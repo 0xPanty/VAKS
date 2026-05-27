@@ -89,6 +89,21 @@ Verified-action strict inside.
 
 Users should interact through a small surface: add source, process this, ask what the vault knows, lint/check the vault, generate a context pack, and review action feedback. Strict schema, evidence, relations, decisions, and feedback machinery should run behind that surface and appear only when a node is promoted or used as action basis.
 
+Processing depth should match material value:
+
+```text
+ordinary material:
+  light Karpathy-style capture.
+
+project material:
+  scope dashboard and dev context when needed.
+
+strong sources:
+  full provenance, review, comparison, and durable pattern/decision/risk writeback.
+```
+
+Strong sources include papers, valuable repositories, official documentation, key architecture articles, important failure reports, and anything that may become action basis.
+
 ## 1. Main architecture
 
 The main architecture is:
@@ -129,6 +144,7 @@ External designs are inputs, not masters.
 | OpenKB | Module reference for long-document tree indexing, wiki/generator layering, Skill Factory, path-scoped agent writes, and ghost-link lint. | Its auto-compiled generic concept wiki does not replace the verified truth layer or main spine. |
 | gbrain | Epistemic inspiration: fact, take, hypothesis, bet, decision, holder, timeline, gaps. | Do not fork its full runtime before this vault's contracts are stable. |
 | obsidian-second-brain | Agentic vault operations: AI-readable preamble, propagation rules, context loading, health checks. | No background rewrite or automatic conflict裁决 in the truth layer. |
+| Dusk-style vault workbench | Scope dashboard, task mailbox, and closeout surfaces for project work. | Workbench views do not decide truth or replace dev context packs. |
 | Obsidian Bases / Base Hub | Workbench and review views over structured Markdown. | Views do not define truth. They display and filter records. |
 | BM25 / vector / QMD / Zilliz / GraphRAG | Candidate retrieval and ranking. | Retrieval is not verification. |
 | Misa / gbrain / external agents | Read-only or suggest-only consumers and candidate proposers. | They do not directly write formal truth without review. |
@@ -175,6 +191,20 @@ known gaps or negative evidence where relevant
 ```
 
 Do not make ordinary capture feel like decision paperwork. Do not let lightweight capture become action-ready truth without review.
+
+### 3.3.1 Reference review is always two-lens
+
+When inspecting a repository, paper, or external framework, apply both lenses:
+
+```text
+current branch:
+  Does this help the thing we are landing now?
+
+whole architecture:
+  Does this help ingest, review, schema, feedback, retrieval, API, viewer, agent access, publishing, or risk?
+```
+
+The current branch may decide the first reading path, but it must not hide main-architecture signals.
 
 ### 3.4 Search only recalls candidates
 

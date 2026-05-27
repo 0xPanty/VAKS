@@ -678,39 +678,33 @@ conversation-derived feedback routing:
 
 ## 当前下一步建议
 
-`IMPLEMENTATION_BLUEPRINT.md`、`REVIEW_QUEUE.md`、`FEEDBACK.md` 已创建。下一步不要继续加重验证，而是跑第一个 10-source point collision + conversation-derived feedback trial：
+2026-05-28 更新：冷热层和 dev context 规格已落地。下一步不要继续加重验证，也不要先写自动化脚本，而是先用真实资料跑第一轮开发上下文。
 
 ```text
-1. 选择 10 条真实 source。
-   从每条 source 抽 2-8 个 candidate point。
+1. 第一个真实 dev context pack
+   用真实项目/参考资料验证 Core / Support / Risk / Cold References。
 
-2. 生成 collision signal。
-   supports / contradicts / refines / replaces / duplicates / near_miss。
+2. one query-run + feedback-event trial
+   用一次真实追问或纠偏，验证 conversation-derived feedback routing。
 
-3. Review collision signal。
-   只把 reviewed signal 用作晋级信号。
+3. PUBLISHING_PIPELINE.md
+   正式落地 capture -> triage -> theme -> draft -> publish -> feedback。
 
-4. CONTEXT_PACK.md
-   answer/decision/implementation/Misa memory pack 的 JSON contract。
+4. templates/publish-draft.md
+   给发布草稿建立模板。
 
-5. LINT_RULES.md
-   traceability/provenance/promotion/actionability/agent-access lint。
-
-6. AGENT_ACCESS.md
-   Misa/gbrain/Codex/user 的权限层与工具边界。
-
-7. query-run / feedback-event 试跑
-   用一次真实追问或纠偏，生成 conversation-derived feedback event。
+5. 10-source point collision trial
+   从 10 条真实 source 抽 candidate points，生成 collision signal。
 ```
 
 建议顺序：
 
 ```text
-10-source point collision trial
+第一个真实 dev context pack
 -> one query-run + feedback-event trial
--> CONTEXT_PACK.md
--> LINT_RULES.md
--> AGENT_ACCESS.md
+-> PUBLISHING_PIPELINE.md
+-> templates/publish-draft.md
+-> 10-source point collision trial
 ```
 
 ## 下一窗口恢复读法
@@ -727,6 +721,11 @@ conversation-derived feedback routing:
 purpose.md
 ARCHITECTURE_PRINCIPLES.md
 SCHEMA.md
+SOURCE_INTAKE.md
+REFERENCE_REVIEW_PROTOCOL.md
+MEMORY_TIER.md
+DEV_CONTEXT.md
+templates/architecture-review-window-prompt.md
 wiki/decisions/2026-05-27-quality-bar-extensible-verified-action-knowledge-system.md
 wiki/decisions/2026-05-27-implementation-includes-llm-wiki-stack.md
 wiki/decisions/2026-05-27-codex-mediated-ingest-and-review-gate.md
@@ -737,6 +736,8 @@ wiki/decisions/2026-05-26-architecture-layering-v0-1.md
 IMPLEMENTATION_BLUEPRINT.md
 REVIEW_QUEUE.md
 FEEDBACK.md
+templates/dev-context-pack.md
+wiki/indexes/memory-tier-reference-index.md
 wiki/projects/2026-05-27-llm-wiki-compiler-implementation-extraction.md
 wiki/projects/2026-05-27-alpha-point-collision-validation-v0-1.md
 wiki/summaries/2026-05-27-openkb-architecture-review.md
@@ -754,7 +755,11 @@ wiki/indexes/knowledge-graph-index.md
 如果要继续实现蓝图，优先创建：
 
 ```text
-10-source point collision trial + one query-run / feedback-event trial
+第一个真实 dev context pack
+-> one query-run + feedback-event trial
+-> PUBLISHING_PIPELINE.md
+-> templates/publish-draft.md
+-> 10-source point collision trial
 ```
 
 `ARCHITECTURE_PRINCIPLES.md` 已创建，并已明确：
@@ -784,6 +789,33 @@ wiki/indexes/knowledge-graph-index.md
 - `templates/query-run.md` 已创建。
 - `outputs/feedback/README.md` 已创建，定义 feedback JSONL 事件日志目录。
 - `wiki/projects/2026-05-27-memory-tier-and-publishing-pipeline-draft.md` 已创建，作为下一窗口方向草案：冷热分层和 5 步发布工作流一起考虑、分开落地。
+- `MEMORY_TIER.md` 已创建，定义基础冷热分层为长期轻量 activation metadata，不是 truth layer。
+- `DEV_CONTEXT.md` 已创建，定义临时开发上下文包：Core / Support / Risk / Cold References。
+- `templates/dev-context-pack.md` 已创建，作为开发模式上下文包模板。
+- `raw/repos/2026-05-27-obsidian-para-source.md`、`wiki/summaries/2026-05-27-obsidian-para-architecture-review.md` 已创建，记录 byarbrough/obsidian-para 的源码/模板级取样。
+- `wiki/indexes/memory-tier-reference-index.md` 已创建，作为冷热记忆 / dev context / activation 相关库的融合工作台。
+- 已新增冷热记忆相关模式：`wiki/patterns/actionability-based-memory-routing.md`、`wiki/patterns/archive-first-lazy-reactivation.md`。
+- 已新增反模式：`wiki/anti-patterns/para-folder-taxonomy-as-truth-layer.md`。
+- `raw/repos/2026-05-27-kepano-obsidian-source.md`、`wiki/summaries/2026-05-27-kepano-obsidian-architecture-review.md` 已创建，记录 kepano/kepano-obsidian 的源码/模板级取样。
+- 已新增 Kepano 相关模式：`wiki/patterns/property-driven-context-workbench.md`、`wiki/patterns/link-overlap-related-context-surface.md`、`wiki/patterns/random-revisit-cold-memory-maintenance.md`。
+- 已新增反模式：`wiki/anti-patterns/derived-relatedness-as-truth-signal.md`。
+- `wiki/indexes/memory-tier-reference-index.md` 已补 `Current Collision Synthesis v0.1`：PARA 提供“为什么现在要激活”，Kepano 提供“不搬文件也能浮出资料”的机制，verified-action schema 继续负责可信度和行动依据。
+- `raw/repos/2026-05-27-knowledge-base-server-source.md`、`wiki/summaries/2026-05-27-knowledge-base-server-architecture-review.md` 已创建，记录 willynikes2/knowledge-base-server 的源码级取样。
+- 已新增 knowledge-base-server 相关模式：`wiki/patterns/token-efficient-context-briefing.md`、`wiki/patterns/shared-agent-memory-retrieval-layer.md`、`wiki/patterns/operational-session-capture-loop.md`、`wiki/patterns/incremental-vault-index-retrieval-cache.md`。
+- 已新增反模式：`wiki/anti-patterns/auto-promotion-without-review-gate.md`。
+- `wiki/indexes/memory-tier-reference-index.md` 已更新为 `Current Collision Synthesis v0.2`：PARA 提供“为什么激活”，Kepano 提供“不搬文件也能浮出”，knowledge-base-server 提供“低 token briefing 后再全文读取”的运行机制；verified-action schema 仍负责可信度和行动依据。
+- `raw/repos/2026-05-27-kagantic-vault-structure-source.md`、`wiki/summaries/2026-05-27-kagantic-vault-structure-architecture-review.md` 已创建，记录 Asim00740/Kagantic-vault-structure 的源码/模板级取样。
+- 已新增 Kagantic 相关模式：`wiki/patterns/hierarchical-index-context-routing.md`。结论是 Markdown index 可以作为 v0.1 的轻量 context briefing：先读 Main/Domain Index，再按 summary/tags 选择全文。
+- 已新增反模式：`wiki/anti-patterns/binary-vault-template-download-as-trusted-source.md`。该 repo 的 advertised zip artifact 含 `Application.cmd`、`package.txt`、`unit.exe`，不是正常 Markdown vault archive；已记录为 source hygiene risk，未执行。
+- `raw/repos/2026-05-27-dusk-obsidian-vault-source.md`、`wiki/summaries/2026-05-27-dusk-obsidian-vault-architecture-review.md` 已创建，记录 DuskWasHere/dusk-obsidian-vault 的源码/模板级取样。
+- 已新增 Dusk 相关模式：`wiki/patterns/scope-dashboard-live-context-surface.md`。结论是 project/area/scope dashboard 可以作为 dev context 候选工作台，把相关 notes、projects、meetings、tasks、references 拉到一页，但不决定 truth。
+- 已新增反模式：`wiki/anti-patterns/all-in-one-vault-runtime-before-modular-contracts.md`。Dusk GitHub 版自身已经从 legacy all-in-one 转向 current modular components；这反向验证我们只吸收模块化设计点，不复制插件重载的全套 vault runtime。
+- `wiki/indexes/memory-tier-reference-index.md` 已更新为 `Current Collision Synthesis v0.3`：新增 Dusk 的 scope dashboard 作为“工作台候选面”，并明确 dashboard 不是 truth、不是最终 dev context，只是进入 context pack 前的候选聚合面。
+- `SOURCE_INTAKE.md` 已创建，正式落地资料处理分级：普通资料 light/Karpathy-simple，项目资料 medium/scope dashboard + DEV_CONTEXT，论文、高价值仓库、官方文档、关键架构资料、风险/反模式等 strong sources 才走 heavy verified-action 流程。
+- `REFERENCE_REVIEW_PROTOCOL.md` 已创建，正式落地以后看仓库的固定逻辑：当前支线顺手推进，但每个库必须同时做全貌架构审查；不能只看冷热分层，要同时检查 ingest、review queue、schema/truth、lint、feedback、retrieval/cache、API/MCP/agent access、viewer/workbench、publishing、risk/source hygiene 等环节。
+- `templates/source-record.md` 已补作者、发布/更新时间、版本/commit/DOI、source_status、processing_level、timeline notes；以后保留来源不只是保存链接，而是保留谁、何时、哪个版本、为什么收、后续如何复查。
+- `templates/library-review.md` 已补 Source/Code Anchors、当前支线价值、全貌架构价值和直接判断区；以后 repo review 必须记录源码/模板/配置锚点，不能只写 README 总结。
+- `templates/architecture-review-window-prompt.md` 已创建，作为后续只读架构打磨 / 参考库碰撞窗口的固定恢复提示词；以后不需要用户每次重复说明“不要执行、先全貌对比、不要只看冷热层、不要把架构变繁琐臃肿、要找优雅舒服的融合设计”。
 - 已新增 traceability-first / graduated verification 决策：raw/source 先保来源可追溯，严格验证只在晋级和行动依据阶段触发。
 - 已新增 alpha point collision 研究记录和 v0.1 落地规格。
 - 主架构已定为 `Verified Action Knowledge System`。
@@ -792,7 +824,7 @@ wiki/indexes/knowledge-graph-index.md
 - Karpathy LLM Wiki 已作为基础范式纳入。
 - 当前系统是融合设计，各取所长，但主裁决框架已明确。
 - 还没有创建 `CONTEXT_PACK.md` / `LINT_RULES.md` / `AGENT_ACCESS.md` 等后续实现规格文件。
-- 还没有创建 `MEMORY_TIER.md` / `PUBLISHING_PIPELINE.md` / `templates/publish-draft.md`；当前只有方向草案。
+- 还没有创建 `PUBLISHING_PIPELINE.md` / `templates/publish-draft.md`；发布流水线当前只有方向草案。
 - 还没有真正实现脚本、API、MCP、viewer；当前是架构与知识系统设计阶段。
 
 ## 明确未落地清单
@@ -828,13 +860,25 @@ wiki/indexes/knowledge-graph-index.md
      capture -> triage -> theme -> draft -> publish -> feedback 的正式字段
      发布后评论/指标 -> feedback-event / missing-point 的试跑
 
-3. 冷热分层未正式落地
+3. 冷热分层已落初稿，但未试跑
    已有:
      wiki/projects/2026-05-27-memory-tier-and-publishing-pipeline-draft.md
+     MEMORY_TIER.md
+     DEV_CONTEXT.md
+     templates/dev-context-pack.md
+     wiki/indexes/memory-tier-reference-index.md
+     wiki/patterns/actionability-based-memory-routing.md
+     wiki/patterns/archive-first-lazy-reactivation.md
+     wiki/patterns/property-driven-context-workbench.md
+     wiki/patterns/link-overlap-related-context-surface.md
+     wiki/patterns/random-revisit-cold-memory-maintenance.md
+     wiki/anti-patterns/para-folder-taxonomy-as-truth-layer.md
+     wiki/anti-patterns/derived-relatedness-as-truth-signal.md
 
    未做:
-     MEMORY_TIER.md
-     memory_tier / activation_status / last_activated 字段接入 SCHEMA.md
+     基于真实项目生成第一个 dev context pack
+     context briefing -> full-read 选择试跑
+     基于 query-run/feedback-event 验证 lazy reactivation
      hot / warm / cold dashboard 或查询规则
 
 4. point collision 还没有真实试跑
@@ -852,9 +896,9 @@ wiki/indexes/knowledge-graph-index.md
 最建议的下一步顺序：
 
 ```text
-MEMORY_TIER.md
+第一个真实 dev context pack
+-> one query-run + feedback-event trial
 -> PUBLISHING_PIPELINE.md
 -> templates/publish-draft.md
--> one query-run + feedback-event trial
 -> 10-source point collision trial
 ```

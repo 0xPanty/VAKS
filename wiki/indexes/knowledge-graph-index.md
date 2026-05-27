@@ -6,6 +6,11 @@
 - [[purpose]]
 - [[ARCHITECTURE_PRINCIPLES]]
 - [[IMPLEMENTATION_BLUEPRINT]]
+- [[SOURCE_INTAKE]]
+- [[REFERENCE_REVIEW_PROTOCOL]]
+- [[MEMORY_TIER]]
+- [[DEV_CONTEXT]]
+- [[memory-tier-reference-index]]
 - [[REVIEW_QUEUE]]
 - [[FEEDBACK]]
 - [[2026-05-26-architecture-layering-v0-1]]
@@ -108,6 +113,32 @@
 - [[accumulated-source-cross-validation]]
 - [[2026-05-27-alpha-point-collision-validation-v0-1]]
 - [[2026-05-27-alpha-point-collision-research]]
+- [[2026-05-27-obsidian-para-source]]
+- [[2026-05-27-obsidian-para-architecture-review]]
+- [[actionability-based-memory-routing]]
+- [[archive-first-lazy-reactivation]]
+- [[para-folder-taxonomy-as-truth-layer]]
+- [[2026-05-27-kepano-obsidian-source]]
+- [[2026-05-27-kepano-obsidian-architecture-review]]
+- [[property-driven-context-workbench]]
+- [[link-overlap-related-context-surface]]
+- [[random-revisit-cold-memory-maintenance]]
+- [[derived-relatedness-as-truth-signal]]
+- [[2026-05-27-knowledge-base-server-source]]
+- [[2026-05-27-knowledge-base-server-architecture-review]]
+- [[token-efficient-context-briefing]]
+- [[shared-agent-memory-retrieval-layer]]
+- [[operational-session-capture-loop]]
+- [[incremental-vault-index-retrieval-cache]]
+- [[auto-promotion-without-review-gate]]
+- [[2026-05-27-kagantic-vault-structure-source]]
+- [[2026-05-27-kagantic-vault-structure-architecture-review]]
+- [[hierarchical-index-context-routing]]
+- [[binary-vault-template-download-as-trusted-source]]
+- [[2026-05-27-dusk-obsidian-vault-source]]
+- [[2026-05-27-dusk-obsidian-vault-architecture-review]]
+- [[scope-dashboard-live-context-surface]]
+- [[all-in-one-vault-runtime-before-modular-contracts]]
 
 ## 当前节点类型
 
@@ -185,6 +216,26 @@
 - 当前新增反馈校准规格：[[FEEDBACK]]。反馈只调整 usefulness、scope fit 和 activation ranking；truth confidence、verification_status、source reliability 仍必须通过 review/promotion 修改。
 - 当前新增隐式反馈路由模式：[[conversation-derived-feedback-routing]]。连续追问、问题变窄、纠偏、说漏了、换题等对话行为可以反推 route / keyword / scope 信号；v0.1 采用 JSONL append-only 记录 query-run/feedback-event，SQLite 只作为可重建缓存，隐式正反馈默认只在 session 内生效。
 - 当前新增下一阶段方向草案：[[2026-05-27-memory-tier-and-publishing-pipeline-draft]]。判断是“冷热分层”和“从捕获到发布的 5 步工作流”要一起考虑但分开落地：memory_tier 只管激活优先级，workflow_stage 只管输出流程进度。
+- 当前新增冷热分层初稿：[[MEMORY_TIER]]。结论是基础冷热分层只做长期轻量 activation metadata，不做 truth layer，不建议先用 01-Hot/02-Warm/03-Cold 文件夹制造搬运成本。
+- 当前新增开发模式上下文初稿：[[DEV_CONTEXT]]。开发项目时先全局发现，再生成临时 Core / Support / Risk / Cold References 工作记忆包；Risk 层必须作为决策 checkpoint，而不是和正向资料混成噪音。
+- 当前新增 byarbrough/obsidian-para 源码/模板级取样：[[2026-05-27-obsidian-para-source]] 和 [[2026-05-27-obsidian-para-architecture-review]]。结论是吸收 actionability routing、archive-first lazy reactivation、project goal gate、project closeout scan；拒绝把 PARA 四文件夹作为 verified truth layer。
+- 当前新增冷热记忆相关模式：[[actionability-based-memory-routing]]、[[archive-first-lazy-reactivation]]。核心是“下一次最可能在哪里用到”决定 activation_reason；旧资料默认 cold，用到时按 scope 升温，复用后才进入 warm。
+- 当前新增反模式：[[para-folder-taxonomy-as-truth-layer]]。PARA 可以做 actionability/lifecycle 参考，但不能替代 raw/wiki/outputs/products、review gate、provenance、verification_status 和 relations。
+- 当前新增冷热支线参考库索引：[[memory-tier-reference-index]]。后续所有与冷热记忆 / dev context / activation 相关的库，都先进入这个融合工作台做 supports / contradicts / refines / replaces 对照，再决定是否晋级为更强 pattern 或 alpha 设计。
+- 当前新增 kepano/kepano-obsidian 源码/模板级取样：[[2026-05-27-kepano-obsidian-source]] 和 [[2026-05-27-kepano-obsidian-architecture-review]]。结论是吸收 property-driven context workbench、link-overlap related context、random revisit cold-memory maintenance；拒绝把 organic links / ratings / recency 当成 truth。
+- 当前新增 Kepano 相关模式：[[property-driven-context-workbench]]、[[link-overlap-related-context-surface]]、[[random-revisit-cold-memory-maintenance]]。它们强化“不要靠搬文件升温”，而是用 metadata / Bases / links / backlinks / tags 生成 activation 和 dev-context 支持候选。
+- 当前新增反模式：[[derived-relatedness-as-truth-signal]]。链接重叠、反链、tag、rating、last seen 都只能做召回和激活线索，不能替代 reviewed relations、evidence_level 或 confidence。
+- 当前新增 willynikes2/knowledge-base-server 源码级取样：[[2026-05-27-knowledge-base-server-source]] 和 [[2026-05-27-knowledge-base-server-architecture-review]]。结论是吸收 token-efficient context briefing、shared agent retrieval layer、operational session capture、incremental vault index retrieval cache；拒绝自动 classify/promote/writeback 绕过 review gate。
+- 当前新增 knowledge-base-server 相关模式：[[token-efficient-context-briefing]]、[[shared-agent-memory-retrieval-layer]]、[[operational-session-capture-loop]]、[[incremental-vault-index-retrieval-cache]]。它们强化“搜索后先给低 token briefing，再决定打开哪些全文”，并把 SQLite/FTS/vector 明确放在 derived cache 层。
+- 当前新增反模式：[[auto-promotion-without-review-gate]]。自动分类、总结、合成、晋级只能生成 candidate 或 briefing metadata，不能直接写成 verified truth、decision 或 confidence。
+- 当前新增 Asim00740/Kagantic-vault-structure 源码/模板级取样：[[2026-05-27-kagantic-vault-structure-source]] 和 [[2026-05-27-kagantic-vault-structure-architecture-review]]。结论是吸收 hierarchical index context routing：先读 Main/Domain Index，再按 summary/tags 选择全文；同时记录 zip artifact 异常。
+- 当前新增 Kagantic 相关模式：[[hierarchical-index-context-routing]]。它把 knowledge-base-server 的 context briefing 降到 Markdown-only 形态，适合 v0.1 在没有 SQL/MCP 前先用。
+- 当前新增反模式：[[binary-vault-template-download-as-trusted-source]]。vault template 下载包必须先检查；含 `Application.cmd` / `unit.exe` 的 archive 不应作为可信资料源或被执行。
+- 当前新增 DuskWasHere/dusk-obsidian-vault 源码/模板级取样：[[2026-05-27-dusk-obsidian-vault-source]] 和 [[2026-05-27-dusk-obsidian-vault-architecture-review]]。结论是 GitHub 版是 legacy all-in-one vault，不适合 fork；可吸收 scope dashboard、page-task mailbox、monthly closeout/cooling surface。
+- 当前新增 Dusk 相关模式：[[scope-dashboard-live-context-surface]]。一个 project/area/scope 页面可以把相关 notes、projects、meetings、tasks、references 汇总成 dev context 候选工作台，但不决定 truth。
+- 当前新增反模式：[[all-in-one-vault-runtime-before-modular-contracts]]。不要在 schema/review/dev-context 合同稳定前复制插件重载的全套 Obsidian vault runtime；只拆模块化设计点。
+- 当前新增资料处理分级规则：[[SOURCE_INTAKE]]。普通资料走 Karpathy 轻处理，项目资料走 Dusk-style scope dashboard / DEV_CONTEXT，论文、高价值仓库、官方文档、关键架构资料等强资料才走 verified-action 重流程。
+- 当前新增参考库审查协议：[[REFERENCE_REVIEW_PROTOCOL]]。以后看仓库必须同时过“当前支线价值”和“全貌架构价值”两道 lens；当前支线顺手推进，但每个库都必须从 ingest/review/schema/feedback/retrieval/API/viewer/agent access/publishing/risk 等全貌环节过一遍。
 - JARVIS inside Obsidian 文章已作为内容创作者工作流参考入库：它比较基础，不是 verified knowledge architecture；可用点主要是 type-based capture、Claude Code skills 示例、published performance feedback loop。当前只新增 [[published-performance-feedback-loop]]，其余归并到已有 [[skills-as-action-modules]] 和 [[source-to-publish-content-pipeline]]。
 - 项目关系图需求已收束为 [[project-crosslink-graph-view]]：多个项目之间共享的 pattern、anti-pattern、decision、implementation-note 可以在 viewer/Obsidian workbench 中展示，但图必须从 reviewed `relations` 生成，不能让视觉连接替代可信关系边。
 - 当前新增正向模式：[[review-gated-compile-queue]]、[[claim-level-provenance-source-ranges]]、[[context-pack-evidence-envelope]]、[[static-wiki-health-lint-before-auto-rewrite]]。

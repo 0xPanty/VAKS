@@ -4,10 +4,17 @@ status: source-captured
 title:
 source_url:
 source_type: article
+author:
+publisher:
+published_at:
+updated_at:
 captured_at:
 captured_by:
+version_or_commit:
+source_status: unknown
 raw_location:
 processing_mode: inbox
+processing_level: light
 review_priority: normal
 review_owner: Codex
 formalization_status: raw-only
@@ -30,9 +37,20 @@ tags:
 - 作者：
 - 发布方：
 - 发布时间：
+- 更新时间：
 - 原始链接：
 - 原始位置：
+- 版本 / commit / DOI：
+- source_status: active / legacy / deprecated / unknown
 - 采集方式：
+
+## 时间线 / 上下文
+
+- 作者/组织背景：
+- 当时版本或阶段：
+- 后续更新：
+- 是否 legacy / deprecated：
+- 为什么这个时间点重要：
 
 ## 初步看点
 
@@ -44,13 +62,20 @@ tags:
 ## 可抽取 Candidate Points
 
 
+## 当前处理等级
+
+```text
+light / medium / heavy
+```
+
+升级到 heavy 的条件：
+
+-
+
 
 ## 可选验证字段
 
 ```yaml
-author:
-publisher:
-published_at:
 source_quality:
 freshness:
 relevance:

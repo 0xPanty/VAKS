@@ -15,6 +15,8 @@ sources:
   - "[[semantic-relation-edge-schema]]"
   - "[[2026-05-27-codex-mediated-ingest-and-review-gate]]"
   - "[[2026-05-27-traceability-first-graduated-verification]]"
+  - "[[SOURCE_INTAKE]]"
+  - "[[REFERENCE_REVIEW_PROTOCOL]]"
 verification_status: active
 evidence_level: synthetic
 confidence: high
@@ -81,6 +83,9 @@ Raw capture 和 source record 不需要一开始填满 evidence、confidence、r
 ```text
 原始内容在哪里
 什么时候收录
+谁/哪个作者/组织产生
+发布或更新时间
+版本、commit、DOI 或 source status
 为什么收录
 谁/什么流程收录
 后续处理状态是什么
@@ -111,6 +116,21 @@ replaces
 ```
 
 这些跨来源信号可以帮助 claim、pattern、decision 晋级。重复出现不是自动真理，但它是比单条当场判断更便宜、更自然的验证入口。
+
+资料处理分级见 `SOURCE_INTAKE.md`：
+
+```text
+light:
+  普通资料，只做来源和简要记录。
+
+medium:
+  项目或复用资料，做摘要、路由、context 候选。
+
+heavy:
+  论文、高价值仓库、官方文档、关键决策资料，做完整 provenance、源码/章节锚点、candidate points、review、pattern/anti-pattern/decision。
+```
+
+强资料才进入重流程。普通资料不应该被迫填写完整 verified-action 字段。
 
 v0.1 的具体承载位置见 `REVIEW_QUEUE.md`：
 
@@ -164,6 +184,28 @@ source reliability
 decision outcome
 ```
 
+### 1.6 Activation is not truth
+
+冷热分层是 activation layer，不是 truth layer。
+
+```text
+memory_tier:
+  控制资料在某个 scope 下应该多早被唤起。
+
+verification_status / evidence_level / confidence:
+  控制资料能否作为可信结论或行动依据。
+```
+
+二者不能混用：
+
+```text
+hot != true
+warm != verified
+cold != useless
+```
+
+开发模式下可以临时生成 dev context pack，把相关资料锁定为当前任务的工作记忆。这个 pack 可以包含 core / support / risk / cold references，但它不改变原始节点的 truth status，也不要求把所有相关资料永久升为 hot。
+
 ## 2. 节点类型
 
 `type` 是每个节点的第一身份。v0.1 的核心节点类型如下。
@@ -200,6 +242,16 @@ next_review:
 relations: []
 ```
 
+以下字段属于可选 activation metadata，不是可信度字段：
+
+```yaml
+memory_tier: hot | warm | cold
+activation_status: active | dormant | archived
+scope_key:
+last_activated:
+activation_reason:
+```
+
 ### 3.1 字段定义
 
 | 字段 | 必填 | 定义 |
@@ -216,6 +268,23 @@ relations: []
 | `last_verified` | 建议 | 最近一次人工/AI 复核日期。 |
 | `next_review` | 建议 | 下一次应复查日期。 |
 | `relations` | 晋级时 | 语义关系边列表。raw/source 可先写 `[]`，强关系只在晋级时补齐。 |
+
+### 3.6 Activation Metadata
+
+| 字段 | 必填 | 定义 |
+|---|---|---|
+| `memory_tier` | 可选 | 当前 scope 下的默认激活优先级：`hot`、`warm`、`cold`。 |
+| `activation_status` | 可选 | 当前是否活跃：`active`、`dormant`、`archived`。 |
+| `scope_key` | 可选 | 激活适用的项目、问题、领域或工作流。 |
+| `last_activated` | 可选 | 最近一次被主动调取或放入工作上下文的日期。 |
+| `activation_reason` | 可选 | 为什么它在该 scope 下被加热或冷却。 |
+
+规则：
+
+- activation metadata 只影响读取顺序和上下文优先级。
+- activation metadata 不能提升 `confidence`。
+- activation metadata 不能改变 `verification_status`。
+- 如果目标是具体开发任务，应优先创建 dev context pack，而不是把全库文件永久改成 hot。
 
 ### 3.2 Status 枚举
 
@@ -975,6 +1044,30 @@ last_verified:
 7. 搜索相似度
 
 搜索相似度永远排在可信字段之后。
+
+## 10.1 Dev Context Pack
+
+Dev context pack 是 context pack 的开发模式变体，详见 `DEV_CONTEXT.md`。
+
+它用于把某个项目或任务的相关资料临时锁定为工作记忆：
+
+```text
+Core:
+  必须读、必须遵守。
+
+Support:
+  需要时展开的正向参考。
+
+Risk:
+  决策前必须检查的反模式、负证据、冲突和边界。
+
+Cold References:
+  可追溯来源和历史资料，只在查证据时打开。
+```
+
+Dev context pack 是 operation record，不是 formal truth node。
+
+它可以临时激活 cold source，但不能因此修改该 source 的 truth status。
 
 ## 11. 自动化边界
 

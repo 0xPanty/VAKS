@@ -18,6 +18,7 @@ related_patterns:
   - "[[context-pack-evidence-envelope]]"
   - "[[static-wiki-health-lint-before-auto-rewrite]]"
   - "[[progressive-vault-context-loader]]"
+  - "[[scope-dashboard-live-context-surface]]"
 related_anti_patterns:
   - "[[direct-compile-to-truth-layer-without-review]]"
   - "[[generic-concept-schema-as-truth-layer]]"
@@ -35,6 +36,8 @@ sources:
   - "[[2026-05-27-quality-bar-extensible-verified-action-knowledge-system]]"
   - "[[2026-05-27-codex-mediated-ingest-and-review-gate]]"
   - "[[2026-05-27-traceability-first-graduated-verification]]"
+  - "[[SOURCE_INTAKE]]"
+  - "[[REFERENCE_REVIEW_PROTOCOL]]"
 verification_status: active
 evidence_level: synthetic
 confidence: high
@@ -130,6 +133,51 @@ record action feedback
 ```
 
 Strict fields, relation edges, negative evidence, actionability, provenance windows, and feedback timelines should appear when needed by promotion or action use. They should not make normal capture feel heavy.
+
+### 2.1 Processing modes
+
+Use three modes instead of one heavy path:
+
+```text
+normal question mode:
+  Karpathy-simple. Search/read enough, answer, optionally save a light note.
+
+project development mode:
+  Dusk-style scope dashboard plus DEV_CONTEXT. Gather related materials, then lock Core / Support / Risk / Cold References.
+
+strong source / decision mode:
+  verified-action strictness. Preserve provenance, extract candidate points, compare, review, and write durable patterns/decisions/risks.
+```
+
+This means:
+
+```text
+ordinary material:
+  light processing.
+
+project material:
+  medium processing plus scope dashboard/dev context when needed.
+
+papers, valuable repos, official docs, key architecture material:
+  heavy processing.
+```
+
+The full rules are in `SOURCE_INTAKE.md`.
+
+### 2.2 Reference review rule
+
+When reviewing external repositories, do not only inspect the active branch question.
+
+Required rule:
+
+```text
+Current branch moves forward opportunistically.
+Every reference must still be checked against the whole Verified Action Knowledge System.
+```
+
+This prevents a memory-tier session from missing useful signals for ingest, review queue, schema, lint, feedback, retrieval, API, viewer, agent access, publishing, or risk.
+
+The detailed checklist is in `REFERENCE_REVIEW_PROTOCOL.md`.
 
 ## 3. System Spine
 
@@ -609,10 +657,13 @@ These may become useful later, but only after Phase 0 through Phase 3 are stable
 Recommended order:
 
 ```text
-1. CONTEXT_PACK.md
-2. LINT_RULES.md
-3. AGENT_ACCESS.md
-4. templates/context-pack.md
+1. MEMORY_TIER.md
+2. DEV_CONTEXT.md
+3. templates/dev-context-pack.md
+4. CONTEXT_PACK.md
+5. LINT_RULES.md
+6. AGENT_ACCESS.md
+7. templates/context-pack.md
 ```
 
 ## 17. Current Stop Point
@@ -622,5 +673,5 @@ This blueprint defines the implementation route but does not yet implement scrip
 Next concrete action:
 
 ```text
-Run the first 10-source point-collision trial, then create CONTEXT_PACK.md.
+Use the first real project/reference set to create a dev context pack, then run one query-run / feedback-event trial and the 10-source point-collision trial.
 ```

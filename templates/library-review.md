@@ -4,9 +4,13 @@ status: draft
 library_name:
 repo_url:
 source_url:
+checked_commit:
+commit_time:
+source_status: active | legacy | deprecated | unknown
 reviewed_at:
 domain:
 related_projects:
+current_branch:
 extracted_patterns:
 fusion_decision: watch
 confidence: medium
@@ -24,6 +28,55 @@ relations: []
 
 ## 核心设计
 
+
+## Source / Code Anchors
+
+记录看过的文件、函数、模板、配置或 artifact。不要只写 README 感想。
+
+| Anchor | What exists | Design extraction | Boundary |
+|---|---|---|---|
+|  |  |  |  |
+
+## 当前支线价值
+
+当前支线：
+
+```text
+
+```
+
+它对当前支线：
+
+```text
+supports / contradicts / refines / replaces / no-clear-value
+```
+
+具体价值：
+
+-
+
+风险：
+
+-
+
+## 全貌架构价值
+
+必须过一遍，不因当前支线而跳过。
+
+| Architecture Zone | Value / Finding | Adopt? |
+|---|---|---|
+| Karpathy spine |  |  |
+| Dusk workbench |  |  |
+| source ingest |  |  |
+| review queue |  |  |
+| schema / truth |  |  |
+| memory / dev context |  |  |
+| feedback |  |  |
+| retrieval / cache |  |  |
+| API / MCP / agent access |  |  |
+| viewer / workbench |  |  |
+| publishing |  |  |
+| risk / anti-pattern |  |  |
 
 ## 值得提炼的模式
 
@@ -91,5 +144,16 @@ relations:
 - 结论：adopt / adapt / watch / reject
 - 理由：
 - 验证方式：
+
+## 直接判断
+
+- Direct use:
+- Fork:
+- Design-only:
+- Reject:
+- Current branch value:
+- Whole architecture value:
+- Risk:
+- Next action:
 
 ## 后续行动
