@@ -16,6 +16,8 @@ sources:
   - "[[2026-05-27-quality-bar-extensible-verified-action-knowledge-system]]"
   - "[[2026-05-27-llm-wiki-compiler-implementation-extraction]]"
   - "[[2026-05-27-codex-mediated-ingest-and-review-gate]]"
+  - "[[2026-05-27-karpathy-simple-verified-strict-ux-principle]]"
+  - "[[2026-05-27-karpathy-spine-modular-extensions]]"
 verification_status: active
 evidence_level: synthetic
 confidence: high
@@ -77,6 +79,15 @@ raw source
 
 The purpose is not only to know. The purpose is to know with evidence, decide with context, act with risk awareness, and learn from the result.
 
+The default experience must stay simple:
+
+```text
+Karpathy-simple outside.
+Verified-action strict inside.
+```
+
+Users should interact through a small surface: add source, process this, ask what the vault knows, lint/check the vault, generate a context pack, and review action feedback. Strict schema, evidence, relations, decisions, and feedback machinery should run behind that surface and appear only when a node is promoted or used as action basis.
+
 ## 1. Main architecture
 
 The main architecture is:
@@ -86,6 +97,15 @@ Verified Action Knowledge System
 ```
 
 This name matters because it decides what belongs in the core.
+
+The operating spine is:
+
+```text
+Karpathy-style LLM Wiki
+raw / wiki / index / log / ingest / query / lint
+```
+
+This spine is the default user experience and open-source entry. The verified-action layer is the stricter internal kernel. Other reference libraries are modular extensions, not competing skeletons.
 
 The system has three inseparable goals:
 
@@ -103,9 +123,9 @@ External designs are inputs, not masters.
 
 | Reference | Role in this system | Boundary |
 |---|---|---|
-| Karpathy LLM Wiki | Basic operating pattern: `raw/`, `wiki/`, `index.md`, `log.md`, ingest, query, lint. | It does not define verified truth or action readiness by itself. |
-| `atomicstrata/llm-wiki-compiler` | Engineering reference for ingest, compile, review queue, provenance, lint, context pack, MCP, viewer. | Its generic page schema does not replace source/summary/claim/pattern/anti-pattern/decision. |
-| OpenKB | Module reference for long-document tree indexing, wiki/generator layering, Skill Factory, path-scoped agent writes, and ghost-link lint. | Its auto-compiled generic concept wiki does not replace the verified truth layer. |
+| Karpathy LLM Wiki | Main operating spine and default UX: `raw/`, `wiki/`, `index.md`, `log.md`, ingest, query, lint. | It does not define verified truth or action readiness by itself. |
+| `atomicstrata/llm-wiki-compiler` | Engineering module reference for ingest, compile, review queue, provenance, lint, context pack, MCP, viewer. | Its generic page schema does not replace source/summary/claim/pattern/anti-pattern/decision. |
+| OpenKB | Module reference for long-document tree indexing, wiki/generator layering, Skill Factory, path-scoped agent writes, and ghost-link lint. | Its auto-compiled generic concept wiki does not replace the verified truth layer or main spine. |
 | gbrain | Epistemic inspiration: fact, take, hypothesis, bet, decision, holder, timeline, gaps. | Do not fork its full runtime before this vault's contracts are stable. |
 | obsidian-second-brain | Agentic vault operations: AI-readable preamble, propagation rules, context loading, health checks. | No background rewrite or automatic conflict裁决 in the truth layer. |
 | Obsidian Bases / Base Hub | Workbench and review views over structured Markdown. | Views do not define truth. They display and filter records. |
@@ -460,6 +480,7 @@ Chat-only conclusions are not enough for durable architecture decisions.
 The system should grow in this order:
 
 ```text
+0. one end-to-end source-to-context-pack loop
 1. Markdown contracts
 2. review queue
 3. lint rules

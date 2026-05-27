@@ -1,11 +1,19 @@
 # 资料库
 
-这个资料库不是普通收藏夹，而是一个面向开发项目和 AI 短剧创作的本地知识编译系统。
+这个资料库不是普通收藏夹，而是一个本地 verified action knowledge system。
+
+当前路线已经确认：
+
+```text
+外层像 Karpathy LLM Wiki 一样简单。
+内层用 verified-action 规则保证可信和可行动。
+其他参考库只作为可替换模块接入。
+```
 
 核心思路：
 
 - `raw/`：原始资料区。文章、X 推文、论文、repo、截图、播客转录等先放这里，尽量保留原文和来源。
-- `wiki/`：编译产物区。由 LLM 把 raw 里的资料整理成摘要、概念、索引、项目知识、短剧设定。
+- `wiki/`：编译产物区。由 LLM/Codex 把 raw 里的资料整理成 summary、claim、pattern、anti-pattern、decision 和项目知识。
 - `outputs/`：运行输出区。把和 AI 的重要问答、方案推导、健康检查报告落成 Markdown，避免结论死在聊天记录里。
 - `products/`：发布成品区。X、公众号、小红书等面向读者的内容放这里，不和 wiki 混在一起。
 - `templates/`：模板区。用于统一记录库分析、设计模式、阶段洞察、决策记录。
@@ -15,17 +23,19 @@
 
 当前默认方案：
 
-- Obsidian 作为 IDE 和资料前端。
-- Properties + Bases 作为主数据库层。
-- LLM 作为编译器，负责增量整理、提炼、链接和检查。
-- 暂时不急着上 RAG，先用索引文件 + 直接阅读相关 Markdown 跑通闭环。
+- 主骨架用 Karpathy-style LLM Wiki：`raw/`、`wiki/`、`index`、`log`、`ingest`、`query`、`lint`。
+- Codex 作为默认 review/write gate，AI 和外部 agent 只能先生成 candidate。
+- Obsidian 作为 IDE、图谱和人工 workbench。
+- 严格字段藏在后台，只在晋级为 claim、pattern、decision、context pack 时启用。
+- 暂时不急着上重型 RAG，先跑通 source -> candidate -> reviewed node -> context pack。
 
 最小闭环：
 
 1. 把新资料放进 `raw/`。
-2. 每积累 5 到 10 条资料，让 LLM 增量编译到 `wiki/`。
-3. 重要问答存到 `outputs/qa/`。
-4. 每周让 LLM 生成一次 `outputs/health/` 健康检查。
+2. 生成 review candidate。
+3. lint / review 后晋级到正式 `wiki/` 节点。
+4. 需要行动时生成 context pack。
+5. 行动结果回流为 feedback，更新 confidence、gaps、next_review。
 
 开发阶段的新增原则：
 

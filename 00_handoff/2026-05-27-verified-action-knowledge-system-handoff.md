@@ -275,6 +275,8 @@ implementation-note
 - `wiki/decisions/2026-05-27-implementation-includes-llm-wiki-stack.md`
 - `wiki/decisions/2026-05-27-quality-bar-extensible-verified-action-knowledge-system.md`
 - `wiki/decisions/2026-05-27-codex-mediated-ingest-and-review-gate.md`
+- `wiki/decisions/2026-05-27-karpathy-simple-verified-strict-ux-principle.md`
+- `wiki/decisions/2026-05-27-karpathy-spine-modular-extensions.md`
 - `wiki/indexes/knowledge-graph-index.md`
 
 Karpathy / llm-wiki-compiler：
@@ -336,6 +338,56 @@ Codex-mediated intake 决策：
 Codex 是默认入库把关者。
 用户是最终采纳者。
 daily brief / weekly synthesis 不能直接成为 verified truth 或 decision。
+```
+
+UX / 开源定位关键决策：
+
+- `wiki/decisions/2026-05-27-karpathy-simple-verified-strict-ux-principle.md`
+- `wiki/decisions/2026-05-27-karpathy-spine-modular-extensions.md`
+
+独立 gpt-5.5 xhigh subagent 评审结论：
+
+```text
+Verdict: 有条件强。
+
+功能能力上限可以强于单个参考库。
+但体验不天然强于 Karpathy。
+只有默认体验保持 Karpathy-simple，严格 verified/action 层藏在后台，才可能同时赢体验和能力。
+```
+
+必须写入 `IMPLEMENTATION_BLUEPRINT.md` 最前面的原则：
+
+```text
+1. 第一版只证明一条 source -> candidate -> lint/review -> verified node -> context pack 的端到端闭环。
+2. 默认体验必须 Karpathy-simple：快速捕获、快速查询、可读 index/log。
+3. Candidate 永远不是 truth。
+4. Schema 分必填底线字段和晋级增强字段；严格字段不要污染普通 capture。
+5. API/MCP/viewer/Skill Factory/vector/PageIndex 都必须可关闭，Markdown 主记录仍可跑通。
+```
+
+当前最终路线已确认：
+
+```text
+主骨架:
+  Karpathy-style LLM Wiki
+  raw / wiki / index / log / ingest / query / lint
+
+内部严格层:
+  Verified Action Knowledge System
+  review gate / evidence / relations / decision / context pack / feedback
+
+模块枝叶:
+  llm-wiki-compiler = review queue / provenance / lint / context pack / MCP / viewer
+  OpenKB = long-doc / Skill Factory / scoped writes / hash registry
+  obsidian-second-brain = preamble / propagation / progressive context / health check
+  gbrain = fact/take/hypothesis/bet/decision / holder / timeline / gaps
+  retrieval/viewer/API = replaceable runtime modules
+```
+
+一句话：
+
+```text
+骨架选 Karpathy，内核用 verified-action，枝叶按需吸收其他库强项。
 ```
 
 本轮新增 cyrilXBT / automated vault 系列：
@@ -467,6 +519,8 @@ SCHEMA.md
 wiki/decisions/2026-05-27-quality-bar-extensible-verified-action-knowledge-system.md
 wiki/decisions/2026-05-27-implementation-includes-llm-wiki-stack.md
 wiki/decisions/2026-05-27-codex-mediated-ingest-and-review-gate.md
+wiki/decisions/2026-05-27-karpathy-simple-verified-strict-ux-principle.md
+wiki/decisions/2026-05-27-karpathy-spine-modular-extensions.md
 wiki/decisions/2026-05-26-architecture-layering-v0-1.md
 wiki/projects/2026-05-27-llm-wiki-compiler-implementation-extraction.md
 wiki/summaries/2026-05-27-openkb-architecture-review.md

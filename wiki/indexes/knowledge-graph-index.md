@@ -9,6 +9,8 @@
 - [[2026-05-27-implementation-includes-llm-wiki-stack]]
 - [[2026-05-27-quality-bar-extensible-verified-action-knowledge-system]]
 - [[2026-05-27-codex-mediated-ingest-and-review-gate]]
+- [[2026-05-27-karpathy-simple-verified-strict-ux-principle]]
+- [[2026-05-27-karpathy-spine-modular-extensions]]
 
 ## 当前核心概念
 
@@ -167,6 +169,8 @@
 - 当前新增 feedback/capture 模式：[[frictionless-capture-to-review-inbox]]、[[daily-brief-as-knowledge-return-loop]]、[[weekly-synthesis-thesis-and-gap-review]]。
 - 当前新增自动化反模式：[[automated-brief-as-truth-without-review]]，避免 scheduled brief 或 weekly synthesis 绕过 review gate。
 - 当前新增入库决策：[[2026-05-27-codex-mediated-ingest-and-review-gate]]。默认所有自动捕获只进入 raw/inbox 或 source raw 目录；用户点名“提炼这篇/分析这个链接/马上入库”时走 immediate 模式，由 Codex 保留 raw 后生成候选并 review 晋级。
+- 当前新增 UX/实现原则决策：[[2026-05-27-karpathy-simple-verified-strict-ux-principle]]。独立 gpt-5.5 xhigh subagent 评审结论是“有条件强”：能力上限可超过单个参考库，但默认体验必须 Karpathy-simple，严格 verified/action 层必须藏在后台。
+- 当前新增主骨架决策：[[2026-05-27-karpathy-spine-modular-extensions]]。正式确认 Karpathy-style LLM Wiki 是默认操作骨架和开源入口；verified-action 是内部严格内核；llm-wiki-compiler、OpenKB、obsidian-second-brain、gbrain、retrieval/viewer/API 都是模块枝叶。
 - JARVIS inside Obsidian 文章已作为内容创作者工作流参考入库：它比较基础，不是 verified knowledge architecture；可用点主要是 type-based capture、Claude Code skills 示例、published performance feedback loop。当前只新增 [[published-performance-feedback-loop]]，其余归并到已有 [[skills-as-action-modules]] 和 [[source-to-publish-content-pipeline]]。
 - 项目关系图需求已收束为 [[project-crosslink-graph-view]]：多个项目之间共享的 pattern、anti-pattern、decision、implementation-note 可以在 viewer/Obsidian workbench 中展示，但图必须从 reviewed `relations` 生成，不能让视觉连接替代可信关系边。
 - 当前新增正向模式：[[review-gated-compile-queue]]、[[claim-level-provenance-source-ranges]]、[[context-pack-evidence-envelope]]、[[static-wiki-health-lint-before-auto-rewrite]]。
