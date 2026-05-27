@@ -783,6 +783,7 @@ wiki/indexes/knowledge-graph-index.md
 - `templates/feedback-event.md` 已创建。
 - `templates/query-run.md` 已创建。
 - `outputs/feedback/README.md` 已创建，定义 feedback JSONL 事件日志目录。
+- `wiki/projects/2026-05-27-memory-tier-and-publishing-pipeline-draft.md` 已创建，作为下一窗口方向草案：冷热分层和 5 步发布工作流一起考虑、分开落地。
 - 已新增 traceability-first / graduated verification 决策：raw/source 先保来源可追溯，严格验证只在晋级和行动依据阶段触发。
 - 已新增 alpha point collision 研究记录和 v0.1 落地规格。
 - 主架构已定为 `Verified Action Knowledge System`。
@@ -791,4 +792,69 @@ wiki/indexes/knowledge-graph-index.md
 - Karpathy LLM Wiki 已作为基础范式纳入。
 - 当前系统是融合设计，各取所长，但主裁决框架已明确。
 - 还没有创建 `CONTEXT_PACK.md` / `LINT_RULES.md` / `AGENT_ACCESS.md` 等后续实现规格文件。
+- 还没有创建 `MEMORY_TIER.md` / `PUBLISHING_PIPELINE.md` / `templates/publish-draft.md`；当前只有方向草案。
 - 还没有真正实现脚本、API、MCP、viewer；当前是架构与知识系统设计阶段。
+
+## 明确未落地清单
+
+下个窗口不要忘记：下面这些只是设计方向或规格，尚未跑通。
+
+```text
+1. 反馈逻辑已设计，但执行层未落地
+   已有:
+     FEEDBACK.md
+     templates/feedback-event.md
+     templates/query-run.md
+     outputs/feedback/README.md
+     wiki/patterns/conversation-derived-feedback-routing.md
+
+   未做:
+     真实 query-run JSONL
+     真实 feedback-event JSONL
+     问题 -> 追问/纠偏 -> 第二次召回改善 的试跑
+     JSONL 聚合权重规则脚本
+     SQLite rebuildable cache
+
+2. 5 步发布工作流未落地
+   已有:
+     source-to-publish-content-pipeline pattern
+     published-performance-feedback-loop pattern
+     products/ 目录
+     memory-tier + publishing-pipeline draft direction
+
+   未做:
+     PUBLISHING_PIPELINE.md
+     templates/publish-draft.md
+     capture -> triage -> theme -> draft -> publish -> feedback 的正式字段
+     发布后评论/指标 -> feedback-event / missing-point 的试跑
+
+3. 冷热分层未正式落地
+   已有:
+     wiki/projects/2026-05-27-memory-tier-and-publishing-pipeline-draft.md
+
+   未做:
+     MEMORY_TIER.md
+     memory_tier / activation_status / last_activated 字段接入 SCHEMA.md
+     hot / warm / cold dashboard 或查询规则
+
+4. point collision 还没有真实试跑
+   已有:
+     REVIEW_QUEUE.md
+     wiki/projects/2026-05-27-alpha-point-collision-validation-v0-1.md
+
+   未做:
+     10-source trial
+     candidate point 抽取
+     collision signal 生成
+     reviewed cluster 晋级样例
+```
+
+最建议的下一步顺序：
+
+```text
+MEMORY_TIER.md
+-> PUBLISHING_PIPELINE.md
+-> templates/publish-draft.md
+-> one query-run + feedback-event trial
+-> 10-source point collision trial
+```

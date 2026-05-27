@@ -184,6 +184,7 @@
 - 当前新增 alpha 落地规格：[[REVIEW_QUEUE]] 和 [[2026-05-27-alpha-point-collision-validation-v0-1]]。核心对象是 source trace、candidate point、collision signal、point cluster；v0.1 只生成 reviewed promotion signals，不自动涨 confidence 或自动晋级 truth。
 - 当前新增反馈校准规格：[[FEEDBACK]]。反馈只调整 usefulness、scope fit 和 activation ranking；truth confidence、verification_status、source reliability 仍必须通过 review/promotion 修改。
 - 当前新增隐式反馈路由模式：[[conversation-derived-feedback-routing]]。连续追问、问题变窄、纠偏、说漏了、换题等对话行为可以反推 route / keyword / scope 信号；v0.1 采用 JSONL append-only 记录 query-run/feedback-event，SQLite 只作为可重建缓存，隐式正反馈默认只在 session 内生效。
+- 当前新增下一阶段方向草案：[[2026-05-27-memory-tier-and-publishing-pipeline-draft]]。判断是“冷热分层”和“从捕获到发布的 5 步工作流”要一起考虑但分开落地：memory_tier 只管激活优先级，workflow_stage 只管输出流程进度。
 - JARVIS inside Obsidian 文章已作为内容创作者工作流参考入库：它比较基础，不是 verified knowledge architecture；可用点主要是 type-based capture、Claude Code skills 示例、published performance feedback loop。当前只新增 [[published-performance-feedback-loop]]，其余归并到已有 [[skills-as-action-modules]] 和 [[source-to-publish-content-pipeline]]。
 - 项目关系图需求已收束为 [[project-crosslink-graph-view]]：多个项目之间共享的 pattern、anti-pattern、decision、implementation-note 可以在 viewer/Obsidian workbench 中展示，但图必须从 reviewed `relations` 生成，不能让视觉连接替代可信关系边。
 - 当前新增正向模式：[[review-gated-compile-queue]]、[[claim-level-provenance-source-ranges]]、[[context-pack-evidence-envelope]]、[[static-wiki-health-lint-before-auto-rewrite]]。
