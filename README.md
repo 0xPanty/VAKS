@@ -15,11 +15,14 @@
 - `raw/`：原始资料区。文章、X 推文、论文、repo、截图、播客转录等先放这里，尽量保留原文和来源。
 - `wiki/`：编译产物区。由 LLM/Codex 把 raw 里的资料整理成 summary、claim、pattern、anti-pattern、decision 和项目知识。
 - `outputs/`：运行输出区。把和 AI 的重要问答、方案推导、健康检查报告落成 Markdown，避免结论死在聊天记录里。
+- `outputs/feedback/`：query-run 和 feedback-event 的 append-only 事件日志区；未来 SQLite 只能作为可重建缓存。
 - `products/`：发布成品区。X、公众号、小红书等面向读者的内容放这里，不和 wiki 混在一起。
 - `templates/`：模板区。用于统一记录库分析、设计模式、阶段洞察、决策记录。
 - `purpose.md`：资料库使命层。说明这个 vault 为什么存在、当前阶段优先级、采用原则和 Agent 使用边界。
 - `ARCHITECTURE_PRINCIPLES.md`：架构原则层。规定主架构、分层职责、参考库吸收边界、采纳裁决和防四不像规则。
 - `SCHEMA.md`：资料库结构契约。定义节点类型、通用字段、验证状态、关系边、晋级流程和自动化边界。
+- `REVIEW_QUEUE.md`：候选审查层。定义 source trace、candidate point、collision signal、point cluster，以及 point collision alpha 机制。
+- `FEEDBACK.md`：反馈校准层。定义 query feedback 如何影响 usefulness、scope fit 和 activation ranking，但不直接改 truth。
 
 当前默认方案：
 
@@ -27,6 +30,9 @@
 - Codex 作为默认 review/write gate，AI 和外部 agent 只能先生成 candidate。
 - Obsidian 作为 IDE、图谱和人工 workbench。
 - 严格字段藏在后台，只在晋级为 claim、pattern、decision、context pack 时启用。
+- 当前 alpha 机制是 point collision：新资料先抽 candidate point，再和旧 point 做 supports / contradicts / refines / replaces 撞击，review 后才影响晋级。
+- 查询反馈只校准激活路径：有用、跑偏、范围错、过期、遗漏；不会直接把用户偏好写成真理。
+- 新增 conversation-derived feedback：从连续追问、问题变窄、纠偏、说漏了、换题等行为反推 route / keyword / scope 信号；默认是弱信号，先 session-local，不直接改 point truth。
 - 暂时不急着上重型 RAG，先跑通 source -> candidate -> reviewed node -> context pack。
 
 最小闭环：
@@ -45,4 +51,4 @@
 - 每条重要设计都应该能回答：来源是什么、解决什么问题、适合哪个项目、关联哪些概念、是否已经采用、采用后怎么验证。
 - 不可行路线、踩坑、反模式也要记录。负面证据同样需要标签、交叉验证、失败条件和替代方案，后续统一设计前要主动查询。
 - 资料库本身要保持可拓展和可演化。以后出现更强的新思路时，先进入采集和验证流程，通过比较、适配、迁移和回退机制再决定是否替换旧方案。
-- 资料库需要可信度治理。资料和重要结论都要记录来源、验证状态、证据等级、置信度和复查时间，避免把未经验证的信息当成确定事实。
+- 资料库需要可信度治理，但不让验证阻碍收集。raw/source 的底线是来源可追溯；验证状态、证据等级、置信度、反例和复查时间主要在 claim、pattern、decision、context pack 晋级或行动使用时补齐。

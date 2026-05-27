@@ -18,6 +18,7 @@ sources:
   - "[[2026-05-27-codex-mediated-ingest-and-review-gate]]"
   - "[[2026-05-27-karpathy-simple-verified-strict-ux-principle]]"
   - "[[2026-05-27-karpathy-spine-modular-extensions]]"
+  - "[[2026-05-27-traceability-first-graduated-verification]]"
 verification_status: active
 evidence_level: synthetic
 confidence: high
@@ -150,7 +151,19 @@ Compiled wiki nodes may summarize, classify, and relate raw material, but they m
 
 LLM output is a candidate, not a formal node.
 
-A claim, pattern, anti-pattern, decision, or implementation note becomes trustworthy only after it has:
+Traceability is the capture baseline. Strict verification is the promotion rule.
+
+Raw sources and review candidates should stay lightweight. They need enough provenance to be inspected later:
+
+```text
+source path or URL
+captured date
+processing status
+source ranges or excerpts when available
+uncertainty or open questions
+```
+
+A claim, pattern, anti-pattern, decision, implementation note, or context pack becomes trustworthy only after it has the fields appropriate to that promotion level:
 
 ```text
 source reference
@@ -160,6 +173,8 @@ confidence
 relations where relevant
 known gaps or negative evidence where relevant
 ```
+
+Do not make ordinary capture feel like decision paperwork. Do not let lightweight capture become action-ready truth without review.
 
 ### 3.4 Search only recalls candidates
 

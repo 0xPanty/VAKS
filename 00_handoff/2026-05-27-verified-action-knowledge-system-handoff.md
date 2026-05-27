@@ -277,6 +277,7 @@ implementation-note
 - `wiki/decisions/2026-05-27-codex-mediated-ingest-and-review-gate.md`
 - `wiki/decisions/2026-05-27-karpathy-simple-verified-strict-ux-principle.md`
 - `wiki/decisions/2026-05-27-karpathy-spine-modular-extensions.md`
+- `wiki/decisions/2026-05-27-traceability-first-graduated-verification.md`
 - `wiki/indexes/knowledge-graph-index.md`
 
 Karpathy / llm-wiki-compiler：
@@ -364,6 +365,103 @@ Verdict: 有条件强。
 4. Schema 分必填底线字段和晋级增强字段；严格字段不要污染普通 capture。
 5. API/MCP/viewer/Skill Factory/vector/PageIndex 都必须可关闭，Markdown 主记录仍可跑通。
 ```
+
+2026-05-27 新增验证纠偏：
+
+```text
+Traceability first.
+Verification only when it matters.
+```
+
+含义：
+
+```text
+raw/source:
+  只要求来源可追溯，不要求填满 evidence/confidence/relations。
+
+candidate:
+  要能审：source refs、source ranges、extracted point、uncertainty。
+
+claim / pattern / anti-pattern:
+  再补 evidence、confidence、negative evidence、gaps、关键 relations。
+
+decision / context pack / implementation-note:
+  才需要 risk、preconditions、rollback、success metric、feedback path。
+```
+
+这个纠偏避免验证系统阻碍 capture。严格验证仍然存在，但只卡晋级和行动依据，不卡普通收集。
+
+配套新增模式：
+
+```text
+wiki/patterns/accumulated-source-cross-validation.md
+REVIEW_QUEUE.md
+FEEDBACK.md
+templates/review-candidate.md
+templates/feedback-event.md
+outputs/qa/2026-05-27-alpha-point-collision-research.md
+wiki/projects/2026-05-27-alpha-point-collision-validation-v0-1.md
+```
+
+含义：
+
+```text
+每条 source 先进来并保留 provenance。
+后续相似内容越来越多时，再通过 supports / contradicts / refines / replaces 形成交叉验证。
+库越厚，越能发现重复观点、冲突观点、同源搬运和稳定模式。
+重复出现只是晋级信号，不自动等于 truth。
+```
+
+Alpha v0.1 已收束为：
+
+```text
+provenance-first
+-> candidate point
+-> point collision signal
+-> point cluster
+-> reviewed promotion
+```
+
+核心对象：
+
+```text
+source trace
+candidate point
+collision signal
+point cluster
+```
+
+硬边界：
+
+```text
+不能因为相似就自动 cross-checked。
+不能把同源复制算独立支持。
+不能把 AI summary 算独立来源。
+不能自动涨 confidence。
+不能自动晋级 claim / pattern / decision。
+```
+
+反馈校准规则已新增：
+
+```text
+FEEDBACK.md
+templates/feedback-event.md
+```
+
+核心边界：
+
+```text
+truth confidence:
+  观点真不真，只能通过 review/promotion 改。
+
+usefulness:
+  这条知识对某类问题有没有帮助，可以由反馈调排序。
+
+scope fit:
+  这条知识适不适合当前项目/版本/场景，可以由反馈收窄。
+```
+
+用户反馈不能直接改 truth，不能隐藏反证，不能自动晋级。反馈只校准 activation path，并生成 review work。
 
 当前最终路线已确认：
 
@@ -458,6 +556,113 @@ Review 目录：
 
 ## 当前不要做什么
 
+## 本轮新增 alpha：conversation-derived feedback routing
+
+本轮核心发现：
+
+```text
+用户的连续对话本身可以成为反馈。
+但它只能校准 retrieval / activation route，不能改 truth。
+```
+
+用户提出的关键洞察：
+
+```text
+如果继续沿着同一条线聊，说明这条线路可能有用。
+如果追问更具体，说明需要生成更细的需求关键词和子通道。
+如果说跑偏、不是这个意思、漏了某点，说明要修正 route / scope / missing signal。
+如果没有继续追问，不能自动脑补为满意或不满意。
+```
+
+最终收敛设计：
+
+```text
+conversation-derived feedback
+= 低置信度 route / keyword / scope 信号
+!= truth signal
+!= 自动训练模型
+!= 自动修改 verified node
+```
+
+落地存储规则：
+
+```text
+Markdown:
+  人能读的知识主资料。
+
+JSONL:
+  append-only 记录 query-run / feedback-event，是事件真相。
+
+SQLite:
+  未来可选，只做可删除、可重建的索引缓存。
+```
+
+信号规则：
+
+```text
+明确说有用:
+  强正反馈，可持久化为 usefulness / route boost。
+
+继续沿同线追问:
+  弱正反馈，默认只在当前 session 内加权。
+
+追问更具体:
+  生成或增强 route / keyword / channel。
+
+说跑偏 / 不是这个意思:
+  降 route / scope fit，不降 truth confidence。
+
+说漏了:
+  生成 missing-point / missing-route candidate。
+
+换题:
+  关闭上一条 route，不写持久反馈。
+
+没有继续追问:
+  neutral / unknown，不更新权重。
+```
+
+必须守住的边界：
+
+```text
+feedback can adjust:
+  usefulness
+  scope fit
+  activation ranking
+  route / keyword boost
+
+feedback cannot adjust:
+  truth confidence
+  verification_status
+  source reliability
+  decision outcome
+```
+
+这条设计和 point collision 互补：
+
+```text
+point collision:
+  让知识本身越积累越能交叉验证。
+
+conversation-derived feedback routing:
+  让查询路径越使用越懂用户真实需求。
+```
+
+外部调研结论：
+
+```text
+外部有关键零件：
+  implicit feedback
+  query reformulation / session search
+  learning-to-rank bias warnings
+  trace feedback
+  RAG feedback
+
+但没有看到完整等于本系统的闭环。
+本系统的 alpha 是把这些零件收束到 verified-action knowledge system：
+  反馈只调路线，不改真理。
+```
+
 不要再回到旧问题：
 
 ```text
@@ -473,30 +678,36 @@ Review 目录：
 
 ## 当前下一步建议
 
-不急着继续盲看新库。优先把已确认架构收束为可实现规格：
+`IMPLEMENTATION_BLUEPRINT.md`、`REVIEW_QUEUE.md`、`FEEDBACK.md` 已创建。下一步不要继续加重验证，而是跑第一个 10-source point collision + conversation-derived feedback trial：
 
 ```text
-1. IMPLEMENTATION_BLUEPRINT.md
-   从 Markdown-only 到 compiler/API/viewer 的阶段路线。
+1. 选择 10 条真实 source。
+   从每条 source 抽 2-8 个 candidate point。
 
-2. REVIEW_QUEUE.md
-   candidate 文件结构、approve/reject/archive 流程。
+2. 生成 collision signal。
+   supports / contradicts / refines / replaces / duplicates / near_miss。
 
-3. CONTEXT_PACK.md
+3. Review collision signal。
+   只把 reviewed signal 用作晋级信号。
+
+4. CONTEXT_PACK.md
    answer/decision/implementation/Misa memory pack 的 JSON contract。
 
-4. LINT_RULES.md
-   schema/provenance/relation/decision/actionability/agent-access lint。
+5. LINT_RULES.md
+   traceability/provenance/promotion/actionability/agent-access lint。
 
-5. AGENT_ACCESS.md
+6. AGENT_ACCESS.md
    Misa/gbrain/Codex/user 的权限层与工具边界。
+
+7. query-run / feedback-event 试跑
+   用一次真实追问或纠偏，生成 conversation-derived feedback event。
 ```
 
 建议顺序：
 
 ```text
-IMPLEMENTATION_BLUEPRINT.md
--> REVIEW_QUEUE.md
+10-source point collision trial
+-> one query-run + feedback-event trial
 -> CONTEXT_PACK.md
 -> LINT_RULES.md
 -> AGENT_ACCESS.md
@@ -521,20 +732,29 @@ wiki/decisions/2026-05-27-implementation-includes-llm-wiki-stack.md
 wiki/decisions/2026-05-27-codex-mediated-ingest-and-review-gate.md
 wiki/decisions/2026-05-27-karpathy-simple-verified-strict-ux-principle.md
 wiki/decisions/2026-05-27-karpathy-spine-modular-extensions.md
+wiki/decisions/2026-05-27-traceability-first-graduated-verification.md
 wiki/decisions/2026-05-26-architecture-layering-v0-1.md
+IMPLEMENTATION_BLUEPRINT.md
+REVIEW_QUEUE.md
+FEEDBACK.md
 wiki/projects/2026-05-27-llm-wiki-compiler-implementation-extraction.md
+wiki/projects/2026-05-27-alpha-point-collision-validation-v0-1.md
 wiki/summaries/2026-05-27-openkb-architecture-review.md
 wiki/summaries/2026-05-27-automated-vault-feedback-loop-review.md
 wiki/summaries/2026-05-27-jarvis-content-vault-review.md
+wiki/patterns/accumulated-source-cross-validation.md
+wiki/patterns/conversation-derived-feedback-routing.md
 wiki/patterns/published-performance-feedback-loop.md
 wiki/patterns/project-crosslink-graph-view.md
+outputs/qa/2026-05-27-alpha-point-collision-research.md
+outputs/qa/2026-05-27-conversation-derived-feedback-routing-research.md
 wiki/indexes/knowledge-graph-index.md
 ```
 
 如果要继续实现蓝图，优先创建：
 
 ```text
-IMPLEMENTATION_BLUEPRINT.md
+10-source point collision trial + one query-run / feedback-event trial
 ```
 
 `ARCHITECTURE_PRINCIPLES.md` 已创建，并已明确：
@@ -554,10 +774,21 @@ IMPLEMENTATION_BLUEPRINT.md
 
 - `SCHEMA.md v0.1` 已创建。
 - `ARCHITECTURE_PRINCIPLES.md v0.1` 已创建。
+- `IMPLEMENTATION_BLUEPRINT.md v0.1` 已创建。
+- `REVIEW_QUEUE.md v0.1` 已创建。
+- `FEEDBACK.md v0.1` 已创建。
+- `wiki/patterns/conversation-derived-feedback-routing.md` 已创建，定义从连续对话反推低置信度 route / keyword / scope 信号。
+- `outputs/qa/2026-05-27-conversation-derived-feedback-routing-research.md` 已创建，记录外部 implicit feedback / session search / RAG feedback 调研结论。
+- `templates/review-candidate.md` 已创建。
+- `templates/feedback-event.md` 已创建。
+- `templates/query-run.md` 已创建。
+- `outputs/feedback/README.md` 已创建，定义 feedback JSONL 事件日志目录。
+- 已新增 traceability-first / graduated verification 决策：raw/source 先保来源可追溯，严格验证只在晋级和行动依据阶段触发。
+- 已新增 alpha point collision 研究记录和 v0.1 落地规格。
 - 主架构已定为 `Verified Action Knowledge System`。
 - `llm-wiki-compiler` 已完成高层和源码级第一轮提取。
 - OpenKB 已完成 README 和源码级第一轮提取，定位为模块级实现参考。
 - Karpathy LLM Wiki 已作为基础范式纳入。
 - 当前系统是融合设计，各取所长，但主裁决框架已明确。
-- 还没有创建 `IMPLEMENTATION_BLUEPRINT.md` / `CONTEXT_PACK.md` 等最终实现规格文件。
+- 还没有创建 `CONTEXT_PACK.md` / `LINT_RULES.md` / `AGENT_ACCESS.md` 等后续实现规格文件。
 - 还没有真正实现脚本、API、MCP、viewer；当前是架构与知识系统设计阶段。

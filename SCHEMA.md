@@ -14,6 +14,7 @@ sources:
   - "[[source-verification-and-trust-model]]"
   - "[[semantic-relation-edge-schema]]"
   - "[[2026-05-27-codex-mediated-ingest-and-review-gate]]"
+  - "[[2026-05-27-traceability-first-graduated-verification]]"
 verification_status: active
 evidence_level: synthetic
 confidence: high
@@ -66,6 +67,103 @@ v0.1 阶段允许 AI 辅助生成节点，但必须写入 Markdown/YAML，并接
 
 注意：这是阶段边界，不是最终能力边界。后续可以实现完整 ingest/query/lint/context/API/viewer 栈；限制只在于这些运行时能力不能绕过 review 和 verified truth layer。
 
+### 1.5 Traceability-first, graduated verification
+
+v0.1 的默认规则改为：
+
+```text
+先保证来源可追溯。
+再按晋级等级增加验证。
+```
+
+Raw capture 和 source record 不需要一开始填满 evidence、confidence、relations、rollback、feedback 等字段。它们的底线是：
+
+```text
+原始内容在哪里
+什么时候收录
+为什么收录
+谁/什么流程收录
+后续处理状态是什么
+```
+
+严格验证只在内容晋级或被用于行动时触发：
+
+```text
+candidate:
+  需要 source refs / source ranges / extracted point / uncertainty。
+
+claim / pattern / anti-pattern:
+  需要 evidence、confidence、negative evidence、gaps、关键 relations。
+
+decision / implementation-note / context pack:
+  需要 risk、preconditions、rollback、success metric、feedback path。
+```
+
+原则：验证不能阻碍 capture。验证应该阻止未经审查的内容变成正式结论或行动依据。
+
+这也意味着验证可以积累完成，而不是单条资料当场完成。只要每条 source 和 candidate 保留清楚来源，后续相似内容就可以形成：
+
+```text
+supports
+contradicts
+refines
+replaces
+```
+
+这些跨来源信号可以帮助 claim、pattern、decision 晋级。重复出现不是自动真理，但它是比单条当场判断更便宜、更自然的验证入口。
+
+v0.1 的具体承载位置见 `REVIEW_QUEUE.md`：
+
+```text
+source trace
+candidate point
+collision signal
+point cluster
+```
+
+这些是 review queue 记录，不是新的 truth node 类型。正式 truth node 仍然是 source、summary、claim、pattern、anti-pattern、decision、qa、implementation-note。
+
+查询后的反馈见 `FEEDBACK.md`。反馈字段不直接改变 truth：
+
+```text
+truth confidence:
+  只能通过 review/promotion 修改。
+
+usefulness:
+  可以由用户反馈影响下次排序。
+
+scope fit:
+  可以由用户反馈收窄适用范围。
+```
+
+反馈记录和 query-run 是 operation records，不是 formal truth nodes。
+
+```text
+explicit feedback:
+  用户直接纠正、确认、指出遗漏或范围错误。
+
+conversation-derived feedback:
+  从连续追问、问题变窄、纠偏、换题等行为中推断的弱信号。
+```
+
+它们只能影响：
+
+```text
+usefulness
+scope fit
+activation ranking
+route / keyword boost
+```
+
+它们不能影响：
+
+```text
+truth confidence
+verification_status
+source reliability
+decision outcome
+```
+
 ## 2. 节点类型
 
 `type` 是每个节点的第一身份。v0.1 的核心节点类型如下。
@@ -85,7 +183,7 @@ v0.1 阶段允许 AI 辅助生成节点，但必须写入 Markdown/YAML，并接
 
 ## 3. 通用字段
 
-所有核心节点都应尽量包含以下字段。v0.1 阶段允许历史文件缺字段，但新文件应按本表创建。
+以下是正式知识节点的通用字段。v0.1 采用分级要求：raw/source capture 只要求 provenance 底线；candidate 要求可审；claim、pattern、decision、context pack 才要求完整验证字段。
 
 ```yaml
 type:
@@ -112,12 +210,12 @@ relations: []
 | `updated` | 是 | 文件最后主动更新日期，格式 `YYYY-MM-DD`。 |
 | `tags` | 建议 | Obsidian/Bases 过滤用标签，不作为 truth source。 |
 | `sources` | 建议 | 支撑本节点的来源列表，可为 wiki link、URL 或 source record。 |
-| `verification_status` | 是 | 该节点当前验证状态。 |
-| `evidence_level` | 是 | 当前证据等级。 |
-| `confidence` | 是 | 对当前结论的置信度。 |
+| `verification_status` | 晋级时 | 该节点当前验证状态。raw/source 可默认为 `unverified`，不阻塞 capture。 |
+| `evidence_level` | 晋级时 | 当前证据等级。raw/source 可留空或写 `unknown`。 |
+| `confidence` | 晋级时 | 对当前结论的置信度。raw/source 和普通 candidate 不强制。 |
 | `last_verified` | 建议 | 最近一次人工/AI 复核日期。 |
 | `next_review` | 建议 | 下一次应复查日期。 |
-| `relations` | 是 | 语义关系边列表。没有关系时写 `[]`。 |
+| `relations` | 晋级时 | 语义关系边列表。raw/source 可先写 `[]`，强关系只在晋级时补齐。 |
 
 ### 3.2 Status 枚举
 
@@ -374,7 +472,7 @@ relations:
 
 ### 6.1 Source
 
-最小 frontmatter：
+最小 frontmatter。Source 的重点是 provenance，不是验证结论：
 
 ```yaml
 type: source
@@ -382,43 +480,45 @@ status: source-captured
 title:
 source_url:
 source_type:
-author:
-publisher:
-published_at:
 captured_at:
 captured_by:
+raw_location:
 processing_mode: inbox | immediate
 review_priority: normal
 review_owner: Codex
 formalization_status: raw-only
 topics:
 projects:
-sources:
 verification_status: unverified
-evidence_level: secondary
-source_quality:
-freshness:
-relevance:
-confidence:
-cross_source_count: 1
-last_verified:
-next_review:
 relations: []
 tags:
 ```
 
-正文必须包含：
+可选字段：
+
+```yaml
+author:
+publisher:
+published_at:
+source_quality:
+freshness:
+relevance:
+confidence:
+cross_source_count:
+last_verified:
+next_review:
+```
+
+正文建议包含：
 
 - 为什么收录
-- 核心内容
 - 来源信息
-- 已验证内容
-- 未验证内容
-- 冲突或疑点
-- 可复用点
+- 原始内容位置或摘录范围
+- 初步看点
+- 明显疑点
 - 下一步
 
-Source 允许低摩擦写入，但只能先成为 raw evidence。`processing_mode` 决定处理节奏，不决定可信度。
+Source 允许低摩擦写入。只要来源可追溯，就可以先成为 raw evidence。`processing_mode` 决定处理节奏，不决定可信度。
 
 ```text
 inbox      = 普通自动捕获，先进入 raw/inbox 或对应 raw 目录，等待批处理。
@@ -693,7 +793,7 @@ formalization_status: raw-only | candidate-generated | reviewed | promoted | rej
 - `immediate` 只在用户明确点名时使用，例如“提炼这篇”“分析这个链接”“马上整理”“把这篇入库”。
 - `immediate` 也必须先保存 raw source，再由 Codex 生成 summary / claim / pattern / anti-pattern / decision 候选。
 - daily brief 和 weekly synthesis 只能写入 `outputs/review/` 或 `outputs/qa/`，不能直接写入 formal wiki truth layer。
-- 候选内容只有经过 Codex/用户 review，并补齐来源、证据、置信度、关系边和缺口后，才能晋级为正式节点。
+- 候选内容只有经过 Codex/用户 review，并按晋级等级补齐必要字段后，才能成为正式节点。source/candidate 只要求可追溯；claim/pattern/decision/context pack 才要求更严格的 evidence、confidence、negative evidence、relations、risk 或 rollback。
 
 ### 7.3 晋级门槛
 
@@ -806,7 +906,7 @@ Review 队列不是 truth layer。候选内容只有在通过 Codex/用户复核
 
 ### 9.1 必查项
 
-- 缺 `type`、`status`、`created`、`sources`、`verification_status`、`evidence_level`、`confidence`。
+- 按节点等级缺少必填字段：raw/source 缺 provenance，candidate 缺 source refs，promoted node 缺 verification/action fields。
 - claim 没有 source。
 - pattern 没有反例或失败条件。
 - decision 没有 negative_evidence、migration_path 或 rollback_path。

@@ -5,12 +5,16 @@
 - [[SCHEMA]]
 - [[purpose]]
 - [[ARCHITECTURE_PRINCIPLES]]
+- [[IMPLEMENTATION_BLUEPRINT]]
+- [[REVIEW_QUEUE]]
+- [[FEEDBACK]]
 - [[2026-05-26-architecture-layering-v0-1]]
 - [[2026-05-27-implementation-includes-llm-wiki-stack]]
 - [[2026-05-27-quality-bar-extensible-verified-action-knowledge-system]]
 - [[2026-05-27-codex-mediated-ingest-and-review-gate]]
 - [[2026-05-27-karpathy-simple-verified-strict-ux-principle]]
 - [[2026-05-27-karpathy-spine-modular-extensions]]
+- [[2026-05-27-traceability-first-graduated-verification]]
 
 ## 当前核心概念
 
@@ -101,6 +105,9 @@
 - [[2026-05-27-jarvis-content-vault-review]]
 - [[published-performance-feedback-loop]]
 - [[project-crosslink-graph-view]]
+- [[accumulated-source-cross-validation]]
+- [[2026-05-27-alpha-point-collision-validation-v0-1]]
+- [[2026-05-27-alpha-point-collision-research]]
 
 ## 当前节点类型
 
@@ -171,6 +178,12 @@
 - 当前新增入库决策：[[2026-05-27-codex-mediated-ingest-and-review-gate]]。默认所有自动捕获只进入 raw/inbox 或 source raw 目录；用户点名“提炼这篇/分析这个链接/马上入库”时走 immediate 模式，由 Codex 保留 raw 后生成候选并 review 晋级。
 - 当前新增 UX/实现原则决策：[[2026-05-27-karpathy-simple-verified-strict-ux-principle]]。独立 gpt-5.5 xhigh subagent 评审结论是“有条件强”：能力上限可超过单个参考库，但默认体验必须 Karpathy-simple，严格 verified/action 层必须藏在后台。
 - 当前新增主骨架决策：[[2026-05-27-karpathy-spine-modular-extensions]]。正式确认 Karpathy-style LLM Wiki 是默认操作骨架和开源入口；verified-action 是内部严格内核；llm-wiki-compiler、OpenKB、obsidian-second-brain、gbrain、retrieval/viewer/API 都是模块枝叶。
+- 当前新增实现蓝图：[[IMPLEMENTATION_BLUEPRINT]]。第一版实现顺序是先证明一条 source -> candidate -> lint/review -> verified node -> context pack -> feedback 的窄闭环，再扩展 review queue、lint、context pack、compiler、query、API/MCP/viewer 和 feedback automation。
+- 当前新增验证纠偏决策：[[2026-05-27-traceability-first-graduated-verification]]。raw/source 以来源可追溯为底线，不要求一开始填满 evidence/confidence/relations；严格验证只在 claim、pattern、decision、implementation-note、context pack 晋级或行动使用时触发。
+- 当前新增积累式验证模式：[[accumulated-source-cross-validation]]。资料进入时先保留 provenance，后续相似内容通过 supports / contradicts / refines / replaces 形成交叉验证信号，降低每条 source 单独重验的成本；重复出现只是晋级信号，不自动等于 truth。
+- 当前新增 alpha 落地规格：[[REVIEW_QUEUE]] 和 [[2026-05-27-alpha-point-collision-validation-v0-1]]。核心对象是 source trace、candidate point、collision signal、point cluster；v0.1 只生成 reviewed promotion signals，不自动涨 confidence 或自动晋级 truth。
+- 当前新增反馈校准规格：[[FEEDBACK]]。反馈只调整 usefulness、scope fit 和 activation ranking；truth confidence、verification_status、source reliability 仍必须通过 review/promotion 修改。
+- 当前新增隐式反馈路由模式：[[conversation-derived-feedback-routing]]。连续追问、问题变窄、纠偏、说漏了、换题等对话行为可以反推 route / keyword / scope 信号；v0.1 采用 JSONL append-only 记录 query-run/feedback-event，SQLite 只作为可重建缓存，隐式正反馈默认只在 session 内生效。
 - JARVIS inside Obsidian 文章已作为内容创作者工作流参考入库：它比较基础，不是 verified knowledge architecture；可用点主要是 type-based capture、Claude Code skills 示例、published performance feedback loop。当前只新增 [[published-performance-feedback-loop]]，其余归并到已有 [[skills-as-action-modules]] 和 [[source-to-publish-content-pipeline]]。
 - 项目关系图需求已收束为 [[project-crosslink-graph-view]]：多个项目之间共享的 pattern、anti-pattern、decision、implementation-note 可以在 viewer/Obsidian workbench 中展示，但图必须从 reviewed `relations` 生成，不能让视觉连接替代可信关系边。
 - 当前新增正向模式：[[review-gated-compile-queue]]、[[claim-level-provenance-source-ranges]]、[[context-pack-evidence-envelope]]、[[static-wiki-health-lint-before-auto-rewrite]]。
