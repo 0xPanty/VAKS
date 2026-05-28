@@ -108,7 +108,7 @@ supports / contradicts / refines / replaces / no-clear-value
 ```yaml
 relations:
   - target: "[[node-name]]"
-    type: supports | contradicts | refines | replaces | applies_to | derived_from | risk_of | alternative_to
+    type: supports | contradicts | refines | risk_of | derived_from
     strength: 1-5
     confidence: low | medium | high
     evidence:

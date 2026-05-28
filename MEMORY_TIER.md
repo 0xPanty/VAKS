@@ -2,7 +2,7 @@
 type: implementation-note
 status: draft
 created: 2026-05-27
-updated: 2026-05-27
+updated: 2026-05-28
 project: verified-action-knowledge-system
 related_files:
   - "[[SCHEMA]]"
@@ -22,7 +22,7 @@ related_files:
 verification_status: draft
 evidence_level: synthetic
 confidence: medium
-last_verified: 2026-05-27
+last_verified: 2026-05-28
 next_review: 2026-06-03
 tags:
   - memory-tier
@@ -36,6 +36,9 @@ tags:
 ## AI-readable preamble
 
 Memory tier is an activation layer, not a truth layer.
+
+Publicly, this can be explained as Activation Tier:
+hot / warm / cold describe what to read first for a scope, not what is more true.
 
 It tells a human or agent what to read first, what to keep nearby, and what to leave in the archive unless needed.
 
@@ -424,7 +427,7 @@ Reason:
 
 ```text
 PARA is useful for actionability routing.
-It is not a verified truth schema.
+It is not a reviewed knowledge schema.
 ```
 
 Do not mark everything relevant as hot.

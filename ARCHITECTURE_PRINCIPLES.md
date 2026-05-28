@@ -2,7 +2,7 @@
 type: decision
 status: active
 created: 2026-05-27
-updated: 2026-05-27
+updated: 2026-05-28
 tags:
   - architecture-principles
   - verified-knowledge-system
@@ -22,36 +22,36 @@ sources:
 verification_status: active
 evidence_level: synthetic
 confidence: high
-last_verified: 2026-05-27
+last_verified: 2026-05-28
 next_review: 2026-06-03
 relations:
   - target: "[[SCHEMA]]"
-    type: constrains
+    type: refines
     strength: 5
     confidence: high
     evidence:
       - "[[ARCHITECTURE_PRINCIPLES]]"
     rationale: "Architecture principles define how SCHEMA is used by runtime modules, agents, retrieval, and future extensions."
     created: 2026-05-27
-    last_verified: 2026-05-27
+    last_verified: 2026-05-28
   - target: "[[2026-05-27-quality-bar-extensible-verified-action-knowledge-system]]"
-    type: implements
+    type: refines
     strength: 5
     confidence: high
     evidence:
       - "[[ARCHITECTURE_PRINCIPLES]]"
     rationale: "This file turns the quality bar into concrete adoption and extension rules."
     created: 2026-05-27
-    last_verified: 2026-05-27
+    last_verified: 2026-05-28
   - target: "[[2026-05-27-implementation-includes-llm-wiki-stack]]"
-    type: constrains
+    type: refines
     strength: 5
     confidence: high
     evidence:
       - "[[ARCHITECTURE_PRINCIPLES]]"
-    rationale: "LLM Wiki stack capabilities are included, but must remain subordinate to verified truth and action-basis contracts."
+    rationale: "LLM Wiki stack capabilities are included, but must remain subordinate to reviewed knowledge and action-basis contracts."
     created: 2026-05-27
-    last_verified: 2026-05-27
+    last_verified: 2026-05-28
 ---
 
 # ARCHITECTURE_PRINCIPLES.md v0.1
@@ -62,7 +62,7 @@ This vault is a Verified Action Knowledge System.
 
 Do not treat it as a generic Obsidian vault, a generic LLM Wiki, a RAG store, or an agent memory dump.
 
-The system of record is Markdown with structured metadata. Search, vector stores, graph scores, APIs, MCP tools, viewers, and agents are runtime surfaces. They may help find or present knowledge, but they cannot create truth without review.
+The system of record is Markdown with structured metadata. Search, vector stores, graph scores, APIs, MCP tools, viewers, and agents are runtime surfaces. They may help find or present knowledge, but they cannot create reviewed knowledge without review.
 
 The main flow is:
 
@@ -70,12 +70,12 @@ The main flow is:
 raw source
 -> ingest / compiler
 -> review candidate
--> verified knowledge graph
+-> reviewed knowledge graph
 -> decision / action basis
 -> context pack / API / viewer
 -> human / agent action
 -> feedback timeline
--> updated confidence / gaps / next review
+-> updated usefulness / gaps / next review / confidence review candidate
 ```
 
 The purpose is not only to know. The purpose is to know with evidence, decide with context, act with risk awareness, and learn from the result.
@@ -139,21 +139,21 @@ External designs are inputs, not masters.
 
 | Reference | Role in this system | Boundary |
 |---|---|---|
-| Karpathy LLM Wiki | Main operating spine and default UX: `raw/`, `wiki/`, `index.md`, `log.md`, ingest, query, lint. | It does not define verified truth or action readiness by itself. |
+| Karpathy LLM Wiki | Main operating spine and default UX: `raw/`, `wiki/`, `index.md`, `log.md`, ingest, query, lint. | It does not define reviewed knowledge or action readiness by itself. |
 | `atomicstrata/llm-wiki-compiler` | Engineering module reference for ingest, compile, review queue, provenance, lint, context pack, MCP, viewer. | Its generic page schema does not replace source/summary/claim/pattern/anti-pattern/decision. |
-| OpenKB | Module reference for long-document tree indexing, wiki/generator layering, Skill Factory, path-scoped agent writes, and ghost-link lint. | Its auto-compiled generic concept wiki does not replace the verified truth layer or main spine. |
+| OpenKB | Module reference for long-document tree indexing, wiki/generator layering, Skill Factory, path-scoped agent writes, and ghost-link lint. | Its auto-compiled generic concept wiki does not replace the reviewed knowledge layer or main spine. |
 | gbrain | Epistemic inspiration: fact, take, hypothesis, bet, decision, holder, timeline, gaps. | Do not fork its full runtime before this vault's contracts are stable. |
-| obsidian-second-brain | Agentic vault operations: AI-readable preamble, propagation rules, context loading, health checks. | No background rewrite or automatic conflict裁决 in the truth layer. |
+| obsidian-second-brain | Agentic vault operations: AI-readable preamble, propagation rules, context loading, health checks. | No background rewrite or automatic conflict裁决 in the reviewed knowledge layer. |
 | Dusk-style vault workbench | Scope dashboard, task mailbox, and closeout surfaces for project work. | Workbench views do not decide truth or replace dev context packs. |
 | Obsidian Bases / Base Hub | Workbench and review views over structured Markdown. | Views do not define truth. They display and filter records. |
 | BM25 / vector / QMD / Zilliz / GraphRAG | Candidate retrieval and ranking. | Retrieval is not verification. |
-| Misa / gbrain / external agents | Read-only or suggest-only consumers and candidate proposers. | They do not directly write formal truth without review. |
+| Misa / gbrain / external agents | Read-only or suggest-only consumers and candidate proposers. | They do not directly write formal reviewed knowledge without review. |
 
 ## 3. Non-negotiable principles
 
 ### 3.1 Markdown is the system of record
 
-The durable truth layer lives in Markdown/YAML files.
+The durable reviewed knowledge layer lives in Markdown/YAML files.
 
 Runtime indexes, vector stores, API responses, dashboards, graph views, and generated context packs are derived artifacts. If they disagree with the Markdown record, Markdown wins until a reviewed update changes it.
 
@@ -253,7 +253,7 @@ Not every summary needs this. Any node used as an action basis does.
 
 ### 3.7 Extension happens through contracts
 
-The system must be able to absorb future ideas without rewriting the truth layer.
+The system must be able to absorb future ideas without rewriting the reviewed knowledge layer.
 
 New modules should plug into one of these extension points:
 
@@ -291,15 +291,15 @@ If a feature cannot fail gracefully, it is not allowed to hold core truth.
 | Layer | Responsibility | Not responsible for |
 |---|---|---|
 | Raw source layer | Preserve original sources and provenance. | Deciding truth or action. |
-| Ingest / compiler layer | Convert raw material into candidates. | Directly writing verified truth. |
+| Ingest / compiler layer | Convert raw material into candidates. | Directly writing reviewed knowledge. |
 | Review candidate layer | Hold AI/Codex/Misa generated candidates for approve/reject/edit. | Being a permanent dumping ground. |
-| Verified knowledge graph layer | Store source, summary, claim, pattern, anti-pattern, decision, qa, implementation-note. | UI, search ranking, or agent autonomy. |
+| Reviewed knowledge graph layer | Store source, summary, claim, pattern, anti-pattern, decision, qa, implementation-note. | UI, search ranking, or agent autonomy. |
 | Relation / health layer | Track typed relations, evidence, graph health, contradictions, orphaned nodes. | Replacing human review. |
 | Retrieval layer | Recall likely relevant records and source windows. | Verification or final裁决. |
 | Context pack / API layer | Package relevant evidence, warnings, gaps, and actionability for humans or agents. | Inventing unrecorded truths. |
 | Agent access layer | Control read-only, suggest-only, reviewed-write, owner-final boundaries. | Unlimited write access. |
-| Decision / action basis layer | Convert verified knowledge into risk-aware action guidance. | Acting without owner or workflow context. |
-| Feedback timeline layer | Record outcomes and update confidence, gaps, and next_review. | Rewriting history silently. |
+| Decision / action basis layer | Convert reviewed knowledge into risk-aware action guidance. | Acting without owner or workflow context. |
+| Feedback timeline layer | Record outcomes, usefulness, scope fit, gaps, and next_review; create confidence review candidates when needed. | Rewriting history or truth confidence silently. |
 | Viewer / Obsidian workbench layer | Display, filter, review, and operate on structured records. | Defining schema or truth. |
 
 ## 5. Adoption gates for new ideas
@@ -311,9 +311,9 @@ Before any new repo, plugin, workflow, retrieval system, UI, API, or agent featu
 2. What real pain does it solve?
 3. Does it improve verified knowledge, action basis, or extensibility?
 4. Can it output or consume existing Markdown contracts?
-5. Can it fail without damaging the truth layer?
+5. Can it fail without damaging the reviewed knowledge layer?
 6. Does it bypass review gates?
-7. Does it confuse candidate retrieval with verified truth?
+7. Does it confuse candidate retrieval with reviewed knowledge?
 8. What is the smallest useful version?
 9. What evidence would prove it is worth keeping?
 10. What would make us remove or replace it?
@@ -357,7 +357,7 @@ If two references conflict, resolve by this order:
 6. tool convenience
 ```
 
-Tool convenience loses to verified truth.
+Tool convenience loses to reviewed knowledge.
 
 ## 7. Agent operating principles
 
@@ -538,7 +538,7 @@ The system should grow in this order:
 10. feedback automation
 ```
 
-This order is not about being small. It is about making sure runtime power has a stable truth layer underneath it.
+This order is not about being small. It is about making sure runtime power has a stable reviewed knowledge layer underneath it.
 
 ## 15. Current v0.1 conclusion
 

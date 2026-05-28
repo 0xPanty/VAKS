@@ -2,7 +2,7 @@
 type: implementation-note
 status: draft
 created: 2026-05-27
-updated: 2026-05-27
+updated: 2026-05-28
 project: verified-action-knowledge-system
 related_files:
   - "[[MEMORY_TIER]]"
@@ -28,7 +28,7 @@ related_files:
 verification_status: draft
 evidence_level: synthetic
 confidence: medium
-last_verified: 2026-05-27
+last_verified: 2026-05-28
 next_review: 2026-06-03
 tags:
   - dev-context
@@ -45,7 +45,7 @@ Dev context is a temporary development-mode working set.
 
 It is created after broad discovery and before implementation. It tells the agent which files are on the desk, which files are supporting references, which risks must be checked, and which sources remain in the archive.
 
-It is not a permanent truth layer and does not replace `MEMORY_TIER.md`.
+It is not a permanent reviewed knowledge layer and does not replace `MEMORY_TIER.md`.
 
 ## 1. Core Judgment
 

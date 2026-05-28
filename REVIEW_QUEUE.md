@@ -2,7 +2,7 @@
 type: implementation-note
 status: active
 created: 2026-05-27
-updated: 2026-05-27
+updated: 2026-05-28
 project: verified-action-knowledge-system
 related_decisions:
   - "[[2026-05-27-traceability-first-graduated-verification]]"
@@ -21,27 +21,27 @@ validated_by:
   - "external source comparison"
 rollback_path:
   - "If point collision creates noise, keep source/candidate records and disable collision promotion until manual review rules improve."
-last_verified: 2026-05-27
+last_verified: 2026-05-28
 next_review: 2026-06-03
 relations:
   - target: "[[IMPLEMENTATION_BLUEPRINT]]"
-    type: implements
+    type: refines
     strength: 5
     confidence: high
     evidence:
       - "[[REVIEW_QUEUE]]"
     rationale: "This file defines the first concrete review queue contract required by the implementation blueprint."
     created: 2026-05-27
-    last_verified: 2026-05-27
+    last_verified: 2026-05-28
   - target: "[[accumulated-source-cross-validation]]"
-    type: implements
+    type: refines
     strength: 5
     confidence: high
     evidence:
       - "[[REVIEW_QUEUE]]"
     rationale: "The queue introduces candidate points, collision signals, and point clusters as the practical mechanism for accumulated cross-validation."
     created: 2026-05-27
-    last_verified: 2026-05-27
+    last_verified: 2026-05-28
 tags:
   - review-queue
   - point-collision
@@ -55,7 +55,7 @@ tags:
 
 This is the first review queue contract for the vault.
 
-The queue is not a dumping ground and not a truth layer. It is where raw sources become reviewable candidate points, and where similar points collide before anything is promoted.
+The queue is not a dumping ground and not a reviewed knowledge layer. It is where raw sources become reviewable candidate points, and where similar points collide before anything is promoted.
 
 The core alpha mechanism is:
 
@@ -71,7 +71,7 @@ provenance-first
 
 We do not want every source to be fully verified when it enters the vault.
 
-We also do not want AI output to become formal truth directly.
+We also do not want AI output to become formal reviewed knowledge directly.
 
 The review queue solves the middle:
 
@@ -174,7 +174,7 @@ record_type: collision-signal
 signal_id:
 from_point:
 to_point:
-relation: supports | contradicts | refines | replaces | duplicates | near_miss | unrelated
+relation: supports | contradicts | refines | risk_of | derived_from | duplicates | near_miss | unrelated
 similarity_basis:
   - keyword
   - entity
@@ -287,7 +287,8 @@ Create pending signals:
 supports
 contradicts
 refines
-replaces
+risk_of
+derived_from
 duplicates
 near_miss
 unrelated

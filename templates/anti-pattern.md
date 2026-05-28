@@ -47,7 +47,7 @@ decision: avoid
 ```yaml
 relations:
   - target: "[[node-name]]"
-    type: contradicts | risk_of | alternative_to | blocked_by | replaces | derived_from
+    type: supports | contradicts | refines | risk_of | derived_from
     strength: 1-5
     confidence: low | medium | high
     evidence:
@@ -64,4 +64,3 @@ relations:
 
 
 ## 后续是否需要复测
-

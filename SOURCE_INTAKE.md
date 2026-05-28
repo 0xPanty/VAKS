@@ -172,7 +172,7 @@ timeline notes
 files or sections reviewed
 source/code anchors
 candidate points
-supports / contradicts / refines / replaces relations
+supports / contradicts / refines / risk_of / derived_from relations
 what we adopt
 what we reject
 risk and anti-pattern extraction

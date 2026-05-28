@@ -6,11 +6,38 @@
 
 ```text
 外层像 Karpathy LLM Wiki 一样简单。
-内层用 verified-action 规则保证可信和可行动。
-其他参考库只作为可替换模块接入。
+内层用 verified-action 规则保证来源、复核和行动依据。
+其他参考库只作为可替换模块接入，不抢 truth 裁决权。
 ```
 
-核心思路：
+对外主线先压成五层：
+
+```text
+1. Capture
+   先保存来源，不强迫立刻判断。
+
+2. Understand
+   把资料整理成 summary、candidate point、candidate claim / pattern / risk。
+
+3. Review
+   只有有来源、有证据、经过 review 的内容进入 reviewed memory。
+
+4. Connect
+   新点和旧点做 supports / contradicts / refines / risk_of / derived_from。
+
+5. Act and Learn
+   生成 context pack / action basis，记录使用反馈，改进下一次激活路径，但不直接改 truth。
+```
+
+一句话：
+
+```text
+The system can suggest.
+Only reviewed evidence can support action.
+Feedback improves activation, not truth.
+```
+
+目录角色：
 
 - `raw/`：原始资料区。文章、X 推文、论文、repo、截图、播客转录等先放这里，尽量保留原文和来源。
 - `wiki/`：编译产物区。由 LLM/Codex 把 raw 里的资料整理成 summary、claim、pattern、anti-pattern、decision 和项目知识。
@@ -30,8 +57,8 @@
 - Codex 作为默认 review/write gate，AI 和外部 agent 只能先生成 candidate。
 - Obsidian 作为 IDE、图谱和人工 workbench。
 - 严格字段藏在后台，只在晋级为 claim、pattern、decision、context pack 时启用。
-- 当前 alpha 机制是 point collision：新资料先抽 candidate point，再和旧 point 做 supports / contradicts / refines / replaces 撞击，review 后才影响晋级。
-- 查询反馈只校准激活路径：有用、跑偏、范围错、过期、遗漏；不会直接把用户偏好写成真理。
+- 当前 alpha 机制是 point collision：新资料先抽 candidate point，再和旧 point 做 supports / contradicts / refines / risk_of / derived_from 撞击，review 后才影响晋级。
+- 查询反馈只校准激活路径：usefulness、scope fit、activation ranking、missing-point candidate；不会直接把用户偏好写成真理。
 - 新增 conversation-derived feedback：从连续追问、问题变窄、纠偏、说漏了、换题等行为反推 route / keyword / scope 信号；默认是弱信号，先 session-local，不直接改 point truth。
 - 暂时不急着上重型 RAG，先跑通 source -> candidate -> reviewed node -> context pack。
 
@@ -41,7 +68,7 @@
 2. 生成 review candidate。
 3. lint / review 后晋级到正式 `wiki/` 节点。
 4. 需要行动时生成 context pack。
-5. 行动结果回流为 feedback，更新 confidence、gaps、next_review。
+5. 行动结果回流为 feedback，校准 activation/usefulness/scope fit，并触发 gaps、review_due 或 missing-point。
 
 开发阶段的新增原则：
 

@@ -3,7 +3,7 @@ type: schema
 status: active
 version: 0.1
 created: 2026-05-26
-updated: 2026-05-27
+updated: 2026-05-28
 scope:
   - verified-knowledge-system
   - markdown-system-of-record
@@ -20,7 +20,7 @@ sources:
 verification_status: active
 evidence_level: synthetic
 confidence: high
-last_verified: 2026-05-27
+last_verified: 2026-05-28
 next_review: 2026-06-03
 ---
 
@@ -34,7 +34,7 @@ next_review: 2026-06-03
 raw source -> summary -> claim -> pattern / anti-pattern -> decision -> context pack
 ```
 
-Markdown/YAML 是主记录。Obsidian Bases、BM25、vector、QMD、Zilliz、graph score、API、context pack 都是派生层或调用层，不能替代本文件定义的 verified truth layer。
+Markdown/YAML 是主记录。Obsidian Bases、BM25、vector、QMD、Zilliz、graph score、API、context pack 都是派生层或调用层，不能替代本文件定义的 reviewed knowledge layer。
 
 实现范围说明：本文件不是要把系统缩小成“只有契约”。最终实现应完整包含 Karpathy LLM Wiki 和 llm-wiki-compiler 代表的操作能力：ingest、compile、index、log、query、lint、review queue、provenance、context pack、API/MCP、viewer/Obsidian view。`SCHEMA.md` 的作用是规定这些能力写入和调用时必须服从什么真值契约。
 
@@ -67,7 +67,7 @@ BM25、vector、QMD、Zilliz、GraphRAG、rerank 只能帮助找到候选资料�
 
 v0.1 阶段允许 AI 辅助生成节点，但必须写入 Markdown/YAML，并接受人类复查。程序第一阶段只做 lint、schema validation、health report，不做 background rewrite、scheduled agents、自动冲突裁决或重型 RAG。
 
-注意：这是阶段边界，不是最终能力边界。后续可以实现完整 ingest/query/lint/context/API/viewer 栈；限制只在于这些运行时能力不能绕过 review 和 verified truth layer。
+注意：这是阶段边界，不是最终能力边界。后续可以实现完整 ingest/query/lint/context/API/viewer 栈；限制只在于这些运行时能力不能绕过 review 和 reviewed knowledge layer。
 
 ### 1.5 Traceability-first, graduated verification
 
@@ -112,7 +112,8 @@ decision / implementation-note / context pack:
 supports
 contradicts
 refines
-replaces
+risk_of
+derived_from
 ```
 
 这些跨来源信号可以帮助 claim、pattern、decision 晋级。重复出现不是自动真理，但它是比单条当场判断更便宜、更自然的验证入口。
@@ -156,7 +157,7 @@ scope fit:
   可以由用户反馈收窄适用范围。
 ```
 
-反馈记录和 query-run 是 operation records，不是 formal truth nodes。
+反馈记录和 query-run 是 operation records，不是 formal reviewed knowledge nodes。
 
 ```text
 explicit feedback:
@@ -453,7 +454,7 @@ evidence_timeline:
   - date: 2026-05-26
     source: "[[source-node]]"
     observation: "What was observed."
-    effect: supports | contradicts | refines | replaces | weakens
+    effect: supports | contradicts | refines | risk_of | derived_from | weakens
     confidence: low | medium | high
 ```
 
@@ -479,7 +480,7 @@ gaps:
 ```yaml
 relations:
   - target: "[[node-name]]"
-    type: supports | contradicts | refines | replaces | implements | applies_to | derived_from | inspired_by | risk_of | alternative_to | blocked_by
+    type: supports | contradicts | refines | risk_of | derived_from
     strength: 1
     confidence: low
     evidence:
@@ -491,19 +492,28 @@ relations:
 
 ### 5.2 关系类型
 
+MVP 只启用五种核心关系。关系类型少一点，review 质量会更高，也更不容易把普通相关性误写成正式边。
+
 | type | 含义 |
 |---|---|
 | `supports` | 当前节点支持目标节点。 |
 | `contradicts` | 当前节点反驳或冲突于目标节点。 |
 | `refines` | 当前节点细化目标节点。 |
-| `replaces` | 当前节点替代目标节点。 |
-| `implements` | 当前节点实现目标节点。 |
-| `applies_to` | 当前节点适用于某项目、场景或问题。 |
 | `derived_from` | 当前节点从某来源、摘要或主张提炼而来。 |
-| `inspired_by` | 当前节点受某来源启发，但不是严格证据推导。 |
 | `risk_of` | 当前节点指出目标节点可能产生的风险。 |
-| `alternative_to` | 当前节点是目标节点的替代方案。 |
-| `blocked_by` | 当前节点受目标节点阻塞。 |
+
+先 parked 的扩展关系：
+
+```text
+replaces
+implements
+applies_to
+inspired_by
+alternative_to
+blocked_by
+```
+
+这些不是被拒绝，只是不进入第一版核心关系集合。需要它们时，先用正文说明或 decision metadata 记录，不急着扩展 YAML relation enum。
 
 ### 5.3 Strength
 
@@ -520,7 +530,7 @@ relations:
 规则：
 
 - `strength >= 4` 必须有 `evidence` 和 `rationale`。
-- `contradicts`、`risk_of`、`replaces` 不得省略 `rationale`。
+- `contradicts`、`risk_of` 不得省略 `rationale`。
 - 无证据的强边应被 health check 标记。
 - 双向关系需要两条边分别记录，不默认自动互逆。
 
@@ -729,7 +739,7 @@ tags:
 
 - anti-pattern 必须记录失败条件。
 - anti-pattern 必须说明替代方案或回退方式。
-- 与 decision 相关的 anti-pattern 应通过 `risk_of` 或 `blocked_by` 连接。
+- 与 decision 相关的 anti-pattern MVP 先通过 `risk_of` 连接；阻塞关系可以先写在正文或 decision metadata，暂不扩展 relation enum。
 
 ### 6.6 Decision
 
@@ -861,7 +871,7 @@ formalization_status: raw-only | candidate-generated | reviewed | promoted | rej
 - `inbox` 是默认模式。自动捕获、Readwise、Telegram、Whisper、N8N、浏览器剪藏都只能先写入 `raw/inbox/` 或对应 raw source 目录。
 - `immediate` 只在用户明确点名时使用，例如“提炼这篇”“分析这个链接”“马上整理”“把这篇入库”。
 - `immediate` 也必须先保存 raw source，再由 Codex 生成 summary / claim / pattern / anti-pattern / decision 候选。
-- daily brief 和 weekly synthesis 只能写入 `outputs/review/` 或 `outputs/qa/`，不能直接写入 formal wiki truth layer。
+- daily brief 和 weekly synthesis 只能写入 `outputs/review/` 或 `outputs/qa/`，不能直接写入 formal reviewed knowledge layer。
 - 候选内容只有经过 Codex/用户 review，并按晋级等级补齐必要字段后，才能成为正式节点。source/candidate 只要求可追溯；claim/pattern/decision/context pack 才要求更严格的 evidence、confidence、negative evidence、relations、risk 或 rollback。
 
 ### 7.3 晋级门槛
@@ -967,7 +977,7 @@ Codex: Level 3 reviewed write
 User: final authority
 ```
 
-Review 队列不是 truth layer。候选内容只有在通过 Codex/用户复核并迁移到 `wiki/claims/`、`wiki/patterns/`、`wiki/anti-patterns/` 或 `wiki/decisions/` 后，才算正式知识节点。
+Review 队列不是 reviewed knowledge layer。候选内容只有在通过 Codex/用户复核并迁移到 `wiki/claims/`、`wiki/patterns/`、`wiki/anti-patterns/` 或 `wiki/decisions/` 后，才算正式知识节点。
 
 ## 9. Health Check
 
@@ -1015,7 +1025,7 @@ health check 不得在 v0.1 自动：
 
 ## 10. Context Pack
 
-Context pack 是调用层输出，不是新的 truth layer。
+Context pack 是调用层输出，不是新的 reviewed knowledge layer。
 
 未来 `POST /context-pack` 或脚本生成的 context pack 应包含：
 
@@ -1065,7 +1075,7 @@ Cold References:
   可追溯来源和历史资料，只在查证据时打开。
 ```
 
-Dev context pack 是 operation record，不是 formal truth node。
+Dev context pack 是 operation record，不是 formal reviewed knowledge node。
 
 它可以临时激活 cold source，但不能因此修改该 source 的 truth status。
 

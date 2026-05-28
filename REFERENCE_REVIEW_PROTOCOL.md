@@ -185,7 +185,25 @@ Use this checklist.
 13. What changed in our own architecture after reading it?
 ```
 
-## 6. Fusion Map
+## 6. Fusion Quality Check
+
+After identifying useful ideas, check whether absorbing them actually improves this system.
+
+```text
+1. Is this a positive design addition for us? Why?
+2. Compared with the source design, where is our fused version better and where is it weaker?
+3. Does this reduce burden, improve judgment quality, or add process complexity?
+4. Is there a risk of overdesign or architecture bloat?
+5. What is the smallest elegant adoption? What should explicitly not be absorbed?
+```
+
+This check prevents forced borrowing.
+
+The goal is not to make the architecture more complete.
+
+The goal is to make it smarter, lighter, and more reliable.
+
+## 7. Fusion Map
 
 When reviewing, map the source to these architecture zones:
 
@@ -195,16 +213,16 @@ When reviewing, map the source to these architecture zones:
 | Dusk workbench | scope dashboard, task mailbox, project surface, closeout |
 | Source ingest | adapters, URL/PDF/repo capture, hash registry, source status |
 | Review queue | candidate records, approval flow, provenance gates |
-| Schema/truth | claim/pattern/decision fields, relation edges, confidence boundaries |
+| Schema/reviewed knowledge | claim/pattern/decision fields, relation edges, confidence boundaries |
 | Memory/dev context | hot/warm/cold, context briefing, Core/Support/Risk/Cold |
 | Feedback | query-run, feedback-event, usefulness/scope fit learning |
 | Retrieval/cache | SQL/FTS/vector/BM25/rerank/cache as derived layers |
 | Agent access | read/write authority, path-scoped tools, MCP/API boundaries |
 | Viewer/workbench | Obsidian Bases, dashboard, graph view, human review UI |
 | Publishing | source-to-draft, product outputs, post-publish feedback |
-| Risk | anti-patterns, source hygiene, over-automation, stale truth |
+| Risk | anti-patterns, source hygiene, over-automation, stale reviewed knowledge |
 
-## 7. Adoption Labels
+## 8. Adoption Labels
 
 Use these labels consistently:
 
@@ -225,7 +243,7 @@ design-only:
   do not run/fork/use code; only extract architecture idea.
 ```
 
-## 8. Direct Judgment Requirement
+## 9. Direct Judgment Requirement
 
 Every review must end with a plain-language judgment:
 
@@ -245,7 +263,7 @@ No forced borrowing.
 
 If there is no useful point, say so.
 
-## 9. Session Rule
+## 10. Session Rule
 
 If the user gives a repo during a branch-focused session:
 

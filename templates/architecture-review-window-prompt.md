@@ -57,7 +57,7 @@ raw / wiki / index / log / ingest / query / lint。
 2. Dusk 是项目桌面体验：
 scope dashboard / project desktop / mailbox / closeout。
 作用是做项目时把相关资料、任务、风险、参考摆到桌面上。
-它是 workbench，不是 truth layer。
+  它是 workbench，不是 reviewed knowledge layer。
 
 3. Verified Action Knowledge System 是后台可信系统：
 source provenance / candidate / review / schema / pattern / anti-pattern / decision / context pack / feedback。
@@ -77,7 +77,7 @@ source provenance / candidate / review / schema / pattern / anti-pattern / decis
 - Dusk workbench
 - source ingest
 - review queue
-- schema / truth
+  - schema / reviewed knowledge
 - memory / dev context
 - feedback
 - retrieval / cache
@@ -99,6 +99,13 @@ source provenance / candidate / review / schema / pattern / anti-pattern / decis
 9. 适合直接用、只吸收设计、观察，还是拒绝？
 10. 有没有必要后续写入 source record / pattern / anti-pattern / decision？
 
+最后加一个融合质量检查：
+11. 吸收这个点以后，对我们是正向设计吗？为什么？
+12. 和原方案相比，我们的融合版哪里更好，哪里更弱？
+13. 这是减少负担、提高判断质量，还是增加流程复杂度？
+14. 有没有过度设计或让架构臃肿的风险？
+15. 最小优雅吸收版是什么？哪些部分明确不吸收？
+
 注意：
 先说人话。
 不要硬借鉴。
@@ -108,7 +115,7 @@ source provenance / candidate / review / schema / pattern / anti-pattern / decis
 不要让流程变成负担。
 不要把每个参考库的优点都硬塞进架构。
 优先寻找能减少负担、提升判断质量、保持体验舒服的 alpha 设计。
-不要把 dashboard、retrieval、metadata 当 truth。
+  不要把 dashboard、retrieval、metadata 当 reviewed knowledge。
 不要把自动化和脚本提前做。
 先做全方面对比和架构判断，等我确认后再落文件。
 ```

@@ -45,7 +45,7 @@ tags:
 ```yaml
 relations:
   - target: "[[node-name]]"
-    type: supports | contradicts | refines | replaces | implements | applies_to | derived_from | risk_of | alternative_to | blocked_by
+    type: supports | contradicts | refines | risk_of | derived_from
     strength: 1-5
     confidence: low | medium | high
     evidence:
@@ -62,4 +62,3 @@ relations:
 
 
 ## 复查计划
-

@@ -48,7 +48,7 @@ rollback_path:
 ```yaml
 relations:
   - target: "[[node-name]]"
-    type: implements | supports | contradicts | replaces | applies_to | risk_of | alternative_to | blocked_by
+    type: supports | contradicts | refines | risk_of | derived_from
     strength: 1-5
     confidence: low | medium | high
     evidence:

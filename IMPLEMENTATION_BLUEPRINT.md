@@ -2,7 +2,7 @@
 type: implementation-note
 status: active
 created: 2026-05-27
-updated: 2026-05-27
+updated: 2026-05-28
 project: verified-action-knowledge-system
 related_decisions:
   - "[[2026-05-27-karpathy-simple-verified-strict-ux-principle]]"
@@ -45,36 +45,36 @@ validated_by:
   - "manual synthesis from active architecture decisions"
 rollback_path:
   - "If the implementation becomes too broad, return to Phase 0 and keep only raw/wiki/index/log plus manual review."
-last_verified: 2026-05-27
+last_verified: 2026-05-28
 next_review: 2026-06-03
 relations:
   - target: "[[ARCHITECTURE_PRINCIPLES]]"
-    type: implements
+    type: refines
     strength: 5
     confidence: high
     evidence:
       - "[[IMPLEMENTATION_BLUEPRINT]]"
     rationale: "This blueprint turns the architecture principles into phased implementation boundaries."
     created: 2026-05-27
-    last_verified: 2026-05-27
+    last_verified: 2026-05-28
   - target: "[[SCHEMA]]"
-    type: implements
+    type: refines
     strength: 5
     confidence: high
     evidence:
       - "[[IMPLEMENTATION_BLUEPRINT]]"
     rationale: "The first implementation phases use SCHEMA as the Markdown truth contract."
     created: 2026-05-27
-    last_verified: 2026-05-27
+    last_verified: 2026-05-28
   - target: "[[2026-05-27-karpathy-simple-verified-strict-ux-principle]]"
-    type: implements
+    type: refines
     strength: 5
     confidence: high
     evidence:
       - "[[IMPLEMENTATION_BLUEPRINT]]"
     rationale: "The blueprint starts with a Karpathy-simple command surface and hides strict fields behind promotion."
     created: 2026-05-27
-    last_verified: 2026-05-27
+    last_verified: 2026-05-28
 tags:
   - implementation-blueprint
   - verified-action-knowledge-system
@@ -489,7 +489,7 @@ If API, MCP, viewer, or index cache disagrees with Markdown, Markdown wins.
 Goal:
 
 ```text
-Make action results update confidence, gaps, and next_review.
+Make action results update usefulness, scope fit, gaps, and next_review, while creating review work for confidence changes.
 ```
 
 Feedback note should include:
@@ -502,7 +502,7 @@ actual_result:
 worked:
 failed:
 new_evidence:
-confidence_change:
+confidence_review:
 nodes_to_review:
 next_review:
 ```
@@ -511,7 +511,7 @@ Feedback may:
 
 ```text
 support a decision
-weaken a claim
+flag a claim for weakening review
 create an anti-pattern
 trigger a replacement decision
 update next_review
@@ -543,7 +543,7 @@ What layer does it belong to?
 What real pain does it solve?
 Does it improve verified knowledge, action basis, or extensibility?
 Can it consume or output existing Markdown contracts?
-Can it fail without damaging the truth layer?
+Can it fail without damaging the reviewed knowledge layer?
 Does it bypass review?
 What evidence would prove it should stay?
 What would make us remove it?

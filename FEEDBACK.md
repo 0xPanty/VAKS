@@ -2,7 +2,7 @@
 type: implementation-note
 status: active
 created: 2026-05-27
-updated: 2026-05-27
+updated: 2026-05-28
 project: verified-action-knowledge-system
 related_decisions:
   - "[[2026-05-27-traceability-first-graduated-verification]]"
@@ -21,7 +21,7 @@ validated_by:
   - "local architecture discussion"
 rollback_path:
   - "If feedback starts reinforcing wrong answers, ignore feedback weights and fall back to reviewed relations plus source evidence."
-last_verified: 2026-05-27
+last_verified: 2026-05-28
 next_review: 2026-06-03
 relations:
   - target: "[[REVIEW_QUEUE]]"
@@ -32,7 +32,7 @@ relations:
       - "[[FEEDBACK]]"
     rationale: "Feedback controls how reviewed points and relations are activated during future queries without changing truth directly."
     created: 2026-05-27
-    last_verified: 2026-05-27
+    last_verified: 2026-05-28
 tags:
   - feedback
   - activation
@@ -47,6 +47,8 @@ tags:
 ## AI-readable preamble
 
 Feedback improves future retrieval and context activation.
+
+In v0.2 language, this file is the Use Ledger contract.
 
 Feedback must not directly rewrite truth. It can adjust usefulness, scope fit, and activation ranking. Formal truth changes still require review and promotion.
 
@@ -463,7 +465,7 @@ L1:
   directly matched seed points and reviewed promoted nodes
 
 L2:
-  reviewed supports / contradicts / refines / replaces / risk_of edges
+  reviewed supports / contradicts / refines / risk_of / derived_from edges
 
 L3:
   disabled by default
