@@ -74,6 +74,15 @@ If a newer handoff exists, prefer the newest file in `00_handoff/`.
 - `REVIEW_QUEUE.md`: candidate points, point collision, review, and promotion.
 - `FEEDBACK.md`: Use Ledger and feedback boundaries.
 
+## Project Review Templates
+
+These two templates are for this project's architecture/repository/reference review work. They are not future user-facing note intake templates.
+
+- `templates/architecture-review-window-prompt.md`: use this as the operating prompt when the user sends repositories, papers, articles, or architecture references for framework design. It defines the read-only/default boundaries, full-system lens, and the required comparison questions.
+- `templates/library-review.md`: use this as the extraction shape when summarizing a repository, library, framework, or architecture source. It requires source/code anchors, current-branch value, whole-architecture value, risks, adoption judgment, and fusion fit.
+
+When reviewing a repo/library/article for this project, follow these templates before proposing writeback. Keep the analysis focused on design extraction and fusion quality. Do not confuse these project-development review templates with future light/medium/heavy intake templates for ordinary user notes.
+
 ## Source Set Already Considered
 
 These references have been discussed, reviewed, or partially absorbed. Use the existing source records, summaries, patterns, anti-patterns, and decisions before re-analyzing them from scratch.
