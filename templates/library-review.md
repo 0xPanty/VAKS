@@ -48,7 +48,7 @@ relations: []
 它对当前支线：
 
 ```text
-supports / contradicts / refines / replaces / no-clear-value
+supports / contradicts / refines / risk_of / derived_from / no-clear-value
 ```
 
 具体价值：
@@ -69,7 +69,7 @@ supports / contradicts / refines / replaces / no-clear-value
 | Dusk workbench |  |  |
 | source ingest |  |  |
 | review queue |  |  |
-| schema / truth |  |  |
+| schema / reviewed knowledge |  |  |
 | memory / dev context |  |  |
 | feedback |  |  |
 | retrieval / cache |  |  |

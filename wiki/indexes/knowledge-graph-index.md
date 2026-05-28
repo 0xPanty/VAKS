@@ -10,6 +10,8 @@
 - [[REFERENCE_REVIEW_PROTOCOL]]
 - [[MEMORY_TIER]]
 - [[DEV_CONTEXT]]
+- [[FUSION_ARCHITECTURE_V0_2_DRAFT]]
+- [[SECOND_BRAIN_MODEL]]
 - [[memory-tier-reference-index]]
 - [[REVIEW_QUEUE]]
 - [[FEEDBACK]]
@@ -165,6 +167,11 @@
 - 整个体系必须保持可拓展、可演化：新思路可以持续进入采集、验证、比较、迁移和落地流程。
 - Yanhua 的 Obsidian + AI 系列和 Karpathy 工作流先按分层系统理解：摄取、编译、上下文、执行、输出、复盘。
 - 资料库本身需要可信度治理：每条资料和重要主张都要有来源、验证状态、证据等级、置信度和复查时间。
+- 2026-05-28 v0.2 收缩：对外主叙事改为 `Capture / Understand / Review / Connect / Act and Learn`；内部主循环是 `Capture -> Candidate Comprehension -> Review -> Association -> Activation -> Context Pack -> Decision/Action -> Use Ledger -> Cooling/Reactivation`。
+- 2026-05-28 v0.2 边界：`SECOND_BRAIN_MODEL.md` 是解释模型和设计校验表，不是工程模块目录；不要把大脑隐喻拆成十几个实现子系统。
+- 2026-05-28 v0.2 关系类型：MVP 只保留 `supports / contradicts / refines / risk_of / derived_from`。`replaces / implements / applies_to / inspired_by / alternative_to / blocked_by` 先 parked。
+- 2026-05-28 v0.2 feedback：`FEEDBACK.md` 作为 Use Ledger，只校准 activation、usefulness、scope fit 和 review_due，不直接改 truth confidence。
+- 2026-05-28 v0.2 proactive synthesis：先 on-demand，输出 Connections / Patterns / Contradictions / Open Questions，全部是 candidate；daily / weekly / monthly 自动化先 parked。
 - 新增高信号设计候选：vault index 作为上下文路由器、purpose-specific vault philosophy、claim-style composable notes。
 - 新增内容工厂高信号候选：source-to-publish pipeline、skills as action modules、container/intelligence/hands 分层。
 - 新增中期架构候选：把已验证资料库做成 API / resolver / context pack，供 agent 调用后结合 gbrain 推理。
@@ -174,36 +181,36 @@
 - 当前反模式警告：不要在 Markdown 契约稳定前复刻完整 App；不要在来源质量不足时相信图谱算法分数。
 - llm_wiki 融合兼容性结论：设计点不冲突，但必须分层采用；使命层和 review 可立即采用，图谱评分/健康检查轻量适配，本地 API 中期观察，完整 App/vector search/Louvain UI 暂缓。
 - llm_wiki 和本资料库的关系：llm_wiki 是自动知识编译机和工程发动机，本资料库是 verified knowledge graph 和可信采纳规则；两者互补，不直接替代。
-- Obsidian Properties + Bases 采用为第一阶段主力视图层/轻数据库层，用来管理 source、claim、pattern、anti-pattern、decision 的 metadata；它不是 truth layer，不替代证据验证。
+- Obsidian Properties + Bases 采用为第一阶段主力视图层/轻数据库层，用来管理 source、claim、pattern、anti-pattern、decision 的 metadata；它不是 reviewed knowledge layer，不替代证据验证。
 - 已新增问答记录：[[2026-05-26-llm-wiki-vs-verified-knowledge-system]]，用于解释“同样用 AI 提炼时，普通 LLM Wiki 和 verified knowledge system 的区别”。
 - 新增实现级提取要求：看过参考库源码后，要记录模块级不变量和防错点；`llm_wiki` 的实现级记录见 `outputs/qa/2026-05-26-llm-wiki-implementation-extraction.md`。
 - cc-note-ops 的价值在操作层：当前笔记锁定、输出/修改分离、表达/结构分离，可作为未来 AI 操作 Obsidian 的安全工作台规则，不进入知识图谱核心层。
-- QMD 的价值在搜索扩展层：当 index 膨胀、raw 细节找不回、跨分类检索变多时，用本地 BM25 + vector + rerank 找候选片段；QMD 不做 truth layer，不能替代 claim 验证。
-- nano-NotebookLM 的价值在搜索扩展层和关系操作层：BM25+FAISS+RRF、concept embedding+BFS GraphRAG、generated graph+human edit overlay、embedding preset namespace；它不做 verified truth layer。
+- QMD 的价值在搜索扩展层：当 index 膨胀、raw 细节找不回、跨分类检索变多时，用本地 BM25 + vector + rerank 找候选片段；QMD 不做 reviewed knowledge layer，不能替代 claim 验证。
+- nano-NotebookLM 的价值在搜索扩展层和关系操作层：BM25+FAISS+RRF、concept embedding+BFS GraphRAG、generated graph+human edit overlay、embedding preset namespace；它不做 reviewed knowledge layer。
 - gbrain 的价值在核心架构层：Markdown system-of-record、compiled truth + timeline、facts/takes epistemology、schema packs、think answer+citation+gaps、dream cycle；它强力验证我们要做的是 verified knowledge engine，不是普通 RAG。
 - gbrain 融合边界：只吸收 schema、epistemology、timeline、context-pack、health-cycle 不变量；不 fork 完整 runtime，不现在做 MCP/OAuth/minions/scheduler/HNSW/reranker 体系。
 - 当前新增反模式：schema 未稳定前复制完整第二大脑 runtime，会把设计任务带偏成产品栈维护。
 - Obsidian-Base-Hub 的价值在视图/工作台层：用 `.base` 文件把结构化 Markdown 节点筛选、分组、嵌入到根页面；可用于未来 source review、claim verification、pattern adoption、decision review。
 - Obsidian-Base-Hub 的风险提醒：Base 视图必须服从 `SCHEMA.md`，不能反过来定义 schema；字段命名混乱会让视图失效。
 - obsidian-second-brain 的价值在 agentic vault runtime：AI-first note contract、never-create-in-isolation、bi-temporal timeline、index/log、two-output rule、progressive context loader、health check、write-time validator。
-- obsidian-second-brain 对本资料库是操作层/维护层补强，不是 truth layer；它不能替代 source/claim/pattern/anti-pattern/decision 的验证和采纳流程。
+- obsidian-second-brain 对本资料库是操作层/维护层补强，不是 reviewed knowledge layer；它不能替代 source/claim/pattern/anti-pattern/decision 的验证和采纳流程。
 - 当前可吸收：AI-first metadata、传播规则、timeline、index/log、health report、context recovery；当前不吸收：background agent、scheduled rewrite、自动冲突裁决、完整命令运行时。
 - 新增反模式：schema 未稳定前启用自动 vault rewrite，会造成隐藏漂移、过度自信的自动裁决和证据历史污染。
 - Misa 建议已采纳为核心 schema 候选：在 `relations` 中记录语义关系边，每条边包含 target、type、strength、confidence、evidence、rationale；向量检索只作为候选筛选器，关系图谱和证据层负责可信排序。
 - 当前架构全貌 v0.1：核心是 Verified Knowledge Graph；工具层、操作层、搜索层、API 层都只能作为外围增强，先记录、再验证、后采用。
 - Karpathy LLM Wiki 原文已作为源头材料入库：它验证 `raw / wiki / schema`、ingest/query/lint、index/log、Obsidian as IDE、LLM as maintainer 的运行模式；本资料库在此基础上增加 verified schema、review queue 和 Misa/gbrain read-only 边界。
 - atomicstrata/llm-wiki-compiler 已作为实现级参考入库：它把 Karpathy 模式工程化为 CLI、候选 review queue、claim-level provenance、context pack、static lint、MCP 和只读 viewer；本资料库优先吸收 review-gated compile、source-range provenance、context-pack evidence envelope、static lint，不照搬 generic page kinds、watch auto-recompile、完整 viewer/MCP 栈。
-- 2026-05-27 纠偏：最终实现不是只做底层契约，也不是排除这些库；要完整包含 Karpathy LLM Wiki / llm-wiki-compiler 的 ingest、compile、index/log、query、lint、review queue、provenance、context pack、API/MCP、viewer 能力。`SCHEMA.md` 只负责规定这些能力不能绕过 verified truth layer。
+- 2026-05-27 纠偏：最终实现不是只做底层契约，也不是排除这些库；要完整包含 Karpathy LLM Wiki / llm-wiki-compiler 的 ingest、compile、index/log、query、lint、review queue、provenance、context pack、API/MCP、viewer 能力。`SCHEMA.md` 只负责规定这些能力不能绕过 reviewed knowledge layer。
 - 2026-05-27 质量目标升级：最终目标不是普通 LLM Wiki，也不是只做可信笔记，而是可拓展的可信知识与行动依据系统；质量标准要覆盖参考库能力，并进一步支持 actionability、decision readiness、feedback timeline、extension contracts。
 - 2026-05-27 源码级提取：`llm-wiki-compiler` 可用实现契约已保存为 [[2026-05-27-llm-wiki-compiler-implementation-extraction]]；当前可用模块包括 incremental source state、self-contained review candidate、context pack budget guardrails、agent tool access tiering、source adapter contract、project next-action state、export surface。
 - 当前新增实现级模式：[[incremental-source-state-compiler]]、[[self-contained-review-candidate-record]]、[[agent-context-pack-budget-guardrails]]、[[agent-tool-access-tiering]]、[[source-adapter-ingest-contract]]、[[project-state-next-action-contract]]、[[exportable-knowledge-artifact-surface]]。
-- 当前新增反模式：[[generic-concept-schema-as-truth-layer]]，避免把普通 concept/entity/comparison/overview 当成 verified truth schema。
-- OpenKB 已作为模块级实现参考入库：它验证了 Karpathy LLM Wiki + PageIndex long-doc adapter + query/chat + Skill Factory 的组合路线；本资料库吸收长文档树索引、wiki foundation/generator surface 分离、skill output adapter、path-scoped agent writes、ghost wikilink whitelist，但不采用 auto-compiled generic concept wiki 作为 verified truth layer。
+- 当前新增反模式：[[generic-concept-schema-as-truth-layer]]，避免把普通 concept/entity/comparison/overview 当成 reviewed knowledge schema。
+- OpenKB 已作为模块级实现参考入库：它验证了 Karpathy LLM Wiki + PageIndex long-doc adapter + query/chat + Skill Factory 的组合路线；本资料库吸收长文档树索引、wiki foundation/generator surface 分离、skill output adapter、path-scoped agent writes、ghost wikilink whitelist，但不采用 auto-compiled generic concept wiki 作为 reviewed knowledge layer。
 - 当前新增 OpenKB 模式：[[wiki-foundation-generator-surface-separation]]、[[long-document-tree-index-source-adapter]]、[[knowledge-to-agent-skill-factory]]、[[path-scoped-agent-output-writes]]、[[ghost-wikilink-whitelist-before-write]]。
 - 当前新增 OpenKB 实现级细模式：[[source-hash-registry-and-idempotent-ingest]]、[[url-source-ingest-normalization]]、[[removal-cleanup-with-registry-commit-point]]、[[artifact-trigger-and-body-alignment-eval]]、[[skill-artifact-iteration-workspace-rollback]]。
 - 当前新增 OpenKB 决策：[[2026-05-27-openkb-as-module-reference]]，结论是模块级纳入，不作为主架构替代。
-- 当前新增 OpenKB 反模式：[[auto-compiled-concept-wiki-as-verified-truth-layer]]，避免把 OpenKB 的 direct concept rewrite 套到 formal truth layer。
-- 自动化 Obsidian daily brief 文章已作为操作层参考入库：其顶级价值是“知识必须主动返回给用户”，可吸收为 low-friction capture、daily brief、weekly synthesis，但输出只能进 review/feedback，不能自动成为 verified truth。
+- 当前新增 OpenKB 反模式：[[auto-compiled-concept-wiki-as-verified-truth-layer]]，避免把 OpenKB 的 direct concept rewrite 套到 formal reviewed knowledge layer。
+- 自动化 Obsidian daily brief 文章已作为操作层参考入库：其顶级价值是“知识必须主动返回给用户”，可吸收为 low-friction capture、daily brief、weekly synthesis，但输出只能进 review/feedback，不能自动成为 reviewed knowledge。
 - 当前新增 feedback/capture 模式：[[frictionless-capture-to-review-inbox]]、[[daily-brief-as-knowledge-return-loop]]、[[weekly-synthesis-thesis-and-gap-review]]。
 - 当前新增自动化反模式：[[automated-brief-as-truth-without-review]]，避免 scheduled brief 或 weekly synthesis 绕过 review gate。
 - 当前新增入库决策：[[2026-05-27-codex-mediated-ingest-and-review-gate]]。默认所有自动捕获只进入 raw/inbox 或 source raw 目录；用户点名“提炼这篇/分析这个链接/马上入库”时走 immediate 模式，由 Codex 保留 raw 后生成候选并 review 晋级。
@@ -211,23 +218,23 @@
 - 当前新增主骨架决策：[[2026-05-27-karpathy-spine-modular-extensions]]。正式确认 Karpathy-style LLM Wiki 是默认操作骨架和开源入口；verified-action 是内部严格内核；llm-wiki-compiler、OpenKB、obsidian-second-brain、gbrain、retrieval/viewer/API 都是模块枝叶。
 - 当前新增实现蓝图：[[IMPLEMENTATION_BLUEPRINT]]。第一版实现顺序是先证明一条 source -> candidate -> lint/review -> verified node -> context pack -> feedback 的窄闭环，再扩展 review queue、lint、context pack、compiler、query、API/MCP/viewer 和 feedback automation。
 - 当前新增验证纠偏决策：[[2026-05-27-traceability-first-graduated-verification]]。raw/source 以来源可追溯为底线，不要求一开始填满 evidence/confidence/relations；严格验证只在 claim、pattern、decision、implementation-note、context pack 晋级或行动使用时触发。
-- 当前新增积累式验证模式：[[accumulated-source-cross-validation]]。资料进入时先保留 provenance，后续相似内容通过 supports / contradicts / refines / replaces 形成交叉验证信号，降低每条 source 单独重验的成本；重复出现只是晋级信号，不自动等于 truth。
+- 当前新增积累式验证模式：[[accumulated-source-cross-validation]]。资料进入时先保留 provenance，后续相似内容通过 supports / contradicts / refines / risk_of / derived_from 形成交叉验证信号，降低每条 source 单独重验的成本；重复出现只是晋级信号，不自动等于 truth。
 - 当前新增 alpha 落地规格：[[REVIEW_QUEUE]] 和 [[2026-05-27-alpha-point-collision-validation-v0-1]]。核心对象是 source trace、candidate point、collision signal、point cluster；v0.1 只生成 reviewed promotion signals，不自动涨 confidence 或自动晋级 truth。
 - 当前新增反馈校准规格：[[FEEDBACK]]。反馈只调整 usefulness、scope fit 和 activation ranking；truth confidence、verification_status、source reliability 仍必须通过 review/promotion 修改。
 - 当前新增隐式反馈路由模式：[[conversation-derived-feedback-routing]]。连续追问、问题变窄、纠偏、说漏了、换题等对话行为可以反推 route / keyword / scope 信号；v0.1 采用 JSONL append-only 记录 query-run/feedback-event，SQLite 只作为可重建缓存，隐式正反馈默认只在 session 内生效。
 - 当前新增下一阶段方向草案：[[2026-05-27-memory-tier-and-publishing-pipeline-draft]]。判断是“冷热分层”和“从捕获到发布的 5 步工作流”要一起考虑但分开落地：memory_tier 只管激活优先级，workflow_stage 只管输出流程进度。
-- 当前新增冷热分层初稿：[[MEMORY_TIER]]。结论是基础冷热分层只做长期轻量 activation metadata，不做 truth layer，不建议先用 01-Hot/02-Warm/03-Cold 文件夹制造搬运成本。
+- 当前新增冷热分层初稿：[[MEMORY_TIER]]。结论是基础冷热分层只做长期轻量 activation metadata，不做 reviewed knowledge layer，不建议先用 01-Hot/02-Warm/03-Cold 文件夹制造搬运成本。
 - 当前新增开发模式上下文初稿：[[DEV_CONTEXT]]。开发项目时先全局发现，再生成临时 Core / Support / Risk / Cold References 工作记忆包；Risk 层必须作为决策 checkpoint，而不是和正向资料混成噪音。
-- 当前新增 byarbrough/obsidian-para 源码/模板级取样：[[2026-05-27-obsidian-para-source]] 和 [[2026-05-27-obsidian-para-architecture-review]]。结论是吸收 actionability routing、archive-first lazy reactivation、project goal gate、project closeout scan；拒绝把 PARA 四文件夹作为 verified truth layer。
+- 当前新增 byarbrough/obsidian-para 源码/模板级取样：[[2026-05-27-obsidian-para-source]] 和 [[2026-05-27-obsidian-para-architecture-review]]。结论是吸收 actionability routing、archive-first lazy reactivation、project goal gate、project closeout scan；拒绝把 PARA 四文件夹作为 reviewed knowledge layer。
 - 当前新增冷热记忆相关模式：[[actionability-based-memory-routing]]、[[archive-first-lazy-reactivation]]。核心是“下一次最可能在哪里用到”决定 activation_reason；旧资料默认 cold，用到时按 scope 升温，复用后才进入 warm。
 - 当前新增反模式：[[para-folder-taxonomy-as-truth-layer]]。PARA 可以做 actionability/lifecycle 参考，但不能替代 raw/wiki/outputs/products、review gate、provenance、verification_status 和 relations。
-- 当前新增冷热支线参考库索引：[[memory-tier-reference-index]]。后续所有与冷热记忆 / dev context / activation 相关的库，都先进入这个融合工作台做 supports / contradicts / refines / replaces 对照，再决定是否晋级为更强 pattern 或 alpha 设计。
+- 当前新增冷热支线参考库索引：[[memory-tier-reference-index]]。后续所有与冷热记忆 / dev context / activation 相关的库，都先进入这个融合工作台做 supports / contradicts / refines / risk_of / derived_from 对照，再决定是否晋级为更强 pattern 或 alpha 设计。
 - 当前新增 kepano/kepano-obsidian 源码/模板级取样：[[2026-05-27-kepano-obsidian-source]] 和 [[2026-05-27-kepano-obsidian-architecture-review]]。结论是吸收 property-driven context workbench、link-overlap related context、random revisit cold-memory maintenance；拒绝把 organic links / ratings / recency 当成 truth。
 - 当前新增 Kepano 相关模式：[[property-driven-context-workbench]]、[[link-overlap-related-context-surface]]、[[random-revisit-cold-memory-maintenance]]。它们强化“不要靠搬文件升温”，而是用 metadata / Bases / links / backlinks / tags 生成 activation 和 dev-context 支持候选。
 - 当前新增反模式：[[derived-relatedness-as-truth-signal]]。链接重叠、反链、tag、rating、last seen 都只能做召回和激活线索，不能替代 reviewed relations、evidence_level 或 confidence。
 - 当前新增 willynikes2/knowledge-base-server 源码级取样：[[2026-05-27-knowledge-base-server-source]] 和 [[2026-05-27-knowledge-base-server-architecture-review]]。结论是吸收 token-efficient context briefing、shared agent retrieval layer、operational session capture、incremental vault index retrieval cache；拒绝自动 classify/promote/writeback 绕过 review gate。
 - 当前新增 knowledge-base-server 相关模式：[[token-efficient-context-briefing]]、[[shared-agent-memory-retrieval-layer]]、[[operational-session-capture-loop]]、[[incremental-vault-index-retrieval-cache]]。它们强化“搜索后先给低 token briefing，再决定打开哪些全文”，并把 SQLite/FTS/vector 明确放在 derived cache 层。
-- 当前新增反模式：[[auto-promotion-without-review-gate]]。自动分类、总结、合成、晋级只能生成 candidate 或 briefing metadata，不能直接写成 verified truth、decision 或 confidence。
+- 当前新增反模式：[[auto-promotion-without-review-gate]]。自动分类、总结、合成、晋级只能生成 candidate 或 briefing metadata，不能直接写成 reviewed knowledge、decision 或 confidence。
 - 当前新增 Asim00740/Kagantic-vault-structure 源码/模板级取样：[[2026-05-27-kagantic-vault-structure-source]] 和 [[2026-05-27-kagantic-vault-structure-architecture-review]]。结论是吸收 hierarchical index context routing：先读 Main/Domain Index，再按 summary/tags 选择全文；同时记录 zip artifact 异常。
 - 当前新增 Kagantic 相关模式：[[hierarchical-index-context-routing]]。它把 knowledge-base-server 的 context briefing 降到 Markdown-only 形态，适合 v0.1 在没有 SQL/MCP 前先用。
 - 当前新增反模式：[[binary-vault-template-download-as-trusted-source]]。vault template 下载包必须先检查；含 `Application.cmd` / `unit.exe` 的 archive 不应作为可信资料源或被执行。
@@ -239,6 +246,6 @@
 - JARVIS inside Obsidian 文章已作为内容创作者工作流参考入库：它比较基础，不是 verified knowledge architecture；可用点主要是 type-based capture、Claude Code skills 示例、published performance feedback loop。当前只新增 [[published-performance-feedback-loop]]，其余归并到已有 [[skills-as-action-modules]] 和 [[source-to-publish-content-pipeline]]。
 - 项目关系图需求已收束为 [[project-crosslink-graph-view]]：多个项目之间共享的 pattern、anti-pattern、decision、implementation-note 可以在 viewer/Obsidian workbench 中展示，但图必须从 reviewed `relations` 生成，不能让视觉连接替代可信关系边。
 - 当前新增正向模式：[[review-gated-compile-queue]]、[[claim-level-provenance-source-ranges]]、[[context-pack-evidence-envelope]]、[[static-wiki-health-lint-before-auto-rewrite]]。
-- 当前新增反模式：[[direct-compile-to-truth-layer-without-review]]，避免 LLM 编译结果未经 review 直接污染 verified truth layer。
+- 当前新增反模式：[[direct-compile-to-truth-layer-without-review]]，避免 LLM 编译结果未经 review 直接污染 reviewed knowledge layer。
 - 模式是否进入项目，最终要经过正向融合判断。
 - 重要问答和阶段复盘要进入 outputs，并反向连接到概念、项目和决策。

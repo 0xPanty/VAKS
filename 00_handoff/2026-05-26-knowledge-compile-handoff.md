@@ -1,6 +1,6 @@
 # 2026-05-26 资料库 handoff：Obsidian + LLM 知识编译系统
 
-> 2026-05-27 更新：本文件已不是最新恢复入口。后续窗口优先读 `00_handoff/2026-05-27-verified-action-knowledge-system-handoff.md`。当前主架构已升级为 `Verified Action Knowledge System`，目标是融合 Karpathy LLM Wiki、llm-wiki-compiler、gbrain、obsidian-second-brain 等设计，形成可拓展的可信知识与行动依据系统。
+> 2026-05-28 更新：本文件已不是最新恢复入口。后续窗口优先读 `00_handoff/2026-05-28-verified-action-knowledge-system-v0-2-handoff.md`。当前主架构已收缩为 v0.2：Karpathy 简单主线 + Dusk 项目桌面 + reviewed-action core；对外五层 `Capture / Understand / Review / Connect / Act and Learn`。
 
 ## 当前结论
 

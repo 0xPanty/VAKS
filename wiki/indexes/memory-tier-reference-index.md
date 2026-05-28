@@ -2,7 +2,7 @@
 type: implementation-note
 status: draft
 created: 2026-05-27
-updated: 2026-05-27
+updated: 2026-05-28
 project: verified-action-knowledge-system
 scope:
   - memory-tier
@@ -16,7 +16,7 @@ related_files:
 verification_status: draft
 evidence_level: synthetic
 confidence: medium
-last_verified: 2026-05-27
+last_verified: 2026-05-28
 next_review: 2026-06-03
 tags:
   - memory-tier
@@ -29,9 +29,9 @@ tags:
 
 ## AI-readable preamble
 
-This index groups external libraries and design references related to memory tier, dev context, activation, and context engineering.
+This index groups external libraries and design references related to activation tier, dev context, context activation, cooling/reactivation, and context engineering.
 
-It is a fusion workbench, not a truth layer.
+It is a fusion workbench, not a reviewed knowledge layer.
 
 Source records stay in `raw/`; reviews, patterns, anti-patterns, and decisions stay in their normal folders. This index collects their relationships so later design synthesis can compare them.
 
@@ -44,7 +44,7 @@ which libraries influenced the memory-tier branch
 what exact design idea was borrowed
 what source/code evidence supports it
 what conflicts or risks appeared
-whether the idea supports, contradicts, refines, or replaces our current skeleton
+whether the idea supports, contradicts, refines, adds risk, or derives from our current skeleton
 ```
 
 ## Current Branch Scope
@@ -67,7 +67,7 @@ How should a large verified knowledge vault decide what an agent should load now
 
 | Library / Source | Source Record | Review | Main Borrowed Idea | Relation To Current Skeleton | Status |
 |---|---|---|---|---|---|
-| byarbrough/obsidian-para | [[2026-05-27-obsidian-para-source]] | [[2026-05-27-obsidian-para-architecture-review]] | Actionability routing; archive-first lazy reactivation; project goal gate; project closeout scan | refines `MEMORY_TIER` and `DEV_CONTEXT`; warns against folder taxonomy as truth layer | adapted |
+| byarbrough/obsidian-para | [[2026-05-27-obsidian-para-source]] | [[2026-05-27-obsidian-para-architecture-review]] | Actionability routing; archive-first lazy reactivation; project goal gate; project closeout scan | refines `MEMORY_TIER` and `DEV_CONTEXT`; warns against folder taxonomy as reviewed knowledge layer | adapted |
 | kepano/kepano-obsidian | [[2026-05-27-kepano-obsidian-source]] | [[2026-05-27-kepano-obsidian-architecture-review]] | Property-driven context workbench; link-overlap related context; random revisit cold-memory maintenance | refines view-first activation and Support discovery; warns against derived relatedness as truth | adapted |
 | willynikes2/knowledge-base-server | [[2026-05-27-knowledge-base-server-source]] | [[2026-05-27-knowledge-base-server-architecture-review]] | Token-efficient context briefing; shared agent retrieval layer; session/fix capture; incremental vault index | refines runtime retrieval and dev-context briefing; warns against auto-promotion without review | adapted |
 | Asim00740/Kagantic-vault-structure | [[2026-05-27-kagantic-vault-structure-source]] | [[2026-05-27-kagantic-vault-structure-architecture-review]] | Hierarchical index context routing; summary/tag pre-read; source hygiene warning | refines Markdown-only context briefing before SQL/MCP; warns against trusting binary vault downloads | adapted-with-caution |
@@ -246,7 +246,7 @@ What this rejects or lowers priority:
 7. Retrieval rank as trust or decision authority.
 8. Binary vault downloads as trusted source artifacts.
 9. Plugin-heavy all-in-one vault runtimes as the starting architecture.
-10. Dashboard state as verified truth.
+10. Dashboard state as reviewed knowledge.
 ```
 
 Current best alpha:
@@ -395,8 +395,8 @@ After 3-5 relevant libraries are recorded:
 
 ```text
 compare repeated design signals
-mark supports / contradicts / refines / replaces
+mark supports / contradicts / refines / risk_of / derived_from
 promote stable repeated signals into stronger patterns
 keep one-off ideas as watch/candidate
-write an updated MEMORY_TIER / DEV_CONTEXT v0.2 proposal
+write an updated Activation Tier / DEV_CONTEXT v0.2 proposal
 ```

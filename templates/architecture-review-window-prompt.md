@@ -5,6 +5,9 @@ created: 2026-05-28
 updated: 2026-05-28
 purpose: "Reusable prompt for architecture-review windows that compare new repositories, papers, or references against the full Verified Action Knowledge System without prematurely executing."
 related_files:
+  - "[[2026-05-28-verified-action-knowledge-system-v0-2-handoff]]"
+  - "[[FUSION_ARCHITECTURE_V0_2_DRAFT]]"
+  - "[[SECOND_BRAIN_MODEL]]"
   - "[[SOURCE_INTAKE]]"
   - "[[REFERENCE_REVIEW_PROTOCOL]]"
   - "[[MEMORY_TIER]]"
@@ -37,7 +40,10 @@ C:\Users\Administrator\Documents\资料库
 默认追求：体验轻、判断准、必要时严格、平时不打扰。
 
 先读这些文件建立记忆层：
-00_handoff/2026-05-27-verified-action-knowledge-system-handoff.md
+00_handoff/2026-05-28-verified-action-knowledge-system-v0-2-handoff.md
+README.md
+FUSION_ARCHITECTURE_V0_2_DRAFT.md
+SECOND_BRAIN_MODEL.md
 ARCHITECTURE_PRINCIPLES.md
 SCHEMA.md
 IMPLEMENTATION_BLUEPRINT.md
@@ -57,7 +63,7 @@ raw / wiki / index / log / ingest / query / lint。
 2. Dusk 是项目桌面体验：
 scope dashboard / project desktop / mailbox / closeout。
 作用是做项目时把相关资料、任务、风险、参考摆到桌面上。
-  它是 workbench，不是 reviewed knowledge layer。
+它是 workbench，不是 reviewed knowledge layer。
 
 3. Verified Action Knowledge System 是后台可信系统：
 source provenance / candidate / review / schema / pattern / anti-pattern / decision / context pack / feedback。
@@ -77,7 +83,7 @@ source provenance / candidate / review / schema / pattern / anti-pattern / decis
 - Dusk workbench
 - source ingest
 - review queue
-  - schema / reviewed knowledge
+- schema / reviewed knowledge
 - memory / dev context
 - feedback
 - retrieval / cache
@@ -115,7 +121,7 @@ source provenance / candidate / review / schema / pattern / anti-pattern / decis
 不要让流程变成负担。
 不要把每个参考库的优点都硬塞进架构。
 优先寻找能减少负担、提升判断质量、保持体验舒服的 alpha 设计。
-  不要把 dashboard、retrieval、metadata 当 reviewed knowledge。
+不要把 dashboard、retrieval、metadata 当 reviewed knowledge。
 不要把自动化和脚本提前做。
 先做全方面对比和架构判断，等我确认后再落文件。
 ```

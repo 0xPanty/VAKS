@@ -1,5 +1,7 @@
 # 2026-05-27 handoff：Verified Action Knowledge System 主架构确认
 
+> 2026-05-28 更新：本文件已不是最新恢复入口。后续窗口优先读 `00_handoff/2026-05-28-verified-action-knowledge-system-v0-2-handoff.md`。当前主架构已收缩为 v0.2：对外五层 `Capture / Understand / Review / Connect / Act and Learn`，内部采用 reviewed knowledge loop；`SECOND_BRAIN_MODEL.md` 是解释层，不是工程主分层；feedback 是 Use Ledger，不直接改 truth confidence。
+
 ## 工作目录
 
 ```text
