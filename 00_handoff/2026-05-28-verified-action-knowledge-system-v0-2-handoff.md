@@ -12,6 +12,7 @@ C:\Users\Administrator\Documents\资料库
 
 ```text
 7d344d3 Document fusion architecture v0.2 and review synthesis
+c3dec34 Update v0.2 handoff and recovery indexes
 ```
 
 这次更新后的核心判断：
@@ -35,6 +36,7 @@ dashboard、retrieval、metadata、brief、feedback 都可以帮忙，但不能�
 ## 下个窗口先读
 
 ```text
+AGENTS.md
 00_handoff/2026-05-28-verified-action-knowledge-system-v0-2-handoff.md
 README.md
 FUSION_ARCHITECTURE_V0_2_DRAFT.md
@@ -54,6 +56,8 @@ templates/architecture-review-window-prompt.md
 ```
 
 如果只是继续看文章/仓库/论文，先读 handoff、README、FUSION、SECOND_BRAIN、REFERENCE_REVIEW_PROTOCOL、architecture review prompt 就够；需要落地实现或改 schema 时，再读完整清单。
+
+`AGENTS.md` 是项目级入口地图：它不替代 handoff，也不替代 schema/docs，只负责告诉新窗口先读什么、各目录是什么、已经吸收过哪些资料、当前边界是什么。
 
 ## 对外主叙事
 
@@ -194,6 +198,7 @@ blocked_by
 ## 已更新的关键文件
 
 ```text
+AGENTS.md
 README.md
 FUSION_ARCHITECTURE_V0_2_DRAFT.md
 SECOND_BRAIN_MODEL.md

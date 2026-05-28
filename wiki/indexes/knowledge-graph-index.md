@@ -3,6 +3,7 @@
 ## 当前核心契约
 
 - [[SCHEMA]]
+- [[AGENTS]]
 - [[purpose]]
 - [[ARCHITECTURE_PRINCIPLES]]
 - [[IMPLEMENTATION_BLUEPRINT]]
@@ -172,6 +173,7 @@
 - 2026-05-28 v0.2 关系类型：MVP 只保留 `supports / contradicts / refines / risk_of / derived_from`。`replaces / implements / applies_to / inspired_by / alternative_to / blocked_by` 先 parked。
 - 2026-05-28 v0.2 feedback：`FEEDBACK.md` 作为 Use Ledger，只校准 activation、usefulness、scope fit 和 review_due，不直接改 truth confidence。
 - 2026-05-28 v0.2 proactive synthesis：先 on-demand，输出 Connections / Patterns / Contradictions / Open Questions，全部是 candidate；daily / weekly / monthly 自动化先 parked。
+- 2026-05-28 新增 `AGENTS.md` 作为项目级入口地图：它记录启动读法、目录职责、已吸收资料集合和操作边界；它不是 schema、不是 handoff、不是 reviewed knowledge layer，只负责让新 Codex 窗口不漏读关键资料。
 - 新增高信号设计候选：vault index 作为上下文路由器、purpose-specific vault philosophy、claim-style composable notes。
 - 新增内容工厂高信号候选：source-to-publish pipeline、skills as action modules、container/intelligence/hands 分层。
 - 新增中期架构候选：把已验证资料库做成 API / resolver / context pack，供 agent 调用后结合 gbrain 推理。

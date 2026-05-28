@@ -5,6 +5,7 @@ created: 2026-05-28
 updated: 2026-05-28
 purpose: "Reusable prompt for architecture-review windows that compare new repositories, papers, or references against the full Verified Action Knowledge System without prematurely executing."
 related_files:
+  - "[[AGENTS]]"
   - "[[2026-05-28-verified-action-knowledge-system-v0-2-handoff]]"
   - "[[FUSION_ARCHITECTURE_V0_2_DRAFT]]"
   - "[[SECOND_BRAIN_MODEL]]"
@@ -40,6 +41,7 @@ C:\Users\Administrator\Documents\资料库
 默认追求：体验轻、判断准、必要时严格、平时不打扰。
 
 先读这些文件建立记忆层：
+AGENTS.md
 00_handoff/2026-05-28-verified-action-knowledge-system-v0-2-handoff.md
 README.md
 FUSION_ARCHITECTURE_V0_2_DRAFT.md
@@ -51,6 +53,8 @@ SOURCE_INTAKE.md
 REFERENCE_REVIEW_PROTOCOL.md
 MEMORY_TIER.md
 DEV_CONTEXT.md
+REVIEW_QUEUE.md
+FEEDBACK.md
 wiki/indexes/knowledge-graph-index.md
 wiki/indexes/memory-tier-reference-index.md
 
