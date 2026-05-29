@@ -103,6 +103,54 @@ Source 会保留轻量 provenance：资料是什么、从哪里来、什么时�
 
 引用不够：context pack 会显示关键判断的覆盖状态，被支持、证据弱、被挑战、证据缺失、范围不适用；风险单独通过 risk flags、risk refs 和 action readiness 显示。
 
+查询也不是只拿几个相似 chunk。
+它应该点亮一片带复核意识的联想邻域：
+
+```text
+supporting points
+challenging points
+risk / anti-pattern
+old decisions
+scope notes
+source / evidence anchors
+gaps and review_due
+```
+
+这借鉴 HippoRAG 的 association retrieval 思路，但只放在 activation / context pack 层。
+Graph traversal、PPR、similarity、association score 只能帮助召回和排序，不能决定 truth、support、confidence 或 action readiness。
+
+GraphRAG / LightRAG 再补一层说法：检索要分层。
+
+```text
+low-level:
+  找具体 source、text unit、claim、entity。
+
+high-level:
+  找 pattern、theme、community。
+
+relation neighborhood:
+  找 reviewed relation 周边的相关上下文。
+```
+
+这些只决定先读什么、一起带出什么，不决定什么是真的。
+Community summary 不是 truth，graph rank 不是 trust，auto-extracted relation 不是 reviewed relation。
+
+第 10 条补强是 temporal applicability：
+
+```text
+Truth is source-backed.
+Applicability is time-, version-, and scope-bound.
+```
+
+一个判断可以是真的，但已经过时；也可以在原项目成立，但对当前版本、环境或时间窗口不适用。
+
+冷热也不是可信度等级，而是 activation tier：
+
+```text
+The vault has activation tiers, not truth tiers.
+Hot means read early, not believe more.
+```
+
 目录角色：
 
 - `raw/`：原始资料区。文章、X 推文、论文、repo、截图、播客转录等先放这里，尽量保留原文和来源。
@@ -127,6 +175,10 @@ Source 会保留轻量 provenance：资料是什么、从哪里来、什么时�
 - Review 采用支持-反对式判断：不仅看来源，还看支持、挑战、范围限制、风险和行动可用性。
 - 查询反馈只校准激活路径：usefulness、scope fit、activation ranking、missing-point candidate；不会直接把用户偏好写成真理。
 - 新增 conversation-derived feedback：从连续追问、问题变窄、纠偏、说漏了、换题等行为反推 route / keyword / scope 信号；默认是弱信号，先 session-local，不直接改 point truth。
+- 新增 Reflexion / RMM-inspired feedback ledger：反馈像 reflection / use memory，只影响 usefulness、scope fit、activation ranking 和 review_due，不直接影响 truth confidence、verification_status 或 source reliability。
+- 正反馈弱；负反馈制造 review pressure；明确纠错触发 review_due。
+- 新增 RKA-inspired review queue taxonomy：low_confidence_claim、contradiction、missing_evidence、synthesis_needed、decision_superseded 只作为 review routing；旧 decision 被替代时不删除，链接 replacement，并把受影响内容标记 review_due。
+- 新增 RKA-inspired action guardrails：重大行动前确认 intent / assumptions / scope / success criteria；用户原话和模型理解分开；maintenance manifest 只报健康问题不自动修；`valid_until` 表示适用期，`stale/review_due` 表示复查压力；没有全文/原文 span 的 claim 不能给高 confidence；decision outcome calibration 只改进未来 recommendation，不直接改 truth。
 - 暂时不急着上重型 RAG，先跑通 source -> candidate points -> calibration -> review -> reviewed node / reviewed relation -> context pack。
 
 最小闭环：
@@ -136,7 +188,8 @@ Source 会保留轻量 provenance：资料是什么、从哪里来、什么时�
 3. 和本地 reviewed knowledge 做 calibration / point collision，浮出候选关系、矛盾、scope mismatch、stale assumption 和 review questions。
 4. lint / review 后晋级到正式 `wiki/` 节点或 reviewed relations。
 5. 需要行动时生成 context pack。
-6. 行动结果回流为 feedback，校准 activation/usefulness/scope fit，并触发 gaps、review_due 或 missing-point。
+6. 重大行动前确认意图和成功标准。
+7. 行动结果回流为 feedback / decision outcome，校准 activation、usefulness、scope fit、risk calibration 和 future recommendation，并触发 gaps、review_due 或 missing-point。
 
 开发阶段的新增原则：
 

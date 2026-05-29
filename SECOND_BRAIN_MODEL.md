@@ -55,6 +55,7 @@ Activation:
   activation tier
   dev context
   context activation
+  association neighborhood activation
 
 Action:
   context pack
@@ -174,6 +175,16 @@ hot 只是当前 scope 下要先看。
 cold 不是没用。
 cold 只是现在不占注意力。
 ```
+
+对外说法：
+
+```text
+The vault has activation tiers, not truth tiers.
+Hot means read early, not believe more.
+```
+
+MemGPT 给这里的启发是 virtual context management：在有限 context window 里管理快/慢记忆。
+本资料库只吸收这个 activation / context discipline，不吸收 agent OS 或自动 memory manager。
 
 边界：
 
@@ -299,6 +310,8 @@ knowledge graph
 ```text
 连接可以启发思考。
 强连接必须有 evidence 和 rationale。
+查询时点亮的是 evidence-aware association neighborhood，不是孤立 chunk。
+GraphRAG / LightRAG 提醒我们：这个 neighborhood 可以分低层具体证据、高层主题模式、关系邻域三层召回。
 ```
 
 边界：
@@ -306,6 +319,11 @@ knowledge graph
 ```text
 link overlap、tag、backlink、search score 可以提示相关。
 但它们不能替代 reviewed relations。
+graph traversal / PPR / association score 也不能替代 support、confidence 或 truth。
+community report 不是 truth。
+graph rank 不是 trust。
+auto-extracted relation 不是 reviewed relation。
+candidate relation neighborhood 不能冒充 reviewed relation neighborhood。
 ```
 
 ## 6. Proactive Synthesis：主动思考（候选生成器）
@@ -386,7 +404,10 @@ implementation-note
 行动依据必须带 risk、preconditions、rollback、success metric 和 feedback path。
 context pack 不能只给 citation，还要显示关键判断的 coverage。
 哪些被支持、哪些证据弱、哪些被挑战、哪些缺证据、哪些 out of scope、哪些有风险。
+还要检查 temporal applicability：这个判断在当前时间、版本、项目、环境下是否仍然适用，是否已经 stale / superseded。
+如果新决策替代旧决策，旧决策不删除；要链接 replacement，并把受影响的 claims / patterns / relations / context packs 标记 review_due。
 行动前还要问 evidence_sufficiency：这组证据够不够支撑当前 action basis / decision / promotion。
+重大行动前还要确认 intent：我理解你的目的、假设、范围和成功标准对不对。
 ```
 
 边界：
@@ -396,7 +417,10 @@ context pack 是调用层输出。
 它不能发明未记录的 truth。
 coverage_map 是审计面，不是 truth layer。
 coverage_status 不能自动提高 confidence。
+Temporal Applicability Check 不改 truth；它只判断一个已审过的判断现在能不能用。
+Decision superseding 不抹掉历史，只改变当前适用性并触发复查压力。
 Evidence Sufficiency Gate 不改 truth confidence；证据不足时只能 ask_user / retrieve_more / create_missing_point / narrow_scope / mark_not_actionable / needs_review。
+Intent confirmation 不判真，只防止行动跑偏；普通问答不用触发。
 ```
 
 ## 8. Use Ledger / Feedback：使用记录与反馈校准
@@ -422,6 +446,7 @@ review_due
 ```text
 Use Ledger 记录知识被怎么用过。
 反馈让系统知道哪些回答有用、哪些跑偏、哪些范围错、哪些资料该重新看。
+Decision outcome calibration 记录“当时建议怎么做、用户怎么选、后来结果怎样”，用来改进未来 recommendation。
 ```
 
 边界：
@@ -516,11 +541,14 @@ Context Pack:
   known risks and gaps
 
 Action:
-  preconditions / rollback / failure mode
+  intent confirmation / preconditions / rollback / failure mode
 
 Feedback:
   missed contradiction -> review_due
+  decision outcome -> future recommendation calibration
 ```
+
+Maintenance manifest 是这个免疫系统的清单：它列出缺证据、缺 source anchor、过期适用范围、缺 intent confirmation、confidence cap 违规等问题。它只提醒，不自动修。
 
 ## System Shape
 
@@ -748,7 +776,9 @@ derived_from 只是来源，不是证据强度。
 
 用户提问时，系统不是只做关键词搜索。
 
-它会沿着 activation tier、reviewed relations、dev context、risk layer 点亮一片相关逻辑树：
+它也不是只拿几个相似 chunk。
+
+它会沿着 activation tier、reviewed relations、dev context、risk layer 点亮一片经过审查的联想邻域：
 
 ```text
 Core:
@@ -760,15 +790,45 @@ Support:
 Risk:
   决策前必须检查的反例、冲突、反模式。
 
+Decision:
+  旧决策、适用范围、回退和已知结果。
+
+Scope:
+  项目、版本、时间、环境和条件限制。
+
 Cold References:
   可追溯旧资料，需要证据时再打开。
 ```
+
+HippoRAG 给这里的启发是 association retrieval：从一个查询出发，沿图上的相关连接找到一片邻域。
+但在本资料库里，这片邻域必须服从 reviewed-action 边界。
+
+GraphRAG / LightRAG 给这里的补充是 retrieval stratification：
+
+```text
+low-level:
+  source / text unit / claim / entity
+
+high-level:
+  pattern / theme / community
+
+relation neighborhood:
+  reviewed relation 周边上下文
+```
+
+这让 context pack 不只是几个相似 chunk，而是同时拿到具体锚点和大范围背景。
 
 边界：
 
 ```text
 激活顺序不是可信度。
 搜索相似度不是 truth。
+graph traversal / PPR / association score 不是 support。
+community report 不是 truth。
+graph rank 不是 trust。
+auto-extracted relation 不是 reviewed relation。
+candidate relation neighborhood 不能冒充 reviewed relation neighborhood。
+被点亮的邻居不是 reviewed relation。
 context pack 不能发明未记录结论。
 ```
 
@@ -789,6 +849,9 @@ scope fit:
 
 activation ranking:
   下次同类问题要不要更早点亮这条路径。
+
+review_due:
+  负反馈、明确纠错、漏证据或漏矛盾会触发复查压力。
 ```
 
 反馈不能直接修改：
@@ -814,6 +877,21 @@ decision outcome
 
 忽略了矛盾:
   下次 context pack 必须带 contradiction。
+
+用户明确纠错:
+  创建 review_due。
+```
+
+Reflexion 给这里的启发是：agent 不靠更新权重学习，而是把反馈写成 verbal reflection / episodic memory，供后续决策使用。
+在本资料库里，这对应 Use Ledger：反馈进入记录，影响未来激活，不直接改 truth。
+
+强规则：
+
+```text
+Positive feedback is weak.
+Negative feedback creates review pressure.
+Explicit correction creates review_due.
+Decision outcome improves future recommendation, not truth.
 ```
 
 ### 4. Conversation-Derived Feedback：从对话里提取弱反馈
@@ -846,6 +924,18 @@ conversation-derived feedback 默认是弱信号。
 它优先调整 route、keyword、scope 和 missing candidate。
 它不能把某个观点直接变成 truth。
 ```
+
+RMM 给这里的启发是 forward-looking / backward-looking reflection：
+
+```text
+forward-looking:
+  总结下一次检索该看什么、避开什么、补什么。
+
+backward-looking:
+  回看引用证据、漏掉的矛盾和失败 route。
+```
+
+这些都只能生成 feedback-event、missing-point、missing-evidence 或 review_due，不直接改 truth。
 
 ### 5. Inhibition / Risk：抑制信号
 
@@ -920,6 +1010,9 @@ Activation Feedback:
 Conversation-Derived Feedback:
   从连续追问、纠偏、问题变窄、说漏了、换题里提取弱反馈。
 
+Feedback Polarity Rule:
+  正反馈弱，负反馈制造 review pressure，明确纠错触发 review_due。
+
 Truth / Usefulness / Scope Fit 三分:
   truth 管真假。
   usefulness 管有没有帮上忙。
@@ -928,6 +1021,7 @@ Truth / Usefulness / Scope Fit 三分:
 Activation Tier 不是 Truth:
   hot 只是先看，不是更真。
   cold 只是暂时不占注意力，不是没用。
+  对外叫 Activation Tier，不叫 truth tier。
 
 Dev Context 四层:
   Core / Support / Risk / Cold References。
@@ -983,6 +1077,18 @@ Obsidian Bases / dashboard / graph view:
 QMD / nano-NotebookLM retrieval:
   BM25、vector、RRF、GraphRAG、generated graph 做候选召回和关系探索。
   搜索分数永远排在 verified 字段之后。
+
+GraphRAG / LightRAG retrieval:
+  吸收 low-level / high-level / relation-neighborhood 检索分层。
+  不吸收 community summary as truth、graph rank as trust、auto-extracted relation as reviewed relation。
+
+HippoRAG retrieval:
+  吸收 association neighborhood activation。
+  不吸收 Personalized PageRank / graph traversal 作为 truth、support、confidence 或 reviewed relation。
+
+Graphiti / Zep temporal graph:
+  吸收 validity window / supersession / episode-backed provenance。
+  不吸收自动构图、自动 invalidation 或图数据库 runtime 作为 truth core。
 
 Publishing feedback loop:
   发布后的评论、指标、读者反馈可以生成 feedback 或 missing-point。

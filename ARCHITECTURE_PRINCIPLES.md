@@ -149,6 +149,11 @@ External designs are inputs, not masters.
 | Dusk-style vault workbench | Scope dashboard, task mailbox, and closeout surfaces for project work. | Workbench views do not decide truth or replace dev context packs. |
 | Obsidian Bases / Base Hub | Workbench and review views over structured Markdown. | Views do not define truth. They display and filter records. |
 | BM25 / vector / QMD / Zilliz / GraphRAG | Candidate retrieval and ranking. | Retrieval is not verification. |
+| HippoRAG | Association retrieval inspiration for lighting up related support, challenge, risk, decisions, and scope around a query. | Personalized PageRank, graph traversal, and association score do not decide truth, support, confidence, or reviewed relations. |
+| GraphRAG / LightRAG | Graph retrieval stratification: low-level source / text unit / claim / entity retrieval, high-level pattern / theme / community retrieval, and relation-neighborhood traversal. | Community reports are briefings, graph rank is not trust, and auto-extracted relations are not reviewed relations. |
+| Graphiti / Zep | Temporal validity windows and episode-backed fact traceability. | Automatic graph construction, automatic invalidation, and graph database runtime do not replace Markdown/YAML or review. |
+| MemGPT | Virtual-context / fast-slow memory inspiration for activation tiers under limited context. | Do not copy an agent OS, autonomous paging runtime, or treat hot/warm/cold as truth levels. |
+| RKA / research knowledge assistant | Workflow reference for review queue taxonomy, decision superseding, intent confirmation, verbatim input, maintenance manifests, confidence caps, and outcome calibration. | Do not import runtime, MCP, dashboard, SQLite truth source, or treat workflow actions / calibration scores as truth changes. |
 | Misa / gbrain / external agents | Read-only or suggest-only consumers and candidate proposers. | They do not directly write formal reviewed knowledge without review. |
 
 ## 3. Non-negotiable principles
@@ -213,6 +218,168 @@ The current branch may decide the first reading path, but it must not hide main-
 BM25, vector search, GraphRAG, Zilliz, QMD, embeddings, rerankers, and graph scores can decide what to read next.
 
 They cannot decide what is true.
+
+HippoRAG-style association retrieval follows the same boundary:
+
+```text
+graph traversal / PPR / association score:
+  recall and activation signal
+
+reviewed evidence / reviewed relation:
+  support, challenge, trust, and action basis signal
+```
+
+GraphRAG / LightRAG-style graph retrieval may structure recall:
+
+```text
+low-level:
+  source / text unit / claim / entity
+
+high-level:
+  pattern / theme / community / community report
+
+relation neighborhood:
+  nearby reviewed relations and context
+```
+
+This can improve context-pack preparation.
+It cannot promote a summary, rank, or extracted edge into truth.
+
+### 3.4.1 Applicability is time-, version-, and scope-bound
+
+Truth is source-backed.
+Applicability is time-, version-, and scope-bound.
+
+Graphiti / Zep-style temporal validity windows are useful because they separate:
+
+```text
+when a fact was learned
+when it became true
+when it stopped being true
+what superseded or invalidated it
+which project / version / environment it applies to
+```
+
+This hardens `scope_fit`.
+It does not automate truth changes.
+
+### 3.4.2 Activation tiers are not truth tiers
+
+MemGPT's useful lesson is virtual context management under a limited context window.
+This supports hot / warm / cold as activation tiers:
+
+```text
+The vault has activation tiers, not truth tiers.
+Hot means read early, not believe more.
+```
+
+`memory_tier` may remain as a schema field for compatibility, but the public concept is Activation Tier.
+
+### 3.4.3 Review queue actions are not truth changes
+
+RKA-style review queues are useful because they name why human attention is needed:
+
+```text
+low_confidence_claim
+contradiction
+missing_evidence
+synthesis_needed
+decision_superseded
+```
+
+Those labels route work. They do not decide truth, confidence, relation status, or action readiness.
+
+Decision superseding follows the same audit rule:
+
+```text
+old decision remains
+replacement decision is linked
+affected downstream knowledge becomes review_due
+```
+
+### 3.4.4 Action intent is confirmed before significant work
+
+RKA's Confirmation Brief / Backbrief idea is useful as an action guardrail:
+
+```text
+restated intent
+assumptions
+scope in / scope out
+success criteria
+verification plan
+```
+
+Use it before significant actions, architecture changes, implementation work, deployment, high-impact decision, or multi-step mission.
+
+Do not use it for ordinary Q&A, small edits, or simple source capture.
+
+This gate checks alignment. It does not decide truth.
+
+### 3.4.5 Verbatim input is not model interpretation
+
+When a user directive, correction, preference, or decision is important enough to affect action or durable knowledge, preserve:
+
+```text
+verbatim_input:
+  what the user actually said
+
+model_interpretation:
+  how the system understood it
+```
+
+This prevents the vault from treating an AI paraphrase as the user's original intent.
+
+### 3.4.6 Stale is review pressure, not expiry
+
+Temporal validity and staleness are different:
+
+```text
+valid_from / valid_until:
+  applicability window
+
+stale / review_due:
+  editorial review pressure
+```
+
+A point can still be valid but due for review.
+A point can be expired or out of scope without being false historically.
+
+### 3.4.7 Confidence caps protect weak source access
+
+If a claim is based only on an abstract, snippet, URL, search result, or unsourced summary, it cannot receive high evidence confidence.
+
+Rule of thumb:
+
+```text
+no source span / full anchor:
+  cap confidence and evidence_level
+
+direct quote or source range:
+  can support stronger review, if the span actually supports the point
+```
+
+This is an Evidence Support Check boundary, not a new truth engine.
+
+### 3.4.8 Decision outcome calibration improves recommendations
+
+Decision outcome calibration records whether action-basis recommendations later worked.
+
+It can adjust:
+
+```text
+future recommendations
+risk calibration
+scope fit
+option framing
+```
+
+It cannot directly adjust:
+
+```text
+truth confidence
+verification status
+source reliability
+```
 
 ### 3.5 Relations are first-class records
 
@@ -432,10 +599,13 @@ A good context pack should include:
 
 ```text
 question or task
+association neighborhood for this query
 primary verified nodes
 source evidence
 relation rationale
 negative evidence
+temporal applicability / validity window
+intent confirmation when action is significant
 confidence and verification_status
 gaps
 warnings
@@ -483,9 +653,15 @@ context packs without warnings or gaps
 candidate backlog
 stale next_review dates
 conflicted nodes still used as active action basis
+confidence cap violations
+missing intent confirmation before significant action
+missing decision outcome records after action follow-up
+validity windows confused with staleness
 ```
 
 In v0.1, lint reports problems. It does not rewrite the vault in the background.
+
+Maintenance manifests are the durable form of these lint reports. They may create review pressure; they may not perform repair by themselves.
 
 ## 11. Progressive context loading
 

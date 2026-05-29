@@ -318,14 +318,21 @@ Item exposed a failure route:
   write or update Risk / anti-pattern.
 ```
 
-## 4. Relationship To Base Memory Tier
+## 4. Relationship To Base Activation Tier
 
-Base memory tier:
+Base activation tier:
 
 ```text
 long-term activation hygiene
 metadata on notes
 lightweight and persistent
+```
+
+The historical field name is `memory_tier`, but the concept should be explained as Activation Tier:
+
+```text
+The vault has activation tiers, not truth tiers.
+Hot means read early, not believe more.
 ```
 
 Dev context:

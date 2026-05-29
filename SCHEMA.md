@@ -3,7 +3,7 @@ type: schema
 status: active
 version: 0.1
 created: 2026-05-26
-updated: 2026-05-28
+updated: 2026-05-30
 scope:
   - verified-knowledge-system
   - markdown-system-of-record
@@ -20,7 +20,7 @@ sources:
 verification_status: active
 evidence_level: synthetic
 confidence: high
-last_verified: 2026-05-28
+last_verified: 2026-05-30
 next_review: 2026-06-03
 ---
 
@@ -49,7 +49,7 @@ Schema 负责:
 
 Schema 不负责:
   把第二大脑模型拆成工程模块。
-  让 dashboard、retrieval、feedback、brief 或 context pack 决定 truth。
+  让 dashboard、retrieval、association score、feedback、brief 或 context pack 决定 truth。
 ```
 
 知识校准口径：
@@ -198,6 +198,8 @@ extraction:
   model:
   tool:
   source_ranges: []
+  verbatim_input:
+  model_interpretation:
 
 provenance:
   model: PROV-lite
@@ -216,6 +218,21 @@ reviewed_by 属于 reviewed node / relation。
 promoted_by 属于 promotion event / reviewed node。
 used_sources 属于 context pack / use ledger。
 ```
+
+When a user directive, explicit correction, preference, or decision is important enough to affect durable knowledge or action, preserve:
+
+```text
+verbatim_input:
+  the user's exact words
+
+model_interpretation:
+  the system's understanding or analysis
+```
+
+Do not treat `model_interpretation` as the user's original intent.
+
+Use `verbatim_input` / `model_interpretation` for user directives, explicit corrections, preferences, decisions, and action instructions.
+Do not require them for ordinary article, repository, paper, or source capture.
 
 严格验证只在内容晋级或被用于行动时触发：
 
@@ -278,6 +295,8 @@ contradiction_candidate
 scope_mismatch
 stale_assumption_candidate
 missing_evidence
+synthesis_needed
+decision_superseded
 review_question
 review_due
 ```
@@ -314,6 +333,7 @@ usefulness
 scope fit
 activation ranking
 route / keyword boost
+review_due
 ```
 
 它们不能影响：
@@ -322,8 +342,52 @@ route / keyword boost
 truth confidence
 verification_status
 source reliability
-decision outcome
+recorded decision outcome
 ```
+
+Feedback ledger 的硬规则：
+
+```text
+Positive feedback is weak.
+Negative feedback creates review pressure.
+Explicit correction creates review_due.
+```
+
+Allowed event families:
+
+```text
+explicit_correction
+missing_evidence
+scope_mismatch
+answer_helpful
+contradiction_missed
+action_outcome
+decision_outcome
+```
+
+Decision outcome calibration records action-basis recommendation quality:
+
+```yaml
+decision_outcome:
+  decision_ref:
+  action_basis_ref:
+  recommendation:
+  confidence_at_decision:
+  user_choice:
+  outcome: succeeded | failed | mixed | unresolved
+  outcome_note:
+  affects:
+    - future_recommendation
+    - risk_calibration
+    - scope_fit
+    - option_framing
+  never_affects_directly:
+    - truth_confidence
+    - verification_status
+    - source_reliability
+```
+
+Decision outcome tells whether the recommendation worked. It does not prove the underlying claim true.
 
 ### 1.6 Activation is not truth
 
@@ -346,6 +410,83 @@ cold != useless
 ```
 
 开发模式下可以临时生成 dev context pack，把相关资料锁定为当前任务的工作记忆。这个 pack 可以包含 core / support / risk / cold references，但它不改变原始节点的 truth status，也不要求把所有相关资料永久升为 hot。
+
+### 1.7 Association neighborhood activation is not truth
+
+HippoRAG-style association retrieval belongs to activation and context-pack preparation.
+
+It can help a query light up:
+
+```text
+supporting points
+challenging points
+risk / anti-pattern
+old decisions
+scope notes
+source / evidence anchors
+gaps and review_due
+```
+
+But it cannot decide:
+
+```text
+truth
+support
+confidence
+evidence_level
+action_readiness
+reviewed relation creation
+```
+
+Rules:
+
+```text
+graph traversal / PPR / association score is recall, not evidence.
+activated neighbor does not mean supported point.
+association path does not replace evidence_support.
+association neighborhood prepares a draft context envelope; coverage_map and evidence_sufficiency still decide whether the answer/action basis is auditable enough.
+ordinary capture does not trigger association neighborhood activation.
+```
+
+### 1.8 Graph retrieval stratification is not truth
+
+GraphRAG / LightRAG-style retrieval can organize context-pack preparation into strata:
+
+```text
+low-level retrieval:
+  source / text_unit / claim / entity
+
+high-level retrieval:
+  pattern / theme / community / community_report
+
+relation neighborhood:
+  reviewed relation neighborhood around the query seed
+```
+
+This helps the system recall both concrete anchors and broader context.
+It cannot decide:
+
+```text
+truth
+trust
+support
+confidence
+verification_status
+evidence_level
+reviewed relation creation
+action_readiness
+```
+
+Rules:
+
+```text
+TextUnit anchor is provenance, not support.
+Community report is briefing, not truth.
+Graph rank is retrieval priority, not trust.
+Auto-extracted relation remains candidate material until reviewed.
+LLM-derived claim status does not become verification_status.
+If graph traversal uses candidate relations, label it candidate_relation_neighborhood, not reviewed_relation_neighborhood.
+```
 
 ## 2. 节点类型
 
@@ -393,6 +534,25 @@ last_activated:
 activation_reason:
 ```
 
+Public concept name:
+
+```text
+Activation Tier
+```
+
+Compatibility field:
+
+```text
+memory_tier
+```
+
+Rule:
+
+```text
+The vault has activation tiers, not truth tiers.
+Hot means read early, not believe more.
+```
+
 以下字段属于可选 review / action metadata，用来表达当前是否站得住、能否用于行动：
 
 完整 Evidence-Aware Review 面板是 lazy gate，不是普通 capture 的必填表。
@@ -428,6 +588,20 @@ qualification:
   time_scope:
   environment_scope:
   assumptions:
+temporal_applicability:
+  valid_from:
+  valid_until:
+  supersedes:
+  superseded_by:
+  invalidated_by:
+  applies_to:
+    project:
+    version:
+    environment:
+    timeframe:
+    conditions:
+  check_state: in_scope | out_of_scope | stale | superseded | unknown | needs_review
+  reviewer_note:
 review_summary:
   why_it_still_holds:
   strongest_challenge:
@@ -443,6 +617,23 @@ evidence_sufficiency:
   missing: []
   required_next_step: proceed | ask_user | retrieve_more | create_missing_point | narrow_scope | mark_not_actionable | needs_review
   reviewer_note:
+intent_confirmation:
+  required: true | false
+  restated_intent:
+  assumptions: []
+  scope_in: []
+  scope_out: []
+  success_criteria: []
+  verification_plan:
+  user_confirmed: true | false
+  confirmation_ref:
+backbrief:
+  plan_summary:
+  acceptance_criteria_interpretation:
+  numbered_assumptions: []
+  risks: []
+  verification_method:
+  approved_by:
 ```
 
 规则：
@@ -451,9 +642,14 @@ evidence_sufficiency:
 - `knowledge_state` 表示当前在知识库里是否还站得住。
 - `action_readiness` 表示当前行动场景能不能用，不等于 truth status。
 - `evidence_sufficiency` 表示当前证据是否足够支撑这次用途，不等于 truth status。
+- `intent_confirmation` 表示重大行动前是否对齐用户意图，不等于 truth status。
+- `backbrief` 表示执行方如何理解任务、风险和验证方法，不等于 truth status。
+- `temporal_applicability` 表示当前时间、版本、项目、环境和 supersession 状态下是否适用，不等于 truth status。
 - 一个节点可以 `knowledge_state: contested`，但在低风险、可回滚场景下仍可作为参考。
 - 一个节点可以 `knowledge_state: standing`，但对当前项目 `action_readiness: not_ready`。
+- 一个节点可以 `knowledge_state: standing`，但 `temporal_applicability.check_state: stale | superseded | out_of_scope`，因此不能直接作为当前 action basis。
 - `evidence_sufficiency` 只在 promotion、decision、context pack / action basis、strong reviewed relation、risk_sensitive_answer 或用户明确问“证据够不够”时触发；普通 capture / ordinary query 不强制。
+- `intent_confirmation` / `backbrief` 只在重大行动、架构改动、执行任务、部署、高影响 decision 或风险敏感 action basis 前触发；普通问答和普通 capture 不触发。
 
 以下字段属于 candidate / review queue routing metadata。它们用于决定怎么 review，不直接决定 truth：
 
@@ -464,6 +660,36 @@ verifiability:
   reason:
 review_route: evidence_check | rationale_check | instance_check | risk_check | action_basis_check | personalization_only | research_question | code_anchor_check
 ```
+
+Review queue items classify why a candidate, cluster, collision signal, decision, or dependency needs attention.
+They do not create truth and do not replace candidate point types.
+They are optional queue routing metadata, not mandatory fields for every candidate point.
+
+```yaml
+review_queue_item:
+  item_type: low_confidence_claim | contradiction | missing_evidence | synthesis_needed | decision_superseded
+  target_refs: []
+  triggered_by:
+    - candidate_point
+    - calibration_signal
+    - point_cluster
+    - reviewed_node
+    - decision
+    - feedback_event
+    - action_outcome
+  suggested_action: approve | reject | merge | override | request_evidence | mark_review_due | create_missing_point
+  status: open | in-review | resolved | rejected | parked
+  resolution_note:
+```
+
+Rules:
+
+- `review_queue_item.item_type` says why attention is needed, not what the point is.
+- `low_confidence_claim` can enter review, but cannot be promoted until evidence support and sufficiency are checked.
+- `contradiction` stays visible until a reviewer resolves or scopes it.
+- `missing_evidence` points to a specific missing support target.
+- `synthesis_needed` asks for a reviewed summary judgment across multiple candidates or clusters.
+- `decision_superseded` starts an audit-preserving replacement flow; it does not delete the old decision.
 
 默认映射：
 
@@ -569,11 +795,11 @@ evidence_support:
 | `next_review` | 建议 | 下一次应复查日期。 |
 | `relations` | 晋级时 | 语义关系边列表。raw/source 可先写 `[]`，强关系只在晋级时补齐。 |
 
-### 3.6 Activation Metadata
+### 3.6 Activation Metadata / Activation Tier
 
 | 字段 | 必填 | 定义 |
 |---|---|---|
-| `memory_tier` | 可选 | 当前 scope 下的默认激活优先级：`hot`、`warm`、`cold`。 |
+| `memory_tier` | 可选 | 当前 scope 下的默认 Activation Tier：`hot`、`warm`、`cold`。字段名保留兼容；概念名优先说 Activation Tier。 |
 | `activation_status` | 可选 | 当前是否活跃：`active`、`dormant`、`archived`。 |
 | `scope_key` | 可选 | 激活适用的项目、问题、领域或工作流。 |
 | `last_activated` | 可选 | 最近一次被主动调取或放入工作上下文的日期。 |
@@ -584,6 +810,7 @@ evidence_support:
 - activation metadata 只影响读取顺序和上下文优先级。
 - activation metadata 不能提升 `confidence`。
 - activation metadata 不能改变 `verification_status`。
+- hot means read early, not believe more.
 - 如果目标是具体开发任务，应优先创建 dev context pack，而不是把全库文件永久改成 hot。
 
 ### 3.2 Status 枚举
@@ -691,6 +918,26 @@ high
 4-5 = high
 ```
 
+### 3.6 Confidence Cap Without Full Text
+
+Confidence is capped by source access quality.
+
+```yaml
+source_access:
+  access_level: full_text | source_span | abstract_only | snippet_only | url_only | summary_only | unknown
+  has_direct_quote: true | false
+  has_source_range: true | false
+  confidence_cap: low | medium | high
+  cap_reason:
+```
+
+Rules:
+
+- `url_only` and `summary_only` cannot support a high-confidence claim.
+- `abstract_only` or `snippet_only` should normally cap at medium unless the point is explicitly scoped to what the abstract/snippet says.
+- High confidence requires a direct source span, full text, source range, direct observation, or equivalent primary anchor.
+- A confidence cap is not a truth judgment; it prevents weak source access from looking stronger than it is.
+
 ## 4. Epistemic Fields
 
 gbrain 启发本资料库区分事实、观点、假设、下注和决策。重要 claim、pattern、anti-pattern、decision 应加入以下字段。
@@ -700,6 +947,15 @@ epistemic_type: fact | take | hypothesis | bet | decision
 holder:
 valid_from:
 valid_until:
+supersedes:
+superseded_by:
+invalidated_by:
+applies_to:
+  project:
+  version:
+  environment:
+  timeframe:
+  conditions:
 learned_at:
 gaps: []
 evidence_timeline: []
@@ -730,19 +986,65 @@ holder: Misa
 holder: official docs
 ```
 
-### 4.3 Time Validity
+### 4.3 Time Validity / Applicability
 
 ```yaml
 valid_from: 2026-05-26
 valid_until:
+supersedes:
+superseded_by:
+invalidated_by:
+applies_to:
+  project:
+  version:
+  environment:
+  timeframe:
+  conditions:
 learned_at: 2026-05-26
 ```
 
 - `valid_from`：该结论在现实世界中开始成立的时间。
-- `valid_until`：该结论失效或预计需要重审的时间。
+- `valid_until`：该结论在现实世界或当前 scope 下不再适用的时间。
+- `supersedes`：本结论替代的旧判断、旧决策或旧关系。
+- `superseded_by`：替代本结论的新判断、决策或关系。
+- `invalidated_by`：使本结论失效或不再适用的来源、证据、事件或 review。
+- `applies_to`：本结论适用的 project、version、environment、timeframe 和 conditions。
 - `learned_at`：本资料库学习/记录该结论的时间。
 
 如果不清楚，留空，不要编造。
+
+`valid_until` 留空不代表永久有效。
+它只表示尚未记录经过 review 的失效边界。
+
+Staleness is separate from validity:
+
+```text
+valid_until:
+  applicability boundary
+
+stale / review_due:
+  review pressure
+```
+
+不要把“需要复查”直接写成“已经失效”；也不要把“已过适用范围”当成历史上从未成立。
+
+Graphiti / Zep 的启发是 temporal validity window：
+
+```text
+created / learned time:
+  资料库何时知道这件事。
+
+valid time:
+  这件事在现实世界何时成立，何时不再成立。
+```
+
+本资料库不照搬自动构图或自动 invalidation。
+只吸收结构化 applicability check：
+
+```text
+Truth is source-backed.
+Applicability is time-, version-, and scope-bound.
+```
 
 ### 4.4 Evidence Timeline
 
@@ -861,6 +1163,8 @@ blocked_by
 - type affinity
 - vector similarity
 - graph score
+- Personalized PageRank / association score
+- graph traversal path
 - context pack ranking
 
 但这些都是派生分数，不能写回替代人工记录的 `relations`。
@@ -1103,7 +1407,34 @@ evidence_strength:
 confidence:
 negative_evidence:
 replaces:
+supersedes:
 superseded_by:
+supersession_reason:
+affected_claims_review_due: []
+affected_patterns_review_due: []
+affected_relations_review_due: []
+affected_context_packs_review_due: []
+intent_confirmation:
+  required: true | false
+  restated_intent:
+  assumptions: []
+  scope_in: []
+  scope_out: []
+  success_criteria: []
+  verification_plan:
+  user_confirmed: true | false
+backbrief:
+  plan_summary:
+  acceptance_criteria_interpretation:
+  numbered_assumptions: []
+  risks: []
+  verification_method:
+decision_outcome:
+  recommendation:
+  confidence_at_decision:
+  user_choice:
+  outcome: succeeded | failed | mixed | unresolved
+  outcome_note:
 migration_path:
 rollback_path:
 last_verified:
@@ -1120,6 +1451,11 @@ tags:
 - decision 必须记录背景、依据、备选方案、风险、验证方式、回退路径。
 - 高影响 decision 不能只依赖单一 source。
 - 如果只能单源决策，必须把 `gaps` 和 `next_review` 写清楚。
+- 新决策替代旧决策时，旧 decision 不删除；新旧决策必须双向链接，并保留替代原因、适用 scope 和 audit trail。
+- 被旧决策支撑过的 claim、pattern、relation、context pack 或 action basis，应按影响范围标记 `review_due`，而不是被静默改写。
+- `superseded_by` 改变当前适用性，不等于抹掉旧决策在历史时间窗口内的有效性。
+- 重大 decision 应有 intent confirmation 或同等用户确认记录。
+- decision outcome 只用于校准未来建议、风险感和选项 framing，不直接改变 claim truth confidence。
 
 ### 6.7 QA
 
@@ -1337,6 +1673,11 @@ Review 队列不是 reviewed knowledge layer。候选内容只有在通过 Codex
 - `next_review` 过期。
 - qa 产生了重要结论但没有拆分成 claim/pattern/decision。
 - source 标记 `deprecated` 但下游 claim/decision 未复查。
+- 高影响 action basis / decision 缺少 intent confirmation 或 success criteria。
+- claim 标记 high confidence 但只有 `abstract_only`、`snippet_only`、`url_only` 或 `summary_only` source access。
+- `valid_until` 已过但下游 action basis 未标 out_of_scope / review_due。
+- `stale` / `review_due` 被当成 `valid_until` 使用，或过期信息被当成 false 处理。
+- 已记录 decision outcome 但没有 action_basis_ref / confidence_at_decision / outcome_note。
 
 ### 9.2 健康检查输出
 
@@ -1346,12 +1687,35 @@ Review 队列不是 reviewed knowledge layer。候选内容只有在通过 Codex
 missing-required-fields
 unsupported-claims
 stale-decisions
+validity-window-mismatch
 conflicted-nodes
 orphan-high-impact-nodes
 weak-relations
 missing-negative-evidence
+missing-intent-confirmation
+confidence-cap-violations
+missing-outcome-calibration
 review-due
 ```
+
+### 9.2.1 Maintenance Manifest
+
+Maintenance manifest is a lint queue, not an automatic repair worker.
+
+```yaml
+maintenance_manifest:
+  generated_at:
+  scope:
+  items:
+    - item_type: missing_required_field | unsupported_claim | stale_dependency | validity_window_mismatch | confidence_cap_violation | missing_intent_confirmation | missing_outcome_calibration | orphan_review_candidate | missing_relation_target
+      target_ref:
+      severity: low | medium | high
+      reason:
+      suggested_action: add_source_anchor | add_evidence_support | mark_review_due | add_intent_confirmation | record_outcome | narrow_scope | ask_user | needs_review
+      status: open | resolved | parked
+```
+
+It may create review queue items. It may not rewrite reviewed knowledge automatically.
 
 ### 9.3 不做事项
 
@@ -1381,6 +1745,70 @@ sources:
 gaps:
 confidence:
 last_verified:
+association_neighborhood:
+  seed_points: []
+  activation_basis: []
+  support_refs: []
+  challenge_refs: []
+  risk_refs: []
+  decision_refs: []
+  scope_refs: []
+  gaps: []
+retrieval_strata:
+  low_level:
+    source_refs: []
+    text_unit_refs: []
+    claim_refs: []
+    entity_refs: []
+  high_level:
+    pattern_refs: []
+    theme_refs: []
+    community_refs: []
+    community_report_refs: []
+  relation_neighborhood:
+    seed_refs: []
+    relation_refs: []
+    traversal_basis:
+    boundary_note:
+temporal_applicability:
+  valid_from:
+  valid_until:
+  superseded_by:
+  invalidated_by:
+  applies_to:
+    project:
+    version:
+    environment:
+    timeframe:
+    conditions:
+  check_state: in_scope | out_of_scope | stale | superseded | unknown | needs_review
+  reviewer_note:
+decision_superseding:
+  old_decision:
+  replacement_decision:
+  supersession_reason:
+  affected_claims: []
+  affected_patterns: []
+  affected_relations: []
+  affected_context_packs: []
+  mark_review_due: true | false
+  audit_note:
+intent_confirmation:
+  required: true | false
+  restated_intent:
+  assumptions: []
+  scope_in: []
+  scope_out: []
+  success_criteria: []
+  verification_plan:
+  user_confirmed: true | false
+decision_outcome:
+  decision_ref:
+  recommendation:
+  confidence_at_decision:
+  user_choice:
+  outcome: succeeded | failed | mixed | unresolved
+  outcome_note:
 coverage_overview:
   supported:
   weakly_supported:
@@ -1413,6 +1841,18 @@ evidence_sufficiency:
 规则：
 
 - context pack 必须 coverage-aware，但不默认展开完整审计表。
+- `association_neighborhood` 是 query/context-pack 的激活草稿，不是 proof、coverage 或 truth layer。
+- association neighborhood 可以帮助找 support / challenge / risk / decision / scope，但每个关键判断仍要走 coverage_map / evidence_support / evidence_sufficiency。
+- graph traversal、PPR、similarity 或 association score 不能计入 `support_refs`，除非另有 reviewed evidence item 支持具体 point 或 relation。
+- `retrieval_strata` 只是 context-pack preparation 的召回结构：low_level 找具体 source / text_unit / claim / entity，high_level 找 pattern / theme / community，relation_neighborhood 找 reviewed relation 周边上下文。
+- TextUnit anchor 是 provenance，不是 support；community report 是 briefing，不是 truth；graph rank 是 retrieval priority，不是 trust。
+- auto-extracted relation / claim / community summary 只能进入 candidate material 或 review input，不能直接成为 reviewed relation、verification_status 或 action basis。
+- 如果 relation-neighborhood 检索使用的是候选关系，应标成 `candidate_relation_neighborhood`，不能叫 `reviewed_relation_neighborhood`。
+- `temporal_applicability` 是 Context Pack / Action Basis 的适用性检查，不是 truth layer；truth is source-backed，applicability is time-, version-, and scope-bound。
+- `decision_superseding` 是 action-basis 审计提示：旧决策不删除，新决策只在 scope 内替代它，受影响内容应先 review_due。
+- `intent_confirmation` 是重大行动前的对齐提示；没有确认时不应把高影响 context pack 标成 ready。
+- `decision_outcome` 是后续 use ledger / calibration 输入，不是 context pack 当下判真的证据。
+- stale / superseded / out_of_scope 的点可以作为背景或历史，但不能直接输出 `action_readiness: ready`，除非 context pack 明确采用了替代依据或收窄 scope。
 - 完整 `coverage_map` 只要求覆盖回答或行动依据中实际使用的关键判断。
 - ordinary query / 普通回答不强制生成完整 `coverage_map`。
 - citation 不等于 coverage。

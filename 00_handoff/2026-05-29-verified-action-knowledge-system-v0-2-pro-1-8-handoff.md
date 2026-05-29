@@ -36,9 +36,8 @@ source
 -> calibration / point collision
 -> review
 -> reviewed node / reviewed relation
--> draft evidence / context envelope
--> Evidence Sufficiency Gate
--> final context pack / action basis
+-> context pack / action basis
+   with coverage_map / evidence_sufficiency when action-ready or high-impact
 -> action
 -> use ledger / feedback
 ```
@@ -226,7 +225,7 @@ Current likely positioning for point 9:
 
 ```text
 The vault does not retrieve isolated chunks.
-It activates an evidence-backed association neighborhood.
+It activates an evidence-aware association neighborhood.
 
 But:
 association retrieval is activation, not truth;

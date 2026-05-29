@@ -189,6 +189,9 @@ architecture review
 pattern
 anti-pattern
 decision
+review queue item
+maintenance manifest
+decision outcome record
 implementation-note
 index update
 handoff update
@@ -239,6 +242,21 @@ not_adopted:
 timeline_notes:
 ```
 
+For user directives, explicit corrections, preferences, decisions, or action instructions that affect durable knowledge or action:
+
+```yaml
+verbatim_input:
+model_interpretation:
+intent_confirmation:
+  restated_intent:
+  assumptions:
+  scope_in:
+  scope_out:
+  success_criteria:
+```
+
+Do not require `verbatim_input` / `model_interpretation` for ordinary article, repository, paper, or source capture.
+
 For a paper:
 
 ```yaml
@@ -267,6 +285,7 @@ Plain rule:
 
 ```text
 Do not let an AI summary become detached from who said it, when, where, and in what version.
+Do not let an AI paraphrase replace the user's original words.
 ```
 
 ## 4. User Experience Modes
@@ -381,6 +400,12 @@ Retrieval rank is not trust.
 Repeated appearance is a signal, not proof.
 Heavy review is for promotion and action, not ordinary saving.
 Evidence support and evidence sufficiency checks are lazy gates: use them for promotion, decision, strong relation, action basis, or explicitly challenged points, not for ordinary capture.
+Association neighborhood activation is also lazy: use it for query/context-pack preparation, promotion review, action basis, or explicit contradiction/risk checks, not for ordinary source capture.
+Graph traversal, PPR, similarity, and association score can suggest what to inspect next; they cannot create support, confidence, reviewed relations, or action readiness.
+Graph retrieval strata can organize context-pack preparation: low-level source/text-unit/claim/entity recall, high-level pattern/theme/community recall, and relation-neighborhood recall. TextUnit anchors are provenance, community reports are briefings, and graph rank is not trust.
+Temporal applicability is checked when a point is promoted, used in a decision/action basis, or appears stale/superseded/out-of-scope; ordinary capture can leave validity windows blank rather than inventing dates.
+Confidence caps are checked when a candidate is promoted or used for action: abstract/snippet/URL-only material cannot become high-confidence support without a direct source span or full-text anchor.
+Intent confirmation is checked only before significant action, high-impact decision, implementation, deployment, or hard-to-rollback work.
 ```
 
 ## 7. First Implementation

@@ -8,6 +8,8 @@ session_id:
 turn_id:
 parent_query_id:
 question_summary:
+verbatim_input:
+model_interpretation:
 query_intent: answer | decision | implementation | research | content | memory
 query_scope:
   project:
@@ -26,6 +28,21 @@ excluded_candidates: []
 answer_path: []
 warnings: []
 gaps: []
+feedback_summary:
+  positive_feedback:
+  negative_feedback:
+  explicit_correction:
+  review_pressure:
+  review_due_created:
+decision_outcome:
+  decision_ref:
+  recommendation:
+  confidence_at_decision:
+  user_choice:
+  outcome:
+intent_confirmation:
+  required:
+  user_confirmed:
 tags:
   - query-run
   - feedback
@@ -35,6 +52,8 @@ tags:
 
 ## What Was Asked
 
+- Verbatim input:
+- Model interpretation:
 
 ## What Was Activated
 
@@ -49,3 +68,13 @@ tags:
 
 
 ## Follow-Up Signal
+
+
+## Feedback Boundary
+
+```text
+Positive feedback is weak.
+Negative feedback creates review pressure.
+Explicit correction creates review_due.
+Decision outcome improves future recommendation, not truth.
+```

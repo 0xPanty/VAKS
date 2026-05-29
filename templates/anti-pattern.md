@@ -26,6 +26,20 @@ qualification:
   time_scope:
   environment_scope:
   assumptions:
+temporal_applicability:
+  valid_from:
+  valid_until:
+  supersedes:
+  superseded_by:
+  invalidated_by:
+  applies_to:
+    project:
+    version:
+    environment:
+    timeframe:
+    conditions:
+  check_state:
+  reviewer_note:
 review_summary:
   why_it_still_holds:
   strongest_challenge:
@@ -60,6 +74,13 @@ decision: avoid
 - 已知风险：
 - 什么时候需要复查：
 - 当前行动可用性：ready / not_ready / risky / needs_review
+
+## Temporal Applicability Check
+
+- 这个风险/反模式从什么时候开始适用：
+- 是否已被新版本、环境或替代方案缓解：
+- 适用 project / version / environment / timeframe / conditions：
+- 当前 check_state：in_scope / out_of_scope / stale / superseded / unknown / needs_review
 
 ## 标签与量化
 

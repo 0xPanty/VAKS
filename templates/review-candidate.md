@@ -11,6 +11,11 @@ verifiability:
   state: verifiable | partially_verifiable | not_verifiable | unknown
   reason:
 review_route: evidence_check | rationale_check | instance_check | risk_check | action_basis_check | personalization_only | research_question | code_anchor_check
+review_queue_item:
+  item_type:
+  triggered_by:
+  suggested_action:
+  status:
 topics: []
 entities: []
 scope:
@@ -24,6 +29,12 @@ source_refs:
     source_url_or_path:
     source_range:
     quote_or_excerpt:
+    source_access:
+      access_level:
+      has_direct_quote:
+      has_source_range:
+      confidence_cap:
+      cap_reason:
     evidence_support:
       span_supports_target:
       evidence_role:
@@ -50,6 +61,20 @@ qualification:
   time_scope:
   environment_scope:
   assumptions:
+temporal_applicability:
+  valid_from:
+  valid_until:
+  supersedes:
+  superseded_by:
+  invalidated_by:
+  applies_to:
+    project:
+    version:
+    environment:
+    timeframe:
+    conditions:
+  check_state:
+  reviewer_note:
 review_summary:
   why_it_still_holds:
   strongest_challenge:
@@ -71,8 +96,34 @@ tags:
 ## Point
 
 
+## Review Queue Routing
+
+Use this only when the candidate needs explicit queue attention.
+Ordinary candidates can leave it blank and rely on `point_type`, `verifiability`, and `review_route`.
+
+- Item type:
+- Why this needs review:
+- Suggested action:
+- Target refs:
+- Resolution note:
+
 ## Source Trace
 
+
+## Confidence Cap / Source Access
+
+- Access level: full_text / source_span / abstract_only / snippet_only / url_only / summary_only / unknown
+- Has source range:
+- Has direct quote:
+- Confidence cap:
+- Cap reason:
+
+Rule:
+
+```text
+No source span / full anchor means no high confidence.
+URL-only and summary-only are provenance, not support.
+```
 
 ## Evidence Support Check
 
@@ -227,6 +278,7 @@ Expand this full panel only for promotion, action basis, strong reviewed relatio
 - What challenges it:
 - Challenge severity: fatal / major / minor / out_of_scope / unresolved
 - Scope limits:
+- Temporal applicability: valid_from / valid_until / superseded_by / applies_to
 - Known risks:
 - Review again when:
 - Action readiness: ready / not_ready / risky / needs_review

@@ -26,6 +26,20 @@ qualification:
   time_scope:
   environment_scope:
   assumptions:
+temporal_applicability:
+  valid_from:
+  valid_until:
+  supersedes:
+  superseded_by:
+  invalidated_by:
+  applies_to:
+    project:
+    version:
+    environment:
+    timeframe:
+    conditions:
+  check_state:
+  reviewer_note:
 review_summary:
   why_it_still_holds:
   strongest_challenge:
@@ -54,6 +68,15 @@ extension_points:
 
 ## 不适用场景
 
+
+## 时间 / 版本 / Scope 适用性
+
+- 何时开始适用：
+- 何时失效或需要重审：
+- 替代了什么：
+- 被什么替代：
+- 适用项目 / 版本 / 环境 / 时间段：
+- 当前 check_state：in_scope / out_of_scope / stale / superseded / unknown / needs_review
 
 ## 反例与避坑
 

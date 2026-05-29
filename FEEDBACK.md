@@ -54,6 +54,22 @@ Feedback must not directly rewrite truth. It can adjust usefulness, scope fit, a
 
 The goal is to make the vault less likely to repeat bad activation paths without hiding evidence or overfitting to user preference.
 
+Reflexion and Reflective Memory Management support this boundary:
+
+```text
+feedback becomes reflection / use memory.
+reflection guides later activation and decisions.
+reflection does not update model weights or truth records directly.
+```
+
+Strong rule:
+
+```text
+Positive feedback is weak.
+Negative feedback creates review pressure.
+Explicit correction creates review_due.
+```
+
 ## 1. Core Rule
 
 Separate three things:
@@ -75,6 +91,7 @@ Feedback can adjust:
 usefulness
 scope fit
 activation ranking
+review_due
 ```
 
 Feedback cannot directly adjust:
@@ -88,6 +105,21 @@ decision outcome
 
 Those require review.
 
+Feedback ledger fields should make that boundary explicit:
+
+```yaml
+affects:
+  - usefulness
+  - scope_fit
+  - activation_ranking
+  - review_due
+
+never_affects_directly:
+  - truth_confidence
+  - verification_status
+  - source_reliability
+```
+
 ## 2. Feedback Record
 
 Use this record for every meaningful correction:
@@ -97,7 +129,7 @@ record_type: feedback-event
 feedback_id:
 created:
 created_by:
-feedback_source: explicit-user | conversation-derived | system-eval | action-result
+feedback_source: explicit-user | conversation-derived | system-eval | action-result | decision-outcome
 query_id:
 session_id:
 turn_id:
@@ -114,6 +146,7 @@ scope_key:
 target_type: point | relation | cluster | claim | pattern | decision | context-pack | answer | route | keyword | channel
 target_id:
 feedback_type: useful | irrelevant | misleading | wrong_scope | stale | missing | contradicted | incomplete | too_weak | too_broad
+event_type: explicit_correction | missing_evidence | scope_mismatch | answer_helpful | contradiction_missed | action_outcome | decision_outcome
 signal_type: explicit_positive | same_line_followup | narrower_followup | correction | wrong_scope | missing | topic_shift | none
 polarity: positive | negative | neutral
 signal_strength: -2 | -1 | 0 | 1 | 2
@@ -127,12 +160,39 @@ effect:
   activation_delta: -2 | -1 | 0 | 1 | 2
   usefulness_delta: -2 | -1 | 0 | 1 | 2
   scope_fit_delta: -2 | -1 | 0 | 1 | 2
-  relation_strength_delta: -1 | 0 | 1
+  relation_activation_delta: -1 | 0 | 1
+affects:
+  usefulness:
+  scope_fit:
+  activation_ranking:
+  review_due:
+  future_recommendation:
+  risk_calibration:
+  option_framing:
+never_affects_directly:
+  truth_confidence
+  verification_status
+  source_reliability
+decision_outcome:
+  decision_ref:
+  action_basis_ref:
+  recommendation:
+  confidence_at_decision:
+  user_choice:
+  outcome: succeeded | failed | mixed | unresolved
+  outcome_note:
 requires_review: true | false
 review_status: pending | accepted | rejected
 reviewed_by:
 reviewed_at:
 next_action:
+```
+
+Relation feedback rule:
+
+```text
+Feedback can change activation of a relation path.
+It cannot directly change reviewed relation strength.
 ```
 
 ## 3. Feedback Types
@@ -153,6 +213,9 @@ Not allowed:
 ```text
 increase truth confidence directly
 ```
+
+Positive feedback is weak by default.
+It may boost usefulness or activation ranking within a similar scope, but it should not persist strongly unless explicit, repeated, or supported by action outcome.
 
 ### irrelevant
 
@@ -177,6 +240,8 @@ require review on relation
 add warning to cluster
 ```
 
+This creates review pressure when the route, relation, or scope caused the error.
+
 ### wrong_scope
 
 The point is valid somewhere else but not here.
@@ -186,6 +251,7 @@ Allowed effect:
 ```text
 narrow scope
 lower scope_fit for this project/domain/version
+create review_due when scope metadata is missing or misleading
 ```
 
 ### stale
@@ -214,6 +280,7 @@ Allowed effect:
 ```text
 create missing-point candidate
 create missing-relation candidate
+create missing-evidence candidate when the gap is evidential
 ```
 
 ### contradicted
@@ -225,6 +292,75 @@ Allowed effect:
 ```text
 raise contradiction priority
 require context pack to include the contradiction next time
+create review_due for the answer path or relation that missed it
+```
+
+### explicit_correction
+
+The user directly corrected the answer, route, scope, evidence, or conclusion.
+
+Allowed effect:
+
+```text
+create review_due
+lower activation for the failed route
+create missing-point / missing-evidence / scope-mismatch candidate
+```
+
+Not allowed:
+
+```text
+directly change truth confidence
+directly mark a source unreliable
+directly reject a reviewed claim without review
+```
+
+### action_outcome
+
+An action based on a context pack or decision succeeded, failed, or exposed a new condition.
+
+Allowed effect:
+
+```text
+update usefulness and scope fit for future activation
+create review_due for stale, risky, or contradicted assumptions
+create implementation-note or decision follow-up candidate
+```
+
+Not allowed:
+
+```text
+turn outcome into truth without evidence-aware review
+```
+
+### decision_outcome
+
+A decision recommendation or action-basis recommendation later got an observable result.
+
+Allowed effect:
+
+```text
+calibrate future recommendation
+adjust risk calibration
+improve option framing
+adjust scope_fit for similar future decisions
+create review_due when the failure exposes stale assumptions or missing evidence
+```
+
+Not allowed:
+
+```text
+directly change truth confidence
+directly change verification_status
+directly change source reliability
+count one successful action as proof that every underlying claim is true
+```
+
+MVP rule:
+
+```text
+Record outcomes first.
+Compute Brier / ECE / override rate only after enough comparable decisions exist.
 ```
 
 ## 4. Conversation-Derived Feedback
@@ -313,6 +449,25 @@ missing:
 ```
 
 Only persist conversation-derived feedback when it is explicit, repeated across sessions, or attached to a high-value query run.
+
+Negative feedback is different:
+
+```text
+negative feedback:
+  creates review pressure
+
+explicit correction:
+  creates review_due
+
+missing evidence:
+  creates missing-evidence candidate
+
+contradiction missed:
+  requires future context packs to surface that contradiction
+```
+
+Review pressure is not truth change.
+It is a queueing signal for review, scope narrowing, missing evidence, or relation recheck.
 
 ### 4.3 Storage
 
@@ -454,6 +609,14 @@ point scope needs narrowing
 claim may be stale
 missing point should be extracted
 context pack should include contradiction
+```
+
+Feedback polarity rules:
+
+```text
+Positive feedback is weak.
+Negative feedback creates review pressure.
+Explicit correction creates review_due.
 ```
 
 ## 8. L2 / L3 Expansion Rules

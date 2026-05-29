@@ -31,14 +31,24 @@ tags:
   - working-set
 ---
 
-# MEMORY_TIER.md v0.1
+# Activation Tier / MEMORY_TIER.md v0.1
 
 ## AI-readable preamble
 
-Memory tier is an activation layer, not a truth layer.
+Activation Tier is an activation layer, not a truth layer.
 
-Publicly, this can be explained as Activation Tier:
+This file keeps the historical filename `MEMORY_TIER.md`, but the public concept name is Activation Tier.
+
 hot / warm / cold describe what to read first for a scope, not what is more true.
+
+Strong public wording:
+
+```text
+The vault has activation tiers, not truth tiers.
+Hot means read early, not believe more.
+```
+
+MemGPT supports the fast / slow context-management intuition, but this vault uses it only for activation priority.
 
 It tells a human or agent what to read first, what to keep nearby, and what to leave in the archive unless needed.
 
@@ -49,7 +59,7 @@ It must stay lightweight during normal knowledge capture. Heavy context locking 
 The vault needs two different mechanisms:
 
 ```text
-base memory tier:
+base activation tier:
   long-lived, lightweight activation signal for ordinary knowledge management
 
 temporary dev context:
@@ -58,7 +68,7 @@ temporary dev context:
 
 Do not merge them.
 
-Base memory tier answers:
+Base activation tier answers:
 
 ```text
 Should this note be surfaced early by default?
@@ -72,7 +82,7 @@ Should this note be loaded for this exact project or task right now?
 
 ## 2. Core Rule
 
-Memory tier controls activation priority only.
+Activation tier controls activation priority only.
 
 It does not control:
 
@@ -227,7 +237,7 @@ Weak:
   activation_reason: "Important knowledge."
 ```
 
-This keeps memory tier aligned with actionability without turning actionability into truth.
+This keeps activation tier aligned with actionability without turning actionability into truth.
 
 ## 6. Daily Use
 
@@ -447,7 +457,7 @@ cold:
 
 ## 9. Relationship To Dev Context
 
-Base memory tier is the vault's long-term activation hygiene.
+Base activation tier is the vault's long-term activation hygiene.
 
 Dev context is the short-term project working table.
 

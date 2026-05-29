@@ -9,7 +9,7 @@ updated:
 created_by:
 status: active
 mode: development
-base_memory_policy: "Use base memory tiers as input signals, but this pack is task-specific."
+base_memory_policy: "Use base activation tiers as input signals, but this pack is task-specific."
 activation_policy: "Core requires likely-next-use for this task; cold references are opened only for evidence/history/conflict."
 verification_status: draft
 ---
@@ -21,6 +21,13 @@ verification_status: draft
 This is a temporary development-mode context pack.
 
 Use Core first. Expand to Support when needed. Check Risk before decisions or writes. Open Cold References only for evidence, history, or contradiction checks.
+
+Activation Tier rule:
+
+```text
+The vault has activation tiers, not truth tiers.
+Hot means read early, not believe more.
+```
 
 ## Task
 
@@ -114,6 +121,157 @@ Risk rule:
 Check Risk before decisions, writes, or scope expansion.
 ```
 
+## Association Neighborhood
+
+Use this when the task needs context activation around a query, action basis, decision, contradiction, or risk check.
+It is a retrieval / activation surface, not proof.
+
+| Item | Why activated | Layer | Boundary |
+|---|---|---|---|
+|  |  | Core / Support / Risk / Decision / Scope / Cold |  |
+
+Association rule:
+
+```text
+The pack activates an evidence-backed neighborhood, not isolated chunks.
+Graph traversal, PPR, similarity, or association score can explain why something was recalled.
+They cannot count as support, confidence, coverage, or reviewed relation.
+Key judgments still need evidence_support, coverage_map, and evidence_sufficiency when used for action.
+```
+
+## Graph Retrieval Strata
+
+Use this to show what kind of retrieval brought material into the pack.
+It is an audit surface for recall, not a trust surface.
+
+```yaml
+retrieval_strata:
+  low_level:
+    source_refs: []
+    text_unit_refs: []
+    claim_refs: []
+    entity_refs: []
+  high_level:
+    pattern_refs: []
+    theme_refs: []
+    community_refs: []
+    community_report_refs: []
+  relation_neighborhood:
+    seed_refs: []
+    relation_refs: []
+    traversal_basis:
+    boundary_note:
+```
+
+Strata rule:
+
+```text
+Low-level retrieval finds concrete anchors.
+High-level retrieval finds themes, patterns, and community briefings.
+Relation-neighborhood retrieval finds nearby reviewed relations and context.
+TextUnit anchors are provenance, not support.
+Community reports are briefings, not truth.
+Graph rank is retrieval priority, not trust.
+Auto-extracted relations are candidates until reviewed.
+If relation-neighborhood retrieval uses candidate relations, label it candidate_relation_neighborhood.
+```
+
+## Temporal Applicability
+
+Use this when a key judgment may depend on time, version, project, environment, supersession, or stale state.
+
+```yaml
+temporal_applicability:
+  valid_from:
+  valid_until:
+  superseded_by:
+  invalidated_by:
+  applies_to:
+    project:
+    version:
+    environment:
+    timeframe:
+    conditions:
+  check_state: in_scope | out_of_scope | stale | superseded | unknown | needs_review
+  reviewer_note:
+```
+
+Applicability rule:
+
+```text
+Truth is source-backed.
+Applicability is time-, version-, and scope-bound.
+Stale is review pressure.
+valid_until / out-of-scope is applicability.
+Stale, superseded, or out-of-scope points can remain useful history, but they cannot make an action basis ready.
+```
+
+## Decision Superseding
+
+Use this when a decision used by the pack may have been replaced or narrowed by a newer decision.
+
+```yaml
+decision_superseding:
+  old_decision:
+  replacement_decision:
+  supersession_reason:
+  affected_claims:
+    -
+  affected_patterns:
+    -
+  affected_relations:
+    -
+  mark_review_due: true | false
+  audit_note:
+```
+
+Superseding rule:
+
+```text
+Old decisions stay auditable.
+Replacement changes the current action basis only within its scope.
+Affected downstream items should be marked review_due before the pack is treated as action-ready.
+```
+
+## Intent Confirmation / Backbrief
+
+Use this only for significant action, architecture change, implementation, deployment, high-impact decision, or hard-to-rollback work.
+
+```yaml
+intent_confirmation:
+  required: true | false
+  restated_intent:
+  assumptions:
+    -
+  scope_in:
+    -
+  scope_out:
+    -
+  success_criteria:
+    -
+  verification_plan:
+  user_confirmed: true | false
+  confirmation_ref:
+
+backbrief:
+  plan_summary:
+  acceptance_criteria_interpretation:
+  numbered_assumptions:
+    -
+  risks:
+    -
+  verification_method:
+  approved_by:
+```
+
+Intent rule:
+
+```text
+Evidence sufficiency asks whether the basis is good enough.
+Intent confirmation asks whether the system is about to do the right thing.
+Do not trigger for ordinary query or simple capture.
+```
+
 ## Coverage Map
 
 Use this only for key judgments in the answer or action basis. Do not turn the pack into a full audit report.
@@ -179,6 +337,37 @@ If evidence is out of scope, show the scope mismatch.
 If evidence is out of scope only for the broad request, narrow_scope may be the right next step.
 If evidence is risky, set action_readiness to risky or needs_review.
 retrieve_more is a recommendation unless the user explicitly authorizes retrieval.
+```
+
+## Decision Outcome Calibration
+
+Use after action or decision follow-up, not while constructing the original evidence basis.
+
+```yaml
+decision_outcome:
+  decision_ref:
+  action_basis_ref:
+  recommendation:
+  confidence_at_decision:
+  user_choice:
+  outcome: succeeded | failed | mixed | unresolved
+  outcome_note:
+  affects:
+    - future_recommendation
+    - risk_calibration
+    - scope_fit
+    - option_framing
+  never_affects_directly:
+    - truth_confidence
+    - verification_status
+    - source_reliability
+```
+
+Outcome rule:
+
+```text
+Outcome calibration improves future recommendation.
+It does not prove the underlying claims true.
 ```
 
 ## Cold References

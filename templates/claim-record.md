@@ -14,6 +14,12 @@ evidence:
   - source_id:
     source_range:
     quote_or_excerpt:
+    source_access:
+      access_level:
+      has_direct_quote:
+      has_source_range:
+      confidence_cap:
+      cap_reason:
     evidence_support:
       span_supports_target:
       evidence_role:
@@ -37,6 +43,20 @@ qualification:
   time_scope:
   environment_scope:
   assumptions:
+temporal_applicability:
+  valid_from:
+  valid_until:
+  supersedes:
+  superseded_by:
+  invalidated_by:
+  applies_to:
+    project:
+    version:
+    environment:
+    timeframe:
+    conditions:
+  check_state:
+  reviewer_note:
 review_summary:
   why_it_still_holds:
   strongest_challenge:
@@ -75,6 +95,12 @@ evidence:
   - source_id:
     source_range:
     quote_or_excerpt:
+    source_access:
+      access_level: full_text | source_span | abstract_only | snippet_only | url_only | summary_only | unknown
+      has_direct_quote: true | false
+      has_source_range: true | false
+      confidence_cap: low | medium | high
+      cap_reason:
     evidence_support:
       span_supports_target: supported | partial | unsupported | unclear
       evidence_role: direct_support | inferential_support | background_context | counterexample
@@ -84,6 +110,8 @@ evidence:
 规则：
 
 - 只有 URL 的 source 只是 provenance，不是 support。
+- 没有 full text / source span / direct quote 的 claim 不能给 high confidence。
+- abstract_only / snippet_only 通常最多 medium，除非 claim 明确只关于摘要或片段本身。
 - `background_context` 不能计入 supported。
 - `inferential_support` 必须写 `reviewer_note` 才能用于 promotion。
 - `counterexample` 应进入反例 / 冲突证据。
@@ -109,6 +137,34 @@ evidence_sufficiency:
 - `insufficient` / `out_of_scope` 不能作为 ready action basis。
 - `weak` 必须带 gaps。
 - `risky` 必须反映到 `action_readiness`。
+
+## Temporal Applicability Check
+
+用于判断这个 claim 在当前时间、版本、项目、环境和条件下是否仍然适用。
+
+```yaml
+temporal_applicability:
+  valid_from:
+  valid_until:
+  supersedes:
+  superseded_by:
+  invalidated_by:
+  applies_to:
+    project:
+    version:
+    environment:
+    timeframe:
+    conditions:
+  check_state: in_scope | out_of_scope | stale | superseded | unknown | needs_review
+  reviewer_note:
+```
+
+边界：
+
+- Truth is source-backed.
+- Applicability is time-, version-, and scope-bound.
+- `out_of_scope` / `stale` / `superseded` 不等于 false，但不能直接作为当前 ready action basis。
+- 不清楚时间窗口时留空或 `unknown`，不要编造。
 
 ## 反例 / 冲突证据
 

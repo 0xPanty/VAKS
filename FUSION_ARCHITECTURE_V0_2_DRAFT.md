@@ -16,7 +16,7 @@ Public architecture:
   Capture -> Understand -> Review -> Connect -> Act and Learn
 
 Internal engineering loop:
-  source -> candidate points -> calibration / point collision -> review -> reviewed node or relation -> context pack -> action -> feedback
+  source -> candidate points -> calibration / point collision -> review -> reviewed node or relation -> context pack / action basis -> intent confirmation when significant -> action -> feedback / outcome
 
 Second-brain model:
   explanation and design checklist, not implementation structure.
@@ -35,6 +35,34 @@ Evidence Sufficiency Gate:
   before a context pack / action basis is finalized as action-ready,
   ask whether the assembled evidence is enough for this specific use.
   Ordinary capture and ordinary queries stay light.
+
+Association Neighborhood Activation:
+  queries should activate evidence-aware neighborhoods, not isolated chunks.
+  Graph traversal, PPR, similarity, and association score are recall signals,
+  not support, confidence, truth, or reviewed relation creation.
+
+Graph Retrieval Stratification:
+  GraphRAG / LightRAG-style graph retrieval can organize recall into
+  low-level source / text unit / claim / entity retrieval, high-level
+  pattern / theme / community retrieval, and relation-neighborhood traversal.
+  These strata prepare context; they do not decide trust.
+
+Temporal Applicability Check:
+  truth is source-backed.
+  Applicability is time-, version-, and scope-bound.
+  A standing claim may still be stale, superseded, or out of scope for action.
+  Stale means review pressure; expired means applicability boundary.
+
+RKA-inspired Action Guardrails:
+  significant action gets intent confirmation / backbrief.
+  user verbatim input is kept separate from model interpretation.
+  maintenance manifest reports health gaps without automatic repair.
+  no full source span means no high confidence.
+  decision outcome calibration improves future recommendations, not truth.
+
+Activation Tier:
+  the vault has activation tiers, not truth tiers.
+  Hot means read early, not believe more.
 
 Strict checks are lazy gates:
   ordinary capture stays light
@@ -274,6 +302,44 @@ Rule:
 ```text
 Candidate is not truth.
 Candidate is material for review.
+```
+
+RKA-style review queue taxonomy is useful here as a small routing vocabulary,
+not as a runtime to copy:
+
+```yaml
+review_queue_item:
+  item_type: low_confidence_claim | contradiction | missing_evidence | synthesis_needed | decision_superseded
+  suggested_action: approve | reject | merge | override | request_evidence | mark_review_due | create_missing_point
+```
+
+This block is optional queue routing.
+Ordinary candidates can rely on `point_type`, `verifiability`, and `review_route` without becoming queue items.
+
+Interpretation:
+
+```text
+low_confidence_claim:
+  useful but not promotion-ready
+
+contradiction:
+  challenge must stay visible
+
+missing_evidence:
+  a specific point or relation lacks support
+
+synthesis_needed:
+  multiple candidates or clusters need one reviewed judgment
+
+decision_superseded:
+  a newer decision or evidence package may replace an older decision for a scope
+```
+
+Boundary:
+
+```text
+Queue actions resolve workflow.
+They do not directly create truth, confidence, reviewed relations, or action readiness.
 ```
 
 #### 2.1 Verifiability Routing
@@ -527,12 +593,12 @@ Runtime / workbench modules:
 
 ```text
 1. Karpathy-simple operating surface
-2. Memory tier
+2. Activation tier
 3. Dev context
 4. Context pack / action basis
 5. Feedback / query-run
 6. Dusk-style workbench
-7. Retrieval / cache
+7. Retrieval / cache / association neighborhood activation
 8. API / MCP / agent access
 9. Proactive synthesis
 10. Expression / publishing
@@ -570,9 +636,12 @@ generic wiki pages as truth
 unreviewed AI compilation as final knowledge
 ```
 
-#### 2. Memory Tier
+#### 2. Activation Tier
 
-Memory tier controls activation, not truth.
+Activation tier controls what gets read early, not what is more true.
+
+MemGPT's useful lesson is the fast / slow memory management intuition under limited context.
+The vault borrows this as activation discipline, not as an autonomous memory OS.
 
 ```text
 hot:
@@ -588,12 +657,16 @@ cold:
 Rules:
 
 ```text
+The vault has activation tiers, not truth tiers.
+Hot means read early, not believe more.
 hot != true
 warm != verified
 cold != useless
 ```
 
-Memory tier belongs in runtime, not truth core.
+The field name may remain `memory_tier` for schema compatibility.
+The concept should be explained as Activation Tier.
+Activation tier belongs in runtime, not truth core.
 
 #### 3. Dev Context
 
@@ -649,7 +722,88 @@ It does not create truth.
 
 It is a way to hand verified context to a human or agent.
 
-##### 4.1 Claim / Point Coverage Map
+##### 4.1 Association Neighborhood Activation
+
+HippoRAG's useful lesson is not the full retrieval stack.
+It is the association retrieval idea:
+
+```text
+The vault does not retrieve isolated chunks.
+It activates an evidence-aware association neighborhood.
+```
+
+For this vault, a query should light up the relevant neighborhood around the question:
+
+```text
+supporting reviewed points
+challenging reviewed points
+risk / anti-pattern
+old decisions
+scope / version / condition notes
+source and evidence anchors
+gaps, missing points, and review_due markers
+```
+
+This belongs to Activation and Context Pack preparation.
+It is a runtime / workbench capability, not truth core.
+
+It may use:
+
+```text
+reviewed relations
+activation tier
+dev context
+risk refs
+scope notes
+source anchors
+retrieval scores
+graph traversal / PPR-style neighborhood expansion
+```
+
+Boundaries:
+
+```text
+association retrieval is recall and activation, not truth.
+graph traversal is not support.
+PPR / association score is not confidence.
+similarity is not evidence.
+activated neighbors are not reviewed relations.
+Only reviewed evidence and rationale can support action.
+Only reviewed relations enter the formal knowledge graph.
+```
+
+GraphRAG / LightRAG add a useful retrieval refinement:
+
+```text
+low-level retrieval:
+  source / text unit / claim / entity
+
+high-level retrieval:
+  pattern / theme / community / community report
+
+relation neighborhood:
+  reviewed relation neighborhood around the query seed
+```
+
+This is graph retrieval stratification.
+It helps a context pack avoid being just a few similar chunks.
+It can bring concrete anchors and broad pattern context into the same draft envelope.
+
+Boundary:
+
+```text
+TextUnit anchor is provenance, not support.
+community report is briefing, not truth.
+graph rank is retrieval priority, not trust.
+auto-extracted relation is candidate material, not reviewed relation.
+candidate relation traversal must be labeled candidate_relation_neighborhood,
+not reviewed_relation_neighborhood.
+```
+
+Trigger lightly for ordinary queries.
+Expand the neighborhood for decisions, action basis, risk_sensitive_answer, promotion review, strong reviewed relation review, explicit audit, challenged answer, or explicit contradiction/risk check.
+
+##### 4.2 Claim / Point Coverage Map
 
 PaperTrail's useful lesson is not the interface itself.
 It is that citations are too coarse for serious verification.
@@ -722,7 +876,103 @@ Level 3: evidence detail with source anchors, reviewed nodes, ranges, and review
 Default context packs should show the overview first.
 Full evidence mapping should expand only for decisions, action basis, agent context packs, high-impact answers, explicit audit requests, challenged answers, or user-expanded points.
 
-##### 4.2 Evidence Sufficiency Gate
+##### 4.3 Temporal Applicability Check
+
+Graphiti / Zep's useful lesson is not automatic graph construction.
+It is that facts and relations need validity windows.
+
+For this vault:
+
+```text
+Truth is source-backed.
+Applicability is time-, version-, and scope-bound.
+```
+
+This strengthens the Truth / Usefulness / Scope Fit split:
+
+```text
+truth:
+  Is this point source-backed and reviewed?
+
+usefulness:
+  Did this point help answer this kind of question?
+
+scope fit:
+  Is this point valid for the current time, project, version, environment, and action?
+```
+
+Minimal shape:
+
+```yaml
+temporal_applicability:
+  valid_from:
+  valid_until:
+  supersedes:
+  superseded_by:
+  invalidated_by:
+  applies_to:
+    project:
+    version:
+    environment:
+    timeframe:
+    conditions:
+  check_state: in_scope | out_of_scope | stale | superseded | unknown | needs_review
+  reviewer_note:
+```
+
+Boundaries:
+
+```text
+validity window is applicability metadata, not automatic truth.
+valid_until / superseded_by does not erase old records.
+out_of_scope does not mean false.
+stale does not mean rejected.
+automatic invalidation is not allowed in the truth core.
+episodes / raw sources remain provenance; reviewed nodes and relations still need review.
+```
+
+Use this check for promotion, decisions, action basis, strong reviewed relation, risk_sensitive_answer, stale / contested points, or explicit "does this still apply?" questions.
+Ordinary capture can leave validity windows blank.
+
+##### 4.4 Decision Superseding
+
+Decision superseding is a special case of temporal applicability and review pressure.
+
+When new evidence or a newer decision replaces an older decision, the old decision
+remains in the vault with an audit trail.
+
+Minimal shape:
+
+```yaml
+decision_superseding:
+  old_decision:
+  replacement_decision:
+  supersession_reason:
+  applies_to:
+    project:
+    version:
+    environment:
+    timeframe:
+    conditions:
+  affected_claims: []
+  affected_patterns: []
+  affected_relations: []
+  affected_context_packs: []
+  mark_review_due: true
+```
+
+Rules:
+
+```text
+old decision is not deleted
+replacement decision links back to the old decision
+affected downstream claims / patterns / relations / context packs are marked review_due
+supersession changes current applicability, not historical auditability
+```
+
+This absorbs the RKA-style decision-superseding lesson without importing a runtime, MCP, or dashboard.
+
+##### 4.5 Evidence Sufficiency Gate
 
 Evidence Sufficiency Gate asks whether the current evidence is enough for the intended use.
 
@@ -739,6 +989,7 @@ Evidence Sufficiency Gate:
 This borrows the control idea from Self-RAG, CRAG, and A2RAG: do not escalate every query; escalate only when evidence is insufficient for the intended action.
 
 The gate does not run in empty space. First assemble an activated evidence envelope or draft context pack, then run the gate, then finalize the context pack / action basis only if the evidence is sufficient for that use.
+Temporal applicability is part of this envelope when the answer or action depends on current time, version, project, environment, or supersession state.
 
 Minimum shape:
 
@@ -771,6 +1022,7 @@ Is there at least one reviewed support or direct primary source support?
 Do key points have source anchors and evidence_support?
 Are known contradictions, challenges, and risks included?
 Does the evidence match the current project, version, time, and environment?
+Does the reviewed point still apply, or is it stale, superseded, invalidated, or out of scope?
 Is any critical evidence missing?
 If evidence is not enough, should the system ask, retrieve more, create a missing-point candidate, narrow scope, mark not actionable, or require review?
 ```
@@ -787,6 +1039,59 @@ insufficient evidence cannot produce action_readiness: ready.
 out_of_scope requires a scope mismatch note.
 out_of_scope may require narrow_scope rather than more retrieval.
 risky requires action_readiness: risky or needs_review.
+superseded or invalidated points cannot produce action_readiness: ready without an explicit replacement basis.
+```
+
+##### 4.6 Intent Confirmation / Backbrief Gate
+
+Evidence sufficiency asks whether the basis is good enough.
+Intent confirmation asks whether the system is about to do the right thing.
+
+Use this gate only for significant action:
+
+```text
+architecture changes
+implementation or deployment
+multi-step mission
+high-impact decision
+irreversible or hard-to-rollback work
+risk-sensitive action basis
+```
+
+Minimum shape:
+
+```yaml
+intent_confirmation:
+  required: true | false
+  restated_intent:
+  assumptions: []
+  scope_in: []
+  scope_out: []
+  success_criteria: []
+  verification_plan:
+  user_confirmed: true | false
+  confirmation_ref:
+```
+
+For executor-style handoffs, use the same shape as a backbrief:
+
+```yaml
+backbrief:
+  plan_summary:
+  acceptance_criteria_interpretation:
+  numbered_assumptions: []
+  risks: []
+  files_or_surfaces_expected:
+  verification_method:
+  approved_by:
+```
+
+Boundaries:
+
+```text
+Do not trigger for ordinary Q&A, simple capture, or low-impact edits.
+This gate aligns intent; it does not decide truth.
+If the user has already explicitly confirmed the intent in the current context, reference that confirmation instead of asking again.
 ```
 
 #### 5. Feedback / Query-Run
@@ -816,6 +1121,7 @@ scope fit
 activation ranking
 route / keyword hints
 missing-point candidates
+review_due
 ```
 
 Feedback cannot directly adjust:
@@ -824,10 +1130,65 @@ Feedback cannot directly adjust:
 truth confidence
 verification_status
 source reliability
-decision outcome
 ```
 
 This is one of the project's main original design choices.
+
+Reflexion and Reflective Memory Management support this boundary:
+
+```text
+feedback becomes verbal reflection / use memory
+use memory guides later activation and decisions
+use memory does not directly rewrite truth
+```
+
+Conservative rule:
+
+```text
+Positive feedback is weak.
+Negative feedback creates review pressure.
+Explicit correction creates review_due.
+```
+
+##### 5.1 Decision Outcome Calibration
+
+Decision outcome calibration records whether a decision recommendation later worked.
+
+It belongs to Use Ledger / Feedback, not to truth verification.
+
+Minimum shape:
+
+```yaml
+decision_outcome:
+  decision_ref:
+  action_basis_ref:
+  recommendation:
+  confidence_at_decision:
+  user_choice:
+  outcome: succeeded | failed | mixed | unresolved
+  outcome_note:
+  recorded_by:
+  recorded_at:
+  affects:
+    - future_recommendation
+    - risk_calibration
+    - scope_fit
+    - option_framing
+  never_affects_directly:
+    - truth_confidence
+    - verification_status
+    - source_reliability
+```
+
+Later runtime can compute calibration metrics such as Brier, ECE, override rate, escape-hatch rate, or near-miss rate.
+
+MVP rule:
+
+```text
+record outcomes first.
+do not compute heavy metrics until enough decisions have outcomes.
+outcomes improve future recommendation behavior, not truth.
+```
 
 #### 6. Dusk-Style Workbench
 
@@ -1091,7 +1452,7 @@ Does it challenge or contradict one?
 Does it refine scope, version, time, or conditions?
 Does it expose a risk in an existing pattern or decision?
 Does it show that an older assumption may be stale?
-Does it reveal missing evidence or a review question?
+Does it reveal missing evidence, synthesis need, decision superseding, or a review question?
 ```
 
 The output is not truth.
@@ -1104,6 +1465,8 @@ contradiction_candidate
 scope_mismatch
 stale_assumption_candidate
 missing_evidence
+synthesis_needed
+decision_superseded
 review_question
 review_due
 ```
@@ -1369,6 +1732,16 @@ Feedback tunes future activation.
 
 This prevents a self-reinforcing belief machine.
 
+Useful analogy:
+
+```text
+Reflexion:
+  task feedback -> verbal reflection -> episodic memory -> later behavior
+
+This vault:
+  query/action feedback -> use ledger -> future activation / scope fit / review_due
+```
+
 ### 5.4 Conversation-Derived Feedback
 
 The next user turn can reveal weak feedback:
@@ -1391,6 +1764,18 @@ topic shift:
 ```
 
 This is useful only because it is conservative.
+
+RMM-style prospective / retrospective reflection maps here as:
+
+```text
+forward-looking:
+  summarize routes, scope hints, missing points, and future retrieval cues
+
+backward-looking:
+  inspect cited evidence, missed contradictions, and failed retrieval paths
+```
+
+Both produce feedback events or review candidates, not truth updates.
 
 ### 5.5 Truth / Usefulness / Scope Fit Split
 
@@ -1609,6 +1994,173 @@ auto-classify/promote/writeback without review
 full hosted server stack now
 ```
 
+### HippoRAG
+
+Adopt:
+
+```text
+association retrieval for context activation
+query-triggered neighborhood expansion
+LLM + graph retrieval as recall inspiration
+support / challenge / risk / decision / scope appearing together
+```
+
+Do not adopt:
+
+```text
+full HippoRAG stack as a core module
+LLM-generated graph as the formal knowledge graph
+Personalized PageRank as evidence or confidence
+graph traversal as truth or reviewed relation creation
+```
+
+### GraphRAG / LightRAG
+
+Adopt:
+
+```text
+TextUnit-style source anchors for traceability
+low-level retrieval for source / text unit / claim / entity
+high-level retrieval for pattern / theme / community
+relation-neighborhood retrieval for context activation
+community / theme reports as briefings
+incremental graph index updates as cache-maintenance inspiration
+```
+
+Do not adopt:
+
+```text
+full GraphRAG or LightRAG runtime as core architecture
+community summary as truth
+graph rank as trust
+auto-extracted relation as reviewed relation
+LLM-derived claim status as verification_status
+incremental index update as automatic truth update
+```
+
+### Graphiti / Zep
+
+Adopt:
+
+```text
+temporal validity windows for facts and relations
+valid_from / valid_until style applicability metadata
+superseded_by / invalidated_by as review and action warnings
+episode / raw-source traceability as provenance discipline
+```
+
+Do not adopt:
+
+```text
+automatic graph construction as reviewed knowledge
+automatic invalidation as truth update
+graph database runtime as the Markdown source of truth
+agent memory platform as core architecture
+```
+
+### Reflexion / Reflective Memory Management
+
+Adopt:
+
+```text
+feedback as verbal reflection / use memory
+episodic feedback records guiding later activation
+forward-looking reflection for future retrieval cues
+backward-looking reflection for cited-evidence and missed-contradiction review
+```
+
+Do not adopt:
+
+```text
+feedback-driven truth confidence changes
+hidden reinforcement learning over reviewed knowledge
+weight updates or model learning as vault truth
+positive feedback as proof
+```
+
+### MemGPT
+
+Adopt:
+
+```text
+virtual context management intuition
+fast / slow memory as activation priority
+explicit movement between active context and archive
+context-window discipline for agent work
+```
+
+Do not adopt:
+
+```text
+agent OS as core architecture
+autonomous memory manager before manual loop works
+hot / warm / cold as truth tiers
+hidden paging that bypasses context-pack evidence boundaries
+```
+
+### RKA / Research Knowledge Assistant
+
+Current source status:
+
+```text
+Repository identified: https://github.com/infinitywings/rka
+Checked commit: 7bc2d76efba61b92db5b056220f7009763003a0d
+Source record: raw/repos/2026-05-29-rka-source.md
+```
+
+Adopt:
+
+```text
+review queue item taxonomy:
+  low_confidence_claim
+  contradiction
+  missing_evidence
+  synthesis_needed
+  decision_superseded
+
+audit-preserving decision superseding:
+  old decision remains
+  replacement decision links back
+  affected downstream knowledge becomes review_due
+
+intent confirmation / backbrief for significant action:
+  restated intent
+  assumptions
+  scope
+  success criteria
+
+verbatim input preservation:
+  user original words separate from model interpretation
+
+maintenance manifest:
+  provenance gaps, orphaned records, stale dependencies, and missing links as lint items
+
+staleness / validity split:
+  valid_until is applicability
+  stale / review_due is review pressure
+
+empty valid_until:
+  no reviewed expiry boundary has been recorded yet; not globally valid forever
+
+confidence cap without full text:
+  abstract / snippet / URL-only material cannot receive high evidence confidence
+
+decision outcome calibration:
+  recommendation, confidence, user choice, and outcome improve future recommendations
+```
+
+Do not adopt:
+
+```text
+full runtime
+MCP surface
+dashboard
+workflow actions as truth changes
+SQLite as the source of truth
+calibration metrics as truth confidence
+automatic background repair
+```
+
 ### Kagantic
 
 Adopt:
@@ -1675,6 +2227,9 @@ AI output should enter as candidate first.
 Source trace matters more than pretty organization.
 Views and dashboards are useful but not authoritative.
 Retrieval should recall candidates, not decide truth.
+Queries should activate evidence-aware association neighborhoods, not isolated chunks.
+Applicability should be checked against time, version, project, environment, and supersession state.
+Activation tiers should guide what to read first without changing trust.
 Context should be briefed before full-read when the vault grows.
 Agent access needs explicit write boundaries.
 Old material should cool, not disappear.
@@ -1710,7 +2265,9 @@ Resolution:
 
 ```text
 Retrieval ranks candidates.
+Association traversal recalls context.
 Reviewed evidence ranks trust.
+Temporal applicability gates action use.
 ```
 
 ### Conflict 4: Proactive Synthesis vs Hallucinated Insight
@@ -1720,6 +2277,24 @@ Resolution:
 ```text
 Every synthesis item must cite specific notes.
 No citation, no insight.
+```
+
+### Conflict 4b: Standing Truth vs Current Applicability
+
+Resolution:
+
+```text
+Truth is source-backed.
+Applicability is time-, version-, and scope-bound.
+```
+
+### Conflict 4c: Activation Priority vs Truth Confidence
+
+Resolution:
+
+```text
+The vault has activation tiers, not truth tiers.
+Hot means read early, not believe more.
 ```
 
 ### Conflict 5: Agent Learning vs Memory Pollution
@@ -2123,7 +2698,7 @@ Attention
 -> Activation
 
 Memory Tier
--> Activation Tier where possible
+-> Activation Tier
 
 Verified Memory
 -> Reviewed Memory or Evidence-backed Memory
@@ -2139,6 +2714,7 @@ Why:
 
 ```text
 hot/warm/cold are activation priority, not truth levels.
+Use Activation Tier as the public name.
 reviewed memory is more honest than verified memory.
 cooling means lower activation, not deletion.
 feedback records use, not truth.
@@ -2294,6 +2870,14 @@ Feedback should be treated as a use ledger.
 
 It records how knowledge was used, not whether it became true.
 
+Reflexion and RMM support the non-parametric learning shape:
+
+```text
+learn from use by storing reflection / feedback records
+do not update truth confidence directly
+use negative feedback to create review pressure
+```
+
 Minimal use ledger records:
 
 ```text
@@ -2324,6 +2908,17 @@ missing-point candidate
 review_due
 ```
 
+Feedback event families:
+
+```text
+explicit_correction
+missing_evidence
+scope_mismatch
+answer_helpful
+contradiction_missed
+action_outcome
+```
+
 Feedback cannot adjust directly:
 
 ```text
@@ -2331,6 +2926,14 @@ truth confidence
 verification_status
 source reliability
 decision outcome
+```
+
+Polarity rule:
+
+```text
+Positive feedback is weak.
+Negative feedback creates review pressure.
+Explicit correction creates review_due.
 ```
 
 ## 23. Expression And Agent Safety Stay Outside The Main Brain Diagram
@@ -2404,6 +3007,7 @@ dev context
 dashboard
 retrieval / cache
 context activation
+association neighborhood activation
 on-demand proactive synthesis
 read-only API / MCP
 ```

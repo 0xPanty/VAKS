@@ -163,6 +163,20 @@ scope:
   version:
   time_range:
   conditions:
+temporal_applicability:
+  valid_from:
+  valid_until:
+  supersedes:
+  superseded_by:
+  invalidated_by:
+  applies_to:
+    project:
+    version:
+    environment:
+    timeframe:
+    conditions:
+  check_state:
+  reviewer_note:
 source_refs:
   - source_id:
     source_url_or_path:
@@ -257,12 +271,14 @@ signal_id:
 from_point:
 to_point:
 relation: supports | contradicts | refines | risk_of | derived_from | duplicates | near_miss | unrelated
-output_kind: candidate_relation | contradiction_candidate | scope_mismatch | stale_assumption_candidate | missing_evidence | review_question | review_due
+output_kind: candidate_relation | contradiction_candidate | scope_mismatch | stale_assumption_candidate | missing_evidence | synthesis_needed | decision_superseded | review_question | review_due
 similarity_basis:
   - keyword
   - entity
   - source_overlap
   - semantic_similarity
+  - graph_neighbor
+  - association_path
   - manual
 source_independence: independent | same-origin | derived | unknown
 independence_rationale:
@@ -279,11 +295,63 @@ Raw source does not collide directly; candidate points do.
 Light capture stays source-only by default; it enters collision only after a candidate point is generated and there is a review, promotion, action, contradiction, or explicit user-processing need.
 Similarity only creates a pending signal.
 Similarity is not support.
+Graph neighbor / association path / PPR-style activation only creates a pending signal.
+Association score is not support or confidence.
 Only reviewed signals can increase promotion readiness.
 Same-origin or derived sources do not count as independent support.
 Background citations do not count as support.
 Contradictions must stay visible; do not auto-resolve them.
 Calibration output is review input, not truth.
+```
+
+### 3.3.1 Review Queue Item Taxonomy
+
+Review queue items explain why human attention is needed.
+
+They are not new truth nodes. They are routing labels for candidate points,
+clusters, collision signals, decisions, or downstream dependencies.
+
+```yaml
+record_type: review-queue-item
+queue_item_id:
+item_type: low_confidence_claim | contradiction | missing_evidence | synthesis_needed | decision_superseded
+target_refs: []
+triggered_by:
+  - candidate_point
+  - calibration_signal
+  - point_cluster
+  - reviewed_node
+  - decision
+  - feedback_event
+  - action_outcome
+reason:
+suggested_action: approve | reject | merge | override | request_evidence | mark_review_due | create_missing_point
+status: open | in-review | resolved | rejected | parked
+reviewed_by:
+reviewed_at:
+resolution_note:
+```
+
+Rules:
+
+```text
+low_confidence_claim means the point may be useful but cannot be promoted yet.
+contradiction means a challenge must remain visible until reviewed.
+missing_evidence means the system needs support for a specific point or relation, not just another URL.
+synthesis_needed means several candidates or clusters need a single reviewed judgment, pattern, anti-pattern, or decision.
+decision_superseded means a newer decision or evidence package may replace an older decision for some scope.
+approve / reject / merge / override are queue resolutions, not automatic truth changes.
+override requires rationale and audit trail.
+```
+
+Maintenance manifests may add lint-style review items. These can use the same queue, but they remain repair prompts:
+
+```text
+missing_intent_confirmation
+confidence_cap_violation
+validity_window_mismatch
+missing_outcome_calibration
+orphan_review_candidate
 ```
 
 ### 3.4 Point Cluster
@@ -390,6 +458,8 @@ contradiction_candidate
 scope_mismatch
 stale_assumption_candidate
 missing_evidence
+synthesis_needed
+decision_superseded
 review_question
 review_due
 ```
@@ -406,11 +476,16 @@ Does one source copy the other?
 Is the newer source more authoritative?
 Is there a direct contradiction?
 Does this signal only show similarity, or does it have evidence and rationale?
+Does this association path only explain retrieval, or does it reveal a reviewable relation?
+Is this community / theme / graph-neighborhood signal only a retrieval cue, or does it point to a concrete candidate point that can be reviewed?
+Is the underlying TextUnit / source anchor available, or are we only looking at a generated briefing?
 Does this signal require a local reviewed claim, pattern, or decision to be rechecked?
 What supports the point?
 What challenges it?
 Is the challenge fatal, major, minor, out of scope, or unresolved?
 What qualifications limit where it applies?
+Is it still valid for the current time, version, project, environment, and action?
+Has it been superseded or invalidated by a newer point, decision, source, or observed result?
 What risks must be carried forward?
 ```
 
@@ -419,6 +494,16 @@ What risks must be carried forward?
 Accepted signals update the point cluster.
 
 Rejected signals stay auditable.
+
+Graph retrieval signals follow the same rule:
+
+```text
+community report -> briefing / review cue
+graph rank -> retrieval priority
+auto-extracted relation -> candidate_relation
+TextUnit anchor -> provenance
+reviewed evidence + rationale -> possible support
+```
 
 ### Step 7: Promote
 
@@ -438,6 +523,42 @@ anti-pattern:
 
 decision:
   reviewed pattern + project fit + risk + rollback
+```
+
+### Step 7.1: Decision Superseding
+
+When new evidence or a new reviewed decision replaces an older decision,
+do not delete the old decision.
+
+Record the replacement link and mark downstream affected knowledge for review:
+
+```yaml
+decision_superseding:
+  old_decision:
+  replacement_decision:
+  supersession_reason:
+  scope:
+    project:
+    version:
+    environment:
+    timeframe:
+    conditions:
+  affected_claims: []
+  affected_patterns: []
+  affected_relations: []
+  affected_context_packs: []
+  mark_review_due: true
+  audit_note:
+```
+
+Rules:
+
+```text
+Old decision remains historical and auditable.
+Replacement decision must link back to what it supersedes.
+Affected claims, patterns, relations, or context packs are marked review_due when their action basis depended on the old decision.
+Superseding changes applicability, not past truth.
+If the replacement scope is narrower than the old decision, do not retire the old decision globally.
 ```
 
 Before promotion, run a lightweight Evidence Sufficiency Gate:
@@ -527,6 +648,8 @@ auto contradiction resolution
 auto promotion to claim / pattern / decision
 auto creation of reviewed relations from calibration signals
 vector score as evidence
+graph traversal / PPR / association score as evidence
+association neighborhood activation as promotion support
 silent overwrite of older claims
 ```
 
@@ -584,6 +707,8 @@ reviewed means it was examined.
 standing means it currently holds.
 contested means it has a material challenge.
 stale means time, version, or scope may have moved.
+stale is review pressure, not automatic expiry.
+valid_until / out_of_scope is an applicability boundary, not historical falsity.
 action_readiness is separate from truth status.
 ```
 
@@ -628,6 +753,11 @@ contradiction signal ignored during promotion
 point cluster promoted with no reviewed signals
 point cluster promoted while status: conflicted
 decision promoted without rollback or feedback path
+significant action basis without intent_confirmation or success_criteria
+high confidence claim with only abstract/snippet/URL/summary source access
+valid_until expired but downstream action basis not marked review_due or out_of_scope
+stale/review_due used as if it were proof of invalidity
+decision outcome recorded without recommendation, confidence_at_decision, user_choice, or outcome_note
 ```
 
 ## 8. First Field Test
