@@ -29,9 +29,7 @@ projects:
 source_family: dung-argumentation-framework
 upstream_sources: []
 verification_status: single-source
-evidence_level: primary
-confidence: medium
-relations: []
+candidate_relation_suggestions: []
 tags:
   - source
   - paper

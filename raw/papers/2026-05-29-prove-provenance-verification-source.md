@@ -37,30 +37,8 @@ projects:
 source_family: prove
 upstream_sources: []
 verification_status: primary-source-captured
-evidence_level: primary
-confidence: medium
-relations:
-  - target: "[[REVIEW_QUEUE]]"
-    type: refines
-    relation_state: candidate
-    strength: 4
-    confidence: medium
-    evidence:
-      - source_id: "[[2026-05-29-prove-provenance-verification-source]]"
-        source_range: "paper abstract / problem statement"
-        quote_or_excerpt: "Paraphrase: the paper frames provenance verification as checking whether documented provenance text supports a KG triple."
-        evidence_support:
-          span_supports_target: partial
-          evidence_role: inferential_support
-          reviewer_note: "The source motivates this vault's source-span-to-target support check, but the vault narrows it to manual review fields rather than adopting the automated pipeline."
-    rationale: "ProVe motivates checking whether documented provenance text supports the specific triple or point being reviewed."
-    created: 2026-05-29
-    last_verified: 2026-05-29
-tags:
-  - source
-  - paper
-  - prove
-  - evidence-support
+candidate_relation_suggestions: []
+
 ---
 
 # 来源记录：ProVe

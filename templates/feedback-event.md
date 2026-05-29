@@ -52,6 +52,9 @@ decision_outcome:
   recommendation:
   confidence_at_decision:
   user_choice:
+  outcome_precondition:
+    - recommendation_recorded
+    - user_choice_or_explicit_override_recorded
   outcome: succeeded | failed | mixed | unresolved
   outcome_note:
 requires_review: true
@@ -86,6 +89,7 @@ It cannot directly change reviewed relation strength.
 - Recommendation:
 - Confidence at decision:
 - User choice:
+- Outcome precondition:
 - Outcome:
 - Outcome note:
 - Future recommendation / risk / scope-fit implication:

@@ -23,7 +23,7 @@ topics:
 projects:
   - verified-action-knowledge-system
 verification_status: primary-source-captured
-relations: []
+candidate_relation_suggestions: []
 tags:
   - graphrag
   - retrieval-stratification

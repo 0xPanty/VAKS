@@ -38,30 +38,8 @@ projects:
 source_family: papertrail
 upstream_sources: []
 verification_status: primary-source-captured
-evidence_level: primary
-confidence: medium
-relations:
-  - target: "[[context-pack-evidence-envelope]]"
-    type: refines
-    relation_state: candidate
-    strength: 4
-    confidence: medium
-    evidence:
-      - source_id: "[[2026-05-29-papertrail-source]]"
-        source_range: "paper title / abstract"
-        quote_or_excerpt: "Paraphrase: PaperTrail frames claim-evidence provenance for LLM-based scholarly QA, motivating context packs that expose key point coverage rather than only citation lists."
-        evidence_support:
-          span_supports_target: partial
-          evidence_role: inferential_support
-          reviewer_note: "The source supports claim-evidence coverage; applying it to context-pack coverage maps is this vault's adaptation."
-    rationale: "PaperTrail motivates context packs that show key point coverage instead of only citation lists."
-    created: 2026-05-29
-    last_verified: 2026-05-29
-tags:
-  - source
-  - paper
-  - papertrail
-  - coverage-map
+candidate_relation_suggestions: []
+
 ---
 
 # 来源记录：PaperTrail

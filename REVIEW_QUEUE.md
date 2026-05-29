@@ -155,6 +155,8 @@ verifiability:
   state: verifiable | partially_verifiable | not_verifiable | unknown
   reason:
 review_route: evidence_check | rationale_check | instance_check | risk_check | action_basis_check | personalization_only | research_question | code_anchor_check
+why_checkworthy:
+evidence_granularity: metadata_only | abstract_or_summary | excerpt_or_passage | table_or_code_anchor | full_source_reviewed
 topics: []
 entities: []
 scope:
@@ -182,10 +184,39 @@ source_refs:
     source_url_or_path:
     source_range:
     quote_or_excerpt:
+    source_anchor:
+      url_or_path:
+      exact_quote:
+      prefix:
+      suffix:
+      captured_at:
+      position:
+      content_hash:
+      archived_url:
+      checked_latest_at:
+      source_changed: unknown | yes | no
     evidence_support:
       span_supports_target: supported | partial | unsupported | unclear
       evidence_role: direct_support | inferential_support | background_context | counterexample
       reviewer_note:
+evidence_packet:
+  point:
+  evidence_items: []
+  grounds:
+  warrant:
+  qualifier:
+  strongest_rebuttal:
+  challenge_kind: rebuttal | undercut | scope_limit | source_hygiene | stale_assumption | action_failure
+  scope_limit:
+  risk_flags: []
+  omission_check:
+    missing_risks:
+    missing_scope_limits:
+    possible_omissions:
+    omission_questions:
+    needs_full_source_read:
+  review_question:
+  minimal_revision_needed: keep | refine_scope | mark_contested | mark_stale | supersede | reject
 extracted_by:
 extracted_at:
 uncertainty:
@@ -237,9 +268,15 @@ Rules:
 If a point cannot be traced to a source range or excerpt, it is not ready for collision.
 If a point has broad wording, narrow the scope before promotion.
 If a point is an AI inference, mark it as hypothesis unless source text directly supports it.
+If a point may be promoted, used for action, used for a strong reviewed relation, or explicitly challenged, prefer an Evidence Packet over a loose source summary.
 Point Collision is triggered by candidate / review / promotion / action need, not by raw capture itself.
 URL-only source_refs are provenance, not support.
 Evidence support is optional during early candidate capture, but required when a source_ref is used for promotion, strong relation review, or action basis.
+Evidence Packet is review input, not a new truth layer.
+`warrant` explains why the evidence supports or weakens the point; it is not the same as provenance.
+`challenge_kind` names the challenge shape; it does not automatically reject the point.
+`minimal_revision_needed` recommends the smallest review action; it does not edit reviewed knowledge.
+`omission_check` is required only for heavy source digests, important repositories, long papers, high-impact decisions, or reviewer request.
 background_context cannot count as support.
 inferential_support needs reviewer_note before it can count as promotion support.
 Not every candidate point can receive truth confidence.
@@ -271,7 +308,9 @@ signal_id:
 from_point:
 to_point:
 relation: supports | contradicts | refines | risk_of | derived_from | duplicates | near_miss | unrelated
+challenge_kind: rebuttal | undercut | scope_limit | source_hygiene | stale_assumption | action_failure
 output_kind: candidate_relation | contradiction_candidate | scope_mismatch | stale_assumption_candidate | missing_evidence | synthesis_needed | decision_superseded | review_question | review_due
+minimal_revision_needed: keep | refine_scope | mark_contested | mark_stale | supersede | reject
 similarity_basis:
   - keyword
   - entity
@@ -297,6 +336,7 @@ Similarity only creates a pending signal.
 Similarity is not support.
 Graph neighbor / association path / PPR-style activation only creates a pending signal.
 Association score is not support or confidence.
+Challenge kind and minimal revision are review routing metadata, not automatic truth changes.
 Only reviewed signals can increase promotion readiness.
 Same-origin or derived sources do not count as independent support.
 Background citations do not count as support.
@@ -692,9 +732,19 @@ qualification:
 review_summary:
   why_it_still_holds:
   strongest_challenge:
+  challenge_kind: rebuttal | undercut | scope_limit | source_hygiene | stale_assumption | action_failure
   scope_limits:
   known_risks:
   review_due_when:
+    - new_primary_source
+    - contradiction
+    - correction_or_retraction
+    - source_version_change
+    - dependency_release_change
+    - action_failure
+    - missed_feedback
+    - stale_assumption
+  minimal_revision_needed: keep | refine_scope | mark_contested | mark_stale | supersede | reject
 action_readiness:
   state: ready | not_ready | risky | needs_review
   reason:
@@ -710,6 +760,8 @@ stale means time, version, or scope may have moved.
 stale is review pressure, not automatic expiry.
 valid_until / out_of_scope is an applicability boundary, not historical falsity.
 action_readiness is separate from truth status.
+not_enough_evidence is a valid review result, not a failure to produce an answer.
+action_failure can trigger review_due through the Use Ledger; it does not directly reject the reviewed point.
 ```
 
 Relations also need state:

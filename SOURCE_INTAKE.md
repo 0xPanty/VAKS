@@ -257,6 +257,42 @@ intent_confirmation:
 
 Do not require `verbatim_input` / `model_interpretation` for ordinary article, repository, paper, or source capture.
 
+For evidence that may support promotion, strong reviewed relations, decisions, or action basis, preserve a source anchor rather than only a source link:
+
+```yaml
+source_anchor:
+  url_or_path:
+  exact_quote:
+  prefix:
+  suffix:
+  captured_at:
+```
+
+For heavy, high-drift, or action-relevant sources, add optional stability fields:
+
+```yaml
+source_anchor:
+  position:
+  content_hash:
+  archived_url:
+  checked_latest_at:
+  source_changed: unknown | yes | no
+```
+
+Track how far the evidence was actually inspected:
+
+```yaml
+evidence_granularity: metadata_only | abstract_or_summary | excerpt_or_passage | table_or_code_anchor | full_source_reviewed
+```
+
+Rule:
+
+```text
+Source provenance tells where material came from.
+Source anchor tells where the specific evidence lives.
+Neither proves support by itself.
+```
+
 For a paper:
 
 ```yaml
@@ -395,6 +431,9 @@ it has been superseded
 ```text
 Capture must stay easy.
 Strong sources must remain traceable.
+Important evidence should carry a source anchor, not just a URL.
+Evidence granularity must stay visible: metadata-only or summary-only material cannot silently become high-confidence support.
+Heavy source digests should include an omission check for missing risks, missing scope limits, likely dropped facts, and whether full source read is needed.
 Dashboard state is not truth.
 Retrieval rank is not trust.
 Repeated appearance is a signal, not proof.

@@ -11,81 +11,18 @@ verifiability:
   state: verifiable | partially_verifiable | not_verifiable | unknown
   reason:
 review_route: evidence_check | rationale_check | instance_check | risk_check | action_basis_check | personalization_only | research_question | code_anchor_check
-review_queue_item:
-  item_type:
-  triggered_by:
-  suggested_action:
-  status:
-topics: []
-entities: []
-scope:
-  domain:
-  project:
-  version:
-  time_range:
-  conditions:
+why_checkworthy:
+evidence_granularity: metadata_only | abstract_or_summary | excerpt_or_passage | table_or_code_anchor | full_source_reviewed
 source_refs:
   - source_id:
     source_url_or_path:
     source_range:
     quote_or_excerpt:
-    source_access:
-      access_level:
-      has_direct_quote:
-      has_source_range:
-      confidence_cap:
-      cap_reason:
-    evidence_support:
-      span_supports_target:
-      evidence_role:
-      reviewer_note:
 extracted_by:
 extracted_at:
 uncertainty:
 possible_related_points: []
-collision_signals: []
 review_status: pending
-review_state: candidate
-knowledge_state:
-attack_assessment:
-  severity:
-  reason:
-  affected_scope:
-  requires_review_due:
-qualification:
-  applies_when:
-  does_not_apply_when:
-  version_scope:
-  project_scope:
-  domain_scope:
-  time_scope:
-  environment_scope:
-  assumptions:
-temporal_applicability:
-  valid_from:
-  valid_until:
-  supersedes:
-  superseded_by:
-  invalidated_by:
-  applies_to:
-    project:
-    version:
-    environment:
-    timeframe:
-    conditions:
-  check_state:
-  reviewer_note:
-review_summary:
-  why_it_still_holds:
-  strongest_challenge:
-  scope_limits:
-  known_risks:
-  review_due_when:
-action_readiness:
-  state:
-  reason:
-reviewed_by:
-reviewed_at:
 promotion_target:
 tags:
   - review-candidate
@@ -101,6 +38,14 @@ tags:
 Use this only when the candidate needs explicit queue attention.
 Ordinary candidates can leave it blank and rely on `point_type`, `verifiability`, and `review_route`.
 
+```yaml
+review_queue_item:
+  item_type:
+  triggered_by:
+  suggested_action:
+  status:
+```
+
 - Item type:
 - Why this needs review:
 - Suggested action:
@@ -109,6 +54,72 @@ Ordinary candidates can leave it blank and rely on `point_type`, `verifiability`
 
 ## Source Trace
 
+Keep the frontmatter `source_refs` light by default.
+Use this block only when a point needs source-span anchoring, confidence cap review, promotion support, a strong reviewed relation, action basis, or explicit audit.
+
+```yaml
+source_anchor:
+  url_or_path:
+  exact_quote:
+  prefix:
+  suffix:
+  captured_at:
+  position:
+  content_hash:
+  archived_url:
+  checked_latest_at:
+  source_changed: unknown | yes | no
+
+source_access:
+  access_level: full_text | source_span | abstract_only | snippet_only | url_only | summary_only | unknown
+  has_direct_quote: true | false
+  has_source_range: true | false
+  confidence_cap: low | medium | high
+  cap_reason:
+```
+
+
+## Evidence Packet
+
+Use this only when the candidate may be promoted, used for action, used for a strong reviewed relation, explicitly challenged, high-impact, stale, contested, or reviewer-requested.
+
+```yaml
+evidence_packet:
+  point:
+  evidence_items:
+    - source_anchor:
+      evidence_granularity: metadata_only | abstract_or_summary | excerpt_or_passage | table_or_code_anchor | full_source_reviewed
+      rationale:
+      evidence_support:
+        span_supports_target: supported | partial | unsupported | unclear
+        evidence_role: direct_support | inferential_support | background_context | counterexample
+        reviewer_note:
+  grounds:
+  warrant:
+  qualifier:
+  strongest_rebuttal:
+  challenge_kind: rebuttal | undercut | scope_limit | source_hygiene | stale_assumption | action_failure
+  risk_flags:
+  omission_check:
+    missing_risks:
+    missing_scope_limits:
+    possible_omissions:
+    omission_questions:
+    needs_full_source_read:
+  review_question:
+  minimal_revision_needed: keep | refine_scope | mark_contested | mark_stale | supersede | reject
+```
+
+Rules:
+
+```text
+Evidence Packet is review input, not a truth layer.
+grounds says what evidence is available.
+warrant says why the evidence supports or weakens the point.
+challenge_kind names the challenge; it does not automatically reject the point.
+minimal_revision_needed is a recommendation for review, not an automatic edit.
+omission_check is for heavy source digests, important repos, long papers, high-impact decisions, or reviewer request.
+```
 
 ## Confidence Cap / Source Access
 
@@ -143,6 +154,60 @@ URL-only source_refs are provenance, not support.
 background_context cannot count as support.
 inferential_support needs reviewer_note before it can count as promotion support.
 counterexample should move into challenge_refs or risk_refs.
+```
+
+## Optional Review Result / Qualification
+
+Use this only after review or when preparing promotion/action basis.
+
+```yaml
+review_result:
+  knowledge_state: standing | limited | contested | stale | superseded | rejected | not_enough_evidence
+  strongest_challenge:
+  scope_limit:
+  minimal_revision_needed:
+  review_due_when:
+
+qualification:
+  applies_when:
+  does_not_apply_when:
+  version_scope:
+  project_scope:
+  domain_scope:
+  time_scope:
+  environment_scope:
+  assumptions:
+
+attack_assessment:
+  severity:
+  reason:
+  affected_scope:
+  requires_review_due:
+```
+
+## Optional Temporal Applicability / Action Readiness
+
+Use this only when the candidate is part of a context pack, action basis, decision, strong reviewed relation, or risk-sensitive answer.
+
+```yaml
+temporal_applicability:
+  valid_from:
+  valid_until:
+  supersedes:
+  superseded_by:
+  invalidated_by:
+  applies_to:
+    project:
+    version:
+    environment:
+    timeframe:
+    conditions:
+  check_state:
+  reviewer_note:
+
+action_readiness:
+  state:
+  reason:
 ```
 
 ## Why It Matters
@@ -276,11 +341,13 @@ Expand this full panel only for promotion, action basis, strong reviewed relatio
 
 - What supports it:
 - What challenges it:
+- Challenge kind: rebuttal / undercut / scope_limit / source_hygiene / stale_assumption / action_failure
 - Challenge severity: fatal / major / minor / out_of_scope / unresolved
 - Scope limits:
 - Temporal applicability: valid_from / valid_until / superseded_by / applies_to
 - Known risks:
 - Review again when:
+- Minimal revision needed: keep / refine_scope / mark_contested / mark_stale / supersede / reject
 - Action readiness: ready / not_ready / risky / needs_review
 
 ## Promotion Notes

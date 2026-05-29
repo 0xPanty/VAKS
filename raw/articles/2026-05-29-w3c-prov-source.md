@@ -48,24 +48,8 @@ projects:
 source_family: w3c-prov
 upstream_sources: []
 verification_status: primary-source-captured
-evidence_level: primary
-confidence: medium
-relations:
-  - target: "[[2026-05-27-traceability-first-graduated-verification]]"
-    type: supports
-    relation_state: candidate
-    strength: 3
-    confidence: medium
-    evidence:
-      - "[[2026-05-29-w3c-prov-source]]"
-    rationale: "W3C PROV gives a useful vocabulary for source traceability, but this project only adopts a lightweight source identity and activity trace."
-    created: 2026-05-29
-    last_verified: 2026-05-29
-tags:
-  - source
-  - w3c
-  - provenance
-  - prov-lite
+candidate_relation_suggestions: []
+
 ---
 
 # 来源记录：W3C PROV

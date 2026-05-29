@@ -31,6 +31,11 @@ Evidence-Aware Review:
   review asks whether a candidate still stands under support, challenge,
   scope limits, and risk. It does not automatically decide winners.
 
+Evidence and Review Discipline:
+  important promotion or action use should build a lightweight Evidence Packet:
+  point, source anchor, evidence relation, warrant, scope, risk, and minimal
+  revision. This is review input, not a formal logic engine or truth engine.
+
 Evidence Sufficiency Gate:
   before a context pack / action basis is finalized as action-ready,
   ask whether the assembled evidence is enough for this specific use.
@@ -1165,6 +1170,9 @@ decision_outcome:
   recommendation:
   confidence_at_decision:
   user_choice:
+  outcome_precondition:
+    - recommendation_recorded
+    - user_choice_or_explicit_override_recorded
   outcome: succeeded | failed | mixed | unresolved
   outcome_note:
   recorded_by:
@@ -1186,6 +1194,7 @@ MVP rule:
 
 ```text
 record outcomes first.
+record the user choice or explicit override before recording a final outcome.
 do not compute heavy metrics until enough decisions have outcomes.
 outcomes improve future recommendation behavior, not truth.
 ```
@@ -3114,4 +3123,262 @@ One-line version:
 Keep the verified knowledge loop as the system.
 Use the brain model as the explanation.
 Let every other idea earn its place as a module.
+```
+
+## 27. v0.3 Evidence And Review Discipline
+
+Status: candidate architecture supplement accepted with Pro blocking patch applied
+Source: `outputs/review/2026-05-29-framework-reference-research.md` plus Pro review compression
+Scope: strengthen existing review / evidence / context-pack rules without changing the public story or expanding the Truth Core
+
+This supplement does not add a new architecture layer.
+
+The fixed internal chain stays:
+
+```text
+source
+-> candidate point
+-> calibration / point collision
+-> evidence-aware review
+-> reviewed node / reviewed relation
+-> context pack / action basis
+-> action
+-> use ledger / feedback / review_due
+```
+
+Evidence discipline is a set of lazy gates around this chain, not a new mandatory step for every source.
+
+```text
+source_anchor
+evidence_packet
+warrant / challenge / minimal_revision_needed
+coverage_map
+evidence_sufficiency
+temporal_applicability
+context_pack_trace
+intent_confirmation
+```
+
+The public story remains:
+
+```text
+Capture -> Understand -> Review -> Connect -> Act and Learn
+```
+
+### 27.1 Core Rule
+
+The system adopts a lightweight evidence discipline:
+
+```text
+A source is not evidence by itself.
+A citation is not support by itself.
+A retrieved relation is not a reviewed relation.
+A feedback event is not a truth update.
+Agent memory is not reviewed memory.
+Index, embedding, graph retrieval, generated wiki, and MCP memory are rebuildable cache or candidate surfaces, not sources of truth.
+```
+
+Before important knowledge is promoted or used for action, the system should build an Evidence Packet.
+
+An Evidence Packet answers:
+
+```text
+What point is being reviewed?
+Where is the specific supporting or challenging source span?
+Why does that evidence support or weaken the point?
+What scope, assumptions, or conditions limit it?
+What risks, omissions, stale assumptions, or source hygiene warnings remain?
+What minimal revision is needed?
+```
+
+This is not a formal logic system.
+It is not automatic truth.
+It is a smaller, clearer review unit.
+
+### 27.2 Accepted Alpha Principles
+
+The framework-reference research is compressed into these ten alpha principles:
+
+```text
+1. Evidence Packet
+2. Warrant separation
+3. Challenge taxonomy
+4. Minimal revision needed
+5. Source anchor mini-profile
+6. Evidence granularity / escalation
+7. Omission check
+8. Context pack trace
+9. Agent memory quarantine
+10. Review due triggers
+```
+
+### 27.3 Layer Placement
+
+Capture gets source anchor discipline:
+
+```yaml
+source_anchor:
+  url_or_path:
+  exact_quote:
+  prefix:
+  suffix:
+  captured_at:
+
+# heavy / high-drift / action-relevant sources only
+  position:
+  content_hash:
+  archived_url:
+  checked_latest_at:
+  source_changed: unknown | yes | no
+```
+
+Understand gets candidate grain, evidence granularity, and omission check:
+
+```yaml
+candidate_point:
+  point_text:
+  point_type:
+  verifiability:
+  source_anchor:
+  why_checkworthy:
+  evidence_granularity: metadata_only | abstract_or_summary | excerpt_or_passage | table_or_code_anchor | full_source_reviewed
+
+omission_check:
+  missing_risks:
+  missing_scope_limits:
+  possible_omissions:
+  omission_questions:
+  needs_full_source_read: true | false
+```
+
+Review gets Evidence Packet, warrant separation, challenge taxonomy, and minimal revision:
+
+```yaml
+evidence_packet:
+  point:
+  point_type:
+  evidence_items: []
+  grounds:
+  warrant:
+  qualifier:
+  challenge_kind: rebuttal | undercut | scope_limit | source_hygiene | stale_assumption | action_failure
+  risk_flags: []
+  review_question:
+
+review_result:
+  knowledge_state: standing | limited | contested | stale | superseded | rejected | not_enough_evidence
+  strongest_challenge:
+  scope_limit:
+  minimal_revision_needed: keep | refine_scope | mark_contested | mark_stale | supersede | reject
+  review_due_when: []
+```
+
+Connect keeps relations review-gated:
+
+```yaml
+reviewed_relation:
+  relation_type: supports | contradicts | refines | risk_of | derived_from
+  source_or_evidence_ref:
+  relation_rationale:
+  scope_qualifier:
+  relation_state: reviewed | contested | stale | superseded
+```
+
+Rules:
+
+```text
+similarity is not relation
+citation is not support
+retrieval path is not proof
+auto-extracted edge is candidate only
+```
+
+Act and Learn gets context-pack trace and use-ledger evidence trace:
+
+```yaml
+context_pack_trace:
+  used_sources: []
+  ignored_sources: []
+  ignored_reason:
+  activation_role: core | support | risk | cold_reference
+  unresolved_contradictions: []
+  risk_flags: []
+
+use_event:
+  context_pack_id:
+  action:
+  evidence_used: []
+  evidence_ignored: []
+  outcome:
+  usefulness_signal:
+  scope_fit_signal:
+  review_due_candidate:
+```
+
+Agent memory is quarantined:
+
+```yaml
+agent_memory_write:
+  status: candidate_only
+  source:
+  scope:
+  review_due:
+  allowed_effect:
+    - activation
+    - usefulness
+    - scope_fit
+  forbidden_effect:
+    - truth_confidence
+    - reviewed_relation
+    - promotion
+```
+
+### 27.4 Lazy Gates
+
+Do not require Evidence Packet for ordinary capture or ordinary query.
+
+Open it for:
+
+```text
+promotion
+decision
+strong reviewed relation
+context pack / action basis
+risk_sensitive_answer
+explicit challenge
+stale or contested point
+high-impact source review
+reviewer request
+```
+
+### 27.5 What Remains Parked
+
+Keep these as watch / parked, not architecture core:
+
+```text
+full TMS / ATMS / AGM / ASPIC+ engine
+full GraphRAG platform
+formal argument map product
+systematic review workflow
+RAG eval framework
+observability stack
+blockchain / DKG / C2PA provenance platform
+semantic wiki / Wikibase / SHACL runtime
+agent memory platform
+MCP write tools
+workflow lineage system
+```
+
+Reject these outright:
+
+```text
+citation count as confidence
+retrieval score as support
+graph rank as trust
+auto-extracted relation as reviewed relation
+agent memory as reviewed memory
+generated wiki as truth
+systematic review checklist as daily workflow
+automatic contradiction resolution
+automatic truth update
 ```

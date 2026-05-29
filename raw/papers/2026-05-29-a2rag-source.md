@@ -47,30 +47,8 @@ projects:
 source_family: a2rag
 upstream_sources: []
 verification_status: primary-source-captured
-evidence_level: primary
-confidence: medium
-relations:
-  - target: "[[context-pack-evidence-envelope]]"
-    type: refines
-    relation_state: candidate
-    strength: 4
-    confidence: medium
-    evidence:
-      - source_id: "[[2026-05-29-a2rag-source]]"
-        source_range: "arXiv abstract"
-        quote_or_excerpt: "Paraphrase: A2RAG verifies evidence sufficiency, escalates retrieval effort only when necessary, and maps graph signals back to provenance text."
-        evidence_support:
-          span_supports_target: supported
-          evidence_role: direct_support
-          reviewer_note: "The source directly motivates the vault's Evidence Sufficiency Gate, while the vault rejects the full agentic retrieval implementation for MVP."
-    rationale: "A2RAG directly motivates evidence sufficiency gating and progressive evidence discovery as an adaptive control idea."
-    created: 2026-05-29
-    last_verified: 2026-05-29
-tags:
-  - source
-  - paper
-  - a2rag
-  - evidence-sufficiency
+candidate_relation_suggestions: []
+
 ---
 
 # 来源记录：A2RAG

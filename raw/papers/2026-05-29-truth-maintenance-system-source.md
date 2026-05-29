@@ -29,9 +29,7 @@ projects:
 source_family: truth-maintenance-system
 upstream_sources: []
 verification_status: single-source
-evidence_level: primary
-confidence: medium
-relations: []
+candidate_relation_suggestions: []
 tags:
   - source
   - paper

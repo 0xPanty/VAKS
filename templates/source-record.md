@@ -25,7 +25,7 @@ projects:
 source_family:
 upstream_sources: []
 verification_status: unverified
-relations: []
+candidate_relation_suggestions: []
 tags:
 ---
 
@@ -112,30 +112,34 @@ light / medium / heavy
 ## 可选验证字段
 
 ```yaml
-source_quality:
+source_metadata_quality:
 freshness:
 relevance:
-confidence:
-cross_source_count:
+source_hygiene_note:
+source_independence_hint:
 last_verified:
 next_review:
 ```
 
-## 关系边 / 关联强度
+These are source hygiene hints only. A Source record does not own truth confidence, and cross-source agreement belongs to review aggregation / coverage rather than the Source node itself.
+
+## 候选关系建议
 
 ```yaml
-relations:
+candidate_relation_suggestions:
   - target: "[[claim-or-pattern]]"
-    type: derived_from | supports | contradicts | refines | risk_of
-    relation_state: candidate | reviewed | rejected | stale
-    strength: 1-5
-    confidence: low | medium | high
-    evidence:
-      - "[[this-source]]"
-    rationale: "One sentence explaining what this source contributes."
-    created:
-    last_verified:
+    relation_type: derived_from | supports | contradicts | refines | risk_of
+    relation_state: candidate
+    why_suggested: "One sentence explaining what this source may contribute."
+    source_anchor:
+    evidence_support:
+      span_supports_target:
+      evidence_role:
+      reviewer_note:
+    suggested_at:
 ```
 
+Source records may suggest candidate relations.
+They cannot create reviewed relations, relation strength, or truth confidence.
 
 ## 下一步

@@ -38,30 +38,8 @@ projects:
 source_family: rag-attribution-faithfulness
 upstream_sources: []
 verification_status: primary-source-captured
-evidence_level: primary
-confidence: medium
-relations:
-  - target: "[[context-pack-evidence-envelope]]"
-    type: refines
-    relation_state: candidate
-    strength: 4
-    confidence: medium
-    evidence:
-      - source_id: "[[2026-05-29-rag-attribution-faithfulness-source]]"
-        source_range: "paper abstract / framing"
-        quote_or_excerpt: "Paraphrase: the paper distinguishes citation correctness from the stronger causal notion of citation faithfulness."
-        evidence_support:
-          span_supports_target: partial
-          evidence_role: inferential_support
-          reviewer_note: "The source supports the boundary warning: this vault should record evidence support but not claim full causal citation faithfulness."
-    rationale: "The paper motivates distinguishing source support from the stronger causal faithfulness claim in attributed generation."
-    created: 2026-05-29
-    last_verified: 2026-05-29
-tags:
-  - source
-  - paper
-  - rag-attribution
-  - evidence-support
+candidate_relation_suggestions: []
+
 ---
 
 # 来源记录：Correctness is not Faithfulness in RAG Attributions

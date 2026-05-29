@@ -38,30 +38,8 @@ projects:
 source_family: crag
 upstream_sources: []
 verification_status: primary-source-captured
-evidence_level: primary
-confidence: medium
-relations:
-  - target: "[[context-pack-evidence-envelope]]"
-    type: refines
-    relation_state: candidate
-    strength: 4
-    confidence: medium
-    evidence:
-      - source_id: "[[2026-05-29-crag-source]]"
-        source_range: "arXiv abstract"
-        quote_or_excerpt: "Paraphrase: CRAG uses a lightweight retrieval evaluator to assess retrieved document quality and trigger different retrieval actions."
-        evidence_support:
-          span_supports_target: partial
-          evidence_role: inferential_support
-          reviewer_note: "The source motivates evaluating whether retrieved evidence is good enough before relying on it, without adopting the automatic evaluator."
-    rationale: "CRAG motivates checking retrieved evidence quality before using it in action context."
-    created: 2026-05-29
-    last_verified: 2026-05-29
-tags:
-  - source
-  - paper
-  - crag
-  - evidence-sufficiency
+candidate_relation_suggestions: []
+
 ---
 
 # 来源记录：CRAG

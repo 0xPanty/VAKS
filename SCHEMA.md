@@ -118,6 +118,9 @@ high-impact, stale, contested, or explicitly challenged.
 
 When a strict gate opens, evidence_support, support/challenge review,
 coverage_map, action_readiness, and optional point_graph_fragment may be required.
+For important promotion or action use, the review input should be an
+Evidence Packet: point + source anchor + evidence item + warrant + scope/risk +
+minimal revision. Evidence Packet is review input, not a new truth layer.
 ```
 
 ## 1. 核心原则
@@ -374,6 +377,9 @@ decision_outcome:
   recommendation:
   confidence_at_decision:
   user_choice:
+  outcome_precondition:
+    - recommendation_recorded
+    - user_choice_or_explicit_override_recorded
   outcome: succeeded | failed | mixed | unresolved
   outcome_note:
   affects:
@@ -387,7 +393,7 @@ decision_outcome:
     - source_reliability
 ```
 
-Decision outcome tells whether the recommendation worked. It does not prove the underlying claim true.
+Decision outcome tells whether the recommendation worked. It does not prove the underlying claim true. Do not record a final decision outcome unless the recommendation and user choice, or explicit user override, are both recorded.
 
 ### 1.6 Activation is not truth
 
@@ -572,7 +578,7 @@ Hot means read early, not believe more.
 
 ```yaml
 review_state: candidate | reviewed | rejected
-knowledge_state: standing | contested | stale | superseded | retired
+knowledge_state: standing | limited | contested | stale | superseded | rejected | not_enough_evidence | retired
 relation_state: candidate | reviewed | rejected | stale
 attack_assessment:
   severity: fatal | major | minor | out_of_scope | unresolved
@@ -690,6 +696,58 @@ Rules:
 - `missing_evidence` points to a specific missing support target.
 - `synthesis_needed` asks for a reviewed summary judgment across multiple candidates or clusters.
 - `decision_superseded` starts an audit-preserving replacement flow; it does not delete the old decision.
+
+以下字段属于 lightweight evidence discipline metadata。它们用于把重要 candidate 的 review 输入收束为 Evidence Packet；普通 capture 和 ordinary query 不强制填写：
+
+```yaml
+evidence_packet:
+  point:
+  point_type:
+  evidence_items:
+    - source_anchor:
+      evidence_granularity: metadata_only | abstract_or_summary | excerpt_or_passage | table_or_code_anchor | full_source_reviewed
+      rationale:
+      evidence_support:
+        span_supports_target: supported | partial | unsupported | unclear
+        evidence_role: direct_support | inferential_support | background_context | counterexample
+        reviewer_note:
+  grounds:
+  warrant:
+  qualifier:
+  strongest_rebuttal:
+  challenge_kind: rebuttal | undercut | scope_limit | source_hygiene | stale_assumption | action_failure
+  scope_limit:
+  risk_flags: []
+  omission_check:
+    missing_risks:
+    missing_scope_limits:
+    possible_omissions:
+    omission_questions:
+    needs_full_source_read: true | false
+  review_question:
+  minimal_revision_needed: keep | refine_scope | mark_contested | mark_stale | supersede | reject
+  review_due_when:
+    - new_primary_source
+    - contradiction
+    - correction_or_retraction
+    - source_version_change
+    - dependency_release_change
+    - action_failure
+    - missed_feedback
+    - stale_assumption
+```
+
+Rules:
+
+- Evidence Packet does not create truth, confidence, reviewed relation, or action readiness by itself.
+- `grounds` records the evidence basis; `warrant` records why the evidence supports or weakens the point.
+- Source anchors live on `evidence_items`; do not maintain a second top-level `source_anchors` list that can drift from the evidence item.
+- `evidence_support.evidence_role` is the canonical support/challenge role; avoid a second `relation_to_point` field unless it is a freeform reviewer note.
+- `challenge_kind` explains what kind of challenge exists; it does not automatically reject the point.
+- `minimal_revision_needed` is a review recommendation, not an automatic edit.
+- `evidence_granularity` caps how far a point can be used before stronger evidence is gathered.
+- `omission_check` is required only for heavy source digest, important repositories, long papers, high-impact decisions, or reviewer request.
+- `review_due_when` records trigger conditions; review_due is pressure to recheck, not proof that the old judgment is false.
 
 默认映射：
 
@@ -1084,15 +1142,36 @@ Similarity is not support.
 Candidate relation is not reviewed relation.
 ```
 
-### 5.1 关系边格式
+### 5.1 Candidate Relation Suggestions
+
+```yaml
+candidate_relation_suggestions:
+  - target: "[[node-name]]"
+    relation_type: supports | contradicts | refines | risk_of | derived_from
+    relation_state: candidate
+    why_suggested:
+    source_anchor:
+    evidence_support:
+      span_supports_target: supported | partial | unsupported | unclear
+      evidence_role: direct_support | inferential_support | background_context | counterexample
+      reviewer_note:
+    suggested_at: 2026-05-26
+```
+
+Candidate relation suggestions are review input.
+They cannot create reviewed relations, relation strength, or truth confidence.
+They may guide Point Collision, context activation, or review queue routing.
+If a candidate relation is promoted, it must become a reviewed relation with evidence for the edge itself.
+
+### 5.2 Reviewed Relation Format
 
 ```yaml
 relations:
   - target: "[[node-name]]"
-    type: supports | contradicts | refines | risk_of | derived_from
-    relation_state: candidate | reviewed | rejected | stale
-    strength: 1
-    confidence: low
+    relation_type: supports | contradicts | refines | risk_of | derived_from
+    relation_state: reviewed | contested | stale | superseded
+    strength: 1-5
+    confidence: low | medium | high
     evidence:
       - source_id: "[[source-or-claim]]"
         source_range:
@@ -1101,14 +1180,16 @@ relations:
           span_supports_target:
           evidence_role:
           reviewer_note:
-    rationale: "One sentence explaining why this edge exists."
+    rationale: "One sentence explaining why this reviewed edge exists."
     created: 2026-05-26
     last_verified: 2026-05-26
 ```
 
-兼容说明：旧记录或弱候选关系中，`evidence` 可能仍是简单 source link 列表。`strength >= 4`、promotion support、reviewed relation、decision/action basis 相关关系，应升级为带 `source_range` / `quote_or_excerpt` / `evidence_support` 的 evidence item。
+Reviewed relations belong to reviewed nodes, promoted patterns, decisions, context-pack/action-basis records, or other reviewed knowledge surfaces.
+They do not belong to raw Source nodes.
+Compatibility note: old records may contain weak relation-like lists. Treat those as `candidate_relation_suggestions` until a review upgrades them.
 
-### 5.2 关系类型
+### 5.3 关系类型
 
 MVP 只启用五种核心关系。关系类型少一点，review 质量会更高，也更不容易把普通相关性误写成正式边。
 
@@ -1133,9 +1214,9 @@ blocked_by
 
 这些不是被拒绝，只是不进入第一版核心关系集合。需要它们时，先用正文说明或 decision metadata 记录，不急着扩展 YAML relation enum。
 
-### 5.3 Strength
+### 5.4 Reviewed Relation Strength
 
-`strength` 表示语义关系强度，范围 `1-5`。
+For reviewed relations only, `strength` 表示语义关系强度，范围 `1-5`。
 
 | strength | 含义 |
 |---|---|
@@ -1153,8 +1234,9 @@ blocked_by
 - `derived_from` 是 provenance relation，不自动构成 support。
 - 无证据的强边应被 health check 标记。
 - 双向关系需要两条边分别记录，不默认自动互逆。
+- Candidate relation suggestions do not have `strength` or `confidence`.
 
-### 5.4 派生分数
+### 5.5 派生分数
 
 程序未来可以从主记录派生：
 
@@ -1195,7 +1277,7 @@ formalization_status: raw-only
 topics:
 projects:
 verification_status: unverified
-relations: []
+candidate_relation_suggestions: []
 tags:
 ```
 
@@ -1215,11 +1297,11 @@ provenance:
   model: PROV-lite
   activities: []
   agents: []
-source_quality:
+source_metadata_quality:
 freshness:
 relevance:
-confidence:
-cross_source_count:
+source_hygiene_note:
+source_independence_hint:
 last_verified:
 next_review:
 ```
@@ -1234,6 +1316,7 @@ next_review:
 - 下一步
 
 Source 允许低摩擦写入。只要来源可追溯，就可以先成为 raw evidence。`processing_mode` 决定处理节奏，不决定可信度。
+Source node 不拥有 truth `confidence` 或 `cross_source_count`。来源卫生、元数据质量和独立性只能作为 hygiene hints；truth confidence 属于 reviewed claim / reviewed node / reviewed relation，交叉来源数量属于 review aggregation 或 coverage，不属于 Source 自身。
 
 ```text
 inbox      = 普通自动捕获，先进入 raw/inbox 或对应 raw 目录，等待批处理。
@@ -1433,6 +1516,9 @@ decision_outcome:
   recommendation:
   confidence_at_decision:
   user_choice:
+  outcome_precondition:
+    - recommendation_recorded
+    - user_choice_or_explicit_override_recorded
   outcome: succeeded | failed | mixed | unresolved
   outcome_note:
 migration_path:
@@ -1807,8 +1893,18 @@ decision_outcome:
   recommendation:
   confidence_at_decision:
   user_choice:
+  outcome_precondition:
+    - recommendation_recorded
+    - user_choice_or_explicit_override_recorded
   outcome: succeeded | failed | mixed | unresolved
   outcome_note:
+context_pack_trace:
+  used_sources: []
+  ignored_sources: []
+  ignored_reason:
+  activation_role: core | support | risk | cold_reference
+  unresolved_contradictions: []
+  risk_flags: []
 coverage_overview:
   supported:
   weakly_supported:
@@ -1852,6 +1948,7 @@ evidence_sufficiency:
 - `decision_superseding` 是 action-basis 审计提示：旧决策不删除，新决策只在 scope 内替代它，受影响内容应先 review_due。
 - `intent_confirmation` 是重大行动前的对齐提示；没有确认时不应把高影响 context pack 标成 ready。
 - `decision_outcome` 是后续 use ledger / calibration 输入，不是 context pack 当下判真的证据。
+- `context_pack_trace` 解释什么被使用、什么被忽略、为什么忽略，以及它在 pack 里是什么 activation role；它是 trace/use ledger surface，不是 truth layer。
 - stale / superseded / out_of_scope 的点可以作为背景或历史，但不能直接输出 `action_readiness: ready`，除非 context pack 明确采用了替代依据或收窄 scope。
 - 完整 `coverage_map` 只要求覆盖回答或行动依据中实际使用的关键判断。
 - ordinary query / 普通回答不强制生成完整 `coverage_map`。

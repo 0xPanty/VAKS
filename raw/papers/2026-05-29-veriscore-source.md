@@ -36,30 +36,8 @@ projects:
 source_family: veriscore
 upstream_sources: []
 verification_status: primary-source-captured
-evidence_level: primary
-confidence: medium
-relations:
-  - target: "[[REVIEW_QUEUE]]"
-    type: refines
-    relation_state: candidate
-    strength: 4
-    confidence: medium
-    evidence:
-      - source_id: "[[2026-05-29-veriscore-source]]"
-        source_range: "paper title / abstract"
-        quote_or_excerpt: "Paraphrase: VERISCORE focuses on evaluating verifiable claims in long-form generation, which motivates routing candidate points by verifiability before factual review."
-        evidence_support:
-          span_supports_target: partial
-          evidence_role: inferential_support
-          reviewer_note: "The source supports the verifiable-claim distinction; applying it as candidate review routing is this vault's adaptation."
-    rationale: "VERISCORE motivates routing candidate points by whether they are verifiable before applying claim-style factual review."
-    created: 2026-05-29
-    last_verified: 2026-05-29
-tags:
-  - source
-  - paper
-  - veriscore
-  - verifiability
+candidate_relation_suggestions: []
+
 ---
 
 # 来源记录：VERISCORE

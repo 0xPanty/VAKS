@@ -199,7 +199,37 @@ known gaps or negative evidence where relevant
 
 Do not make ordinary capture feel like decision paperwork. Do not let lightweight capture become action-ready truth without review.
 
-### 3.3.1 Reference review is always two-lens
+### 3.3.1 Evidence Packet sharpens review input
+
+For important promotion, strong reviewed relations, decisions, action basis, high-impact source review, stale / contested points, or explicit challenges, review should use a lightweight Evidence Packet.
+
+Evidence Packet is not a new truth layer. It is a smaller unit of review:
+
+```text
+point
+source anchor
+evidence item
+warrant
+scope / qualifier
+challenge kind
+risk flags
+omission check when needed
+minimal revision needed
+```
+
+Rules:
+
+```text
+source is not evidence by itself
+citation is not support by itself
+retrieval relation is not reviewed relation
+feedback is not truth update
+agent memory is not reviewed memory
+```
+
+Use Evidence Packet to make review clearer, not heavier. Ordinary capture and ordinary query stay light.
+
+### 3.3.2 Reference review is always two-lens
 
 When inspecting a repository, paper, or external framework, apply both lenses:
 

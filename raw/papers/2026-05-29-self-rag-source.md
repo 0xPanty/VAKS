@@ -38,30 +38,8 @@ projects:
 source_family: self-rag
 upstream_sources: []
 verification_status: primary-source-captured
-evidence_level: primary
-confidence: medium
-relations:
-  - target: "[[context-pack-evidence-envelope]]"
-    type: refines
-    relation_state: candidate
-    strength: 4
-    confidence: medium
-    evidence:
-      - source_id: "[[2026-05-29-self-rag-source]]"
-        source_range: "arXiv abstract"
-        quote_or_excerpt: "Paraphrase: Self-RAG retrieves on demand and reflects on retrieved passages and generations, instead of blindly using a fixed retrieval set."
-        evidence_support:
-          span_supports_target: partial
-          evidence_role: inferential_support
-          reviewer_note: "The source motivates the vault's rule that not every query should escalate; stricter evidence checks appear when the intended use requires them."
-    rationale: "Self-RAG motivates on-demand retrieval and reflection as a control idea for evidence sufficiency."
-    created: 2026-05-29
-    last_verified: 2026-05-29
-tags:
-  - source
-  - paper
-  - self-rag
-  - evidence-sufficiency
+candidate_relation_suggestions: []
+
 ---
 
 # 来源记录：Self-RAG

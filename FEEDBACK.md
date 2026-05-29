@@ -179,6 +179,9 @@ decision_outcome:
   recommendation:
   confidence_at_decision:
   user_choice:
+  outcome_precondition:
+    - recommendation_recorded
+    - user_choice_or_explicit_override_recorded
   outcome: succeeded | failed | mixed | unresolved
   outcome_note:
 requires_review: true | false
@@ -360,6 +363,7 @@ MVP rule:
 
 ```text
 Record outcomes first.
+Record the recommendation and user choice, or explicit user override, before recording a final outcome.
 Compute Brier / ECE / override rate only after enough comparable decisions exist.
 ```
 
@@ -609,6 +613,26 @@ point scope needs narrowing
 claim may be stale
 missing point should be extracted
 context pack should include contradiction
+```
+
+Review due should be triggered by concrete signals, not only by dates:
+
+```text
+new_primary_source
+contradiction
+correction_or_retraction
+source_version_change
+dependency_release_change
+action_failure
+missed_feedback
+stale_assumption
+```
+
+Agent memory quarantine:
+
+```text
+Future agent / MCP memory writes can create candidate or feedback-event records.
+They cannot directly write reviewed truth, change truth confidence, create reviewed relations, or promote knowledge.
 ```
 
 Feedback polarity rules:

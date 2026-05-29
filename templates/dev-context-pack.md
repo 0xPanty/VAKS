@@ -278,6 +278,32 @@ Use this only for key judgments in the answer or action basis. Do not turn the p
 Every pack should be coverage-aware, but ordinary use can keep only the overview plus high-risk, challenged, or missing-evidence items.
 Expand full `coverage_map` detail only for decisions, action basis, agent context packs, high-impact answers, explicit audit requests, or challenged answers.
 
+## Context Pack Trace
+
+Use this to explain why material entered the pack and what was ignored. It is a trace / use-ledger surface, not a trust surface.
+
+```yaml
+context_pack_trace:
+  used_sources:
+    -
+  ignored_sources:
+    -
+  ignored_reason:
+  activation_role: core | support | risk | cold_reference
+  unresolved_contradictions:
+    -
+  risk_flags:
+    -
+```
+
+Trace rule:
+
+```text
+Trace explains selection and omission.
+It does not create support, confidence, or reviewed relations.
+Retrieved-but-ignored material can still matter later as a missing-context or review_due candidate.
+```
+
 ```yaml
 coverage_overview:
   supported:

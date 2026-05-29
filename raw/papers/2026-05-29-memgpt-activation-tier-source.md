@@ -22,7 +22,7 @@ topics:
 projects:
   - verified-action-knowledge-system
 verification_status: unverified
-relations: []
+candidate_relation_suggestions: []
 tags:
   - memgpt
   - activation-tier

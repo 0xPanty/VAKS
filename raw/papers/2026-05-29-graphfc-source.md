@@ -39,24 +39,8 @@ projects:
 source_family: graphfc
 upstream_sources: []
 verification_status: primary-source-captured
-evidence_level: primary
-confidence: medium
-relations:
-  - target: "[[REVIEW_QUEUE]]"
-    type: refines
-    relation_state: candidate
-    strength: 3
-    confidence: low
-    evidence:
-      - "[[2026-05-29-graphfc-source]]"
-    rationale: "GraphFC motivates optional entity-relation decomposition for complex candidate points without adopting the full automated fact-checking pipeline."
-    created: 2026-05-29
-    last_verified: 2026-05-29
-tags:
-  - source
-  - paper
-  - graphfc
-  - point-graph-fragment
+candidate_relation_suggestions: []
+
 ---
 
 # 来源记录：GraphFC
