@@ -114,6 +114,73 @@ Risk rule:
 Check Risk before decisions, writes, or scope expansion.
 ```
 
+## Coverage Map
+
+Use this only for key judgments in the answer or action basis. Do not turn the pack into a full audit report.
+Every pack should be coverage-aware, but ordinary use can keep only the overview plus high-risk, challenged, or missing-evidence items.
+Expand full `coverage_map` detail only for decisions, action basis, agent context packs, high-impact answers, explicit audit requests, or challenged answers.
+
+```yaml
+coverage_overview:
+  supported:
+  weakly_supported:
+  challenged:
+  missing_evidence:
+  out_of_scope:
+  risk_flags:
+
+coverage_map:
+  - point:
+    point_type:
+    coverage_status: supported | weakly_supported | challenged | missing_evidence | out_of_scope | not_verifiable
+    support_refs:
+    challenge_refs:
+    risk_refs:
+    critical_omissions:
+    note:
+
+action_readiness:
+  state: ready | not_ready | risky | needs_review
+  reason:
+```
+
+Coverage rule:
+
+```text
+Citations are not enough.
+Coverage status does not change truth confidence.
+Coverage can consume evidence_support, but background_context cannot count as supported.
+Risk flags are only overview signals; concrete risks stay in risk_refs and action_readiness.
+Critical omissions are known major omissions only, not a full omission scan.
+```
+
+## Evidence Sufficiency Gate
+
+Use this only before action basis, decision, promotion, strong reviewed relation, risk_sensitive_answer, or when the user asks whether evidence is enough.
+Run it after the draft evidence/context envelope is assembled, before marking the pack action-ready.
+
+```yaml
+evidence_sufficiency:
+  state: sufficient | weak | insufficient | out_of_scope | risky
+  checked_for: context_pack | action_basis | decision | promotion | reviewed_relation | risk_sensitive_answer
+  missing:
+    -
+  required_next_step: proceed | ask_user | retrieve_more | create_missing_point | narrow_scope | mark_not_actionable | needs_review
+  reviewer_note:
+```
+
+Gate rule:
+
+```text
+Ordinary capture and ordinary query do not trigger this gate.
+If evidence is insufficient, do not output a ready action basis.
+If evidence is weak, expose gaps and weak support.
+If evidence is out of scope, show the scope mismatch.
+If evidence is out of scope only for the broad request, narrow_scope may be the right next step.
+If evidence is risky, set action_readiness to risky or needs_review.
+retrieve_more is a recommendation unless the user explicitly authorizes retrieval.
+```
+
 ## Cold References
 
 Traceable sources and historical records. Do not load by default.

@@ -103,6 +103,14 @@ These references have been discussed, reviewed, or partially absorbed. Use the e
 - Obsidian + Claude / Vellum daily synthesis and second-brain articles.
 - JARVIS / content-production vault article.
 - ECC / AgentShield / Claude Code tool-safety article: discussed as future agent tool-safety inspiration; do not turn it into a core platform before agents can write or execute.
+- Jon Doyle / Truth Maintenance System / Reason Maintenance: conceptual ancestor for Point Collision as knowledge calibration; absorb the idea of reasons, contradiction pressure, and review-triggering evidence, not an automatic truth machine.
+- Dung / abstract argumentation framework: conceptual reference for Evidence-Aware Review; absorb the support/challenge/standing-check idea, not formal argumentation semantics or automatic debate resolution.
+- W3C PROV / provenance model: conceptual reference for lightweight source provenance; absorb source identity, capture/extraction activity, and human/model/tool traceability, not the full ontology, graph stack, or source-node usage ledger.
+- VERISCORE / verifiable-claim factuality evaluation: conceptual reference for candidate routing; absorb the distinction between verifiable and unverifiable content, not the metric or evaluator pipeline.
+- PaperTrail / claim-evidence provenance interface: conceptual reference for context-pack coverage maps; absorb key point coverage and progressive disclosure, not the full UI or exhaustive omission scan.
+- GraphFC / graph-based fact checking: conceptual reference for optional point graph fragments on complex candidate points; absorb entity-relation decomposition as a review aid, not the full pipeline or automatic graph truth.
+- ProVe / RAG attribution faithfulness: conceptual references for Evidence Support Check; absorb source-span-to-point/relation support checking and the citation-correctness-vs-faithfulness warning, not automated ProVe, NLI/RTE, support scores, or causal citation faithfulness verification.
+- Self-RAG / CRAG / A2RAG: conceptual references for Evidence Sufficiency Gate; absorb "escalate only when evidence is insufficient for the intended action", not automatic retrieval evaluators, web search, agentic retrievers, or correction pipelines.
 
 For the full current graph of absorbed patterns, anti-patterns, decisions, source summaries, and index notes, read:
 
@@ -133,8 +141,9 @@ Internal loop:
 ```text
 Capture / Provenance
 -> Candidate Comprehension
+-> Knowledge Calibration / Point Collision
 -> Review / Consolidation
--> Association / Point Collision
+-> Association / Reviewed Relations
 -> Activation / Dev Context
 -> Context Pack
 -> Decision / Action
@@ -145,6 +154,15 @@ Capture / Provenance
 Boundaries:
 
 - Feedback improves activation, usefulness, and scope fit; it does not directly change truth confidence.
+- Strict checks are lazy gates: ordinary capture stays light, ordinary query stays simple, promotion gets strict, and action basis gets auditable.
 - Proactive synthesis is candidate-only.
 - Risk / Inhibition is cross-cutting.
+- Knowledge calibration output is review input, not truth.
+- Evidence-aware review checks support, challenge, scope limits, and risk before a judgment is treated as standing; the full panel is a lazy gate for promotion, decisions, action basis, strong relations, explicit contradictions, or stale / contested claims.
+- Source provenance uses a lightweight PROV-inspired vocabulary. Source records stay light; review, promotion, and context-pack use are recorded in their own layers.
+- Verifiability routing happens before review: candidate points are atomic review units, not all claims; only verifiable claims receive truth confidence.
+- Complex candidate points may use optional `point_graph_fragment`; extracted triplets are review aids, not truth or reviewed relations.
+- Context packs are coverage-aware, but full `coverage_map` detail is only required for key judgments used in an answer or action basis; ordinary queries should not become full audit reports.
 - The second-brain model is an explanation and design-check layer, not the engineering module structure.
+- Evidence Support Check lives on evidence items, not Source nodes: URL-only citations are provenance, background citations cannot count as support, and evidence must support the specific point or relation.
+- Evidence Sufficiency Gate appears only for promotion, decision, strong reviewed relation, context pack / action basis, risk_sensitive_answer, or an explicit "is this enough" question; it runs after a draft evidence/context envelope is assembled and before action-ready finalization. Ordinary capture and ordinary query stay light.

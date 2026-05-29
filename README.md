@@ -10,7 +10,7 @@
 其他参考库只作为可替换模块接入，不抢 truth 裁决权。
 ```
 
-对外主线先压成五层：
+对外主架构固定为五层：
 
 ```text
 1. Capture
@@ -37,6 +37,72 @@ Only reviewed evidence can support action.
 Feedback improves activation, not truth.
 ```
 
+Strict checks are lazy gates:
+
+```text
+Capture stays light.
+Promotion gets strict.
+Action basis gets auditable.
+Feedback improves activation, not truth.
+```
+
+Candidate points may stay lightweight until they are promoted, used for action, used as evidence for a strong reviewed relation, included in an action basis, high-impact, stale, contested, or explicitly challenged.
+
+内部可以继续用 verified loop 和第二大脑模型解释细节，但它们不能替代这五层主架构。
+第二大脑模型只做解释和设计校验，不做实现模块目录。
+
+内部主循环是：
+
+```text
+source
+-> candidate
+-> calibration / point collision
+-> review
+-> reviewed node / reviewed relation
+-> context pack / action basis
+-> action
+-> use ledger / feedback
+```
+
+这条线回答的是：
+
+```text
+资料怎么从来源变成候选？
+候选点怎么和本地 reviewed knowledge 做校准？
+哪些旧判断被支持、被挑战、被细化、暴露风险或需要复查？
+候选怎么经过 review 进入 reviewed memory？
+新点怎么和旧点发生支持、冲突、细化、风险和来源关系？
+知识怎么变成行动依据？
+用后反馈怎么改善下一次激活，而不是改写 truth？
+```
+
+这里的 calibration / point collision 不是整篇 raw source 直接撞库。
+它的意思是：
+
+```text
+外部资料先被拆成少量 candidate points。
+这些 candidate points 再和本地 reviewed knowledge 做双向校准。
+校准只浮出候选关系、矛盾、适用范围不匹配、旧判断可能过时、缺失证据和复查问题。
+校准结果是 review input，不是 truth。
+```
+
+Review 也不是简单盖章。
+它要看一个判断在支持、反对、适用范围和风险都摆出来后，现在还站不站得住：
+
+```text
+有来源，不等于已经被支持。
+有反对，不等于立刻作废。
+相似不是支持。
+重复出现不会自动提高 confidence。
+能不能行动要单独看当前场景、风险和回退。
+```
+
+Source 会保留轻量 provenance：资料是什么、从哪里来、什么时候收录、谁/什么工具处理过；这只负责追溯，不负责判断 truth、support 或 confidence。
+
+不是所有 candidate 都是 claim：进入 review 前，系统会先判断它是什么、是否可验证，避免把事实、解释、偏好、决策、风险和开放问题都当成 truth。
+
+引用不够：context pack 会显示关键判断的覆盖状态，被支持、证据弱、被挑战、证据缺失、范围不适用；风险单独通过 risk flags、risk refs 和 action readiness 显示。
+
 目录角色：
 
 - `raw/`：原始资料区。文章、X 推文、论文、repo、截图、播客转录等先放这里，尽量保留原文和来源。
@@ -57,18 +123,20 @@ Feedback improves activation, not truth.
 - Codex 作为默认 review/write gate，AI 和外部 agent 只能先生成 candidate。
 - Obsidian 作为 IDE、图谱和人工 workbench。
 - 严格字段藏在后台，只在晋级为 claim、pattern、decision、context pack 时启用。
-- 当前 alpha 机制是 point collision：新资料先抽 candidate point，再和旧 point 做 supports / contradicts / refines / risk_of / derived_from 撞击，review 后才影响晋级。
+- 当前 alpha 机制是 knowledge calibration / point collision：新资料先抽 candidate point，再和本地 reviewed knowledge 做双向校准，生成 supports / contradicts / refines / risk_of / derived_from 等候选关系和复查问题，review 后才影响晋级。
+- Review 采用支持-反对式判断：不仅看来源，还看支持、挑战、范围限制、风险和行动可用性。
 - 查询反馈只校准激活路径：usefulness、scope fit、activation ranking、missing-point candidate；不会直接把用户偏好写成真理。
 - 新增 conversation-derived feedback：从连续追问、问题变窄、纠偏、说漏了、换题等行为反推 route / keyword / scope 信号；默认是弱信号，先 session-local，不直接改 point truth。
-- 暂时不急着上重型 RAG，先跑通 source -> candidate -> reviewed node -> context pack。
+- 暂时不急着上重型 RAG，先跑通 source -> candidate points -> calibration -> review -> reviewed node / reviewed relation -> context pack。
 
 最小闭环：
 
 1. 把新资料放进 `raw/`。
-2. 生成 review candidate。
-3. lint / review 后晋级到正式 `wiki/` 节点。
-4. 需要行动时生成 context pack。
-5. 行动结果回流为 feedback，校准 activation/usefulness/scope fit，并触发 gaps、review_due 或 missing-point。
+2. 生成 candidate points。
+3. 和本地 reviewed knowledge 做 calibration / point collision，浮出候选关系、矛盾、scope mismatch、stale assumption 和 review questions。
+4. lint / review 后晋级到正式 `wiki/` 节点或 reviewed relations。
+5. 需要行动时生成 context pack。
+6. 行动结果回流为 feedback，校准 activation/usefulness/scope fit，并触发 gaps、review_due 或 missing-point。
 
 开发阶段的新增原则：
 

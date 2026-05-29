@@ -10,6 +10,75 @@
 Capture -> Understand -> Review -> Connect -> Act and Learn
 ```
 
+当前落地口径：
+
+```text
+1. 大脑模型降权：
+   它解释系统为什么需要输入、理解、复核、联想、激活、行动、反馈和风险抑制。
+   它不定义实现模块。
+
+2. 主架构不变：
+   Capture -> Understand -> Review -> Connect -> Act and Learn。
+
+3. 内部主线不变：
+   source -> candidate points -> calibration / point collision -> review -> reviewed relation / node -> context pack -> action -> feedback。
+
+4. Risk / Inhibition 是横切层：
+   它贯穿 capture、comprehension、review、association、activation、action、feedback。
+
+5. Proactive Synthesis、Expression / Publishing、Agent Tool Safety 不进 truth core：
+   它们分别是候选生成器、未来输出面、未来执行安全层。
+```
+
+不要把下面的编号读成线性执行顺序。更准确的分组是：
+
+```text
+Input:
+  Capture / Provenance
+
+Comprehension:
+  summary
+  candidate point
+  missing point
+
+Reviewed Memory:
+  claim
+  pattern
+  anti-pattern
+  decision
+
+Association:
+  knowledge calibration / point collision
+  reviewed relations
+
+Activation:
+  activation tier
+  dev context
+  context activation
+
+Action:
+  context pack
+  decision support
+  implementation note
+
+Learning:
+  use ledger
+  feedback event
+  review_due
+  cooling / reactivation
+
+Cross-cutting Inhibition:
+  risk
+  negative evidence
+  contradiction
+  source hygiene
+  safety gate
+
+Optional Output:
+  proactive synthesis
+  expression / publishing
+```
+
 它的目标是做一个有可信边界的第二大脑：
 
 ```text
@@ -66,6 +135,12 @@ source record
 保留来源。
 不要要求当场分类、总结、判断。
 ```
+
+Source record 里保留轻量 provenance：资料是什么、从哪里来、什么版本、什么时候收录、谁或什么工具捕获/提取过。
+
+review、promotion、context-pack 使用记录不塞回 source 文件；它们分别属于 reviewed node、promotion record、context pack 或 use ledger。
+
+这只是来源追溯，不是判真。
 
 边界：
 
@@ -127,7 +202,42 @@ candidate point
 ```text
 理解结果先是候选。
 候选不是正式知识。
+不是所有候选都是 claim。
 ```
+
+Candidate 进入 review 前要先做轻量分流：
+
+```text
+它是什么类型？
+它能不能事实验证？
+它该走哪条 review 路径？
+```
+
+说人话：
+
+```text
+事实走验证。
+解释走理由。
+假设走研究问题。
+模式走实例。
+风险走失败证据。
+偏好只做个性化。
+决策走行动依据。
+代码笔记走代码锚点。
+```
+
+复杂、高影响、跨文档或有歧义的 candidate，可以可选拆成 `point_graph_fragment`：
+
+```text
+不是只看一句话像不像。
+而是看清楚：
+  哪些 entity 参与？
+  它们之间是什么 relation？
+  scope / version / condition 是什么？
+  哪些 triplet 有 source anchor？
+```
+
+它只帮助校准和 review 更精确，不自动生成 truth 或 reviewed relation。
 
 边界：
 
@@ -136,6 +246,7 @@ LLM 可以帮助整理。
 但 LLM 编译结果不能直接进入 reviewed knowledge layer。
 summary 只是 source-level digest。
 只有 reviewed claim / pattern / risk / decision 才能进入长期可信记忆。
+不可验证不等于没用，但不能获得 truth confidence。
 ```
 
 ## 4. Reviewed Memory / Evidence-backed Memory：有证据的长期记忆
@@ -197,7 +308,7 @@ link overlap、tag、backlink、search score 可以提示相关。
 但它们不能替代 reviewed relations。
 ```
 
-## 6. Proactive Synthesis：主动思考
+## 6. Proactive Synthesis：主动思考（候选生成器）
 
 人脑不会只在被问时思考。
 
@@ -273,6 +384,9 @@ implementation-note
 ```text
 知识要能变成行动依据。
 行动依据必须带 risk、preconditions、rollback、success metric 和 feedback path。
+context pack 不能只给 citation，还要显示关键判断的 coverage。
+哪些被支持、哪些证据弱、哪些被挑战、哪些缺证据、哪些 out of scope、哪些有风险。
+行动前还要问 evidence_sufficiency：这组证据够不够支撑当前 action basis / decision / promotion。
 ```
 
 边界：
@@ -280,6 +394,9 @@ implementation-note
 ```text
 context pack 是调用层输出。
 它不能发明未记录的 truth。
+coverage_map 是审计面，不是 truth layer。
+coverage_status 不能自动提高 confidence。
+Evidence Sufficiency Gate 不改 truth confidence；证据不足时只能 ask_user / retrieve_more / create_missing_point / narrow_scope / mark_not_actionable / needs_review。
 ```
 
 ## 8. Use Ledger / Feedback：使用记录与反馈校准
@@ -437,8 +554,9 @@ Act and Learn
 raw source
 -> Capture / Provenance
 -> Candidate Comprehension
+-> Knowledge Calibration / Point Collision
 -> Review / Consolidation
--> Association / Point Collision
+-> Association / Reviewed Relations
 -> Activation / Dev Context
 -> Context Pack
 -> Decision / Action
@@ -513,31 +631,117 @@ Risk / Inhibition layer:
 主动思考负责后台回放。
 ```
 
-### 1. Point Collision：记忆形成
+### 1. Knowledge Calibration / Point Collision：校准式记忆形成
 
-新资料进入时，不是孤立保存。
+新资料进入时，不是孤立保存，也不是整篇 raw source 直接撞库。
 
-它会和旧的 claim、pattern、anti-pattern、decision 发生碰撞：
+系统先把外部资料理解成少量 candidate points，再把这些点和本地 reviewed knowledge 做校准。
+
+说人话：
 
 ```text
-supports
-contradicts
-refines
-risk_of
-derived_from
+外部资料 = 新证据
+本地 reviewed knowledge = 当前判断
+校准 = 看新证据会不会影响当前判断
+review = 决定到底改不改
+```
+
+它会检查：
+
+```text
+它支持了哪些已有判断？
+它挑战了哪些已有判断？
+它细化了哪些 pattern？
+它暴露了哪些 risk？
+它说明哪些旧判断可能过时？
+它在哪些 scope / version / time / condition 下才成立？
+它提出了哪些需要复查的问题？
 ```
 
 `replaces`、`implements`、`applies_to`、`inspired_by`、`alternative_to`、`blocked_by`
 这些关系先不进 MVP。等五种核心关系跑顺以后，再看是否真的需要扩展。
 
-这相当于新记忆接入旧网络。
+这相当于新证据和本地判断体系互相校准。
+
+它吸收了 Truth Maintenance System / Reason Maintenance 的一个核心思路：
+
+```text
+不要只记录结论。
+还要记录为什么相信这个结论。
+新证据进来时，要知道哪些旧判断需要复查。
+行动依据要能解释来源、理由和风险。
+```
 
 边界：
 
 ```text
-碰撞只生成 promotion signal。
+校准只生成 review input。
+相似不是支持。
+冲突不是自动推翻。
 重复出现不是自动真理。
+本地旧知识不是永远的裁判。
+外部新资料也不会自动赢。
 强关系必须有 evidence 和 rationale。
+reviewed relation 必须经过 review。
+```
+
+### 1.1 Evidence-Aware Review：支持-反对式复核
+
+Review 不是简单问“有没有来源”。
+
+它要问：
+
+```text
+这个判断有谁支持？
+有谁挑战？
+挑战是不是致命？
+它只在哪些条件下成立？
+风险是什么？
+现在能不能用于行动？
+```
+
+说人话：
+
+```text
+Review 是看这个判断在支持、反对、范围限制和风险都摆出来后，还站不站得住。
+```
+
+状态建议用来表达“当前站立状态”：
+
+```text
+candidate:
+  还没审
+
+standing:
+  审过，目前站得住
+
+contested:
+  有重要争议，不能无脑用
+
+stale:
+  可能过时或换了 scope
+
+superseded:
+  被新判断替代
+
+rejected:
+  审过，不采纳
+```
+
+行动可用性要单独判断：
+
+```text
+action_readiness:
+  ready / not_ready / risky / needs_review
+```
+
+核心边界：
+
+```text
+有引用不等于有支持。
+derived_from 只是来源，不是证据强度。
+反对意见不一定推翻结论，可能只是限制范围或触发 review_due。
+支持变多不会自动提高 confidence，只会增加 review evidence。
 ```
 
 ### 2. Context Activation：联想激活
@@ -708,7 +912,7 @@ Verified Action Knowledge System:
   目标是让资料可追溯、可验证、可连接、可行动，并能从行动反馈中学习。
 
 Point Collision:
-  新知识入库时撞旧知识，形成 supports / contradicts / refines / risk_of / derived_from 等信号。
+  新知识先蒸馏成 candidate points，再和本地 reviewed knowledge 做双向校准，形成 supports / contradicts / refines / risk_of / derived_from 等候选信号和复查问题。
 
 Activation Feedback:
   用后修正联想路径，而不是直接改 truth。
@@ -802,7 +1006,7 @@ Claude / Obsidian creator workflow:
   本系统负责边界、裁决和行动依据。
 ```
 
-## Parked Future Layer：Expression / Publishing
+## Parked Future Layer：Expression / Publishing（未来输出面）
 
 这个层先记录，等整体框架打磨稳定后再做。
 
@@ -901,7 +1105,7 @@ pre-publish risk gate
 post-publish feedback loop
 ```
 
-## Parked Future Layer：Agent Tool Safety
+## Parked Future Layer：Agent Tool Safety（未来执行安全层）
 
 这个层也是先记录，等未来 Codex、Claude Code、MCP、hooks、skills 或其他 agent 真正接入资料库执行任务时再正式落地。
 

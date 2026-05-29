@@ -62,9 +62,18 @@ The core alpha mechanism is:
 ```text
 provenance-first
 -> candidate point
--> point collision signal
+-> knowledge calibration / point collision signal
 -> reviewed cluster
 -> promoted claim / pattern / anti-pattern / decision
+```
+
+Knowledge calibration is the practical queue-level version of the vault's truth-maintenance idea:
+
+```text
+do not only store a conclusion
+record why it is believed
+surface what new candidate points support, challenge, narrow, or make stale
+send those effects to review before they can affect action
 ```
 
 ## 1. Why This Exists
@@ -104,11 +113,13 @@ Source trace is the minimum record needed before point extraction.
 
 ```yaml
 source_id:
+source_uri:
 source_url_or_path:
 raw_location:
 source_type: article | paper | repo | docs | transcript | screenshot | chat | other
 source_family:
 upstream_sources: []
+version_or_commit:
 captured_at:
 captured_by:
 processing_mode: inbox | immediate
@@ -122,20 +133,28 @@ Rules:
 source_family marks likely shared origin: same URL, same repo, same author, same org, same article chain, same transcript, same AI output.
 upstream_sources records what this source appears to depend on or cite.
 source_family and upstream_sources are hints, not final independence judgments.
+Source trace records source identity and capture provenance only.
+Extraction details belong to candidate points or medium/heavy source records.
+Review, promotion, and context-pack use belong to reviewed nodes, promotion records, context packs, or the use ledger.
+Provenance is traceability, not truth or confidence.
 ```
 
 ### 3.2 Candidate Point
 
-Candidate point is the atomic review unit.
+Candidate point is the atomic review unit, not necessarily an atomic claim.
 
-It should be one small comparable idea, not a whole article summary.
+It should be one small comparable idea, question, risk, decision candidate, preference, or implementation note, not a whole article summary.
 
 ```yaml
 record_type: candidate-point
 point_id:
 point_text:
 normalized_point:
-point_type: fact | take | hypothesis | practice | warning | decision-candidate
+point_type: claim | interpretation | hypothesis | pattern | risk | preference | decision | open_question | implementation_note
+verifiability:
+  state: verifiable | partially_verifiable | not_verifiable | unknown
+  reason:
+review_route: evidence_check | rationale_check | instance_check | risk_check | action_basis_check | personalization_only | research_question | code_anchor_check
 topics: []
 entities: []
 scope:
@@ -149,12 +168,53 @@ source_refs:
     source_url_or_path:
     source_range:
     quote_or_excerpt:
+    evidence_support:
+      span_supports_target: supported | partial | unsupported | unclear
+      evidence_role: direct_support | inferential_support | background_context | counterexample
+      reviewer_note:
 extracted_by:
 extracted_at:
 uncertainty:
 possible_related_points: []
 review_status: pending | accepted | rejected | needs-edit
 promotion_target:
+
+# Optional, high-impact-only review aid.
+point_graph_fragment:
+  purpose:
+  entities:
+    - id:
+      label:
+      type:
+      aliases: []
+      resolution:
+        status:
+        note:
+  relation_triplets:
+    - subject:
+      predicate:
+      object:
+      qualifier:
+      scope:
+      source_anchor:
+      note:
+  open_questions:
+    - question:
+      blocks_review:
+```
+
+Default route:
+
+```text
+claim -> evidence_check
+interpretation -> rationale_check
+hypothesis -> research_question
+pattern -> instance_check
+risk -> risk_check
+preference -> personalization_only
+decision -> action_basis_check
+open_question -> research_question
+implementation_note -> code_anchor_check
 ```
 
 Rules:
@@ -163,18 +223,41 @@ Rules:
 If a point cannot be traced to a source range or excerpt, it is not ready for collision.
 If a point has broad wording, narrow the scope before promotion.
 If a point is an AI inference, mark it as hypothesis unless source text directly supports it.
+Point Collision is triggered by candidate / review / promotion / action need, not by raw capture itself.
+URL-only source_refs are provenance, not support.
+Evidence support is optional during early candidate capture, but required when a source_ref is used for promotion, strong relation review, or action basis.
+background_context cannot count as support.
+inferential_support needs reviewer_note before it can count as promotion support.
+Not every candidate point can receive truth confidence.
+Only verifiable claims can receive truth / evidence confidence.
+Unverifiable does not mean useless; it means the point needs a non-truth review route.
+Review route defaults from point_type and can be overridden by a reviewer.
+point_graph_fragment is optional; use it only for complex, high-impact, cross-document, multi-hop, action-relevant, or ambiguous points.
+Extracted triplets are not truth, not support, and not reviewed relations.
+If a graph fragment needs more than 3-5 essential triplets, split the candidate point instead.
 ```
 
-### 3.3 Collision Signal
+Evidence support is not a Source-node property. It is a source-span-to-target check:
 
-Collision signal records how two points relate.
+```text
+source provenance:
+  where this material came from
+
+evidence support:
+  whether this source span supports this candidate point, reviewed node, or reviewed relation
+```
+
+### 3.3 Calibration / Collision Signal
+
+Calibration / collision signal records how a new candidate point may affect local reviewed knowledge or another candidate point.
 
 ```yaml
-record_type: collision-signal
+record_type: calibration-signal
 signal_id:
 from_point:
 to_point:
 relation: supports | contradicts | refines | risk_of | derived_from | duplicates | near_miss | unrelated
+output_kind: candidate_relation | contradiction_candidate | scope_mismatch | stale_assumption_candidate | missing_evidence | review_question | review_due
 similarity_basis:
   - keyword
   - entity
@@ -192,10 +275,15 @@ reviewed_at:
 Rules:
 
 ```text
+Raw source does not collide directly; candidate points do.
+Light capture stays source-only by default; it enters collision only after a candidate point is generated and there is a review, promotion, action, contradiction, or explicit user-processing need.
 Similarity only creates a pending signal.
+Similarity is not support.
 Only reviewed signals can increase promotion readiness.
 Same-origin or derived sources do not count as independent support.
+Background citations do not count as support.
 Contradictions must stay visible; do not auto-resolve them.
+Calibration output is review input, not truth.
 ```
 
 ### 3.4 Point Cluster
@@ -294,6 +382,18 @@ near_miss
 unrelated
 ```
 
+Also record what kind of review input the signal creates:
+
+```text
+candidate_relation
+contradiction_candidate
+scope_mismatch
+stale_assumption_candidate
+missing_evidence
+review_question
+review_due
+```
+
 ### Step 5: Review Collision Signals
 
 Review asks:
@@ -305,6 +405,13 @@ Are the sources independent?
 Does one source copy the other?
 Is the newer source more authoritative?
 Is there a direct contradiction?
+Does this signal only show similarity, or does it have evidence and rationale?
+Does this signal require a local reviewed claim, pattern, or decision to be rechecked?
+What supports the point?
+What challenges it?
+Is the challenge fatal, major, minor, out of scope, or unresolved?
+What qualifications limit where it applies?
+What risks must be carried forward?
 ```
 
 ### Step 6: Update Cluster
@@ -333,6 +440,31 @@ decision:
   reviewed pattern + project fit + risk + rollback
 ```
 
+Before promotion, run a lightweight Evidence Sufficiency Gate:
+
+```yaml
+evidence_sufficiency:
+  state: sufficient | weak | insufficient | out_of_scope | risky
+  checked_for: promotion | reviewed_relation | decision | action_basis | risk_sensitive_answer
+  missing: []
+  required_next_step: proceed | ask_user | retrieve_more | create_missing_point | narrow_scope | mark_not_actionable | needs_review
+  reviewer_note:
+```
+
+Rules:
+
+```text
+Do not run this gate for ordinary capture or ordinary query.
+Run it for promotion, strong reviewed relation, decision, context pack / action basis, risk_sensitive_answer, or explicit "is this enough?" questions.
+sufficient can proceed.
+weak must expose gaps and weak support.
+insufficient cannot produce promotion or ready action basis.
+out_of_scope needs a scope mismatch note.
+out_of_scope may require narrow_scope instead of more retrieval.
+risky needs action_readiness: risky or needs_review.
+retrieve_more is a recommendation unless the user explicitly authorizes retrieval.
+```
+
 ## 5. Promotion Rules
 
 ### Claim Promotion
@@ -342,6 +474,8 @@ Minimum:
 ```text
 at least one source-backed candidate point
 source range or excerpt
+evidence_support marked direct_support, or inferential_support with reviewer_note
+evidence_sufficiency not insufficient / out_of_scope for promotion
 no unresolved high-severity contradiction
 reviewed collision signals if cross-source support is claimed
 ```
@@ -376,6 +510,7 @@ preconditions
 rollback
 success metric
 feedback path
+evidence_sufficiency checked for action_basis or decision
 ```
 
 ## 6. What Must Not Be Automated
@@ -384,13 +519,94 @@ v0.1 forbids:
 
 ```text
 auto cross-checked from similarity
+auto support from similarity
 auto confidence increase from repetition
 counting same-origin copies as independent support
 counting AI summaries as independent sources
 auto contradiction resolution
 auto promotion to claim / pattern / decision
+auto creation of reviewed relations from calibration signals
 vector score as evidence
 silent overwrite of older claims
+```
+
+## 6.1 Evidence-Aware Review Fields
+
+When a candidate point, cluster, claim, pattern, anti-pattern, or decision is reviewed, prefer this compact review panel:
+
+Lazy boundary:
+
+```text
+Ordinary candidate capture does not need the full panel.
+It only needs a short uncertainty / risk note when relevant.
+
+Expand the full support / challenge / qualification / risk panel only for:
+claim / pattern / anti-pattern / decision promotion
+context pack / action basis
+strong reviewed relation
+explicit contradiction
+stale or contested claim
+reviewer-requested standing check
+```
+
+```yaml
+review_state: candidate | reviewed | rejected
+knowledge_state: standing | contested | stale | superseded | retired
+attack_assessment:
+  severity: fatal | major | minor | out_of_scope | unresolved
+  reason:
+  affected_scope:
+  requires_review_due: true | false
+qualification:
+  applies_when:
+  does_not_apply_when:
+  version_scope:
+  project_scope:
+  domain_scope:
+  time_scope:
+  environment_scope:
+  assumptions:
+review_summary:
+  why_it_still_holds:
+  strongest_challenge:
+  scope_limits:
+  known_risks:
+  review_due_when:
+action_readiness:
+  state: ready | not_ready | risky | needs_review
+  reason:
+```
+
+Rules:
+
+```text
+reviewed means it was examined.
+standing means it currently holds.
+contested means it has a material challenge.
+stale means time, version, or scope may have moved.
+action_readiness is separate from truth status.
+```
+
+Relations also need state:
+
+```yaml
+relation_state: candidate | reviewed | rejected | stale
+```
+
+Rules:
+
+```text
+candidate relation:
+  suggested by calibration
+
+reviewed relation:
+  accepted with evidence and rationale
+
+rejected relation:
+  looked related, but review says it is not a valid relation
+
+stale relation:
+  used to hold, but time, version, or scope changed
 ```
 
 ## 7. Lint Rules
@@ -400,6 +616,12 @@ First lint checks:
 ```text
 candidate point without source_refs
 candidate point without source_range or excerpt
+promotion support from URL-only source_ref
+promotion support from evidence_role: background_context
+promotion support from inferential_support without reviewer_note
+promotion support from span_supports_target: unsupported or unclear
+promotion or ready action basis with evidence_sufficiency: insufficient
+ready action basis with evidence_sufficiency: out_of_scope or risky
 collision signal still pending but used for promotion
 support signal with source_independence: same-origin counted as independent
 contradiction signal ignored during promotion

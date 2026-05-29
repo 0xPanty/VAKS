@@ -163,6 +163,7 @@ Add:
 
 ```text
 full provenance
+PROV-inspired trace when the source is medium/heavy
 author / organization
 published_at / updated_at
 captured_at
@@ -196,16 +197,39 @@ handoff update
 ## 3. What "Preserve Source" Means
 
 Preserving source means giving important knowledge an identity card.
+For strong sources, it can also record a small handling trail:
+
+```text
+source identity:
+  what the source is
+
+capture / extraction:
+  who or what captured and extracted it
+
+agent:
+  simple human/model/tool strings
+```
+
+This does not make capture heavy. Light sources keep the minimal identity fields; medium/heavy sources may add extraction and optional provenance details.
+
+Review, promotion, and context-pack usage are not stored as source main fields. They belong to reviewed nodes, promotion records, context packs, or the use ledger.
 
 For a repository:
 
 ```yaml
+source_id:
+source_uri:
 source_url:
 owner:
 repo:
 checked_commit:
 commit_time:
 captured_at:
+captured_by:
+extracted_by:
+extracted_at:
+extraction_tool:
+extraction_model:
 source_status: active | legacy | deprecated | unknown
 files_reviewed:
 source_anchor_matrix:
@@ -218,6 +242,8 @@ timeline_notes:
 For a paper:
 
 ```yaml
+source_id:
+source_uri:
 title:
 authors:
 published_at:
@@ -225,6 +251,11 @@ venue:
 doi_or_arxiv:
 version:
 captured_at:
+captured_by:
+extracted_by:
+extracted_at:
+extraction_tool:
+extraction_model:
 key_sections_reviewed:
 main_claims:
 limitations:
@@ -349,6 +380,7 @@ Dashboard state is not truth.
 Retrieval rank is not trust.
 Repeated appearance is a signal, not proof.
 Heavy review is for promotion and action, not ordinary saving.
+Evidence support and evidence sufficiency checks are lazy gates: use them for promotion, decision, strong relation, action basis, or explicitly challenged points, not for ordinary capture.
 ```
 
 ## 7. First Implementation

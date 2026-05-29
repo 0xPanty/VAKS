@@ -1,6 +1,8 @@
 ---
 type: decision
 status: draft
+review_state: candidate
+knowledge_state:
 created:
 decision:
 related_projects:
@@ -10,6 +12,29 @@ outcome: pending
 evidence_strength:
 validation_status: pending
 negative_evidence:
+attack_assessment:
+  severity:
+  reason:
+  affected_scope:
+  requires_review_due:
+qualification:
+  applies_when:
+  does_not_apply_when:
+  version_scope:
+  project_scope:
+  domain_scope:
+  time_scope:
+  environment_scope:
+  assumptions:
+review_summary:
+  why_it_still_holds:
+  strongest_challenge:
+  scope_limits:
+  known_risks:
+  review_due_when:
+action_readiness:
+  state:
+  reason:
 replaces:
 relations: []
 migration_path:
@@ -26,6 +51,17 @@ rollback_path:
 
 ## 依据
 
+
+## 支持-反对式 Review
+
+- 为什么这个决策现在还站得住：
+- 已知最强反对：
+- 反对严重度：fatal / major / minor / out_of_scope / unresolved
+- 适用条件：
+- 不适用条件：
+- 已知风险：
+- 当前行动可用性：ready / not_ready / risky / needs_review
+- 什么时候需要复查：
 
 ## 量化判断
 
@@ -49,6 +85,7 @@ rollback_path:
 relations:
   - target: "[[node-name]]"
     type: supports | contradicts | refines | risk_of | derived_from
+    relation_state: candidate | reviewed | rejected | stale
     strength: 1-5
     confidence: low | medium | high
     evidence:

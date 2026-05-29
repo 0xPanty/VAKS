@@ -2,6 +2,8 @@
 type: source
 status: source-captured
 title:
+source_id:
+source_uri:
 source_url:
 source_type: article
 author:
@@ -43,6 +45,40 @@ tags:
 - 版本 / commit / DOI：
 - source_status: active / legacy / deprecated / unknown
 - 采集方式：
+
+## Medium / Heavy Optional Provenance
+
+```yaml
+extraction:
+  extracted_at:
+  extracted_by:
+  model:
+  tool:
+  source_ranges: []
+
+provenance:
+  model: PROV-lite
+  activities:
+    - type: captured
+      at:
+      by:
+    - type: extracted
+      at:
+      by:
+      tool:
+      model:
+  agents:
+    - id:
+      type: human | model | tool
+```
+
+说明：
+
+```text
+provenance 只记录来源和处理轨迹，不代表这个 source 支持了某个 claim。
+claim 是否成立，仍然要进入 candidate / calibration / review。
+review、promotion、context-pack use 不放在 Source 主字段里。
+```
 
 ## 时间线 / 上下文
 
@@ -91,6 +127,7 @@ next_review:
 relations:
   - target: "[[claim-or-pattern]]"
     type: derived_from | supports | contradicts | refines | risk_of
+    relation_state: candidate | reviewed | rejected | stale
     strength: 1-5
     confidence: low | medium | high
     evidence:

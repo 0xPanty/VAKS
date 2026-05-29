@@ -1,6 +1,8 @@
 ---
 type: anti_pattern
 status: draft
+review_state: candidate
+knowledge_state:
 created:
 domain:
 failure_mode:
@@ -10,6 +12,29 @@ complexity_cost:
 cross_validated_with:
 related_projects:
 replacement:
+attack_assessment:
+  severity:
+  reason:
+  affected_scope:
+  requires_review_due:
+qualification:
+  applies_when:
+  does_not_apply_when:
+  version_scope:
+  project_scope:
+  domain_scope:
+  time_scope:
+  environment_scope:
+  assumptions:
+review_summary:
+  why_it_still_holds:
+  strongest_challenge:
+  scope_limits:
+  known_risks:
+  review_due_when:
+action_readiness:
+  state:
+  reason:
 relations: []
 decision: avoid
 ---
@@ -24,6 +49,17 @@ decision: avoid
 
 ## 失败条件
 
+
+## 支持-反对式 Review
+
+- 为什么这个反模式现在还站得住：
+- 已知最强反对：
+- 反对严重度：fatal / major / minor / out_of_scope / unresolved
+- 适用条件：
+- 不适用条件：
+- 已知风险：
+- 什么时候需要复查：
+- 当前行动可用性：ready / not_ready / risky / needs_review
 
 ## 标签与量化
 
@@ -48,6 +84,7 @@ decision: avoid
 relations:
   - target: "[[node-name]]"
     type: supports | contradicts | refines | risk_of | derived_from
+    relation_state: candidate | reviewed | rejected | stale
     strength: 1-5
     confidence: low | medium | high
     evidence:

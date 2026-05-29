@@ -109,6 +109,18 @@ source provenance / candidate / review / schema / pattern / anti-pattern / decis
 9. 适合直接用、只吸收设计、观察，还是拒绝？
 10. 有没有必要后续写入 source record / pattern / anti-pattern / decision？
 
+校准检查：
+先把资料拆成少量 candidate points，再和本地 reviewed knowledge 做双向校准。
+不要让 raw source 直接撞库。
+输出只允许是 review input：
+candidate relation、contradiction candidate、scope mismatch、stale assumption、missing evidence、review question、review due。
+相似不是支持，冲突不是自动推翻，重复出现不是自动真理。
+
+Review 检查：
+Review 不只是看有没有来源，也要看这个判断在支持、反对、范围限制和风险下面还站不站得住。
+区分 fatal / major / minor / out_of_scope / unresolved 的挑战。
+provenance 不是 support；有引用不等于有证据；支持变多不自动提高 confidence。
+
 最后加一个融合质量检查：
 11. 吸收这个点以后，对我们是正向设计吗？为什么？
 12. 和原方案相比，我们的融合版哪里更好，哪里更弱？

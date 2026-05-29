@@ -103,12 +103,46 @@ supports / contradicts / refines / risk_of / derived_from / no-clear-value
 - 反例或失败边界：
 - 最小验证方式：
 
+## Knowledge Calibration / Point Collision
+
+先把资料蒸馏成少量 candidate points，再和本地 reviewed knowledge 做双向校准。不要让整篇 repo / article 直接撞库。
+
+| Candidate Point | Local Reviewed Knowledge | Calibration Output | Review Question |
+|---|---|---|---|
+|  |  | candidate_relation / contradiction_candidate / scope_mismatch / stale_assumption_candidate / missing_evidence / review_due |  |
+
+边界：
+
+- 相似不是支持。
+- 冲突不是自动推翻。
+- 重复出现不是自动真理。
+- 校准输出是 review input，不是 reviewed relation。
+
+## Support / Challenge Review
+
+对值得吸收的 claim / pattern / decision，检查它在支持、反对、范围限制和风险下是否还站得住。
+
+- What supports it:
+- What challenges it:
+- Challenge severity: fatal / major / minor / out_of_scope / unresolved
+- Scope limits:
+- Known risks:
+- Review again when:
+- Action readiness: ready / not_ready / risky / needs_review
+
+边界：
+
+- provenance 不是 support。
+- 有引用不等于有证据。
+- 支持变多不自动提高 confidence。
+
 ## 关系边 / 关联强度
 
 ```yaml
 relations:
   - target: "[[node-name]]"
     type: supports | contradicts | refines | risk_of | derived_from
+    relation_state: candidate | reviewed | rejected | stale
     strength: 1-5
     confidence: low | medium | high
     evidence:

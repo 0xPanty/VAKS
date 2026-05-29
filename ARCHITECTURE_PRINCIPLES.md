@@ -89,6 +89,8 @@ Verified-action strict inside.
 
 Users should interact through a small surface: add source, process this, ask what the vault knows, lint/check the vault, generate a context pack, and review action feedback. Strict schema, evidence, relations, decisions, and feedback machinery should run behind that surface and appear only when a node is promoted or used as action basis.
 
+Strict checks are lazy gates: evidence support and evidence sufficiency appear only for promotion, decision, strong relation evidence, action basis, risk_sensitive_answer, or explicitly challenged points. Ordinary capture and ordinary queries stay light.
+
 Processing depth should match material value:
 
 ```text
@@ -437,6 +439,8 @@ negative evidence
 confidence and verification_status
 gaps
 warnings
+coverage overview for key points
+coverage map for supported, weak, challenged, missing-evidence, or out-of-scope points, with risks shown separately through risk_refs and action_readiness
 recommended next action where relevant
 budget and truncation notes
 ```
@@ -446,8 +450,18 @@ A context pack should not include:
 ```text
 uncited certainty
 retrieval-only claims as truth
+citations without point coverage for high-impact judgments
 hidden raw dumps beyond budget
 agent instructions that bypass review
+```
+
+Coverage rule:
+
+```text
+Citations are not enough.
+Coverage map is an audit surface, not a truth layer.
+Coverage status does not automatically change confidence.
+Critical omissions are known major omissions only, not a full omission scan.
 ```
 
 ## 10. Health and lint principles

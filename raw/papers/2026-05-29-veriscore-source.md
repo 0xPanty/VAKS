@@ -1,0 +1,121 @@
+---
+type: source
+status: source-captured
+title: "VERISCORE: Evaluating the factuality of verifiable claims in long-form text generation"
+source_id: 2026-05-29-veriscore-source
+source_uri: https://aclanthology.org/2024.findings-emnlp.552/
+source_url: https://aclanthology.org/2024.findings-emnlp.552/
+source_type: paper
+authors:
+  - Yixiao Song
+  - Yekyung Kim
+  - Mohit Iyyer
+publisher: Association for Computational Linguistics
+venue: Findings of EMNLP 2024
+published_at: 2024
+captured_at: 2026-05-29
+captured_by: Codex
+extracted_by: Codex
+extracted_at: 2026-05-29
+extraction_tool: web
+extraction_model: Codex
+version_or_commit: ACL Anthology 2024.findings-emnlp.552
+source_status: active
+raw_location:
+processing_mode: immediate
+processing_level: medium
+review_priority: normal
+review_owner: Codex
+formalization_status: source-only
+topics:
+  - factuality
+  - verifiability
+  - candidate-routing
+projects:
+  - verified-action-knowledge-system
+source_family: veriscore
+upstream_sources: []
+verification_status: primary-source-captured
+evidence_level: primary
+confidence: medium
+relations:
+  - target: "[[REVIEW_QUEUE]]"
+    type: refines
+    relation_state: candidate
+    strength: 4
+    confidence: medium
+    evidence:
+      - source_id: "[[2026-05-29-veriscore-source]]"
+        source_range: "paper title / abstract"
+        quote_or_excerpt: "Paraphrase: VERISCORE focuses on evaluating verifiable claims in long-form generation, which motivates routing candidate points by verifiability before factual review."
+        evidence_support:
+          span_supports_target: partial
+          evidence_role: inferential_support
+          reviewer_note: "The source supports the verifiable-claim distinction; applying it as candidate review routing is this vault's adaptation."
+    rationale: "VERISCORE motivates routing candidate points by whether they are verifiable before applying claim-style factual review."
+    created: 2026-05-29
+    last_verified: 2026-05-29
+tags:
+  - source
+  - paper
+  - veriscore
+  - verifiability
+---
+
+# 来源记录：VERISCORE
+
+## 为什么收录
+
+Pro 第四个补充建议吸收 VERISCORE 的一个核心启发：长文本里不是所有内容都可验证，不应该把所有 candidate 都当作 atomic claim 处理。
+
+本项目只吸收这个 review-routing 思路，不实现 VERISCORE metric，也不引入自动 factuality evaluator。
+
+## 来源信息
+
+- 论文：VERISCORE: Evaluating the factuality of verifiable claims in long-form text generation
+- 作者：Yixiao Song, Yekyung Kim, Mohit Iyyer
+- 会议：Findings of EMNLP 2024
+- 官方页面：https://aclanthology.org/2024.findings-emnlp.552/
+- arXiv：https://arxiv.org/abs/2406.19276
+
+## 初步看点
+
+- 论文指出，很多长文本 factuality metrics 会把输入拆成 atomic claims，然后假设每个 claim 都能被验证。
+- VERISCORE 的问题意识是：真实长文本任务同时包含可验证和不可验证内容。
+- 它只评估 verifiable claims，而不是把所有内容拉进同一条事实验证管道。
+
+## 吸收方式
+
+```text
+Use the idea, not the metric.
+
+Candidate point = atomic review unit.
+Not every candidate point = atomic claim.
+
+Before review:
+  identify point_type
+  identify verifiability
+  route to the right review path
+```
+
+## 边界
+
+```text
+Unverifiable does not mean useless.
+It means no truth confidence.
+
+Only verifiable claims can receive truth / evidence confidence.
+Preferences, interpretations, hypotheses, open questions, and decisions need other review signals.
+```
+
+## 可抽取 Candidate Points
+
+1. Candidate points should be routed by point type and verifiability before review.
+2. Atomic review unit is a better term than atomic claim for this project.
+3. Useful but unverifiable content should not receive truth confidence.
+4. Review routes should differ for claims, interpretations, hypotheses, patterns, risks, preferences, decisions, open questions, and implementation notes.
+
+## 下一步
+
+- Keep routing fields light.
+- Do not turn verifiability routing into a new module or automated metric.

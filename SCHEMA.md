@@ -38,6 +38,88 @@ Markdown/YAML 是主记录。Obsidian Bases、BM25、vector、QMD、Zilliz、gra
 
 实现范围说明：本文件不是要把系统缩小成“只有契约”。最终实现应完整包含 Karpathy LLM Wiki 和 llm-wiki-compiler 代表的操作能力：ingest、compile、index、log、query、lint、review queue、provenance、context pack、API/MCP、viewer/Obsidian view。`SCHEMA.md` 的作用是规定这些能力写入和调用时必须服从什么真值契约。
 
+架构口径说明：
+
+```text
+对外主架构:
+  Capture -> Understand -> Review -> Connect -> Act and Learn
+
+Schema 负责:
+  reviewed knowledge 的字段、状态、关系、晋级、降级和自动化边界。
+
+Schema 不负责:
+  把第二大脑模型拆成工程模块。
+  让 dashboard、retrieval、feedback、brief 或 context pack 决定 truth。
+```
+
+知识校准口径：
+
+```text
+外部资料不会直接变成 truth。
+外部资料先被理解成 candidate points。
+candidate points 再和本地 reviewed knowledge 做双向校准。
+校准输出是 review input，不是 reviewed relation，也不是 confidence 更新。
+```
+
+Review 口径说明：
+
+```text
+Review 不只是检查来源。
+Review 要判断一个 candidate 在支持、挑战、范围限制和风险下是否仍然站得住。
+```
+
+人类可读的 review families：
+
+```text
+support:
+  支持
+
+attack:
+  反对 / 挑战
+
+qualification:
+  限定条件 / 适用范围
+
+risk:
+  风险
+
+provenance:
+  来源 / 派生路径
+```
+
+它们大致映射到关系类型：
+
+```text
+supports     -> support
+contradicts  -> attack
+refines      -> qualification
+risk_of      -> risk
+derived_from -> provenance
+```
+
+硬边界：
+
+```text
+provenance 只说明来源，不自动构成 support。
+有引用不等于有证据。
+支持关系变多，不自动提高 confidence。
+confidence 只能通过 review 修改。
+```
+
+总原则：
+
+```text
+Strict checks are lazy gates.
+
+Capture should preserve source identity without forcing full review.
+Candidate points may stay lightweight until they are promoted, used for action,
+used as evidence for a strong reviewed relation, included in an action basis,
+high-impact, stale, contested, or explicitly challenged.
+
+When a strict gate opens, evidence_support, support/challenge review,
+coverage_map, action_readiness, and optional point_graph_fragment may be required.
+```
+
 ## 1. 核心原则
 
 ### 1.1 文件为准
@@ -91,6 +173,50 @@ Raw capture 和 source record 不需要一开始填满 evidence、confidence、r
 后续处理状态是什么
 ```
 
+轻量 provenance 口径借 W3C PROV 的三个问题，但不实现完整 PROV、RDF、OWL、validator 或 provenance graph：
+
+```text
+这个资料是什么？        -> source identity
+它经历过什么处理动作？  -> capture / extraction activity
+谁或什么工具处理过？    -> human / model / tool agent
+```
+
+默认 Source 记录保持扁平和轻量；只有 medium / heavy source 才补可选审计轨迹：
+
+```yaml
+source_id:
+source_uri:
+source_type:
+version_or_commit:
+captured_at:
+captured_by:
+processing_level: light | medium | heavy
+
+extraction:
+  extracted_at:
+  extracted_by:
+  model:
+  tool:
+  source_ranges: []
+
+provenance:
+  model: PROV-lite
+  activities: []
+  agents: []
+```
+
+边界：
+
+```text
+provenance 只负责追溯，不负责判真。
+有清楚来源链，不等于 claim 已经成立。
+引用不自动构成 support。
+review、confidence、action_readiness 仍然按 reviewed knowledge 规则处理。
+reviewed_by 属于 reviewed node / relation。
+promoted_by 属于 promotion event / reviewed node。
+used_sources 属于 context pack / use ledger。
+```
+
 严格验证只在内容晋级或被用于行动时触发：
 
 ```text
@@ -138,11 +264,25 @@ v0.1 的具体承载位置见 `REVIEW_QUEUE.md`：
 ```text
 source trace
 candidate point
-collision signal
+calibration / collision signal
 point cluster
 ```
 
 这些是 review queue 记录，不是新的 truth node 类型。正式 truth node 仍然是 source、summary、claim、pattern、anti-pattern、decision、qa、implementation-note。
+
+校准输出可以包括：
+
+```text
+candidate_relation
+contradiction_candidate
+scope_mismatch
+stale_assumption_candidate
+missing_evidence
+review_question
+review_due
+```
+
+这些输出只能推动 review，不能直接创建 reviewed claim、reviewed relation、truth confidence update、automatic promotion 或 automatic conflict resolution。
 
 查询后的反馈见 `FEEDBACK.md`。反馈字段不直接改变 truth：
 
@@ -252,6 +392,165 @@ scope_key:
 last_activated:
 activation_reason:
 ```
+
+以下字段属于可选 review / action metadata，用来表达当前是否站得住、能否用于行动：
+
+完整 Evidence-Aware Review 面板是 lazy gate，不是普通 capture 的必填表。
+
+```text
+普通 candidate:
+  只需要 uncertainty / risk 短注，除非要晋级或用于行动。
+
+必须展开完整 support / challenge / qualification / risk 面板:
+  claim / pattern / anti-pattern / decision promotion
+  context pack / action basis
+  strong reviewed relation
+  explicit contradiction
+  stale or contested claim
+  reviewer-requested standing check
+```
+
+```yaml
+review_state: candidate | reviewed | rejected
+knowledge_state: standing | contested | stale | superseded | retired
+relation_state: candidate | reviewed | rejected | stale
+attack_assessment:
+  severity: fatal | major | minor | out_of_scope | unresolved
+  reason:
+  affected_scope:
+  requires_review_due: true | false
+qualification:
+  applies_when:
+  does_not_apply_when:
+  version_scope:
+  project_scope:
+  domain_scope:
+  time_scope:
+  environment_scope:
+  assumptions:
+review_summary:
+  why_it_still_holds:
+  strongest_challenge:
+  scope_limits:
+  known_risks:
+  review_due_when:
+action_readiness:
+  state: ready | not_ready | risky | needs_review
+  reason:
+evidence_sufficiency:
+  state: sufficient | weak | insufficient | out_of_scope | risky
+  checked_for: context_pack | action_basis | decision | promotion | reviewed_relation | risk_sensitive_answer
+  missing: []
+  required_next_step: proceed | ask_user | retrieve_more | create_missing_point | narrow_scope | mark_not_actionable | needs_review
+  reviewer_note:
+```
+
+规则：
+
+- `review_state` 表示是否经过 review。
+- `knowledge_state` 表示当前在知识库里是否还站得住。
+- `action_readiness` 表示当前行动场景能不能用，不等于 truth status。
+- `evidence_sufficiency` 表示当前证据是否足够支撑这次用途，不等于 truth status。
+- 一个节点可以 `knowledge_state: contested`，但在低风险、可回滚场景下仍可作为参考。
+- 一个节点可以 `knowledge_state: standing`，但对当前项目 `action_readiness: not_ready`。
+- `evidence_sufficiency` 只在 promotion、decision、context pack / action basis、strong reviewed relation、risk_sensitive_answer 或用户明确问“证据够不够”时触发；普通 capture / ordinary query 不强制。
+
+以下字段属于 candidate / review queue routing metadata。它们用于决定怎么 review，不直接决定 truth：
+
+```yaml
+point_type: claim | interpretation | hypothesis | pattern | risk | preference | decision | open_question | implementation_note
+verifiability:
+  state: verifiable | partially_verifiable | not_verifiable | unknown
+  reason:
+review_route: evidence_check | rationale_check | instance_check | risk_check | action_basis_check | personalization_only | research_question | code_anchor_check
+```
+
+默认映射：
+
+```text
+claim -> evidence_check
+interpretation -> rationale_check
+hypothesis -> research_question
+pattern -> instance_check
+risk -> risk_check
+preference -> personalization_only
+decision -> action_basis_check
+open_question -> research_question
+implementation_note -> code_anchor_check
+```
+
+规则：
+
+- candidate point 是 atomic review unit，不默认等于 atomic claim。
+- `point_type` 表示这个点是什么。
+- `verifiability.state` 表示它能不能事实验证。
+- `review_route` 默认由 `point_type` 推导，必要时人工覆盖。
+- `anti_pattern` 先用 `point_type: risk` + `risk_kind: anti_pattern` 表达。
+- `heuristic` 先用 `point_type: pattern` 或 `point_type: interpretation` 表达。
+- 只有可验证的 `claim` 可以有 truth / evidence confidence。
+- `implementation_note` 的代码位置、版本、行为描述可以部分 evidence-check；从实现泛化出的架构原则必须另走 pattern 或 interpretation review。
+- `preference`、`hypothesis`、`open_question` 不允许 truth confidence，但可以有 usefulness、research_value、scope_fit 或 personalization_scope。
+
+以下字段属于 optional candidate decomposition metadata。它只在复杂、高影响、多跳、跨文档、行动相关或有歧义的 candidate 上使用：
+
+```yaml
+point_graph_fragment:
+  purpose: collision_check | evidence_review | scope_clarification | action_basis | ambiguity_resolution
+  entities:
+    - id:
+      label:
+      type:
+      aliases: []
+      resolution:
+        status: resolved | unresolved | ambiguous
+        note:
+  relation_triplets:
+    - subject:
+      predicate:
+      object:
+      qualifier:
+      scope:
+      source_anchor:
+      note:
+  open_questions:
+    - question:
+      blocks_review: true | false
+```
+
+规则：
+
+- `point_graph_fragment` 是 review aid，不是 reviewed relation。
+- triplet extraction 不是 truth。
+- triplet similarity 不是 support。
+- triplet conflict 不是 automatic rejection。
+- 只有 reviewed relation 可以进入 formal knowledge graph。
+- 普通 candidate 不需要 graph fragment。
+- 如果一个 fragment 需要超过 3-5 个 essential triplets，应拆成多个 candidate points。
+- 无法 source-anchor 的 triplet 只能作为 review question。
+
+以下字段属于 evidence item support metadata。它用于检查某个 source span 是否真的支持当前 candidate point、reviewed node 或 reviewed relation，不属于 Source node 主字段：
+
+```yaml
+evidence_support:
+  span_supports_target: supported | partial | unsupported | unclear
+  evidence_role: direct_support | inferential_support | background_context | counterexample
+  reviewer_note:
+```
+
+规则：
+
+- URL-only source reference 是 provenance，不是 evidence support。
+- 要计入 support，evidence item 必须包含 `source_range`、`quote_or_excerpt`、code anchor、table anchor 或等价 source span。
+- `background_context` 可以作为上下文保留，但不能计入 supported，不能提高 `evidence_level` 或 `confidence`。
+- `inferential_support` 需要 `reviewer_note`，否则不能作为 promotion support。
+- `counterexample` 应进入 `challenge_refs` 或 `risk_refs`。
+- `span_supports_target: unsupported | unclear` 不能作为 promotion support。
+- 强 reviewed relation 的 evidence 必须支持 relation edge 本身，而不只是分别支持两个端点。
+- evidence support 不自动改变 confidence；confidence 仍只能通过 review 修改。
+- `supported` + `direct_support` 可计入 supported。
+- `partial` + `inferential_support` + `reviewer_note` 可计入 weakly_supported，或由 reviewer 接受为 promotion support。
+- `background_context` 永远不能计入 support。
+- `counterexample` 应进入 `challenge_refs` 或 `risk_refs`，不应放在 `support_refs`。
 
 ### 3.1 字段定义
 
@@ -475,20 +774,37 @@ gaps:
 
 `relations` 是核心字段，不是装饰字段。可信图谱以 YAML 关系边为准，Obsidian 双链和 tags 只是辅助。
 
+Reviewed relation 来自 review 后的校准结果，不来自相似度本身：
+
+```text
+Similarity can suggest calibration.
+Similarity is not support.
+Candidate relation is not reviewed relation.
+```
+
 ### 5.1 关系边格式
 
 ```yaml
 relations:
   - target: "[[node-name]]"
     type: supports | contradicts | refines | risk_of | derived_from
+    relation_state: candidate | reviewed | rejected | stale
     strength: 1
     confidence: low
     evidence:
-      - "[[source-or-claim]]"
+      - source_id: "[[source-or-claim]]"
+        source_range:
+        quote_or_excerpt:
+        evidence_support:
+          span_supports_target:
+          evidence_role:
+          reviewer_note:
     rationale: "One sentence explaining why this edge exists."
     created: 2026-05-26
     last_verified: 2026-05-26
 ```
+
+兼容说明：旧记录或弱候选关系中，`evidence` 可能仍是简单 source link 列表。`strength >= 4`、promotion support、reviewed relation、decision/action basis 相关关系，应升级为带 `source_range` / `quote_or_excerpt` / `evidence_support` 的 evidence item。
 
 ### 5.2 关系类型
 
@@ -531,6 +847,8 @@ blocked_by
 
 - `strength >= 4` 必须有 `evidence` 和 `rationale`。
 - `contradicts`、`risk_of` 不得省略 `rationale`。
+- `supports`、`contradicts`、`refines`、`risk_of` 的强边 evidence 必须能说明证据如何支持这条边本身。
+- `derived_from` 是 provenance relation，不自动构成 support。
 - 无证据的强边应被 health check 标记。
 - 双向关系需要两条边分别记录，不默认自动互逆。
 
@@ -557,12 +875,16 @@ blocked_by
 type: source
 status: source-captured
 title:
+source_id:
+source_uri:
 source_url:
 source_type:
+version_or_commit:
 captured_at:
 captured_by:
 raw_location:
 processing_mode: inbox | immediate
+processing_level: light | medium | heavy
 review_priority: normal
 review_owner: Codex
 formalization_status: raw-only
@@ -579,6 +901,16 @@ tags:
 author:
 publisher:
 published_at:
+extraction:
+  extracted_at:
+  extracted_by:
+  model:
+  tool:
+  source_ranges: []
+provenance:
+  model: PROV-lite
+  activities: []
+  agents: []
 source_quality:
 freshness:
 relevance:
@@ -645,6 +977,14 @@ related_projects:
 sources:
 supporting_sources:
 conflicting_sources:
+evidence:
+  - source_id:
+    source_range:
+    quote_or_excerpt:
+    evidence_support:
+      span_supports_target:
+      evidence_role:
+      reviewer_note:
 verification_status: unverified
 evidence_level: unknown
 confidence:
@@ -1041,7 +1381,52 @@ sources:
 gaps:
 confidence:
 last_verified:
+coverage_overview:
+  supported:
+  weakly_supported:
+  challenged:
+  missing_evidence:
+  out_of_scope:
+  risk_flags:
+coverage_map:
+  - point:
+    point_type:
+    coverage_status: supported | weakly_supported | challenged | missing_evidence | out_of_scope | not_verifiable
+    support_refs: []
+    challenge_refs: []
+    risk_refs: []
+    critical_omissions: []
+    note:
+action_readiness:
+  state: ready | not_ready | risky | needs_review
+  reason:
+evidence_sufficiency:
+  state: sufficient | weak | insufficient | out_of_scope | risky
+  checked_for: context_pack | action_basis | decision | promotion | reviewed_relation | risk_sensitive_answer
+  missing: []
+  required_next_step: proceed | ask_user | retrieve_more | create_missing_point | narrow_scope | mark_not_actionable | needs_review
+  reviewer_note:
 ```
+
+`coverage_map` 是 Context Pack / Action Basis 的审计面，不是新的 truth layer。
+
+规则：
+
+- context pack 必须 coverage-aware，但不默认展开完整审计表。
+- 完整 `coverage_map` 只要求覆盖回答或行动依据中实际使用的关键判断。
+- ordinary query / 普通回答不强制生成完整 `coverage_map`。
+- citation 不等于 coverage。
+- `coverage_status` 不能自动提高 `confidence`。
+- `missing_evidence` 不等于 false，只说明当前行动依据缺证据。
+- `challenged` 不等于 rejected，只说明存在 contradiction、attack、counterexample 或 risk。
+- `out_of_scope` 表示证据或判断不适用于当前 project / version / time / action。
+- `not_verifiable` 用于 preference、open_question、hypothesis、interpretation 等不走 claim-style truth verification 的点。
+- `risk_flags` 只做 overview 风险提示；具体风险仍放在 `risk_refs`，行动可用性仍看 `action_readiness: risky | needs_review`。
+- coverage_map 消费 `evidence_support`：`direct_support` 可计入 supported；带 `reviewer_note` 的 `inferential_support` 默认计入 weakly_supported 或 reviewer-accepted support；`background_context` 不能计入 supported；`counterexample` 进入 challenged 或 risk。
+- `evidence_sufficiency` 在 draft evidence envelope / draft context pack 组好后、Context Pack / Action Basis 被定稿为 action-ready 前运行：证据不足不能输出 ready action basis；`retrieve_more` 是建议动作，不是自动检索；`out_of_scope` 可以要求 `narrow_scope`。
+- `critical_omissions` 只记录已知重大遗漏，不做全库/全 source 遗漏扫描。
+- 默认只显示 `coverage_overview`、高风险项、被挑战项和缺证据项；需要决策、行动、agent context pack、高影响回答、显式 audit 或回答被挑战时，再展开完整 key-point detail。
+- 非可验证点仍然可以有 rationale、risk 或 action-basis coverage。
 
 排序优先级：
 

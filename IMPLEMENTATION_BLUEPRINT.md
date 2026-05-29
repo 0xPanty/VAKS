@@ -367,12 +367,43 @@ sources:
 relation_rationale:
 gaps:
 warnings:
+coverage_overview:
+  supported:
+  weakly_supported:
+  challenged:
+  missing_evidence:
+  out_of_scope:
+  risk_flags:
+coverage_map:
+  - point:
+    point_type:
+    coverage_status:
+    support_refs:
+    challenge_refs:
+    risk_refs:
+    note:
+action_readiness:
+  state:
+  reason:
+evidence_sufficiency:
+  state:
+  checked_for: context_pack | action_basis | decision | promotion | reviewed_relation | risk_sensitive_answer
+  missing:
+  required_next_step: proceed | ask_user | retrieve_more | create_missing_point | narrow_scope | mark_not_actionable | needs_review
+  reviewer_note:
 confidence:
 last_verified:
 budget:
 truncation_notes:
 recommended_next_action:
 ```
+
+Coverage map is required only for important answer/action points in the first manual trial.
+It is not a full PaperTrail implementation and must not become a truth layer.
+Context packs must be coverage-aware, but ordinary query output should not become a full coverage audit.
+Full `coverage_map` detail is required only for key judgments used in the answer or action basis, especially decisions, agent context packs, high-impact answers, explicit audit requests, or challenged answers.
+`risk_flags` only summarizes risk presence; concrete risks stay in `risk_refs` and `action_readiness`.
+`evidence_sufficiency` is checked after a draft evidence envelope is assembled and before promotion, decision, strong reviewed relation, context pack / action basis, or risk_sensitive_answer is finalized as action-ready.
 
 Sorting priority:
 
