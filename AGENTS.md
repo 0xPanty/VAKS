@@ -130,6 +130,7 @@ For the full current graph of absorbed patterns, anti-patterns, decisions, sourc
 - Use files as source of truth. Do not rely on chat memory alone.
 - If the user says read-only, analysis only, no edits, no implementation, no commit, or no push, obey that boundary.
 - Do not overdesign. Prefer the smallest elegant architecture change that preserves the current spine.
+- Do not add a new formal lane structure; automatic compile is parked, and `Karpathy-light / VAKS-strict` is only a plain-language explanation layer.
 - Do not treat dashboard, retrieval, metadata, brief, or feedback as reviewed knowledge.
 - Do not start automation, scripts, API/MCP, viewer, publishing pipeline, dev context pack, query-run, feedback-event, or scheduled synthesis unless explicitly asked.
 - Important architecture conclusions should be written back to the appropriate docs, handoff, and indexes after user confirmation.
