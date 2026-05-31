@@ -2,12 +2,14 @@
 type: handoff
 status: current
 created: 2026-05-31
+updated: 2026-05-31
 project: verified-action-knowledge-system
 scope:
   - route-lock
   - recovery-state
   - architecture-boundary
-mainline_change: route-confirmation-only
+  - alpha-minimal-writeback
+mainline_change: review-boundary-tightening
 ---
 
 # Route Lock Confirmation Handoff
@@ -129,9 +131,76 @@ agent OS / MCP runtime as core
 
 ## Recovery Note
 
-The latest accepted mainline remains v0.3 evidence discipline.
+The latest accepted mainline is v0.3 evidence discipline plus the minimal review-boundary tightening in commit `1eed9e2`.
 
 This handoff confirms route interpretation only.
 
 Do not modify `SCHEMA.md`, `FUSION_ARCHITECTURE_V0_2_DRAFT.md`, or `ARCHITECTURE_PRINCIPLES.md` from this note alone.
 
+## 2026-05-31 Minimal Alpha Writeback
+
+Commit:
+
+```text
+1eed9e2 Tighten review and maintenance boundaries
+```
+
+Mainline files changed:
+
+```text
+REVIEW_QUEUE.md
+templates/maintenance-manifest.md
+```
+
+What landed:
+
+```text
+Approval integrity:
+  LLM-assisted labels, prefilled review notes, high agreement, majority vote,
+  or human "looks good" approval are review input / review pressure only.
+  They do not create evidence review, truth confidence, reviewed relations,
+  or automatic promotion.
+
+Known omission check:
+  Context-pack, action-basis, risk-sensitive, or explicit sufficiency reviews
+  should expose known support, known counterevidence, known gaps, and known
+  conflicts. This is review input, not action readiness.
+
+Maintenance report discipline:
+  Test, benchmark, fixture, and LLM-judge results are lint / diagnostic input.
+  They do not create truth confidence, benchmark authority, runtime readiness,
+  mainline readiness, or a new eval/test template family.
+```
+
+What stayed untouched:
+
+```text
+SCHEMA.md
+README.md
+ARCHITECTURE_PRINCIPLES.md
+runtime / API / MCP / dashboard
+eval platform
+agent toolchain
+```
+
+Sandbox evidence:
+
+```text
+triage-compression-2026-05-31/mainline-placement-review/
+  MAINLINE_PLACEMENT_REVIEW.md
+  PLACEMENT_SCORE_MATRIX.md
+  placement_test_report.md
+  placement_results.json
+
+triage-compression-2026-05-31/minimal-review-pressure-tests/
+  report.md
+  results.json
+```
+
+Post-writeback checks:
+
+```text
+placement test: 160 combinations, recommendation unchanged
+pressure tests: 59 passed / 0 failed
+git diff --check: passed, with Windows CRLF warnings only
+```
