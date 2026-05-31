@@ -2,7 +2,7 @@
 record_type: maintenance-manifest
 status: open
 created:
-updated:
+updated: 2026-05-31
 scope:
 generated_by:
 tags:
@@ -33,4 +33,7 @@ items:
 Maintenance manifest is lint.
 It may create review pressure.
 It must not rewrite reviewed knowledge automatically.
+Test, benchmark, fixture, and LLM-judge results are lint / diagnostic input.
+They may report what was measured, what was not measured, negative coverage, side-effect scope, and forbidden interpretations.
+They must not create truth confidence, benchmark authority, reviewer status, runtime readiness, mainline readiness, or a new eval/test template family.
 ```

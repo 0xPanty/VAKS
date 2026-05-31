@@ -2,7 +2,7 @@
 type: implementation-note
 status: active
 created: 2026-05-27
-updated: 2026-05-28
+updated: 2026-05-31
 project: verified-action-knowledge-system
 related_decisions:
   - "[[2026-05-27-traceability-first-graduated-verification]]"
@@ -21,7 +21,7 @@ validated_by:
   - "external source comparison"
 rollback_path:
   - "If point collision creates noise, keep source/candidate records and disable collision promotion until manual review rules improve."
-last_verified: 2026-05-28
+last_verified: 2026-05-31
 next_review: 2026-06-03
 relations:
   - target: "[[IMPLEMENTATION_BLUEPRINT]]"
@@ -394,6 +394,14 @@ missing_outcome_calibration
 orphan_review_candidate
 ```
 
+### 3.3.2 Approval Integrity
+
+Approval integrity is process evidence, not evidence support.
+
+LLM-assisted labels, model-prefilled review notes, high agreement, majority vote, or a human "looks good" confirmation can create review input or review pressure, but they do not by themselves create evidence review, truth confidence, reviewed relations, or automatic promotion.
+
+For any approval that can affect promotion, formal writeback, benchmark label reuse, or action basis, keep the narrow process facts visible: approved_by, approval_source, approved_at, body_hash, llm_assisted, and whether the human checked the specific evidence rather than only the summary.
+
 ### 3.4 Point Cluster
 
 Point cluster groups recurring candidate points.
@@ -625,6 +633,12 @@ out_of_scope may require narrow_scope instead of more retrieval.
 risky needs action_readiness: risky or needs_review.
 retrieve_more is a recommendation unless the user explicitly authorizes retrieval.
 ```
+
+Known omission check is review input, not action readiness.
+
+For context-pack, action-basis, risk-sensitive, or explicit "is this enough" reviews, check whether known support, known counterevidence, known gaps, and known conflicts are visible. The result may be enough_for_action_basis_review, not_enough, or conflicting.
+
+This check must not create a global evidence pool, coverage score, automatic retrieve_more action, truth confidence, or ready action basis. Missing evidence or visible conflict creates review pressure, scope narrowing, or a next-step recommendation only.
 
 ## 5. Promotion Rules
 
