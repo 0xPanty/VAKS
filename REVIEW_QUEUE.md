@@ -271,6 +271,7 @@ If a point is an AI inference, mark it as hypothesis unless source text directly
 If a point may be promoted, used for action, used for a strong reviewed relation, or explicitly challenged, prefer an Evidence Packet over a loose source summary.
 Point Collision is triggered by candidate / review / promotion / action need, not by raw capture itself.
 URL-only source_refs are provenance, not support.
+For dynamic data evidence, source identity includes query, filter, subset, as-of, and result-set scope when used for promotion, strong relation review, or action basis.
 Evidence support is optional during early candidate capture, but required when a source_ref is used for promotion, strong relation review, or action basis.
 Evidence Packet is review input, not a new truth layer.
 `warrant` explains why the evidence supports or weakens the point; it is not the same as provenance.
@@ -278,6 +279,7 @@ Evidence Packet is review input, not a new truth layer.
 `minimal_revision_needed` recommends the smallest review action; it does not edit reviewed knowledge.
 `omission_check` is required only for heavy source digests, important repositories, long papers, high-impact decisions, or reviewer request.
 background_context cannot count as support.
+prior chat memory, agent memory, or model background cannot count as current source support unless tied to a current source span.
 inferential_support needs reviewer_note before it can count as promotion support.
 Not every candidate point can receive truth confidence.
 Only verifiable claims can receive truth / evidence confidence.
@@ -809,8 +811,10 @@ candidate point without source_refs
 candidate point without source_range or excerpt
 promotion support from URL-only source_ref
 promotion support from evidence_role: background_context
+promotion or ready action basis support from prior chat memory, agent memory, or model background without current source span support
 promotion support from inferential_support without reviewer_note
 promotion support from span_supports_target: unsupported or unclear
+dynamic data evidence used for promotion or ready action basis without query/filter/subset/as-of/result-set identity
 promotion or ready action basis with evidence_sufficiency: insufficient
 ready action basis with evidence_sufficiency: out_of_scope or risky
 collision signal still pending but used for promotion

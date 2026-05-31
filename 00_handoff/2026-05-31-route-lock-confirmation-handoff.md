@@ -2,7 +2,7 @@
 type: handoff
 status: current
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-01
 project: verified-action-knowledge-system
 scope:
   - route-lock
@@ -212,4 +212,40 @@ Post-writeback checks:
 placement test: 160 combinations, recommendation unchanged
 pressure tests: 59 passed / 0 failed
 git diff --check: passed, with Windows CRLF warnings only
+```
+
+## 2026-06-01 Reverse-Audit 2+1 Closeout
+
+Final narrow writeback:
+
+```text
+REVIEW_QUEUE.md:
+  prior chat memory / agent memory / model background cannot count as current
+  source support unless tied to a current source span.
+
+REVIEW_QUEUE.md:
+  dynamic data evidence used for promotion or ready action basis needs
+  query/filter/subset/as-of/result-set identity.
+
+wiki/anti-patterns/transformed-evidence-as-original-source.md:
+  OCR / translation / bbox / layout / table-derived evidence must not masquerade
+  as original source support without a recoverable original anchor.
+```
+
+Explicitly not landed:
+
+```text
+oracle type taxonomy:
+  parked / cut because AGENTS.md and templates/maintenance-manifest.md already
+  say test, benchmark, fixture, and LLM-judge results are diagnostic lint only.
+```
+
+Untouched:
+
+```text
+SCHEMA.md
+README.md public spine
+runtime / API / MCP / dashboard
+eval platform
+agent toolchain
 ```
