@@ -63,6 +63,14 @@ Action basis gets auditable.
 Feedback improves activation, not truth.
 ```
 
+2026-05-31 minimal review-boundary tightening:
+
+```text
+Approval / agreement / LLM-assisted review notes are process evidence, not evidence support.
+Known counterevidence / gaps / conflicts must stay visible in important sufficiency reviews, but this is review input, not action readiness.
+Test / benchmark / fixture / LLM-judge results are lint and diagnostics, not truth or mainline readiness.
+```
+
 Candidate points may stay lightweight until they are promoted, used for action, used as evidence for a strong reviewed relation, included in an action basis, high-impact, stale, contested, or explicitly challenged.
 
 内部可以继续用 verified loop 和第二大脑模型解释细节，但它们不能替代这五层主架构。

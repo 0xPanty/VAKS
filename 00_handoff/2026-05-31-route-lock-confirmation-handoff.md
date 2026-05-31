@@ -176,11 +176,20 @@ What stayed untouched:
 
 ```text
 SCHEMA.md
-README.md
+README.md public five-layer spine
 ARCHITECTURE_PRINCIPLES.md
 runtime / API / MCP / dashboard
 eval platform
 agent toolchain
+```
+
+Post-writeback documentation sync:
+
+```text
+README.md, AGENTS.md, and wiki/indexes/knowledge-graph-index.md were later
+updated to mention the accepted boundary tightening for recovery/discovery.
+This did not change the public five-layer spine, schema, runtime, eval platform,
+or agent toolchain.
 ```
 
 Sandbox evidence:
