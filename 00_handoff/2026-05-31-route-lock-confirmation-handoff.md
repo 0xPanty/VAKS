@@ -131,7 +131,8 @@ agent OS / MCP runtime as core
 
 ## Recovery Note
 
-The latest accepted mainline is v0.3 evidence discipline plus the minimal review-boundary tightening in commit `1eed9e2`.
+The latest accepted mainline is v0.3 evidence discipline plus the minimal
+review-boundary / reverse-audit guardrail tightening in commit `70f73b7`.
 
 This handoff confirms route interpretation only.
 
@@ -248,4 +249,93 @@ README.md public spine
 runtime / API / MCP / dashboard
 eval platform
 agent toolchain
+```
+
+## 2026-06-01 Audit-Shell Noise-Reduction Sandbox
+
+Status:
+
+```text
+sandbox/package only
+not mainline
+not schema
+not product proof
+```
+
+Purpose:
+
+```text
+Test whether ordinary audit/log noise can be reduced without weakening the
+existing evidence discipline. The candidate direction is audit shell v1:
+default light, conditionally thick, raw anchors jump-backable.
+```
+
+External research and sandbox work tested these ideas:
+
+```text
+compact evidence card
+compact coverage card
+support/refine cluster
+categorical feedback stub
+unified audit shell v1
+unresolved-first queue
+resolved folding
+regressed reopen
+manual grouping guard
+sparse provenance / jump-back pointer
+```
+
+Latest sandbox result:
+
+```text
+96-case adversarial fixture patch
+96/96 pass
+hard_gate_pass: true
+false_lite: 0
+review_due_precision: 1.0
+review_due_recall: 1.0
+jumpback_failures: 0
+severe_over_grouping: 0
+authority_leakage_incidents: 0
+visible_front_reduction_pct: 58.7
+grouped_reduction_pct: 50.0
+```
+
+Interpretation:
+
+```text
+This is stronger than the earlier 112-case pilot because gold labels, shell
+output, comparison logic, and local anchor resolution are separated.
+
+It is still fixture-based. It does not prove product readiness and does not
+authorize main-vault operation convention writeback.
+```
+
+Current package locations:
+
+```text
+C:\Users\Administrator\Documents\VAKS_deep_research_context_2026-06-01.zip
+C:\Users\Administrator\Documents\VAKS_pro_review_audit_shell_v1_2026-06-01_package.zip
+C:\Users\Administrator\Documents\VAKS_alpha_noise_test_2026-06-01_package.zip
+```
+
+Recovery entry:
+
+```text
+00_READ_FIRST/NEXT_WINDOW_RECOVERY_FULL_GRAIN.md
+```
+
+Next decision:
+
+```text
+Send the package to Pro for review. If Pro accepts the adversarial patch, design
+the 480 real-data paired pilot. Do not write audit shell v1 into main docs yet.
+```
+
+Non-authority boundary:
+
+```text
+shell / grouping / dashboard / feedback / tests are routing and review aids.
+They are not truth authority, source independence, evidence support, action
+readiness, or mainline readiness.
 ```
