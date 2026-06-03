@@ -1,0 +1,10 @@
+{
+  "bvid": "BV1LY5J6pEZD",
+  "method": "public playurl via Jina Reader -> local Whisper small",
+  "model": "whisper small",
+  "device": "cuda",
+  "language": "zh",
+  "segment_count": 22,
+  "text_chars": 619,
+  "media_retention": "scratch media deleted after ASR"
+}

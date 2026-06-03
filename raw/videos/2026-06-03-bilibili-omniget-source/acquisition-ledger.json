@@ -1,0 +1,9 @@
+{
+  "bvid": "BV1LY5J6pEZD",
+  "cid": "26011702440",
+  "method": "public playurl via Jina Reader -> local ASR",
+  "selected_audio_host": "upos-hz-mirrorakam.akamaized.net",
+  "captured_at": "2026-06-03T19:53:51",
+  "media_retention": "delete scratch after ASR",
+  "subtitle_status": "empty on view/player endpoints"
+}

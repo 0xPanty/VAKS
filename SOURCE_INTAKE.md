@@ -217,6 +217,7 @@ key-entity confidence
 anti-omission extraction pass
 user visual check for unclear names, URLs, commands, numbers, or UI text
 delete downloaded media scratch after transcript by default
+copy retained text artifacts into project-visible `raw/videos/<source-slug>/`
 route useful ideas into candidate points before review
 ```
 
@@ -227,7 +228,8 @@ light:
   save source card, metadata, why saved, one-sentence summary, and uncertainty.
 
 medium:
-  add transcript or subtitle, timestamp segments, key-entity confidence,
+  add transcript or subtitle, timestamp segments, ASR metadata / ledger locations,
+  project-visible artifact paths, key-entity confidence,
   anti-omission extraction, candidate points, borrow / do-not-borrow notes,
   and related VAKS layer.
 
@@ -288,6 +290,8 @@ challenge to us:
 ```
 
 If a video / post digest only says "what it is about" but does not cover pain point, workflow, tools / plugins, risks, and VAKS comparison, the digest is incomplete.
+
+If a medium / heavy video card says transcript or segments are `inline` but the full transcript or timestamp segments are only stored in `.codex` scratch, the writeback is incomplete. Copy the retained text artifacts into `raw/videos/<source-slug>/` or the formal Obsidian vault, then point the source card to those paths.
 
 ## 3. What "Preserve Source" Means
 

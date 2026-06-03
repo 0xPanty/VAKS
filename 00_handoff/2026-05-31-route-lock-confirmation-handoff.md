@@ -196,6 +196,12 @@ raw/videos/2026-06-03-bilibili-omniget-source.md:
   The workflow belongs in this repository's `AGENTS.md`, `SOURCE_INTAKE.md`,
   `REVIEW_QUEUE.md`, `raw/videos/`, and `templates/video-source.md`; it should
   not become a global template for unrelated projects.
+
+2026-06-04 artifact-location correction:
+  medium / heavy video cards must not leave the only transcript, segment list,
+  ASR metadata, or ledger under `.codex` scratch. Retained text artifacts should
+  be copied into project-visible `raw/videos/<source-slug>/` paths or the formal
+  Obsidian vault, and the source card should point there.
 ```
 
 Borrowed ideas are limited to workflow shape:

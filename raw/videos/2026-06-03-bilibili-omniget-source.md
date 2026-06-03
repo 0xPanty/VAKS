@@ -23,8 +23,10 @@ review_owner: Codex
 formalization_status: raw-only
 access_boundary: public
 transcript_method: local_asr
-transcript_location: inline
-segments_location: inline
+transcript_location: raw/videos/2026-06-03-bilibili-omniget-source/transcript.txt
+segments_location: raw/videos/2026-06-03-bilibili-omniget-source/segments.md
+asr_metadata_location: raw/videos/2026-06-03-bilibili-omniget-source/asr-meta.json
+ledger_location: raw/videos/2026-06-03-bilibili-omniget-source/acquisition-ledger.json
 media_retention: deleted
 source_status: active
 topics:
@@ -71,6 +73,11 @@ asr_device: cuda
 transcript_quality: medium
 media_retention: deleted
 scratch_cleanup: audio.m4s and audio.wav deleted after ASR
+project_visible_artifacts: yes
+transcript_location: raw/videos/2026-06-03-bilibili-omniget-source/transcript.txt
+segments_location: raw/videos/2026-06-03-bilibili-omniget-source/segments.md
+asr_metadata_location: raw/videos/2026-06-03-bilibili-omniget-source/asr-meta.json
+ledger_location: raw/videos/2026-06-03-bilibili-omniget-source/acquisition-ledger.json
 ```
 
 说明：
@@ -79,6 +86,7 @@ scratch_cleanup: audio.m4s and audio.wav deleted after ASR
 字幕 / ASR 是 raw/source text，不是 reviewed evidence。
 AI 摘要是 candidate comprehension，不是 truth。
 本条视频无公开字幕；转写使用公开视频音频 + 本地 GPU ASR。
+完整逐字稿、时间轴、ASR metadata 和 acquisition ledger 已复制到 `raw/videos/2026-06-03-bilibili-omniget-source/`，不依赖 `.codex` scratch。
 ```
 
 ## 人话摘要

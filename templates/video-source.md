@@ -25,6 +25,8 @@ access_boundary: public
 transcript_method: none
 transcript_location:
 segments_location:
+asr_metadata_location:
+ledger_location:
 media_retention: not_downloaded
 source_status: unknown
 topics:
@@ -62,6 +64,9 @@ asr_device:
 transcript_quality: high | medium | low | unknown
 media_retention: deleted | kept | not_downloaded
 scratch_cleanup:
+project_visible_artifacts: yes | no
+asr_metadata_location:
+ledger_location:
 ```
 
 说明：
@@ -70,6 +75,7 @@ scratch_cleanup:
 字幕 / ASR 是 raw/source text，不是 reviewed evidence。
 AI 摘要是 candidate comprehension，不是 truth。
 如果音视频为转写临时下载，成功后默认删除，只保留文字稿、时间轴、元数据和 ledger。
+这些保留物必须在本项目或正式 Obsidian vault 中可见；不能只留在 .codex scratch。
 ```
 
 ## 人话摘要
@@ -194,4 +200,3 @@ heavy:
 - 
 
 ## 下一步
-

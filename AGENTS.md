@@ -102,6 +102,8 @@ public subtitles first
 -> delete downloaded audio/video/wav/playurl scratch by default
 ```
 
+Retained text artifacts must be visible inside this project or the formal Obsidian vault. Do not leave the only transcript, timestamp segments, ASR metadata, or ledger copy in `.codex` scratch. For repository write-in, put them under `raw/videos/<source-slug>/` and point the source card to those paths.
+
 Preferred Bilibili execution defaults for this repository:
 
 ```text
