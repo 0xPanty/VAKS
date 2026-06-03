@@ -134,6 +134,40 @@ needs user visual check:
 
 OmniGet 更像“资源获取层 + 本地学习 workbench”，不是 verified knowledge system。它可以启发本项目的视频入口和批量处理体验，但不能替代 VAKS 的 candidate point、review、evidence boundary 和 action basis。
 
+## 反漏提取检查
+
+```text
+pain point:
+  用户在网上看到大量视频、课程、文档、音频、图片等资料后，下载和整理都很分散，后续学习也缺少统一入口。
+
+workflow:
+  复制链接 -> OmniGet 识别来源 -> 安装 / 调用 yt-dlp 与 FFmpeg 类依赖 -> 选择质量和路径 -> 下载资源 -> 按平台整理 -> 在本地播放器 / 阅读器 / 学习组件中使用。
+
+tools / plugins:
+  OmniGet、yt-dlp、FFmpeg、插件市场、字幕下载、课程平台入口、番茄钟、专注定时器、记忆闪卡。
+
+information structure:
+  视频强调按平台生成独立文件夹，并把下载资料和笔记保存在本地；没有展示 reviewed knowledge、candidate point 或证据审查结构。
+
+judgment mechanism:
+  视频没有明确判断资料可信度的方法，主要按“能下载 / 能整理 / 能学习”判断工具价值。
+
+user experience:
+  优点是复制链接即可下载、按平台归档、本地保存、学习组件集中；缺点是依赖安装可能失败，课程平台可能需要代理和登录。
+
+automation boundary:
+  链接识别、下载、归档、字幕下载偏自动；依赖安装、课程登录、代理配置、资料是否值得相信仍需人工判断。
+
+risk:
+  容易把“能下载很多资料”变成囤积资料；课程平台下载涉及授权和平台规则；ASR/口播宣传不能证明工具能力真实稳定。
+
+fit for us:
+  可借鉴批量链接、平台归档、本地优先、转写后资料卡、插件候选工作台；不需要把资料库做成下载器。
+
+challenge to us:
+  它提醒我们 UI / 队列 / 插件复用可能比自研框架更重要；如果我们的入口太重，用户会更倾向这种简单工具。
+```
+
 ## 可抽取 Candidate Points
 
 - 视频资料入口应该支持批量链接，而不是每条视频都手工单独处理。

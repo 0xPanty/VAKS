@@ -184,6 +184,12 @@ raw/videos/2026-06-03-bilibili-omniget-source.md:
 
 .gitignore:
   keeps local Obsidian UI config, trash, and OS metadata out of git.
+
+2026-06-04 anti-omission follow-up:
+  `SOURCE_INTAKE.md`, `templates/video-source.md`, and the OmniGet test card now
+  require a second extraction pass for pain point, workflow, tools/plugins,
+  information structure, judgment mechanism, UX, automation boundary, risk,
+  fit for us, and challenge to us. A summary-only digest is incomplete.
 ```
 
 Borrowed ideas are limited to workflow shape:

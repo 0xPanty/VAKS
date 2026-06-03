@@ -214,6 +214,7 @@ public subtitles first
 local ASR when subtitles are missing
 timestamped transcript / segment ledger
 key-entity confidence
+anti-omission extraction pass
 user visual check for unclear names, URLs, commands, numbers, or UI text
 delete downloaded media scratch after transcript by default
 route useful ideas into candidate points before review
@@ -227,7 +228,8 @@ light:
 
 medium:
   add transcript or subtitle, timestamp segments, key-entity confidence,
-  candidate points, borrow / do-not-borrow notes, and related VAKS layer.
+  anti-omission extraction, candidate points, borrow / do-not-borrow notes,
+  and related VAKS layer.
 
 heavy:
   only when the video affects architecture, decision, action basis,
@@ -250,6 +252,42 @@ X changes confidence.
 ```
 
 When upgrading video material to heavy, verify important entities and claims against stronger anchors such as official docs, project repositories, source code, release notes, screenshots / key frames, or independent sources. Then route the extracted point through `REVIEW_QUEUE.md`.
+
+Anti-omission pass:
+
+```text
+pain point:
+  What real user problem is the source solving?
+
+workflow:
+  What is the full input -> process -> output path?
+
+tools / plugins:
+  Which Obsidian plugins, AI tools, platforms, commands, or services appear?
+
+information structure:
+  How are notes, files, tags, links, databases, cards, folders, or dashboards organized?
+
+judgment mechanism:
+  How does the source decide what is useful, reliable, worth keeping, or worth acting on?
+
+user experience:
+  What becomes easier or harder than our current workflow?
+
+automation boundary:
+  Which steps are automatic, which stay manual, and where can automation mislead?
+
+risk:
+  What can pollute knowledge, create false authority, lose context, or become a junk pile?
+
+fit for us:
+  What can replace self-built design, reduce scope, or fill a gap?
+
+challenge to us:
+  Does this show our framework is too heavy, too slow, missing UI/workflow, or solving the wrong problem?
+```
+
+If a video / post digest only says "what it is about" but does not cover pain point, workflow, tools / plugins, risks, and VAKS comparison, the digest is incomplete.
 
 ## 3. What "Preserve Source" Means
 

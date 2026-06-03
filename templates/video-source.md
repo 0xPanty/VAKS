@@ -106,6 +106,46 @@ needs user visual check:
 ## 我的理解 / 推断
 
 
+## 反漏提取检查
+
+```text
+pain point:
+  -
+
+workflow:
+  -
+
+tools / plugins:
+  -
+
+information structure:
+  -
+
+judgment mechanism:
+  -
+
+user experience:
+  -
+
+automation boundary:
+  -
+
+risk:
+  -
+
+fit for us:
+  -
+
+challenge to us:
+  -
+```
+
+提取合格线：
+
+```text
+如果只写了摘要，但没有写痛点、工作流、工具 / 插件、风险、对我们框架的验证或挑战，这条资料卡不算提取完成。
+```
+
 ## 可抽取 Candidate Points
 
 - 
@@ -154,5 +194,4 @@ heavy:
 - 
 
 ## 下一步
-
 
