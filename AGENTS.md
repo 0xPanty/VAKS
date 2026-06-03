@@ -42,6 +42,7 @@ If a newer handoff exists, prefer the newest file in `00_handoff/`.
 
 - `00_handoff/`: recovery handoffs and next-window state.
 - `raw/articles/`: article source records.
+- `raw/videos/`: video source records, transcripts, timestamp notes, and candidate-only video intake cards.
 - `raw/repos/`: repository source records.
 - `raw/repos/_snapshots/`: source snapshots and downloaded archives.
 - `wiki/claims/`: reviewed or review-ready claim notes.
@@ -83,6 +84,10 @@ These two templates are for this project's architecture/repository/reference rev
 - `templates/maintenance-manifest.md`: use this for lint-style maintenance reports. It may surface missing evidence, confidence-cap violations, stale dependencies, missing intent confirmation, missing outcome calibration, or test/benchmark interpretation risks, but it must not auto-repair reviewed knowledge or create truth/mainline readiness.
 
 When reviewing a repo/library/article for this project, follow these templates before proposing writeback. Keep the analysis focused on design extraction and fusion quality. Do not confuse these project-development review templates with future light/medium/heavy intake templates for ordinary user notes.
+
+## Source Intake Templates
+
+- `templates/video-source.md`: use this for Bilibili, YouTube, course, lecture, interview, podcast-with-video, demo, or walkthrough source cards under `raw/videos/`. It records source metadata, transcript method, key-entity confidence, candidate points, and review routing, but it does not create reviewed knowledge.
 
 ## Source Set Already Considered
 

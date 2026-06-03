@@ -2,13 +2,14 @@
 type: handoff
 status: current
 created: 2026-05-31
-updated: 2026-06-01
+updated: 2026-06-03
 project: verified-action-knowledge-system
 scope:
   - route-lock
   - recovery-state
   - architecture-boundary
   - alpha-minimal-writeback
+  - video-source-intake
 mainline_change: review-boundary-tightening
 ---
 
@@ -137,6 +138,77 @@ review-boundary / reverse-audit guardrail tightening in commit `70f73b7`.
 This handoff confirms route interpretation only.
 
 Do not modify `SCHEMA.md`, `FUSION_ARCHITECTURE_V0_2_DRAFT.md`, or `ARCHITECTURE_PRINCIPLES.md` from this note alone.
+
+## 2026-06-03 Video Source Intake
+
+This landing adds a video source entrance, not a downloader module and not a new truth layer.
+
+Mainline files changed:
+
+```text
+SOURCE_INTAKE.md
+REVIEW_QUEUE.md
+README.md
+AGENTS.md
+wiki/indexes/knowledge-graph-index.md
+templates/video-source.md
+raw/videos/.gitkeep
+raw/videos/2026-06-03-bilibili-omniget-source.md
+.gitignore
+```
+
+What landed:
+
+```text
+raw/videos/:
+  future home for video source records and transcript-backed source cards.
+
+templates/video-source.md:
+  Obsidian-ready video source card with source metadata, transcript method,
+  media cleanup note, key-entity confidence, candidate points, borrow /
+  do-not-borrow notes, and VAKS routing.
+
+SOURCE_INTAKE.md:
+  video light / medium / heavy handling.
+  Direct conclusion allowed: "This video says X."
+  Not allowed without review: "X is true", "we should adopt X",
+  "X supports a reviewed claim", or "X changes confidence".
+
+REVIEW_QUEUE.md:
+  source trace source_type enum now includes video.
+
+raw/videos/2026-06-03-bilibili-omniget-source.md:
+  first real medium-level video source card, based on the OmniGet Bilibili test.
+  It is raw-only / candidate-only and does not adopt OmniGet or create reviewed
+  claims.
+
+.gitignore:
+  keeps local Obsidian UI config, trash, and OS metadata out of git.
+```
+
+Borrowed ideas are limited to workflow shape:
+
+```text
+batch links
+platform-aware source identity
+public subtitles first
+local ASR when subtitles are missing
+timestamped transcript / segment ledger
+key-entity confidence
+user visual check for unclear names / URLs / commands / numbers / UI text
+delete downloaded media scratch after transcript by default
+candidate-point routing before review
+```
+
+Do not infer from this landing:
+
+```text
+OmniGet adoption
+video downloader product build
+private/cookie/member-only scanning
+automatic truth promotion
+new schema/runtime/RAG/dashboard module
+```
 
 ## 2026-05-31 Minimal Alpha Writeback
 

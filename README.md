@@ -178,7 +178,7 @@ Hot means read early, not believe more.
 
 目录角色：
 
-- `raw/`：原始资料区。文章、X 推文、论文、repo、截图、播客转录等先放这里，尽量保留原文和来源。
+- `raw/`：原始资料区。文章、X 推文、论文、repo、截图、视频 / 播客转录等先放这里，尽量保留原文和来源。
 - `wiki/`：编译产物区。由 LLM/Codex 把 raw 里的资料整理成 summary、claim、pattern、anti-pattern、decision 和项目知识。
 - `outputs/`：运行输出区。把和 AI 的重要问答、方案推导、健康检查报告落成 Markdown，避免结论死在聊天记录里。
 - `outputs/feedback/`：query-run 和 feedback-event 的 append-only 事件日志区；未来 SQLite 只能作为可重建缓存。

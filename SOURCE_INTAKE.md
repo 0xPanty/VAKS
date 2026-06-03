@@ -2,7 +2,7 @@
 type: implementation-note
 status: active
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-06-03
 project: verified-action-knowledge-system
 scope:
   - source-intake
@@ -15,6 +15,7 @@ related_files:
   - "[[DEV_CONTEXT]]"
   - "[[MEMORY_TIER]]"
   - "[[REFERENCE_REVIEW_PROTOCOL]]"
+  - "[[templates/video-source]]"
 verification_status: active
 evidence_level: synthetic
 confidence: high
@@ -25,6 +26,7 @@ tags:
   - processing-tier
   - karpathy-simple
   - source-provenance
+  - video-intake
 ---
 
 # SOURCE_INTAKE.md v0.1
@@ -196,6 +198,58 @@ implementation-note
 index update
 handoff update
 ```
+
+### Video Source Intake
+
+Video is a source format, not a truth format.
+
+Use `raw/videos/` and `templates/video-source.md` for useful Bilibili, YouTube, course, lecture, interview, podcast-with-video, demo, or walkthrough material.
+
+The borrowed product/workflow ideas are narrow:
+
+```text
+batch links instead of one-by-one manual handling
+platform-aware source identity
+public subtitles first
+local ASR when subtitles are missing
+timestamped transcript / segment ledger
+key-entity confidence
+user visual check for unclear names, URLs, commands, numbers, or UI text
+delete downloaded media scratch after transcript by default
+route useful ideas into candidate points before review
+```
+
+Default processing:
+
+```text
+light:
+  save source card, metadata, why saved, one-sentence summary, and uncertainty.
+
+medium:
+  add transcript or subtitle, timestamp segments, key-entity confidence,
+  candidate points, borrow / do-not-borrow notes, and related VAKS layer.
+
+heavy:
+  only when the video affects architecture, decision, action basis,
+  strong reviewed relation, important adoption, or explicit review.
+```
+
+Allowed direct conclusion:
+
+```text
+This video says X.
+```
+
+Not allowed without later review:
+
+```text
+X is true.
+We should adopt X.
+X supports a reviewed claim.
+X changes confidence.
+```
+
+When upgrading video material to heavy, verify important entities and claims against stronger anchors such as official docs, project repositories, source code, release notes, screenshots / key frames, or independent sources. Then route the extracted point through `REVIEW_QUEUE.md`.
 
 ## 3. What "Preserve Source" Means
 

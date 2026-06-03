@@ -116,7 +116,7 @@ source_id:
 source_uri:
 source_url_or_path:
 raw_location:
-source_type: article | paper | repo | docs | transcript | screenshot | chat | other
+source_type: article | paper | repo | docs | video | transcript | screenshot | chat | other
 source_family:
 upstream_sources: []
 version_or_commit:
