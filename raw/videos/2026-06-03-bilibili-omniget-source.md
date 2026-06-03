@@ -25,7 +25,7 @@ access_boundary: public
 transcript_method: local_asr
 transcript_location: raw/videos/2026-06-03-bilibili-omniget-source/transcript.txt
 segments_location: raw/videos/2026-06-03-bilibili-omniget-source/segments.md
-asr_metadata_location: raw/videos/2026-06-03-bilibili-omniget-source/asr-meta.json
+transcript_metadata_location: raw/videos/2026-06-03-bilibili-omniget-source/transcript-meta.json
 ledger_location: raw/videos/2026-06-03-bilibili-omniget-source/acquisition-ledger.json
 media_retention: deleted
 source_status: active
@@ -76,7 +76,7 @@ scratch_cleanup: audio.m4s and audio.wav deleted after ASR
 project_visible_artifacts: yes
 transcript_location: raw/videos/2026-06-03-bilibili-omniget-source/transcript.txt
 segments_location: raw/videos/2026-06-03-bilibili-omniget-source/segments.md
-asr_metadata_location: raw/videos/2026-06-03-bilibili-omniget-source/asr-meta.json
+transcript_metadata_location: raw/videos/2026-06-03-bilibili-omniget-source/transcript-meta.json
 ledger_location: raw/videos/2026-06-03-bilibili-omniget-source/acquisition-ledger.json
 ```
 

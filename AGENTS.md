@@ -57,6 +57,7 @@ If a newer handoff exists, prefer the newest file in `00_handoff/`.
 - `outputs/review/`: review outputs.
 - `outputs/feedback/`: feedback outputs.
 - `templates/`: reusable record, review, feedback, and window templates.
+- `tools/`: project-local helper scripts, including video intake finalization connectors.
 - `products/`: future external publishing artifacts.
 
 ## Root Documents
@@ -98,11 +99,22 @@ When the user sends Bilibili, YouTube, course, lecture, podcast, interview, or o
 ```text
 public subtitles first
 -> if no subtitles, public audio + local GPU ASR
--> save transcript / timestamp segments / ASR metadata / ledger
+-> save transcript / timestamp segments / transcript metadata / ledger
 -> delete downloaded audio/video/wav/playurl scratch by default
 ```
 
 Retained text artifacts must be visible inside this project or the formal Obsidian vault. Do not leave the only transcript, timestamp segments, ASR metadata, or ledger copy in `.codex` scratch. For repository write-in, put them under `raw/videos/<source-slug>/` and point the source card to those paths.
+
+For medium / heavy video writeback, use the project-local finalization connector after drafting the source card:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\tools\finalize-video-intake.ps1 `
+  -CardPath .\raw\videos\<source-slug>.md `
+  -ScratchPath C:\Users\Administrator\.codex\video-research\<scratch-id>\asr-vaks `
+  -DeleteScratchMedia
+```
+
+This connector verifies project-visible `transcript_location`, `segments_location`, `transcript_metadata_location`, and `ledger_location` paths, syncs the card and retained text artifacts to the formal Obsidian vault, checks SHA256 hashes, and optionally deletes temporary scratch media. It is not a transcript engine, review engine, truth authority, or architecture promotion path.
 
 Preferred Bilibili execution defaults for this repository:
 

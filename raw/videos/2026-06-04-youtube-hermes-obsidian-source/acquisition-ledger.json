@@ -1,0 +1,49 @@
+{
+  "video_id": "mjju1qYAV2w",
+  "url": "https://www.youtube.com/watch?v=mjju1qYAV2w",
+  "captured_at": "2026-06-04T01:54:41+08:00",
+  "steps": [
+    {
+      "method": "YouTube oEmbed / watch metadata",
+      "status": "succeeded",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "watch page caption track discovery",
+      "status": "succeeded",
+      "result": "English auto-generated caption track found",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "direct timedtext fetch",
+      "status": "empty_body",
+      "fallback": "yt-dlp public auto subtitle download",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "yt-dlp --write-auto-sub --sub-langs en-orig,en --sub-format json3",
+      "status": "succeeded",
+      "result": "public auto subtitle json3 downloaded",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "audio/video download",
+      "status": "not_run",
+      "reason": "public auto subtitle was sufficient"
+    }
+  ],
+  "media_retention": "not_downloaded",
+  "retained_project_artifacts": [
+    "raw/videos/2026-06-04-youtube-hermes-obsidian-source/transcript.txt",
+    "raw/videos/2026-06-04-youtube-hermes-obsidian-source/segments.md",
+    "raw/videos/2026-06-04-youtube-hermes-obsidian-source/segments.json",
+    "raw/videos/2026-06-04-youtube-hermes-obsidian-source/transcript-meta.json",
+    "raw/videos/2026-06-04-youtube-hermes-obsidian-source/acquisition-ledger.json",
+    "raw/videos/2026-06-04-youtube-hermes-obsidian-source/source-metadata.json"
+  ],
+  "scratch_boundary": ".codex video-research directory used only as temporary working area, not formal archive"
+}

@@ -228,7 +228,7 @@ light:
   save source card, metadata, why saved, one-sentence summary, and uncertainty.
 
 medium:
-  add transcript or subtitle, timestamp segments, ASR metadata / ledger locations,
+  add transcript or subtitle, timestamp segments, transcript metadata / ledger locations,
   project-visible artifact paths, key-entity confidence,
   anti-omission extraction, candidate points, borrow / do-not-borrow notes,
   and related VAKS layer.

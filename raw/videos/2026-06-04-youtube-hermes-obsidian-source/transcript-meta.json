@@ -1,0 +1,16 @@
+{
+  "video_id": "mjju1qYAV2w",
+  "method": "public YouTube auto captions via yt-dlp",
+  "transcript_method": "public_subtitle",
+  "subtitle_language": "en-orig",
+  "subtitle_format": "json3",
+  "extraction_tool": "yt-dlp 2026.3.17",
+  "asr_model": null,
+  "asr_device": null,
+  "language": "en",
+  "segment_count": 239,
+  "text_chars": 9096,
+  "media_retention": "no audio/video downloaded",
+  "scratch_source": "C:\\Users\\Administrator\\.codex\\video-research\\mjju1qYAV2w\\subtitles\\mjju1qYAV2w.en-orig.json3",
+  "project_visible_artifacts": true
+}

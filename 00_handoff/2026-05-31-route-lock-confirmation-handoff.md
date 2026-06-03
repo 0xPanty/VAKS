@@ -2,7 +2,7 @@
 type: handoff
 status: current
 created: 2026-05-31
-updated: 2026-06-03
+updated: 2026-06-04
 project: verified-action-knowledge-system
 scope:
   - route-lock
@@ -202,6 +202,16 @@ raw/videos/2026-06-03-bilibili-omniget-source.md:
   ASR metadata, or ledger under `.codex` scratch. Retained text artifacts should
   be copied into project-visible `raw/videos/<source-slug>/` paths or the formal
   Obsidian vault, and the source card should point there.
+
+2026-06-04 finalization connector:
+  `tools/finalize-video-intake.ps1` is the project-local connector for medium /
+  heavy video writeback finalization. It validates source-card artifact paths,
+  syncs the source card and retained text artifacts to `H:\Obsidian\资料库`, checks
+  SHA256 hashes, and can delete `.codex\video-research` temporary media. It uses
+  `transcript_metadata_location` for subtitle or ASR metadata, with legacy
+  `asr_metadata_location` accepted only as a compatibility alias. It is
+  not a transcript engine, review engine, truth authority, or architecture
+  promotion path.
 ```
 
 Borrowed ideas are limited to workflow shape:

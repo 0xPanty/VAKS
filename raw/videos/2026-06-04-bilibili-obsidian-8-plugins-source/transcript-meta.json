@@ -1,0 +1,14 @@
+{
+  "bvid": "BV1Gjd5BPEhh",
+  "method": "public playurl via yt-dlp headers -> faster-whisper local",
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16",
+  "language": "zh",
+  "language_probability": 1,
+  "duration": 601.2343125,
+  "segment_count": 271,
+  "text_chars": 4008,
+  "elapsed_seconds": 87.77,
+  "media_retention": "scratch audio to be deleted after project artifacts are copied"
+}
