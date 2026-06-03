@@ -89,6 +89,55 @@ When reviewing a repo/library/article for this project, follow these templates b
 
 - `templates/video-source.md`: use this for Bilibili, YouTube, course, lecture, interview, podcast-with-video, demo, or walkthrough source cards under `raw/videos/`. It records source metadata, transcript method, key-entity confidence, candidate points, and review routing, but it does not create reviewed knowledge.
 
+## Project-Local Video Intake
+
+This section is only for this repository / VAKS. Do not export this template to unrelated projects.
+
+When the user sends Bilibili, YouTube, course, lecture, podcast, interview, or other video links as research material for this project, use the project-scoped video intake flow:
+
+```text
+public subtitles first
+-> if no subtitles, public audio + local GPU ASR
+-> save transcript / timestamp segments / ASR metadata / ledger
+-> delete downloaded audio/video/wav/playurl scratch by default
+```
+
+Preferred Bilibili execution defaults for this repository:
+
+```text
+engine: bili2text
+provider: whisper
+model:
+  quick draft: base
+  research/default: small
+cloud APIs: off unless explicitly requested
+cookies: off unless explicitly requested
+web/server/docker: off unless explicitly requested
+media retention: delete temporary audio/video after successful transcript unless explicitly asked to keep
+```
+
+For names, repositories, URLs, commands, version numbers, star counts, product names, and UI labels, add a key-entity confidence check. ASR alone is not enough for these details. If a high-impact entity is still unclear after public metadata, cover/key-frame/OCR, or source checks, ask the user to inspect the relevant timestamp or screenshot instead of guessing.
+
+Do not read browser cookies, private favorites, account collections, or member-only content unless the user explicitly authorizes that path.
+
+For this repository, keep the boundary strict:
+
+```text
+video URL = source provenance
+subtitle / ASR = raw source text
+summary = candidate comprehension
+extracted ideas = candidate points
+promotion = later review queue / evidence-aware review only
+```
+
+Preferred formal Obsidian vault target for this project:
+
+```text
+H:\Obsidian\资料库
+```
+
+Use this path for future formal VAKS / 资料库 Obsidian write-ins unless the user points to a different vault. The older `C:\Users\Administrator\Documents\资料库` path remains the project repo, not the long-term Obsidian storage target.
+
 ## Source Set Already Considered
 
 These references have been discussed, reviewed, or partially absorbed. Use the existing source records, summaries, patterns, anti-patterns, and decisions before re-analyzing them from scratch.

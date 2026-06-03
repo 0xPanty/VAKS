@@ -190,6 +190,12 @@ raw/videos/2026-06-03-bilibili-omniget-source.md:
   require a second extraction pass for pain point, workflow, tools/plugins,
   information structure, judgment mechanism, UX, automation boundary, risk,
   fit for us, and challenge to us. A summary-only digest is incomplete.
+
+2026-06-04 project-local scope correction:
+  video intake defaults are project-local to `C:\Users\Administrator\Documents\资料库`.
+  The workflow belongs in this repository's `AGENTS.md`, `SOURCE_INTAKE.md`,
+  `REVIEW_QUEUE.md`, `raw/videos/`, and `templates/video-source.md`; it should
+  not become a global template for unrelated projects.
 ```
 
 Borrowed ideas are limited to workflow shape:
