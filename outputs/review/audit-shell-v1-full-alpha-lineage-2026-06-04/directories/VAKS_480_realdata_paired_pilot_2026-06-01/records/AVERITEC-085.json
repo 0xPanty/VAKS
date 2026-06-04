@@ -1,0 +1,22 @@
+{
+  "id": "AVERITEC-085",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 84,
+  "claim": "Nigeria is the largest producer of rice in Africa, ranking 14th in the world.",
+  "evidence": "7,937 - (1000 mt) Yes Nigeria are 14th on the list.",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-085.md",
+    "marker": "AVERITEC-085_ANCHOR"
+  }
+}

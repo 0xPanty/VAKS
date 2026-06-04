@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-107",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 106,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "500 days of summer is an indie movie.",
+  "evidence": "500 Days of Summer (stylized as (500) Days of Summer) is a 2009 American romantic comedy-drama film by first-time director Marc Webb from a screenplay written by Scott Neustadter and Michael H. Weber, and produced by Mark Waters. The film stars Joseph Gordon-Levitt and Zooey Deschanel, and employs a nonlinear narrative structure, with the story based upon its male protagonist and his memories of a failed relationship. As an independent production, the film was picked up for distribution by Fox Searchlight Pictures and premiered at the 25th Sundance Film Festival. It garnered favorable reviews and became a successful \"sleeper hit\", earning over $60 million in worldwide returns, far exceeding its $7.5 million budget. Many critics lauded the film as one of the best from 2009 and drew comparisons to other acclaimed films such as Annie Hall (1977) and High Fidelity (2000). The film received Best Original Screenplay and Best Screenplay awards at the 14th Satellite Awards and 25th Independent Spirit Awards, respectively, as well as two nominations at the 67th Golden Globe Awards: Best Motion Picture – Musical or Comedy and Best Actor – Musical or Comedy (Gordon-Levitt).",
+  "source_label": "supporting",
+  "surface_state": "ordinary",
+  "signals": [
+    "insufficient_evidence"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-107.md",
+    "document_hash": "e9ac38e5abb4f06e12816b30ddb0ca2232551f2a6c5d761824f85861788c7bb4",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-107_ANCHOR",
+    "text_quote": "500 Days of Summer (stylized as (500) Days of Summer) is a 2009 American romantic comedy-drama film by first-time director Marc Webb from a screenplay written by Scott Neustadter and Michael H. Weber, and produced by Mar",
+    "start": 146,
+    "end": 366
+  },
+  "record_path": "records/AMBIFC-107.json",
+  "evidence_path": "evidence/AMBIFC-107.md"
+}

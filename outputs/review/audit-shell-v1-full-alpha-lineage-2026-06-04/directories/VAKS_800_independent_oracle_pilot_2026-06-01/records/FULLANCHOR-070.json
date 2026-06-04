@@ -1,0 +1,32 @@
+{
+  "id": "FULLANCHOR-070",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 69,
+  "layer": "full_anchor_click",
+  "claim": "Chronic aerobic exercise alters endothelial function, improving vasodilating mechanisms mediated by NO.",
+  "evidence": "BACKGROUND Endothelium-dependent modulation of coronary tone is impaired in the collateral-dependent coronary microcirculation. We used a porcine model of chronic coronary occlusion and collateral development to evaluate the hypothesis that exercise training enhances endothelium-mediated relaxation and increases endothelial nitric oxide synthase (ecNOS) mRNA levels of collateral-dependent microvasculature. METHODS AND RESULTS Adult female miniature swine were subjected to chronic, progressive ameroid occlusion of the proximal left circumflex coronary artery (LCx); after 2 months, animals were randomly exposed to 16-week exercise-training (EX group; treadmill running) or sedentary (SED group; cage confinement) protocols. After completion of EX or SED programs, coronary arterioles ( approximately 100 microm in diameter) were isolated from collateral-dependent LCx (distal to occlusion) and nonoccluded left anterior descending coronary artery (LAD) regions of each heart. Arterioles were studied by in vitro videomicroscopy or frozen for ecNOS mRNA analysis (RT-PCR techniques). Relaxation to the endothelium-dependent vasodilator bradykinin was decreased (P<0.05) in arterioles isolated from collateral-dependent LCx versus nonoccluded LAD regions of SED animals. Bradykinin-mediated relaxation, however, was not different in LCx versus LAD arterioles isolated from EX animals. Nitroprussi",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "manual_span",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/FULLANCHOR-070.md",
+    "document_hash": "f14e431d62cfb7b35f7d457d8b80db7491c8fca919a9e43c5248f551eb86c13c",
+    "version_id": "manual_span-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-070_ANCHOR",
+    "text_quote": "BACKGROUND Endothelium-dependent modulation of coronary tone is impaired in the collateral-dependent coronary microcirculation. We used a porcine model of chronic coronary occlusion and collateral development to evaluate",
+    "start": 225,
+    "end": 445
+  },
+  "record_path": "records/FULLANCHOR-070.json",
+  "evidence_path": "evidence/FULLANCHOR-070.md"
+}

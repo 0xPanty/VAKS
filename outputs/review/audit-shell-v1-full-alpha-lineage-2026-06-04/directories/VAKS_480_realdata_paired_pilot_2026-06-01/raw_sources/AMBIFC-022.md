@@ -1,0 +1,7 @@
+# Raw Source AMBIFC-022
+dataset: ambifc
+source_row: 21
+marker: AMBIFC-022_ANCHOR
+claim: k2 is the highest mountain in the world.
+label: neutral
+evidence: Very technical, and second most demanding. First climbed in 1986 by the Polish-Slovak trio Piasecki-Wróż-Božik. Since then Jordi Corominas from Spain has been the only successful climber on this route (he summitted in 2004), despite many other attempts. South Face or "Polish Line" or "Central Rib" Extremely exposed, demanding, and dangerous. In July 1986, Jerzy Kukuczka and Tadeusz Piotrowski summitted on this route. Piotrowski was killed while descending on the Abruzzi Spur. The route starts off the first part of the Southwest Pillar, and then deviates into a totally exposed, snow-covered cliff area, then through a gully known as "The Hockey Stick", and then goes up to yet another exposed cliff-face, and the route continues through yet another extremely exposed section all the way up to the point where the route joins with the Abruzzi Spur about 300 m (1,000 ft) before the summit. Reinhold Messner called it a suicidal route and so far, no one has repeated Kukuczka and Piotrowski's achievement. "The route is so avalanche-prone, that no one else has ever considered a new attempt". Northwest Face First ascent via this route was in 1990 by a Japanese team; this route is located on the

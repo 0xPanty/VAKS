@@ -1,0 +1,29 @@
+{
+  "id": "SCIFACT-039",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 38,
+  "layer": "ordinary_stable",
+  "claim": "Auditory entrainment is strengthened when people see congruent visual and auditory information.",
+  "evidence": "UNLABELLED Congruent audiovisual speech enhances our ability to comprehend a speaker, even in noise-free conditions. When incongruent auditory and visual information is presented concurrently, it can hinder a listener's perception and even cause him or her to perceive information that was not presented in either modality. Efforts to investigate the neural basis of these effects have often focused on the special case of discrete audiovisual syllables that are spatially and temporally congruent, with less work done on the case of natural, continuous speech. Recent electrophysiological studies have demonstrated that cortical response measures to continuous auditory speech can be easily obtained using multivariate analysis methods. Here, we apply such methods to the case of audiovisual speech and, importantly, present a novel framework for indexing multisensory integration in the context of continuous speech. Specifically, we examine how the temporal and contextual congruency of ongoing audiovisual speech affects the cortical encoding of the speech envelope in humans using electroencephalography. We demonstrate that the cortical representation of the speech envelope is enhanced by the presentation of congruent audiovisual speech in noise-free conditions. Furthermore, we show that this is likely attributable to the contribution of neural generators that are not particularly active d",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-039.md",
+    "document_hash": "f1c1112c60b77ef78f518d85a530375d36edf85c317522791b17f741752d3bfd",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-039_ANCHOR",
+    "text_quote": "UNLABELLED Congruent audiovisual speech enhances our ability to comprehend a speaker, even in noise-free conditions. When incongruent auditory and visual information is presented concurrently, it can hinder a listener's ",
+    "start": 207,
+    "end": 427
+  },
+  "record_path": "records/SCIFACT-039.json",
+  "evidence_path": "evidence/SCIFACT-039.md"
+}

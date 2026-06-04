@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-094",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 93,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Enhanced early production of inflammatory chemokines improves viral control in the lung.",
+  "evidence": "Inflammation induced by recognition of pathogen-associated molecular patterns markedly affects subsequent adaptive responses. We asked whether the adaptive immune system can also affect the character and magnitude of innate inflammatory responses. We found that the response of memory, but not naive, CD4+ T cells enhances production of multiple innate inflammatory cytokines and chemokines (IICs) in the lung and that, during influenza infection, this leads to early control of virus. Memory CD4+ T cell–induced IICs and viral control require cognate antigen recognition and are optimal when memory cells are either T helper type 1 (TH1) or TH17 polarized but are independent of interferon-γ (IFN-γ) and tumor necrosis factor-α (TNF-α) production and do not require activation of conserved pathogen recognition pathways. This represents a previously undescribed mechanism by which memory CD4+ T cells induce an early innate response that enhances immune protection against pathogens.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-094.md",
+    "document_hash": "faea413b0ffa2a3bad67abf72f2dddcf119048e085c1e08393765903245baf39",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-094_ANCHOR",
+    "text_quote": "Inflammation induced by recognition of pathogen-associated molecular patterns markedly affects subsequent adaptive responses. We asked whether the adaptive immune system can also affect the character and magnitude of inn",
+    "start": 200,
+    "end": 420
+  },
+  "record_path": "records/SCIFACT-094.json",
+  "evidence_path": "evidence/SCIFACT-094.md"
+}

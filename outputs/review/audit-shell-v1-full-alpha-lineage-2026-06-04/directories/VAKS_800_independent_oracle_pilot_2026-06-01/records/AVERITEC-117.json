@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-117",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 116,
+  "layer": "anchor_problem",
+  "claim": "Former president Pranab Mukherjee from India has passed away.",
+  "evidence": "13/08/2020 Yes Yes",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "stale_pointer"
+  ],
+  "anchor_status": "stale",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "stale",
+    "path": "raw_sources/AVERITEC-117.md",
+    "document_hash": "dab4ba3fee616c4cbea81154a9da61e0ff358c6c2af820e70a3b64a01dd22c0c",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-117_ANCHOR",
+    "text_quote": "13/08/2020 Yes Yes",
+    "start": 193,
+    "end": 211
+  },
+  "record_path": "records/AVERITEC-117.json",
+  "evidence_path": "evidence/AVERITEC-117.md"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-088",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 87,
+  "layer": "action_challenge_conflict",
+  "claim": "Australia has a backchannel with both the United States and New Zealand to cooperate on military matters worldwide.",
+  "evidence": "United_States | 38 | Accounting for approximately a quarter of global GDP and a third of global military spending , the United States is the world 's foremost economic and military power .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-088.md",
+    "document_hash": "f7fcd6ad6898898fca51f365db1136c45959e2553688aac8a3c68a8a5fc26190",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-088_ANCHOR",
+    "text_quote": "United_States | 38 | Accounting for approximately a quarter of global GDP and a third of global military spending , the United States is the world 's foremost economic and military power .",
+    "start": 221,
+    "end": 409
+  },
+  "record_path": "records/FEVER-088.json",
+  "evidence_path": "evidence/FEVER-088.md"
+}

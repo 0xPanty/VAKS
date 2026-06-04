@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-036",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 35,
+  "claim": "Combining phosphatidylinositide 3-kinase and MEK 1/2 inhibitors is effective at treating KRAS mutant tumors.",
+  "evidence": "Somatic mutations that activate phosphoinositide 3-kinase (PI3K) have been identified in the p110-alpha catalytic subunit (encoded by PIK3CA). They are most frequently observed in two hotspots: the helical domain (E545K and E542K) and the kinase domain (H1047R). Although the p110-alpha mutants are transforming in vitro, their oncogenic potential has not been assessed in genetically engineered mouse models. Furthermore, clinical trials with PI3K inhibitors have recently been initiated, and it is unknown if their efficacy will be restricted to specific, genetically defined malignancies. In this study, we engineered a mouse model of lung adenocarcinomas initiated and maintained by expression of p110-alpha H1047R. Treatment of these tumors with NVP-BEZ235, a dual pan-PI3K and mammalian target of rapamycin (mTOR) inhibitor in clinical development, led to marked tumor regression as shown by positron emission tomography-computed tomography, magnetic resonance imaging and microscopic examination. In contrast, mouse lung cancers driven by mutant Kras did not substantially respond to single-agent NVP-BEZ235. However, when NVP-BEZ235 was combined with a mitogen-activated protein kinase kinase",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-036.md",
+    "marker": "RECSTRESS-036_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-03",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-03-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-036.json",
+  "evidence_path": "evidence/RECSTRESS-036.md"
+}

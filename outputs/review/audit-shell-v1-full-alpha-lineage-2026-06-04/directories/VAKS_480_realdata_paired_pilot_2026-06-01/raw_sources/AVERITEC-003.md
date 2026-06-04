@@ -1,0 +1,7 @@
+# Raw Source AVERITEC-003
+dataset: averitec
+source_row: 2
+marker: AVERITEC-003_ANCHOR
+claim: In Nigeria … in terms of revenue share, 20% goes to the local government.
+label: Supported
+evidence: After months of an often fractious stalemate, in September 2020 Kenya’s senate hammered out a deal on how revenue would be shared between the country’s two levels of government. In August, at the height of the deadlock, former prime minister Odinga returned to a familiar talking point to argue for establishing a third tier of government. Building on this in an interview with Citizen TV, Odinga, who is also an African Union envoy, said Kenya could solve the recurring battle over how to share revenue if it looked to Nigeria for lessons. Nigeria, he said, had a local, state and federal system of government. “In terms of revenue share, 20% of the revenue goes to the local, 35% goes to the state and 45% goes to the federal governments ... and it works perfectly well,” Odinga said.

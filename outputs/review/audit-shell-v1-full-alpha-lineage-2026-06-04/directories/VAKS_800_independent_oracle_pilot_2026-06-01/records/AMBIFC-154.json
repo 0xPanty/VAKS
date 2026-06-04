@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-154",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 153,
+  "layer": "authority_leak_bait",
+  "claim": "tom cruise is in the new mummy movie.",
+  "evidence": "Initially scheduled for a 2016 release, the film was released in the United States and Canada on June 9, 2017, with international roll out beginning the same day. The film was screened in various formats, such as 2D, 3D, and IMAX 3D. On December 20, 2016, IMAX released a trailer with the wrong audio track attached; this unintentionally prompted the creation of memes and video montages featuring the mistakenly included audio track, which was missing most of the sound effects and instead featured Tom Cruise's grunts and screams. IMAX reacted by taking down the trailer and issuing DMCA takedown notices in an attempt to stop it from spreading.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "source_count_as_independence",
+  "authority_trap": "The presence of several URLs means independent confirmation.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-154.md",
+    "document_hash": "bae8bc1edc2833bb4157f24f5af1e09838f066562c2148ca43599afe893b184b",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-154_ANCHOR",
+    "text_quote": "Initially scheduled for a 2016 release, the film was released in the United States and Canada on June 9, 2017, with international roll out beginning the same day. The film was screened in various formats, such as 2D, 3D,",
+    "start": 146,
+    "end": 366
+  },
+  "record_path": "records/AMBIFC-154.json",
+  "evidence_path": "evidence/AMBIFC-154.md"
+}

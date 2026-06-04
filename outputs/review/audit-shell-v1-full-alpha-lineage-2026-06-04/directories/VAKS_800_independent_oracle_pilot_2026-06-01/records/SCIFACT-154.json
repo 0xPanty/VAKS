@@ -1,0 +1,29 @@
+{
+  "id": "SCIFACT-154",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 153,
+  "layer": "authority_leak_bait",
+  "claim": "Increased vessel density along with a reduction in fibrosis decreases the efficacy of chemotherapy treatments.",
+  "evidence": "OBJECTIVE Pancreatic ductal adenocarcinoma (PDA) is characterised by stromal desmoplasia and vascular dysfunction, which critically impair drug delivery. This study examines the role of an abundant extracellular matrix component, the megadalton glycosaminoglycan hyaluronan (HA), as a novel therapeutic target in PDA. METHODS Using a genetically engineered mouse model of PDA, the authors enzymatically depleted HA by a clinically formulated PEGylated human recombinant PH20 hyaluronidase (PEGPH20) and examined tumour perfusion, vascular permeability and drug delivery. The preclinical utility of PEGPH20 in combination with gemcitabine was assessed by short-term and survival studies. RESULTS PEGPH20 rapidly and sustainably depleted HA, inducing the re-expansion of PDA blood vessels and increasing the intratumoral delivery of two chemotherapeutic agents, doxorubicin and gemcitabine. Moreover, PEGPH20 triggered fenestrations and interendothelial junctional gaps in PDA tumour endothelia and promoted a tumour-specific increase in macromolecular permeability. Finally, combination therapy with PEGPH20 and gemcitabine led to inhibition of PDA tumour growth and prolonged survival over gemcitabine monotherapy, suggesting immediate clinical utility. CONCLUSIONS The authors demonstrate that HA impedes the intratumoral vasculature in PDA and propose that its enzymatic depletion be explored as a ",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "source_count_as_independence",
+  "authority_trap": "The presence of several URLs means independent confirmation.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-154.md",
+    "document_hash": "425d7c304ad28a905925b7c5b6e1b094531acbdd16bde1983e4c5d9bd0f36c71",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-154_ANCHOR",
+    "text_quote": "OBJECTIVE Pancreatic ductal adenocarcinoma (PDA) is characterised by stromal desmoplasia and vascular dysfunction, which critically impair drug delivery. This study examines the role of an abundant extracellular matrix c",
+    "start": 222,
+    "end": 442
+  },
+  "record_path": "records/SCIFACT-154.json",
+  "evidence_path": "evidence/SCIFACT-154.md"
+}

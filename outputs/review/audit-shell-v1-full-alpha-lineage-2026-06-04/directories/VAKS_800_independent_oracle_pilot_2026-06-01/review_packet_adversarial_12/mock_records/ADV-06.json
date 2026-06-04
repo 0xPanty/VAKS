@@ -1,0 +1,11 @@
+{
+  "case_id": "ADV-06",
+  "adversarial_category": "grouping near-miss",
+  "claim": "两条记录都提到“保留 source pointer”，但一个用于普通保存，一个用于行动依据。",
+  "expected_state": "ordinary",
+  "expected_anchor_status": "valid",
+  "expected_no_group": "yes",
+  "source_pointer": "review_packet_adversarial_12/mock_sources/ADV-06.md",
+  "evidence_pointer": "review_packet_adversarial_12/mock_evidence/ADV-06.md",
+  "note": "Synthetic operator-surface test record; not a truth-layer schema proposal."
+}

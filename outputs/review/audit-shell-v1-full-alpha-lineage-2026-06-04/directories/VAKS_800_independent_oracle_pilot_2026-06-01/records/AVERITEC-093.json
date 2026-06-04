@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-093",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 92,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Vice President Biden and President Obama assembled a pandemic playbook to make sure that America was prepared and protected. The Trump administration disbanded the pandemic response team that was given to them.",
+  "evidence": "Yes No Yes",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [
+    "ambiguous_scope"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-093.md",
+    "document_hash": "b499f8b0184489bf66f08f1da82e121fb400f4807e2e63bd665c7f17b29e2c3d",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-093_ANCHOR",
+    "text_quote": "Yes No Yes",
+    "start": 325,
+    "end": 335
+  },
+  "record_path": "records/AVERITEC-093.json",
+  "evidence_path": "evidence/AVERITEC-093.md"
+}

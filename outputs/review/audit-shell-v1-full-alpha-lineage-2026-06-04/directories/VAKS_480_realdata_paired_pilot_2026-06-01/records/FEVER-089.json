@@ -1,0 +1,22 @@
+{
+  "id": "FEVER-089",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 88,
+  "claim": "The characters in Grey's Anatomy only evolve into seasoned chefs.",
+  "evidence": "Grey's_Anatomy | 1 | The series focuses on the fictional lives of surgical interns , residents and attending physicians , as they evolve into seasoned doctors while trying to maintain personal lives and relationships .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-089.md",
+    "marker": "FEVER-089_ANCHOR"
+  }
+}

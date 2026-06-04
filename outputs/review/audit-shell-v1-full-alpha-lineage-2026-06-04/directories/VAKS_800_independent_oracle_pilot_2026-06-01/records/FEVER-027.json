@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-027",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 26,
+  "layer": "ordinary_stable",
+  "claim": "Basic Instinct only has a theatrical cut and a shorter cut for television viewing.",
+  "evidence": "Basic_Instinct | 11 | Several versions of the film have been released on videocassette , DVD , and Blu-ray including a director 's cut with extended footage previously unseen in North American cinemas .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-027.md",
+    "document_hash": "a51dcddff9a38351be2cb6c25e843fabb12d3e0ddc381488aacb70742a2bb2b3",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-027_ANCHOR",
+    "text_quote": "Basic_Instinct | 11 | Several versions of the film have been released on videocassette , DVD , and Blu-ray including a director 's cut with extended footage previously unseen in North American cinemas .",
+    "start": 188,
+    "end": 390
+  },
+  "record_path": "records/FEVER-027.json",
+  "evidence_path": "evidence/FEVER-027.md"
+}

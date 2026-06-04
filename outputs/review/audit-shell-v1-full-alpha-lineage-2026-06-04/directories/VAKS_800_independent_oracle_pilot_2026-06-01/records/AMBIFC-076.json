@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-076",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 75,
+  "layer": "action_challenge_conflict",
+  "claim": "the us open was won over par at least once.",
+  "evidence": "Willie Anderson, Bobby Jones, Ben Hogan and Jack Nicklaus hold the record for the most U.S. Open victories, with four victories each. Hale Irwin is the oldest winner of the U.S. Open at 45 years and 15 days in 1990. The youngest winner of the U.S. Open is John McDermott at 19 years, 10 months, 14 days in 1911. (a) denotes amateur",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-076.md",
+    "document_hash": "f397cc1a18eefee3a9a223d5d2637247014947c92b2aed2e6a28834cb884d190",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-076_ANCHOR",
+    "text_quote": "Willie Anderson, Bobby Jones, Ben Hogan and Jack Nicklaus hold the record for the most U.S. Open victories, with four victories each. Hale Irwin is the oldest winner of the U.S. Open at 45 years and 15 days in 1990. The ",
+    "start": 152,
+    "end": 372
+  },
+  "record_path": "records/AMBIFC-076.json",
+  "evidence_path": "evidence/AMBIFC-076.md"
+}

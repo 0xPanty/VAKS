@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-101",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 100,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Snowpiercer is co-written and directed by Bong Joon-ho.",
+  "evidence": "Snowpiercer | 1 | The film is directed by Bong Joon-ho , and written by Bong and Kelly Masterson .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "insufficient_evidence"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-101.md",
+    "document_hash": "149b1879c8f432a13813547554e66bb6e79c771eaf20007aaff38181b4715416",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-101_ANCHOR",
+    "text_quote": "Snowpiercer | 1 | The film is directed by Bong Joon-ho , and written by Bong and Kelly Masterson .",
+    "start": 161,
+    "end": 259
+  },
+  "record_path": "records/FEVER-101.json",
+  "evidence_path": "evidence/FEVER-101.md"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-111",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 110,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Gene expression does not vary appreciably across genetically identical cells.",
+  "evidence": "Gene expression is a fundamentally stochastic process, with randomness in transcription and translation leading to cell-to-cell variations in mRNA and protein levels. This variation appears in organisms ranging from microbes to metazoans, and its characteristics depend both on the biophysical parameters governing gene expression and on gene network structure. Stochastic gene expression has important consequences for cellular function, being beneficial in some contexts and harmful in others. These situations include the stress response, metabolism, development, the cell cycle, circadian rhythms, and aging.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "ambiguous_scope"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-111.md",
+    "document_hash": "e735373b2415bfd27b36d4c91974939191ce00ee312d40d73531c3a51d6de29b",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-111_ANCHOR",
+    "text_quote": "Gene expression is a fundamentally stochastic process, with randomness in transcription and translation leading to cell-to-cell variations in mRNA and protein levels. This variation appears in organisms ranging from micr",
+    "start": 189,
+    "end": 409
+  },
+  "record_path": "records/SCIFACT-111.json",
+  "evidence_path": "evidence/SCIFACT-111.md"
+}

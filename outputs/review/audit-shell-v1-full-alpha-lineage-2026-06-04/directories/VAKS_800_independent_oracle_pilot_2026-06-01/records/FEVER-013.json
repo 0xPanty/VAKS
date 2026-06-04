@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-013",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 12,
+  "layer": "ordinary_stable",
+  "claim": "Bob Arum is from New York.",
+  "evidence": "Joseph_Serrano | 14 | Serrano then awaited a relatively long time to make a decision as far as to which promoter he would sign with as a professional fighter , but he finally decided to sign with Bob Arum and Arum 's Top Rank company .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-013.md",
+    "document_hash": "263c302b470984fb2d37ba9626b1ecaa6e791de651e95ccdf83865a18ae9295f",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-013_ANCHOR",
+    "text_quote": "Joseph_Serrano | 14 | Serrano then awaited a relatively long time to make a decision as far as to which promoter he would sign with as a professional fighter , but he finally decided to sign with Bob Arum and Arum 's Top",
+    "start": 132,
+    "end": 352
+  },
+  "record_path": "records/FEVER-013.json",
+  "evidence_path": "evidence/FEVER-013.md"
+}

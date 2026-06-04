@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-083",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 82,
+  "layer": "action_challenge_conflict",
+  "claim": "There are cultural, historical, and aesthetic significance with the film The Breakfast Club.",
+  "evidence": "The_Breakfast_Club | 14 | In 2016 , the film was selected for preservation in the United States National Film Registry by the Library of Congress as being `` culturally , historically , or aesthetically significant '' .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "explicit_challenge"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-083.md",
+    "document_hash": "a0350f9ed34de63d94181c955c33281fa85c00e76216366bd189246a9d3f2ceb",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-083_ANCHOR",
+    "text_quote": "The_Breakfast_Club | 14 | In 2016 , the film was selected for preservation in the United States National Film Registry by the Library of Congress as being `` culturally , historically , or aesthetically significant '' .",
+    "start": 198,
+    "end": 417
+  },
+  "record_path": "records/FEVER-083.json",
+  "evidence_path": "evidence/FEVER-083.md"
+}

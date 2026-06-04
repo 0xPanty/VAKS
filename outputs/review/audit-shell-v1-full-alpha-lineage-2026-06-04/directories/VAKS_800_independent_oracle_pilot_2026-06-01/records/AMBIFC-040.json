@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-040",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 39,
+  "layer": "ordinary_stable",
+  "claim": "baby did get out of jail in baby driver.",
+  "evidence": "Baby Driver is a longtime passion project Wright had been developing since 1995, when the writer-director was a struggling 21-year-old filmmaker living in suburban London. He had relocated to London to finish his first professional film, the low-budget western comedy A Fistful of Fingers, and to contemplate his future in entertainment. Wright's repeated listening to Orange (1994), the fourth studio album by the Jon Spencer Blues Explosion, provided the impetus for Baby Driver. At first he envisioned a high-speed car chase, which then evolved into a full sequence where the getaway driver dances to \"Bellbottoms\" in his car before the ensuing chase. Though this was ultimately written into the script as the film's opening sequence, Wright's nascent vision was far from a fully realized project. By the time Baby Driver took definite form, the advent of the iPod, Wright's childhood tinnitus, and his reading of Oliver Sacks' Musicophilia (2007), which explores the neuroscience of music, were forces shaping the project's artistic direction.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-040.md",
+    "document_hash": "f56d8c616bd4c0c6d89ada77f463e12ca0de0ac857cf6dc23395c345d76d2e77",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-040_ANCHOR",
+    "text_quote": "Baby Driver is a longtime passion project Wright had been developing since 1995, when the writer-director was a struggling 21-year-old filmmaker living in suburban London. He had relocated to London to finish his first p",
+    "start": 149,
+    "end": 369
+  },
+  "record_path": "records/AMBIFC-040.json",
+  "evidence_path": "evidence/AMBIFC-040.md"
+}

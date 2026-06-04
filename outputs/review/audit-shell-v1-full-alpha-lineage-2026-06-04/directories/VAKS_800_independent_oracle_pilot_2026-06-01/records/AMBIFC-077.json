@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-077",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 76,
+  "layer": "action_challenge_conflict",
+  "claim": "one life to live is still on tv.",
+  "evidence": "One Life to Live is set in the fictional city of Llanview, a suburb of Philadelphia, Pennsylvania. The show continually centers on the wealthy, WASP Lord family, with the working-class Polish American Woleks, the less wealthy Irish Catholic Rileys, and the African-American Grays present at the series' inception. One Life to Live has been called \"the most peculiarly American of soap operas: the first serial to present a vast array of ethnic types, broad comic situations, a constant emphasis on social issues, and strong male characters\". From the debut episode, One Life to Live centered on fictional character Victoria \"Viki\" Lord (originated by Gillian Spencer), portrayed by six-time Emmy winner Erika Slezak for longer than any other One Life to Live series actor, from March 1971 through the series finale January 13, 2012, as well as the 2013 web revival. Long-suffering heroine Viki weathered love and loss, widowhood, rape, divorce, stroke, and breast cancer, and was plagued by dissociative identity disorder (or DID, once known as multiple personality disorder) on and off for decades. Viki also had heart problems and received a transplant from her dying husband Ben Davidson (Mark Derwin). Featured male protagonist Dr. Larry Wolek also appeared at the debut episode and for 36 years, played from 1969 until the character's last appearance in 2004 by Emmy-nominated actor Michael Stor",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "explicit_challenge"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-077.md",
+    "document_hash": "bfdf1e2c124d6392fae9e724842f9c4c00245968a68499f7f66145d4d147857b",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-077_ANCHOR",
+    "text_quote": "One Life to Live is set in the fictional city of Llanview, a suburb of Philadelphia, Pennsylvania. The show continually centers on the wealthy, WASP Lord family, with the working-class Polish American Woleks, the less we",
+    "start": 141,
+    "end": 361
+  },
+  "record_path": "records/AMBIFC-077.json",
+  "evidence_path": "evidence/AMBIFC-077.md"
+}

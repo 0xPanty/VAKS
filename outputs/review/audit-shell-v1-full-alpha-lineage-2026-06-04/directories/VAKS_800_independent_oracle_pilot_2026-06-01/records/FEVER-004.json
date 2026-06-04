@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-004",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 3,
+  "layer": "ordinary_stable",
+  "claim": "Cosmos: A Spacetime Odyssey secured studio support thanks to Seth MacFarlane.",
+  "evidence": "Seth_MacFarlane | 21 | MacFarlane served as executive producer of Cosmos : A Spacetime Odyssey , an update of the 1980s Carl Sagan -- hosted Cosmos series , hosted by Neil deGrasse Tyson .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-004.md",
+    "document_hash": "a4b3cdb8f0e27d45e66fe8f1f2a95bbdac1c4c839bb41a9f9789e57ff5b63a39",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-004_ANCHOR",
+    "text_quote": "Seth_MacFarlane | 21 | MacFarlane served as executive producer of Cosmos : A Spacetime Odyssey , an update of the 1980s Carl Sagan -- hosted Cosmos series , hosted by Neil deGrasse Tyson .",
+    "start": 183,
+    "end": 371
+  },
+  "record_path": "records/FEVER-004.json",
+  "evidence_path": "evidence/FEVER-004.md"
+}

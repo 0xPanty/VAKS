@@ -1,0 +1,11 @@
+{
+  "case_id": "ADV-11",
+  "adversarial_category": "source-count trap",
+  "claim": "这条记录用多个 URL 暗示独立确认。",
+  "expected_state": "ordinary",
+  "expected_anchor_status": "valid",
+  "expected_no_group": "n/a",
+  "source_pointer": "review_packet_adversarial_12/mock_sources/ADV-11.md",
+  "evidence_pointer": "review_packet_adversarial_12/mock_evidence/ADV-11.md",
+  "note": "Synthetic operator-surface test record; not a truth-layer schema proposal."
+}

@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-112",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 111,
+  "claim": "The Annabelle doll escaped from the Warren's Occult Museum on 14th August 2020 at 3am.",
+  "evidence": "No",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "explicit_challenge"
+  ],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-112.md",
+    "marker": "AVERITEC-112_ANCHOR"
+  },
+  "recurrence_key": "rec-0c1acf13e9",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "",
+  "dedup_open_only": true
+}

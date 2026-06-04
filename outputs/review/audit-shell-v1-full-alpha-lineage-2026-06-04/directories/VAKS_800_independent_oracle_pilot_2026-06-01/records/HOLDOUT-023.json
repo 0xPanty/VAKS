@@ -1,0 +1,31 @@
+{
+  "id": "HOLDOUT-023",
+  "pool": "adversarial_holdout",
+  "dataset_family": "scifact",
+  "source_row_index": 22,
+  "layer": "review_due_trap",
+  "claim": "Angiotensin converting enzyme inhibitors are associated with increased risk for functional renal insufficiency.",
+  "evidence": "Angiotensin converting enzyme (ACE) inhibitors are now one of the most frequently used classes of antihypertensive drugs. Beyond their utility in the management of hypertension, their use has been extended to the long-term management of patients with congestive heart failure (CHF), as well as diabetic and nondiabetic nephropathies. Although ACE inhibitor therapy usually improves renal blood flow (RBF) and sodium excretion rates in CHF and reduces the rate of progressive renal injury in chronic renal disease, its use can also be associated with a syndrome of “functional renal insufficiency” and/or hyperkalemia. This form of acute renal failure (ARF) most commonly develops shortly after initiation of ACE inhibitor therapy but can be observed after months or years of therapy, even in the absence of prior ill effects. ARF is most likely to occur when renal perfusion pressure cannot be sustained because of substantial decreases in mean arterial pressure (MAP) or when glomerular filtration rate (GFR) is highly angiotensin II (Ang II) dependent. Conditions that predict an adverse hemodynamic effect of ACE inhibitors in patients with CHF are preexisting hypotension and low cardiac filling pressures. The GFR is especially dependent on Ang II during extracellular fluid (ECF) volume depletion, high-grade bilateral renal artery stenosis, or stenosis of a dominant or single kidney, as in a ",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "ambiguous_scope"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/HOLDOUT-023.md",
+    "document_hash": "53e2d53effeacbe7ac45cd473f57a376f96ca4472bf4014772e9722eed1168c8",
+    "version_id": "holdout-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "HOLDOUT-023_ANCHOR",
+    "text_quote": "Angiotensin converting enzyme (ACE) inhibitors are now one of the most frequently used classes of antihypertensive drugs. Beyond their utility in the management of hypertension, their use has been extended to the long-te",
+    "start": 223,
+    "end": 443
+  },
+  "record_path": "records/HOLDOUT-023.json",
+  "evidence_path": "evidence/HOLDOUT-023.md"
+}

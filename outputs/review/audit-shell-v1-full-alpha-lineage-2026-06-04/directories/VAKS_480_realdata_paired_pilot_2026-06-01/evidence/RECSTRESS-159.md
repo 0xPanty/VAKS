@@ -1,0 +1,3 @@
+# Evidence RECSTRESS-159
+marker: EVIDENCE_RECSTRESS-159_ANCHOR
+The average is 321, 652

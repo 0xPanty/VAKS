@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-019",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 18,
+  "layer": "ordinary_stable",
+  "claim": "the movie gangs of new york was based on fact.",
+  "evidence": "Gangs of New York was listed on many critics' top ten lists.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-019.md",
+    "document_hash": "472dffb80f45a1be2e9cc0b750f926a59342aefee8f51115c2ee11a5f0838533",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-019_ANCHOR",
+    "text_quote": "Gangs of New York was listed on many critics' top ten lists.",
+    "start": 155,
+    "end": 215
+  },
+  "record_path": "records/AMBIFC-019.json",
+  "evidence_path": "evidence/AMBIFC-019.md"
+}

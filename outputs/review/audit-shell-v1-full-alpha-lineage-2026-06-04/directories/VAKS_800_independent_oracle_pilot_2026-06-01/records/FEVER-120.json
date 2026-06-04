@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-120",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 119,
+  "layer": "anchor_problem",
+  "claim": "Celeste and Jesse Forever stars Rashida Jones, Andy Samberg, and Will McCormack.",
+  "evidence": "Celeste_and_Jesse_Forever | 1 | It stars Rashida Jones and Andy Samberg , and was written by Jones and Will McCormack , who also has a role in the film .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "missing_anchor"
+  ],
+  "anchor_status": "missing",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "missing",
+    "path": "raw_sources/FEVER-120.md",
+    "document_hash": "",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-120_ANCHOR",
+    "text_quote": "Celeste_and_Jesse_Forever | 1 | It stars Rashida Jones and Andy Samberg , and was written by Jones and Will McCormack , who also has a role in the film .",
+    "start": -1,
+    "end": -1
+  },
+  "record_path": "records/FEVER-120.json",
+  "evidence_path": "evidence/FEVER-120.md"
+}

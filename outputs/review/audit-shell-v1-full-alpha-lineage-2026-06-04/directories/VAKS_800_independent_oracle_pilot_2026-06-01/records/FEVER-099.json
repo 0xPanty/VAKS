@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-099",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 98,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "The Formosa Resolution lost congressional approval under Dwight D. Eisenhower.",
+  "evidence": "Formosa_Resolution_of_1955 | 0 | The Formosa Resolution was a bill enacted by the U.S. Congress on January 29 , 1955 that established an American commitment to defend Formosa -LRB- now called Taiwan -RRB- .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [
+    "ambiguous_scope"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-099.md",
+    "document_hash": "310774e20c4e5c9d55cb3e3fb1b4d230267a7ccea70ea5dc1bb9ab13625be548",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-099_ANCHOR",
+    "text_quote": "Formosa_Resolution_of_1955 | 0 | The Formosa Resolution was a bill enacted by the U.S. Congress on January 29 , 1955 that established an American commitment to defend Formosa -LRB- now called Taiwan -RRB- .",
+    "start": 184,
+    "end": 390
+  },
+  "record_path": "records/FEVER-099.json",
+  "evidence_path": "evidence/FEVER-099.md"
+}

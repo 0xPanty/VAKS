@@ -1,0 +1,31 @@
+{
+  "id": "RECSTRESS-230",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 109,
+  "claim": "Former U.S. President George W. Bush supports the Democratic presidential ticket of Joe Biden and Kamala Harris.",
+  "evidence": "No",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-230.md",
+    "marker": "RECSTRESS-230_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-22",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-230.json",
+  "evidence_path": "evidence/RECSTRESS-230.md"
+}

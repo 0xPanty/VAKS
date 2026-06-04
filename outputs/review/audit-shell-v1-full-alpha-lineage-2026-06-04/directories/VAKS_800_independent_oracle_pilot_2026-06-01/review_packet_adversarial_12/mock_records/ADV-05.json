@@ -1,0 +1,11 @@
+{
+  "case_id": "ADV-05",
+  "adversarial_category": "review_due trap",
+  "claim": "这条记录认为当前证据足够支持跨版本迁移建议。",
+  "expected_state": "for_review",
+  "expected_anchor_status": "valid",
+  "expected_no_group": "n/a",
+  "source_pointer": "review_packet_adversarial_12/mock_sources/ADV-05.md",
+  "evidence_pointer": "review_packet_adversarial_12/mock_evidence/ADV-05.md",
+  "note": "Synthetic operator-surface test record; not a truth-layer schema proposal."
+}

@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-037",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 36,
+  "layer": "ordinary_stable",
+  "claim": "Tokyo is Japan's seat of government.",
+  "evidence": "Tokyo | 4 | Formerly known as Edo , it has been the de facto seat of government since 1603 when Shogun Tokugawa Ieyasu made the city his headquarters .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-037.md",
+    "document_hash": "100e30a62833bed39e2bcf382b5750896a6c0035fcc5778781c697450d512f24",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-037_ANCHOR",
+    "text_quote": "Tokyo | 4 | Formerly known as Edo , it has been the de facto seat of government since 1603 when Shogun Tokugawa Ieyasu made the city his headquarters .",
+    "start": 142,
+    "end": 293
+  },
+  "record_path": "records/FEVER-037.json",
+  "evidence_path": "evidence/FEVER-037.md"
+}

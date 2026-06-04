@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-105",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 104,
+  "claim": "Polymeal nutrition reduces cardiovascular mortality.",
+  "evidence": "OBJECTIVE Although the Polypill concept (proposed in 2003) is promising in terms of benefits for cardiovascular risk management, the potential costs and adverse effects are its main pitfalls. The objective of this study was to identify a tastier and safer alternative to the Polypill: the Polymeal. METHODS Data on the ingredients of the Polymeal were taken from the literature. The evidence based recipe included wine, fish, dark chocolate, fruits, vegetables, garlic, and almonds. Data from the Framingham heart study and the Framingham offspring study were used to build life tables to model the benefits of the Polymeal in the general population from age 50, assuming multiplicative correlations. RESULTS Combining the ingredients of the Polymeal would reduce cardiovascular disease events by 76%. For men, taking the Polymeal daily represented an increase in total life expectancy of 6.6 years, an increase in life expectancy free from cardiovascular disease of 9.0 years, and a decrease in life expectancy with cardiovascular disease of 2.4 years. The corresponding differences for women were 4.8, 8.1, and 3.3 years. CONCLUSION The Polymeal promises to be an effective, non-pharmacological, sa",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-105.md",
+    "marker": "RECSTRESS-105_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-10",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-10-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-105.json",
+  "evidence_path": "evidence/RECSTRESS-105.md"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-081",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 80,
+  "layer": "action_challenge_conflict",
+  "claim": "Cytochrome c is released from the mitochondrial intermembrane space to cytosol during apoptosis.",
+  "evidence": "Apoptosis that proceeds via the mitochondrial pathway involves mitochondrial outer membrane permeabilization (MOMP), responsible for the release of cytochrome c and other proteins of the mitochondrial intermembrane space. This essential step is controlled and mediated by proteins of the Bcl-2 family. The proapoptotic proteins Bax and Bak are required for MOMP, while the antiapoptotic Bcl-2 proteins, including Bcl-2, Bcl-xL, Mcl-1, and others, prevent MOMP. Different proapoptotic BH3-only proteins act to interfere with the function of the antiapoptotic Bcl-2 members and/or activate Bax and Bak. Here, we discuss an emerging view, proposed by Certo et al. in this issue of Cancer Cell, on how these interactions result in MOMP and apoptosis.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-081.md",
+    "document_hash": "b019a9adf48281eb5891a1207bfc3fbc8f1b61015f5443262dd90dc446968df7",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-081_ANCHOR",
+    "text_quote": "Apoptosis that proceeds via the mitochondrial pathway involves mitochondrial outer membrane permeabilization (MOMP), responsible for the release of cytochrome c and other proteins of the mitochondrial intermembrane space",
+    "start": 208,
+    "end": 428
+  },
+  "record_path": "records/SCIFACT-081.json",
+  "evidence_path": "evidence/SCIFACT-081.md"
+}

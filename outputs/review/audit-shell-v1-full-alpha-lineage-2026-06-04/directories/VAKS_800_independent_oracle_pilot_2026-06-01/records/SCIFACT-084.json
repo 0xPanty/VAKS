@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-084",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 83,
+  "layer": "action_challenge_conflict",
+  "claim": "De novo assembly of sequence data has more specific contigs than unassembled sequence data.",
+  "evidence": "IMPORTANCE Identification of the bacterium responsible for an outbreak can aid in disease management. However, traditional culture-based diagnosis can be difficult, particularly if no specific diagnostic test is available for an outbreak strain. OBJECTIVE To explore the potential of metagenomics, which is the direct sequencing of DNA extracted from microbiologically complex samples, as an open-ended clinical discovery platform capable of identifying and characterizing bacterial strains from an outbreak without laboratory culture. DESIGN, SETTING, AND PATIENTS In a retrospective investigation, 45 samples were selected from fecal specimens obtained from patients with diarrhea during the 2011 outbreak of Shiga-toxigenic Escherichia coli (STEC) O104:H4 in Germany. Samples were subjected to high-throughput sequencing (August-September 2012), followed by a 3-phase analysis (November 2012-February 2013). In phase 1, a de novo assembly approach was developed to obtain a draft genome of the outbreak strain. In phase 2, the depth of coverage of the outbreak strain genome was determined in each sample. In phase 3, sequences from each sample were compared with sequences from known bacteria to identify pathogens other than the outbreak strain. MAIN OUTCOMES AND MEASURES The recovery of genome sequence data for the purposes of identification and characterization of the outbreak strain and ot",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-084.md",
+    "document_hash": "3fc1b3c856eb7df28fcf7f5cfc92b8cd31a3d208230c3d55fc5dfbbad357c61e",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-084_ANCHOR",
+    "text_quote": "IMPORTANCE Identification of the bacterium responsible for an outbreak can aid in disease management. However, traditional culture-based diagnosis can be difficult, particularly if no specific diagnostic test is availabl",
+    "start": 203,
+    "end": 423
+  },
+  "record_path": "records/SCIFACT-084.json",
+  "evidence_path": "evidence/SCIFACT-084.md"
+}

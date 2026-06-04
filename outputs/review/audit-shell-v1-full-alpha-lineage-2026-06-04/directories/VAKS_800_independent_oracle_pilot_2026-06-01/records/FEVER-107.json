@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-107",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 106,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Laadla is the antonym of The Beloved Son.",
+  "evidence": "Laadla_-LRB-1994_film-RRB- | 0 | Laadla -LRB- translation : The Beloved Son -RRB- is a Bollywood film released on 17 April 1994 , starring Sridevi , Anil Kapoor and Raveena Tandon .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [
+    "insufficient_evidence"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-107.md",
+    "document_hash": "bc5c47a118c880387a35d0f48557299a88eea610963d61d58a2066dcdb2949ee",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-107_ANCHOR",
+    "text_quote": "Laadla_-LRB-1994_film-RRB- | 0 | Laadla -LRB- translation : The Beloved Son -RRB- is a Bollywood film released on 17 April 1994 , starring Sridevi , Anil Kapoor and Raveena Tandon .",
+    "start": 147,
+    "end": 328
+  },
+  "record_path": "records/FEVER-107.json",
+  "evidence_path": "evidence/FEVER-107.md"
+}

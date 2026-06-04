@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-094",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 93,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Sriti Jha plays the lead role in an Hindi-language TV show.",
+  "evidence": "Sriti_Jha | 3 | She is a currently playing the lead role of Pragya in Zee TV 's show Kumkum Bhagya . | Kumkum_Bhagya | 0 | Kumkum Bhagya -LRB- English : Vermillion In My Fate -RRB- is a Hindi-language Indian soap opera which premiered on 15 April 2014 .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-094.md",
+    "document_hash": "1f02a4704ebf16ace2380ea081d7bd87c34d043499e450e87b2d5dfcc0f43877",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-094_ANCHOR",
+    "text_quote": "Sriti_Jha | 3 | She is a currently playing the lead role of Pragya in Zee TV 's show Kumkum Bhagya . | Kumkum_Bhagya | 0 | Kumkum Bhagya -LRB- English : Vermillion In My Fate -RRB- is a Hindi-language Indian soap opera w",
+    "start": 165,
+    "end": 385
+  },
+  "record_path": "records/FEVER-094.json",
+  "evidence_path": "evidence/FEVER-094.md"
+}

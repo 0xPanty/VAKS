@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-024",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 23,
+  "layer": "ordinary_stable",
+  "claim": "k2 is the highest mountain in the world.",
+  "evidence": "Finishes on North Ridge. First ascent in 1991. South-southeast spur or \"Cesen route\" or \"Basque route\" It runs the pillar between the Abruzzi Spur and the Polish Route. It connects with the Abruzzi Spur on the Shoulder, above the Black Pyramid and below the Bottleneck; since it avoids the Black Pyramid, it is considered safer. In 1986, Tomo Česen ascended to 8,000 m (26,000 ft) via this route. The first summit via this route was by a Basque team in 1994. West Face Technical difficulty at high altitude, first climbed by a Russian team in 2007.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-024.md",
+    "document_hash": "e41d4e4cda29c9a848a059fdd03d01d045ba827d4dff8c9b5eeb81267f90c139",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-024_ANCHOR",
+    "text_quote": "Finishes on North Ridge. First ascent in 1991. South-southeast spur or \"Cesen route\" or \"Basque route\" It runs the pillar between the Abruzzi Spur and the Polish Route. It connects with the Abruzzi Spur on the Shoulder, ",
+    "start": 149,
+    "end": 369
+  },
+  "record_path": "records/AMBIFC-024.json",
+  "evidence_path": "evidence/AMBIFC-024.md"
+}

@@ -1,0 +1,30 @@
+{
+  "sample_count": 12,
+  "adversarial_categories": [
+    "ordinary-looking action-basis",
+    "explicit challenge buried in polite wording",
+    "anchor pseudo-success",
+    "wrapper-only click-back",
+    "review_due trap",
+    "grouping near-miss",
+    "serious folded trap",
+    "authority paraphrase",
+    "fake numeric precision",
+    "summary overwrite",
+    "source-count trap",
+    "lineage trap"
+  ],
+  "state_counts": {
+    "blocking": 3,
+    "for_review": 4,
+    "ordinary": 4,
+    "regressed": 1
+  },
+  "anchor_status_counts": {
+    "valid": 9,
+    "pseudo_success": 1,
+    "wrapper_only": 1,
+    "missing": 1
+  },
+  "note": "One hand-authored synthetic pressure case per category; not broad coverage and not a truth oracle."
+}

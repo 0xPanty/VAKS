@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-111",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 110,
+  "claim": "Enough Project dreams campaigns.",
+  "evidence": "Enough_Project | 4 | The Enough Project facilitates several campaigns and initiatives which work to bring attention to these crises , including The Sentry , Raise Hope for Congo , and the Satellite Sentinel Project .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [
+    "regression"
+  ],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-111.md",
+    "marker": "FEVER-111_ANCHOR"
+  },
+  "recurrence_key": "rec-acd3b495ec",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "",
+  "dedup_open_only": true
+}

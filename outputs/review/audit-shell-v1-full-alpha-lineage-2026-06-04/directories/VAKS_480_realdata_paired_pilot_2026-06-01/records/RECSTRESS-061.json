@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-061",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 60,
+  "claim": "In domesticated populations of Saccharomyces cerevisiae, whole chromosome aneuploidy is very uncommon.",
+  "evidence": "Whereas domestication of livestock, pets, and crops is well documented, it is still unclear to what extent microbes associated with the production of food have also undergone human selection and where the plethora of industrial strains originates from. Here, we present the genomes and phenomes of 157 industrial Saccharomyces cerevisiae yeasts. Our analyses reveal that today's industrial yeasts can be divided into five sublineages that are genetically and phenotypically separated from wild strains and originate from only a few ancestors through complex patterns of domestication and local divergence. Large-scale phenotyping and genome analysis further show strong industry-specific selection for stress tolerance, sugar utilization, and flavor production, while the sexual cycle and other phenotypes related to survival in nature show decay, particularly in beer yeasts. Together, these results shed light on the origins, evolutionary history, and phenotypic diversity of industrial yeasts and provide a resource for further selection of superior strains. PAPERCLIP.",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-061.md",
+    "marker": "RECSTRESS-061_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-06",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-06-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-061.json",
+  "evidence_path": "evidence/RECSTRESS-061.md"
+}

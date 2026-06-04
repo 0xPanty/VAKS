@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-122",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 121,
+  "layer": "anchor_problem",
+  "claim": "High levels of CRP reduces the risk of exacerbations in chronic obstructive pulmonary disease (COPD).",
+  "evidence": "IMPORTANCE Exacerbations of respiratory symptoms in chronic obstructive pulmonary disease (COPD) have profound and long-lasting adverse effects on patients. OBJECTIVE To test the hypothesis that elevated levels of inflammatory biomarkers in individuals with stable COPD are associated with an increased risk of having exacerbations. DESIGN, SETTING, AND PARTICIPANTS Prospective cohort study examining 61,650 participants with spirometry measurements from the Copenhagen City Heart Study (2001-2003) and the Copenhagen General Population Study (2003-2008). Of these, 6574 had COPD, defined as a ratio between forced expiratory volume in 1 second (FEV1) and forced vital capacity below 0.7. MAIN OUTCOMES AND MEASURES Baseline levels of C-reactive protein (CRP) and fibrinogen and leukocyte count were measured in participants at a time when they were not experiencing symptoms of exacerbations. Exacerbations were recorded and defined as short-course treatment with oral corticosteroids alone or in combination with an antibiotic or as a hospital admission due to COPD. Levels of CRP and fibrinogen and leukocyte count were defined as high or low according to cut points of 3 mg/L, 14 μmol/L, and 9 ×10(9)/L, respectively. RESULTS During follow-up, 3083 exacerbations were recorded (mean, 0.5/participant). In the first year of follow-up, multivariable-adjusted odds ratios for having frequent exacer",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "selector_drift"
+  ],
+  "anchor_status": "drift",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "drift",
+    "path": "raw_sources/SCIFACT-122.md",
+    "document_hash": "c234cff915a1e455c0768bfd4adbd7ecf360d19d42ac862d4011c32490a9e7fa",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-122_ANCHOR",
+    "text_quote": "IMPORTANCE Exacerbations of respiratory symptoms in chronic obstructive pulmonary disease (COPD) have profound and long-lasting adverse effects on patients. OBJECTIVE To test the hypothesis that elevated levels of inflam",
+    "start": 220,
+    "end": 440
+  },
+  "record_path": "records/SCIFACT-122.json",
+  "evidence_path": "evidence/SCIFACT-122.md"
+}

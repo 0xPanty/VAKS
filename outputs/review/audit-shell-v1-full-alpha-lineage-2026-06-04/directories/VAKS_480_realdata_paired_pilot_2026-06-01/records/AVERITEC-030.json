@@ -1,0 +1,20 @@
+{
+  "id": "AVERITEC-030",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 29,
+  "claim": "The judiciary of Kenya have an average of 400,000 cases being filed in our courts every year.",
+  "evidence": "The average number of cases filed was 405,283 a year.",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-030.md",
+    "marker": "AVERITEC-030_ANCHOR"
+  }
+}

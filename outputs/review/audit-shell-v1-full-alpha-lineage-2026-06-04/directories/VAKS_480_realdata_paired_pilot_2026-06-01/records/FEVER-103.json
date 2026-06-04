@@ -1,0 +1,27 @@
+{
+  "id": "FEVER-103",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 102,
+  "claim": "James Taylor made an album.",
+  "evidence": "James_Taylor | 10 | He achieved his first number one album in the US in 2015 with his recording Before This World .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-103.md",
+    "marker": "FEVER-103_ANCHOR"
+  },
+  "recurrence_key": "rec-acd3b495ec",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "fever-open-v1-acd3b495ec",
+  "dedup_open_only": true
+}

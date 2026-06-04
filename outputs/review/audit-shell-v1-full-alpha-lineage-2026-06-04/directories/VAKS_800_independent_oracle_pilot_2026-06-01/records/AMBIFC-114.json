@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-114",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 113,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "the movie outbreak is based on a true story.",
+  "evidence": "Scenes in \"Cedar Creek\" were filmed in Ferndale, California, where tanks and helicopters were a common feature of daily life during nearly two months of filming. Other locations used were Dugway Proving Ground and Kauai. Producer Lynda Obst has stated that it was due to the production of Outbreak that her film adaptation of The Hot Zone was dropped by 20th Century Fox, despite having, in her words, \"the better package and... the better script\". She also claimed that director Wolfgang Petersen tried to entice Robert Redford, who was already cast for her film, to be a part of Outbreak, based on Redford's call to her. Obst would eventually have her adaptation of the book, but greenlit as a miniseries by National Geographic, which premiered in May 2019.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "ambiguous_scope"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-114.md",
+    "document_hash": "616d5b1d84bd093bcb3a84ba617f3ab14e9102280ccb77de05ea9b1fbca6c884",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-114_ANCHOR",
+    "text_quote": "Scenes in \"Cedar Creek\" were filmed in Ferndale, California, where tanks and helicopters were a common feature of daily life during nearly two months of filming. Other locations used were Dugway Proving Ground and Kauai.",
+    "start": 153,
+    "end": 373
+  },
+  "record_path": "records/AMBIFC-114.json",
+  "evidence_path": "evidence/AMBIFC-114.md"
+}

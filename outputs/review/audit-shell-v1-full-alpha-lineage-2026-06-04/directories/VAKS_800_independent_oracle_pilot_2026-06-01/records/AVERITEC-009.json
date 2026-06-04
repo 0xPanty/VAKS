@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-009",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 8,
+  "layer": "ordinary_stable",
+  "claim": "Joe Biden voted for the Irag War and supported war in Serbia, Syria and Libya.",
+  "evidence": "He supported the H.J.Res.114 - Authorization for Use of Military Force Against Iraq Resolution of 2002 107th Congress (2001-2002) Yes Biden had \"argued strongly\" within the White House \"against going ... to Libya,\" a stance that put him at odds with Secretary of State Hillary Clinton",
+  "source_label": "Conflicting Evidence/Cherrypicking",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-009.md",
+    "document_hash": "20b6beee08ef9f9a037f47ce23fa319e582738c8bf869c3751eed45370eca983",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-009_ANCHOR",
+    "text_quote": "He supported the H.J.Res.114 - Authorization for Use of Military Force Against Iraq Resolution of 2002 107th Congress (2001-2002) Yes Biden had \"argued strongly\" within the White House \"against going ... to Libya,\" a sta",
+    "start": 193,
+    "end": 413
+  },
+  "record_path": "records/AVERITEC-009.json",
+  "evidence_path": "evidence/AVERITEC-009.md"
+}

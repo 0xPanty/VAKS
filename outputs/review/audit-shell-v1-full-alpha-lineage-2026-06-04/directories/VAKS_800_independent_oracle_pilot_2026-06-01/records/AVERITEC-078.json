@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-078",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 77,
+  "layer": "action_challenge_conflict",
+  "claim": "Drinking traditional Chinese medicine (TCM) or steroids, along with antibiotics at the onset of symptoms cures COVID-19.",
+  "evidence": "No Scientists around the world are working to find and develop treatments for COVID-19. Home remedies and traditional medicine do not cure Covid-19. Dexamethasone is a corticosteroid that can help reduce the length of time on a ventilator and save lives of patients with severe and critical illness. Steroids can help treat the symptoms of Covid-19 but they do not cure it.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-078.md",
+    "document_hash": "70fd2d9900028fc46ee02a81914b25ac466f2c1c6681a1ef062ecbd5d5a25f06",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-078_ANCHOR",
+    "text_quote": "No Scientists around the world are working to find and develop treatments for COVID-19. Home remedies and traditional medicine do not cure Covid-19. Dexamethasone is a corticosteroid that can help reduce the length of ti",
+    "start": 235,
+    "end": 455
+  },
+  "record_path": "records/AVERITEC-078.json",
+  "evidence_path": "evidence/AVERITEC-078.md"
+}

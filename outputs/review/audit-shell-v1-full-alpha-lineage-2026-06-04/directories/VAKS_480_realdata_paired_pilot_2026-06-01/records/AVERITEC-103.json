@@ -1,0 +1,27 @@
+{
+  "id": "AVERITEC-103",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 102,
+  "claim": "Cold water affects the internal walls of the stomach. It affects the large intestine and results in cancer",
+  "evidence": "No",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-103.md",
+    "marker": "AVERITEC-103_ANCHOR"
+  },
+  "recurrence_key": "rec-0c1acf13e9",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "averitec-open-v1-0c1acf13e9",
+  "dedup_open_only": true
+}

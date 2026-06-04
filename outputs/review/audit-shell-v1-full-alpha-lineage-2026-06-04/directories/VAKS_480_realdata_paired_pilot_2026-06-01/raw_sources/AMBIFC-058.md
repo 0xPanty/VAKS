@@ -1,0 +1,7 @@
+# Raw Source AMBIFC-058
+dataset: ambifc
+source_row: 57
+marker: AMBIFC-058_ANCHOR
+claim: baby got out of jail in baby driver.
+label: neutral
+evidence: Wright views Baby's moral shift as the thematic crux of the film. According to David Sims at The Atlantic, Baby's initial moral detachment manifests through his reliance on music, which he uses to escape the chaos in his environment, and his own tinnitus. It is only because of his obligation to protect Debora, Joseph, and the impending threat of crime on his livelihood, that Baby is forced to confront reality, no longer able to ignore the mayhem around him. Baby Driver employs some of the conventions of gangster film, chiefly heroic fatalism and uncompromising villainy. Characteristic of Wright's films, Baby Driver is driven by strong color cues. Colors are used symbolically to represent the personas of the core characters. Whereas Baby is dressed in drab colors that reflect his black-and-white perspective of the universe, his peers are associated with bright, vibrant colors that clash with this sensibility: red symbolizes Bats, purple and pink symbolize Darling, and blue represents Buddy. As the story progresses, the pressures of organized crime become overwhelming, and Baby's wardrobe evolves by proxy. He is seen in faint greys and bloodstained white shirts at that point. Costume

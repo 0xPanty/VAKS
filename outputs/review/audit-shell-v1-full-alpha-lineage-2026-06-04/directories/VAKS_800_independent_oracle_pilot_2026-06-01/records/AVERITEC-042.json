@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-042",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 41,
+  "layer": "ordinary_stable",
+  "claim": "In Kenya, one Magistrate serves 77,000 people.",
+  "evidence": "546 magistrates The total enumerated population was 47,564,296 The total population is 47,564,296",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-042.md",
+    "document_hash": "68c1fb067507b4d1c23c979ef4cff7800884183997c6cb9f74c65cf7ce72d2e1",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-042_ANCHOR",
+    "text_quote": "546 magistrates The total enumerated population was 47,564,296 The total population is 47,564,296",
+    "start": 161,
+    "end": 258
+  },
+  "record_path": "records/AVERITEC-042.json",
+  "evidence_path": "evidence/AVERITEC-042.md"
+}

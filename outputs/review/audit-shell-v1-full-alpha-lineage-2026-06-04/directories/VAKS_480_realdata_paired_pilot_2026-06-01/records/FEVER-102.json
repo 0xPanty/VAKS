@@ -1,0 +1,27 @@
+{
+  "id": "FEVER-102",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 101,
+  "claim": "The 19th G7 summit only included Russia.",
+  "evidence": "19th_G7_summit | 4 | The Group of Seven -LRB- G7 -RRB- was an unofficial forum which brought together the heads of the richest industrialized countries : France , Germany , Italy , Japan , the United Kingdom , the United States , Canada -LRB- since 1976 -RRB- and the President of the European Commission -LRB- starting officially in 1981 -RRB- .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-102.md",
+    "marker": "FEVER-102_ANCHOR"
+  },
+  "recurrence_key": "rec-acd3b495ec",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "fever-open-v1-acd3b495ec",
+  "dedup_open_only": true
+}

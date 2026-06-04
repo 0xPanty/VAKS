@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-123",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 122,
+  "layer": "anchor_problem",
+  "claim": "High levels of copeptin decrease risk of diabetes.",
+  "evidence": "BACKGROUND Genetic and epidemiological evidence suggests an inverse association between B-type natriuretic peptide (BNP) levels in blood and risk of type 2 diabetes (T2D), but the prospective association of BNP with T2D is uncertain, and it is unclear whether the association is confounded. METHODS AND FINDINGS We analysed the association between levels of the N-terminal fragment of pro-BNP (NT-pro-BNP) in blood and risk of incident T2D in a prospective case-cohort study and genotyped the variant rs198389 within the BNP locus in three T2D case-control studies. We combined our results with existing data in a meta-analysis of 11 case-control studies. Using a Mendelian randomization approach, we compared the observed association between rs198389 and T2D to that expected from the NT-pro-BNP level to T2D association and the NT-pro-BNP difference per C allele of rs198389. In participants of our case-cohort study who were free of T2D and cardiovascular disease at baseline, we observed a 21% (95% CI 3%-36%) decreased risk of incident T2D per one standard deviation (SD) higher log-transformed NT-pro-BNP levels in analysis adjusted for age, sex, body mass index, systolic blood pressure, smoking, family history of T2D, history of hypertension, and levels of triglycerides, high-density lipoprotein cholesterol, and low-density lipoprotein cholesterol. The association between rs198389 and T2D",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "moved_pointer"
+  ],
+  "anchor_status": "moved",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "moved",
+    "path": "raw_sources/SCIFACT-123_moved.md",
+    "document_hash": "43d6cc40fb3fee7633a7b54d3f3efa0275d0b411d1c8b441e376f909db850c5b",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-123_ANCHOR",
+    "text_quote": "BACKGROUND Genetic and epidemiological evidence suggests an inverse association between B-type natriuretic peptide (BNP) levels in blood and risk of type 2 diabetes (T2D), but the prospective association of BNP with T2D ",
+    "start": 162,
+    "end": 382
+  },
+  "record_path": "records/SCIFACT-123.json",
+  "evidence_path": "evidence/SCIFACT-123.md"
+}

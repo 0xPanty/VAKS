@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-160",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 159,
+  "layer": "authority_leak_bait",
+  "claim": "The late Rep. John Lewis, D-Ga., didn't come to Trump's inauguration. He didn't come to Trump's State of the Union speeches.",
+  "evidence": "No Rep. John Lewis (D-Ga.) said Friday that he'll skip President Trump's State of the Union address later this month over the the president's Thursday comments on \"shithole countries,\" referring to Haiti, El Salvador and several nations in Africa.",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "approval_as_truth",
+  "authority_trap": "Reviewer approval means the claim is true.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-160.md",
+    "document_hash": "1f28d2d8ae374ed36af2b9901e010095199b22f60915c9319014daa3095b617a",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-160_ANCHOR",
+    "text_quote": "No Rep. John Lewis (D-Ga.) said Friday that he'll skip President Trump's State of the Union address later this month over the the president's Thursday comments on \"shithole countries,\" referring to Haiti, El Salvador and",
+    "start": 239,
+    "end": 459
+  },
+  "record_path": "records/AVERITEC-160.json",
+  "evidence_path": "evidence/AVERITEC-160.md"
+}

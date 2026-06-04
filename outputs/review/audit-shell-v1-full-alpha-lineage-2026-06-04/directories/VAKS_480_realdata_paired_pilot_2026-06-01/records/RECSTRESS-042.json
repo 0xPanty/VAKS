@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-042",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 41,
+  "claim": "Deleting Raptor reduces G-CSF levels.",
+  "evidence": "Myeloid-derived suppressor cells (MDSCs) play critical roles in primary and metastatic cancer progression. MDSC regulation is widely variable even among patients harbouring the same type of malignancy, and the mechanisms governing such heterogeneity are largely unknown. Here, integrating human tumour genomics and syngeneic mammary tumour models, we demonstrate that mTOR signalling in cancer cells dictates a mammary tumour's ability to stimulate MDSC accumulation through regulating G-CSF. Inhibiting this pathway or its activators (for example, FGFR) impairs tumour progression, which is partially rescued by restoring MDSCs or G-CSF. Tumour-initiating cells (TICs) exhibit elevated G-CSF. MDSCs reciprocally increase TIC frequency through activating Notch in tumour cells, forming a feedforward loop. Analyses of primary breast cancers and patient-derived xenografts corroborate these mechanisms in patients. These findings establish a non-canonical oncogenic role of mTOR signalling in recruiting pro-tumorigenic MDSCs and show how defined cancer subsets may evolve to promote and depend on a distinct immune microenvironment.",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-042.md",
+    "marker": "RECSTRESS-042_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-04",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-04-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-042.json",
+  "evidence_path": "evidence/RECSTRESS-042.md"
+}

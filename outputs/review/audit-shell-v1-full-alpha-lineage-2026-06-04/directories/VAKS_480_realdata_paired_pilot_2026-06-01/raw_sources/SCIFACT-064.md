@@ -1,0 +1,7 @@
+# Raw Source SCIFACT-064
+dataset: scifact
+source_row: 63
+marker: SCIFACT-064_ANCHOR
+claim: In young and middle-aged adults, current or remote uses of ADHD medications do not increase the risk of serious cardiovascular events.
+label: 
+evidence: CONTEXT More than 1.5 million US adults use stimulants and other medications labeled for treatment of attention-deficit/hyperactivity disorder (ADHD). These agents can increase heart rate and blood pressure, raising concerns about their cardiovascular safety. OBJECTIVE To examine whether current use of medications prescribed primarily to treat ADHD is associated with increased risk of serious cardiovascular events in young and middle-aged adults. DESIGN, SETTING, AND PARTICIPANTS Retrospective, population-based cohort study using electronic health care records from 4 study sites (OptumInsight Epidemiology, Tennessee Medicaid, Kaiser Permanente California, and the HMO Research Network), starting in 1986 at 1 site and ending in 2005 at all sites, with additional covariate assessment using 2007 survey data. Participants were adults aged 25 through 64 years with dispensed prescriptions for methylphenidate, amphetamine, or atomoxetine at baseline. Each medication user (n = 150,359) was matched to 2 nonusers on study site, birth year, sex, and calendar year (443,198 total users and nonusers). MAIN OUTCOME MEASURES Serious cardiovascular events, including myocardial infarction (MI), sudde

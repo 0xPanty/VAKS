@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-074",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 73,
+  "claim": "Localization of PIN1 in the roots of Arabidopsis does not require VPS9a",
+  "evidence": "Dynamically polarized membrane proteins define different cell boundaries and have an important role in intercellular communication—a vital feature of multicellular development. Efflux carriers for the signalling molecule auxin from the PIN family are landmarks of cell polarity in plants and have a crucial involvement in auxin distribution-dependent development including embryo patterning, organogenesis and tropisms. Polar PIN localization determines the direction of intercellular auxin flow, yet the mechanisms generating PIN polarity remain unclear. Here we identify an endocytosis-dependent mechanism of PIN polarity generation and analyse its developmental implications. Real-time PIN tracking showed that after synthesis, PINs are initially delivered to the plasma membrane in a non-polar manner and their polarity is established by subsequent endocytic recycling. Interference with PIN endocytosis either by auxin or by manipulation of the Arabidopsis Rab5 GTPase pathway prevents PIN polarization. Failure of PIN polarization transiently alters asymmetric auxin distribution during embryogenesis and increases the local auxin response in apical embryo regions. This results in ectopic expr",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-074.md",
+    "marker": "RECSTRESS-074_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-07",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-07-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-074.json",
+  "evidence_path": "evidence/RECSTRESS-074.md"
+}

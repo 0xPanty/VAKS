@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-045",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 44,
+  "layer": "ordinary_stable",
+  "claim": "A pizza place in Washington, D.C. -- Comet Ping Pong has ties to Hillary Clinton and other leading Democrats",
+  "evidence": "Pizzagate is the theory that holds that a particular pizza place in Washington, D.C. -- Comet Ping Pong -- is a front for a child sex-trafficking ring tied to Hillary Clinton and other leading Democrats. No No",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-045.md",
+    "document_hash": "2eb418bdcbf280149c2030affb8c29380978764a3b674a350a80fef51157670e",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-045_ANCHOR",
+    "text_quote": "Pizzagate is the theory that holds that a particular pizza place in Washington, D.C. -- Comet Ping Pong -- is a front for a child sex-trafficking ring tied to Hillary Clinton and other leading Democrats. No No",
+    "start": 223,
+    "end": 432
+  },
+  "record_path": "records/AVERITEC-045.json",
+  "evidence_path": "evidence/AVERITEC-045.md"
+}

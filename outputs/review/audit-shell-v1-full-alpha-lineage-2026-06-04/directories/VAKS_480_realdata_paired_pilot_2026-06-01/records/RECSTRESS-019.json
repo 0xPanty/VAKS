@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-019",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 18,
+  "claim": "Autologous transplantation of mesenchymal stem cells causes a higher rate of opportunistic infections than induction therapy with anti-interleukin-2 receptor antibodies.",
+  "evidence": "CONTEXT Antibody-based induction therapy plus calcineurin inhibitors (CNIs) reduce acute rejection rates in kidney recipients; however, opportunistic infections and toxic CNI effects remain challenging. Reportedly, mesenchymal stem cells (MSCs) have successfully treated graft-vs-host disease. OBJECTIVE To assess autologous MSCs as replacement of antibody induction for patients with end-stage renal disease who undergo ABO-compatible, cross-match-negative kidney transplants from a living-related donor. DESIGN, SETTING, AND PATIENTS One hundred fifty-nine patients were enrolled in this single-site, prospective, open-label, randomized study from February 2008-May 2009, when recruitment was completed. INTERVENTION Patients were inoculated with marrow-derived autologous MSC (1-2 x 10(6)/kg) at kidney reperfusion and two weeks later. Fifty-three patients received standard-dose and 52 patients received low-dose CNIs (80% of standard); 51 patients in the control group received anti-IL-2 receptor antibody plus standard-dose CNIs. MAIN OUTCOME MEASURES The primary measure was 1-year incidence of acute rejection and renal function (estimated glomerular filtration rate [eGFR]); the secondary me",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-019.md",
+    "marker": "RECSTRESS-019_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-01",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "stress-rec-01-fp-v2",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-019.json",
+  "evidence_path": "evidence/RECSTRESS-019.md"
+}

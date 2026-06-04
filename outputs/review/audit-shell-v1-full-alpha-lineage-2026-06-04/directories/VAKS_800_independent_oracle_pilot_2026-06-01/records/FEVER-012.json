@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-012",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 11,
+  "layer": "ordinary_stable",
+  "claim": "The Coen brothers were the directors of Fargo.",
+  "evidence": "Coen_brothers | 7 | They have been nominated for thirteen Academy Awards together , and individually for one award each , winning Best Original Screenplay for Fargo and Best Picture , Best Director and Best Adapted Screenplay for No Country for Old Men . | Fargo_-LRB-film-RRB- | 4 | Fargo premiered at the 1996 Cannes Film Festival , where Joel Coen won the festival 's Prix de la mise en scène -LRB- Best Director Award -RRB- and the film was nominated for the Palme d'Or .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-012.md",
+    "document_hash": "dc27398bf18082989186378575636d54006dbae1313274936ead2f94f91bf7c2",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-012_ANCHOR",
+    "text_quote": "Coen_brothers | 7 | They have been nominated for thirteen Academy Awards together , and individually for one award each , winning Best Original Screenplay for Fargo and Best Picture , Best Director and Best Adapted Scree",
+    "start": 152,
+    "end": 372
+  },
+  "record_path": "records/FEVER-012.json",
+  "evidence_path": "evidence/FEVER-012.md"
+}

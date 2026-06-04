@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-083",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 82,
+  "layer": "action_challenge_conflict",
+  "claim": "DMRT1 is a sex-determining gene that is epigenetically regulated by the MHM region.",
+  "evidence": "In the mammalian model of sex determination, embryos are considered to be sexually indifferent until the transient action of a sex-determining gene initiates gonadal differentiation. Although this model is thought to apply to all vertebrates, this has yet to be established. Here we have examined three lateral gynandromorph chickens (a rare, naturally occurring phenomenon in which one side of the animal appears male and the other female) to investigate the sex-determining mechanism in birds. These studies demonstrated that gynandromorph birds are genuine male:female chimaeras, and indicated that male and female avian somatic cells may have an inherent sex identity. To test this hypothesis, we transplanted presumptive mesoderm between embryos of reciprocal sexes to generate embryos containing male:female chimaeric gonads. In contrast to the outcome for mammalian mixed-sex chimaeras, in chicken mixed-sex chimaeras the donor cells were excluded from the functional structures of the host gonad. In an example where female tissue was transplanted into a male host, donor cells contributing to the developing testis retained a female identity and expressed a marker of female function. Our study demonstrates that avian somatic cells possess an inherent sex identity and that, in birds, sexual differentiation is substantively cell autonomous.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "explicit_challenge"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-083.md",
+    "document_hash": "eca2fc1ceae6f9499fa4df9c6bc0c30fe02da5fd3bde5eea78c93c8579d9e007",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-083_ANCHOR",
+    "text_quote": "In the mammalian model of sex determination, embryos are considered to be sexually indifferent until the transient action of a sex-determining gene initiates gonadal differentiation. Although this model is thought to app",
+    "start": 195,
+    "end": 415
+  },
+  "record_path": "records/SCIFACT-083.json",
+  "evidence_path": "evidence/SCIFACT-083.md"
+}

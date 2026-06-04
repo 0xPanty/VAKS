@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-071",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 70,
+  "claim": "Lack of clpC does not affect sporulation efficiency in Bacillus subtilis cells.",
+  "evidence": "The differentiation of the bacterium Bacillus subtilis into a dormant spore is among the most well-characterized developmental pathways in biology. Classical genetic screens performed over the past half century identified scores of factors involved in every step of this morphological process. More recently, transcriptional profiling uncovered additional sporulation-induced genes required for successful spore development. Here, we used transposon-sequencing (Tn-seq) to assess whether there were any sporulation genes left to be discovered. Our screen identified 133 out of the 148 genes with known sporulation defects. Surprisingly, we discovered 24 additional genes that had not been previously implicated in spore formation. To investigate their functions, we used fluorescence microscopy to survey early, middle, and late stages of differentiation of null mutants from the B. subtilis ordered knockout collection. This analysis identified mutants that are delayed in the initiation of sporulation, defective in membrane remodeling, and impaired in spore maturation. Several mutants had novel sporulation phenotypes. We performed in-depth characterization of two new factors that participate in",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-071.md",
+    "marker": "RECSTRESS-071_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-07",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-07-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-071.json",
+  "evidence_path": "evidence/RECSTRESS-071.md"
+}

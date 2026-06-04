@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-137",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 16,
+  "claim": "We actually saw revenues to the Treasury increase after we lowered taxes in 2017. Rest assured the Democrats do not want you to know that.",
+  "evidence": "No, Really, Tax Revenue Has Not Risen Total revenue over the time period in question has actually fallen by 1.6 percent in real (inflation-adjusted) terms",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-137.md",
+    "marker": "RECSTRESS-137_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-13",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "stress-rec-13-fp-v2",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-137.json",
+  "evidence_path": "evidence/RECSTRESS-137.md"
+}

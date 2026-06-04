@@ -1,0 +1,7 @@
+# Raw Source AVERITEC-006
+dataset: averitec
+source_row: 5
+marker: AVERITEC-006_ANCHOR
+claim: The Common Law Admission Test (CLAT) 2020 will not be conducted on September 7, 2020, as planned
+label: Refuted
+evidence: No it was a fake notification and an official announcement was made saying: "Sub: Fake Notification Regarding Postponement of the CLAT 2020 Examination 1. It has come to the attention of the Consortium of National Universities (the “Consortium”) that a document purporting to be a Notification issued by the Consortium and announcing the postponement of the CLAT 2020 from its scheduled date of September 7, 2020 is being circulated on the internet (the “Fake Notification”). 2. The Consortium hereby categorically states that the Fake Notification has not been issued by the Consortium. The date of the CLAT 2020 examination, and all other particulars, in relation to the CLAT 2020 examination remain unaltered. 3. Official Notifications from the Consortium are available at https://consortiumofnlus.ac.in/ 4. You may confirm or clarify any information by writing to clat@consortiumofnlus.ac.in"

@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-100",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 99,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Cold drinks are the main cause of heart attacks.",
+  "evidence": "No Yes",
+  "source_label": "Not Enough Evidence",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-100.md",
+    "document_hash": "592c8ea8c5061f745c1084a681799156c6f48cefdbc17dd967f70c850f08b868",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-100_ANCHOR",
+    "text_quote": "No Yes",
+    "start": 163,
+    "end": 169
+  },
+  "record_path": "records/AVERITEC-100.json",
+  "evidence_path": "evidence/AVERITEC-100.md"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "FEVER-091",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 90,
+  "claim": "The English language isn't influenced by Germanic languages.",
+  "evidence": "English_language | 0 | English -LSB- ˈɪŋɡlɪʃ -RSB- is a West Germanic language that was first spoken in early medieval England and is now the global lingua franca .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-091.md",
+    "marker": "FEVER-091_ANCHOR"
+  }
+}

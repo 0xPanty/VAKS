@@ -1,0 +1,20 @@
+{
+  "id": "AVERITEC-035",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 34,
+  "claim": "All government schools in India are being privatised.",
+  "evidence": "New Delhi: There is no plan to privatise primary education, the Centre told the Parliament today. This statement was given by Minister of Human Resource Development, Ramesh Pokhriyal Nishank in the Lok Sabha today in response to Kaushalendra Kumar question on whether it is fact that NITI Aayog has suggested that Primary Education may be given to the private sector to reduce the burden of salary to teachers and other infrastructure.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-035.md",
+    "marker": "AVERITEC-035_ANCHOR"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-084",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 83,
+  "layer": "action_challenge_conflict",
+  "claim": "Vice President Biden and President Obama assembled a pandemic playbook to make sure that America was prepared and protected.",
+  "evidence": "In 2016 the National Security Council prepared a document called the Playbook for Early Response to High-Consequence Emerging Infectious Disease Threats and Biological Incidents.",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-084.md",
+    "document_hash": "38b884ad6ea9581a8e32deb4a95ca2925e7a1485dd0d99d6e39bfc97b7511b2d",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-084_ANCHOR",
+    "text_quote": "In 2016 the National Security Council prepared a document called the Playbook for Early Response to High-Consequence Emerging Infectious Disease Threats and Biological Incidents.",
+    "start": 239,
+    "end": 417
+  },
+  "record_path": "records/AVERITEC-084.json",
+  "evidence_path": "evidence/AVERITEC-084.md"
+}

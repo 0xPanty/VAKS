@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-052",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 51,
+  "layer": "ordinary_stable",
+  "claim": "the atomic number is equal to the number of protons.",
+  "evidence": "The atomic number or proton number (symbol Z) of a chemical element is the number of protons found in the nucleus of every atom of that element. The atomic number uniquely identifies a chemical element. It is identical to the charge number of the nucleus. In an uncharged atom, the atomic number is also equal to the number of electrons. The sum of the atomic number Z and the number of neutrons N gives the mass number A of an atom. Since protons and neutrons have approximately the same mass (and the mass of the electrons is negligible for many purposes) and the mass defect of nucleon binding is always small compared to the nucleon mass, the atomic mass of any atom, when expressed in unified atomic mass units (making a quantity called the \"relative isotopic mass\"), is within 1% of the whole number A. Atoms with the same atomic number but different neutron numbers, and hence different mass numbers, are known as isotopes. A little more than three-quarters of naturally occurring elements exist as a mixture of isotopes (see monoisotopic elements), and the average isotopic mass of an isotopic mixture for an element (called the relative atomic mass) in a defined environment on Earth, determines the element's standard atomic weight. Historically, it was these atomic weights of elements (in comparison to hydrogen) that were the quantities measurable by chemists in the 19th century. The co",
+  "source_label": "supporting",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-052.md",
+    "document_hash": "43f27d26044b515ec6651638d2981a3b1bd7016120678183cdae1dfe2a060b39",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-052_ANCHOR",
+    "text_quote": "The atomic number or proton number (symbol Z) of a chemical element is the number of protons found in the nucleus of every atom of that element. The atomic number uniquely identifies a chemical element. It is identical t",
+    "start": 161,
+    "end": 381
+  },
+  "record_path": "records/AMBIFC-052.json",
+  "evidence_path": "evidence/AMBIFC-052.md"
+}

@@ -1,0 +1,7 @@
+# Raw Source AVERITEC-079
+dataset: averitec
+source_row: 78
+marker: AVERITEC-079_ANCHOR
+claim: The Sarang Jeil Church of Jesus took preventative measure against coronavirus but the government spread the virus to prevent Rev. Jeon Kwang-hun attending the anti-government demonstration on August 15th.
+label: Refuted
+evidence: This new burst of patients has been linked to conservative pastor Rev. Jeon Kwang-hun’s Sarang Jeil Church (SJC) after one member was tested positive for the coronavirus on Aug. 12. Three days later the SJC members took part in a mass anti-government demonstration – despite being told by health officials to self-isolate. More than 30,000 people participated in the protests on Aug. 15, Korea’s Independence Day, to demand that President Moon Jae-In step down. At the rally, the Rev. Jeon expressed doubt regarding the government’s response to the virus in religious communities and suggested there was a government plot to purposefully spread the virus. According to media reports, the SJC has not followed government-issued outlines for sermons. The list of churchgoers submitted by the church for case-tracking purposes was found to be faulty, and Rev. Jeon was caught on a video speaking and walking around without a mask. The city of Seoul filed a lawsuit against the church for violation of disease prevention laws and obstructing quarantine procedures. Jeon, whose church is not officially recognized, tested positive for the coronavirus two days after the protests. Against regulations, he h

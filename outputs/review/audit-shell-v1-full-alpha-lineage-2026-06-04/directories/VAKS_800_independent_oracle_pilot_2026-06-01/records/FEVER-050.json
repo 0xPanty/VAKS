@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-050",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 49,
+  "layer": "ordinary_stable",
+  "claim": "Gimli was featured in a legendarium.",
+  "evidence": "Gimli_-LRB-Middle-earth-RRB- | 0 | Gimli is a fictional character from J. R. R. Tolkien 's Middle-earth legendarium , featured in The Lord of the Rings .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-050.md",
+    "document_hash": "6702470ca51f385f1b0890701b75162f9d79fc53f881ff8068b8e21761beb10b",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-050_ANCHOR",
+    "text_quote": "Gimli_-LRB-Middle-earth-RRB- | 0 | Gimli is a fictional character from J. R. R. Tolkien 's Middle-earth legendarium , featured in The Lord of the Rings .",
+    "start": 142,
+    "end": 295
+  },
+  "record_path": "records/FEVER-050.json",
+  "evidence_path": "evidence/FEVER-050.md"
+}

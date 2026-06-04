@@ -1,0 +1,63 @@
+{
+  "timing_prefilled": false,
+  "main_core": {
+    "assignments": 240,
+    "unique_cases": 120,
+    "variants": [
+      "baseline_full",
+      "shell_core"
+    ],
+    "coverage": {
+      "unique_cases": 120,
+      "resolved_cases": 14,
+      "can_group_cases": 22,
+      "non_valid_anchor_cases": 22,
+      "authority_family_cases": 10,
+      "anchor_jumpback_failure_layer": 8,
+      "over_grouping_near_miss_layer": 10,
+      "serious_folded_violation_layer": 8,
+      "layer_counts": {
+        "ordinary_stable": 24,
+        "action_challenge_conflict": 22,
+        "anchor_problem": 10,
+        "anchor_jumpback_failure": 8,
+        "resolved_repeated_recurrence": 28,
+        "authority_leak_bait": 10,
+        "over_grouping_near_miss": 10,
+        "serious_folded_violation": 8
+      },
+      "pool_counts": {
+        "main_public": 94,
+        "adversarial_holdout": 26
+      }
+    }
+  },
+  "side_recurrence": {
+    "assignments": 120,
+    "unique_cases": 60,
+    "variants": [
+      "shell_core",
+      "shell_core_plus_recurrence"
+    ],
+    "coverage": {
+      "unique_cases": 60,
+      "resolved_cases": 14,
+      "can_group_cases": 34,
+      "non_valid_anchor_cases": 6,
+      "authority_family_cases": 0,
+      "anchor_jumpback_failure_layer": 0,
+      "over_grouping_near_miss_layer": 14,
+      "serious_folded_violation_layer": 8,
+      "layer_counts": {
+        "resolved_repeated_recurrence": 38,
+        "over_grouping_near_miss": 14,
+        "serious_folded_violation": 8
+      },
+      "pool_counts": {
+        "main_public": 38,
+        "adversarial_holdout": 22
+      }
+    }
+  },
+  "note": "Review sheets are intentionally blank. Expected state/gold is not exposed in assignment rows."
+}

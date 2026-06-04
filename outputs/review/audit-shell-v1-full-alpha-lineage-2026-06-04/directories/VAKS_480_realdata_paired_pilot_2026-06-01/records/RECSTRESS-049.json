@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-049",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 48,
+  "claim": "Exposure to fine particulate air pollution is relate to anxiety prevalence.",
+  "evidence": "OBJECTIVE To determine whether higher past exposure to particulate air pollution is associated with prevalent high symptoms of anxiety. DESIGN Observational cohort study. SETTING Nurses' Health Study. PARTICIPANTS 71,271 women enrolled in the Nurses' Health Study residing throughout the contiguous United States who had valid estimates on exposure to particulate matter for at least one exposure period of interest and data on anxiety symptoms. MAIN OUTCOME MEASURES Meaningfully high symptoms of anxiety, defined as a score of 6 points or greater on the phobic anxiety subscale of the Crown-Crisp index, administered in 2004. RESULTS The 71,271 eligible women were aged between 57 and 85 years (mean 70 years) at the time of assessment of anxiety symptoms, with a prevalence of high anxiety symptoms of 15%. Exposure to particulate matter was characterized using estimated average exposure to particulate matter <2.5 μm in diameter (PM2.5) and 2.5 to 10 μm in diameter (PM2.5-10) in the one month, three months, six months, one year, and 15 years prior to assessment of anxiety symptoms, and residential distance to the nearest major road two years prior to assessment. Significantly increased odds",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-049.md",
+    "marker": "RECSTRESS-049_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-04",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "stress-rec-04-fp-v2",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-049.json",
+  "evidence_path": "evidence/RECSTRESS-049.md"
+}

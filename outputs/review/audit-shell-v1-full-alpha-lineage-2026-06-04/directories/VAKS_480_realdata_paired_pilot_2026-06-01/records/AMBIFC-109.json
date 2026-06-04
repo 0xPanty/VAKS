@@ -1,0 +1,27 @@
+{
+  "id": "AMBIFC-109",
+  "dataset_family": "ambifc",
+  "source_dataset_status": "real_row",
+  "source_row_index": 108,
+  "claim": "every nation state does have a national government.",
+  "evidence": "Israel was founded as a Jewish state in 1948. Its \"Basic Laws\" describe it as both a Jewish and a democratic state. The Basic Law: Israel as the Nation-State of the Jewish People (2018) explicitly specifies the nature of the State of Israel as the nation-state of the Jewish people. According to the Israel Central Bureau of Statistics, 75.7% of Israel's population are Jews. Arabs, who make up 20.4% of the population, are the largest ethnic minority in Israel. Israel also has very small communities of Armenians, Circassians, Assyrians, Samaritans. There are also some non-Jewish spouses of Israeli Jews. However, these communities are very small, and usually number only in the hundreds or thousands.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-109.md",
+    "marker": "AMBIFC-109_ANCHOR"
+  },
+  "recurrence_key": "rec-331c4d1d1f",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "ambifc-open-v2-331c4d1d1f",
+  "dedup_open_only": true
+}

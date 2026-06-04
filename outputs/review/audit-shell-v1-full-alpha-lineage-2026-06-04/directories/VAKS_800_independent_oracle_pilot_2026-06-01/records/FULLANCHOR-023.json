@@ -1,0 +1,38 @@
+{
+  "id": "FULLANCHOR-023",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 22,
+  "layer": "full_anchor_click",
+  "claim": "In Kenya now with a population of about 48 million, there is one judge serving over 300,000 people.",
+  "evidence": "47,564,296 153 310,877.751634\n\n(Round up to 311)",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "real_web_snapshot",
+  "source_anchor": {
+    "status": "valid",
+    "path": "real_source_snapshots/FULLANCHOR-023.txt",
+    "document_hash": "72b00a11693e35f7a03f0f81aa36f4fb49dd690a550a127bc1b51a1e4c6a8cef",
+    "version_id": "real-web-snapshot-v2",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-023_REAL_SNAPSHOT",
+    "text_quote": "Claim In Kenya now with a population of about 48 million, we have one judge serving over 300,000 people Verdict correct There are 47.",
+    "start": 5253,
+    "end": 5386,
+    "quote_strategy": "claim_keyword_window",
+    "landing_class": "claim_relevant_context_landing",
+    "semantic_selector_success": true,
+    "boilerplate_quote": false
+  },
+  "record_path": "records/FULLANCHOR-023.json",
+  "evidence_path": "evidence/FULLANCHOR-023.md",
+  "real_snapshot_url": "https://web.archive.org/web/20210127231105/https://africacheck.org/fact-checks/reports/factchecking-kenyas-chief-justice-judiciary-funding-and-backlog-cases",
+  "clickback_snapshot_kind": "live_urllib_retry"
+}

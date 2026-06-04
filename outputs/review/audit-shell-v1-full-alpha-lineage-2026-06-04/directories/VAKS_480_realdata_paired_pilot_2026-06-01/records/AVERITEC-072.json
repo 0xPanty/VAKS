@@ -1,0 +1,22 @@
+{
+  "id": "AVERITEC-072",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 71,
+  "claim": "Donald Trump is trying to take away the health care by getting rid of the Affordable Care Act.",
+  "evidence": "The Affordable Care Act (ACA)will provide one of the largest expansions of mental health and substance use disorder coverage in a generation. Beginning in 2014 under the law, all new small group and individual market plans will be required to cover ten Essential Health Benefit categories Yes",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-072.md",
+    "marker": "AVERITEC-072_ANCHOR"
+  }
+}

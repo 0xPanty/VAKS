@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-106",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 105,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Richard Nixon's wife governed Washington in 1942.",
+  "evidence": "Richard_Nixon_Foundation | 10 | The Nixon Foundation is governed by a Board of Directors , led by former Nixon White House Director of Presidential Advance Ronald H. Walker .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-106.md",
+    "document_hash": "c5032a6e83beb79423dd029cf3f5c536011a2a9c5d044b44e6630274a6dc2a6b",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-106_ANCHOR",
+    "text_quote": "Richard_Nixon_Foundation | 10 | The Nixon Foundation is governed by a Board of Directors , led by former Nixon White House Director of Presidential Advance Ronald H. Walker .",
+    "start": 155,
+    "end": 329
+  },
+  "record_path": "records/FEVER-106.json",
+  "evidence_path": "evidence/FEVER-106.md"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "FEVER-119",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 118,
+  "claim": "Giampaolo Pazzini only ever played for the Hellas Verona club.",
+  "evidence": "Giampaolo_Pazzini | 1 | Throughout his club career , he has only played for teams in Italy , previously playing for Atalanta , Fiorentina , Sampdoria , Internazionale and Milan .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "test_pass_as_truth",
+  "authority_trap": "Because the benchmark passed, we can trust this answer.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-119.md",
+    "marker": "FEVER-119_ANCHOR"
+  }
+}

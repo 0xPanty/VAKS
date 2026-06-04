@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-063",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 62,
+  "layer": "action_challenge_conflict",
+  "claim": "Bruno Mar's band plays different instruments.",
+  "evidence": "Bruno_Mars | 20 | He is accompanied by his band , The Hooligans , who play a variety of instruments such as electric guitar , bass , piano , keyboards , drums and horns , and also serve as backup singers and dancers .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-063.md",
+    "document_hash": "42b6d7e1bac095f5e42442917547a8a427375d69df831f47062a0ce6d573d0ff",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-063_ANCHOR",
+    "text_quote": "Bruno_Mars | 20 | He is accompanied by his band , The Hooligans , who play a variety of instruments such as electric guitar , bass , piano , keyboards , drums and horns , and also serve as backup singers and dancers .",
+    "start": 151,
+    "end": 368
+  },
+  "record_path": "records/FEVER-063.json",
+  "evidence_path": "evidence/FEVER-063.md"
+}

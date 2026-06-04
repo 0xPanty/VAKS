@@ -1,0 +1,31 @@
+{
+  "id": "HOLDOUT-013",
+  "pool": "adversarial_holdout",
+  "dataset_family": "scifact",
+  "source_row_index": 12,
+  "layer": "false_lite_trap",
+  "claim": "AMP-activated protein kinase (AMPK) activation increases inflammation-related fibrosis in the lungs.",
+  "evidence": "Fibrosis is a pathological result of a dysfunctional repair response to tissue injury and occurs in a number of organs, including the lungs1. Cellular metabolism regulates tissue repair and remodelling responses to injury2-4. AMPK is a critical sensor of cellular bioenergetics and controls the switch from anabolic to catabolic metabolism5. However, the role of AMPK in fibrosis is not well understood. Here, we demonstrate that in humans with idiopathic pulmonary fibrosis (IPF) and in an experimental mouse model of lung fibrosis, AMPK activity is lower in fibrotic regions associated with metabolically active and apoptosis-resistant myofibroblasts. Pharmacological activation of AMPK in myofibroblasts from lungs of humans with IPF display lower fibrotic activity, along with enhanced mitochondrial biogenesis and normalization of sensitivity to apoptosis. In a bleomycin model of lung fibrosis in mice, metformin therapeutically accelerates the resolution of well-established fibrosis in an AMPK-dependent manner. These studies implicate deficient AMPK activation in non-resolving, pathologic fibrotic processes, and support a role for metformin (or other AMPK activators) to reverse established fibrosis by facilitating deactivation and apoptosis of myofibroblasts.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/HOLDOUT-013.md",
+    "document_hash": "4795d7a3d255b049f0d1cafa96a68ed241d26711c43da15ed4d46b1ab5c37eeb",
+    "version_id": "holdout-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "HOLDOUT-013_ANCHOR",
+    "text_quote": "Fibrosis is a pathological result of a dysfunctional repair response to tissue injury and occurs in a number of organs, including the lungs1. Cellular metabolism regulates tissue repair and remodelling responses to injur",
+    "start": 212,
+    "end": 432
+  },
+  "record_path": "records/HOLDOUT-013.json",
+  "evidence_path": "evidence/HOLDOUT-013.md"
+}

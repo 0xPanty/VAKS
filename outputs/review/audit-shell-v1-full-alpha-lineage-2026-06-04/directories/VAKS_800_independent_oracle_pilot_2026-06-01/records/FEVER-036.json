@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-036",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 35,
+  "layer": "ordinary_stable",
+  "claim": "Ulysses S. Grant worked with George Washington.",
+  "evidence": "Ulysses_S._Grant | 0 | Ulysses S. Grant -LRB- born Hiram Ulysses Grant ; April 27 , 1822 -- July 23 , 1885 -RRB- was the 18th President of the United States -LRB- 1869 -- 77 -RRB- . | George_Washington | 0 | George Washington -LRB- -LSB- ˈdʒɔɹdʒ_ˈwɒʃɪŋtən -RSB- -- , 1799 -RRB- was an American politician and soldier who served as the first President of the United States from 1789 to 1797 and was one of the Founding Fathers of the United States .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-036.md",
+    "document_hash": "41cc9052c4bc5305e992e84bf4ecd0181e5d868f59d3a37a0f12a862babf4db8",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-036_ANCHOR",
+    "text_quote": "Ulysses_S._Grant | 0 | Ulysses S. Grant -LRB- born Hiram Ulysses Grant ; April 27 , 1822 -- July 23 , 1885 -RRB- was the 18th President of the United States -LRB- 1869 -- 77 -RRB- . | George_Washington | 0 | George Washi",
+    "start": 153,
+    "end": 373
+  },
+  "record_path": "records/FEVER-036.json",
+  "evidence_path": "evidence/FEVER-036.md"
+}

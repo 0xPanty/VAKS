@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-038",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 37,
+  "layer": "ordinary_stable",
+  "claim": "The Formula (1980 film) is an American mystery film.",
+  "evidence": "The_Formula_-LRB-1980_film-RRB- | 0 | The Formula is a 1980 American mystery film directed by John G. Avildsen and released by Metro-Goldwyn-Mayer .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-038.md",
+    "document_hash": "0672c9286c5eb98f90039455f2754a1302fecda259b3e4e600c440e1a531500b",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-038_ANCHOR",
+    "text_quote": "The_Formula_-LRB-1980_film-RRB- | 0 | The Formula is a 1980 American mystery film directed by John G. Avildsen and released by Metro-Goldwyn-Mayer .",
+    "start": 158,
+    "end": 306
+  },
+  "record_path": "records/FEVER-038.json",
+  "evidence_path": "evidence/FEVER-038.md"
+}

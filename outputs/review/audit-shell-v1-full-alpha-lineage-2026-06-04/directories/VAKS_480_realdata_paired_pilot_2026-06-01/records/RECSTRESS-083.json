@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-083",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 82,
+  "claim": "MicroRNA is involved in the regulation of Neural Stem Cell (NSC) differentiation and proliferation dynamic homeostasis",
+  "evidence": "Methyl-CpG binding protein 1 (MBD1) regulates gene expression via a DNA methylation-mediated epigenetic mechanism. We have previously demonstrated that MBD1 deficiency impairs adult neural stem/progenitor cell (aNSC) differentiation and neurogenesis, but the underlying mechanism was unclear. Here, we show that MBD1 regulates the expression of several microRNAs in aNSCs and, specifically, that miR-184 is directly repressed by MBD1. High levels of miR-184 promoted proliferation but inhibited differentiation of aNSCs, whereas inhibition of miR-184 rescued the phenotypes associated with MBD1 deficiency. We further found that miR-184 regulates the expression of Numblike (Numbl), a known regulator of brain development, by binding to the 3'-UTR of Numbl mRNA and affecting its translation. Expression of exogenous Numbl could rescue the aNSC defects that result from either miR-184 overexpression or MBD1 deficiency. Therefore, MBD1, miR-184, and Numbl form a regulatory network that helps control the balance between proliferation and differentiation of aNSCs.",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-083.md",
+    "marker": "RECSTRESS-083_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-08",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-08-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-083.json",
+  "evidence_path": "evidence/RECSTRESS-083.md"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "FEVER-008",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 7,
+  "claim": "Chokher Bali was nominated for a Golden Leopard in 2003.",
+  "evidence": "Chokher_Bali_-LRB-film-RRB- | 10 | Chokher Bali won the National Film Award for Best Feature Film in Bengali and was nominated for the Golden Leopard -LRB- Best Film -RRB- award at the Locarno International Film Festival in 2003 .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-008.md",
+    "marker": "FEVER-008_ANCHOR"
+  }
+}

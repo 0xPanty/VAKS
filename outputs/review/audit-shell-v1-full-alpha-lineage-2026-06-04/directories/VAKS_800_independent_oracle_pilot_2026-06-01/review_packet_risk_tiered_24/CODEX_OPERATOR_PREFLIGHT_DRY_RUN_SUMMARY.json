@@ -1,0 +1,21 @@
+{
+  "status": "codex_operator_dry_run_only",
+  "sample_count": 24,
+  "state_understood": 24,
+  "risk_reason_understood": 24,
+  "wrong_actionability": 0,
+  "serious_miss": 0,
+  "authority_misunderstanding": 0,
+  "source_path_opens": 18,
+  "record_path_opens": 24,
+  "evidence_path_opens": 24,
+  "product_clickback_success": 18,
+  "product_clickback_not_success": 6,
+  "limits": [
+    "AI dry-run is not independent human adjudication.",
+    "time_to_triage is not measured.",
+    "product click-back success only counts local package sources or live snapshots with claim-relevant semantic selector success.",
+    "transport fetch, path opening, and semantic landing are separate.",
+    "quality_gate_eval_800.json should remain not_go_yet."
+  ]
+}

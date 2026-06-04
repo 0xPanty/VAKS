@@ -1,0 +1,31 @@
+{
+  "id": "RECSTRESS-211",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 90,
+  "claim": "Social Security beneficiaries count on the post office to get their checks",
+  "evidence": "Social Security is paid via paper cheques and direct deposits. 557,840 63,668,789",
+  "source_label": "Conflicting Evidence/Cherrypicking",
+  "surface_state": "ordinary",
+  "signals": [
+    "regression"
+  ],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-211.md",
+    "marker": "RECSTRESS-211_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-21",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-211.json",
+  "evidence_path": "evidence/RECSTRESS-211.md"
+}

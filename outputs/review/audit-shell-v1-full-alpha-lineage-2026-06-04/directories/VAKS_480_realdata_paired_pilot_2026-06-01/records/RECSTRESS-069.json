@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-069",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 68,
+  "claim": "Ivermectin is used to treat onchocerciasis.",
+  "evidence": "Over the past two decades there have been significant achievements in the control of a handful of important human tropical infections [1]. These achievements include the substantive reductions in the prevalence and incidence of the so-called neglected diseases such as lymphatic filariasis, onchocerciasis, guinea worm, leprosy, and trachoma (Box 1) [2]. Each of these neglected diseases is a poverty-promoting and often stigmatizing condition occurring primarily in rural areas of low-income countries (Box 2) [3]. They are ancient afflictions, described in the Bible and other ancient texts, which have burdened humanity for millennia [3]. But now, as a result of aggressive regional vertical interventions, there is a possibility that some neglected tropical infections could be eventually controlled to the point of elimination in some areas of endemicity [2–8]. In the case of guinea worm infection, disease eradication might also soon be possible [9]. Box 2. Common Features of the Neglected Tropical Diseases Ancient afflictions that have burdened humanity for centuries Poverty-promoting conditions Associated with stigma Rural areas of low-income countries and fragile states No commercial m",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-069.md",
+    "marker": "RECSTRESS-069_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-06",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "stress-rec-06-fp-v2",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-069.json",
+  "evidence_path": "evidence/RECSTRESS-069.md"
+}

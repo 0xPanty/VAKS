@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-039",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 38,
+  "layer": "ordinary_stable",
+  "claim": "Anne Bancroft was the winner of an Oscar.",
+  "evidence": "Anne_Bancroft | 6 | She won both an Oscar for her work in the film , and a Tony for the same role in the play .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-039.md",
+    "document_hash": "0dece8f8f41c2010e3d5fe8e1b974a2a7d007bc4a7202ac2df71c8dc5ae2ba69",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-039_ANCHOR",
+    "text_quote": "Anne_Bancroft | 6 | She won both an Oscar for her work in the film , and a Tony for the same role in the play .",
+    "start": 147,
+    "end": 258
+  },
+  "record_path": "records/FEVER-039.json",
+  "evidence_path": "evidence/FEVER-039.md"
+}

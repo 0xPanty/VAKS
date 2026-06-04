@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-011",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 10,
+  "claim": "All hematopoietic stem cells segregate their chromosomes randomly.",
+  "evidence": "Stem cells are proposed to segregate chromosomes asymmetrically during self-renewing divisions so that older (‘immortal’) DNA strands are retained in daughter stem cells whereas newly synthesized strands segregate to differentiating cells. Stem cells are also proposed to retain DNA labels, such as 5-bromo-2-deoxyuridine (BrdU), either because they segregate chromosomes asymmetrically or because they divide slowly. However, the purity of stem cells among BrdU-label-retaining cells has not been documented in any tissue, and the ‘immortal strand hypothesis’ has not been tested in a system with definitive stem cell markers. Here we tested these hypotheses in haematopoietic stem cells (HSCs), which can be highly purified using well characterized markers. We administered BrdU to newborn mice, mice treated with cyclophosphamide and granulocyte colony-stimulating factor, and normal adult mice for 4 to 10 days, followed by 70 days without BrdU. In each case, less than 6% of HSCs retained BrdU and less than 0.5% of all BrdU-retaining haematopoietic cells were HSCs, revealing that BrdU has poor specificity and poor sensitivity as an HSC marker. Sequential administration of 5-chloro-2-deoxyuri",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-011.md",
+    "marker": "RECSTRESS-011_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-01",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-01-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-011.json",
+  "evidence_path": "evidence/RECSTRESS-011.md"
+}

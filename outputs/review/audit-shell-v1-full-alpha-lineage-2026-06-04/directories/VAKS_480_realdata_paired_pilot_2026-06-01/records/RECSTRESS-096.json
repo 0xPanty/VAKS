@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-096",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 95,
+  "claim": "PD-1 triggering on monocytes reduces IL-10 production by monocytes.",
+  "evidence": "Viral replication and microbial translocation from the gut to the blood during HIV infection lead to hyperimmune activation, which contributes to the decline in CD4+ T cell numbers during HIV infection. Programmed death-1 (PD-1) and interleukin-10 (IL-10) are both upregulated during HIV infection. Blocking interactions between PD-1 and programmed death ligand-1 (PD-L1) and between IL-10 and IL-10 receptor (IL-10R) results in viral clearance and improves T cell function in animal models of chronic viral infections. Here we show that high amounts of microbial products and inflammatory cytokines in the plasma of HIV-infected subjects lead to upregulation of PD-1 expression on monocytes that correlates with high plasma concentrations of IL-10. Triggering of PD-1 expressed on monocytes by PD-L1 expressed on various cell types induced IL-10 production and led to reversible CD4+ T cell dysfunction. We describe a new function for PD-1 whereby microbial products inhibit T cell expansion and function by upregulating PD-1 levels and IL-10 production by monocytes after binding of PD-1 by PD-L1.",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-096.md",
+    "marker": "RECSTRESS-096_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-09",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-09-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-096.json",
+  "evidence_path": "evidence/RECSTRESS-096.md"
+}

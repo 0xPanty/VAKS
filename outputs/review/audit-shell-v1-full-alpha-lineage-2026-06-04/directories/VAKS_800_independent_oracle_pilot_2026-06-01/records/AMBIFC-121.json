@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-121",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 120,
+  "layer": "anchor_problem",
+  "claim": "elizabeth and jack sparrow end up together.",
+  "evidence": "The story continues eight years later, and Elizabeth is now a marriageable age. Back then, as matrimony was a common means to forge strategic political alliances and advantageous social connections rather than loving unions, she is expected to wed a respectable and prosperous man equal or superior to her in rank. Elizabeth prefers marrying for love, and she may secretly harbor feelings for Will Turner. But Will, a common blacksmith, is an unsuitable match for such a well-born lady. And although Will secretly loves Elizabeth, he knows his place and keeps his feelings deeply hidden. Governor Swann, meanwhile, desires that his daughter marry Commodore James Norrington, a respected Royal Navy officer who Elizabeth admires but does not love. Ironically, it is Norrington who sets events into motion that not only alter Elizabeth's fate, but also his own and Will's. During Norrington's marriage proposal, Elizabeth, whose tightly laced corset nearly suffocates her, faints and falls off a rampart and into the bay. Her unlikely rescuer, and the catalyst for her transformation from a demure lady into a daring pirate, is the notorious Captain Jack Sparrow, newly arrived in Port Royal to commandeer a ship. Despite Sparrow's gallant actions and against Elizabeth's protests, he is promptly jailed for piracy and sentenced to hang. That night, a pirate ship, the Black Pearl, raids Port Royal. It",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "stale_pointer"
+  ],
+  "anchor_status": "stale",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "stale",
+    "path": "raw_sources/AMBIFC-121.md",
+    "document_hash": "3bc19a42a8020400fcbde6618876474b990e5567263ef2daf4ab08f00abcfc9d",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-121_ANCHOR",
+    "text_quote": "The story continues eight years later, and Elizabeth is now a marriageable age. Back then, as matrimony was a common means to forge strategic political alliances and advantageous social connections rather than loving uni",
+    "start": -1,
+    "end": -1
+  },
+  "record_path": "records/AMBIFC-121.json",
+  "evidence_path": "evidence/AMBIFC-121.md"
+}

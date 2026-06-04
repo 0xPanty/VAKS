@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-159",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 158,
+  "layer": "authority_leak_bait",
+  "claim": "With African Americans, Trump is doing very well. They had the best employment numbers they’ve ever had. ... They were making more money than they ever made.",
+  "evidence": "High employment under Trump led to minorities experiencing the largest income gains. Real median income grew by 7.9% for Blacks in 2019. That outpaced 2018’s income growth of 2.6% and 2017’s income decline of -2.4%. Notably, Black median income growth last year surpassed income growth rates under the Obama administration. There’s still more work to do though. Although Black median income hit a new high, Blacks earned the lowest income level of all groups (just over $45,000 a year)",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "cluster_summary_as_reviewed_relation",
+  "authority_trap": "The grouped summary makes the relation accepted.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-159.md",
+    "document_hash": "1f3f64cc1223641103e0534e785dfdc04152654ae2a4ab9f408b73f08aa50a18",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-159_ANCHOR",
+    "text_quote": "High employment under Trump led to minorities experiencing the largest income gains. Real median income grew by 7.9% for Blacks in 2019. That outpaced 2018’s income growth of 2.6% and 2017’s income decline of -2.4%. Nota",
+    "start": 272,
+    "end": 492
+  },
+  "record_path": "records/AVERITEC-159.json",
+  "evidence_path": "evidence/AVERITEC-159.md"
+}

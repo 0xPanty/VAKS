@@ -1,0 +1,7 @@
+# Raw Source SCIFACT-117
+dataset: scifact
+source_row: 116
+marker: SCIFACT-117_ANCHOR
+claim: Statins decrease blood cholesterol.
+label: 
+evidence: One-fourth of all deaths in industrialized countries result from coronary heart disease. A century of research has revealed the essential causative agent: cholesterol-carrying low-density lipoprotein (LDL). LDL is controlled by specific receptors (LDLRs) in liver that remove it from blood. Mutations that eliminate LDLRs raise LDL and cause heart attacks in childhood, whereas mutations that raise LDLRs reduce LDL and diminish heart attacks. If we are to eliminate coronary disease, lowering LDL should be the primary goal. Effective means to achieve this goal are currently available. The key questions are: who to treat, when to treat, and how long to treat.

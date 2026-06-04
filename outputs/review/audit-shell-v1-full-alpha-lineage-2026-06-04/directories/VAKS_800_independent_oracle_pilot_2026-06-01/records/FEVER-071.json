@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-071",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 70,
+  "layer": "action_challenge_conflict",
+  "claim": "Pluto has moons.",
+  "evidence": "Pluto | 19 | Pluto has five known moons : Charon -LRB- the largest , with a diameter just over half that of Pluto -RRB- , Styx , Nix , Kerberos , and Hydra .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "explicit_challenge"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-071.md",
+    "document_hash": "357db954cf759b074613a577311559baf4bd26c36ba3c4cd4370425105ff14cb",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-071_ANCHOR",
+    "text_quote": "Pluto | 19 | Pluto has five known moons : Charon -LRB- the largest , with a diameter just over half that of Pluto -RRB- , Styx , Nix , Kerberos , and Hydra .",
+    "start": 122,
+    "end": 279
+  },
+  "record_path": "records/FEVER-071.json",
+  "evidence_path": "evidence/FEVER-071.md"
+}

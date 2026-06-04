@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-042",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 41,
+  "layer": "ordinary_stable",
+  "claim": "the movie finest hours is a true story.",
+  "evidence": "Walt Disney Studios Motion Pictures originally set The Finest Hours for release on April 15, 2016 and then October 9, 2015, until announcing a final release date of January 29, 2016. The first trailer for the film was released on July 8, 2015. A second trailer was released on November 11, 2015. The Finest Hours opened the Coronado Island Film Festival on January 15, 2016. The film held its world premiere at the TCL Chinese Theatre in Hollywood, California on January 25, 2016. Walt Disney Studios Home Entertainment released the film on Blu-ray, DVD, and digital download on May 24, 2016.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-042.md",
+    "document_hash": "5638454bdab56395fe6304dd39b0916b95f59129d072f264d24c484a9bbae7af",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-042_ANCHOR",
+    "text_quote": "Walt Disney Studios Motion Pictures originally set The Finest Hours for release on April 15, 2016 and then October 9, 2015, until announcing a final release date of January 29, 2016. The first trailer for the film was re",
+    "start": 148,
+    "end": 368
+  },
+  "record_path": "records/AMBIFC-042.json",
+  "evidence_path": "evidence/AMBIFC-042.md"
+}

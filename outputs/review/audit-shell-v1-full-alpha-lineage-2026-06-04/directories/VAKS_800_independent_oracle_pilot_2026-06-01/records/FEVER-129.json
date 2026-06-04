@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-129",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 128,
+  "layer": "anchor_problem",
+  "claim": "The Chainsmokers are a mountain range.",
+  "evidence": "The_Chainsmokers | 4 | They have also won an American Music Award and five iHeartRadio Music Awards .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [
+    "stale_pointer"
+  ],
+  "anchor_status": "stale",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "stale",
+    "path": "raw_sources/FEVER-129.md",
+    "document_hash": "a3929e9a46b5e47d79c1fcbebeb39ac0b39555101d1d7c939829517f2f2a9a23",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-129_ANCHOR",
+    "text_quote": "The_Chainsmokers | 4 | They have also won an American Music Award and five iHeartRadio Music Awards .",
+    "start": -1,
+    "end": -1
+  },
+  "record_path": "records/FEVER-129.json",
+  "evidence_path": "evidence/FEVER-129.md"
+}

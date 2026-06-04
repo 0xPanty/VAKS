@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-114",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 113,
+  "claim": "Francois de Belleforest wrote.",
+  "evidence": "François_de_Belleforest | 0 | François de Belleforest -LRB- 1530 -- 1 January 1583 -RRB- was a prolific French author , poet and translator of the Renaissance .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "missing_anchor"
+  ],
+  "anchor_status": "missing",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "missing",
+    "path": "raw_sources/FEVER-114.md",
+    "marker": "FEVER-114_ANCHOR"
+  },
+  "recurrence_key": "rec-acd3b495ec",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "",
+  "dedup_open_only": true
+}

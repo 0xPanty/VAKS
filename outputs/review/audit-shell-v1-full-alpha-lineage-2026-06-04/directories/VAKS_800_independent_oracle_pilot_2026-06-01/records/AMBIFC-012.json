@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-012",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 11,
+  "layer": "ordinary_stable",
+  "claim": "the movie to kill a mockingbird won an academy award.",
+  "evidence": "* AFI's 100 Years. ..100Movies – #34 * AFI's 100 Years. ..100Heroes & Villains: * Atticus Finch – #1 Hero * AFI's 100 Years. ..100Movie Quotes: * \"Miss Jean Louise, stand up. Your father's passing\". – Nominated * \"You never really understand a person until you consider things from his point of view, until you climb inside of his skin and walk around in it\". – Nominated * AFI's 100 Years of Film Scores – #17 * AFI's 100 Years. ..100Cheers – #2",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-012.md",
+    "document_hash": "577a517e9a8eacc51981f8969240dac3129afc6c17af67cfd7f802857c0eea2d",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-012_ANCHOR",
+    "text_quote": "* AFI's 100 Years. ..100Movies – #34 * AFI's 100 Years. ..100Heroes & Villains: * Atticus Finch – #1 Hero * AFI's 100 Years. ..100Movie Quotes: * \"Miss Jean Louise, stand up. Your father's passing\". – Nominated * \"You ne",
+    "start": 162,
+    "end": 382
+  },
+  "record_path": "records/AMBIFC-012.json",
+  "evidence_path": "evidence/AMBIFC-012.md"
+}

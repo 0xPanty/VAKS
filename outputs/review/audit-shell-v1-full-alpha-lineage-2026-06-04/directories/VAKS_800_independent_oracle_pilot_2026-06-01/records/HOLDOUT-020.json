@@ -1,0 +1,31 @@
+{
+  "id": "HOLDOUT-020",
+  "pool": "adversarial_holdout",
+  "dataset_family": "scifact",
+  "source_row_index": 19,
+  "layer": "review_due_trap",
+  "claim": "Albendazole is used to treat lymphatic filariasis.",
+  "evidence": "Over the past two decades there have been significant achievements in the control of a handful of important human tropical infections [1]. These achievements include the substantive reductions in the prevalence and incidence of the so-called neglected diseases such as lymphatic filariasis, onchocerciasis, guinea worm, leprosy, and trachoma (Box 1) [2]. Each of these neglected diseases is a poverty-promoting and often stigmatizing condition occurring primarily in rural areas of low-income countries (Box 2) [3]. They are ancient afflictions, described in the Bible and other ancient texts, which have burdened humanity for millennia [3]. But now, as a result of aggressive regional vertical interventions, there is a possibility that some neglected tropical infections could be eventually controlled to the point of elimination in some areas of endemicity [2–8]. In the case of guinea worm infection, disease eradication might also soon be possible [9]. Box 2. Common Features of the Neglected Tropical Diseases Ancient afflictions that have burdened humanity for centuries Poverty-promoting conditions Associated with stigma Rural areas of low-income countries and fragile states No commercial markets for products that target these diseases Interventions, when applied, have a history of success",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "ambiguous_scope"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/HOLDOUT-020.md",
+    "document_hash": "3eca3d0cf2051b7e168ee364e6efc112752e72fd6030054b072dc5b6778b6241",
+    "version_id": "holdout-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "HOLDOUT-020_ANCHOR",
+    "text_quote": "Over the past two decades there have been significant achievements in the control of a handful of important human tropical infections [1]. These achievements include the substantive reductions in the prevalence and incid",
+    "start": 162,
+    "end": 382
+  },
+  "record_path": "records/HOLDOUT-020.json",
+  "evidence_path": "evidence/HOLDOUT-020.md"
+}

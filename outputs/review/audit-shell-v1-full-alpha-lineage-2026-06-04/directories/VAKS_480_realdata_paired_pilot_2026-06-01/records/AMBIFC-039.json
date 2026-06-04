@@ -1,0 +1,20 @@
+{
+  "id": "AMBIFC-039",
+  "dataset_family": "ambifc",
+  "source_dataset_status": "real_row",
+  "source_row_index": 38,
+  "claim": "baby got out of jail in baby driver.",
+  "evidence": "On a £25,000 budget, Wright developed the music video for Mint Royale's \"Blue Song\" in 2003, featuring a backstory gleaned from his early concept of Baby Driver. The video became an unexpected success, and although happy with his work, Wright was frustrated he had cannibalized an idea he felt had enormous potential. In retrospect, he admits his music video was a significant undertaking because it provided proof of concept for Baby Driver. The release of Wright's first major feature, Shaun of the Dead (2004), was another important catalyst not only for its artistic direction, but for signaling the start of a long-term working relationship between Wright and Working Title producers, who would assist with Baby Driver's development. By 2007, after signing a multi-picture deal with Working Title, and with a clearer vision of the project, the writer-director met with Steven Price to discuss early musical ideas for Baby Driver. The drafting of a story started around the release of Scott Pilgrim vs. the World (2010), but pre-production of the film stalled as Wright's other projects—The World's End (2013) and the then-forthcoming Ant-Man (2015), for which he had already prepared a script wi",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-039.md",
+    "marker": "AMBIFC-039_ANCHOR"
+  }
+}

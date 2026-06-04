@@ -1,0 +1,20 @@
+{
+  "id": "FEVER-115",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 114,
+  "claim": "Nicole Kidman's parents are from Melbourne.",
+  "evidence": "Nicole_Kidman | 19 | As a result of being born to Australian parents in Hawaii , Kidman has dual citizenship in Australia and the United States .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "lineage_as_independence",
+  "authority_trap": "The lineage chain shows this is independently supported.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-115.md",
+    "marker": "FEVER-115_ANCHOR"
+  }
+}

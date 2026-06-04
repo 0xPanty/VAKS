@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-128",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 127,
+  "layer": "anchor_problem",
+  "claim": "Shraddha Kapoor is part of the Hindi language film industry, and a nominee at the Filmfare awards.",
+  "evidence": "Shraddha_Kapoor | 4 | Kapoor gained wide recognition for playing a singer in the commercially successful romantic drama Aashiqui 2 -LRB- 2013 -RRB- , for which she received several accolades including a Filmfare nomination for the Best Actress . | Filmfare_Awards | 0 | The Filmfare Awards are presented annually by The Times Group to honour both artistic and technical excellence of professionals in the Hindi language film industry of India .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "missing_anchor"
+  ],
+  "anchor_status": "missing",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "missing",
+    "path": "raw_sources/FEVER-128.md",
+    "document_hash": "",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-128_ANCHOR",
+    "text_quote": "Shraddha_Kapoor | 4 | Kapoor gained wide recognition for playing a singer in the commercially successful romantic drama Aashiqui 2 -LRB- 2013 -RRB- , for which she received several accolades including a Filmfare nominati",
+    "start": -1,
+    "end": -1
+  },
+  "record_path": "records/FEVER-128.json",
+  "evidence_path": "evidence/FEVER-128.md"
+}

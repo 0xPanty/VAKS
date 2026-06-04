@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-069",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 68,
+  "layer": "action_challenge_conflict",
+  "claim": "Chenodeosycholic acid treatment reduces whole-body energy expenditure.",
+  "evidence": "The interest in brown adipose tissue (BAT) as a target to combat metabolic disease has recently been renewed with the discovery of functional BAT in humans. In rodents, BAT can be activated by bile acids, which activate type 2 iodothyronine deiodinase (D2) in BAT via the G-coupled protein receptor TGR5, resulting in increased oxygen consumption and energy expenditure. Here we examined the effects of oral supplementation of the bile acid chenodeoxycholic acid (CDCA) on human BAT activity. Treatment of 12 healthy female subjects with CDCA for 2 days resulted in increased BAT activity. Whole-body energy expenditure was also increased upon CDCA treatment. In vitro treatment of primary human brown adipocytes derived with CDCA or specific TGR5 agonists increased mitochondrial uncoupling and D2 expression, an effect that was absent in human primary white adipocytes. These findings identify bile acids as a target to activate BAT in humans.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-069.md",
+    "document_hash": "0b364a674f87a2abe95ae6f19aaa30218f44bf99d43f5cb97b464e05bd82c110",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-069_ANCHOR",
+    "text_quote": "The interest in brown adipose tissue (BAT) as a target to combat metabolic disease has recently been renewed with the discovery of functional BAT in humans. In rodents, BAT can be activated by bile acids, which activate ",
+    "start": 182,
+    "end": 402
+  },
+  "record_path": "records/SCIFACT-069.json",
+  "evidence_path": "evidence/SCIFACT-069.md"
+}

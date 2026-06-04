@@ -1,0 +1,29 @@
+{
+  "id": "SCIFACT-049",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 48,
+  "layer": "ordinary_stable",
+  "claim": "Birth-weight is positively associated with breast cancer.",
+  "evidence": "INTRODUCTION Various perinatal factors, including birth weight, birth order, maternal age, gestational age, twin status, and parental smoking, have been postulated to affect breast cancer risk in daughters by altering the hormonal environment of the developing fetal mammary glands. Despite ample biologic plausibility, epidemiologic studies to date have yielded conflicting results. We investigated the associations between perinatal factors and subsequent breast cancer risk through meta-analyses. METHODS We reviewed breast cancer studies published from January 1966 to February 2007 that included data on birth weight, birth order, maternal age, gestational age, twin status, and maternal or paternal smoking. Meta-analyses using random effect models were employed to summarize the results. RESULTS We found that heavier birth weights were associated with increased breast cancer risk, with studies involving five categories of birth weight identifying odds ratios (ORs) of 1.24 (95% confidence interval [CI] 1.04 to 1.48) for 4,000 g or more and 1.15 (95% CI 1.04 to 1.26) for 3,500 g to 3,999 g, relative to a birth weight of 2,500 to 2,599 g. These studies provided no support for a J-shaped relationship of birthweight to risk. Support for an association with birthweight was also derived from studies based on three birth weight categories (OR 1.15 [95% CI 1.01 to 1.31] for > or =4,000 g re",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-049.md",
+    "document_hash": "c88c50c6394a99e935b1a7ed66eaa844bc221b88336693c3ff73ee7c53e83c32",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-049_ANCHOR",
+    "text_quote": "INTRODUCTION Various perinatal factors, including birth weight, birth order, maternal age, gestational age, twin status, and parental smoking, have been postulated to affect breast cancer risk in daughters by altering th",
+    "start": 169,
+    "end": 389
+  },
+  "record_path": "records/SCIFACT-049.json",
+  "evidence_path": "evidence/SCIFACT-049.md"
+}

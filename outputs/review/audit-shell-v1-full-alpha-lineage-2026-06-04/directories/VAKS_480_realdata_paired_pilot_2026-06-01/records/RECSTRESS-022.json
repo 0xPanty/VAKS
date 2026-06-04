@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-022",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 21,
+  "claim": "Autophagy declines in aged organisms.",
+  "evidence": "Chaperone-mediated autophagy (CMA), a selective mechanism for degradation of cytosolic proteins in lysosomes, contributes to the removal of altered proteins as part of the cellular quality-control systems. We have previously found that CMA activity declines in aged organisms and have proposed that this failure in cellular clearance could contribute to the accumulation of altered proteins, the abnormal cellular homeostasis and, eventually, the functional loss characteristic of aged organisms. To determine whether these negative features of aging can be prevented by maintaining efficient autophagic activity until late in life, in this work we have corrected the CMA defect in aged rodents. We have generated a double transgenic mouse model in which the amount of the lysosomal receptor for CMA, previously shown to decrease in abundance with age, can be modulated. We have analyzed in this model the consequences of preventing the age-dependent decrease in receptor abundance in aged rodents at the cellular and organ levels. We show here that CMA activity is maintained until advanced ages if the decrease in the receptor abundance is prevented and that preservation of autophagic activity is",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-022.md",
+    "marker": "RECSTRESS-022_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-02",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-02-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-022.json",
+  "evidence_path": "evidence/RECSTRESS-022.md"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "HOLDOUT-002",
+  "pool": "adversarial_holdout",
+  "dataset_family": "scifact",
+  "source_row_index": 1,
+  "layer": "false_lite_trap",
+  "claim": "1,000 genomes project enables mapping of genetic sequence variation consisting of rare variants with larger penetrance effects than common variants.",
+  "evidence": "Genome-wide association studies (GWAS) have now identified at least 2,000 common variants that appear associated with common diseases or related traits (http://www.genome.gov/gwastudies), hundreds of which have been convincingly replicated. It is generally thought that the associated markers reflect the effect of a nearby common (minor allele frequency >0.05) causal site, which is associated with the marker, leading to extensive resequencing efforts to find causal sites. We propose as an alternative explanation that variants much less common than the associated one may create \"synthetic associations\" by occurring, stochastically, more often in association with one of the alleles at the common site versus the other allele. Although synthetic associations are an obvious theoretical possibility, they have never been systematically explored as a possible explanation for GWAS findings. Here, we use simple computer simulations to show the conditions under which such synthetic associations will arise and how they may be recognized. We show that they are not only possible, but inevitable, and that under simple but reasonable genetic models, they are likely to account for or contribute to many of the recently identified signals reported in genome-wide association studies. We also illustrate the behavior of synthetic associations in real datasets by showing that rare causal mutations res",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "promotion"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/HOLDOUT-002.md",
+    "document_hash": "3d88b8b7e1f412488f3174f51f00e160bb304b1f1a54fb4a01f27160c8b1347e",
+    "version_id": "holdout-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "HOLDOUT-002_ANCHOR",
+    "text_quote": "Genome-wide association studies (GWAS) have now identified at least 2,000 common variants that appear associated with common diseases or related traits (http://www.genome.gov/gwastudies), hundreds of which have been conv",
+    "start": 260,
+    "end": 480
+  },
+  "record_path": "records/HOLDOUT-002.json",
+  "evidence_path": "evidence/HOLDOUT-002.md"
+}

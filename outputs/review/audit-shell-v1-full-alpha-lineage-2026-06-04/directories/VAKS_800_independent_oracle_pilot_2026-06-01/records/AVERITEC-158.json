@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-158",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 157,
+  "layer": "authority_leak_bait",
+  "claim": "Trump did more for the Black community than anybody with the possible exception of Abraham Lincoln.",
+  "evidence": "He earned a Promise Kept for his pledge to ensure funding for historically Black colleges and universities, or HBCUs. Trump signed the bipartisan FUTURE Act in 2019 to ensure that the original science, technology, engineering and math funding for HBCUs from President George W. Bush's 2007 College Cost Reduction and Access Act would continue to be awarded. While Trump has made this assertion before, historians disagree. Right behind Lincoln, who prosecuted the Civil War and issued the Emancipation Proclamation, would be President Lyndon B. Johnson. Johnson, a skilled legislator from his years in the Senate, deliberately crafted his agenda and pushed it through Congress with personal persuasion, to a far greater degree than Trump, historians say. \"His accomplishments on behalf of African Americans — the Civil Rights Act, the Voting Rights Act, the Fair Housing Act — were historic,\" said University of Texas historian H.W. Brands. Jeffrey A. Engel, director of Southern Methodist University’s Center for Presidential History, sees Johnson and President Harry Truman, who moved to desegregate the military, as being among recent presidents who were ahead of their times. Even a president like Richard Nixon, who was captured on tape making racist remarks, had a fairly robust legacy on civil rights, advancing the desegregation of schools and affirmative action in employment, said John J. P",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "llm_summary_as_support",
+  "authority_trap": "The LLM recap gives support for the point.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-158.md",
+    "document_hash": "187f39939bcdeca51bdeff30e566b7afaa345b1fd87632811eeecbfffa4125f8",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-158_ANCHOR",
+    "text_quote": "He earned a Promise Kept for his pledge to ensure funding for historically Black colleges and universities, or HBCUs. Trump signed the bipartisan FUTURE Act in 2019 to ensure that the original science, technology, engine",
+    "start": 214,
+    "end": 434
+  },
+  "record_path": "records/AVERITEC-158.json",
+  "evidence_path": "evidence/AVERITEC-158.md"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-119",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 118,
+  "layer": "anchor_problem",
+  "claim": "Hematopoietic Stem Cell purification reaches purity rate of up to 50%.",
+  "evidence": "Heterogeneity within the self-renewal durability of adult hematopoietic stem cells (HSCs) challenges our understanding of the molecular framework underlying HSC function. Gene expression studies have been hampered by the presence of multiple HSC subtypes and contaminating non-HSCs in bulk HSC populations. To gain deeper insight into the gene expression program of murine HSCs, we combined single-cell functional assays with flow cytometric index sorting and single-cell gene expression assays. Through bioinformatic integration of these datasets, we designed an unbiased sorting strategy that separates non-HSCs away from HSCs, and single-cell transplantation experiments using the enriched population were combined with RNA-seq data to identify key molecules that associate with long-term durable self-renewal, producing a single-cell molecular dataset that is linked to functional stem cell activity. Finally, we demonstrated the broader applicability of this approach for linking key molecules with defined cellular functions in another stem cell system.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "moved_pointer"
+  ],
+  "anchor_status": "moved",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "moved",
+    "path": "raw_sources/SCIFACT-119_moved.md",
+    "document_hash": "6f5ad87f448f55088e2d6345628d453254edc4c2c4c67ca1297eb09703787c93",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-119_ANCHOR",
+    "text_quote": "Heterogeneity within the self-renewal durability of adult hematopoietic stem cells (HSCs) challenges our understanding of the molecular framework underlying HSC function. Gene expression studies have been hampered by the",
+    "start": 182,
+    "end": 402
+  },
+  "record_path": "records/SCIFACT-119.json",
+  "evidence_path": "evidence/SCIFACT-119.md"
+}

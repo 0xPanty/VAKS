@@ -1,0 +1,20 @@
+{
+  "id": "AMBIFC-021",
+  "dataset_family": "ambifc",
+  "source_dataset_status": "real_row",
+  "source_row_index": 20,
+  "claim": "donna and sam got married in mamma mia.",
+  "evidence": "In the United Kingdom, Mamma Mia! has grossed £69.2 million as of January 23, 2009, and is the thirteenth highest-grossing film of all time at the UK box office. The film opened at #1 in the U.K, taking £6.6 million on 496 screens. It managed to hold onto the top spot for 2 weeks, narrowly keeping Pixar's WALL-E from reaching #1 in its second week. When released on July 3 in Greece, the film grossed $1.6 million in its opening weekend, ranking #1 at the Greek box office. Mamma Mia! grossed $144.1 million in the United States and $471.6 million in other territories for a worldwide total of $615.7 million, against a production budget of $52 million. It became the highest grossing live-action musical of all time, until it was surpassed by Bill Condon's Beauty and the Beast in 2017. It was also the highest-grossing movie directed by a woman, until it was surpassed by Patty Jenkins' Wonder Woman in 2017. It is the third highest-grossing film of 2008 internationally (i.e., outside North America) with an international total of $458.4 million and the thirteenth highest gross of 2008 in North America (the US and Canada) with $144.1 million. The film made $9.6 million in its opening day in t",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-021.md",
+    "marker": "AMBIFC-021_ANCHOR"
+  }
+}

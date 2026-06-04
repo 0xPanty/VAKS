@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-045",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 44,
+  "layer": "ordinary_stable",
+  "claim": "the wwe championship belt has real diamonds.",
+  "evidence": "Over the course of the first brand split, the WWE Championship was used as the world title of the SmackDown brand twice and of the Raw brand three times. In all but two cases, the WWE Championship switched brands as a result of the annual draft. In June 2006, the WWE established ECW as a third brand, on which former Extreme Championship Wrestling stars and newer talent competed. When ECW's Rob Van Dam won the WWE Championship at ECW One Night Stand on June 11, 2006, the championship briefly became a world title of the ECW brand; the ECW World Heavyweight Championship was subsequently reactivated for the ECW brand upon Van Dam's title win. Van Dam held both titles until he lost the WWE Championship to Raw's Edge the following month. The ECW brand was disbanded in 2010, subsequently deactivating the ECW Championship. The first brand split ended in August 2011. Just prior to the end of the first brand split, a storyline saw CM Punk vowing to leave the company with the WWE Championship when his contract expired on July 17, 2011, the date of the 2011 Money in the Bank pay-per-view. At the event, Punk succeeded in defeating the defending champion John Cena to win the title, and left the company with the physical championship belt. Subsequently, the championship was vacated and Rey Mysterio won an eight-man tournament by defeating The Miz in the finals to be crowned the new WWE Champi",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-045.md",
+    "document_hash": "9e97b6ee9653c9d11f4f69b2c7d312ab3def82b974fb4b39dc8d7967969ef396",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-045_ANCHOR",
+    "text_quote": "Over the course of the first brand split, the WWE Championship was used as the world title of the SmackDown brand twice and of the Raw brand three times. In all but two cases, the WWE Championship switched brands as a re",
+    "start": 153,
+    "end": 373
+  },
+  "record_path": "records/AMBIFC-045.json",
+  "evidence_path": "evidence/AMBIFC-045.md"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "HOLDOUT-025",
+  "pool": "adversarial_holdout",
+  "dataset_family": "scifact",
+  "source_row_index": 24,
+  "layer": "review_due_trap",
+  "claim": "Antibiotic induced alterations in the gut microbiome reduce resistance against Clostridium difficile",
+  "evidence": "Antibiotics can have significant and long-lasting effects on the gastrointestinal tract microbiota, reducing colonization resistance against pathogens including Clostridium difficile. Here we show that antibiotic treatment induces substantial changes in the gut microbial community and in the metabolome of mice susceptible to C. difficile infection. Levels of secondary bile acids, glucose, free fatty acids and dipeptides decrease, whereas those of primary bile acids and sugar alcohols increase, reflecting the modified metabolic activity of the altered gut microbiome. In vitro and ex vivo analyses demonstrate that C. difficile can exploit specific metabolites that become more abundant in the mouse gut after antibiotics, including the primary bile acid taurocholate for germination, and carbon sources such as mannitol, fructose, sorbitol, raffinose and stachyose for growth. Our results indicate that antibiotic-mediated alteration of the gut microbiome converts the global metabolic profile to one that favours C. difficile germination and growth.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/HOLDOUT-025.md",
+    "document_hash": "2d73174df90652b03b63458da693a449fc8e6fbf30586635b5a7007799ba8fb8",
+    "version_id": "holdout-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "HOLDOUT-025_ANCHOR",
+    "text_quote": "Antibiotics can have significant and long-lasting effects on the gastrointestinal tract microbiota, reducing colonization resistance against pathogens including Clostridium difficile. Here we show that antibiotic treatme",
+    "start": 212,
+    "end": 432
+  },
+  "record_path": "records/HOLDOUT-025.json",
+  "evidence_path": "evidence/HOLDOUT-025.md"
+}

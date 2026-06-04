@@ -1,0 +1,22 @@
+{
+  "id": "FEVER-090",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 89,
+  "claim": "The Council on Foreign Relations is from the United States since 1921.",
+  "evidence": "Council_on_Foreign_Relations | 0 | The Council on Foreign Relations -LRB- CFR -RRB- , founded in 1921 , is a United States nonprofit think tank specializing in U.S. foreign policy and international affairs .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-090.md",
+    "marker": "FEVER-090_ANCHOR"
+  }
+}

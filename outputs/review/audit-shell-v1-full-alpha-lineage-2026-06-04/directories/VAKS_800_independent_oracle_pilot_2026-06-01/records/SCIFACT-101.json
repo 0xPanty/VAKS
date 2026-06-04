@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-101",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 100,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Febrile seizures increase the threshold for development of epilepsy.",
+  "evidence": "Febrile (fever-induced) seizures affect 3–5% of infants and young children. Despite the high incidence of febrile seizures, their contribution to the development of epilepsy later in life has remained controversial. Combining a new rat model of complex febrile seizures and patch clamp techniques, we determined that hyperthermia-induced seizures in the immature rat cause a selective presynaptic increase in inhibitory synaptic transmission in the hippocampus that lasts into adulthood. The long-lasting nature of these potent alterations in synaptic communication after febrile seizures does not support the prevalent view of the 'benign' nature of early-life febrile convulsions.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "insufficient_evidence"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-101.md",
+    "document_hash": "f74b720322a0d26147ed9269c96c33bc49a530f1be34cf39bca1733ebef1e0d5",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-101_ANCHOR",
+    "text_quote": "Febrile (fever-induced) seizures affect 3–5% of infants and young children. Despite the high incidence of febrile seizures, their contribution to the development of epilepsy later in life has remained controversial. Comb",
+    "start": 180,
+    "end": 400
+  },
+  "record_path": "records/SCIFACT-101.json",
+  "evidence_path": "evidence/SCIFACT-101.md"
+}

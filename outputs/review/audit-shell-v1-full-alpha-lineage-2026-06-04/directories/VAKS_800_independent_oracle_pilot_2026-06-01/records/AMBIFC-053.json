@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-053",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 52,
+  "layer": "ordinary_stable",
+  "claim": "vw audi is not the same company as porsche.",
+  "evidence": "Volkswagen is heavily involved in sports sponsorship, with investments having included the 2008 Summer Olympics, the 2014 Winter Olympics, as well as the David Beckham Academy. Volkswagen AG wholly owns the Bundesliga football side VfL Wolfsburg; the company is also the shirt sponsor of Major League Soccer club D.C. United, League of Ireland Premier Division Sligo Rovers and top level of the Mexican football league system Liga MX team Puebla F.C.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-053.md",
+    "document_hash": "0ec4391d426ebac70647d1499e66f54ff1e36023ba420fa7717541649c5ae224",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-053_ANCHOR",
+    "text_quote": "Volkswagen is heavily involved in sports sponsorship, with investments having included the 2008 Summer Olympics, the 2014 Winter Olympics, as well as the David Beckham Academy. Volkswagen AG wholly owns the Bundesliga fo",
+    "start": 152,
+    "end": 372
+  },
+  "record_path": "records/AMBIFC-053.json",
+  "evidence_path": "evidence/AMBIFC-053.md"
+}

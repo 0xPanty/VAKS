@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-121",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 0,
+  "claim": "Hunter Biden had no experience in Ukraine or in the energy sector when he joined the board of Burisma.",
+  "evidence": "No No",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-121.md",
+    "marker": "RECSTRESS-121_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-12",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-12-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-121.json",
+  "evidence_path": "evidence/RECSTRESS-121.md"
+}

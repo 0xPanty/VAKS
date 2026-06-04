@@ -1,0 +1,20 @@
+{
+  "id": "AVERITEC-048",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 47,
+  "claim": "South African consume more alcohol per person on average than anywhere else in Africa.",
+  "evidence": "7.1 litres 9.6 litres",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-048.md",
+    "marker": "AVERITEC-048_ANCHOR"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-032",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 31,
+  "layer": "ordinary_stable",
+  "claim": "Qatar is a language.",
+  "evidence": "Qatar | 2 | A strait in the Persian Gulf separates Qatar from the nearby island country of Bahrain , as well as sharing maritime borders with the United Arab Emirates and Iran .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-032.md",
+    "document_hash": "9c18672683207682bd0609690d65024e9710018770527700f8b8e6b74d2c7b19",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-032_ANCHOR",
+    "text_quote": "Qatar | 2 | A strait in the Persian Gulf separates Qatar from the nearby island country of Bahrain , as well as sharing maritime borders with the United Arab Emirates and Iran .",
+    "start": 126,
+    "end": 303
+  },
+  "record_path": "records/FEVER-032.json",
+  "evidence_path": "evidence/FEVER-032.md"
+}

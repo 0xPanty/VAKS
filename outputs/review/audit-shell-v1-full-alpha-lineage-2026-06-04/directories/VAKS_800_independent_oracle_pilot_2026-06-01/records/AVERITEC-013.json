@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-013",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 12,
+  "layer": "ordinary_stable",
+  "claim": "Donald Trump inherited a stagnant economy and then rebuilt it.",
+  "evidence": "November 2016 The IMF marked down its forecast for the United States in 2016 to 1.6 percent, from 2.2 percent in July 2016 U.S. economy picked up in 2017, but growth slowed at year's end",
+  "source_label": "Conflicting Evidence/Cherrypicking",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-013.md",
+    "document_hash": "c457e71d2f20549299e82752239f60551f6dc0b7d5b722a3c1a8081172285634",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-013_ANCHOR",
+    "text_quote": "November 2016 The IMF marked down its forecast for the United States in 2016 to 1.6 percent, from 2.2 percent in July 2016 U.S. economy picked up in 2017, but growth slowed at year's end",
+    "start": 177,
+    "end": 363
+  },
+  "record_path": "records/AVERITEC-013.json",
+  "evidence_path": "evidence/AVERITEC-013.md"
+}

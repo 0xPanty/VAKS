@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-114",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 113,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Golli-deficient T-cells prefer to differentiate into an anergic phenotype in the adaptive immune response when there are increased levels of Ca2+ in the cytosol.",
+  "evidence": "Calcium influx is crucial for T cell activation and differentiation. The detailed regulation of this process remains unclear. We report here that golli protein, an alternatively spliced product of the myelin basic protein gene, plays a critical role in regulating calcium influx in T cells. Golli-deficient T cells were hyperproliferative and showed enhanced calcium entry upon T cell receptor stimulation. We further found that golli regulates calcium influx in T cells through the inhibition of the store depletion-induced calcium influx. Mutation of the myristoylation site on golli disrupted its association with the plasma membrane and reversed its inhibitory action on Ca2+ influx, indicating that membrane association of golli was essential for its inhibitory action. These results indicate that golli functions in a unique way to regulate T cell activation through a mechanism involving the modulation of the calcium homeostasis.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "ambiguous_scope"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-114.md",
+    "document_hash": "89a489b60476e0f01b2d5029b28e2338c3c66f7e94f878d47041ec4eae767218",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-114_ANCHOR",
+    "text_quote": "Calcium influx is crucial for T cell activation and differentiation. The detailed regulation of this process remains unclear. We report here that golli protein, an alternatively spliced product of the myelin basic protei",
+    "start": 273,
+    "end": 493
+  },
+  "record_path": "records/SCIFACT-114.json",
+  "evidence_path": "evidence/SCIFACT-114.md"
+}

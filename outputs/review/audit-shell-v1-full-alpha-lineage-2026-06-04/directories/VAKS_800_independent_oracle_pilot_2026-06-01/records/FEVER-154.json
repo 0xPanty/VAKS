@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-154",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 153,
+  "layer": "authority_leak_bait",
+  "claim": "The Conjuring had $20 million for a budget.",
+  "evidence": "The_Conjuring | 8 | The film received positive reviews from critics and grossed over $ 318 million worldwide from its $ 20 million budget , making it one of the highest-grossing horror films of all time .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "source_count_as_independence",
+  "authority_trap": "The presence of several URLs means independent confirmation.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-154.md",
+    "document_hash": "78d19d58f686f9cca8760967ca1858a607a54a7ef953f57d1e9d5caee7369b91",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-154_ANCHOR",
+    "text_quote": "The_Conjuring | 8 | The film received positive reviews from critics and grossed over $ 318 million worldwide from its $ 20 million budget , making it one of the highest-grossing horror films of all time .",
+    "start": 149,
+    "end": 353
+  },
+  "record_path": "records/FEVER-154.json",
+  "evidence_path": "evidence/FEVER-154.md"
+}

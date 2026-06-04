@@ -1,0 +1,7 @@
+# Raw Source AMBIFC-089
+dataset: ambifc
+source_row: 88
+marker: AMBIFC-089_ANCHOR
+claim: dazed and confused is based on a true story
+label: neutral
+evidence: Dazed and Confused was released on September 24, 1993 in 183 theaters, grossing $918,127 on its opening weekend. It went on to make $7.9 million in North America. The film received positive reviews from critics. On review aggregator Rotten Tomatoes, it has a 91% approval rating based on 58 reviews, with a weighted average rating of 7.76/10. The website's critical consensus reads: "Featuring an excellent ensemble cast, a precise feel for the 1970s, and a killer soundtrack, Dazed and Confused is a funny, affectionate, and clear-eyed look at high school life". Metacritic provides a score of 78 out of 100 from 19 critics, indicating "generally favorable" reviews. Film critic Roger Ebert awarded the film three stars out of four, praising the film as "art crossed with anthropology" with a "painful underside". Janet Maslin of The New York Times wrote, "Dazed and Confused has an enjoyably playful spirit, one that amply compensates for its lack of structure". Desson Howe of The Washington Post, wrote, "Dazed succeeds on its own terms and reflects American culture so well, it becomes part of it". In her review for The Austin Chronicle, Marjorie Baumgarten gave particular praise to Matthew Mc

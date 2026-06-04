@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-168",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 47,
+  "claim": "South African consume more alcohol per person on average than anywhere else in Africa.",
+  "evidence": "7.1 litres 9.6 litres",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-168.md",
+    "marker": "RECSTRESS-168_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-16",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "stress-rec-16-fp-v2",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-168.json",
+  "evidence_path": "evidence/RECSTRESS-168.md"
+}

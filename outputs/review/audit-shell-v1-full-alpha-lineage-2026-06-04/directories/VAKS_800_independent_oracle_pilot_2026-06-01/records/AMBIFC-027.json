@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-027",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 26,
+  "layer": "ordinary_stable",
+  "claim": "the tv show blue bloods is still on.",
+  "evidence": "Reviewers have praised the series' on-location shooting. The New York Daily News praised Selleck's performance as Frank Reagan, while also praising the family dinner scene for discussion of morally complex issues. The Daily News drew comparisons between Selleck's characters Jesse Stone and Frank Reagan, saying that both Reagan and Stone are moral, principled men of few words. In Entertainment Weekly's annual Fall TV Preview, Ken Tucker named Blue Bloods one of the \"5 Best New Shows\" of 2010. In late 2014, the magazine Slate's Laura Hudson criticized the show for its depiction of racial incidents involving the police. In 2017, Selleck was nominated for a People's Choice Award for Favorite TV Crime Drama Actor for his work on the show.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-027.md",
+    "document_hash": "7e23d19cef7997d1b715b2916cf7fb2593d03b1ac561e8525ac1ba04d36ec4b8",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-027_ANCHOR",
+    "text_quote": "Reviewers have praised the series' on-location shooting. The New York Daily News praised Selleck's performance as Frank Reagan, while also praising the family dinner scene for discussion of morally complex issues. The Da",
+    "start": 145,
+    "end": 365
+  },
+  "record_path": "records/AMBIFC-027.json",
+  "evidence_path": "evidence/AMBIFC-027.md"
+}

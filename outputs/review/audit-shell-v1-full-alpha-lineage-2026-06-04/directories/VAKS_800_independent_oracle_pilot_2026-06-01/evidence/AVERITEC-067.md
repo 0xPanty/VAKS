@@ -1,0 +1,3 @@
+# Evidence AVERITEC-067
+marker: EVIDENCE_AVERITEC-067_ANCHOR
+quote: No

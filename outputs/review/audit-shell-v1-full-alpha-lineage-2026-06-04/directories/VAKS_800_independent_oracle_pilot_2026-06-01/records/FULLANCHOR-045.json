@@ -1,0 +1,30 @@
+{
+  "id": "FULLANCHOR-045",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 44,
+  "layer": "full_anchor_click",
+  "claim": "Basophils counteract disease development in patients with systemic lupus erythematosus (SLE).",
+  "evidence": "In systemic lupus erythematosus (SLE), self-reactive antibodies can target the kidney (lupus nephritis), leading to functional failure and possible mortality. We report that activation of basophils by autoreactive IgE causes their homing to lymph nodes, promoting T helper type 2 (T(H)2) cell differentiation and enhancing the production of self-reactive antibodies that cause lupus-like nephritis in mice lacking the Src family protein tyrosine kinase Lyn (Lyn(-/-) mice). Individuals with SLE also have elevated serum IgE, self-reactive IgEs and activated basophils that express CD62 ligand (CD62L) and the major histocompatibility complex (MHC) class II molecule human leukocyte antigen-DR (HLA-DR), parameters that are associated with increased disease activity and active lupus nephritis. Basophils were also present in the lymph nodes and spleen of subjects with SLE. Thus, in Lyn(-/-) mice, basophils and IgE autoantibodies amplify autoantibody production that leads to lupus nephritis, and in individuals with SLE IgE autoantibodies and activated basophils are factors associated with disease activity and nephritis.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "manual_span",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/FULLANCHOR-045.md",
+    "document_hash": "bc521d9eec81c1a6ed2d01bd551984febd1fcd62a2388436d268e845af00675f",
+    "version_id": "manual_span-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-045_ANCHOR",
+    "text_quote": "In systemic lupus erythematosus (SLE), self-reactive antibodies can target the kidney (lupus nephritis), leading to functional failure and possible mortality. We report that activation of basophils by autoreactive IgE ca",
+    "start": 215,
+    "end": 435
+  },
+  "record_path": "records/FULLANCHOR-045.json",
+  "evidence_path": "evidence/FULLANCHOR-045.md"
+}

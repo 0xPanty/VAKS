@@ -1,0 +1,23 @@
+{
+  "status": "blank_human_operator_adjudication_packet",
+  "scope": "narrow_real_human_operator_adjudication_only",
+  "core_samples": 24,
+  "adversarial_samples": 12,
+  "reviewers_required": 2,
+  "adjudicator_required": true,
+  "result_status": "blank_not_run",
+  "source_materials": [
+    "review_packet_risk_tiered_24/RISK_TIERED_REVIEWER_CARDS_ZH.md",
+    "review_packet_adversarial_12/ADVERSARIAL_OPERATOR_CARDS_ZH.md"
+  ],
+  "hidden_gold_files": [
+    "review_packet_risk_tiered_24/hidden_gold_after_done.csv",
+    "review_packet_adversarial_12/hidden_gold_after_done.csv"
+  ],
+  "do_not_claim": [
+    "main-vault operation convention readiness",
+    "independent human oracle before sheets are filled",
+    "product click-back success without reviewer click logs",
+    "human timing without measured timestamps"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "case_id": "ADV-03",
+  "adversarial_category": "anchor pseudo-success",
+  "claim": "这条记录声称来源原文支持“默认开启自动归并”。",
+  "expected_state": "blocking",
+  "expected_anchor_status": "pseudo_success",
+  "expected_no_group": "n/a",
+  "source_pointer": "review_packet_adversarial_12/mock_sources/ADV-03.md",
+  "evidence_pointer": "review_packet_adversarial_12/mock_evidence/ADV-03.md",
+  "note": "Synthetic operator-surface test record; not a truth-layer schema proposal."
+}

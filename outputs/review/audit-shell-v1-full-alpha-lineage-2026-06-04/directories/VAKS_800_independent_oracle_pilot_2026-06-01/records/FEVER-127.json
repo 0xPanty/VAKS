@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-127",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 126,
+  "layer": "anchor_problem",
+  "claim": "Syd Barrett helped create The Piper at the Gates of Dawn.",
+  "evidence": "The_Piper_at_the_Gates_of_Dawn | 13 | Special limited editions of The Piper at the Gates of Dawn were issued to mark its thirtieth and fortieth anniversaries in 1997 and 2007 , respectively , with the latter release containing bonus tracks .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [
+    "moved_pointer"
+  ],
+  "anchor_status": "moved",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "moved",
+    "path": "raw_sources/FEVER-127_moved.md",
+    "document_hash": "8ddeccbfa14e495cdfafb7c855eb5ef7814e77b51630f6ec0d0be9c77b937b82",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-127_ANCHOR",
+    "text_quote": "The_Piper_at_the_Gates_of_Dawn | 13 | Special limited editions of The Piper at the Gates of Dawn were issued to mark its thirtieth and fortieth anniversaries in 1997 and 2007 , respectively , with the latter release cont",
+    "start": 163,
+    "end": 383
+  },
+  "record_path": "records/FEVER-127.json",
+  "evidence_path": "evidence/FEVER-127.md"
+}

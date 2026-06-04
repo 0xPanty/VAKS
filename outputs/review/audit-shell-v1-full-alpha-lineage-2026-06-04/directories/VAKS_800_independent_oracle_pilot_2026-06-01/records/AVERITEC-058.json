@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-058",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 57,
+  "layer": "ordinary_stable",
+  "claim": "The interface of the COVID-19 Exposure Notification System, a contact tracing programme developed by Apple and Google has been secretly inserted onto phones and tracks user’s location.",
+  "evidence": "Google explicitly states that Exposure Notification “does not collect or use the location from your device. It uses Bluetooth, which can be used to detect if two devices are near each other — without revealing where the devices are.” Google adds that “neither Google, Apple, nor other users can see your identity” and that the “technology only works if you decide to opt-in.”",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-058.md",
+    "document_hash": "87846382122182a822c6b8f199bafe099a5f4a8ad18b31a26ea5f73f142d9401",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-058_ANCHOR",
+    "text_quote": "Google explicitly states that Exposure Notification “does not collect or use the location from your device. It uses Bluetooth, which can be used to detect if two devices are near each other — without revealing where the ",
+    "start": 299,
+    "end": 519
+  },
+  "record_path": "records/AVERITEC-058.json",
+  "evidence_path": "evidence/AVERITEC-058.md"
+}

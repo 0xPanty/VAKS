@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-028",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 27,
+  "layer": "ordinary_stable",
+  "claim": "rocky balboa is in the boxing hall of fame.",
+  "evidence": "Since Rocky's very last fight, his brother-in-law, Paulie has died. In addition, his statue has been re-installed at the Philadelphia Museum of Art at the very bottom of the steps. Three years later, Rocky is visited at Adrian's by Adonis \"Donnie\" Johnson Creed (Michael B. Jordan) – Apollo's illegitimate son, who grew up serving time at a juvenile detention center in Los Angeles. After Donnie grew up, he worked as a securities firm at the Smith Boardley Financial Group, but eventually resigned to be a boxer and moved to Philadelphia. Donnie meets Rocky at Adrian's restaurant and requests him to train him, but Rocky is reluctant to come back to the sport of boxing after his brain damage and a one-off comeback. Days after his initial offer, Rocky recommends him to his friend, Pete Sporino (Ritchie Coster), who currently runs Mighty Mick's Gym. After deep thought, Rocky finally agrees to take Donnie as his new protégé.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-028.md",
+    "document_hash": "d26acd880d0f4b572faf25f0a4dc18f5e598ed7a04b67842905655f14e5941f4",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-028_ANCHOR",
+    "text_quote": "Since Rocky's very last fight, his brother-in-law, Paulie has died. In addition, his statue has been re-installed at the Philadelphia Museum of Art at the very bottom of the steps. Three years later, Rocky is visited at ",
+    "start": 152,
+    "end": 372
+  },
+  "record_path": "records/AMBIFC-028.json",
+  "evidence_path": "evidence/AMBIFC-028.md"
+}

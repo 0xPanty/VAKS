@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-092",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 91,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Downregulation and mislocalization of Scribble prevents cell transformation and mammary tumorigenesis.",
+  "evidence": "Loss of cell polarity proteins such as Scribble induces neoplasia in Drosophila by promoting uncontrolled proliferation. In mammals, the role that polarity proteins play during tumorigenesis is not well understood. Here, we demonstrate that depletion of Scribble in mammary epithelia disrupts cell polarity, blocks three-dimensional morphogenesis, inhibits apoptosis, and induces dysplasia in vivo that progress to tumors after long latency. Loss of Scribble cooperates with oncogenes such as c-myc to transform epithelial cells and induce tumors in vivo by blocking activation of an apoptosis pathway. Like depletion, mislocalization of Scribble from cell-cell junction was sufficient to promote cell transformation. Interestingly, spontaneous mammary tumors in mice and humans possess both downregulated and mislocalized Scribble. Thus, we demonstrate that scribble inhibits breast cancer formation and that deregulation of polarity pathways promotes dysplastic and neoplastic growth in mammals by disrupting morphogenesis and inhibiting cell death.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "insufficient_evidence"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-092.md",
+    "document_hash": "bc76bb8a296c1bd66c3773747372e4027ee6582046b59abacb7ce7f2816b662d",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-092_ANCHOR",
+    "text_quote": "Loss of cell polarity proteins such as Scribble induces neoplasia in Drosophila by promoting uncontrolled proliferation. In mammals, the role that polarity proteins play during tumorigenesis is not well understood. Here,",
+    "start": 214,
+    "end": 434
+  },
+  "record_path": "records/SCIFACT-092.json",
+  "evidence_path": "evidence/SCIFACT-092.md"
+}

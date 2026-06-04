@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-066",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 65,
+  "claim": "Increased vessel density along with a reduction in fibrosis decreases the efficacy of chemotherapy treatments.",
+  "evidence": "OBJECTIVE Pancreatic ductal adenocarcinoma (PDA) is characterised by stromal desmoplasia and vascular dysfunction, which critically impair drug delivery. This study examines the role of an abundant extracellular matrix component, the megadalton glycosaminoglycan hyaluronan (HA), as a novel therapeutic target in PDA. METHODS Using a genetically engineered mouse model of PDA, the authors enzymatically depleted HA by a clinically formulated PEGylated human recombinant PH20 hyaluronidase (PEGPH20) and examined tumour perfusion, vascular permeability and drug delivery. The preclinical utility of PEGPH20 in combination with gemcitabine was assessed by short-term and survival studies. RESULTS PEGPH20 rapidly and sustainably depleted HA, inducing the re-expansion of PDA blood vessels and increasing the intratumoral delivery of two chemotherapeutic agents, doxorubicin and gemcitabine. Moreover, PEGPH20 triggered fenestrations and interendothelial junctional gaps in PDA tumour endothelia and promoted a tumour-specific increase in macromolecular permeability. Finally, combination therapy with PEGPH20 and gemcitabine led to inhibition of PDA tumour growth and prolonged survival over gemcitabin",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-066.md",
+    "marker": "RECSTRESS-066_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-06",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-06-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-066.json",
+  "evidence_path": "evidence/RECSTRESS-066.md"
+}

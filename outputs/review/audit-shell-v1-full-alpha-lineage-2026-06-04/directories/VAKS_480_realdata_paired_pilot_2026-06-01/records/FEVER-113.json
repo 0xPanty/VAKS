@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-113",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 112,
+  "claim": "Carl Sanders served as the 74th Governor of Georgia from 1963 to 1967.",
+  "evidence": "Carl_Sanders | 0 | Carl Edward Sanders Sr. -LRB- May 15 , 1925 -- November 16 , 2014 -RRB- was an American politician who served as the 74th Governor of the state of Georgia from 1963 to 1967 .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_outcome"
+  ],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-113.md",
+    "marker": "FEVER-113_ANCHOR"
+  },
+  "recurrence_key": "rec-acd3b495ec",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "",
+  "dedup_open_only": true
+}

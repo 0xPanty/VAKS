@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-092",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 91,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Social Security beneficiaries count on the post office to get their checks.",
+  "evidence": "Doing the math, there are about 555,000 Americans who still get Social Security checks by mail and about 215,000 who get Supplemental Security Income (SSI) checks by mail. That compares with 61.5 million who receive direct deposit either to the bank or a debit card. Of course, you still need to rely on the mail to get the debit card. Social Security notices also come through the mail, unless a person opts out. But relatively few people still get checks. Yes",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [
+    "insufficient_evidence"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-092.md",
+    "document_hash": "a836b59edb33bc3a2335f6dd182ef26d8d1eaad6ea148a6e5dad97c0cc9c5be4",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-092_ANCHOR",
+    "text_quote": "Doing the math, there are about 555,000 Americans who still get Social Security checks by mail and about 215,000 who get Supplemental Security Income (SSI) checks by mail. That compares with 61.5 million who receive dire",
+    "start": 190,
+    "end": 410
+  },
+  "record_path": "records/AVERITEC-092.json",
+  "evidence_path": "evidence/AVERITEC-092.md"
+}

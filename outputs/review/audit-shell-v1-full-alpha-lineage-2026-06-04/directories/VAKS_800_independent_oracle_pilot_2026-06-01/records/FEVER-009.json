@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-009",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 8,
+  "layer": "ordinary_stable",
+  "claim": "Usain Bolt won at the Olympics.",
+  "evidence": "Usain_Bolt | 9 | Bolt is the only sprinter to win Olympic 100 m and 200 m titles at three consecutive olympics -LRB- 2008 , 2012 and 2016 -RRB- , a feat referred to as the `` triple double . ''",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-009.md",
+    "document_hash": "6e3de21912391d2010192aebf5ee210e6fae566d0232e8c82e4cac33b80a47ce",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-009_ANCHOR",
+    "text_quote": "Usain_Bolt | 9 | Bolt is the only sprinter to win Olympic 100 m and 200 m titles at three consecutive olympics -LRB- 2008 , 2012 and 2016 -RRB- , a feat referred to as the `` triple double . ''",
+    "start": 137,
+    "end": 330
+  },
+  "record_path": "records/FEVER-009.json",
+  "evidence_path": "evidence/FEVER-009.md"
+}

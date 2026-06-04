@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-117",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 116,
+  "layer": "anchor_problem",
+  "claim": "Game of Thrones's third season concluded.",
+  "evidence": "Game_of_Thrones_-LRB-season_3-RRB- | 0 | The third season of the fantasy drama television series Game of Thrones premiered in the United States on HBO on March 31 , 2013 , and concluded on June 9 , 2013 .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "stale_pointer"
+  ],
+  "anchor_status": "stale",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "stale",
+    "path": "raw_sources/FEVER-117.md",
+    "document_hash": "a76f8dd7aa08ae37a15ab11b22adc721201211411cbb0baf55abb05ab01787f9",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-117_ANCHOR",
+    "text_quote": "Game_of_Thrones_-LRB-season_3-RRB- | 0 | The third season of the fantasy drama television series Game of Thrones premiered in the United States on HBO on March 31 , 2013 , and concluded on June 9 , 2013 .",
+    "start": -1,
+    "end": -1
+  },
+  "record_path": "records/FEVER-117.json",
+  "evidence_path": "evidence/FEVER-117.md"
+}

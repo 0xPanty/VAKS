@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-113",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 112,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "COVID-19 medical face masks are designed to be worn differently depending on the health of the wearer, masks should be worn colored side out if you are sick and do not want to spread germs around and the white side of the mask is the filter part to be worn facing out when the wearer is not sick, to prevent germs from getting in.",
+  "evidence": "The World Health Organisation (WHO) produced an infographic which includes the instruction to 'ensure the colored-side faces outwards.' it was worn properly, the face mask is not touched when it is worn.",
+  "source_label": "Not Enough Evidence",
+  "surface_state": "ordinary",
+  "signals": [
+    "insufficient_evidence"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-113.md",
+    "document_hash": "2719ecf9a287b89d1ee834676e1452e1afb9b6f823470e74b18d538e929fd17a",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-113_ANCHOR",
+    "text_quote": "The World Health Organisation (WHO) produced an infographic which includes the instruction to 'ensure the colored-side faces outwards.' it was worn properly, the face mask is not touched when it is worn.",
+    "start": 445,
+    "end": 648
+  },
+  "record_path": "records/AVERITEC-113.json",
+  "evidence_path": "evidence/AVERITEC-113.md"
+}

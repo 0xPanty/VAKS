@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-037",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 36,
+  "claim": "Crossover hot spots are not found within gene promoters in Saccharomyces cerevisiae.",
+  "evidence": "DNA double-strand breaks (DSBs), which are formed by the Spo11 protein, initiate meiotic recombination. Previous DSB-mapping studies have used rad50S or sae2Δ mutants, which are defective in break processing, to accumulate Spo11-linked DSBs, and report large (≥ 50 kb) “DSB-hot” regions that are separated by “DSB-cold” domains of similar size. Substantial recombination occurs in some DSB-cold regions, suggesting that DSB patterns are not normal in rad50S or sae2Δ mutants. We therefore developed a novel method to map genome-wide, single-strand DNA (ssDNA)–associated DSBs that accumulate in processing-capable, repair-defective dmc1Δ and dmc1Δ rad51Δ mutants. DSBs were observed at known hot spots, but also in most previously identified “DSB-cold” regions, including near centromeres and telomeres. Although approximately 40% of the genome is DSB-cold in rad50S mutants, analysis of meiotic ssDNA from dmc1Δ shows that most of these regions have substantial DSB activity. Southern blot assays of DSBs in selected regions in dmc1Δ, rad50S, and wild-type cells confirm these findings. Thus, DSBs are distributed much more uniformly than was previously believed. Comparisons of DSB signals in dmc1,",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-037.md",
+    "marker": "RECSTRESS-037_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-03",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "stress-rec-03-fp-v2",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-037.json",
+  "evidence_path": "evidence/RECSTRESS-037.md"
+}

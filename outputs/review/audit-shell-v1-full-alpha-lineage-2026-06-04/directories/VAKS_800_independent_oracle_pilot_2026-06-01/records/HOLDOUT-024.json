@@ -1,0 +1,31 @@
+{
+  "id": "HOLDOUT-024",
+  "pool": "adversarial_holdout",
+  "dataset_family": "scifact",
+  "source_row_index": 23,
+  "layer": "review_due_trap",
+  "claim": "Anthrax spores can be disposed of easily after they are dispersed.",
+  "evidence": "CONTEXT Bioterrorist attacks involving letters and mail-handling systems in Washington, DC, resulted in Bacillus anthracis (anthrax) spore contamination in the Hart Senate Office Building and other facilities in the US Capitol's vicinity. OBJECTIVE To provide information about the nature and extent of indoor secondary aerosolization of B anthracis spores. DESIGN Stationary and personal air samples, surface dust, and swab samples were collected under semiquiescent (minimal activities) and then simulated active office conditions to estimate secondary aerosolization of B anthracis spores. Nominal size characteristics, airborne concentrations, and surface contamination of B anthracis particles (colony-forming units) were evaluated. RESULTS Viable B anthracis spores reaerosolized under semiquiescent conditions, with a marked increase in reaerosolization during simulated active office conditions. Increases were observed for B anthracis collected on open sheep blood agar plates (P<.001) and personal air monitors (P =.01) during active office conditions. More than 80% of the B anthracis particles collected on stationary monitors were within an alveolar respirable size range of 0.95 to 3.5 micro m. CONCLUSIONS Bacillus anthracis spores used in a recent terrorist incident reaerosolized under common office activities. These findings have important implications for appropriate respiratory ",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "insufficient_evidence"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/HOLDOUT-024.md",
+    "document_hash": "8e8194c07a6b3165409ed39b6a8ca02722e5ac8cf054914def6d67c3a8597041",
+    "version_id": "holdout-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "HOLDOUT-024_ANCHOR",
+    "text_quote": "CONTEXT Bioterrorist attacks involving letters and mail-handling systems in Washington, DC, resulted in Bacillus anthracis (anthrax) spore contamination in the Hart Senate Office Building and other facilities in the US C",
+    "start": 178,
+    "end": 398
+  },
+  "record_path": "records/HOLDOUT-024.json",
+  "evidence_path": "evidence/HOLDOUT-024.md"
+}

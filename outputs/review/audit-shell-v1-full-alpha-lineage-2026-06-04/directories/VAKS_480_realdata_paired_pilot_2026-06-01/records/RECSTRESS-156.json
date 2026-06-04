@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-156",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 35,
+  "claim": "The current Ghana administration has resulted in a decline in unemployment rates from 11.9% in 2015 to 7.3% in 2019.",
+  "evidence": "The survey covered a period of twelve (12) months from 18th October 2012 to 17th October 2013. The data collection was over a period of 12 months (22nd October, 2016 to 17th October, 2017). The overall unemployment rate for the country is 8.4 percent.",
+  "source_label": "Not Enough Evidence",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-156.md",
+    "marker": "RECSTRESS-156_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-15",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-15-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-156.json",
+  "evidence_path": "evidence/RECSTRESS-156.md"
+}

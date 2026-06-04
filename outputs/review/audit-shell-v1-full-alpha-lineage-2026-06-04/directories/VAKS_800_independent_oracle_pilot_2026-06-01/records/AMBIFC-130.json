@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-130",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 129,
+  "layer": "anchor_problem",
+  "claim": "avatar the last airbender was based on a book.",
+  "evidence": "The series is notable for borrowing extensively from East Asian art and mythology for its universe. Its creators employed cultural consultants Edwin Zane and calligrapher Siu-Leung Lee to help determine its art direction and settings. Its character designs are influenced by Chinese art and history, Hinduism, Taoism and Buddhism, and Yoga. Jeremy Zuckerman and Benjamin Wynn composed the series' music and sound; they experimented with a wide range of instruments, including the guzheng, pipa, and duduk, to match the show's Asia-influenced setting. The art style of the fictitious locations used in the series are based on real locations in Asia. Sites such as the Forbidden City and the Great Wall of China in Beijing were inspirations for the Earth Kingdom city of Ba Sing Se, and Water Tribe locations were based on Inuit and Sireniki cultures. According to writer Aaron Ehasz, early Fire Nation designs were based on Japanese culture. To avoid accidentally making broad statements, they redesigned many settings and peoples to be more \"broadly inspired\". For the final design, the creators went with a more Chinese style for the Fire Nation's clothing and architecture. For instance, the Fire Temple was based on the Yellow Crane Tower, as its flame-like architectural elements were a perfect motif for the Fire Nation architecture according to the creators.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "selector_drift"
+  ],
+  "anchor_status": "drift",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "drift",
+    "path": "raw_sources/AMBIFC-130.md",
+    "document_hash": "3e4330b76667c4c7554786ca1b90ff7dfa4ccaa6f51a41307ec43430a2b97fa9",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-130_ANCHOR",
+    "text_quote": "The series is notable for borrowing extensively from East Asian art and mythology for its universe. Its creators employed cultural consultants Edwin Zane and calligrapher Siu-Leung Lee to help determine its art direction",
+    "start": 162,
+    "end": 382
+  },
+  "record_path": "records/AMBIFC-130.json",
+  "evidence_path": "evidence/AMBIFC-130.md"
+}

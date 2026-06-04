@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-063",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 62,
+  "layer": "action_challenge_conflict",
+  "claim": "Israel has developed super-quick saliva test for COVID-19.",
+  "evidence": "Yes although still in testing phase. 1-second Covid spit test shown 95% accurate so far Newsight’s spectral technology, currently being tried on patients at Sheba Medical Center, could revolutionize SARS-CoV-2 testing across the world. Yes. The claim does not ask whether the test is licensed, reviewed, in production or accurate. It merely states that a quick test has been developed. It has and is under review.",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-063.md",
+    "document_hash": "1b9f7d695fc675b6364e22caee2797a0ee4be7133aa329fc7754f9f17a1d1b1e",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-063_ANCHOR",
+    "text_quote": "Yes although still in testing phase. 1-second Covid spit test shown 95% accurate so far Newsight’s spectral technology, currently being tried on patients at Sheba Medical Center, could revolutionize SARS-CoV-2 testing ac",
+    "start": 173,
+    "end": 393
+  },
+  "record_path": "records/AVERITEC-063.json",
+  "evidence_path": "evidence/AVERITEC-063.md"
+}

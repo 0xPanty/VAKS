@@ -1,0 +1,7 @@
+# Raw Source AMBIFC-045
+dataset: ambifc
+source_row: 44
+marker: AMBIFC-045_ANCHOR
+claim: the wwe championship belt has real diamonds.
+label: neutral
+evidence: Over the course of the first brand split, the WWE Championship was used as the world title of the SmackDown brand twice and of the Raw brand three times. In all but two cases, the WWE Championship switched brands as a result of the annual draft. In June 2006, the WWE established ECW as a third brand, on which former Extreme Championship Wrestling stars and newer talent competed. When ECW's Rob Van Dam won the WWE Championship at ECW One Night Stand on June 11, 2006, the championship briefly became a world title of the ECW brand; the ECW World Heavyweight Championship was subsequently reactivated for the ECW brand upon Van Dam's title win. Van Dam held both titles until he lost the WWE Championship to Raw's Edge the following month. The ECW brand was disbanded in 2010, subsequently deactivating the ECW Championship. The first brand split ended in August 2011. Just prior to the end of the first brand split, a storyline saw CM Punk vowing to leave the company with the WWE Championship when his contract expired on July 17, 2011, the date of the 2011 Money in the Bank pay-per-view. At the event, Punk succeeded in defeating the defending champion John Cena to win the title, and left the 

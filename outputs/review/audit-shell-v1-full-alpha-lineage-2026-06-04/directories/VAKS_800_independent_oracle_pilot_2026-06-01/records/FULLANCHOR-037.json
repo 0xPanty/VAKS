@@ -1,0 +1,30 @@
+{
+  "id": "FULLANCHOR-037",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 36,
+  "layer": "full_anchor_click",
+  "claim": "Asymptomatic visual impairment screening in elderly populations does not lead to improved vision.",
+  "evidence": "OBJECTIVE To assess whether population screening for impaired vision among older people in the community leads to improvements in vision. DESIGN Systematic review of randomised controlled trials of population screening in the community that included any assessment of vision or visual function with at least 6 months' follow up. SUBJECTS Adults aged 65 or over. MAIN OUTCOME MEASURE Proportions with visual impairment in intervention and control groups with any method of assessing visual impairment. RESULTS There were no trials that primarily assessed visual screening. Outcome data on vision were available for 3494 people in five trials of multiphasic assessment. All the trials used self reported measures for vision impairment, both as screening tools and as outcome measures. The inclusion of a visual screening component in the assessment did not result in improvements in self reported visual problems (pooled odds ratio 1.04:95% confidence interval 0.89 to 1.22). A small reduction (11%) in the number of older people with self reported visual problems cannot be excluded. CONCLUSIONS Screening of asymptomatic older people in the community is not justified on present evidence. Visual impairment in this age group can usually be reduced with treatment. It is unclear why no benefit was seen. Further work is needed to clarify what interventions are appropriate for older people with unrepo",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "web_page",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/FULLANCHOR-037.md",
+    "document_hash": "e81d7cbecfc3a0aa80df8bc08d8d371f5da4818b11cdc638d70ca1d39a14587c",
+    "version_id": "web_page-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-037_ANCHOR",
+    "text_quote": "OBJECTIVE To assess whether population screening for impaired vision among older people in the community leads to improvements in vision. DESIGN Systematic review of randomised controlled trials of population screening i",
+    "start": 216,
+    "end": 436
+  },
+  "record_path": "records/FULLANCHOR-037.json",
+  "evidence_path": "evidence/FULLANCHOR-037.md"
+}

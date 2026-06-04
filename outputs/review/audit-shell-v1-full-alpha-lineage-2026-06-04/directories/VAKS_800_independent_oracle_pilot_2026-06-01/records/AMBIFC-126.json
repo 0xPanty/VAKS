@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-126",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 125,
+  "layer": "anchor_problem",
+  "claim": "war of the world is a horror movie",
+  "evidence": "War of the Worlds was nominated for three Academy Awards, including Visual Effects (Pablo Helman), Sound Mixing (Andy Nelson, Anna Behlmer and Ron Judkins), and Sound Editing, losing all to King Kong. The film was nominated for six Saturn Awards, and won Best Performance by a Younger Actor (Dakota Fanning). The film won a Golden Reel Award for Sound Effects & Foley, a World Soundtrack Award for Best Original Soundtrack, and three VES Awards for its special effects, and was nominated for three Empire Awards, three Satellite Awards, and an MTV Movie Award.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "selector_drift"
+  ],
+  "anchor_status": "drift",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "drift",
+    "path": "raw_sources/AMBIFC-126.md",
+    "document_hash": "023f8ae3f05d2e31a3fb2e92fdf21096a4ad7ab874d1be30a950e30ec93d52ab",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-126_ANCHOR",
+    "text_quote": "War of the Worlds was nominated for three Academy Awards, including Visual Effects (Pablo Helman), Sound Mixing (Andy Nelson, Anna Behlmer and Ron Judkins), and Sound Editing, losing all to King Kong. The film was nomina",
+    "start": 150,
+    "end": 370
+  },
+  "record_path": "records/AMBIFC-126.json",
+  "evidence_path": "evidence/AMBIFC-126.md"
+}

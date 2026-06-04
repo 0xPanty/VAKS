@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-113",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 112,
+  "claim": "Rapamycin decreases the concentration of triacylglycerols in fruit flies.",
+  "evidence": "The target of rapamycin (TOR) pathway is a major nutrient-sensing pathway that, when genetically downregulated, increases life span in evolutionarily diverse organisms including mammals. The central component of this pathway, TOR kinase, is the target of the inhibitory drug rapamycin, a highly specific and well-described drug approved for human use. We show here that feeding rapamycin to adult Drosophila produces the life span extension seen in some TOR mutants. Increase in life span by rapamycin was associated with increased resistance to both starvation and paraquat. Analysis of the underlying mechanisms revealed that rapamycin increased longevity specifically through the TORC1 branch of the TOR pathway, through alterations to both autophagy and translation. Rapamycin could increase life span of weak insulin/Igf signaling (IIS) pathway mutants and of flies with life span maximized by dietary restriction, indicating additional mechanisms.",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-113.md",
+    "marker": "RECSTRESS-113_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-11",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-11-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-113.json",
+  "evidence_path": "evidence/RECSTRESS-113.md"
+}

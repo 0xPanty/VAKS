@@ -1,0 +1,15 @@
+{
+  "status": "blank",
+  "go_meaning": "eligible for candidate operation-convention discussion only, not adoption",
+  "hard_gates": {
+    "wrong_actionability": "blank",
+    "serious_miss": "blank",
+    "source_record_evidence_clickback_success": "blank",
+    "authority_misunderstanding": "blank"
+  },
+  "product_gates": {
+    "triage_time": "blank",
+    "full_audit_open_rate": "blank"
+  },
+  "note": "Fill from double-review and adjudication sheets only. Do not use Codex dry-run as human evidence."
+}

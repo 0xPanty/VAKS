@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-090",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 89,
+  "layer": "action_challenge_conflict",
+  "claim": "The Council on Foreign Relations is from the United States since 1921.",
+  "evidence": "Council_on_Foreign_Relations | 0 | The Council on Foreign Relations -LRB- CFR -RRB- , founded in 1921 , is a United States nonprofit think tank specializing in U.S. foreign policy and international affairs .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-090.md",
+    "document_hash": "53a62af9da7b012d5e3590e93956355a5554b260dfe9e06a98c15f198270f60b",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-090_ANCHOR",
+    "text_quote": "Council_on_Foreign_Relations | 0 | The Council on Foreign Relations -LRB- CFR -RRB- , founded in 1921 , is a United States nonprofit think tank specializing in U.S. foreign policy and international affairs .",
+    "start": 176,
+    "end": 383
+  },
+  "record_path": "records/FEVER-090.json",
+  "evidence_path": "evidence/FEVER-090.md"
+}

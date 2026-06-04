@@ -1,0 +1,7 @@
+# Raw Source SCIFACT-115
+dataset: scifact
+source_row: 114
+marker: SCIFACT-115_ANCHOR
+claim: Rapid up-regulation and higher basal expression of interferon-induced genes reduce survival of granule cell neurons that are infected by West Nile virus.
+label: 
+evidence: Although susceptibility of neurons in the brain to microbial infection is a major determinant of clinical outcome, little is known about the molecular factors governing this vulnerability. Here we show that two types of neurons from distinct brain regions showed differential permissivity to replication of several positive-stranded RNA viruses. Granule cell neurons of the cerebellum and cortical neurons from the cerebral cortex have unique innate immune programs that confer differential susceptibility to viral infection ex vivo and in vivo. By transducing cortical neurons with genes that were expressed more highly in granule cell neurons, we identified three interferon-stimulated genes (ISGs; Ifi27, Irg1 and Rsad2 (also known as Viperin)) that mediated the antiviral effects against different neurotropic viruses. Moreover, we found that the epigenetic state and microRNA (miRNA)-mediated regulation of ISGs correlates with enhanced antiviral response in granule cell neurons. Thus, neurons from evolutionarily distinct brain regions have unique innate immune signatures, which probably contribute to their relative permissiveness to infection.

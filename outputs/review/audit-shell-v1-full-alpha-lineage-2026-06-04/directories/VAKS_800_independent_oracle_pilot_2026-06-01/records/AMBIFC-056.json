@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-056",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 55,
+  "layer": "ordinary_stable",
+  "claim": "there is gonna be a new divergent movie.",
+  "evidence": "Snow White and the Huntsman screenwriter Evan Daugherty and Hope Springs screenwriter Vanessa Taylor co-wrote the screenplay for Divergent. During the time that Neil Burger was originally going to direct the sequel, Brian Duffield was recruited to write the screenplay for The Divergent Series: Insurgent, but after Burger dropped out of the film and Robert Schwentke took over as director, he brought in Akiva Goldsman and Mark Bomback to rewrite Duffield's script. The screenplay for the two-part finale, The Divergent Series: Allegiant and Ascendant, was written by Noah Oppenheim, Adam Cooper, Bill Collage, and Stephen Chbosky.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-056.md",
+    "document_hash": "341f662a3e9260270dfc4ff58f131a34cd06cc986a26c82ad16828a91b43b8dc",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-056_ANCHOR",
+    "text_quote": "Snow White and the Huntsman screenwriter Evan Daugherty and Hope Springs screenwriter Vanessa Taylor co-wrote the screenplay for Divergent. During the time that Neil Burger was originally going to direct the sequel, Bria",
+    "start": 149,
+    "end": 369
+  },
+  "record_path": "records/AMBIFC-056.json",
+  "evidence_path": "evidence/AMBIFC-056.md"
+}

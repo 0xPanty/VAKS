@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-159",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 158,
+  "layer": "authority_leak_bait",
+  "claim": "superman is not going to be in the new justice league movie.",
+  "evidence": "A former college athlete who, after being cybernetically reconstructed after a nearly fatal car accident, is turned into a techno-organic being enhanced by reactive, adaptive biomimetic alien technology. His enhancements include the abilities of flight, variable weaponry and technopathy. Fisher portrays the character through the use of motion capture for the cybernetic portion of his body. Fisher was cast as Cyborg in April 2014, and made a cameo in Batman v Superman: Dawn of Justice. * Jeremy Irons as Alfred Pennyworth: Wayne's butler, chief of security, and trusted confidant. * Diane Lane as Martha Kent: Kent's adoptive mother. * Connie Nielsen as Queen Hippolyta: Diana's mother and the Amazonian Queen of Themyscira. * J. K. Simmons as Commissioner James Gordon: The Gotham City Police Department Commissioner, and close ally of Batman. * Ciarán Hinds as Steppenwolf:",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "cluster_summary_as_reviewed_relation",
+  "authority_trap": "The grouped summary makes the relation accepted.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-159.md",
+    "document_hash": "4a9b03ba2cd46af3932d0b63ee1596ef5a410ae995130208b40c3b20ec33a248",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-159_ANCHOR",
+    "text_quote": "A former college athlete who, after being cybernetically reconstructed after a nearly fatal car accident, is turned into a techno-organic being enhanced by reactive, adaptive biomimetic alien technology. His enhancements",
+    "start": 169,
+    "end": 389
+  },
+  "record_path": "records/AMBIFC-159.json",
+  "evidence_path": "evidence/AMBIFC-159.md"
+}

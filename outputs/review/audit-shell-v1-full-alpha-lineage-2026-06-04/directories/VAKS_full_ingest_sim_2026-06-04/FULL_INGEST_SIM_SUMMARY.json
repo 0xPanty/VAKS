@@ -1,0 +1,83 @@
+{
+  "run_id": "VAKS_full_ingest_sim_2026-06-04",
+  "date": "2026-06-04",
+  "main_vault": "C:\\Users\\Administrator\\Documents\\资料库",
+  "sandbox_dir": "C:\\Users\\Administrator\\Documents\\VAKS_full_ingest_sim_2026-06-04",
+  "main_vault_write_policy": "read_only",
+  "commit_policy": "no_commit",
+  "source_package": "C:\\Users\\Administrator\\Documents\\VAKS_800_independent_oracle_pilot_2026-06-01",
+  "audit_shell_package_status_before_run": "not_go_yet",
+  "simulation_type": "Codex operator full ingest simulation over real local vault samples",
+  "sample_count": 46,
+  "state_counts": {
+    "ordinary": 24,
+    "for_review": 16,
+    "blocking": 2,
+    "resolved_folded": 3,
+    "regressed": 1
+  },
+  "layer_counts": {
+    "raw/articles": 4,
+    "raw/videos": 5,
+    "raw/repos": 5,
+    "wiki/claims": 3,
+    "wiki/patterns": 6,
+    "wiki/anti-patterns": 4,
+    "wiki/concepts": 2,
+    "wiki/decisions": 4,
+    "outputs/review": 5,
+    "outputs/feedback": 1,
+    "00_handoff": 2,
+    "templates": 5
+  },
+  "immediate_full_audit_count": 19,
+  "ordinary_light_count": 24,
+  "resolved_or_folded_count": 3,
+  "hard_blockers": [
+    {
+      "id": "V05",
+      "path": "raw/videos/2026-06-04-youtube-hermes-obsidian-source/transcript.txt",
+      "reason": "flat transcript cannot serve as precise evidence or action anchor"
+    },
+    {
+      "id": "R04",
+      "path": "raw/repos/_snapshots/openkb-main-2026-05-27.zip",
+      "reason": "binary snapshot alone has no source-first evidence drilldown"
+    }
+  ],
+  "regressions": [
+    {
+      "id": "O04",
+      "path": "outputs/review/2026-05-30-alpha-plugin-boundary-pro-review-package-manifest.md",
+      "reason": "stale package manifest and commit pointer can mislead recovery"
+    }
+  ],
+  "risk_checks": {
+    "ordinary_material_light": "pass",
+    "action_material_full_audit": "pass",
+    "missing_or_weak_anchor_blocked": "pass",
+    "video_asr_not_reviewed_knowledge": "pass",
+    "feedback_not_truth_change": "pass_with_wording_risk",
+    "count_lineage_dashboard_not_authority": "pass",
+    "old_handoff_decision_template_stale_handled": "pass",
+    "codex_operator_surface_useful": "pass",
+    "too_heavy": "not_if_targeted_reminders_stay_sparse"
+  },
+  "operator_verdict": "helpful for Codex and reviewer operator triage",
+  "adoption_recommendation": {
+    "candidate_operation_convention_draft": "yes_after_user_confirmation",
+    "formal_mainline_adoption": "no",
+    "schema_change": "no",
+    "truth_layer_change": "no",
+    "recurrence_grouping": "keep_parked_default_off"
+  },
+  "remaining_gates": [
+    "human_or_second_operator_timing",
+    "real source-record-evidence click-back adjudication",
+    "authority misunderstanding observation beyond Codex self-simulation",
+    "small landing-class vocabulary for operator convention",
+    "stale and review_due handling rule for next_review, old handoff, old package, and old commit pointer"
+  ],
+  "plain_language_verdict": "This helps as a backstage operator shell. It is not too heavy if ordinary records stay light. It should move into a candidate operation convention draft, not formal adoption."
+}
+

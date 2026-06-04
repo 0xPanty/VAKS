@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-062",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 61,
+  "claim": "In mice, P. chabaudi parasites are able to proliferate faster early in infection when inoculated at lower numbers than when inoculated at high numbers.",
+  "evidence": "Immune clearance and resource limitation (via red blood cell depletion) shape the peaks and troughs of malaria parasitemia, which in turn affect disease severity and transmission. Quantitatively partitioning the relative roles of these effects through time is challenging. Using data from rodent malaria, we estimated the effective propagation number, which reflects the relative importance of contrasting within-host control mechanisms through time and is sensitive to the inoculating parasite dose. Our analysis showed that the capacity of innate responses to restrict initial parasite growth saturates with parasite dose and that experimentally enhanced innate immunity can affect parasite density indirectly via resource depletion. Such a statistical approach offers a tool to improve targeting of drugs or vaccines for human therapy by revealing the dynamics and interactions of within-host regulatory mechanisms.",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-062.md",
+    "marker": "RECSTRESS-062_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-06",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-06-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-062.json",
+  "evidence_path": "evidence/RECSTRESS-062.md"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-097",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 96,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Epigenetic modulating agents (EMAs) modulate antitumor immune response in a cancer model system.",
+  "evidence": "Ovarian cancer is the most lethal of all gynecological cancers, and there is an urgent unmet need to develop new therapies. Epithelial ovarian cancer (EOC) is characterized by an immune suppressive microenvironment, and response of ovarian cancers to immune therapies has thus far been disappointing. We now find, in a mouse model of EOC, that clinically relevant doses of DNA methyltransferase and histone deacetylase inhibitors (DNMTi and HDACi, respectively) reduce the immune suppressive microenvironment through type I IFN signaling and improve response to immune checkpoint therapy. These data indicate that the type I IFN response is required for effective in vivo antitumorigenic actions of the DNMTi 5-azacytidine (AZA). Through type I IFN signaling, AZA increases the numbers of CD45+ immune cells and the percentage of active CD8+ T and natural killer (NK) cells in the tumor microenvironment, while reducing tumor burden and extending survival. AZA also increases viral defense gene expression in both tumor and immune cells, and reduces the percentage of macrophages and myeloid-derived suppressor cells in the tumor microenvironment. The addition of an HDACi to AZA enhances the modulation of the immune microenvironment, specifically increasing T and NK cell activation and reducing macrophages over AZA treatment alone, while further increasing the survival of the mice. Finally, a tr",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-097.md",
+    "document_hash": "ddb81ddeea2de5e5f7620a6ed9fcc9b0df05c88041ddc2b925be4defe1a8725a",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-097_ANCHOR",
+    "text_quote": "Ovarian cancer is the most lethal of all gynecological cancers, and there is an urgent unmet need to develop new therapies. Epithelial ovarian cancer (EOC) is characterized by an immune suppressive microenvironment, and ",
+    "start": 208,
+    "end": 428
+  },
+  "record_path": "records/SCIFACT-097.json",
+  "evidence_path": "evidence/SCIFACT-097.md"
+}

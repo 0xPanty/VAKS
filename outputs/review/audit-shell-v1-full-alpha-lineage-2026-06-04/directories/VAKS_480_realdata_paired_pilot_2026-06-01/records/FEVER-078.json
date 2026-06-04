@@ -1,0 +1,22 @@
+{
+  "id": "FEVER-078",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 77,
+  "claim": "King Kong is a film.",
+  "evidence": "King_Kong_-LRB-2005_film-RRB- | 6 | Filming for King Kong took place in New Zealand from September 2004 to March 2005 .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-078.md",
+    "marker": "FEVER-078_ANCHOR"
+  }
+}

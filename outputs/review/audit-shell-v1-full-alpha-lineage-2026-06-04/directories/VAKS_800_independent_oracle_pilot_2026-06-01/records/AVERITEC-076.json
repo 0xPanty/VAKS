@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-076",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 75,
+  "layer": "action_challenge_conflict",
+  "claim": "Drinking vodka protects an individual against COVID-19.",
+  "evidence": "Alcohol in the body at the time of exposure to a pathogen tends to impair the body’s immediate immune response to the pathogen, making it easier for an infection to develop.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-076.md",
+    "document_hash": "f12134d75fa9e4791372372397695afe045ccf41dfb325eb7cbc5720450d29fb",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-076_ANCHOR",
+    "text_quote": "Alcohol in the body at the time of exposure to a pathogen tends to impair the body’s immediate immune response to the pathogen, making it easier for an infection to develop.",
+    "start": 170,
+    "end": 343
+  },
+  "record_path": "records/AVERITEC-076.json",
+  "evidence_path": "evidence/AVERITEC-076.md"
+}

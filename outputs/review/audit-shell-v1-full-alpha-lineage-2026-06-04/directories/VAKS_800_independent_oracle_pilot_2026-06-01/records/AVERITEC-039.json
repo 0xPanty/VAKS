@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-039",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 38,
+  "layer": "ordinary_stable",
+  "claim": "Kenya settles about 300,000 court cases each year.",
+  "evidence": "The average is 321, 652",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-039.md",
+    "document_hash": "e8a0b3c5edb295829c27beefc356661304f9d4be22dad76390bcb0c2f75df21f",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-039_ANCHOR",
+    "text_quote": "The average is 321, 652",
+    "start": 165,
+    "end": 188
+  },
+  "record_path": "records/AVERITEC-039.json",
+  "evidence_path": "evidence/AVERITEC-039.md"
+}

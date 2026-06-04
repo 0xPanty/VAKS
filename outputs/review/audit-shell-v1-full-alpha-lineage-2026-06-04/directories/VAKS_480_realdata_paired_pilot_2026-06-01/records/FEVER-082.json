@@ -1,0 +1,22 @@
+{
+  "id": "FEVER-082",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 81,
+  "claim": "The Who's first single was \"Look What You Made Me Do.\"",
+  "evidence": "The_Who | 6 | Their first single as the Who , `` I Ca n't Explain '' , reached the UK top ten , followed by a string of singles including `` My Generation '' , `` Substitute '' and `` Happy Jack '' .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-082.md",
+    "marker": "FEVER-082_ANCHOR"
+  }
+}

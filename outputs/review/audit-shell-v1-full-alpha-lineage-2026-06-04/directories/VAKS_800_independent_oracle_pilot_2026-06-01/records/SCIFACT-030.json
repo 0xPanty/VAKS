@@ -1,0 +1,29 @@
+{
+  "id": "SCIFACT-030",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 29,
+  "layer": "ordinary_stable",
+  "claim": "Articles published in open access format are more likely to be cited than traditional journals.",
+  "evidence": "PLoS Biology publishes today a research article by Gunther Eysenbach that is not about biology. It is about citations. It provides robust evidence that open-access articles (OA articles) are more immediately recognized and cited than non-OA articles. As such, it adds objective support to the belief we have always held that open-access publication speeds up scientific dialog between researchers and, consequently, should be extended to the whole scientific literature as quickly as possible. It is therefore fitting that we publish such a paper. We have long argued that papers freely available in a journal will be more often read and cited than those behind a subscription barrier. However, solid evidence to support or refute such a claim has been surprisingly hard to find. Since most open-access journals are new, comparisons of the effects of open access with established subscription-based journals are easily confounded by age and reputation. In the current study, Eysenbach compared citations compiled by Thomson Scientific (formerly Thomson ISI) to individual articles published between June 2004 and December 2004 in the same journal—namely, Proceedings of the National Academy of Sciences (PNAS), which announced its open-access option for authors on June 8 of that year, with an associated publication charge of US$1,000. Non-OA articles in PNAS are subject to a six-month “toll-access",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-030.md",
+    "document_hash": "b2924dc41ffc984131287fd13191a422bd0fb37f89ba306898d6261583dcf655",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-030_ANCHOR",
+    "text_quote": "PLoS Biology publishes today a research article by Gunther Eysenbach that is not about biology. It is about citations. It provides robust evidence that open-access articles (OA articles) are more immediately recognized a",
+    "start": 207,
+    "end": 427
+  },
+  "record_path": "records/SCIFACT-030.json",
+  "evidence_path": "evidence/SCIFACT-030.md"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-090",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 89,
+  "claim": "Nanoparticles can be targeted against specific cell types by incorporating aptamers into lipid nanoparticles.",
+  "evidence": "Currently, major concerns about the safety and efficacy of RNA interference (RNAi)-based bone anabolic strategies still exist because of the lack of direct osteoblast-specific delivery systems for osteogenic siRNAs. Here we screened the aptamer CH6 by cell-SELEX, specifically targeting both rat and human osteoblasts, and then we developed CH6 aptamer–functionalized lipid nanoparticles (LNPs) encapsulating osteogenic pleckstrin homology domain-containing family O member 1 (Plekho1) siRNA (CH6-LNPs-siRNA). Our results showed that CH6 facilitated in vitro osteoblast-selective uptake of Plekho1 siRNA, mainly via macropinocytosis, and boosted in vivo osteoblast-specific Plekho1 gene silencing, which promoted bone formation, improved bone microarchitecture, increased bone mass and enhanced mechanical properties in both osteopenic and healthy rodents. These results indicate that osteoblast-specific aptamer-functionalized LNPs could act as a new RNAi-based bone anabolic strategy, advancing the targeted delivery selectivity of osteogenic siRNAs from the tissue level to the cellular level.",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-090.md",
+    "marker": "RECSTRESS-090_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-08",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "stress-rec-08-fp-v2",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-090.json",
+  "evidence_path": "evidence/RECSTRESS-090.md"
+}

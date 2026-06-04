@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-122",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 121,
+  "layer": "anchor_problem",
+  "claim": "elizabeth and jack sparrow do end up together.",
+  "evidence": "Throughout the trilogy, Elizabeth Swann is portrayed as a spirited, intelligent, and independent-minded character who often chafes at the restrictions imposed on her gender and social rank. Early on in the first movie she often fantasizes about pirates and life at sea. This may have been fueled somewhat by her association with another character, Will Turner, who eleven-year-old Elizabeth met when she and her father, Governor Weatherby Swann were en route to Port Royal eight years earlier. Will, also about eleven, was found adrift at sea, the sole survivor of a pirate attack. During his rescue, Elizabeth briefly glimpsed a mysterious ship slipping into the mist—a vessel foreshadowing her destiny.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "selector_drift"
+  ],
+  "anchor_status": "drift",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "drift",
+    "path": "raw_sources/AMBIFC-122.md",
+    "document_hash": "c85190e02cbe008f4c8510367feb800dd4f546b7bb74af427e4b0f8732e86931",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-122_ANCHOR",
+    "text_quote": "Throughout the trilogy, Elizabeth Swann is portrayed as a spirited, intelligent, and independent-minded character who often chafes at the restrictions imposed on her gender and social rank. Early on in the first movie sh",
+    "start": 162,
+    "end": 382
+  },
+  "record_path": "records/AMBIFC-122.json",
+  "evidence_path": "evidence/AMBIFC-122.md"
+}

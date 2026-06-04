@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-120",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 119,
+  "layer": "anchor_problem",
+  "claim": "Creativity is contagious. Pass it on was said by Albert Einstein",
+  "evidence": "No",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "missing_anchor"
+  ],
+  "anchor_status": "missing",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "missing",
+    "path": "raw_sources/AVERITEC-120.md",
+    "document_hash": "",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-120_ANCHOR",
+    "text_quote": "No",
+    "start": -1,
+    "end": -1
+  },
+  "record_path": "records/AVERITEC-120.json",
+  "evidence_path": "evidence/AVERITEC-120.md"
+}

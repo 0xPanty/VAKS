@@ -1,0 +1,28 @@
+{
+  "scifact": {
+    "source_rows": 220,
+    "pilot_cases": 160,
+    "source_status": "real_with_qrels"
+  },
+  "averitec": {
+    "source_rows": 220,
+    "pilot_cases": 160,
+    "source_status": "real_dataset_server"
+  },
+  "ambifc": {
+    "source_rows": 220,
+    "pilot_cases": 160,
+    "source_status": "real_dataset_server"
+  },
+  "fever": {
+    "source_rows": 220,
+    "pilot_cases": 160,
+    "source_status": "real_dataset_server"
+  },
+  "full_anchor_real_pack": {
+    "pilot_cases": 80
+  },
+  "adversarial_holdout": {
+    "pilot_cases": 80
+  }
+}

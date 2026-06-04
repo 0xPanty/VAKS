@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-017",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 16,
+  "layer": "ordinary_stable",
+  "claim": "Tennis is not a sport.",
+  "evidence": "Tennis | 18 | Tennis is played by millions of recreational players and is also a popular worldwide spectator sport .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-017.md",
+    "document_hash": "e40ed92fc38deb656dc5295e3f3f2c9b99cbb93bf816f186e8db0503f8172930",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-017_ANCHOR",
+    "text_quote": "Tennis | 18 | Tennis is played by millions of recreational players and is also a popular worldwide spectator sport .",
+    "start": 128,
+    "end": 244
+  },
+  "record_path": "records/FEVER-017.json",
+  "evidence_path": "evidence/FEVER-017.md"
+}

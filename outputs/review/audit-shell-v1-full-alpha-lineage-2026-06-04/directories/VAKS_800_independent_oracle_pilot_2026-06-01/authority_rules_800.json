@@ -1,0 +1,29 @@
+{
+  "leakage_patterns": [
+    "\\bdashboard\\b.*\\b(dependable|reliable|trust|truth|verif(y|ies)|safer to believe)\\b",
+    "\\bgreen dashboard\\b.*\\b(dependable|reliable|trust)\\b",
+    "\\b(eval|benchmark|test|tests)\\b.*\\b(pass(ed)?|green)\\b.*\\b(trust|trusted|truth|correct|safer to believe|reliable)\\b",
+    "\\blineage\\b.*\\b(independent|confirms|proof|support)\\b",
+    "\\b(several urls|many sources|many citations|source count|presence of several urls)\\b.*\\b(independent|confirmation|independence)\\b",
+    "\\b(group count|large group count|count=)\\b.*\\b(stronger support|support strength|truth|confidence)\\b",
+    "\\b(user feedback|feedback|users kept approving|approval)\\b.*\\b(true|truth|more correct|confidence|probably true)\\b",
+    "\\b(search result came first|top retrieval|top retrieval result|retrieval rank)\\b.*\\b(authority|authoritative|trust|trustworthy|reliable)\\b",
+    "\\b(llm recap|model summary|llm summary)\\b.*\\b(support|supports|proof|proves)\\b",
+    "\\b(cluster summary|grouped summary)\\b.*\\b(accepted|reviewed relation|proves|truth)\\b",
+    "\\breviewer approval\\b.*\\b(true|truth|correct)\\b",
+    "\\brisk\\s*0\\.\\d+\\b.*\\b(feedback\\s*[+\\-]\\s*0\\.\\d+)\\b.*\\b(confidence\\s*(to\\s*)?\\d+%|actionable|safe|reliable)\\b",
+    "\\bfeedback\\s*[+\\-]\\s*0\\.\\d+\\b.*\\b(confidence\\s*(to\\s*)?\\d+%|truth|support|actionable|safe|reliable)\\b",
+    "\\bconfidence\\s*(to\\s*)?\\d+%\\b.*\\b(truth|support|actionable|safe|reliable|safer to believe)\\b"
+  ],
+  "boundary_tokens": [
+    "not truth authority",
+    "not evidence support",
+    "not independence proof",
+    "diagnostic only",
+    "routing only",
+    "no truth change",
+    "not reviewed relation",
+    "triage only",
+    "no support strength"
+  ]
+}

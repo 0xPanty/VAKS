@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-128",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 7,
+  "claim": "Margaret Sanger was a racist who believed in eugenics. Her goal when founding Planned Parenthood was to eradicate minorities.",
+  "evidence": "Eugenics is the practice or advocacy of improving the human species by selectively mating people with specific desirable hereditary traits. It aims to reduce human suffering by “breeding out” disease, disabilities and so-called undesirable characteristics from the human population I think the greatest sin in the world is bringing children into the world -- that have disease from their parents, that have no chance in the world to be a human being practically. Delinquents, prisoners, all sorts of things just marked when they're born. That to me is the greatest sin -- that people can -- can commit As her biographer Ellen Chesler told me, she was a progressive who believed in racial integration. She voted for Norman Thomas. She worked with progressive Black people—W.E.B. Du Bois, for example, who along with Mary McCleod Bethune and Adam Clayton Powell Sr. served on the board of the Negro Project, a network of birth control and maternal health clinics Sanger established in Harlem and the South. In 1966, Martin Luther King accepted Planned Parenthood’s first Margaret Sanger Award, and in his statement offered a vigorous endorsement of voluntary birth control.",
+  "source_label": "Conflicting Evidence/Cherrypicking",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-128.md",
+    "marker": "RECSTRESS-128_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-12",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "stress-rec-12-fp-v2",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-128.json",
+  "evidence_path": "evidence/RECSTRESS-128.md"
+}

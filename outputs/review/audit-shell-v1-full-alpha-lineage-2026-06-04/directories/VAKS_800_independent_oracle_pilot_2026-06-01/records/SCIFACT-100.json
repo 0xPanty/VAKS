@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-100",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 99,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Exposure to fine particulate air pollution is relate to anxiety prevalence.",
+  "evidence": "OBJECTIVE To determine whether higher past exposure to particulate air pollution is associated with prevalent high symptoms of anxiety. DESIGN Observational cohort study. SETTING Nurses' Health Study. PARTICIPANTS 71,271 women enrolled in the Nurses' Health Study residing throughout the contiguous United States who had valid estimates on exposure to particulate matter for at least one exposure period of interest and data on anxiety symptoms. MAIN OUTCOME MEASURES Meaningfully high symptoms of anxiety, defined as a score of 6 points or greater on the phobic anxiety subscale of the Crown-Crisp index, administered in 2004. RESULTS The 71,271 eligible women were aged between 57 and 85 years (mean 70 years) at the time of assessment of anxiety symptoms, with a prevalence of high anxiety symptoms of 15%. Exposure to particulate matter was characterized using estimated average exposure to particulate matter <2.5 μm in diameter (PM2.5) and 2.5 to 10 μm in diameter (PM2.5-10) in the one month, three months, six months, one year, and 15 years prior to assessment of anxiety symptoms, and residential distance to the nearest major road two years prior to assessment. Significantly increased odds of high anxiety symptoms were observed with higher exposure to PM2.5 for multiple averaging periods (for example, odds ratio per 10 µg/m(3) increase in prior one month average PM2.5: 1.12, 95% confid",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-100.md",
+    "document_hash": "9f31786e5a073d4d05a7e281874dbbfe84513899566333a3a897f7c09e2f0205",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-100_ANCHOR",
+    "text_quote": "OBJECTIVE To determine whether higher past exposure to particulate air pollution is associated with prevalent high symptoms of anxiety. DESIGN Observational cohort study. SETTING Nurses' Health Study. PARTICIPANTS 71,271",
+    "start": 187,
+    "end": 407
+  },
+  "record_path": "records/SCIFACT-100.json",
+  "evidence_path": "evidence/SCIFACT-100.md"
+}

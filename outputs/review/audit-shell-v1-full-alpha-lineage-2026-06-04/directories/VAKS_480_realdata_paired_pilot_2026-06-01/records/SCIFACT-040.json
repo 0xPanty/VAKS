@@ -1,0 +1,20 @@
+{
+  "id": "SCIFACT-040",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row",
+  "source_row_index": 39,
+  "claim": "De novo assembly of sequence data has more specific contigs than unassembled sequence data.",
+  "evidence": "IMPORTANCE Identification of the bacterium responsible for an outbreak can aid in disease management. However, traditional culture-based diagnosis can be difficult, particularly if no specific diagnostic test is available for an outbreak strain. OBJECTIVE To explore the potential of metagenomics, which is the direct sequencing of DNA extracted from microbiologically complex samples, as an open-ended clinical discovery platform capable of identifying and characterizing bacterial strains from an outbreak without laboratory culture. DESIGN, SETTING, AND PATIENTS In a retrospective investigation, 45 samples were selected from fecal specimens obtained from patients with diarrhea during the 2011 outbreak of Shiga-toxigenic Escherichia coli (STEC) O104:H4 in Germany. Samples were subjected to high-throughput sequencing (August-September 2012), followed by a 3-phase analysis (November 2012-February 2013). In phase 1, a de novo assembly approach was developed to obtain a draft genome of the outbreak strain. In phase 2, the depth of coverage of the outbreak strain genome was determined in each sample. In phase 3, sequences from each sample were compared with sequences from known bacteria to ",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-040.md",
+    "marker": "SCIFACT-040_ANCHOR"
+  }
+}

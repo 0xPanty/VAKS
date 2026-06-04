@@ -1,0 +1,38 @@
+{
+  "id": "FULLANCHOR-010",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 9,
+  "layer": "full_anchor_click",
+  "claim": "Biden will take away the Second Amendment.",
+  "evidence": "Biden’s plan to end gun violence says \"It’s within our grasp to end our gun violence epidemic and respect the Second Amendment, which is limited,\"",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "real_web_snapshot",
+  "source_anchor": {
+    "status": "valid",
+    "path": "real_source_snapshots/FULLANCHOR-010.txt",
+    "document_hash": "bafed6faa4c721856b9da391bdd3aafb09bd59a847929ae7921371d387917fe1",
+    "version_id": "real-web-snapshot-v2",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-010_REAL_SNAPSHOT",
+    "text_quote": "\"It’s within our grasp to end our gun violence epidemic and respect the Second Amendment, which is limited,\" his plan says.",
+    "start": 6419,
+    "end": 6542,
+    "quote_strategy": "claim_keyword_window",
+    "landing_class": "claim_relevant_context_landing",
+    "semantic_selector_success": true,
+    "boilerplate_quote": false
+  },
+  "record_path": "records/FULLANCHOR-010.json",
+  "evidence_path": "evidence/FULLANCHOR-010.md",
+  "real_snapshot_url": "https://web.archive.org/web/20210111003633/https://www.politifact.com/article/2020/aug/26/fact-checking-second-night-2020-rnc/",
+  "clickback_snapshot_kind": "live_urllib_retry"
+}

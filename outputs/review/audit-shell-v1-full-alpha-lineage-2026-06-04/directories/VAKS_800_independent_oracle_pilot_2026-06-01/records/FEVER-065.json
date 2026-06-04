@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-065",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 64,
+  "layer": "action_challenge_conflict",
+  "claim": "Tennis was a term used to refer to real tennis in the 19th century.",
+  "evidence": "Tennis | 10 | During most of the 19th century , in fact , the term `` tennis '' referred to real tennis , not lawn tennis : for example , in Disraeli 's novel Sybil -LRB- 1845 -RRB- , Lord Eugene De Vere announces that he will `` go down to Hampton Court and play tennis . ''",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "explicit_challenge"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-065.md",
+    "document_hash": "e48458a7d1e8cca1e008b043f3c637e7bfbeef449cc15b55a66b60d5ebf16fe7",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-065_ANCHOR",
+    "text_quote": "Tennis | 10 | During most of the 19th century , in fact , the term `` tennis '' referred to real tennis , not lawn tennis : for example , in Disraeli 's novel Sybil -LRB- 1845 -RRB- , Lord Eugene De Vere announces that h",
+    "start": 173,
+    "end": 393
+  },
+  "record_path": "records/FEVER-065.json",
+  "evidence_path": "evidence/FEVER-065.md"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "AMBIFC-120",
+  "dataset_family": "ambifc",
+  "source_dataset_status": "real_row",
+  "source_row_index": 119,
+  "claim": "there is a sequel to the mortal instruments city of bones.",
+  "evidence": "The Mortal Instruments: City of Bones (Original Motion Picture Soundtrack) was released by Republic Records in stores and digital retailers on August 20, 2013. It is headlined by Demi Lovato, Zedd, Colbie Caillat, AFI remixed by LA Riots, and Jessie J among others. The soundtrack is a collaboration between trance DJs Myon & Shane 54 with Seven Lions, as well as a song by Bryan Ellis, produced by Brian West. Some songs, including Lovato's \"Heart by Heart\" and Caillat's \"When the Darkness Comes\", were recorded specifically for City of Bones. Zedd \"scored for a key scene in the film\". \"Almost Is Never Enough\", performed by Ariana Grande and Nathan Sykes was released as promotional single from the album on August 19, 2013. The album peaked at #32 on the US Billboard 200\\. \"Almost is Never Enough\", performed by Ariana Grande and The Wanted's Nathan Sykes, debuted on the Billboard Hot 100 at number 84. Beth Crowley had also written a song inspired by the movie called \"Warrior\".",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "retrieval_rank_as_trust",
+  "authority_trap": "The top retrieval rank means this source is most trustworthy.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-120.md",
+    "marker": "AMBIFC-120_ANCHOR"
+  }
+}

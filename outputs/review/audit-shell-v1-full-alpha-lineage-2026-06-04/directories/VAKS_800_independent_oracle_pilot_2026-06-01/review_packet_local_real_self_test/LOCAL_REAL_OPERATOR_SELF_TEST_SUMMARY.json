@@ -1,0 +1,38 @@
+{
+  "status": "codex local real operator self-test",
+  "generated_at": "2026-06-03T18:55:52.615705+00:00",
+  "scope": "Codex self-test over local real-row/full-anchor samples; not human adjudication; not product gate.",
+  "sample_count": 26,
+  "layer_counts": {
+    "full_anchor_click": 6,
+    "ordinary_stable": 2,
+    "action_challenge_conflict": 2,
+    "omission_insufficiency_ambiguity": 2,
+    "anchor_problem": 2,
+    "anchor_jumpback_failure": 1,
+    "false_lite_trap": 1,
+    "review_due_trap": 1,
+    "resolved_repeated_recurrence": 2,
+    "authority_leak_bait": 2,
+    "authority_leakage_paraphrase": 1,
+    "over_grouping_near_miss": 2,
+    "serious_folded_violation": 2
+  },
+  "landing_class_counts": {
+    "evidence_landing": 1,
+    "claim_landing": 1,
+    "claim_relevant_context_landing": 4,
+    "none": 20
+  },
+  "can_understand_state_and_action": 26,
+  "wrong_actionability_selftest": 0,
+  "serious_miss_selftest": 0,
+  "authority_misunderstanding_selftest": 0,
+  "source_path_resolves": 23,
+  "record_path_resolves": 26,
+  "evidence_path_resolves": 26,
+  "quote_text_found": 22,
+  "quote_offset_exact": 22,
+  "verdict": "usable_for_codex_operator_triage_with_known_limits",
+  "next_route": "keep not_go_yet; use this as Codex comprehension evidence only; human/product gates remain open."
+}

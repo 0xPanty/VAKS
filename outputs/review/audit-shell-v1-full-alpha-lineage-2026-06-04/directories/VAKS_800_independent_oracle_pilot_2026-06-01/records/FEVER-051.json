@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-051",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 50,
+  "layer": "ordinary_stable",
+  "claim": "Her was given a wide release on January 11, 1654.",
+  "evidence": "Her_-LRB-film-RRB- | 16 | It was later given a wide release at over 1,700 theaters in the United States and Canada on January 10 , 2014 .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-051.md",
+    "document_hash": "271a8e620d2a5856b7720bf2887cce91d9a889de99ba76d4e556f9a3329129b4",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-051_ANCHOR",
+    "text_quote": "Her_-LRB-film-RRB- | 16 | It was later given a wide release at over 1,700 theaters in the United States and Canada on January 10 , 2014 .",
+    "start": 155,
+    "end": 292
+  },
+  "record_path": "records/FEVER-051.json",
+  "evidence_path": "evidence/FEVER-051.md"
+}

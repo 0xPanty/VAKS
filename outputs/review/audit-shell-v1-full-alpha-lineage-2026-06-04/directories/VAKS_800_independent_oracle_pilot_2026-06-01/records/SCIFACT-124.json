@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-124",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 123,
+  "layer": "anchor_problem",
+  "claim": "High-sensitivity cardiac troponin T (HSCT-T) dosage may not be diagnostic if the onset of symptoms occurs less than 3 hours before acute myocardial injury (AMI).",
+  "evidence": "OBJECTIVE To obtain summary estimates of the accuracy of a single baseline measurement of the Elecsys Troponin T high-sensitive assay (Roche Diagnostics) for the diagnosis of acute myocardial infarction in patients presenting to the emergency department. DESIGN Systematic review and meta-analysis of diagnostic test accuracy studies. DATA SOURCES Medline, Embase, and other relevant electronic databases were searched for papers published between January 2006 and December 2013. STUDY SELECTION Studies were included if they evaluated the diagnostic accuracy of a single baseline measurement of Elecsys Troponin T high-sensitive assay for the diagnosis of acute myocardial infarction in patients presenting to the emergency department with suspected acute coronary syndrome. STUDY APPRAISAL AND DATA SYNTHESIS The first author screened all titles and abstracts identified through the searches and selected all potentially relevant papers. The screening of the full texts, the data extraction, and the methodological quality assessment, using the adapted QUADAS-2 tool, were conducted independently by two reviewers with disagreements being resolved through discussion or arbitration. If appropriate, meta-analysis was conducted using the hierarchical bivariate model. RESULTS Twenty three studies reported the performance of the evaluated assay at presentation. The results for 14 ng/L and 3-5 ng/L ",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "missing_anchor"
+  ],
+  "anchor_status": "missing",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "missing",
+    "path": "raw_sources/SCIFACT-124.md",
+    "document_hash": "",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-124_ANCHOR",
+    "text_quote": "OBJECTIVE To obtain summary estimates of the accuracy of a single baseline measurement of the Elecsys Troponin T high-sensitive assay (Roche Diagnostics) for the diagnosis of acute myocardial infarction in patients prese",
+    "start": -1,
+    "end": -1
+  },
+  "record_path": "records/SCIFACT-124.json",
+  "evidence_path": "evidence/SCIFACT-124.md"
+}

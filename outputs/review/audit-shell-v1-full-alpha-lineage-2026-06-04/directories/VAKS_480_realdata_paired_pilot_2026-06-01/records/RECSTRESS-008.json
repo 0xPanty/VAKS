@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-008",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 7,
+  "claim": "Activator-inhibitor pairs are provided dorsally by Admpchordin.",
+  "evidence": "Embryos have the ability to self-regulate and regenerate normal structures after being sectioned in half. How is such a morphogenetic field established? We discovered that quadruple knockdown of ADMP and BMP2/4/7 in Xenopus embryos eliminates self-regulation, causing ubiquitous neural induction throughout the ectoderm. ADMP transcription in the Spemann organizer is activated at low BMP levels. When ventral BMP2/4/7 signals are depleted, Admp expression increases, allowing for self-regulation. ADMP has BMP-like activity and signals via the ALK-2 receptor. It is unable to signal dorsally because of inhibition by Chordin. The ventral BMP antagonists Sizzled and Bambi further refine the pattern. By transplanting dorsal or ventral wild-type grafts into ADMP/BMP2/4/7-depleted hosts, we demonstrate that both poles serve as signaling centers that can induce histotypic differentiation over considerable distances. We conclude that dorsal and ventral BMP signals and their extracellular antagonists expressed under opposing transcriptional regulation provide a molecular mechanism for embryonic self-regulation.",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-008.md",
+    "marker": "RECSTRESS-008_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-00",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "stress-rec-00-fp-v2",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-008.json",
+  "evidence_path": "evidence/RECSTRESS-008.md"
+}

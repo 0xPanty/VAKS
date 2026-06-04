@@ -1,0 +1,26 @@
+{
+  "leakage_patterns": [
+    "lineage\\s+(repeats|confirms|proves|shows).*independent",
+    "derived\\s+chain\\s+confirms\\s+independent",
+    "multiple\\s+urls?.*independence\\s+is\\s+stronger",
+    "three\\s+sources\\s+agree.*confidence\\s+should\\s+rise",
+    "dashboard\\s+is\\s+green.*verifies",
+    "test\\s+passed.*knowledge\\s+is\\s+true",
+    "feedback\\s+confirms.*true",
+    "feedback\\s+raises\\s+truth\\s+confidence",
+    "ranked\\s+first.*trust",
+    "top\\s+search\\s+result.*credibility",
+    "cluster\\s+summary\\s+establishes\\s+a\\s+reviewed\\s+relation",
+    "model\\s+summary\\s+supports"
+  ],
+  "boundary_tokens": [
+    "not independence proof",
+    "not support strength",
+    "not truth authority",
+    "diagnostic only",
+    "routing only",
+    "no truth change",
+    "not reviewed relation",
+    "not evidence support"
+  ]
+}

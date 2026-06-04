@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-014",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 13,
+  "layer": "ordinary_stable",
+  "claim": "Lance Armstrong had a puppy.",
+  "evidence": "L.A._Confidentiel | 0 | L.A. Confidentiel : Les secrets de Lance Armstrong -LRB- L.A. Confidential : Lance Armstrong 's Secrets -RRB- is a book by sports journalist Pierre Ballester and The Sunday Times sports correspondent David Walsh .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-014.md",
+    "document_hash": "9b01d040f862a26323b892a8c793c6adca3c8f76822a7320cebe7fbe096009ee",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-014_ANCHOR",
+    "text_quote": "L.A._Confidentiel | 0 | L.A. Confidentiel : Les secrets de Lance Armstrong -LRB- L.A. Confidential : Lance Armstrong 's Secrets -RRB- is a book by sports journalist Pierre Ballester and The Sunday Times sports correspond",
+    "start": 134,
+    "end": 354
+  },
+  "record_path": "records/FEVER-014.json",
+  "evidence_path": "evidence/FEVER-014.md"
+}

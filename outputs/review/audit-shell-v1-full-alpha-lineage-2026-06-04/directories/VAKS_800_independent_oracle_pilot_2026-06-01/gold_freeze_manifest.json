@@ -1,0 +1,8 @@
+{
+  "frozen_at_utc": "2026-06-03T17:55:09.452099+00:00",
+  "gold_file": "gold_oracle_frozen.json",
+  "sha256": "b7b938d81b2f05ce351bc3460be1c8485b66a5838ca97059b3dad3ad48ba52a8",
+  "case_count": 800,
+  "gold_origin": "machine_frozen_from_explicit_case_overlays_not_human_adjudicated",
+  "warning": "This proves frozen-gold workflow and rule consistency, not independent human oracle validity."
+}

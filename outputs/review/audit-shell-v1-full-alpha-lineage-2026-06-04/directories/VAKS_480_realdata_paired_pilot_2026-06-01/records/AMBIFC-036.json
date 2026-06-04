@@ -1,0 +1,20 @@
+{
+  "id": "AMBIFC-036",
+  "dataset_family": "ambifc",
+  "source_dataset_status": "real_row",
+  "source_row_index": 35,
+  "claim": "in the fundamentals of caring, trevor dies.",
+  "evidence": "* Paul Rudd as Ben * Craig Roberts as Trevor * Selena Gomez as Dot * Jennifer Ehle as Elsa * Megan Ferguson as Peaches * Frederick Weller as Bob * Bobby Cannavale as Cash",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-036.md",
+    "marker": "AMBIFC-036_ANCHOR"
+  }
+}

@@ -1,0 +1,7 @@
+# Raw Source AMBIFC-095
+dataset: ambifc
+source_row: 94
+marker: OLD_AMBIFC-095_ANCHOR
+claim: will smith's daughter is in i am legend.
+label: neutral
+evidence: In 1998, Smith starred with Gene Hackman in Enemy of the State. The following year he turned down the role of Neo in The Matrix in favor of Wild Wild West (1999). Despite the disappointment of Wild Wild West, Smith has said that he harbors no regrets about his decision, asserting that Keanu Reeves's performance as Neo was superior to what Smith himself would have achieved, although in interviews subsequent to the release of Wild Wild West he stated that he "made a mistake on Wild Wild West. That could have been better". Smith's second album was again supported by the release of a film theme song as the lead single: "Wild Wild West", featuring Dru Hill and Kool Moe Dee, topped the Billboard Hot 100 and was certified gold by the RIAA. The album in question, Willennium, reached number five on the Billboard 200 and was certified double platinum by the RIAA. "Will 2K", the second single from the album, reached number 25 on the Billboard Hot 100. Before the end of 1999, a video album was released featuring Smith's seven music videos released to date, which reached number 25 on the UK Music Video Chart. The same year, the rapper was also featured on The Fresh Prince of Bel-Air co-star Tat

@@ -1,0 +1,22 @@
+{
+  "id": "AVERITEC-087",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 86,
+  "claim": "In the US, envelopes used for mail-in ballots in general elections reveal the party affiliation of the voter allowing postal workers to toss votes.",
+  "evidence": "No The office of the supervisor of elections for Palm Beach County, Florida — where the envelopes in the Facebook posts were sent — confirmed that in a statement to FactCheck.org. In a closed primary, “voters are sent ballots according to their precinct and their party affiliation. The ballots in that video are primary ballots.” The alphanumeric codes on the envelopes shown in the video are used to direct the ballots for counting.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-087.md",
+    "marker": "AVERITEC-087_ANCHOR"
+  }
+}

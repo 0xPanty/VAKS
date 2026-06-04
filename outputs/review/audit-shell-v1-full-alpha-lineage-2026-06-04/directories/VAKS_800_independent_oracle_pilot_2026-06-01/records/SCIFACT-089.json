@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-089",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 88,
+  "layer": "action_challenge_conflict",
+  "claim": "Diabetic patients with acute coronary syndrome experience increased short-term and long-term risk for bleeding events.",
+  "evidence": "BACKGROUND Diabetes mellitus is a major risk factor for adverse outcomes after acute coronary syndromes (ACS). Because this disease may be associated with increased platelet aggregation, we investigated whether diabetic patients with ACS derive particular benefit from platelet glycoprotein (GP) IIb/IIIa receptor inhibition. METHODS AND RESULTS We performed a meta-analysis of the diabetic populations enrolled in the 6 large-scale platelet GP IIb/IIIa inhibitor ACS trials: PRISM, PRISM-PLUS, PARAGON A, PARAGON B, PURSUIT, and GUSTO IV. Among 6458 diabetic patients, platelet GP IIb/IIIa inhibition was associated with a significant mortality reduction at 30 days, from 6.2% to 4.6% (OR 0.74; 95% CI 0.59 to 0.92; P=0.007). Conversely, 23 072 nondiabetic patients had no survival benefit (3.0% versus 3.0%). The interaction between platelet GP IIb/IIIa inhibition and diabetic status was statistically significant (P=0.036). Among 1279 diabetic patients undergoing percutaneous coronary intervention (PCI) during index hospitalization, the use of these agents was associated with a mortality reduction at 30 days from 4.0% to 1.2% (OR 0.30; 95% CI 0.14 to 0.69; P=0.002). CONCLUSIONS This meta-analysis, including the entire large-scale trial experience of intravenous platelet GP IIb/IIIa inhibitors for the medical management of non-ST-segment-elevation ACS, shows that these agents may signific",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "explicit_challenge"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-089.md",
+    "document_hash": "6e1849a982ef0801c0b5357ac7e35cb8d22bf0c4b6db75b784a4ebe051e9f38f",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-089_ANCHOR",
+    "text_quote": "BACKGROUND Diabetes mellitus is a major risk factor for adverse outcomes after acute coronary syndromes (ACS). Because this disease may be associated with increased platelet aggregation, we investigated whether diabetic ",
+    "start": 230,
+    "end": 450
+  },
+  "record_path": "records/SCIFACT-089.json",
+  "evidence_path": "evidence/SCIFACT-089.md"
+}

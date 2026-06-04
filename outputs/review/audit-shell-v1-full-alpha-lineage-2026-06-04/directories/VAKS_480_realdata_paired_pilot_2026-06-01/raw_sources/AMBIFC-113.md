@@ -1,0 +1,7 @@
+# Raw Source AMBIFC-113
+dataset: ambifc
+source_row: 112
+marker: AMBIFC-113_ANCHOR
+claim: a female director has never won an oscar.
+label: neutral
+evidence: The Academy Award for Best Director (officially known as the Academy Award of Merit for Directing) is an award presented annually by the Academy of Motion Picture Arts and Sciences (AMPAS). It is given in honor of a film director who has exhibited outstanding directing while working in the film industry. The 1st Academy Awards ceremony was held in 1929 with the award being split into "Dramatic" and "Comedy" categories; Frank Borzage and Lewis Milestone won for 7th Heaven and Two Arabian Knights, respectively. However, these categories were merged for all subsequent ceremonies. Nominees are determined by single transferable vote within the directors branch of AMPAS; winners are selected by a plurality vote from the entire eligible voting members of the Academy. For the first eleven years of the Academy Awards, directors were allowed to be nominated for multiple films in the same year. However, after the nomination of Michael Curtiz for two films, Angels with Dirty Faces and Four Daughters, at the 11th Academy Awards, the rules were revised so that an individual could only be nominated for one film at each ceremony. That rule has since been amended, although the only director who has

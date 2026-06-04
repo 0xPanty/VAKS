@@ -1,0 +1,31 @@
+{
+  "id": "RECSTRESS-221",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 100,
+  "claim": "Facebook deleted a photo of Melania Trump with her sister and mother.",
+  "evidence": "it shows Melania, her sister and audrey gruss (not Melanias mother) No the photo was not removed from Facebook",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "regression"
+  ],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-221.md",
+    "marker": "RECSTRESS-221_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-22",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-221.json",
+  "evidence_path": "evidence/RECSTRESS-221.md"
+}

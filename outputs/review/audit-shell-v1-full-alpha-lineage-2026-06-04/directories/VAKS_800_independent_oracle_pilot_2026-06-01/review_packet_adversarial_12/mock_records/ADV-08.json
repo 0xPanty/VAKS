@@ -1,0 +1,11 @@
+{
+  "case_id": "ADV-08",
+  "adversarial_category": "authority paraphrase",
+  "claim": "这条记录暗示测试通过、dashboard 绿色和模型总结让结论更可信。",
+  "expected_state": "ordinary",
+  "expected_anchor_status": "valid",
+  "expected_no_group": "n/a",
+  "source_pointer": "review_packet_adversarial_12/mock_sources/ADV-08.md",
+  "evidence_pointer": "review_packet_adversarial_12/mock_evidence/ADV-08.md",
+  "note": "Synthetic operator-surface test record; not a truth-layer schema proposal."
+}

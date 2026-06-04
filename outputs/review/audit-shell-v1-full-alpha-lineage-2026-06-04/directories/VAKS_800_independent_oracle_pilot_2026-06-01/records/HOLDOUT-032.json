@@ -1,0 +1,31 @@
+{
+  "id": "HOLDOUT-032",
+  "pool": "adversarial_holdout",
+  "dataset_family": "scifact",
+  "source_row_index": 31,
+  "layer": "anchor_jumpback_failure",
+  "claim": "Assembly of invadopodia is triggered by focal generation of phosphatidylinositol-3,4-biphosphate and the activation of the nonreceptor tyrosine kinase Src.",
+  "evidence": "Tks5/Fish is a scaffolding protein with five SH3 domains and one PX domain. In Src-transformed cells, Tks5/Fish localizes to podosomes, discrete protrusions of the ventral membrane. We generated Src-transformed cells with reduced Tks5/Fish levels. They no longer formed podosomes, did not degrade gelatin, and were poorly invasive. We detected Tks5/Fish expression in podosomes in invasive cancer cells, as well as in human breast cancer and melanoma samples. Tks5/Fish expression was also required for protease-driven matrigel invasion in human cancer cells. Finally, coexpression of Tks5/Fish and Src in epithelial cells resulted in the appearance of podosomes. Thus, Tks5/Fish appears to be required for podosome formation, for degradation of the extracellular matrix, and for invasion of some cancer cells.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "moved_pointer"
+  ],
+  "anchor_status": "moved",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "moved",
+    "path": "full_anchor_sources/HOLDOUT-032_moved.md",
+    "document_hash": "13adec952b76db124b926ee81ed365b46045488df613e721a5e9ea2cbdecefe0",
+    "version_id": "holdout-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "HOLDOUT-032_ANCHOR",
+    "text_quote": "Tks5/Fish is a scaffolding protein with five SH3 domains and one PX domain. In Src-transformed cells, Tks5/Fish localizes to podosomes, discrete protrusions of the ventral membrane. We generated Src-transformed cells wit",
+    "start": 267,
+    "end": 487
+  },
+  "record_path": "records/HOLDOUT-032.json",
+  "evidence_path": "evidence/HOLDOUT-032.md"
+}

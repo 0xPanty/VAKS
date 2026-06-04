@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-116",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 115,
+  "claim": "Recurrent mutations occur frequently within CTCF anchor sites adjacent to oncogenes.",
+  "evidence": "In this study, we describe the 3D chromosome regulatory landscape of human naive and primed embryonic stem cells. To devise this map, we identified transcriptional enhancers and insulators in these cells and placed them within the context of cohesin-associated CTCF-CTCF loops using cohesin ChIA-PET data. The CTCF-CTCF loops we identified form a chromosomal framework of insulated neighborhoods, which in turn form topologically associating domains (TADs) that are largely preserved during the transition between the naive and primed states. Regulatory changes in enhancer-promoter interactions occur within insulated neighborhoods during cell state transition. The CTCF anchor regions we identified are conserved across species, influence gene expression, and are a frequent site of mutations in cancer cells, underscoring their functional importance in cellular regulation. These 3D regulatory maps of human pluripotent cells therefore provide a foundation for future interrogation of the relationships between chromosome structure and gene control in development and disease.",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-116.md",
+    "marker": "RECSTRESS-116_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-11",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-11-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-116.json",
+  "evidence_path": "evidence/RECSTRESS-116.md"
+}

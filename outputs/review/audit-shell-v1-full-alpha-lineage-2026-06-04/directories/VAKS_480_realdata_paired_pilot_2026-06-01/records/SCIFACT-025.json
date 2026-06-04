@@ -1,0 +1,20 @@
+{
+  "id": "SCIFACT-025",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row",
+  "source_row_index": 24,
+  "claim": "Cataract and trachoma are the primary cause of blindness in Southern Sudan.",
+  "evidence": "Background Blindness and low vision are thought to be common in southern Sudan. However, the magnitude and geographical distribution are largely unknown. We aimed to estimate the prevalence of blindness and low vision, identify the main causes of blindness and low vision, and estimate targets for blindness prevention programs in Mankien payam (district), southern Sudan.",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-025.md",
+    "marker": "SCIFACT-025_ANCHOR"
+  }
+}

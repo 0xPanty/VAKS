@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-102",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 101,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "rocky balboa is in the boxing hall of fame.",
+  "evidence": "Rocky Balboa fights as a southpaw (left-handed). In the second film, against Apollo Creed, he comes out orthodox and Mickey intends for him to switch back to southpaw late in the last round, but Balboa refuses saying \"no tricks, I ain't switching\". Mickey tells him that Apollo is ready for him (if he continues using his right) and so towards the end of the round, he does indeed lead with his left. The real reason for this is Sylvester Stallone tore his pectoral muscles in training, but the idea was probably taken from the great left-handed boxer \"Marvelous\" Marvin Hagler who would sometimes come out orthodox to confuse opponents. Rocky was an all-or-nothing brawler coming into his first bout with Creed; however, under the training of Mickey, he began to develop his boxing skills which he eventually mastered. During his reign as world champion, he became a class hybrid fighter, possessing the qualities of an inside fighter, brawler, and swarmer. With the exception of his rematch against Clubber Lang (where he fights as an outside fighter), he often advances quickly upon his opponents, driving them into the ropes in order to attack the body. Balboa's best attribute is without question his near-superhuman ability to absorb a multitude of the hardest hits without falling — an attribute he often employs on purpose to wear down his opponents, sacrificing defensive strategy to land hi",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "ambiguous_scope"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-102.md",
+    "document_hash": "218b8f5896303ee0aaf35c778624c0bd7f163d4babfe76e6f7a1a4073b0bc29f",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-102_ANCHOR",
+    "text_quote": "Rocky Balboa fights as a southpaw (left-handed). In the second film, against Apollo Creed, he comes out orthodox and Mickey intends for him to switch back to southpaw late in the last round, but Balboa refuses saying \"no",
+    "start": 152,
+    "end": 372
+  },
+  "record_path": "records/AMBIFC-102.json",
+  "evidence_path": "evidence/AMBIFC-102.md"
+}

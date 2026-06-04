@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-046",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 45,
+  "layer": "ordinary_stable",
+  "claim": "Carmelo Anthony plays basketball.",
+  "evidence": "Carmelo_Anthony | 14 | He is the United States Olympic men 's national basketball team all-time leading scorer , leader in rebounds and games played .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-046.md",
+    "document_hash": "f92468084d073e721be5cbf7ba1a5d94784ea0f6a3bc161f801bb28ffb2ca370",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-046_ANCHOR",
+    "text_quote": "Carmelo_Anthony | 14 | He is the United States Olympic men 's national basketball team all-time leading scorer , leader in rebounds and games played .",
+    "start": 139,
+    "end": 289
+  },
+  "record_path": "records/FEVER-046.json",
+  "evidence_path": "evidence/FEVER-046.md"
+}

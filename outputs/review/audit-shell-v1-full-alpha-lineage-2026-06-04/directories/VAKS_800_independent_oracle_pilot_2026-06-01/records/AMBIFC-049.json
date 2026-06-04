@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-049",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 48,
+  "layer": "ordinary_stable",
+  "claim": "the nun is a prequel to the conjuring.",
+  "evidence": "Warner Bros. Pictures had initially scheduled The Nun to be released in the United States on July 13, 2018. In February 2018, it was announced that the film's release date would be pushed back to September 7, 2018. On June 13, 2018, a teaser trailer was released. In August 2018, a short advertisement for the film was removed from YouTube due to an unskippable jump scare that violated the platform's \"Shocking Content\" policies. The studio spent an estimated $90 million on prints and advertisements for the film. The film was released on Digital HD on November 20, 2018 and on Blu-ray and DVD on December 4, 2018.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-049.md",
+    "document_hash": "ed93d981eb24b84b805065d4d4d0e96295dc09fca3a00e89112b46fd124e936e",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-049_ANCHOR",
+    "text_quote": "Warner Bros. Pictures had initially scheduled The Nun to be released in the United States on July 13, 2018. In February 2018, it was announced that the film's release date would be pushed back to September 7, 2018. On Ju",
+    "start": 147,
+    "end": 367
+  },
+  "record_path": "records/AMBIFC-049.json",
+  "evidence_path": "evidence/AMBIFC-049.md"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "HOLDOUT-065",
+  "pool": "adversarial_holdout",
+  "dataset_family": "scifact",
+  "source_row_index": 64,
+  "layer": "authority_leakage_paraphrase",
+  "claim": "Cells lacking clpC have a defect in sporulation efficiency in Bacillus subtilis.",
+  "evidence": "The differentiation of the bacterium Bacillus subtilis into a dormant spore is among the most well-characterized developmental pathways in biology. Classical genetic screens performed over the past half century identified scores of factors involved in every step of this morphological process. More recently, transcriptional profiling uncovered additional sporulation-induced genes required for successful spore development. Here, we used transposon-sequencing (Tn-seq) to assess whether there were any sporulation genes left to be discovered. Our screen identified 133 out of the 148 genes with known sporulation defects. Surprisingly, we discovered 24 additional genes that had not been previously implicated in spore formation. To investigate their functions, we used fluorescence microscopy to survey early, middle, and late stages of differentiation of null mutants from the B. subtilis ordered knockout collection. This analysis identified mutants that are delayed in the initiation of sporulation, defective in membrane remodeling, and impaired in spore maturation. Several mutants had novel sporulation phenotypes. We performed in-depth characterization of two new factors that participate in cell-cell signaling pathways during sporulation. One (SpoIIT) functions in the activation of σE in the mother cell; the other (SpoIIIL) is required for σG activity in the forespore. Our analysis also",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "dashboard_as_truth",
+  "authority_trap": "Green dashboard checks make this answer dependable.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/HOLDOUT-065.md",
+    "document_hash": "5d749ad9a8c153ac096e841e4fe5361eab4c573c9a66f849a6e1f94b7230eb2f",
+    "version_id": "holdout-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "HOLDOUT-065_ANCHOR",
+    "text_quote": "The differentiation of the bacterium Bacillus subtilis into a dormant spore is among the most well-characterized developmental pathways in biology. Classical genetic screens performed over the past half century identifie",
+    "start": 192,
+    "end": 412
+  },
+  "record_path": "records/HOLDOUT-065.json",
+  "evidence_path": "evidence/HOLDOUT-065.md"
+}

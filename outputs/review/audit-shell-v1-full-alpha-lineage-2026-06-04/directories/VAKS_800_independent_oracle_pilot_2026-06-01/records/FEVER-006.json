@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-006",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 5,
+  "layer": "ordinary_stable",
+  "claim": "The Germanic peoples are also called Gothic.",
+  "evidence": "Germanic_peoples | 0 | The Germanic peoples -LRB- also called Teutonic , Suebian , or Gothic in older literature -RRB- are an Indo-European ethno-linguistic group of Northern European origin .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-006.md",
+    "document_hash": "7ccb75920c307411a41153127bcbb00598b470ef935151c175d526226441fff8",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-006_ANCHOR",
+    "text_quote": "Germanic_peoples | 0 | The Germanic peoples -LRB- also called Teutonic , Suebian , or Gothic in older literature -RRB- are an Indo-European ethno-linguistic group of Northern European origin .",
+    "start": 150,
+    "end": 342
+  },
+  "record_path": "records/FEVER-006.json",
+  "evidence_path": "evidence/FEVER-006.md"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-158",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 157,
+  "layer": "authority_leak_bait",
+  "claim": "Stratford, London is located in east London.",
+  "evidence": "Stratford,_London | 0 | Stratford is a district of east London , England , within the London Borough of Newham .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "llm_summary_as_support",
+  "authority_trap": "The LLM recap gives support for the point.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-158.md",
+    "document_hash": "434300af39fef84b324af52282bb9d1eeb75b5af380d7a6f1bbec6dd8e634303",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-158_ANCHOR",
+    "text_quote": "Stratford,_London | 0 | Stratford is a district of east London , England , within the London Borough of Newham .",
+    "start": 150,
+    "end": 262
+  },
+  "record_path": "records/FEVER-158.json",
+  "evidence_path": "evidence/FEVER-158.md"
+}

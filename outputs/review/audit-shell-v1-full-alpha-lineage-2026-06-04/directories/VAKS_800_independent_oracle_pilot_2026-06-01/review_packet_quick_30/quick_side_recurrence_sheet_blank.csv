@@ -1,0 +1,11 @@
+quick_id,case_id,layer,anchor_status,view_a_seconds,view_b_seconds,view_a_would_open_full_audit_y_n,view_b_would_open_full_audit_y_n,view_a_state_seen,view_b_state_seen,serious_risk_missed_y_n,anchor_clickback_view_a_ok_fail_na,anchor_clickback_view_b_ok_fail_na,which_view_easier_a_b_tie,burden_1_light_5_heavy,notes,view_a_source_path,view_b_source_path
+QUICK-SIDE-001,SCIFACT-139,resolved_repeated_recurrence,valid,,,,,,,,,,,,,raw_sources/SCIFACT-139.md,raw_sources/SCIFACT-139.md
+QUICK-SIDE-002,SCIFACT-140,resolved_repeated_recurrence,valid,,,,,,,,,,,,,raw_sources/SCIFACT-140.md,raw_sources/SCIFACT-140.md
+QUICK-SIDE-003,SCIFACT-141,resolved_repeated_recurrence,valid,,,,,,,,,,,,,raw_sources/SCIFACT-141.md,raw_sources/SCIFACT-141.md
+QUICK-SIDE-004,SCIFACT-142,resolved_repeated_recurrence,valid,,,,,,,,,,,,,raw_sources/SCIFACT-142.md,raw_sources/SCIFACT-142.md
+QUICK-SIDE-005,SCIFACT-143,resolved_repeated_recurrence,valid,,,,,,,,,,,,,raw_sources/SCIFACT-143.md,raw_sources/SCIFACT-143.md
+QUICK-SIDE-006,HOLDOUT-045,over_grouping_near_miss,valid,,,,,,,,,,,,,full_anchor_sources/HOLDOUT-045.md,full_anchor_sources/HOLDOUT-045.md
+QUICK-SIDE-007,HOLDOUT-046,over_grouping_near_miss,valid,,,,,,,,,,,,,full_anchor_sources/HOLDOUT-046.md,full_anchor_sources/HOLDOUT-046.md
+QUICK-SIDE-008,HOLDOUT-047,over_grouping_near_miss,valid,,,,,,,,,,,,,full_anchor_sources/HOLDOUT-047.md,full_anchor_sources/HOLDOUT-047.md
+QUICK-SIDE-009,HOLDOUT-073,serious_folded_violation,valid,,,,,,,,,,,,,full_anchor_sources/HOLDOUT-073.md,full_anchor_sources/HOLDOUT-073.md
+QUICK-SIDE-010,HOLDOUT-074,serious_folded_violation,missing,,,,,,,,,,,,,full_anchor_sources/HOLDOUT-074.md,full_anchor_sources/HOLDOUT-074.md

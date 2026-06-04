@@ -1,0 +1,20 @@
+{
+  "id": "AVERITEC-116",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 115,
+  "claim": "The murder of Oscar Grant, by a police officer in the United States, was never prosecuted by the DA.",
+  "evidence": "Oscar Grant, 22, was shot once while on the platform after a BART officer drew his gun during what officials called a volatile and chaotic scene. A gravely wounded Grant was taken to Highland Hospital, where he died Yes",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "source_count_as_independence",
+  "authority_trap": "Many sources appear, so independence is stronger.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-116.md",
+    "marker": "AVERITEC-116_ANCHOR"
+  }
+}

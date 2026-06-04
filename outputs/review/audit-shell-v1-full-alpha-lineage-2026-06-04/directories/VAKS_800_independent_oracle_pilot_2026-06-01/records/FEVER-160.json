@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-160",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 159,
+  "layer": "authority_leak_bait",
+  "claim": "Genghis Khan controlled a significant territory.",
+  "evidence": "Genghis_Khan | 13 | He was buried in an unmarked grave somewhere in Mongolia . | Mongolia | 20 | In 1206 , Genghis Khan founded the Mongol Empire , which became the largest contiguous land empire in history .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "approval_as_truth",
+  "authority_trap": "Reviewer approval means the claim is true.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-160.md",
+    "document_hash": "4bcb4a1c37adb3c82117c5f6e8ec2c1f9e2453e1c9bb85a5427e5c6e33b517fb",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-160_ANCHOR",
+    "text_quote": "Genghis_Khan | 13 | He was buried in an unmarked grave somewhere in Mongolia . | Mongolia | 20 | In 1206 , Genghis Khan founded the Mongol Empire , which became the largest contiguous land empire in history .",
+    "start": 154,
+    "end": 362
+  },
+  "record_path": "records/FEVER-160.json",
+  "evidence_path": "evidence/FEVER-160.md"
+}

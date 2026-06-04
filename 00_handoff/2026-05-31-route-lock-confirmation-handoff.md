@@ -199,9 +199,18 @@ raw/videos/2026-06-03-bilibili-omniget-source.md:
 
 2026-06-04 artifact-location correction:
   medium / heavy video cards must not leave the only transcript, segment list,
-  ASR metadata, or ledger under `.codex` scratch. Retained text artifacts should
-  be copied into project-visible `raw/videos/<source-slug>/` paths or the formal
-  Obsidian vault, and the source card should point there.
+  transcript metadata, or ledger under `.codex` scratch. Retained text artifacts
+  should be copied into project-visible `raw/videos/<source-slug>/` paths or the
+  formal Obsidian vault, and the source card should point there.
+
+2026-06-04 source-card runner:
+  `tools/new-video-source-card.ps1` is the project-local runner for the
+  mechanical source-card draft: it can infer video identity, fetch public
+  Bilibili metadata or public YouTube metadata through `yt-dlp` when available,
+  copy retained transcript artifacts into `raw/videos/<source-slug>/`, generate
+  frontmatter with project-visible artifact paths, and optionally invoke the
+  finalization connector. It does not download media, transcribe, summarize,
+  review claims, or promote knowledge.
 
 2026-06-04 finalization connector:
   `tools/finalize-video-intake.ps1` is the project-local connector for medium /
@@ -429,7 +438,16 @@ Next decision:
 
 ```text
 Send the package to Pro for review. If Pro accepts the adversarial patch, design
-the 480 real-data paired pilot. Do not write audit shell v1 into main docs yet.
+the 480 real-data paired pilot. At this June 1 stage, main-doc candidate
+writeback was still on hold.
+```
+
+Superseded on 2026-06-04:
+
+```text
+The June 1 main-doc writeback hold belonged to the fixture/package stage.
+It is superseded by the June 4 full ingest, pressure test, queue-first
+prototype, Pro final gate, and main-vault candidate merge below.
 ```
 
 Non-authority boundary:
@@ -438,4 +456,80 @@ Non-authority boundary:
 shell / grouping / dashboard / feedback / tests are routing and review aids.
 They are not truth authority, source independence, evidence support, action
 readiness, or mainline readiness.
+```
+
+## 2026-06-04 Audit Shell v1 / Queue-First Operator Cockpit Main-Vault Candidate Merge
+
+Status changed after the June 4 full ingest simulation, pressure test, queue-first prototype, Pro review, final closeout, and final blocker confirmation.
+
+Current status:
+
+```text
+operator-only candidate convention
+pilot pending
+not formal adoption
+not schema guidance
+not truth-layer guidance
+not user-facing UI
+not operator-usability validated
+not product-grade click-back validated
+```
+
+Main candidate record:
+
+```text
+outputs/review/2026-06-04-audit-shell-v1-candidate-operation-convention.md
+```
+
+Final review and closeout:
+
+```text
+outputs/review/2026-06-04-audit-shell-v1-final-version-review.md
+outputs/review/2026-06-04-audit-shell-v1-queue-cockpit-closeout.md
+```
+
+Full alpha lineage has been copied into the main vault without reduction:
+
+```text
+outputs/review/audit-shell-v1-full-alpha-lineage-2026-06-04/
+outputs/review/audit-shell-v1-full-alpha-lineage-2026-06-04/ARTIFACT_MANIFEST.csv
+```
+
+This main-vault bundle includes:
+
+```text
+June 1 research / noise test / oracle / 480 / 800 lineage
+June 4 full ingest simulation
+June 4 pressure test
+June 4 candidate Pro review package
+June 4 queue-first cockpit prototype
+June 4 Pro review package
+June 4 final closeout package
+intermediate and final zip snapshots
+```
+
+Final Pro gate:
+
+```text
+No merge blocker.
+Can merge as main-vault candidate operation convention / operator-only candidate.
+Do not present as formal adoption or completed product validation.
+```
+
+Hard rules now written into the candidate:
+
+```text
+deferred_review_unless_promoted requires promotion receipt / reopen before
+action-basis, rule/convention basis, conflict handling, explicit challenge,
+or high-risk answer support.
+
+anchor-strength strip is only a front-face summary. Only selector-grade
+jump-back can claim evidence landing.
+```
+
+Next step:
+
+```text
+Run the 80/60/60 operator pilot from:
+outputs/review/audit-shell-v1-full-alpha-lineage-2026-06-04/directories/VAKS_queue_cockpit_CLOSEOUT_2026-06-04/NEXT_OPERATOR_PILOT_PROMPT.md
 ```

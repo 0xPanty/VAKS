@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-121",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 120,
+  "layer": "anchor_problem",
+  "claim": "Kamala Harris said \"And once Trump’s gone and we have regained our rightful place in the White House, look out if you supported him and endorsed his actions, because we’ll be coming for you next\".",
+  "evidence": "11/08/2020 The claim was first published on bustatroll.org It is a satirical website and identifies as a subsidiary of America’s Last line of Defense’ network of parody, satire, and tomfoolery",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "stale_pointer"
+  ],
+  "anchor_status": "stale",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "stale",
+    "path": "raw_sources/AVERITEC-121.md",
+    "document_hash": "7edb688a4fe28646c08120c2d2b775800e0f3baa570c3c7cc99e979ea960188d",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-121_ANCHOR",
+    "text_quote": "11/08/2020 The claim was first published on bustatroll.org It is a satirical website and identifies as a subsidiary of America’s Last line of Defense’ network of parody, satire, and tomfoolery",
+    "start": -1,
+    "end": -1
+  },
+  "record_path": "records/AVERITEC-121.json",
+  "evidence_path": "evidence/AVERITEC-121.md"
+}

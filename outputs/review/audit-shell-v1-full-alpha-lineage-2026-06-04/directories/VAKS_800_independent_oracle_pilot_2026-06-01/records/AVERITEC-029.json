@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-029",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 28,
+  "layer": "ordinary_stable",
+  "claim": "Kenya only disposes of about 300,000 cases.",
+  "evidence": "About 300,000 cases every year.",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-029.md",
+    "document_hash": "1c365d1168245d6cf0dd59a00a0bcf33a5223fd199a18704a6ef66810d9f7f06",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-029_ANCHOR",
+    "text_quote": "About 300,000 cases every year.",
+    "start": 158,
+    "end": 189
+  },
+  "record_path": "records/AVERITEC-029.json",
+  "evidence_path": "evidence/AVERITEC-029.md"
+}

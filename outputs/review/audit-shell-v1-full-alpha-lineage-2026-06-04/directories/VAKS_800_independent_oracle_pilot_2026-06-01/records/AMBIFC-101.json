@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-101",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 100,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "the movie morning glory is based on a true story.",
+  "evidence": "Aspiring news producer Becky Fuller (Rachel McAdams) has dreamed since childhood of working for the Today show, but her dedication to her career is off-putting to potential suitors. She is laid off from her job at Good Morning New Jersey, and her mother advises her to give up her dream before it becomes an embarrassment. Becky perseveres, and receives a call from IBS News, which is seeking a producer for its struggling national morning show, DayBreak. After a discouraging job interview with executive Jerry Barnes (Jeff Goldblum), who dismisses both her and DayBreak as also-rans, Becky is brushed off in the elevator by one of her heroes, veteran television journalist Mike Pomeroy (Harrison Ford). Seemingly against his better judgement, Jerry hires Becky as DayBreak's executive producer, and she moves to New York City. On her first day, Becky realizes she has signed on to a show in turmoil, lacking in direction and money. After meeting acerbic, long-suffering co-host Colleen Peck (Diane Keaton), Becky fires the lecherous co-host Paul McVee (Ty Burrell), to her co-workers’ delight. She chooses an unwilling Mike as Colleen's new co-host; under contract to IBS, Mike has escaped being utilized while still getting paid. Becky finds a clause in Mike’s contract requiring him to accept an official job offer or lose his salary, forcing him to comply.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "insufficient_evidence"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-101.md",
+    "document_hash": "0a728d1628263bfa644011789723336ffde0b75dc08d7de23c1dc7c29f2ea79b",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-101_ANCHOR",
+    "text_quote": "Aspiring news producer Becky Fuller (Rachel McAdams) has dreamed since childhood of working for the Today show, but her dedication to her career is off-putting to potential suitors. She is laid off from her job at Good M",
+    "start": 158,
+    "end": 378
+  },
+  "record_path": "records/AMBIFC-101.json",
+  "evidence_path": "evidence/AMBIFC-101.md"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "AMBIFC-100",
+  "dataset_family": "ambifc",
+  "source_dataset_status": "real_row",
+  "source_row_index": 99,
+  "claim": "belfast city airport is the same as george best airport.",
+  "evidence": "George Best Belfast City Airport (IATA: BHD, ICAO: EGAC) is a single-runway airport in Belfast, Northern Ireland. Situated in County Down, it is adjacent to the Port of Belfast and is 3 mi (5 km) from Belfast City Centre. It shares the site with the Short Brothers/Bombardier aircraft manufacturing facility. The airport began commercial operations in 1983, and was known as \"Belfast City Airport\" until it was renamed in 2006 in memory of George Best, the professional footballer from Belfast. The airport has a CAA public use aerodrome licence (number P862) that allows flights for the public transport of passengers or for flying instruction. The airport primarily handles intra-UK flights. It handled over 2.4 million passengers in 2019, having peaked at 2.7 million in 2010. The airport was a major base for Flybe which began operations at the airport in 1993, and was the largest operator at Belfast City until its demise in 2020. The airport also served as a base for Aer Lingus from 2012 until 2019, having transferred operations from Belfast International Airport, although the airline still provides flights to London Heathrow. Ground handling is provided by Swissport and Menzies Aviation,",
+  "source_label": "supporting",
+  "surface_state": "ordinary",
+  "signals": [
+    "moved_pointer"
+  ],
+  "anchor_status": "moved",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "moved",
+    "path": "raw_sources/AMBIFC-100.md",
+    "marker": "AMBIFC-100_ANCHOR"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-066",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 65,
+  "layer": "action_challenge_conflict",
+  "claim": "Anderson Silva was born on the day of the 15th.",
+  "evidence": "Anderson_Silva | 0 | Anderson da Silva -LRB- -LSB- ˈɐ̃deʁsõ ˈsiwvɐ -RSB- ; born April 14 , 1975 -RRB- is a Brazilian mixed martial artist and former UFC Middleweight Champion .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-066.md",
+    "document_hash": "c6acb5277bc9438117ac611e5e423f9cfcfe4cfa5627bc6e49527df7fb7b7a86",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-066_ANCHOR",
+    "text_quote": "Anderson_Silva | 0 | Anderson da Silva -LRB- -LSB- ˈɐ̃deʁsõ ˈsiwvɐ -RSB- ; born April 14 , 1975 -RRB- is a Brazilian mixed martial artist and former UFC Middleweight Champion .",
+    "start": 153,
+    "end": 329
+  },
+  "record_path": "records/FEVER-066.json",
+  "evidence_path": "evidence/FEVER-066.md"
+}

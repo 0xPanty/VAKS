@@ -1,0 +1,20 @@
+{
+  "id": "FEVER-043",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 42,
+  "claim": "Justin Bieber's fourth album came out in 2017.",
+  "evidence": "Justin_Bieber | 11 | His fourth studio album Purpose was released in November 2015 , spawning three number one singles : `` What Do You Mean ? ''",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-043.md",
+    "marker": "FEVER-043_ANCHOR"
+  }
+}

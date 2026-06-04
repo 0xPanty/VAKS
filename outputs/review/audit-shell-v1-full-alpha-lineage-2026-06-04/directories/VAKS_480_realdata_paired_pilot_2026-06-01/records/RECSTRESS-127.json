@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-127",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 6,
+  "claim": "35% of revenue goes to states. (In Nigeria)",
+  "evidence": "Revenue is shared in accordance with the vertical formula, as determined by RMAFC and approved by the National Assembly. The formula allocates 52.68%, 26.72% and 20.60% to the Federal, State and Local Governments respectively",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-127.md",
+    "marker": "RECSTRESS-127_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-12",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "stress-rec-12-fp-v2",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-127.json",
+  "evidence_path": "evidence/RECSTRESS-127.md"
+}

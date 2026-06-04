@@ -1,0 +1,32 @@
+{
+  "id": "FULLANCHOR-059",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 58,
+  "layer": "full_anchor_click",
+  "claim": "CX3CR1 on the Th2 cells promotes airway inflammation.",
+  "evidence": "Allergic asthma is a T helper type 2 (T(H)2)-dominated disease of the lung. In people with asthma, a fraction of CD4(+) T cells express the CX3CL1 receptor, CX3CR1, and CX3CL1 expression is increased in airway smooth muscle, lung endothelium and epithelium upon allergen challenge. Here we found that untreated CX3CR1-deficient mice or wild-type (WT) mice treated with CX3CR1-blocking reagents show reduced lung disease upon allergen sensitization and challenge. Transfer of WT CD4(+) T cells into CX3CR1-deficient mice restored the cardinal features of asthma, and CX3CR1-blocking reagents prevented airway inflammation in CX3CR1-deficient recipients injected with WT T(H)2 cells. We found that CX3CR1 signaling promoted T(H)2 survival in the inflamed lungs, and injection of B cell leukemia/lymphoma-2 protein (BCl-2)-transduced CX3CR1-deficient T(H)2 cells into CX3CR1-deficient mice restored asthma. CX3CR1-induced survival was also observed for T(H)1 cells upon airway inflammation but not under homeostatic conditions or upon peripheral inflammation. Therefore, CX3CR1 and CX3CL1 may represent attractive therapeutic targets in asthma.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "release_note",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/FULLANCHOR-059.md",
+    "document_hash": "82496d68d1405dbb2b8d2834ae8f220117cb2a3f1370c2602d35bf883b66735b",
+    "version_id": "release_note-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-059_ANCHOR",
+    "text_quote": "Allergic asthma is a T helper type 2 (T(H)2)-dominated disease of the lung. In people with asthma, a fraction of CD4(+) T cells express the CX3CL1 receptor, CX3CR1, and CX3CL1 expression is increased in airway smooth mus",
+    "start": 176,
+    "end": 396
+  },
+  "record_path": "records/FULLANCHOR-059.json",
+  "evidence_path": "evidence/FULLANCHOR-059.md"
+}

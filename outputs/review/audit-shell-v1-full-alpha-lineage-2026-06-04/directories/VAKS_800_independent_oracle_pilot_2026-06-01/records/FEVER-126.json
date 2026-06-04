@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-126",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 125,
+  "layer": "anchor_problem",
+  "claim": "The human condition is ignored in religion.",
+  "evidence": "Human_condition | 1 | This is a very broad topic which has been and continues to be pondered and analyzed from many perspectives , including those of religion , philosophy , history , art , literature , anthropology , psychology , and biology .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [
+    "selector_drift"
+  ],
+  "anchor_status": "drift",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "drift",
+    "path": "raw_sources/FEVER-126.md",
+    "document_hash": "e6e4f574dbbfd3062f65ef8c954dff6a02b46ff29b3ab96640547eaa0569f13f",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-126_ANCHOR",
+    "text_quote": "Human_condition | 1 | This is a very broad topic which has been and continues to be pondered and analyzed from many perspectives , including those of religion , philosophy , history , art , literature , anthropology , ps",
+    "start": 156,
+    "end": 376
+  },
+  "record_path": "records/FEVER-126.json",
+  "evidence_path": "evidence/FEVER-126.md"
+}

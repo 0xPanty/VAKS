@@ -1,0 +1,7 @@
+# Raw Source AMBIFC-034
+dataset: ambifc
+source_row: 33
+marker: AMBIFC-034_ANCHOR
+claim: the movie dreamgirls was based on the supremes.
+label: neutral
+evidence: Dreamgirls received positive reviews from critics. On the review aggregator website Rotten Tomatoes, the film holds a 78% rating based on 207 reviews, with an average rating of 7.24/10. The site's consensus states: "Dreamgirls' simple characters and plot hardly detract from the movie's real feats: the electrifying performances and the dazzling musical numbers". Metacritic reports a 76 out of 100 rating, based on 37 critics, indicating "generally favorable reviews". Rolling Stone's Peter Travers gave the film three and a half stars (out of four) and the number-two position on his "best of 2006" list, stating that "despite transitional bumps, Condon does Dreamgirls proud". David Rooney of Variety reported that the film featured "tremendously exciting musical sequences" and that "after The Phantom of the Opera, Rent and The Producers botched the transfer from stage to screen, Dreamgirls gets it right". On the December 10, 2006 episode of the television show Ebert & Roeper, Richard Roeper and guest critic Aisha Tyler (filling in for Roger Ebert, who was recovering from cancer-related surgery) gave the film "two thumbs up", with Roeper's reservations that it was "a little short on heart

@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-121",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 120,
+  "layer": "anchor_problem",
+  "claim": "Ramona Marquez is from somewhere other than London.",
+  "evidence": "Ramona_Marquez | 0 | Ramona Marquez -LRB- born 24 February 2001 -RRB- is a British child actress from London , best known for her role as Karen Brockman in the BBC One sitcom Outnumbered .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [
+    "stale_pointer"
+  ],
+  "anchor_status": "stale",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "stale",
+    "path": "raw_sources/FEVER-121.md",
+    "document_hash": "33faf14da12c5d1551f89d3a13e44ee6ade270dcd1a2d5a5f315e71359b681cc",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-121_ANCHOR",
+    "text_quote": "Ramona_Marquez | 0 | Ramona Marquez -LRB- born 24 February 2001 -RRB- is a British child actress from London , best known for her role as Karen Brockman in the BBC One sitcom Outnumbered .",
+    "start": -1,
+    "end": -1
+  },
+  "record_path": "records/FEVER-121.json",
+  "evidence_path": "evidence/FEVER-121.md"
+}

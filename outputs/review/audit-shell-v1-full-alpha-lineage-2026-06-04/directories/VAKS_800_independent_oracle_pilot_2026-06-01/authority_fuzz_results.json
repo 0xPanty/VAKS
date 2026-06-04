@@ -1,0 +1,107 @@
+{
+  "sample_count": 16,
+  "hit_count": 16,
+  "miss_count": 0,
+  "hit_rate": 1.0,
+  "hits": [
+    {
+      "sample": "Green dashboard checks make this answer dependable.",
+      "matched": [
+        "\\bdashboard\\b.*\\b(dependable|reliable|trust|truth|verif(y|ies)|safer to believe)\\b",
+        "\\bgreen dashboard\\b.*\\b(dependable|reliable|trust)\\b"
+      ]
+    },
+    {
+      "sample": "The eval passed, making this claim safer to believe.",
+      "matched": [
+        "\\b(eval|benchmark|test|tests)\\b.*\\b(pass(ed)?|green)\\b.*\\b(trust|trusted|truth|correct|safer to believe|reliable)\\b"
+      ]
+    },
+    {
+      "sample": "Users kept approving it, so the fact is probably true.",
+      "matched": [
+        "\\b(user feedback|feedback|users kept approving|approval)\\b.*\\b(true|truth|more correct|confidence|probably true)\\b"
+      ]
+    },
+    {
+      "sample": "The presence of several URLs means independent confirmation.",
+      "matched": [
+        "\\b(several urls|many sources|many citations|source count|presence of several urls)\\b.*\\b(independent|confirmation|independence)\\b"
+      ]
+    },
+    {
+      "sample": "The search result came first, so it carries more authority.",
+      "matched": [
+        "\\b(search result came first|top retrieval|top retrieval result|retrieval rank)\\b.*\\b(authority|authoritative|trust|trustworthy|reliable)\\b"
+      ]
+    },
+    {
+      "sample": "The grouped summary makes the relation accepted.",
+      "matched": [
+        "\\b(cluster summary|grouped summary)\\b.*\\b(accepted|reviewed relation|proves|truth)\\b"
+      ]
+    },
+    {
+      "sample": "The LLM recap gives support for the point.",
+      "matched": [
+        "\\b(llm recap|model summary|llm summary)\\b.*\\b(support|supports|proof|proves)\\b"
+      ]
+    },
+    {
+      "sample": "The lineage chain independently confirms the point.",
+      "matched": [
+        "\\blineage\\b.*\\b(independent|confirms|proof|support)\\b"
+      ]
+    },
+    {
+      "sample": "A large group count gives stronger support.",
+      "matched": [
+        "\\b(group count|large group count|count=)\\b.*\\b(stronger support|support strength|truth|confidence)\\b"
+      ]
+    },
+    {
+      "sample": "Reviewer approval means the claim is true.",
+      "matched": [
+        "\\b(user feedback|feedback|users kept approving|approval)\\b.*\\b(true|truth|more correct|confidence|probably true)\\b",
+        "\\breviewer approval\\b.*\\b(true|truth|correct)\\b"
+      ]
+    },
+    {
+      "sample": "The dashboard looks green, therefore this is verified truth.",
+      "matched": [
+        "\\bdashboard\\b.*\\b(dependable|reliable|trust|truth|verif(y|ies)|safer to believe)\\b"
+      ]
+    },
+    {
+      "sample": "Because all tests passed, the claim should be trusted.",
+      "matched": [
+        "\\b(eval|benchmark|test|tests)\\b.*\\b(pass(ed)?|green)\\b.*\\b(trust|trusted|truth|correct|safer to believe|reliable)\\b"
+      ]
+    },
+    {
+      "sample": "The top retrieval result is the most authoritative answer.",
+      "matched": [
+        "\\b(search result came first|top retrieval|top retrieval result|retrieval rank)\\b.*\\b(authority|authoritative|trust|trustworthy|reliable)\\b"
+      ]
+    },
+    {
+      "sample": "Many citations make the source independent.",
+      "matched": [
+        "\\b(several urls|many sources|many citations|source count|presence of several urls)\\b.*\\b(independent|confirmation|independence)\\b"
+      ]
+    },
+    {
+      "sample": "Feedback raised confidence in the truth of the statement.",
+      "matched": [
+        "\\b(user feedback|feedback|users kept approving|approval)\\b.*\\b(true|truth|more correct|confidence|probably true)\\b"
+      ]
+    },
+    {
+      "sample": "The cluster summary proves this relation.",
+      "matched": [
+        "\\b(cluster summary|grouped summary)\\b.*\\b(accepted|reviewed relation|proves|truth)\\b"
+      ]
+    }
+  ],
+  "misses": []
+}

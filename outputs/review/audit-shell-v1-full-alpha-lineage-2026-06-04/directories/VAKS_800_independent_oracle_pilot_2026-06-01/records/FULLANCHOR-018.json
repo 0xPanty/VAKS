@@ -1,0 +1,38 @@
+{
+  "id": "FULLANCHOR-018",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 17,
+  "layer": "full_anchor_click",
+  "claim": "In 2019 the US Police were 20.8 times more likely to kill than be killed by a criminal",
+  "evidence": "According to statistics reported to the FBI, 89 law enforcement officers were killed in line-of-duty incidents in 2019. Of these, 48 officers died as a result of felonious acts, and 41 officers died in accidents. Comprehensive data tables about these incidents and brief narratives describing the fatal attacks are included in Law Enforcement Officers Killed and Assaulted, 2019, released today. In 2019, 999 people were shot and killed by police. 20.8125.",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "real_web_snapshot",
+  "source_anchor": {
+    "status": "valid",
+    "path": "real_source_snapshots/FULLANCHOR-018.txt",
+    "document_hash": "ba86f94c07cdbdb569da967dc0fce320570301001b2a74a7ffb6c75aba5af99a",
+    "version_id": "real-web-snapshot-v2",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-018_REAL_SNAPSHOT",
+    "text_quote": "24, 2020 Federal Bureau of Investigation, \"FBI releases 2019 statistics on law enforcement officers killed in the line of duty,\" May 4, 2020 Washington Post, \"Fatal Force: 1,019 people have been shot and killed by police in the past year,\" Aug.",
+    "start": 8448,
+    "end": 8692,
+    "quote_strategy": "claim_keyword_window",
+    "landing_class": "claim_relevant_context_landing",
+    "semantic_selector_success": true,
+    "boilerplate_quote": false
+  },
+  "record_path": "records/FULLANCHOR-018.json",
+  "evidence_path": "evidence/FULLANCHOR-018.md",
+  "real_snapshot_url": "https://web.archive.org/web/20210419235356/https://www.politifact.com/factchecks/2020/aug/27/chris-larson/yes-police-were-208-more-likely-kill-be-killed-cri/",
+  "clickback_snapshot_kind": "live_urllib_retry"
+}

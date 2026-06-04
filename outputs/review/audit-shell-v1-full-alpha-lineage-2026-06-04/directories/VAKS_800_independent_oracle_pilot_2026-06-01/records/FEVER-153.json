@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-153",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 152,
+  "layer": "authority_leak_bait",
+  "claim": "William Jennings Bryan was an American politician.",
+  "evidence": "William_Jennings_Bryan | 0 | William Jennings Bryan -LRB- March 19 , 1860 -- July 26 , 1925 -RRB- was an American orator and politician from Nebraska , and a dominant force in the populist wing of the Democratic Party , standing three times as the Party 's nominee for President of the United States -LRB- 1896 , 1900 , and 1908 -RRB- .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "lineage_as_independence",
+  "authority_trap": "The lineage chain independently confirms the point.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-153.md",
+    "document_hash": "50846434db70f37efa9373dc64770f2f22a0f6cfd894cd8d57dafa7d078d4cd6",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-153_ANCHOR",
+    "text_quote": "William_Jennings_Bryan | 0 | William Jennings Bryan -LRB- March 19 , 1860 -- July 26 , 1925 -RRB- was an American orator and politician from Nebraska , and a dominant force in the populist wing of the Democratic Party , ",
+    "start": 156,
+    "end": 376
+  },
+  "record_path": "records/FEVER-153.json",
+  "evidence_path": "evidence/FEVER-153.md"
+}

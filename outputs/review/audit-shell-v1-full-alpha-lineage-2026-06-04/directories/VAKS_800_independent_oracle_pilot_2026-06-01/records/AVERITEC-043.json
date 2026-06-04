@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-043",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 42,
+  "layer": "ordinary_stable",
+  "claim": "In Kenya now, with a population of about 48 million, they have one judge serving over 300,000 people.",
+  "evidence": "The 2019 Kenyan population is 47,564,296. As of June 2019, there were 153 judges. one judge for every 311,000 people",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-043.md",
+    "document_hash": "3ea62ca05a3ce4abd73ae937c9e4e790768cf1f593af7f9de82e0d0df480fc13",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-043_ANCHOR",
+    "text_quote": "The 2019 Kenyan population is 47,564,296. As of June 2019, there were 153 judges. one judge for every 311,000 people",
+    "start": 216,
+    "end": 332
+  },
+  "record_path": "records/AVERITEC-043.json",
+  "evidence_path": "evidence/AVERITEC-043.md"
+}

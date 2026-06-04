@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-157",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 156,
+  "layer": "authority_leak_bait",
+  "claim": "You can test too much for Covid-19.",
+  "evidence": "Frequent testing of the entire population would help identify so-called hidden hidden carriers — individuals infected with SARS-CoV-2, the virus that causes Covid-19, but who have no symptoms of it. They seem to play an important role in the spread of Covid-19. Identifying these silent spreaders could help public health workers be more effective at contract tracing by identifying others who have been exposed and may require quarantine. There are also the harms of Covid-19 testing to consider. Perhaps the biggest challenge is false negatives — tests signaling no infection in those who are indeed infected. Covid-19 testing is typically performed on samples from behind the nose or in the back of the mouth, and will be positive only if the sample happens to contain the virus. In some people, the virus may be present in high quantities only deep in the lungs. False negatives occur surprisingly often — perhaps as often as one-third of the time — which could lead to a false sense of security among those with such results. Testing those without symptoms can also lead to false alarms. PCR testing for the virus, which is the best way to identify an active infection, can detect the presence of SARS-CoV-2 — or remnants of it — for weeks, even when the infection is unlikely to be transmitted to others. Testing the entire population would undoubtedly identify a large number of such individua",
+  "source_label": "Conflicting Evidence/Cherrypicking",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "retrieval_rank_as_trust",
+  "authority_trap": "The search result came first, so it carries more authority.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-157.md",
+    "document_hash": "cd2a0059b72e452f4df134b43c339e4da6f74c5b7ee554181b58b07126d334e8",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-157_ANCHOR",
+    "text_quote": "Frequent testing of the entire population would help identify so-called hidden hidden carriers — individuals infected with SARS-CoV-2, the virus that causes Covid-19, but who have no symptoms of it. They seem to play an ",
+    "start": 150,
+    "end": 370
+  },
+  "record_path": "records/AVERITEC-157.json",
+  "evidence_path": "evidence/AVERITEC-157.md"
+}

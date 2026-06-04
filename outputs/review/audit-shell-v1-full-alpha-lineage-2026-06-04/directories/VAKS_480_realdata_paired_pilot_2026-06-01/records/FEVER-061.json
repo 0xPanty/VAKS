@@ -1,0 +1,22 @@
+{
+  "id": "FEVER-061",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 60,
+  "claim": "Shraddha Kapoor acts.",
+  "evidence": "Shraddha_Kapoor | 1 | The daughter of actor Shakti Kapoor , she began her acting career with a brief role in the 2010 heist film Teen Patti and followed it with her first leading role in the teen drama Luv Ka The End -LRB- 2011 -RRB- .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-061.md",
+    "marker": "FEVER-061_ANCHOR"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-002",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 1,
+  "layer": "ordinary_stable",
+  "claim": "Gabrielle Union was in a movie.",
+  "evidence": "Gabrielle_Union | 8 | She co-starred in film The Birth of a Nation -LRB- 2016 -RRB- , and next appeared in Almost Christmas -LRB- 2016 -RRB- and Sleepless -LRB- 2017 -RRB- .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-002.md",
+    "document_hash": "0444980ad1bc4cf5c9d2e2beadbd3a7f5343baa1f8d73a6f3f4fa69930c57ff1",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-002_ANCHOR",
+    "text_quote": "Gabrielle_Union | 8 | She co-starred in film The Birth of a Nation -LRB- 2016 -RRB- , and next appeared in Almost Christmas -LRB- 2016 -RRB- and Sleepless -LRB- 2017 -RRB- .",
+    "start": 137,
+    "end": 310
+  },
+  "record_path": "records/FEVER-002.json",
+  "evidence_path": "evidence/FEVER-002.md"
+}

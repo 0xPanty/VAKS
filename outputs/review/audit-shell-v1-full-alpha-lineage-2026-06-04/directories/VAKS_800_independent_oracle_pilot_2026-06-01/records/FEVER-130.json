@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-130",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 129,
+  "layer": "anchor_problem",
+  "claim": "Boston Legal features Leonard Nimoy.",
+  "evidence": "Boston_Legal | 2 | The series , starring James Spader , with Candice Bergen , and William Shatner , is a spin-off of the long-running Kelley series The Practice , following the exploits of former Practice character Alan Shore at the legal firm of Crane , Poole & Schmidt .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [
+    "selector_drift"
+  ],
+  "anchor_status": "drift",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "drift",
+    "path": "raw_sources/FEVER-130.md",
+    "document_hash": "e561eaf2327cd77c0f9bc33165718c9ffb8828a8a959fe6fbe72882ef6d00b7c",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-130_ANCHOR",
+    "text_quote": "Boston_Legal | 2 | The series , starring James Spader , with Candice Bergen , and William Shatner , is a spin-off of the long-running Kelley series The Practice , following the exploits of former Practice character Alan ",
+    "start": 149,
+    "end": 369
+  },
+  "record_path": "records/FEVER-130.json",
+  "evidence_path": "evidence/FEVER-130.md"
+}

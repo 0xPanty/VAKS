@@ -1,0 +1,7 @@
+# Raw Source SCIFACT-048
+dataset: scifact
+source_row: 47
+marker: SCIFACT-048_ANCHOR
+claim: Ethanol stress decreases the expression of IBP in bacteria.
+label: 
+evidence: Understanding the genetic basis of adaptation is a central problem in biology. However, revealing the underlying molecular mechanisms has been challenging as changes in fitness may result from perturbations to many pathways, any of which may contribute relatively little. We have developed a combined experimental/computational framework to address this problem and used it to understand the genetic basis of ethanol tolerance in Escherichia coli. We used fitness profiling to measure the consequences of single-locus perturbations in the context of ethanol exposure. A module-level computational analysis was then used to reveal the organization of the contributing loci into cellular processes and regulatory pathways (e.g. osmoregulation and cell-wall biogenesis) whose modifications significantly affect ethanol tolerance. Strikingly, we discovered that a dominant component of adaptation involves metabolic rewiring that boosts intracellular ethanol degradation and assimilation. Through phenotypic and metabolomic analysis of laboratory-evolved ethanol-tolerant strains, we investigated naturally accessible pathways of ethanol tolerance. Remarkably, these laboratory-evolved strains, by and la

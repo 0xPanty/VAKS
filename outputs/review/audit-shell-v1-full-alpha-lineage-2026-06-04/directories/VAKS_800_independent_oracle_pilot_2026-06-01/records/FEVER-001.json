@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-001",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 0,
+  "layer": "ordinary_stable",
+  "claim": "The number of new cases of shingles per year extends from 1.2–3.4 per 1,000 among healthy individuals.",
+  "evidence": "Shingles | 31 | The number of new cases per year ranges from 1.2 -- 3.4 per 1,000 among healthy individuals to 3.9 -- 11.8 per 1,000 among those older than 65 years of age .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-001.md",
+    "document_hash": "68779152cbccdaccd9fe0cb9e4b76a22c90f074390f3a5266268c533f7d9bc07",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-001_ANCHOR",
+    "text_quote": "Shingles | 31 | The number of new cases per year ranges from 1.2 -- 3.4 per 1,000 among healthy individuals to 3.9 -- 11.8 per 1,000 among those older than 65 years of age .",
+    "start": 208,
+    "end": 381
+  },
+  "record_path": "records/FEVER-001.json",
+  "evidence_path": "evidence/FEVER-001.md"
+}

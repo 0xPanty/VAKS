@@ -1,0 +1,20 @@
+{
+  "id": "FEVER-058",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 57,
+  "claim": "Bon Scott was the lead singer for a band.",
+  "evidence": "Bon_Scott | 5 | Scott formed his first band , The Spektors , in 1964 and became the band 's drummer and occasional lead vocalist .",
+  "source_label": "SUPPORTS",
+  "surface_state": "resolved_folded",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-058.md",
+    "marker": "FEVER-058_ANCHOR"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-073",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 72,
+  "layer": "action_challenge_conflict",
+  "claim": "Jordan Peele isn't a producer.",
+  "evidence": "Jordan_Peele | 3 | His directorial debut , the horror film Get Out , was released in 2017 to critical acclaim and box-office success . | Get_Out_-LRB-film-RRB- | 0 | Get Out is a 2017 American horror film written , co-produced and directed by Jordan Peele , in his directorial debut .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-073.md",
+    "document_hash": "be20e1ca5a93a2e4aadd0244715e8685271ab9a7f903da6bcfa8bfce6784a641",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-073_ANCHOR",
+    "text_quote": "Jordan_Peele | 3 | His directorial debut , the horror film Get Out , was released in 2017 to critical acclaim and box-office success . | Get_Out_-LRB-film-RRB- | 0 | Get Out is a 2017 American horror film written , co-pr",
+    "start": 136,
+    "end": 356
+  },
+  "record_path": "records/FEVER-073.json",
+  "evidence_path": "evidence/FEVER-073.md"
+}

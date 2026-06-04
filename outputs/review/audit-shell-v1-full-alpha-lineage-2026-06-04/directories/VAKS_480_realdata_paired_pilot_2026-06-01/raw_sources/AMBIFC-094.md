@@ -1,0 +1,7 @@
+# Raw Source AMBIFC-094
+dataset: ambifc
+source_row: 93
+marker: OLD_AMBIFC-094_ANCHOR
+claim: labor day is a public holiday in usa.
+label: supporting
+evidence: Labor Day in the United States of America is a public holiday celebrated on the first Monday in September. It honors the American labor movement and the power of collective action by laborers, who are essential for the workings of society. It is the Monday of the long weekend known as Labor Day Weekend. It is recognized as a federal holiday. Beginning in the late 19th century, as the trade union and labor movements grew, trade unionists proposed that a day be set aside to celebrate labor. "Labor Day" was promoted by the Central Labor Union and the Knights of Labor, which organized the first parade in New York City. In 1887, Oregon was the first state of the United States to make it an official public holiday. By the time it became an official federal holiday in 1894, thirty states in the United States officially celebrated Labor Day. Canada's Labour Day is also celebrated on the first Monday of September. More than 80 countries celebrate International Workers' Day on May 1 – the ancient European holiday of May Day.

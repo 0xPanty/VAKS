@@ -1,0 +1,22 @@
+{
+  "id": "FEVER-095",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 94,
+  "claim": "Tetris has sold zero copies.",
+  "evidence": "Tetris | 18 | In January 2010 , it was announced that the Tetris franchise had sold more than 170 million copies , approximately 70 million physical copies and over 100 million copies for cell phones , making it the best selling paid-downloaded game of all time .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [
+    "selector_drift"
+  ],
+  "anchor_status": "drift",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "drift",
+    "path": "raw_sources/FEVER-095.md",
+    "marker": "FEVER-095_ANCHOR"
+  }
+}

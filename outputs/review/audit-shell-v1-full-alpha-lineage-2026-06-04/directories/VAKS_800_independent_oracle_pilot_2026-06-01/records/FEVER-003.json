@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-003",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 2,
+  "layer": "ordinary_stable",
+  "claim": "Eleveneleven was founded by a chef.",
+  "evidence": "Eleveneleven | 0 | eleveneleven is a record label founded in 2010 by Mike Hamlin , Ellen DeGeneres and her production company , A Very Good Production , in association with longtime affiliate Warner Bros. .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-003.md",
+    "document_hash": "fcddb8ebfb7b3ca79d6b69431fa4af37cdfb4a90a5fec7164483e1ff7c426fec",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-003_ANCHOR",
+    "text_quote": "Eleveneleven | 0 | eleveneleven is a record label founded in 2010 by Mike Hamlin , Ellen DeGeneres and her production company , A Very Good Production , in association with longtime affiliate Warner Bros. .",
+    "start": 141,
+    "end": 347
+  },
+  "record_path": "records/FEVER-003.json",
+  "evidence_path": "evidence/FEVER-003.md"
+}

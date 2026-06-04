@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-023",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 22,
+  "layer": "ordinary_stable",
+  "claim": "Sean Connery acted in a movie.",
+  "evidence": "Sean_Connery | 4 | Connery was the first actor to portray the character James Bond in film , starring in seven Bond films between 1962 and 1983 .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-023.md",
+    "document_hash": "0d73a6893c05f272a9455ea5591800581ffe0f9a1bed7f54c8c51d4017707d0c",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-023_ANCHOR",
+    "text_quote": "Sean_Connery | 4 | Connery was the first actor to portray the character James Bond in film , starring in seven Bond films between 1962 and 1983 .",
+    "start": 136,
+    "end": 281
+  },
+  "record_path": "records/FEVER-023.json",
+  "evidence_path": "evidence/FEVER-023.md"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-124",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 123,
+  "layer": "anchor_problem",
+  "claim": "Democratic California Sen. Kamala Harris was the Alameda County district attorney when Oscar Grant, a 22-year-old black man, was shot and killed in Oakland, California.",
+  "evidence": "January 1st, 2009. Mr. TOM ORLOFF (District Attorney, Alameda County, California) From 2004 until 2010, Kamala Harris was the district attorney for San Francisco County.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "missing_anchor"
+  ],
+  "anchor_status": "missing",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "missing",
+    "path": "raw_sources/AVERITEC-124.md",
+    "document_hash": "",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-124_ANCHOR",
+    "text_quote": "January 1st, 2009. Mr. TOM ORLOFF (District Attorney, Alameda County, California) From 2004 until 2010, Kamala Harris was the district attorney for San Francisco County.",
+    "start": -1,
+    "end": -1
+  },
+  "record_path": "records/AVERITEC-124.json",
+  "evidence_path": "evidence/AVERITEC-124.md"
+}

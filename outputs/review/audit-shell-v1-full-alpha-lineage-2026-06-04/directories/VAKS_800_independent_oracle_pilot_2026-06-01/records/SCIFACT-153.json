@@ -1,0 +1,29 @@
+{
+  "id": "SCIFACT-153",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 152,
+  "layer": "authority_leak_bait",
+  "claim": "Increased vessel density along with a reduction in fibrosis decreases the efficacy of chemotherapy treatments.",
+  "evidence": "Pancreatic ductal adenocarcinoma (PDA) is among the most lethal human cancers in part because it is insensitive to many chemotherapeutic drugs. Studying a mouse model of PDA that is refractory to the clinically used drug gemcitabine, we found that the tumors in this model were poorly perfused and poorly vascularized, properties that are shared with human PDA. We tested whether the delivery and efficacy of gemcitabine in the mice could be improved by coadministration of IPI-926, a drug that depletes tumor-associated stromal tissue by inhibition of the Hedgehog cellular signaling pathway. The combination therapy produced a transient increase in intratumoral vascular density and intratumoral concentration of gemcitabine, leading to transient stabilization of disease. Thus, inefficient drug delivery may be an important contributor to chemoresistance in pancreatic cancer.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "lineage_as_independence",
+  "authority_trap": "The lineage chain independently confirms the point.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-153.md",
+    "document_hash": "919d3b90a7034d4424696db365fde415faf1218e8aac51fa3ba57d8cfc76f68d",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-153_ANCHOR",
+    "text_quote": "Pancreatic ductal adenocarcinoma (PDA) is among the most lethal human cancers in part because it is insensitive to many chemotherapeutic drugs. Studying a mouse model of PDA that is refractory to the clinically used drug",
+    "start": 222,
+    "end": 442
+  },
+  "record_path": "records/SCIFACT-153.json",
+  "evidence_path": "evidence/SCIFACT-153.md"
+}

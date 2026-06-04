@@ -1,0 +1,7 @@
+# Raw Source AMBIFC-086
+dataset: ambifc
+source_row: 85
+marker: AMBIFC-086_ANCHOR
+claim: the original xbox requires a memory card.
+label: neutral
+evidence: In 2002 and 2003, several high-profile releases helped the Xbox gain momentum and distinguish itself from the PS2. Microsoft purchased Rare, responsible for many Nintendo 64 hit games, to expand their 1st party portfolio. The Xbox Live online service was launched in late 2002 alongside pilot titles MotoGP, MechAssault and Tom Clancy's Ghost Recon. Several best-selling and critically acclaimed titles for the Xbox soon followed, such as Tom Clancy's Splinter Cell, and Star Wars: Knights of the Old Republic. Take-Two Interactive's exclusivity deal with Sony was amended to allow Grand Theft Auto III and its sequels to be published for the Xbox. Many other publishers got into the trend of releasing the Xbox version alongside the PS2 version, instead of delaying it for months. 2004 saw the release of highly rated exclusives Fable and Ninja Gaiden, both of these games would become big hits for the Xbox. Later that year, Halo 2 was released and became the highest-grossing release in entertainment history, making over $125 million in its first day and became the best-selling Xbox game worldwide. Halo 2 became Xbox Live's third killer app after MechAssault & Tom Clancy's Rainbow Six 3. That 

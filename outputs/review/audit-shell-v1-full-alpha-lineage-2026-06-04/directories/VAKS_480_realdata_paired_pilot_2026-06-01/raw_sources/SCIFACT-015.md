@@ -1,0 +1,7 @@
+# Raw Source SCIFACT-015
+dataset: scifact
+source_row: 14
+marker: SCIFACT-015_ANCHOR
+claim: Arterioles have a larger lumen diameter than venules.
+label: 
+evidence: BACKGROUND We have developed techniques to implant angiogenic patches onto the epicardium over regions of infarcted cardiac tissue to stimulate revascularization of the damaged tissue. These experiments used a scaffold-based 3D human dermal fibroblast culture (3DFC) as an epicardial patch. The 3DFC contains viable cells that secrete angiogenic growth factors and has previously been shown to stimulate angiogenic activity. The hypothesis tested was that a viable 3DFC cardiac patch would stimulate an angiogenic response within an area of infarcted cardiac tissue. METHODS AND RESULTS A coronary occlusion of a branch of the left anterior descending coronary artery was performed by thermal ligation in severe combined immunodeficient mice. 3DFCs with or without viable cells were sized to the damaged area, implanted in replicate mice onto the epicardium at the site of tissue injury, and compared with animals that received infarct surgery but no implant. Fourteen and 30 days after surgery, hearts were exposed and photographed, and tissue samples were prepared for histology and cytochemistry. Fourteen and 30 days after surgery, the damaged myocardium receiving viable 3DFC exhibited a signifi

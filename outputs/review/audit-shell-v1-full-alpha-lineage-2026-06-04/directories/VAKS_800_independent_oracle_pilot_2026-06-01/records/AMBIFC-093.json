@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-093",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 92,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "there is a sequel to the amazing spider man.",
+  "evidence": "The release of the film in the United Kingdom was moved to April 16, 2014, two days ahead of its original April 18 date. Deadline reported that, in addition to the production budget, the film's marketing budget was $180–190 million. On July 17, 2013, Sony released a clip from the film with the first released footage of Jamie Foxx as Electro to encourage attendance at the panel, at the San Diego Comic-Con International. At the panel they premiered a four-minute trailer, which was not publicly released but eventually leaked on the internet. Viral marketing for the film included a version of the Daily Bugle on the blogging service Tumblr, which included references to Kate Cushing, Detective Stan Carter, the \"Big Man\", Izzy Bunsen, Joy Mercado, Donald Menken, the Vulture, Hydro-Man, Spencer Smythe, Ned Leeds, Anne Weying, J. Jonah Jameson, Shocker, Alistair Smythe, Doctor Octopus, Eddie Brock, The Enforcers, and Puma. Marc Webb posted a photo on Twitter with a message written in Dwarven language revealing that the first trailer would debut prior to 3D screenings of The Hobbit: The Desolation of Smaug. On December 8, 2013, it was announced that new footage from the film would be presented during New Year's Eve festivities at New York City's Times Square. The film was further promoted during the World Wide Fund for Nature (WWF) \"Earth Hour\" campaign. The cast was present at the launc",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "ambiguous_scope"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-093.md",
+    "document_hash": "2d30fdd89855b033810f57f9d0d226c6a74e663506ecf432be96471dfb40106c",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-093_ANCHOR",
+    "text_quote": "The release of the film in the United Kingdom was moved to April 16, 2014, two days ahead of its original April 18 date. Deadline reported that, in addition to the production budget, the film's marketing budget was $180–",
+    "start": 153,
+    "end": 373
+  },
+  "record_path": "records/AMBIFC-093.json",
+  "evidence_path": "evidence/AMBIFC-093.md"
+}

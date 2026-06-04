@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-057",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 56,
+  "claim": "Human T-lymphotropic virus type-I-associated myelopathy / tropical spastic paraparesis (HAM/TSP) patients produce Immunoglobulin G (IgG) antibodies which cross-react with an immunodominant epitope in Tax.",
+  "evidence": "One hypothesis that couples infection with autoimmune disease is molecular mimicry. Molecular mimicry is characterized by an immune response to an environmental agent that cross-reacts with a host antigen, resulting in disease. This hypothesis has been implicated in the pathogenesis of diabetes, lupus and multiple sclerosis (MS). There is limited direct evidence linking causative agents with pathogenic immune reactions in these diseases. Our study establishes a clear link between viral infection, autoimmunity and neurological disease in humans. As a model for molecular mimicry, we studied patients with human T-lymphotropic virus type 1 (HTLV-1)-associated myelopathy/tropical spastic paraparesis (HAM/TSP), a disease that can be indistinguishable from MS (refs. 5,6,7). HAM/TSP patients develop antibodies to neurons. We hypothesized these antibodies would identify a central nervous system (CNS) autoantigen. Immunoglobulin G isolated from HAM/TSP patients identified heterogeneous nuclear ribonuclear protein-A1 (hnRNP-A1) as the autoantigen. Antibodies to hnRNP-A1 cross-reacted with HTLV-1-tax, the immune response to which is associated with HAM/TSP (refs. 5,9). Immunoglobulin G specifi",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-057.md",
+    "marker": "RECSTRESS-057_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-05",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "stress-rec-05-fp-v2",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-057.json",
+  "evidence_path": "evidence/RECSTRESS-057.md"
+}

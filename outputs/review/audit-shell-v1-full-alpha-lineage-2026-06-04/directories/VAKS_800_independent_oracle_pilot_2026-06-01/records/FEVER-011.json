@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-011",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 10,
+  "layer": "ordinary_stable",
+  "claim": "Life After Death is by Eminem.",
+  "evidence": "Life_After_Death | 1 | A double album , it was released posthumously following his death on March 9 , 1997 . | Eminem | 0 | Marshall Bruce Mathers III -LRB- born October 17 , 1972 -RRB- , known professionally as Eminem -LRB- often stylized as EMINƎM -RRB- , is an American rapper , record producer , and actor .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-011.md",
+    "document_hash": "a2300d269b9b4153becc5d2947a0ea3060901e23581ff4c02cdfd512624d700a",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-011_ANCHOR",
+    "text_quote": "Life_After_Death | 1 | A double album , it was released posthumously following his death on March 9 , 1997 . | Eminem | 0 | Marshall Bruce Mathers III -LRB- born October 17 , 1972 -RRB- , known professionally as Eminem -",
+    "start": 136,
+    "end": 356
+  },
+  "record_path": "records/FEVER-011.json",
+  "evidence_path": "evidence/FEVER-011.md"
+}

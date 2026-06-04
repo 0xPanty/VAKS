@@ -1,0 +1,38 @@
+{
+  "id": "FULLANCHOR-007",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 6,
+  "layer": "full_anchor_click",
+  "claim": "35% of revenue goes to states. (In Nigeria)",
+  "evidence": "Revenue is shared in accordance with the vertical formula, as determined by RMAFC and approved by the National Assembly. The formula allocates 52.68%, 26.72% and 20.60% to the Federal, State and Local Governments respectively",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "real_web_snapshot",
+  "source_anchor": {
+    "status": "valid",
+    "path": "real_source_snapshots/FULLANCHOR-007.txt",
+    "document_hash": "244ba4573ef942687ac233e307f92d5373a3c1a3381f11caf84fd975b44ff206",
+    "version_id": "real-web-snapshot-v2",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-007_REAL_SNAPSHOT",
+    "text_quote": "“In terms of revenue share, 20% of the revenue goes to the local, 35% goes to the state and 45% goes to the federal governments .",
+    "start": 2354,
+    "end": 2483,
+    "quote_strategy": "claim_keyword_window",
+    "landing_class": "claim_relevant_context_landing",
+    "semantic_selector_success": true,
+    "boilerplate_quote": false
+  },
+  "record_path": "records/FULLANCHOR-007.json",
+  "evidence_path": "evidence/FULLANCHOR-007.md",
+  "real_snapshot_url": "https://web.archive.org/web/20210307003741/https://africacheck.org/fact-checks/reports/kenyas-ex-prime-minister-odinga-mangles-his-numbers-government-revenue-share",
+  "clickback_snapshot_kind": "live_urllib_retry"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-080",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 79,
+  "layer": "action_challenge_conflict",
+  "claim": "In 2016, 33 million Americans voted by mail.",
+  "evidence": "Numerically, absentee/mail-in ballots made up roughly 33 million of the 140 million ballots counted in the 2016 general election",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [
+    "explicit_challenge"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-080.md",
+    "document_hash": "9978119200f2b1e3645e154d68655f76e121da1d693d18763f7f49345635cc05",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-080_ANCHOR",
+    "text_quote": "Numerically, absentee/mail-in ballots made up roughly 33 million of the 140 million ballots counted in the 2016 general election",
+    "start": 159,
+    "end": 287
+  },
+  "record_path": "records/AVERITEC-080.json",
+  "evidence_path": "evidence/AVERITEC-080.md"
+}

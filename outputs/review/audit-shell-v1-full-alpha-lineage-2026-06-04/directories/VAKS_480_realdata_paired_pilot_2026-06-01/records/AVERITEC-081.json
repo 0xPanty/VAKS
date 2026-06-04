@@ -1,0 +1,22 @@
+{
+  "id": "AVERITEC-081",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 80,
+  "claim": "In Michigan, US one of the three key states that enabled Donald Trump to win the presidential election in 2016, the winning margin averaged out to just over two votes per precinct.",
+  "evidence": "4,810 2,279,543 Hillary Clinton, with 2,268,839 votes.",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-081.md",
+    "marker": "AVERITEC-081_ANCHOR"
+  }
+}

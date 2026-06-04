@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-129",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 128,
+  "layer": "anchor_problem",
+  "claim": "COVID-19 virus is airborne.",
+  "evidence": "According to the World Health Organization (WHO) and the United States Centers for Disease Control and Prevention (CDC), SARS-CoV-2 is still mainly transmitted through respiratory secretions or droplets that can reach the mouth, nose and eyes of someone who comes in close contact with a COVID-19-infected person. Indirect transmission may also occur when infected respiratory droplets land on objects or surfaces creating fomites, where SARS-CoV-2 could stay viable for hours or days depending on the environment. However, WHO noted in its latest scientific brief that no specific reports demonstrate fomite transmission of the virus. Yes",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [
+    "stale_pointer"
+  ],
+  "anchor_status": "stale",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "stale",
+    "path": "raw_sources/AVERITEC-129.md",
+    "document_hash": "2f4699cc59a31242d5a28df582c084ff872c7b2aa55a0d7e80a2dde6bd74f2b6",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-129_ANCHOR",
+    "text_quote": "According to the World Health Organization (WHO) and the United States Centers for Disease Control and Prevention (CDC), SARS-CoV-2 is still mainly transmitted through respiratory secretions or droplets that can reach th",
+    "start": -1,
+    "end": -1
+  },
+  "record_path": "records/AVERITEC-129.json",
+  "evidence_path": "evidence/AVERITEC-129.md"
+}

@@ -1,0 +1,43 @@
+{
+  "T01":{"state":"blocking","full_audit":true,"review_due":true,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":false,"queue_visible":true},
+  "T02":{"state":"blocking","full_audit":true,"review_due":true,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":false,"queue_visible":true},
+  "T03":{"state":"blocking","full_audit":true,"review_due":true,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":false,"queue_visible":true},
+  "T04":{"state":"for_review","full_audit":true,"review_due":true,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":false,"queue_visible":true},
+  "T05":{"state":"blocking","full_audit":true,"review_due":true,"anchor_health":"missing","anchor_problem_visibility":true,"authority_boundary_required":false,"queue_visible":true},
+  "T06":{"state":"for_review","full_audit":true,"review_due":true,"anchor_health":"stale","anchor_problem_visibility":true,"authority_boundary_required":false,"queue_visible":true},
+  "T07":{"state":"for_review","full_audit":true,"review_due":true,"anchor_health":"drift","anchor_problem_visibility":true,"authority_boundary_required":false,"queue_visible":true},
+  "T08":{"state":"for_review","full_audit":true,"review_due":true,"anchor_health":"moved","anchor_problem_visibility":true,"authority_boundary_required":false,"queue_visible":true},
+  "T09":{"state":"regressed","full_audit":true,"review_due":true,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":false,"queue_visible":true},
+  "T10":{"state":"blocking","full_audit":true,"review_due":true,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":false,"queue_visible":true},
+  "T11":{"state":"for_review","full_audit":true,"review_due":true,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":false,"queue_visible":true},
+  "T12":{"state":"for_review","full_audit":true,"review_due":true,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":false,"queue_visible":true},
+  "T13":{"state":"blocking","full_audit":true,"review_due":true,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":false,"queue_visible":true},
+
+  "A01":{"state":"ordinary","full_audit":false,"review_due":false,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":true,"queue_visible":false},
+  "A02":{"state":"ordinary","full_audit":false,"review_due":false,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":true,"queue_visible":false},
+  "A03":{"state":"ordinary","full_audit":false,"review_due":false,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":true,"queue_visible":false},
+  "A04":{"state":"ordinary","full_audit":false,"review_due":false,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":true,"queue_visible":false},
+  "A05":{"state":"ordinary","full_audit":false,"review_due":false,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":true,"queue_visible":false},
+  "A06":{"state":"ordinary","full_audit":false,"review_due":false,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":true,"queue_visible":false},
+  "A07":{"state":"ordinary","full_audit":false,"review_due":false,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":true,"queue_visible":false},
+  "A08":{"state":"ordinary","full_audit":false,"review_due":false,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":true,"queue_visible":false},
+  "A09":{"state":"ordinary","full_audit":false,"review_due":false,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":true,"queue_visible":false},
+  "A10":{"state":"ordinary","full_audit":false,"review_due":false,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":true,"queue_visible":false},
+  "A11":{"state":"ordinary","full_audit":false,"review_due":false,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":true,"queue_visible":false},
+  "A12":{"state":"blocking","full_audit":true,"review_due":true,"anchor_health":"missing","anchor_problem_visibility":true,"authority_boundary_required":true,"queue_visible":true},
+
+  "R01":{"state":"ordinary","full_audit":false,"review_due":false,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":false,"queue_visible":false,"group_id":"G-REC-SCOPE","can_group":true},
+  "R02":{"state":"ordinary","full_audit":false,"review_due":false,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":false,"queue_visible":false,"group_id":"G-REC-SCOPE","can_group":true},
+  "R03":{"state":"regressed","full_audit":true,"review_due":true,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":false,"queue_visible":true},
+  "R04":{"state":"blocking","full_audit":true,"review_due":true,"anchor_health":"missing","anchor_problem_visibility":true,"authority_boundary_required":false,"queue_visible":true},
+
+  "V01":{"state":"ordinary","full_audit":false,"review_due":false,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":false,"queue_visible":false,"group_id":"G-FP-v1","can_group":true},
+  "V02":{"state":"ordinary","full_audit":false,"review_due":false,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":false,"queue_visible":false,"group_id":"G-FP-v1","can_group":true},
+  "V03":{"state":"ordinary","full_audit":false,"review_due":false,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":false,"queue_visible":false,"group_id":"G-FP-v2","can_group":true},
+  "V04":{"state":"ordinary","full_audit":false,"review_due":false,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":false,"queue_visible":false,"group_id":"G-FP-v2","can_group":true},
+
+  "Q01":{"state":"resolved_folded","full_audit":false,"review_due":false,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":false,"queue_visible":false},
+  "Q02":{"state":"parked_nonblocking","full_audit":false,"review_due":false,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":false,"queue_visible":false},
+  "Q03":{"state":"for_review","full_audit":true,"review_due":true,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":false,"queue_visible":true},
+  "Q04":{"state":"ordinary","full_audit":false,"review_due":false,"anchor_health":"valid","anchor_problem_visibility":false,"authority_boundary_required":false,"queue_visible":false}
+}

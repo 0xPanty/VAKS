@@ -1,0 +1,29 @@
+{
+  "id": "HOLDOUT-068",
+  "pool": "adversarial_holdout",
+  "dataset_family": "scifact",
+  "source_row_index": 67,
+  "layer": "authority_leakage_paraphrase",
+  "claim": "Chenodeosycholic acid treatment increases whole-body energy expenditure.",
+  "evidence": "The interest in brown adipose tissue (BAT) as a target to combat metabolic disease has recently been renewed with the discovery of functional BAT in humans. In rodents, BAT can be activated by bile acids, which activate type 2 iodothyronine deiodinase (D2) in BAT via the G-coupled protein receptor TGR5, resulting in increased oxygen consumption and energy expenditure. Here we examined the effects of oral supplementation of the bile acid chenodeoxycholic acid (CDCA) on human BAT activity. Treatment of 12 healthy female subjects with CDCA for 2 days resulted in increased BAT activity. Whole-body energy expenditure was also increased upon CDCA treatment. In vitro treatment of primary human brown adipocytes derived with CDCA or specific TGR5 agonists increased mitochondrial uncoupling and D2 expression, an effect that was absent in human primary white adipocytes. These findings identify bile acids as a target to activate BAT in humans.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "source_count_as_independence",
+  "authority_trap": "The presence of several URLs means independent confirmation.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/HOLDOUT-068.md",
+    "document_hash": "3b578d3218fc4d96908b98c05d7efa607e634eef57ab77be85b8fc239178d6cc",
+    "version_id": "holdout-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "HOLDOUT-068_ANCHOR",
+    "text_quote": "The interest in brown adipose tissue (BAT) as a target to combat metabolic disease has recently been renewed with the discovery of functional BAT in humans. In rodents, BAT can be activated by bile acids, which activate ",
+    "start": 184,
+    "end": 404
+  },
+  "record_path": "records/HOLDOUT-068.json",
+  "evidence_path": "evidence/HOLDOUT-068.md"
+}

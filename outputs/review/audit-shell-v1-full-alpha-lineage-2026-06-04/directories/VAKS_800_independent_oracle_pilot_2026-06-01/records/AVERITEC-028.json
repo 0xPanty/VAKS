@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-028",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 27,
+  "layer": "ordinary_stable",
+  "claim": "The counties are striving to reach the 10% [allocation to agriculture] recommended by the Malabo declaration.",
+  "evidence": "We commit to ending hunger in Africa by 2025 No answer could be found.",
+  "source_label": "Not Enough Evidence",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-028.md",
+    "document_hash": "43303c987df8d6ac99c941f17173a917439217a062af76c298af32411ffa4e0b",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-028_ANCHOR",
+    "text_quote": "We commit to ending hunger in Africa by 2025 No answer could be found.",
+    "start": 224,
+    "end": 294
+  },
+  "record_path": "records/AVERITEC-028.json",
+  "evidence_path": "evidence/AVERITEC-028.md"
+}

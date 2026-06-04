@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-111",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 110,
+  "claim": "Pseudogene PTENP1 regulates the expression of PTEN by functioning as an miRNA decoy.",
+  "evidence": "The canonical role of messenger RNA (mRNA) is to deliver protein-coding information to sites of protein synthesis. However, given that microRNAs bind to RNAs, we hypothesized that RNAs could possess a regulatory role that relies on their ability to compete for microRNA binding, independently of their protein-coding function. As a model for the protein-coding-independent role of RNAs, we describe the functional relationship between the mRNAs produced by the PTEN tumour suppressor gene and its pseudogene PTENP1 and the critical consequences of this interaction. We find that PTENP1 is biologically active as it can regulate cellular levels of PTEN and exert a growth-suppressive role. We also show that the PTENP1 locus is selectively lost in human cancer. We extended our analysis to other cancer-related genes that possess pseudogenes, such as oncogenic KRAS. We also demonstrate that the transcripts of protein-coding genes such as PTEN are biologically active. These findings attribute a novel biological role to expressed pseudogenes, as they can regulate coding gene expression, and reveal a non-coding function for mRNAs.",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-111.md",
+    "marker": "RECSTRESS-111_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-11",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-11-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-111.json",
+  "evidence_path": "evidence/RECSTRESS-111.md"
+}

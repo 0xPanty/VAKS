@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-050",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 49,
+  "layer": "ordinary_stable",
+  "claim": "Only 31% of South African drink alcohol",
+  "evidence": "Overall, approximately 62,300 (95% UI 27,000–103,000) adults died from alcohol-attributable causes in South Africa in 2015, with 60% of deaths occurring in people in the low and 15% in the high SES groups. Age-standardized, alcohol-attributable mortality rates per 100,000 adults were highest for the low SES group (727 deaths, 95% UI 354–1208 deaths) followed by the middle (377 deaths, 95% UI 165–687 deaths) and high SES groups (163 deaths, 95% UI 71–289 deaths). The socioeconomic differences were highest for mortality from infectious diseases. No answer could be found.",
+  "source_label": "Not Enough Evidence",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-050.md",
+    "document_hash": "4656299982720c566eca45b2a5f1548cd1b60ba40dc2fab688e95df1ab07126b",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-050_ANCHOR",
+    "text_quote": "Overall, approximately 62,300 (95% UI 27,000–103,000) adults died from alcohol-attributable causes in South Africa in 2015, with 60% of deaths occurring in people in the low and 15% in the high SES groups. Age-standardiz",
+    "start": 154,
+    "end": 374
+  },
+  "record_path": "records/AVERITEC-050.json",
+  "evidence_path": "evidence/AVERITEC-050.md"
+}

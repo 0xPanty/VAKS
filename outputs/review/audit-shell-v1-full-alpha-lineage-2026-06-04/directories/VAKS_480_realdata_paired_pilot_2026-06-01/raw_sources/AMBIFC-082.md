@@ -1,0 +1,7 @@
+# Raw Source AMBIFC-082
+dataset: ambifc
+source_row: 81
+marker: AMBIFC-082_ANCHOR
+claim: all the members of fleetwood mac are still alive.
+label: neutral
+evidence: After Welch announced that he was leaving the band, Fleetwood began searching for a replacement. While Fleetwood was checking out Sound City Studios in Los Angeles, the house engineer, Keith Olsen, played him a track he had recorded in the studio, "Frozen Love", from the album Buckingham Nicks (1973). Fleetwood liked it and was introduced to the guitarist from the band, Lindsey Buckingham, who was at Sound City that day recording demos. Fleetwood asked him to join Fleetwood Mac and Buckingham agreed, on the condition that his music partner and girlfriend, Stevie Nicks, be included. Buckingham and Nicks joined the band on New Year's Eve 1974, within four weeks of the previous incarnation splitting. In 1975, the new line-up released another self-titled album, their tenth studio album. The album was a breakthrough for the band and became a huge hit, reaching No.1 in the US and selling over 7 million copies. Among the hit singles from this album were Christine McVie's "Over My Head" and "Say You Love Me" and Stevie Nicks's "Rhiannon", as well as the much-played album track "Landslide", a live rendition of which became a hit twenty years later on The Dance album. In 1976, the band was s

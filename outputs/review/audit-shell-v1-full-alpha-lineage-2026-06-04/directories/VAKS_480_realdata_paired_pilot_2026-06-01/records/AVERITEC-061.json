@@ -1,0 +1,22 @@
+{
+  "id": "AVERITEC-061",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 60,
+  "claim": "Democrats recited the US Pledge of Allegiance tonight and took out \"under God\".",
+  "evidence": "The Pledge of Allegiance to the Flag: \"I pledge allegiance to the Flag of the United States of America, and to the Republic for which it stands, one Nation under God, indivisible, with liberty and justice for all,\" should be rendered by standing at attention facing the flag with the right hand over the heart. I pledge allegiance to the Flag of the United States of America, and to the Republic for which it stands, one Nation under God, indivisible, with liberty and justice for all",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-061.md",
+    "marker": "AVERITEC-061_ANCHOR"
+  }
+}

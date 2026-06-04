@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-087",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 86,
+  "layer": "action_challenge_conflict",
+  "claim": "Deletion of αvβ8 does not result in a spontaneous inflammatory phenotype.",
+  "evidence": "Regulatory T (Treg) cells play a pivotal role in suppressing self-harmful T cell responses, but how Treg cells mediate suppression to maintain immune homeostasis and limit responses during inflammation is unclear. Here we show that effector Treg cells express high amounts of the integrin αvβ8, which enables them to activate latent transforming growth factor-β (TGF-β). Treg-cell-specific deletion of integrin αvβ8 did not result in a spontaneous inflammatory phenotype, suggesting that this pathway is not important in Treg-cell-mediated maintenance of immune homeostasis. However, Treg cells lacking expression of integrin αvβ8 were unable to suppress pathogenic T cell responses during active inflammation. Thus, our results identify a mechanism by which Treg cells suppress exuberant immune responses, highlighting a key role for effector Treg-cell-mediated activation of latent TGF-β in suppression of self-harmful T cell responses during active inflammation.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-087.md",
+    "document_hash": "08aa2976a776598a63848aa11eebacb95d75611df7c9b37db3579fbaed37368b",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-087_ANCHOR",
+    "text_quote": "Regulatory T (Treg) cells play a pivotal role in suppressing self-harmful T cell responses, but how Treg cells mediate suppression to maintain immune homeostasis and limit responses during inflammation is unclear. Here w",
+    "start": 185,
+    "end": 405
+  },
+  "record_path": "records/SCIFACT-087.json",
+  "evidence_path": "evidence/SCIFACT-087.md"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "HOLDOUT-027",
+  "pool": "adversarial_holdout",
+  "dataset_family": "scifact",
+  "source_row_index": 26,
+  "layer": "review_due_trap",
+  "claim": "Arginine 90 in p150n is important for interaction with EB1.",
+  "evidence": "Plus-end tracking proteins, such as EB1 and the dynein/dynactin complex, regulate microtubule dynamics. These proteins are thought to stabilize microtubules by forming a plus-end complex at microtubule growing ends with ill-defined mechanisms. Here we report the crystal structure of two plus-end complex components, the carboxy-terminal dimerization domain of EB1 and the microtubule binding (CAP-Gly) domain of the dynactin subunit p150Glued. Each molecule of the EB1 dimer contains two helices forming a conserved four-helix bundle, while also providing p150Glued binding sites in its flexible tail region. Combining crystallography, NMR, and mutational analyses, our studies reveal the critical interacting elements of both EB1 and p150Glued, whose mutation alters microtubule polymerization activity. Moreover, removal of the key flexible tail from EB1 activates microtubule assembly by EB1 alone, suggesting that the flexible tail negatively regulates EB1 activity. We, therefore, propose that EB1 possesses an auto-inhibited conformation, which is relieved by p150Glued as an allosteric activator.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "insufficient_evidence"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/HOLDOUT-027.md",
+    "document_hash": "6426381056217d628b628a529ec5c025e5cba369d6dd73e1644ac3b6bca67183",
+    "version_id": "holdout-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "HOLDOUT-027_ANCHOR",
+    "text_quote": "Plus-end tracking proteins, such as EB1 and the dynein/dynactin complex, regulate microtubule dynamics. These proteins are thought to stabilize microtubules by forming a plus-end complex at microtubule growing ends with ",
+    "start": 171,
+    "end": 391
+  },
+  "record_path": "records/HOLDOUT-027.json",
+  "evidence_path": "evidence/HOLDOUT-027.md"
+}

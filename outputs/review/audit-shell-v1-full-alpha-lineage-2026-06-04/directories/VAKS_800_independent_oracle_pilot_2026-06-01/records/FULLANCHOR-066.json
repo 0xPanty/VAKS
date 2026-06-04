@@ -1,0 +1,32 @@
+{
+  "id": "FULLANCHOR-066",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 65,
+  "layer": "full_anchor_click",
+  "claim": "Cells undergoing methionine restriction may activate miRNAs.",
+  "evidence": "Emerging data suggest that microRNAs (miRNAs) are instrumental in a variety of stress responses in addition to their more recognized role in development. Surprisingly, miRNAs, which normally suppress expression of target transcripts, may become activators of expression during stress. This might be partially explained by new interactions of miRNA/Argonaute complexes with RNA-binding proteins that relocate from different subcellular compartments during stress.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "pdf_text",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/FULLANCHOR-066.md",
+    "document_hash": "2ecae5742eb9bca0f0f1ced7743ea6a55b3aeb8f33bf3c858dd7b8f01243bac1",
+    "version_id": "pdf_text-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-066_ANCHOR",
+    "text_quote": "Emerging data suggest that microRNAs (miRNAs) are instrumental in a variety of stress responses in addition to their more recognized role in development. Surprisingly, miRNAs, which normally suppress expression of target",
+    "start": 179,
+    "end": 399
+  },
+  "record_path": "records/FULLANCHOR-066.json",
+  "evidence_path": "evidence/FULLANCHOR-066.md"
+}

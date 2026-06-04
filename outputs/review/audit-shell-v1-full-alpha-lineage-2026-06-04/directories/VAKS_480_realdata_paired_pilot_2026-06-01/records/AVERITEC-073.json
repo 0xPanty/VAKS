@@ -1,0 +1,22 @@
+{
+  "id": "AVERITEC-073",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 72,
+  "claim": "Mughal Gardens Renamed To Dr. Rajendra Prasad Garden",
+  "evidence": "The Mughal gardens are the few number of gardens built by the Mughals in the Islamic style of architecture in India as well as other countries. Most famous Mughal Gardens of India are the garden of Taj Mahal, the Red Fort garden in Delhi, Agra Fort and Humayun’s Tomb Garden. Other Mughal gardens are Tomb of Safdarjung,Mehtab Bagh,Roshanara Bagh,Khusro Bagh and Ram Bagh. New Delhi, Dec 3 (IANS) The Hindu Mahasabha has demanded a change of name and this time around, it wants the iconic Mughal Garden that falls under the President''s Estate, to be renamed as Rajendra Prasad Udyan. The outfit''s President Swami Chakrapani has said that he intends to meet the Prime Minister Narendra Modi and Home Minister Amit Shah to persuade them for the same. Speaking to IANS, Chakrapani said: \"We all know the mayhem the Mughals created when they ruled. In today''s day and age to have a garden, that too inside the Rashtrapati Bhawan, named after Mughals is unacceptable. That''s why I have proposed to name it after the first President Dr Rajendra Prasad.\" On the official site of the President of India, the Mughal Gardens are still named the Mughal Gardens. There has been no change.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-073.md",
+    "marker": "AVERITEC-073_ANCHOR"
+  }
+}

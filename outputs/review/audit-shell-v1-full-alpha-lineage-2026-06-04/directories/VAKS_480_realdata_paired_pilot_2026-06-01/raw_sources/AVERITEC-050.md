@@ -1,0 +1,7 @@
+# Raw Source AVERITEC-050
+dataset: averitec
+source_row: 49
+marker: AVERITEC-050_ANCHOR
+claim: Only 31% of South African drink alcohol
+label: Not Enough Evidence
+evidence: Overall, approximately 62,300 (95% UI 27,000–103,000) adults died from alcohol-attributable causes in South Africa in 2015, with 60% of deaths occurring in people in the low and 15% in the high SES groups. Age-standardized, alcohol-attributable mortality rates per 100,000 adults were highest for the low SES group (727 deaths, 95% UI 354–1208 deaths) followed by the middle (377 deaths, 95% UI 165–687 deaths) and high SES groups (163 deaths, 95% UI 71–289 deaths). The socioeconomic differences were highest for mortality from infectious diseases. No answer could be found.

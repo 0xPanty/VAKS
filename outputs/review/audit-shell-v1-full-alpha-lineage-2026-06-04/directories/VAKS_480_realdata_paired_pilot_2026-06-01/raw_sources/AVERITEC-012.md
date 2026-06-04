@@ -1,0 +1,7 @@
+# Raw Source AVERITEC-012
+dataset: averitec
+source_row: 11
+marker: AVERITEC-012_ANCHOR
+claim: 45% of Nigeria's revenue goes to the federal government.
+label: Refuted
+evidence: 52.68 % goes to the federal government. 2,661.13 trillion went to federal government from the 5,051.50 trillion available for sharing. 52.68 % goes to the federal government.

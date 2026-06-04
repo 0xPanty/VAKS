@@ -1,0 +1,29 @@
+{
+  "id": "SCIFACT-022",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 21,
+  "layer": "ordinary_stable",
+  "claim": "All hematopoietic stem cells segregate their chromosomes randomly.",
+  "evidence": "Stem cells are proposed to segregate chromosomes asymmetrically during self-renewing divisions so that older (‘immortal’) DNA strands are retained in daughter stem cells whereas newly synthesized strands segregate to differentiating cells. Stem cells are also proposed to retain DNA labels, such as 5-bromo-2-deoxyuridine (BrdU), either because they segregate chromosomes asymmetrically or because they divide slowly. However, the purity of stem cells among BrdU-label-retaining cells has not been documented in any tissue, and the ‘immortal strand hypothesis’ has not been tested in a system with definitive stem cell markers. Here we tested these hypotheses in haematopoietic stem cells (HSCs), which can be highly purified using well characterized markers. We administered BrdU to newborn mice, mice treated with cyclophosphamide and granulocyte colony-stimulating factor, and normal adult mice for 4 to 10 days, followed by 70 days without BrdU. In each case, less than 6% of HSCs retained BrdU and less than 0.5% of all BrdU-retaining haematopoietic cells were HSCs, revealing that BrdU has poor specificity and poor sensitivity as an HSC marker. Sequential administration of 5-chloro-2-deoxyuridine and 5-iodo-2-deoxyuridine indicated that all HSCs segregate their chromosomes randomly. Division of individual HSCs in culture revealed no asymmetric segregation of the label. Thus, HSCs cannot b",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-022.md",
+    "document_hash": "e5c423a8289bb60e451cd44d03d77314ca89032c3b3eded2b9da4cb58d222b1d",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-022_ANCHOR",
+    "text_quote": "Stem cells are proposed to segregate chromosomes asymmetrically during self-renewing divisions so that older (‘immortal’) DNA strands are retained in daughter stem cells whereas newly synthesized strands segregate to dif",
+    "start": 178,
+    "end": 398
+  },
+  "record_path": "records/SCIFACT-022.json",
+  "evidence_path": "evidence/SCIFACT-022.md"
+}

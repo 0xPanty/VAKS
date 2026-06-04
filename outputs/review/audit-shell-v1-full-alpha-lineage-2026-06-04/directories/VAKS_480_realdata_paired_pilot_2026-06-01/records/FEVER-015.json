@@ -1,0 +1,20 @@
+{
+  "id": "FEVER-015",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 14,
+  "claim": "Sparta won the Peloponnesian War at the great cost of five billion lives.",
+  "evidence": "Peloponnesian_War | 0 | The Peloponnesian War -LRB- 431 -- 404 BC -RRB- was an ancient Greek war fought by Athens and its empire against the Peloponnesian League led by Sparta .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-015.md",
+    "marker": "FEVER-015_ANCHOR"
+  }
+}

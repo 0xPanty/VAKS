@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-053",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 52,
+  "layer": "ordinary_stable",
+  "claim": "Buzz Aldrin was born in January in 1930.",
+  "evidence": "Buzz_Aldrin | 0 | Buzz Aldrin -LRB- born Edwin Eugene Aldrin Jr. , January 20 , 1930 -RRB- is an American engineer and former astronaut .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-053.md",
+    "document_hash": "6b57d1dc1f6dbccfc2d54a409af7757d3a2935fa19ab282d9626b6ec509c59d9",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-053_ANCHOR",
+    "text_quote": "Buzz_Aldrin | 0 | Buzz Aldrin -LRB- born Edwin Eugene Aldrin Jr. , January 20 , 1930 -RRB- is an American engineer and former astronaut .",
+    "start": 146,
+    "end": 283
+  },
+  "record_path": "records/FEVER-053.json",
+  "evidence_path": "evidence/FEVER-053.md"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-079",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 78,
+  "layer": "action_challenge_conflict",
+  "claim": "will smith's daughter is in i am legend.",
+  "evidence": "Smith's first major roles were in the drama Six Degrees of Separation (1993) and the action film Bad Boys (1995) in which he starred opposite Martin Lawrence. The latter film was commercially successful, grossing $141,407,024 worldwide – $65,807,024 in North America and $75,600,000 overseas. However, critical reception was generally mixed. In 1996, Smith starred as part of an ensemble cast in Roland Emmerich's Independence Day. The film was a massive blockbuster, becoming the second highest-grossing film in history at the time and establishing Smith as a prime box office draw. In the summer of 1997, he starred alongside Tommy Lee Jones in the hit Men in Black, playing Agent J. The film was released on July 2 by Columbia Pictures and grossed over $589.3 million worldwide against a $90 million budget, becoming the year's third highest-grossing film, with an estimated 54,616,700 tickets sold in the US. It received worldwide acclaim, with critics highly praising its humor, as well as Jones and Smith's performances. During the summer of 1997, Smith also began his solo music career with the release of \"Men in Black\", the theme song for the film, which topped singles charts in several regions across the world, including the UK. \"Men in Black\" (and second single \"Just Cruisin'\") was later included on Smith's debut solo album Big Willie Style, which reached the top ten of the US Billboa",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-079.md",
+    "document_hash": "0383c8d64b1fd8b24fcc781f96c73d4268e1cee57951c7739b93d1adf495d86a",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-079_ANCHOR",
+    "text_quote": "Smith's first major roles were in the drama Six Degrees of Separation (1993) and the action film Bad Boys (1995) in which he starred opposite Martin Lawrence. The latter film was commercially successful, grossing $141,40",
+    "start": 149,
+    "end": 369
+  },
+  "record_path": "records/AMBIFC-079.json",
+  "evidence_path": "evidence/AMBIFC-079.md"
+}

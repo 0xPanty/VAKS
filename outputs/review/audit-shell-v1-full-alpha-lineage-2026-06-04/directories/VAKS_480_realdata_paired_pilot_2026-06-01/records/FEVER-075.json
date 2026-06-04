@@ -1,0 +1,22 @@
+{
+  "id": "FEVER-075",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 74,
+  "claim": "Bill Gates is a murderer.",
+  "evidence": "Bill_Gates_-LRB-frontiersman-RRB- | 0 | `` Swiftwater '' Bill Gates -LRB- died 1935 -RRB- was an American frontiersman and fortune hunter , and a fixture in stories of the Klondike Gold Rush .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-075.md",
+    "marker": "FEVER-075_ANCHOR"
+  }
+}

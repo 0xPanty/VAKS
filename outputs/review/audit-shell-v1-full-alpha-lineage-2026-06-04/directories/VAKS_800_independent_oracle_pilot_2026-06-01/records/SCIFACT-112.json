@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-112",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 111,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Gene expression does not vary appreciably across genetically identical cells.",
+  "evidence": "Genetically identical cells sharing an environment can display markedly different phenotypes. It is often unclear how much of this variation derives from chance, external signals, or attempts by individual cells to exert autonomous phenotypic programs. By observing thousands of cells for hundreds of consecutive generations under constant conditions, we dissect the stochastic decision between a solitary, motile state and a chained, sessile state in Bacillus subtilis. We show that the motile state is 'memoryless', exhibiting no autonomous control over the time spent in the state. In contrast, the time spent as connected chains of cells is tightly controlled, enforcing coordination among related cells in the multicellular state. We show that the three-protein regulatory circuit governing the decision is modular, as initiation and maintenance of chaining are genetically separable functions. As stimulation of the same initiating pathway triggers biofilm formation, we argue that autonomous timing allows a trial commitment to multicellularity that external signals could extend.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-112.md",
+    "document_hash": "a3d8fc7637c5195cc3a60ec7e3d4ff50659d87b0ff129ad87d5b006e980e4dbc",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-112_ANCHOR",
+    "text_quote": "Genetically identical cells sharing an environment can display markedly different phenotypes. It is often unclear how much of this variation derives from chance, external signals, or attempts by individual cells to exert",
+    "start": 189,
+    "end": 409
+  },
+  "record_path": "records/SCIFACT-112.json",
+  "evidence_path": "evidence/SCIFACT-112.md"
+}

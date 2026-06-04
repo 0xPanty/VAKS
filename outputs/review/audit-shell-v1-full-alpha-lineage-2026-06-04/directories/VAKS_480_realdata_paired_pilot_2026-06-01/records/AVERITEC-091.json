@@ -1,0 +1,22 @@
+{
+  "id": "AVERITEC-091",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 90,
+  "claim": "Social Security beneficiaries count on the post office to get their checks",
+  "evidence": "Social Security is paid via paper cheques and direct deposits. 557,840 63,668,789",
+  "source_label": "Conflicting Evidence/Cherrypicking",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-091.md",
+    "marker": "AVERITEC-091_ANCHOR"
+  }
+}

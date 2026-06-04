@@ -1,0 +1,677 @@
+{
+  "recurrence_heavy": {
+    "shell_core": {
+      "summary": {
+        "safety_pass": true,
+        "hard_failures": {
+          "state_mismatch": 0,
+          "false_lite": 0,
+          "review_due_fn": 0,
+          "queue_fn": 0,
+          "source_anchor_failures": 0,
+          "anchor_problem_visibility_failures": 0,
+          "record_pointer_failures": 0,
+          "evidence_pointer_failures": 0,
+          "authority_leakage": 0,
+          "authority_boundary_failures": 0,
+          "severe_over_grouping": 0,
+          "serious_folded_count": 0
+        },
+        "front_budget_warnings": 0,
+        "front_lines_total": 1768,
+        "front_chars_total": 83834,
+        "front_chars_p50": 345,
+        "front_chars_p95": 437,
+        "max_front_line_chars_p95": 165,
+        "rendered_lines_total": 2728,
+        "rendered_chars_total": 166344,
+        "source_anchor_ok_rows": 240,
+        "grouping": {
+          "expected_multi_groups": 40,
+          "recalled_multi_groups": 0,
+          "grouping_recall": 0.0,
+          "predicted_grouped_members": 0,
+          "expected_groupable_members": 200,
+          "grouped_reduction_pct": 0.0,
+          "severe_over_grouping": [],
+          "serious_folded_count": 0
+        }
+      },
+      "paired_all": {
+        "case_count": 240,
+        "rendered_line_reduction_pct": 36.9,
+        "rendered_char_reduction_pct": 51.0,
+        "front_char_reduction_pct": -23.7,
+        "review_proxy_delta_pct": -50.9,
+        "baseline_lines": 4320,
+        "candidate_lines": 2728,
+        "baseline_chars": 339238,
+        "candidate_chars": 166344
+      },
+      "paired_recurrence": {
+        "case_count": 240,
+        "rendered_line_reduction_pct": 36.9,
+        "rendered_char_reduction_pct": 51.0,
+        "front_char_reduction_pct": -23.7,
+        "review_proxy_delta_pct": -50.9,
+        "baseline_lines": 4320,
+        "candidate_lines": 2728,
+        "baseline_chars": 339238,
+        "candidate_chars": 166344
+      }
+    },
+    "shell_core_plus_recurrence": {
+      "summary": {
+        "safety_pass": true,
+        "hard_failures": {
+          "state_mismatch": 0,
+          "false_lite": 0,
+          "review_due_fn": 0,
+          "queue_fn": 0,
+          "source_anchor_failures": 0,
+          "anchor_problem_visibility_failures": 0,
+          "record_pointer_failures": 0,
+          "evidence_pointer_failures": 0,
+          "authority_leakage": 0,
+          "authority_boundary_failures": 0,
+          "severe_over_grouping": 0,
+          "serious_folded_count": 0
+        },
+        "front_budget_warnings": 0,
+        "front_lines_total": 1688,
+        "front_chars_total": 78454,
+        "front_chars_p50": 267,
+        "front_chars_p95": 507,
+        "max_front_line_chars_p95": 153,
+        "rendered_lines_total": 2648,
+        "rendered_chars_total": 160964,
+        "source_anchor_ok_rows": 240,
+        "grouping": {
+          "expected_multi_groups": 40,
+          "recalled_multi_groups": 40,
+          "grouping_recall": 1.0,
+          "predicted_grouped_members": 200,
+          "expected_groupable_members": 200,
+          "grouped_reduction_pct": 80.0,
+          "severe_over_grouping": [],
+          "serious_folded_count": 0
+        }
+      },
+      "paired_all": {
+        "case_count": 240,
+        "rendered_line_reduction_pct": 38.7,
+        "rendered_char_reduction_pct": 52.6,
+        "front_char_reduction_pct": -15.8,
+        "review_proxy_delta_pct": -52.1,
+        "baseline_lines": 4320,
+        "candidate_lines": 2648,
+        "baseline_chars": 339238,
+        "candidate_chars": 160964
+      },
+      "paired_recurrence": {
+        "case_count": 240,
+        "rendered_line_reduction_pct": 38.7,
+        "rendered_char_reduction_pct": 52.6,
+        "front_char_reduction_pct": -15.8,
+        "review_proxy_delta_pct": -52.1,
+        "baseline_lines": 4320,
+        "candidate_lines": 2648,
+        "baseline_chars": 339238,
+        "candidate_chars": 160964
+      }
+    },
+    "shell_core_plus_unversioned_control": {
+      "summary": {
+        "safety_pass": false,
+        "hard_failures": {
+          "state_mismatch": 0,
+          "false_lite": 0,
+          "review_due_fn": 0,
+          "queue_fn": 0,
+          "source_anchor_failures": 0,
+          "anchor_problem_visibility_failures": 0,
+          "record_pointer_failures": 0,
+          "evidence_pointer_failures": 0,
+          "authority_leakage": 0,
+          "authority_boundary_failures": 0,
+          "severe_over_grouping": 20,
+          "serious_folded_count": 0
+        },
+        "front_budget_warnings": 0,
+        "front_lines_total": 1628,
+        "front_chars_total": 72699,
+        "front_chars_p50": 262,
+        "front_chars_p95": 478,
+        "max_front_line_chars_p95": 128,
+        "rendered_lines_total": 2588,
+        "rendered_chars_total": 155209,
+        "source_anchor_ok_rows": 240,
+        "grouping": {
+          "expected_multi_groups": 40,
+          "recalled_multi_groups": 40,
+          "grouping_recall": 1.0,
+          "predicted_grouped_members": 200,
+          "expected_groupable_members": 200,
+          "grouped_reduction_pct": 90.0,
+          "severe_over_grouping": [
+            {
+              "group_id": "stress-rec-00|scope_fit_note|scope_fit|minor_repeat|valid",
+              "members": [
+                "RECSTRESS-001",
+                "RECSTRESS-002",
+                "RECSTRESS-003",
+                "RECSTRESS-004",
+                "RECSTRESS-005",
+                "RECSTRESS-006",
+                "RECSTRESS-007",
+                "RECSTRESS-008",
+                "RECSTRESS-009",
+                "RECSTRESS-010"
+              ],
+              "gold_group_ids": [
+                "stress-rec-00-fp-v1",
+                "stress-rec-00-fp-v2"
+              ],
+              "has_must_not_group": false
+            },
+            {
+              "group_id": "stress-rec-01|scope_fit_note|scope_fit|minor_repeat|valid",
+              "members": [
+                "RECSTRESS-011",
+                "RECSTRESS-012",
+                "RECSTRESS-013",
+                "RECSTRESS-014",
+                "RECSTRESS-015",
+                "RECSTRESS-016",
+                "RECSTRESS-017",
+                "RECSTRESS-018",
+                "RECSTRESS-019",
+                "RECSTRESS-020"
+              ],
+              "gold_group_ids": [
+                "stress-rec-01-fp-v1",
+                "stress-rec-01-fp-v2"
+              ],
+              "has_must_not_group": false
+            },
+            {
+              "group_id": "stress-rec-02|scope_fit_note|scope_fit|minor_repeat|valid",
+              "members": [
+                "RECSTRESS-021",
+                "RECSTRESS-022",
+                "RECSTRESS-023",
+                "RECSTRESS-024",
+                "RECSTRESS-025",
+                "RECSTRESS-026",
+                "RECSTRESS-027",
+                "RECSTRESS-028",
+                "RECSTRESS-029",
+                "RECSTRESS-030"
+              ],
+              "gold_group_ids": [
+                "stress-rec-02-fp-v1",
+                "stress-rec-02-fp-v2"
+              ],
+              "has_must_not_group": false
+            },
+            {
+              "group_id": "stress-rec-03|scope_fit_note|scope_fit|minor_repeat|valid",
+              "members": [
+                "RECSTRESS-031",
+                "RECSTRESS-032",
+                "RECSTRESS-033",
+                "RECSTRESS-034",
+                "RECSTRESS-035",
+                "RECSTRESS-036",
+                "RECSTRESS-037",
+                "RECSTRESS-038",
+                "RECSTRESS-039",
+                "RECSTRESS-040"
+              ],
+              "gold_group_ids": [
+                "stress-rec-03-fp-v1",
+                "stress-rec-03-fp-v2"
+              ],
+              "has_must_not_group": false
+            },
+            {
+              "group_id": "stress-rec-04|scope_fit_note|scope_fit|minor_repeat|valid",
+              "members": [
+                "RECSTRESS-041",
+                "RECSTRESS-042",
+                "RECSTRESS-043",
+                "RECSTRESS-044",
+                "RECSTRESS-045",
+                "RECSTRESS-046",
+                "RECSTRESS-047",
+                "RECSTRESS-048",
+                "RECSTRESS-049",
+                "RECSTRESS-050"
+              ],
+              "gold_group_ids": [
+                "stress-rec-04-fp-v1",
+                "stress-rec-04-fp-v2"
+              ],
+              "has_must_not_group": false
+            },
+            {
+              "group_id": "stress-rec-05|scope_fit_note|scope_fit|minor_repeat|valid",
+              "members": [
+                "RECSTRESS-051",
+                "RECSTRESS-052",
+                "RECSTRESS-053",
+                "RECSTRESS-054",
+                "RECSTRESS-055",
+                "RECSTRESS-056",
+                "RECSTRESS-057",
+                "RECSTRESS-058",
+                "RECSTRESS-059",
+                "RECSTRESS-060"
+              ],
+              "gold_group_ids": [
+                "stress-rec-05-fp-v1",
+                "stress-rec-05-fp-v2"
+              ],
+              "has_must_not_group": false
+            },
+            {
+              "group_id": "stress-rec-06|scope_fit_note|scope_fit|minor_repeat|valid",
+              "members": [
+                "RECSTRESS-061",
+                "RECSTRESS-062",
+                "RECSTRESS-063",
+                "RECSTRESS-064",
+                "RECSTRESS-065",
+                "RECSTRESS-066",
+                "RECSTRESS-067",
+                "RECSTRESS-068",
+                "RECSTRESS-069",
+                "RECSTRESS-070"
+              ],
+              "gold_group_ids": [
+                "stress-rec-06-fp-v1",
+                "stress-rec-06-fp-v2"
+              ],
+              "has_must_not_group": false
+            },
+            {
+              "group_id": "stress-rec-07|scope_fit_note|scope_fit|minor_repeat|valid",
+              "members": [
+                "RECSTRESS-071",
+                "RECSTRESS-072",
+                "RECSTRESS-073",
+                "RECSTRESS-074",
+                "RECSTRESS-075",
+                "RECSTRESS-076",
+                "RECSTRESS-077",
+                "RECSTRESS-078",
+                "RECSTRESS-079",
+                "RECSTRESS-080"
+              ],
+              "gold_group_ids": [
+                "stress-rec-07-fp-v1",
+                "stress-rec-07-fp-v2"
+              ],
+              "has_must_not_group": false
+            },
+            {
+              "group_id": "stress-rec-08|scope_fit_note|scope_fit|minor_repeat|valid",
+              "members": [
+                "RECSTRESS-081",
+                "RECSTRESS-082",
+                "RECSTRESS-083",
+                "RECSTRESS-084",
+                "RECSTRESS-085",
+                "RECSTRESS-086",
+                "RECSTRESS-087",
+                "RECSTRESS-088",
+                "RECSTRESS-089",
+                "RECSTRESS-090"
+              ],
+              "gold_group_ids": [
+                "stress-rec-08-fp-v1",
+                "stress-rec-08-fp-v2"
+              ],
+              "has_must_not_group": false
+            },
+            {
+              "group_id": "stress-rec-09|scope_fit_note|scope_fit|minor_repeat|valid",
+              "members": [
+                "RECSTRESS-091",
+                "RECSTRESS-092",
+                "RECSTRESS-093",
+                "RECSTRESS-094",
+                "RECSTRESS-095",
+                "RECSTRESS-096",
+                "RECSTRESS-097",
+                "RECSTRESS-098",
+                "RECSTRESS-099",
+                "RECSTRESS-100"
+              ],
+              "gold_group_ids": [
+                "stress-rec-09-fp-v1",
+                "stress-rec-09-fp-v2"
+              ],
+              "has_must_not_group": false
+            },
+            {
+              "group_id": "stress-rec-10|scope_fit_note|scope_fit|minor_repeat|valid",
+              "members": [
+                "RECSTRESS-101",
+                "RECSTRESS-102",
+                "RECSTRESS-103",
+                "RECSTRESS-104",
+                "RECSTRESS-105",
+                "RECSTRESS-106",
+                "RECSTRESS-107",
+                "RECSTRESS-108",
+                "RECSTRESS-109",
+                "RECSTRESS-110"
+              ],
+              "gold_group_ids": [
+                "stress-rec-10-fp-v1",
+                "stress-rec-10-fp-v2"
+              ],
+              "has_must_not_group": false
+            },
+            {
+              "group_id": "stress-rec-11|scope_fit_note|scope_fit|minor_repeat|valid",
+              "members": [
+                "RECSTRESS-111",
+                "RECSTRESS-112",
+                "RECSTRESS-113",
+                "RECSTRESS-114",
+                "RECSTRESS-115",
+                "RECSTRESS-116",
+                "RECSTRESS-117",
+                "RECSTRESS-118",
+                "RECSTRESS-119",
+                "RECSTRESS-120"
+              ],
+              "gold_group_ids": [
+                "stress-rec-11-fp-v1",
+                "stress-rec-11-fp-v2"
+              ],
+              "has_must_not_group": false
+            },
+            {
+              "group_id": "stress-rec-12|scope_fit_note|scope_fit|minor_repeat|valid",
+              "members": [
+                "RECSTRESS-121",
+                "RECSTRESS-122",
+                "RECSTRESS-123",
+                "RECSTRESS-124",
+                "RECSTRESS-125",
+                "RECSTRESS-126",
+                "RECSTRESS-127",
+                "RECSTRESS-128",
+                "RECSTRESS-129",
+                "RECSTRESS-130"
+              ],
+              "gold_group_ids": [
+                "stress-rec-12-fp-v1",
+                "stress-rec-12-fp-v2"
+              ],
+              "has_must_not_group": false
+            },
+            {
+              "group_id": "stress-rec-13|scope_fit_note|scope_fit|minor_repeat|valid",
+              "members": [
+                "RECSTRESS-131",
+                "RECSTRESS-132",
+                "RECSTRESS-133",
+                "RECSTRESS-134",
+                "RECSTRESS-135",
+                "RECSTRESS-136",
+                "RECSTRESS-137",
+                "RECSTRESS-138",
+                "RECSTRESS-139",
+                "RECSTRESS-140"
+              ],
+              "gold_group_ids": [
+                "stress-rec-13-fp-v1",
+                "stress-rec-13-fp-v2"
+              ],
+              "has_must_not_group": false
+            },
+            {
+              "group_id": "stress-rec-14|scope_fit_note|scope_fit|minor_repeat|valid",
+              "members": [
+                "RECSTRESS-141",
+                "RECSTRESS-142",
+                "RECSTRESS-143",
+                "RECSTRESS-144",
+                "RECSTRESS-145",
+                "RECSTRESS-146",
+                "RECSTRESS-147",
+                "RECSTRESS-148",
+                "RECSTRESS-149",
+                "RECSTRESS-150"
+              ],
+              "gold_group_ids": [
+                "stress-rec-14-fp-v1",
+                "stress-rec-14-fp-v2"
+              ],
+              "has_must_not_group": false
+            },
+            {
+              "group_id": "stress-rec-15|scope_fit_note|scope_fit|minor_repeat|valid",
+              "members": [
+                "RECSTRESS-151",
+                "RECSTRESS-152",
+                "RECSTRESS-153",
+                "RECSTRESS-154",
+                "RECSTRESS-155",
+                "RECSTRESS-156",
+                "RECSTRESS-157",
+                "RECSTRESS-158",
+                "RECSTRESS-159",
+                "RECSTRESS-160"
+              ],
+              "gold_group_ids": [
+                "stress-rec-15-fp-v1",
+                "stress-rec-15-fp-v2"
+              ],
+              "has_must_not_group": false
+            },
+            {
+              "group_id": "stress-rec-16|scope_fit_note|scope_fit|minor_repeat|valid",
+              "members": [
+                "RECSTRESS-161",
+                "RECSTRESS-162",
+                "RECSTRESS-163",
+                "RECSTRESS-164",
+                "RECSTRESS-165",
+                "RECSTRESS-166",
+                "RECSTRESS-167",
+                "RECSTRESS-168",
+                "RECSTRESS-169",
+                "RECSTRESS-170"
+              ],
+              "gold_group_ids": [
+                "stress-rec-16-fp-v1",
+                "stress-rec-16-fp-v2"
+              ],
+              "has_must_not_group": false
+            },
+            {
+              "group_id": "stress-rec-17|scope_fit_note|scope_fit|minor_repeat|valid",
+              "members": [
+                "RECSTRESS-171",
+                "RECSTRESS-172",
+                "RECSTRESS-173",
+                "RECSTRESS-174",
+                "RECSTRESS-175",
+                "RECSTRESS-176",
+                "RECSTRESS-177",
+                "RECSTRESS-178",
+                "RECSTRESS-179",
+                "RECSTRESS-180"
+              ],
+              "gold_group_ids": [
+                "stress-rec-17-fp-v1",
+                "stress-rec-17-fp-v2"
+              ],
+              "has_must_not_group": false
+            },
+            {
+              "group_id": "stress-rec-18|scope_fit_note|scope_fit|minor_repeat|valid",
+              "members": [
+                "RECSTRESS-181",
+                "RECSTRESS-182",
+                "RECSTRESS-183",
+                "RECSTRESS-184",
+                "RECSTRESS-185",
+                "RECSTRESS-186",
+                "RECSTRESS-187",
+                "RECSTRESS-188",
+                "RECSTRESS-189",
+                "RECSTRESS-190"
+              ],
+              "gold_group_ids": [
+                "stress-rec-18-fp-v1",
+                "stress-rec-18-fp-v2"
+              ],
+              "has_must_not_group": false
+            },
+            {
+              "group_id": "stress-rec-19|scope_fit_note|scope_fit|minor_repeat|valid",
+              "members": [
+                "RECSTRESS-191",
+                "RECSTRESS-192",
+                "RECSTRESS-193",
+                "RECSTRESS-194",
+                "RECSTRESS-195",
+                "RECSTRESS-196",
+                "RECSTRESS-197",
+                "RECSTRESS-198",
+                "RECSTRESS-199",
+                "RECSTRESS-200"
+              ],
+              "gold_group_ids": [
+                "stress-rec-19-fp-v1",
+                "stress-rec-19-fp-v2"
+              ],
+              "has_must_not_group": false
+            }
+          ],
+          "serious_folded_count": 0
+        }
+      },
+      "paired_all": {
+        "case_count": 240,
+        "rendered_line_reduction_pct": 40.1,
+        "rendered_char_reduction_pct": 54.2,
+        "front_char_reduction_pct": -7.3,
+        "review_proxy_delta_pct": -53.4,
+        "baseline_lines": 4320,
+        "candidate_lines": 2588,
+        "baseline_chars": 339238,
+        "candidate_chars": 155209
+      },
+      "paired_recurrence": {
+        "case_count": 240,
+        "rendered_line_reduction_pct": 40.1,
+        "rendered_char_reduction_pct": 54.2,
+        "front_char_reduction_pct": -7.3,
+        "review_proxy_delta_pct": -53.4,
+        "baseline_lines": 4320,
+        "candidate_lines": 2588,
+        "baseline_chars": 339238,
+        "candidate_chars": 155209
+      }
+    }
+  },
+  "authority_fuzz": {
+    "sample_count": 16,
+    "hits": [
+      {
+        "sample": "Green checks on the dashboard make the claim reliable.",
+        "matched": [
+          "\\bdashboard\\b.*\\b(verif(y|ies)|reliable|trust)\\b",
+          "\\bgreen checks?\\b.*\\b(reliable|trust|verif(y|ies))\\b"
+        ]
+      },
+      {
+        "sample": "The dashboard stayed green, so the answer deserves trust.",
+        "matched": [
+          "\\bdashboard\\b.*\\b(verif(y|ies)|reliable|trust)\\b"
+        ]
+      },
+      {
+        "sample": "Because the benchmark passed, we can trust this answer.",
+        "matched": [
+          "\\bbenchmark\\b.*\\bpassed\\b.*\\b(trust|reliable)\\b"
+        ]
+      },
+      {
+        "sample": "Repeated user feedback makes the claim more correct.",
+        "matched": [
+          "\\bfeedback\\b.*\\b(more correct|truth confidence|raises truth|confirm(s|ed) truth)\\b"
+        ]
+      },
+      {
+        "sample": "Many sources appear, so independence is stronger.",
+        "matched": [
+          "\\bmany sources\\b.*\\bindependence\\b"
+        ]
+      },
+      {
+        "sample": "Top retrieval rank means this source is most trustworthy.",
+        "matched": [
+          "\\bretrieval rank\\b.*\\b(trust|trustworthy|truth)\\b",
+          "\\btop retrieval\\b.*\\b(trust|trustworthy|reliable)\\b"
+        ]
+      },
+      {
+        "sample": "The cluster summary proves this relation is reviewed.",
+        "matched": [
+          "\\bcluster summary\\b.*\\b(proves|reviewed relation|truth)\\b"
+        ]
+      },
+      {
+        "sample": "The model summary itself supports the claim.",
+        "matched": [
+          "\\bmodel summary\\b.*\\b(supports|proves)\\b"
+        ]
+      },
+      {
+        "sample": "The lineage chain shows this is independently supported.",
+        "matched": [
+          "\\blineage\\b.*\\bindependent(ly)? supported\\b"
+        ]
+      }
+    ],
+    "misses": [
+      {
+        "sample": "Green dashboard checks make this answer dependable.",
+        "matched": []
+      },
+      {
+        "sample": "The eval passed, making this claim safer to believe.",
+        "matched": []
+      },
+      {
+        "sample": "Users kept approving it, so the fact is probably true.",
+        "matched": []
+      },
+      {
+        "sample": "The presence of several URLs means independent confirmation.",
+        "matched": []
+      },
+      {
+        "sample": "The search result came first, so it carries more authority.",
+        "matched": []
+      },
+      {
+        "sample": "The grouped summary makes the relation accepted.",
+        "matched": []
+      },
+      {
+        "sample": "The LLM recap gives support for the point.",
+        "matched": []
+      }
+    ],
+    "hit_rate": 0.562
+  }
+}

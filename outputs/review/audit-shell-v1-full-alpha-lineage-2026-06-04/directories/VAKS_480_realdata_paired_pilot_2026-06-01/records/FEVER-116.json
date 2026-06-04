@@ -1,0 +1,20 @@
+{
+  "id": "FEVER-116",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 115,
+  "claim": "Emily Blunt never starred in a period drama film.",
+  "evidence": "Emily_Blunt | 11 | She received more acclaim for portraying Queen Victoria in The Young Victoria -LRB- 2009 -RRB- , receiving a nomination for the Golden Globe Award for Best Actress in a Motion Picture -- Drama . | The_Young_Victoria | 0 | The Young Victoria is a 2009 British-American period drama film directed by Jean-Marc Vallée and written by Julian Fellowes , based on the early life and reign of Queen Victoria , and her marriage to Prince Albert of Saxe-Coburg and Gotha .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "source_count_as_independence",
+  "authority_trap": "Many sources appear, so independence is stronger.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-116.md",
+    "marker": "FEVER-116_ANCHOR"
+  }
+}

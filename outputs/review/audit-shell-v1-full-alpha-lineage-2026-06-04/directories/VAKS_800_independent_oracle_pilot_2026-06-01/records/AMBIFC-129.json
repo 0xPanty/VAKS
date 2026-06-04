@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-129",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 128,
+  "layer": "anchor_problem",
+  "claim": "baby got out of jail in baby driver.",
+  "evidence": "Wright and Price exchanged ideas throughout pre-production, selecting ten tracks to shape the project's musical direction. In total, the filmmakers licensed 36 tracks with Right Music, most written in the script well before shooting. Wright was unable to acquire the usage rights for certain hip hop and electronic songs written in the script because they contained uncleared samples. At that point, he pursued licensing of the sampled songs in question and used them in the soundtrack instead. Danger Mouse and Kid Koala composed the album's only original tracks, \"Chase Me\" and \"Was He Slow?\". \"Chase Me\" features contributions from Run the Jewels and Big Boi. For \"Was He Slow?\", which samples some of Spacey and Bernthal's dialogue, Kid Koala produced the song using analog equipment. Columbia imprint 30th Century Records released the Baby Driver soundtrack on June 23, 2017, on vinyl and CD. A follow-up album containing previously unreleased content was issued on April 13, 2018.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "stale_pointer"
+  ],
+  "anchor_status": "stale",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "stale",
+    "path": "raw_sources/AMBIFC-129.md",
+    "document_hash": "8addfb589f2fab4776529b188af5f4a539c0ebb57126dc603f49ed34de7a9802",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-129_ANCHOR",
+    "text_quote": "Wright and Price exchanged ideas throughout pre-production, selecting ten tracks to shape the project's musical direction. In total, the filmmakers licensed 36 tracks with Right Music, most written in the script well bef",
+    "start": -1,
+    "end": -1
+  },
+  "record_path": "records/AMBIFC-129.json",
+  "evidence_path": "evidence/AMBIFC-129.md"
+}

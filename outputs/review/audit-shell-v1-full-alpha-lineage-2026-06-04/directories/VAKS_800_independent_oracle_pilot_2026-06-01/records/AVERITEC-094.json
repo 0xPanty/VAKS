@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-094",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 93,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Sweden, which does not require the wearing of masks in public, has had few deaths due to COVID-19",
+  "evidence": "Sweden has the highest mortality rate at 56.23% per 100,000 population No No",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-094.md",
+    "document_hash": "c4ec535ffeef481726d5be7dbd91a949a3333215b9f7036cdb1de88c4b62dff6",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-094_ANCHOR",
+    "text_quote": "Sweden has the highest mortality rate at 56.23% per 100,000 population No No",
+    "start": 212,
+    "end": 288
+  },
+  "record_path": "records/AVERITEC-094.json",
+  "evidence_path": "evidence/AVERITEC-094.md"
+}

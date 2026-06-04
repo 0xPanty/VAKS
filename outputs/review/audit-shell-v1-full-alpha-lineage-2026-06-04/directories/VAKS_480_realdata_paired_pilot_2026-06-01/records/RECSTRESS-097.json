@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-097",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 96,
+  "claim": "PDPN promotes efficient motility along stromal surfaces by activating the C-type lectin receptor to rearrange the actin cytoskeleton in dendritic cells.",
+  "evidence": "To initiate adaptive immunity, dendritic cells (DCs) move from parenchymal tissues to lymphoid organs by migrating along stromal scaffolds that display the glycoprotein podoplanin (PDPN). PDPN is expressed by lymphatic endothelial and fibroblastic reticular cells and promotes blood-lymph separation during development by activating the C-type lectin receptor, CLEC-2, on platelets. Here, we describe a role for CLEC-2 in the morphodynamic behavior and motility of DCs. CLEC-2 deficiency in DCs impaired their entry into lymphatics and trafficking to and within lymph nodes, thereby reducing T cell priming. CLEC-2 engagement of PDPN was necessary for DCs to spread and migrate along stromal surfaces and sufficient to induce membrane protrusions. CLEC-2 activation triggered cell spreading via downregulation of RhoA activity and myosin light-chain phosphorylation and triggered F-actin-rich protrusions via Vav signaling and Rac1 activation. Thus, activation of CLEC-2 by PDPN rearranges the actin cytoskeleton in DCs to promote efficient motility along stromal surfaces.",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-097.md",
+    "marker": "RECSTRESS-097_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-09",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "stress-rec-09-fp-v2",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-097.json",
+  "evidence_path": "evidence/RECSTRESS-097.md"
+}

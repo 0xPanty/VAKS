@@ -1,0 +1,22 @@
+{
+  "id": "FEVER-072",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 71,
+  "claim": "Tyra Banks was an African American model.",
+  "evidence": "Tyra_Banks | 1 | Born in Inglewood , California , she began her career as a model at age 15 , and was the first African American woman to be featured on the covers of GQ and the Sports Illustrated Swimsuit Issue , on which she appeared twice .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-072.md",
+    "marker": "FEVER-072_ANCHOR"
+  }
+}

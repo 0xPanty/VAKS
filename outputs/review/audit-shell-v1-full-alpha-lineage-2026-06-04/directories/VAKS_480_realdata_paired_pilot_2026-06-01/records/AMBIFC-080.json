@@ -1,0 +1,22 @@
+{
+  "id": "AMBIFC-080",
+  "dataset_family": "ambifc",
+  "source_dataset_status": "real_row",
+  "source_row_index": 79,
+  "claim": "finn does die in the new star wars movie.",
+  "evidence": "Finn is a playable Hero in Star Wars Battlefront II, voiced by Boyega. He was added through the DLC of The Last Jedi.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-080.md",
+    "marker": "AMBIFC-080_ANCHOR"
+  }
+}

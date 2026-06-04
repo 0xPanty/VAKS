@@ -1,0 +1,20 @@
+{
+  "id": "FEVER-055",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 54,
+  "claim": "Tesla, Inc. is an electric car maker.",
+  "evidence": "Tesla,_Inc. | 7 | The Model S has been the world 's best-selling plug-in electric car for two years in a row , 2015 and 2016 . | Tesla_Model_S | 0 | The Tesla Model S is a full-sized all-electric five-door , luxury liftback , produced by Tesla Inc. , and introduced on 22nd June 2012 .",
+  "source_label": "SUPPORTS",
+  "surface_state": "resolved_folded",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-055.md",
+    "marker": "FEVER-055_ANCHOR"
+  }
+}

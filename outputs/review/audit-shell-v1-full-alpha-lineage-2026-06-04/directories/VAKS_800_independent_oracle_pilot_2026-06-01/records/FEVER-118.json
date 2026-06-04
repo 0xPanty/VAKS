@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-118",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 117,
+  "layer": "anchor_problem",
+  "claim": "Alexander Hamilton attended a college that is now called Harvard University.",
+  "evidence": "Alexander_Hamilton | 14 | Hamilton attended King 's College -LRB- now Columbia University -RRB- , choosing to stay in the Thirteen Colonies to seek his fortune .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [
+    "selector_drift"
+  ],
+  "anchor_status": "drift",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "drift",
+    "path": "raw_sources/FEVER-118.md",
+    "document_hash": "f5b7986be61dfb345b0658fc057915d1f1566bd1fb6bb53ef7e863a32669b3f4",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-118_ANCHOR",
+    "text_quote": "Alexander_Hamilton | 14 | Hamilton attended King 's College -LRB- now Columbia University -RRB- , choosing to stay in the Thirteen Colonies to seek his fortune .",
+    "start": 189,
+    "end": 350
+  },
+  "record_path": "records/FEVER-118.json",
+  "evidence_path": "evidence/FEVER-118.md"
+}

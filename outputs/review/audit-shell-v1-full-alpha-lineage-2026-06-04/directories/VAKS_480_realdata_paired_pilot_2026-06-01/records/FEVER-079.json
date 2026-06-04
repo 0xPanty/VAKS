@@ -1,0 +1,22 @@
+{
+  "id": "FEVER-079",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 78,
+  "claim": "Venus Williams plays tennis.",
+  "evidence": "Venus_Williams | 28 | She is the only tennis player to have won a medal at four separate Olympic Games .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-079.md",
+    "marker": "FEVER-079_ANCHOR"
+  }
+}

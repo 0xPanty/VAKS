@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-092",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 91,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "we bought a zoo is a true story.",
+  "evidence": "Crowe traveled to the set of the film True Grit to persuade actor Matt Damon to take on the role of the lead character in the film. Crowe also presented a script of the film, a CD of songs that Crowe composed himself, and a copy of the 1983 film Local Hero, with instructions \"to not just read the script and make a decision\". Damon was persuaded to play the role after he was moved by Crowe's music and found that Local Hero was a \"masterpiece\". As for Crowe himself, he had already decided on Damon halfway through their meeting, though the distributor Fox still had a shortlist of candidates to play this role.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "insufficient_evidence"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-092.md",
+    "document_hash": "550dfdbe271a54ede59559f3cfb980423163d721c7edb7ac131b32e8c8eff87a",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-092_ANCHOR",
+    "text_quote": "Crowe traveled to the set of the film True Grit to persuade actor Matt Damon to take on the role of the lead character in the film. Crowe also presented a script of the film, a CD of songs that Crowe composed himself, an",
+    "start": 141,
+    "end": 361
+  },
+  "record_path": "records/AMBIFC-092.json",
+  "evidence_path": "evidence/AMBIFC-092.md"
+}

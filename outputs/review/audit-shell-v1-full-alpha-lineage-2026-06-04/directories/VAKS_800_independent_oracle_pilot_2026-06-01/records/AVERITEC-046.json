@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-046",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 45,
+  "layer": "ordinary_stable",
+  "claim": "South Africans that drink are amongst the top drinkers in the world.",
+  "evidence": "The global averages as of 2016 is 15.1 litres per day. 29.9 litres. 6th out of 189 countries.",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-046.md",
+    "document_hash": "f0c6dc2a2cb358b3c728fdeb1c484ccd6f44f6a8af8edeb55c26cf4ad898c929",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-046_ANCHOR",
+    "text_quote": "The global averages as of 2016 is 15.1 litres per day. 29.9 litres. 6th out of 189 countries.",
+    "start": 183,
+    "end": 276
+  },
+  "record_path": "records/AVERITEC-046.json",
+  "evidence_path": "evidence/AVERITEC-046.md"
+}

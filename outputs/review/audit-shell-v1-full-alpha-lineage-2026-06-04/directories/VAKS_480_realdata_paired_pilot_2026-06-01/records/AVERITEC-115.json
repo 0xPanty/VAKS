@@ -1,0 +1,20 @@
+{
+  "id": "AVERITEC-115",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 114,
+  "claim": "The media is ignoring the tragic death of a 5-year-old boy who was fatally shot by a neighbor in Wilson, North Carolina, on August 9, 2020.",
+  "evidence": "Yes Yes",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "lineage_as_independence",
+  "authority_trap": "The lineage chain shows this is independently supported.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-115.md",
+    "marker": "AVERITEC-115_ANCHOR"
+  }
+}

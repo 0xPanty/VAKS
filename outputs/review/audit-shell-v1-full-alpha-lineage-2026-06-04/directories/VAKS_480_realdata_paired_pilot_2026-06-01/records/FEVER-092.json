@@ -1,0 +1,22 @@
+{
+  "id": "FEVER-092",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 91,
+  "claim": "Edgar Allan Poe was a raven.",
+  "evidence": "Edgar_Allan_Poe | 25 | Poe died in Baltimore on October 7 , 1849 , at age 40 ; the cause of his death is unknown and has been variously attributed to alcohol , brain congestion , cholera , drugs , heart disease , rabies , suicide , tuberculosis , and other agents .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-092.md",
+    "marker": "FEVER-092_ANCHOR"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "HOLDOUT-021",
+  "pool": "adversarial_holdout",
+  "dataset_family": "scifact",
+  "source_row_index": 20,
+  "layer": "review_due_trap",
+  "claim": "Alizarin forms hydrogen bonds with residues involved in PGAM1 substrate binding.",
+  "evidence": "How oncogenic signalling coordinates glycolysis and anabolic biosynthesis in cancer cells remains unclear. We recently reported that the glycolytic enzyme phosphoglycerate mutase 1 (PGAM1) regulates anabolic biosynthesis by controlling intracellular levels of its substrate 3-phosphoglycerate and product 2-phosphoglycerate. Here we report a novel mechanism in which Y26 phosphorylation enhances PGAM1 activation through release of inhibitory E19 that blocks the active site, stabilising cofactor 2,3-bisphosphoglycerate binding and H11 phosphorylation. We also report the crystal structure of H11-phosphorylated PGAM1 and find that phospho-H11 activates PGAM1 at least in part by promoting substrate 3-phosphoglycerate binding. Moreover, Y26 phosphorylation of PGAM1 is common in human cancer cells and contributes to regulation of 3-phosphoglycerate and 2-phosphoglycerate levels, promoting cancer cell proliferation and tumour growth. As PGAM1 is a negative transcriptional target of TP53, and is therefore commonly upregulated in human cancers, these findings suggest that Y26 phosphorylation represents an additional acute mechanism underlying phosphoglycerate mutase 1 upregulation.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "insufficient_evidence"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/HOLDOUT-021.md",
+    "document_hash": "096f8f2d336bcd234a37981ac5170f2d5d9cef89345f89b5f65d28a1bc884fc3",
+    "version_id": "holdout-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "HOLDOUT-021_ANCHOR",
+    "text_quote": "How oncogenic signalling coordinates glycolysis and anabolic biosynthesis in cancer cells remains unclear. We recently reported that the glycolytic enzyme phosphoglycerate mutase 1 (PGAM1) regulates anabolic biosynthesis",
+    "start": 192,
+    "end": 412
+  },
+  "record_path": "records/HOLDOUT-021.json",
+  "evidence_path": "evidence/HOLDOUT-021.md"
+}

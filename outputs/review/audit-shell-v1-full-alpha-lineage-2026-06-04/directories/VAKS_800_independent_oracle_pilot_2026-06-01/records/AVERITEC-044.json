@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-044",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 43,
+  "layer": "ordinary_stable",
+  "claim": "No Democrats have condemned the rioting that has occurred alongside recent protests.",
+  "evidence": "Yes Yes Joe Biden is a democrat.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-044.md",
+    "document_hash": "13b2645d04e990e5fcfa2a87f0b38a12e7d3ad20987e53802c69652d29f75398",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-044_ANCHOR",
+    "text_quote": "Yes Yes Joe Biden is a democrat.",
+    "start": 199,
+    "end": 231
+  },
+  "record_path": "records/AVERITEC-044.json",
+  "evidence_path": "evidence/AVERITEC-044.md"
+}

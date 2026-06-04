@@ -1,0 +1,7 @@
+# Raw Source AMBIFC-110
+dataset: ambifc
+source_row: 109
+marker: AMBIFC-110_ANCHOR
+claim: ncaa and nba balls are the same size.
+label: refuting
+evidence: A basketball is a spherical ball used in basketball games. Basketballs usually range in size from very small promotional items only a few inches (some centimeters) in diameter to extra large balls nearly 2 feet (60 cm) in diameter used in training exercises. For example, a youth basketball could be 27 inches (69 cm) in circumference, while a National Collegiate Athletic Association (NCAA) men's ball would be a maximum of 30 inches (76 cm) and an NCAA women's ball would be a maximum of 29 inches (74 cm). The standard for a basketball in the National Basketball Association (NBA) is 29.5 inches (75 cm) in circumference and for the Women's National Basketball Association (WNBA), a maximum circumference of 29 inches (74 cm). High school and junior leagues normally use NCAA, NBA or WNBA sized balls. Aside from the court and the baskets, the basketball is the only piece of equipment necessary to play the game of basketball. During the game, the ball must be bounced continuously (dribbling), thrown through the air to other players (passing) or thrown towards the basket (shooting). Therefore, the ball must be very durable and easy to hold on to. The ball is also used to perform tricks (some

@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-094",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 93,
+  "claim": "Occupancy of ribosomes by IncRNAs do not make functional peptides.",
+  "evidence": "Large noncoding RNAs are emerging as an important component in cellular regulation. Considerable evidence indicates that these transcripts act directly as functional RNAs rather than through an encoded protein product. However, a recent study of ribosome occupancy reported that many large intergenic ncRNAs (lincRNAs) are bound by ribosomes, raising the possibility that they are translated into proteins. Here, we show that classical noncoding RNAs and 5' UTRs show the same ribosome occupancy as lincRNAs, demonstrating that ribosome occupancy alone is not sufficient to classify transcripts as coding or noncoding. Instead, we define a metric based on the known property of translation whereby translating ribosomes are released upon encountering a bona fide stop codon. We show that this metric accurately discriminates between protein-coding transcripts and all classes of known noncoding transcripts, including lincRNAs. Taken together, these results argue that the large majority of lincRNAs do not function through encoded proteins.",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-094.md",
+    "marker": "RECSTRESS-094_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-09",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-09-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-094.json",
+  "evidence_path": "evidence/RECSTRESS-094.md"
+}

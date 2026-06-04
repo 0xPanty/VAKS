@@ -1,0 +1,22 @@
+{
+  "id": "AVERITEC-097",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 96,
+  "claim": "warm water is effective in curing joint pain",
+  "evidence": "There is no cure for osteoarthritis (joint pain)",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "missing_anchor"
+  ],
+  "anchor_status": "missing",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "missing",
+    "path": "raw_sources/AVERITEC-097.md",
+    "marker": "AVERITEC-097_ANCHOR"
+  }
+}

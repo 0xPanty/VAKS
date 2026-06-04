@@ -1,0 +1,7 @@
+# Raw Source SCIFACT-044
+dataset: scifact
+source_row: 43
+marker: SCIFACT-044_ANCHOR
+claim: Diabetic patients with acute coronary syndrome experience increased short-term and long-term risk for bleeding events.
+label: 
+evidence: BACKGROUND Although unstable coronary artery disease is the most common reason for admission to a coronary care unit, the long-term prognosis of patients with this diagnosis is unknown. This is particularly true for patients with diabetes mellitus, who are known to have a high morbidity and mortality after an acute myocardial infarction. METHODS AND RESULTS Prospectively collected data from 6 different countries in the Organization to Assess Strategies for Ischemic Syndromes (OASIS) registry were analyzed to determine the 2-year prognosis of diabetic and nondiabetic patients who were hospitalized with unstable angina or non-Q-wave myocardial infarction. Overall, 1718 of 8013 registry patients (21%) had diabetes. Diabetic patients had a higher rate of coronary bypass surgery than nondiabetic patients (23% versus 20%, P:<0.001) but had similar rates of catheterization and angioplasty. Diabetes independently predicted mortality (relative risk [RR], 1.57; 95% CI, 1.38 to 1.81; P:<0.001), as well as cardiovascular death, new myocardial infarction, stroke, and new congestive heart failure. Moreover, compared with their nondiabetic counterparts, women had a significantly higher risk than 

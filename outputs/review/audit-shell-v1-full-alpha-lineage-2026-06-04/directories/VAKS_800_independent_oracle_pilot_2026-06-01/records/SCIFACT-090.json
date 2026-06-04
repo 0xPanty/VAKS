@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-090",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 89,
+  "layer": "action_challenge_conflict",
+  "claim": "Diabetic patients with acute coronary syndrome experience increased short-term and long-term risk for bleeding events.",
+  "evidence": "BACKGROUND Although unstable coronary artery disease is the most common reason for admission to a coronary care unit, the long-term prognosis of patients with this diagnosis is unknown. This is particularly true for patients with diabetes mellitus, who are known to have a high morbidity and mortality after an acute myocardial infarction. METHODS AND RESULTS Prospectively collected data from 6 different countries in the Organization to Assess Strategies for Ischemic Syndromes (OASIS) registry were analyzed to determine the 2-year prognosis of diabetic and nondiabetic patients who were hospitalized with unstable angina or non-Q-wave myocardial infarction. Overall, 1718 of 8013 registry patients (21%) had diabetes. Diabetic patients had a higher rate of coronary bypass surgery than nondiabetic patients (23% versus 20%, P:<0.001) but had similar rates of catheterization and angioplasty. Diabetes independently predicted mortality (relative risk [RR], 1.57; 95% CI, 1.38 to 1.81; P:<0.001), as well as cardiovascular death, new myocardial infarction, stroke, and new congestive heart failure. Moreover, compared with their nondiabetic counterparts, women had a significantly higher risk than men (RR, 1.98; 95% CI, 1.60 to 2.44; and RR, 1.28; 95% CI, 1.06 to 1.56, respectively). Interestingly, diabetic patients without prior cardiovascular disease had the same event rates for all outcomes ",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-090.md",
+    "document_hash": "ff3d10c228ff98d0f140636ba959a9a3ef8df690361176412b7a4f7630c76c6d",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-090_ANCHOR",
+    "text_quote": "BACKGROUND Although unstable coronary artery disease is the most common reason for admission to a coronary care unit, the long-term prognosis of patients with this diagnosis is unknown. This is particularly true for pati",
+    "start": 230,
+    "end": 450
+  },
+  "record_path": "records/SCIFACT-090.json",
+  "evidence_path": "evidence/SCIFACT-090.md"
+}

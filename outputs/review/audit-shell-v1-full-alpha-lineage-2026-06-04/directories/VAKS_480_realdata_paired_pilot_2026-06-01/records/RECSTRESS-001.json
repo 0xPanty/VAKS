@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-001",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 0,
+  "claim": "5% of perinatal mortality is due to low birth weight.",
+  "evidence": "CONTEXT One key target of the United Nations Millennium Development goals is to reduce the prevalence of underweight among children younger than 5 years by half between 1990 and 2015. OBJECTIVE To estimate trends in childhood underweight by geographic regions of the world. DESIGN, SETTING, AND PARTICIPANTS Time series study of prevalence of underweight, defined as weight 2 SDs below the mean weight for age of the National Center for Health Statistics and World Health Organization (WHO) reference population. National prevalence rates derived from the WHO Global Database on Child Growth and Malnutrition, which includes data on approximately 31 million children younger than 5 years who participated in 419 national nutritional surveys in 139 countries from 1965 through 2002. MAIN OUTCOME MEASURES Linear mixed-effects modeling was used to estimate prevalence rates and numbers of underweight children by region in 1990 and 2015 and to calculate the changes (ie, increase or decrease) to these values between 1990 and 2015. RESULTS Worldwide, underweight prevalence was projected to decline from 26.5% in 1990 to 17.6% in 2015, a change of -34% (95% confidence interval [CI], -43% to -23%). In",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-001.md",
+    "marker": "RECSTRESS-001_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-00",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-00-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-001.json",
+  "evidence_path": "evidence/RECSTRESS-001.md"
+}

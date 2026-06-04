@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-022",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 21,
+  "layer": "ordinary_stable",
+  "claim": "Jimmy Carter was a king.",
+  "evidence": "Electoral_history_of_Jimmy_Carter | 24 | Chevene King - 70,424 -LRB- 8.82 % -RRB-",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-022.md",
+    "document_hash": "b83bdaaba7ab93e9bd83d8c6e55ba96880a8871b6f623b361c08ce2531dae727",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-022_ANCHOR",
+    "text_quote": "Electoral_history_of_Jimmy_Carter | 24 | Chevene King - 70,424 -LRB- 8.82 % -RRB-",
+    "start": 130,
+    "end": 211
+  },
+  "record_path": "records/FEVER-022.json",
+  "evidence_path": "evidence/FEVER-022.md"
+}

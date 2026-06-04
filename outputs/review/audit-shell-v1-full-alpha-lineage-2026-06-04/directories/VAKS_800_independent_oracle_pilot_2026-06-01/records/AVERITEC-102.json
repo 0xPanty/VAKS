@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-102",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 101,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "UK Prime Minister Boris Johnson apologised for colonial rule in India.",
+  "evidence": "It was published by an unofficial Unverified twitter handle (@BorisUKJohnson) created in July2020. April 2015 No, nothing found.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "ambiguous_scope"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-102.md",
+    "document_hash": "a72f73cb58d7f454d082d95798c0660359e471ccc933e1bd01664ef62d272e6a",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-102_ANCHOR",
+    "text_quote": "It was published by an unofficial Unverified twitter handle (@BorisUKJohnson) created in July2020. April 2015 No, nothing found.",
+    "start": 185,
+    "end": 313
+  },
+  "record_path": "records/AVERITEC-102.json",
+  "evidence_path": "evidence/AVERITEC-102.md"
+}

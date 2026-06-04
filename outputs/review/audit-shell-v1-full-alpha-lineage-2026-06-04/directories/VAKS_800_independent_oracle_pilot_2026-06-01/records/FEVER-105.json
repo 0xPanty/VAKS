@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-105",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 104,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Con Man (web series) is an American comedy web series written by Alan Tudyk.",
+  "evidence": "Con_Man_-LRB-web_series-RRB- | 0 | Con Man is an American comedy web series created , written , directed by , and starring Alan Tudyk .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "ambiguous_scope"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-105.md",
+    "document_hash": "c0d6226b0b6d17a175c565be27ff5796e0a0054150f71f64d00f71d78ae6a80f",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-105_ANCHOR",
+    "text_quote": "Con_Man_-LRB-web_series-RRB- | 0 | Con Man is an American comedy web series created , written , directed by , and starring Alan Tudyk .",
+    "start": 182,
+    "end": 317
+  },
+  "record_path": "records/FEVER-105.json",
+  "evidence_path": "evidence/FEVER-105.md"
+}

@@ -1,0 +1,11 @@
+{
+  "case_id": "ADV-07",
+  "adversarial_category": "serious folded trap",
+  "claim": "重复组里大多数成员普通，但其中一个成员已经回归并且锚点缺失。",
+  "expected_state": "regressed",
+  "expected_anchor_status": "missing",
+  "expected_no_group": "yes",
+  "source_pointer": "review_packet_adversarial_12/mock_sources/ADV-07.md",
+  "evidence_pointer": "review_packet_adversarial_12/mock_evidence/ADV-07.md",
+  "note": "Synthetic operator-surface test record; not a truth-layer schema proposal."
+}

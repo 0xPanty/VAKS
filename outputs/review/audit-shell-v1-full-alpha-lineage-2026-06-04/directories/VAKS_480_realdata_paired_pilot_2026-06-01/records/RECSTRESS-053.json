@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-053",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 52,
+  "claim": "Fz/PCP-dependent Pk localizes to the anterior membrane of notochord cells during zebrafish neuralation.",
+  "evidence": "Environmental and genetic aberrations lead to neural tube closure defects (NTDs) in 1 out of every 1,000 births. Mouse and frog models for these birth defects have indicated that Van Gogh-like 2 (Vangl2, also known as Strabismus) and other components of planar cell polarity (PCP) signalling might control neurulation by promoting the convergence of neural progenitors to the midline. Here we show a novel role for PCP signalling during neurulation in zebrafish. We demonstrate that non-canonical Wnt/PCP signalling polarizes neural progenitors along the anteroposterior axis. This polarity is transiently lost during cell division in the neural keel but is re-established as daughter cells reintegrate into the neuroepithelium. Loss of zebrafish Vangl2 (in trilobite mutants) abolishes the polarization of neural keel cells, disrupts re-intercalation of daughter cells into the neuroepithelium, and results in ectopic neural progenitor accumulations and NTDs. Remarkably, blocking cell division leads to rescue of trilobite neural tube morphogenesis despite persistent defects in convergence and extension. These results reveal a function for PCP signalling in coupling cell division and morphogenes",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-053.md",
+    "marker": "RECSTRESS-053_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-05",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-05-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-053.json",
+  "evidence_path": "evidence/RECSTRESS-053.md"
+}

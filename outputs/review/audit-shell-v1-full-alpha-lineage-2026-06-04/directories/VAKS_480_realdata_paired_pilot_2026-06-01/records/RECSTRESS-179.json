@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-179",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 58,
+  "claim": "Democratic Arizona Superintendent of Public Instruction Kathy Hoffman was sworn into office on a Dr. Seuss book.",
+  "evidence": "offman was sworn into office in January 2019 and, according to The Hill, took her oath on the children’s book “Too Many Moose!” by Lisa Bakos No",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-179.md",
+    "marker": "RECSTRESS-179_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-17",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "stress-rec-17-fp-v2",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-179.json",
+  "evidence_path": "evidence/RECSTRESS-179.md"
+}

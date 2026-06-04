@@ -1,0 +1,20 @@
+{
+  "id": "FEVER-042",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 41,
+  "claim": "Dileep acted in a film.",
+  "evidence": "Dileep_-LRB-actor-RRB- | 8 | Films such as Sallapam -LRB- 1996 -RRB- , Ee Puzhayum Kadannu -LRB- 1997 -RRB- , Punjabi House -LRB- 1998 -RRB- , Udayapuram Sulthan -LRB- 1999 -RRB- , and Chandranudikkunna Dikhil -LRB- 1999 -RRB- established his status as a prominent actor during the late-1990s .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-042.md",
+    "marker": "FEVER-042_ANCHOR"
+  }
+}

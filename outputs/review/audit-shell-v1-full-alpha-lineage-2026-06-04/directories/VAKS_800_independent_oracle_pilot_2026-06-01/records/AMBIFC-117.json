@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-117",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 116,
+  "layer": "anchor_problem",
+  "claim": "avatar the last airbender was based on a book.",
+  "evidence": "Rob Keyes of Screen Rant called the series \"one of the greatest cartoons ever made\". Mike Noyes of Inside Pulse recommended it to viewers who enjoy \"great\" adventure. Gord Lacey of TVShowsonDVD.com called the series \"one of the finest animated shows ever\". According to Todd Douglass, Jr. of DVD Talk, adults will enjoy the series as much as children do. Joshua Miller of CHUD.com called it \"phenomenal\" and \"one of the most well animated programs (children's or adult) American TV has ever had\"; according to Miller, the series is heavily influenced by anime. Tim Janson of Cinefantastique described it as \"one of the most engaging animated shows produced\". Dennis Amith of J!ENT called the series \"one of the best animated TV series shown in the US by American creators\". Amith praised its sophisticated storylines, edginess, humor, and action. Franco \"Cricket\" Te of Nerd Society described Avatar: The Last Airbender as \"one of the best cartoon[s]\" he had ever seen, recommending the series for its characters and plot. Scott Thill of Wired called the series engaging and its setting, influenced by the Eastern world, \"fantastic\". Kirk Hamilton of Kotaku said the series should be part of the golden age of television, and recommended \"the sophisticated kids show\" to others. The show's writing and theme have been widely praised by critics. Michael S. Mammano of Den of Geek called the plot \"smar",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "stale_pointer"
+  ],
+  "anchor_status": "stale",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "stale",
+    "path": "raw_sources/AMBIFC-117.md",
+    "document_hash": "c42824878de8580347499d491ce1419834eeb05fcaf6031c68f8720e9ddf9bf4",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-117_ANCHOR",
+    "text_quote": "Rob Keyes of Screen Rant called the series \"one of the greatest cartoons ever made\". Mike Noyes of Inside Pulse recommended it to viewers who enjoy \"great\" adventure. Gord Lacey of TVShowsonDVD.com called the series \"one",
+    "start": -1,
+    "end": -1
+  },
+  "record_path": "records/AMBIFC-117.json",
+  "evidence_path": "evidence/AMBIFC-117.md"
+}

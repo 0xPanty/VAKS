@@ -1,0 +1,7 @@
+# Raw Source AMBIFC-014
+dataset: ambifc
+source_row: 13
+marker: AMBIFC-014_ANCHOR
+claim: the sahara desert in northern africa helps south america's amazon rainforest to grow.
+label: neutral
+evidence: Deforestation is the conversion of forested areas to non-forested areas. The main sources of deforestation in the Amazon are human settlement and development of the land. In 2018, about 17% of the Amazon rainforest was already destroyed. Research suggests that upon reaching about 20–25% (hence 3–8% more), the tipping point to flip it into a non-forest ecosystems – degraded savannah – (in eastern, southern and central Amazonia) will be reached. Prior to the early 1960s, access to the forest's interior was highly restricted, and the forest remained basically intact. Farms established during the 1960s were based on crop cultivation and the slash and burn method. However, the colonists were unable to manage their fields and the crops because of the loss of soil fertility and weed invasion. The soils in the Amazon are productive for just a short period of time, so farmers are constantly moving to new areas and clearing more land. These farming practices led to deforestation and caused extensive environmental damage. Deforestation is considerable, and areas cleared of forest are visible to the naked eye from outer space.

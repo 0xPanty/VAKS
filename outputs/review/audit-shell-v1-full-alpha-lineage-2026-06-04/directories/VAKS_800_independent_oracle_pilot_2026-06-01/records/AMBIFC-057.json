@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-057",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 56,
+  "layer": "ordinary_stable",
+  "claim": "travis scott is a part of good music.",
+  "evidence": "Scott began dating reality television star and entrepreneur Kylie Jenner in April 2017. On February 1, 2018, Jenner gave birth to their first child, daughter Stormi Webster. The couple broke up in September 2019, however, they have been spotted together since, sparking rumors of their reconcilement.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-057.md",
+    "document_hash": "ddff22987af17dd9720ebe66643ba5248cb665c3f6fe89d114425ef1e1da19d8",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-057_ANCHOR",
+    "text_quote": "Scott began dating reality television star and entrepreneur Kylie Jenner in April 2017. On February 1, 2018, Jenner gave birth to their first child, daughter Stormi Webster. The couple broke up in September 2019, however",
+    "start": 146,
+    "end": 366
+  },
+  "record_path": "records/AMBIFC-057.json",
+  "evidence_path": "evidence/AMBIFC-057.md"
+}

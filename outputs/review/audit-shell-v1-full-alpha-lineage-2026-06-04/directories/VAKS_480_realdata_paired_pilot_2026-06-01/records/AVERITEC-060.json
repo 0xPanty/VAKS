@@ -1,0 +1,20 @@
+{
+  "id": "AVERITEC-060",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 59,
+  "claim": "India's Supreme Court recently changed its motto from ‘Satyamev Jayate’ to ‘Yato Dharmastato Jai’.",
+  "evidence": "No The inscription in Sanskrit “yatodharmastato jayah” means – Truth alone I uphold. No",
+  "source_label": "Refuted",
+  "surface_state": "resolved_folded",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-060.md",
+    "marker": "AVERITEC-060_ANCHOR"
+  }
+}

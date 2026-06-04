@@ -1,0 +1,29 @@
+{
+  "id": "SCIFACT-012",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 11,
+  "layer": "ordinary_stable",
+  "claim": "ALDH1 expression is associated with poorer prognosis in breast cancer.",
+  "evidence": "Application of stem cell biology to breast cancer research has been limited by the lack of simple methods for identification and isolation of normal and malignant stem cells. Utilizing in vitro and in vivo experimental systems, we show that normal and cancer human mammary epithelial cells with increased aldehyde dehydrogenase activity (ALDH) have stem/progenitor properties. These cells contain the subpopulation of normal breast epithelium with the broadest lineage differentiation potential and greatest growth capacity in a xenotransplant model. In breast carcinomas, high ALDH activity identifies the tumorigenic cell fraction, capable of self-renewal and of generating tumors that recapitulate the heterogeneity of the parental tumor. In a series of 577 breast carcinomas, expression of ALDH1 detected by immunostaining correlated with poor prognosis. These findings offer an important new tool for the study of normal and malignant breast stem cells and facilitate the clinical application of stem cell concepts.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-012.md",
+    "document_hash": "03ee83654023fd3093a065f3a69a39a629b59d7670ddafaada832ebaa1a03af8",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-012_ANCHOR",
+    "text_quote": "Application of stem cell biology to breast cancer research has been limited by the lack of simple methods for identification and isolation of normal and malignant stem cells. Utilizing in vitro and in vivo experimental s",
+    "start": 182,
+    "end": 402
+  },
+  "record_path": "records/SCIFACT-012.json",
+  "evidence_path": "evidence/SCIFACT-012.md"
+}

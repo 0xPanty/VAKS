@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-104",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 103,
+  "claim": "Podocytes are motile and migrate in the presence of injury.",
+  "evidence": "Podocytes are critical in the maintenance of a healthy glomerular filter; however, they have been difficult to study in the intact kidney because of technical limitations. Here we report the development of serial multiphoton microscopy (MPM) of the same glomeruli over several days to visualize the motility of podocytes and parietal epithelial cells (PECs) in vivo. In podocin-GFP mice, podocytes formed sporadic multicellular clusters after unilateral ureteral ligation and migrated into the parietal Bowman's capsule. The tracking of single cells in podocin-confetti mice featuring cell-specific expression of CFP, GFP, YFP or RFP revealed the simultaneous migration of multiple podocytes. In phosphoenolpyruvate carboxykinase (PEPCK)-GFP mice, serial MPM found PEC-to-podocyte migration and nanotubule connections. Our data support a highly dynamic rather than a static nature of the glomerular environment and cellular composition. Future application of this new approach should advance our understanding of the mechanisms of glomerular injury and regeneration.",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-104.md",
+    "marker": "RECSTRESS-104_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-10",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-10-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-104.json",
+  "evidence_path": "evidence/RECSTRESS-104.md"
+}

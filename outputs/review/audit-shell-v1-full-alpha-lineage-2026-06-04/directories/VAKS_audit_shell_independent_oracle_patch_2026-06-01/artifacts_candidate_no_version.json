@@ -1,0 +1,698 @@
+[
+  {
+    "case_id": "T01",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: T01",
+      "state: blocking",
+      "summary: Looks ordinary but user asks for action basis.",
+      "anchor_health: valid key=POL-P1 path=raw_sources/policy_pages.md marker=ANCHOR:POL-P1",
+      "flags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate"
+    ],
+    "back": [
+      "full_record_pointer: record://T01",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [
+      "FULL_AUDIT_OPEN",
+      "deep_packet_retained: true",
+      "evidence_packet_pointer: evidence://T01"
+    ],
+    "rendered_text": "case: T01\nstate: blocking\nsummary: Looks ordinary but user asks for action basis.\nanchor_health: valid key=POL-P1 path=raw_sources/policy_pages.md marker=ANCHOR:POL-P1\nflags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate\nfull_record_pointer: record://T01\nsparse_provenance: anchor pointer only; detail available in full record\nFULL_AUDIT_OPEN\ndeep_packet_retained: true\nevidence_packet_pointer: evidence://T01"
+  },
+  {
+    "case_id": "T02",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: T02",
+      "state: blocking",
+      "summary: Note cleanup hides promotion request.",
+      "anchor_health: valid key=PDF-A3 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A3",
+      "flags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate"
+    ],
+    "back": [
+      "full_record_pointer: record://T02",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [
+      "FULL_AUDIT_OPEN",
+      "deep_packet_retained: true",
+      "evidence_packet_pointer: evidence://T02"
+    ],
+    "rendered_text": "case: T02\nstate: blocking\nsummary: Note cleanup hides promotion request.\nanchor_health: valid key=PDF-A3 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A3\nflags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate\nfull_record_pointer: record://T02\nsparse_provenance: anchor pointer only; detail available in full record\nFULL_AUDIT_OPEN\ndeep_packet_retained: true\nevidence_packet_pointer: evidence://T02"
+  },
+  {
+    "case_id": "T03",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: T03",
+      "state: blocking",
+      "summary: Source conflicts with standing claim.",
+      "anchor_health: valid key=PDF-A4 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A4",
+      "flags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate"
+    ],
+    "back": [
+      "full_record_pointer: record://T03",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [
+      "FULL_AUDIT_OPEN",
+      "deep_packet_retained: true",
+      "evidence_packet_pointer: evidence://T03"
+    ],
+    "rendered_text": "case: T03\nstate: blocking\nsummary: Source conflicts with standing claim.\nanchor_health: valid key=PDF-A4 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A4\nflags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate\nfull_record_pointer: record://T03\nsparse_provenance: anchor pointer only; detail available in full record\nFULL_AUDIT_OPEN\ndeep_packet_retained: true\nevidence_packet_pointer: evidence://T03"
+  },
+  {
+    "case_id": "T04",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: T04",
+      "state: for_review",
+      "summary: Known omission in current source.",
+      "anchor_health: valid key=WEB-AR4 path=raw_sources/archived_web.md marker=ANCHOR:WEB-AR4",
+      "flags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate"
+    ],
+    "back": [
+      "full_record_pointer: record://T04",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [
+      "FULL_AUDIT_OPEN",
+      "deep_packet_retained: true",
+      "evidence_packet_pointer: evidence://T04"
+    ],
+    "rendered_text": "case: T04\nstate: for_review\nsummary: Known omission in current source.\nanchor_health: valid key=WEB-AR4 path=raw_sources/archived_web.md marker=ANCHOR:WEB-AR4\nflags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate\nfull_record_pointer: record://T04\nsparse_provenance: anchor pointer only; detail available in full record\nFULL_AUDIT_OPEN\ndeep_packet_retained: true\nevidence_packet_pointer: evidence://T04"
+  },
+  {
+    "case_id": "T05",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: T05",
+      "state: blocking",
+      "summary: Missing source span must be visible.",
+      "anchor_health: missing key=NONE problem visible",
+      "flags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate"
+    ],
+    "back": [
+      "full_record_pointer: record://T05",
+      "anchor_problem_visibility: missing shown on front"
+    ],
+    "full": [
+      "FULL_AUDIT_OPEN",
+      "deep_packet_retained: true",
+      "evidence_packet_pointer: evidence://T05"
+    ],
+    "rendered_text": "case: T05\nstate: blocking\nsummary: Missing source span must be visible.\nanchor_health: missing key=NONE problem visible\nflags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate\nfull_record_pointer: record://T05\nanchor_problem_visibility: missing shown on front\nFULL_AUDIT_OPEN\ndeep_packet_retained: true\nevidence_packet_pointer: evidence://T05"
+  },
+  {
+    "case_id": "T06",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: T06",
+      "state: for_review",
+      "summary: Stale pointer must not pass as traceability.",
+      "anchor_health: stale key=STALE-DOC problem visible",
+      "flags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate"
+    ],
+    "back": [
+      "full_record_pointer: record://T06",
+      "anchor_problem_visibility: stale shown on front"
+    ],
+    "full": [
+      "FULL_AUDIT_OPEN",
+      "deep_packet_retained: true",
+      "evidence_packet_pointer: evidence://T06"
+    ],
+    "rendered_text": "case: T06\nstate: for_review\nsummary: Stale pointer must not pass as traceability.\nanchor_health: stale key=STALE-DOC problem visible\nflags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate\nfull_record_pointer: record://T06\nanchor_problem_visibility: stale shown on front\nFULL_AUDIT_OPEN\ndeep_packet_retained: true\nevidence_packet_pointer: evidence://T06"
+  },
+  {
+    "case_id": "T07",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: T07",
+      "state: for_review",
+      "summary: Drifted selector must be visible.",
+      "anchor_health: drift key=WEB-DRIFT problem visible",
+      "flags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate"
+    ],
+    "back": [
+      "full_record_pointer: record://T07",
+      "anchor_problem_visibility: drift shown on front"
+    ],
+    "full": [
+      "FULL_AUDIT_OPEN",
+      "deep_packet_retained: true",
+      "evidence_packet_pointer: evidence://T07"
+    ],
+    "rendered_text": "case: T07\nstate: for_review\nsummary: Drifted selector must be visible.\nanchor_health: drift key=WEB-DRIFT problem visible\nflags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate\nfull_record_pointer: record://T07\nanchor_problem_visibility: drift shown on front\nFULL_AUDIT_OPEN\ndeep_packet_retained: true\nevidence_packet_pointer: evidence://T07"
+  },
+  {
+    "case_id": "T08",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: T08",
+      "state: for_review",
+      "summary: Moved pointer must be visible.",
+      "anchor_health: moved key=MOVED-WEB problem visible",
+      "flags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate"
+    ],
+    "back": [
+      "full_record_pointer: record://T08",
+      "anchor_problem_visibility: moved shown on front"
+    ],
+    "full": [
+      "FULL_AUDIT_OPEN",
+      "deep_packet_retained: true",
+      "evidence_packet_pointer: evidence://T08"
+    ],
+    "rendered_text": "case: T08\nstate: for_review\nsummary: Moved pointer must be visible.\nanchor_health: moved key=MOVED-WEB problem visible\nflags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate\nfull_record_pointer: record://T08\nanchor_problem_visibility: moved shown on front\nFULL_AUDIT_OPEN\ndeep_packet_retained: true\nevidence_packet_pointer: evidence://T08"
+  },
+  {
+    "case_id": "T09",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: T09",
+      "state: regressed",
+      "summary: Resolved problem reappears as regression.",
+      "anchor_health: valid key=PDF-A1 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A1",
+      "flags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate ; feedback_revision: type=too_broad no truth change no numeric delta"
+    ],
+    "back": [
+      "full_record_pointer: record://T09",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [
+      "FULL_AUDIT_OPEN",
+      "deep_packet_retained: true",
+      "evidence_packet_pointer: evidence://T09"
+    ],
+    "rendered_text": "case: T09\nstate: regressed\nsummary: Resolved problem reappears as regression.\nanchor_health: valid key=PDF-A1 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A1\nflags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate ; feedback_revision: type=too_broad no truth change no numeric delta\nfull_record_pointer: record://T09\nsparse_provenance: anchor pointer only; detail available in full record\nFULL_AUDIT_OPEN\ndeep_packet_retained: true\nevidence_packet_pointer: evidence://T09"
+  },
+  {
+    "case_id": "T10",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: T10",
+      "state: blocking",
+      "summary: High-severity wrong answer report.",
+      "anchor_health: valid key=DOC-V3 path=raw_sources/versioned_docs.md marker=ANCHOR:DOC-V3",
+      "flags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate ; feedback_revision: type=wrong_answer no truth change no numeric delta"
+    ],
+    "back": [
+      "full_record_pointer: record://T10",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [
+      "FULL_AUDIT_OPEN",
+      "deep_packet_retained: true",
+      "evidence_packet_pointer: evidence://T10"
+    ],
+    "rendered_text": "case: T10\nstate: blocking\nsummary: High-severity wrong answer report.\nanchor_health: valid key=DOC-V3 path=raw_sources/versioned_docs.md marker=ANCHOR:DOC-V3\nflags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate ; feedback_revision: type=wrong_answer no truth change no numeric delta\nfull_record_pointer: record://T10\nsparse_provenance: anchor pointer only; detail available in full record\nFULL_AUDIT_OPEN\ndeep_packet_retained: true\nevidence_packet_pointer: evidence://T10"
+  },
+  {
+    "case_id": "T11",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: T11",
+      "state: for_review",
+      "summary: Action outcome failed.",
+      "anchor_health: valid key=POL-P3 path=raw_sources/policy_pages.md marker=ANCHOR:POL-P3",
+      "flags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate ; feedback_revision: type=action_result no truth change no numeric delta"
+    ],
+    "back": [
+      "full_record_pointer: record://T11",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [
+      "FULL_AUDIT_OPEN",
+      "deep_packet_retained: true",
+      "evidence_packet_pointer: evidence://T11"
+    ],
+    "rendered_text": "case: T11\nstate: for_review\nsummary: Action outcome failed.\nanchor_health: valid key=POL-P3 path=raw_sources/policy_pages.md marker=ANCHOR:POL-P3\nflags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate ; feedback_revision: type=action_result no truth change no numeric delta\nfull_record_pointer: record://T11\nsparse_provenance: anchor pointer only; detail available in full record\nFULL_AUDIT_OPEN\ndeep_packet_retained: true\nevidence_packet_pointer: evidence://T11"
+  },
+  {
+    "case_id": "T12",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: T12",
+      "state: for_review",
+      "summary: Decision outcome changes future framing.",
+      "anchor_health: valid key=POL-P3 path=raw_sources/policy_pages.md marker=ANCHOR:POL-P3",
+      "flags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate ; feedback_revision: type=decision_result no truth change no numeric delta"
+    ],
+    "back": [
+      "full_record_pointer: record://T12",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [
+      "FULL_AUDIT_OPEN",
+      "deep_packet_retained: true",
+      "evidence_packet_pointer: evidence://T12"
+    ],
+    "rendered_text": "case: T12\nstate: for_review\nsummary: Decision outcome changes future framing.\nanchor_health: valid key=POL-P3 path=raw_sources/policy_pages.md marker=ANCHOR:POL-P3\nflags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate ; feedback_revision: type=decision_result no truth change no numeric delta\nfull_record_pointer: record://T12\nsparse_provenance: anchor pointer only; detail available in full record\nFULL_AUDIT_OPEN\ndeep_packet_retained: true\nevidence_packet_pointer: evidence://T12"
+  },
+  {
+    "case_id": "T13",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: T13",
+      "state: blocking",
+      "summary: Reviewer blocks upgrade.",
+      "anchor_health: valid key=POL-P2 path=raw_sources/policy_pages.md marker=ANCHOR:POL-P2",
+      "flags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate"
+    ],
+    "back": [
+      "full_record_pointer: record://T13",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [
+      "FULL_AUDIT_OPEN",
+      "deep_packet_retained: true",
+      "evidence_packet_pointer: evidence://T13"
+    ],
+    "rendered_text": "case: T13\nstate: blocking\nsummary: Reviewer blocks upgrade.\nanchor_health: valid key=POL-P2 path=raw_sources/policy_pages.md marker=ANCHOR:POL-P2\nflags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate\nfull_record_pointer: record://T13\nsparse_provenance: anchor pointer only; detail available in full record\nFULL_AUDIT_OPEN\ndeep_packet_retained: true\nevidence_packet_pointer: evidence://T13"
+  },
+  {
+    "case_id": "A01",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: A01",
+      "state: ordinary",
+      "summary: Lineage paraphrase one.",
+      "anchor_health: valid key=DOC-V1 path=raw_sources/versioned_docs.md marker=ANCHOR:DOC-V1",
+      "flags: authority_boundary: lineage_as_independence is not independence proof"
+    ],
+    "back": [
+      "full_record_pointer: record://A01",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [],
+    "rendered_text": "case: A01\nstate: ordinary\nsummary: Lineage paraphrase one.\nanchor_health: valid key=DOC-V1 path=raw_sources/versioned_docs.md marker=ANCHOR:DOC-V1\nflags: authority_boundary: lineage_as_independence is not independence proof\nfull_record_pointer: record://A01\nsparse_provenance: anchor pointer only; detail available in full record"
+  },
+  {
+    "case_id": "A02",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: A02",
+      "state: ordinary",
+      "summary: Lineage paraphrase two.",
+      "anchor_health: valid key=DOC-V1 path=raw_sources/versioned_docs.md marker=ANCHOR:DOC-V1",
+      "flags: authority_boundary: lineage_as_independence is not independence proof"
+    ],
+    "back": [
+      "full_record_pointer: record://A02",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [],
+    "rendered_text": "case: A02\nstate: ordinary\nsummary: Lineage paraphrase two.\nanchor_health: valid key=DOC-V1 path=raw_sources/versioned_docs.md marker=ANCHOR:DOC-V1\nflags: authority_boundary: lineage_as_independence is not independence proof\nfull_record_pointer: record://A02\nsparse_provenance: anchor pointer only; detail available in full record"
+  },
+  {
+    "case_id": "A03",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: A03",
+      "state: ordinary",
+      "summary: Source count paraphrase one.",
+      "anchor_health: valid key=DOC-V1 path=raw_sources/versioned_docs.md marker=ANCHOR:DOC-V1",
+      "flags: authority_boundary: source_count_as_independence is not independence proof"
+    ],
+    "back": [
+      "full_record_pointer: record://A03",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [],
+    "rendered_text": "case: A03\nstate: ordinary\nsummary: Source count paraphrase one.\nanchor_health: valid key=DOC-V1 path=raw_sources/versioned_docs.md marker=ANCHOR:DOC-V1\nflags: authority_boundary: source_count_as_independence is not independence proof\nfull_record_pointer: record://A03\nsparse_provenance: anchor pointer only; detail available in full record"
+  },
+  {
+    "case_id": "A04",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: A04",
+      "state: ordinary",
+      "summary: Source count paraphrase two.",
+      "anchor_health: valid key=DOC-V2 path=raw_sources/versioned_docs.md marker=ANCHOR:DOC-V2",
+      "flags: authority_boundary: source_count_as_independence is not independence proof"
+    ],
+    "back": [
+      "full_record_pointer: record://A04",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [],
+    "rendered_text": "case: A04\nstate: ordinary\nsummary: Source count paraphrase two.\nanchor_health: valid key=DOC-V2 path=raw_sources/versioned_docs.md marker=ANCHOR:DOC-V2\nflags: authority_boundary: source_count_as_independence is not independence proof\nfull_record_pointer: record://A04\nsparse_provenance: anchor pointer only; detail available in full record"
+  },
+  {
+    "case_id": "A05",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: A05",
+      "state: ordinary",
+      "summary: Dashboard truth paraphrase.",
+      "anchor_health: valid key=POL-P1 path=raw_sources/policy_pages.md marker=ANCHOR:POL-P1",
+      "flags: authority_boundary: dashboard_as_truth is diagnostic only"
+    ],
+    "back": [
+      "full_record_pointer: record://A05",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [],
+    "rendered_text": "case: A05\nstate: ordinary\nsummary: Dashboard truth paraphrase.\nanchor_health: valid key=POL-P1 path=raw_sources/policy_pages.md marker=ANCHOR:POL-P1\nflags: authority_boundary: dashboard_as_truth is diagnostic only\nfull_record_pointer: record://A05\nsparse_provenance: anchor pointer only; detail available in full record"
+  },
+  {
+    "case_id": "A06",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: A06",
+      "state: ordinary",
+      "summary: Test pass truth paraphrase.",
+      "anchor_health: valid key=REPO-R3 path=raw_sources/repo_notes.md marker=ANCHOR:REPO-R3",
+      "flags: authority_boundary: test_pass_as_truth is diagnostic only"
+    ],
+    "back": [
+      "full_record_pointer: record://A06",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [],
+    "rendered_text": "case: A06\nstate: ordinary\nsummary: Test pass truth paraphrase.\nanchor_health: valid key=REPO-R3 path=raw_sources/repo_notes.md marker=ANCHOR:REPO-R3\nflags: authority_boundary: test_pass_as_truth is diagnostic only\nfull_record_pointer: record://A06\nsparse_provenance: anchor pointer only; detail available in full record"
+  },
+  {
+    "case_id": "A07",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: A07",
+      "state: ordinary",
+      "summary: Feedback truth paraphrase one.",
+      "anchor_health: valid key=PDF-A1 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A1",
+      "flags: authority_boundary: feedback is no truth change ; feedback_revision: type=useful no truth change no numeric delta"
+    ],
+    "back": [
+      "full_record_pointer: record://A07",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [],
+    "rendered_text": "case: A07\nstate: ordinary\nsummary: Feedback truth paraphrase one.\nanchor_health: valid key=PDF-A1 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A1\nflags: authority_boundary: feedback is no truth change ; feedback_revision: type=useful no truth change no numeric delta\nfull_record_pointer: record://A07\nsparse_provenance: anchor pointer only; detail available in full record"
+  },
+  {
+    "case_id": "A08",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: A08",
+      "state: ordinary",
+      "summary: Feedback truth paraphrase two.",
+      "anchor_health: valid key=PDF-A1 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A1",
+      "flags: authority_boundary: feedback is no truth change ; group_id: auth-feedback|narrow_answer_scope|too_broad|scope|valid ; recurrence_digest: latest + unresolved exemplar + count + last_seen ; feedback_revision: type=too_broad no truth change no numeric delta"
+    ],
+    "back": [
+      "full_record_pointer: record://A08",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [],
+    "rendered_text": "case: A08\nstate: ordinary\nsummary: Feedback truth paraphrase two.\nanchor_health: valid key=PDF-A1 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A1\nflags: authority_boundary: feedback is no truth change ; group_id: auth-feedback|narrow_answer_scope|too_broad|scope|valid ; recurrence_digest: latest + unresolved exemplar + count + last_seen ; feedback_revision: type=too_broad no truth change no numeric delta\nfull_record_pointer: record://A08\nsparse_provenance: anchor pointer only; detail available in full record"
+  },
+  {
+    "case_id": "A09",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: A09",
+      "state: ordinary",
+      "summary: Retrieval rank trust paraphrase one.",
+      "anchor_health: valid key=WEB-AR1 path=raw_sources/archived_web.md marker=ANCHOR:WEB-AR1",
+      "flags: authority_boundary: retrieval rank is routing only"
+    ],
+    "back": [
+      "full_record_pointer: record://A09",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [],
+    "rendered_text": "case: A09\nstate: ordinary\nsummary: Retrieval rank trust paraphrase one.\nanchor_health: valid key=WEB-AR1 path=raw_sources/archived_web.md marker=ANCHOR:WEB-AR1\nflags: authority_boundary: retrieval rank is routing only\nfull_record_pointer: record://A09\nsparse_provenance: anchor pointer only; detail available in full record"
+  },
+  {
+    "case_id": "A10",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: A10",
+      "state: ordinary",
+      "summary: Retrieval rank trust paraphrase two.",
+      "anchor_health: valid key=WEB-AR2 path=raw_sources/archived_web.md marker=ANCHOR:WEB-AR2",
+      "flags: authority_boundary: retrieval rank is routing only"
+    ],
+    "back": [
+      "full_record_pointer: record://A10",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [],
+    "rendered_text": "case: A10\nstate: ordinary\nsummary: Retrieval rank trust paraphrase two.\nanchor_health: valid key=WEB-AR2 path=raw_sources/archived_web.md marker=ANCHOR:WEB-AR2\nflags: authority_boundary: retrieval rank is routing only\nfull_record_pointer: record://A10\nsparse_provenance: anchor pointer only; detail available in full record"
+  },
+  {
+    "case_id": "A11",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: A11",
+      "state: ordinary",
+      "summary: Cluster summary relation paraphrase.",
+      "anchor_health: valid key=REPO-R4 path=raw_sources/repo_notes.md marker=ANCHOR:REPO-R4",
+      "flags: authority_boundary: cluster summary is not reviewed relation"
+    ],
+    "back": [
+      "full_record_pointer: record://A11",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [],
+    "rendered_text": "case: A11\nstate: ordinary\nsummary: Cluster summary relation paraphrase.\nanchor_health: valid key=REPO-R4 path=raw_sources/repo_notes.md marker=ANCHOR:REPO-R4\nflags: authority_boundary: cluster summary is not reviewed relation\nfull_record_pointer: record://A11\nsparse_provenance: anchor pointer only; detail available in full record"
+  },
+  {
+    "case_id": "A12",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: A12",
+      "state: blocking",
+      "summary: LLM summary support paraphrase.",
+      "anchor_health: missing key=NONE problem visible",
+      "flags: authority_boundary: model summary is not evidence support ; upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate"
+    ],
+    "back": [
+      "full_record_pointer: record://A12",
+      "anchor_problem_visibility: missing shown on front"
+    ],
+    "full": [
+      "FULL_AUDIT_OPEN",
+      "deep_packet_retained: true",
+      "evidence_packet_pointer: evidence://A12"
+    ],
+    "rendered_text": "case: A12\nstate: blocking\nsummary: LLM summary support paraphrase.\nanchor_health: missing key=NONE problem visible\nflags: authority_boundary: model summary is not evidence support ; upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate\nfull_record_pointer: record://A12\nanchor_problem_visibility: missing shown on front\nFULL_AUDIT_OPEN\ndeep_packet_retained: true\nevidence_packet_pointer: evidence://A12"
+  },
+  {
+    "case_id": "R01",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: R01",
+      "state: ordinary",
+      "summary: Repeated too-broad feedback one.",
+      "anchor_health: valid key=PDF-A1 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A1",
+      "flags: group_id: scope-beta|narrow_answer_scope|too_broad|scope|valid ; recurrence_digest: latest + unresolved exemplar + count + last_seen ; feedback_revision: type=too_broad no truth change no numeric delta"
+    ],
+    "back": [
+      "full_record_pointer: record://R01",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [],
+    "rendered_text": "case: R01\nstate: ordinary\nsummary: Repeated too-broad feedback one.\nanchor_health: valid key=PDF-A1 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A1\nflags: group_id: scope-beta|narrow_answer_scope|too_broad|scope|valid ; recurrence_digest: latest + unresolved exemplar + count + last_seen ; feedback_revision: type=too_broad no truth change no numeric delta\nfull_record_pointer: record://R01\nsparse_provenance: anchor pointer only; detail available in full record"
+  },
+  {
+    "case_id": "R02",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: R02",
+      "state: ordinary",
+      "summary: Repeated too-broad feedback two.",
+      "anchor_health: valid key=PDF-A1 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A1",
+      "flags: group_id: scope-beta|narrow_answer_scope|too_broad|scope|valid ; recurrence_digest: latest + unresolved exemplar + count + last_seen ; feedback_revision: type=too_broad no truth change no numeric delta"
+    ],
+    "back": [
+      "full_record_pointer: record://R02",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [],
+    "rendered_text": "case: R02\nstate: ordinary\nsummary: Repeated too-broad feedback two.\nanchor_health: valid key=PDF-A1 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A1\nflags: group_id: scope-beta|narrow_answer_scope|too_broad|scope|valid ; recurrence_digest: latest + unresolved exemplar + count + last_seen ; feedback_revision: type=too_broad no truth change no numeric delta\nfull_record_pointer: record://R02\nsparse_provenance: anchor pointer only; detail available in full record"
+  },
+  {
+    "case_id": "R03",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: R03",
+      "state: regressed",
+      "summary: Same recurrence but regression.",
+      "anchor_health: valid key=PDF-A1 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A1",
+      "flags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate ; feedback_revision: type=too_broad no truth change no numeric delta"
+    ],
+    "back": [
+      "full_record_pointer: record://R03",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [
+      "FULL_AUDIT_OPEN",
+      "deep_packet_retained: true",
+      "evidence_packet_pointer: evidence://R03"
+    ],
+    "rendered_text": "case: R03\nstate: regressed\nsummary: Same recurrence but regression.\nanchor_health: valid key=PDF-A1 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A1\nflags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate ; feedback_revision: type=too_broad no truth change no numeric delta\nfull_record_pointer: record://R03\nsparse_provenance: anchor pointer only; detail available in full record\nFULL_AUDIT_OPEN\ndeep_packet_retained: true\nevidence_packet_pointer: evidence://R03"
+  },
+  {
+    "case_id": "R04",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: R04",
+      "state: blocking",
+      "summary: Same recurrence but missing anchor.",
+      "anchor_health: missing key=NONE problem visible",
+      "flags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate ; feedback_revision: type=too_broad no truth change no numeric delta"
+    ],
+    "back": [
+      "full_record_pointer: record://R04",
+      "anchor_problem_visibility: missing shown on front"
+    ],
+    "full": [
+      "FULL_AUDIT_OPEN",
+      "deep_packet_retained: true",
+      "evidence_packet_pointer: evidence://R04"
+    ],
+    "rendered_text": "case: R04\nstate: blocking\nsummary: Same recurrence but missing anchor.\nanchor_health: missing key=NONE problem visible\nflags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate ; feedback_revision: type=too_broad no truth change no numeric delta\nfull_record_pointer: record://R04\nanchor_problem_visibility: missing shown on front\nFULL_AUDIT_OPEN\ndeep_packet_retained: true\nevidence_packet_pointer: evidence://R04"
+  },
+  {
+    "case_id": "V01",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: V01",
+      "state: ordinary",
+      "summary: Version v1 ordinary recurrence one.",
+      "anchor_health: valid key=PDF-A1 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A1",
+      "flags: group_id: fp-hard|narrow_answer_scope|too_broad|scope|valid ; recurrence_digest: latest + unresolved exemplar + count + last_seen ; feedback_revision: type=too_broad no truth change no numeric delta"
+    ],
+    "back": [
+      "full_record_pointer: record://V01",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [],
+    "rendered_text": "case: V01\nstate: ordinary\nsummary: Version v1 ordinary recurrence one.\nanchor_health: valid key=PDF-A1 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A1\nflags: group_id: fp-hard|narrow_answer_scope|too_broad|scope|valid ; recurrence_digest: latest + unresolved exemplar + count + last_seen ; feedback_revision: type=too_broad no truth change no numeric delta\nfull_record_pointer: record://V01\nsparse_provenance: anchor pointer only; detail available in full record"
+  },
+  {
+    "case_id": "V02",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: V02",
+      "state: ordinary",
+      "summary: Version v1 ordinary recurrence two.",
+      "anchor_health: valid key=PDF-A1 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A1",
+      "flags: group_id: fp-hard|narrow_answer_scope|too_broad|scope|valid ; recurrence_digest: latest + unresolved exemplar + count + last_seen ; feedback_revision: type=too_broad no truth change no numeric delta"
+    ],
+    "back": [
+      "full_record_pointer: record://V02",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [],
+    "rendered_text": "case: V02\nstate: ordinary\nsummary: Version v1 ordinary recurrence two.\nanchor_health: valid key=PDF-A1 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A1\nflags: group_id: fp-hard|narrow_answer_scope|too_broad|scope|valid ; recurrence_digest: latest + unresolved exemplar + count + last_seen ; feedback_revision: type=too_broad no truth change no numeric delta\nfull_record_pointer: record://V02\nsparse_provenance: anchor pointer only; detail available in full record"
+  },
+  {
+    "case_id": "V03",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: V03",
+      "state: ordinary",
+      "summary: Version v2 ordinary recurrence one, same non-version fields.",
+      "anchor_health: valid key=PDF-A1 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A1",
+      "flags: group_id: fp-hard|narrow_answer_scope|too_broad|scope|valid ; recurrence_digest: latest + unresolved exemplar + count + last_seen ; feedback_revision: type=too_broad no truth change no numeric delta"
+    ],
+    "back": [
+      "full_record_pointer: record://V03",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [],
+    "rendered_text": "case: V03\nstate: ordinary\nsummary: Version v2 ordinary recurrence one, same non-version fields.\nanchor_health: valid key=PDF-A1 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A1\nflags: group_id: fp-hard|narrow_answer_scope|too_broad|scope|valid ; recurrence_digest: latest + unresolved exemplar + count + last_seen ; feedback_revision: type=too_broad no truth change no numeric delta\nfull_record_pointer: record://V03\nsparse_provenance: anchor pointer only; detail available in full record"
+  },
+  {
+    "case_id": "V04",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: V04",
+      "state: ordinary",
+      "summary: Version v2 ordinary recurrence two, same non-version fields.",
+      "anchor_health: valid key=PDF-A1 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A1",
+      "flags: group_id: fp-hard|narrow_answer_scope|too_broad|scope|valid ; recurrence_digest: latest + unresolved exemplar + count + last_seen ; feedback_revision: type=too_broad no truth change no numeric delta"
+    ],
+    "back": [
+      "full_record_pointer: record://V04",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [],
+    "rendered_text": "case: V04\nstate: ordinary\nsummary: Version v2 ordinary recurrence two, same non-version fields.\nanchor_health: valid key=PDF-A1 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A1\nflags: group_id: fp-hard|narrow_answer_scope|too_broad|scope|valid ; recurrence_digest: latest + unresolved exemplar + count + last_seen ; feedback_revision: type=too_broad no truth change no numeric delta\nfull_record_pointer: record://V04\nsparse_provenance: anchor pointer only; detail available in full record"
+  },
+  {
+    "case_id": "Q01",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: Q01",
+      "state: resolved_folded",
+      "summary: Resolved old note should fold.",
+      "anchor_health: valid key=PDF-A1 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A1",
+      "flags: group_id: q-old|narrow_answer_scope|useful|none|valid ; recurrence_digest: latest + unresolved exemplar + count + last_seen ; feedback_revision: type=useful no truth change no numeric delta"
+    ],
+    "back": [
+      "full_record_pointer: record://Q01",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [],
+    "rendered_text": "case: Q01\nstate: resolved_folded\nsummary: Resolved old note should fold.\nanchor_health: valid key=PDF-A1 path=raw_sources/pdf_claims.md marker=ANCHOR:PDF-A1\nflags: group_id: q-old|narrow_answer_scope|useful|none|valid ; recurrence_digest: latest + unresolved exemplar + count + last_seen ; feedback_revision: type=useful no truth change no numeric delta\nfull_record_pointer: record://Q01\nsparse_provenance: anchor pointer only; detail available in full record"
+  },
+  {
+    "case_id": "Q02",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: Q02",
+      "state: parked_nonblocking",
+      "summary: Parked nonblocking note should not block.",
+      "anchor_health: valid key=POL-P4 path=raw_sources/policy_pages.md marker=ANCHOR:POL-P4",
+      "flags: group_id: q-park|park_followup|minor_note|minor|valid ; recurrence_digest: latest + unresolved exemplar + count + last_seen ; feedback_revision: type=minor_note no truth change no numeric delta"
+    ],
+    "back": [
+      "full_record_pointer: record://Q02",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [],
+    "rendered_text": "case: Q02\nstate: parked_nonblocking\nsummary: Parked nonblocking note should not block.\nanchor_health: valid key=POL-P4 path=raw_sources/policy_pages.md marker=ANCHOR:POL-P4\nflags: group_id: q-park|park_followup|minor_note|minor|valid ; recurrence_digest: latest + unresolved exemplar + count + last_seen ; feedback_revision: type=minor_note no truth change no numeric delta\nfull_record_pointer: record://Q02\nsparse_provenance: anchor pointer only; detail available in full record"
+  },
+  {
+    "case_id": "Q03",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: Q03",
+      "state: for_review",
+      "summary: For-review item must appear in review debt queue.",
+      "anchor_health: valid key=DOC-V1 path=raw_sources/versioned_docs.md marker=ANCHOR:DOC-V1",
+      "flags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate"
+    ],
+    "back": [
+      "full_record_pointer: record://Q03",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [
+      "FULL_AUDIT_OPEN",
+      "deep_packet_retained: true",
+      "evidence_packet_pointer: evidence://Q03"
+    ],
+    "rendered_text": "case: Q03\nstate: for_review\nsummary: For-review item must appear in review debt queue.\nanchor_health: valid key=DOC-V1 path=raw_sources/versioned_docs.md marker=ANCHOR:DOC-V1\nflags: upgrade: hard trigger or anchor problem ; review_due: true ; queue: unresolved_gate\nfull_record_pointer: record://Q03\nsparse_provenance: anchor pointer only; detail available in full record\nFULL_AUDIT_OPEN\ndeep_packet_retained: true\nevidence_packet_pointer: evidence://Q03"
+  },
+  {
+    "case_id": "Q04",
+    "variant": "candidate_no_version",
+    "front": [
+      "case: Q04",
+      "state: ordinary",
+      "summary: Ordinary answer should remain light.",
+      "anchor_health: valid key=WEB-AR1 path=raw_sources/archived_web.md marker=ANCHOR:WEB-AR1"
+    ],
+    "back": [
+      "full_record_pointer: record://Q04",
+      "sparse_provenance: anchor pointer only; detail available in full record"
+    ],
+    "full": [],
+    "rendered_text": "case: Q04\nstate: ordinary\nsummary: Ordinary answer should remain light.\nanchor_health: valid key=WEB-AR1 path=raw_sources/archived_web.md marker=ANCHOR:WEB-AR1\nfull_record_pointer: record://Q04\nsparse_provenance: anchor pointer only; detail available in full record"
+  }
+]

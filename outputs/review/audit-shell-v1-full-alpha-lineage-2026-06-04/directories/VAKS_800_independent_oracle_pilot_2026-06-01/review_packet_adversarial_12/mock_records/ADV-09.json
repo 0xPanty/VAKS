@@ -1,0 +1,11 @@
+{
+  "case_id": "ADV-09",
+  "adversarial_category": "fake numeric precision",
+  "claim": "这条记录用精确数字暗示资料已经足够可靠。",
+  "expected_state": "for_review",
+  "expected_anchor_status": "valid",
+  "expected_no_group": "n/a",
+  "source_pointer": "review_packet_adversarial_12/mock_sources/ADV-09.md",
+  "evidence_pointer": "review_packet_adversarial_12/mock_evidence/ADV-09.md",
+  "note": "Synthetic operator-surface test record; not a truth-layer schema proposal."
+}

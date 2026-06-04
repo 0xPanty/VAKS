@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-039",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 38,
+  "layer": "ordinary_stable",
+  "claim": "baby got out of jail in baby driver.",
+  "evidence": "On a £25,000 budget, Wright developed the music video for Mint Royale's \"Blue Song\" in 2003, featuring a backstory gleaned from his early concept of Baby Driver. The video became an unexpected success, and although happy with his work, Wright was frustrated he had cannibalized an idea he felt had enormous potential. In retrospect, he admits his music video was a significant undertaking because it provided proof of concept for Baby Driver. The release of Wright's first major feature, Shaun of the Dead (2004), was another important catalyst not only for its artistic direction, but for signaling the start of a long-term working relationship between Wright and Working Title producers, who would assist with Baby Driver's development. By 2007, after signing a multi-picture deal with Working Title, and with a clearer vision of the project, the writer-director met with Steven Price to discuss early musical ideas for Baby Driver. The drafting of a story started around the release of Scott Pilgrim vs. the World (2010), but pre-production of the film stalled as Wright's other projects—The World's End (2013) and the then-forthcoming Ant-Man (2015), for which he had already prepared a script with Joe Cornish—took precedence. Work resumed immediately after Wright's departure from Ant-Man, when the studio began assembling their roster of actors and technical staff before shooting. In preparat",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-039.md",
+    "document_hash": "252df0b5e81a71c8541b960b5cdaff76ba1f6d12e5d91265e38dfa787ed06f2a",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-039_ANCHOR",
+    "text_quote": "On a £25,000 budget, Wright developed the music video for Mint Royale's \"Blue Song\" in 2003, featuring a backstory gleaned from his early concept of Baby Driver. The video became an unexpected success, and although happy",
+    "start": 145,
+    "end": 365
+  },
+  "record_path": "records/AMBIFC-039.json",
+  "evidence_path": "evidence/AMBIFC-039.md"
+}

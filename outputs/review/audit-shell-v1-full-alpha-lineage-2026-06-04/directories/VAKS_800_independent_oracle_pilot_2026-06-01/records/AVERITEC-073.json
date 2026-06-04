@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-073",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 72,
+  "layer": "action_challenge_conflict",
+  "claim": "Mughal Gardens Renamed To Dr. Rajendra Prasad Garden",
+  "evidence": "The Mughal gardens are the few number of gardens built by the Mughals in the Islamic style of architecture in India as well as other countries. Most famous Mughal Gardens of India are the garden of Taj Mahal, the Red Fort garden in Delhi, Agra Fort and Humayun’s Tomb Garden. Other Mughal gardens are Tomb of Safdarjung,Mehtab Bagh,Roshanara Bagh,Khusro Bagh and Ram Bagh. New Delhi, Dec 3 (IANS) The Hindu Mahasabha has demanded a change of name and this time around, it wants the iconic Mughal Garden that falls under the President''s Estate, to be renamed as Rajendra Prasad Udyan. The outfit''s President Swami Chakrapani has said that he intends to meet the Prime Minister Narendra Modi and Home Minister Amit Shah to persuade them for the same. Speaking to IANS, Chakrapani said: \"We all know the mayhem the Mughals created when they ruled. In today''s day and age to have a garden, that too inside the Rashtrapati Bhawan, named after Mughals is unacceptable. That''s why I have proposed to name it after the first President Dr Rajendra Prasad.\" On the official site of the President of India, the Mughal Gardens are still named the Mughal Gardens. There has been no change.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-073.md",
+    "document_hash": "7659b9b38ddba3470fb66bb41f688ce65b56d126cc2d95ba13c4c6a9dfe209e7",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-073_ANCHOR",
+    "text_quote": "The Mughal gardens are the few number of gardens built by the Mughals in the Islamic style of architecture in India as well as other countries. Most famous Mughal Gardens of India are the garden of Taj Mahal, the Red For",
+    "start": 167,
+    "end": 387
+  },
+  "record_path": "records/AVERITEC-073.json",
+  "evidence_path": "evidence/AVERITEC-073.md"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-040",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 39,
+  "layer": "ordinary_stable",
+  "claim": "There is a ‘global average’ for the number of judges and magistrates to number of people",
+  "evidence": "No No answer could be found.",
+  "source_label": "Not Enough Evidence",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-040.md",
+    "document_hash": "0344c950795daeff6c56c31530d9b027981607221f34a02adab2710a7ee4ac0f",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-040_ANCHOR",
+    "text_quote": "No No answer could be found.",
+    "start": 203,
+    "end": 231
+  },
+  "record_path": "records/AVERITEC-040.json",
+  "evidence_path": "evidence/AVERITEC-040.md"
+}

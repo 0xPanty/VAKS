@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-023",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 22,
+  "layer": "ordinary_stable",
+  "claim": "In Kenya now with a population of about 48 million, there is one judge serving over 300,000 people.",
+  "evidence": "47,564,296 153 310,877.751634 (Round up to 311)",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-023.md",
+    "document_hash": "2e2fb8c03b44bf85a355bb7cca9ef58c2b4481aab25b49c6d4580aa8968fc8dc",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-023_ANCHOR",
+    "text_quote": "47,564,296 153 310,877.751634 (Round up to 311)",
+    "start": 214,
+    "end": 261
+  },
+  "record_path": "records/AVERITEC-023.json",
+  "evidence_path": "evidence/AVERITEC-023.md"
+}

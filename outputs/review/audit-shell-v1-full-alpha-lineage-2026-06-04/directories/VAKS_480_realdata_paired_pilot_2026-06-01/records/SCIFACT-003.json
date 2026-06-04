@@ -1,0 +1,20 @@
+{
+  "id": "SCIFACT-003",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row",
+  "source_row_index": 2,
+  "claim": "ADAR1 binds to Dicer to cleave pre-miRNA.",
+  "evidence": "Adenosine deaminases acting on RNA (ADARs) are involved in RNA editing that converts adenosine residues to inosine specifically in double-stranded RNAs. In this study, we investigated the interaction of the RNA editing mechanism with the RNA interference (RNAi) machinery and found that ADAR1 forms a complex with Dicer through direct protein-protein interaction. Most importantly, ADAR1 increases the maximum rate (Vmax) of pre-microRNA (miRNA) cleavage by Dicer and facilitates loading of miRNA onto RNA-induced silencing complexes, identifying a new role of ADAR1 in miRNA processing and RNAi mechanisms. ADAR1 differentiates its functions in RNA editing and RNAi by the formation of either ADAR1/ADAR1 homodimer or Dicer/ADAR1 heterodimer complexes, respectively. As expected, the expression of miRNAs is globally inhibited in ADAR1(-/-) mouse embryos, which, in turn, alters the expression of their target genes and might contribute to their embryonic lethal phenotype.",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-003.md",
+    "marker": "SCIFACT-003_ANCHOR"
+  }
+}

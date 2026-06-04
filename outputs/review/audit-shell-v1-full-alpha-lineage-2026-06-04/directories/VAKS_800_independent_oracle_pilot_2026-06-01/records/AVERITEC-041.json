@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-041",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 40,
+  "layer": "ordinary_stable",
+  "claim": "Kenya's judiciary does not even get 1% of the national budget",
+  "evidence": "EIGHT POINT ECONOMIC STIMULUS PACKAGE - COVID-19 RESPONSE 3 THE NATIONAL TREASURY AND PLANNING 1. Improving Road Infrastructure and Urban Re- newal whose initiatives include:  A Ksh 10.0 Bn “Kazi Mtaani Programme” targeting 100,000 unemployed youth in the major cities and urban settlements of Nairobi, Mombasa, Kisumu, Eldoret, Nakuru and other major towns to be engaged in fumigation, storm water drainage, cleaning of markets and informal settle- ments;  Ksh 5.0 Bn for rehabilitation of access roads and foot bridges affected by the heavy rains, using local labour in all constituencies. A clean up exercise under the “Kazi Mtaani Programme across the country 2. Improving Education Outcomes:  Allocations to support education include:  Ksh 2.4 Bn for recruitment of 10,000 teacher interns to support the 100 percent transition and employment creation;  Ksh 2.1 Bn for rehabilitation and construction of classrooms; Ksh 1.9 Bn to cater for fabricated desks for secondary and primary schools.  Ksh 0.7 Bn for capitation and improving infrastructure in low cost boarding schools in ASAL using local labour; and  Ksh 0.3 Bn for hiring of 1,000 ICT interns to support digital learning in public schools and employment creation. Local artisans making desks 3. Enhancing Liquidity for Small & Medium En- terprises (SMEs):  Allocations to enhance liquidity for SMEs include:  Ksh 5.0 billion t",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-041.md",
+    "document_hash": "0f0d58e767c90abcdc0530b929d99f605c6536dd98c03abb88a94a3d7c707fed",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-041_ANCHOR",
+    "text_quote": "EIGHT POINT ECONOMIC STIMULUS PACKAGE - COVID-19 RESPONSE 3 THE NATIONAL TREASURY AND PLANNING 1. Improving Road Infrastructure and Urban Re- newal whose initiatives include:  A Ksh 10.0 Bn “Kazi Mtaani Programme” targe",
+    "start": 176,
+    "end": 396
+  },
+  "record_path": "records/AVERITEC-041.json",
+  "evidence_path": "evidence/AVERITEC-041.md"
+}

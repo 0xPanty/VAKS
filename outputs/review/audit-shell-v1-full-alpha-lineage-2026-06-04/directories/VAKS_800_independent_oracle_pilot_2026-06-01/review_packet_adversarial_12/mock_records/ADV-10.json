@@ -1,0 +1,11 @@
+{
+  "case_id": "ADV-10",
+  "adversarial_category": "summary overwrite",
+  "claim": "exemplar 摘要说“都支持默认开启”，但某成员实际只支持实验环境。",
+  "expected_state": "for_review",
+  "expected_anchor_status": "valid",
+  "expected_no_group": "yes",
+  "source_pointer": "review_packet_adversarial_12/mock_sources/ADV-10.md",
+  "evidence_pointer": "review_packet_adversarial_12/mock_evidence/ADV-10.md",
+  "note": "Synthetic operator-surface test record; not a truth-layer schema proposal."
+}

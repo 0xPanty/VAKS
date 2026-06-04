@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-125",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 124,
+  "layer": "anchor_problem",
+  "claim": "Sarah Huckabee Sanders said \"it's not the government's job to protect my health\" and that \"when you trade liberty for safety, you end up losing both\"",
+  "evidence": "Sarah Huckabee Sanders @SarahHuckabee @hucklebee_sarah which is a suspended account. No",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "stale_pointer"
+  ],
+  "anchor_status": "stale",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "stale",
+    "path": "raw_sources/AVERITEC-125.md",
+    "document_hash": "94822b99389e8448ff9b043a48b7430f21c7f8349f921da9d062383e974f8f4d",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-125_ANCHOR",
+    "text_quote": "Sarah Huckabee Sanders @SarahHuckabee @hucklebee_sarah which is a suspended account. No",
+    "start": -1,
+    "end": -1
+  },
+  "record_path": "records/AVERITEC-125.json",
+  "evidence_path": "evidence/AVERITEC-125.md"
+}

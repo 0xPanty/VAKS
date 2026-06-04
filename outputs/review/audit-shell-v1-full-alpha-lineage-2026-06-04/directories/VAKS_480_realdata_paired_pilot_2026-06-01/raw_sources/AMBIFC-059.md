@@ -1,0 +1,7 @@
+# Raw Source AMBIFC-059
+dataset: ambifc
+source_row: 58
+marker: AMBIFC-059_ANCHOR
+claim: barney the purple dinosaur is still on tv.
+label: neutral
+evidence: Barney was created by Sheryl Leach of Dallas, Texas. She came up with the idea of a children's program after noticing that her son outgrew Wee Sing Together, and then recognizing that there were no videos to appeal to her son. Leach then brought together a team who created a series of home videos, Barney and the Backyard Gang, initially released in 1988. The first three videos starred actress Sandy Duncan. One day in 1991, the daughter of Connecticut Public Television executive Larry Rifkin rented one of the videos and was "mesmerized" by it. Rifkin thought the concept could be developed for PBS. Rifkin thought Barney had appeal because he was not as neurotic as Big Bird. He pitched it to CPTV president Jerry Franklin, whose preschool son also fell in love with it. Franklin and Rifkin pitched the idea to all of their colleagues with preschoolers, and they all agreed that kids would love a Barney show. Franklin and Rifkin convinced Leach to let CPTV revamp the concept for television. The show debuted as Barney & Friends in 1992. The series was produced by CPTV and Lyrick Studios (later bought by HIT Entertainment).

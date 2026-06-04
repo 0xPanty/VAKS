@@ -1,0 +1,22 @@
+{
+  "id": "FEVER-093",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 92,
+  "claim": "Sunrise created Ghost in the Shell.",
+  "evidence": "Eilean_Meadhonach | 0 | Eilean Meadhonach is the second largest of the Crowlin Islands , located in the Inner Sound off the island of Skye , Scotland .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [
+    "missing_anchor"
+  ],
+  "anchor_status": "missing",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "missing",
+    "path": "raw_sources/FEVER-093.md",
+    "marker": "FEVER-093_ANCHOR"
+  }
+}

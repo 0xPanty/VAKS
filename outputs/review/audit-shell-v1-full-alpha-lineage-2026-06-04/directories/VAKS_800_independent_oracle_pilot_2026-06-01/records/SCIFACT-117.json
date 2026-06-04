@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-117",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 116,
+  "layer": "anchor_problem",
+  "claim": "Healthcare delivery efficiency in crowded delivery centers is impaired by improving structural, logistical, and interpersonal elements.",
+  "evidence": "BACKGROUND The World Health Organization (WHO) released revised guidelines in 2015 recommending that all people living with HIV, regardless of CD4 count, initiate antiretroviral therapy (ART) upon diagnosis. However, few studies have projected the global resources needed for rapid scale-up of ART. Under the Health Policy Project, we conducted modeling analyses for 97 countries to estimate eligibility for and numbers on ART from 2015 to 2020, along with the facility-level financial resources required. We compared the estimated financial requirements to estimated funding available. METHODS AND FINDINGS Current coverage levels and future need for treatment were based on country-specific epidemiological and demographic data. Simulated annual numbers of individuals on treatment were derived from three scenarios: (1) continuation of countries' current policies of eligibility for ART, (2) universal adoption of aspects of the WHO 2013 eligibility guidelines, and (3) expanded eligibility as per the WHO 2015 guidelines and meeting the Joint United Nations Programme on HIV/AIDS \"90-90-90\" ART targets. We modeled uncertainty in the annual resource requirements for antiretroviral drugs, laboratory tests, and facility-level personnel and overhead. We estimate that 25.7 (95% CI 25.5, 26.0) million adults and 1.57 (95% CI 1.55, 1.60) million children could receive ART by 2020 if countries main",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "stale_pointer"
+  ],
+  "anchor_status": "stale",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "stale",
+    "path": "raw_sources/SCIFACT-117.md",
+    "document_hash": "e78b671b03f196455088d086a947dff3e46fa7d1fabb20d9734fda115cef0f66",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-117_ANCHOR",
+    "text_quote": "BACKGROUND The World Health Organization (WHO) released revised guidelines in 2015 recommending that all people living with HIV, regardless of CD4 count, initiate antiretroviral therapy (ART) upon diagnosis. However, few",
+    "start": -1,
+    "end": -1
+  },
+  "record_path": "records/SCIFACT-117.json",
+  "evidence_path": "evidence/SCIFACT-117.md"
+}

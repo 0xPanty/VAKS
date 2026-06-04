@@ -1,0 +1,38 @@
+{
+  "id": "FULLANCHOR-019",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 18,
+  "layer": "full_anchor_click",
+  "claim": "A greater proportion of 16 year olds vote in elections in Scotland, Wales and Austria than 18 and 20 year olds.",
+  "evidence": "Even though 16- to 17-year-olds exhibit somewhat lower  general  interest  in  politics  and  lower  internal  efficacy,  turnout  is  generally  higher compared to older first-time voters and similar to the electorate’s average, they follow electoral campaigns to the same extent as do other young voters, and  they  exhibit  considerably  high levels of external efficacy and satisfaction with democracy 51 per cent of 16- and 17- year-olds claim to have voted, compared with 39 per cent of those aged 18 to 24 16 and 17 year olds will be able to vote for the first time at the Senedd Elections in 2021, as part of the biggest changes to the democratic process in Wales in half a century.",
+  "source_label": "Conflicting Evidence/Cherrypicking",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "real_web_snapshot",
+  "source_anchor": {
+    "status": "valid",
+    "path": "real_source_snapshots/FULLANCHOR-019.txt",
+    "document_hash": "ea26456bf056e5b0b236caec1c74656b8c3901c8b7ced494c04a2caa869e5c31",
+    "version_id": "real-web-snapshot-v2",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-019_REAL_SNAPSHOT",
+    "text_quote": "heck team About AAP FactCheck Organisational Structure Contact Us Newsroom Photos About AAP team FAQ Our Journal: Back Story AAP Charter of Editorial Independence Our Standards Code of Practice Legal Terms and Privacy Policy Contact Log In FactCheck News Media",
+    "start": 541,
+    "end": 801,
+    "quote_strategy": "claim_keyword_window",
+    "landing_class": "claim_relevant_context_landing",
+    "semantic_selector_success": true,
+    "boilerplate_quote": false
+  },
+  "record_path": "records/FULLANCHOR-019.json",
+  "evidence_path": "evidence/FULLANCHOR-019.md",
+  "real_snapshot_url": "https://web.archive.org/web/20200924204255/https://www.aap.com.au/lower-voting-age-higher-participation-rate-claims-make-it-16/",
+  "clickback_snapshot_kind": "live_urllib_retry"
+}

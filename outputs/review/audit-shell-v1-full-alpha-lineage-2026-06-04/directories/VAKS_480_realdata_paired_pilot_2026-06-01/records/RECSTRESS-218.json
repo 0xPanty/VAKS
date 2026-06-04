@@ -1,0 +1,31 @@
+{
+  "id": "RECSTRESS-218",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 97,
+  "claim": "Walmart stores have stopped accepting cash payments.",
+  "evidence": "Like most retailers, we're experiencing the [effects] of the nationwide coin shortage,\" a Walmart spokesperson told NPR. It's coronavirus-related only in that the pandemic has resulted in a surprising shortage of coins in the U.S. money system, which makes it difficult to offer change for cash purchases. We're asking customers to pay with card or use correct change when possible if they need to pay with cash. Cash is welcome at all of our stores.\"",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-218.md",
+    "marker": "RECSTRESS-218_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-21",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-218.json",
+  "evidence_path": "evidence/RECSTRESS-218.md"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-174",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 53,
+  "claim": "Only 31% of South Africans drink alcohol",
+  "evidence": "In the most recent report 69% of South Africans over the age of 15 did NOT drink alcohol.",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-174.md",
+    "marker": "RECSTRESS-174_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-17",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-17-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-174.json",
+  "evidence_path": "evidence/RECSTRESS-174.md"
+}

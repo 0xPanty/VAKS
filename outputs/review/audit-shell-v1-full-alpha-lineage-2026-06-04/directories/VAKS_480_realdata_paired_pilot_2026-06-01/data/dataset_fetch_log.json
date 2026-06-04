@@ -1,0 +1,411 @@
+{
+  "scifact": {
+    "row_count": 140,
+    "source_status": "real_with_qrels",
+    "logs": [
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "queries",
+        "split": "queries",
+        "offset": 0,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "queries",
+        "split": "queries",
+        "offset": 100,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "queries",
+        "split": "queries",
+        "offset": 200,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "queries",
+        "split": "queries",
+        "offset": 300,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "queries",
+        "split": "queries",
+        "offset": 400,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "queries",
+        "split": "queries",
+        "offset": 500,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "queries",
+        "split": "queries",
+        "offset": 600,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "queries",
+        "split": "queries",
+        "offset": 700,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "queries",
+        "split": "queries",
+        "offset": 800,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "queries",
+        "split": "queries",
+        "offset": 900,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "queries",
+        "split": "queries",
+        "offset": 1000,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "queries",
+        "split": "queries",
+        "offset": 1100,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 0,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 100,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 200,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 300,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 400,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 500,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 600,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 700,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 800,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 900,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 1000,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 1100,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 1200,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 1300,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 1400,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 1500,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 1600,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 1700,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 1800,
+        "length": 100
+      },
+      {
+        "ok": false,
+        "error": "429: <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />\n    <meta\n            name=\"description\"\n            content=\"We're on a journey to advance and democratize artificial intelligence through open source and open science.\"\n    />\n    <meta property=\"f",
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 1900,
+        "length": 100
+      },
+      {
+        "source": "BeIR/scifact-qrels/test.tsv",
+        "ok": true,
+        "status": 200,
+        "attempt": 1
+      }
+    ]
+  },
+  "averitec": {
+    "row_count": 140,
+    "source_status": "real_dataset_server",
+    "logs": [
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "pminervini/averitec",
+        "config": "default",
+        "split": "train",
+        "offset": 0,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "pminervini/averitec",
+        "config": "default",
+        "split": "train",
+        "offset": 100,
+        "length": 40
+      }
+    ]
+  },
+  "ambifc": {
+    "row_count": 140,
+    "source_status": "real_dataset_server",
+    "logs": [
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "just1nseo/ambifc",
+        "config": "default",
+        "split": "train",
+        "offset": 0,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "just1nseo/ambifc",
+        "config": "default",
+        "split": "train",
+        "offset": 100,
+        "length": 40
+      }
+    ]
+  },
+  "fever": {
+    "row_count": 140,
+    "source_status": "real_dataset_server",
+    "logs": [
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "copenlu/fever_gold_evidence",
+        "config": "default",
+        "split": "train",
+        "offset": 0,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "copenlu/fever_gold_evidence",
+        "config": "default",
+        "split": "train",
+        "offset": 100,
+        "length": 40
+      }
+    ]
+  }
+}

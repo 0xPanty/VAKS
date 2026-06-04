@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-062",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 61,
+  "layer": "action_challenge_conflict",
+  "claim": "Neve Campbell starred in a Netflix drama series' fourth and fifth seasons.",
+  "evidence": "Neve_Campbell | 4 | Campbell has also made guest appearances on several television series , such as Medium , Grey 's Anatomy and Mad Men , as well as a starring role in the fourth and fifth seasons of the critically acclaimed Netflix drama series House of Cards .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "explicit_challenge"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-062.md",
+    "document_hash": "b19a0da3168f8a8ab6ab9e1263634d02df686c266156c63ec00be1098cbecc92",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-062_ANCHOR",
+    "text_quote": "Neve_Campbell | 4 | Campbell has also made guest appearances on several television series , such as Medium , Grey 's Anatomy and Mad Men , as well as a starring role in the fourth and fifth seasons of the critically accl",
+    "start": 180,
+    "end": 400
+  },
+  "record_path": "records/FEVER-062.json",
+  "evidence_path": "evidence/FEVER-062.md"
+}

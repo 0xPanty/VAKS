@@ -1,0 +1,31 @@
+{
+  "id": "RECSTRESS-220",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 99,
+  "claim": "Cold drinks are the main cause of heart attacks.",
+  "evidence": "No Yes",
+  "source_label": "Not Enough Evidence",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-220.md",
+    "marker": "RECSTRESS-220_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-21",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-220.json",
+  "evidence_path": "evidence/RECSTRESS-220.md"
+}

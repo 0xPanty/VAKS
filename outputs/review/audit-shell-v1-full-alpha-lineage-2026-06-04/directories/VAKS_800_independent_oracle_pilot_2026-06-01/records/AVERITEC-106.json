@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-106",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 105,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Sweden, despite never having had lockdown, has a lower COVID-19 death rate than Spain, Italy, and the United Kingdom.",
+  "evidence": "56.66 deaths per 100,000 inhabitants. 61.17 deaths per 100,000 inhabitants. 58.27 deaths per 100,000 inhabitants.",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-106.md",
+    "document_hash": "4107908ef0258c14e49d0e45b14ee7a895ac147dcb34fa4952e4949775aaea9e",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-106_ANCHOR",
+    "text_quote": "56.66 deaths per 100,000 inhabitants. 61.17 deaths per 100,000 inhabitants. 58.27 deaths per 100,000 inhabitants.",
+    "start": 232,
+    "end": 345
+  },
+  "record_path": "records/AVERITEC-106.json",
+  "evidence_path": "evidence/AVERITEC-106.md"
+}

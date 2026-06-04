@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-157",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 156,
+  "layer": "authority_leak_bait",
+  "claim": "Wentworth has had negative reception.",
+  "evidence": "Wentworth_-LRB-TV_series-RRB- | 9 | The show has received a mostly positive reception from critics , and the first episode became the most watched Australian drama series premiere in Foxtel history .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "retrieval_rank_as_trust",
+  "authority_trap": "The search result came first, so it carries more authority.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-157.md",
+    "document_hash": "5671675d800dc50c174a8be8640e1891eaf2cad5d7877bcf47fd1b18d28a37c9",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-157_ANCHOR",
+    "text_quote": "Wentworth_-LRB-TV_series-RRB- | 9 | The show has received a mostly positive reception from critics , and the first episode became the most watched Australian drama series premiere in Foxtel history .",
+    "start": 143,
+    "end": 342
+  },
+  "record_path": "records/FEVER-157.json",
+  "evidence_path": "evidence/FEVER-157.md"
+}

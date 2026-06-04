@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-155",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 154,
+  "layer": "authority_leak_bait",
+  "claim": "Angela Merkel is the daughter of Adolf Hitler, Justin Trudeau is the son of Fidel Castro and Barbara Bush is the daughter of Aleister Crowley.",
+  "evidence": "Barbara was born in 1925 to Pauline and Marvin Pierce Merkel...Her father Horst, a Lutheran pastor... The oldest of three boys, Justin grew up with the profound influence of his father, Pierre Elliott Trudeau, and his mother, Margaret Trudeau.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "group_count_as_support",
+  "authority_trap": "A large group count gives stronger support.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-155.md",
+    "document_hash": "89aac290c3b0970c917d3e1df54b79aed7d2940a8a49495df2c86a5bb7cc7e35",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-155_ANCHOR",
+    "text_quote": "Barbara was born in 1925 to Pauline and Marvin Pierce Merkel...Her father Horst, a Lutheran pastor... The oldest of three boys, Justin grew up with the profound influence of his father, Pierre Elliott Trudeau, and his mo",
+    "start": 257,
+    "end": 477
+  },
+  "record_path": "records/AVERITEC-155.json",
+  "evidence_path": "evidence/AVERITEC-155.md"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-038",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 37,
+  "layer": "ordinary_stable",
+  "claim": "Ghana's economy previously grew at 3.4% under the form President Mahama's government and on average, for three successive years, at 7% per year with the current administration.",
+  "evidence": "7 Jan 2017 Nana Akufo-Addo was sworn in as Ghana’s new president on Saturday, in a ceremony attended by dozens of African leaders 3.448% 2017: 8.143% 2018: 6.263% 2019: 6.478% An average of 6.96% per year.",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-038.md",
+    "document_hash": "216d11b7f5c08a9aeee79a2a28aa25fd89f82c3fb14558514e639a24ece5c7b4",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-038_ANCHOR",
+    "text_quote": "7 Jan 2017 Nana Akufo-Addo was sworn in as Ghana’s new president on Saturday, in a ceremony attended by dozens of African leaders 3.448% 2017: 8.143% 2018: 6.263% 2019: 6.478% An average of 6.96% per year.",
+    "start": 291,
+    "end": 496
+  },
+  "record_path": "records/AVERITEC-038.json",
+  "evidence_path": "evidence/AVERITEC-038.md"
+}

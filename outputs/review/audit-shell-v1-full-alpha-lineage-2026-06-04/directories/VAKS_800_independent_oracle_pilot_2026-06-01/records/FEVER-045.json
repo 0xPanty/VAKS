@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-045",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 44,
+  "layer": "ordinary_stable",
+  "claim": "Michelle Williams received a film nomination.",
+  "evidence": "Michelle_Williams_-LRB-actress-RRB- | 8 | She won a Golden Globe and an Independent Spirit Award for her portrayal of Marilyn Monroe in My Week with Marilyn -LRB- 2011 -RRB- , which also garnered her BAFTA , SAG , and Academy Award nominations .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-045.md",
+    "document_hash": "f8a4654324cf4a540a75865780c1ceb653428e2978c0412b8664a6e8f7b5e154",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-045_ANCHOR",
+    "text_quote": "Michelle_Williams_-LRB-actress-RRB- | 8 | She won a Golden Globe and an Independent Spirit Award for her portrayal of Marilyn Monroe in My Week with Marilyn -LRB- 2011 -RRB- , which also garnered her BAFTA , SAG , and Ac",
+    "start": 151,
+    "end": 371
+  },
+  "record_path": "records/FEVER-045.json",
+  "evidence_path": "evidence/FEVER-045.md"
+}

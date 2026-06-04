@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-112",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 111,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "United States contains cars.",
+  "evidence": "Lists_of_landforms_of_the_United_States | 0 | The United States contains varied landforms across its territory .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-112.md",
+    "document_hash": "00a7ff618746c1ef10fd0f77f8c059b74d6609e0ecc4c5a7bfe4118e97dc4559",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-112_ANCHOR",
+    "text_quote": "Lists_of_landforms_of_the_United_States | 0 | The United States contains varied landforms across its territory .",
+    "start": 134,
+    "end": 246
+  },
+  "record_path": "records/FEVER-112.json",
+  "evidence_path": "evidence/FEVER-112.md"
+}

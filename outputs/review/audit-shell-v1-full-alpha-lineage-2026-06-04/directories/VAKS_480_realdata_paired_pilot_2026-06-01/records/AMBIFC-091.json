@@ -1,0 +1,22 @@
+{
+  "id": "AMBIFC-091",
+  "dataset_family": "ambifc",
+  "source_dataset_status": "real_row",
+  "source_row_index": 90,
+  "claim": "there is a series 9 of vampire diaries",
+  "evidence": "The series is set in the fictional town of Mystic Falls, Virginia, a town charged with supernatural history since its settlement of migrants from New England in the late 18th century. It follows the life of Elena Gilbert (Nina Dobrev), a teenage girl who has just lost both parents in a car accident, as she falls in love with a 162-year-old vampire named Stefan Salvatore (Paul Wesley). Their relationship becomes increasingly complicated as Stefan's mysterious older brother Damon Salvatore (Ian Somerhalder) returns, with a plan to bring back their past love Katherine Pierce (also played by Dobrev), a vampire who looks exactly like Elena. Although Damon initially harbors a grudge against his brother for forcing him to become a vampire, he later reconciles with Stefan. He falls in love with Elena, creating a love triangle among the three. Both brothers protect Elena as they face various villains and threats to their town, including Katherine. The brothers' history and the town's mythology are revealed through flashbacks as the series goes on. Additional storylines revolve around the other inhabitants of the town, most notably Elena's younger brother Jeremy Gilbert (Steven R. McQueen) a",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-091.md",
+    "marker": "AMBIFC-091_ANCHOR"
+  }
+}

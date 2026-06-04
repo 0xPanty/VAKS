@@ -1,0 +1,9 @@
+# Source FULLANCHOR-028
+kind: repo_file
+dataset: scifact
+marker: FULLANCHOR-028_ANCHOR
+
+claim: Arterioles have a larger lumen diameter than venules.
+
+evidence quote begins: BACKGROUND We have developed techniques to implant angiogenic patches onto the epicardium over regions of infarcted cardiac tissue to stimulate revascularization of the damaged tissue. These experiments used a scaffold-b
+evidence quote ends.

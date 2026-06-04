@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-095",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 94,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Beijing government announced that Chinese people should not travel to the United States or buy American-made products.",
+  "evidence": "No No No",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "insufficient_evidence"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-095.md",
+    "document_hash": "d0f066c5758d9a0a02eafc50bb91b91fc800108a7cc9338e441f47d4d67139e1",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-095_ANCHOR",
+    "text_quote": "No No No",
+    "start": 233,
+    "end": 241
+  },
+  "record_path": "records/AVERITEC-095.json",
+  "evidence_path": "evidence/AVERITEC-095.md"
+}

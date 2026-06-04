@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-086",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 85,
+  "layer": "action_challenge_conflict",
+  "claim": "Ginger Baker is a musician.",
+  "evidence": "Ginger_Baker | 0 | Peter Edward `` Ginger '' Baker -LRB- born 19 August 1939 -RRB- is an English drummer , best known as the founder of the rock band Cream .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "explicit_challenge"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-086.md",
+    "document_hash": "5df8c5b140f9aed291b951798e5d99d050622a830e51da5f9fb3c2970921bc9d",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-086_ANCHOR",
+    "text_quote": "Ginger_Baker | 0 | Peter Edward `` Ginger '' Baker -LRB- born 19 August 1939 -RRB- is an English drummer , best known as the founder of the rock band Cream .",
+    "start": 133,
+    "end": 290
+  },
+  "record_path": "records/FEVER-086.json",
+  "evidence_path": "evidence/FEVER-086.md"
+}

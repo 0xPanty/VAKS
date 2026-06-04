@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-043",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 42,
+  "layer": "ordinary_stable",
+  "claim": "the hobbit is in lord of the rings.",
+  "evidence": "Originally, there were three types of hobbits, with different physical characteristics and temperaments: Harfoots, Stoors, and Fallohides. The Harfoots were the most numerous group of hobbits and were the first to enter Eriador. They were the smallest in stature, and the most typical of the race as described in The Hobbit. They lived in holes, or smials, and had closer relations with Dwarves than did other hobbits. Tolkien coined the term as analogous to \"hairfoot\". The Stoors were the second most numerous group of hobbits and the last to enter Eriador. They were stockier than other hobbits. They had an affinity for water, dwelt mostly beside rivers, and were the only hobbits to use boats and swim. Males were able to grow beards. Tolkien says they were \"less shy of Men\". Many hobbits of Buckland and the Marish in the Shire were Stoors, as were Déagol and Sméagol/Gollum. Tolkien used the Old English word stor or stoor, meaning \"strong\".",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-043.md",
+    "document_hash": "95c8045ae2b2bed2bccfe6c48f554bf35c8525b5049c2a92ada972d6c44428eb",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-043_ANCHOR",
+    "text_quote": "Originally, there were three types of hobbits, with different physical characteristics and temperaments: Harfoots, Stoors, and Fallohides. The Harfoots were the most numerous group of hobbits and were the first to enter ",
+    "start": 144,
+    "end": 364
+  },
+  "record_path": "records/AMBIFC-043.json",
+  "evidence_path": "evidence/AMBIFC-043.md"
+}

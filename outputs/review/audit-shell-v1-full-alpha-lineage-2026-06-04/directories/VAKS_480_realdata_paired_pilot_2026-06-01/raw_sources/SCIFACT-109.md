@@ -1,0 +1,7 @@
+# Raw Source SCIFACT-109
+dataset: scifact
+source_row: 108
+marker: SCIFACT-109_ANCHOR
+claim: Primary pro-inflammatory cytokines induce secondary pro- and anti-inflammatory mediators.
+label: 
+evidence: Little is known about the inter-individual variation of cytokine responses to different pathogens in healthy individuals. To systematically describe cytokine responses elicited by distinct pathogens and to determine the effect of genetic variation on cytokine production, we profiled cytokines produced by peripheral blood mononuclear cells from 197 individuals of European origin from the 200 Functional Genomics (200FG) cohort in the Human Functional Genomics Project (http://www.humanfunctionalgenomics.org), obtained over three different years. We compared bacteria- and fungi-induced cytokine profiles and found that most cytokine responses were organized around a physiological response to specific pathogens, rather than around a particular immune pathway or cytokine. We then correlated genome-wide single-nucleotide polymorphism (SNP) genotypes with cytokine abundance and identified six cytokine quantitative trait loci (QTLs). Among them, a cytokine QTL at the NAA35-GOLM1 locus markedly modulated interleukin (IL)-6 production in response to multiple pathogens and was associated with susceptibility to candidemia. Furthermore, the cytokine QTLs that we identified were enriched among SNP

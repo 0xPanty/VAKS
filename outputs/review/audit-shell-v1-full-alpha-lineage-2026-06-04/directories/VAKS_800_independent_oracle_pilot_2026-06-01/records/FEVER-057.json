@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-057",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 56,
+  "layer": "ordinary_stable",
+  "claim": "Charles, Prince of Wales founded The Prince's Trust in 1976.",
+  "evidence": "Charles,_Prince_of_Wales | 16 | Charles 's interests encompass a range of humanitarian and social issues : he founded The Prince 's Trust in 1976 , sponsors The Prince 's Charities , and is patron of numerous other charitable and arts organisations .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-057.md",
+    "document_hash": "97dfb7405308550b25881d765e778c95d195301c2cb7f3fef088adc1aaa733cb",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-057_ANCHOR",
+    "text_quote": "Charles,_Prince_of_Wales | 16 | Charles 's interests encompass a range of humanitarian and social issues : he founded The Prince 's Trust in 1976 , sponsors The Prince 's Charities , and is patron of numerous other chari",
+    "start": 166,
+    "end": 386
+  },
+  "record_path": "records/FEVER-057.json",
+  "evidence_path": "evidence/FEVER-057.md"
+}

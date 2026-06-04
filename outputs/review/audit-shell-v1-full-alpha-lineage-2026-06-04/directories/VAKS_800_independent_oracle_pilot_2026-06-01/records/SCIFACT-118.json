@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-118",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 117,
+  "layer": "anchor_problem",
+  "claim": "Helminths interfere with immune system control of macrophages activated by IL-4 favor Mycobacterium tuberculosis replication.",
+  "evidence": "Autophagy is a recently recognized immune effector mechanism against intracellular pathogens. The role of autophagy in innate immunity has been well established, but the extent of its regulation by the adaptive immune response is less well understood. The T helper 1 (Th1) cell cytokine IFN-gamma induces autophagy in macrophages to eliminate Mycobacterium tuberculosis. Here, we report that Th2 cytokines affect autophagy in macrophages and their ability to control intracellular M. tuberculosis. IL-4 and IL-13 abrogated autophagy and autophagy-mediated killing of intracellular mycobacteria in murine and human macrophages. Inhibition of starvation-induced autophagy by IL-4 and IL-13 was dependent on Akt signaling, whereas the inhibition of IFN-gamma-induced autophagy was Akt independent and signal transducer and activator of transcription 6 (STAT6) dependent. These findings establish a mechanism through which Th1-Th2 polarization differentially affects the immune control of intracellular pathogens.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "selector_drift"
+  ],
+  "anchor_status": "drift",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "drift",
+    "path": "raw_sources/SCIFACT-118.md",
+    "document_hash": "dcc79c9bf47e5d304097abc820ff72a768309a2689f0c7c5eafb0e459bc750da",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-118_ANCHOR",
+    "text_quote": "Autophagy is a recently recognized immune effector mechanism against intracellular pathogens. The role of autophagy in innate immunity has been well established, but the extent of its regulation by the adaptive immune re",
+    "start": 244,
+    "end": 464
+  },
+  "record_path": "records/SCIFACT-118.json",
+  "evidence_path": "evidence/SCIFACT-118.md"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "FULLANCHOR-056",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 55,
+  "layer": "full_anchor_click",
+  "claim": "CRP is not predictive of postoperative mortality following Coronary Artery Bypass Graft (CABG) surgery.",
+  "evidence": "OBJECTIVE To determine the effectiveness and cost effectiveness of using information from circulating biomarkers to inform the prioritisation process of patients with stable angina awaiting coronary artery bypass graft surgery. DESIGN Decision analytical model comparing four prioritisation strategies without biomarkers (no formal prioritisation, two urgency scores, and a risk score) and three strategies based on a risk score using biomarkers: a routinely assessed biomarker (estimated glomerular filtration rate), a novel biomarker (C reactive protein), or both. The order in which to perform coronary artery bypass grafting in a cohort of patients was determined by each prioritisation strategy, and mean lifetime costs and quality adjusted life years (QALYs) were compared. DATA SOURCES Swedish Coronary Angiography and Angioplasty Registry (9935 patients with stable angina awaiting coronary artery bypass grafting and then followed up for cardiovascular events after the procedure for 3.8 years), and meta-analyses of prognostic effects (relative risks) of biomarkers. RESULTS The observed risk of cardiovascular events while on the waiting list for coronary artery bypass grafting was 3 per 10,000 patients per day within the first 90 days (184 events in 9935 patients). Using a cost effectiveness threshold of pound20,000- pound30,000 (euro22,000-euro33,000; $32,000-$48,000) per additional",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "pdf_text",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/FULLANCHOR-056.md",
+    "document_hash": "db900b10dcd4d7960617a844209428233ae308a1da4c5b4a56db8ddf4e3831f6",
+    "version_id": "pdf_text-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-056_ANCHOR",
+    "text_quote": "OBJECTIVE To determine the effectiveness and cost effectiveness of using information from circulating biomarkers to inform the prioritisation process of patients with stable angina awaiting coronary artery bypass graft s",
+    "start": 222,
+    "end": 442
+  },
+  "record_path": "records/FULLANCHOR-056.json",
+  "evidence_path": "evidence/FULLANCHOR-056.md"
+}

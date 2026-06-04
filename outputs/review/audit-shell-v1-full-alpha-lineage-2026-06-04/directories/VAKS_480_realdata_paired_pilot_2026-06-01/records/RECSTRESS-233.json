@@ -1,0 +1,31 @@
+{
+  "id": "RECSTRESS-233",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 112,
+  "claim": "COVID-19 medical face masks are designed to be worn differently depending on the health of the wearer, masks should be worn colored side out if you are sick and do not want to spread germs around and the white side of the mask is the filter part to be worn facing out when the wearer is not sick, to prevent germs from getting in.",
+  "evidence": "The World Health Organisation (WHO) produced an infographic which includes the instruction to 'ensure the colored-side faces outwards.' it was worn properly, the face mask is not touched when it is worn.",
+  "source_label": "Not Enough Evidence",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-233.md",
+    "marker": "RECSTRESS-233_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-23",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-233.json",
+  "evidence_path": "evidence/RECSTRESS-233.md"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-004",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 3,
+  "layer": "ordinary_stable",
+  "claim": "the truman show is based on a book.",
+  "evidence": "An essay published in the International Journal of Psychoanalysis analyzed Truman as > [A] prototypical adolescent at the beginning of the movie. He feels trapped into a familial and social world to which he tries to conform while being unable to entirely identify with it, believing that he has no other choice (other than through the fantasy of fleeing to a far-way island). Eventually, Truman gains sufficient awareness of his condition to \"leave home\"—developing a more mature and authentic identity as an adult, leaving his child-self behind and becoming a True-man.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-004.md",
+    "document_hash": "e755e9fad823212d4efb973934b75f88f403e2217b49c2dc1404a8be8b1841ef",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-004_ANCHOR",
+    "text_quote": "An essay published in the International Journal of Psychoanalysis analyzed Truman as > [A] prototypical adolescent at the beginning of the movie. He feels trapped into a familial and social world to which he tries to con",
+    "start": 144,
+    "end": 364
+  },
+  "record_path": "records/AMBIFC-004.json",
+  "evidence_path": "evidence/AMBIFC-004.md"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-122",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 121,
+  "layer": "anchor_problem",
+  "claim": "Russia has successfully developed a vaccine for Covid-19 and it has passed all checks.",
+  "evidence": "‘Sputnik V’ has been developed by Moscow-based Gamaleya Research Institute of Epidemiology and Microbiology. It was registered by the Russian health ministry on August 11 as the first registered Covid-19 vaccine in the market but The certificate mentions that “the vaccine cannot be used widely until 1 January 2021”, presumably after larger clinical trials are completed. The Russian vaccine is an “adenovirus vector-based vaccine”. The idea is to use the weakened common cold virus to stimulate an immune response and trigger the formation of antibodies against Covid-19. These anti-bodies are then ready to fight against Covid-19 in case one catches a coronavirus infection. Even the widely awaited Oxford University vaccine is exploring the same route.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "selector_drift"
+  ],
+  "anchor_status": "drift",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "drift",
+    "path": "raw_sources/AVERITEC-122.md",
+    "document_hash": "bad92a06cc20ac8125b6bfb7fbd9baca9ad45720a2227c15662e2b0b0afd2a37",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-122_ANCHOR",
+    "text_quote": "‘Sputnik V’ has been developed by Moscow-based Gamaleya Research Institute of Epidemiology and Microbiology. It was registered by the Russian health ministry on August 11 as the first registered Covid-19 vaccine in the m",
+    "start": 208,
+    "end": 428
+  },
+  "record_path": "records/AVERITEC-122.json",
+  "evidence_path": "evidence/AVERITEC-122.md"
+}

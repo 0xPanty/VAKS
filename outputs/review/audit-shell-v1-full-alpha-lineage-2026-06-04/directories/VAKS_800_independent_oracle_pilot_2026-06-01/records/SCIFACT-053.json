@@ -1,0 +1,29 @@
+{
+  "id": "SCIFACT-053",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 52,
+  "layer": "ordinary_stable",
+  "claim": "CCL19 is absent within dLNs.",
+  "evidence": "Chemokines orchestrate immune cell trafficking by eliciting either directed or random migration and by activating integrins in order to induce cell adhesion. Analyzing dendritic cell (DC) migration, we showed that these distinct cellular responses depended on the mode of chemokine presentation within tissues. The surface-immobilized form of the chemokine CCL21, the heparan sulfate-anchoring ligand of the CC-chemokine receptor 7 (CCR7), caused random movement of DCs that was confined to the chemokine-presenting surface because it triggered integrin-mediated adhesion. Upon direct contact with CCL21, DCs truncated the anchoring residues of CCL21, thereby releasing it from the solid phase. Soluble CCL21 functionally resembles the second CCR7 ligand, CCL19, which lacks anchoring residues and forms soluble gradients. Both soluble CCR7 ligands triggered chemotactic movement, but not surface adhesion. Adhesive random migration and directional steering cooperate to produce dynamic but spatially restricted locomotion patterns closely resembling the cellular dynamics observed in secondary lymphoid organs.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-053.md",
+    "document_hash": "1b3b73f749c5c04c3ed3f70c236cf239e40ea5def0a21fe4d63703953659786d",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-053_ANCHOR",
+    "text_quote": "Chemokines orchestrate immune cell trafficking by eliciting either directed or random migration and by activating integrins in order to induce cell adhesion. Analyzing dendritic cell (DC) migration, we showed that these ",
+    "start": 140,
+    "end": 360
+  },
+  "record_path": "records/SCIFACT-053.json",
+  "evidence_path": "evidence/SCIFACT-053.md"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "SCIFACT-034",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 33,
+  "layer": "ordinary_stable",
+  "claim": "Assembly of invadopodia is triggered by focal generation of phosphatidylinositol-3,4-biphosphate and the activation of the nonreceptor tyrosine kinase Src.",
+  "evidence": "Invadopodia are extracellular matrix (ECM)-degrading protrusions formed by invasive cancer cells. Podosomes are structures functionally similar to invadopodia that are found in oncogene-transformed fibroblasts and monocyte-derived cells, including macrophages and osteoclasts. These structures are thought to play important roles in the pericellular remodeling of ECM during cancer invasion and metastasis. Much effort has been directed toward identification of the molecular components and regulators of invadopodia/podosomes, which could be therapeutic targets in the treatment of malignant cancers. However, it remains largely unknown how these components are assembled into invadopodia/podosomes and how the assembly process is spatially and temporally regulated. This review will summarize recent progress on the molecular mechanisms of invadopodia/podosome formation, with strong emphasis on the roles of lipid rafts and phosphoinositides.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-034.md",
+    "document_hash": "6cd8f8403c46d756280cbfc38cbf1ab024c79396c2ed8bae8d93d2d78efbe391",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-034_ANCHOR",
+    "text_quote": "Invadopodia are extracellular matrix (ECM)-degrading protrusions formed by invasive cancer cells. Podosomes are structures functionally similar to invadopodia that are found in oncogene-transformed fibroblasts and monocy",
+    "start": 267,
+    "end": 487
+  },
+  "record_path": "records/SCIFACT-034.json",
+  "evidence_path": "evidence/SCIFACT-034.md"
+}

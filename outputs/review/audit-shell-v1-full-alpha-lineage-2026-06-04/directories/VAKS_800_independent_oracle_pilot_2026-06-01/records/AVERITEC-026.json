@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-026",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 25,
+  "layer": "ordinary_stable",
+  "claim": "The Kenyan judiciary does not even get 1% of the national budget.",
+  "evidence": "2021 Budget speeches for 2020/21 show the judiciary received 0.6% of the national budget.",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-026.md",
+    "document_hash": "a0c652bd3ef35d7716c78eb9298f785173a626ba45a854f7395e568f0644939c",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-026_ANCHOR",
+    "text_quote": "2021 Budget speeches for 2020/21 show the judiciary received 0.6% of the national budget.",
+    "start": 180,
+    "end": 269
+  },
+  "record_path": "records/AVERITEC-026.json",
+  "evidence_path": "evidence/AVERITEC-026.md"
+}

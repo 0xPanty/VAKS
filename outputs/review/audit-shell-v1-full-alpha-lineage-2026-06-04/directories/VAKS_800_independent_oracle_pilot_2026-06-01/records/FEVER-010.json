@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-010",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 9,
+  "layer": "ordinary_stable",
+  "claim": "The industry that the company The New York Times is part of is declining.",
+  "evidence": "The_New_York_Times | 0 | The New York Times -LRB- sometimes abbreviated NYT and The Times -RRB- is an American daily newspaper , founded and continuously published in New York City since September 18 , 1851 , by The New York Times Company . | Newspaper | 31 | The late 2000s -- early 2010s global recession , combined with the rapid growth of free web-based alternatives , has helped cause a decline in advertising and circulation , as many papers had to retrench operations to stanch the losses .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-010.md",
+    "document_hash": "3852627484197d301d15f02658c3ccb488f134217da2edda0ba50a6fcd6155f6",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-010_ANCHOR",
+    "text_quote": "The_New_York_Times | 0 | The New York Times -LRB- sometimes abbreviated NYT and The Times -RRB- is an American daily newspaper , founded and continuously published in New York City since September 18 , 1851 , by The New ",
+    "start": 179,
+    "end": 399
+  },
+  "record_path": "records/FEVER-010.json",
+  "evidence_path": "evidence/FEVER-010.md"
+}

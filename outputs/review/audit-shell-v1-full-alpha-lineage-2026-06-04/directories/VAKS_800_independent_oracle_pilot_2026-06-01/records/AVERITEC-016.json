@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-016",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 15,
+  "layer": "ordinary_stable",
+  "claim": "Plant Seeds Can Restructure Their Own DNA Through Human Saliva",
+  "evidence": "There is no biological mechanism by which plant DNA can sense nutritional needs of a human via human DNA",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-016.md",
+    "document_hash": "334fa566721cd446e137655e917bb9abe252773988994d5c17cb17953a4371e4",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-016_ANCHOR",
+    "text_quote": "There is no biological mechanism by which plant DNA can sense nutritional needs of a human via human DNA",
+    "start": 177,
+    "end": 281
+  },
+  "record_path": "records/AVERITEC-016.json",
+  "evidence_path": "evidence/AVERITEC-016.md"
+}

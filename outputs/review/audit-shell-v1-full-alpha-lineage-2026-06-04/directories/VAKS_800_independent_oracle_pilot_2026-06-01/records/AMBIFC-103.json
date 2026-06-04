@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-103",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 102,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "into the woods is a musical all the way through.",
+  "evidence": "Reports subsequently surfaced in January 2013 that Meryl Streep had been cast to play the Witch. Streep had instituted a personal \"no witch\" rule after she turned 40 and was offered three witch roles, but ultimately broke her own rule to do a Sondheim role again. She was already familiar with his work, having participated in the original production of Sondheim's The Frogs as a student at Yale University. During the same month, it was reported that Janney had been confirmed to join the film as well. Five months later, however, Tracey Ullman was cast as Jack's Mother instead. In April 2013, Johnny Depp was in final negotiations, along with Streep, to join the film. The Hollywood Reporter reported that to help make the film on such a tight budget, Depp agreed as a favor to Disney and to Marshall to a \"boarding\" arrangement, in which he would appear in a minor role for a fee of $1 million, instead of his typical fee of $20 million for a starring role. In May, James Corden, who took part in the reading of the screenplay, was in talks to play the role of the Baker. On May 10, 2013, Disney confirmed the casting of Streep, Depp, and Corden as the Witch, the Big Bad Wolf, and the Baker, respectively. That same month, Emily Blunt and Christine Baranski were cast, respectively, as the Baker's Wife and Cinderella's Stepmother. Marshall later confirmed that Blunt was selected for her \"warm[",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-103.md",
+    "document_hash": "16a97d6fdb92dcd2a4506cb24852a47823b03a066c9d1bebefd3b4af20a8dc22",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-103_ANCHOR",
+    "text_quote": "Reports subsequently surfaced in January 2013 that Meryl Streep had been cast to play the Witch. Streep had instituted a personal \"no witch\" rule after she turned 40 and was offered three witch roles, but ultimately brok",
+    "start": 157,
+    "end": 377
+  },
+  "record_path": "records/AMBIFC-103.json",
+  "evidence_path": "evidence/AMBIFC-103.md"
+}

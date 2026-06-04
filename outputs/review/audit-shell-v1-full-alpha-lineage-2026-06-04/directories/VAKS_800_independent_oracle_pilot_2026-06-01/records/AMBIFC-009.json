@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-009",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 8,
+  "layer": "ordinary_stable",
+  "claim": "mockingbird kill with an academy award",
+  "evidence": "* AFI's 100 Years. ..100Movies: 10th Anniversary Edition– #25",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-009.md",
+    "document_hash": "9d0eaa6aaba449fbf2d417e1c00184a125c6cc764aae54f9964c50346837ee54",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-009_ANCHOR",
+    "text_quote": "* AFI's 100 Years. ..100Movies: 10th Anniversary Edition– #25",
+    "start": 147,
+    "end": 208
+  },
+  "record_path": "records/AMBIFC-009.json",
+  "evidence_path": "evidence/AMBIFC-009.md"
+}

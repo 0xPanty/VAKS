@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-109",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 108,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Pan Am ended in 2000.",
+  "evidence": "Pan_Am_-LRB-TV_series-RRB- | 4 | Pan Am premiered on ABC on September 25 , 2011 , and ended on February 19 , 2012 .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-109.md",
+    "document_hash": "357aa4ef07b5e21c0b9937092db67d13ad9893a11835f181af59b630520ffe3d",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-109_ANCHOR",
+    "text_quote": "Pan_Am_-LRB-TV_series-RRB- | 4 | Pan Am premiered on ABC on September 25 , 2011 , and ended on February 19 , 2012 .",
+    "start": 127,
+    "end": 242
+  },
+  "record_path": "records/FEVER-109.json",
+  "evidence_path": "evidence/FEVER-109.md"
+}

@@ -1,0 +1,13 @@
+sample_id,case_id,adversarial_category,time_to_triage_seconds,trap_recognized_y_n,next_action,would_open_full_audit_y_n,wrong_actionability_y_n,clickback_source_path_opens_y_n,clickback_product_success_y_n,authority_misunderstanding_y_n,grouping_misread_y_n,notes
+ADV-UX-01,ADV-01,ordinary-looking action-basis,not_measured_ai_dry_run,y,打开 full audit；完成复核前暂不可作为行动依据。,y,n,y,y,n,n,"Codex adversarial dry-run; synthetic trap recognition only, not human/product validation."
+ADV-UX-02,ADV-02,explicit challenge buried in polite wording,not_measured_ai_dry_run,y,标为需要复核；展开挑战和适用范围。,y,n,y,y,n,n,"Codex adversarial dry-run; synthetic trap recognition only, not human/product validation."
+ADV-UX-03,ADV-03,anchor pseudo-success,not_measured_ai_dry_run,y,重新定位锚点；暂不可行动。,y,n,y,n,n,n,"Codex adversarial dry-run; synthetic trap recognition only, not human/product validation."
+ADV-UX-04,ADV-04,wrapper-only click-back,not_measured_ai_dry_run,y,补真实来源或 immutable snapshot；暂不可行动。,y,n,y,n,n,n,"Codex adversarial dry-run; synthetic trap recognition only, not human/product validation."
+ADV-UX-05,ADV-05,review_due trap,not_measured_ai_dry_run,y,进入 review_due；补 evidence envelope 与适用范围。,y,n,y,y,n,n,"Codex adversarial dry-run; synthetic trap recognition only, not human/product validation."
+ADV-UX-06,ADV-06,grouping near-miss,not_measured_ai_dry_run,y,保持单条可见；禁止按同一 recurrence digest 覆盖。,n,n,y,y,n,n,"Codex adversarial dry-run; synthetic trap recognition only, not human/product validation."
+ADV-UX-07,ADV-07,serious folded trap,not_measured_ai_dry_run,y,从组里 breakout；打开 full audit；暂不可行动。,y,n,y,n,n,n,"Codex adversarial dry-run; synthetic trap recognition only, not human/product validation."
+ADV-UX-08,ADV-08,authority paraphrase,not_measured_ai_dry_run,y,保留记录，但去掉 authority 暗示；必要时加边界提醒。,n,n,y,y,n,n,"Codex adversarial dry-run; synthetic trap recognition only, not human/product validation."
+ADV-UX-09,ADV-09,fake numeric precision,not_measured_ai_dry_run,y,触发 wording review；移除或降级数字权威暗示。,y,n,y,y,n,n,"Codex adversarial dry-run; synthetic trap recognition only, not human/product validation."
+ADV-UX-10,ADV-10,summary overwrite,not_measured_ai_dry_run,y,打开 group/member view；恢复成员自己的 claim 与 evidence。,y,n,y,y,n,n,"Codex adversarial dry-run; synthetic trap recognition only, not human/product validation."
+ADV-UX-11,ADV-11,source-count trap,not_measured_ai_dry_run,y,保留 sparse pointer，但不要把 source count 写成支持强度。,n,n,y,y,n,n,"Codex adversarial dry-run; synthetic trap recognition only, not human/product validation."
+ADV-UX-12,ADV-12,lineage trap,not_measured_ai_dry_run,y,保留 lineage 作为 provenance；不要升级为 support 或 independence。,n,n,y,y,n,n,"Codex adversarial dry-run; synthetic trap recognition only, not human/product validation."

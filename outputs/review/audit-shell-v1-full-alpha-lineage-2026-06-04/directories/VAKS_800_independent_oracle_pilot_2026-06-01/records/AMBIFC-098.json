@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-098",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 97,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "the handmaid's tale is a hulu original.",
+  "evidence": "On Rotten Tomatoes, the third season has an approval rating of 82% based on 53 reviews, with an average rating of 6.91/10. The site's critical consensus reads, \"The Handmaid's Tale's third season reins in its horrors and inspires hope that revolution really is possible – if only the story would stop spinning its wheels and get to it already\". On Metacritic, it has a weighted average score of 67 out of 100 based on 13 critics, indicating \"generally favorable reviews\". Kelly Lawler of USA Today gave it a positive review, scoring it three out of four stars. She claimed it is an improvement over the second season, \"that rights many – though definitely not all – of Season 2's wrongs\". Overall, she wrote, \"The new season is more propulsive and watchable, although it doesn't quite reach the heights of that first moving season. But Handmaid's regains its footing by setting off on a new path\". Daniel Fienberg of The Hollywood Reporter wrote a generally positive review, praising Elisabeth Moss' performance and the cinematography, but criticized the plot \"that has become frustratingly repetitive\". Overall, he wrote, \"Still occasionally powerful, but rarely as provocative\".",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "insufficient_evidence"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-098.md",
+    "document_hash": "0f317dc4cb9cec029c74cd286374aa98c8720a9c7e78e3912b1f42c12f95fc67",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-098_ANCHOR",
+    "text_quote": "On Rotten Tomatoes, the third season has an approval rating of 82% based on 53 reviews, with an average rating of 6.91/10. The site's critical consensus reads, \"The Handmaid's Tale's third season reins in its horrors and",
+    "start": 148,
+    "end": 368
+  },
+  "record_path": "records/AMBIFC-098.json",
+  "evidence_path": "evidence/AMBIFC-098.md"
+}

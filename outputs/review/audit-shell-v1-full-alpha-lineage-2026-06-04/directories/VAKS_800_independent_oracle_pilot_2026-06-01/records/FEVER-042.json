@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-042",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 41,
+  "layer": "ordinary_stable",
+  "claim": "Dileep acted in a film.",
+  "evidence": "Dileep_-LRB-actor-RRB- | 8 | Films such as Sallapam -LRB- 1996 -RRB- , Ee Puzhayum Kadannu -LRB- 1997 -RRB- , Punjabi House -LRB- 1998 -RRB- , Udayapuram Sulthan -LRB- 1999 -RRB- , and Chandranudikkunna Dikhil -LRB- 1999 -RRB- established his status as a prominent actor during the late-1990s .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-042.md",
+    "document_hash": "6cfa932f6713cc80611ea504623d900ab65cb6b852870a2bb3f802ac76746ce3",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-042_ANCHOR",
+    "text_quote": "Dileep_-LRB-actor-RRB- | 8 | Films such as Sallapam -LRB- 1996 -RRB- , Ee Puzhayum Kadannu -LRB- 1997 -RRB- , Punjabi House -LRB- 1998 -RRB- , Udayapuram Sulthan -LRB- 1999 -RRB- , and Chandranudikkunna Dikhil -LRB- 1999",
+    "start": 129,
+    "end": 349
+  },
+  "record_path": "records/FEVER-042.json",
+  "evidence_path": "evidence/FEVER-042.md"
+}

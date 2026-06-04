@@ -1,0 +1,4 @@
+# Evidence Packet AMBIFC-032
+marker: EVIDENCE_AMBIFC-032_ANCHOR
+claim: samuel l jackson dies in snakes on a plane.
+evidence: In June 2006, New Line commissioned famed UK audio-visual film remixers and chop-up artists Addictive TV to cut and sample Snakes on a Plane to create trailers for the U.S. television networks. The official teaser trailer premiered before X-Men: The Last Stand, and the first official trailer appeared online on June 26, 2006. Another trailer circulated in July 2006, showing several of the snake attacks and a missing pilot and co-pilot. Rotten Tomatoes had video clips of the official trailers, as well as fan-made trailers. During a July 21, 2006 panel discussion at the Comic-Con Convention in San Diego, California, a preview clip from the film was shown to a crowd of more than 6,500 people. The panel included actors Samuel L. Jackson and Kenan Thompson, director David R. Ellis, and snake-handler Jules Sylvester.

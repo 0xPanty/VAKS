@@ -1,0 +1,7 @@
+# Raw Source SCIFACT-081
+dataset: scifact
+source_row: 80
+marker: SCIFACT-081_ANCHOR
+claim: Mathematical models predict that using Artemisinin-based combination therapy over nongametocytocidal drugs have a dramatic impact in reducing malaria transmission.
+label: 
+evidence: BACKGROUND Artemisinin derivatives used in recently introduced combination therapies (ACTs) for Plasmodium falciparum malaria significantly lower patient infectiousness and have the potential to reduce population-level transmission of the parasite. With the increased interest in malaria elimination, understanding the impact on transmission of ACT and other antimalarial drugs with different pharmacodynamics becomes a key issue. This study estimates the reduction in transmission that may be achieved by introducing different types of treatment for symptomatic P. falciparum malaria in endemic areas. METHODS AND FINDINGS We developed a mathematical model to predict the potential impact on transmission outcomes of introducing ACT as first-line treatment for uncomplicated malaria in six areas of varying transmission intensity in Tanzania. We also estimated the impact that could be achieved by antimalarials with different efficacy, prophylactic time, and gametocytocidal effects. Rates of treatment, asymptomatic infection, and symptomatic infection in the six study areas were estimated using the model together with data from a cross-sectional survey of 5,667 individuals conducted prior to p

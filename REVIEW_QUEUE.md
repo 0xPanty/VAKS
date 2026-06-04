@@ -858,3 +858,69 @@ The queue produces noisy clusters that cannot support promotion decisions.
 ```
 
 If it fails, adjust point granularity and source independence rules before adding embeddings or scoring.
+
+## 9. Candidate Operation Convention: Audit Shell v1 / Queue-First Operator Cockpit
+
+Status:
+
+```text
+operator-only candidate convention
+pilot pending
+not formal adoption
+not schema guidance
+not truth-layer guidance
+not user-facing UI
+```
+
+Main candidate record:
+
+```text
+outputs/review/2026-06-04-audit-shell-v1-candidate-operation-convention.md
+```
+
+Full alpha lineage now lives inside the main vault:
+
+```text
+outputs/review/audit-shell-v1-full-alpha-lineage-2026-06-04/
+```
+
+This directory keeps the June 1 through June 4 audit shell alpha materials intact:
+
+```text
+full ingest simulation
+pressure test
+800 independent oracle pilot lineage
+queue-first cockpit prototype
+Pro review package
+final closeout package
+intermediate zip snapshots
+```
+
+Candidate rule:
+
+```text
+Use queue-first cockpit as an operator-only candidate convention for backstage
+source / record / evidence triage. Do not treat it as formal adoption, reviewed
+truth, schema guidance, or product-grade click-back validation.
+```
+
+Hard boundary:
+
+```text
+deferred_review_unless_promoted items must generate a promotion receipt and
+move to review_now / blocking / regressed before they can be used as
+action-basis, rule/convention basis, conflict handling, explicit challenge
+handling, or high-risk answer support.
+
+anchor-strength strip is only a front-face summary. Only selector-grade
+jump-back can claim evidence landing. source / claim / context / diagnostic /
+history / binary landing cannot be described as evidence support.
+```
+
+Next pilot:
+
+```text
+80-row operator triage
+60-row selector-grade semantic click-back
+60-row source-family independence trap
+```

@@ -1,0 +1,22 @@
+{
+  "id": "AMBIFC-065",
+  "dataset_family": "ambifc",
+  "source_dataset_status": "real_row",
+  "source_row_index": 64,
+  "claim": "8 tablespoons of butter is a whole stick.",
+  "evidence": "In the United States, butter has traditionally been made into small, rectangular blocks by means of a pair of wooden butter paddles. It is usually produced in 4-ounce (1⁄4 lb; 110 g) sticks that are individually wrapped in waxed or foiled paper, and sold as a 1 pound (0.45 kg) package of 4 sticks. This practice is believed to have originated in 1907, when Swift and Company began packaging butter in this manner for mass distribution. Due to historical differences in butter printers (machines that cut and package butter), 4-ounce sticks are commonly produced in two different shapes: * The dominant shape east of the Rocky Mountains is the Elgin, or Eastern-pack shape, named for a dairy in Elgin, Illinois. The sticks measure 4 3⁄4 by 1 1⁄4 by 1 1⁄4 inches (121 mm × 32 mm × 32 mm) and are typically sold stacked two by two in elongated cube-shaped boxes. * West of the Rocky Mountains, butter printers standardized on a different shape that is now referred to as the Western-pack shape. These butter sticks measure 3 1⁄4 by 1 1⁄2 by 1 1⁄2 inches (83 mm × 38 mm × 38 mm) and are usually sold with four sticks packed side-by-side in a flat, rectangular box. Most butter dishes are designed for El",
+  "source_label": "refuting",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-065.md",
+    "marker": "AMBIFC-065_ANCHOR"
+  }
+}

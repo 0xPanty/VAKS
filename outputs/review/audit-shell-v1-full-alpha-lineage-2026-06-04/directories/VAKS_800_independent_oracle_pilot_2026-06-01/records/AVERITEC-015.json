@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-015",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 14,
+  "layer": "ordinary_stable",
+  "claim": "President Muhammadu Buhari sign a new Police bill to allow officers arrest without a warrant",
+  "evidence": "Yes, President Buhari introduced a new police bill which allows the police to arrest without a warrant or court order is true. The bill is confirmed to have been in place since September 16, 2020. Yes, President Buhari introduced a new police bill which allows the police to arrest without a warrant or court order is true but only under certain circumstances. The president in a memo dated September 16, 2020, communicated his assent to the Bill to the National Assembly, through the Clerk of the legislature.",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-015.md",
+    "document_hash": "03c77b71077a3883f119447d42ba68d1391913f326548afbc26cae1280b27e4b",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-015_ANCHOR",
+    "text_quote": "Yes, President Buhari introduced a new police bill which allows the police to arrest without a warrant or court order is true. The bill is confirmed to have been in place since September 16, 2020. Yes, President Buhari i",
+    "start": 207,
+    "end": 427
+  },
+  "record_path": "records/AVERITEC-015.json",
+  "evidence_path": "evidence/AVERITEC-015.md"
+}

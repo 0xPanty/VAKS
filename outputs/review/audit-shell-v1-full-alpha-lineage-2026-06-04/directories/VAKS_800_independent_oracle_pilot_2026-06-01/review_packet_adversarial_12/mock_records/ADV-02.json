@@ -1,0 +1,11 @@
+{
+  "case_id": "ADV-02",
+  "adversarial_category": "explicit challenge buried in polite wording",
+  "claim": "这条记录认为某方案在所有相似项目中都适用。",
+  "expected_state": "for_review",
+  "expected_anchor_status": "valid",
+  "expected_no_group": "n/a",
+  "source_pointer": "review_packet_adversarial_12/mock_sources/ADV-02.md",
+  "evidence_pointer": "review_packet_adversarial_12/mock_evidence/ADV-02.md",
+  "note": "Synthetic operator-surface test record; not a truth-layer schema proposal."
+}

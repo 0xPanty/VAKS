@@ -1,0 +1,20 @@
+{
+  "id": "FEVER-007",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 6,
+  "claim": "Margot Kidder is a person.",
+  "evidence": "Margot_Kidder | 15 | In 2005 , Kidder became a naturalized U.S. citizen .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-007.md",
+    "marker": "FEVER-007_ANCHOR"
+  }
+}

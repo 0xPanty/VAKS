@@ -1,0 +1,38 @@
+{
+  "id": "FULLANCHOR-014",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 13,
+  "layer": "full_anchor_click",
+  "claim": "Joe Biden voted for the Iraq War and he supported wars in Serbia, Syria, and Libya.",
+  "evidence": "Yes Yes Yes",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "real_web_snapshot",
+  "source_anchor": {
+    "status": "valid",
+    "path": "real_source_snapshots/FULLANCHOR-014.txt",
+    "document_hash": "cf0ee16faf28a987cfa9593a766f1d0fda0a52a88c075fe2d9eb57f31742e026",
+    "version_id": "real-web-snapshot-v2",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-014_REAL_SNAPSHOT",
+    "text_quote": "More Info I would like to contribute One Time Monthly Yearly Join Now Rand Paul stated on August 25, 2020 in a speech at the RNC: Says Joe Biden “voted for the Iraq War … He supported war in Serbia, Syria, Libya.",
+    "start": 1446,
+    "end": 1658,
+    "quote_strategy": "claim_keyword_window",
+    "landing_class": "claim_relevant_context_landing",
+    "semantic_selector_success": true,
+    "boilerplate_quote": false
+  },
+  "record_path": "records/FULLANCHOR-014.json",
+  "evidence_path": "evidence/FULLANCHOR-014.md",
+  "real_snapshot_url": "https://web.archive.org/web/20210506070632/https://www.politifact.com/factchecks/2020/aug/26/rand-paul/fact-checking-rand-paul-joe-biden-and-support-wars/",
+  "clickback_snapshot_kind": "live_urllib_retry"
+}

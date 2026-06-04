@@ -1,0 +1,11 @@
+{
+  "case_id": "ADV-12",
+  "adversarial_category": "lineage trap",
+  "claim": "这条记录把完整 lineage 写成独立验证。",
+  "expected_state": "ordinary",
+  "expected_anchor_status": "valid",
+  "expected_no_group": "n/a",
+  "source_pointer": "review_packet_adversarial_12/mock_sources/ADV-12.md",
+  "evidence_pointer": "review_packet_adversarial_12/mock_evidence/ADV-12.md",
+  "note": "Synthetic operator-surface test record; not a truth-layer schema proposal."
+}

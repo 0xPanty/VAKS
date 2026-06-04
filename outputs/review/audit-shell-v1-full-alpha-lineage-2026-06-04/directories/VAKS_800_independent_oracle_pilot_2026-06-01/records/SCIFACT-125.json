@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-125",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 124,
+  "layer": "anchor_problem",
+  "claim": "Histone demethylase recruitment and a transient decrease in histone methylation is necessary for ligand-dependent induction of transcription by nuclear receptors.",
+  "evidence": "Nuclear receptors undergo ligand-dependent conformational changes that are required for corepressor-coactivator exchange, but whether there is an actual requirement for specific epigenetic landmarks to impose ligand dependency for gene activation remains unknown. Here we report an unexpected and general strategy that is based on the requirement for specific cohorts of inhibitory histone methyltransferases (HMTs) to impose gene-specific gatekeeper functions that prevent unliganded nuclear receptors and other classes of regulated transcription factors from binding to their target gene promoters and causing constitutive gene activation in the absence of stimulating signals. This strategy, based at least in part on an HMT-dependent inhibitory histone code, imposes a requirement for specific histone demethylases, including LSD1, to permit ligand- and signal-dependent activation of regulated gene expression. These events link an inhibitory methylation component of the histone code to a broadly used strategy that circumvents pathological constitutive gene induction by physiologically regulated transcription factors.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "stale_pointer"
+  ],
+  "anchor_status": "stale",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "stale",
+    "path": "raw_sources/SCIFACT-125.md",
+    "document_hash": "ae05fb29e9a93e3604725da150a566fe2d2ec86716364668f86fd9d163cae624",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-125_ANCHOR",
+    "text_quote": "Nuclear receptors undergo ligand-dependent conformational changes that are required for corepressor-coactivator exchange, but whether there is an actual requirement for specific epigenetic landmarks to impose ligand depe",
+    "start": -1,
+    "end": -1
+  },
+  "record_path": "records/SCIFACT-125.json",
+  "evidence_path": "evidence/SCIFACT-125.md"
+}

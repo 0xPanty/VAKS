@@ -1,0 +1,30 @@
+{
+  "id": "FULLANCHOR-068",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 67,
+  "layer": "full_anchor_click",
+  "claim": "Chenodeosycholic acid treatment increases whole-body energy expenditure.",
+  "evidence": "The interest in brown adipose tissue (BAT) as a target to combat metabolic disease has recently been renewed with the discovery of functional BAT in humans. In rodents, BAT can be activated by bile acids, which activate type 2 iodothyronine deiodinase (D2) in BAT via the G-coupled protein receptor TGR5, resulting in increased oxygen consumption and energy expenditure. Here we examined the effects of oral supplementation of the bile acid chenodeoxycholic acid (CDCA) on human BAT activity. Treatment of 12 healthy female subjects with CDCA for 2 days resulted in increased BAT activity. Whole-body energy expenditure was also increased upon CDCA treatment. In vitro treatment of primary human brown adipocytes derived with CDCA or specific TGR5 agonists increased mitochondrial uncoupling and D2 expression, an effect that was absent in human primary white adipocytes. These findings identify bile acids as a target to activate BAT in humans.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "repo_file",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/FULLANCHOR-068.md",
+    "document_hash": "8c817ee77d7e1138fcfa1f3d449948875c3031209c83f5c3f20118f9cc2bc654",
+    "version_id": "repo_file-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-068_ANCHOR",
+    "text_quote": "The interest in brown adipose tissue (BAT) as a target to combat metabolic disease has recently been renewed with the discovery of functional BAT in humans. In rodents, BAT can be activated by bile acids, which activate ",
+    "start": 192,
+    "end": 412
+  },
+  "record_path": "records/FULLANCHOR-068.json",
+  "evidence_path": "evidence/FULLANCHOR-068.md"
+}

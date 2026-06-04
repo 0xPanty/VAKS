@@ -1,0 +1,22 @@
+{
+  "id": "FEVER-098",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 97,
+  "claim": "FC Barcelona is a sports club.",
+  "evidence": "FC_Barcelona | 4 | Unlike many other football clubs , the supporters own and operate Barcelona .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "stale_pointer"
+  ],
+  "anchor_status": "stale",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "stale",
+    "path": "raw_sources/FEVER-098.md",
+    "marker": "FEVER-098_ANCHOR"
+  }
+}

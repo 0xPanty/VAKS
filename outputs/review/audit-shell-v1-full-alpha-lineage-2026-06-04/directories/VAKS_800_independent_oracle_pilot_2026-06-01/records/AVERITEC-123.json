@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-123",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 122,
+  "layer": "anchor_problem",
+  "claim": "Kamala Harris was descended from enslavers, and this is an inconvenient part of her history and this is a deep dark secret.",
+  "evidence": "She is of Jamaican descent One of her ancestors was an Irish sugar plantation owner who had slaves ‘I am who I am’: Kamala Harris, daughter of Indian and Jamaican immigrants, defines herself simply as ‘American’",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "moved_pointer"
+  ],
+  "anchor_status": "moved",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "moved",
+    "path": "raw_sources/AVERITEC-123_moved.md",
+    "document_hash": "195e2e39e6f4cd7032715c6b5e0dc0d8b8574b5b07c8d6795d10c6dd802fecbd",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-123_ANCHOR",
+    "text_quote": "She is of Jamaican descent One of her ancestors was an Irish sugar plantation owner who had slaves ‘I am who I am’: Kamala Harris, daughter of Indian and Jamaican immigrants, defines herself simply as ‘American’",
+    "start": 238,
+    "end": 449
+  },
+  "record_path": "records/AVERITEC-123.json",
+  "evidence_path": "evidence/AVERITEC-123.md"
+}

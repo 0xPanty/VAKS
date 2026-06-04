@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-065",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 64,
+  "layer": "action_challenge_conflict",
+  "claim": "Social Security checks do not go through the U.S. postal service since 2013 because it's not secure",
+  "evidence": "Currently, the Social Security Administration pays approximately 71.6 million (98.8%) Social Security and SSI benefits electronically per month and mails nearly 850,000 paper checks (1.2%) per month. No answer could be found. There are two ways you can receive your benefits: Into an existing bank account via Direct Deposit or Onto a Direct Express® Debit Mastercard®",
+  "source_label": "Conflicting Evidence/Cherrypicking",
+  "surface_state": "ordinary",
+  "signals": [
+    "explicit_challenge"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-065.md",
+    "document_hash": "99e596c96caf20ca31dab67e81be894185649d059f26d90eaf1540fdc8ab9862",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-065_ANCHOR",
+    "text_quote": "Currently, the Social Security Administration pays approximately 71.6 million (98.8%) Social Security and SSI benefits electronically per month and mails nearly 850,000 paper checks (1.2%) per month. No answer could be f",
+    "start": 214,
+    "end": 434
+  },
+  "record_path": "records/AVERITEC-065.json",
+  "evidence_path": "evidence/AVERITEC-065.md"
+}

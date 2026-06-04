@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-006",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 5,
+  "claim": "Activation of PPM1D suppresses p53 function.",
+  "evidence": "Gliomas arising in the brainstem and thalamus are devastating tumors that are difficult to surgically resect. To determine the genetic and epigenetic landscape of these tumors, we performed exomic sequencing of 14 brainstem gliomas (BSGs) and 12 thalamic gliomas. We also performed targeted mutational analysis of an additional 24 such tumors and genome-wide methylation profiling of 45 gliomas. This study led to the discovery of tumor-specific mutations in PPM1D, encoding wild-type p53-induced protein phosphatase 1D (WIP1), in 37.5% of the BSGs that harbored hallmark H3F3A mutations encoding p. Lys27Met substitutions. PPM1D mutations were mutually exclusive with TP53 mutations in BSG and attenuated p53 activation in vitro. PPM1D mutations were truncating alterations in exon 6 that enhanced the ability of PPM1D to suppress the activation of the DNA damage response checkpoint protein CHK2. These results define PPM1D as a frequent target of somatic mutation and as a potential therapeutic target in brainstem gliomas.",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-006.md",
+    "marker": "RECSTRESS-006_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-00",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-00-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-006.json",
+  "evidence_path": "evidence/RECSTRESS-006.md"
+}

@@ -1,0 +1,7 @@
+# Raw Source SCIFACT-023
+dataset: scifact
+source_row: 22
+marker: SCIFACT-023_ANCHOR
+claim: CCL19 is absent within dLNs.
+label: 
+evidence: Chemokines orchestrate immune cell trafficking by eliciting either directed or random migration and by activating integrins in order to induce cell adhesion. Analyzing dendritic cell (DC) migration, we showed that these distinct cellular responses depended on the mode of chemokine presentation within tissues. The surface-immobilized form of the chemokine CCL21, the heparan sulfate-anchoring ligand of the CC-chemokine receptor 7 (CCR7), caused random movement of DCs that was confined to the chemokine-presenting surface because it triggered integrin-mediated adhesion. Upon direct contact with CCL21, DCs truncated the anchoring residues of CCL21, thereby releasing it from the solid phase. Soluble CCL21 functionally resembles the second CCR7 ligand, CCL19, which lacks anchoring residues and forms soluble gradients. Both soluble CCR7 ligands triggered chemotactic movement, but not surface adhesion. Adhesive random migration and directional steering cooperate to produce dynamic but spatially restricted locomotion patterns closely resembling the cellular dynamics observed in secondary lymphoid organs.

@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-026",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 25,
+  "layer": "ordinary_stable",
+  "claim": "Gianluigi Buffon has won football titles.",
+  "evidence": "Gianluigi_Buffon | 11 | After winning two more consecutive league titles in 2005 and 2006 , the club were later stripped of these titles and relegated due to their involvement in the 2006 Italian football scandal .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-026.md",
+    "document_hash": "38b376b6f3881b9f73c7913d2d464afb9937db502a6471506272f3a2ba20e1a7",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-026_ANCHOR",
+    "text_quote": "Gianluigi_Buffon | 11 | After winning two more consecutive league titles in 2005 and 2006 , the club were later stripped of these titles and relegated due to their involvement in the 2006 Italian football scandal .",
+    "start": 147,
+    "end": 361
+  },
+  "record_path": "records/FEVER-026.json",
+  "evidence_path": "evidence/FEVER-026.md"
+}

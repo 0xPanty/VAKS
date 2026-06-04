@@ -1,0 +1,31 @@
+{
+  "id": "HOLDOUT-001",
+  "pool": "adversarial_holdout",
+  "dataset_family": "scifact",
+  "source_row_index": 0,
+  "layer": "false_lite_trap",
+  "claim": "0-dimensional biomaterials show inductive properties.",
+  "evidence": "Nanotechnologies are emerging platforms that could be useful in measuring, understanding, and manipulating stem cells. Examples include magnetic nanoparticles and quantum dots for stem cell labeling and in vivo tracking; nanoparticles, carbon nanotubes, and polyplexes for the intracellular delivery of genes/oligonucleotides and protein/peptides; and engineered nanometer-scale scaffolds for stem cell differentiation and transplantation. This review examines the use of nanotechnologies for stem cell tracking, differentiation, and transplantation. We further discuss their utility and the potential concerns regarding their cytotoxicity.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/HOLDOUT-001.md",
+    "document_hash": "48d6f17f63d7aa0f1e750f218e6b9fc2b8500dab18365e8e1395e9207c5d839b",
+    "version_id": "holdout-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "HOLDOUT-001_ANCHOR",
+    "text_quote": "Nanotechnologies are emerging platforms that could be useful in measuring, understanding, and manipulating stem cells. Examples include magnetic nanoparticles and quantum dots for stem cell labeling and in vivo tracking;",
+    "start": 165,
+    "end": 385
+  },
+  "record_path": "records/HOLDOUT-001.json",
+  "evidence_path": "evidence/HOLDOUT-001.md"
+}

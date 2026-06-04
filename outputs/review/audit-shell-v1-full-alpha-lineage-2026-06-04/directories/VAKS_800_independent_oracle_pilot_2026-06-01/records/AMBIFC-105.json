@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-105",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 104,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "there is a sequel after batman vs superman.",
+  "evidence": "* Henry Cavill as Clark Kent / Superman: A Metropolis-based Kryptonian survivor and a journalist for the Daily Planet who uses his extraterrestrial abilities to protect humanity. Superman's suit in Batman v Superman is somewhat similar to that in Man of Steel, but with enhanced, high-tech-style surface detail and a shinier, more metallic-looking cape. A quote written in Kryptonian was added into Superman's symbol which says \"Where we had thought to stand alone, we will be with all the world\". As to how Superman has embraced his role as a hero since the previous installment, Cavill said \"He's more used to this gig, doing his best to save as many lives as he can\", further explaining, \"He is no longer frantic. He's no longer a wet-behind-the-ears kind of superhero\". And as to how Superman views Batman's approach to crime fighting, Cavill said \"He doesn't agree with his form of justice. For this farm boy, who tries to do things the right way, justice at any cost is not something he can come to terms with\" hoping to use his position as a journalist for the Daily Planet to \"show the world what this Batman dude is doing\". The film addresses the destruction caused by Superman and Zod in Metropolis, a part of Man of Steel that was criticized for being too extensive for Superman, to which Snyder responded \"I was surprised because that's the thesis of Superman for me, that you can't just ",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "ambiguous_scope"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-105.md",
+    "document_hash": "bcc703448c44d6e28a4b6b4f12aa18f5a8b099ef489f94fcac09c81002183248",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-105_ANCHOR",
+    "text_quote": "* Henry Cavill as Clark Kent / Superman: A Metropolis-based Kryptonian survivor and a journalist for the Daily Planet who uses his extraterrestrial abilities to protect humanity. Superman's suit in Batman v Superman is s",
+    "start": 152,
+    "end": 372
+  },
+  "record_path": "records/AMBIFC-105.json",
+  "evidence_path": "evidence/AMBIFC-105.md"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-153",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 152,
+  "layer": "authority_leak_bait",
+  "claim": "France approves the use of HCQ for treatment of Covid 19. After trials proved successful. 800 hospital have commenced using it.",
+  "evidence": "03/08/2020 No",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "lineage_as_independence",
+  "authority_trap": "The lineage chain independently confirms the point.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-153.md",
+    "document_hash": "8466aa35bba4e17da0450d1eb8b883e951b19ce6d6c3a26675982cbf5d7fef8f",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-153_ANCHOR",
+    "text_quote": "03/08/2020 No",
+    "start": 242,
+    "end": 255
+  },
+  "record_path": "records/AVERITEC-153.json",
+  "evidence_path": "evidence/AVERITEC-153.md"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-067",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 66,
+  "claim": "Insomnia can be effectively treated with cognitive behavioral therapy.",
+  "evidence": "CONTEXT Insomnia is a common condition in older adults and is associated with a number of adverse medical, social, and psychological consequences. Previous research has suggested beneficial outcomes of both psychological and pharmacological treatments, but blinded placebo-controlled trials comparing the effects of these treatments are lacking. OBJECTIVE To examine short- and long-term clinical efficacy of cognitive behavioral therapy (CBT) and pharmacological treatment in older adults experiencing chronic primary insomnia. DESIGN, SETTING, AND PARTICIPANTS A randomized, double-blinded, placebo-controlled trial of 46 adults (mean age, 60.8 y; 22 women) with chronic primary insomnia conducted between January 2004 and December 2005 in a single Norwegian university-based outpatient clinic for adults and elderly patients. INTERVENTION CBT (sleep hygiene, sleep restriction, stimulus control, cognitive therapy, and relaxation; n = 18), sleep medication (7.5-mg zopiclone each night; n = 16), or placebo medication (n = 12). All treatment duration was 6 weeks, and the 2 active treatments were followed up at 6 months. MAIN OUTCOME MEASURES Ambulant clinical polysomnographic data and sleep dia",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-067.md",
+    "marker": "RECSTRESS-067_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-06",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "stress-rec-06-fp-v2",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-067.json",
+  "evidence_path": "evidence/RECSTRESS-067.md"
+}

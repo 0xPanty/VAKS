@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-006",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 5,
+  "layer": "ordinary_stable",
+  "claim": "the movie dreamgirls was based on the supremes.",
+  "evidence": "While much of the stage musical's story remains intact, a number of significant changes were made. The Dreams' hometown—the setting for much of the action—was moved from Chicago to Detroit, the real-life hometown of The Supremes and Motown Records. The roles of many of the characters were related more closely to their real-life inspirations, following a suggestion by Geffen. Warner Bros. had retained the film rights to Dreamgirls, and agreed to co-produce with DreamWorks. However, after casting was completed, the film was budgeted at $73 million and Warner backed out of the production. Geffen, taking the role of co-producer, brought Paramount Pictures in to co-finance and release Dreamgirls. During the course of production, Paramount's parent company, Viacom, would purchase DreamWorks, aligning the two studios under one umbrella (and giving the senior studio US distribution rights on behalf of DreamWorks). The completed film had a production budget of $75 million, making Dreamgirls the most expensive film with an all-black starring cast in cinema history.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-006.md",
+    "document_hash": "ca768bb15a2417154c9333183c51b021ecc5c41984936ba83db4f150eda07430",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-006_ANCHOR",
+    "text_quote": "While much of the stage musical's story remains intact, a number of significant changes were made. The Dreams' hometown—the setting for much of the action—was moved from Chicago to Detroit, the real-life hometown of The ",
+    "start": 156,
+    "end": 376
+  },
+  "record_path": "records/AMBIFC-006.json",
+  "evidence_path": "evidence/AMBIFC-006.md"
+}

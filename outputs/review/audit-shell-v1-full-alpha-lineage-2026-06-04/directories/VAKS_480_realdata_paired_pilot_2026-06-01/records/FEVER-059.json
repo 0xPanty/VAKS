@@ -1,0 +1,20 @@
+{
+  "id": "FEVER-059",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 58,
+  "claim": "Rod Laver is a former athlete.",
+  "evidence": "Rod_Laver | 0 | Rodney George `` Rod '' Laver -LRB- born 9 August 1938 -RRB- is an Australian former tennis player widely regarded as one of the greatest in tennis history . | Tennis | 0 | Tennis is a racket sport that can be played individually against a single opponent -LRB- singles -RRB- or between two teams of two players each -LRB- doubles -RRB- .",
+  "source_label": "SUPPORTS",
+  "surface_state": "resolved_folded",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-059.md",
+    "marker": "FEVER-059_ANCHOR"
+  }
+}

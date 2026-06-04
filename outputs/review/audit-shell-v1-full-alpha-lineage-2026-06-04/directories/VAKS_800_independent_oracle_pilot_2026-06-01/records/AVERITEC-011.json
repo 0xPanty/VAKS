@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-011",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 10,
+  "layer": "ordinary_stable",
+  "claim": "Biden has pledged to defund the police",
+  "evidence": "NO he said: \"Federal dollars should not go to departments that violate people’s rights or turn to violence as a first resort, but I don't support defunding police.\"",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-011.md",
+    "document_hash": "969b39f01031cd82f3ba5da163eb582051f240d38af41e995cc867c5d465ee50",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-011_ANCHOR",
+    "text_quote": "NO he said: \"Federal dollars should not go to departments that violate people’s rights or turn to violence as a first resort, but I don't support defunding police.\"",
+    "start": 153,
+    "end": 317
+  },
+  "record_path": "records/AVERITEC-011.json",
+  "evidence_path": "evidence/AVERITEC-011.md"
+}

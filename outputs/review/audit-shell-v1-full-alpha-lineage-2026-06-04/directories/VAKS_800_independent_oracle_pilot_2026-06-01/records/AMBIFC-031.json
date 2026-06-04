@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-031",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 30,
+  "layer": "ordinary_stable",
+  "claim": "harry potter and the half blood prince is in two parts.",
+  "evidence": "The film's score was composed by Nicholas Hooper, who also composed the music for Harry Potter and the Order of the Phoenix. The soundtrack was released on an Audio CD format on 14 July 2009, a day before the film was released in cinemas. The album debuted at number twenty-nine on the Billboard 200 chart, thus making it the highest-charting soundtrack among all the six movie soundtracks released. It was nominated for the 2010 Grammy Award for Best Score Soundtrack Album For Motion Picture, Television or Other Visual Media.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-031.md",
+    "document_hash": "8a3facdfb4bd53616f373761dbddfabf8be7081eee33364bb74d9cd12fb5cd01",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-031_ANCHOR",
+    "text_quote": "The film's score was composed by Nicholas Hooper, who also composed the music for Harry Potter and the Order of the Phoenix. The soundtrack was released on an Audio CD format on 14 July 2009, a day before the film was re",
+    "start": 164,
+    "end": 384
+  },
+  "record_path": "records/AMBIFC-031.json",
+  "evidence_path": "evidence/AMBIFC-031.md"
+}

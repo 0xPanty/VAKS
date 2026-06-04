@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-025",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 24,
+  "layer": "ordinary_stable",
+  "claim": "lake superior is one of the largest fresh water lakes in the world",
+  "evidence": "Lake Superior's size reduces the severity of the seasons of its humid continental climate (more typically seen in locations like Nova Scotia). The water surface's slow reaction to temperature changes, seasonally ranging between 32 and 55 °F (0–13 °C) around 1970, helps to moderate surrounding air temperatures in the summer and winter, and creates lake effect snow in colder months. The hills and mountains that border the lake hold moisture and fog, particularly in the fall. The lake's surface temperature rose by 4.5 °F (2.5 °C) from 1979 to 2006.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-025.md",
+    "document_hash": "cd6fa224bf34ac614f06db3198f3ce00e56da0b5bd6d402513bd92e856d77b29",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-025_ANCHOR",
+    "text_quote": "Lake Superior's size reduces the severity of the seasons of its humid continental climate (more typically seen in locations like Nova Scotia). The water surface's slow reaction to temperature changes, seasonally ranging ",
+    "start": 175,
+    "end": 395
+  },
+  "record_path": "records/AMBIFC-025.json",
+  "evidence_path": "evidence/AMBIFC-025.md"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "FEVER-067",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 66,
+  "claim": "Mike Tyson boxed Evander Holyfield in November 1996.",
+  "evidence": "Mike_Tyson | 17 | After being stripped of the WBC title in the same year , Tyson lost the WBA title to Evander Holyfield by an eleventh-round stoppage . | Mike_Tyson_vs._Evander_Holyfield | 0 | Mike Tyson vs. Evander Holyfield , billed as `` Finally '' , was a professional boxing match fought between Evander Holyfield and Mike Tyson for the World Boxing Association heavyweight championship on November 9 , 1996 at the MGM Grand Garden Arena in Paradise , Nevada .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-067.md",
+    "marker": "FEVER-067_ANCHOR"
+  }
+}

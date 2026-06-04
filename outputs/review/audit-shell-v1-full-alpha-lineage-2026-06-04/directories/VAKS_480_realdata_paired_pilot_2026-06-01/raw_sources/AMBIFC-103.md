@@ -1,0 +1,7 @@
+# Raw Source AMBIFC-103
+dataset: ambifc
+source_row: 102
+marker: AMBIFC-103_ANCHOR
+claim: into the woods is a musical all the way through.
+label: neutral
+evidence: Reports subsequently surfaced in January 2013 that Meryl Streep had been cast to play the Witch. Streep had instituted a personal "no witch" rule after she turned 40 and was offered three witch roles, but ultimately broke her own rule to do a Sondheim role again. She was already familiar with his work, having participated in the original production of Sondheim's The Frogs as a student at Yale University. During the same month, it was reported that Janney had been confirmed to join the film as well. Five months later, however, Tracey Ullman was cast as Jack's Mother instead. In April 2013, Johnny Depp was in final negotiations, along with Streep, to join the film. The Hollywood Reporter reported that to help make the film on such a tight budget, Depp agreed as a favor to Disney and to Marshall to a "boarding" arrangement, in which he would appear in a minor role for a fee of $1 million, instead of his typical fee of $20 million for a starring role. In May, James Corden, who took part in the reading of the screenplay, was in talks to play the role of the Baker. On May 10, 2013, Disney confirmed the casting of Streep, Depp, and Corden as the Witch, the Big Bad Wolf, and the Baker, res

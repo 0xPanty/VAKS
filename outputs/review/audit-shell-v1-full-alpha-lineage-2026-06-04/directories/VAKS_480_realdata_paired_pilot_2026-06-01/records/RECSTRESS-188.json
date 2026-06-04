@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-188",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 67,
+  "claim": "US billionaires became $400 billion richer during the COVID-19 pandemic, while millions lost their $600 a week in extra unemployment.",
+  "evidence": "Cumulatively, the top 50 billionaires lost $232 billion between the market’s peak and this Tuesday. If the remaining billionaires on the Forbes list lost wealth at the same roughly 12.5% rate that the top 50 experienced, that’s another $200 billion–plus wiped out. Nearly 30 million workers have lost $600 in enhanced weekly unemployment benefits",
+  "source_label": "Conflicting Evidence/Cherrypicking",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-188.md",
+    "marker": "RECSTRESS-188_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-18",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "stress-rec-18-fp-v2",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-188.json",
+  "evidence_path": "evidence/RECSTRESS-188.md"
+}

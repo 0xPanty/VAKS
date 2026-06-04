@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-120",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 119,
+  "layer": "anchor_problem",
+  "claim": "High cardiopulmonary fitness causes increased mortality rate.",
+  "evidence": "CONTEXT Population surveys indicate that physical activity levels are low in the United States. One consequence of inactivity, low cardiorespiratory fitness, is an established risk factor for cardiovascular disease (CVD) morbidity and mortality, but the prevalence of cardiorespiratory fitness has not been quantified in representative US population samples. OBJECTIVES To describe the prevalence of low fitness in the US population aged 12 through 49 years and to relate low fitness to CVD risk factors in this population. DESIGN, SETTING, AND PARTICIPANTS Inception cohort study using data from the cross-sectional nationally representative National Health and Nutrition Examination Survey 1999-2002. Participants were adolescents (aged 12-19 years; n = 3110) and adults (aged 20-49 years; n = 2205) free from previously diagnosed CVD who underwent submaximal graded exercise treadmill testing to achieve at least 75% to 90% of their age-predicted maximum heart rate. Maximal oxygen consumption (VO2max) was estimated by measuring the heart rate response to reference levels of submaximal work. MAIN OUTCOME MEASURES Low fitness defined using percentile cut points of estimated VO2max from existing external referent populations; anthropometric and other CVD risk factors measured according to standard methods. RESULTS Low fitness was identified in 33.6% of adolescents (approximately 7.5 million ",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "missing_anchor"
+  ],
+  "anchor_status": "missing",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "missing",
+    "path": "raw_sources/SCIFACT-120.md",
+    "document_hash": "",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-120_ANCHOR",
+    "text_quote": "CONTEXT Population surveys indicate that physical activity levels are low in the United States. One consequence of inactivity, low cardiorespiratory fitness, is an established risk factor for cardiovascular disease (CVD)",
+    "start": -1,
+    "end": -1
+  },
+  "record_path": "records/SCIFACT-120.json",
+  "evidence_path": "evidence/SCIFACT-120.md"
+}

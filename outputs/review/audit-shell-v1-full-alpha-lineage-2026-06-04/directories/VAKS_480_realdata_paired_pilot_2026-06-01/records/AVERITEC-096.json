@@ -1,0 +1,22 @@
+{
+  "id": "AVERITEC-096",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 95,
+  "claim": "MS Dhoni has exited the cricket team for refusing to campaign for BJP in Jharkhand election.",
+  "evidence": "\"One of India's greatest Test captains under whose leadership India became the No. 1 team in the test rankings, MS Dhoni, has decided to retire from Test cricket citing the strain of playing all formats of cricket,\" the board said.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "moved_pointer"
+  ],
+  "anchor_status": "moved",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "moved",
+    "path": "raw_sources/AVERITEC-096.md",
+    "marker": "AVERITEC-096_ANCHOR"
+  }
+}

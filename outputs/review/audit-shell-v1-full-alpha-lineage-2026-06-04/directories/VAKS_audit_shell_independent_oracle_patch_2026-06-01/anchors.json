@@ -1,0 +1,23 @@
+{
+  "PDF-A1": {"path": "raw_sources/pdf_claims.md", "marker": "ANCHOR:PDF-A1", "type": "pdf_span"},
+  "PDF-A2": {"path": "raw_sources/pdf_claims.md", "marker": "ANCHOR:PDF-A2", "type": "pdf_span"},
+  "PDF-A3": {"path": "raw_sources/pdf_claims.md", "marker": "ANCHOR:PDF-A3", "type": "pdf_span"},
+  "PDF-A4": {"path": "raw_sources/pdf_claims.md", "marker": "ANCHOR:PDF-A4", "type": "pdf_span"},
+  "DOC-V1": {"path": "raw_sources/versioned_docs.md", "marker": "ANCHOR:DOC-V1", "type": "versioned_doc"},
+  "DOC-V2": {"path": "raw_sources/versioned_docs.md", "marker": "ANCHOR:DOC-V2", "type": "versioned_doc"},
+  "DOC-V3": {"path": "raw_sources/versioned_docs.md", "marker": "ANCHOR:DOC-V3", "type": "versioned_doc"},
+  "DOC-V4": {"path": "raw_sources/versioned_docs.md", "marker": "ANCHOR:DOC-V4", "type": "versioned_doc"},
+  "WEB-AR1": {"path": "raw_sources/archived_web.md", "marker": "ANCHOR:WEB-AR1", "type": "archived_web"},
+  "WEB-AR2": {"path": "raw_sources/archived_web.md", "marker": "ANCHOR:WEB-AR2", "type": "archived_web"},
+  "WEB-AR3": {"path": "raw_sources/archived_web.md", "marker": "ANCHOR:WEB-AR3", "type": "archived_web"},
+  "WEB-AR4": {"path": "raw_sources/archived_web.md", "marker": "ANCHOR:WEB-AR4", "type": "archived_web"},
+  "REPO-R1": {"path": "raw_sources/repo_notes.md", "marker": "ANCHOR:REPO-R1", "type": "repo_release"},
+  "REPO-R2": {"path": "raw_sources/repo_notes.md", "marker": "ANCHOR:REPO-R2", "type": "repo_release"},
+  "REPO-R3": {"path": "raw_sources/repo_notes.md", "marker": "ANCHOR:REPO-R3", "type": "repo_commit"},
+  "REPO-R4": {"path": "raw_sources/repo_notes.md", "marker": "ANCHOR:REPO-R4", "type": "repo_readme"},
+  "POL-P1": {"path": "raw_sources/policy_pages.md", "marker": "ANCHOR:POL-P1", "type": "policy_page"},
+  "POL-P2": {"path": "raw_sources/policy_pages.md", "marker": "ANCHOR:POL-P2", "type": "policy_page"},
+  "POL-P3": {"path": "raw_sources/policy_pages.md", "marker": "ANCHOR:POL-P3", "type": "policy_page"},
+  "POL-P4": {"path": "raw_sources/policy_pages.md", "marker": "ANCHOR:POL-P4", "type": "policy_page"}
+}
+

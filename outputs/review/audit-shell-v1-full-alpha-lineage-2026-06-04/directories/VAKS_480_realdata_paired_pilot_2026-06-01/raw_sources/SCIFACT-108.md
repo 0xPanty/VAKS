@@ -1,0 +1,7 @@
+# Raw Source SCIFACT-108
+dataset: scifact
+source_row: 107
+marker: SCIFACT-108_ANCHOR
+claim: Primary cervical cancer screening with HPV detection has higher longitudinal sensitivity than conventional cytology to detect cervical intraepithelial neoplasia grade 2.
+label: 
+evidence: BACKGROUND Human papillomavirus (HPV) testing is more sensitive for the detection of high-grade cervical lesions than is cytology, but detection of HPV by DNA screening in two screening rounds 5 years apart has not been assessed. The aim of this study was to assess whether HPV DNA testing in the first screen decreases detection of cervical intraepithelial neoplasia (CIN) grade 3 or worse, CIN grade 2 or worse, and cervical cancer in the second screening. METHODS In this randomised trial, women aged 29-56 years participating in the cervical screening programme in the Netherlands were randomly assigned to receive HPV DNA (GP5+/6+-PCR method) and cytology co-testing or cytology testing alone, from January, 1999, to September, 2002. Randomisation (in a 1:1 ratio) was done with computer-generated random numbers after the cervical specimen had been taken. At the second screening 5 years later, HPV DNA and cytology co-testing was done in both groups; researchers were masked to the patient's assignment. The primary endpoint was the number of CIN grade 3 or worse detected. Analysis was done by intention to screen. The trial is now finished and is registered, number ISRCTN20781131. FINDINGS 

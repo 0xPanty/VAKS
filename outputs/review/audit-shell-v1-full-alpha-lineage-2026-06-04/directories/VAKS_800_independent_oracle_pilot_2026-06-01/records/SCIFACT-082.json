@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-082",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 81,
+  "layer": "action_challenge_conflict",
+  "claim": "Cytosolic proteins bind to iron-responsive elements on mRNAs coding for DMT1. Cytosolic proteins bind to iron-responsive elements on mRNAs coding for proteins involved in iron uptake.",
+  "evidence": "Chronic obstructive pulmonary disease (COPD) is linked to both cigarette smoking and genetic determinants. We have previously identified iron-responsive element-binding protein 2 (IRP2) as an important COPD susceptibility gene and have shown that IRP2 protein is increased in the lungs of individuals with COPD. Here we demonstrate that mice deficient in Irp2 were protected from cigarette smoke (CS)-induced experimental COPD. By integrating RNA immunoprecipitation followed by sequencing (RIP-seq), RNA sequencing (RNA-seq), and gene expression and functional enrichment clustering analysis, we identified Irp2 as a regulator of mitochondrial function in the lungs of mice. Irp2 increased mitochondrial iron loading and levels of cytochrome c oxidase (COX), which led to mitochondrial dysfunction and subsequent experimental COPD. Frataxin-deficient mice, which had higher mitochondrial iron loading, showed impaired airway mucociliary clearance (MCC) and higher pulmonary inflammation at baseline, whereas mice deficient in the synthesis of cytochrome c oxidase, which have reduced COX, were protected from CS-induced pulmonary inflammation and impairment of MCC. Mice treated with a mitochondrial iron chelator or mice fed a low-iron diet were protected from CS-induced COPD. Mitochondrial iron chelation also alleviated CS-induced impairment of MCC, CS-induced pulmonary inflammation and CS-asso",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-082.md",
+    "document_hash": "a293c8e45ae6e4a7aeb8beec6d23600cbcf4831ddba037a1866ff8e57cca4fbb",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-082_ANCHOR",
+    "text_quote": "Chronic obstructive pulmonary disease (COPD) is linked to both cigarette smoking and genetic determinants. We have previously identified iron-responsive element-binding protein 2 (IRP2) as an important COPD susceptibilit",
+    "start": 295,
+    "end": 515
+  },
+  "record_path": "records/SCIFACT-082.json",
+  "evidence_path": "evidence/SCIFACT-082.md"
+}

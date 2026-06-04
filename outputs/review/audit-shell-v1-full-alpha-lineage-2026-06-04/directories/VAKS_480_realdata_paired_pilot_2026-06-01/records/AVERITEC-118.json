@@ -1,0 +1,20 @@
+{
+  "id": "AVERITEC-118",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 117,
+  "claim": "Kamala Harris called Joe Biden 'A Racist And A Rapist'",
+  "evidence": "Based on our research, the claim that Harris called Biden a racist and said she believed sexual harassment allegations — or called him a \"rapist\" — is PARTLY FALSE. Harris never called Biden a racist. She said she believed women who said that unwanted touching from Biden made them uncomfortable. But she never said she believed a sexual assault accusation from Tara Reade, or any allegations of rape, and did not call him a rapist.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "dashboard_as_truth",
+  "authority_trap": "Green checks on the dashboard make the claim reliable.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-118.md",
+    "marker": "AVERITEC-118_ANCHOR"
+  }
+}

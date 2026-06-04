@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-074",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 73,
+  "layer": "action_challenge_conflict",
+  "claim": "The Philippines were named after a King of Spain.",
+  "evidence": "Philippines | 18 | In 1543 , Spanish explorer Ruy López de Villalobos named the archipelago Las Islas Filipinas in honor of Philip II of Spain . | Philip_II_of_Spain | 0 | Philip II of Spain -LRB- Felipe II 21 May 1527 -- 13 September 1598 -RRB- , called `` the Prudent '' -LRB- el Prudente -RRB- , was King of Spain -LRB- 1556 -- 98 -RRB- , King of Portugal -LRB- 1581 -- 98 , as Philip I , Filipe I -RRB- , King of Naples and Sicily -LRB- both from 1554 -RRB- , and jure uxoris King of England and Ireland -LRB- during his marriage to Queen Mary I from 1554 -- 58 -RRB- .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "explicit_challenge"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-074.md",
+    "document_hash": "ac0b5bc2ab62b56943e52cacee4a89c46604d4d540708a8670db1ad2e20533ab",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-074_ANCHOR",
+    "text_quote": "Philippines | 18 | In 1543 , Spanish explorer Ruy López de Villalobos named the archipelago Las Islas Filipinas in honor of Philip II of Spain . | Philip_II_of_Spain | 0 | Philip II of Spain -LRB- Felipe II 21 May 1527 -",
+    "start": 155,
+    "end": 375
+  },
+  "record_path": "records/FEVER-074.json",
+  "evidence_path": "evidence/FEVER-074.md"
+}

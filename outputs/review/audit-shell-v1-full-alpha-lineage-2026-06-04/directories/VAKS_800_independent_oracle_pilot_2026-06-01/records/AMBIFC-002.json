@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-002",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 1,
+  "layer": "ordinary_stable",
+  "claim": "a irrational number can be a real number.",
+  "evidence": "As a result of the distinction between number and magnitude, geometry became the only method that could take into account incommensurable ratios. Because previous numerical foundations were still incompatible with the concept of incommensurability, Greek focus shifted away from those numerical conceptions such as algebra and focused almost exclusively on geometry. In fact, in many cases algebraic conceptions were reformulated into geometric terms. This may account for why we still conceive of x2 and x3 as x squared and x cubed instead of x to the second power and x to the third power. Also crucial to Zeno’s work with incommensurable magnitudes was the fundamental focus on deductive reasoning that resulted from the foundational shattering of earlier Greek mathematics. The realization that some basic conception within the existing theory was at odds with reality necessitated a complete and thorough investigation of the axioms and assumptions that underlie that theory. Out of this necessity, Eudoxus developed his method of exhaustion, a kind of reductio ad absurdum that “...established the deductive organization on the basis of explicit axioms...” as well as “...reinforced the earlier decision to rely on deductive reasoning for proof.”This method of exhaustion is the first step in the creation of calculus. Theodorus of Cyrene proved the irrationality of the surds of whole numbers ",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-002.md",
+    "document_hash": "63c6eb0d02ce814cbb7116638666a417b438ec4578d1dcff817b16451fd465f1",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-002_ANCHOR",
+    "text_quote": "As a result of the distinction between number and magnitude, geometry became the only method that could take into account incommensurable ratios. Because previous numerical foundations were still incompatible with the co",
+    "start": 150,
+    "end": 370
+  },
+  "record_path": "records/AMBIFC-002.json",
+  "evidence_path": "evidence/AMBIFC-002.md"
+}

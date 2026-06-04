@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-154",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 153,
+  "layer": "authority_leak_bait",
+  "claim": "At Trump’s Tulsa rally there were 12000 people, not 6000 as reported by Axios and others.",
+  "evidence": "Just fewer than 6,200 people attended President Donald Trump’s rally in Tulsa, Oklahoma, the Tulsa Fire Department said Sunday Trump campaign communications director Tim Murtaugh disputed the department’s count Sunday, saying, “12,000 people went through the metal detectors so that number is way off.” While the Trump re-election effort boasted that it would fill BOK Center, which seats more than 19,000 people, only 6,200 supporters ultimately occupied the general admission sections, the Tulsa fire marshal told NBC News.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "source_count_as_independence",
+  "authority_trap": "The presence of several URLs means independent confirmation.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-154.md",
+    "document_hash": "b55fb58b4500705988b8197ceb2a0d03244e1a9b92fe6e8a2fbf14cc0180359f",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-154_ANCHOR",
+    "text_quote": "Just fewer than 6,200 people attended President Donald Trump’s rally in Tulsa, Oklahoma, the Tulsa Fire Department said Sunday Trump campaign communications director Tim Murtaugh disputed the department’s count Sunday, s",
+    "start": 204,
+    "end": 424
+  },
+  "record_path": "records/AVERITEC-154.json",
+  "evidence_path": "evidence/AVERITEC-154.md"
+}

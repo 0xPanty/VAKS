@@ -1,0 +1,359 @@
+{
+  "dataset_manifest": {
+    "scifact": {
+      "fetched_rows": 140,
+      "source_status": "real_with_qrels",
+      "pilot_cases": 120
+    },
+    "averitec": {
+      "fetched_rows": 140,
+      "source_status": "real_dataset_server",
+      "pilot_cases": 120
+    },
+    "ambifc": {
+      "fetched_rows": 140,
+      "source_status": "real_dataset_server",
+      "pilot_cases": 120
+    },
+    "fever": {
+      "fetched_rows": 140,
+      "source_status": "real_dataset_server",
+      "pilot_cases": 120
+    }
+  },
+  "variants": {
+    "shell_core": {
+      "summary": {
+        "safety_pass": true,
+        "hard_failures": {
+          "state_mismatch": 0,
+          "false_lite": 0,
+          "review_due_fn": 0,
+          "queue_fn": 0,
+          "source_anchor_failures": 0,
+          "anchor_problem_visibility_failures": 0,
+          "record_pointer_failures": 0,
+          "evidence_pointer_failures": 0,
+          "authority_leakage": 0,
+          "authority_boundary_failures": 0,
+          "severe_over_grouping": 0,
+          "serious_folded_count": 0
+        },
+        "front_budget_warnings": 0,
+        "front_lines_total": 3348,
+        "front_chars_total": 126480,
+        "front_chars_p50": 256,
+        "front_chars_p95": 361,
+        "max_front_line_chars_p95": 153,
+        "rendered_lines_total": 5844,
+        "rendered_chars_total": 356481,
+        "source_anchor_ok_rows": 480,
+        "grouping": {
+          "expected_multi_groups": 8,
+          "recalled_multi_groups": 0,
+          "grouping_recall": 0.0,
+          "predicted_grouped_members": 0,
+          "expected_groupable_members": 40,
+          "grouped_reduction_pct": 0.0,
+          "severe_over_grouping": [],
+          "serious_folded_count": 0
+        }
+      },
+      "paired": {
+        "all": {
+          "case_count": 480,
+          "rendered_line_reduction_pct": 32.4,
+          "rendered_char_reduction_pct": 44.8,
+          "front_char_reduction_pct": -3.4,
+          "review_proxy_delta_pct": -43.0,
+          "baseline_lines": 8640,
+          "candidate_lines": 5844,
+          "baseline_chars": 646218,
+          "candidate_chars": 356481
+        },
+        "ordinary": {
+          "case_count": 304,
+          "rendered_line_reduction_pct": 48.8,
+          "rendered_char_reduction_pct": 62.0,
+          "front_char_reduction_pct": 3.1,
+          "review_proxy_delta_pct": -62.3,
+          "baseline_lines": 5472,
+          "candidate_lines": 2800,
+          "baseline_chars": 405750,
+          "candidate_chars": 154197
+        },
+        "serious": {
+          "case_count": 176,
+          "rendered_line_reduction_pct": 3.9,
+          "rendered_char_reduction_pct": 15.9,
+          "front_char_reduction_pct": -14.6,
+          "review_proxy_delta_pct": -10.1,
+          "baseline_lines": 3168,
+          "candidate_lines": 3044,
+          "baseline_chars": 240468,
+          "candidate_chars": 202284
+        },
+        "recurrence": {
+          "case_count": 56,
+          "rendered_line_reduction_pct": 31.3,
+          "rendered_char_reduction_pct": 43.0,
+          "front_char_reduction_pct": -29.0,
+          "review_proxy_delta_pct": -43.1,
+          "baseline_lines": 1008,
+          "candidate_lines": 692,
+          "baseline_chars": 73479,
+          "candidate_chars": 41894
+        }
+      }
+    },
+    "shell_core_plus_recurrence": {
+      "summary": {
+        "safety_pass": true,
+        "hard_failures": {
+          "state_mismatch": 0,
+          "false_lite": 0,
+          "review_due_fn": 0,
+          "queue_fn": 0,
+          "source_anchor_failures": 0,
+          "anchor_problem_visibility_failures": 0,
+          "record_pointer_failures": 0,
+          "evidence_pointer_failures": 0,
+          "authority_leakage": 0,
+          "authority_boundary_failures": 0,
+          "severe_over_grouping": 0,
+          "serious_folded_count": 0
+        },
+        "front_budget_warnings": 0,
+        "front_lines_total": 3332,
+        "front_chars_total": 125984,
+        "front_chars_p50": 254,
+        "front_chars_p95": 370,
+        "max_front_line_chars_p95": 149,
+        "rendered_lines_total": 5828,
+        "rendered_chars_total": 355985,
+        "source_anchor_ok_rows": 480,
+        "grouping": {
+          "expected_multi_groups": 8,
+          "recalled_multi_groups": 8,
+          "grouping_recall": 1.0,
+          "predicted_grouped_members": 40,
+          "expected_groupable_members": 40,
+          "grouped_reduction_pct": 80.0,
+          "severe_over_grouping": [],
+          "serious_folded_count": 0
+        }
+      },
+      "paired": {
+        "all": {
+          "case_count": 480,
+          "rendered_line_reduction_pct": 32.5,
+          "rendered_char_reduction_pct": 44.9,
+          "front_char_reduction_pct": -3.0,
+          "review_proxy_delta_pct": -43.1,
+          "baseline_lines": 8640,
+          "candidate_lines": 5828,
+          "baseline_chars": 646218,
+          "candidate_chars": 355985
+        },
+        "ordinary": {
+          "case_count": 304,
+          "rendered_line_reduction_pct": 49.1,
+          "rendered_char_reduction_pct": 62.1,
+          "front_char_reduction_pct": 3.8,
+          "review_proxy_delta_pct": -62.5,
+          "baseline_lines": 5472,
+          "candidate_lines": 2784,
+          "baseline_chars": 405750,
+          "candidate_chars": 153701
+        },
+        "serious": {
+          "case_count": 176,
+          "rendered_line_reduction_pct": 3.9,
+          "rendered_char_reduction_pct": 15.9,
+          "front_char_reduction_pct": -14.6,
+          "review_proxy_delta_pct": -10.1,
+          "baseline_lines": 3168,
+          "candidate_lines": 3044,
+          "baseline_chars": 240468,
+          "candidate_chars": 202284
+        },
+        "recurrence": {
+          "case_count": 56,
+          "rendered_line_reduction_pct": 32.9,
+          "rendered_char_reduction_pct": 43.7,
+          "front_char_reduction_pct": -25.5,
+          "review_proxy_delta_pct": -43.8,
+          "baseline_lines": 1008,
+          "candidate_lines": 676,
+          "baseline_chars": 73479,
+          "candidate_chars": 41398
+        }
+      }
+    },
+    "shell_core_plus_unversioned_control": {
+      "summary": {
+        "safety_pass": false,
+        "hard_failures": {
+          "state_mismatch": 0,
+          "false_lite": 0,
+          "review_due_fn": 0,
+          "queue_fn": 0,
+          "source_anchor_failures": 0,
+          "anchor_problem_visibility_failures": 0,
+          "record_pointer_failures": 0,
+          "evidence_pointer_failures": 0,
+          "authority_leakage": 0,
+          "authority_boundary_failures": 0,
+          "severe_over_grouping": 4,
+          "serious_folded_count": 0
+        },
+        "front_budget_warnings": 0,
+        "front_lines_total": 3320,
+        "front_chars_total": 125034,
+        "front_chars_p50": 251,
+        "front_chars_p95": 362,
+        "max_front_line_chars_p95": 149,
+        "rendered_lines_total": 5816,
+        "rendered_chars_total": 355035,
+        "source_anchor_ok_rows": 480,
+        "grouping": {
+          "expected_multi_groups": 8,
+          "recalled_multi_groups": 8,
+          "grouping_recall": 1.0,
+          "predicted_grouped_members": 40,
+          "expected_groupable_members": 40,
+          "grouped_reduction_pct": 90.0,
+          "severe_over_grouping": [
+            {
+              "group_id": "rec-e5481296a0|scope_fit_note|scope_fit|minor_repeat|valid",
+              "members": [
+                "SCIFACT-101",
+                "SCIFACT-102",
+                "SCIFACT-103",
+                "SCIFACT-104",
+                "SCIFACT-105",
+                "SCIFACT-106",
+                "SCIFACT-107",
+                "SCIFACT-108",
+                "SCIFACT-109",
+                "SCIFACT-110"
+              ],
+              "gold_group_ids": [
+                "scifact-open-v1-e5481296a0",
+                "scifact-open-v2-e5481296a0"
+              ],
+              "has_must_not_group": false
+            },
+            {
+              "group_id": "rec-0c1acf13e9|scope_fit_note|scope_fit|minor_repeat|valid",
+              "members": [
+                "AVERITEC-101",
+                "AVERITEC-102",
+                "AVERITEC-103",
+                "AVERITEC-104",
+                "AVERITEC-105",
+                "AVERITEC-106",
+                "AVERITEC-107",
+                "AVERITEC-108",
+                "AVERITEC-109",
+                "AVERITEC-110"
+              ],
+              "gold_group_ids": [
+                "averitec-open-v1-0c1acf13e9",
+                "averitec-open-v2-0c1acf13e9"
+              ],
+              "has_must_not_group": false
+            },
+            {
+              "group_id": "rec-331c4d1d1f|scope_fit_note|scope_fit|minor_repeat|valid",
+              "members": [
+                "AMBIFC-101",
+                "AMBIFC-102",
+                "AMBIFC-103",
+                "AMBIFC-104",
+                "AMBIFC-105",
+                "AMBIFC-106",
+                "AMBIFC-107",
+                "AMBIFC-108",
+                "AMBIFC-109",
+                "AMBIFC-110"
+              ],
+              "gold_group_ids": [
+                "ambifc-open-v1-331c4d1d1f",
+                "ambifc-open-v2-331c4d1d1f"
+              ],
+              "has_must_not_group": false
+            },
+            {
+              "group_id": "rec-acd3b495ec|scope_fit_note|scope_fit|minor_repeat|valid",
+              "members": [
+                "FEVER-101",
+                "FEVER-102",
+                "FEVER-103",
+                "FEVER-104",
+                "FEVER-105",
+                "FEVER-106",
+                "FEVER-107",
+                "FEVER-108",
+                "FEVER-109",
+                "FEVER-110"
+              ],
+              "gold_group_ids": [
+                "fever-open-v1-acd3b495ec",
+                "fever-open-v2-acd3b495ec"
+              ],
+              "has_must_not_group": false
+            }
+          ],
+          "serious_folded_count": 0
+        }
+      },
+      "paired": {
+        "all": {
+          "case_count": 480,
+          "rendered_line_reduction_pct": 32.7,
+          "rendered_char_reduction_pct": 45.1,
+          "front_char_reduction_pct": -2.2,
+          "review_proxy_delta_pct": -43.2,
+          "baseline_lines": 8640,
+          "candidate_lines": 5816,
+          "baseline_chars": 646218,
+          "candidate_chars": 355035
+        },
+        "ordinary": {
+          "case_count": 304,
+          "rendered_line_reduction_pct": 49.3,
+          "rendered_char_reduction_pct": 62.4,
+          "front_char_reduction_pct": 5.0,
+          "review_proxy_delta_pct": -62.6,
+          "baseline_lines": 5472,
+          "candidate_lines": 2772,
+          "baseline_chars": 405750,
+          "candidate_chars": 152751
+        },
+        "serious": {
+          "case_count": 176,
+          "rendered_line_reduction_pct": 3.9,
+          "rendered_char_reduction_pct": 15.9,
+          "front_char_reduction_pct": -14.6,
+          "review_proxy_delta_pct": -10.1,
+          "baseline_lines": 3168,
+          "candidate_lines": 3044,
+          "baseline_chars": 240468,
+          "candidate_chars": 202284
+        },
+        "recurrence": {
+          "case_count": 56,
+          "rendered_line_reduction_pct": 34.1,
+          "rendered_char_reduction_pct": 45.0,
+          "front_char_reduction_pct": -18.7,
+          "review_proxy_delta_pct": -44.8,
+          "baseline_lines": 1008,
+          "candidate_lines": 664,
+          "baseline_chars": 73479,
+          "candidate_chars": 40448
+        }
+      }
+    }
+  }
+}

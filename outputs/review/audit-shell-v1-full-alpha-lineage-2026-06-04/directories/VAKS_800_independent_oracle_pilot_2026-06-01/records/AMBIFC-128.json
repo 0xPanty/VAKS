@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-128",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 127,
+  "layer": "anchor_problem",
+  "claim": "labor day is a public holiday in usa.",
+  "evidence": "In 1887 Oregon became the first state of the United States to make Labor Day an official public holiday. By the time it became an official federal holiday in 1894, thirty U.S. states officially celebrated Labor Day. The federal law, however, only made it a holiday for federal workers. As late as the 1930s, unions were encouraging workers to strike to make sure they got the day off. All U.S. states, the District of Columbia, and the United States territories have subsequently made Labor Day a statutory holiday.",
+  "source_label": "supporting",
+  "surface_state": "ordinary",
+  "signals": [
+    "missing_anchor"
+  ],
+  "anchor_status": "missing",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "missing",
+    "path": "raw_sources/AMBIFC-128.md",
+    "document_hash": "",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-128_ANCHOR",
+    "text_quote": "In 1887 Oregon became the first state of the United States to make Labor Day an official public holiday. By the time it became an official federal holiday in 1894, thirty U.S. states officially celebrated Labor Day. The ",
+    "start": -1,
+    "end": -1
+  },
+  "record_path": "records/AMBIFC-128.json",
+  "evidence_path": "evidence/AMBIFC-128.md"
+}

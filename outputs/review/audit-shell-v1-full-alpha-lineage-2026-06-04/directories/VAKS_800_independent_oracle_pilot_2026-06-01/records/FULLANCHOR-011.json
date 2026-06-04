@@ -1,0 +1,38 @@
+{
+  "id": "FULLANCHOR-011",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 10,
+  "layer": "full_anchor_click",
+  "claim": "Biden has pledged to defund the police",
+  "evidence": "NO he said:\n\n\"Federal dollars should not go to departments that violate people’s rights or turn to violence as a first resort, but I don't support defunding police.\"",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "real_web_snapshot",
+  "source_anchor": {
+    "status": "valid",
+    "path": "real_source_snapshots/FULLANCHOR-011.txt",
+    "document_hash": "771817bca3f6577e99c776b34fedcf5ccd585fd4c67cf239e9253c4e85c92b3b",
+    "version_id": "real-web-snapshot-v2",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-011_REAL_SNAPSHOT",
+    "text_quote": "Biden has pledged to defund the police",
+    "start": 5651,
+    "end": 5689,
+    "quote_strategy": "claim_substring",
+    "landing_class": "claim_landing",
+    "semantic_selector_success": true,
+    "boilerplate_quote": false
+  },
+  "record_path": "records/FULLANCHOR-011.json",
+  "evidence_path": "evidence/FULLANCHOR-011.md",
+  "real_snapshot_url": "https://web.archive.org/web/20210111003633/https://www.politifact.com/article/2020/aug/26/fact-checking-second-night-2020-rnc/",
+  "clickback_snapshot_kind": "live_urllib_retry"
+}

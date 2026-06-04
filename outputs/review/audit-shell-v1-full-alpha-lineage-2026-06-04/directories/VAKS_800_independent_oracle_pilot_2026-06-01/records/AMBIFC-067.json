@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-067",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 66,
+  "layer": "action_challenge_conflict",
+  "claim": "the movie salt was filmed in albany ny.",
+  "evidence": "Salt received generally positive reviews from critics. Review aggregation website Rotten Tomatoes gives the film a score of 63% based on 238 reviews, with a rating average of 6/10. The site's critical consensus reads: \"Angelina Jolie gives it her all in the title role, and her seasoned performance is almost enough to save Salt from its predictable and ludicrous plot\". Metacritic, which assigns a weighted average score out of 100 to reviews from film critics, gave the film a score of 65 based on 42 reviews, indicating \"generally favorable reviews\". Many reviewers highlighted the coincidence of Salt getting released shortly after the reveal of real Russian sleeper agents in the Illegals Program, with a few comparing Salt to one of the agents, Anna Chapman. Kirk Honeycutt of The Hollywood Reporter said that, \"While preposterous at every turn, Salt is a better Bond movie than most recent Bond movies, as its makers keep the stunts real and severely limit CGI gimmickry\". Chicago Sun-Times critic Roger Ebert gave the film four stars (his maximum), saying \"Salt is a damn fine thriller. ... It's gloriously absurd. This movie has holes in it big enough to drive the whole movie through. The laws of physics seem to be suspended here the same way as in a Road Runner cartoon\". Time magazine reviewer Richard Corliss praised the action scenes and Noyce's persistence in keeping a serious tone—\"",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-067.md",
+    "document_hash": "777ee04d9a6bf78f17ce1406223a7c1f533293650abd87db8924fa31d996a556",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-067_ANCHOR",
+    "text_quote": "Salt received generally positive reviews from critics. Review aggregation website Rotten Tomatoes gives the film a score of 63% based on 238 reviews, with a rating average of 6/10. The site's critical consensus reads: \"A",
+    "start": 148,
+    "end": 368
+  },
+  "record_path": "records/AMBIFC-067.json",
+  "evidence_path": "evidence/AMBIFC-067.md"
+}

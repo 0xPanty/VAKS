@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-189",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 68,
+  "claim": "Messages in Google Earth show the \"Deep States New Home,\" which shows up on the map as \"Setatspeed Emohwen Gardens\" near Guantanamo Bay, Cuba.",
+  "evidence": "A search on Google Earth does not show results for Deepstates New Home A search on Google Earth does not show results for Emohwen Setatspeed gardens. Yes",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-189.md",
+    "marker": "RECSTRESS-189_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-18",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "stress-rec-18-fp-v2",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-189.json",
+  "evidence_path": "evidence/RECSTRESS-189.md"
+}

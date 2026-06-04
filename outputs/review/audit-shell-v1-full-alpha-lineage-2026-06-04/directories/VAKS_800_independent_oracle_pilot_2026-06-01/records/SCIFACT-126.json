@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-126",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 125,
+  "layer": "anchor_problem",
+  "claim": "Homozygous deletion of murine Sbds gene from osterix-expressing mesenchymal stem and progenitor cells (MPCs) prevents oxidative stress.",
+  "evidence": "Mesenchymal niche cells may drive tissue failure and malignant transformation in the hematopoietic system, but the underlying molecular mechanisms and relevance to human disease remain poorly defined. Here, we show that perturbation of mesenchymal cells in a mouse model of the pre-leukemic disorder Shwachman-Diamond syndrome (SDS) induces mitochondrial dysfunction, oxidative stress, and activation of DNA damage responses in hematopoietic stem and progenitor cells. Massive parallel RNA sequencing of highly purified mesenchymal cells in the SDS mouse model and a range of human pre-leukemic syndromes identified p53-S100A8/9-TLR inflammatory signaling as a common driving mechanism of genotoxic stress. Transcriptional activation of this signaling axis in the mesenchymal niche predicted leukemic evolution and progression-free survival in myelodysplastic syndrome (MDS), the principal leukemia predisposition syndrome. Collectively, our findings identify mesenchymal niche-induced genotoxic stress in heterotypic stem and progenitor cells through inflammatory signaling as a targetable determinant of disease outcome in human pre-leukemia.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "selector_drift"
+  ],
+  "anchor_status": "drift",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "drift",
+    "path": "raw_sources/SCIFACT-126.md",
+    "document_hash": "d60267828d7ae04664d5e8b0b394c116dc1a309457bf8ec555355fad26a3fff1",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-126_ANCHOR",
+    "text_quote": "Mesenchymal niche cells may drive tissue failure and malignant transformation in the hematopoietic system, but the underlying molecular mechanisms and relevance to human disease remain poorly defined. Here, we show that ",
+    "start": 254,
+    "end": 474
+  },
+  "record_path": "records/SCIFACT-126.json",
+  "evidence_path": "evidence/SCIFACT-126.md"
+}

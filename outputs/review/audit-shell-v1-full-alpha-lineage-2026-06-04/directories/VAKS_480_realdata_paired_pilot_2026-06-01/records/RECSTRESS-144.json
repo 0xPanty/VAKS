@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-144",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 23,
+  "claim": "Kenya had a population of about 48 million with one judge serving over 300,000 people in 2019.",
+  "evidence": "Posted on November 4, 2019 The total enumerated population was 47,564,296 No answer could be found.",
+  "source_label": "Not Enough Evidence",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-144.md",
+    "marker": "RECSTRESS-144_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-14",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-14-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-144.json",
+  "evidence_path": "evidence/RECSTRESS-144.md"
+}

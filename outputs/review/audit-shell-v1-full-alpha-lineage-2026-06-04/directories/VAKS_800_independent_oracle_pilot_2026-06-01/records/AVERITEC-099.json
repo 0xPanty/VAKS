@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-099",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 98,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "warm water is effective in curing asthma",
+  "evidence": "No answer could be found. No",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "ambiguous_scope"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-099.md",
+    "document_hash": "ef7f1d8d843df050094d5a196e15bfb549d3e6bf40be32185c4734e64f7da217",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-099_ANCHOR",
+    "text_quote": "No answer could be found. No",
+    "start": 155,
+    "end": 183
+  },
+  "record_path": "records/AVERITEC-099.json",
+  "evidence_path": "evidence/AVERITEC-099.md"
+}

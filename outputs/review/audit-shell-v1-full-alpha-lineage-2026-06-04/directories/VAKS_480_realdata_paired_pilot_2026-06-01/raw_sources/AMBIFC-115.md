@@ -1,0 +1,7 @@
+# Raw Source AMBIFC-115
+dataset: ambifc
+source_row: 114
+marker: AMBIFC-115_ANCHOR
+claim: avatar is the last airbender a disney movie.
+label: neutral
+evidence: Avatar: The Last Airbender received critical acclaim. Max Nicholson of IGN called it a "must-watch" and described it as "one of the greatest animated series of all time". Nick Hartel of DVD Talk called the series a remarkable, "child friendly show" whose legacy "should endure for years to come". Erik Amaya of Bleeding Cool described the series as "impressive in its sophistication" and "fantastic". Henry Glasheen of SLUG Magazine called the series "adventurous and exciting", a "classic" and occasionally moving. According to Brittany Lovely of Hypable, it tells "complex and beautiful" stories. Joe Corey of Inside Pulse described the series as an anime-action hybrid. Chris Mitchell of Popzara called it one of best shows to air on Nickelodeon, praising the series' background music and voice acting. D. F. Smith of IGN recommended it to viewers who enjoy action-adventure cartoons.

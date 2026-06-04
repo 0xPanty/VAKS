@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-086",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 85,
+  "layer": "action_challenge_conflict",
+  "claim": "Deleting Raptor reduces G-CSF levels.",
+  "evidence": "Myeloid-derived suppressor cells (MDSCs) play critical roles in primary and metastatic cancer progression. MDSC regulation is widely variable even among patients harbouring the same type of malignancy, and the mechanisms governing such heterogeneity are largely unknown. Here, integrating human tumour genomics and syngeneic mammary tumour models, we demonstrate that mTOR signalling in cancer cells dictates a mammary tumour's ability to stimulate MDSC accumulation through regulating G-CSF. Inhibiting this pathway or its activators (for example, FGFR) impairs tumour progression, which is partially rescued by restoring MDSCs or G-CSF. Tumour-initiating cells (TICs) exhibit elevated G-CSF. MDSCs reciprocally increase TIC frequency through activating Notch in tumour cells, forming a feedforward loop. Analyses of primary breast cancers and patient-derived xenografts corroborate these mechanisms in patients. These findings establish a non-canonical oncogenic role of mTOR signalling in recruiting pro-tumorigenic MDSCs and show how defined cancer subsets may evolve to promote and depend on a distinct immune microenvironment.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "explicit_challenge"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-086.md",
+    "document_hash": "f3ae284a113f65600a376fd98a33260b554834e5e8d59f655f2b72947502f820",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-086_ANCHOR",
+    "text_quote": "Myeloid-derived suppressor cells (MDSCs) play critical roles in primary and metastatic cancer progression. MDSC regulation is widely variable even among patients harbouring the same type of malignancy, and the mechanisms",
+    "start": 149,
+    "end": 369
+  },
+  "record_path": "records/SCIFACT-086.json",
+  "evidence_path": "evidence/SCIFACT-086.md"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-127",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 126,
+  "layer": "anchor_problem",
+  "claim": "Russia has developed a new vaccine to fight COVID-19.",
+  "evidence": "Sputnik V Dr. Scott Gottlieb, the former U.S. Food and Drug Administration commissioner, urged caution about Russia’s coronavirus vaccine, telling CNBC on Tuesday that he would “certainly not” take it outside of a clinical trial where patients are closely monitored. “They’ve cleared the equivalent, really, of a phase 1 clinical trial in terms of putting it in 100 to maybe as many as 300 patients so it needs to be evaluated in a large-scale clinical trial,” he said on “Squawk Box.” Russia’s vaccine development is “certainly not ahead” of the United States, added Gottlieb, who is a board member of Pfizer, which is developing a potential vaccine. Russian President Vladimir Putin announced Tuesday that the country has approved a coronavirus vaccine despite not having completed crucial clinical trials to determine its efficacy and safety. Developed at Moscow's Gamaleya Institute, the vaccine, called Sputnik V, has not yet undergone Phase 3 of testing, a key, monthslong trial involving administering a vaccine to a large group of people that can reveal previously unknown side effects. Russia has not published any scientific data on its vaccine testing, and Sputnik V is not among the eight currently undergoing Phase 3 trials, according to the New York Times coronavirus vaccine tracker.",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [
+    "moved_pointer"
+  ],
+  "anchor_status": "moved",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "moved",
+    "path": "raw_sources/AVERITEC-127_moved.md",
+    "document_hash": "6cc86c38dd99da2ffe36e7002a6303271e7e40697044efa28fc1344f1295d071",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-127_ANCHOR",
+    "text_quote": "Sputnik V Dr. Scott Gottlieb, the former U.S. Food and Drug Administration commissioner, urged caution about Russia’s coronavirus vaccine, telling CNBC on Tuesday that he would “certainly not” take it outside of a clinic",
+    "start": 168,
+    "end": 388
+  },
+  "record_path": "records/AVERITEC-127.json",
+  "evidence_path": "evidence/AVERITEC-127.md"
+}

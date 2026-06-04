@@ -1,0 +1,7 @@
+# Raw Source AMBIFC-116
+dataset: ambifc
+source_row: 115
+marker: AMBIFC-116_ANCHOR
+claim: avatar is the last airbender a disney movie.
+label: neutral
+evidence: Rob Keyes of Screen Rant called the series "one of the greatest cartoons ever made". Mike Noyes of Inside Pulse recommended it to viewers who enjoy "great" adventure. Gord Lacey of TVShowsonDVD.com called the series "one of the finest animated shows ever". According to Todd Douglass, Jr. of DVD Talk, adults will enjoy the series as much as children do. Joshua Miller of CHUD.com called it "phenomenal" and "one of the most well animated programs (children's or adult) American TV has ever had"; according to Miller, the series is heavily influenced by anime. Tim Janson of Cinefantastique described it as "one of the most engaging animated shows produced". Dennis Amith of J!ENT called the series "one of the best animated TV series shown in the US by American creators". Amith praised its sophisticated storylines, edginess, humor, and action. Franco "Cricket" Te of Nerd Society described Avatar: The Last Airbender as "one of the best cartoon[s]" he had ever seen, recommending the series for its characters and plot. Scott Thill of Wired called the series engaging and its setting, influenced by the Eastern world, "fantastic". Kirk Hamilton of Kotaku said the series should be part of the gold

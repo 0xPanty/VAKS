@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-130",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 129,
+  "layer": "anchor_problem",
+  "claim": "LITTLE CAESARS IS OFFERING FREE PIZZA TO ANYONE WHO SHARES AND COMMENTS ON A FACEBOOK POST",
+  "evidence": "There is currently a fraudulent Little Caesars coupon in circulation, stating ‘Little Caesars is rewarding everyone with 3 free large pizza coupon on their 60th anniversary.’ This coupon was not generated or distributed by Little Caesars",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "selector_drift"
+  ],
+  "anchor_status": "drift",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "drift",
+    "path": "raw_sources/AVERITEC-130.md",
+    "document_hash": "d1d26318018067556b8e6a02d9e08991474e2b162740428de1eab1fbb66ea3c1",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-130_ANCHOR",
+    "text_quote": "There is currently a fraudulent Little Caesars coupon in circulation, stating ‘Little Caesars is rewarding everyone with 3 free large pizza coupon on their 60th anniversary.’ This coupon was not generated or distributed ",
+    "start": 212,
+    "end": 432
+  },
+  "record_path": "records/AVERITEC-130.json",
+  "evidence_path": "evidence/AVERITEC-130.md"
+}

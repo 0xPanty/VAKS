@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-018",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 17,
+  "layer": "ordinary_stable",
+  "claim": "NSYNC was a vocal group that formed in 1998.",
+  "evidence": "NSYNC | 0 | NSYNC -LRB- sometimes stylized as * NSYNC or 'N Sync -RRB- was an American boy band formed in Orlando , Florida in 1995 and launched in Germany by BMG Ariola Munich .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-018.md",
+    "document_hash": "be3c05594f9e07e334d924d3d4f00b69315463410512f81517b4f89b2ba4fcc7",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-018_ANCHOR",
+    "text_quote": "NSYNC | 0 | NSYNC -LRB- sometimes stylized as * NSYNC or 'N Sync -RRB- was an American boy band formed in Orlando , Florida in 1995 and launched in Germany by BMG Ariola Munich .",
+    "start": 150,
+    "end": 328
+  },
+  "record_path": "records/FEVER-018.json",
+  "evidence_path": "evidence/FEVER-018.md"
+}

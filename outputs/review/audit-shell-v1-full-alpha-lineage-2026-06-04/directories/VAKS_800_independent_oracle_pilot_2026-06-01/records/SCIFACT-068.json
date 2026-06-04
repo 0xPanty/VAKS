@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-068",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 67,
+  "layer": "action_challenge_conflict",
+  "claim": "Chenodeosycholic acid treatment increases whole-body energy expenditure.",
+  "evidence": "The interest in brown adipose tissue (BAT) as a target to combat metabolic disease has recently been renewed with the discovery of functional BAT in humans. In rodents, BAT can be activated by bile acids, which activate type 2 iodothyronine deiodinase (D2) in BAT via the G-coupled protein receptor TGR5, resulting in increased oxygen consumption and energy expenditure. Here we examined the effects of oral supplementation of the bile acid chenodeoxycholic acid (CDCA) on human BAT activity. Treatment of 12 healthy female subjects with CDCA for 2 days resulted in increased BAT activity. Whole-body energy expenditure was also increased upon CDCA treatment. In vitro treatment of primary human brown adipocytes derived with CDCA or specific TGR5 agonists increased mitochondrial uncoupling and D2 expression, an effect that was absent in human primary white adipocytes. These findings identify bile acids as a target to activate BAT in humans.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "explicit_challenge"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-068.md",
+    "document_hash": "323b46f4fed715d64656285578e5f274213d0cfb1cf8536872490ab2ad9faec5",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-068_ANCHOR",
+    "text_quote": "The interest in brown adipose tissue (BAT) as a target to combat metabolic disease has recently been renewed with the discovery of functional BAT in humans. In rodents, BAT can be activated by bile acids, which activate ",
+    "start": 184,
+    "end": 404
+  },
+  "record_path": "records/SCIFACT-068.json",
+  "evidence_path": "evidence/SCIFACT-068.md"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-031",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 30,
+  "layer": "ordinary_stable",
+  "claim": "Nike had a revenue of over 24 billion dollars in 2012.",
+  "evidence": "Nike,_Inc. | 2 | It is one of the world 's largest suppliers of athletic shoes and apparel and a major manufacturer of sports equipment , with revenue in excess of US$ 24.1 billion in its fiscal year 2012 -LRB- ending May 31 , 2012 -RRB- .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-031.md",
+    "document_hash": "1377ff2f54d8c276f345fc262100bd476d69eccd7a5111eba7d86efe86c228d3",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-031_ANCHOR",
+    "text_quote": "Nike,_Inc. | 2 | It is one of the world 's largest suppliers of athletic shoes and apparel and a major manufacturer of sports equipment , with revenue in excess of US$ 24.1 billion in its fiscal year 2012 -LRB- ending Ma",
+    "start": 160,
+    "end": 380
+  },
+  "record_path": "records/FEVER-031.json",
+  "evidence_path": "evidence/FEVER-031.md"
+}

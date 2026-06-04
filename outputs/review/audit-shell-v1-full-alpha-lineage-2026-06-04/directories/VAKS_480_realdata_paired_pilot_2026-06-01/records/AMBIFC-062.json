@@ -1,0 +1,22 @@
+{
+  "id": "AMBIFC-062",
+  "dataset_family": "ambifc",
+  "source_dataset_status": "real_row",
+  "source_row_index": 61,
+  "claim": "in finding dory, dory finds her parents.",
+  "evidence": "Following its record-breaking openings, it scored the biggest Monday for Pixar by grossing $19.6 million (breaking Toy Story 3's $15.6 million) and the best Monday in June for an animated film. However, among all animated films, it is ranked second—behind 2004's Shrek 2, which made $23.4 million on its first Monday, and it is also the biggest Tuesday for an animated film with $23.2 million, besting Minions' $16.8 million. It jumped 18.5% over its Monday gross, a rare achievement for a film. It crossed the $200 million mark in its first seven days, becoming the first (and fastest) animated film to pass this milestone in just a week. It fell only 46% in its second weekend earning $73 million to record the biggest second weekend for an animated film (breaking Shrek 2's $72.2 million previous record), the biggest for Disney and 2016 (surpassing Captain America: Civil War's $72.6 million), and the eighth-biggest second weekend gross of all time overall. This was despite facing stiff competition from newcomer Independence Day: Resurgence. It crossed $300 million in 12 days—a new record for an animated film, surpassing the previous record held by Shrek 2 and Toy Story 3 (both of which too",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-062.md",
+    "marker": "AMBIFC-062_ANCHOR"
+  }
+}

@@ -1,0 +1,7 @@
+# Raw Source AVERITEC-064
+dataset: averitec
+source_row: 63
+marker: AVERITEC-064_ANCHOR
+claim: Children are silent super-spreaders of coronavirus.
+label: Refuted
+evidence: Prof Adilia Warris, Professor of Paediatric Infectious Diseases at the University of Exeter, said, “The data presented here does not support the claim that children are silent spreaders of COVID-19. “The authors do show that children who presented with respiratory symptoms during this pandemic, and who tested positive for SARS-CoV-2, displayed viral loads comparable to adult hospitalized patients, especially in the first two days of symptoms. Interestingly, of the children presenting with symptoms, only around 28 per cent of children tested positive, and of these, more than 60 per cent were over the age of 11, 26 per cent were obese (with less than 10 per cent in the non SARS-CoV-2 group), and exposure to the virus was by either mum or dad (77 per cent), supporting a larger role for adults in the transmission of this virus. Kids are a possible source of spreading this virus said Alessio Fasano, MD Director, Mucosal Immunology and Biology Research Center Massachusetts General Hospital Dr Simon Clarke, Associate Professor in Cellular Microbiology at the University of Reading, said: It does not demonstrate, in any way, that children actually spread of the virus to adults or other chil

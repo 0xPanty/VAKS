@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-048",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 47,
+  "layer": "ordinary_stable",
+  "claim": "Lincoln Motor Company was named by Henry M. Leland.",
+  "evidence": "Lincoln_Motor_Company | 1 | Founded in 1917 by Henry M. Leland , Lincoln has been a subsidiary of Ford since 1922 .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-048.md",
+    "document_hash": "bfd0ec0a2d6204c9ebcef42385735b4ef545ad18a85bf2fa666e1a2dc4a68534",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-048_ANCHOR",
+    "text_quote": "Lincoln_Motor_Company | 1 | Founded in 1917 by Henry M. Leland , Lincoln has been a subsidiary of Ford since 1922 .",
+    "start": 157,
+    "end": 272
+  },
+  "record_path": "records/FEVER-048.json",
+  "evidence_path": "evidence/FEVER-048.md"
+}

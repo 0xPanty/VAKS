@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-114",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 113,
+  "claim": "Vitamin D prevents COVID-19 infection and reduces severity.",
+  "evidence": "We found no clinical evidence on vitamin D in COVID-19. There was no evidence related to vitamin D deficiency predisposing to COVID-19, nor were there studies of supplementation for preventing or treating COVID-19 (Search date upto 4th of April 2020, clinicaltrials.gov searched upto on 23rd April). Some have speculated that people with low serum vitamin D might be at higher risk of infection with COVID-19, or do worse if infected.[9] There is an overlap between groups at high risk of vitamin D deficiency and groups at high risk of severe COVID-19. Examples include people with chronic disease, older age, and people of black and minority ethnic (BAME) heritage. However, infants and children are at risk of vitamin D deficiency, but are not considered high-risk for severe COVID-19.[10] We found no clinical evidence that vitamin D supplements are beneficial in preventing or treating COVID-19. We would need evidence from well-masked randomized trials to determine if there are effects, before recommending vitamin D3 supplements for treating or preventing COVID-19 infection.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "missing_anchor"
+  ],
+  "anchor_status": "missing",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "missing",
+    "path": "raw_sources/AVERITEC-114.md",
+    "marker": "AVERITEC-114_ANCHOR"
+  },
+  "recurrence_key": "rec-0c1acf13e9",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "",
+  "dedup_open_only": true
+}

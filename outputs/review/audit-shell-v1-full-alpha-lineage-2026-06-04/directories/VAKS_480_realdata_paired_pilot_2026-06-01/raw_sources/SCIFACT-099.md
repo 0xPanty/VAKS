@@ -1,0 +1,7 @@
+# Raw Source SCIFACT-099
+dataset: scifact
+source_row: 98
+marker: OLD_SCIFACT-099_ANCHOR
+claim: PKG-la plays an essential role in expression of pain hypersensitivity in PGK-la knockout mice.
+label: 
+evidence: Synaptic long-term potentiation (LTP) at spinal neurons directly communicating pain-specific inputs from the periphery to the brain has been proposed to serve as a trigger for pain hypersensitivity in pathological states. Previous studies have functionally implicated the NMDA receptor-NO pathway and the downstream second messenger, cGMP, in these processes. Because cGMP can broadly influence diverse ion-channels, kinases, and phosphodiesterases, pre- as well as post-synaptically, the precise identity of cGMP targets mediating spinal LTP, their mechanisms of action, and their locus in the spinal circuitry are still unclear. Here, we found that Protein Kinase G1 (PKG-I) localized presynaptically in nociceptor terminals plays an essential role in the expression of spinal LTP. Using the Cre-lox P system, we generated nociceptor-specific knockout mice lacking PKG-I specifically in presynaptic terminals of nociceptors in the spinal cord, but not in post-synaptic neurons or elsewhere (SNS-PKG-I(-/-) mice). Patch clamp recordings showed that activity-induced LTP at identified synapses between nociceptors and spinal neurons projecting to the periaqueductal grey (PAG) was completely abolishe

@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-087",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 86,
+  "layer": "action_challenge_conflict",
+  "claim": "Bradley Cooper appeared in a movie.",
+  "evidence": "Bradley_Cooper | 7 | He first gained recognition as Will Tippin in the spy-action television show Alias -LRB- 2001 -- 2006 -RRB- , and achieved minor success with a supporting part in the comedy film Wedding Crashers -LRB- 2005 -RRB- .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-087.md",
+    "document_hash": "886b31e3f4116db4946a3315ff08c12c670cf4e1cc4be40999cfaaa9407b2c44",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-087_ANCHOR",
+    "text_quote": "Bradley_Cooper | 7 | He first gained recognition as Will Tippin in the spy-action television show Alias -LRB- 2001 -- 2006 -RRB- , and achieved minor success with a supporting part in the comedy film Wedding Crashers -LR",
+    "start": 141,
+    "end": 361
+  },
+  "record_path": "records/FEVER-087.json",
+  "evidence_path": "evidence/FEVER-087.md"
+}

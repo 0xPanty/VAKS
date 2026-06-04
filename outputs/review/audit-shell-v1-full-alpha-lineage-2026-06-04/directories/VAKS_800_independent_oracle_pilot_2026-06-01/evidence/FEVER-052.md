@@ -1,0 +1,3 @@
+# Evidence FEVER-052
+marker: EVIDENCE_FEVER-052_ANCHOR
+quote: The_Bends | 2 | The Bends marked the beginning of a shift in aesthetics and themes for the band , with greater use of keyboards and more abrasive guitar tracks , while balancing them with subtler ones .

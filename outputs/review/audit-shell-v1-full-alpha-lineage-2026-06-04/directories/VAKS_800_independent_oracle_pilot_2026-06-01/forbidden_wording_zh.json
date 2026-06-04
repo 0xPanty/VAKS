@@ -1,0 +1,144 @@
+{
+  "status": "sandbox Chinese forbidden-wording lint rules; normal operator-facing renderer only",
+  "scope": "Applies to default Chinese operator-facing wording. Adversarial trap packets may quote banned wording only when explicitly labeled as traps.",
+  "exact_banned_phrases": [
+    "已验证",
+    "已证实",
+    "已确认正确",
+    "可信度 87%",
+    "truth_confidence +0.17",
+    "truth_confidence +",
+    "scope-fit 0.72",
+    "风险 0.18",
+    "5 个来源支持，因此更可靠",
+    "多个 URL，因此独立性更强",
+    "lineage 完整，因此独立",
+    "重复出现 7 次，因此支持更强",
+    "dashboard 绿色，因此成立",
+    "测试通过，因此正确",
+    "lint 通过，因此安全",
+    "feedback 提高了 truth confidence",
+    "feedback confidence",
+    "可直接行动",
+    "无锚点但大意一致",
+    "grouped summary 证明该关系已被接受",
+    "已安全",
+    "high confidence",
+    "enough confidence",
+    "safe to proceed",
+    "ready for action",
+    "verified enough",
+    "可直接采用",
+    "可直接上线",
+    "足够可靠",
+    "多源交叉证实",
+    "reviewer approved so OK",
+    "green enough",
+    "looked aligned",
+    "summary matches source so fine",
+    "因此更可靠",
+    "因此独立",
+    "因此支持更强",
+    "因此成立"
+  ],
+  "regex_banned_patterns": [
+    {
+      "id": "credibility_percent_as_truth",
+      "pattern": "可信度\\s*\\d+(\\.\\d+)?%"
+    },
+    {
+      "id": "truth_confidence_delta",
+      "pattern": "truth_confidence\\s*[+\\-]\\s*\\d+(\\.\\d+)?"
+    },
+    {
+      "id": "scope_fit_numeric",
+      "pattern": "scope-fit\\s*\\d+(\\.\\d+)?"
+    },
+    {
+      "id": "risk_numeric_as_truth",
+      "pattern": "风险\\s*\\d+(\\.\\d+)?"
+    },
+    {
+      "id": "source_count_as_reliability",
+      "pattern": "\\d+\\s*个来源.*(更可靠|支持|可信|成立)"
+    },
+    {
+      "id": "multiple_urls_as_independence",
+      "pattern": "多个\\s*URL.*(独立|独立性|更强)"
+    },
+    {
+      "id": "lineage_as_independence",
+      "pattern": "lineage\\s*完整.*(独立|独立性)"
+    },
+    {
+      "id": "recurrence_count_as_support",
+      "pattern": "重复出现\\s*\\d+\\s*次.*(支持更强|更可靠|成立|可信)"
+    },
+    {
+      "id": "dashboard_as_truth",
+      "pattern": "dashboard\\s*绿色.*(成立|正确|可信|可靠|安全)"
+    },
+    {
+      "id": "test_pass_as_truth",
+      "pattern": "测试通过.*(正确|成立|可信|可靠|安全)"
+    },
+    {
+      "id": "lint_pass_as_safety",
+      "pattern": "lint\\s*通过.*(安全|正确|成立|可信|可靠)"
+    },
+    {
+      "id": "feedback_truth_confidence",
+      "pattern": "feedback.*(truth confidence|truth_confidence|提高.*truth)"
+    },
+    {
+      "id": "direct_action_without_audit",
+      "pattern": "可直接行动"
+    },
+    {
+      "id": "missing_anchor_semantic_match",
+      "pattern": "无锚点.*大意一致"
+    },
+    {
+      "id": "grouped_summary_as_accepted_relation",
+      "pattern": "grouped summary.*(证明|已被接受|accepted|reviewed relation)"
+    },
+    {
+      "id": "english_confidence_as_readiness",
+      "pattern": "(high|enough)\\s+confidence.*(proceed|ready|action|adopt|safe|use)"
+    },
+    {
+      "id": "safe_ready_action_english",
+      "pattern": "(safe to proceed|ready for action|verified enough|green enough)"
+    },
+    {
+      "id": "direct_adoption_chinese",
+      "pattern": "可直接(采用|上线|使用|发布|执行)"
+    },
+    {
+      "id": "reliability_enough_chinese",
+      "pattern": "(足够可靠|足够可信|可靠性足够|可信度足够).*(采用|上线|行动|执行|使用)?"
+    },
+    {
+      "id": "multi_source_cross_verified",
+      "pattern": "(多源|多个来源|多个URL|多 URL).*(交叉证实|交叉验证|证实|验证).*(可靠|成立|可用|可行动)?"
+    },
+    {
+      "id": "reviewer_approval_as_ok",
+      "pattern": "(reviewer approved|reviewer\\s*通过|评审通过|复核通过).*(OK|ok|可用|采用|上线|行动|成立|正确)"
+    },
+    {
+      "id": "aligned_summary_as_safety",
+      "pattern": "(looked aligned|summary matches source|摘要.*(匹配|一致).*(source|来源)).*(fine|OK|ok|可用|可靠|成立|行动)?"
+    }
+  ],
+  "safe_replacements": [
+    "当前状态：普通记录 / 需要复核 / 阻塞 / 已解决折叠 / 已回归",
+    "锚点异常，暂不能回源，必须复核",
+    "已记录来源 / 记录 / 证据入口；独立性需另证",
+    "同类重复 N 次，仅表示归并与路由",
+    "dashboard / tests / lint 仅作诊断",
+    "feedback 只影响适用性或复核队列，不改变 truth",
+    "如需行动依据，请打开 full audit"
+  ],
+  "principle": "Status, grouping, diagnostics, and feedback serve triage, not truth. Sentry issue status, GitHub resolved/unresolved state, and ClaimReview metadata are workflow or review description surfaces, not proof-strength surfaces."
+}

@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-090",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 89,
+  "layer": "action_challenge_conflict",
+  "claim": "President Donald Trump threatened to delay the election and suggested that he will not leave office if he loses.",
+  "evidence": "\"With Universal Mail-In Voting (not Absentee Voting, which is good), 2020 will be the most INACCURATE & FRAUDULENT Election in history. It will be a great embarrassment to the USA. Delay the Election until people can properly, securely and safely vote???\" he tweeted July 30. \"I never even thought of changing the date of the election,\" he said. \"Why would I do that? November 3rd. It’s a good number. No, I look forward to that election.\" Trump’s certainty that he simply cannot lose could have a real impact on this year’s election. Since assuming office in January 2017, Trump has made at least 27 references to staying in office beyond the constitutional limit of two terms. He often follows up with a remark indicating he is “joking,” “kidding,” or saying it to drive the “fake” news media “crazy.” Even if Trump thinks that he’s only “joking,” the comments fit a broader pattern that raises the prospect that Trump may not leave office quietly in the event he’s on the losing end of a very close election. And unfortunately this possibility is only one of a number of potential election meltdowns we may face in November.",
+  "source_label": "Conflicting Evidence/Cherrypicking",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-090.md",
+    "document_hash": "c2f26521b391f49180d5d9f484920694a2d81bc3e8b5fa24c129905fb38afc09",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-090_ANCHOR",
+    "text_quote": "\"With Universal Mail-In Voting (not Absentee Voting, which is good), 2020 will be the most INACCURATE & FRAUDULENT Election in history. It will be a great embarrassment to the USA. Delay the Election until people can pro",
+    "start": 227,
+    "end": 447
+  },
+  "record_path": "records/AVERITEC-090.json",
+  "evidence_path": "evidence/AVERITEC-090.md"
+}

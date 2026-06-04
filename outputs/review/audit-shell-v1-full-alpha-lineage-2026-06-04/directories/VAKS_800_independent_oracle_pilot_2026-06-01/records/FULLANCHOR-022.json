@@ -1,0 +1,38 @@
+{
+  "id": "FULLANCHOR-022",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 21,
+  "layer": "full_anchor_click",
+  "claim": "There is a ‘global average’ for the number of judges and magistrates to number of people in Kenya.",
+  "evidence": "No answer could be found. No answer could be found. No answer could be found.",
+  "source_label": "Not Enough Evidence",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "real_web_snapshot",
+  "source_anchor": {
+    "status": "valid",
+    "path": "real_source_snapshots/FULLANCHOR-022.txt",
+    "document_hash": "cd76cacbd707d74940843fc8debc096e7bc1f9346445cb71129186f15d725cef",
+    "version_id": "real-web-snapshot-v2",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-022_REAL_SNAPSHOT",
+    "text_quote": "There is a ‘global average’ for the number of judges and magistrates to number o",
+    "start": 6095,
+    "end": 6175,
+    "quote_strategy": "claim_substring",
+    "landing_class": "claim_landing",
+    "semantic_selector_success": true,
+    "boilerplate_quote": false
+  },
+  "record_path": "records/FULLANCHOR-022.json",
+  "evidence_path": "evidence/FULLANCHOR-022.md",
+  "real_snapshot_url": "https://web.archive.org/web/20210127231105/https://africacheck.org/fact-checks/reports/factchecking-kenyas-chief-justice-judiciary-funding-and-backlog-cases",
+  "clickback_snapshot_kind": "live_urllib_retry"
+}

@@ -1,0 +1,3 @@
+# Evidence RECSTRESS-139
+marker: EVIDENCE_RECSTRESS-139_ANCHOR
+Even though 16- to 17-year-olds exhibit somewhat lower general interest in politics and lower internal efficacy, turnout is generally higher compared to older first-time voters and similar to the electorate’s average, they follow electoral campaigns to the same extent as do other young voters, and they exhibit considerably high levels of external efficacy and satisfaction with democracy 51 per cent of 16- and 17- year-olds claim to have voted, compared with 39 per cent of those aged 18 to 24 16 and 17 year olds will be able to vote for the first time at the Senedd Elections in 2021, as part of the biggest changes to the democratic process in Wales in half a century.

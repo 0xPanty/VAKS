@@ -1,0 +1,22 @@
+{
+  "scifact": {
+    "fetched_rows": 140,
+    "source_status": "real_with_qrels",
+    "pilot_cases": 120
+  },
+  "averitec": {
+    "fetched_rows": 140,
+    "source_status": "real_dataset_server",
+    "pilot_cases": 120
+  },
+  "ambifc": {
+    "fetched_rows": 140,
+    "source_status": "real_dataset_server",
+    "pilot_cases": 120
+  },
+  "fever": {
+    "fetched_rows": 140,
+    "source_status": "real_dataset_server",
+    "pilot_cases": 120
+  }
+}

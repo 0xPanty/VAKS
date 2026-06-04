@@ -1,0 +1,20 @@
+{
+  "id": "FEVER-052",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 51,
+  "claim": "The Bends is a fire hydrant.",
+  "evidence": "The_Bends | 2 | The Bends marked the beginning of a shift in aesthetics and themes for the band , with greater use of keyboards and more abrasive guitar tracks , while balancing them with subtler ones .",
+  "source_label": "REFUTES",
+  "surface_state": "resolved_folded",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-052.md",
+    "marker": "FEVER-052_ANCHOR"
+  }
+}

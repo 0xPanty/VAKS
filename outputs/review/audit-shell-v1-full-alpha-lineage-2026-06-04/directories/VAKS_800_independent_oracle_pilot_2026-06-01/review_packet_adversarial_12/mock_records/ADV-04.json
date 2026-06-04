@@ -1,0 +1,11 @@
+{
+  "case_id": "ADV-04",
+  "adversarial_category": "wrapper-only click-back",
+  "claim": "这条记录声称外部网页证明某产品规则已经改变。",
+  "expected_state": "blocking",
+  "expected_anchor_status": "wrapper_only",
+  "expected_no_group": "n/a",
+  "source_pointer": "review_packet_adversarial_12/mock_sources/ADV-04.md",
+  "evidence_pointer": "review_packet_adversarial_12/mock_evidence/ADV-04.md",
+  "note": "Synthetic operator-surface test record; not a truth-layer schema proposal."
+}

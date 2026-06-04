@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-140",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 19,
+  "claim": "Donald Trump has kept his promises to voters",
+  "evidence": "During the 2016 campaign, Donald Trump made more than 280 promises, though many were contradictory or just uttered in a single campaign event. By 2020 Trump had made a number of promises, 6 of which he had not fulfilled, including covid measures such as having plenty of ventilators which states had faced shortages, no covid home testing kits, no covid drive thru testing and no Google covid website for screening, all of which he promised to deliver on. He also failed to deliver on a promise he would purchase new oil at a very good price and yet there has not been any new oil for the US strategic reserve. Yes",
+  "source_label": "Conflicting Evidence/Cherrypicking",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-140.md",
+    "marker": "RECSTRESS-140_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-13",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "stress-rec-13-fp-v2",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-140.json",
+  "evidence_path": "evidence/RECSTRESS-140.md"
+}

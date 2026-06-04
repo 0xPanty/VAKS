@@ -1,0 +1,20 @@
+{
+  "id": "AMBIFC-009",
+  "dataset_family": "ambifc",
+  "source_dataset_status": "real_row",
+  "source_row_index": 8,
+  "claim": "mockingbird kill with an academy award",
+  "evidence": "* AFI's 100 Years. ..100Movies: 10th Anniversary Edition– #25",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-009.md",
+    "marker": "AMBIFC-009_ANCHOR"
+  }
+}

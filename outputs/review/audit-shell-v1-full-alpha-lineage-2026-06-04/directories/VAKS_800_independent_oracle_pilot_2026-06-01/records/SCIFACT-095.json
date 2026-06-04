@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-095",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 94,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Epidemiological disease burden from noncommunicable diseases is more prevalent in low economic settings.",
+  "evidence": "BACKGROUND The Global Burden of Diseases, Injuries, and Risk Factors Study 2015 provides an up-to-date synthesis of the evidence for risk factor exposure and the attributable burden of disease. By providing national and subnational assessments spanning the past 25 years, this study can inform debates on the importance of addressing risks in context. METHODS We used the comparative risk assessment framework developed for previous iterations of the Global Burden of Disease Study to estimate attributable deaths, disability-adjusted life-years (DALYs), and trends in exposure by age group, sex, year, and geography for 79 behavioural, environmental and occupational, and metabolic risks or clusters of risks from 1990 to 2015. This study included 388 risk-outcome pairs that met World Cancer Research Fund-defined criteria for convincing or probable evidence. We extracted relative risk and exposure estimates from randomised controlled trials, cohorts, pooled cohorts, household surveys, census data, satellite data, and other sources. We used statistical models to pool data, adjust for bias, and incorporate covariates. We developed a metric that allows comparisons of exposure across risk factors-the summary exposure value. Using the counterfactual scenario of theoretical minimum risk level, we estimated the portion of deaths and DALYs that could be attributed to a given risk. We decomposed",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "insufficient_evidence"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-095.md",
+    "document_hash": "1c48fabf9c498c3bdc2a085b9e07d11c4a1f93d70ce4b09d666b343ad68aa9f1",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-095_ANCHOR",
+    "text_quote": "BACKGROUND The Global Burden of Diseases, Injuries, and Risk Factors Study 2015 provides an up-to-date synthesis of the evidence for risk factor exposure and the attributable burden of disease. By providing national and ",
+    "start": 216,
+    "end": 436
+  },
+  "record_path": "records/SCIFACT-095.json",
+  "evidence_path": "evidence/SCIFACT-095.md"
+}

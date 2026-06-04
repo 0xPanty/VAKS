@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-080",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 79,
+  "claim": "Many proteins in human cells can be post-translationally modified at lysine residues via acetylation.",
+  "evidence": "Lysine acetylation is a reversible posttranslational modifcation, an epigenetic phenomenon, referred to as transfer of an acetyl group from acetyl CoA to lysine e- amino group of targeted protein, which is modulated by acetyltransferases (histone/ lysine (K) acetyltransferases, HATs/KATs) and deacetylases (histone/lysine (K) deacetylases, HDACs/KDACs). Lysine acetylation regulates various metabolic processes, such as fatty acid oxidation, Krebs cycle, oxidative phosphorylation, angiogenesis and so on. Thus disorders of lysine acetylation may be correlated with obesity, diabetes and cardiovascular disease, which are termed as the metabolic complication. With accumulating studies on proteomic acetylation, lysine acetylation also involves in cell immune status and degenerative diseases, for example, Alzheimer’s disease and Huntington’s disease. This review primarily summarizes the current studies of lysine acetylation in metabolism modulation and in metabolism-related diseases, such as cardiovascular disease and fat metabolism disorder.",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-080.md",
+    "marker": "RECSTRESS-080_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-07",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "stress-rec-07-fp-v2",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-080.json",
+  "evidence_path": "evidence/RECSTRESS-080.md"
+}

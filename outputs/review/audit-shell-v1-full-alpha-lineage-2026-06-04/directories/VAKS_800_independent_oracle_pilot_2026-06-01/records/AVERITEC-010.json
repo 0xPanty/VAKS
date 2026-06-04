@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-010",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 9,
+  "layer": "ordinary_stable",
+  "claim": "Biden will take away the Second Amendment.",
+  "evidence": "Biden’s plan to end gun violence says \"It’s within our grasp to end our gun violence epidemic and respect the Second Amendment, which is limited,\"",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-010.md",
+    "document_hash": "e2f41070aa7fd9419560a628b2e5968a15ed2aef94a59678010a2d573724e1b4",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-010_ANCHOR",
+    "text_quote": "Biden’s plan to end gun violence says \"It’s within our grasp to end our gun violence epidemic and respect the Second Amendment, which is limited,\"",
+    "start": 157,
+    "end": 303
+  },
+  "record_path": "records/AVERITEC-010.json",
+  "evidence_path": "evidence/AVERITEC-010.md"
+}

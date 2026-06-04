@@ -1,0 +1,22 @@
+{
+  "id": "AVERITEC-089",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 88,
+  "claim": "A sharp decline recently in novel coronavirus cases in New York was down to Gov. Andrew M. Cuomo handling of the situation.",
+  "evidence": "Yes Yes Yes",
+  "source_label": "Conflicting Evidence/Cherrypicking",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-089.md",
+    "marker": "AVERITEC-089_ANCHOR"
+  }
+}

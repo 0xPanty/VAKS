@@ -1,0 +1,40 @@
+{
+  "sample_count": 24,
+  "targets": {
+    "ordinary_stable": 3,
+    "action_challenge_conflict": 3,
+    "anchor_problem": 3,
+    "omission_insufficiency_ambiguity": 3,
+    "full_anchor_click": 2,
+    "resolved_repeated_recurrence": 2,
+    "authority_leak_bait": 2,
+    "over_grouping_near_miss": 2,
+    "anchor_jumpback_failure": 2,
+    "serious_folded_violation": 2
+  },
+  "layers": {
+    "ordinary_stable": 3,
+    "action_challenge_conflict": 3,
+    "anchor_problem": 3,
+    "omission_insufficiency_ambiguity": 3,
+    "full_anchor_click": 2,
+    "resolved_repeated_recurrence": 2,
+    "authority_leak_bait": 2,
+    "over_grouping_near_miss": 2,
+    "anchor_jumpback_failure": 2,
+    "serious_folded_violation": 2
+  },
+  "anchor_status": {
+    "valid": 18,
+    "missing": 5,
+    "stale": 1
+  },
+  "states": {
+    "ordinary": 8,
+    "blocking": 9,
+    "for_review": 4,
+    "resolved_folded": 2,
+    "regressed": 1
+  },
+  "note": "Default-core shell_core only; recurrence side arm is not under test."
+}

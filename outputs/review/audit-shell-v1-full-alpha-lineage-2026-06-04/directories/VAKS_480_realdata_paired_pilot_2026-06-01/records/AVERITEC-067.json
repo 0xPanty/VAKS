@@ -1,0 +1,22 @@
+{
+  "id": "AVERITEC-067",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 66,
+  "claim": "President Trump is the most pro-gay president in American history.",
+  "evidence": "No",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-067.md",
+    "marker": "AVERITEC-067_ANCHOR"
+  }
+}

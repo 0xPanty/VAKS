@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-011",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 10,
+  "layer": "ordinary_stable",
+  "claim": "'to kill a mockingbird' should be an academy award winner.",
+  "evidence": "* AFI's 100 Years. ..100Movies: 10th Anniversary Edition– #25",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-011.md",
+    "document_hash": "3f211dd39453b7b5ccc7ccafa53c7c4ef5b50bc942fc7af385b51179c508ef42",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-011_ANCHOR",
+    "text_quote": "* AFI's 100 Years. ..100Movies: 10th Anniversary Edition– #25",
+    "start": 167,
+    "end": 228
+  },
+  "record_path": "records/AMBIFC-011.json",
+  "evidence_path": "evidence/AMBIFC-011.md"
+}

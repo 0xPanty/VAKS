@@ -1,0 +1,27 @@
+{
+  "id": "FEVER-110",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 109,
+  "claim": "Portugal is a nation with its own government.",
+  "evidence": "Portugal | 31 | It is the 5th most peaceful country in the world , maintaining a unitary semi-presidential republican form of government .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-110.md",
+    "marker": "FEVER-110_ANCHOR"
+  },
+  "recurrence_key": "rec-acd3b495ec",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "fever-open-v2-acd3b495ec",
+  "dedup_open_only": true
+}

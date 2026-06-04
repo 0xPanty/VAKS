@@ -1,0 +1,32 @@
+{
+  "id": "FULLANCHOR-046",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 45,
+  "layer": "full_anchor_click",
+  "claim": "Birth-weight is positively associated with breast cancer.",
+  "evidence": "BACKGROUND Birth size, perhaps a proxy for prenatal environment, might be a correlate of subsequent breast cancer risk, but findings from epidemiological studies have been inconsistent. We re-analysed individual participant data from published and unpublished studies to obtain more precise estimates of the magnitude and shape of the birth size-breast cancer association. METHODS AND FINDINGS Studies were identified through computer-assisted and manual searches, and personal communication with investigators. Individual participant data from 32 studies, comprising 22,058 breast cancer cases, were obtained. Random effect models were used, if appropriate, to combine study-specific estimates of effect. Birth weight was positively associated with breast cancer risk in studies based on birth records (pooled relative risk [RR] per one standard deviation [SD] [= 0.5 kg] increment in birth weight: 1.06; 95% confidence interval [CI] 1.02-1.09) and parental recall when the participants were children (1.02; 95% CI 0.99-1.05), but not in those based on adult self-reports, or maternal recall during the woman's adulthood (0.98; 95% CI 0.95-1.01) (p for heterogeneity between data sources = 0.003). Relative to women who weighed 3.000-3.499 kg, the risk was 0.96 (CI 0.80-1.16) in those who weighed < 2.500 kg, and 1.12 (95% CI 1.00-1.25) in those who weighed > or = 4.000 kg (p for linear trend = 0.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "pdf_text",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/FULLANCHOR-046.md",
+    "document_hash": "3a0c168188bb332bea564cccb1855e3833895e9bd963bd0dabde896017989951",
+    "version_id": "pdf_text-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-046_ANCHOR",
+    "text_quote": "BACKGROUND Birth size, perhaps a proxy for prenatal environment, might be a correlate of subsequent breast cancer risk, but findings from epidemiological studies have been inconsistent. We re-analysed individual particip",
+    "start": 176,
+    "end": 396
+  },
+  "record_path": "records/FULLANCHOR-046.json",
+  "evidence_path": "evidence/FULLANCHOR-046.md"
+}

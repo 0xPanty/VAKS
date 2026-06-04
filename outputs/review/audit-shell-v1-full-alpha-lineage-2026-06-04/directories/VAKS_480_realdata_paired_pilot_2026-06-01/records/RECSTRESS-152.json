@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-152",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 31,
+  "claim": "There is a ‘global average’ for the number of judges and magistrates to number of people in Kenya.",
+  "evidence": "No answer could be found. 1.3 judges or magistrates for every 100,000 people in Kenya in 2014, 3.6 for South Africa in 2015, 0.8 for the US in 2017 8.7 for China in 2017. No answer could be found.",
+  "source_label": "Not Enough Evidence",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-152.md",
+    "marker": "RECSTRESS-152_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-15",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-15-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-152.json",
+  "evidence_path": "evidence/RECSTRESS-152.md"
+}

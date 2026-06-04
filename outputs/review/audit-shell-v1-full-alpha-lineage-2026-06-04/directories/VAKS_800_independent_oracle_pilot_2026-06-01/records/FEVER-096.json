@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-096",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 95,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Dragon is derived from the Sinhalese.",
+  "evidence": "Dragon | 4 | The European dragon , derived from European folk traditions and ultimately related to Balkans and Western Asian mythologies .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [
+    "ambiguous_scope"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-096.md",
+    "document_hash": "6dc02b0354780cc477f134aef657a0b11a5939757c706d0622a46e048f00d1a3",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-096_ANCHOR",
+    "text_quote": "Dragon | 4 | The European dragon , derived from European folk traditions and ultimately related to Balkans and Western Asian mythologies .",
+    "start": 143,
+    "end": 281
+  },
+  "record_path": "records/FEVER-096.json",
+  "evidence_path": "evidence/FEVER-096.md"
+}

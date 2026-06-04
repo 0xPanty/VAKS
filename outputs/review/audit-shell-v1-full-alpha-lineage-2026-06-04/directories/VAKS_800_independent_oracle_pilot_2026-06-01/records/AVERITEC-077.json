@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-077",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 76,
+  "layer": "action_challenge_conflict",
+  "claim": "BJP MP and former Union Minister Alphons Kannanthanam sent his mother's dead body from Delhi to Kerala for the funeral without revealing she died of Covid-19.",
+  "evidence": "The Rajya Sabha MP’s mother did not die due to Covid-19. She was tested negative twice for Covid-19 before her demise at AIIMS, Delhi, due to internal organ damage.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "explicit_challenge"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-077.md",
+    "document_hash": "9986f41aef794dcccce922a079255c89a3c0c47b29c4927a41ddd5f387d8ef3f",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-077_ANCHOR",
+    "text_quote": "The Rajya Sabha MP’s mother did not die due to Covid-19. She was tested negative twice for Covid-19 before her demise at AIIMS, Delhi, due to internal organ damage.",
+    "start": 273,
+    "end": 437
+  },
+  "record_path": "records/AVERITEC-077.json",
+  "evidence_path": "evidence/AVERITEC-077.md"
+}

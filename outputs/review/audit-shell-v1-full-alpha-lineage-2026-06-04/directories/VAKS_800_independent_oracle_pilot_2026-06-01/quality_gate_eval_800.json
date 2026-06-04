@@ -1,0 +1,199 @@
+{
+  "status": "sandbox quality gate evaluation",
+  "gate_meaning": "go means eligible for candidate operation-convention discussion, not adoption",
+  "overall": {
+    "current_go_status": "not_go_yet",
+    "meaning": "Not eligible yet for main-vault candidate operation-convention discussion because human/product click-back adjudication gates are not passed.",
+    "automated_proxy_failures": [],
+    "not_measured_yet": [
+      "wrong_actionability",
+      "source_record_evidence_clickback_success",
+      "authority_misunderstanding",
+      "ordinary_triage_time_reduction",
+      "ordinary_full_audit_open_rate_reduction",
+      "recurrence_human_misunderstanding",
+      "recurrence_slice_triage_time_reduction"
+    ],
+    "hard_gates_not_measured_yet": [
+      "wrong_actionability",
+      "source_record_evidence_clickback_success",
+      "authority_misunderstanding"
+    ],
+    "automated_proxy_status": "available_automated_proxies_pass"
+  },
+  "gates": [
+    {
+      "id": "serious_false_lite",
+      "threshold": "0",
+      "nature": "hard",
+      "status": "automated_proxy_pass",
+      "current_value": 0,
+      "note": "Automated overlay proxy only; final truth requires reviewer/adjudicator."
+    },
+    {
+      "id": "serious_full_audit_recall",
+      "threshold": "100%",
+      "nature": "hard",
+      "status": "automated_proxy_pass",
+      "current_value": 100.0,
+      "note": "Automated overlay proxy only."
+    },
+    {
+      "id": "serious_folded_count",
+      "threshold": "0",
+      "nature": "hard",
+      "status": "automated_proxy_pass",
+      "current_value": 0,
+      "note": "Automated overlay proxy only."
+    },
+    {
+      "status": "not_measured_yet",
+      "current_value": null,
+      "note": "wrong_actionability requires reviewer decision plus adjudication.",
+      "id": "wrong_actionability",
+      "threshold": "0",
+      "nature": "hard"
+    },
+    {
+      "id": "ordinary_false_positive_rate",
+      "threshold": "<= 2%",
+      "nature": "hard",
+      "status": "automated_proxy_pass",
+      "current_value": 0.0,
+      "note": "Automated overlay proxy only."
+    },
+    {
+      "id": "review_due_recall",
+      "threshold": ">= 95%",
+      "nature": "hard",
+      "status": "automated_proxy_pass",
+      "current_value": 100.0,
+      "note": "Machine-overlay diagnostic; final gate requires adjudication."
+    },
+    {
+      "id": "review_due_precision",
+      "threshold": ">= 90%",
+      "nature": "strong",
+      "status": "automated_proxy_pass",
+      "current_value": 100.0,
+      "note": "Machine-overlay diagnostic; final gate requires adjudication."
+    },
+    {
+      "id": "source_record_evidence_clickback_success",
+      "threshold": ">= 95% live / immutable cases",
+      "nature": "hard",
+      "status": "not_measured_yet",
+      "current_value": {
+        "package_pointer_source_resolve_pct": 100.0,
+        "package_record_pointer_resolve_pct": 100.0,
+        "package_evidence_pointer_resolve_pct": 100.0,
+        "live_fetch_success": 24,
+        "fallback_used": 0,
+        "target": 24,
+        "semantic_selector_success": 24,
+        "semantic_selector_success_pct": 100.0,
+        "body_window_used": 0,
+        "boilerplate_quote": 0,
+        "landing_class_counts": {
+          "evidence_landing": 1,
+          "claim_landing": 6,
+          "claim_relevant_context_landing": 17,
+          "selector_failure": 0
+        }
+      },
+      "note": "Package pointer resolution, live fetch, and automated semantic landing are not product click-back. claim_relevant_context_landing is weaker than evidence_landing and needs operator adjudication."
+    },
+    {
+      "id": "anchor_problem_visibility",
+      "threshold": "100%",
+      "nature": "hard",
+      "status": "automated_proxy_pass",
+      "current_value": 100.0,
+      "note": "Automated visibility proxy only; failures=0; final gate requires reviewer/adjudicator."
+    },
+    {
+      "status": "not_measured_yet",
+      "current_value": null,
+      "note": "authority misunderstanding requires observation prompts, notes, and adjudication.",
+      "id": "authority_misunderstanding",
+      "threshold": "<= 2%",
+      "nature": "hard"
+    },
+    {
+      "status": "not_measured_yet",
+      "current_value": null,
+      "note": "ordinary triage time reduction requires actual human timing.",
+      "id": "ordinary_triage_time_reduction",
+      "threshold": ">= 20% vs baseline_full",
+      "nature": "product"
+    },
+    {
+      "id": "ordinary_full_audit_open_rate_reduction",
+      "threshold": ">= 30% vs baseline_full",
+      "nature": "product",
+      "status": "not_measured_yet",
+      "current_value": {
+        "artifact_proxy_reduction_pct": 100.0,
+        "baseline_ordinary_full_open_artifacts": 424,
+        "shell_core_ordinary_full_open_artifacts": 0
+      },
+      "note": "Artifact full-open reduction is a diagnostic proxy, not actual reviewer operation rate."
+    },
+    {
+      "id": "ordinary_rendered_line_reduction",
+      "threshold": ">= 55%",
+      "nature": "supporting",
+      "status": "automated_proxy_pass",
+      "current_value": 56.2,
+      "note": "Supporting renderer metric only."
+    },
+    {
+      "id": "ordinary_rendered_char_reduction",
+      "threshold": ">= 60%",
+      "nature": "supporting",
+      "status": "automated_proxy_pass",
+      "current_value": 63.4,
+      "note": "Supporting renderer metric only."
+    },
+    {
+      "id": "resolved_default_queue_visible",
+      "threshold": "0",
+      "nature": "hard",
+      "status": "automated_proxy_pass",
+      "current_value": 0,
+      "note": "Automated queue-surface proxy only."
+    },
+    {
+      "id": "recurrence_grouped_reduction",
+      "threshold": ">= 50%",
+      "nature": "conditional",
+      "status": "automated_proxy_pass",
+      "current_value": 83.3,
+      "note": "Conditional side-arm diagnostic only."
+    },
+    {
+      "id": "recurrence_over_grouping_serious_mismatch",
+      "threshold": "0",
+      "nature": "hard when recurrence is enabled",
+      "status": "automated_proxy_pass",
+      "current_value": 0,
+      "note": "Automated side-arm proxy only."
+    },
+    {
+      "status": "not_measured_yet",
+      "current_value": null,
+      "note": "recurrence human misunderstanding requires side-packet reviewer notes and adjudication.",
+      "id": "recurrence_human_misunderstanding",
+      "threshold": "<= 5%",
+      "nature": "conditional"
+    },
+    {
+      "status": "not_measured_yet",
+      "current_value": null,
+      "note": "recurrence slice triage-time reduction requires side-packet human timing.",
+      "id": "recurrence_slice_triage_time_reduction",
+      "threshold": ">= 10%",
+      "nature": "conditional product"
+    }
+  ]
+}

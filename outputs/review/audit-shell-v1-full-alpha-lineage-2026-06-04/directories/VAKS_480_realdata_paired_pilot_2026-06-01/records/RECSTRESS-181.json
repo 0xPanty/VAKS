@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-181",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 60,
+  "claim": "Democrats recited the US Pledge of Allegiance tonight and took out \"under God\".",
+  "evidence": "The Pledge of Allegiance to the Flag: \"I pledge allegiance to the Flag of the United States of America, and to the Republic for which it stands, one Nation under God, indivisible, with liberty and justice for all,\" should be rendered by standing at attention facing the flag with the right hand over the heart. I pledge allegiance to the Flag of the United States of America, and to the Republic for which it stands, one Nation under God, indivisible, with liberty and justice for all",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-181.md",
+    "marker": "RECSTRESS-181_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-18",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-18-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-181.json",
+  "evidence_path": "evidence/RECSTRESS-181.md"
+}

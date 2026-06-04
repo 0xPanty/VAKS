@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-041",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 40,
+  "layer": "ordinary_stable",
+  "claim": "socialized medicine is the same as universal health care.",
+  "evidence": "In Poland, people are obliged to pay a percentage of the average monthly wage to the state if they are not covered by private insurance.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-041.md",
+    "document_hash": "11fed31c03b9c169ad6d432871fe796997f987ea9e186d42abe3fbf228ae453f",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-041_ANCHOR",
+    "text_quote": "In Poland, people are obliged to pay a percentage of the average monthly wage to the state if they are not covered by private insurance.",
+    "start": 166,
+    "end": 302
+  },
+  "record_path": "records/AMBIFC-041.json",
+  "evidence_path": "evidence/AMBIFC-041.md"
+}

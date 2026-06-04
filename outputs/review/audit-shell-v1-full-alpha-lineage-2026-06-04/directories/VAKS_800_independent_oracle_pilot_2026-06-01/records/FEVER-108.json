@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-108",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 107,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Ji Chang-wook is a South Korean citizen.",
+  "evidence": "Ji_Chang-wook | 0 | Ji Chang-wook -LRB- born on July 5 , 1987 -RRB- is a South Korean actor .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "ambiguous_scope"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-108.md",
+    "document_hash": "3c20f141fe321f0544794fc2476e58cde42bacf4f23abfc5e4a812573a79b1d2",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-108_ANCHOR",
+    "text_quote": "Ji_Chang-wook | 0 | Ji Chang-wook -LRB- born on July 5 , 1987 -RRB- is a South Korean actor .",
+    "start": 146,
+    "end": 239
+  },
+  "record_path": "records/FEVER-108.json",
+  "evidence_path": "evidence/FEVER-108.md"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-063",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 62,
+  "layer": "action_challenge_conflict",
+  "claim": "dory does find her parents in finding dory.",
+  "evidence": "In the United States and Canada, Finding Dory opened on June 17, 2016, alongside Central Intelligence, with projections having the film grossing $110–120 million in its opening weekend, with some estimates going as high as $130 million. It received the widest release for a Pixar film (4,305 theaters, breaking Brave's record), of which 3,200 venues were in 3D, along with 425 premium large format locales, approximately 100 IMAX theaters and a handful of Dolby Cinema sites. It was Fandango's top pre-selling animated film of all time, outselling the previous record-holder, Minions. The film grossed $9.2 million from Thursday night previews, a record for both Pixar and any animated film, and $54.7 million on its opening day, marking both the biggest opening day and single-day for an animated film. This also marks the first time that an animated film has grossed over $50 million in a single day. It went on to gross $135.1 million in its opening weekend, finishing first at the box office and setting the record for the highest opening weekend for both Pixar (breaking Toy Story 3's record) and any animated film (out-grossing Shrek the Third's record, later out-grossed by Incredibles 2) and became the third-biggest adjusted for inflation. It is also the third-highest opening (excluding Marvel and Star Wars films) for Walt Disney Studios Motion Pictures behind Beauty and the Beast ($174.8",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-063.md",
+    "document_hash": "5a0a7b070160a84396e80d85b87a81729f051b08f3807e359b521a6dc0bab37e",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-063_ANCHOR",
+    "text_quote": "In the United States and Canada, Finding Dory opened on June 17, 2016, alongside Central Intelligence, with projections having the film grossing $110–120 million in its opening weekend, with some estimates going as high ",
+    "start": 152,
+    "end": 372
+  },
+  "record_path": "records/AMBIFC-063.json",
+  "evidence_path": "evidence/AMBIFC-063.md"
+}

@@ -1,0 +1,9 @@
+user_id,quick_id,case_id,view_a_variant,view_b_variant,layer,anchor_status
+USER-MAIN-01,QUICK-MAIN-001,SCIFACT-001,baseline_full,shell_core,ordinary_stable,valid
+USER-MAIN-02,QUICK-MAIN-005,SCIFACT-061,baseline_full,shell_core,action_challenge_conflict,valid
+USER-MAIN-03,QUICK-MAIN-009,SCIFACT-116,baseline_full,shell_core,anchor_problem,missing
+USER-MAIN-04,QUICK-MAIN-017,SCIFACT-151,baseline_full,shell_core,authority_leak_bait,valid
+USER-MAIN-05,QUICK-MAIN-019,HOLDOUT-045,baseline_full,shell_core,over_grouping_near_miss,valid
+USER-SIDE-01,QUICK-SIDE-001,SCIFACT-139,shell_core,shell_core_plus_recurrence,resolved_repeated_recurrence,valid
+USER-SIDE-02,QUICK-SIDE-004,SCIFACT-142,shell_core_plus_recurrence,shell_core,resolved_repeated_recurrence,valid
+USER-SIDE-03,QUICK-SIDE-006,HOLDOUT-045,shell_core,shell_core_plus_recurrence,over_grouping_near_miss,valid

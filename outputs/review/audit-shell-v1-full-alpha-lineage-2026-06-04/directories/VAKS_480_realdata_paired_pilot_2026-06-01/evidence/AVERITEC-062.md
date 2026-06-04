@@ -1,0 +1,4 @@
+# Evidence Packet AVERITEC-062
+marker: EVIDENCE_AVERITEC-062_ANCHOR
+claim: Democratic VP candidate Kamala Harris called young voters stupid.
+evidence: In a May 2014 speech at the Ford Foundation, Harris said, "When I was at Howard University and we were in college we were 18 through 24 and you know what we were called? 'College kids.' But when you turn 18 and you're in the system, you are considered an adult, period," she added. Attempting to lighten the mood, she joked, "What else do we know about this population, 18 through 24? They are stupid. That is why we put them in dormitories. And they have a resident assistant. They make really bad decisions." Kamala Harris said "What else do we know about this population, 18 through 24? They are stupid. That is why we put them in dormitories. And they have a resident assistant. They make really bad decisions." It is true that she called the young people stupid no matter what the reason was.

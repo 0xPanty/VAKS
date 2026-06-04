@@ -1,0 +1,3 @@
+# Evidence AVERITEC-117
+marker: EVIDENCE_AVERITEC-117_ANCHOR
+quote: 13/08/2020 Yes Yes

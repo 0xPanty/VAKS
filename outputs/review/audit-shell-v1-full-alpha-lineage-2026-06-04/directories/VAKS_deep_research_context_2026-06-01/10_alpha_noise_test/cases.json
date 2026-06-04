@@ -1,0 +1,195 @@
+[
+  {
+    "case_id": "EC-01",
+    "candidate": "compact_evidence_card",
+    "scenario": "ordinary",
+    "case_text": "A narrow reviewed claim says ALCE highlights that citation quality and answer quality should be evaluated separately. The current source anchor directly supports the wording.",
+    "signals": {"kind": "small_claim", "source_anchor": true, "support_judgment": "supports", "scope_limit": true, "risk_note": false, "promotion": false, "action_basis": false, "explicit_challenge": false, "conflict": false, "regression": false, "known_omission": false, "memory_only": false, "transformed_anchor_missing": false},
+    "expected": {"should_escalate": false, "ordinary": true, "must_preserve": ["claim", "source_anchor", "support_judgment", "scope_limit", "jump_back_pointer"]}
+  },
+  {
+    "case_id": "EC-02",
+    "candidate": "compact_evidence_card",
+    "scenario": "ordinary",
+    "case_text": "A small claim has a source span and a narrow scope limit: the finding applies to citation support, not all factuality evaluation.",
+    "signals": {"kind": "small_claim", "source_anchor": true, "support_judgment": "partially_supports", "scope_limit": true, "risk_note": true, "promotion": false, "action_basis": false, "explicit_challenge": false, "conflict": false, "regression": false, "known_omission": false, "memory_only": false, "transformed_anchor_missing": false},
+    "expected": {"should_escalate": false, "ordinary": true, "must_preserve": ["claim", "source_anchor", "support_judgment", "scope_limit", "risk_note", "jump_back_pointer"]}
+  },
+  {
+    "case_id": "EC-03",
+    "candidate": "compact_evidence_card",
+    "scenario": "ordinary",
+    "case_text": "A source-backed note says context packs should distinguish answer support from citation support. It is a low-risk internal design observation.",
+    "signals": {"kind": "small_claim", "source_anchor": true, "support_judgment": "supports", "scope_limit": false, "risk_note": false, "promotion": false, "action_basis": false, "explicit_challenge": false, "conflict": false, "regression": false, "known_omission": false, "memory_only": false, "transformed_anchor_missing": false},
+    "expected": {"should_escalate": false, "ordinary": true, "must_preserve": ["claim", "source_anchor", "support_judgment", "jump_back_pointer"]}
+  },
+  {
+    "case_id": "EC-04",
+    "candidate": "compact_evidence_card",
+    "scenario": "true_failure",
+    "case_text": "The same small claim is now requested as a promotion candidate for a durable architecture rule.",
+    "signals": {"kind": "small_claim", "source_anchor": true, "support_judgment": "supports", "scope_limit": true, "risk_note": true, "promotion": true, "action_basis": false, "explicit_challenge": false, "conflict": false, "regression": false, "known_omission": false, "memory_only": false, "transformed_anchor_missing": false},
+    "expected": {"should_escalate": true, "ordinary": false, "must_preserve": ["claim", "source_anchor", "support_judgment", "scope_limit", "risk_note", "counterevidence_slot", "omission_slot", "jump_back_pointer"]}
+  },
+  {
+    "case_id": "EC-05",
+    "candidate": "compact_evidence_card",
+    "scenario": "boundary",
+    "case_text": "A current source supports the claim, but another known note challenges the scope. The record must not stay as a simple card.",
+    "signals": {"kind": "small_claim", "source_anchor": true, "support_judgment": "challenged", "scope_limit": true, "risk_note": true, "promotion": false, "action_basis": false, "explicit_challenge": true, "conflict": false, "regression": false, "known_omission": false, "memory_only": false, "transformed_anchor_missing": false},
+    "expected": {"should_escalate": true, "ordinary": false, "must_preserve": ["claim", "source_anchor", "support_judgment", "scope_limit", "challenge_note", "jump_back_pointer"]}
+  },
+  {
+    "case_id": "EC-06",
+    "candidate": "compact_evidence_card",
+    "scenario": "boundary",
+    "case_text": "The answer attributes the claim to the current paper, but the actual reason comes from prior chat memory and has no current source span.",
+    "signals": {"kind": "small_claim", "source_anchor": false, "support_judgment": "unsupported", "scope_limit": false, "risk_note": true, "promotion": false, "action_basis": false, "explicit_challenge": false, "conflict": false, "regression": false, "known_omission": true, "memory_only": true, "transformed_anchor_missing": false},
+    "expected": {"should_escalate": true, "ordinary": false, "must_preserve": ["claim", "missing_anchor_note", "review_due", "jump_back_pointer"]}
+  },
+  {
+    "case_id": "CC-01",
+    "candidate": "compact_coverage_card",
+    "scenario": "ordinary",
+    "case_text": "An ordinary answer uses two reviewed claims and one scope caveat. It is not an action basis.",
+    "signals": {"kind": "query_answer", "dependent_points": 2, "missing_items": 1, "source_anchor": true, "action_basis": false, "risk_sensitive": false, "explicit_enough_question": false, "explicit_challenge": false, "conflict": false, "regression": false},
+    "expected": {"should_escalate": false, "ordinary": true, "must_preserve": ["answer_point", "covered_points", "missing_items", "scope_limit", "jump_back_pointer"]}
+  },
+  {
+    "case_id": "CC-02",
+    "candidate": "compact_coverage_card",
+    "scenario": "ordinary",
+    "case_text": "A normal design explanation depends on one source and explicitly says one adjacent issue remains unreviewed.",
+    "signals": {"kind": "query_answer", "dependent_points": 1, "missing_items": 1, "source_anchor": true, "action_basis": false, "risk_sensitive": false, "explicit_enough_question": false, "explicit_challenge": false, "conflict": false, "regression": false},
+    "expected": {"should_escalate": false, "ordinary": true, "must_preserve": ["answer_point", "covered_points", "missing_items", "jump_back_pointer"]}
+  },
+  {
+    "case_id": "CC-03",
+    "candidate": "compact_coverage_card",
+    "scenario": "ordinary",
+    "case_text": "A low-risk answer compares baseline and lightweight variant using existing trial notes.",
+    "signals": {"kind": "query_answer", "dependent_points": 3, "missing_items": 0, "source_anchor": true, "action_basis": false, "risk_sensitive": false, "explicit_enough_question": false, "explicit_challenge": false, "conflict": false, "regression": false},
+    "expected": {"should_escalate": false, "ordinary": true, "must_preserve": ["answer_point", "covered_points", "scope_limit", "jump_back_pointer"]}
+  },
+  {
+    "case_id": "CC-04",
+    "candidate": "compact_coverage_card",
+    "scenario": "true_failure",
+    "case_text": "The user asks whether the evidence is enough to make an action-basis decision.",
+    "signals": {"kind": "query_answer", "dependent_points": 4, "missing_items": 2, "source_anchor": true, "action_basis": true, "risk_sensitive": false, "explicit_enough_question": true, "explicit_challenge": false, "conflict": false, "regression": false},
+    "expected": {"should_escalate": true, "ordinary": false, "must_preserve": ["answer_point", "full_coverage_rows", "omission_check", "scope_limit", "jump_back_pointer"]}
+  },
+  {
+    "case_id": "CC-05",
+    "candidate": "compact_coverage_card",
+    "scenario": "boundary",
+    "case_text": "The answer is ordinary, but the user explicitly asks if the evidence is sufficient.",
+    "signals": {"kind": "query_answer", "dependent_points": 2, "missing_items": 1, "source_anchor": true, "action_basis": false, "risk_sensitive": false, "explicit_enough_question": true, "explicit_challenge": false, "conflict": false, "regression": false},
+    "expected": {"should_escalate": true, "ordinary": false, "must_preserve": ["answer_point", "full_coverage_rows", "omission_check", "jump_back_pointer"]}
+  },
+  {
+    "case_id": "CC-06",
+    "candidate": "compact_coverage_card",
+    "scenario": "boundary",
+    "case_text": "The answer is used in a risk-sensitive decision even though the question text is short.",
+    "signals": {"kind": "query_answer", "dependent_points": 2, "missing_items": 2, "source_anchor": true, "action_basis": false, "risk_sensitive": true, "explicit_enough_question": false, "explicit_challenge": false, "conflict": false, "regression": false},
+    "expected": {"should_escalate": true, "ordinary": false, "must_preserve": ["answer_point", "full_coverage_rows", "risk_note", "omission_check", "jump_back_pointer"]}
+  },
+  {
+    "case_id": "SRC-01",
+    "candidate": "support_refine_cluster",
+    "scenario": "ordinary",
+    "case_text": "Two papers support the same high-level idea but one narrows the claim to citation support. This is support/refine, not contradiction.",
+    "signals": {"kind": "collision", "occurrences": 2, "sources": 2, "unresolved_gap": true, "source_anchor": true, "support_refine": true, "explicit_challenge": false, "conflict": false, "action_basis": false, "stale_source": false, "nonblocking": false},
+    "expected": {"should_escalate": false, "ordinary": true, "must_preserve": ["cluster_key", "source_contributions", "unresolved_gap", "why_not_upgrade", "jump_back_pointer"]}
+  },
+  {
+    "case_id": "SRC-02",
+    "candidate": "support_refine_cluster",
+    "scenario": "ordinary",
+    "case_text": "A too-broad framing appears in three notes. Each note points to the same missing scope distinction.",
+    "signals": {"kind": "collision", "occurrences": 3, "sources": 3, "unresolved_gap": true, "source_anchor": true, "support_refine": true, "explicit_challenge": false, "conflict": false, "action_basis": false, "stale_source": false, "nonblocking": false},
+    "expected": {"should_escalate": false, "ordinary": true, "must_preserve": ["cluster_key", "source_contributions", "unresolved_gap", "why_not_upgrade", "jump_back_pointer"]}
+  },
+  {
+    "case_id": "SRC-03",
+    "candidate": "support_refine_cluster",
+    "scenario": "ordinary",
+    "case_text": "A repeated source-derived note adds detail but no independent support. It should not become a new full collision record.",
+    "signals": {"kind": "collision", "occurrences": 2, "sources": 1, "unresolved_gap": true, "source_anchor": true, "support_refine": true, "explicit_challenge": false, "conflict": false, "action_basis": false, "stale_source": false, "nonblocking": false},
+    "expected": {"should_escalate": false, "ordinary": true, "must_preserve": ["cluster_key", "source_contributions", "unresolved_gap", "why_not_upgrade", "jump_back_pointer"]}
+  },
+  {
+    "case_id": "SRC-04",
+    "candidate": "support_refine_cluster",
+    "scenario": "true_failure",
+    "case_text": "A new source directly contradicts an existing reviewed claim. This must not stay as a quiet support/refine cluster.",
+    "signals": {"kind": "collision", "occurrences": 1, "sources": 2, "unresolved_gap": true, "source_anchor": true, "support_refine": false, "explicit_challenge": true, "conflict": true, "action_basis": false, "stale_source": false, "nonblocking": false},
+    "expected": {"should_escalate": true, "ordinary": false, "must_preserve": ["cluster_key", "challenge_note", "conflict", "review_due", "jump_back_pointer"]}
+  },
+  {
+    "case_id": "SRC-05",
+    "candidate": "support_refine_cluster",
+    "scenario": "boundary",
+    "case_text": "A support/refine note is useful but non-blocking. It should become a linked stub outside the main queue, not vanish.",
+    "signals": {"kind": "collision", "occurrences": 1, "sources": 1, "unresolved_gap": true, "source_anchor": true, "support_refine": true, "explicit_challenge": false, "conflict": false, "action_basis": false, "stale_source": false, "nonblocking": true},
+    "expected": {"should_escalate": false, "ordinary": false, "must_preserve": ["linked_stub", "unresolved_gap", "jump_back_pointer"]}
+  },
+  {
+    "case_id": "SRC-06",
+    "candidate": "support_refine_cluster",
+    "scenario": "boundary",
+    "case_text": "A source becomes stale, but the unresolved evidence issue was never solved. It must not auto-close.",
+    "signals": {"kind": "collision", "occurrences": 1, "sources": 2, "unresolved_gap": true, "source_anchor": true, "support_refine": true, "explicit_challenge": false, "conflict": false, "action_basis": false, "stale_source": true, "nonblocking": false},
+    "expected": {"should_escalate": false, "ordinary": false, "must_preserve": ["cluster_key", "unresolved_gap", "not_auto_resolved", "jump_back_pointer"]}
+  },
+  {
+    "case_id": "FB-01",
+    "candidate": "categorical_feedback_stub",
+    "scenario": "ordinary",
+    "case_text": "A user says the answer was useful for this scope but should not change truth confidence.",
+    "signals": {"kind": "feedback", "feedback_type": "scope_fit_positive", "positive": true, "negative": false, "explicit_correction": false, "regression": false, "recurrence": false, "source_anchor": true},
+    "expected": {"should_escalate": false, "ordinary": true, "must_preserve": ["feedback_type", "short_reason", "next_activate", "no_truth_change", "jump_back_pointer"]}
+  },
+  {
+    "case_id": "FB-02",
+    "candidate": "categorical_feedback_stub",
+    "scenario": "ordinary",
+    "case_text": "The answer was too broad. Next time activate narrower scope notes and avoid action-basis framing.",
+    "signals": {"kind": "feedback", "feedback_type": "too_broad", "positive": false, "negative": true, "explicit_correction": false, "regression": false, "recurrence": false, "source_anchor": true},
+    "expected": {"should_escalate": false, "ordinary": true, "must_preserve": ["feedback_type", "short_reason", "next_activate", "next_avoid", "no_truth_change", "jump_back_pointer"]}
+  },
+  {
+    "case_id": "FB-03",
+    "candidate": "categorical_feedback_stub",
+    "scenario": "ordinary",
+    "case_text": "The context was helpful but missed a known anti-pattern. This is a scope-fit note, not a correction.",
+    "signals": {"kind": "feedback", "feedback_type": "missing_context", "positive": false, "negative": true, "explicit_correction": false, "regression": false, "recurrence": false, "source_anchor": true},
+    "expected": {"should_escalate": false, "ordinary": true, "must_preserve": ["feedback_type", "short_reason", "next_activate", "no_truth_change", "jump_back_pointer"]}
+  },
+  {
+    "case_id": "FB-04",
+    "candidate": "categorical_feedback_stub",
+    "scenario": "true_failure",
+    "case_text": "The user explicitly corrects the answer and says a cited claim was wrong.",
+    "signals": {"kind": "feedback", "feedback_type": "explicit_correction", "positive": false, "negative": true, "explicit_correction": true, "regression": false, "recurrence": false, "source_anchor": true},
+    "expected": {"should_escalate": true, "ordinary": false, "must_preserve": ["feedback_type", "review_due", "affected_claim", "short_reason", "jump_back_pointer"]}
+  },
+  {
+    "case_id": "FB-05",
+    "candidate": "categorical_feedback_stub",
+    "scenario": "boundary",
+    "case_text": "The same too-broad problem has reappeared after being archived. It should float back as regressed.",
+    "signals": {"kind": "feedback", "feedback_type": "too_broad", "positive": false, "negative": true, "explicit_correction": false, "regression": true, "recurrence": true, "source_anchor": true},
+    "expected": {"should_escalate": true, "ordinary": false, "must_preserve": ["feedback_type", "regressed", "recurrence", "review_due", "jump_back_pointer"]}
+  },
+  {
+    "case_id": "FB-06",
+    "candidate": "categorical_feedback_stub",
+    "scenario": "boundary",
+    "case_text": "Feedback suggests activation changed, but there is no runtime proof. The record must stay manual and avoid fake numeric deltas.",
+    "signals": {"kind": "feedback", "feedback_type": "manual_activation_observed", "positive": true, "negative": false, "explicit_correction": false, "regression": false, "recurrence": false, "source_anchor": true, "runtime_proof": false},
+    "expected": {"should_escalate": false, "ordinary": false, "must_preserve": ["feedback_type", "manual_trace_not_proof", "short_reason", "no_truth_change", "jump_back_pointer"]}
+  }
+]
+

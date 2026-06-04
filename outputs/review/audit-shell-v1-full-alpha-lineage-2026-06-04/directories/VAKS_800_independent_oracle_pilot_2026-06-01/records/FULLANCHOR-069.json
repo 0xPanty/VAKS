@@ -1,0 +1,30 @@
+{
+  "id": "FULLANCHOR-069",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 68,
+  "layer": "full_anchor_click",
+  "claim": "Chenodeosycholic acid treatment reduces whole-body energy expenditure.",
+  "evidence": "The interest in brown adipose tissue (BAT) as a target to combat metabolic disease has recently been renewed with the discovery of functional BAT in humans. In rodents, BAT can be activated by bile acids, which activate type 2 iodothyronine deiodinase (D2) in BAT via the G-coupled protein receptor TGR5, resulting in increased oxygen consumption and energy expenditure. Here we examined the effects of oral supplementation of the bile acid chenodeoxycholic acid (CDCA) on human BAT activity. Treatment of 12 healthy female subjects with CDCA for 2 days resulted in increased BAT activity. Whole-body energy expenditure was also increased upon CDCA treatment. In vitro treatment of primary human brown adipocytes derived with CDCA or specific TGR5 agonists increased mitochondrial uncoupling and D2 expression, an effect that was absent in human primary white adipocytes. These findings identify bile acids as a target to activate BAT in humans.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "release_note",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/FULLANCHOR-069.md",
+    "document_hash": "9ffdb89f6ff7d685f98ad4bdc5e0a152f1405c5b06ef782420247f0d2bb52073",
+    "version_id": "release_note-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-069_ANCHOR",
+    "text_quote": "The interest in brown adipose tissue (BAT) as a target to combat metabolic disease has recently been renewed with the discovery of functional BAT in humans. In rodents, BAT can be activated by bile acids, which activate ",
+    "start": 193,
+    "end": 413
+  },
+  "record_path": "records/FULLANCHOR-069.json",
+  "evidence_path": "evidence/FULLANCHOR-069.md"
+}

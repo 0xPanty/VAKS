@@ -1,0 +1,20 @@
+{
+  "id": "AVERITEC-057",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 56,
+  "claim": "Democratic Arizona Superintendent of Public Instruction Kathy Hoffman is “pushing” for sex education that would teach kindergartners about masturbation and sexual positions.",
+  "evidence": "Yes No The local governing board shall publicize and hold at least two public 26 hearings for the purpose of receiving public input at least one week prior to 27 the local governing board meeting at which the elective sex education lessons 28 will be considered for approval. THE PUBLIC HEARINGS SHALL ADHERE 29 TO OPEN MEETING LAW REQUIREMENTS PURSUANT TO ARIZONA 30 REVISED STATUTES SECTION 38-431 THROUGH 38-431.09. Lessons shall MAY be taught to boys and girls separately. Lessons shall not include tests, psychological inventories, surveys, or 40 examinations containing any questions about the student’s or his THEIR 41 parents’ personal beliefs or practices in sex, family life, morality, values or 42 religion. All sex education materials and instruction shall be age appropriate, recognize 9 the needs of exceptional students, meet the needs of the district, recognize local 10 community standards and sensitivities, shall not include the teaching of 11 abnormal, deviate, or unusual sexual acts and practices, BE MEDICALLY AND 12 SCIENTIFICALLY ACCURATE Stress that sexually transmitted diseases INFECTIONS have severe 27 consequences and constitute a serious and widespread public health 2",
+  "source_label": "Refuted",
+  "surface_state": "resolved_folded",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-057.md",
+    "marker": "AVERITEC-057_ANCHOR"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-124",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 123,
+  "layer": "anchor_problem",
+  "claim": "Aruba is in the known universe.",
+  "evidence": "Aruba | 3 | Collectively , Aruba and the other Dutch islands in the Caribbean are often called the Dutch Caribbean .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "missing_anchor"
+  ],
+  "anchor_status": "missing",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "missing",
+    "path": "raw_sources/FEVER-124.md",
+    "document_hash": "",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-124_ANCHOR",
+    "text_quote": "Aruba | 3 | Collectively , Aruba and the other Dutch islands in the Caribbean are often called the Dutch Caribbean .",
+    "start": -1,
+    "end": -1
+  },
+  "record_path": "records/FEVER-124.json",
+  "evidence_path": "evidence/FEVER-124.md"
+}

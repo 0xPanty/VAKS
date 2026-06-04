@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-125",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 124,
+  "layer": "anchor_problem",
+  "claim": "Rhode Island renounced its allegiance to the Catholic Church in 1776.",
+  "evidence": "Catholic_Church | 0 | The Catholic Church , also known as the Roman Catholic Church , is the largest Christian Church , with more than 1.29 billion members worldwide .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [
+    "stale_pointer"
+  ],
+  "anchor_status": "stale",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "stale",
+    "path": "raw_sources/FEVER-125.md",
+    "document_hash": "df4b793a465549562c4b511c0d72a3944a6a9004fb7b2eb3ac587bdc88e7f2ea",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-125_ANCHOR",
+    "text_quote": "Catholic_Church | 0 | The Catholic Church , also known as the Roman Catholic Church , is the largest Christian Church , with more than 1.29 billion members worldwide .",
+    "start": -1,
+    "end": -1
+  },
+  "record_path": "records/FEVER-125.json",
+  "evidence_path": "evidence/FEVER-125.md"
+}

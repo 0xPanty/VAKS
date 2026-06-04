@@ -1,0 +1,20 @@
+{
+  "id": "FEVER-118",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 117,
+  "claim": "Alexander Hamilton attended a college that is now called Harvard University.",
+  "evidence": "Alexander_Hamilton | 14 | Hamilton attended King 's College -LRB- now Columbia University -RRB- , choosing to stay in the Thirteen Colonies to seek his fortune .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "dashboard_as_truth",
+  "authority_trap": "Green checks on the dashboard make the claim reliable.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-118.md",
+    "marker": "FEVER-118_ANCHOR"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "case_id": "ADV-01",
+  "adversarial_category": "ordinary-looking action-basis",
+  "claim": "这条资料看起来只是记录某工具在本项目里表现稳定。",
+  "expected_state": "blocking",
+  "expected_anchor_status": "valid",
+  "expected_no_group": "n/a",
+  "source_pointer": "review_packet_adversarial_12/mock_sources/ADV-01.md",
+  "evidence_pointer": "review_packet_adversarial_12/mock_evidence/ADV-01.md",
+  "note": "Synthetic operator-surface test record; not a truth-layer schema proposal."
+}

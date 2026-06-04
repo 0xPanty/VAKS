@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-007",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 6,
+  "layer": "ordinary_stable",
+  "claim": "Margot Kidder is a person.",
+  "evidence": "Margot_Kidder | 15 | In 2005 , Kidder became a naturalized U.S. citizen .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-007.md",
+    "document_hash": "927f2f589c96594e7f5f0776ed40369e9a0a2bdbdba330d572cd6b2b5f5a3d78",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-007_ANCHOR",
+    "text_quote": "Margot_Kidder | 15 | In 2005 , Kidder became a naturalized U.S. citizen .",
+    "start": 132,
+    "end": 205
+  },
+  "record_path": "records/FEVER-007.json",
+  "evidence_path": "evidence/FEVER-007.md"
+}

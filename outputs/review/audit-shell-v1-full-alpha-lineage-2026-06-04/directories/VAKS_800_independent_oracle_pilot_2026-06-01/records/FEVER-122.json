@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-122",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 121,
+  "layer": "anchor_problem",
+  "claim": "Zhou Enlai was instrumental in the Communist Party's fall from power.",
+  "evidence": "Zhou_Enlai | 1 | Zhou served along with Chairman Mao Zedong and was instrumental in the Communist Party 's rise to power , and later in consolidating its control , forming foreign policy , and developing the Chinese economy .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [
+    "selector_drift"
+  ],
+  "anchor_status": "drift",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "drift",
+    "path": "raw_sources/FEVER-122.md",
+    "document_hash": "6d1cdf4ad83498258cfed4f0b4f96bb268c8bbbdf743b03ea9f6dc1e5e712e9d",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-122_ANCHOR",
+    "text_quote": "Zhou_Enlai | 1 | Zhou served along with Chairman Mao Zedong and was instrumental in the Communist Party 's rise to power , and later in consolidating its control , forming foreign policy , and developing the Chinese econ",
+    "start": 182,
+    "end": 402
+  },
+  "record_path": "records/FEVER-122.json",
+  "evidence_path": "evidence/FEVER-122.md"
+}

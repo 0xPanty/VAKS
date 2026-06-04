@@ -1,0 +1,20 @@
+{
+  "id": "FEVER-019",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 18,
+  "claim": "Kick-Ass is a horror film.",
+  "evidence": "Kick-Ass_-LRB-film-RRB- | 0 | Kick-Ass is a 2010 British-American superhero black comedy film based on the comic book of the same name by Mark Millar and John Romita , Jr. .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-019.md",
+    "marker": "FEVER-019_ANCHOR"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "AVERITEC-119",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 118,
+  "claim": "COVID-19 has caused more casualties than WWI; the Korean, Vietnam, Iraq, and Afghanistan-US wars; and 9/11.",
+  "evidence": "116,516 54,246 90,220",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "test_pass_as_truth",
+  "authority_trap": "Because the benchmark passed, we can trust this answer.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-119.md",
+    "marker": "AVERITEC-119_ANCHOR"
+  }
+}

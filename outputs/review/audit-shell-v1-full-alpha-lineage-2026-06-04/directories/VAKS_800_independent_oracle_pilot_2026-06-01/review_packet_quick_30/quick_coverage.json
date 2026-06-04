@@ -1,0 +1,19 @@
+{
+  "main_count": 20,
+  "side_count": 10,
+  "main_layers": {
+    "ordinary_stable": 4,
+    "action_challenge_conflict": 4,
+    "anchor_problem": 3,
+    "anchor_jumpback_failure": 2,
+    "resolved_repeated_recurrence": 3,
+    "authority_leak_bait": 2,
+    "over_grouping_near_miss": 1,
+    "serious_folded_violation": 1
+  },
+  "side_layers": {
+    "resolved_repeated_recurrence": 5,
+    "over_grouping_near_miss": 3,
+    "serious_folded_violation": 2
+  }
+}

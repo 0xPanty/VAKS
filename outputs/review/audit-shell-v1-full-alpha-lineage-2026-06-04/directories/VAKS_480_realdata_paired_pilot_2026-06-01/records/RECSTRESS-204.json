@@ -1,0 +1,31 @@
+{
+  "id": "RECSTRESS-204",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 83,
+  "claim": "Vice President Biden and President Obama assembled a pandemic playbook to make sure that America was prepared and protected.",
+  "evidence": "In 2016 the National Security Council prepared a document called the Playbook for Early Response to High-Consequence Emerging Infectious Disease Threats and Biological Incidents.",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [
+    "missing_anchor"
+  ],
+  "anchor_status": "missing",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "missing",
+    "path": "raw_sources/RECSTRESS-204.md",
+    "marker": "RECSTRESS-204_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-20",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-204.json",
+  "evidence_path": "evidence/RECSTRESS-204.md"
+}

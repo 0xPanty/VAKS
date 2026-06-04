@@ -1,0 +1,32 @@
+{
+  "id": "FULLANCHOR-078",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 77,
+  "layer": "full_anchor_click",
+  "claim": "Commelina yellow mottle virus' (ComYMV) genome consists of 7489 baise pairs.",
+  "evidence": "The non-enveloped bacilliform viruses are the second group of plant viruses known to possess a genome consisting of circular double-stranded DNA. We have characterized the viral transcript and determined the complete sequence of the genome of Commelina mellow mottle virus (CoYMV), a member of this group. Analysis of the viral transcript indicates that the virus encodes a single terminally-redundant genome-length plus 120 nucleotide transcript. A fraction of the transcripts is polyadenylated, although the majority of the transcript is not polyadenylated. Analysis of the genome sequence indicates that the genome is 7489 bp in size and that the transcribed strand contains three open reading frames capable of encoding proteins of 23, 15 and 216 kd. The function of the 25 and 15 kd proteins is unknown. Similarities between the 216 kd polypeptide and the cauliflower mosaic virus coat protein and protease/reverse transcriptase polyprotein suggest that the 216 kd polypeptide is a polyprotein that is proteolytically processed to yield the virion coat protein, a protease, and replicase (reverse transcriptase and ribonuclease H). Each strand of the CoYMV genome is interrupted by site-specific discontinuities. The locations of the 5'-ends of these discontinuities, and the presence and location of a region on the CoYMV transcript capable of annealing with the 3'-end of cytosolic initiator m",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "repo_file",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/FULLANCHOR-078.md",
+    "document_hash": "90034e02407515420d41f9f837081d78bf5954973023b6440858c537adb2730a",
+    "version_id": "repo_file-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-078_ANCHOR",
+    "text_quote": "The non-enveloped bacilliform viruses are the second group of plant viruses known to possess a genome consisting of circular double-stranded DNA. We have characterized the viral transcript and determined the complete seq",
+    "start": 196,
+    "end": 416
+  },
+  "record_path": "records/FULLANCHOR-078.json",
+  "evidence_path": "evidence/FULLANCHOR-078.md"
+}

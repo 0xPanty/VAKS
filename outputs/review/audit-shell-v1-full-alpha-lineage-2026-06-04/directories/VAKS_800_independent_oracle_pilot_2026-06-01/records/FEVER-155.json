@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-155",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 154,
+  "layer": "authority_leak_bait",
+  "claim": "The Backstreet Boys are a girl group.",
+  "evidence": "Backstreet_Boys | 0 | The Backstreet Boys -LRB- often abbreviated as BSB -RRB- are an American vocal group , formed in Orlando , Florida in 1993 . | Backstreet_Boys_-LRB-1996_album-RRB- | 0 | Backstreet Boys is the self-titled international debut studio album by American boy band Backstreet Boys .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "group_count_as_support",
+  "authority_trap": "A large group count gives stronger support.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-155.md",
+    "document_hash": "814110be5cd5e098924fd6614f6b968653389e08ea693f2be60728801844541a",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-155_ANCHOR",
+    "text_quote": "Backstreet_Boys | 0 | The Backstreet Boys -LRB- often abbreviated as BSB -RRB- are an American vocal group , formed in Orlando , Florida in 1993 . | Backstreet_Boys_-LRB-1996_album-RRB- | 0 | Backstreet Boys is the self-",
+    "start": 143,
+    "end": 363
+  },
+  "record_path": "records/FEVER-155.json",
+  "evidence_path": "evidence/FEVER-155.md"
+}

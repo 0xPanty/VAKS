@@ -1,0 +1,14 @@
+{
+  "status": "codex_adversarial_dry_run_only",
+  "sample_count": 12,
+  "trap_recognized": 12,
+  "wrong_actionability": 0,
+  "authority_misunderstanding": 0,
+  "grouping_misread": 0,
+  "product_clickback_success": 9,
+  "product_clickback_not_success": 3,
+  "limits": [
+    "Synthetic adversarial packet is not real business log coverage.",
+    "AI dry-run is not independent human adjudication."
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "AMBIFC-118",
+  "dataset_family": "ambifc",
+  "source_dataset_status": "real_row",
+  "source_row_index": 117,
+  "claim": "avatar the last airbender was based on a book.",
+  "evidence": "According to Mike Noyes, the series amalgamates elements of \"classic fantasy epics\". Todd Douglass, Jr. called the plot engaging, well-thought-out, and meaningful. The series' concept is \"well-realized\", with a consistent story. Douglass wrote that the characters \"[have] a real sense of progression\", and praised the writers for their humor, drama, and emotion. Joshua Miller called the series surprisingly dark despite its \"silly\" theme; the plot is livelier than that of Lost and, similar to the latter show, emphasizes character development. According to Miller, its writing was \"true adult levels of storytelling\". Tim Janson described the series as more than fantasy-and superhero-themed, seeing the characters as central and relateable. \"Cricket\"Te praised the series' use of Buddhist philosophies and the diverse presentation of its themes of courage and life. Kirk Hamiltion praises the series for expressing towards its audience to be themselves and for its quiet progressivism. Critics also praised Avatar: The Last Airbender's character development, art, animation, and choreography; Eric Amaya enjoyed the expressive animation that complements the writing. According to Amaya, the elemen",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "dashboard_as_truth",
+  "authority_trap": "Green checks on the dashboard make the claim reliable.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-118.md",
+    "marker": "AMBIFC-118_ANCHOR"
+  }
+}

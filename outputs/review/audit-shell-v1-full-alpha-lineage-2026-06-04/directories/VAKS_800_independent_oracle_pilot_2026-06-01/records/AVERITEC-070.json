@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-070",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 69,
+  "layer": "action_challenge_conflict",
+  "claim": "USA is the only major industrial economy to have it unemployment rate triple.",
+  "evidence": "3.6% 11.1% Only Canada came close",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-070.md",
+    "document_hash": "3c551e882561b4a22bc93309b3dc664862728cf6137d50c5fc95edf2cdb0dd49",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-070_ANCHOR",
+    "text_quote": "3.6% 11.1% Only Canada came close",
+    "start": 192,
+    "end": 225
+  },
+  "record_path": "records/AVERITEC-070.json",
+  "evidence_path": "evidence/AVERITEC-070.md"
+}

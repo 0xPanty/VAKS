@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-160",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 159,
+  "layer": "authority_leak_bait",
+  "claim": "in the fundamentals of caring, trevor dies.",
+  "evidence": "On October 11, 2012, Worldwide Pants' Rob Burnett and Jon Beckerman acquired the film rights to Jonathan Evison's novel The Revised Fundamentals of Caregiving. Burnett adapted and directed the film, and Donna Gigliotti and James Spies produced. On January 7, 2015, Paul Rudd was cast to play the male lead, and on January 13, Selena Gomez also joined the film. On December 7, it was announced that the original title, The Revised Fundamentals of Caregiving, had been changed to The Fundamentals of Caring. It was later revealed Bobby Cannavale and Frederick Weller had been cast in the film as well, with Craig Roberts also added to star opposite Rudd.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "approval_as_truth",
+  "authority_trap": "Reviewer approval means the claim is true.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-160.md",
+    "document_hash": "600a311c5602fbaeec949c91a3d9325db4fb9ef2603ae733b055f1b254008ec9",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-160_ANCHOR",
+    "text_quote": "On October 11, 2012, Worldwide Pants' Rob Burnett and Jon Beckerman acquired the film rights to Jonathan Evison's novel The Revised Fundamentals of Caregiving. Burnett adapted and directed the film, and Donna Gigliotti a",
+    "start": 152,
+    "end": 372
+  },
+  "record_path": "records/AMBIFC-160.json",
+  "evidence_path": "evidence/AMBIFC-160.md"
+}

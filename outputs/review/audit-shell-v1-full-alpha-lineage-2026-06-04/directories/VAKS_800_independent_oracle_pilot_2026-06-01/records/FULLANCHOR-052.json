@@ -1,0 +1,30 @@
+{
+  "id": "FULLANCHOR-052",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 51,
+  "layer": "full_anchor_click",
+  "claim": "Breast cancer development is determined exclusively by genetic factors.",
+  "evidence": "BACKGROUND Information is scarce about the combined effects on breast cancer incidence of low-penetrance genetic susceptibility polymorphisms and environmental factors (reproductive, behavioural, and anthropometric risk factors for breast cancer). To test for evidence of gene-environment interactions, we compared genotypic relative risks for breast cancer across the other risk factors in a large UK prospective study. METHODS We tested gene-environment interactions in 7610 women who developed breast cancer and 10 196 controls without the disease, studying the effects of 12 polymorphisms (FGFR2-rs2981582, TNRC9-rs3803662, 2q35-rs13387042, MAP3K1-rs889312, 8q24-rs13281615, 2p-rs4666451, 5p12-rs981782, CASP8-rs1045485, LSP1-rs3817198, 5q-rs30099, TGFB1-rs1982073, and ATM-rs1800054) in relation to prospectively collected information about ten established environmental risk factors (age at menarche, parity, age at first birth, breastfeeding, menopausal status, age at menopause, use of hormone replacement therapy, body-mass index, height, and alcohol consumption). FINDINGS After allowance for multiple testing none of the 120 comparisons yielded significant evidence of a gene-environment interaction. By contrast with previous suggestions, there was little evidence that the genotypic relative risks were affected by use of hormone replacement therapy, either overall or for oestrogen-rece",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "web_page",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/FULLANCHOR-052.md",
+    "document_hash": "2f6e1dc33abbe2605438e508787308776e81a2e34c83916201711c11d743d9b9",
+    "version_id": "web_page-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-052_ANCHOR",
+    "text_quote": "BACKGROUND Information is scarce about the combined effects on breast cancer incidence of low-penetrance genetic susceptibility polymorphisms and environmental factors (reproductive, behavioural, and anthropometric risk ",
+    "start": 190,
+    "end": 410
+  },
+  "record_path": "records/FULLANCHOR-052.json",
+  "evidence_path": "evidence/FULLANCHOR-052.md"
+}

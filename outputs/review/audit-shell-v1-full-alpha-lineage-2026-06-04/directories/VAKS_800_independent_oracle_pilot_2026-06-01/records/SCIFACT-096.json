@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-096",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 95,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Epigenetic modulating agents (EMAs) modulate antitumor immune response in a cancer model system.",
+  "evidence": "Combining DNA-demethylating agents (DNA methyltransferase inhibitors [DNMTis]) with histone deacetylase inhibitors (HDACis) holds promise for enhancing cancer immune therapy. Herein, pharmacologic and isoform specificity of HDACis are investigated to guide their addition to a DNMTi, thus devising a new, low-dose, sequential regimen that imparts a robust anti-tumor effect for non-small-cell lung cancer (NSCLC). Using in-vitro-treated NSCLC cell lines, we elucidate an interferon α/β-based transcriptional program with accompanying upregulation of antigen presentation machinery, mediated in part through double-stranded RNA (dsRNA) induction. This is accompanied by suppression of MYC signaling and an increase in the T cell chemoattractant CCL5. Use of this combination treatment schema in mouse models of NSCLC reverses tumor immune evasion and modulates T cell exhaustion state towards memory and effector T cell phenotypes. Key correlative science metrics emerge for an upcoming clinical trial, testing enhancement of immune checkpoint therapy for NSCLC.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "ambiguous_scope"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-096.md",
+    "document_hash": "47c62f76f43c96fca465d8bcce3824ae039d3e05836a9c5d78f34a93e12a7b85",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-096_ANCHOR",
+    "text_quote": "Combining DNA-demethylating agents (DNA methyltransferase inhibitors [DNMTis]) with histone deacetylase inhibitors (HDACis) holds promise for enhancing cancer immune therapy. Herein, pharmacologic and isoform specificity",
+    "start": 208,
+    "end": 428
+  },
+  "record_path": "records/SCIFACT-096.json",
+  "evidence_path": "evidence/SCIFACT-096.md"
+}

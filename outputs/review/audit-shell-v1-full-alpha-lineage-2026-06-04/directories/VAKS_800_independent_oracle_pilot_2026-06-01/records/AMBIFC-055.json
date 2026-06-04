@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-055",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 54,
+  "layer": "ordinary_stable",
+  "claim": "some of the galapagos islands are inhabited by humans.",
+  "evidence": "In 1986, the 70,000 square kilometers (27,000 sq mi) of ocean surrounding the islands was declared a marine reserve, second in size only to Australia's Great Barrier Reef. In 1990, the archipelago became a whale sanctuary. UNESCO recognized the islands in 1978 as a World Heritage Site and in 1985, as a biosphere reserve. This was later extended in December 2001 to include the marine reserve. In July 2010, the World Heritage Committee agreed to remove the Galápagos Islands from its list of precious sites endangered by environmental threats or overuse. Noteworthy species include: * Galápagos land iguanas, Conolophus spp. * Marine iguana, Amblyrhynchus cristatus, the only iguana feeding in the sea * Galápagos tortoise (Galápagos giant tortoise), Chelonoidis nigra, known as galápago in Spanish, it gave the name to the islands * Galápagos green turtle, Chelonia mydas agassisi, a subspecies of the green turtle * Sea cucumbers, the cause of environmental battles with fishermen over quotas of this expensive Asian delicacy * Flightless cormorant, Phalacrocorax harrisi * Great frigatebird and magnificent frigatebird * Blue-footed booby, Sula nebouxii, popular among visitors for their large blue feet which they show off in courtship * Galápagos penguin, Spheniscus mendiculus, the only living tropical penguin * Waved albatross, Phoebastria irrorata, the only living tropical albatross * Gal",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-055.md",
+    "document_hash": "010f5a737674285cdbf1bfaad38935d050cc4f22c25e6c5e58fc2adb488cc58d",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-055_ANCHOR",
+    "text_quote": "In 1986, the 70,000 square kilometers (27,000 sq mi) of ocean surrounding the islands was declared a marine reserve, second in size only to Australia's Great Barrier Reef. In 1990, the archipelago became a whale sanctuar",
+    "start": 163,
+    "end": 383
+  },
+  "record_path": "records/AMBIFC-055.json",
+  "evidence_path": "evidence/AMBIFC-055.md"
+}

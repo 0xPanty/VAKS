@@ -1,0 +1,30 @@
+{
+  "id": "FULLANCHOR-048",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 47,
+  "layer": "full_anchor_click",
+  "claim": "Birth-weight is positively associated with breast cancer.",
+  "evidence": "BACKGROUND Emerging evidence suggests an association between female prenatal experience and her subsequent risk of developing breast cancer. Potential underlying mechanisms include variation in amounts of maternal endogenous sex hormones and growth hormones, germ-cell mutations, formation of cancer stem-cells, and other genetic or epigenetic events. We reviewed and summarised quantitatively the available data on intrauterine exposures and risk of breast cancer. METHODS We systematically searched for studies that assessed association between perinatal factors and risk of breast cancer. We reviewed separately each of the perinatal factors, including birthweight, birth length, parental age at delivery, gestational age, intrauterine exposure to diethylstilbestrol, twin membership, maternal pre-eclampsia or eclampsia, and other factors. FINDINGS We identified 57 studies published between Oct 1, 1980, and June 21, 2007. Increased risk of breast cancer was noted with increased birthweight (relative risk [RR] 1.15 [95% CI 1.09-1.21]), birth length (1.28 [1.11-1.48]), higher maternal age (1.13 [1.02-1.25]), and paternal age (1.12 [1.05-1.19]). Decreased risk of breast cancer was noted for maternal pre-eclampsia and eclampsia (0.48 [0.30-0.78]) and twin membership (0.93 [0.87-1.00]). No association was noted between risk of breast cancer and gestational age at birth (0.95 [0.71-1.26]) or",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "repo_file",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/FULLANCHOR-048.md",
+    "document_hash": "0ca8cf96654990a9a9a6f41f0f6a943c4e8bd65e45d17e9e2baeaaebfd48954c",
+    "version_id": "repo_file-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-048_ANCHOR",
+    "text_quote": "BACKGROUND Emerging evidence suggests an association between female prenatal experience and her subsequent risk of developing breast cancer. Potential underlying mechanisms include variation in amounts of maternal endoge",
+    "start": 177,
+    "end": 397
+  },
+  "record_path": "records/FULLANCHOR-048.json",
+  "evidence_path": "evidence/FULLANCHOR-048.md"
+}

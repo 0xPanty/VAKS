@@ -1,0 +1,31 @@
+{
+  "id": "RECSTRESS-231",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 110,
+  "claim": "The United States has reached herd immunity for COVID-19",
+  "evidence": "\"We've not reached herd immunity,\" Dr John Wherry, the director of the University of Pennsylvania's Institute of Immunology said. 70%-90% The number of confirmed infections in the US is about five million, which is less than two percent of the population.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "regression"
+  ],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-231.md",
+    "marker": "RECSTRESS-231_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-23",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-231.json",
+  "evidence_path": "evidence/RECSTRESS-231.md"
+}

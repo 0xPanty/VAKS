@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-077",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 76,
+  "layer": "action_challenge_conflict",
+  "claim": "Charlemagne was crowned by Pope Leo III.",
+  "evidence": "Charlemagne | 10 | Charlemagne reached the height of his power in 800 when he was crowned Emperor of the Romans by Pope Leo III on Christmas Day at Old St. Peter 's Basilica .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "explicit_challenge"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-077.md",
+    "document_hash": "683323861990e7bed708fa626800e0e4ebd06dcdd6a5d048c10efe4391cba5a6",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-077_ANCHOR",
+    "text_quote": "Charlemagne | 10 | Charlemagne reached the height of his power in 800 when he was crowned Emperor of the Romans by Pope Leo III on Christmas Day at Old St. Peter 's Basilica .",
+    "start": 146,
+    "end": 321
+  },
+  "record_path": "records/FEVER-077.json",
+  "evidence_path": "evidence/FEVER-077.md"
+}

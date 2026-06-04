@@ -1,0 +1,32 @@
+{
+  "id": "FULLANCHOR-074",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 73,
+  "layer": "full_anchor_click",
+  "claim": "Combination nicotine replacement therapies with varenicline or bupropion lead to significantly higher long-term abstinence rates at 52 weeks than varenicline monotherapy.",
+  "evidence": "IMPORTANCE Combining pharmacotherapies for tobacco-dependence treatment may increase smoking abstinence. OBJECTIVE To determine efficacy and safety of varenicline and bupropion sustained-release (SR; combination therapy) compared with varenicline (monotherapy) in cigarette smokers. DESIGN, SETTING, AND PARTICIPANTS Randomized, blinded, placebo-controlled multicenter clinical trial with a 12-week treatment period and follow-up through week 52 conducted between October 2009 and April 2013 at 3 midwestern clinical research sites. Five hundred six adult (≥18 years) cigarette smokers were randomly assigned and 315 (62%) completed the study. INTERVENTIONS Twelve weeks of varenicline and bupropion SR or varenicline and placebo. MAIN OUTCOMES AND MEASURES Primary outcome was abstinence rates at week 12, defined as prolonged (no smoking from 2 weeks after the target quit date) abstinence and 7-day point-prevalence (no smoking past 7 days) abstinence. Secondary outcomes were prolonged and point-prevalence smoking abstinence rates at weeks 26 and 52. Outcomes were biochemically confirmed. RESULTS At 12 weeks, 53.0% of the combination therapy group achieved prolonged smoking abstinence and 56.2% achieved 7-day point-prevalence smoking abstinence compared with 43.2% and 48.6% in varenicline monotherapy (odds ratio [OR], 1.49; 95% CI, 1.05-2.12; P = .03 and OR, 1.36; 95% CI, 0.95-1.93; P = .",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "release_note",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/FULLANCHOR-074.md",
+    "document_hash": "663d697f9c1830897cbb861cc0944300017b4ad921e10d25ed24f291a3235b76",
+    "version_id": "release_note-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-074_ANCHOR",
+    "text_quote": "IMPORTANCE Combining pharmacotherapies for tobacco-dependence treatment may increase smoking abstinence. OBJECTIVE To determine efficacy and safety of varenicline and bupropion sustained-release (SR; combination therapy)",
+    "start": 293,
+    "end": 513
+  },
+  "record_path": "records/FULLANCHOR-074.json",
+  "evidence_path": "evidence/FULLANCHOR-074.md"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "FEVER-020",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 19,
+  "claim": "Boeing 737s served the same markets that 757 airliners filled previously.",
+  "evidence": "Boeing_737 | 20 | Many 737s serve markets previously filled by 707 , 727 , 757 , DC-9 , and MD-80 / MD-90 airliners , and the aircraft currently competes primarily with the Airbus A320 family .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-020.md",
+    "marker": "FEVER-020_ANCHOR"
+  }
+}

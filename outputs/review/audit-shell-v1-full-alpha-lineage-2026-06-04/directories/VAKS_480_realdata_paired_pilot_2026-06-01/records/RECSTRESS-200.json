@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-200",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 79,
+  "claim": "In 2016, 33 million Americans voted by mail.",
+  "evidence": "Numerically, absentee/mail-in ballots made up roughly 33 million of the 140 million ballots counted in the 2016 general election",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-200.md",
+    "marker": "RECSTRESS-200_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-19",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "stress-rec-19-fp-v2",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-200.json",
+  "evidence_path": "evidence/RECSTRESS-200.md"
+}

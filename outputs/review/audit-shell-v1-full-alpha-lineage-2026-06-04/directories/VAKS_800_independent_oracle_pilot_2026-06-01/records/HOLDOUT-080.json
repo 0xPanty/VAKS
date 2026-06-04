@@ -1,0 +1,36 @@
+{
+  "id": "HOLDOUT-080",
+  "pool": "adversarial_holdout",
+  "dataset_family": "scifact",
+  "source_row_index": 79,
+  "layer": "serious_folded_violation",
+  "claim": "Crosstalk between dendritic cells (DCs) and innate lymphoid cells (ILCs) is important in the regulation of intestinal homeostasis.",
+  "evidence": "Mice lacking the transcription factor T-bet in the innate immune system develop microbiota-dependent colitis. Here, we show that interleukin-17A (IL-17A)-producing IL-7Rα(+) innate lymphoid cells (ILCs) were potent promoters of disease in Tbx21(-/-)Rag2(-/-) ulcerative colitis (TRUC) mice. TNF-α produced by CD103(-)CD11b(+) dendritic cells synergized with IL-23 to drive IL-17A production by ILCs, demonstrating a previously unrecognized layer of cellular crosstalk between dendritic cells and ILCs. We have identified Helicobacter typhlonius as a key disease trigger driving excess TNF-α production and promoting colitis in TRUC mice. Crucially, T-bet also suppressed the expression of IL-7R, a key molecule involved in controlling intestinal ILC homeostasis. The importance of IL-7R signaling in TRUC disease was highlighted by the dramatic reduction in intestinal ILCs and attenuated colitis following IL-7R blockade. Taken together, these data demonstrate the mechanism by which T-bet regulates the complex interplay between mucosal dendritic cells, ILCs, and the intestinal microbiota.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "recurrence_key": "serious-fold-39",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/HOLDOUT-080.md",
+    "document_hash": "ff71c379931721fd6168bbb40925680bbffa8a7af0d0ed0cff694557ed373419",
+    "version_id": "holdout-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "HOLDOUT-080_ANCHOR",
+    "text_quote": "Mice lacking the transcription factor T-bet in the innate immune system develop microbiota-dependent colitis. Here, we show that interleukin-17A (IL-17A)-producing IL-7Rα(+) innate lymphoid cells (ILCs) were potent promo",
+    "start": 242,
+    "end": 462
+  },
+  "record_path": "records/HOLDOUT-080.json",
+  "evidence_path": "evidence/HOLDOUT-080.md"
+}

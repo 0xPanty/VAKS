@@ -1,0 +1,31 @@
+{
+  "id": "HOLDOUT-034",
+  "pool": "adversarial_holdout",
+  "dataset_family": "scifact",
+  "source_row_index": 33,
+  "layer": "anchor_jumpback_failure",
+  "claim": "Assembly of invadopodia is triggered by focal generation of phosphatidylinositol-3,4-biphosphate and the activation of the nonreceptor tyrosine kinase Src.",
+  "evidence": "Invadopodia are extracellular matrix (ECM)-degrading protrusions formed by invasive cancer cells. Podosomes are structures functionally similar to invadopodia that are found in oncogene-transformed fibroblasts and monocyte-derived cells, including macrophages and osteoclasts. These structures are thought to play important roles in the pericellular remodeling of ECM during cancer invasion and metastasis. Much effort has been directed toward identification of the molecular components and regulators of invadopodia/podosomes, which could be therapeutic targets in the treatment of malignant cancers. However, it remains largely unknown how these components are assembled into invadopodia/podosomes and how the assembly process is spatially and temporally regulated. This review will summarize recent progress on the molecular mechanisms of invadopodia/podosome formation, with strong emphasis on the roles of lipid rafts and phosphoinositides.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "stale_pointer"
+  ],
+  "anchor_status": "stale",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "stale",
+    "path": "full_anchor_sources/HOLDOUT-034.md",
+    "document_hash": "464716967bc7a9379b71c64b046815933abba8f07112be99dd72b79bae722b93",
+    "version_id": "holdout-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "HOLDOUT-034_ANCHOR",
+    "text_quote": "Invadopodia are extracellular matrix (ECM)-degrading protrusions formed by invasive cancer cells. Podosomes are structures functionally similar to invadopodia that are found in oncogene-transformed fibroblasts and monocy",
+    "start": -1,
+    "end": -1
+  },
+  "record_path": "records/HOLDOUT-034.json",
+  "evidence_path": "evidence/HOLDOUT-034.md"
+}

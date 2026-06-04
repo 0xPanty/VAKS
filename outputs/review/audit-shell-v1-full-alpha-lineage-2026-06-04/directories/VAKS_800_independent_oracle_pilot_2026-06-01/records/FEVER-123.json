@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-123",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 122,
+  "layer": "anchor_problem",
+  "claim": "Natalie Wood has starred in a reboot.",
+  "evidence": "Natalie_Wood | 18 | Wood starred in several television productions , including a remake of the film From Here to Eternity -LRB- 1979 -RRB- for which she won a Golden Globe Award .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [
+    "moved_pointer"
+  ],
+  "anchor_status": "moved",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "moved",
+    "path": "raw_sources/FEVER-123_moved.md",
+    "document_hash": "af839c061d20122d6f2b73a8090c53daa6c790ec00f2774aa1ebed305410c151",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-123_ANCHOR",
+    "text_quote": "Natalie_Wood | 18 | Wood starred in several television productions , including a remake of the film From Here to Eternity -LRB- 1979 -RRB- for which she won a Golden Globe Award .",
+    "start": 143,
+    "end": 322
+  },
+  "record_path": "records/FEVER-123.json",
+  "evidence_path": "evidence/FEVER-123.md"
+}

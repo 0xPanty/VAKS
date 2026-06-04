@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "sample_count": 24,
+  "findings": [],
+  "rules": "forbidden_wording_zh.json",
+  "note": "Render-integrity and Chinese forbidden-wording lint only; targeted boundary reminders appear only when relevant. Not semantic safety proof."
+}

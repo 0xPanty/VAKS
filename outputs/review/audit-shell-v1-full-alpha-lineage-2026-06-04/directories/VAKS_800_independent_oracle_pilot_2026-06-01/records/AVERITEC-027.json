@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-027",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 26,
+  "layer": "ordinary_stable",
+  "claim": "I will raise taxes for anybody making over $400,000. … No new taxes for people making less than $400,000.",
+  "evidence": "There is broad agreement among the five tax models that Biden’s tax increase would fall almost entirely on the very wealthy. For technical reasons, the corporate tax increase is deemed to filter through to almost all income groups, giving the Republicans an opening to misleadingly claim that Biden is raising taxes on most Americans. Those numbers may change in Biden’s favor as updated analyses are completed of all of Biden’s tax proposals.We will leave this unrated. We are not in the habit of giving check marks for campaign promises.",
+  "source_label": "Not Enough Evidence",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-027.md",
+    "document_hash": "cefb4a90c61cc5ddc27978d611eef18d5dc066607b875ef13e5558d41692d033",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-027_ANCHOR",
+    "text_quote": "There is broad agreement among the five tax models that Biden’s tax increase would fall almost entirely on the very wealthy. For technical reasons, the corporate tax increase is deemed to filter through to almost all inc",
+    "start": 220,
+    "end": 440
+  },
+  "record_path": "records/AVERITEC-027.json",
+  "evidence_path": "evidence/AVERITEC-027.md"
+}

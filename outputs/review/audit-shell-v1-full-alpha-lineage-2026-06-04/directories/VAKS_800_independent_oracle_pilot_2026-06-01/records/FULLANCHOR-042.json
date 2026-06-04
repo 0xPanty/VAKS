@@ -1,0 +1,32 @@
+{
+  "id": "FULLANCHOR-042",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 41,
+  "layer": "full_anchor_click",
+  "claim": "Autologous transplantation of mesenchymal stem cells has lower rates of rejection than induction therapy with anti-interleukin-2 receptor antibodies.",
+  "evidence": "CONTEXT Antibody-based induction therapy plus calcineurin inhibitors (CNIs) reduce acute rejection rates in kidney recipients; however, opportunistic infections and toxic CNI effects remain challenging. Reportedly, mesenchymal stem cells (MSCs) have successfully treated graft-vs-host disease. OBJECTIVE To assess autologous MSCs as replacement of antibody induction for patients with end-stage renal disease who undergo ABO-compatible, cross-match-negative kidney transplants from a living-related donor. DESIGN, SETTING, AND PATIENTS One hundred fifty-nine patients were enrolled in this single-site, prospective, open-label, randomized study from February 2008-May 2009, when recruitment was completed. INTERVENTION Patients were inoculated with marrow-derived autologous MSC (1-2 x 10(6)/kg) at kidney reperfusion and two weeks later. Fifty-three patients received standard-dose and 52 patients received low-dose CNIs (80% of standard); 51 patients in the control group received anti-IL-2 receptor antibody plus standard-dose CNIs. MAIN OUTCOME MEASURES The primary measure was 1-year incidence of acute rejection and renal function (estimated glomerular filtration rate [eGFR]); the secondary measure was patient and graft survival and incidence of adverse events. RESULTS Patient and graft survival at 13 to 30 months was similar in all groups. After 6 months, 4 of 53 patients (7.5%) in the au",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "web_page",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/FULLANCHOR-042.md",
+    "document_hash": "48b7eaded4bd2bd09c715ceabf2ab6966b3fafc7755081f2173037241c906db3",
+    "version_id": "web_page-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-042_ANCHOR",
+    "text_quote": "CONTEXT Antibody-based induction therapy plus calcineurin inhibitors (CNIs) reduce acute rejection rates in kidney recipients; however, opportunistic infections and toxic CNI effects remain challenging. Reportedly, mesen",
+    "start": 268,
+    "end": 488
+  },
+  "record_path": "records/FULLANCHOR-042.json",
+  "evidence_path": "evidence/FULLANCHOR-042.md"
+}

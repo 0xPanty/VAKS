@@ -1,0 +1,29 @@
+{
+  "id": "SCIFACT-004",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 3,
+  "layer": "ordinary_stable",
+  "claim": "5% of perinatal mortality is due to low birth weight.",
+  "evidence": "CONTEXT One key target of the United Nations Millennium Development goals is to reduce the prevalence of underweight among children younger than 5 years by half between 1990 and 2015. OBJECTIVE To estimate trends in childhood underweight by geographic regions of the world. DESIGN, SETTING, AND PARTICIPANTS Time series study of prevalence of underweight, defined as weight 2 SDs below the mean weight for age of the National Center for Health Statistics and World Health Organization (WHO) reference population. National prevalence rates derived from the WHO Global Database on Child Growth and Malnutrition, which includes data on approximately 31 million children younger than 5 years who participated in 419 national nutritional surveys in 139 countries from 1965 through 2002. MAIN OUTCOME MEASURES Linear mixed-effects modeling was used to estimate prevalence rates and numbers of underweight children by region in 1990 and 2015 and to calculate the changes (ie, increase or decrease) to these values between 1990 and 2015. RESULTS Worldwide, underweight prevalence was projected to decline from 26.5% in 1990 to 17.6% in 2015, a change of -34% (95% confidence interval [CI], -43% to -23%). In developed countries, the prevalence was estimated to decrease from 1.6% to 0.9%, a change of -41% (95% CI, -92% to 343%). In developing regions, the prevalence was forecasted to decline from 30.2% to ",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-004.md",
+    "document_hash": "0e7990d0073c733ca9da8ccbee75a3e81f89ce2cd74bad7658664b4e5aaee00c",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-004_ANCHOR",
+    "text_quote": "CONTEXT One key target of the United Nations Millennium Development goals is to reduce the prevalence of underweight among children younger than 5 years by half between 1990 and 2015. OBJECTIVE To estimate trends in chil",
+    "start": 165,
+    "end": 385
+  },
+  "record_path": "records/SCIFACT-004.json",
+  "evidence_path": "evidence/SCIFACT-004.md"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "FEVER-076",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 75,
+  "claim": "Black Panther is a five act play.",
+  "evidence": "Mark_Comfort | 57 | In July 1967 , after the raid , the assembly passed the Mulford Act prohibiting the public carrying of loaded firearms .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-076.md",
+    "marker": "FEVER-076_ANCHOR"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-066",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 65,
+  "layer": "action_challenge_conflict",
+  "claim": "Candace Owens was fired from her show at One America News after a racist outburst.",
+  "evidence": "No Taterforceone.com No",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-066.md",
+    "document_hash": "81fecd8456acbb9e471e737811a787369ebb47e19d91b471caed7d48edb10d28",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-066_ANCHOR",
+    "text_quote": "No Taterforceone.com No",
+    "start": 197,
+    "end": 220
+  },
+  "record_path": "records/AVERITEC-066.json",
+  "evidence_path": "evidence/AVERITEC-066.md"
+}

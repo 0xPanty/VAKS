@@ -1,0 +1,9 @@
+user_id,case_id,prefer_a_b_tie,hidden_serious_risk_y_n_unsure,would_open_full_audit_a_b_both_neither,clickback_clear_a_b_both_neither,burden_1_light_5_heavy,notes
+USER-MAIN-01,SCIFACT-001,,,,,,
+USER-MAIN-02,SCIFACT-061,,,,,,
+USER-MAIN-03,SCIFACT-116,,,,,,
+USER-MAIN-04,SCIFACT-151,,,,,,
+USER-MAIN-05,HOLDOUT-045,,,,,,
+USER-SIDE-01,SCIFACT-139,,,,,,
+USER-SIDE-02,SCIFACT-142,,,,,,
+USER-SIDE-03,HOLDOUT-045,,,,,,

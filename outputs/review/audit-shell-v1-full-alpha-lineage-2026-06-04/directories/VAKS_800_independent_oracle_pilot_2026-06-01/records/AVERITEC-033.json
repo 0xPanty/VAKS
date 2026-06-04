@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-033",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 32,
+  "layer": "ordinary_stable",
+  "claim": "The Kenya judiciary have one magistrate serving over 77,000 people.",
+  "evidence": "546 as of June 2019. Rounded up to 47.6 million. 87 179",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-033.md",
+    "document_hash": "dad6ee523acdd9476222dd99670b6cd8359c8802405225074344d9d7b5d83d4c",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-033_ANCHOR",
+    "text_quote": "546 as of June 2019. Rounded up to 47.6 million. 87 179",
+    "start": 182,
+    "end": 237
+  },
+  "record_path": "records/AVERITEC-033.json",
+  "evidence_path": "evidence/AVERITEC-033.md"
+}

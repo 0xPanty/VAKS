@@ -1,0 +1,31 @@
+{
+  "id": "RECSTRESS-224",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 103,
+  "claim": "Late actor Sushant Singh Rajput developed an app which could detect Covid-19 infection just through a person's breathing.",
+  "evidence": "No answer could be found. Alleged suicide. Sushant Singh Rajput’s father, KK Singh, had filed a police complaint against Chakraborty in Patna, accusing her of abetting his son’s alleged suicide in June. His father has also alleged that Chakraborty illegally transferred Rs 15 crore from his son’s bank account and mentally harassed him.",
+  "source_label": "Not Enough Evidence",
+  "surface_state": "ordinary",
+  "signals": [
+    "missing_anchor"
+  ],
+  "anchor_status": "missing",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "missing",
+    "path": "raw_sources/RECSTRESS-224.md",
+    "marker": "RECSTRESS-224_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-22",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-224.json",
+  "evidence_path": "evidence/RECSTRESS-224.md"
+}

@@ -1,0 +1,140 @@
+{
+  "status": "sandbox gate spec; go means eligible for main-vault candidate operation-convention discussion, not adoption",
+  "candidate": "shell_core + Chinese operator renderer",
+  "side_arm": "shell_core_plus_recurrence",
+  "gates": [
+    {
+      "id": "serious_false_lite",
+      "threshold": "0",
+      "nature": "hard",
+      "truth_source": "dual reviewer + adjudicator after source inspection",
+      "automated_proxy": "hard_failures.serious_false_lite"
+    },
+    {
+      "id": "serious_full_audit_recall",
+      "threshold": "100%",
+      "nature": "hard",
+      "truth_source": "dual reviewer + adjudicator after source inspection",
+      "automated_proxy": "summary.serious_full_audit_recall_pct"
+    },
+    {
+      "id": "serious_folded_count",
+      "threshold": "0",
+      "nature": "hard",
+      "truth_source": "dual reviewer + adjudicator, recurrence side packet if recurrence is enabled",
+      "automated_proxy": "hard_failures.serious_folded_count"
+    },
+    {
+      "id": "wrong_actionability",
+      "threshold": "0",
+      "nature": "hard",
+      "truth_source": "reviewer decision + adjudication",
+      "automated_proxy": null
+    },
+    {
+      "id": "ordinary_false_positive_rate",
+      "threshold": "<= 2%",
+      "nature": "hard",
+      "truth_source": "dual reviewer + adjudicator after source inspection",
+      "automated_proxy": "summary.ordinary_false_positive_rate_pct"
+    },
+    {
+      "id": "review_due_recall",
+      "threshold": ">= 95%",
+      "nature": "hard",
+      "truth_source": "dual reviewer + adjudicator",
+      "automated_proxy": "1 - review_due_fn / expected_review_due"
+    },
+    {
+      "id": "review_due_precision",
+      "threshold": ">= 90%",
+      "nature": "strong",
+      "truth_source": "dual reviewer + adjudicator",
+      "automated_proxy": "1 - review_due_fp / observed_review_due"
+    },
+    {
+      "id": "source_record_evidence_clickback_success",
+      "threshold": ">= 95% on live / immutable cases",
+      "nature": "hard",
+      "truth_source": "actual source / record / evidence click logs; wrapper-only does not count",
+      "automated_proxy": "package pointer resolution only; not product click-back"
+    },
+    {
+      "id": "anchor_problem_visibility",
+      "threshold": "100%",
+      "nature": "hard",
+      "truth_source": "dual reviewer + adjudicator",
+      "automated_proxy": "hard_failures.anchor_problem_visibility_failures == 0"
+    },
+    {
+      "id": "authority_misunderstanding",
+      "threshold": "<= 2%",
+      "nature": "hard",
+      "truth_source": "observation prompts + notes + adjudication",
+      "automated_proxy": null
+    },
+    {
+      "id": "ordinary_triage_time_reduction",
+      "threshold": ">= 20% vs baseline_full",
+      "nature": "product",
+      "truth_source": "actual human timing",
+      "automated_proxy": null
+    },
+    {
+      "id": "ordinary_full_audit_open_rate_reduction",
+      "threshold": ">= 30% vs baseline_full",
+      "nature": "product",
+      "truth_source": "actual operation records",
+      "automated_proxy": null
+    },
+    {
+      "id": "ordinary_rendered_line_reduction",
+      "threshold": ">= 55%",
+      "nature": "supporting",
+      "truth_source": "renderer artifact diagnostic only",
+      "automated_proxy": "paired.ordinary.rendered_line_reduction_pct"
+    },
+    {
+      "id": "ordinary_rendered_char_reduction",
+      "threshold": ">= 60%",
+      "nature": "supporting",
+      "truth_source": "renderer artifact diagnostic only",
+      "automated_proxy": "paired.ordinary.rendered_char_reduction_pct"
+    },
+    {
+      "id": "resolved_default_queue_visible",
+      "threshold": "0",
+      "nature": "hard",
+      "truth_source": "reviewer/adjudicator plus queue surface check",
+      "automated_proxy": "summary.resolved_default_queue_visible"
+    },
+    {
+      "id": "recurrence_grouped_reduction",
+      "threshold": ">= 50%",
+      "nature": "conditional",
+      "truth_source": "recurrence side packet only",
+      "automated_proxy": "summary.grouping.grouped_reduction_pct"
+    },
+    {
+      "id": "recurrence_over_grouping_serious_mismatch",
+      "threshold": "0",
+      "nature": "hard when recurrence is enabled",
+      "truth_source": "recurrence-specific adjudication",
+      "automated_proxy": "hard_failures.severe_over_grouping + hard_failures.serious_folded_count"
+    },
+    {
+      "id": "recurrence_human_misunderstanding",
+      "threshold": "<= 5%",
+      "nature": "conditional",
+      "truth_source": "recurrence side packet reviewer notes + adjudication",
+      "automated_proxy": null
+    },
+    {
+      "id": "recurrence_slice_triage_time_reduction",
+      "threshold": ">= 10%",
+      "nature": "conditional product",
+      "truth_source": "recurrence side packet human timing",
+      "automated_proxy": null
+    }
+  ]
+}

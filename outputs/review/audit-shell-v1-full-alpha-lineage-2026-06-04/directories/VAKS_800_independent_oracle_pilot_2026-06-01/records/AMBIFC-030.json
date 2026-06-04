@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-030",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 29,
+  "layer": "ordinary_stable",
+  "claim": "vivien leigh won an oscar for streetcar named desire.",
+  "evidence": "Laurence Olivier saw Leigh in The Mask of Virtue, and a friendship developed after he congratulated her on her performance. Olivier and Leigh began an affair while acting as lovers in Fire Over England (1937), but Olivier was still married to actress Jill Esmond. During this period, Leigh read the Margaret Mitchell novel Gone with the Wind and instructed her American agent to recommend her to David O. Selznick, who was planning a film version. She remarked to a journalist, \"I've cast myself as Scarlett O'Hara\", and The Observer film critic C. A. Lejeune recalled a conversation of the same period in which Leigh \"stunned us all\" with the assertion that Olivier \"won't play Rhett Butler, but I shall play Scarlett O'Hara. Wait and see\". Despite her relative inexperience, Leigh was chosen to play Ophelia to Olivier's Hamlet in an Old Vic Theatre production staged at Elsinore, Denmark. Olivier later recalled an incident when her mood rapidly changed as she was preparing to go onstage. Without apparent provocation, she began screaming at him before suddenly becoming silent and staring into space. She was able to perform without mishap, and by the following day she had returned to normal with no recollection of the event. It was the first time Olivier witnessed such behaviour from her. They began living together, as their respective spouses had each refused to grant either of them a div",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-030.md",
+    "document_hash": "9f826472335dffba6271c26ba3068992b0ae004d0e65f5c9fe6923f3cdb68ced",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-030_ANCHOR",
+    "text_quote": "Laurence Olivier saw Leigh in The Mask of Virtue, and a friendship developed after he congratulated her on her performance. Olivier and Leigh began an affair while acting as lovers in Fire Over England (1937), but Olivie",
+    "start": 162,
+    "end": 382
+  },
+  "record_path": "records/AMBIFC-030.json",
+  "evidence_path": "evidence/AMBIFC-030.md"
+}

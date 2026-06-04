@@ -1,0 +1,20 @@
+{
+  "id": "AVERITEC-014",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 13,
+  "claim": "Joe Biden voted for the Iraq War and he supported wars in Serbia, Syria, and Libya.",
+  "evidence": "Yes Yes Yes",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-014.md",
+    "marker": "AVERITEC-014_ANCHOR"
+  }
+}

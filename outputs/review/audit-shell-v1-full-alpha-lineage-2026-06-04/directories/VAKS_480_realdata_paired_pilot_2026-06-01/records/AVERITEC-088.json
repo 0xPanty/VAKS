@@ -1,0 +1,22 @@
+{
+  "id": "AVERITEC-088",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 87,
+  "claim": "In one of the states that determined the outcome\" of the 2016 presidential race, \"the winning margin averaged out to just two votes per precinct — two votes.",
+  "evidence": "Michelle Obama in her speech said \"In one of the states that determined the outcome, the winning margin averaged out to just two votes per precinct—two votes\".",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-088.md",
+    "marker": "AVERITEC-088_ANCHOR"
+  }
+}

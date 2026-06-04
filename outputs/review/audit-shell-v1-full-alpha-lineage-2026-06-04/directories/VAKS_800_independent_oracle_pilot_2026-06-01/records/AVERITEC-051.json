@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-051",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 50,
+  "layer": "ordinary_stable",
+  "claim": "South Africans drink more per person than anywhere else in Africa.",
+  "evidence": "1st Tunisia (36.6 litres), 2nd Eswatini (34.4 litres) 3rd Namibia (32.4 litres) were above South Africa in the rankings with South Africa at 29.9 litres.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-051.md",
+    "document_hash": "1732de407d4686fed262be65f54503f628f00a8df1aa70f218e54c63048cce12",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-051_ANCHOR",
+    "text_quote": "1st Tunisia (36.6 litres), 2nd Eswatini (34.4 litres) 3rd Namibia (32.4 litres) were above South Africa in the rankings with South Africa at 29.9 litres.",
+    "start": 181,
+    "end": 334
+  },
+  "record_path": "records/AVERITEC-051.json",
+  "evidence_path": "evidence/AVERITEC-051.md"
+}

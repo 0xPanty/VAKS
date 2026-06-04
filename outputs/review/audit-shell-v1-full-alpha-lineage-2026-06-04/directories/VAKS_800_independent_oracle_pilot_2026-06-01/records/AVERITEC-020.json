@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-020",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 19,
+  "layer": "ordinary_stable",
+  "claim": "Donald Trump has kept his promises to voters",
+  "evidence": "During the 2016 campaign, Donald Trump made more than 280 promises, though many were contradictory or just uttered in a single campaign event. By 2020 Trump had made a number of promises, 6 of which he had not fulfilled, including covid measures such as having plenty of ventilators which states had faced shortages, no covid home testing kits, no covid drive thru testing and no Google covid website for screening, all of which he promised to deliver on. He also failed to deliver on a promise he would purchase new oil at a very good price and yet there has not been any new oil for the US strategic reserve. Yes",
+  "source_label": "Conflicting Evidence/Cherrypicking",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-020.md",
+    "document_hash": "c60543147f4bfe4d40fbcc4deec7c5d7486e993b9cfbda162de82da313ce6cec",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-020_ANCHOR",
+    "text_quote": "During the 2016 campaign, Donald Trump made more than 280 promises, though many were contradictory or just uttered in a single campaign event. By 2020 Trump had made a number of promises, 6 of which he had not fulfilled,",
+    "start": 159,
+    "end": 379
+  },
+  "record_path": "records/AVERITEC-020.json",
+  "evidence_path": "evidence/AVERITEC-020.md"
+}

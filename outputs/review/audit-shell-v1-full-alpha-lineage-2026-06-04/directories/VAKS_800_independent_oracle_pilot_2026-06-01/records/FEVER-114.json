@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-114",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 113,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Francois de Belleforest wrote.",
+  "evidence": "François_de_Belleforest | 0 | François de Belleforest -LRB- 1530 -- 1 January 1583 -RRB- was a prolific French author , poet and translator of the Renaissance .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "ambiguous_scope"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-114.md",
+    "document_hash": "289c9450cc9b1b4168568113d17b4ebbd535f81268220edda753c091f18321b3",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-114_ANCHOR",
+    "text_quote": "François_de_Belleforest | 0 | François de Belleforest -LRB- 1530 -- 1 January 1583 -RRB- was a prolific French author , poet and translator of the Renaissance .",
+    "start": 136,
+    "end": 296
+  },
+  "record_path": "records/FEVER-114.json",
+  "evidence_path": "evidence/FEVER-114.md"
+}

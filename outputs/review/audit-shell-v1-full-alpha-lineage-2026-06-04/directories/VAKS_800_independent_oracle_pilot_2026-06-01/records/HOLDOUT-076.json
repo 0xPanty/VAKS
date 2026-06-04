@@ -1,0 +1,36 @@
+{
+  "id": "HOLDOUT-076",
+  "pool": "adversarial_holdout",
+  "dataset_family": "scifact",
+  "source_row_index": 75,
+  "layer": "serious_folded_violation",
+  "claim": "Combining phosphatidylinositide 3-kinase and MEK 1/2 inhibitors is effective at treating KRAS mutant tumors.",
+  "evidence": "Phosphatidylinositol-3-kinase (PI3K) pathway deregulation is a common event in human cancer, either through inactivation of the tumor suppressor phosphatase and tensin homologue deleted from chromosome 10 or activating mutations of p110-alpha. These hotspot mutations result in oncogenic activity of the enzyme and contribute to therapeutic resistance to the anti-HER2 antibody trastuzumab. The PI3K pathway is, therefore, an attractive target for cancer therapy. We have studied NVP-BEZ235, a dual inhibitor of the PI3K and the downstream mammalian target of rapamycin (mTOR). NVP-BEZ235 inhibited the activation of the downstream effectors Akt, S6 ribosomal protein, and 4EBP1 in breast cancer cells. The antiproliferative activity of NVP-BEZ235 was superior to the allosteric selective mTOR complex inhibitor everolimus in a panel of 21 cancer cell lines of different origin and mutation status. The described Akt activation due to mTOR inhibition was prevented by higher doses of NVP-BEZ235. NVP-BEZ235 reversed the hyperactivation of the PI3K/mTOR pathway caused by the oncogenic mutations of p110-alpha, E545K, and H1047R, and inhibited the proliferation of HER2-amplified BT474 cells exogenously expressing these mutations that render them resistant to trastuzumab. In trastuzumab-resistant BT474 H1047R breast cancer xenografts, NVP-BEZ235 inhibited PI3K signaling and had potent antitumor ac",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "recurrence_key": "serious-fold-37",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/HOLDOUT-076.md",
+    "document_hash": "a2f27b67b0aacdeb964cfea9c883485111ec1bf86f7b8f3ca0b53fd955d78e8c",
+    "version_id": "holdout-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "HOLDOUT-076_ANCHOR",
+    "text_quote": "Phosphatidylinositol-3-kinase (PI3K) pathway deregulation is a common event in human cancer, either through inactivation of the tumor suppressor phosphatase and tensin homologue deleted from chromosome 10 or activating m",
+    "start": 220,
+    "end": 440
+  },
+  "record_path": "records/HOLDOUT-076.json",
+  "evidence_path": "evidence/HOLDOUT-076.md"
+}

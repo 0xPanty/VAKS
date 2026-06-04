@@ -1,0 +1,20 @@
+{
+  "id": "FEVER-056",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 55,
+  "claim": "Sharon Tate was an actress.",
+  "evidence": "Sharon_Tate | 5 | She made her film debut in 1966 with the occult-themed Eye of the Devil .",
+  "source_label": "SUPPORTS",
+  "surface_state": "resolved_folded",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-056.md",
+    "marker": "FEVER-056_ANCHOR"
+  }
+}

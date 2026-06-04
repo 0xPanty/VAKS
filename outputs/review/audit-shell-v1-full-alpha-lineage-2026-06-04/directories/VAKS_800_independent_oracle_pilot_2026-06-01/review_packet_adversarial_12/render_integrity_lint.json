@@ -1,0 +1,6 @@
+{
+  "status": "pass",
+  "sample_count": 12,
+  "findings": [],
+  "note": "Render-integrity lint only; adversarial recognition still needs operator/adjudicator judgment."
+}

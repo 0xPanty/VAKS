@@ -1,0 +1,7 @@
+# Raw Source SCIFACT-073
+dataset: scifact
+source_row: 72
+marker: SCIFACT-073_ANCHOR
+claim: Localization of PIN1 in the Arabidopsis embryo does not require VPS9a
+label: 
+evidence: Dynamically polarized membrane proteins define different cell boundaries and have an important role in intercellular communication—a vital feature of multicellular development. Efflux carriers for the signalling molecule auxin from the PIN family are landmarks of cell polarity in plants and have a crucial involvement in auxin distribution-dependent development including embryo patterning, organogenesis and tropisms. Polar PIN localization determines the direction of intercellular auxin flow, yet the mechanisms generating PIN polarity remain unclear. Here we identify an endocytosis-dependent mechanism of PIN polarity generation and analyse its developmental implications. Real-time PIN tracking showed that after synthesis, PINs are initially delivered to the plasma membrane in a non-polar manner and their polarity is established by subsequent endocytic recycling. Interference with PIN endocytosis either by auxin or by manipulation of the Arabidopsis Rab5 GTPase pathway prevents PIN polarization. Failure of PIN polarization transiently alters asymmetric auxin distribution during embryogenesis and increases the local auxin response in apical embryo regions. This results in ectopic expr

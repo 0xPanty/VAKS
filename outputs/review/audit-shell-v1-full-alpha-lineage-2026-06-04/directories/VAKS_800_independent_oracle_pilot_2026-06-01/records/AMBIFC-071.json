@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-071",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 70,
+  "layer": "action_challenge_conflict",
+  "claim": "fifty shades of grey started as fanfiction.",
+  "evidence": "An album of songs selected by E. L. James was released on 11 September 2012 by EMI Classics under the title Fifty Shades of Grey: The Classical Album, and reached number four on the US Billboard classical music albums chart in October 2012. A Seattle P-I reviewer favourably wrote that the album would appeal both to fans of the series and to \"those who have no intention of reading any of the Grey Shades\".",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "explicit_challenge"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-071.md",
+    "document_hash": "dcde43784f2d48ea3eed41f27d46e192f67f8e6fcc98dcad80a720ecfa652934",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-071_ANCHOR",
+    "text_quote": "An album of songs selected by E. L. James was released on 11 September 2012 by EMI Classics under the title Fifty Shades of Grey: The Classical Album, and reached number four on the US Billboard classical music albums ch",
+    "start": 152,
+    "end": 372
+  },
+  "record_path": "records/AMBIFC-071.json",
+  "evidence_path": "evidence/AMBIFC-071.md"
+}

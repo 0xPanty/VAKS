@@ -1,0 +1,29 @@
+{
+  "id": "SCIFACT-155",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 154,
+  "layer": "authority_leak_bait",
+  "claim": "Individuals with low serum vitamin D concentrations have increased risk of multiple sclerosis.",
+  "evidence": "OBJECTIVE To examine whether past high sun exposure is associated with a reduced risk of multiple sclerosis. DESIGN Population based case-control study. SETTING Tasmania, latitudes 41-3 degrees S. PARTICIPANTS 136 cases with multiple sclerosis and 272 controls randomly drawn from the community and matched on sex and year of birth. MAIN OUTCOME MEASURE Multiple sclerosis defined by both clinical and magnetic resonance imaging criteria. RESULTS Higher sun exposure when aged 6-15 years (average 2-3 hours or more a day in summer during weekends and holidays) was associated with a decreased risk of multiple sclerosis (adjusted odds ratio 0.31, 95% confidence interval 0.16 to 0.59). Higher exposure in winter seemed more important than higher exposure in summer. Greater actinic damage was also independently associated with a decreased risk of multiple sclerosis (0.32, 0.11 to 0.88 for grades 4-6 disease). A dose-response relation was observed between multiple sclerosis and decreasing sun exposure when aged 6-15 years and with actinic damage. CONCLUSION Higher sun exposure during childhood and early adolescence is associated with a reduced risk of multiple sclerosis. Insufficient ultraviolet radiation may therefore influence the development of multiple sclerosis.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "group_count_as_support",
+  "authority_trap": "A large group count gives stronger support.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-155.md",
+    "document_hash": "82822e37886020e68b175c9f297b379bb2bca35d590c9d70a3852a75a87debf7",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-155_ANCHOR",
+    "text_quote": "OBJECTIVE To examine whether past high sun exposure is associated with a reduced risk of multiple sclerosis. DESIGN Population based case-control study. SETTING Tasmania, latitudes 41-3 degrees S. PARTICIPANTS 136 cases ",
+    "start": 206,
+    "end": 426
+  },
+  "record_path": "records/SCIFACT-155.json",
+  "evidence_path": "evidence/SCIFACT-155.md"
+}

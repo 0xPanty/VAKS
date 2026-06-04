@@ -1,0 +1,7 @@
+# Raw Source AMBIFC-079
+dataset: ambifc
+source_row: 78
+marker: AMBIFC-079_ANCHOR
+claim: will smith's daughter is in i am legend.
+label: neutral
+evidence: Smith's first major roles were in the drama Six Degrees of Separation (1993) and the action film Bad Boys (1995) in which he starred opposite Martin Lawrence. The latter film was commercially successful, grossing $141,407,024 worldwide – $65,807,024 in North America and $75,600,000 overseas. However, critical reception was generally mixed. In 1996, Smith starred as part of an ensemble cast in Roland Emmerich's Independence Day. The film was a massive blockbuster, becoming the second highest-grossing film in history at the time and establishing Smith as a prime box office draw. In the summer of 1997, he starred alongside Tommy Lee Jones in the hit Men in Black, playing Agent J. The film was released on July 2 by Columbia Pictures and grossed over $589.3 million worldwide against a $90 million budget, becoming the year's third highest-grossing film, with an estimated 54,616,700 tickets sold in the US. It received worldwide acclaim, with critics highly praising its humor, as well as Jones and Smith's performances. During the summer of 1997, Smith also began his solo music career with the release of "Men in Black", the theme song for the film, which topped singles charts in several reg

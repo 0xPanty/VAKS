@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-101",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 100,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Facebook deleted a photo of Melania Trump with her sister and mother.",
+  "evidence": "it shows Melania, her sister and audrey gruss (not Melanias mother) No the photo was not removed from Facebook",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "insufficient_evidence"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-101.md",
+    "document_hash": "3b60770ea67f7ca9f8f318c949ddeb356c57ea761d33fcc0745b09b26e4e2e04",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-101_ANCHOR",
+    "text_quote": "it shows Melania, her sister and audrey gruss (not Melanias mother) No the photo was not removed from Facebook",
+    "start": 184,
+    "end": 294
+  },
+  "record_path": "records/AVERITEC-101.json",
+  "evidence_path": "evidence/AVERITEC-101.md"
+}

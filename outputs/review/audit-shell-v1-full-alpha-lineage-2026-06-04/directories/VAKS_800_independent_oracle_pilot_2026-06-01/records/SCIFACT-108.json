@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-108",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 107,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Fz/PCP-dependent Pk localizes to the anterior membrane of neuroectoderm cells during zebrafish neuralation",
+  "evidence": "Environmental and genetic aberrations lead to neural tube closure defects (NTDs) in 1 out of every 1,000 births. Mouse and frog models for these birth defects have indicated that Van Gogh-like 2 (Vangl2, also known as Strabismus) and other components of planar cell polarity (PCP) signalling might control neurulation by promoting the convergence of neural progenitors to the midline. Here we show a novel role for PCP signalling during neurulation in zebrafish. We demonstrate that non-canonical Wnt/PCP signalling polarizes neural progenitors along the anteroposterior axis. This polarity is transiently lost during cell division in the neural keel but is re-established as daughter cells reintegrate into the neuroepithelium. Loss of zebrafish Vangl2 (in trilobite mutants) abolishes the polarization of neural keel cells, disrupts re-intercalation of daughter cells into the neuroepithelium, and results in ectopic neural progenitor accumulations and NTDs. Remarkably, blocking cell division leads to rescue of trilobite neural tube morphogenesis despite persistent defects in convergence and extension. These results reveal a function for PCP signalling in coupling cell division and morphogenesis at neurulation and indicate a previously unrecognized mechanism that might underlie NTDs.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "ambiguous_scope"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-108.md",
+    "document_hash": "11f9a24f60dd51904a52292ebf065d6bd7fc41e9b4dc19da5423fc05dbc29c8a",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-108_ANCHOR",
+    "text_quote": "Environmental and genetic aberrations lead to neural tube closure defects (NTDs) in 1 out of every 1,000 births. Mouse and frog models for these birth defects have indicated that Van Gogh-like 2 (Vangl2, also known as St",
+    "start": 218,
+    "end": 438
+  },
+  "record_path": "records/SCIFACT-108.json",
+  "evidence_path": "evidence/SCIFACT-108.md"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-088",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 87,
+  "layer": "action_challenge_conflict",
+  "claim": "Dexamethasone decreases risk of postoperative bleeding.",
+  "evidence": "CONTEXT Dexamethasone is widely used to prevent postoperative nausea and vomiting (PONV) in pediatric tonsillectomy. OBJECTIVE To assess whether dexamethasone dose-dependently reduces the risk of PONV at 24 hours after tonsillectomy. DESIGN, SETTING, AND PATIENTS Randomized placebo-controlled trial conducted among 215 children undergoing elective tonsillectomy at a major public teaching hospital in Switzerland from February 2005 to December 2007. INTERVENTIONS Children were randomly assigned to receive dexamethasone (0.05, 0.15, or 0.5 mg/kg) or placebo intravenously after induction of anesthesia. Acetaminophen-codeine and ibuprofen were given as postoperative analgesia. Follow-up continued until the 10th postoperative day. MAIN OUTCOME MEASURES The primary end point was prevention of PONV at 24 hours; secondary end points were decrease in the need for ibuprofen at 24 hours and evaluation of adverse effects. RESULTS At 24 hours, 24 of 54 participants who received placebo (44%; 95% confidence interval [CI], 31%-59%) had experienced PONV compared with 20 of 53 (38%; 95% CI, 25%-52%), 13 of 54 (24%; 95% CI, 13%-38%), and 6 of 52 (12%; 95% CI, 4%-23%) who received dexamethasone at 0.05, 0.15, and 0.5 mg/kg, respectively (P<.001 for linear trend). Children who received dexamethasone received significantly less ibuprofen. There were 26 postoperative bleeding episodes in 22 children. ",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-088.md",
+    "document_hash": "a737ba99b0d6d37609ce25451906f776626c08be0a476a72157c2628dc8f0b4e",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-088_ANCHOR",
+    "text_quote": "CONTEXT Dexamethasone is widely used to prevent postoperative nausea and vomiting (PONV) in pediatric tonsillectomy. OBJECTIVE To assess whether dexamethasone dose-dependently reduces the risk of PONV at 24 hours after t",
+    "start": 167,
+    "end": 387
+  },
+  "record_path": "records/SCIFACT-088.json",
+  "evidence_path": "evidence/SCIFACT-088.md"
+}

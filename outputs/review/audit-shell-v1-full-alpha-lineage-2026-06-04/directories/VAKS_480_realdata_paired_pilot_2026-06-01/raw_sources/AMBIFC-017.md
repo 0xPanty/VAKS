@@ -1,0 +1,7 @@
+# Raw Source AMBIFC-017
+dataset: ambifc
+source_row: 16
+marker: AMBIFC-017_ANCHOR
+claim: the word actor can be used for females.
+label: neutral
+evidence: To act on stage, actors need to learn the stage directions that appear in the script, such as "Stage Left" and "Stage Right". These directions are based on the actor's point of view as he or she stands on the stage facing the audience. Actors also have to learn the meaning of the stage directions "Upstage" (away from the audience) and "Downstage" (towards the audience) Theatre actors need to learn blocking, which is "...where and how an actor moves on the stage during a play". Most scripts specify some blocking. The Director also gives instructions on blocking, such as crossing the stage or picking up and using a prop. Some theater actors need to learn stage combat, which is simulated fighting on stage. Actors may have to simulate hand-to-hand [fighting] or sword[-fighting]. Actors are coached by fight directors, who help them learn the choreographed sequence of fight actions.

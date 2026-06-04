@@ -1,0 +1,20 @@
+{
+  "id": "AVERITEC-037",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 36,
+  "claim": "If one gets the Spanish flu you have a 50% chance of dying",
+  "evidence": "The influenza pandemic of 1918-1919 killed more people than the Great War, known today as World War I (WWI), at somewhere between 20 and 40 million people. Half a billion people were infected.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-037.md",
+    "marker": "AVERITEC-037_ANCHOR"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-008",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 7,
+  "layer": "ordinary_stable",
+  "claim": "Margaret Sanger was a racist who believed in eugenics. Her goal when founding Planned Parenthood was to eradicate minorities.",
+  "evidence": "Eugenics is the practice or advocacy of improving the human species by selectively mating people with specific desirable hereditary traits. It aims to reduce human suffering by “breeding out” disease, disabilities and so-called undesirable characteristics from the human population I think the greatest sin in the world is bringing children into the world -- that have disease from their parents, that have no chance in the world to be a human being practically. Delinquents, prisoners, all sorts of things just marked when they're born. That to me is the greatest sin -- that people can -- can commit As her biographer Ellen Chesler told me, she was a progressive who believed in racial integration. She voted for Norman Thomas. She worked with progressive Black people—W.E.B. Du Bois, for example, who along with Mary McCleod Bethune and Adam Clayton Powell Sr. served on the board of the Negro Project, a network of birth control and maternal health clinics Sanger established in Harlem and the South. In 1966, Martin Luther King accepted Planned Parenthood’s first Margaret Sanger Award, and in his statement offered a vigorous endorsement of voluntary birth control.",
+  "source_label": "Conflicting Evidence/Cherrypicking",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-008.md",
+    "document_hash": "b3dd9dbe8ff0cff8103d9a24b5c0dfac5e0876719a8ce2cf2286e8fd86c09bab",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-008_ANCHOR",
+    "text_quote": "Eugenics is the practice or advocacy of improving the human species by selectively mating people with specific desirable hereditary traits. It aims to reduce human suffering by “breeding out” disease, disabilities and so",
+    "start": 240,
+    "end": 460
+  },
+  "record_path": "records/AVERITEC-008.json",
+  "evidence_path": "evidence/AVERITEC-008.md"
+}

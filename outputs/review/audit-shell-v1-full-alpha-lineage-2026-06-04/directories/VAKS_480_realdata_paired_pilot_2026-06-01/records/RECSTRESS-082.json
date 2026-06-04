@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-082",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 81,
+  "claim": "Mercaptopurine is anabolized into the inactive methylmercaptopurine by thiopurine methyltrasnferase (TPMT).",
+  "evidence": "Acute lymphoblastic leukemia (ALL) is an aggressive hematological tumor resulting from the malignant transformation of lymphoid progenitors. Despite intensive chemotherapy, 20% of pediatric patients and over 50% of adult patients with ALL do not achieve a complete remission or relapse after intensified chemotherapy, making disease relapse and resistance to therapy the most substantial challenge in the treatment of this disease. Using whole-exome sequencing, we identify mutations in the cytosolic 5'-nucleotidase II gene (NT5C2), which encodes a 5'-nucleotidase enzyme that is responsible for the inactivation of nucleoside-analog chemotherapy drugs, in 20/103 (19%) relapse T cell ALLs and 1/35 (3%) relapse B-precursor ALLs. NT5C2 mutant proteins show increased nucleotidase activity in vitro and conferred resistance to chemotherapy with 6-mercaptopurine and 6-thioguanine when expressed in ALL lymphoblasts. These results support a prominent role for activating mutations in NT5C2 and increased nucleoside-analog metabolism in disease progression and chemotherapy resistance in ALL.",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-082.md",
+    "marker": "RECSTRESS-082_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-08",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-08-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-082.json",
+  "evidence_path": "evidence/RECSTRESS-082.md"
+}

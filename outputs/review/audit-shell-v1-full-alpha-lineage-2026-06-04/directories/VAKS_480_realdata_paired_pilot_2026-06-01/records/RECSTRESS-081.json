@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-081",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 80,
+  "claim": "Mathematical models predict that using Artemisinin-based combination therapy over nongametocytocidal drugs have a dramatic impact in reducing malaria transmission.",
+  "evidence": "BACKGROUND Artemisinin derivatives used in recently introduced combination therapies (ACTs) for Plasmodium falciparum malaria significantly lower patient infectiousness and have the potential to reduce population-level transmission of the parasite. With the increased interest in malaria elimination, understanding the impact on transmission of ACT and other antimalarial drugs with different pharmacodynamics becomes a key issue. This study estimates the reduction in transmission that may be achieved by introducing different types of treatment for symptomatic P. falciparum malaria in endemic areas. METHODS AND FINDINGS We developed a mathematical model to predict the potential impact on transmission outcomes of introducing ACT as first-line treatment for uncomplicated malaria in six areas of varying transmission intensity in Tanzania. We also estimated the impact that could be achieved by antimalarials with different efficacy, prophylactic time, and gametocytocidal effects. Rates of treatment, asymptomatic infection, and symptomatic infection in the six study areas were estimated using the model together with data from a cross-sectional survey of 5,667 individuals conducted prior to p",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-081.md",
+    "marker": "RECSTRESS-081_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-08",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-08-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-081.json",
+  "evidence_path": "evidence/RECSTRESS-081.md"
+}

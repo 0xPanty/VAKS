@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-072",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 71,
+  "claim": "Leukemia associated Rho guanine nucleotide-exchange factor represses RhoA in response to SRC activation.",
+  "evidence": "How individual cells respond to mechanical forces is of considerable interest to biologists as force affects many aspects of cell behaviour. The application of force on integrins triggers cytoskeletal rearrangements and growth of the associated adhesion complex, resulting in increased cellular stiffness, also known as reinforcement. Although RhoA has been shown to play a role during reinforcement, the molecular mechanisms that regulate its activity are unknown. By combining biochemical and biophysical approaches, we identified two guanine nucleotide exchange factors (GEFs), LARG and GEF-H1, as key molecules that regulate the cellular adaptation to force. We show that stimulation of integrins with tensional force triggers activation of these two GEFs and their recruitment to adhesion complexes. Surprisingly, activation of LARG and GEF-H1 involves distinct signalling pathways. Our results reveal that LARG is activated by the Src family tyrosine kinase Fyn, whereas GEF-H1 catalytic activity is enhanced by ERK downstream of a signalling cascade that includes FAK and Ras.",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-072.md",
+    "marker": "RECSTRESS-072_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-07",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-07-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-072.json",
+  "evidence_path": "evidence/RECSTRESS-072.md"
+}

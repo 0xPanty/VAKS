@@ -1,0 +1,821 @@
+{
+  "generated_at": "2026-05-31T18:15:55.530432+00:00",
+  "suite": "narrow-hole-3-plus-1-pressure-tests",
+  "status": "PASS",
+  "case_count": 24,
+  "pass_count": 24,
+  "fail_count": 0,
+  "main_vault_clean": true,
+  "git_status_short": "",
+  "git_diff_name_only": "",
+  "universal_forbidden_effects": [
+    "truth_confidence_created",
+    "reviewed_relation_created",
+    "action_readiness_created",
+    "mainline_readiness_created",
+    "runtime_readiness_created",
+    "schema_change_proposed",
+    "automatic_promotion_created",
+    "ordinary_capture_heavy_gate_created"
+  ],
+  "summaries": [
+    {
+      "candidate": "context-memory/source 混淆",
+      "landing": "REVIEW_QUEUE",
+      "true_failure_caught": true,
+      "ordinary_false_positives": 0,
+      "ordinary_flow_burdened": false,
+      "forbidden_effects_zero": true,
+      "conflicts_existing_rules": false,
+      "suggestion": "candidate-ok"
+    },
+    {
+      "candidate": "转换证据锚点",
+      "landing": "anti-pattern",
+      "true_failure_caught": true,
+      "ordinary_false_positives": 0,
+      "ordinary_flow_burdened": false,
+      "forbidden_effects_zero": true,
+      "conflicts_existing_rules": false,
+      "suggestion": "candidate-ok"
+    },
+    {
+      "candidate": "动态数据 query-scope 身份",
+      "landing": "REVIEW_QUEUE",
+      "true_failure_caught": true,
+      "ordinary_false_positives": 0,
+      "ordinary_flow_burdened": false,
+      "forbidden_effects_zero": true,
+      "conflicts_existing_rules": false,
+      "suggestion": "candidate-ok"
+    },
+    {
+      "candidate": "oracle 类型",
+      "landing": "maintenance-manifest",
+      "true_failure_caught": true,
+      "ordinary_false_positives": 0,
+      "ordinary_flow_burdened": false,
+      "forbidden_effects_zero": true,
+      "conflicts_existing_rules": false,
+      "suggestion": "candidate-ok"
+    }
+  ],
+  "results": [
+    {
+      "id": "cms_fail_001",
+      "candidate": "context-memory/source 混淆",
+      "kind": "true_failure",
+      "title": "action basis 把记忆结论挂到当前论文",
+      "expected_trigger": true,
+      "actual_trigger": true,
+      "ordinary_flow": false,
+      "ordinary_false_positive": false,
+      "effects": [
+        "origin_confusion_review_needed"
+      ],
+      "produced_forbidden_effects": [],
+      "forbidden_effects_zero": true,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "id": "cms_ord_001",
+      "candidate": "context-memory/source 混淆",
+      "kind": "ordinary",
+      "title": "light capture 保存链接",
+      "expected_trigger": false,
+      "actual_trigger": false,
+      "ordinary_flow": true,
+      "ordinary_false_positive": false,
+      "effects": [],
+      "produced_forbidden_effects": [],
+      "forbidden_effects_zero": true,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "id": "cms_ord_002",
+      "candidate": "context-memory/source 混淆",
+      "kind": "ordinary",
+      "title": "ordinary query 摘要",
+      "expected_trigger": false,
+      "actual_trigger": false,
+      "ordinary_flow": true,
+      "ordinary_false_positive": false,
+      "effects": [],
+      "produced_forbidden_effects": [],
+      "forbidden_effects_zero": true,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "id": "cms_ord_003",
+      "candidate": "context-memory/source 混淆",
+      "kind": "ordinary",
+      "title": "ordinary query 背景常识不作支持",
+      "expected_trigger": false,
+      "actual_trigger": false,
+      "ordinary_flow": true,
+      "ordinary_false_positive": false,
+      "effects": [],
+      "produced_forbidden_effects": [],
+      "forbidden_effects_zero": true,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "id": "cms_edge_001",
+      "candidate": "context-memory/source 混淆",
+      "kind": "edge",
+      "title": "历史记忆提过但当前 source span 也直接支持",
+      "expected_trigger": false,
+      "actual_trigger": false,
+      "ordinary_flow": false,
+      "ordinary_false_positive": false,
+      "effects": [],
+      "produced_forbidden_effects": [],
+      "forbidden_effects_zero": true,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "id": "cms_edge_002",
+      "candidate": "context-memory/source 混淆",
+      "kind": "edge",
+      "title": "当前 source 支持 A，记忆补成 B",
+      "expected_trigger": true,
+      "actual_trigger": true,
+      "ordinary_flow": false,
+      "ordinary_false_positive": false,
+      "effects": [
+        "origin_confusion_review_needed"
+      ],
+      "produced_forbidden_effects": [],
+      "forbidden_effects_zero": true,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "id": "tea_fail_001",
+      "candidate": "转换证据锚点",
+      "kind": "true_failure",
+      "title": "OCR 表格错列被当直接证据",
+      "expected_trigger": true,
+      "actual_trigger": true,
+      "ordinary_flow": false,
+      "ordinary_false_positive": false,
+      "effects": [
+        "transformed_evidence_anchor_needed"
+      ],
+      "produced_forbidden_effects": [],
+      "forbidden_effects_zero": true,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "id": "tea_ord_001",
+      "candidate": "转换证据锚点",
+      "kind": "ordinary",
+      "title": "light capture 保存截图",
+      "expected_trigger": false,
+      "actual_trigger": false,
+      "ordinary_flow": true,
+      "ordinary_false_positive": false,
+      "effects": [],
+      "produced_forbidden_effects": [],
+      "forbidden_effects_zero": true,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "id": "tea_ord_002",
+      "candidate": "转换证据锚点",
+      "kind": "ordinary",
+      "title": "ordinary query 读表大意",
+      "expected_trigger": false,
+      "actual_trigger": false,
+      "ordinary_flow": true,
+      "ordinary_false_positive": false,
+      "effects": [],
+      "produced_forbidden_effects": [],
+      "forbidden_effects_zero": true,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "id": "tea_ord_003",
+      "candidate": "转换证据锚点",
+      "kind": "ordinary",
+      "title": "普通原文 quote",
+      "expected_trigger": false,
+      "actual_trigger": false,
+      "ordinary_flow": true,
+      "ordinary_false_positive": false,
+      "effects": [],
+      "produced_forbidden_effects": [],
+      "forbidden_effects_zero": true,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "id": "tea_edge_001",
+      "candidate": "转换证据锚点",
+      "kind": "edge",
+      "title": "OCR 有原始格锚点",
+      "expected_trigger": false,
+      "actual_trigger": false,
+      "ordinary_flow": false,
+      "ordinary_false_positive": false,
+      "effects": [],
+      "produced_forbidden_effects": [],
+      "forbidden_effects_zero": true,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "id": "tea_edge_002",
+      "candidate": "转换证据锚点",
+      "kind": "edge",
+      "title": "翻译漏条件",
+      "expected_trigger": true,
+      "actual_trigger": true,
+      "ordinary_flow": false,
+      "ordinary_false_positive": false,
+      "effects": [
+        "transformed_evidence_anchor_needed"
+      ],
+      "produced_forbidden_effects": [],
+      "forbidden_effects_zero": true,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "id": "dqs_fail_001",
+      "candidate": "动态数据 query-scope 身份",
+      "kind": "true_failure",
+      "title": "动态接口无 filter/as-of 支撑行动",
+      "expected_trigger": true,
+      "actual_trigger": true,
+      "ordinary_flow": false,
+      "ordinary_false_positive": false,
+      "effects": [
+        "query_scope_identity_missing"
+      ],
+      "produced_forbidden_effects": [],
+      "forbidden_effects_zero": true,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "id": "dqs_ord_001",
+      "candidate": "动态数据 query-scope 身份",
+      "kind": "ordinary",
+      "title": "light capture 保存数据集主页",
+      "expected_trigger": false,
+      "actual_trigger": false,
+      "ordinary_flow": true,
+      "ordinary_false_positive": false,
+      "effects": [],
+      "produced_forbidden_effects": [],
+      "forbidden_effects_zero": true,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "id": "dqs_ord_002",
+      "candidate": "动态数据 query-scope 身份",
+      "kind": "ordinary",
+      "title": "ordinary query 问数据集是什么",
+      "expected_trigger": false,
+      "actual_trigger": false,
+      "ordinary_flow": true,
+      "ordinary_false_positive": false,
+      "effects": [],
+      "produced_forbidden_effects": [],
+      "forbidden_effects_zero": true,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "id": "dqs_ord_003",
+      "candidate": "动态数据 query-scope 身份",
+      "kind": "ordinary",
+      "title": "静态版本文件",
+      "expected_trigger": false,
+      "actual_trigger": false,
+      "ordinary_flow": true,
+      "ordinary_false_positive": false,
+      "effects": [],
+      "produced_forbidden_effects": [],
+      "forbidden_effects_zero": true,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "id": "dqs_edge_001",
+      "candidate": "动态数据 query-scope 身份",
+      "kind": "edge",
+      "title": "动态 query scope 完整",
+      "expected_trigger": false,
+      "actual_trigger": false,
+      "ordinary_flow": false,
+      "ordinary_false_positive": false,
+      "effects": [],
+      "produced_forbidden_effects": [],
+      "forbidden_effects_zero": true,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "id": "dqs_edge_002",
+      "candidate": "动态数据 query-scope 身份",
+      "kind": "edge",
+      "title": "同 URL 同日期不同 filter 被合并",
+      "expected_trigger": true,
+      "actual_trigger": true,
+      "ordinary_flow": false,
+      "ordinary_false_positive": false,
+      "effects": [
+        "query_scope_identity_missing"
+      ],
+      "produced_forbidden_effects": [],
+      "forbidden_effects_zero": true,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "id": "otl_fail_001",
+      "candidate": "oracle 类型",
+      "kind": "true_failure",
+      "title": "snapshot oracle 被解读为 mainline ready",
+      "expected_trigger": true,
+      "actual_trigger": true,
+      "ordinary_flow": false,
+      "ordinary_false_positive": false,
+      "effects": [
+        "oracle_type_lint_needed"
+      ],
+      "produced_forbidden_effects": [],
+      "forbidden_effects_zero": true,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "id": "otl_ord_001",
+      "candidate": "oracle 类型",
+      "kind": "ordinary",
+      "title": "light capture 保存测试文章",
+      "expected_trigger": false,
+      "actual_trigger": false,
+      "ordinary_flow": true,
+      "ordinary_false_positive": false,
+      "effects": [],
+      "produced_forbidden_effects": [],
+      "forbidden_effects_zero": true,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "id": "otl_ord_002",
+      "candidate": "oracle 类型",
+      "kind": "ordinary",
+      "title": "ordinary query 解释测试结果",
+      "expected_trigger": false,
+      "actual_trigger": false,
+      "ordinary_flow": true,
+      "ordinary_false_positive": false,
+      "effects": [],
+      "produced_forbidden_effects": [],
+      "forbidden_effects_zero": true,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "id": "otl_ord_003",
+      "candidate": "oracle 类型",
+      "kind": "ordinary",
+      "title": "truth review 使用 source span",
+      "expected_trigger": false,
+      "actual_trigger": false,
+      "ordinary_flow": true,
+      "ordinary_false_positive": false,
+      "effects": [],
+      "produced_forbidden_effects": [],
+      "forbidden_effects_zero": true,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "id": "otl_edge_001",
+      "candidate": "oracle 类型",
+      "kind": "edge",
+      "title": "强 oracle 但只作 diagnostic",
+      "expected_trigger": false,
+      "actual_trigger": false,
+      "ordinary_flow": false,
+      "ordinary_false_positive": false,
+      "effects": [],
+      "produced_forbidden_effects": [],
+      "forbidden_effects_zero": true,
+      "status": "PASS",
+      "failures": []
+    },
+    {
+      "id": "otl_edge_002",
+      "candidate": "oracle 类型",
+      "kind": "edge",
+      "title": "fixture pass 被解读为 runtime ready",
+      "expected_trigger": true,
+      "actual_trigger": true,
+      "ordinary_flow": false,
+      "ordinary_false_positive": false,
+      "effects": [
+        "oracle_type_lint_needed"
+      ],
+      "produced_forbidden_effects": [],
+      "forbidden_effects_zero": true,
+      "status": "PASS",
+      "failures": []
+    }
+  ],
+  "cases": [
+    {
+      "id": "cms_fail_001",
+      "candidate": "context-memory/source 混淆",
+      "kind": "true_failure",
+      "title": "action basis 把记忆结论挂到当前论文",
+      "case_text": "用户要求基于论文 A 做行动依据。回答写：论文 A 支持 X。实际 X 来自前一轮聊天里用户提过的经验判断；论文 A 的当前 source span 只说了背景定义，没有支持 X。",
+      "expected_trigger": true,
+      "ordinary_flow": false,
+      "signals": {
+        "gate": "action_basis",
+        "support_claimed": true,
+        "origin": "prior_context_memory",
+        "current_source_span_support": "background_context"
+      }
+    },
+    {
+      "id": "cms_ord_001",
+      "candidate": "context-memory/source 混淆",
+      "kind": "ordinary",
+      "title": "light capture 保存链接",
+      "case_text": "用户保存一篇普通文章链接，只记录 title、URL、captured_at 和 why_saved，不抽 claim，也不声称该文章支持任何行动判断。",
+      "expected_trigger": false,
+      "ordinary_flow": true,
+      "signals": {
+        "gate": "light_capture",
+        "support_claimed": false,
+        "origin": "not_applicable",
+        "current_source_span_support": "not_checked"
+      }
+    },
+    {
+      "id": "cms_ord_002",
+      "candidate": "context-memory/source 混淆",
+      "kind": "ordinary",
+      "title": "ordinary query 摘要",
+      "case_text": "用户问：这篇文章大概讲什么？回答只做普通摘要，并标明没有做证据审查或行动依据，不把任何句子放入 support_refs。",
+      "expected_trigger": false,
+      "ordinary_flow": true,
+      "signals": {
+        "gate": "ordinary_query",
+        "support_claimed": false,
+        "origin": "current_source_context",
+        "current_source_span_support": "summary_only"
+      }
+    },
+    {
+      "id": "cms_ord_003",
+      "candidate": "context-memory/source 混淆",
+      "kind": "ordinary",
+      "title": "ordinary query 背景常识不作支持",
+      "case_text": "用户让系统头脑风暴一个解释。回答使用模型背景知识给可能原因，但明确说这不是当前 source-backed support，也不进入 review/promotion。",
+      "expected_trigger": false,
+      "ordinary_flow": true,
+      "signals": {
+        "gate": "ordinary_query",
+        "support_claimed": false,
+        "origin": "model_background",
+        "current_source_span_support": "not_applicable"
+      }
+    },
+    {
+      "id": "cms_edge_001",
+      "candidate": "context-memory/source 混淆",
+      "kind": "edge",
+      "title": "历史记忆提过但当前 source span 也直接支持",
+      "case_text": "X 以前在聊天里出现过，但当前论文 A 的 exact quote 也直接支持同一个 X。回答把 support 绑定到当前 exact quote，而不是绑定到记忆。",
+      "expected_trigger": false,
+      "ordinary_flow": false,
+      "signals": {
+        "gate": "challenged_answer",
+        "support_claimed": true,
+        "origin": "current_source_context",
+        "current_source_span_support": "direct_support"
+      }
+    },
+    {
+      "id": "cms_edge_002",
+      "candidate": "context-memory/source 混淆",
+      "kind": "edge",
+      "title": "当前 source 支持 A，记忆补成 B",
+      "case_text": "当前 source span 只支持 A。回答在 action basis 里写成 source 支持 A+B，其中 B 来自项目记忆中的旧判断。",
+      "expected_trigger": true,
+      "ordinary_flow": false,
+      "signals": {
+        "gate": "action_basis",
+        "support_claimed": true,
+        "origin": "mixed_memory_and_source",
+        "current_source_span_support": "partial"
+      }
+    },
+    {
+      "id": "tea_fail_001",
+      "candidate": "转换证据锚点",
+      "kind": "true_failure",
+      "title": "OCR 表格错列被当直接证据",
+      "case_text": "OCR 把 PDF 表格里的 risk_level 列和 method 列错位。候选 claim 用 OCR 输出作为直接证据，但没有原始表格格、页码或 bbox 回链。",
+      "expected_trigger": true,
+      "ordinary_flow": false,
+      "signals": {
+        "gate": "promotion",
+        "support_claimed": true,
+        "transform_type": "ocr",
+        "original_anchor_status": "missing"
+      }
+    },
+    {
+      "id": "tea_ord_001",
+      "candidate": "转换证据锚点",
+      "kind": "ordinary",
+      "title": "light capture 保存截图",
+      "case_text": "用户保存一张截图到 raw，只记录来源、时间和简短说明；没有抽取 claim，也没有把 OCR 结果当证据。",
+      "expected_trigger": false,
+      "ordinary_flow": true,
+      "signals": {
+        "gate": "light_capture",
+        "support_claimed": false,
+        "transform_type": "none",
+        "original_anchor_status": "not_required"
+      }
+    },
+    {
+      "id": "tea_ord_002",
+      "candidate": "转换证据锚点",
+      "kind": "ordinary",
+      "title": "ordinary query 读表大意",
+      "case_text": "用户问：这个表大概说明什么？回答说只是粗读，不生成 promotion support，也不进入 action basis。",
+      "expected_trigger": false,
+      "ordinary_flow": true,
+      "signals": {
+        "gate": "ordinary_query",
+        "support_claimed": false,
+        "transform_type": "table_summary",
+        "original_anchor_status": "not_required"
+      }
+    },
+    {
+      "id": "tea_ord_003",
+      "candidate": "转换证据锚点",
+      "kind": "ordinary",
+      "title": "普通原文 quote",
+      "case_text": "候选点使用网页原文 exact quote 作为 source span，没有 OCR、翻译或 bbox 转换。",
+      "expected_trigger": false,
+      "ordinary_flow": true,
+      "signals": {
+        "gate": "ordinary_query",
+        "support_claimed": true,
+        "transform_type": "none",
+        "original_anchor_status": "direct_source_span"
+      }
+    },
+    {
+      "id": "tea_edge_001",
+      "candidate": "转换证据锚点",
+      "kind": "edge",
+      "title": "OCR 有原始格锚点",
+      "case_text": "OCR 提取了 PDF 表格，但 candidate 同时记录 page=7、row=4、col=risk_level 和 bbox，人工核过原始区域。",
+      "expected_trigger": false,
+      "ordinary_flow": false,
+      "signals": {
+        "gate": "promotion",
+        "support_claimed": true,
+        "transform_type": "ocr",
+        "original_anchor_status": "present_valid"
+      }
+    },
+    {
+      "id": "tea_edge_002",
+      "candidate": "转换证据锚点",
+      "kind": "edge",
+      "title": "翻译漏条件",
+      "case_text": "中文候选 claim 来自英文段落的机器翻译。翻译漏掉 under simulated conditions，原文段落没有附上，claim 被用于 risk-sensitive answer。",
+      "expected_trigger": true,
+      "ordinary_flow": false,
+      "signals": {
+        "gate": "risk_sensitive_answer",
+        "support_claimed": true,
+        "transform_type": "translation",
+        "original_anchor_status": "missing"
+      }
+    },
+    {
+      "id": "dqs_fail_001",
+      "candidate": "动态数据 query-scope 身份",
+      "kind": "true_failure",
+      "title": "动态接口无 filter/as-of 支撑行动",
+      "case_text": "action basis 引用同一个 analytics API URL，说 2025 年转化率下降。记录里只有 URL 和 captured_at，没有 query filter、date range、as_of 或 result snapshot。",
+      "expected_trigger": true,
+      "ordinary_flow": false,
+      "signals": {
+        "gate": "action_basis",
+        "support_claimed": true,
+        "dynamic_data": true,
+        "query_scope_complete": false,
+        "identity_collision": false
+      }
+    },
+    {
+      "id": "dqs_ord_001",
+      "candidate": "动态数据 query-scope 身份",
+      "kind": "ordinary",
+      "title": "light capture 保存数据集主页",
+      "case_text": "用户保存一个公开数据集主页链接，当前只做 light capture，尚未用任何 query 结果支撑 claim 或 action basis。",
+      "expected_trigger": false,
+      "ordinary_flow": true,
+      "signals": {
+        "gate": "light_capture",
+        "support_claimed": false,
+        "dynamic_data": true,
+        "query_scope_complete": false,
+        "identity_collision": false
+      }
+    },
+    {
+      "id": "dqs_ord_002",
+      "candidate": "动态数据 query-scope 身份",
+      "kind": "ordinary",
+      "title": "ordinary query 问数据集是什么",
+      "case_text": "用户问这个数据集是什么类型。回答只解释数据集简介，不引用特定过滤结果，不进入 support_refs。",
+      "expected_trigger": false,
+      "ordinary_flow": true,
+      "signals": {
+        "gate": "ordinary_query",
+        "support_claimed": false,
+        "dynamic_data": true,
+        "query_scope_complete": false,
+        "identity_collision": false
+      }
+    },
+    {
+      "id": "dqs_ord_003",
+      "candidate": "动态数据 query-scope 身份",
+      "kind": "ordinary",
+      "title": "静态版本文件",
+      "case_text": "引用的是固定 CSV snapshot v1.2，文件 hash 和 captured_at 已记录；没有动态 query 或 filter。",
+      "expected_trigger": false,
+      "ordinary_flow": true,
+      "signals": {
+        "gate": "ordinary_query",
+        "support_claimed": true,
+        "dynamic_data": false,
+        "query_scope_complete": true,
+        "identity_collision": false
+      }
+    },
+    {
+      "id": "dqs_edge_001",
+      "candidate": "动态数据 query-scope 身份",
+      "kind": "edge",
+      "title": "动态 query scope 完整",
+      "case_text": "同一个 API URL 被用于 action-basis review，但记录了 filter=country:US、subset=paid_users、as_of=2026-05-31、result_hash 和返回行数。",
+      "expected_trigger": false,
+      "ordinary_flow": false,
+      "signals": {
+        "gate": "action_basis",
+        "support_claimed": true,
+        "dynamic_data": true,
+        "query_scope_complete": true,
+        "identity_collision": false
+      }
+    },
+    {
+      "id": "dqs_edge_002",
+      "candidate": "动态数据 query-scope 身份",
+      "kind": "edge",
+      "title": "同 URL 同日期不同 filter 被合并",
+      "case_text": "同一个 API URL 同一天导出两次：filter=free_users 和 filter=paid_users。报告把二者合成同一 evidence identity 支撑同一个 claim。",
+      "expected_trigger": true,
+      "ordinary_flow": false,
+      "signals": {
+        "gate": "promotion",
+        "support_claimed": true,
+        "dynamic_data": true,
+        "query_scope_complete": true,
+        "identity_collision": true
+      }
+    },
+    {
+      "id": "otl_fail_001",
+      "candidate": "oracle 类型",
+      "kind": "true_failure",
+      "title": "snapshot oracle 被解读为 mainline ready",
+      "case_text": "沙盒测试全绿，但测试 oracle 只是 snapshot/string match。报告写成：因此候选可以进主线。",
+      "expected_trigger": true,
+      "ordinary_flow": false,
+      "signals": {
+        "artifact": "test_report",
+        "important_report": true,
+        "oracle_type_recorded": true,
+        "oracle_type": "snapshot",
+        "claim_scope_recorded": false,
+        "interpretation": "mainline_ready"
+      }
+    },
+    {
+      "id": "otl_ord_001",
+      "candidate": "oracle 类型",
+      "kind": "ordinary",
+      "title": "light capture 保存测试文章",
+      "case_text": "用户保存一篇测试方法文章到 raw，只做来源记录，不生成 test report，也不解释任何测试结果。",
+      "expected_trigger": false,
+      "ordinary_flow": true,
+      "signals": {
+        "artifact": "source_capture",
+        "important_report": false,
+        "oracle_type_recorded": false,
+        "oracle_type": "none",
+        "claim_scope_recorded": false,
+        "interpretation": "none"
+      }
+    },
+    {
+      "id": "otl_ord_002",
+      "candidate": "oracle 类型",
+      "kind": "ordinary",
+      "title": "ordinary query 解释测试结果",
+      "case_text": "用户问测试结果怎么看。回答说：这是 diagnostic，只说明这个 fixture 的 contract 没破，不代表 truth 或 mainline readiness。",
+      "expected_trigger": false,
+      "ordinary_flow": true,
+      "signals": {
+        "artifact": "test_report",
+        "important_report": false,
+        "oracle_type_recorded": false,
+        "oracle_type": "unknown",
+        "claim_scope_recorded": false,
+        "interpretation": "diagnostic_only"
+      }
+    },
+    {
+      "id": "otl_ord_003",
+      "candidate": "oracle 类型",
+      "kind": "ordinary",
+      "title": "truth review 使用 source span",
+      "case_text": "一个 claim review 使用 source span 和 evidence_support 字段，没有引用测试/fixture/oracle 作为证据。",
+      "expected_trigger": false,
+      "ordinary_flow": true,
+      "signals": {
+        "artifact": "evidence_review",
+        "important_report": false,
+        "oracle_type_recorded": false,
+        "oracle_type": "none",
+        "claim_scope_recorded": false,
+        "interpretation": "not_test_based"
+      }
+    },
+    {
+      "id": "otl_edge_001",
+      "candidate": "oracle 类型",
+      "kind": "edge",
+      "title": "强 oracle 但只作 diagnostic",
+      "case_text": "重要测试报告记录 oracle_type=semantic_equivalence+manual_review，claim_scope=contract_boundary_only，并明确不产生 truth 或 runtime readiness。",
+      "expected_trigger": false,
+      "ordinary_flow": false,
+      "signals": {
+        "artifact": "test_report",
+        "important_report": true,
+        "oracle_type_recorded": true,
+        "oracle_type": "semantic_equivalence_manual_review",
+        "claim_scope_recorded": true,
+        "interpretation": "diagnostic_only"
+      }
+    },
+    {
+      "id": "otl_edge_002",
+      "candidate": "oracle 类型",
+      "kind": "edge",
+      "title": "fixture pass 被解读为 runtime ready",
+      "case_text": "fixture cases 都通过，但没有集成环境、side effect、rollback 测试。报告把它解释成 runtime readiness。",
+      "expected_trigger": true,
+      "ordinary_flow": false,
+      "signals": {
+        "artifact": "test_report",
+        "important_report": true,
+        "oracle_type_recorded": true,
+        "oracle_type": "fixture_contract",
+        "claim_scope_recorded": true,
+        "interpretation": "runtime_ready"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "FEVER-080",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 79,
+  "claim": "Alandi is in the southern Pune district.",
+  "evidence": "Ambegaon_-LRB-Vidhan_Sabha_constituency-RRB- | 3 | It is a part of the Shirur -LRB- Lok Sabha constituency -RRB- in the Pune district along with five other assembly constituencies , viz Junnar , Khed Alandi , Shirur , Bhosari and Hadapsar .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-080.md",
+    "marker": "FEVER-080_ANCHOR"
+  }
+}

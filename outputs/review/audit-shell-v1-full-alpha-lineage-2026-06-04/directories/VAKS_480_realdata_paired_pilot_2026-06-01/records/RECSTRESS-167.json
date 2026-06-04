@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-167",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 46,
+  "claim": "South Africans are among the top drinkers in the world.",
+  "evidence": "1 Tunisia 36.6 litres of alcohol per person 2 Eswatini 34.4 litres of alcohol per person 3 Namibia 32.4 litres of alcohol per person South Africa places 4th with only 29.9 litres of alcohol per person. South Africa ranked 6th out of 189 countries for alcohol consumption per person.",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-167.md",
+    "marker": "RECSTRESS-167_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-16",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "stress-rec-16-fp-v2",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-167.json",
+  "evidence_path": "evidence/RECSTRESS-167.md"
+}

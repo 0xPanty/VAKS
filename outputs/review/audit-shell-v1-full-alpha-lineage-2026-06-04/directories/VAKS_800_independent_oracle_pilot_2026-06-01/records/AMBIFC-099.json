@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-099",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 98,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "players get a cap for every game.",
+  "evidence": "* 184: Ahmed Hassan, Egypt * 179: Ahmed Mubarak, Oman * 178: Mohamed Al-Deayea, Saudi Arabia * 178: Bader Al-Mutawa, Kuwait * 177: Claudio Suárez, Mexico * 176: Gianluigi Buffon, Italy * 170: Sergio Ramos, Spain * 169: Hossam Hassan, Egypt * 168: Iván Hurtado, Ecuador * 167: Vitālijs Astafjevs, Latvia * 167: Iker Casillas, Spain",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "ambiguous_scope"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-099.md",
+    "document_hash": "d023cd5e89b597e3d997cd86ea650115c13f5415be525aa6712ec8294cfb298b",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-099_ANCHOR",
+    "text_quote": "* 184: Ahmed Hassan, Egypt * 179: Ahmed Mubarak, Oman * 178: Mohamed Al-Deayea, Saudi Arabia * 178: Bader Al-Mutawa, Kuwait * 177: Claudio Suárez, Mexico * 176: Gianluigi Buffon, Italy * 170: Sergio Ramos, Spain * 169: H",
+    "start": 142,
+    "end": 362
+  },
+  "record_path": "records/AMBIFC-099.json",
+  "evidence_path": "evidence/AMBIFC-099.md"
+}

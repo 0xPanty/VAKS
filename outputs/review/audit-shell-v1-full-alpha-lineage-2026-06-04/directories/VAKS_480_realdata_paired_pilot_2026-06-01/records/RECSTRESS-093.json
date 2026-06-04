@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-093",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 92,
+  "claim": "Obesity is determined solely by environmental factors.",
+  "evidence": "An analysis of the genetic factors in obesity has been carried out on a sample of nuclear families from Aosta (N. Italy). The families consisted of the parents and sibs of all elementary school children considered to be obese during a preliminary screening and a similar sample of non-obese children and their nuclear families. The numbers of such families were 67 and 112, respectively. Several tests were applied in order to examine the genetic contribution to obesity, and in particular to investigate the presence of a dominant major gene. Our conclusions are that genetic factors are certainly present. Several analyses suggest the presence of a dominant major gene with weak effect.",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-093.md",
+    "marker": "RECSTRESS-093_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-09",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-09-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-093.json",
+  "evidence_path": "evidence/RECSTRESS-093.md"
+}

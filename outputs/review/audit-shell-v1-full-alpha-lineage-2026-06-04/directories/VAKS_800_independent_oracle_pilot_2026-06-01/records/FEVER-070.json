@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-070",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 69,
+  "layer": "action_challenge_conflict",
+  "claim": "Thirteen was written by Nikki Reed in 2001.",
+  "evidence": "Thirteen_-LRB-2003_film-RRB- | 3 | The script was written in six days .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-070.md",
+    "document_hash": "d5b8b02435215ee008e954ac95cfe338cd883f4abf8083f9a783c5d3230e88e6",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-070_ANCHOR",
+    "text_quote": "Thirteen_-LRB-2003_film-RRB- | 3 | The script was written in six days .",
+    "start": 149,
+    "end": 220
+  },
+  "record_path": "records/FEVER-070.json",
+  "evidence_path": "evidence/FEVER-070.md"
+}

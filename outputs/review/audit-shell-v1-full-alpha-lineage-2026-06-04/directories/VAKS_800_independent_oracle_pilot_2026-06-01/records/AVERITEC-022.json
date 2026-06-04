@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-022",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 21,
+  "layer": "ordinary_stable",
+  "claim": "There is a ‘global average’ for the number of judges and magistrates to number of people in Kenya.",
+  "evidence": "No answer could be found. No answer could be found. No answer could be found.",
+  "source_label": "Not Enough Evidence",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-022.md",
+    "document_hash": "1d609fbbd3e74fa62db7284e4fab1cec7873b9f1718c110900d2b39d155ca615",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-022_ANCHOR",
+    "text_quote": "No answer could be found. No answer could be found. No answer could be found.",
+    "start": 213,
+    "end": 290
+  },
+  "record_path": "records/AVERITEC-022.json",
+  "evidence_path": "evidence/AVERITEC-022.md"
+}

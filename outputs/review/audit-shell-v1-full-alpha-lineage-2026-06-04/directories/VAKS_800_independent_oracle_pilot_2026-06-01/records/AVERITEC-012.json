@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-012",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 11,
+  "layer": "ordinary_stable",
+  "claim": "45% of Nigeria's revenue goes to the federal government.",
+  "evidence": "52.68 % goes to the federal government. 2,661.13 trillion went to federal government from the 5,051.50 trillion available for sharing. 52.68 % goes to the federal government.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-012.md",
+    "document_hash": "27eb69039ef72dd3ae339cbc3a0ed51dc0547df120706bba67dae48d69077427",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-012_ANCHOR",
+    "text_quote": "52.68 % goes to the federal government. 2,661.13 trillion went to federal government from the 5,051.50 trillion available for sharing. 52.68 % goes to the federal government.",
+    "start": 171,
+    "end": 345
+  },
+  "record_path": "records/AVERITEC-012.json",
+  "evidence_path": "evidence/AVERITEC-012.md"
+}

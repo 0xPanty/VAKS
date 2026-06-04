@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-112",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 111,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "jack black played guitar in school of rock.",
+  "evidence": "School of Rock received an approval rating of 91% on Rotten Tomatoes based on 198 reviews with an average rating of 7.74/10. The site's critical consensus reads, \"Black's exuberant, gleeful performance turns School of Rock into a hilarious, rocking good time\". On Metacritic, the film has a score of 82 out of 100, based on 41 critics, indicating \"universal acclaim\".",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-112.md",
+    "document_hash": "5f4fd55da68d1d0040c0a9e283a5015611732d73f5ba974837864d808ecb51e8",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-112_ANCHOR",
+    "text_quote": "School of Rock received an approval rating of 91% on Rotten Tomatoes based on 198 reviews with an average rating of 7.74/10. The site's critical consensus reads, \"Black's exuberant, gleeful performance turns School of Ro",
+    "start": 152,
+    "end": 372
+  },
+  "record_path": "records/AMBIFC-112.json",
+  "evidence_path": "evidence/AMBIFC-112.md"
+}

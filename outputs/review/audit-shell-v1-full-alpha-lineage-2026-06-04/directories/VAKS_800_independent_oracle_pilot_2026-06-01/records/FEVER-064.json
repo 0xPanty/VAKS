@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-064",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 63,
+  "layer": "action_challenge_conflict",
+  "claim": "Melissa McCarthy is incapable of appearing in television.",
+  "evidence": "Melissa_McCarthy | 7 | She has also been nominated four times -LRB- in 2012 , 2013 , 2014 and 2016 -RRB- for the Primetime Emmy Award for Outstanding Guest Actress in a Comedy Series for her five appearances as host on Saturday Night Live .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-064.md",
+    "document_hash": "4889850414d380de7af5824ac87f0de82f6a1c18249b0d11bb06c373cff0d8d8",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-064_ANCHOR",
+    "text_quote": "Melissa_McCarthy | 7 | She has also been nominated four times -LRB- in 2012 , 2013 , 2014 and 2016 -RRB- for the Primetime Emmy Award for Outstanding Guest Actress in a Comedy Series for her five appearances as host on S",
+    "start": 163,
+    "end": 383
+  },
+  "record_path": "records/FEVER-064.json",
+  "evidence_path": "evidence/FEVER-064.md"
+}

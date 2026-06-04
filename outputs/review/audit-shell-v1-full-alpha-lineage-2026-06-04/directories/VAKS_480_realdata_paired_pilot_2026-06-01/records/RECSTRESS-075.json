@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-075",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 74,
+  "claim": "Lupus-prone mice infected with curliproducing bacteria have higher autoantibody titers compared to controls.",
+  "evidence": "Research on the human microbiome has established that commensal and pathogenic bacteria can influence obesity, cancer, and autoimmunity through mechanisms mostly unknown. We found that a component of bacterial biofilms, the amyloid protein curli, irreversibly formed fibers with bacterial DNA during biofilm formation. This interaction accelerated amyloid polymerization and created potent immunogenic complexes that activated immune cells, including dendritic cells, to produce cytokines such as type I interferons, which are pathogenic in systemic lupus erythematosus (SLE). When given systemically, curli-DNA composites triggered immune activation and production of autoantibodies in lupus-prone and wild-type mice. We also found that the infection of lupus-prone mice with curli-producing bacteria triggered higher autoantibody titers compared to curli-deficient bacteria. These data provide a mechanism by which the microbiome and biofilm-producing enteric infections may contribute to the progression of SLE and point to a potential molecular target for treatment of autoimmunity.",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-075.md",
+    "marker": "RECSTRESS-075_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-07",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-07-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-075.json",
+  "evidence_path": "evidence/RECSTRESS-075.md"
+}

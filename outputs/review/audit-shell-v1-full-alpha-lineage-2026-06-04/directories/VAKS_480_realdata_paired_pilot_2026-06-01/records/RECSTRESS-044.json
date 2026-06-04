@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-044",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 43,
+  "claim": "Diabetic patients with acute coronary syndrome experience increased short-term and long-term risk for bleeding events.",
+  "evidence": "BACKGROUND Although unstable coronary artery disease is the most common reason for admission to a coronary care unit, the long-term prognosis of patients with this diagnosis is unknown. This is particularly true for patients with diabetes mellitus, who are known to have a high morbidity and mortality after an acute myocardial infarction. METHODS AND RESULTS Prospectively collected data from 6 different countries in the Organization to Assess Strategies for Ischemic Syndromes (OASIS) registry were analyzed to determine the 2-year prognosis of diabetic and nondiabetic patients who were hospitalized with unstable angina or non-Q-wave myocardial infarction. Overall, 1718 of 8013 registry patients (21%) had diabetes. Diabetic patients had a higher rate of coronary bypass surgery than nondiabetic patients (23% versus 20%, P:<0.001) but had similar rates of catheterization and angioplasty. Diabetes independently predicted mortality (relative risk [RR], 1.57; 95% CI, 1.38 to 1.81; P:<0.001), as well as cardiovascular death, new myocardial infarction, stroke, and new congestive heart failure. Moreover, compared with their nondiabetic counterparts, women had a significantly higher risk than",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-044.md",
+    "marker": "RECSTRESS-044_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-04",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-04-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-044.json",
+  "evidence_path": "evidence/RECSTRESS-044.md"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-082",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 81,
+  "layer": "action_challenge_conflict",
+  "claim": "all the members of fleetwood mac are still alive.",
+  "evidence": "After Welch announced that he was leaving the band, Fleetwood began searching for a replacement. While Fleetwood was checking out Sound City Studios in Los Angeles, the house engineer, Keith Olsen, played him a track he had recorded in the studio, \"Frozen Love\", from the album Buckingham Nicks (1973). Fleetwood liked it and was introduced to the guitarist from the band, Lindsey Buckingham, who was at Sound City that day recording demos. Fleetwood asked him to join Fleetwood Mac and Buckingham agreed, on the condition that his music partner and girlfriend, Stevie Nicks, be included. Buckingham and Nicks joined the band on New Year's Eve 1974, within four weeks of the previous incarnation splitting. In 1975, the new line-up released another self-titled album, their tenth studio album. The album was a breakthrough for the band and became a huge hit, reaching No.1 in the US and selling over 7 million copies. Among the hit singles from this album were Christine McVie's \"Over My Head\" and \"Say You Love Me\" and Stevie Nicks's \"Rhiannon\", as well as the much-played album track \"Landslide\", a live rendition of which became a hit twenty years later on The Dance album. In 1976, the band was suffering from severe stress. With success came the end of John and Christine McVie's marriage, as well as Buckingham and Nicks's long-term romantic relationship. Fleetwood, meanwhile, was in the midst",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-082.md",
+    "document_hash": "5c61ff9412be28360d7763ebe4e2ff1310100451eee8703d97e046b9175ffe8d",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-082_ANCHOR",
+    "text_quote": "After Welch announced that he was leaving the band, Fleetwood began searching for a replacement. While Fleetwood was checking out Sound City Studios in Los Angeles, the house engineer, Keith Olsen, played him a track he ",
+    "start": 158,
+    "end": 378
+  },
+  "record_path": "records/AMBIFC-082.json",
+  "evidence_path": "evidence/AMBIFC-082.md"
+}

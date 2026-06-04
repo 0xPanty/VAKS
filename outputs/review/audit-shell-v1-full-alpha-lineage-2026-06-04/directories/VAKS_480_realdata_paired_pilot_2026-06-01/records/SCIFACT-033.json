@@ -1,0 +1,20 @@
+{
+  "id": "SCIFACT-033",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row",
+  "source_row_index": 32,
+  "claim": "Chronic aerobic exercise alters endothelial function, improving vasodilating mechanisms mediated by NO.",
+  "evidence": "BACKGROUND The purpose of this study was to test the hypothesis that vasodilator responses of porcine coronary resistance arteries are increased by exercise training. METHODS AND RESULTS Yucatan miniature swine were randomly divided into groups of exercise-trained (ET) and sedentary (SED) control pigs. ET pigs were placed on a progressive treadmill training program lasting 16 to 20 weeks, and SED pigs remained inactive during the same time period. Coronary resistance arteries 64 to 157 microns in diameter were isolated for in vitro evaluation of relaxation responses to the endothelium-independent dilators sodium nitroprusside (1 x 10(-10) to 1 x 10(-4) mol/L) and adenosine (1 x 10(-10) to 1 x 10(-5) mol/L) and to bradykinin (1 x 10(-13) to 3 x 10(-7) mol/L), an endothelium-dependent agent. Relaxation responses to adenosine and sodium nitroprusside were not altered by exercise training. Endothelium-dependent relaxation to bradykinin was enhanced in coronary resistance arteries from ET pigs (IC50: ET, 0.07 +/- 0.02 nmol/L; SED, 1.59 +/- 0.09 nmol/L). To determine whether prostanoids and/or the nitric oxide synthase pathway were involved in the ET-induced changes in bradykinin-induced",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-033.md",
+    "marker": "SCIFACT-033_ANCHOR"
+  }
+}

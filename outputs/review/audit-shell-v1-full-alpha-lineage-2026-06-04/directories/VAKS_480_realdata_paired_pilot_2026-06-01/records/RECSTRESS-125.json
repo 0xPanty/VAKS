@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-125",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 4,
+  "claim": "After the police shooting of Jacob Blake, Gov. Tony Evers & Lt. Gov. Mandela Barnes did not call for peace or encourage calm.",
+  "evidence": "Inn a video statement posted the next day, Evers urged people planning to protest to peacefully. In a news release later that day, Evers said \"Tonight, and in the days ahead, if you are going to protest, please do so peacefully and safely. Please do not allow the actions of a few distract us from the work we must do together to demand justice, equity, and accountability.\" This proves that the claim made by Senator Howard Marklein is incorrect that the Gov. did not ask for peace.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-125.md",
+    "marker": "RECSTRESS-125_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-12",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-12-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-125.json",
+  "evidence_path": "evidence/RECSTRESS-125.md"
+}

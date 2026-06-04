@@ -1,0 +1,20 @@
+{
+  "id": "FEVER-033",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 32,
+  "claim": "Quentin Tarantino makes movies.",
+  "evidence": "Quentin_Tarantino | 7 | Its popularity was boosted by his second film , Pulp Fiction -LRB- 1994 -RRB- , a black comedy crime film that was a major success both among critics and audiences .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-033.md",
+    "marker": "FEVER-033_ANCHOR"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "leakage_patterns": [
+    "\\blineage\\b.*\\bindependent(ly)? supported\\b",
+    "\\bsource count\\b.*\\bindependence\\b",
+    "\\bmany sources\\b.*\\bindependence\\b",
+    "\\bfeedback\\b.*\\b(more correct|truth confidence|raises truth|confirm(s|ed) truth)\\b",
+    "\\bdashboard\\b.*\\b(verif(y|ies)|reliable|trust)\\b",
+    "\\bgreen checks?\\b.*\\b(reliable|trust|verif(y|ies))\\b",
+    "\\bbenchmark\\b.*\\bpassed\\b.*\\b(trust|reliable)\\b",
+    "\\btest(s)? passed\\b.*\\b(trust|truth|correct)\\b",
+    "\\bretrieval rank\\b.*\\b(trust|trustworthy|truth)\\b",
+    "\\btop retrieval\\b.*\\b(trust|trustworthy|reliable)\\b",
+    "\\bcluster summary\\b.*\\b(proves|reviewed relation|truth)\\b",
+    "\\bmodel summary\\b.*\\b(supports|proves)\\b"
+  ],
+  "boundary_tokens": [
+    "not truth authority",
+    "not evidence support",
+    "not independence proof",
+    "diagnostic only",
+    "routing only",
+    "no truth change",
+    "not reviewed relation"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-052",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 51,
+  "layer": "ordinary_stable",
+  "claim": "world bank currently rates Nigeria as one of ten top performing countries on its Doing Business Index.",
+  "evidence": "Nigeria is included in the top ten countries in the index.",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-052.md",
+    "document_hash": "74d03b639ee03004c9bd54d499ab4a2910ec70e0387f752ad2684b9985a0ee04",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-052_ANCHOR",
+    "text_quote": "Nigeria is included in the top ten countries in the index.",
+    "start": 217,
+    "end": 275
+  },
+  "record_path": "records/AVERITEC-052.json",
+  "evidence_path": "evidence/AVERITEC-052.md"
+}

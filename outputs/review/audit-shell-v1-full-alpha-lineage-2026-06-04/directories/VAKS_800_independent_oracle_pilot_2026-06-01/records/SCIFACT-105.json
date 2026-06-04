@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-105",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 104,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "FoxO3a activation in neuronal death is mediated by reactive oxygen species (ROS).",
+  "evidence": "The Sir2 deacetylase modulates organismal life-span in various species. However, the molecular mechanisms by which Sir2 increases longevity are largely unknown. We show that in mammalian cells, the Sir2 homolog SIRT1 appears to control the cellular response to stress by regulating the FOXO family of Forkhead transcription factors, a family of proteins that function as sensors of the insulin signaling pathway and as regulators of organismal longevity. SIRT1 and the FOXO transcription factor FOXO3 formed a complex in cells in response to oxidative stress, and SIRT1 deacetylated FOXO3 in vitro and within cells. SIRT1 had a dual effect on FOXO3 function: SIRT1 increased FOXO3's ability to induce cell cycle arrest and resistance to oxidative stress but inhibited FOXO3's ability to induce cell death. Thus, one way in which members of the Sir2 family of proteins may increase organismal longevity is by tipping FOXO-dependent responses away from apoptosis and toward stress resistance.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "ambiguous_scope"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-105.md",
+    "document_hash": "bd5f2246e627fa54204c436a19a18fc554ef888cb873bc7aae213c4530df5ead",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-105_ANCHOR",
+    "text_quote": "The Sir2 deacetylase modulates organismal life-span in various species. However, the molecular mechanisms by which Sir2 increases longevity are largely unknown. We show that in mammalian cells, the Sir2 homolog SIRT1 app",
+    "start": 193,
+    "end": 413
+  },
+  "record_path": "records/SCIFACT-105.json",
+  "evidence_path": "evidence/SCIFACT-105.md"
+}

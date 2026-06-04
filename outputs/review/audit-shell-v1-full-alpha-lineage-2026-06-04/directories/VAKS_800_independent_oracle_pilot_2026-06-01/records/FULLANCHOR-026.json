@@ -1,0 +1,32 @@
+{
+  "id": "FULLANCHOR-026",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 25,
+  "layer": "full_anchor_click",
+  "claim": "Antiretroviral therapy reduces rates of tuberculosis across a broad range of CD4 strata.",
+  "evidence": "BACKGROUND Human immunodeficiency virus (HIV) infection is the strongest risk factor for developing tuberculosis and has fuelled its resurgence, especially in sub-Saharan Africa. In 2010, there were an estimated 1.1 million incident cases of tuberculosis among the 34 million people living with HIV worldwide. Antiretroviral therapy has substantial potential to prevent HIV-associated tuberculosis. We conducted a systematic review of studies that analysed the impact of antiretroviral therapy on the incidence of tuberculosis in adults with HIV infection. METHODS AND FINDINGS PubMed, Embase, African Index Medicus, LILACS, and clinical trial registries were systematically searched. Randomised controlled trials, prospective cohort studies, and retrospective cohort studies were included if they compared tuberculosis incidence by antiretroviral therapy status in HIV-infected adults for a median of over 6 mo in developing countries. For the meta-analyses there were four categories based on CD4 counts at antiretroviral therapy initiation: (1) less than 200 cells/µl, (2) 200 to 350 cells/µl, (3) greater than 350 cells/µl, and (4) any CD4 count. Eleven studies met the inclusion criteria. Antiretroviral therapy is strongly associated with a reduction in the incidence of tuberculosis in all baseline CD4 count categories: (1) less than 200 cells/µl (hazard ratio [HR] 0.16, 95% confidence inter",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "pdf_text",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/FULLANCHOR-026.md",
+    "document_hash": "43228bf20553b7458b4a740026b2ee072be1a7b29a3802e2fcb22d14bdc002ca",
+    "version_id": "pdf_text-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-026_ANCHOR",
+    "text_quote": "BACKGROUND Human immunodeficiency virus (HIV) infection is the strongest risk factor for developing tuberculosis and has fuelled its resurgence, especially in sub-Saharan Africa. In 2010, there were an estimated 1.1 mill",
+    "start": 207,
+    "end": 427
+  },
+  "record_path": "records/FULLANCHOR-026.json",
+  "evidence_path": "evidence/FULLANCHOR-026.md"
+}

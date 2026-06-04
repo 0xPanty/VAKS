@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-098",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 97,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Errors in peripheral IV drug administration are most common during bolus administration and multiple-step medicine preparations.",
+  "evidence": "OBJECTIVES To determine the incidence and clinical importance of errors in the preparation and administration of intravenous drugs and the stages of the process in which errors occur. DESIGN Prospective ethnographic study using disguised observation. PARTICIPANTS Nurses who prepared and administered intravenous drugs. SETTING 10 wards in a teaching and non-teaching hospital in the United Kingdom. MAIN OUTCOME MEASURES Number, type, and clinical importance of errors. RESULTS 249 errors were identified. At least one error occurred in 212 out of 430 intravenous drug doses (49%, 95% confidence interval 45% to 54%). Three doses (1%) had potentially severe errors, 126 (29%) potentially moderate errors, and 83 (19%) potentially minor errors. Most errors occurred when giving bolus doses or making up drugs that required multiple step preparation. CONCLUSIONS The rate of intravenous drug errors was high. Although most errors would cause only short term adverse effects, a few could have been serious. A combination of reducing the amount of preparation on the ward, training, and technology to administer slow bolus doses would probably have the greatest effect on error rates.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "insufficient_evidence"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-098.md",
+    "document_hash": "b7c14bb3989361838e51bf6cdb8ae6c5c2de261fb1db1b9050e795e1df690e18",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-098_ANCHOR",
+    "text_quote": "OBJECTIVES To determine the incidence and clinical importance of errors in the preparation and administration of intravenous drugs and the stages of the process in which errors occur. DESIGN Prospective ethnographic stud",
+    "start": 240,
+    "end": 460
+  },
+  "record_path": "records/SCIFACT-098.json",
+  "evidence_path": "evidence/SCIFACT-098.md"
+}

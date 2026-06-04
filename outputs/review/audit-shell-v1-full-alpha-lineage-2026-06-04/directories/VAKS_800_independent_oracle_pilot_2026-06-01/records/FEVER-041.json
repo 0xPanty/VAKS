@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-041",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 40,
+  "layer": "ordinary_stable",
+  "claim": "Sportsman of the Year has been awarded to Michael Schumacher.",
+  "evidence": "Michael_Schumacher | 2 | He was named Laureus World Sportsman of the Year twice .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-041.md",
+    "document_hash": "ba669df62cc9e166f2def86ecbeab751480fe383f9273d5cc5b6a9661a5bad87",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-041_ANCHOR",
+    "text_quote": "Michael_Schumacher | 2 | He was named Laureus World Sportsman of the Year twice .",
+    "start": 167,
+    "end": 248
+  },
+  "record_path": "records/FEVER-041.json",
+  "evidence_path": "evidence/FEVER-041.md"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-108",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 107,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "The United States Postal Service advises customers to never send cash in the mail.",
+  "evidence": "Be careful about what you send Don't risk sending cash in the mail Don't risk sending cash in the mail For Registered Mail®, cash can be insured up to $50,000.",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [
+    "ambiguous_scope"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-108.md",
+    "document_hash": "10a141179704d3aad6266297d5da50015cec5c13edaa9e2c60d6c652bf9545ce",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-108_ANCHOR",
+    "text_quote": "Be careful about what you send Don't risk sending cash in the mail Don't risk sending cash in the mail For Registered Mail®, cash can be insured up to $50,000.",
+    "start": 197,
+    "end": 356
+  },
+  "record_path": "records/AVERITEC-108.json",
+  "evidence_path": "evidence/AVERITEC-108.md"
+}

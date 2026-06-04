@@ -1,0 +1,27 @@
+{
+  "id": "AVERITEC-105",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 104,
+  "claim": "warm water is effective in curing migraine",
+  "evidence": "Migraine is a disorder of the nervous system, something that appears to be genetically predisposed, with environmental and biological factors that may increase or decrease the sensitivity of the nervous system to the attacks we call “migraine.” It is not like an infection that can be eradicated by taking antibiotics, nor like a tumor that can be surgically removed. Migraines can be controlled in the sense that there are treatments to reduce the frequency and severity of the attacks, and medications to take when an attack occurs. In general, migraines tend to become much less frequent as people age, beyond 60 years. There's currently no cure for migraines, although a number of treatments are available to help ease the symptoms.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-105.md",
+    "marker": "AVERITEC-105_ANCHOR"
+  },
+  "recurrence_key": "rec-0c1acf13e9",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "averitec-open-v1-0c1acf13e9",
+  "dedup_open_only": true
+}

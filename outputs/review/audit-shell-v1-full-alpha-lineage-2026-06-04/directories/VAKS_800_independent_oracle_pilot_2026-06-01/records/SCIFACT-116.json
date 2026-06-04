@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-116",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 115,
+  "layer": "anchor_problem",
+  "claim": "Headaches are not correlated with cognitive impairment.",
+  "evidence": "OBJECTIVE To evaluate the association of overall and specific headaches with volume of white matter hyperintensities, brain infarcts, and cognition. DESIGN Population based, cross sectional study. SETTING Epidemiology of Vascular Ageing study, Nantes, France. PARTICIPANTS 780 participants (mean age 69, 58.5% women) with detailed headache assessment. MAIN OUTCOME MEASURES Brain scans were evaluated for volume of white matter hyperintensities (by fully automated imaging processing) and for classification of infarcts (by visual reading with a standardised assessment grid). Cognitive function was assessed by a battery of tests including the mini-mental state examination. RESULTS 163 (20.9%) participants reported a history of severe headache and 116 had migraine, of whom 17 (14.7%) reported aura symptoms. An association was found between any history of severe headache and increasing volume of white matter hyperintensities. The adjusted odds ratio of being in the highest third for total volume of white matter hyperintensities was 2.0 (95% confidence interval 1.3 to 3.1, P for trend 0.002) for participants with any history of severe headache when compared with participants without severe headache being in the lowest third. The association pattern was similar for all headache types. Migraine with aura was the only headache type strongly associated with volume of deep white matter hyper",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "missing_anchor"
+  ],
+  "anchor_status": "missing",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "missing",
+    "path": "raw_sources/SCIFACT-116.md",
+    "document_hash": "",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-116_ANCHOR",
+    "text_quote": "OBJECTIVE To evaluate the association of overall and specific headaches with volume of white matter hyperintensities, brain infarcts, and cognition. DESIGN Population based, cross sectional study. SETTING Epidemiology of",
+    "start": -1,
+    "end": -1
+  },
+  "record_path": "records/SCIFACT-116.json",
+  "evidence_path": "evidence/SCIFACT-116.md"
+}

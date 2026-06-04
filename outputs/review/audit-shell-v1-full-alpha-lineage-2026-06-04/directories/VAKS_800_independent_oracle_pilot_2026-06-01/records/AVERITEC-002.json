@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-002",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 1,
+  "layer": "ordinary_stable",
+  "claim": "Donald Trump delivered the largest tax cuts in American history.",
+  "evidence": "This tax cut is the 8th largest as a percent of Gross Domestic Product (GDP) since 1918 and the 4th largest in inflation-adjusted dollars. Three tax bills have been larger: American Taxpayer Relief Act of 2012 (enacted in 2013); Tax Relief, Unemployment Insurance Reauthorization, and Job Creation Act of 2010 and Economic Recovery Tax Act of 1981",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-002.md",
+    "document_hash": "0a8ee78a3a833564216cae467b2067c88bff0713df4cbc60887cdeb134662ba8",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-002_ANCHOR",
+    "text_quote": "This tax cut is the 8th largest as a percent of Gross Domestic Product (GDP) since 1918 and the 4th largest in inflation-adjusted dollars. Three tax bills have been larger: American Taxpayer Relief Act of 2012 (enacted i",
+    "start": 179,
+    "end": 399
+  },
+  "record_path": "records/AVERITEC-002.json",
+  "evidence_path": "evidence/AVERITEC-002.md"
+}

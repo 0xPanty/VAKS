@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-109",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 108,
+  "claim": "Primary pro-inflammatory cytokines induce secondary pro- and anti-inflammatory mediators.",
+  "evidence": "Little is known about the inter-individual variation of cytokine responses to different pathogens in healthy individuals. To systematically describe cytokine responses elicited by distinct pathogens and to determine the effect of genetic variation on cytokine production, we profiled cytokines produced by peripheral blood mononuclear cells from 197 individuals of European origin from the 200 Functional Genomics (200FG) cohort in the Human Functional Genomics Project (http://www.humanfunctionalgenomics.org), obtained over three different years. We compared bacteria- and fungi-induced cytokine profiles and found that most cytokine responses were organized around a physiological response to specific pathogens, rather than around a particular immune pathway or cytokine. We then correlated genome-wide single-nucleotide polymorphism (SNP) genotypes with cytokine abundance and identified six cytokine quantitative trait loci (QTLs). Among them, a cytokine QTL at the NAA35-GOLM1 locus markedly modulated interleukin (IL)-6 production in response to multiple pathogens and was associated with susceptibility to candidemia. Furthermore, the cytokine QTLs that we identified were enriched among SNP",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-109.md",
+    "marker": "RECSTRESS-109_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-10",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "stress-rec-10-fp-v2",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-109.json",
+  "evidence_path": "evidence/RECSTRESS-109.md"
+}

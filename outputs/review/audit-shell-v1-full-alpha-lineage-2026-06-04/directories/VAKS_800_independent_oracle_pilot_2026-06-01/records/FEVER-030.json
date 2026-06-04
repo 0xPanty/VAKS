@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-030",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 29,
+  "layer": "ordinary_stable",
+  "claim": "As of June 2014, Eminem had sold 45.1 million albums.",
+  "evidence": "Eminem | 3 | With US sales of 45.1 million albums and 42 million tracks as of June 2014 , Eminem is the second best-selling male artist of the Nielsen SoundScan era , the sixth best-selling artist in the United States and the best-selling hip-hop artist .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-030.md",
+    "document_hash": "5ab13ef8b007ee0c99e2254108b58917efa18780c9ad885ecfeb779aba8a2de7",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-030_ANCHOR",
+    "text_quote": "Eminem | 3 | With US sales of 45.1 million albums and 42 million tracks as of June 2014 , Eminem is the second best-selling male artist of the Nielsen SoundScan era , the sixth best-selling artist in the United States an",
+    "start": 159,
+    "end": 379
+  },
+  "record_path": "records/FEVER-030.json",
+  "evidence_path": "evidence/FEVER-030.md"
+}

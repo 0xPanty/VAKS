@@ -1,0 +1,3 @@
+# Evidence AVERITEC-120
+marker: EVIDENCE_AVERITEC-120_ANCHOR
+quote: No

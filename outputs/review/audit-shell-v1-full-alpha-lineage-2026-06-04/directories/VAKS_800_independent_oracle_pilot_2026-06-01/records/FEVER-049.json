@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-049",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 48,
+  "layer": "ordinary_stable",
+  "claim": "Lily Collins won One to Watch.",
+  "evidence": "Lily_Collins | 5 | In 2008 , she was named Newest Red Carpet Correspondent and One to Watch in 2008 .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-049.md",
+    "document_hash": "1a1cc5852a980523bb616e20ecce6657e4d91ded17b7419c7e2e2683f59551db",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-049_ANCHOR",
+    "text_quote": "Lily_Collins | 5 | In 2008 , she was named Newest Red Carpet Correspondent and One to Watch in 2008 .",
+    "start": 136,
+    "end": 237
+  },
+  "record_path": "records/FEVER-049.json",
+  "evidence_path": "evidence/FEVER-049.md"
+}

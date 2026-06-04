@@ -1,0 +1,22 @@
+{
+  "id": "SCIFACT-095",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row",
+  "source_row_index": 94,
+  "claim": "Occupancy of ribosomes by IncRNAs mirror 5 0-UTRs",
+  "evidence": "Large noncoding RNAs are emerging as an important component in cellular regulation. Considerable evidence indicates that these transcripts act directly as functional RNAs rather than through an encoded protein product. However, a recent study of ribosome occupancy reported that many large intergenic ncRNAs (lincRNAs) are bound by ribosomes, raising the possibility that they are translated into proteins. Here, we show that classical noncoding RNAs and 5' UTRs show the same ribosome occupancy as lincRNAs, demonstrating that ribosome occupancy alone is not sufficient to classify transcripts as coding or noncoding. Instead, we define a metric based on the known property of translation whereby translating ribosomes are released upon encountering a bona fide stop codon. We show that this metric accurately discriminates between protein-coding transcripts and all classes of known noncoding transcripts, including lincRNAs. Taken together, these results argue that the large majority of lincRNAs do not function through encoded proteins.",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [
+    "selector_drift"
+  ],
+  "anchor_status": "drift",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "drift",
+    "path": "raw_sources/SCIFACT-095.md",
+    "marker": "SCIFACT-095_ANCHOR"
+  }
+}

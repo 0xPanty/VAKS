@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-047",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 46,
+  "layer": "ordinary_stable",
+  "claim": "Scabies is an entity.",
+  "evidence": "Scabies | 0 | Scabies , previously known as the seven-year itch , is a contagious skin infestation by the mite Sarcoptes scabiei .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-047.md",
+    "document_hash": "f52bbb5946e47fb2c1adcc5ab32404f12d77f27955696ccf091bd76891b6c3a9",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-047_ANCHOR",
+    "text_quote": "Scabies | 0 | Scabies , previously known as the seven-year itch , is a contagious skin infestation by the mite Sarcoptes scabiei .",
+    "start": 127,
+    "end": 257
+  },
+  "record_path": "records/FEVER-047.json",
+  "evidence_path": "evidence/FEVER-047.md"
+}

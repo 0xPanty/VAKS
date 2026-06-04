@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-068",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 67,
+  "layer": "action_challenge_conflict",
+  "claim": "In 1969, Yoko Ono and her husband John Lennon held two week-long Bed-Ins for Peace.",
+  "evidence": "Bed-In | 0 | As the Vietnam War raged in 1969 , Yoko Ono and her husband John Lennon held two week-long Bed-Ins for Peace , one at the Hilton Hotel in Amsterdam and one at Fairmont The Queen Elizabeth in Montreal , each of which were intended to be non-violent protests against wars , and experimental tests of new ways to promote peace .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "explicit_challenge"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-068.md",
+    "document_hash": "e814c6bfc9474de9dedb7c2cf0b7155c846a628febaa2cfdadd13ef6fe83168a",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-068_ANCHOR",
+    "text_quote": "Bed-In | 0 | As the Vietnam War raged in 1969 , Yoko Ono and her husband John Lennon held two week-long Bed-Ins for Peace , one at the Hilton Hotel in Amsterdam and one at Fairmont The Queen Elizabeth in Montreal , each ",
+    "start": 189,
+    "end": 409
+  },
+  "record_path": "records/FEVER-068.json",
+  "evidence_path": "evidence/FEVER-068.md"
+}

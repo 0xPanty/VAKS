@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-018",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 17,
+  "layer": "ordinary_stable",
+  "claim": "In 2019 the US Police were 20.8 times more likely to kill than be killed by a criminal",
+  "evidence": "According to statistics reported to the FBI, 89 law enforcement officers were killed in line-of-duty incidents in 2019. Of these, 48 officers died as a result of felonious acts, and 41 officers died in accidents. Comprehensive data tables about these incidents and brief narratives describing the fatal attacks are included in Law Enforcement Officers Killed and Assaulted, 2019, released today. In 2019, 999 people were shot and killed by police. 20.8125.",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-018.md",
+    "document_hash": "aaf738526a84ca3eb8b8836fb8cb20d415ae080cac06d2d7cbcc61142596f3dc",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-018_ANCHOR",
+    "text_quote": "According to statistics reported to the FBI, 89 law enforcement officers were killed in line-of-duty incidents in 2019. Of these, 48 officers died as a result of felonious acts, and 41 officers died in accidents. Compreh",
+    "start": 201,
+    "end": 421
+  },
+  "record_path": "records/AVERITEC-018.json",
+  "evidence_path": "evidence/AVERITEC-018.md"
+}

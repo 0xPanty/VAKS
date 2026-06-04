@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-071",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 70,
+  "layer": "action_challenge_conflict",
+  "claim": "The USA has only 4% of the worlds population but has 25% of the worlds Covid-19 Cases.",
+  "evidence": "about 4% about 25%",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [
+    "explicit_challenge"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-071.md",
+    "document_hash": "fddc0219a54f96cd5f9e200344c98eeeeab25f4f6b8248a9f322911aec105e59",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-071_ANCHOR",
+    "text_quote": "about 4% about 25%",
+    "start": 201,
+    "end": 219
+  },
+  "record_path": "records/AVERITEC-071.json",
+  "evidence_path": "evidence/AVERITEC-071.md"
+}

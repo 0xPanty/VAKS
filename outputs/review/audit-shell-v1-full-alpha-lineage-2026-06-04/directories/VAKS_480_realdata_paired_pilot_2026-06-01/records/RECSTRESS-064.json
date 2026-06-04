@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-064",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 63,
+  "claim": "In young and middle-aged adults, current or remote uses of ADHD medications do not increase the risk of serious cardiovascular events.",
+  "evidence": "CONTEXT More than 1.5 million US adults use stimulants and other medications labeled for treatment of attention-deficit/hyperactivity disorder (ADHD). These agents can increase heart rate and blood pressure, raising concerns about their cardiovascular safety. OBJECTIVE To examine whether current use of medications prescribed primarily to treat ADHD is associated with increased risk of serious cardiovascular events in young and middle-aged adults. DESIGN, SETTING, AND PARTICIPANTS Retrospective, population-based cohort study using electronic health care records from 4 study sites (OptumInsight Epidemiology, Tennessee Medicaid, Kaiser Permanente California, and the HMO Research Network), starting in 1986 at 1 site and ending in 2005 at all sites, with additional covariate assessment using 2007 survey data. Participants were adults aged 25 through 64 years with dispensed prescriptions for methylphenidate, amphetamine, or atomoxetine at baseline. Each medication user (n = 150,359) was matched to 2 nonusers on study site, birth year, sex, and calendar year (443,198 total users and nonusers). MAIN OUTCOME MEASURES Serious cardiovascular events, including myocardial infarction (MI), sudde",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-064.md",
+    "marker": "RECSTRESS-064_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-06",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-06-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-064.json",
+  "evidence_path": "evidence/RECSTRESS-064.md"
+}

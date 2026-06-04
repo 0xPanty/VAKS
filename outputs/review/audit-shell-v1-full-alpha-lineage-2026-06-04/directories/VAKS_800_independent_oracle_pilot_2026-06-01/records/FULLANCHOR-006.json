@@ -1,0 +1,38 @@
+{
+  "id": "FULLANCHOR-006",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 5,
+  "layer": "full_anchor_click",
+  "claim": "The Common Law Admission Test (CLAT) 2020 will not be conducted on September 7, 2020, as planned",
+  "evidence": "No it was a fake notification and an official announcement was made saying:\n\n\"Sub: Fake Notification Regarding Postponement of the CLAT 2020 Examination\n1. It has come to the attention of the Consortium of National Universities (the\n“Consortium”) that a document purporting to be a Notification issued by the\nConsortium and announcing the postponement of the CLAT 2020 from its scheduled\ndate of September 7, 2020 is being circulated on the internet (the “Fake\nNotification”).\n2. The Consortium hereby categorically states that the Fake Notification has not been\nissued by the Consortium. The date of the CLAT 2020 examination, and all other\nparticulars, in relation to the CLAT 2020 examination remain unaltered.\n3. Official Notifications from the Consortium are available at\nhttps://consortiumofnlus.ac.in/\n4. You may confirm or clarify any information by writing to\nclat@consortiumofnlus.ac.in\"",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "real_web_snapshot",
+  "source_anchor": {
+    "status": "valid",
+    "path": "real_source_snapshots/FULLANCHOR-006.txt",
+    "document_hash": "9cd04ced1c3399edb4bc27b17c70e638d6ec86305773ebc8376a3e47d6117ddc",
+    "version_id": "real-web-snapshot-v2",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-006_REAL_SNAPSHOT",
+    "text_quote": "Consortium of National Law Universities (CNLU), the Nodal Agency for conducting CLAT 2020, issued an official notice on its website that a document purporting to be a notification issued by the Consortium announcing the postponement of the CLAT 2020 is being s",
+    "start": 2050,
+    "end": 2310,
+    "quote_strategy": "claim_keyword_window",
+    "landing_class": "claim_relevant_context_landing",
+    "semantic_selector_success": true,
+    "boilerplate_quote": false
+  },
+  "record_path": "records/FULLANCHOR-006.json",
+  "evidence_path": "evidence/FULLANCHOR-006.md",
+  "real_snapshot_url": "https://web.archive.org/web/20200922100752/https://newsmeter.in/viral-claim-about-postponement-of-clat-2020-is-false/",
+  "clickback_snapshot_kind": "live_urllib_retry"
+}

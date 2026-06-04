@@ -1,0 +1,7 @@
+# Raw Source SCIFACT-075
+dataset: scifact
+source_row: 74
+marker: SCIFACT-075_ANCHOR
+claim: Lupus-prone mice infected with curliproducing bacteria have higher autoantibody titers compared to controls.
+label: 
+evidence: Research on the human microbiome has established that commensal and pathogenic bacteria can influence obesity, cancer, and autoimmunity through mechanisms mostly unknown. We found that a component of bacterial biofilms, the amyloid protein curli, irreversibly formed fibers with bacterial DNA during biofilm formation. This interaction accelerated amyloid polymerization and created potent immunogenic complexes that activated immune cells, including dendritic cells, to produce cytokines such as type I interferons, which are pathogenic in systemic lupus erythematosus (SLE). When given systemically, curli-DNA composites triggered immune activation and production of autoantibodies in lupus-prone and wild-type mice. We also found that the infection of lupus-prone mice with curli-producing bacteria triggered higher autoantibody titers compared to curli-deficient bacteria. These data provide a mechanism by which the microbiome and biofilm-producing enteric infections may contribute to the progression of SLE and point to a potential molecular target for treatment of autoimmunity.

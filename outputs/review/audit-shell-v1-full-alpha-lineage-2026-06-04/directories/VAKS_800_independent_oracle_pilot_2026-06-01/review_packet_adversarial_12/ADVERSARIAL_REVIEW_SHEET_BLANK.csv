@@ -1,0 +1,13 @@
+sample_id,case_id,time_to_triage_seconds,trap_recognized_y_n,next_action,would_open_full_audit_y_n,wrong_actionability_y_n,clickback_source_path_opens_y_n,clickback_product_success_y_n,authority_misunderstanding_y_n,grouping_misread_y_n,notes
+ADV-UX-01,ADV-01,,,,,,,,,,
+ADV-UX-02,ADV-02,,,,,,,,,,
+ADV-UX-03,ADV-03,,,,,,,,,,
+ADV-UX-04,ADV-04,,,,,,,,,,
+ADV-UX-05,ADV-05,,,,,,,,,,
+ADV-UX-06,ADV-06,,,,,,,,,,
+ADV-UX-07,ADV-07,,,,,,,,,,
+ADV-UX-08,ADV-08,,,,,,,,,,
+ADV-UX-09,ADV-09,,,,,,,,,,
+ADV-UX-10,ADV-10,,,,,,,,,,
+ADV-UX-11,ADV-11,,,,,,,,,,
+ADV-UX-12,ADV-12,,,,,,,,,,

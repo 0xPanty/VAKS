@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-113",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 112,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Glycolysis is one of the primary glycometabolic pathways in cells.",
+  "evidence": "Fast axonal transport (FAT) requires consistent energy over long distances to fuel the molecular motors that transport vesicles. We demonstrate that glycolysis provides ATP for the FAT of vesicles. Although inhibiting ATP production from mitochondria did not affect vesicles motility, pharmacological or genetic inhibition of the glycolytic enzyme GAPDH reduced transport in cultured neurons and in Drosophila larvae. GAPDH localizes on vesicles via a huntingtin-dependent mechanism and is transported on fast-moving vesicles within axons. Purified motile vesicles showed GAPDH enzymatic activity and produced ATP. Finally, we show that vesicular GAPDH is necessary and sufficient to provide on-board energy for fast vesicular transport. Although detaching GAPDH from vesicles reduced transport, targeting GAPDH to vesicles was sufficient to promote FAT in GAPDH deficient neurons. This specifically localized glycolytic machinery may supply constant energy, independent of mitochondria, for the processive movement of vesicles over long distances in axons.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "insufficient_evidence"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-113.md",
+    "document_hash": "03051fac8fb55c4b4d8cac83493eb3782939447f584f73c0b3fb9f9aab3a8eed",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-113_ANCHOR",
+    "text_quote": "Fast axonal transport (FAT) requires consistent energy over long distances to fuel the molecular motors that transport vesicles. We demonstrate that glycolysis provides ATP for the FAT of vesicles. Although inhibiting AT",
+    "start": 178,
+    "end": 398
+  },
+  "record_path": "records/SCIFACT-113.json",
+  "evidence_path": "evidence/SCIFACT-113.md"
+}

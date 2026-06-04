@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-100",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 99,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "The Heart is Crazy stars Shah Rukh Khan.",
+  "evidence": "Main_Hoon_Na | 2 | It stars Shah Rukh Khan , Sunil Shetty , Sushmita Sen , Zayed Khan and Amrita Rao in the main cast .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-100.md",
+    "document_hash": "9283822811ce712cb2dbefe715d0c3ce495dcc8c2fe14cfb56b18ff4ec82065f",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-100_ANCHOR",
+    "text_quote": "Main_Hoon_Na | 2 | It stars Shah Rukh Khan , Sunil Shetty , Sushmita Sen , Zayed Khan and Amrita Rao in the main cast .",
+    "start": 146,
+    "end": 265
+  },
+  "record_path": "records/FEVER-100.json",
+  "evidence_path": "evidence/FEVER-100.md"
+}

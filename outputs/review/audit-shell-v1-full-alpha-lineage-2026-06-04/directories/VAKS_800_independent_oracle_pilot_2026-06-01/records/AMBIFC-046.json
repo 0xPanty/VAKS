@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-046",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 45,
+  "layer": "ordinary_stable",
+  "claim": "they survive.in the movie no escape",
+  "evidence": "No Escape is a 2015 American action thriller film directed by John Erick Dowdle, who co-wrote the screenplay with his brother, Drew Dowdle. The film stars Owen Wilson, Lake Bell, and Pierce Brosnan, and tells the story of an expat engineer trapped with his family in an unidentified country in Southeast Asia during a violent uprising. The film was released on August 26, 2015. It had special sneak previews in the Philippines on August 16 and 17, 2015, as well as multiple pre-screenings throughout the United States before its official release on August 26, 2015 by The Weinstein Company. No Escape received mixed reviews from critics, who praised the action sequences and the acting performances, especially Wilson's dramatic role, but others criticized the lack of character development and anti-climactic ending.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-046.md",
+    "document_hash": "87259397aace8810ce68a2202cd335dc619356fc765cab939ba90e394a6fac0a",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-046_ANCHOR",
+    "text_quote": "No Escape is a 2015 American action thriller film directed by John Erick Dowdle, who co-wrote the screenplay with his brother, Drew Dowdle. The film stars Owen Wilson, Lake Bell, and Pierce Brosnan, and tells the story o",
+    "start": 144,
+    "end": 364
+  },
+  "record_path": "records/AMBIFC-046.json",
+  "evidence_path": "evidence/AMBIFC-046.md"
+}

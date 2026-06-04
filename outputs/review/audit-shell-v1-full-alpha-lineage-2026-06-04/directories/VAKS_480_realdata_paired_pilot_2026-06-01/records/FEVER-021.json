@@ -1,0 +1,20 @@
+{
+  "id": "FEVER-021",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 20,
+  "claim": "Sindh borders Indian states and is in India.",
+  "evidence": "Sindh | 12 | Sindh is home to a large portion of Pakistan 's industrial sector and contains two of Pakistan 's commercial seaports -- Port Bin Qasim and the Karachi Port .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-021.md",
+    "marker": "FEVER-021_ANCHOR"
+  }
+}

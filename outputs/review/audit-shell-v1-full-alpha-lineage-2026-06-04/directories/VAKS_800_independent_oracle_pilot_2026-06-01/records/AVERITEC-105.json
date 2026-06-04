@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-105",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 104,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "warm water is effective in curing migraine",
+  "evidence": "Migraine is a disorder of the nervous system, something that appears to be genetically predisposed, with environmental and biological factors that may increase or decrease the sensitivity of the nervous system to the attacks we call “migraine.” It is not like an infection that can be eradicated by taking antibiotics, nor like a tumor that can be surgically removed. Migraines can be controlled in the sense that there are treatments to reduce the frequency and severity of the attacks, and medications to take when an attack occurs. In general, migraines tend to become much less frequent as people age, beyond 60 years. There's currently no cure for migraines, although a number of treatments are available to help ease the symptoms.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "ambiguous_scope"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-105.md",
+    "document_hash": "9ae867f5ba1c7cfcf8a66815f0d84e3162e45ec6773fc47a41ac0d19e215147c",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-105_ANCHOR",
+    "text_quote": "Migraine is a disorder of the nervous system, something that appears to be genetically predisposed, with environmental and biological factors that may increase or decrease the sensitivity of the nervous system to the att",
+    "start": 157,
+    "end": 377
+  },
+  "record_path": "records/AVERITEC-105.json",
+  "evidence_path": "evidence/AVERITEC-105.md"
+}

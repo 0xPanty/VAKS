@@ -1,0 +1,31 @@
+{
+  "id": "RECSTRESS-208",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 87,
+  "claim": "In one of the states that determined the outcome\" of the 2016 presidential race, \"the winning margin averaged out to just two votes per precinct — two votes.",
+  "evidence": "Michelle Obama in her speech said \"In one of the states that determined the outcome, the winning margin averaged out to just two votes per precinct—two votes\".",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-208.md",
+    "marker": "RECSTRESS-208_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-20",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-208.json",
+  "evidence_path": "evidence/RECSTRESS-208.md"
+}

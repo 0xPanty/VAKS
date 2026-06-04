@@ -1,0 +1,295 @@
+---
+type: review-candidate
+status: candidate-only-merge-ready
+created: 2026-06-04
+updated: 2026-06-04
+project: verified-action-knowledge-system
+proposed_node_type: operation-convention-candidate
+proposed_title: "Audit Shell v1 / Queue-First Operator Cockpit 后台 operator 候选约定"
+proposed_by: Codex
+sources:
+  - "outputs/review/audit-shell-v1-full-alpha-lineage-2026-06-04"
+  - "outputs/review/audit-shell-v1-full-alpha-lineage-2026-06-04/ARTIFACT_MANIFEST.csv"
+  - "C:\\Users\\Administrator\\Documents\\VAKS_audit_shell_pressure_test_2026-06-04\\PRESSURE_TEST_REPORT.md"
+  - "C:\\Users\\Administrator\\Documents\\VAKS_audit_shell_pressure_test_2026-06-04\\PRESSURE_TEST_RESULTS.csv"
+  - "C:\\Users\\Administrator\\Documents\\VAKS_audit_shell_pressure_test_2026-06-04\\PRESSURE_TEST_SUMMARY.json"
+  - "C:\\Users\\Administrator\\Documents\\VAKS_audit_shell_pressure_test_2026-06-04\\NON_REDUCTIVE_OPERATOR_SURFACE_DESIGN.md"
+  - "C:\\Users\\Administrator\\Documents\\VAKS_audit_shell_pressure_test_2026-06-04\\OPERATOR_FRONT_FACE_EXAMPLES.md"
+main_vault_artifact_root: "outputs/review/audit-shell-v1-full-alpha-lineage-2026-06-04"
+evidence_level: sandbox-pressure-test
+verification_status: candidate-tested
+confidence: medium-high
+reviewer: Pro
+review_result: can-merge-as-operator-only-candidate-after-small-fixes
+---
+
+# Audit Shell v1 / Queue-First Operator Cockpit 候选约定
+
+## Merge Banner
+
+```text
+operator-only candidate convention
+pilot pending
+not formal adoption
+not truth-layer guidance
+not schema guidance
+not user-facing UI
+not evidence that operator adjudication has passed
+not evidence that product-grade click-back has passed
+```
+
+说人话：这份文件可以进入主库作为后台 operator 候选约定，但它不是正式采用，也不是证明系统已经被真人 operator 验证通过。
+
+## 先说边界
+
+这不是正式主库规则，不改 `SCHEMA.md`，不改 truth layer，不打开 recurrence / grouping 默认。
+
+这是一条候选 operation convention：给 Codex / Pro / reviewer 当后台资料库管家 surface 用，不是给普通用户看的 card。
+
+## 一句话
+
+Audit shell v1 的最终收束不是 card-first，而是 queue-first operator cockpit。
+
+它的价值是让后台 operator 在真实资料流量里先分清：
+
+```text
+轻量收
+需要复核
+必须挡住
+旧的折叠
+过期/回归的重开
+```
+
+它不是为了证明资料是真的，而是为了防止 Codex 把 source、ASR、summary、feedback、dashboard、test、lint、count、old handoff 混成可靠知识。
+
+最终操作形态：
+
+```text
+risk-tiered queue
+-> issue row
+-> evidence envelope
+-> deep packet
+```
+
+## 候选规则
+
+### 状态机
+
+保留完整 `shell_core`：
+
+```text
+ordinary
+for_review
+blocking
+resolved_folded
+regressed
+```
+
+含义：
+
+| State | 人话 | 操作 |
+|---|---|---|
+| `ordinary` | 普通资料 | 轻量处理；变成行动依据时再打开 full audit。 |
+| `for_review` | 需要复核 | 进 unresolved/review；复核前不当行动依据。 |
+| `blocking` | 暂不可行动 | 先修锚点、证据、冲突或 action-basis 问题。 |
+| `resolved_folded` | 历史/已处理 | 默认折叠；只有被重新使用时打开。 |
+| `regressed` | 回归/旧入口误导 | 重新入队，先核对最新入口。 |
+
+### State / Lane 分离
+
+`state` 表示资料的风险状态，`lane` 表示当前 operator 第一屏怎么处理。两者不能混成一个概念。
+
+候选 lane：
+
+| Lane | 人话 | 操作 |
+|---|---|---|
+| `ordinary_light` | 普通轻量 | 保存 provenance，不打扰主队列。 |
+| `review_now` | 现在要看 | 进入主 unresolved queue。 |
+| `blocking_now` | 现在要挡 | 不修不能当行动依据。 |
+| `deferred_review_unless_promoted` | 先不打扰，但不能忘 | 不占主队列；一旦被使用或质疑，必须晋级。 |
+| `folded_history` | 历史折叠 | 默认收起；被重新使用或回归时重开。 |
+| `regressed_reopen` | 回归重开 | 重新进入主队列。 |
+
+### Deferred Lane 硬规则
+
+`deferred_review_unless_promoted` 项若被引用、被用作 action-basis、被用作 rule / convention basis、被明确 challenge、与他项冲突，或锚点弱点影响当前回答，则必须先生成 `promotion receipt`，并提升到 `review_now` / `blocking` / `regressed` 之一。
+
+在 `promotion receipt` 生成之前，deferred 项不得作为 action-basis 使用。
+
+`promotion receipt` 至少要记录：
+
+```text
+被晋级的 item
+触发原因
+触发者或触发场景
+晋级前 anchor / pointer 状态
+晋级后的 state / lane
+是否需要 deep packet
+operator 决策
+```
+
+这条是防 false-lite 的底线。它不要求改 schema，但作为候选约定必须执行。
+
+### 前脸 slots
+
+每条 operator 前脸必须覆盖：
+
+```text
+状态
+一句话摘要
+风险原因
+锚点状态
+处理建议
+定向边界提醒
+回源入口
+```
+
+注意：不要求每条都写成长 card。ordinary 要短，风险提醒只在命中风险时显示。
+
+### Anchor-Strength Strip 边界
+
+前脸可以只显示 anchor-strength strip，但它只是摘要，不是证据判定。
+
+硬规则：
+
+```text
+只有 selector-grade jump-back 才能主张 evidence landing。
+source / claim / context / diagnostic / history / binary landing 一律不得表述为“已构成证据支持”。
+```
+
+完整 landing taxonomy 必须保留在 drilldown / deep packet / machine layer，不得被前脸 strip 替代。
+
+## 必须挡住或复核的触发器
+
+这些不能轻放：
+
+- 用作行动依据。
+- 用作主库规则、schema、operation convention 依据。
+- 缺 source URL / source URI / source anchor。
+- flat transcript 被拿来当证据。
+- repo/package zip 被拿来当 evidence landing。
+- `next_review` 已过期且要当当前规则。
+- draft / candidate pattern 要被当 adopted rule。
+- feedback 被当 truth change。
+- dashboard / test / lint / count / lineage 被当 authority。
+- 旧 handoff 或旧 package manifest 被当当前入口。
+- derived QA / summary 被当 reviewed truth。
+
+## 必须保持轻量的东西
+
+这些不要乱加厚：
+
+- 普通 source card。
+- video source card，前提是不直接当证据。
+- ASR / acquisition metadata JSON。
+- template。
+- concept explanation。
+- current handoff pointer，前提是不改路线。
+- completed review output，前提只是历史查看。
+
+轻量不是相信，轻量只是“不需要现在打开 full audit”。
+
+## 视频 / ASR 规则
+
+强压测试支持这个拆分：
+
+```text
+video source card = ordinary provenance
+ASR/acquisition json = ordinary diagnostic metadata
+segments.md = for_review
+transcript.txt = blocking before evidence/action use
+```
+
+这条不能砍。视频链路最容易把 source、ASR、summary、candidate、reviewed knowledge 混掉。
+
+## Landing class
+
+候选 operator landing class：
+
+| Landing | 说明 |
+|---|---|
+| `source_record_landing` | 只落到来源记录，能追溯，不等于证据支持。 |
+| `claim_landing` | 落到 claim 文本，不是 evidence landing。 |
+| `claim_relevant_context_landing` | 相关上下文，比 claim landing 还弱。 |
+| `evidence_landing` | 落到具体证据位置。 |
+| `transcript_segment_landing` | 落到时间段 ASR 文本，需要 key entity check。 |
+| `transcript_landing` | flat transcript，不能直接行动。 |
+| `diagnostic_landing` | 元数据、lint、test、dashboard、manifest，只能辅助。 |
+| `handoff_landing` | 恢复入口，不是 schema 或 truth。 |
+| `template_landing` | 模板，不是 record facts。 |
+| `binary_snapshot_landing` | 有文件，但没有可读证据落点。 |
+
+## 强压结果
+
+本轮 sandbox 强压测试扫了 282 个真实主库文件。
+
+结果：
+
+```text
+ordinary: 113
+for_review: 139
+blocking: 11
+regressed: 2
+resolved_folded: 17
+false-lite: 0
+over-heavy: 0
+direct full audit: 152
+```
+
+说人话：
+
+```text
+该轻的能轻。
+该挡的能挡。
+该复核的没直接放行。
+```
+
+## 为什么值得进入候选
+
+它明显帮 Codex 减少三类错误：
+
+1. 把“有文件/有摘要/有 transcript”误当“能当证据”。
+2. 把 feedback / dashboard / test / lint / count / lineage 误当 authority。
+3. 被旧 handoff / 旧 package manifest 带错恢复入口。
+
+## 反例和不确定性
+
+还没有完成：
+
+- 真人或第二 operator timing。
+- Pro/reviewer 独立误解率测试。
+- 真实 click-back 成功/失败记录。
+- 前脸 UI/文本长度验证。
+- `for_review` 大量出现时的队列可用性设计。
+
+所以它不应直接正式 adoption。
+
+## 最终 Pro Gate
+
+Pro 最终收尾复核已完成。
+
+结论：
+
+```text
+无合入阻塞。
+可以合入 main-vault candidate operation convention / operator-only candidate convention。
+不能外推为 formal adoption、真人 operator 已验证通过、product-grade click-back 已验证通过。
+```
+
+已吸收的合入前硬修：
+
+```text
+deferred_review_unless_promoted 必须有 promotion receipt / reopen 闭环。
+candidate 顶部必须保留 merge banner。
+anchor-strength strip 只是前脸摘要，不能替代 selector-grade evidence landing。
+```
+
+## 当前建议
+
+```text
+保留完整 shell_core。
+保留完整 alpha lineage，不删减、不压扁。
+作为 operator-only candidate convention 进入主库候选区。
+不要正式 adoption。
+下一步直接跑 80/60/60 operator pilot。
+```

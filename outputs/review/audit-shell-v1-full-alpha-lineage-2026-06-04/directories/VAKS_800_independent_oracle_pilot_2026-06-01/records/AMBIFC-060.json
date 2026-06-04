@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-060",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 59,
+  "layer": "ordinary_stable",
+  "claim": "the first incredibles came out in theaters.",
+  "evidence": "The film was first released on both VHS and a two-disc collector's edition DVD set on March 15, 2005. The DVD set included two newly commissioned Pixar short films, Jack-Jack Attack and Mr. Incredible and Pals, which were made specifically for this home-video release, and Boundin', a Pixar short film that premiered alongside the feature film in its original theatrical release. The VHS release only featured the short, Boundin'. It was the highest-selling DVD of 2005, with 17.38 million copies sold. The film was also released on UMD for the Sony PSP. Disney released the film on Blu-ray in North America on April 12, 2011, and on 4K UHD Blu-ray on June 5, 2018; this marks Disney's first 4K Blu-ray reissue on the format.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-060.md",
+    "document_hash": "a9a1bea1e627576924f16d5d914fda90d6cdec0f45e8dfb5f85f7d792006a6e7",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-060_ANCHOR",
+    "text_quote": "The film was first released on both VHS and a two-disc collector's edition DVD set on March 15, 2005. The DVD set included two newly commissioned Pixar short films, Jack-Jack Attack and Mr. Incredible and Pals, which wer",
+    "start": 152,
+    "end": 372
+  },
+  "record_path": "records/AMBIFC-060.json",
+  "evidence_path": "evidence/AMBIFC-060.md"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "SCIFACT-054",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 53,
+  "layer": "ordinary_stable",
+  "claim": "CHEK2 is not associated with breast cancer.",
+  "evidence": "Background Checkpoint kinase 2 (CHEK2) averts cancer development by promoting cell cycle arrest and activating DNA repair in genetically damaged cells. Previous investigation has established a role for the CHEK2 gene in breast cancer aetiology, but studies have largely been limited to the rare 1100delC mutation. Whether common polymorphisms in this gene influence breast cancer risk remains unknown. In this study, we aimed to assess the importance of common CHEK2 variants on population risk for breast cancer by capturing the majority of diversity in the gene using haplotype tagging single nucleotide polymorphisms (tagSNPs). Methods and Findings We analyzed 14 common SNPs spanning 52 kilobases (kb) of the CHEK2 gene in 92 Swedish women. Coverage evaluation indicated that these typed SNPs would efficiently convey association signal also from untyped SNPs in the same region. Six of the 14 SNPs predicted well both the haplotypic and single SNP variations within CHEK2. We genotyped these six tagSNPs in 1,577 postmenopausal breast cancer cases and 1,513 population controls, but found no convincing association between any common CHEK2 haplotype and breast cancer risk. The 1100delC mutation was rare in our Swedish population—0.7% in cases and 0.4% in controls— with a corresponding odds ratio for carriers versus noncarriers of 2.26 (95% confidence interval, 0.99–5.15). Estimates of the p",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-054.md",
+    "document_hash": "8f9bd00b653dbbdbafd3fd98aa3377d6cc02e85adb7905c2980b0fc725efd046",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-054_ANCHOR",
+    "text_quote": "Background Checkpoint kinase 2 (CHEK2) averts cancer development by promoting cell cycle arrest and activating DNA repair in genetically damaged cells. Previous investigation has established a role for the CHEK2 gene in ",
+    "start": 155,
+    "end": 375
+  },
+  "record_path": "records/SCIFACT-054.json",
+  "evidence_path": "evidence/SCIFACT-054.md"
+}

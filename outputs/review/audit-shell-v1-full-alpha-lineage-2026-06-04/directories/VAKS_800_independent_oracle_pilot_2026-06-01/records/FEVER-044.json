@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-044",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 43,
+  "layer": "ordinary_stable",
+  "claim": "Las Vegas is renowned in Europe and South America.",
+  "evidence": "Las_Vegas | 2 | Las Vegas is an internationally renowned major resort city known primarily for its gambling , shopping , fine dining , entertainment , and nightlife .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-044.md",
+    "document_hash": "54b47101857ab4a72dd990ec594a886f7c290269e9f9a06412d6b14b7cd3cd5c",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-044_ANCHOR",
+    "text_quote": "Las_Vegas | 2 | Las Vegas is an internationally renowned major resort city known primarily for its gambling , shopping , fine dining , entertainment , and nightlife .",
+    "start": 156,
+    "end": 322
+  },
+  "record_path": "records/FEVER-044.json",
+  "evidence_path": "evidence/FEVER-044.md"
+}

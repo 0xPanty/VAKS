@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-060",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 59,
+  "layer": "ordinary_stable",
+  "claim": "Live Your Life is by Miley Cyrus.",
+  "evidence": "Live_Your_Life_-LRB-T.I._song-RRB- | 0 | `` Live Your Life '' is a song by American rapper T.I. , from his sixth studio album , Paper Trail -LRB- 2008 -RRB- , and features Barbadian singer Rihanna .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-060.md",
+    "document_hash": "effe940cf6e4d338f700d5ee6b377b108435471999f9ef72063a817ab1a38e1b",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-060_ANCHOR",
+    "text_quote": "Live_Your_Life_-LRB-T.I._song-RRB- | 0 | `` Live Your Life '' is a song by American rapper T.I. , from his sixth studio album , Paper Trail -LRB- 2008 -RRB- , and features Barbadian singer Rihanna .",
+    "start": 139,
+    "end": 337
+  },
+  "record_path": "records/FEVER-060.json",
+  "evidence_path": "evidence/FEVER-060.md"
+}

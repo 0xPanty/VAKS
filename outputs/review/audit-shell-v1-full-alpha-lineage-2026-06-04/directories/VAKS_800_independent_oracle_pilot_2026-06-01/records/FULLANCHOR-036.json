@@ -1,0 +1,30 @@
+{
+  "id": "FULLANCHOR-036",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 35,
+  "layer": "full_anchor_click",
+  "claim": "Assembly of invadopodia is triggered by focal generation of phosphatidylinositol-3,4-biphosphate and the activation of the nonreceptor tyrosine kinase Src.",
+  "evidence": "Invadopodia are matrix-degrading membrane protrusions in invasive carcinoma cells. The mechanisms regulating invadopodium assembly and maturation are not understood. We have dissected the stages of invadopodium assembly and maturation and show that invadopodia use cortactin phosphorylation as a master switch during these processes. In particular, cortactin phosphorylation was found to regulate cofilin and Arp2/3 complex-dependent actin polymerization. Cortactin directly binds cofilin and inhibits its severing activity. Cortactin phosphorylation is required to release this inhibition so cofilin can sever actin filaments to create barbed ends at invadopodia to support Arp2/3-dependent actin polymerization. After barbed end formation, cortactin is dephosphorylated, which blocks cofilin severing activity thereby stabilizing invadopodia. These findings identify novel mechanisms for actin polymerization in the invadopodia of metastatic carcinoma cells and define four distinct stages of invadopodium assembly and maturation consisting of invadopodium precursor formation, actin polymerization, stabilization, and matrix degradation.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "pdf_text",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/FULLANCHOR-036.md",
+    "document_hash": "fe15ef6ed086afd87516e1fb1086689e1ab3129025cab357011135904558242b",
+    "version_id": "pdf_text-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-036_ANCHOR",
+    "text_quote": "Invadopodia are matrix-degrading membrane protrusions in invasive carcinoma cells. The mechanisms regulating invadopodium assembly and maturation are not understood. We have dissected the stages of invadopodium assembly ",
+    "start": 274,
+    "end": 494
+  },
+  "record_path": "records/FULLANCHOR-036.json",
+  "evidence_path": "evidence/FULLANCHOR-036.md"
+}

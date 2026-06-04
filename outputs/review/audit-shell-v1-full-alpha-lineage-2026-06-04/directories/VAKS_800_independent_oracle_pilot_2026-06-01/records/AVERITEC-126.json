@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-126",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 125,
+  "layer": "anchor_problem",
+  "claim": "President Trump Says He Hopes The NFL Season Gets Canceled Due To Coronavirus",
+  "evidence": "Well they want to open, and they want to open badly and they've been working with government. I would say this: if they don't stand for the national anthem I hope they don't open, but other than that I'd love to see them open and we're doing everything possible for getting them open.” No No",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "selector_drift"
+  ],
+  "anchor_status": "drift",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "drift",
+    "path": "raw_sources/AVERITEC-126.md",
+    "document_hash": "c3c3dfae1ba31fdae5384c382f739e56e7da39c56d056e333380f08690e87f23",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-126_ANCHOR",
+    "text_quote": "Well they want to open, and they want to open badly and they've been working with government. I would say this: if they don't stand for the national anthem I hope they don't open, but other than that I'd love to see them",
+    "start": 199,
+    "end": 419
+  },
+  "record_path": "records/AVERITEC-126.json",
+  "evidence_path": "evidence/AVERITEC-126.md"
+}

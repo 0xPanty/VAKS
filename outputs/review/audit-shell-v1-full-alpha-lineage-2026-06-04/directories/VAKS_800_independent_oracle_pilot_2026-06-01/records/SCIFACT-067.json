@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-067",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 66,
+  "layer": "action_challenge_conflict",
+  "claim": "Cellular aging closely links to an older appearance.",
+  "evidence": "OBJECTIVE To determine whether perceived age correlates with survival and important age related phenotypes. DESIGN Follow-up study, with survival of twins determined up to January 2008, by which time 675 (37%) had died. SETTING Population based twin cohort in Denmark. PARTICIPANTS 20 nurses, 10 young men, and 11 older women (assessors); 1826 twins aged >or=70. MAIN OUTCOME MEASURES Assessors: perceived age of twins from photographs. Twins: physical and cognitive tests and molecular biomarker of ageing (leucocyte telomere length). RESULTS For all three groups of assessors, perceived age was significantly associated with survival, even after adjustment for chronological age, sex, and rearing environment. Perceived age was still significantly associated with survival after further adjustment for physical and cognitive functioning. The likelihood that the older looking twin of the pair died first increased with increasing discordance in perceived age within the twin pair-that is, the bigger the difference in perceived age within the pair, the more likely that the older looking twin died first. Twin analyses suggested that common genetic factors influence both perceived age and survival. Perceived age, controlled for chronological age and sex, also correlated significantly with physical and cognitive functioning as well as with leucocyte telomere length. CONCLUSION Perceived age-whi",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-067.md",
+    "document_hash": "03d16fd54dfe0833bc8b9d70c8070bdab89606fe8a88e745dc90d7966f691010",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-067_ANCHOR",
+    "text_quote": "OBJECTIVE To determine whether perceived age correlates with survival and important age related phenotypes. DESIGN Follow-up study, with survival of twins determined up to January 2008, by which time 675 (37%) had died. ",
+    "start": 164,
+    "end": 384
+  },
+  "record_path": "records/SCIFACT-067.json",
+  "evidence_path": "evidence/SCIFACT-067.md"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "FEVER-005",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 4,
+  "claim": "The World According to Paris starred Hilton's then-girlfriend.",
+  "evidence": "The_World_According_to_Paris | 4 | It was filmed from November 2010 , with Hilton 's court-ordered community service stemming from her arrest in Las Vegas , Nevada for cocaine possession , to February 2011 , with her birthday party , the series co-starred Brooke Mueller , Lexi Dreyfus , Jennifer Rovero , Allison Melnick , Brooke Brinson -LRB- daughter of Kim Richards -RRB- , Hilton 's then-boyfriend Cy Waits , and Kathy Hilton .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-005.md",
+    "marker": "FEVER-005_ANCHOR"
+  }
+}

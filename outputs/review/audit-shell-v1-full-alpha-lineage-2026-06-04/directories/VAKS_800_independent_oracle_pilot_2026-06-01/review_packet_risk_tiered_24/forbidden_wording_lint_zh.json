@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "rules": "forbidden_wording_zh.json",
+  "sample_count": 24,
+  "findings": [],
+  "note": "Chinese forbidden-wording lint for normal operator-facing renderer text."
+}

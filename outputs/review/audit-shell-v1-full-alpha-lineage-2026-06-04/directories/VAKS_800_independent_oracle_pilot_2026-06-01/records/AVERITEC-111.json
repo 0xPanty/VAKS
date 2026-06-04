@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-111",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 110,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "The United States has reached herd immunity for COVID-19",
+  "evidence": "\"We've not reached herd immunity,\" Dr John Wherry, the director of the University of Pennsylvania's Institute of Immunology said. 70%-90% The number of confirmed infections in the US is about five million, which is less than two percent of the population.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "ambiguous_scope"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-111.md",
+    "document_hash": "bd8788f5482b1fdb197ab68841c3a48e079db95653f4edd9ec4d6a3083a817fe",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-111_ANCHOR",
+    "text_quote": "\"We've not reached herd immunity,\" Dr John Wherry, the director of the University of Pennsylvania's Institute of Immunology said. 70%-90% The number of confirmed infections in the US is about five million, which is less ",
+    "start": 171,
+    "end": 391
+  },
+  "record_path": "records/AVERITEC-111.json",
+  "evidence_path": "evidence/AVERITEC-111.md"
+}

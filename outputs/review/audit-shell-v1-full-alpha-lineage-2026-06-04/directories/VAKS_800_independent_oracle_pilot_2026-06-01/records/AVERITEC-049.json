@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-049",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 48,
+  "layer": "ordinary_stable",
+  "claim": "South Africans drink more per person than anywhere else in Africa",
+  "evidence": "29.9 litres Yes",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-049.md",
+    "document_hash": "ef1eedaa0328e28fe452a93fe549f5fbe8a72774afdc53215d6c5e5b2dd12a7f",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-049_ANCHOR",
+    "text_quote": "29.9 litres Yes",
+    "start": 180,
+    "end": 195
+  },
+  "record_path": "records/AVERITEC-049.json",
+  "evidence_path": "evidence/AVERITEC-049.md"
+}

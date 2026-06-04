@@ -1,0 +1,762 @@
+{
+  "averitec": {
+    "rows": 220,
+    "source_status": "real_dataset_server",
+    "logs": [
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "pminervini/averitec",
+        "config": "default",
+        "split": "train",
+        "offset": 0,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "pminervini/averitec",
+        "config": "default",
+        "split": "train",
+        "offset": 100,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "pminervini/averitec",
+        "config": "default",
+        "split": "train",
+        "offset": 200,
+        "length": 20
+      }
+    ]
+  },
+  "scifact": {
+    "rows": 220,
+    "source_status": "real_with_qrels",
+    "logs": [
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "queries",
+        "split": "queries",
+        "offset": 0,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "queries",
+        "split": "queries",
+        "offset": 100,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "queries",
+        "split": "queries",
+        "offset": 200,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "queries",
+        "split": "queries",
+        "offset": 300,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "queries",
+        "split": "queries",
+        "offset": 400,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "queries",
+        "split": "queries",
+        "offset": 500,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "queries",
+        "split": "queries",
+        "offset": 600,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "queries",
+        "split": "queries",
+        "offset": 700,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "queries",
+        "split": "queries",
+        "offset": 800,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "queries",
+        "split": "queries",
+        "offset": 900,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "queries",
+        "split": "queries",
+        "offset": 1000,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "queries",
+        "split": "queries",
+        "offset": 1100,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 0,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 100,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 200,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 300,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 400,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 500,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 600,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 700,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 800,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 900,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 1000,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 1100,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 1200,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 1300,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 1400,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 4,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 1500,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 1600,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 1700,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 1800,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 1900,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 2000,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 2100,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 2200,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 2300,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 2400,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 2500,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 2600,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 2700,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 2800,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 2900,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 3000,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 3100,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 3200,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 3300,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 3400,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 3500,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 3600,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 3700,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 3800,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 3900,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 4000,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 4100,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 4200,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 4300,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 4400,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 4500,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 4600,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 4700,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 4,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 4800,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 4900,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 5000,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "BeIR/scifact",
+        "config": "corpus",
+        "split": "corpus",
+        "offset": 5100,
+        "length": 100
+      },
+      {
+        "source": "BeIR/scifact-qrels/test.tsv",
+        "ok": true,
+        "status": 200,
+        "attempt": 1
+      }
+    ]
+  },
+  "ambifc": {
+    "rows": 220,
+    "source_status": "real_dataset_server",
+    "logs": [
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "just1nseo/ambifc",
+        "config": "default",
+        "split": "train",
+        "offset": 0,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "just1nseo/ambifc",
+        "config": "default",
+        "split": "train",
+        "offset": 100,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "just1nseo/ambifc",
+        "config": "default",
+        "split": "train",
+        "offset": 200,
+        "length": 20
+      }
+    ]
+  },
+  "fever": {
+    "rows": 220,
+    "source_status": "real_dataset_server",
+    "logs": [
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "copenlu/fever_gold_evidence",
+        "config": "default",
+        "split": "train",
+        "offset": 0,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "copenlu/fever_gold_evidence",
+        "config": "default",
+        "split": "train",
+        "offset": 100,
+        "length": 100
+      },
+      {
+        "ok": true,
+        "status": 200,
+        "attempt": 1,
+        "dataset": "copenlu/fever_gold_evidence",
+        "config": "default",
+        "split": "train",
+        "offset": 200,
+        "length": 20
+      }
+    ]
+  }
+}

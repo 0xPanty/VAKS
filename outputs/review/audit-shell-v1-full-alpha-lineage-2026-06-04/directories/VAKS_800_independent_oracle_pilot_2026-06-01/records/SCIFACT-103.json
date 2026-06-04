@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-103",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 102,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Female carriers of the Apolipoprotein E4 (APOE4) allele have increased risk for dementia.",
+  "evidence": "CONTEXT Exogenous estrogen use may lower risk of dementia in postmenopausal women. A relationship between long-term exposure to endogenous estrogens and incident dementia has been hypothesized but not studied. OBJECTIVE To determine whether a longer reproductive period, as an indicator of longer exposure to endogenous estrogens, is associated with lower risk of dementia and Alzheimer disease (AD) in women who have natural menopause. DESIGN AND SETTING The Rotterdam Study, a population-based prospective cohort study conducted in the Netherlands. PARTICIPANTS A total of 3601 women aged 55 years or older who did not have dementia at baseline (1990-1993) and had information on age at menarche, age at menopause, and type of menopause. Participants were reexamined in 1993-1994 and 1997-1999 and were continuously monitored for development of dementia. MAIN OUTCOME MEASURES Incidence of dementia, based on Diagnostic and Statistical Manual of Mental Disorders, Revised Third Edition criteria, and AD, based on National Institute of Neurological Disorders and Stroke/Alzheimer's Disease and Related Disorders Association criteria, compared by quartiles of reproductive period among women with natural menopause. RESULTS During 21 046 person-years of follow-up (median follow-up, 6.3 years), 199 women developed dementia, including 159 who developed AD. After adjusting for age, dementia was not c",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-103.md",
+    "document_hash": "4aa5a1a37e49f30a9d6c0f7f7e4fead878825ca79e752e3e3f1208fc0b224e77",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-103_ANCHOR",
+    "text_quote": "CONTEXT Exogenous estrogen use may lower risk of dementia in postmenopausal women. A relationship between long-term exposure to endogenous estrogens and incident dementia has been hypothesized but not studied. OBJECTIVE ",
+    "start": 201,
+    "end": 421
+  },
+  "record_path": "records/SCIFACT-103.json",
+  "evidence_path": "evidence/SCIFACT-103.md"
+}

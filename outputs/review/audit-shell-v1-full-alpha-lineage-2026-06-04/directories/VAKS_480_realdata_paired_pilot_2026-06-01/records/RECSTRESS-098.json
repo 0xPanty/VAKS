@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-098",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 97,
+  "claim": "PGE 2 promotes intestinal tumor growth by altering the expression of tumor suppressing and DNA repair genes.",
+  "evidence": "Although aberrant DNA methylation is considered to be one of the key ways by which tumor-suppressor and DNA-repair genes are silenced during tumor initiation and progression, the mechanisms underlying DNA methylation alterations in cancer remain unclear. Here we show that prostaglandin E(2) (PGE(2)) silences certain tumor-suppressor and DNA-repair genes through DNA methylation to promote tumor growth. These findings uncover a previously unrecognized role for PGE(2) in the promotion of tumor progression.",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-098.md",
+    "marker": "RECSTRESS-098_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-09",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "stress-rec-09-fp-v2",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-098.json",
+  "evidence_path": "evidence/RECSTRESS-098.md"
+}

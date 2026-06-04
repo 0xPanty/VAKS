@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-035",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 34,
+  "layer": "ordinary_stable",
+  "claim": "Tim Rice collaborated with members of ABBA and he was American.",
+  "evidence": "Tim_Rice | 0 | Sir Timothy Miles Bindon `` Tim '' Rice -LRB- born 10 November 1944 -RRB- is an English author and Academy Award , Golden Globe Award , Tony Award , and Grammy Award-winning lyricist .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-035.md",
+    "document_hash": "fca73098feff2f077b1cd7487f28cb720c7d65a48190ebde4b93e1982a6f9699",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-035_ANCHOR",
+    "text_quote": "Tim_Rice | 0 | Sir Timothy Miles Bindon `` Tim '' Rice -LRB- born 10 November 1944 -RRB- is an English author and Academy Award , Golden Globe Award , Tony Award , and Grammy Award-winning lyricist .",
+    "start": 169,
+    "end": 368
+  },
+  "record_path": "records/FEVER-035.json",
+  "evidence_path": "evidence/FEVER-035.md"
+}

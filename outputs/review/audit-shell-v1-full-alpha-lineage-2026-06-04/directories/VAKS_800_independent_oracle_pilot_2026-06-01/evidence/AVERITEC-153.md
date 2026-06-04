@@ -1,0 +1,3 @@
+# Evidence AVERITEC-153
+marker: EVIDENCE_AVERITEC-153_ANCHOR
+quote: 03/08/2020 No

@@ -1,0 +1,31 @@
+{
+  "id": "RECSTRESS-219",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 98,
+  "claim": "warm water is effective in curing asthma",
+  "evidence": "No answer could be found. No",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "missing_anchor"
+  ],
+  "anchor_status": "missing",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "missing",
+    "path": "raw_sources/RECSTRESS-219.md",
+    "marker": "RECSTRESS-219_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-21",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-219.json",
+  "evidence_path": "evidence/RECSTRESS-219.md"
+}

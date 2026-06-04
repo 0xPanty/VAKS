@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-145",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 24,
+  "claim": "Anxiety levels among young teenagers dropped during the coronavirus pandemic, a study has suggested",
+  "evidence": "The study was based on a survey of around 1,000 year 9 students in the south west of England. It found that students reported lower levels of anxiety when surveyed in April and May of this year compared to October 2019. It also found an increase in wellbeing but “no large change in risk of depression.” There’s nothing wrong with this study in terms of its method or what it claims, but it shouldn’t necessarily be taken to represent the experience of all children across the country. It can’t rule out the possibility that the mental toll of the pandemic may have been different across different parts of the country, and for people of different ages. For example, a study out of the University of Oxford, asked parents and carers to report any changes in behavior of their children during a one-month period in lockdown. It found that while parents and carers reported that the emotional difficulties of adolescents decreased, the emotional difficulties of children aged four to ten increased. Also a potential contributor to feelings of anxiety among students during the pandemic has been the uncertainty over exam results, which would have primarily affected students in years 11 and 13, not yea",
+  "source_label": "Conflicting Evidence/Cherrypicking",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-145.md",
+    "marker": "RECSTRESS-145_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-14",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-14-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-145.json",
+  "evidence_path": "evidence/RECSTRESS-145.md"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "RECSTRESS-209",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 88,
+  "claim": "A sharp decline recently in novel coronavirus cases in New York was down to Gov. Andrew M. Cuomo handling of the situation.",
+  "evidence": "Yes Yes Yes",
+  "source_label": "Conflicting Evidence/Cherrypicking",
+  "surface_state": "ordinary",
+  "signals": [
+    "missing_anchor"
+  ],
+  "anchor_status": "missing",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "missing",
+    "path": "raw_sources/RECSTRESS-209.md",
+    "marker": "RECSTRESS-209_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-20",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-209.json",
+  "evidence_path": "evidence/RECSTRESS-209.md"
+}

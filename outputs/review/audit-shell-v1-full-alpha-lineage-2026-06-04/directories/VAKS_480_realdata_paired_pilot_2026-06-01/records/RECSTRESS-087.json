@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-087",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 86,
+  "claim": "NF2 (Merlin) causes phosphorylation and subsequent cytoplasmic sequestration of YAP in Drosophila by activating LATS1/2 kinases.",
+  "evidence": "The Hippo–YAP pathway is an emerging signalling cascade involved in the regulation of stem cell activity and organ size. To identify components of this pathway, we performed an RNAi-based kinome screen in human cells. Our screen identified several kinases not previously associated with Hippo signalling that control multiple cellular processes. One of the hits, LKB1, is a common tumour suppressor whose mechanism of action is only partially understood. We demonstrate that LKB1 acts through its substrates of the microtubule affinity-regulating kinase family to regulate the localization of the polarity determinant Scribble and the activity of the core Hippo kinases. Our data also indicate that YAP is functionally important for the tumour suppressive effects of LKB1. Our results identify a signalling axis that links YAP activation with LKB1 mutations, and have implications for the treatment of LKB1-mutant human malignancies. In addition, our findings provide insight into upstream signals of the Hippo–YAP signalling cascade.",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-087.md",
+    "marker": "RECSTRESS-087_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-08",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "stress-rec-08-fp-v2",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-087.json",
+  "evidence_path": "evidence/RECSTRESS-087.md"
+}

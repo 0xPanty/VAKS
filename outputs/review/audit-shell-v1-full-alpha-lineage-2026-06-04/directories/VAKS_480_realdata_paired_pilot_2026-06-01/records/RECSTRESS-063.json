@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-063",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 62,
+  "claim": "In mouse models, the loss of CSF1R facilitates MOZ-TIF2-induced leuekmogenesis.",
+  "evidence": "Leukemias and other cancers possess self-renewing stem cells that help to maintain the cancer. Cancer stem cell eradication is thought to be crucial for successful anticancer therapy. Using an acute myeloid leukemia (AML) model induced by the leukemia-associated monocytic leukemia zinc finger (MOZ)-TIF2 fusion protein, we show here that AML can be cured by the ablation of leukemia stem cells. The MOZ fusion proteins MOZ-TIF2 and MOZ-CBP interacted with the transcription factor PU.1 to stimulate the expression of macrophage colony–stimulating factor receptor (CSF1R, also known as M-CSFR, c-FMS or CD115). Studies using PU.1-deficient mice showed that PU.1 is essential for the ability of MOZ-TIF2 to establish and maintain AML stem cells. Cells expressing high amounts of CSF1R (CSF1Rhigh cells), but not those expressing low amounts of CSF1R (CSF1Rlow cells), showed potent leukemia-initiating activity. Using transgenic mice expressing a drug-inducible suicide gene controlled by the CSF1R promoter, we cured AML by ablation of CSF1Rhigh cells. Moreover, induction of AML was suppressed in CSF1R-deficient mice and CSF1R inhibitors slowed the progression of MOZ-TIF2–induced leukemia. Thus, i",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-063.md",
+    "marker": "RECSTRESS-063_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-06",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-06-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-063.json",
+  "evidence_path": "evidence/RECSTRESS-063.md"
+}

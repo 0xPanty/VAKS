@@ -1,0 +1,31 @@
+{
+  "id": "HOLDOUT-010",
+  "pool": "adversarial_holdout",
+  "dataset_family": "scifact",
+  "source_row_index": 9,
+  "layer": "false_lite_trap",
+  "claim": "AIRE is expressed in some skin tumors.",
+  "evidence": "Expression of the intermediate filament protein keratin 17 (K17) is robustly upregulated in inflammatory skin diseases and in many tumors originating in stratified and pseudostratified epithelia. We report that autoimmune regulator (Aire), a transcriptional regulator, is inducibly expressed in human and mouse tumor keratinocytes in a K17-dependent manner and is required for timely onset of Gli2-induced skin tumorigenesis in mice. The induction of Aire mRNA in keratinocytes depends on a functional interaction between K17 and the heterogeneous nuclear ribonucleoprotein hnRNP K. Further, K17 colocalizes with Aire protein in the nucleus of tumor-prone keratinocytes, and each factor is bound to a specific promoter region featuring an NF-κB consensus sequence in a relevant subset of K17- and Aire-dependent proinflammatory genes. These findings provide radically new insight into keratin intermediate filament and Aire function, along with a molecular basis for the K17-dependent amplification of inflammatory and immune responses in diseased epithelia.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "promotion"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/HOLDOUT-010.md",
+    "document_hash": "7653c7dfd017cdd77dc9f82cbf452763dfe5664e8d7f3af0e89db618102981c9",
+    "version_id": "holdout-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "HOLDOUT-010_ANCHOR",
+    "text_quote": "Expression of the intermediate filament protein keratin 17 (K17) is robustly upregulated in inflammatory skin diseases and in many tumors originating in stratified and pseudostratified epithelia. We report that autoimmun",
+    "start": 150,
+    "end": 370
+  },
+  "record_path": "records/HOLDOUT-010.json",
+  "evidence_path": "evidence/HOLDOUT-010.md"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "AVERITEC-082",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row",
+  "source_row_index": 81,
+  "claim": "The Trump administration disbanded the pandemic response team that was given to them.",
+  "evidence": "The top White House official responsible for leading the U.S. response in the event of a deadly pandemic has left the administration, and the global health security team he oversaw has been disbanded under a reorganization by national security adviser John Bolton. The abrupt departure of Rear Adm. Timothy Ziemer from the National Security Council means no senior administration official is now focused solely on global health security. Ziemer’s departure, along with the breakup of his team, comes at a time when many experts say the country is already underprepared for the increasing risks of a pandemic or bioterrorism attack.",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-082.md",
+    "marker": "AVERITEC-082_ANCHOR"
+  }
+}

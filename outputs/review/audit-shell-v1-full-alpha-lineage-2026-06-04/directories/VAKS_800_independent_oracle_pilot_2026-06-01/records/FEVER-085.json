@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-085",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 84,
+  "layer": "action_challenge_conflict",
+  "claim": "Taylor Schilling is recognized for her portrayal of Piper Chapman.",
+  "evidence": "Taylor_Schilling | 1 | She is known for her role as Piper Chapman on the Netflix original comedy-drama series Orange Is the New Black -LRB- 2013 -- present -RRB- , for which she received a nomination for the Primetime Emmy Award for Outstanding Lead Actress in a Comedy Series and two Golden Globe Award nominations for Best Actress -- Television Series Musical or Comedy and Best Actress -- Television Series Drama .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-085.md",
+    "document_hash": "8625baf4d47dd8ddae4dd1ca4eb1983a45b2de975836b7affd9822061754feee",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-085_ANCHOR",
+    "text_quote": "Taylor_Schilling | 1 | She is known for her role as Piper Chapman on the Netflix original comedy-drama series Orange Is the New Black -LRB- 2013 -- present -RRB- , for which she received a nomination for the Primetime Em",
+    "start": 172,
+    "end": 392
+  },
+  "record_path": "records/FEVER-085.json",
+  "evidence_path": "evidence/FEVER-085.md"
+}

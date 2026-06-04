@@ -1,0 +1,7 @@
+# Raw Source AMBIFC-007
+dataset: ambifc
+source_row: 6
+marker: AMBIFC-007_ANCHOR
+claim: mockingbird kill with an academy award
+label: neutral
+evidence: In 1995, To Kill a Mockingbird was selected for preservation in the United States National Film Registry by the Library of Congress as being "culturally, historically, or aesthetically significant". It is also Robert Duvall's big-screen debut, as the misunderstood recluse Boo Radley. Duvall was cast on the recommendation of screenwriter Horton Foote, who met him at Neighborhood Playhouse in New York City where Duvall starred in a 1957 production of Foote's play, The Midnight Caller. The American Film Institute named Atticus Finch the greatest movie hero of the 20th century. Additionally, the AFI ranked the movie second on their 100 Years... 100 Cheers list, behind It's a Wonderful Life. The film was ranked number 34 on AFI's list of the 100 greatest movies of all time, but moved up to number 25 on the 10th Anniversary list. In June 2008, the AFI revealed its "Ten top Ten"—the best ten films in ten "classic" American film genres—after polling over 1,500 people from the creative community. To Kill a Mockingbird was acknowledged as the best film in the courtroom drama genre. In 2007, Hamilton was honored by the Harlem community for her part in the movie. She was the last surviving Afr

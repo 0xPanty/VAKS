@@ -1,0 +1,38 @@
+{
+  "id": "FULLANCHOR-003",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 2,
+  "layer": "full_anchor_click",
+  "claim": "In Nigeria … in terms of revenue share, 20% goes to the local government.",
+  "evidence": "After months of an often fractious stalemate, in September 2020 Kenya’s senate hammered out a deal on how revenue would be shared  between the country’s two levels of government.\n\nIn August, at the height of the deadlock, former prime minister Odinga returned to a familiar talking point to argue for establishing a third tier of government.\n\nBuilding on this in an interview with Citizen TV, Odinga, who is also an African Union envoy, said Kenya could solve the recurring battle over how to share revenue if it looked to Nigeria for lessons.\n\nNigeria, he said, had a local, state and federal system of government. “In terms of revenue share, 20% of the revenue goes to the local, 35% goes to the state and 45% goes to the federal governments ... and it works perfectly well,” Odinga said.",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "real_web_snapshot",
+  "source_anchor": {
+    "status": "valid",
+    "path": "real_source_snapshots/FULLANCHOR-003.txt",
+    "document_hash": "f6bb57dc4728c1a73e6304eb719a05d960e59fe6b732525b92e1f7485fc4c72e",
+    "version_id": "real-web-snapshot-v2",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-003_REAL_SNAPSHOT",
+    "text_quote": "In Nigeria … in terms of revenue share, 20% goes to the local government.",
+    "start": 2627,
+    "end": 2700,
+    "quote_strategy": "claim_substring",
+    "landing_class": "claim_landing",
+    "semantic_selector_success": true,
+    "boilerplate_quote": false
+  },
+  "record_path": "records/FULLANCHOR-003.json",
+  "evidence_path": "evidence/FULLANCHOR-003.md",
+  "real_snapshot_url": "https://web.archive.org/web/20210307003741/https://africacheck.org/fact-checks/reports/kenyas-ex-prime-minister-odinga-mangles-his-numbers-government-revenue-share",
+  "clickback_snapshot_kind": "live_urllib_retry"
+}

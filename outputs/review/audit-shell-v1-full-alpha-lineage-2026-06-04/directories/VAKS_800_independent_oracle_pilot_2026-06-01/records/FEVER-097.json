@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-097",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 96,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "Octavia Spencer worked in the Divergent film franchise.",
+  "evidence": "Octavia_Spencer | 4 | Recently , Spencer has received acclaim for her work in the films Get on Up , Black or White , Smashed , Snowpiercer , The Divergent Series : Insurgent , and Zootopia .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [
+    "known_omission"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-097.md",
+    "document_hash": "4002c5dddf02153e65b17749d4addd0e71942400225b65afd042958a71a1bb96",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-097_ANCHOR",
+    "text_quote": "Octavia_Spencer | 4 | Recently , Spencer has received acclaim for her work in the films Get on Up , Black or White , Smashed , Snowpiercer , The Divergent Series : Insurgent , and Zootopia .",
+    "start": 161,
+    "end": 351
+  },
+  "record_path": "records/FEVER-097.json",
+  "evidence_path": "evidence/FEVER-097.md"
+}

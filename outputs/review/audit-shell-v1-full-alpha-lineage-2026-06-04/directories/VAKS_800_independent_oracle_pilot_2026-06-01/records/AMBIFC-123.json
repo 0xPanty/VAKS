@@ -1,0 +1,31 @@
+{
+  "id": "AMBIFC-123",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 122,
+  "layer": "anchor_problem",
+  "claim": "there is a good place in the good place.",
+  "evidence": "* Angela Trimbur as Madison, Eleanor's roommate. * Meryl Hathaway as Brittany, Eleanor's roommate. * Mitch Narito as Donkey Doug, Jason's dopey father. * Keston John as Uzo, Chidi's best friend. * Brandon Scott Jones as John Wheaton, the first test subject sent to the experimental Good Place. In life, he was a gossip columnist and published trashy articles, especially about Tahani. * Ben Koldyke as Brent Norwalk, the fourth test subject sent to the experimental Good Place, a privileged and arrogant chauvinist racist. * Michael McKean and Noah Garfinkel as Doug Forcett. Michael keeps a picture of Garfinkel as Forcett on his office wall as a reminder of the human who almost understood the afterlife points system. In a later episode, Michael McKean appears as an older Forcett trying to live the best life possible on Earth.",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [
+    "moved_pointer"
+  ],
+  "anchor_status": "moved",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "moved",
+    "path": "raw_sources/AMBIFC-123_moved.md",
+    "document_hash": "ed60edb45ff003d7d65d6149d5e972cf88e9845c7475866e6a32456d6b553fc1",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-123_ANCHOR",
+    "text_quote": "* Angela Trimbur as Madison, Eleanor's roommate. * Meryl Hathaway as Brittany, Eleanor's roommate. * Mitch Narito as Donkey Doug, Jason's dopey father. * Keston John as Uzo, Chidi's best friend. * Brandon Scott Jones as ",
+    "start": 149,
+    "end": 369
+  },
+  "record_path": "records/AMBIFC-123.json",
+  "evidence_path": "evidence/AMBIFC-123.md"
+}

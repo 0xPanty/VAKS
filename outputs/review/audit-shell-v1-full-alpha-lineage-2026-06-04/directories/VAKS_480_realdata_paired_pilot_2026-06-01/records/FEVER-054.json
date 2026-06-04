@@ -1,0 +1,20 @@
+{
+  "id": "FEVER-054",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 53,
+  "claim": "Tamara Taylor is an actress.",
+  "evidence": "Tamara_Taylor | 0 | Tamara Taylor -LRB- born September 27 , 1970 -RRB- is a Canadian actress .",
+  "source_label": "SUPPORTS",
+  "surface_state": "resolved_folded",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-054.md",
+    "marker": "FEVER-054_ANCHOR"
+  }
+}

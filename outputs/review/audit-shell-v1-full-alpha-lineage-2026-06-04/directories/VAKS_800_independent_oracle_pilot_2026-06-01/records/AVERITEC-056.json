@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-056",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 55,
+  "layer": "ordinary_stable",
+  "claim": "Joe Biden officiated a gay wedding at the White House in 2016.",
+  "evidence": "Yes The Naval Observatory is based at Number One Observatory Circle on the White House grounds. No",
+  "source_label": "Conflicting Evidence/Cherrypicking",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-056.md",
+    "document_hash": "2f0cba65a98e7f28b43ade413fd609ba811ddbf6e0268d101be01fc8d7f59a91",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-056_ANCHOR",
+    "text_quote": "Yes The Naval Observatory is based at Number One Observatory Circle on the White House grounds. No",
+    "start": 177,
+    "end": 275
+  },
+  "record_path": "records/AVERITEC-056.json",
+  "evidence_path": "evidence/AVERITEC-056.md"
+}

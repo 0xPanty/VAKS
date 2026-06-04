@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-151",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 30,
+  "claim": "There is an average of 400,000 cases being filed in Kenya's courts every year.",
+  "evidence": "The most recent state of the judiciary report covers the 2018/19 financial year. Released in January 2020, it shows that more than two million cases were lodged in all courts between 2014/15 and 2018/19. Total number of cases filed in the judiciary Financial year Cases 2014/15 334,685 2015/16 460,961 2016/17 344,180 2017/18 402,243 2018/19 484,349 Average 405,283",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-151.md",
+    "marker": "RECSTRESS-151_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-15",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-15-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-151.json",
+  "evidence_path": "evidence/RECSTRESS-151.md"
+}

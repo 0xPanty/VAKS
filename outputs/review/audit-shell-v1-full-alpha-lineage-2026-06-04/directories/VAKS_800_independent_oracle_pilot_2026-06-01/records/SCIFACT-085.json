@@ -1,0 +1,31 @@
+{
+  "id": "SCIFACT-085",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 84,
+  "layer": "action_challenge_conflict",
+  "claim": "Deamination of cytidine to uridine on the minus strand of viral DNA results in catastrophic G-to-A mutations in the viral genome.",
+  "evidence": "Viral replication usually requires that innate intracellular lines of defence be overcome, a task usually accomplished by specialized viral gene products. The virion infectivity factor (Vif) protein of human immunodeficiency virus (HIV) is required during the late stages of viral production to counter the antiviral activity of APOBEC3G (apolipoprotein B mRNA-editing enzyme, catalytic polypeptide-like 3G; also known as CEM15), a protein expressed notably in human T lymphocytes. When produced in the presence of APOBEC3G, vif-defective virus is non-infectious. APOBEC3G is closely related to APOBEC1, the central component of an RNA-editing complex that deaminates a cytosine residue in apoB messenger RNA. APOBEC family members also have potent DNA mutator activity through dC deamination; however, whether the editing potential of APOBEC3G has any relevance to HIV inhibition is unknown. Here, we demonstrate that it does, as APOBEC3G exerts its antiviral effect during reverse transcription to trigger G-to-A hypermutation in the nascent retroviral DNA. We also find that APOBEC3G can act on a broad range of retroviruses in addition to HIV, suggesting that hypermutation by editing is a general innate defence mechanism against this important group of pathogens.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "action_basis"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-085.md",
+    "document_hash": "77ab037e34bd55143448a1ab1bb1c2a3ea0cf3c79eed94d1fca4460e7efdf0e9",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-085_ANCHOR",
+    "text_quote": "Viral replication usually requires that innate intracellular lines of defence be overcome, a task usually accomplished by specialized viral gene products. The virion infectivity factor (Vif) protein of human immunodefici",
+    "start": 241,
+    "end": 461
+  },
+  "record_path": "records/SCIFACT-085.json",
+  "evidence_path": "evidence/SCIFACT-085.md"
+}

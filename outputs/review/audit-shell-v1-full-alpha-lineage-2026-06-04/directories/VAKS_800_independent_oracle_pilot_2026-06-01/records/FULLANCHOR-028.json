@@ -1,0 +1,30 @@
+{
+  "id": "FULLANCHOR-028",
+  "pool": "full_anchor_real_pack",
+  "dataset_family": "scifact",
+  "source_row_index": 27,
+  "layer": "full_anchor_click",
+  "claim": "Arterioles have a larger lumen diameter than venules.",
+  "evidence": "BACKGROUND We have developed techniques to implant angiogenic patches onto the epicardium over regions of infarcted cardiac tissue to stimulate revascularization of the damaged tissue. These experiments used a scaffold-based 3D human dermal fibroblast culture (3DFC) as an epicardial patch. The 3DFC contains viable cells that secrete angiogenic growth factors and has previously been shown to stimulate angiogenic activity. The hypothesis tested was that a viable 3DFC cardiac patch would stimulate an angiogenic response within an area of infarcted cardiac tissue. METHODS AND RESULTS A coronary occlusion of a branch of the left anterior descending coronary artery was performed by thermal ligation in severe combined immunodeficient mice. 3DFCs with or without viable cells were sized to the damaged area, implanted in replicate mice onto the epicardium at the site of tissue injury, and compared with animals that received infarct surgery but no implant. Fourteen and 30 days after surgery, hearts were exposed and photographed, and tissue samples were prepared for histology and cytochemistry. Fourteen and 30 days after surgery, the damaged myocardium receiving viable 3DFC exhibited a significantly greater angiogenic response (including arterioles, venules, and capillaries) than nonviable and untreated control groups. CONCLUSIONS In this animal model, viable 3DFC stimulates angiogenesis w",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "full_anchor_kind": "repo_file",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/FULLANCHOR-028.md",
+    "document_hash": "77b27eb80c498673f7870f41a9ab8abab2dbf54d00e428fc7912572c0083a4e7",
+    "version_id": "repo_file-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FULLANCHOR-028_ANCHOR",
+    "text_quote": "BACKGROUND We have developed techniques to implant angiogenic patches onto the epicardium over regions of infarcted cardiac tissue to stimulate revascularization of the damaged tissue. These experiments used a scaffold-b",
+    "start": 173,
+    "end": 393
+  },
+  "record_path": "records/FULLANCHOR-028.json",
+  "evidence_path": "evidence/FULLANCHOR-028.md"
+}

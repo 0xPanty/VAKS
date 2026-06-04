@@ -1,0 +1,20 @@
+{
+  "id": "FEVER-028",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 27,
+  "claim": "Kazakhstan is in Central Asia and Eastern Indiana.",
+  "evidence": "Indiana | 7 | Since its founding as a territory , settlement patterns in Indiana have reflected regional cultural segmentation present in the Eastern United States ; the state 's northernmost tier was settled primarily by people from New England and New York , Central Indiana by migrants from the Mid-Atlantic states and from adjacent Ohio , and Southern Indiana by settlers from the Southern states , particularly Kentucky and Tennessee .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-028.md",
+    "marker": "FEVER-028_ANCHOR"
+  }
+}

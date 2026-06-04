@@ -1,0 +1,29 @@
+{
+  "id": "SCIFACT-045",
+  "pool": "main_public",
+  "dataset_family": "scifact",
+  "source_row_index": 44,
+  "layer": "ordinary_stable",
+  "claim": "Basophils counteract disease development in patients with systemic lupus erythematosus (SLE).",
+  "evidence": "In systemic lupus erythematosus (SLE), self-reactive antibodies can target the kidney (lupus nephritis), leading to functional failure and possible mortality. We report that activation of basophils by autoreactive IgE causes their homing to lymph nodes, promoting T helper type 2 (T(H)2) cell differentiation and enhancing the production of self-reactive antibodies that cause lupus-like nephritis in mice lacking the Src family protein tyrosine kinase Lyn (Lyn(-/-) mice). Individuals with SLE also have elevated serum IgE, self-reactive IgEs and activated basophils that express CD62 ligand (CD62L) and the major histocompatibility complex (MHC) class II molecule human leukocyte antigen-DR (HLA-DR), parameters that are associated with increased disease activity and active lupus nephritis. Basophils were also present in the lymph nodes and spleen of subjects with SLE. Thus, in Lyn(-/-) mice, basophils and IgE autoantibodies amplify autoantibody production that leads to lupus nephritis, and in individuals with SLE IgE autoantibodies and activated basophils are factors associated with disease activity and nephritis.",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/SCIFACT-045.md",
+    "document_hash": "767e1139a83425ee2274b2145a634e2e8037507c47bed220a7f4a1866d9cf26f",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "SCIFACT-045_ANCHOR",
+    "text_quote": "In systemic lupus erythematosus (SLE), self-reactive antibodies can target the kidney (lupus nephritis), leading to functional failure and possible mortality. We report that activation of basophils by autoreactive IgE ca",
+    "start": 205,
+    "end": 425
+  },
+  "record_path": "records/SCIFACT-045.json",
+  "evidence_path": "evidence/SCIFACT-045.md"
+}

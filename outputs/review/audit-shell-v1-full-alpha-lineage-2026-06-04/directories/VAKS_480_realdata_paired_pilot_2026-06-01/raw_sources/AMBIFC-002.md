@@ -1,0 +1,7 @@
+# Raw Source AMBIFC-002
+dataset: ambifc
+source_row: 1
+marker: AMBIFC-002_ANCHOR
+claim: a irrational number can be a real number.
+label: neutral
+evidence: As a result of the distinction between number and magnitude, geometry became the only method that could take into account incommensurable ratios. Because previous numerical foundations were still incompatible with the concept of incommensurability, Greek focus shifted away from those numerical conceptions such as algebra and focused almost exclusively on geometry. In fact, in many cases algebraic conceptions were reformulated into geometric terms. This may account for why we still conceive of x2 and x3 as x squared and x cubed instead of x to the second power and x to the third power. Also crucial to Zeno’s work with incommensurable magnitudes was the fundamental focus on deductive reasoning that resulted from the foundational shattering of earlier Greek mathematics. The realization that some basic conception within the existing theory was at odds with reality necessitated a complete and thorough investigation of the axioms and assumptions that underlie that theory. Out of this necessity, Eudoxus developed his method of exhaustion, a kind of reductio ad absurdum that “...established the deductive organization on the basis of explicit axioms...” as well as “...reinforced the earlier

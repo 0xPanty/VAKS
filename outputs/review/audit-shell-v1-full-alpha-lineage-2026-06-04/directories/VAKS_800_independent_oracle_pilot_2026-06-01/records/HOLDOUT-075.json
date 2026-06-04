@@ -1,0 +1,36 @@
+{
+  "id": "HOLDOUT-075",
+  "pool": "adversarial_holdout",
+  "dataset_family": "scifact",
+  "source_row_index": 74,
+  "layer": "serious_folded_violation",
+  "claim": "Combining phosphatidylinositide 3-kinase and MEK 1/2 inhibitors is effective at treating KRAS mutant tumors.",
+  "evidence": "Somatic mutations that activate phosphoinositide 3-kinase (PI3K) have been identified in the p110-alpha catalytic subunit (encoded by PIK3CA). They are most frequently observed in two hotspots: the helical domain (E545K and E542K) and the kinase domain (H1047R). Although the p110-alpha mutants are transforming in vitro, their oncogenic potential has not been assessed in genetically engineered mouse models. Furthermore, clinical trials with PI3K inhibitors have recently been initiated, and it is unknown if their efficacy will be restricted to specific, genetically defined malignancies. In this study, we engineered a mouse model of lung adenocarcinomas initiated and maintained by expression of p110-alpha H1047R. Treatment of these tumors with NVP-BEZ235, a dual pan-PI3K and mammalian target of rapamycin (mTOR) inhibitor in clinical development, led to marked tumor regression as shown by positron emission tomography-computed tomography, magnetic resonance imaging and microscopic examination. In contrast, mouse lung cancers driven by mutant Kras did not substantially respond to single-agent NVP-BEZ235. However, when NVP-BEZ235 was combined with a mitogen-activated protein kinase kinase (MEK) inhibitor, ARRY-142886, there was marked synergy in shrinking these Kras-mutant cancers. These in vivo studies suggest that inhibitors of the PI3K-mTOR pathway may be active in cancers with PIK",
+  "source_label": "qrel:1",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "recurrence_key": "serious-fold-37",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "source_anchor": {
+    "status": "valid",
+    "path": "full_anchor_sources/HOLDOUT-075.md",
+    "document_hash": "88e8eda7d0dc0a5af0b53c54f88a700de5c57e43d1e9e5082aa7e0f67dd315ea",
+    "version_id": "holdout-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "HOLDOUT-075_ANCHOR",
+    "text_quote": "Somatic mutations that activate phosphoinositide 3-kinase (PI3K) have been identified in the p110-alpha catalytic subunit (encoded by PIK3CA). They are most frequently observed in two hotspots: the helical domain (E545K ",
+    "start": 220,
+    "end": 440
+  },
+  "record_path": "records/HOLDOUT-075.json",
+  "evidence_path": "evidence/HOLDOUT-075.md"
+}

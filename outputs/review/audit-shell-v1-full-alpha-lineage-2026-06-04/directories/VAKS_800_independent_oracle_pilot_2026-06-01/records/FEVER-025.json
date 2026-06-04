@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-025",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 24,
+  "layer": "ordinary_stable",
+  "claim": "Joan Cusack was in a film.",
+  "evidence": "Joan_Cusack | 2 | She is also known as the voice of Jessie in the Toy Story franchise . | Jessie_-LRB-Toy_Story-RRB- | 0 | Jessie The Yodeling Cowgirl is a fictional character from the films Toy Story 2 and Toy Story 3 .",
+  "source_label": "SUPPORTS",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-025.md",
+    "document_hash": "ba19537fcfcf7cd98838c0d1be87d00246bd5b89c8c30e2677801bed916cb060",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-025_ANCHOR",
+    "text_quote": "Joan_Cusack | 2 | She is also known as the voice of Jessie in the Toy Story franchise . | Jessie_-LRB-Toy_Story-RRB- | 0 | Jessie The Yodeling Cowgirl is a fictional character from the films Toy Story 2 and Toy Story 3 .",
+    "start": 132,
+    "end": 352
+  },
+  "record_path": "records/FEVER-025.json",
+  "evidence_path": "evidence/FEVER-025.md"
+}

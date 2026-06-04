@@ -1,0 +1,7 @@
+# Raw Source AMBIFC-118
+dataset: ambifc
+source_row: 117
+marker: AMBIFC-118_ANCHOR
+claim: avatar the last airbender was based on a book.
+label: neutral
+evidence: According to Mike Noyes, the series amalgamates elements of "classic fantasy epics". Todd Douglass, Jr. called the plot engaging, well-thought-out, and meaningful. The series' concept is "well-realized", with a consistent story. Douglass wrote that the characters "[have] a real sense of progression", and praised the writers for their humor, drama, and emotion. Joshua Miller called the series surprisingly dark despite its "silly" theme; the plot is livelier than that of Lost and, similar to the latter show, emphasizes character development. According to Miller, its writing was "true adult levels of storytelling". Tim Janson described the series as more than fantasy-and superhero-themed, seeing the characters as central and relateable. "Cricket"Te praised the series' use of Buddhist philosophies and the diverse presentation of its themes of courage and life. Kirk Hamiltion praises the series for expressing towards its audience to be themselves and for its quiet progressivism. Critics also praised Avatar: The Last Airbender's character development, art, animation, and choreography; Eric Amaya enjoyed the expressive animation that complements the writing. According to Amaya, the elemen

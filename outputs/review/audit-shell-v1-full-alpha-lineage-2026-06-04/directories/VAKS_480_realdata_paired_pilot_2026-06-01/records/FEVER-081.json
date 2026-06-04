@@ -1,0 +1,22 @@
+{
+  "id": "FEVER-081",
+  "dataset_family": "fever",
+  "source_dataset_status": "real_row",
+  "source_row_index": 80,
+  "claim": "Resident Evil is not a franchise built around survival horror video games.",
+  "evidence": "Resident_Evil | 1 | The franchise focuses around a series of survival horror video games , but has since branched out into comic books , novels , novelizations , sound dramas , live-action films , animated sequels to the games , and a variety of associated merchandise , such as action figures . | Resident_Evil | 0 | Resident Evil , known as in Japan , is a survival horror video game-based media franchise created by Shinji Mikami and Tokuro Fujiwara and owned by the video game company Capcom .",
+  "source_label": "REFUTES",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-081.md",
+    "marker": "FEVER-081_ANCHOR"
+  }
+}

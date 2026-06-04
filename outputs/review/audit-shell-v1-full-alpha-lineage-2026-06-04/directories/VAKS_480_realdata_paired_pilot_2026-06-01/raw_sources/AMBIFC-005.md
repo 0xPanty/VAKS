@@ -1,0 +1,7 @@
+# Raw Source AMBIFC-005
+dataset: ambifc
+source_row: 4
+marker: AMBIFC-005_ANCHOR
+claim: the nun is a prequel to the conjuring.
+label: neutral
+evidence: The Nun grossed $117.5 million in the United States and Canada, and $248.1 million in other territories, for a total worldwide gross of $365.6 million, against a production budget of $22 million, becoming the highest-grossing film in the franchise. Deadline Hollywood calculated the net profit of the film to be $155 million, when factoring together all expenses and revenues. In the United States and Canada, The Nun was released alongside Peppermint and God Bless the Broken Road, and was originally projected to gross $32–37 million in its opening weekend. By the week of its release, forecasts had been increased to $36–45 million from 3,876 theaters. It made $22.4 million on its first day, including $5.4 million from Thursday night previews, both the highest such numbers for The Conjuring films. It went on to debut to $53.8 million, also marking the best figure of the franchise, and became the first film in almost a month to finish ahead of Crazy Rich Asians at the box office. In other territories, it currently ranks as the highest-grossing horror film of all time in twelve markets, including the Philippines (where it has grossed $5 million in its first week), Indonesia, Brazil, Roman

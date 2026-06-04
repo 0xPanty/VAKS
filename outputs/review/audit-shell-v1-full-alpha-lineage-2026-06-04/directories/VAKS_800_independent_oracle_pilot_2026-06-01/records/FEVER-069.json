@@ -1,0 +1,31 @@
+{
+  "id": "FEVER-069",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 68,
+  "layer": "action_challenge_conflict",
+  "claim": "Princess Margaret had at least three championships.",
+  "evidence": "Princess_Margaret_-LRB-disambiguation-RRB- | 0 | Princess Margaret may refer to :",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [
+    "conflict"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-069.md",
+    "document_hash": "a61dd59db9dbef397cb9812db772024bb07f1784fba3f13c3285189a57ab05c3",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-069_ANCHOR",
+    "text_quote": "Princess_Margaret_-LRB-disambiguation-RRB- | 0 | Princess Margaret may refer to :",
+    "start": 157,
+    "end": 238
+  },
+  "record_path": "records/FEVER-069.json",
+  "evidence_path": "evidence/FEVER-069.md"
+}

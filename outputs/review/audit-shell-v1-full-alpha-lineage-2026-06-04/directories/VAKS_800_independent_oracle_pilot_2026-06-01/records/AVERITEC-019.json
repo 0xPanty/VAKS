@@ -1,0 +1,29 @@
+{
+  "id": "AVERITEC-019",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 18,
+  "layer": "ordinary_stable",
+  "claim": "A greater proportion of 16 year olds vote in elections in Scotland, Wales and Austria than 18 and 20 year olds.",
+  "evidence": "Even though 16- to 17-year-olds exhibit somewhat lower general interest in politics and lower internal efficacy, turnout is generally higher compared to older first-time voters and similar to the electorate’s average, they follow electoral campaigns to the same extent as do other young voters, and they exhibit considerably high levels of external efficacy and satisfaction with democracy 51 per cent of 16- and 17- year-olds claim to have voted, compared with 39 per cent of those aged 18 to 24 16 and 17 year olds will be able to vote for the first time at the Senedd Elections in 2021, as part of the biggest changes to the democratic process in Wales in half a century.",
+  "source_label": "Conflicting Evidence/Cherrypicking",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-019.md",
+    "document_hash": "c269adfaa0469a7a5f232b753aa9afc3a7eb67bc4afecc1b35a3c2ac80dc5ae5",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-019_ANCHOR",
+    "text_quote": "Even though 16- to 17-year-olds exhibit somewhat lower general interest in politics and lower internal efficacy, turnout is generally higher compared to older first-time voters and similar to the electorate’s average, th",
+    "start": 226,
+    "end": 446
+  },
+  "record_path": "records/AVERITEC-019.json",
+  "evidence_path": "evidence/AVERITEC-019.md"
+}

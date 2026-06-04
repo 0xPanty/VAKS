@@ -1,0 +1,29 @@
+{
+  "id": "FEVER-159",
+  "pool": "main_public",
+  "dataset_family": "fever",
+  "source_row_index": 158,
+  "layer": "authority_leak_bait",
+  "claim": "Bermuda is an associate member of NATO.",
+  "evidence": "International_Accounting_Standards_Committee | 52 | The Malaysian Association of Certified Public Accountants became an associate member in 1975 -LRB- later joined by the Institut Akauntan Malaysia , the Malaysian Institute of Accountants -RRB- , and was a member of the board from 1995-2000 .",
+  "source_label": "NOT ENOUGH INFO",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "cluster_summary_as_reviewed_relation",
+  "authority_trap": "The grouped summary makes the relation accepted.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/FEVER-159.md",
+    "document_hash": "cd484fe74915fc1ad8e8b78e97b4e47f3023d220c424d9b9937a121047ab8414",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "FEVER-159_ANCHOR",
+    "text_quote": "International_Accounting_Standards_Committee | 52 | The Malaysian Association of Certified Public Accountants became an associate member in 1975 -LRB- later joined by the Institut Akauntan Malaysia , the Malaysian Instit",
+    "start": 145,
+    "end": 365
+  },
+  "record_path": "records/FEVER-159.json",
+  "evidence_path": "evidence/FEVER-159.md"
+}

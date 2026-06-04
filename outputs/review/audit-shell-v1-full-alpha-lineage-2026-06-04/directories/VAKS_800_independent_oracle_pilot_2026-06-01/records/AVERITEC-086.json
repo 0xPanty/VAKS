@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-086",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 85,
+  "layer": "action_challenge_conflict",
+  "claim": "There are many scientific studies saying masks should be worn only in enclosed spaces, such as in elevators and conference rooms, and not outdoors",
+  "evidence": "These include public settings such as grocery stores, at work, social or mass gatherings, closed areas (like schools, churches or mosques), public transportation, and other areas where there is high transmission of the virus, or where at least two meters physical distancing is not possible. No answer could be found.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "explicit_challenge"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-086.md",
+    "document_hash": "2f1d1884a1b6375a14b4b338dbd87ba3069c2680225497337626296bb6865b33",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-086_ANCHOR",
+    "text_quote": "These include public settings such as grocery stores, at work, social or mass gatherings, closed areas (like schools, churches or mosques), public transportation, and other areas where there is high transmission of the v",
+    "start": 261,
+    "end": 481
+  },
+  "record_path": "records/AVERITEC-086.json",
+  "evidence_path": "evidence/AVERITEC-086.md"
+}

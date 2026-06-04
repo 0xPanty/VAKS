@@ -1,0 +1,7 @@
+# Raw Source SCIFACT-007
+dataset: scifact
+source_row: 6
+marker: SCIFACT-007_ANCHOR
+claim: Activation of PPM1D suppresses p53 function.
+label: 
+evidence: Improved sequencing technologies offer unprecedented opportunities for investigating the role of rare genetic variation in common disease. However, there are considerable challenges with respect to study design, data analysis and replication. Using pooled next-generation sequencing of 507 genes implicated in the repair of DNA in 1,150 samples, an analytical strategy focused on protein-truncating variants (PTVs) and a large-scale sequencing case–control replication experiment in 13,642 individuals, here we show that rare PTVs in the p53-inducible protein phosphatase PPM1D are associated with predisposition to breast cancer and ovarian cancer. PPM1D PTV mutations were present in 25 out of 7,781 cases versus 1 out of 5,861 controls (P = 1.12 × 10−5), including 18 mutations in 6,912 individuals with breast cancer (P = 2.42 × 10−4) and 12 mutations in 1,121 individuals with ovarian cancer (P = 3.10 × 10−9). Notably, all of the identified PPM1D PTVs were mosaic in lymphocyte DNA and clustered within a 370-base-pair region in the final exon of the gene, carboxy-terminal to the phosphatase catalytic domain. Functional studies demonstrate that the mutations result in enhanced suppression of

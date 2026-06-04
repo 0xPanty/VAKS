@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-155",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 154,
+  "layer": "authority_leak_bait",
+  "claim": "superman does appear in the movie justice league.",
+  "evidence": "An alien military officer from Apokolips who leads an army of Parademons and is searching for the three Mother Boxes held on Earth. The character is described as \"old, tired\" and trying to find a way to escape his role of servitude under Darkseid. Hinds portrayed the villain through use of motion capture and received some advice in the process from Liam Neeson, who had recently done similar work in A Monster Calls. After the release of the film, Hinds was reportedly unhappy with the final cut of the film, which trimmed down the backstory and characterization of Steppenwolf. * Amber Heard as Mera: An Atlantean, who approaches Curry to discuss the nature of the Mother Boxes. * Joe Morton as Silas Stone: Victor Stone's father and head of S.T.A.R. Labs. During a scene a half hour into the film, depicting Steppenwolf's first invasion thousands of years earlier, Olympian Old Gods Zeus, Ares and Artemis are portrayed by fitness model Sergi Constance, stuntman Nick McKinless, and MMA fighter Aurore Lauzeral, respectively. All three were required to reach a specific degree of physicality, with Snyder instructing McKinless to sport \"veins like worms and paper thin skin\". In the finished film, McKinless' face was replaced with that of David Thewlis using special effects; Thewlis received the credit as Ares. The scene also shows a Green Lantern, named Yalan Gur, created through motion-capt",
+  "source_label": "neutral",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "group_count_as_support",
+  "authority_trap": "A large group count gives stronger support.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-155.md",
+    "document_hash": "d1311a0faee3921cb37c52c92ddf83d836d54515b498acc9584a36d6ebca1185",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-155_ANCHOR",
+    "text_quote": "An alien military officer from Apokolips who leads an army of Parademons and is searching for the three Mother Boxes held on Earth. The character is described as \"old, tired\" and trying to find a way to escape his role o",
+    "start": 158,
+    "end": 378
+  },
+  "record_path": "records/AMBIFC-155.json",
+  "evidence_path": "evidence/AMBIFC-155.md"
+}

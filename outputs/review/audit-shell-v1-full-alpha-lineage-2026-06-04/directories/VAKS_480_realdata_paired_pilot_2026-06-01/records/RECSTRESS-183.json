@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-183",
+  "dataset_family": "averitec",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 62,
+  "claim": "Israel has developed super-quick saliva test for COVID-19.",
+  "evidence": "Yes although still in testing phase. 1-second Covid spit test shown 95% accurate so far Newsight’s spectral technology, currently being tried on patients at Sheba Medical Center, could revolutionize SARS-CoV-2 testing across the world. Yes. The claim does not ask whether the test is licensed, reviewed, in production or accurate. It merely states that a quick test has been developed. It has and is under review.",
+  "source_label": "Supported",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-183.md",
+    "marker": "RECSTRESS-183_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-18",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v1",
+  "gold_group_id": "stress-rec-18-fp-v1",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-183.json",
+  "evidence_path": "evidence/RECSTRESS-183.md"
+}

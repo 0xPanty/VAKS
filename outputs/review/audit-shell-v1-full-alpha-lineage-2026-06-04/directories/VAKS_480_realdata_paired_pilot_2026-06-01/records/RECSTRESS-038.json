@@ -1,0 +1,29 @@
+{
+  "id": "RECSTRESS-038",
+  "dataset_family": "scifact",
+  "source_dataset_status": "real_row_pressure_overlay",
+  "source_row_index": 37,
+  "claim": "Cytosolic proteins bind to iron-responsive elements on mRNAs coding for DMT1. Cytosolic proteins bind to iron-responsive elements on mRNAs coding for proteins involved in iron uptake.",
+  "evidence": "Chronic obstructive pulmonary disease (COPD) is linked to both cigarette smoking and genetic determinants. We have previously identified iron-responsive element-binding protein 2 (IRP2) as an important COPD susceptibility gene and have shown that IRP2 protein is increased in the lungs of individuals with COPD. Here we demonstrate that mice deficient in Irp2 were protected from cigarette smoke (CS)-induced experimental COPD. By integrating RNA immunoprecipitation followed by sequencing (RIP-seq), RNA sequencing (RNA-seq), and gene expression and functional enrichment clustering analysis, we identified Irp2 as a regulator of mitochondrial function in the lungs of mice. Irp2 increased mitochondrial iron loading and levels of cytochrome c oxidase (COX), which led to mitochondrial dysfunction and subsequent experimental COPD. Frataxin-deficient mice, which had higher mitochondrial iron loading, showed impaired airway mucociliary clearance (MCC) and higher pulmonary inflammation at baseline, whereas mice deficient in the synthesis of cytochrome c oxidase, which have reduced COX, were protected from CS-induced pulmonary inflammation and impairment of MCC. Mice treated with a mitochondrial",
+  "source_label": "",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "feedback",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/RECSTRESS-038.md",
+    "marker": "RECSTRESS-038_ANCHOR"
+  },
+  "recurrence_key": "stress-rec-03",
+  "action_meaning": "scope_fit_note",
+  "feedback_type": "scope_fit",
+  "gap_family": "minor_repeat",
+  "fingerprint_version": "fp-v2",
+  "gold_group_id": "stress-rec-03-fp-v2",
+  "dedup_open_only": true,
+  "record_path": "records/RECSTRESS-038.json",
+  "evidence_path": "evidence/RECSTRESS-038.md"
+}

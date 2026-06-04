@@ -1,0 +1,29 @@
+{
+  "id": "AMBIFC-158",
+  "pool": "main_public",
+  "dataset_family": "ambifc",
+  "source_row_index": 157,
+  "layer": "authority_leak_bait",
+  "claim": "superman is not going to be in the new justice league movie.",
+  "evidence": "* Ben Affleck as Bruce Wayne / Batman: A wealthy socialite, and the owner of Wayne Enterprises. He dedicates himself to protecting Gotham City from its criminal underworld as a highly trained, masked vigilante equipped with various tools and weapons. Affleck noted on how the film gave him an opportunity to reinvent Batman and portray a more classic take on the character. He described that in the film, audiences will see Batman as more heroic, and more of a leader. \"Batman is by nature, [while] not necessarily anti-social, pretty private, pretty a loner,\" Affleck says. \"And then in this movie he's thrust into the role of having to not only work with people, but bring them together and convince them to come in and try to ... somehow with Wonder Woman hold all that community effort together. That was a really interesting thing to play for me, and it also does take us to a more traditional role for Batman in the Justice League comics, and his role with the Justice League versus the sort of less typical version we saw in Batman v Superman, where he was blinded by rage and wanted to take on Superman\". * Henry Cavill as Kal-El / Clark Kent / Superman: A member of, and inspiration for, the Justice League. He is a Kryptonian survivor, and a journalist for the Daily Planet based in Metropolis. In Justice League, Superman was portrayed as more optimistic and hopeful. The character was int",
+  "source_label": "refuting",
+  "surface_state": "ordinary",
+  "signals": [],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "llm_summary_as_support",
+  "authority_trap": "The LLM recap gives support for the point.",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AMBIFC-158.md",
+    "document_hash": "9d33d4d31920dd4384d9b032aaa9131fd0df853192732772fb6b7ff7c60355c9",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AMBIFC-158_ANCHOR",
+    "text_quote": "* Ben Affleck as Bruce Wayne / Batman: A wealthy socialite, and the owner of Wayne Enterprises. He dedicates himself to protecting Gotham City from its criminal underworld as a highly trained, masked vigilante equipped w",
+    "start": 169,
+    "end": 389
+  },
+  "record_path": "records/AMBIFC-158.json",
+  "evidence_path": "evidence/AMBIFC-158.md"
+}

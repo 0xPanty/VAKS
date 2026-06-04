@@ -1,0 +1,23 @@
+{
+  "run_id": "VAKS_audit_shell_queue_cockpit_prototype_2026-06-04",
+  "source": "PRESSURE_TEST_RESULTS.csv",
+  "total_rows": 282,
+  "cockpit_lane_counts": {
+    "03_review_now": 30,
+    "04_deferred_review_unless_promoted": 109,
+    "01_blocking_now": 11,
+    "04_ordinary_light": 113,
+    "02_regressed_reopen": 2,
+    "05_folded_history": 17
+  },
+  "anchor_strength_counts": {
+    "2_precise_text_unreviewed": 4,
+    "3_source_claim_context_only": 213,
+    "4_diagnostic_history_binary_or_weak": 65
+  },
+  "operator_pilot_rows": 80,
+  "semantic_clickback_rows": 60,
+  "independence_trap_rows": 60,
+  "design_posture": "queue_first_operator_cockpit_not_card_first",
+  "recommendation": "run operator pilot before formal adoption"
+}

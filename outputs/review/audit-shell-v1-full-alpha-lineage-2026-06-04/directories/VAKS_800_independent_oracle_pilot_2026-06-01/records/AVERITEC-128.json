@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-128",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 127,
+  "layer": "anchor_problem",
+  "claim": "All regular Indian Railways trains cancelled till 30th September, 2020.",
+  "evidence": "Rubbishing the claim, Ministry of Railways, in a tweet dated August 10, 2020, clarified that the message in circulation is incorrect. The ministry clarified that as of August 10, 2020, no new circular has been issued by Ministry of Railways regarding the extension of cancellation of trains.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "missing_anchor"
+  ],
+  "anchor_status": "missing",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "missing",
+    "path": "raw_sources/AVERITEC-128.md",
+    "document_hash": "",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-128_ANCHOR",
+    "text_quote": "Rubbishing the claim, Ministry of Railways, in a tweet dated August 10, 2020, clarified that the message in circulation is incorrect. The ministry clarified that as of August 10, 2020, no new circular has been issued by ",
+    "start": -1,
+    "end": -1
+  },
+  "record_path": "records/AVERITEC-128.json",
+  "evidence_path": "evidence/AVERITEC-128.md"
+}

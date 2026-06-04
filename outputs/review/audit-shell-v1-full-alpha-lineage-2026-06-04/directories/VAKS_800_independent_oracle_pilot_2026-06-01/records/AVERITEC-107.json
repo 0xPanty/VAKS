@@ -1,0 +1,31 @@
+{
+  "id": "AVERITEC-107",
+  "pool": "main_public",
+  "dataset_family": "averitec",
+  "source_row_index": 106,
+  "layer": "omission_insufficiency_ambiguity",
+  "claim": "warm water is effective in curing epilepsy",
+  "evidence": "Warm water has benefits but doesn’t cure any ailment.",
+  "source_label": "Refuted",
+  "surface_state": "ordinary",
+  "signals": [
+    "insufficient_evidence"
+  ],
+  "anchor_status": "valid",
+  "object_type": "claim",
+  "authority_family": "",
+  "authority_trap": "",
+  "source_anchor": {
+    "status": "valid",
+    "path": "raw_sources/AVERITEC-107.md",
+    "document_hash": "bee22c6f0a5db492b208844b46d4e3497103d024e12d9e0f57d35ff71ea8fc3e",
+    "version_id": "dataset-v1",
+    "selector_type": "text_quote+char_offset",
+    "marker": "AVERITEC-107_ANCHOR",
+    "text_quote": "Warm water has benefits but doesn’t cure any ailment.",
+    "start": 157,
+    "end": 210
+  },
+  "record_path": "records/AVERITEC-107.json",
+  "evidence_path": "evidence/AVERITEC-107.md"
+}
