@@ -1,6 +1,6 @@
 ---
 type: review-closeout
-status: candidate-merge-ready-for-operator-pilot
+status: superseded-by-formal-graduation
 created: 2026-06-04
 updated: 2026-06-04
 project: verified-action-knowledge-system
@@ -16,9 +16,33 @@ sources:
 evidence_level: review-synthesis
 verification_status: candidate-route-closed-required-edits-applied
 confidence: medium-high
+superseded_by:
+  - "outputs/review/2026-06-04-audit-shell-v1-formal-graduation-verdict.md"
+  - "00_handoff/2026-06-04-audit-shell-v1-formal-graduation-handoff.md"
 ---
 
 # Audit Shell v1 Queue Cockpit Closeout
+
+## Supersession Note
+
+This closeout was the candidate-to-pilot closeout. It has been superseded by the later formal pilot and high-intensity graduation supplement.
+
+Current status:
+
+```text
+ready_for_formal_operator_only_operation_convention
+formal operator-only operation convention
+not schema guidance
+not truth-layer guidance
+not user-facing UI
+recurrence / grouping default-off
+```
+
+Current handoff:
+
+```text
+00_handoff/2026-06-04-audit-shell-v1-formal-graduation-handoff.md
+```
 
 ## 大白话结论
 

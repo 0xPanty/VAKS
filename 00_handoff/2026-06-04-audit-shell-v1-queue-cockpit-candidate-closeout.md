@@ -1,23 +1,30 @@
 ---
 type: handoff
-status: current
+status: superseded
 created: 2026-06-04
 project: verified-action-knowledge-system
 subject: audit-shell-v1-queue-cockpit-candidate-closeout
 scope: operator-only-candidate-convention
 verification_status: committed
 commit: 2ed5ee2
+superseded_by: 00_handoff/2026-06-04-audit-shell-v1-formal-graduation-handoff.md
 ---
 
 # Audit Shell v1 / Queue-First Operator Cockpit Closeout Handoff
 
 ## Read This First
 
-This is the current recovery entry for the Audit Shell v1 / Queue-First Operator Cockpit work.
+This was the candidate-closeout recovery entry for the Audit Shell v1 / Queue-First Operator Cockpit work.
+
+It has been superseded by:
+
+```text
+00_handoff/2026-06-04-audit-shell-v1-formal-graduation-handoff.md
+```
 
 Do not restart broad design review.
 
-Current status:
+Historical status at this handoff:
 
 ```text
 main-vault candidate operation convention
@@ -29,6 +36,17 @@ not truth-layer guidance
 not user-facing UI
 not operator-usability validated
 not product-grade click-back validated
+```
+
+Current status after the later pilot / high-intensity supplement:
+
+```text
+ready_for_formal_operator_only_operation_convention
+formal operator-only operation convention
+not schema guidance
+not truth-layer guidance
+not user-facing UI
+recurrence / grouping default-off
 ```
 
 ## What Was Committed
@@ -117,7 +135,7 @@ turn card-first back into the architecture
 use source count / lineage / repeated mention as support strength
 ```
 
-## Next Step
+## Historical Next Step
 
 Run the operator pilot:
 
@@ -131,6 +149,14 @@ Start from:
 
 ```text
 outputs/review/audit-shell-v1-full-alpha-lineage-2026-06-04/directories/VAKS_queue_cockpit_CLOSEOUT_2026-06-04/NEXT_OPERATOR_PILOT_PROMPT.md
+```
+
+This step has now been completed. See:
+
+```text
+outputs/review/2026-06-04-audit-shell-v1-formal-pilot-results.md
+outputs/review/2026-06-04-audit-shell-v1-high-intensity-graduation-report.md
+outputs/review/2026-06-04-audit-shell-v1-formal-graduation-verdict.md
 ```
 
 ## Dirty Worktree Note

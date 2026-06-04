@@ -1,11 +1,11 @@
 ---
-type: candidate-artifact-bundle
-status: main-vault-candidate-asset
+type: artifact-bundle
+status: main-vault-full-alpha-lineage-retained
 created: 2026-06-04
 project: verified-action-knowledge-system
 subject: audit-shell-v1-full-alpha-lineage
-scope: operator-only-candidate-convention
-verification_status: packaged-for-main-vault-recovery
+scope: formal-operator-only-operation-convention-lineage
+verification_status: retained-after-formal-graduation
 ---
 
 # Audit Shell v1 Full Alpha Lineage
@@ -18,17 +18,15 @@ It keeps the alpha materials intact inside the main vault.
 
 This is not a reduced summary and not a deletion of the original sandbox folders.
 
-## Merge Boundary
+## Current Boundary
 
 ```text
-operator-only candidate convention
-pilot pending
-not formal adoption
+formal operator-only operation convention lineage
 not truth-layer guidance
 not schema guidance
 not user-facing UI
-not evidence that operator adjudication has passed
-not evidence that product-grade click-back has passed
+not automatic evidence / truth authority
+recurrence / grouping default-off
 ```
 
 ## What Is Inside
@@ -57,9 +55,9 @@ VAKS_queue_cockpit_CLOSEOUT_2026-06-04
 
 `ARTIFACT_MANIFEST.csv` lists copied directories and zip packages with file counts, bytes, and main-vault paths.
 
-## Current Accepted Candidate
+## Current Accepted Convention
 
-The current candidate convention is:
+The current formal operator-only convention is:
 
 ```text
 Audit Shell v1 / Queue-First Operator Cockpit
@@ -68,10 +66,17 @@ Audit Shell v1 / Queue-First Operator Cockpit
 Current handoff:
 
 ```text
-00_handoff/2026-06-04-audit-shell-v1-queue-cockpit-candidate-closeout.md
+00_handoff/2026-06-04-audit-shell-v1-formal-graduation-handoff.md
 ```
 
-Main record:
+Formal verdict:
+
+```text
+outputs/review/2026-06-04-audit-shell-v1-formal-graduation-verdict.md
+outputs/review/2026-06-04-audit-shell-v1-formal-adoption-recommendation.md
+```
+
+Historical candidate record:
 
 ```text
 outputs/review/2026-06-04-audit-shell-v1-candidate-operation-convention.md
@@ -94,21 +99,24 @@ outputs/review/2026-06-04-audit-shell-v1-main-framework-integration-validation.m
 
 The design-review loop is closed.
 
-Pro's final result:
+Formal graduation result:
 
 ```text
-no merge blocker
-can merge as operator-only candidate convention
-not formal adoption
-next step is 80/60/60 operator pilot
+initial formal pilot: 200 / 200 row_pass=true
+high-intensity supplement: 3701 total result rows, 0 failures, 0 hard failures
+ready_for_formal_operator_only_operation_convention
 ```
 
 ## Next Step
 
-Run the pilot from:
+No graduation blocker remains open.
+
+Future optional work:
 
 ```text
-outputs/review/audit-shell-v1-full-alpha-lineage-2026-06-04/directories/VAKS_queue_cockpit_CLOSEOUT_2026-06-04/NEXT_OPERATOR_PILOT_PROMPT.md
+product UI / ergonomics
+grouping default-off pilot
+future implementation surfaces
 ```
 
-Do not restart broad design review unless a pilot finds a real blocker.
+Do not restart broad design review unless a new hard issue appears.

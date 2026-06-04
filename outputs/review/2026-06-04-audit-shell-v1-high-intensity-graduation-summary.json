@@ -1,0 +1,111 @@
+{
+  "run_id": "2026-06-04-audit-shell-v1-high-intensity-graduation",
+  "executed_at": "2026-06-04",
+  "workspace": "C:\\Users\\Administrator\\Documents\\资料库",
+  "scope": "formal graduation stress test for operator-only audit shell convention",
+  "inputs": {
+    "cockpit_rows": ".\\outputs\\review\\audit-shell-v1-full-alpha-lineage-2026-06-04\\directories\\VAKS_audit_shell_queue_cockpit_prototype_2026-06-04\\COCKPIT_QUEUE_ROWS.csv",
+    "pressure_results": ".\\outputs\\review\\audit-shell-v1-full-alpha-lineage-2026-06-04\\directories\\VAKS_queue_cockpit_PRO_REVIEW_PACKAGE_2026-06-04\\03_PRESSURE_TEST\\PRESSURE_TEST_RESULTS.csv",
+    "prior_pilot_results": ".\\outputs\\review\\2026-06-04-audit-shell-v1-formal-pilot-results.csv",
+    "trap_sample": ".\\outputs\\review\\audit-shell-v1-full-alpha-lineage-2026-06-04\\directories\\VAKS_audit_shell_queue_cockpit_prototype_2026-06-04\\SOURCE_FAMILY_INDEPENDENCE_TRAP_SAMPLE.csv",
+    "evidence_dirs": [
+      ".\\outputs\\review\\audit-shell-v1-full-alpha-lineage-2026-06-04\\directories\\VAKS_480_realdata_paired_pilot_2026-06-01\\evidence",
+      ".\\outputs\\review\\audit-shell-v1-full-alpha-lineage-2026-06-04\\directories\\VAKS_800_independent_oracle_pilot_2026-06-01\\evidence"
+    ]
+  },
+  "outputs": {
+    "csv_results": ".\\outputs\\review\\2026-06-04-audit-shell-v1-high-intensity-graduation-results.csv",
+    "json_summary": ".\\outputs\\review\\2026-06-04-audit-shell-v1-high-intensity-graduation-summary.json",
+    "report": ".\\outputs\\review\\2026-06-04-audit-shell-v1-high-intensity-graduation-report.md",
+    "verdict": ".\\outputs\\review\\2026-06-04-audit-shell-v1-formal-graduation-verdict.md",
+    "updated_recommendation": ".\\outputs\\review\\2026-06-04-audit-shell-v1-formal-adoption-recommendation.md"
+  },
+  "row_counts": {
+    "total_result_rows": 3701,
+    "full_282_lane_triage": 282,
+    "blind_no_first_action_282_triage": 282,
+    "deferred_promotion_trigger_matrix": 654,
+    "exact_evidence_anchor_clickback": 1453,
+    "weak_evidence_anchor_quarantine": 67,
+    "non_evidence_landing_negative_controls": 282,
+    "source_family_adversarial_matrix": 480,
+    "prior_200_pilot_replay": 200,
+    "direct_full_audit_burden_proxy": 1
+  },
+  "failures": {
+    "all_failures": 0,
+    "hard_failures": 0,
+    "by_suite": {
+      "blind_no_first_action_282_triage": {
+        "rows": 282,
+        "failures": 0
+      },
+      "deferred_promotion_trigger_matrix": {
+        "rows": 654,
+        "failures": 0
+      },
+      "direct_full_audit_burden_proxy": {
+        "rows": 1,
+        "failures": 0
+      },
+      "exact_evidence_anchor_clickback": {
+        "rows": 1453,
+        "failures": 0
+      },
+      "full_282_lane_triage": {
+        "rows": 282,
+        "failures": 0
+      },
+      "non_evidence_landing_negative_controls": {
+        "rows": 282,
+        "failures": 0
+      },
+      "prior_200_pilot_replay": {
+        "rows": 200,
+        "failures": 0
+      },
+      "source_family_adversarial_matrix": {
+        "rows": 480,
+        "failures": 0
+      },
+      "weak_evidence_anchor_quarantine": {
+        "rows": 67,
+        "failures": 0
+      }
+    }
+  },
+  "direct_full_audit_proxy": {
+    "direct_full_audit_rows": 152,
+    "queue_first_unresolved_rows": 43,
+    "row_burden_reduction_percent": 71.71,
+    "queue_pass_median_ms": 4.743,
+    "direct_file_read_median_ms": 920.298,
+    "timing_ratio_direct_over_queue": 194.05,
+    "note": "automation load proxy only; not a human UI stopwatch"
+  },
+  "gates": {
+    "all_282_paths_and_actions_pass": true,
+    "blind_no_first_action_pass": true,
+    "deferred_receipt_matrix_pass": true,
+    "exact_evidence_anchor_clickback_pass": true,
+    "weak_evidence_anchor_quarantine_pass": true,
+    "non_evidence_negative_controls_pass": true,
+    "source_family_adversarial_pass": true,
+    "prior_200_replay_pass": true,
+    "burden_proxy_pass": true
+  },
+  "discovered_issues": {
+    "weak_legacy_evidence_packets": 67,
+    "handling": "quarantined_not_selector_grade_not_evidence_landing",
+    "blocking_for_operator_convention": false
+  },
+  "formal_graduation_recommendation": "ready_for_formal_operator_only_operation_convention",
+  "allowed_scope": "formal operator-only operation convention; not schema guidance, not truth-layer guidance, not user-facing UI, not recurrence/grouping default-on",
+  "hard_boundaries": [
+    "deferred_review_unless_promoted requires promotion receipt before citation/action/rule/challenge/conflict/answer-shaping use",
+    "only exact selector-grade anchors can claim evidence landing",
+    "source/claim/context/diagnostic/history/binary/transcript/test/count/lineage/feedback are not evidence support by themselves",
+    "source-family count or repeated mention can raise look-here priority only, not truth confidence or action readiness",
+    "recurrence/grouping remains default-off"
+  ]
+}

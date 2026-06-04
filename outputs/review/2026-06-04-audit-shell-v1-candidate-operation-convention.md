@@ -1,6 +1,6 @@
 ---
 type: review-candidate
-status: candidate-only-merge-ready
+status: formalized-by-later-pilot
 created: 2026-06-04
 updated: 2026-06-04
 project: verified-action-knowledge-system
@@ -17,28 +17,56 @@ sources:
   - "C:\\Users\\Administrator\\Documents\\VAKS_audit_shell_pressure_test_2026-06-04\\OPERATOR_FRONT_FACE_EXAMPLES.md"
 main_vault_artifact_root: "outputs/review/audit-shell-v1-full-alpha-lineage-2026-06-04"
 evidence_level: sandbox-pressure-test
-verification_status: candidate-tested
+verification_status: superseded-by-formal-graduation
 confidence: medium-high
 reviewer: Pro
 review_result: can-merge-as-operator-only-candidate-after-small-fixes
+superseded_by:
+  - "outputs/review/2026-06-04-audit-shell-v1-formal-graduation-verdict.md"
+  - "outputs/review/2026-06-04-audit-shell-v1-formal-adoption-recommendation.md"
 ---
 
 # Audit Shell v1 / Queue-First Operator Cockpit 候选约定
 
+## Formalization Note
+
+This candidate record has been superseded by the later formal pilot and high-intensity graduation supplement.
+
+Current status:
+
+```text
+ready_for_formal_operator_only_operation_convention
+formal operator-only operation convention
+not schema guidance
+not truth-layer guidance
+not user-facing UI
+recurrence / grouping default-off
+```
+
+Current recovery entry:
+
+```text
+00_handoff/2026-06-04-audit-shell-v1-formal-graduation-handoff.md
+```
+
+Formal verdict:
+
+```text
+outputs/review/2026-06-04-audit-shell-v1-formal-graduation-verdict.md
+```
+
 ## Merge Banner
 
 ```text
-operator-only candidate convention
-pilot pending
-not formal adoption
+historical candidate convention record
+formalized by later pilot / high-intensity supplement
 not truth-layer guidance
 not schema guidance
 not user-facing UI
-not evidence that operator adjudication has passed
-not evidence that product-grade click-back has passed
+not automatic evidence / truth authority
 ```
 
-说人话：这份文件可以进入主库作为后台 operator 候选约定，但它不是正式采用，也不是证明系统已经被真人 operator 验证通过。
+说人话：这份文件是候选阶段记录。当前正式状态看上面的 Formalization Note 和 formal graduation verdict。
 
 ## 先说边界
 

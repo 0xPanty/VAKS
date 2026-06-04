@@ -458,24 +458,36 @@ They are not truth authority, source independence, evidence support, action
 readiness, or mainline readiness.
 ```
 
-## 2026-06-04 Audit Shell v1 / Queue-First Operator Cockpit Main-Vault Candidate Merge
+## 2026-06-04 Audit Shell v1 / Queue-First Operator Cockpit Main-Vault Formal Graduation
 
-Status changed after the June 4 full ingest simulation, pressure test, queue-first prototype, Pro review, final closeout, and final blocker confirmation.
+Status changed after the June 4 full ingest simulation, pressure test, queue-first prototype, Pro review, final closeout, final blocker confirmation, 80/60/60 formal pilot, and high-intensity graduation supplement.
 
 Current status:
 
 ```text
-operator-only candidate convention
-pilot pending
-not formal adoption
+ready_for_formal_operator_only_operation_convention
+formal operator-only operation convention
 not schema guidance
 not truth-layer guidance
 not user-facing UI
-not operator-usability validated
-not product-grade click-back validated
+not automatic evidence / truth authority
+recurrence / grouping default-off
 ```
 
-Main candidate record:
+Current handoff:
+
+```text
+00_handoff/2026-06-04-audit-shell-v1-formal-graduation-handoff.md
+```
+
+Formal verdict:
+
+```text
+outputs/review/2026-06-04-audit-shell-v1-formal-graduation-verdict.md
+outputs/review/2026-06-04-audit-shell-v1-formal-adoption-recommendation.md
+```
+
+Historical candidate record:
 
 ```text
 outputs/review/2026-06-04-audit-shell-v1-candidate-operation-convention.md
@@ -508,12 +520,18 @@ June 4 final closeout package
 intermediate and final zip snapshots
 ```
 
-Final Pro gate:
+Formal graduation gate:
 
 ```text
-No merge blocker.
-Can merge as main-vault candidate operation convention / operator-only candidate.
-Do not present as formal adoption or completed product validation.
+Initial formal pilot: 200 / 200 row_pass=true.
+High-intensity supplement: 3701 total result rows, 0 failures, 0 hard failures.
+Full 282-row triage passed.
+Blind no-first-action triage passed.
+Deferred promotion trigger matrix passed.
+Exact eligible evidence anchors verified: 1453.
+Weak legacy evidence anchors quarantined: 67.
+Source-family adversarial cases verified: 480.
+First-screen unresolved remains 43 vs direct full audit 152.
 ```
 
 Hard rules now written into the candidate:
@@ -527,9 +545,11 @@ anchor-strength strip is only a front-face summary. Only selector-grade
 jump-back can claim evidence landing.
 ```
 
-Next step:
+Current boundary:
 
 ```text
-Run the 80/60/60 operator pilot from:
-outputs/review/audit-shell-v1-full-alpha-lineage-2026-06-04/directories/VAKS_queue_cockpit_CLOSEOUT_2026-06-04/NEXT_OPERATOR_PILOT_PROMPT.md
+This is formal operator-only operation convention.
+It is not schema guidance, truth-layer guidance, user-facing UI, or automatic
+evidence / truth authority.
+Recurrence / grouping remains default-off.
 ```

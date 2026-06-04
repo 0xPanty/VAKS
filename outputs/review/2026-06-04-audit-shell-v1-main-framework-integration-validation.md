@@ -1,16 +1,40 @@
 ---
 type: integration-validation
-status: passed-candidate-framework-run
+status: superseded-by-formal-graduation
 created: 2026-06-04
 project: verified-action-knowledge-system
 subject: audit-shell-v1-main-framework-integration-validation
-scope: operator-only-candidate-convention
+scope: formal-operator-only-operation-convention
 verification_status: main-framework-consistency-pass
 evidence_level: local-main-vault-artifact-check
 confidence: high-for-candidate-merge
+superseded_by:
+  - "outputs/review/2026-06-04-audit-shell-v1-formal-graduation-verdict.md"
+  - "00_handoff/2026-06-04-audit-shell-v1-formal-graduation-handoff.md"
 ---
 
 # Audit Shell v1 主框架集成验证
+
+## Supersession Note
+
+This integration validation proved candidate-main-framework compatibility before the final pilot.
+
+It has been superseded by the formal graduation verdict:
+
+```text
+outputs/review/2026-06-04-audit-shell-v1-formal-graduation-verdict.md
+```
+
+Current status:
+
+```text
+ready_for_formal_operator_only_operation_convention
+formal operator-only operation convention
+not schema guidance
+not truth-layer guidance
+not user-facing UI
+recurrence / grouping default-off
+```
 
 ## 大白话结论
 

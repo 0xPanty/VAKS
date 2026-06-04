@@ -1,0 +1,131 @@
+{
+  "run_id": "2026-06-04-audit-shell-v1-formal-pilot",
+  "executed_at": "2026-06-04",
+  "workspace": "C:\\Users\\Administrator\\Documents\\资料库",
+  "scope": "operator-only formal-graduation pilot for candidate operation convention",
+  "operator_model": "single Codex operator using cockpit rows first",
+  "inputs": {
+    "operator_triage": ".\\outputs\\review\\audit-shell-v1-full-alpha-lineage-2026-06-04\\directories\\VAKS_audit_shell_queue_cockpit_prototype_2026-06-04\\OPERATOR_TRIAGE_PILOT_SAMPLE_80.csv",
+    "semantic_clickback": ".\\outputs\\review\\audit-shell-v1-full-alpha-lineage-2026-06-04\\directories\\VAKS_audit_shell_queue_cockpit_prototype_2026-06-04\\SEMANTIC_CLICKBACK_PILOT_SAMPLE_60.csv",
+    "source_family_independence_trap": ".\\outputs\\review\\audit-shell-v1-full-alpha-lineage-2026-06-04\\directories\\VAKS_audit_shell_queue_cockpit_prototype_2026-06-04\\SOURCE_FAMILY_INDEPENDENCE_TRAP_SAMPLE.csv"
+  },
+  "outputs": {
+    "markdown_report": ".\\outputs\\review\\2026-06-04-audit-shell-v1-formal-pilot-results.md",
+    "csv_results": ".\\outputs\\review\\2026-06-04-audit-shell-v1-formal-pilot-results.csv",
+    "json_summary": ".\\outputs\\review\\2026-06-04-audit-shell-v1-formal-pilot-summary.json",
+    "adoption_recommendation": ".\\outputs\\review\\2026-06-04-audit-shell-v1-formal-adoption-recommendation.md"
+  },
+  "sample_counts": {
+    "operator_triage": 80,
+    "semantic_clickback": 60,
+    "source_family_independence_trap": 60,
+    "combined_rows": 200
+  },
+  "operator_triage": {
+    "rows": 80,
+    "action_counts": {
+      "block_and_fix_anchor": 10,
+      "defer_review": 21,
+      "fold_history": 8,
+      "light_save": 20,
+      "reopen_regressed": 2,
+      "review_now": 19
+    },
+    "state_counts": {
+      "blocking": 10,
+      "for_review": 40,
+      "ordinary": 20,
+      "regressed": 2,
+      "resolved_folded": 8
+    },
+    "lane_counts": {
+      "01_blocking_now": 10,
+      "02_regressed_reopen": 2,
+      "03_review_now": 19,
+      "04_deferred_review_unless_promoted": 21,
+      "04_ordinary_light": 20,
+      "05_folded_history": 8
+    },
+    "wrong_actionability": 0,
+    "wrong_actionability_on_high_risk": 0,
+    "serious_miss": 0,
+    "severe_authority_misunderstanding": 0,
+    "serious_false_lite": 0,
+    "deferred_rows": 21,
+    "deferred_used_as_action_basis_without_receipt": 0,
+    "ordinary_rows_kept_light": 20,
+    "hard_gate": "pass",
+    "timing_gate": "not_measured_single_operator_no_direct_full_audit_stopwatch"
+  },
+  "semantic_clickback": {
+    "rows": 60,
+    "path_exists": 60,
+    "first_correct_click": 60,
+    "first_correct_click_rate": 1.0,
+    "wrong_semantic_landing": 0,
+    "dead_end_click": 0,
+    "claimed_evidence_support_without_selector_grade": 0,
+    "selector_grade_counts": {
+      "claim_or_context_only": 18,
+      "diagnostic_or_history_only": 32,
+      "source_record_only": 6,
+      "timestamp_segment_anchor": 4
+    },
+    "landing_class_counts": {
+      "claim_landing": 6,
+      "claim_relevant_context_landing": 6,
+      "diagnostic_landing": 6,
+      "handoff_landing": 10,
+      "review_output_landing": 6,
+      "source_record_landing": 6,
+      "summary_or_qa_landing": 6,
+      "template_landing": 6,
+      "transcript_landing": 4,
+      "transcript_segment_landing": 4
+    },
+    "precise_evidence_anchor_rows": 0,
+    "hard_gate": "pass_for_available_landing_classes",
+    "product_grade_evidence_clickback": "not_claimed_no_1_precise_evidence_anchor_rows_in_sample"
+  },
+  "source_family_independence_trap": {
+    "rows": 60,
+    "path_exists": 60,
+    "independence_misread": 0,
+    "action_basis_from_count_or_lineage": 0,
+    "independent_support_yes": 0,
+    "risk_dimension_counts": {
+      "binary_snapshot_no_visible_evidence;review_output_not_authority": 1,
+      "derived_summary_or_qa_not_truth": 21,
+      "review_output_not_authority": 7,
+      "review_output_not_authority;package_manifest_recovery_risk": 1,
+      "review_output_not_authority;unfinalized_review_output": 10,
+      "review_output_not_authority;unfinalized_review_output;package_manifest_recovery_risk": 1,
+      "source_record_not_truth": 14,
+      "source_record_not_truth;heavy_or_high_priority_source": 5
+    },
+    "landing_class_counts": {
+      "review_output_landing": 20,
+      "source_record_landing": 19,
+      "summary_or_qa_landing": 21
+    },
+    "hard_gate": "pass"
+  },
+  "global_hard_gates": {
+    "serious_false_lite_zero": true,
+    "high_risk_wrong_actionability_zero": true,
+    "serious_miss_zero": true,
+    "severe_authority_misunderstanding_zero": true,
+    "dead_end_click_zero": true,
+    "weak_or_non_evidence_landing_not_called_evidence_zero": true,
+    "independence_misread_zero": true,
+    "action_basis_from_count_or_lineage_zero": true,
+    "missing_paths_zero": true
+  },
+  "final_verdict": "continue_sandbox_with_specific_fixes",
+  "formal_operation_convention_upgrade": "not_yet_recommended",
+  "reason": "All hard safety gates passed, but formal graduation still lacks two-operator/timed usability evidence and exact evidence-anchor click-back fixtures.",
+  "minimum_gap": [
+    "Run a two-operator or two-pass timed triage over the same 80 rows and record median first-action time versus direct full audit.",
+    "Add exact selector-grade evidence-anchor cases with 1_precise_evidence_anchor/evidence_landing and rerun semantic click-back."
+  ]
+}

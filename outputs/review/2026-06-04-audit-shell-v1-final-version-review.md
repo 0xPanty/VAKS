@@ -1,6 +1,6 @@
 ---
 type: final-version-review
-status: candidate-merge-ready-after-required-edits
+status: superseded-by-formal-graduation
 created: 2026-06-04
 updated: 2026-06-04
 project: verified-action-knowledge-system
@@ -15,9 +15,34 @@ sources:
 verification_status: final-reviewed-required-edits-applied
 evidence_level: local-artifact-consistency-check
 confidence: medium-high
+superseded_by:
+  - "outputs/review/2026-06-04-audit-shell-v1-formal-graduation-verdict.md"
+  - "00_handoff/2026-06-04-audit-shell-v1-formal-graduation-handoff.md"
 ---
 
 # Audit Shell v1 Final Version Review
+
+## Supersession Note
+
+This final-version review closed the candidate design-review phase before the operator pilot.
+
+It has been superseded by:
+
+```text
+outputs/review/2026-06-04-audit-shell-v1-formal-graduation-verdict.md
+00_handoff/2026-06-04-audit-shell-v1-formal-graduation-handoff.md
+```
+
+Current status:
+
+```text
+ready_for_formal_operator_only_operation_convention
+formal operator-only operation convention
+not schema guidance
+not truth-layer guidance
+not user-facing UI
+recurrence / grouping default-off
+```
 
 ## Final Verdict
 

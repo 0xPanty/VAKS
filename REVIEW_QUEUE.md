@@ -859,20 +859,34 @@ The queue produces noisy clusters that cannot support promotion decisions.
 
 If it fails, adjust point granularity and source independence rules before adding embeddings or scoring.
 
-## 9. Candidate Operation Convention: Audit Shell v1 / Queue-First Operator Cockpit
+## 9. Formal Operator Convention: Audit Shell v1 / Queue-First Operator Cockpit
 
 Status:
 
 ```text
-operator-only candidate convention
-pilot pending
-not formal adoption
+ready_for_formal_operator_only_operation_convention
+formal operator-only operation convention
 not schema guidance
 not truth-layer guidance
 not user-facing UI
+not automatic evidence / truth authority
+recurrence / grouping default-off
 ```
 
-Main candidate record:
+Current handoff:
+
+```text
+00_handoff/2026-06-04-audit-shell-v1-formal-graduation-handoff.md
+```
+
+Formal verdict:
+
+```text
+outputs/review/2026-06-04-audit-shell-v1-formal-graduation-verdict.md
+outputs/review/2026-06-04-audit-shell-v1-formal-adoption-recommendation.md
+```
+
+Historical candidate record:
 
 ```text
 outputs/review/2026-06-04-audit-shell-v1-candidate-operation-convention.md
@@ -896,12 +910,13 @@ final closeout package
 intermediate zip snapshots
 ```
 
-Candidate rule:
+Formal operator rule:
 
 ```text
-Use queue-first cockpit as an operator-only candidate convention for backstage
-source / record / evidence triage. Do not treat it as formal adoption, reviewed
-truth, schema guidance, or product-grade click-back validation.
+Use queue-first cockpit as the formal operator-only convention for backstage
+source / record / evidence triage. Do not treat it as reviewed truth,
+schema guidance, truth-layer guidance, user-facing UI, or automatic
+evidence / truth authority.
 ```
 
 Hard boundary:
@@ -917,10 +932,19 @@ jump-back can claim evidence landing. source / claim / context / diagnostic /
 history / binary landing cannot be described as evidence support.
 ```
 
-Next pilot:
+Graduation evidence:
 
 ```text
-80-row operator triage
-60-row selector-grade semantic click-back
-60-row source-family independence trap
+initial formal pilot: 200 / 200 row_pass=true
+high-intensity supplement: 3701 total result rows, 0 failures, 0 hard failures
+exact eligible evidence anchors verified: 1453
+weak legacy evidence anchors quarantined: 67
+source-family adversarial cases verified: 480
+first-screen unresolved remains 43 vs direct full audit 152
+```
+
+Grouping / merging remains parked:
+
+```text
+outputs/review/2026-06-04-audit-shell-v1-grouping-default-off-future-note.md
 ```
