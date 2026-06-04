@@ -65,6 +65,12 @@ The current candidate convention is:
 Audit Shell v1 / Queue-First Operator Cockpit
 ```
 
+Current handoff:
+
+```text
+00_handoff/2026-06-04-audit-shell-v1-queue-cockpit-candidate-closeout.md
+```
+
 Main record:
 
 ```text
