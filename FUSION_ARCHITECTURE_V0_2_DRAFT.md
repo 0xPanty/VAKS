@@ -41,6 +41,19 @@ Evidence Sufficiency Gate:
   ask whether the assembled evidence is enough for this specific use.
   Ordinary capture and ordinary queries stay light.
 
+Late-stage action-facing review:
+  for action_basis and significant promotion / decision use, do not treat an
+  evidence list as sufficient by itself. Make clear the specific action-facing
+  claim being relied on, the anchored evidence that directly bears on that
+  claim, why that evidence supports the claim under the stated scope and
+  assumptions, what known challenges or gaps remain, and what review or risk
+  remains open. Diagrams, notation, source counts, tool counts, vendor claims,
+  and confidence labels do not add support, independence, or action readiness.
+  Optional project-scoped sidecar overlays may route temporary project reuse
+  views outside generic knowledge points; they are navigation/context aids, not
+  reviewed knowledge, decisions, truth confidence, or action basis, and
+  action-facing use still returns to this late-stage review rule.
+
 Association Neighborhood Activation:
   queries should activate evidence-aware neighborhoods, not isolated chunks.
   Graph traversal, PPR, similarity, and association score are recall signals,
@@ -993,8 +1006,20 @@ Evidence Sufficiency Gate:
 
 This borrows the control idea from Self-RAG, CRAG, and A2RAG: do not escalate every query; escalate only when evidence is insufficient for the intended action.
 
-The gate does not run in empty space. First assemble an activated evidence envelope or draft context pack, then run the gate, then finalize the context pack / action basis only if the evidence is sufficient for that use.
-Temporal applicability is part of this envelope when the answer or action depends on current time, version, project, environment, or supersession state.
+The gate does not run in empty space. First assemble the relevant evidence, context, and draft answer/action material, then run the gate, then finalize the context pack / action basis only if the evidence is sufficient for that use.
+Temporal applicability is part of this review when the answer or action depends on current time, version, project, environment, or supersession state.
+
+For action_basis and significant promotion / decision use, do not treat an evidence list as sufficient by itself. Make clear:
+
+- the specific action-facing claim being relied on;
+- the anchored evidence that directly bears on that claim;
+- why that evidence supports the claim under the stated scope and assumptions;
+- what known challenges or gaps remain;
+- and what review or risk remains open.
+
+If that warrant cannot be stated without circularity, the claim is not yet sufficient for action-facing use.
+
+This is a late-stage review requirement, not a new schema, template, pattern, assurance-case subsystem, diagram requirement, or truth layer. Diagrams, notation, source counts, tool counts, vendor claims, and confidence labels do not add support, independence, or action readiness.
 
 Minimum shape:
 
@@ -1028,6 +1053,7 @@ Do key points have source anchors and evidence_support?
 Are known contradictions, challenges, and risks included?
 Does the evidence match the current project, version, time, and environment?
 Does the reviewed point still apply, or is it stale, superseded, invalidated, or out of scope?
+Is the warrant non-circular: does it actually explain why this evidence supports this action-facing claim?
 Is any critical evidence missing?
 If evidence is not enough, should the system ask, retrieve more, create a missing-point candidate, narrow scope, mark not actionable, or require review?
 ```
@@ -1509,6 +1535,8 @@ It is a human-readable standing check:
 ```text
 Does this candidate still stand after support, challenge, scope limits, and risk are visible?
 ```
+
+For action-facing use, review must also make the warrant clear: not only what evidence exists, but why that evidence supports the claim under the stated scope and assumptions. If that warrant is circular, the claim is not yet sufficient for action-facing use. A source list, clean diagram, tool catalogue, vendor claim, or confidence label cannot stand in for that warrant.
 
 The useful idea is borrowed from abstract argumentation work such as Dung's 1995 paper on argument acceptability (`raw/papers/2026-05-29-dung-argumentation-framework-source.md`), but the project does not implement formal argumentation semantics. It only absorbs the review habit:
 

@@ -223,11 +223,14 @@ Rules:
 source is not evidence by itself
 citation is not support by itself
 retrieval relation is not reviewed relation
+evidence list is not action basis by itself
+action-facing use must show a non-circular warrant
+diagram / notation / source count / tool count / vendor claim / confidence label is not support
 feedback is not truth update
 agent memory is not reviewed memory
 ```
 
-Use Evidence Packet to make review clearer, not heavier. Ordinary capture and ordinary query stay light.
+Use Evidence Packet to make review clearer, not heavier. For action basis and significant promotion / decision use, do not treat an evidence list as sufficient by itself. Make clear the specific action-facing claim being relied on, the anchored evidence that directly bears on that claim, why that evidence supports the claim under the stated scope and assumptions, what known challenges or gaps remain, and what review or risk remains open. If that warrant cannot be stated without circularity, the claim is not yet sufficient for action-facing use. Ordinary capture and ordinary query stay light.
 
 ### 3.3.2 Reference review is always two-lens
 
@@ -242,6 +245,8 @@ whole architecture:
 ```
 
 The current branch may decide the first reading path, but it must not hide main-architecture signals.
+
+Projects may optionally keep project-scoped sidecar overlays outside generic knowledge points to record temporary reuse views and navigation hints for that project. Such overlays do not rewrite the knowledge point and do not create reviewed knowledge, architecture decisions, action basis, or truth confidence. If their contents are used for significant promotion, architecture absorption, decision, or risk-sensitive answers, the late-stage action-facing review rule still applies.
 
 ### 3.4 Search only recalls candidates
 
