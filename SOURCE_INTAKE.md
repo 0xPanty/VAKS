@@ -2,7 +2,7 @@
 type: implementation-note
 status: active
 created: 2026-05-28
-updated: 2026-06-03
+updated: 2026-06-06
 project: verified-action-knowledge-system
 scope:
   - source-intake
@@ -15,12 +15,18 @@ related_files:
   - "[[DEV_CONTEXT]]"
   - "[[MEMORY_TIER]]"
   - "[[REFERENCE_REVIEW_PROTOCOL]]"
+  - "[[templates/source-record]]"
   - "[[templates/video-source]]"
+  - "[[templates/candidate-distillation]]"
+  - "[[templates/review-candidate]]"
+  - "[[templates/query-run]]"
+  - "[[templates/feedback-event]]"
+  - "[[templates/project-overlay]]"
 verification_status: active
 evidence_level: synthetic
 confidence: high
-last_verified: 2026-05-28
-next_review: 2026-06-04
+last_verified: 2026-06-06
+next_review: 2026-06-13
 tags:
   - source-intake
   - processing-tier
@@ -70,6 +76,85 @@ too light:
 
 too heavy:
   every ordinary note becomes paperwork.
+```
+
+## 1.1 Machine-Readable Boundary Fields
+
+Do not collapse processing effort, truth status, project mounting, and review
+pressure into one field.
+
+Use these orthogonal fields:
+
+| Field | Values | Meaning |
+|---|---|---|
+| `processing_tier` | `light` / `medium` / `heavy` | How much work has been done. This is not authority. |
+| `knowledge_status` | `raw` / `candidate` / `reviewed` | Whether the record can act as knowledge. |
+| `overlay_state` | `none` / `suggested` / `confirmed` / `archived` | Whether a project sidecar is mounted or retained as history. |
+| `review_pressure` | `none` / `review_due` / `blocked` | Whether feedback or anchor problems require review. |
+| `retrieval_policy.policy_kind` | `source_identity_only` / `orientation_only` / `project_context_only` / `reviewed_support_only` | How retrieval is allowed to use the record. |
+| `retrieval_policy.pack_allowed` | `false` / `activation_only` / `review_input_only` / `drilldown_required` / `reviewed_support` | Whether this record can enter a context pack, and for what purpose. |
+| `retrieval_policy.action_basis_allowed` | `true` / `false` | Whether this record can directly support action. Candidate material defaults to false. |
+| `retrieval_policy.warning_code` | short machine-readable string | Why the record is limited. |
+| `promotion_gate` | `none` / `v0_2_13_required` / `review_passed` | What gate must pass before promotion or action use. |
+
+Minimal object rules:
+
+```text
+Source Card:
+  record_kind: source_card
+  knowledge_status: raw
+  retrieval_policy:
+    policy_kind: source_identity_only
+    pack_allowed: drilldown_required
+    action_basis_allowed: false
+    warning_code: raw_is_provenance_only
+  review_pressure: none, unless anchor/source is broken
+  action_basis_allowed: false
+  no adopt/reject verdict, no truth score
+
+Candidate Distillation:
+  record_kind: candidate_distillation
+  knowledge_status: candidate
+  processing_tier: medium
+  retrieval_policy:
+    policy_kind: orientation_only
+    pack_allowed: activation_only
+    action_basis_allowed: false
+    warning_code: candidate_not_action_basis
+  promotion_gate: v0_2_13_required
+  no project-level borrow verdict
+
+Project Overlay:
+  record_kind: project_overlay
+  knowledge_status: candidate
+  overlay_scope: project_sidecar_only
+  overlay_storage: confirmed_persistent_project_bucket
+  retrieval_scope: active_project_only
+  default_retrieval: false
+  retrieval_policy:
+    policy_kind: project_context_only
+    default_scope: project_only
+    pack_allowed: activation_only
+    action_basis_allowed: false
+    warning_code: overlay_not_authority
+  project_borrow_scope / project_non_borrow_scope / project_reopen_trigger / target_hint
+  no decision outcome, no review verdict, no universal ban
+
+Heavy Review:
+  claim + evidence_anchors + non_circular_warrant + scope + gaps + residual_risk
+  review_status controls promotion
+
+Feedback Event:
+  event_kind + observed_in_context + review_pressure_effect
+  project_ref or explicit observed context
+  retrieval_policy:
+    policy_kind: project_context_only
+    pack_allowed: review_input_only
+    action_basis_allowed: false
+    warning_code: feedback_not_truth
+  forbidden_truth_mutation_fields_absent: true
+  reviewed_note_mutation_allowed: false
+  source_reliability_mutation_allowed: false
 ```
 
 ## 2. Processing Levels
@@ -144,6 +229,240 @@ DEV_CONTEXT support or cold references
 ```
 
 It still does not create truth.
+
+#### Medium Provisional Identity
+
+Every medium candidate distillation must carry an explicit provisional identity.
+
+Required markers:
+
+```yaml
+record_kind: candidate_distillation
+provisional: true
+knowledge_status: candidate
+processing_tier: medium
+retrieval_policy:
+  policy_kind: orientation_only
+  pack_allowed: activation_only
+  action_basis_allowed: false
+  warning_code: candidate_not_action_basis
+promotion_gate: v0_2_13_required
+action_basis_allowed: false
+truth_mutation_allowed: false
+```
+
+This is a retrieval guard, not paperwork.
+
+Use enum-like fields instead of free-text warnings. A future retrieval layer
+must be able to filter these records mechanically.
+
+When an agent later sees a medium candidate in search results or a context
+briefing, it must treat the file as:
+
+```text
+useful for orientation
+useful for candidate ideas
+useful for project discussion
+not a rule
+not a reviewed pattern
+not action basis
+not evidence support by itself
+```
+
+Medium candidate files may include:
+
+```text
+candidate_points
+open_questions
+routing_hint
+possible_project_refs
+point_anchor_refs
+```
+
+Medium candidate files must not include project-level adoption conclusions:
+
+```text
+architecture decision
+action basis
+formal pattern
+borrow_scope / non_borrow_scope as project conclusion
+```
+
+If project-specific borrowing is needed, put it in Project Overlay instead.
+
+### Project Overlay Gate
+
+Project Overlay is not a normal tag.
+
+It is a project-scoped sidecar that records:
+
+```text
+project usable range / project_borrow_scope
+project forbidden range / project_non_borrow_scope
+reopen condition / project_reopen_trigger
+possible target layer / target_hint
+```
+
+Storage rule:
+
+```text
+write confirmed overlays under outputs/review/project_overlays/<project_id>/ or
+another explicit project overlay / lens folder.
+do not rewrite raw source metadata to express project fit.
+```
+
+Default automation rule:
+
+```text
+source/project semantic match may create a suggested overlay only in query-run
+trace, agent trace, or a temporary suggestion inbox.
+suggested overlay does not enter the long-term vault and does not participate in
+default retrieval.
+confirmed Project Overlay requires user confirmation or an explicitly active
+project-intake task.
+```
+
+For ordinary source intake, do this:
+
+```text
+source card
+ordinary tags/topics
+candidate distillation if useful
+suggested_project_overlay: yes/no
+```
+
+Only after confirmation, do this:
+
+```text
+write Project Overlay Card
+set project_id
+write project_borrow_scope / project_non_borrow_scope / project_reopen_trigger / target_hint
+```
+
+Suggested overlay trace markers:
+
+```yaml
+record_kind: query_run_trace | overlay_suggestion
+knowledge_status: candidate
+overlay_state: suggested
+overlay_scope: project_sidecar_only
+retrieval_policy:
+  policy_kind: project_context_only
+  pack_allowed: false
+  action_basis_allowed: false
+  warning_code: overlay_unconfirmed
+persistent_overlay_allowed: false
+default_retrieval_allowed: false
+action_basis_allowed: false
+truth_mutation_allowed: false
+```
+
+Confirmed Project Overlay markers:
+
+```yaml
+record_kind: project_overlay
+knowledge_status: candidate
+overlay_state: confirmed
+overlay_scope: project_sidecar_only
+overlay_storage: confirmed_persistent_project_bucket
+retrieval_scope: active_project_only
+default_retrieval: false
+retrieval_policy:
+  policy_kind: project_context_only
+  default_scope: project_only
+  pack_allowed: activation_only
+  action_basis_allowed: false
+  warning_code: overlay_not_authority
+promotion_gate: v0_2_13_required
+action_basis_allowed: false
+truth_mutation_allowed: false
+```
+
+Archived Project Overlay markers:
+
+```yaml
+record_kind: project_overlay
+knowledge_status: candidate
+overlay_state: archived
+overlay_scope: project_sidecar_only
+retrieval_scope: archived_excluded
+default_retrieval: false
+retrieval_policy:
+  policy_kind: project_context_only
+  pack_allowed: false
+  action_basis_allowed: false
+  warning_code: archived_overlay_excluded
+action_basis_allowed: false
+truth_mutation_allowed: false
+```
+
+`project_non_borrow_scope` is the first field to read when using an overlay. It
+is the project-level warning lane. It is not yet formal negative knowledge, but
+it should stop agents from borrowing a source in the known-bad direction.
+
+Hard rules for `project_non_borrow_scope`:
+
+```text
+use project-local language, not universal truth language.
+Do not write a universal ban.
+include why this project should avoid the borrowing direction.
+include a reopen trigger for when the boundary should be reconsidered.
+```
+
+Good shape:
+
+```text
+For project VAKS, do not currently borrow X as Y because Z.
+Reopen if the project goal changes to A, or if a later heavy review supports B.
+```
+
+Bad shape:
+
+```text
+X is wrong.
+Never use X.
+```
+
+Confirmed overlays are project-mode context. Non-project queries should not read
+them by default. Archived overlays do not participate in default retrieval.
+
+### Retrieval Bucket Policy
+
+Do not retrieve raw, candidate, overlay, and reviewed records from one mixed pool
+and let relevance ranking imply authority.
+
+Use bucketed retrieval first, then merge relevance signals inside the allowed
+bucket:
+
+```text
+action / review mode:
+  default: reviewed records only
+  optional: raw anchors for evidence checks
+  candidate / overlay: review input only, not final support
+
+orientation mode:
+  reviewed + candidate + confirmed overlay
+  output must mark candidate/provisional material explicitly
+
+source inspection mode:
+  raw + candidate
+  goal is source lookup, comparison, and distillation
+
+project exploration mode:
+  reviewed + candidate + confirmed overlay for the active project only
+  any should / must / adopt / reject language triggers v0.2.13
+```
+
+Hybrid retrieval, lexical search, vector search, and RRF may combine relevance
+signals inside an allowed bucket. They must not merge authority levels.
+
+```text
+RRF can merge relevance signals inside reviewed.
+RRF can merge relevance signals inside candidate.
+RRF can merge relevance signals inside active-project overlay.
+RRF cannot merge across authority buckets.
+RRF must not merge raw / candidate / reviewed / overlay into one authority-like list.
+```
 
 ### Heavy Processing
 
@@ -522,6 +841,140 @@ its value is only historical
 it has been superseded
 ```
 
+## 5.1 Feedback Cache For Negative Use
+
+When a candidate, overlay, or reviewed item fails in real project use, do not
+silently edit truth-layer files.
+
+Feedback Cache is append-only.
+
+First write a feedback event:
+
+```yaml
+event_kind:
+target_ref:
+project_ref:
+observed_in_context:
+event_time:
+review_pressure_effect:
+retrieval_policy:
+  policy_kind: project_context_only
+  pack_allowed: review_input_only
+  action_basis_allowed: false
+  warning_code: feedback_not_truth
+forbidden_truth_mutation_fields_absent: true
+reviewed_note_mutation_allowed: false
+source_reliability_mutation_allowed: false
+```
+
+This cache can warn the current project immediately, but it does not mutate
+reviewed knowledge.
+
+Allowed event kinds:
+
+| event_kind | Immediate effect | Truth effect |
+|---|---|---|
+| `useful_orientation` | locally improve activation / routing | none |
+| `misleading_orientation` | locally reduce activation and add `review_due` | none |
+| `scope_mismatch` | add scope hint / project boundary pressure | none |
+| `anchor_broken_or_source_changed` | set `blocked` or `review_due` until anchor/source is checked | none |
+
+Scope rule:
+
+```text
+Every feedback event must bind to project_ref or observed_in_context.
+Do not create global negative knowledge from a local feedback event.
+```
+
+Allowed immediate updates:
+
+```text
+retrieval heuristics for the same project/context/task family
+review_pressure on a target or overlay
+temporary project warning
+```
+
+Forbidden immediate updates:
+
+```text
+source card rewrite
+candidate note rewrite
+reviewed note rewrite
+truth confidence delta
+universal ban
+automatic superseding decision
+```
+
+Escalate to heavy review only when:
+
+```text
+the same target receives repeated negative feedback in the same scoped context
+an action-facing use was misled
+an anchor is broken or source changed for a record needed in review/action
+the feedback would change a project boundary, decision, or reviewed relation
+```
+
+After review, it may update:
+
+```text
+project_non_borrow_scope
+avoid note
+negative knowledge
+decision supersede record
+reviewed relation scope
+```
+
+## 5.2 Intake Control Failure Matrix
+
+Use this matrix to pressure-test Source Intake and Promotion. These are expected
+agent failure modes, not rare edge cases.
+
+| Failure case | Bad result | Minimal guardrail |
+|---|---|---|
+| Medium candidate is written like a rule and quoted in default answers. | Candidate is treated as rule. | Use `knowledge_status` + `retrieval_policy` filtering; action mode excludes candidates. |
+| Semantic match directly creates persistent Project Overlay. | Project pollution and zombie overlays. | Suggested overlay stays in trace/inbox only; confirmed overlay is the only persistent overlay. |
+| `project_non_borrow_scope` is read as a universal ban. | One project experience pollutes every project. | Field name keeps project scope; require `project_reopen_trigger`; default candidate-only. |
+| Candidate summary outranks raw anchor. | Polished summary replaces original evidence. | Bucket raw / candidate / reviewed separately; candidate is orientation, not evidence. |
+| One successful use makes a source seem "more true". | Feedback mutates truth. | Feedback is append-only; it can affect activation and review pressure only. |
+| Source page, repository, or video version changes. | Old anchor pretends to still point to current source. | Require `snapshot_ref_or_source_date` and selector-style anchors; broken anchors set `blocked` or `review_due`. |
+| Heavy review is open but not passed, yet agent cites it. | Unresolved gaps become conclusions. | `heavy_review_open` is excluded from default answer pools until review passes. |
+| Archived overlay remains in retrieval. | Historical sidecar keeps misleading current work. | Archived overlays are excluded from default retrieval; project closeout drains active overlays. |
+| Confirmed overlay is read outside the active project. | One project's sidecar contaminates another project. | Require `retrieval_scope: active_project_only`; non-active-project retrieval excludes it. |
+| Project overlay is written like an ADR or decision. | Candidate project guidance becomes adoption. | Forbid decision outcome, review verdict, action basis, and universal ban in overlay records. |
+
+### Action-Facing Anchor Rule
+
+For promotion, decision, strong reviewed relation, risk-sensitive answer, or
+action basis, evidence anchors must return to raw source material or a stable
+representation.
+
+Allowed anchors:
+
+```text
+raw snapshot path
+stable source URL plus captured date
+commit SHA / branch / file path / line range
+page / section / fragment selector
+quote selector with enough surrounding context
+timestamp / segment id for transcript or video
+hash or stored artifact path when available
+```
+
+Forbidden as final support anchors:
+
+```text
+candidate distillation
+project overlay
+briefing summary
+retrieval score
+graph relation
+LLM evaluator output
+feedback event
+```
+
+These forbidden items may route review or orientation, but they cannot be the
+final evidence anchor for action-facing support.
+
 ## 6. Non-negotiable Boundaries
 
 ```text
@@ -541,6 +994,15 @@ Graph retrieval strata can organize context-pack preparation: low-level source/t
 Temporal applicability is checked when a point is promoted, used in a decision/action basis, or appears stale/superseded/out-of-scope; ordinary capture can leave validity windows blank rather than inventing dates.
 Confidence caps are checked when a candidate is promoted or used for action: abstract/snippet/URL-only material cannot become high-confidence support without a direct source span or full-text anchor.
 Intent confirmation is checked only before significant action, high-impact decision, implementation, deployment, or hard-to-rollback work.
+Medium candidates are provisional by default: they require machine-filterable status and retrieval-policy markers and cannot be used as action basis without promotion.
+Project overlays can be suggested automatically, but confirmed project mounting requires user confirmation or an explicitly active project-intake task.
+Confirmed overlays are active-project-only by default; archived overlays are excluded from default retrieval.
+Negative feedback creates review pressure first; it does not directly mutate reviewed truth.
+Processing tier is not authority: `light`, `medium`, and `heavy` describe effort, while `knowledge_status` describes boundary status.
+Lineage is traceability, not authority.
+Feedback is scoped and append-only: it can affect activation and review pressure, but not truth confidence or reviewed notes without review.
+Action-facing support must anchor to raw source material or a stable representation, not to distillation, overlay, retrieval score, evaluator output, or feedback.
+Retrieval must filter by authority bucket first and fuse relevance only inside the allowed bucket.
 ```
 
 ## 7. First Implementation

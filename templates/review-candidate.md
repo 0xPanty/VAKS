@@ -1,6 +1,16 @@
 ---
 record_type: candidate-point
 status: pending
+knowledge_status: candidate
+processing_tier: medium
+retrieval_policy:
+  policy_kind: orientation_only
+  pack_allowed: review_input_only
+  action_basis_allowed: false
+  warning_code: candidate_not_action_basis
+promotion_gate: v0_2_13_required
+action_basis_allowed: false
+truth_mutation_allowed: false
 created:
 updated:
 point_id:

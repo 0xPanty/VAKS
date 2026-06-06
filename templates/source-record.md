@@ -17,6 +17,18 @@ source_status: unknown
 raw_location:
 processing_mode: inbox
 processing_level: light
+processing_tier: light
+knowledge_status: raw
+overlay_state: none
+review_pressure: none
+retrieval_policy:
+  policy_kind: source_identity_only
+  pack_allowed: drilldown_required
+  action_basis_allowed: false
+  warning_code: raw_is_provenance_only
+promotion_gate: none
+action_basis_allowed: false
+truth_mutation_allowed: false
 review_priority: normal
 review_owner: Codex
 formalization_status: raw-only
@@ -45,6 +57,27 @@ tags:
 - 版本 / commit / DOI：
 - source_status: active / legacy / deprecated / unknown
 - 采集方式：
+
+## Intake Boundary
+
+```yaml
+processing_tier: light | medium | heavy
+knowledge_status: raw
+overlay_state: none
+review_pressure: none | review_due | blocked
+retrieval_policy:
+  policy_kind: source_identity_only
+  pack_allowed: drilldown_required
+  action_basis_allowed: false
+  warning_code: raw_is_provenance_only
+promotion_gate: none
+action_basis_allowed: false
+truth_mutation_allowed: false
+```
+
+Source records provide provenance and findability. They must not carry
+adopt/reject verdicts, truth scores, project borrowing conclusions, or action
+basis.
 
 ## Medium / Heavy Optional Provenance
 

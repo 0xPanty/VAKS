@@ -1,108 +1,70 @@
 ---
-record_type: feedback-event
-status: pending
-created:
-updated:
-feedback_id:
-created_by:
-feedback_source: explicit-user | conversation-derived | system-eval | action-result | decision-outcome
-query_id:
-session_id:
-turn_id:
-parent_query_id:
-derived_from_turn_id:
-question:
-query_intent: answer | decision | implementation | research | content | memory
-query_scope:
-  project:
-  domain:
-  version:
-  time_range:
-scope_key:
-target_type: point | relation | cluster | claim | pattern | decision | context-pack | answer | route | keyword | channel
-target_id:
-feedback_type: useful | irrelevant | misleading | wrong_scope | stale | missing | contradicted | incomplete | too_weak | too_broad
-event_type: explicit_correction | missing_evidence | scope_mismatch | answer_helpful | contradiction_missed | action_outcome | decision_outcome
-signal_type: explicit_positive | same_line_followup | narrower_followup | correction | wrong_scope | missing | topic_shift | none
-polarity: positive | negative | neutral
-signal_strength: -2 | -1 | 0 | 1 | 2
-signal_confidence:
-severity: low | medium | high
-reason:
-effect:
-  activation_delta:
-  usefulness_delta:
-  scope_fit_delta:
-  relation_activation_delta:
-affects:
-  usefulness:
-  scope_fit:
-  activation_ranking:
-  review_due:
-  future_recommendation:
-  risk_calibration:
-  option_framing:
-never_affects_directly:
-  truth_confidence
-  verification_status
-  source_reliability
-decision_outcome:
-  decision_ref:
-  action_basis_ref:
-  recommendation:
-  confidence_at_decision:
-  user_choice:
-  outcome_precondition:
-    - recommendation_recorded
-    - user_choice_or_explicit_override_recorded
-  outcome: succeeded | failed | mixed | unresolved
-  outcome_note:
-requires_review: true
-review_status: pending
-reviewed_by:
-reviewed_at:
-tags:
-  - feedback-event
+record_kind: feedback_event
+status: logged
+knowledge_status: candidate
+processing_tier: light
+lifecycle_state: feedback_cached
+retrieval_policy:
+  policy_kind: project_context_only
+  pack_allowed: review_input_only
+  action_basis_allowed: false
+  warning_code: feedback_not_truth
+promotion_gate: v0_2_13_required
+action_basis_allowed: false
+truth_mutation_allowed: false
+forbidden_truth_mutation_fields_absent: true
+reviewed_note_mutation_allowed: false
+source_reliability_mutation_allowed: false
+event_kind:
+target_ref:
+project_ref:
+observed_in_context:
+event_time:
+review_pressure_effect: none
+query_run_ref:
+note:
 ---
 
 # Feedback Event
 
-## What Happened
+## Boundary
 
+This event is append-only.
 
-## Why It Matters
+It can affect activation, routing, scope hints, and review pressure in the
+recorded context. It cannot directly change truth confidence, reviewed notes,
+decisions, source cards, or candidate notes.
 
-
-## Proposed Effect
-
-
-## Relation Activation Boundary
-
-```text
-Feedback can change activation of a relation path.
-It cannot directly change reviewed relation strength.
-```
-
-## Decision Outcome Calibration
-
-- Decision / action basis:
-- Recommendation:
-- Confidence at decision:
-- User choice:
-- Outcome precondition:
-- Outcome:
-- Outcome note:
-- Future recommendation / risk / scope-fit implication:
-
-## Safety Boundary
+## Allowed Event Kinds
 
 ```text
-Positive feedback is weak.
-Negative feedback creates review pressure.
-Explicit correction creates review_due.
-Decision outcome improves future recommendations, not truth.
+useful_orientation
+misleading_orientation
+scope_mismatch
+anchor_broken_or_source_changed
 ```
 
-This event must not directly change truth confidence, verification_status, or source reliability.
+## Scope
 
-## Review Notes
+```text
+project_ref:
+observed_in_context:
+target_ref:
+```
+
+Do not generalize this event outside its recorded project/context without later
+review.
+
+## Immediate Effect
+
+```text
+retrieval_heuristic_change:
+review_pressure_effect:
+temporary_project_warning:
+```
+
+## Review Escalation
+
+Escalate only if repeated scoped negative feedback appears, action-facing use
+was misled, an anchor/source needed for action is broken, or a project boundary /
+decision / reviewed relation may need to change.

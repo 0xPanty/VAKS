@@ -25,6 +25,17 @@ activated_relations: []
 activated_routes: []
 included_sources: []
 excluded_candidates: []
+retrieval_mode:
+authority_bucket:
+rrf_scope: same_authority_bucket_only
+overlay_suggestions:
+  - target_ref:
+    project_ref:
+    overlay_state: suggested
+    persistent_overlay_allowed: false
+    default_retrieval_allowed: false
+    action_basis_allowed: false
+    warning_code: overlay_unconfirmed
 answer_path: []
 warnings: []
 gaps: []

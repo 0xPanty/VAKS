@@ -18,6 +18,18 @@ captured_by: Codex
 raw_location: raw/videos/
 processing_mode: inbox
 processing_level: light
+processing_tier: light
+knowledge_status: raw
+overlay_state: none
+review_pressure: none
+retrieval_policy:
+  policy_kind: source_identity_only
+  pack_allowed: drilldown_required
+  action_basis_allowed: false
+  warning_code: raw_is_provenance_only
+promotion_gate: none
+action_basis_allowed: false
+truth_mutation_allowed: false
 review_priority: normal
 review_owner: Codex
 formalization_status: raw-only
@@ -53,6 +65,27 @@ tags:
 - 视频时长：
 - 收录时间：
 - 访问边界：public / authenticated / private / unknown
+
+## Intake Boundary
+
+```yaml
+processing_tier: light | medium | heavy
+knowledge_status: raw
+overlay_state: none
+review_pressure: none | review_due | blocked
+retrieval_policy:
+  policy_kind: source_identity_only
+  pack_allowed: drilldown_required
+  action_basis_allowed: false
+  warning_code: raw_is_provenance_only
+promotion_gate: none
+action_basis_allowed: false
+truth_mutation_allowed: false
+```
+
+Video source records provide provenance, transcript location, and findability.
+They do not create reviewed evidence, project borrowing conclusions, or action
+basis.
 
 ## 获取与转写
 
