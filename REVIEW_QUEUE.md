@@ -2,12 +2,13 @@
 type: implementation-note
 status: active
 created: 2026-05-27
-updated: 2026-05-31
+updated: 2026-06-08
 project: verified-action-knowledge-system
 related_decisions:
   - "[[2026-05-27-traceability-first-graduated-verification]]"
 related_patterns:
   - "[[review-gated-compile-queue]]"
+  - "[[self-contained-review-candidate-record]]"
   - "[[accumulated-source-cross-validation]]"
   - "[[claim-level-provenance-source-ranges]]"
 sources:
@@ -62,6 +63,7 @@ The core alpha mechanism is:
 ```text
 provenance-first
 -> candidate point
+-> self-contained review candidate record, when review or promotion is intended
 -> knowledge calibration / point collision signal
 -> reviewed cluster
 -> promoted claim / pattern / anti-pattern / decision
@@ -87,6 +89,7 @@ The review queue solves the middle:
 ```text
 capture stays light
 candidate points stay inspectable
+promotion candidates become self-contained review records
 similar points can cross-check each other
 promotion stays reviewed
 ```
@@ -298,6 +301,54 @@ source provenance:
 
 evidence support:
   whether this source span supports this candidate point, reviewed node, or reviewed relation
+```
+
+### 3.2.1 Self-Contained Review Candidate Record
+
+A self-contained review candidate record is required only when a candidate is
+prepared for promotion, formal writeback, action-basis use, or a reviewer asks
+for a fixed review object.
+
+It is not required for ordinary light capture.
+
+```yaml
+record_type: review-candidate
+candidate_id:
+source_candidate_points: []
+promotion_target: claim | pattern | anti-pattern | decision | reviewed_relation | none
+proposed_title:
+proposed_path:
+review_object_state: draft | fixed_for_review | revised_after_review | archived
+candidate_body_location:
+body_hash:
+body_hash_algorithm: sha256_utf8_lf_trim_body_without_heading
+evidence_packet_ref:
+source_anchor_refs: []
+scope_limits: []
+risk_flags: []
+known_counterevidence: []
+missing_evidence: []
+approval_integrity:
+  approved_by:
+  approval_source:
+  approved_at:
+  llm_assisted: true | false
+  checked_specific_evidence: true | false
+  checked_body_hash:
+archive_reason:
+```
+
+Rules:
+
+```text
+The record is a review object, not reviewed knowledge.
+candidate_body_location points to the exact Markdown section or file proposed for writeback.
+Do not embed long Markdown bodies in frontmatter/YAML metadata.
+Canonical body hash rule: hash the content pointed to by `candidate_body_location`, excluding the heading, normalizing CRLF to LF, trimming leading/trailing whitespace, encoded as UTF-8 SHA256.
+If the candidate body changes after review, body_hash changes and the candidate returns to review.
+Approval may approve the fixed candidate body; it must not silently regenerate a different body.
+source_anchor_refs must point to independent source anchors, not only to source summaries or the candidate itself.
+Evidence Packet remains the support check; the self-contained record only fixes the object being reviewed.
 ```
 
 ### 3.3 Calibration / Collision Signal
@@ -558,6 +609,22 @@ reviewed evidence + rationale -> possible support
 ### Step 7: Promote
 
 Promotion is allowed only when a cluster is reviewed.
+
+For any claim, pattern, anti-pattern, decision, reviewed relation, or action-basis
+promotion, the target must first be represented as a self-contained review
+candidate record:
+
+```text
+candidate point / cluster
+-> fixed candidate body + body_hash
+-> Evidence Packet + Evidence Sufficiency Gate
+-> reviewer approval of that exact body
+-> writeback / archive receipt
+```
+
+This gate protects review/writeback alignment. It does not create truth,
+confidence, reviewed relations, automatic promotion, or action readiness by
+itself.
 
 Promotion examples:
 

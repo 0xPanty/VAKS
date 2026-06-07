@@ -1,11 +1,11 @@
 ---
 type: pattern
-status: pattern-candidate
+status: active
 created: 2026-05-27
-updated: 2026-05-27
+updated: 2026-06-08
 tags:
   - pattern/review
-  - pattern/candidate
+  - pattern/adopted
   - verified-knowledge-system
 sources:
   - "[[2026-05-26-llm-wiki-compiler-source]]"
@@ -17,7 +17,7 @@ last_verified: 2026-05-27
 next_review: 2026-06-03
 source_libraries:
   - atomicstrata/llm-wiki-compiler
-adoption_status: adopt-now
+adoption_status: adopted
 evidence_count: 2
 negative_evidence:
   - "[[direct-compile-to-truth-layer-without-review]]"
@@ -76,7 +76,9 @@ proposed_path:
 proposed_by:
 sources:
 source_states: []
+candidate_body_location:
 body_hash:
+body_hash_algorithm:
 schema_violations: []
 provenance_violations: []
 relation_violations: []
@@ -105,7 +107,32 @@ candidate -> copy body to wiki/... -> update index -> archive candidate
 
 ## 项目融合建议
 
-立即采用。它是我们从“人工整理”走向“可运行 compiler”的第一块。
+采用为 promotion 前的对象完整性门槛。
+
+它不是新架构模块，也不是新的 truth layer。它补的是候选进入评审前的
+artifact discipline：评审时看的候选正文、证据包、边界和审批事实必须固定在
+同一个记录里。
+
+## 落地位置
+
+```text
+source / summary
+-> candidate point
+-> self-contained review candidate record
+-> Evidence Packet / Evidence Sufficiency Gate
+-> reviewed claim / pattern / anti-pattern / decision
+```
+
+普通 light capture 不需要这个门槛。只有 promotion、formal writeback、
+strong reviewed relation、action basis，或 reviewer 明确要求时才需要。
+
+## 不替换什么
+
+- 不替换 Evidence Packet。
+- 不替换 Evidence Sufficiency Gate。
+- 不替换 `REVIEW_QUEUE.md` 的 promotion 规则。
+- 不改变 Source node 的 provenance / support 分离。
+- 不允许自动晋升。
 
 ## 验证指标
 
@@ -113,3 +140,6 @@ candidate -> copy body to wiki/... -> update index -> archive candidate
 - 候选有 sources 和 violations。
 - approve 不重新调用 LLM。
 - reject 不删除审计记录，只归档。
+- body 改动后 body_hash 改变，并触发重新评审。
+- 候选正文放在 Markdown 正文段落或外部引用里，不塞进 frontmatter/YAML。
+- body_hash 采用固定规则：hash `candidate_body_location` 指向的正文内容，不含标题，CRLF 统一为 LF，首尾空白 trim，UTF-8 SHA256。

@@ -1,5 +1,5 @@
 ---
-record_type: candidate-point
+record_type: review-candidate
 status: pending
 knowledge_status: candidate
 processing_tier: medium
@@ -14,6 +14,8 @@ truth_mutation_allowed: false
 created:
 updated:
 point_id:
+candidate_id:
+source_candidate_points: []
 point_text:
 normalized_point:
 point_type: claim | interpretation | hypothesis | pattern | risk | preference | decision | open_question | implementation_note
@@ -34,14 +36,74 @@ uncertainty:
 possible_related_points: []
 review_status: pending
 promotion_target:
+proposed_title:
+proposed_path:
+review_object_state: draft | fixed_for_review | revised_after_review | archived
+candidate_body_location: "# Candidate Body"
+body_hash:
+body_hash_algorithm: sha256_utf8_lf_trim_body_without_heading
+evidence_packet_ref:
+source_anchor_refs: []
+scope_limits: []
+risk_flags: []
+known_counterevidence: []
+missing_evidence: []
+approval_integrity:
+  approved_by:
+  approval_source:
+  approved_at:
+  llm_assisted: true | false
+  checked_specific_evidence: true | false
+  checked_body_hash:
+archive_reason:
 tags:
   - review-candidate
 ---
 
-# Candidate Point
+# Review Candidate
 
 ## Point
 
+
+## Self-Contained Review Object
+
+Use this block when the candidate is being prepared for promotion, formal
+writeback, strong reviewed relation, action basis, or explicit reviewer audit.
+Leave it blank for ordinary light capture.
+
+Canonical self-contained review object fields live in top-level frontmatter.
+Do not create a second nested schema block here.
+
+Required when `review_object_state` is `fixed_for_review` or later:
+
+- `candidate_id`
+- `promotion_target`
+- `proposed_title`
+- `proposed_path`
+- `candidate_body_location`
+- `body_hash`
+- `body_hash_algorithm`
+- `evidence_packet_ref`
+- `source_anchor_refs`
+- `scope_limits`
+- `risk_flags`
+
+Rules:
+
+```text
+The self-contained review object is not reviewed knowledge.
+It fixes the body being reviewed so approval and writeback refer to the same artifact.
+Keep the candidate body in a Markdown section or referenced file, not inside frontmatter/YAML.
+If the candidate body changes after review, body_hash changes and review must run again.
+Canonical body hash rule: hash the content pointed to by `candidate_body_location`, excluding the heading, normalizing CRLF to LF, trimming leading/trailing whitespace, encoded as UTF-8 SHA256.
+Do not use this block as a substitute for Evidence Packet support.
+Do not count a source summary, this candidate, or a prior chat as the independent support anchor.
+```
+
+## Candidate Body
+
+Use this section only when `review_object_state` is `fixed_for_review` or later.
+This is the exact body proposed for writeback.
 
 ## Review Queue Routing
 
