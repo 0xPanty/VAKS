@@ -264,6 +264,20 @@ Open Questions
 Stop Conditions
 ```
 
+For important or agent-facing packs, also preserve the context envelope:
+
+```text
+primary
+neighbors
+warnings
+gaps
+suggested_actions
+```
+
+Budget trimming may shorten context, but it must not hide critical warnings,
+gaps, missing evidence, source-window loss, or action risk. If key support is
+trimmed out, the pack cannot remain action-ready.
+
 Template:
 
 ```text

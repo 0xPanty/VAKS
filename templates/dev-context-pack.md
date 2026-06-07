@@ -12,6 +12,18 @@ mode: development
 base_memory_policy: "Use base activation tiers as input signals, but this pack is task-specific."
 activation_policy: "Core requires likely-next-use for this task; cold references are opened only for evidence/history/conflict."
 verification_status: draft
+context_pack_envelope:
+  primary: []
+  neighbors: []
+  warnings: []
+  gaps: []
+  suggested_actions: []
+budget_guardrails:
+  budget_trimmed: false
+  trimmed_key_support: false
+  hidden_warnings_or_gaps: false
+  source_window_loss: false
+  action_ready_after_trim: false
 ---
 
 # Dev Context Pack
@@ -21,6 +33,10 @@ verification_status: draft
 This is a temporary development-mode context pack.
 
 Use Core first. Expand to Support when needed. Check Risk before decisions or writes. Open Cold References only for evidence, history, or contradiction checks.
+
+Envelope and budget fields help agents see what was included, omitted, warned,
+or trimmed. They cannot create truth, evidence support, reviewed relations, or
+action readiness by themselves.
 
 Activation Tier rule:
 

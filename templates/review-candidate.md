@@ -55,6 +55,10 @@ approval_integrity:
   llm_assisted: true | false
   checked_specific_evidence: true | false
   checked_body_hash:
+candidate_lint:
+  schema_violations: []
+  provenance_violations: []
+  lint_status: unchecked
 archive_reason:
 tags:
   - review-candidate
@@ -99,6 +103,12 @@ Canonical body hash rule: hash the content pointed to by `candidate_body_locatio
 Do not use this block as a substitute for Evidence Packet support.
 Do not count a source summary, this candidate, or a prior chat as the independent support anchor.
 ```
+
+## Candidate Lint
+
+Use this block to preserve schema or provenance problems found before approval.
+These fields are review input only; they do not reject, approve, promote, change
+truth confidence, or create reviewed relations by themselves.
 
 ## Candidate Body
 
@@ -206,6 +216,8 @@ Rule:
 ```text
 No source span / full anchor means no high confidence.
 URL-only and summary-only are provenance, not support.
+Source range / line range / quote selector is a provenance handle; it becomes
+support only after evidence_support checks the specific target.
 ```
 
 ## Evidence Support Check
@@ -230,6 +242,8 @@ Rules:
 
 ```text
 URL-only source_refs are provenance, not support.
+Source ranges and quote selectors are handles for returning to the source, not
+support by themselves.
 background_context cannot count as support.
 inferential_support needs reviewer_note before it can count as promotion support.
 counterexample should move into challenge_refs or risk_refs.

@@ -40,6 +40,8 @@ decision_outcome:
   recommendation:
   confidence_at_decision:
   user_choice:
+  explicit_user_override: false
+  rationale:
   outcome: succeeded | failed | mixed | unresolved
   outcome_note:
 attack_assessment:
@@ -142,10 +144,21 @@ rollback_path:
 - 当时推荐：
 - 当时 confidence：
 - 用户选择：
+- 明确 user override：
+- 当时理由：
 - 后来结果：succeeded / failed / mixed / unresolved
 - 结果说明：
 - 对 future recommendation / risk_calibration / scope_fit / option_framing 的影响：
 - 不直接影响 truth_confidence / verification_status / source_reliability：
+
+Outcome precondition:
+
+```text
+Do not record a final outcome unless the original recommendation and either
+user_choice or explicit_user_override are present.
+Outcome calibration must not change truth_confidence, verification_status, or
+source_reliability.
+```
 
 ## 量化判断
 

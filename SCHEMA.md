@@ -743,6 +743,7 @@ Rules:
 - `grounds` records the evidence basis; `warrant` records why the evidence supports or weakens the point.
 - Source anchors live on `evidence_items`; do not maintain a second top-level `source_anchors` list that can drift from the evidence item.
 - `evidence_support.evidence_role` is the canonical support/challenge role; avoid a second `relation_to_point` field unless it is a freeform reviewer note.
+- Source ranges, line ranges, quote selectors, and source spans are provenance handles. They only become support when `evidence_support` checks that the span bears on the specific candidate point, reviewed node, reviewed relation, decision, or action basis.
 - `challenge_kind` explains what kind of challenge exists; it does not automatically reject the point.
 - `minimal_revision_needed` is a review recommendation, not an automatic edit.
 - `evidence_granularity` caps how far a point can be used before stronger evidence is gathered.
@@ -1937,6 +1938,7 @@ evidence_sufficiency:
 规则：
 
 - context pack 必须 coverage-aware，但不默认展开完整审计表。
+- Budget trimming may reduce context size, but it must not hide critical warnings, gaps, missing evidence, source-window loss, or action risk. If key support is trimmed out, the pack cannot remain action-ready.
 - `association_neighborhood` 是 query/context-pack 的激活草稿，不是 proof、coverage 或 truth layer。
 - association neighborhood 可以帮助找 support / challenge / risk / decision / scope，但每个关键判断仍要走 coverage_map / evidence_support / evidence_sufficiency。
 - graph traversal、PPR、similarity 或 association score 不能计入 `support_refs`，除非另有 reviewed evidence item 支持具体 point 或 relation。

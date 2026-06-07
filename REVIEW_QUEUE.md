@@ -351,6 +351,56 @@ source_anchor_refs must point to independent source anchors, not only to source 
 Evidence Packet remains the support check; the self-contained record only fixes the object being reviewed.
 ```
 
+Candidate lint before approval:
+
+```yaml
+candidate_lint:
+  schema_violations: []
+  provenance_violations: []
+  lint_status: unchecked | pass | warnings | blocked
+```
+
+Candidate lint records visible problems before approval. It is review input, not
+a rejection verdict, truth change, reviewed relation, or automatic promotion
+decision.
+
+### 3.2.2 Review-Gated Compile / Writeback Queue
+
+Any LLM / compile / agent output that proposes a formal `wiki/` node must enter
+the review queue before writeback.
+
+This applies to:
+
+```text
+source -> generated summary / claim / pattern / anti-pattern / decision
+query answer -> proposed reviewed node
+brief / proactive synthesis -> proposed reviewed node
+agent suggestion -> proposed reviewed node
+```
+
+The required path is:
+
+```text
+generated body
+-> review-candidate record
+-> fixed body hash when prepared for review
+-> lint / evidence review
+-> approval of that exact body
+-> formal wiki writeback or archive
+```
+
+Rules:
+
+```text
+Compile/writeback review is an entrance gate, not a truth layer.
+It does not replace Evidence Packet, Evidence Sufficiency Gate, or approval integrity.
+It does not create confidence, reviewed relations, action readiness, or automatic promotion.
+Approval must write the fixed candidate body; it must not silently regenerate a new body.
+Rejected candidates are archived or left auditable; rejection must not delete the source trail.
+Raw source capture and ordinary outputs/qa records do not require this gate until they are proposed for formal wiki writeback.
+Watch, query-save, MCP write, Obsidian sync, or bulk scripts must not bypass this gate for formal reviewed knowledge.
+```
+
 ### 3.3 Calibration / Collision Signal
 
 Calibration / collision signal records how a new candidate point may affect local reviewed knowledge or another candidate point.

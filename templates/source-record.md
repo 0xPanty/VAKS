@@ -13,6 +13,16 @@ updated_at:
 captured_at:
 captured_by:
 version_or_commit:
+source_integrity:
+  source_hash:
+  snapshot_hash:
+  ingest_state: unknown
+adapter_ingest:
+  adapter_name:
+  adapter_version:
+  capture_method:
+  extraction_trace:
+  known_limits: []
 source_status: unknown
 raw_location:
 processing_mode: inbox
@@ -78,6 +88,14 @@ truth_mutation_allowed: false
 Source records provide provenance and findability. They must not carry
 adopt/reject verdicts, truth scores, project borrowing conclusions, or action
 basis.
+
+`source_integrity` is ingest hygiene only. It helps detect new, changed,
+unchanged, or deleted source material, but it does not create evidence support,
+verification status, truth confidence, or action readiness.
+
+`adapter_ingest` is ingest hygiene only. It records how a source was captured or
+converted and what limits are known. It must not create reviewed wiki nodes,
+truth confidence, reviewed relations, verification status, or action readiness.
 
 ## Medium / Heavy Optional Provenance
 

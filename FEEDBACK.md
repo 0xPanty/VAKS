@@ -364,6 +364,8 @@ MVP rule:
 ```text
 Record outcomes first.
 Record the recommendation and user choice, or explicit user override, before recording a final outcome.
+Also record confidence_at_decision, rationale, and outcome_note.
+Do not record a final outcome from outcome text alone.
 Compute Brier / ECE / override rate only after enough comparable decisions exist.
 ```
 

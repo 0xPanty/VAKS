@@ -632,6 +632,35 @@ This does not make capture heavy. Light sources keep the minimal identity fields
 
 Review, promotion, and context-pack usage are not stored as source main fields. They belong to reviewed nodes, promotion records, context packs, or the use ledger.
 
+Source hash / incremental ingest hygiene:
+
+```yaml
+source_integrity:
+  source_hash:
+  snapshot_hash:
+  ingest_state: new | changed | unchanged | deleted | unknown
+```
+
+Source hashes help detect duplicate, changed, unchanged, or deleted source
+material. They are source hygiene only. They do not decide truth, evidence
+support, review verdict, verification status, or action readiness.
+
+Source adapter ingest contract:
+
+```yaml
+adapter_ingest:
+  adapter_name:
+  adapter_version:
+  capture_method:
+  extraction_trace:
+  known_limits: []
+```
+
+Adapter records preserve how a source was captured or converted. They are ingest
+hygiene only. Adapter output may create raw/source records or candidate material,
+but it must not directly create reviewed wiki nodes, truth confidence,
+verification status, reviewed relations, or action readiness.
+
 For a repository:
 
 ```yaml
