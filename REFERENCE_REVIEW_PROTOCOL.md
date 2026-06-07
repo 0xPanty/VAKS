@@ -140,6 +140,15 @@ Do not paste large copyrighted source blocks.
 
 Use anchors and short excerpts only where needed.
 
+Do not treat a reviewed claim note as independent evidence for its own claim.
+Use the claim as a trace handle, then inspect the source record, source summary,
+snapshot, code anchor, excerpt, transcript segment, or other independent anchor.
+
+If the only support is the claim note restating itself, mark the review as a
+`self_support_loop`. If the evidence supports only a narrower conclusion, mark
+it `scope_limited`. If provenance exists but no inspected evidence anchor exists,
+mark it `missing_anchor` or `not_ready`.
+
 ## 4. Required Output Files
 
 For strong repositories, create or update:

@@ -39,6 +39,13 @@ overlay_suggestions:
 answer_path: []
 warnings: []
 gaps: []
+support_boundary:
+  supported_not_truth: true
+  answer_ready_not_action_ready: true
+  claim_refs_are_trace_handles: true
+  independent_anchor_required: true
+  self_support_loop_check:
+  support_result: supported | weak | missing_anchor | self_support_loop | scope_limited | not_ready
 feedback_summary:
   positive_feedback:
   negative_feedback:
@@ -77,6 +84,49 @@ tags:
 
 ## Warnings / Gaps
 
+
+## Support Boundary
+
+Use this section when the query answer, decision, review note, or action-adjacent
+response depends on a claim as support.
+
+```text
+claim_refs are trace handles, not proof.
+supported does not mean truth.
+answer-ready does not mean action-ready.
+test / lint / blind review does not mean reviewer approval.
+```
+
+Record whether support came from an independent evidence/source anchor:
+
+```yaml
+support_checks:
+  - claim_ref:
+    answer_line:
+    independent_anchor:
+      anchor_type: raw_source | source_snapshot | source_summary | reviewed_source_review | code_anchor | transcript_segment | quote_selector | other
+      url_or_path:
+      selector:
+      evidence_granularity: metadata_only | abstract_or_summary | excerpt_or_passage | table_or_code_anchor | full_source_reviewed
+    claim_note_only: false
+    result: supported | weak | missing_anchor | self_support_loop | scope_limited | not_ready
+    reviewer_note:
+```
+
+If the only support is the claim note restating itself, mark:
+
+```text
+self_support_loop
+```
+
+If evidence supports a narrower conclusion than the answer draft says, mark:
+
+```text
+scope_limited
+```
+
+Weak, missing-anchor, self-support, and scope-limited results can still be useful
+for orientation, but they cannot be treated as reviewed truth or action basis.
 
 ## Follow-Up Signal
 

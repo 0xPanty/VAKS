@@ -1005,6 +1005,78 @@ Action-facing support must anchor to raw source material or a stable representat
 Retrieval must filter by authority bucket first and fuse relevance only inside the allowed bucket.
 ```
 
+### Answer Preparation / Independent Support Boundary
+
+When a query, review, or answer draft uses a claim as support, do not let the
+claim note prove itself.
+
+Use this lightweight chain for important answer preparation:
+
+```text
+route by authority bucket
+-> assemble a context / evidence envelope
+-> check whether key answer claims have independent evidence/source anchors
+-> draft only within supported or explicitly qualified scope
+```
+
+This is a lazy gate for answer-bearing, review-bearing, or action-adjacent use.
+It is not required for ordinary source capture or casual lookup.
+
+Rules:
+
+```text
+supported != truth
+answer-ready != action-ready
+claim_refs = trace handles, not proof
+test / lint / blind review = diagnostic process evidence, not reviewer approval
+claim note cannot self-support
+independent evidence/source anchor is required before a claim can count as support
+missing independent anchor means not_ready, weak, missing_anchor, or scope_limited
+scope overclaim must be blocked or narrowed
+```
+
+Allowed independent anchors include:
+
+```text
+raw source material
+source snapshot
+source summary or architecture review with inspected anchors
+code/file/line selector
+quote / excerpt / section selector
+transcript timestamp or segment
+stable captured artifact with hash or version
+```
+
+Not enough by themselves:
+
+```text
+claim note repeating its own conclusion
+URL-only provenance
+candidate distillation
+project overlay
+briefing summary
+retrieval score
+graph rank
+LLM evaluator output
+test pass
+blind review pass
+```
+
+Useful result states:
+
+```text
+supported: independent anchor supports the target within scope
+weak: support exists but is secondary, partial, or low-granularity
+missing_anchor: provenance exists but no source/evidence anchor was inspected
+self_support_loop: the claim note is supporting itself
+scope_limited: evidence supports a narrower conclusion than the draft says
+not_ready: answer or review should not proceed as supported
+```
+
+Answer drafts, skeletons, smoke checks, or similar helpers may improve human
+drafting discipline, but they do not create truth, reviewed knowledge, action
+basis, or approval.
+
 ## 7. First Implementation
 
 Do not write automation first.

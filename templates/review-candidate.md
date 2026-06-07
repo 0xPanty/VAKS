@@ -155,6 +155,13 @@ evidence_support:
   span_supports_target: supported | partial | unsupported | unclear
   evidence_role: direct_support | inferential_support | background_context | counterexample
   reviewer_note:
+
+independent_anchor_check:
+  anchor_type: raw_source | source_snapshot | source_summary | reviewed_source_review | transcript_segment | code_anchor | quote_selector | other
+  claim_note_only: true | false
+  self_support_loop: true | false
+  result: pass | weak | missing_anchor | self_support_loop | scope_limited | not_ready
+  reviewer_note:
 ```
 
 Rules:
@@ -164,6 +171,9 @@ URL-only source_refs are provenance, not support.
 background_context cannot count as support.
 inferential_support needs reviewer_note before it can count as promotion support.
 counterexample should move into challenge_refs or risk_refs.
+The reviewed or review-ready claim can be a trace handle, but it cannot be the only support for itself.
+Direct support requires an independent evidence/source anchor.
+If support is secondary, partial, missing, circular, or narrower than the candidate says, mark weak / missing_anchor / self_support_loop / scope_limited / not_ready instead of upgrading confidence.
 ```
 
 ## Optional Review Result / Qualification
