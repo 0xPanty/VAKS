@@ -34,8 +34,7 @@ properties:
     displayName: Path
 views:
   - type: table
-    name: "All sources"
-    limit: 100
+    name: All sources
     order:
       - file.name
       - status
@@ -50,9 +49,9 @@ views:
       - last_verified
       - next_review
       - file.path
-  - type: table
-    name: "Unverified"
     limit: 100
+  - type: table
+    name: Unverified
     filters:
       or:
         - verification_status == "unverified"
@@ -68,9 +67,9 @@ views:
       - review_pressure
       - confidence
       - file.path
-  - type: table
-    name: "Review pressure"
     limit: 100
+  - type: table
+    name: Review pressure
     filters:
       or:
         - review_pressure == "review_due"
@@ -81,3 +80,4 @@ views:
       - verification_status
       - source_family
       - file.path
+    limit: 100
