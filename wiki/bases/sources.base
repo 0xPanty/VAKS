@@ -1,0 +1,83 @@
+filters:
+  and:
+    - file.inFolder("raw")
+    - file.ext == "md"
+    - or:
+        - type == "source"
+        - type == "source_record"
+properties:
+  file.name:
+    displayName: File
+  status:
+    displayName: Status
+  source_status:
+    displayName: Source status
+  processing_level:
+    displayName: Processing level
+  processing_tier:
+    displayName: Processing tier
+  knowledge_status:
+    displayName: Knowledge status
+  verification_status:
+    displayName: Verification status
+  review_pressure:
+    displayName: Review pressure
+  source_family:
+    displayName: Source family
+  confidence:
+    displayName: Confidence
+  last_verified:
+    displayName: Last verified
+  next_review:
+    displayName: Next review
+  file.path:
+    displayName: Path
+views:
+  - type: table
+    name: "All sources"
+    limit: 100
+    order:
+      - file.name
+      - status
+      - source_status
+      - processing_level
+      - processing_tier
+      - knowledge_status
+      - verification_status
+      - review_pressure
+      - source_family
+      - confidence
+      - last_verified
+      - next_review
+      - file.path
+  - type: table
+    name: "Unverified"
+    limit: 100
+    filters:
+      or:
+        - verification_status == "unverified"
+        - verification_status == "single-source"
+    order:
+      - file.name
+      - verification_status
+      - status
+      - source_status
+      - processing_level
+      - processing_tier
+      - knowledge_status
+      - review_pressure
+      - confidence
+      - file.path
+  - type: table
+    name: "Review pressure"
+    limit: 100
+    filters:
+      or:
+        - review_pressure == "review_due"
+        - review_pressure == "blocked"
+    order:
+      - file.name
+      - review_pressure
+      - verification_status
+      - source_family
+      - file.path

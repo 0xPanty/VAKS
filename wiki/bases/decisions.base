@@ -1,0 +1,77 @@
+filters:
+  and:
+    - file.inFolder("wiki/decisions")
+    - file.ext == "md"
+    - type == "decision"
+properties:
+  file.name:
+    displayName: Decision
+  status:
+    displayName: Status
+  outcome:
+    displayName: Outcome
+  decision_scope:
+    displayName: Scope
+  verification_status:
+    displayName: Verification status
+  evidence_level:
+    displayName: Evidence level
+  confidence:
+    displayName: Confidence
+  last_verified:
+    displayName: Last verified
+  next_review:
+    displayName: Next review
+  replaces:
+    displayName: Replaces
+  superseded_by:
+    displayName: Superseded by
+  file.path:
+    displayName: Path
+views:
+  - type: table
+    name: "All decisions"
+    limit: 100
+    order:
+      - file.name
+      - status
+      - outcome
+      - decision_scope
+      - verification_status
+      - evidence_level
+      - confidence
+      - last_verified
+      - next_review
+      - replaces
+      - superseded_by
+      - file.path
+  - type: table
+    name: "Review due"
+    limit: 100
+    filters:
+      or:
+        - next_review <= today()
+        - status == "accepted"
+    order:
+      - file.name
+      - status
+      - outcome
+      - next_review
+      - verification_status
+      - confidence
+      - file.path
+  - type: table
+    name: "Supersession"
+    limit: 100
+    filters:
+      or:
+        - replaces
+        - superseded_by
+    order:
+      - file.name
+      - status
+      - outcome
+      - replaces
+      - superseded_by
+      - next_review
+      - file.path
