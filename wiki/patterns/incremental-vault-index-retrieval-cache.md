@@ -11,7 +11,7 @@ related_concepts:
   - "[[SCHEMA]]"
 related_projects:
   - verified-action-knowledge-system
-adoption_status: adapt-later
+adoption_status: watch
 verification_status: single-source
 evidence_level: secondary
 evidence_count: 1

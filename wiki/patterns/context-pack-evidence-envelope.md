@@ -34,7 +34,7 @@ related_concepts:
 related_projects:
   - verified-knowledge-system
   - misa-hermes
-adoption_status: adopt-soon
+adoption_status: adopt
 evidence_count: 3
 negative_evidence: []
 relations:

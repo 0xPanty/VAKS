@@ -10,7 +10,7 @@ related_concepts:
   - "[[ghost-wikilink-whitelist-before-write]]"
 related_projects:
   - verified-knowledge-system
-adoption_status: adopt-candidate
+adoption_status: adopt
 tags:
   - pattern/lifecycle
   - source-removal

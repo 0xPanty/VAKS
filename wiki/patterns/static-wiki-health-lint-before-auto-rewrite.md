@@ -31,7 +31,7 @@ related_concepts:
   - "[[vault-health-check-as-maintenance-contract]]"
 related_projects:
   - verified-knowledge-system
-adoption_status: adopt-soon
+adoption_status: adopt
 evidence_count: 3
 negative_evidence:
   - "[[automatic-agentic-vault-rewrite-before-schema-stability]]"

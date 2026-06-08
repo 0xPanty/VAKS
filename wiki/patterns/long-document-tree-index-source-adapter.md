@@ -11,7 +11,7 @@ related_concepts:
   - "[[source-adapter-ingest-contract]]"
 related_projects:
   - verified-knowledge-system
-adoption_status: adopt-candidate
+adoption_status: adopt
 tags:
   - pattern/source-adapter
   - long-document

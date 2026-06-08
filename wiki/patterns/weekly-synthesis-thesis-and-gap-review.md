@@ -11,7 +11,7 @@ related_concepts:
   - "[[2026-05-27-automated-vault-feedback-loop-review]]"
 related_projects:
   - verified-knowledge-system
-adoption_status: adopt-candidate
+adoption_status: adopt
 tags:
   - pattern/synthesis
   - weekly-review

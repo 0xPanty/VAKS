@@ -12,7 +12,7 @@ related_concepts:
   - "[[2026-05-27-quality-bar-extensible-verified-action-knowledge-system]]"
 related_projects:
   - verified-action-knowledge-system
-adoption_status: adopt-candidate
+adoption_status: adopt
 verification_status: single-source
 evidence_level: anecdotal
 evidence_count: 1

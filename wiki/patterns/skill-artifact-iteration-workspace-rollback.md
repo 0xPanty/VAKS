@@ -10,7 +10,7 @@ related_concepts:
   - "[[artifact-trigger-and-body-alignment-eval]]"
 related_projects:
   - verified-knowledge-system
-adoption_status: adopt-candidate
+adoption_status: adopt
 tags:
   - pattern/output-adapter
   - rollback

@@ -11,7 +11,7 @@ related_concepts:
 related_projects:
   - verified-vault
   - ai-short-drama
-adoption_status: adopt-lite
+adoption_status: adopt
 tags:
   - purpose
   - vault-philosophy

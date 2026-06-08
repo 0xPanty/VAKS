@@ -10,7 +10,7 @@ related_concepts:
   - "[[url-source-ingest-normalization]]"
 related_projects:
   - verified-knowledge-system
-adoption_status: adopt-candidate
+adoption_status: adopt
 tags:
   - pattern/capture
   - inbox

@@ -17,7 +17,7 @@ last_verified: 2026-05-27
 next_review: 2026-06-03
 source_libraries:
   - atomicstrata/llm-wiki-compiler
-adoption_status: adopt-soon
+adoption_status: adopt
 evidence_count: 2
 negative_evidence: []
 relations:

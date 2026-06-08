@@ -31,7 +31,7 @@ related_concepts:
   - "[[source-verification-and-trust-model]]"
 related_projects:
   - verified-knowledge-system
-adoption_status: adopt-soon
+adoption_status: adopt
 evidence_count: 2
 negative_evidence: []
 relations:

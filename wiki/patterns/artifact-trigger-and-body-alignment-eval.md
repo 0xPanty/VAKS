@@ -10,7 +10,7 @@ related_concepts:
   - "[[wiki-foundation-generator-surface-separation]]"
 related_projects:
   - verified-knowledge-system
-adoption_status: adopt-candidate
+adoption_status: adopt
 tags:
   - pattern/eval
   - agent-skill

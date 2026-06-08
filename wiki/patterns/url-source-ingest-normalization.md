@@ -10,7 +10,7 @@ related_concepts:
   - "[[2026-05-27-openkb-architecture-review]]"
 related_projects:
   - verified-knowledge-system
-adoption_status: adopt-candidate
+adoption_status: adopt
 tags:
   - pattern/source-adapter
   - url-ingest

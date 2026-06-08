@@ -14,7 +14,7 @@ related_concepts:
   - "[[obsidian-bases-linked-workbench-views]]"
 related_projects:
   - verified-action-knowledge-system
-adoption_status: adopt-candidate
+adoption_status: adopt
 verification_status: single-source
 evidence_level: synthetic
 evidence_count: 1
