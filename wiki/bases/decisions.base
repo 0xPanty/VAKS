@@ -30,8 +30,7 @@ properties:
     displayName: Path
 views:
   - type: table
-    name: "All decisions"
-    limit: 100
+    name: All decisions
     order:
       - file.name
       - status
@@ -45,9 +44,9 @@ views:
       - replaces
       - superseded_by
       - file.path
-  - type: table
-    name: "Review due"
     limit: 100
+  - type: table
+    name: Review due
     filters:
       or:
         - next_review <= today()
@@ -60,9 +59,9 @@ views:
       - verification_status
       - confidence
       - file.path
-  - type: table
-    name: "Supersession"
     limit: 100
+  - type: table
+    name: Supersession
     filters:
       or:
         - replaces
@@ -75,3 +74,4 @@ views:
       - superseded_by
       - next_review
       - file.path
+    limit: 100
