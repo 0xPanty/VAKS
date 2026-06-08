@@ -17,7 +17,7 @@ tags:
   - ingest
   - quality-gate
 evidence_count: 2
-confidence: medium_high
+confidence: high
 negative_evidence:
   - algorithmic-graph-scoring-without-source-quality
 replaces:

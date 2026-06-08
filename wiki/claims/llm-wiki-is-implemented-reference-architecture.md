@@ -16,7 +16,7 @@ supporting_sources:
 conflicting_sources:
 evidence_level: primary
 verification_status: code-inspected
-confidence: 4
+confidence: high
 impact: 5
 last_verified: 2026-05-26
 next_review: 2026-06-26

@@ -18,7 +18,7 @@ supporting_sources:
 conflicting_sources:
 evidence_level: secondary
 verification_status: cross-checked
-confidence: 4
+confidence: high
 impact: 5
 last_verified: 2026-05-26
 next_review:
