@@ -1,0 +1,76 @@
+filters:
+  and:
+    - file.inFolder("wiki/claims")
+    - file.ext == "md"
+    - type == "claim"
+properties:
+  file.name:
+    displayName: File
+  claim:
+    displayName: Claim
+  status:
+    displayName: Status
+  verification_status:
+    displayName: Verification status
+  evidence_level:
+    displayName: Evidence level
+  confidence:
+    displayName: Confidence
+  last_verified:
+    displayName: Last verified
+  next_review:
+    displayName: Next review
+  sources:
+    displayName: Sources
+  supporting_sources:
+    displayName: Supporting sources
+  conflicting_sources:
+    displayName: Conflicting sources
+  impact:
+    displayName: Impact
+  file.path:
+    displayName: Path
+views:
+  - type: table
+    name: All claims
+    order:
+      - file.name
+      - claim
+      - status
+      - verification_status
+      - evidence_level
+      - confidence
+      - last_verified
+      - next_review
+      - file.path
+    limit: 100
+  - type: table
+    name: Review due
+    filters:
+      and:
+        - next_review <= today()
+    order:
+      - file.name
+      - claim
+      - status
+      - next_review
+      - verification_status
+      - evidence_level
+      - confidence
+      - file.path
+    limit: 100
+  - type: table
+    name: Secondary evidence
+    filters:
+      and:
+        - evidence_level == "secondary"
+    order:
+      - file.name
+      - claim
+      - status
+      - verification_status
+      - evidence_level
+      - confidence
+      - sources
+      - file.path
+    limit: 100
