@@ -32,6 +32,24 @@ context. Files are source of truth. Do not rely on chat memory alone.
 - Old sandbox `outputs/review/source-intake-tag-routing-sandbox-2026-06-07/` is DELETED.
 - Promoted claims in `wiki/claims/`: 9.
 
+## 2A. Verified Current State Addendum (2026-06-14)
+
+- Source Annotation pilot workbench mainline merge was committed as
+  `db7b6bb2 docs: land source annotation pilot workbench`.
+- That commit intentionally contains only five files:
+  `00_handoff/2026-06-08-answer-boundary-and-three-window-execution-handoff.md`,
+  `SCHEMA.md`, `SOURCE_INTAKE.md`, `templates/source-annotation.md`, and
+  `wiki/bases/source-annotations.base`.
+- The scale sandbox `outputs/review/source-annotation-scale-sandbox-2026-06-14/`
+  remains untracked sandbox evidence and was not included in the mainline merge.
+- Validation after the merge: `python .\tools\validate_source_intake_contract.py`
+  returned `0 warnings / 0 errors`; YAML parsing also passed for
+  `templates/source-annotation.md` frontmatter and
+  `wiki/bases/source-annotations.base`.
+- The broader working tree remains dirty with unrelated historical intake,
+  raw-source, project-overlay, and tool changes. Do not use `git add .`; future
+  commits must continue to stage only their own explicit file territory.
+
 ## 3. Locked Route + Red Lines (do not violate)
 
 - Spine FROZEN: do NOT edit `SCHEMA.md`, `ARCHITECTURE_PRINCIPLES.md`, `FUSION_*`.
