@@ -2,7 +2,7 @@
 type: implementation-note
 status: draft
 created: 2026-05-27
-updated: 2026-05-28
+updated: 2026-06-14
 project: verified-action-knowledge-system
 related_files:
   - "[[MEMORY_TIER]]"
@@ -46,6 +46,27 @@ Dev context is a temporary development-mode working set.
 It is created after broad discovery and before implementation. It tells the agent which files are on the desk, which files are supporting references, which risks must be checked, and which sources remain in the archive.
 
 It is not a permanent reviewed knowledge layer and does not replace `MEMORY_TIER.md`.
+
+## 0. Legacy Development Sticky Marker
+
+Legacy marker: this development context/workbench area may still contain old
+project-tag or sticky-note language.
+
+From 2026-06-14 onward, do not add new loose "this is useful for VAKS" notes
+here for source-level insights.
+
+Use the new route instead:
+
+```text
+source-level useful span -> Source Annotation Sidecar
+project-level borrow / non-borrow -> Project Overlay
+review or action support -> Evidence Packet
+```
+
+Existing legacy notes are historical working material. Do not bulk-delete them
+until the new annotation workflow is fully landed. When an old sticky note is
+touched again, either convert it to `source_annotation`, move project-level scope
+into Project Overlay, or mark it as missing source anchor.
 
 ## 1. Core Judgment
 
@@ -277,6 +298,16 @@ suggested_actions
 Budget trimming may shorten context, but it must not hide critical warnings,
 gaps, missing evidence, source-window loss, or action risk. If key support is
 trimmed out, the pack cannot remain action-ready.
+
+Retrieval receipts may help assemble a context-pack candidate.
+
+They are not action basis by themselves. A pack that uses adapter output must
+still expose source click-back, authority badge, usage badge, warning code, and
+stale or scope warnings before it can be reviewed for action-facing use.
+
+Those badges and warnings are preconditions for review only. They are not
+enough to create action basis, evidence support, truth confidence, or reviewed
+relations. In short: they are not enough to create action basis.
 
 Template:
 

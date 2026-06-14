@@ -1,5 +1,6 @@
 ---
 type: source
+record_kind: source_card
 status: source-captured
 title:
 source_id:
@@ -25,8 +26,6 @@ adapter_ingest:
   known_limits: []
 source_status: unknown
 raw_location:
-processing_mode: inbox
-processing_level: light
 processing_tier: light
 knowledge_status: raw
 overlay_state: none
@@ -42,6 +41,7 @@ truth_mutation_allowed: false
 review_priority: normal
 review_owner: Codex
 formalization_status: raw-only
+why_saved:
 topics:
 projects:
 source_family:
@@ -192,5 +192,21 @@ candidate_relation_suggestions:
 
 Source records may suggest candidate relations.
 They cannot create reviewed relations, relation strength, or truth confidence.
+
+## Source Annotation Sidecars
+
+If a specific passage, timestamp, PDF region, or screenshot region is worth
+pinning, create a separate `source_annotation` record under
+`outputs/review/source_annotations/<source-slug>/`.
+
+Do not put inline footnotes, working-copy annotation text, or source-local
+development sticky notes into the immutable raw source card.
+
+```yaml
+source_annotation_refs:
+  - annotation_id:
+    path:
+    anchor_status:
+```
 
 ## 下一步

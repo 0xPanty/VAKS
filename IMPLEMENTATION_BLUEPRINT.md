@@ -2,7 +2,7 @@
 type: implementation-note
 status: active
 created: 2026-05-27
-updated: 2026-05-28
+updated: 2026-06-14
 project: verified-action-knowledge-system
 related_decisions:
   - "[[2026-05-27-karpathy-simple-verified-strict-ux-principle]]"
@@ -45,8 +45,8 @@ validated_by:
   - "manual synthesis from active architecture decisions"
 rollback_path:
   - "If the implementation becomes too broad, return to Phase 0 and keep only raw/wiki/index/log plus manual review."
-last_verified: 2026-05-28
-next_review: 2026-06-03
+last_verified: 2026-06-14
+next_review: 2026-06-21
 relations:
   - target: "[[ARCHITECTURE_PRINCIPLES]]"
     type: refines
@@ -103,6 +103,7 @@ Build this system in this order:
 
 ```text
 one raw source
+-> optional source annotation sidecar
 -> one review candidate
 -> traceability lint / review
 -> one verified wiki node
@@ -124,6 +125,7 @@ The default command surface should stay small:
 
 ```text
 add source
+mark source span
 process this
 ask what the vault knows
 lint / check vault
@@ -156,7 +158,7 @@ ordinary material:
   light processing.
 
 project material:
-  medium processing plus scope dashboard/dev context when needed.
+  medium processing plus source annotation workbench, scope dashboard, or DEV_CONTEXT when needed.
 
 papers, valuable repos, official docs, key architecture material:
   heavy processing.
@@ -231,17 +233,18 @@ outputs/review/README.md
 Minimum workflow:
 
 1. Preserve a source in `raw/`.
-2. Create a candidate in `outputs/review/`.
-3. Manually review traceability first: source path or URL, captured date, source ranges, extracted point, uncertainty.
-4. Promote only reviewed content into `wiki/claims/`, `wiki/patterns/`, `wiki/anti-patterns/`, `wiki/decisions/`, or `wiki/projects/`.
-5. Update `wiki/indexes/knowledge-graph-index.md`.
-6. Create a context pack manually from verified nodes.
-7. Record feedback after the context pack is used.
+2. Optionally pin important source spans as `source_annotation` sidecars.
+3. Create a candidate in `outputs/review/`.
+4. Manually review traceability first: source path or URL, source annotation refs or source ranges, extracted point, uncertainty.
+5. Promote only reviewed content into `wiki/claims/`, `wiki/patterns/`, `wiki/anti-patterns/`, `wiki/decisions/`, or `wiki/projects/`.
+6. Update `wiki/indexes/knowledge-graph-index.md`.
+7. Create a context pack manually from verified nodes.
+8. Record feedback after the context pack is used.
 
 Exit criteria:
 
 ```text
-At least one source has completed source -> candidate -> verified node -> context pack -> feedback.
+At least one source has completed source -> optional annotation -> candidate -> verified node -> context pack -> feedback.
 ```
 
 ## 5. Phase 1: Review Queue Contract
@@ -265,6 +268,7 @@ Candidate record must include:
 candidate_id:
 candidate_type: summary | claim | pattern | anti-pattern | decision | implementation-note
 source_refs:
+source_annotation_refs:
 source_ranges:
 extracted_points:
 uncertainty:
@@ -484,6 +488,19 @@ Verified nodes decide trust.
 Decision records decide action.
 ```
 
+Phase B query-layer documentation may describe a read-only derived adapter:
+
+```text
+build chunk manifest and retrieval receipt artifacts
+filter by VAKS authority bucket before ranking
+run bucket-local retrieval and rerank
+return context-pack candidates with click-back and warnings
+require pressure, contract, readiness, and external-review gates before any runtime/default/production adoption beyond this documentation note
+```
+
+Do not attach Skills, MCP writes, subagents, formal writeback, or production
+claims to Phase B.
+
 ## 10. Phase 6: API, MCP, Viewer, and Obsidian Workbench
 
 Goal:
@@ -499,6 +516,7 @@ read-only API
 context-pack API
 MCP read tools
 Obsidian Bases views
+source annotation workbench
 review dashboard
 read-only viewer
 export adapters

@@ -1,0 +1,91 @@
+{
+  "version": "2026-06-14-source-annotation-v1",
+  "fail_closed": true,
+  "enums": {
+    "record_kind": [
+      "source_card",
+      "source_annotation",
+      "candidate_distillation",
+      "project_overlay",
+      "feedback_event",
+      "heavy_review_open",
+      "context_pack_manifest",
+      "query_run_trace",
+      "overlay_suggestion"
+    ],
+    "processing_tier": ["light", "medium", "heavy"],
+    "knowledge_status": ["raw", "candidate", "reviewed"],
+    "overlay_state": ["none", "confirmed", "archived"],
+    "review_pressure": ["none", "review_due", "blocked"],
+    "retrieval_policy.policy_kind": [
+      "source_identity_only",
+      "orientation_only",
+      "project_context_only",
+      "reviewed_support_only"
+    ],
+    "retrieval_policy.pack_allowed": [
+      "none",
+      "activation_only",
+      "review_input_only",
+      "drilldown_required",
+      "reviewed_support"
+    ],
+    "retrieval_policy.action_basis_allowed": [true, false],
+    "retrieval_policy.warning_code": [
+      "raw_is_provenance_only",
+      "source_card_not_reviewed_knowledge",
+      "annotation_not_support",
+      "candidate_not_action_basis",
+      "overlay_unconfirmed",
+      "overlay_not_authority",
+      "archived_overlay_excluded",
+      "feedback_not_truth",
+      "heavy_review_open_not_passed",
+      "context_pack_not_action_basis"
+    ],
+    "promotion_gate": ["none", "v0_2_13_required"],
+    "query_mode": ["orientation", "source_inspection", "review", "action"],
+    "pack_role": ["orientation", "review_input", "support", "anchor"],
+    "support_result": [
+      "supported",
+      "weak",
+      "missing_anchor",
+      "self_support_loop",
+      "scope_limited",
+      "not_ready"
+    ],
+    "anchor_status": [
+      "exact_verified",
+      "fuzzy_recovered",
+      "ambiguous",
+      "broken",
+      "source_changed"
+    ],
+    "evidence_support_status": [
+      "not_checked",
+      "supported",
+      "partial",
+      "unsupported",
+      "unclear"
+    ],
+    "event_kind": [
+      "useful_orientation",
+      "misleading_orientation",
+      "scope_mismatch",
+      "anchor_broken_or_source_changed"
+    ]
+  },
+  "legacy_disallowed_examples": {
+    "overlay_state": [
+      "candidate",
+      "candidate_only",
+      "project_sidecar_created"
+    ],
+    "promotion_gate": [
+      "evidence_aware_review_required",
+      "evidence_aware_review_and_local_benchmark_required",
+      "evidence_aware_review_and_sandbox_required",
+      "retrieval_layer_comparison_and_sandbox_required"
+    ]
+  }
+}

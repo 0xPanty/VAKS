@@ -1,0 +1,57 @@
+filters:
+  and:
+    - file.inFolder("outputs/review/source_annotations")
+    - file.ext == "md"
+    - record_kind == "source_annotation"
+properties:
+  file.name:
+    displayName: File
+  annotation_id:
+    displayName: Annotation ID
+  source_ref:
+    displayName: Source
+  selector_type:
+    displayName: Selector
+  anchor_status:
+    displayName: Anchor status
+  annotation_role:
+    displayName: Role
+  support_checked:
+    displayName: Support checked
+  evidence_support_status:
+    displayName: Evidence support
+  action_basis_allowed:
+    displayName: Action basis allowed
+  review_pressure:
+    displayName: Review pressure
+  file.path:
+    displayName: Path
+views:
+  - type: table
+    name: Annotation inbox
+    order:
+      - annotation_id
+      - source_ref
+      - selector_type
+      - anchor_status
+      - annotation_role
+      - support_checked
+      - evidence_support_status
+      - action_basis_allowed
+      - review_pressure
+      - file.path
+    limit: 100
+  - type: table
+    name: Needs anchor repair
+    filters:
+      or:
+        - anchor_status == "ambiguous"
+        - anchor_status == "broken"
+        - anchor_status == "source_changed"
+    order:
+      - annotation_id
+      - source_ref
+      - anchor_status
+      - review_pressure
+      - file.path
+    limit: 100

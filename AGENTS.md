@@ -55,6 +55,7 @@ If a newer handoff exists, prefer the newest file in `00_handoff/`.
 - `wiki/indexes/`: index and recovery maps.
 - `outputs/qa/`: analysis outputs and Q&A records.
 - `outputs/review/`: review outputs.
+- `outputs/review/source_annotations/`: source-local annotation sidecars; these replace the old development sticky-note / loose borrow-tag habit for specific source spans.
 - `outputs/feedback/`: feedback outputs.
 - `templates/`: reusable record, review, feedback, and window templates.
 - `tools/`: project-local helper scripts, including video intake finalization connectors.
@@ -89,6 +90,8 @@ When reviewing a repo/library/article for this project, follow these templates b
 ## Source Intake Templates
 
 - `templates/video-source.md`: use this for Bilibili, YouTube, course, lecture, interview, podcast-with-video, demo, or walkthrough source cards under `raw/videos/`. It records source metadata, transcript method, key-entity confidence, candidate points, and review routing, but it does not create reviewed knowledge.
+- `templates/source-annotation.md`: use this when a specific source span is worth pinning for later inspection. A source annotation is a locator and review input only; it is not evidence support, a project verdict, reviewed truth, or action basis.
+- `wiki/bases/source-annotations.base`: Obsidian Bases workbench for annotation inbox and anchor repair.
 
 ## Project-Local Video Intake
 
@@ -200,6 +203,8 @@ For the full current graph of absorbed patterns, anti-patterns, decisions, sourc
 - Do not overdesign. Prefer the smallest elegant architecture change that preserves the current spine.
 - Do not add a new formal lane structure; automatic compile is parked, and `Karpathy-light / VAKS-strict` is only a plain-language explanation layer.
 - Do not treat dashboard, retrieval, metadata, brief, or feedback as reviewed knowledge.
+- For source-level "this is useful / worth borrowing" notes, use Source Annotation Sidecar under `outputs/review/source_annotations/`; old development sticky notes or loose source-level project tags are legacy.
+- Project-level borrow / non-borrow / reopen scope belongs in Project Overlay. Evidence or action support belongs in Evidence Packet / evidence support. Ordinary tags remain broad filters only.
 - Do not start automation, scripts, API/MCP, viewer, publishing pipeline, dev context pack, query-run, feedback-event, or scheduled synthesis unless explicitly asked.
 - Important architecture conclusions should be written back to the appropriate docs, handoff, and indexes after user confirmation.
 - After meaningful file changes, run a sanity check, update handoff if recovery state changed, and commit when the user asks.
@@ -236,6 +241,7 @@ Boundaries:
 - Knowledge calibration output is review input, not truth.
 - Evidence-aware review checks support, challenge, scope limits, and risk before a judgment is treated as standing; the full panel is a lazy gate for promotion, decisions, action basis, strong relations, explicit contradictions, or stale / contested claims.
 - Source provenance uses a lightweight PROV-inspired vocabulary. Source records stay light; review, promotion, and context-pack use are recorded in their own layers.
+- Source Annotation Sidecar is the source-local locator layer: it means "inspect this span later", not support, confidence, Project Overlay verdict, reviewed relation, or action readiness.
 - Verifiability routing happens before review: candidate points are atomic review units, not all claims; only verifiable claims receive truth confidence.
 - Complex candidate points may use optional `point_graph_fragment`; extracted triplets are review aids, not truth or reviewed relations.
 - Context packs are coverage-aware, but full `coverage_map` detail is only required for key judgments used in an answer or action basis; ordinary queries should not become full audit reports.

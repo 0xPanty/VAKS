@@ -4,6 +4,7 @@ status: candidate
 knowledge_status: candidate
 processing_tier: medium
 overlay_state: confirmed
+review_pressure: none
 overlay_scope: project_sidecar_only
 overlay_storage: confirmed_persistent_project_bucket
 retrieval_scope: active_project_only
@@ -21,6 +22,7 @@ project_id:
 target_ref:
 target_selector:
 target_hint:
+source_annotation_refs: []
 project_borrow_scope:
 project_non_borrow_scope:
 project_reopen_trigger:
@@ -47,7 +49,12 @@ action basis.
 target_ref:
 target_selector:
 target_hint:
+source_annotation_refs:
 ```
+
+`source_annotation_refs` can point to useful source-local locators, but they do
+not replace `project_borrow_scope`, `project_non_borrow_scope`, or
+`project_reopen_trigger`.
 
 ## Project Borrow Scope
 
@@ -58,8 +65,8 @@ For this project, what may be borrowed from the target?
 ## Project Non-Borrow Scope
 
 ```text
-For this project, what should not currently be borrowed, and why?
-Use project-local language. Do not write a universal ban.
+For project <project_id>, do not currently borrow <X> as <Y> because <reason>.
+Reopen if <goal/scope/tooling/evidence> changes.
 ```
 
 ## Reopen Trigger
@@ -82,6 +89,7 @@ expires_at:
 decision outcome
 review verdict
 truth confidence
+source annotation as project verdict
 action basis
 universal ban
 ```

@@ -7,6 +7,7 @@ processing_tier: medium
 lifecycle_state: candidate_provisional
 overlay_state: none
 review_pressure: none
+source_ref:
 derived_from:
 retrieval_policy:
   policy_kind: orientation_only
@@ -19,6 +20,7 @@ truth_mutation_allowed: false
 v0_2_13_trigger: no
 routing_hint: []
 possible_project_refs: []
+source_annotation_refs: []
 point_anchor_refs: []
 tags:
   - candidate
@@ -39,6 +41,10 @@ basis.
 
 ```yaml
 derived_from:
+source_annotation_refs:
+  - annotation_id:
+    source_ref:
+    role:
 point_anchor_refs:
   - snapshot_ref:
     selector_type:
@@ -59,6 +65,7 @@ point_anchor_refs:
 ```text
 project_borrow_scope
 project_non_borrow_scope
+source annotation as final support
 decision outcome
 formal pattern
 action basis

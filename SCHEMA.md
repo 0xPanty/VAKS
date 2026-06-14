@@ -3,7 +3,7 @@ type: schema
 status: active
 version: 0.1
 created: 2026-05-26
-updated: 2026-05-30
+updated: 2026-06-14
 scope:
   - verified-knowledge-system
   - markdown-system-of-record
@@ -20,8 +20,8 @@ sources:
 verification_status: active
 evidence_level: synthetic
 confidence: high
-last_verified: 2026-05-30
-next_review: 2026-06-03
+last_verified: 2026-06-14
+next_review: 2026-06-21
 ---
 
 # SCHEMA.md v0.1
@@ -31,7 +31,7 @@ next_review: 2026-06-03
 当前资料库不是普通 Obsidian 笔记库，而是：
 
 ```text
-raw source -> summary -> claim -> pattern / anti-pattern -> decision -> context pack
+raw source -> optional source annotation -> candidate -> claim -> pattern / anti-pattern -> decision -> context pack
 ```
 
 Markdown/YAML 是主记录。Obsidian Bases、BM25、vector、QMD、Zilliz、graph score、API、context pack 都是派生层或调用层，不能替代本文件定义的 reviewed knowledge layer。
@@ -749,6 +749,79 @@ Rules:
 - `evidence_granularity` caps how far a point can be used before stronger evidence is gathered.
 - `omission_check` is required only for heavy source digest, important repositories, long papers, high-impact decisions, or reviewer request.
 - `review_due_when` records trigger conditions; review_due is pressure to recheck, not proof that the old judgment is false.
+
+### 3.0 Source Annotation Sidecar / Evidence Anchor Workbench
+
+Source Annotation Sidecar is the source-local locator layer between raw capture
+and candidate comprehension.
+
+It replaces loose development sticky notes for source-level insights:
+
+```text
+inline footnote / highlight = human-friendly entrance
+source_annotation = canonical locator record
+candidate point = review unit
+Evidence Packet = support/challenge check
+Project Overlay = project-level borrow / non-borrow sidecar
+```
+
+Canonical shape:
+
+```yaml
+record_kind: source_annotation
+knowledge_status: candidate
+processing_tier: light | medium
+annotation_scope: source_local_anchor
+annotation_id:
+source_ref:
+working_copy_ref:
+selector_type: TextQuoteSelector | TextPositionSelector | line_range | timestamp | page_rect | bbox
+selector_exact:
+selector_prefix:
+selector_suffix:
+selector_position:
+selector_timestamp_start:
+selector_timestamp_end:
+selector_page:
+selector_rect:
+content_hash:
+anchor_status: exact_verified | fuzzy_recovered | ambiguous | broken | source_changed
+annotation_role: question | possible_support | counterexample | scope_limit | risk_signal | candidate_seed | term_definition | implementation_note
+body_note:
+support_checked: false
+evidence_support_status: not_checked
+evidence_packet_ref:
+candidate_refs: []
+project_overlay_refs: []
+retrieval_policy:
+  policy_kind: orientation_only
+  pack_allowed: review_input_only
+  action_basis_allowed: false
+  warning_code: annotation_not_support
+action_basis_allowed: false
+truth_mutation_allowed: false
+```
+
+Rules:
+
+- A source annotation says "inspect this exact source span"; it does not say the
+  span supports any point.
+- Inline footnotes, highlights, PDF annotations, Zotero annotations, Readwise
+  highlights, or browser annotations are capture surfaces. The canonical data is
+  the Markdown/YAML `source_annotation` record.
+- Raw source files should remain clean. If inline footnotes are useful, they
+  belong in a working copy or derived view, not the immutable raw source.
+- `anchor_status` describes locator health. `evidence_support_status` describes
+  whether a later review has checked the span against a specific point. These
+  are separate fields.
+- If `support_checked: true`, `evidence_packet_ref` must point to the Evidence
+  Packet or review object that performed the check.
+- A source annotation may route a candidate point, review queue item, or Project
+  Overlay, but cannot create reviewed relations, truth confidence, action
+  readiness, or project borrow/non-borrow scope.
+- When an annotation becomes evidence in an Evidence Packet, the reviewer copies
+  or resolves the locator into `evidence_items.source_anchor` and performs
+  `evidence_support` there. Do not count the annotation record itself as support.
 
 默认映射：
 

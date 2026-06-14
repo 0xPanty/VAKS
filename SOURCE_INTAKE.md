@@ -1,8 +1,8 @@
 ---
 type: implementation-note
-status: active
+status: active_contract_with_migration_debt
 created: 2026-05-28
-updated: 2026-06-06
+updated: 2026-06-14
 project: verified-action-knowledge-system
 scope:
   - source-intake
@@ -16,17 +16,21 @@ related_files:
   - "[[MEMORY_TIER]]"
   - "[[REFERENCE_REVIEW_PROTOCOL]]"
   - "[[templates/source-record]]"
+  - "[[templates/source-annotation]]"
   - "[[templates/video-source]]"
   - "[[templates/candidate-distillation]]"
   - "[[templates/review-candidate]]"
+  - "[[templates/heavy-review-open]]"
   - "[[templates/query-run]]"
+  - "[[templates/context-pack-manifest]]"
   - "[[templates/feedback-event]]"
   - "[[templates/project-overlay]]"
-verification_status: active
+verification_status: contract_lint_pass_current_structural_pass_semantic_debt
 evidence_level: synthetic
-confidence: high
-last_verified: 2026-06-06
-next_review: 2026-06-13
+confidence: medium
+confidence_basis: source annotation contract lint passed with 0 warnings and 0 errors; current lint passed structurally with existing migration warnings
+last_verified: 2026-06-14
+next_review: 2026-06-21
 tags:
   - source-intake
   - processing-tier
@@ -89,13 +93,13 @@ Use these orthogonal fields:
 |---|---|---|
 | `processing_tier` | `light` / `medium` / `heavy` | How much work has been done. This is not authority. |
 | `knowledge_status` | `raw` / `candidate` / `reviewed` | Whether the record can act as knowledge. |
-| `overlay_state` | `none` / `suggested` / `confirmed` / `archived` | Whether a project sidecar is mounted or retained as history. |
+| `overlay_state` | `none` / `confirmed` / `archived` | Whether a persistent project sidecar is mounted or retained as history. Suggested overlays live only in trace/inbox artifacts. |
 | `review_pressure` | `none` / `review_due` / `blocked` | Whether feedback or anchor problems require review. |
 | `retrieval_policy.policy_kind` | `source_identity_only` / `orientation_only` / `project_context_only` / `reviewed_support_only` | How retrieval is allowed to use the record. |
-| `retrieval_policy.pack_allowed` | `false` / `activation_only` / `review_input_only` / `drilldown_required` / `reviewed_support` | Whether this record can enter a context pack, and for what purpose. |
+| `retrieval_policy.pack_allowed` | `none` / `activation_only` / `review_input_only` / `drilldown_required` / `reviewed_support` | Whether this record can enter a context pack, and for what purpose. |
 | `retrieval_policy.action_basis_allowed` | `true` / `false` | Whether this record can directly support action. Candidate material defaults to false. |
 | `retrieval_policy.warning_code` | short machine-readable string | Why the record is limited. |
-| `promotion_gate` | `none` / `v0_2_13_required` / `review_passed` | What gate must pass before promotion or action use. |
+| `promotion_gate` | `none` / `v0_2_13_required` | What gate must be run before promotion or action use. Review outcome belongs in `review_status`, not this field. |
 
 Minimal object rules:
 
@@ -111,6 +115,21 @@ Source Card:
   review_pressure: none, unless anchor/source is broken
   action_basis_allowed: false
   no adopt/reject verdict, no truth score
+
+Source Annotation Sidecar:
+  record_kind: source_annotation
+  knowledge_status: candidate
+  processing_tier: light | medium
+  annotation_scope: source_local_anchor
+  retrieval_policy:
+    policy_kind: orientation_only
+    pack_allowed: review_input_only
+    action_basis_allowed: false
+    warning_code: annotation_not_support
+  anchor_status: exact_verified | fuzzy_recovered | ambiguous | broken | source_changed
+  support_checked: false by default
+  evidence_support_status: not_checked by default
+  no project-level borrow verdict, no truth score, no action basis
 
 Candidate Distillation:
   record_kind: candidate_distillation
@@ -156,6 +175,147 @@ Feedback Event:
   reviewed_note_mutation_allowed: false
   source_reliability_mutation_allowed: false
 ```
+
+### 1.2 Canonical Enum Registry
+
+The canonical machine values live in `tools/source_intake_enum_registry.json`.
+Any source-intake validator, retrieval compiler, adapter, or context-pack builder
+must fail closed on unknown enum values.
+
+Core values:
+
+| Field | Allowed values |
+|---|---|
+| `processing_tier` | `light`, `medium`, `heavy` |
+| `knowledge_status` | `raw`, `candidate`, `reviewed` |
+| `overlay_state` | `none`, `confirmed`, `archived` |
+| `review_pressure` | `none`, `review_due`, `blocked` |
+| `retrieval_policy.policy_kind` | `source_identity_only`, `orientation_only`, `project_context_only`, `reviewed_support_only` |
+| `retrieval_policy.pack_allowed` | `none`, `activation_only`, `review_input_only`, `drilldown_required`, `reviewed_support` |
+| `retrieval_policy.action_basis_allowed` | `true`, `false` |
+| `retrieval_policy.warning_code` | registry-controlled warning code |
+| `promotion_gate` | `none`, `v0_2_13_required` |
+| `pack_role` | `orientation`, `review_input`, `support`, `anchor` |
+| `support_result` | `supported`, `weak`, `missing_anchor`, `self_support_loop`, `scope_limited`, `not_ready` |
+| `anchor_status` | `exact_verified`, `fuzzy_recovered`, `ambiguous`, `broken`, `source_changed` |
+| `evidence_support_status` | `not_checked`, `supported`, `partial`, `unsupported`, `unclear` |
+
+Legacy or descriptive values such as `overlay_state: candidate`,
+`overlay_state: project_sidecar_created`, `promotion_gate:
+evidence_aware_review_required`, and `promotion_gate:
+evidence_aware_review_and_local_benchmark_required` are not allowed machine
+values. Preserve that nuance in prose fields, not in gate enums.
+
+### 1.3 No Automatic Authority Promotion
+
+Any migration from raw, candidate, overlay, or feedback material into reviewed
+knowledge, decision, reviewed relation, or action basis requires explicit human
+review.
+
+Hard rule:
+
+```text
+raw/candidate/overlay/feedback -> reviewed/decision/action-basis
+requires explicit human-confirmed review.
+```
+
+Suggested overlays may be produced by semantic match, tags, or embeddings only
+inside query-run trace, agent trace, or a suggestion inbox. They cannot become
+persistent project overlays merely because retrieval found a match.
+
+### 1.4 Minimal State Machine
+
+Use state names that make authority visible:
+
+| State | Meaning | Automation allowed | Human confirmation |
+|---|---|---|---|
+| `LightRaw` | source identity and findability only | create source card and basic metadata | confirm source identity / why saved |
+| `SourceAnnotated` | source-local span was marked for later use | create annotation sidecar and optional footnote handle | confirm only when it persists beyond scratch |
+| `MediumCandidate` | provisional summary and candidate points | draft summary and routing hints | confirm provisional persistence |
+| `OverlaySuggested` | project match suggestion in trace/inbox only | create transient suggestion | required before persistence |
+| `OverlayConfirmed` | project-scoped sidecar | draft scope language | required for persistence and closeout |
+| `OverlayArchived` | historical sidecar excluded by default | batch closeout draft | closeout confirmation |
+| `HeavyReviewOpen` | review object is prepared, not passed | assemble evidence packet | reviewer must pass gate |
+| `Reviewed` | reviewed knowledge / decision / relation | stale reminders only | content mutation requires review |
+| `FeedbackCached` | append-only use event | log explicit use/failure event | confirm high-impact scope pressure |
+
+Important wording: `HeavyReviewOpen` is not authority. It means the work has
+entered review, not that the claim has passed review.
+
+### 1.5 Object-Level Minimum Fields
+
+Keep frontmatter small. Only fields needed for mechanical filtering, agent
+constraints, and review routing should be mandatory.
+
+| Object | Required fields | Optional fields | Boundary |
+|---|---|---|---|
+| Source Card | `source_id`, `source_url` or `raw_location`, `captured_at`, `title`, `why_saved` | `source_hash`, `snapshot_hash`, `adapter_ingest`, `author`, `version_or_commit` | provenance only; no adopt/reject |
+| Source Annotation Sidecar | `annotation_id`, `source_ref`, `selector_type`, one stable selector, `anchor_status`, `annotation_role`, `support_checked`, `evidence_support_status` | `working_copy_ref`, `content_hash`, `candidate_refs`, `project_overlay_refs`, `external_annotation_id`, `evidence_packet_ref` when `support_checked: true` | source-local locator; not support, not project verdict |
+| Medium Candidate | `source_ref`, `provisional: true`, `knowledge_status: candidate`, structured summary, candidate points | `open_questions`, `routing_hint`, `point_anchor_refs`, `possible_project_refs` | provisional orientation, not rule |
+| Project Overlay Confirmed | `project_id`, `target_ref`, `overlay_state: confirmed`, `project_borrow_scope`, `project_non_borrow_scope`, `project_reopen_trigger` | `target_hint`, `last_checked_at`, `expires_at`, `confirmation_basis` | project sidecar, not truth |
+| Heavy Review Open | `claim`, `source_anchor_refs` or `evidence_anchor_refs`, `warrant`, `scope`, `gaps`, `residual_risk`, `review_status` | `assumptions`, `known_counterevidence`, `reviewer`, `reviewed_at` | review input, not review pass |
+| Feedback Event | `event_kind`, `target_ref`, `project_ref` or `observed_in_context`, `event_time`, `review_pressure_effect` | `query_run_ref`, `temporary_project_warning`, `note` | append-only use event |
+
+Placeholder fields are not all equal:
+
+- Canonical confirmed overlays must not use placeholder values for
+  `target_ref`, `project_borrow_scope`, `project_non_borrow_scope`, or
+  `project_reopen_trigger`. If any of those fields are placeholders, the object
+  is not a valid confirmed overlay.
+- Legacy lens files may keep placeholder-like fields only when they are excluded
+  from canonical overlay scope and retained through a compatibility
+  manifest/tombstone.
+- Raw source cards may keep `why_saved: see_body_or_legacy_record` as migration
+  debt only when the body contains a real `Why Captured`, `Capture Reason`,
+  `为什么收录`, or equivalent save-reason section. Without that body reason, the
+  record has a missing intent/reason field, not merely harmless migration debt.
+- `author` is optional on source cards. If unknown, use `unknown` or omit it;
+  do not invent a specific placeholder that downstream retrieval could mistake
+  for an authority signal.
+- `kp_ref` is a legacy Project Lens maintenance pointer, not a Source Intake P0
+  core field. It can help navigate old lens entries, but it must not be treated
+  as evidence support, action basis, or proof that a canonical overlay exists.
+
+### 1.6 Forbidden Intake Fields And Proxy Support
+
+The following fields or writing patterns are forbidden in source, candidate,
+overlay, and feedback records:
+
+| Forbidden field or wording | Reason |
+|---|---|
+| `truth_score`, `truth_confidence`, `confidence_delta` | makes intake metadata look like truth confidence |
+| `adopted`, `rejected`, `must_use`, `universal_ban` | makes candidate/overlay look like a decision |
+| `action_basis_allowed: true` in candidate/overlay/feedback | bypasses the action gate |
+| overlay `decision_outcome`, `review_verdict`, `accepted` | makes overlay look like ADR or review result |
+| source-card top-level `relations` | makes raw provenance look like reviewed graph or support edges |
+| source-card top-level `confidence` | makes capture quality or source trust look like truth authority |
+| source-card top-level `freshness`, `relevance`, `source_quality`, `cross_source_count` | stable raw metadata can be mistaken for applicability, query relevance, trust, or multi-source support |
+| `source_count`, `tool_count`, `project_count` as support | coverage count is not evidential support |
+| `retrieval_score`, `graph_rank`, `dashboard_hit` as support | activation/diagnostic signal is not evidence |
+| `vendor says`, `diagram looks clean`, `benchmark passed` as warrant | diagnostics do not bridge evidence to claim |
+
+Heavy Review must explicitly check that these proxy signals were not used as
+action-facing support.
+
+If raw-source `confidence` means capture, transcript, or extraction quality,
+place it under `source_integrity` or `adapter_ingest` with a scoped name such as
+`capture_confidence` or `extraction_confidence`. If it means source trust, it
+belongs in triage/review, not raw provenance.
+
+If old raw-source `relations` must be retained, move it to
+`candidate_relation_suggestions`, `legacy_raw_metadata.relations`, or a separate
+candidate sidecar. It must not remain as a top-level raw source field.
+
+If old raw-source `freshness`, `relevance`, `source_quality`, or
+`cross_source_count` must be retained for audit, move them to a clearly
+downgraded namespace such as `legacy_raw_metadata`. They are diagnostics or
+historical triage values, not evidence support or authority.
+
+`legacy_raw_metadata` is an audit/tombstone subtree. Retrieval compilers, graph
+compilers, context-pack builders, and support checkers must ignore the entire
+subtree by default. If a value from that subtree is ever needed again, promote it
+through a new candidate/overlay/review object with explicit provenance instead
+of selecting it directly.
 
 ## 2. Processing Levels
 
@@ -288,7 +448,130 @@ formal pattern
 borrow_scope / non_borrow_scope as project conclusion
 ```
 
-If project-specific borrowing is needed, put it in Project Overlay instead.
+If a specific source span matters, put the locator in a Source Annotation
+Sidecar instead of rewriting the source or creating a loose development sticky
+note.
+
+If project-specific borrowing is needed, put the project-level judgment in
+Project Overlay instead.
+
+### Source Annotation Sidecar Gate
+
+Source Annotation Sidecar replaces source-level development sticky notes. It is
+not a normal tag and not a Project Overlay.
+
+Plain-language rule:
+
+```text
+tag = broad filter for a whole note
+source_annotation = pin on a specific source span
+project_overlay = project-level borrow / non-borrow boundary
+```
+
+User-facing capture may be lightweight:
+
+```text
+select source text
+-> insert optional inline footnote / ann_id handle
+-> create source_annotation sidecar
+-> show sidecar rows in Bases / workbench
+```
+
+Canonical storage rule:
+
+```text
+do not pollute immutable raw source text with inline footnotes.
+inline footnote is an entrance or working-copy handle only.
+canonical annotation data lives in a Markdown/YAML source_annotation record.
+```
+
+Storage path:
+
+```text
+outputs/review/source_annotations/<source-slug>/<annotation-id>.md
+```
+
+Minimum record:
+
+```yaml
+record_kind: source_annotation
+knowledge_status: candidate
+processing_tier: light
+annotation_scope: source_local_anchor
+source_ref:
+working_copy_ref:
+selector_type: TextQuoteSelector | TextPositionSelector | line_range | timestamp | page_rect | bbox
+selector_exact:
+selector_prefix:
+selector_suffix:
+selector_position:
+selector_timestamp_start:
+selector_timestamp_end:
+selector_page:
+selector_rect:
+anchor_status: exact_verified | fuzzy_recovered | ambiguous | broken | source_changed
+annotation_role: question | possible_support | counterexample | scope_limit | risk_signal | candidate_seed | term_definition | implementation_note
+body_note:
+support_checked: false
+evidence_support_status: not_checked
+evidence_packet_ref:
+candidate_refs: []
+project_overlay_refs: []
+retrieval_policy:
+  policy_kind: orientation_only
+  pack_allowed: review_input_only
+  action_basis_allowed: false
+  warning_code: annotation_not_support
+action_basis_allowed: false
+truth_mutation_allowed: false
+```
+
+Boundary:
+
+```text
+source_annotation means "inspect this source span".
+it does not mean "this span supports the point".
+support exists only after Evidence Packet / evidence_support checks the span
+against a specific candidate, reviewed relation, decision, or action basis.
+```
+
+If `support_checked: true`, the annotation must point to the Evidence Packet or
+review object that performed the check:
+
+```yaml
+evidence_packet_ref:
+```
+
+Annotation roles are routing hints, not verdicts:
+
+```text
+question -> look again
+possible_support -> possible evidence candidate, not support
+counterexample -> possible challenge candidate, not rejection
+scope_limit -> likely boundary condition
+risk_signal -> possible risk to inspect
+candidate_seed -> may become a candidate point
+term_definition -> local definition anchor
+implementation_note -> possible implementation detail
+```
+
+If an annotation becomes important:
+
+```text
+source_annotation
+-> candidate point or review candidate
+-> Evidence Packet copies/resolves the source span into evidence_items.source_anchor
+-> evidence_support checks whether the span actually bears on the point
+```
+
+If an annotation is project-specific:
+
+```text
+source_annotation may link to a Project Overlay.
+Project Overlay still owns project_borrow_scope / project_non_borrow_scope /
+project_reopen_trigger.
+The annotation does not replace those fields.
+```
 
 ### Project Overlay Gate
 
@@ -326,7 +609,8 @@ For ordinary source intake, do this:
 
 ```text
 source card
-ordinary tags/topics
+ordinary tags/topics as broad filters only
+source_annotation if a specific source span is worth pinning
 candidate distillation if useful
 suggested_project_overlay: yes/no
 ```
@@ -348,7 +632,7 @@ overlay_state: suggested
 overlay_scope: project_sidecar_only
 retrieval_policy:
   policy_kind: project_context_only
-  pack_allowed: false
+  pack_allowed: none
   action_basis_allowed: false
   warning_code: overlay_unconfirmed
 persistent_overlay_allowed: false
@@ -389,7 +673,7 @@ retrieval_scope: archived_excluded
 default_retrieval: false
 retrieval_policy:
   policy_kind: project_context_only
-  pack_allowed: false
+  pack_allowed: none
   action_basis_allowed: false
   warning_code: archived_overlay_excluded
 action_basis_allowed: false
@@ -463,6 +747,111 @@ RRF can merge relevance signals inside active-project overlay.
 RRF cannot merge across authority buckets.
 RRF must not merge raw / candidate / reviewed / overlay into one authority-like list.
 ```
+
+#### Retrieval Receipt and Context-Pack Manifest
+
+Any query-run or context pack that includes raw, candidate, overlay, feedback, or
+reviewed records must make its authority boundary visible at item level.
+
+Minimum query-run trace:
+
+```yaml
+query_id:
+query_time:
+question_summary:
+verbatim_input:
+active_project:
+query_mode: orientation | source_inspection | review | action
+requested_authority_bucket:
+included_buckets: []
+excluded_buckets: []
+retrieval_filters:
+  include_candidates: false
+  include_overlays: active_project_only
+selected_items:
+  - ref:
+    record_kind:
+    knowledge_status:
+    pack_role: orientation | review_input | support | anchor
+    warning_code:
+    action_basis_allowed: false
+    selected_by:
+      lexical:
+      semantic:
+      graph:
+      metadata:
+      legacy_raw_metadata: false
+support_checks:
+  - claim_ref:
+    independent_anchor_ref:
+    result: supported | weak | missing_anchor | self_support_loop | scope_limited | not_ready
+warnings: []
+gaps: []
+human_confirmation_required: false
+```
+
+Minimum context-pack item:
+
+```yaml
+ref:
+record_kind:
+knowledge_status:
+pack_role:
+warning_code:
+project_scope:
+action_basis_allowed:
+independent_anchor_ref:
+selected_by:
+excluded_reason:
+```
+
+Hard rules:
+
+```text
+candidate and overlay items may enter packs only as orientation or review_input.
+support requires reviewed material or a raw/stable independent anchor.
+if support lacks independent_anchor_ref, mark missing_anchor or not_ready.
+selected_by is trace metadata only; it is not authority or evidence.
+`legacy_raw_metadata` must remain false. It is retained for audit only and must
+not be used as a retrieval, graph, pack, or support signal.
+
+Static schema/lint checks are necessary but not sufficient. They can catch
+mis-serialized fields, invalid receipt shapes, and obvious support misuse; they
+do not prove answer-loop faithfulness, groundedness, or tool behavior. Runtime
+validation still requires read-only query -> retrieval -> answer/use-loop traces.
+```
+
+#### Phase B Read-Only Retrieval Adapter
+
+VAKS may record a documentation-only Phase B direction for a derived retrieval
+adapter. This does not approve runtime, default, or production adoption.
+
+Allowed adapter use:
+
+```text
+parser / chunk / metadata / vector-like recall / graph-neighborhood recall
+click-back anchors
+source and chunk hashes
+retrieval receipts
+warning codes
+retrieval reasons
+```
+
+Required boundary:
+
+```text
+apply VAKS authority buckets before ranking or RRF fusion
+merge relevance signals only inside the allowed bucket
+return context-pack candidates, not support by default
+```
+
+`graph_path`, retrieval reasons, graph-neighborhood hits, and extracted graph
+edges are recall metadata only. They are not reviewed relations, evidence
+support, truth confidence, or action basis.
+
+The adapter must not promote raw, candidate, diagnostic, feedback, or overlay
+material into reviewed support, reviewed relation, truth confidence, or action
+basis.
 
 ### Heavy Processing
 
@@ -734,8 +1123,15 @@ Rule:
 ```text
 Source provenance tells where material came from.
 Source anchor tells where the specific evidence lives.
+Source annotation tells which source span deserves inspection.
 Neither proves support by itself.
 ```
+
+Source Annotation Sidecar may supply the locator for a later
+`evidence_items.source_anchor`, but it is not itself evidence support. When a
+candidate is promoted, used for a strong relation, decision, risk-sensitive
+answer, or action basis, the reviewer must still check the anchored span against
+the specific target point.
 
 For a paper:
 
@@ -958,18 +1354,20 @@ reviewed relation scope
 Use this matrix to pressure-test Source Intake and Promotion. These are expected
 agent failure modes, not rare edge cases.
 
-| Failure case | Bad result | Minimal guardrail |
-|---|---|---|
-| Medium candidate is written like a rule and quoted in default answers. | Candidate is treated as rule. | Use `knowledge_status` + `retrieval_policy` filtering; action mode excludes candidates. |
-| Semantic match directly creates persistent Project Overlay. | Project pollution and zombie overlays. | Suggested overlay stays in trace/inbox only; confirmed overlay is the only persistent overlay. |
-| `project_non_borrow_scope` is read as a universal ban. | One project experience pollutes every project. | Field name keeps project scope; require `project_reopen_trigger`; default candidate-only. |
-| Candidate summary outranks raw anchor. | Polished summary replaces original evidence. | Bucket raw / candidate / reviewed separately; candidate is orientation, not evidence. |
-| One successful use makes a source seem "more true". | Feedback mutates truth. | Feedback is append-only; it can affect activation and review pressure only. |
-| Source page, repository, or video version changes. | Old anchor pretends to still point to current source. | Require `snapshot_ref_or_source_date` and selector-style anchors; broken anchors set `blocked` or `review_due`. |
-| Heavy review is open but not passed, yet agent cites it. | Unresolved gaps become conclusions. | `heavy_review_open` is excluded from default answer pools until review passes. |
-| Archived overlay remains in retrieval. | Historical sidecar keeps misleading current work. | Archived overlays are excluded from default retrieval; project closeout drains active overlays. |
-| Confirmed overlay is read outside the active project. | One project's sidecar contaminates another project. | Require `retrieval_scope: active_project_only`; non-active-project retrieval excludes it. |
-| Project overlay is written like an ADR or decision. | Candidate project guidance becomes adoption. | Forbid decision outcome, review verdict, action basis, and universal ban in overlay records. |
+| Failure case | Trigger | Expected guardrail | Detection | Recovery |
+|---|---|---|---|---|
+| Medium candidate becomes action basis. | Candidate summary enters action/review mode. | Bucket filter first; candidate `action_basis_allowed: false`. | Query-run trace shows candidate as `support`. | Reclassify as `review_input`; add receipt warning. |
+| Suggested overlay persists without confirmation. | Semantic match writes durable overlay. | `suggested` exists only in trace/inbox. | Lint finds persisted `overlay_state: suggested`. | Delete persisted note; keep trace-only suggestion. |
+| Confirmed overlay leaks into inactive project retrieval. | Retrieval skips active project filter. | `retrieval_scope: active_project_only`. | Non-project receipt includes overlay. | Fix filter; rebuild derived index/cache. |
+| `project_non_borrow_scope` becomes universal ban. | Wording says "Never use X" or "X is wrong". | Project-local sentence plus reopen trigger. | Lint checks universal-ban wording in overlay. | Rewrite as project-local non-borrow scope. |
+| Candidate summary outranks raw anchor. | Top-k candidate is marked `support`. | Support needs independent raw/stable anchor. | Receipt `support` lacks `independent_anchor_ref`. | Mark `missing_anchor`; add raw/stable anchor or reject. |
+| Broken anchor is cited in action mode. | Source page changed or repo moved. | `review_pressure: blocked`. | Anchor checker / stale scan / use failure. | Pause action use; recapture source or reopen review. |
+| Negative feedback does not create review pressure. | Repeated scoped failures only downrank locally. | Repeated negative -> `review_due`. | Feedback aggregation report. | Add feedback event; reopen Heavy Review if needed. |
+| Archived overlay remains in default retrieval. | Closeout moved file but not filter state. | `overlay_state: archived` + default exclude. | Project closeout audit / retrieval receipt. | Fix state; rebuild index/cache. |
+| Heavy Review Open is treated as Review Passed. | `review_status: pending` is cited as support. | Review-status hard gate. | Action receipt includes pending review object. | Block writeback; return to review. |
+| Enum drift bypasses filter. | New example uses unregistered enum. | Enum registry + vault lint. | Lint reports unknown enum. | Normalize enum; move nuance into prose. |
+| Feedback directly mutates reviewed truth. | Agent edits reviewed note from feedback. | `truth_mutation_allowed: false`. | Git/vault diff or feedback lint. | Revert truth edit; write feedback event. |
+| Graph/rank score becomes support. | Graph edge or vector rank is cited. | Diagnostics-only labels. | Support check has no independent anchor. | Downgrade to orientation; add anchor or reject. |
 
 ### Action-Facing Anchor Rule
 
@@ -1010,6 +1408,8 @@ final evidence anchor for action-facing support.
 Capture must stay easy.
 Strong sources must remain traceable.
 Important evidence should carry a source anchor, not just a URL.
+Source-local insights should use Source Annotation Sidecar, not loose development sticky notes.
+Inline footnotes are capture affordances or working-copy handles; they are not the canonical annotation data layer.
 Evidence granularity must stay visible: metadata-only or summary-only material cannot silently become high-confidence support.
 Heavy source digests should include an omission check for missing risks, missing scope limits, likely dropped facts, and whether full source read is needed.
 Dashboard state is not truth.
@@ -1025,6 +1425,7 @@ Confidence caps are checked when a candidate is promoted or used for action: abs
 Intent confirmation is checked only before significant action, high-impact decision, implementation, deployment, or hard-to-rollback work.
 Medium candidates are provisional by default: they require machine-filterable status and retrieval-policy markers and cannot be used as action basis without promotion.
 Project overlays can be suggested automatically, but confirmed project mounting requires user confirmation or an explicitly active project-intake task.
+Source annotations can be created as low-friction pins, but they cannot create Project Overlay scope, reviewed relations, confidence, or action readiness.
 Confirmed overlays are active-project-only by default; archived overlays are excluded from default retrieval.
 Negative feedback creates review pressure first; it does not directly mutate reviewed truth.
 Processing tier is not authority: `light`, `medium`, and `heavy` describe effort, while `knowledge_status` describes boundary status.
