@@ -127,6 +127,9 @@ Source Annotation Sidecar:
     action_basis_allowed: false
     warning_code: annotation_not_support
   anchor_status: exact_verified | fuzzy_recovered | ambiguous | broken | source_changed
+  anchor_checked_at: last locator check date
+  anchor_stale: false by default
+  next_action: inspect_source_span by default
   support_checked: false by default
   evidence_support_status: not_checked by default
   no project-level borrow verdict, no truth score, no action basis
@@ -250,7 +253,7 @@ constraints, and review routing should be mandatory.
 | Object | Required fields | Optional fields | Boundary |
 |---|---|---|---|
 | Source Card | `source_id`, `source_url` or `raw_location`, `captured_at`, `title`, `why_saved` | `source_hash`, `snapshot_hash`, `adapter_ingest`, `author`, `version_or_commit` | provenance only; no adopt/reject |
-| Source Annotation Sidecar | `annotation_id`, `source_ref`, `selector_type`, one stable selector, `anchor_status`, `annotation_role`, `support_checked`, `evidence_support_status` | `working_copy_ref`, `content_hash`, `candidate_refs`, `project_overlay_refs`, `external_annotation_id`, `evidence_packet_ref` when `support_checked: true` | source-local locator; not support, not project verdict |
+| Source Annotation Sidecar | `annotation_id`, `source_ref`, `selector_type`, one stable selector, `anchor_status`, `annotation_role`, `support_checked`, `evidence_support_status` | `working_copy_ref`, `source_snapshot_ref`, `source_hash`, `content_hash`, `anchor_checked_at`, `anchor_stale`, `anchor_match_count`, `blocked_reason`, `next_action`, `source_digest_required`, `source_digest_ref`, `candidate_refs`, `project_overlay_refs`, `external_annotation_id`, `evidence_packet_ref` when `support_checked: true` | source-local locator; not support, not project verdict |
 | Medium Candidate | `source_ref`, `provisional: true`, `knowledge_status: candidate`, structured summary, candidate points | `open_questions`, `routing_hint`, `point_anchor_refs`, `possible_project_refs` | provisional orientation, not rule |
 | Project Overlay Confirmed | `project_id`, `target_ref`, `overlay_state: confirmed`, `project_borrow_scope`, `project_non_borrow_scope`, `project_reopen_trigger` | `target_hint`, `last_checked_at`, `expires_at`, `confirmation_basis` | project sidecar, not truth |
 | Heavy Review Open | `claim`, `source_anchor_refs` or `evidence_anchor_refs`, `warrant`, `scope`, `gaps`, `residual_risk`, `review_status` | `assumptions`, `known_counterevidence`, `reviewer`, `reviewed_at` | review input, not review pass |
@@ -500,6 +503,7 @@ processing_tier: light
 annotation_scope: source_local_anchor
 source_ref:
 working_copy_ref:
+source_snapshot_ref:
 selector_type: TextQuoteSelector | TextPositionSelector | line_range | timestamp | page_rect | bbox
 selector_exact:
 selector_prefix:
@@ -509,14 +513,23 @@ selector_timestamp_start:
 selector_timestamp_end:
 selector_page:
 selector_rect:
+source_hash:
+content_hash:
 anchor_status: exact_verified | fuzzy_recovered | ambiguous | broken | source_changed
+anchor_checked_at:
+anchor_stale: false
+anchor_match_count:
 annotation_role: question | possible_support | counterexample | scope_limit | risk_signal | candidate_seed | term_definition | implementation_note
 body_note:
+blocked_reason:
+next_action: inspect_source_span
 support_checked: false
 evidence_support_status: not_checked
 evidence_packet_ref:
 candidate_refs: []
 project_overlay_refs: []
+source_digest_required: false
+source_digest_ref:
 retrieval_policy:
   policy_kind: orientation_only
   pack_allowed: review_input_only
@@ -571,6 +584,18 @@ source_annotation may link to a Project Overlay.
 Project Overlay still owns project_borrow_scope / project_non_borrow_scope /
 project_reopen_trigger.
 The annotation does not replace those fields.
+```
+
+Scale rule:
+
+```text
+Do not let source annotations become a giant flat tag pile.
+
+At scale, use the source-annotation workbench as:
+working inbox -> needs anchor repair -> source drilldown -> AI review-input gate -> source health.
+
+Dense sources should route to a source digest / consolidation queue instead of
+asking humans to inspect every row-level pin.
 ```
 
 ### Project Overlay Gate

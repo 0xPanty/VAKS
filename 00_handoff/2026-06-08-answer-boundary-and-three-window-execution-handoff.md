@@ -131,6 +131,19 @@ Single-window priority: open Window 1. Two windows: 1 + 3. Three: 1 + 2 + 3.
   were updated so future VAKS / Obsidian intake uses annotations for source
   spans, Project Overlay for project borrow / non-borrow scope, and Evidence
   Packet / evidence_support for support or action use.
+- Product-gate closeout: an independent red-team pass judged the design
+  `pass-with-conditions`: L4 product-grade pilot-ready, not L5
+  production-operated. The safe mainline merge is intentionally small:
+  `templates/source-annotation.md`, `wiki/bases/source-annotations.base`,
+  `SOURCE_INTAKE.md`, and `SCHEMA.md` only absorbed the durable fields and
+  workbench rules. The scale sandbox, 10k fixtures, reports, and stress scripts
+  stay sandbox evidence and should not be bundled into mainline.
+- Mainline enhancement now landed conceptually: source annotations carry anchor
+  health (`anchor_checked_at`, `anchor_stale`, `anchor_match_count`), operator
+  routing (`blocked_reason`, `next_action`), and source-level scale controls
+  (`source_digest_required`, `source_digest_ref`). The Bases workbench should
+  stay lightweight: working inbox, anchor repair, source drilldown, AI
+  review-input gate, and source health.
 
 ## 9. Report Back Format
 

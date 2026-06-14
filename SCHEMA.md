@@ -775,6 +775,7 @@ annotation_scope: source_local_anchor
 annotation_id:
 source_ref:
 working_copy_ref:
+source_snapshot_ref:
 selector_type: TextQuoteSelector | TextPositionSelector | line_range | timestamp | page_rect | bbox
 selector_exact:
 selector_prefix:
@@ -784,15 +785,23 @@ selector_timestamp_start:
 selector_timestamp_end:
 selector_page:
 selector_rect:
+source_hash:
 content_hash:
 anchor_status: exact_verified | fuzzy_recovered | ambiguous | broken | source_changed
+anchor_checked_at:
+anchor_stale: false
+anchor_match_count:
 annotation_role: question | possible_support | counterexample | scope_limit | risk_signal | candidate_seed | term_definition | implementation_note
 body_note:
+blocked_reason:
+next_action: inspect_source_span
 support_checked: false
 evidence_support_status: not_checked
 evidence_packet_ref:
 candidate_refs: []
 project_overlay_refs: []
+source_digest_required: false
+source_digest_ref:
 retrieval_policy:
   policy_kind: orientation_only
   pack_allowed: review_input_only
@@ -814,6 +823,11 @@ Rules:
 - `anchor_status` describes locator health. `evidence_support_status` describes
   whether a later review has checked the span against a specific point. These
   are separate fields.
+- `anchor_checked_at`, `anchor_stale`, and `anchor_match_count` are operational
+  health fields. They route repair and refresh work; they do not create support
+  or confidence.
+- `blocked_reason` and `next_action` keep broken, ambiguous, changed, or stale
+  annotations actionable instead of leaving them as dead tags.
 - If `support_checked: true`, `evidence_packet_ref` must point to the Evidence
   Packet or review object that performed the check.
 - A source annotation may route a candidate point, review queue item, or Project
@@ -822,6 +836,11 @@ Rules:
 - When an annotation becomes evidence in an Evidence Packet, the reviewer copies
   or resolves the locator into `evidence_items.source_anchor` and performs
   `evidence_support` there. Do not count the annotation record itself as support.
+- At scale, source annotations must be operated through a workbench split:
+  working inbox, anchor repair, source drilldown, AI review-input gate, and
+  source health. Dense sources route to `source_digest_required` /
+  `source_digest_ref` or a consolidation queue instead of becoming a row-level
+  pile.
 
 默认映射：
 

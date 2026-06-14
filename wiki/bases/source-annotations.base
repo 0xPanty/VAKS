@@ -10,35 +10,64 @@ properties:
     displayName: Annotation ID
   source_ref:
     displayName: Source
+  working_copy_ref:
+    displayName: Working copy
+  source_snapshot_ref:
+    displayName: Snapshot
   selector_type:
     displayName: Selector
   anchor_status:
     displayName: Anchor status
+  anchor_checked_at:
+    displayName: Anchor checked
+  anchor_stale:
+    displayName: Stale
+  anchor_match_count:
+    displayName: Matches
   annotation_role:
     displayName: Role
+  body_note:
+    displayName: Note
+  lifecycle_state:
+    displayName: Lifecycle
+  blocked_reason:
+    displayName: Blocked reason
+  next_action:
+    displayName: Next action
+  source_digest_required:
+    displayName: Digest needed
+  source_digest_ref:
+    displayName: Digest
   support_checked:
     displayName: Support checked
   evidence_support_status:
     displayName: Evidence support
+  evidence_packet_ref:
+    displayName: Evidence packet
   action_basis_allowed:
     displayName: Action basis allowed
+  truth_mutation_allowed:
+    displayName: Truth mutation allowed
   review_pressure:
     displayName: Review pressure
   file.path:
     displayName: Path
 views:
   - type: table
-    name: Annotation inbox
+    name: Working inbox
+    filters:
+      and:
+        - lifecycle_state != "archived"
+        - anchor_status != "exact_verified"
     order:
       - annotation_id
       - source_ref
-      - selector_type
       - anchor_status
+      - anchor_stale
       - annotation_role
-      - support_checked
-      - evidence_support_status
-      - action_basis_allowed
       - review_pressure
+      - next_action
+      - blocked_reason
       - file.path
     limit: 100
   - type: table
@@ -52,6 +81,51 @@ views:
       - annotation_id
       - source_ref
       - anchor_status
+      - anchor_match_count
       - review_pressure
+      - blocked_reason
+      - next_action
       - file.path
     limit: 100
+  - type: table
+    name: Source drilldown
+    order:
+      - source_ref
+      - annotation_id
+      - anchor_status
+      - annotation_role
+      - body_note
+      - candidate_refs
+      - project_overlay_refs
+      - file.path
+    limit: 200
+  - type: table
+    name: AI review-input gate
+    order:
+      - annotation_id
+      - source_ref
+      - anchor_status
+      - anchor_stale
+      - annotation_role
+      - body_note
+      - support_checked
+      - evidence_packet_ref
+      - action_basis_allowed
+      - truth_mutation_allowed
+      - next_action
+      - file.path
+    limit: 100
+  - type: table
+    name: Source health
+    order:
+      - source_ref
+      - source_digest_required
+      - source_digest_ref
+      - anchor_status
+      - anchor_stale
+      - anchor_match_count
+      - review_pressure
+      - next_action
+      - blocked_reason
+      - file.path
+    limit: 200

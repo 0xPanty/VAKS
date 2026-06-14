@@ -10,6 +10,7 @@ annotation_scope: source_local_anchor
 annotation_id:
 source_ref:
 working_copy_ref:
+source_snapshot_ref:
 external_annotation_id:
 selector_type:
 selector_exact:
@@ -20,15 +21,23 @@ selector_timestamp_start:
 selector_timestamp_end:
 selector_page:
 selector_rect:
+source_hash:
 content_hash:
 anchor_status: exact_verified
+anchor_checked_at:
+anchor_stale: false
+anchor_match_count:
 annotation_role: candidate_seed
 body_note:
+blocked_reason:
+next_action: inspect_source_span
 support_checked: false
 evidence_support_status: not_checked
 evidence_packet_ref:
 candidate_refs: []
 project_overlay_refs: []
+source_digest_required: false
+source_digest_ref:
 retrieval_policy:
   policy_kind: orientation_only
   pack_allowed: review_input_only
@@ -60,6 +69,7 @@ canonical data layer.
 ```yaml
 source_ref:
 working_copy_ref:
+source_snapshot_ref:
 selector_type:
 selector_exact:
 selector_prefix:
@@ -69,8 +79,12 @@ selector_timestamp_start:
 selector_timestamp_end:
 selector_page:
 selector_rect:
+source_hash:
 content_hash:
 anchor_status:
+anchor_checked_at:
+anchor_stale:
+anchor_match_count:
 ```
 
 ## Annotation Body
@@ -78,6 +92,8 @@ anchor_status:
 ```yaml
 annotation_role:
 body_note:
+blocked_reason:
+next_action:
 ```
 
 Allowed role intent:
@@ -98,6 +114,8 @@ implementation_note
 ```yaml
 candidate_refs:
 project_overlay_refs:
+source_digest_required:
+source_digest_ref:
 support_checked: false
 evidence_support_status: not_checked
 evidence_packet_ref:
@@ -105,6 +123,16 @@ evidence_packet_ref:
 
 If `support_checked` becomes true, `evidence_packet_ref` must identify the
 Evidence Packet or review object that performed the support check.
+
+At scale, keep daily work in the annotation workbench instead of one flat tag
+pile:
+
+```text
+working inbox -> repair queue -> source drilldown -> AI review-input gate -> source health
+```
+
+Dense sources should route to a source digest or consolidation queue instead of
+making humans inspect hundreds of row-level pins.
 
 ## Forbidden
 
