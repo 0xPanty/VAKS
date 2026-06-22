@@ -1,0 +1,33 @@
+{
+  "status": "sandbox_package_check_pass",
+  "case_count": 20,
+  "passed_expected_decision_count": 20,
+  "query_policy_contract_status": "sandbox_contract_included",
+  "query_policy_receipt_count": 20,
+  "receipt_effect_status": "pass",
+  "receipt_effect_observed_nonzero_exclusion_count": 4,
+  "receipt_effect_expected_nonzero_exclusion_count": 4,
+  "default_restricted_policy_case_count": 2,
+  "default_restricted_policy_nonzero_exclusion_count": 2,
+  "source_annotation_effect_case_count": 2,
+  "source_annotation_retained_case_count": 1,
+  "source_annotation_excluded_case_count": 1,
+  "source_annotation_exclusion_observed_across_all_restricted_pairs": 3,
+  "reviewed_bucket_effect_case_count": 2,
+  "reviewed_bucket_retained_case_count": 1,
+  "reviewed_bucket_excluded_case_count": 1,
+  "reviewed_bucket_exclusion_observed_across_all_restricted_pairs": 3,
+  "retrieval_channels_implemented": [
+    "local_lexical"
+  ],
+  "retrieval_channels_not_implemented": [
+    "dense_vector",
+    "sparse_semantic",
+    "graph_overlay",
+    "second_stage_rerank",
+    "rrf_hybrid_fusion"
+  ],
+  "full_workspace_frozen_replay_status": "pass",
+  "semantic_support_judgment_status": "author_side_scripted_self_check_completed_external_not_judged",
+  "truth_boundary": "Package check covers generated sandbox evidence, QueryPolicy authority-bucket receipts, receipt-effect exclusions, generic assembler decisions, and full collected Markdown corpus replay only."
+}

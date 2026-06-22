@@ -1,0 +1,12 @@
+{
+  "status": "ready_not_judged",
+  "dispatch_zip": "outputs/review/source-intake-generic-readonly-loop-2026-06-14/semantic-support-judge-dispatch-bundle.zip",
+  "dispatch_zip_sha256": "be96dafa56d886711b6b0ab65236c4be8b92726f9bcdef675080876ccdea719e",
+  "judge_a_zip_sha256": "b2763932bdd5aeb719db0c03b9c214d3bd93d1387c48ca93e55e4ff7550f931c",
+  "judge_b_zip_sha256": "42dad5916008c502a1f7234793e38544867e40d45a832c1181016f1afb8c029b",
+  "per_judge_minimized_schema": true,
+  "has_dispatch_manifest": true,
+  "has_per_zip_sha_sidecars": true,
+  "row_count": 11,
+  "truth_boundary": "Dispatch bundle is ready to send to two independent judges, but no independent semantic support judgment has been completed."
+}

@@ -1,0 +1,7 @@
+{
+  "status": "author_side_scripted_self_check_completed_external_not_judged",
+  "row_count": 11,
+  "all_internal_relevance_at_least_2": true,
+  "all_internal_sufficiency_at_least_2": true,
+  "truth_boundary": "This is a local Codex author-side scripted semantic support self-check. It is not independent manual review, external blind relevance, Pro judgment, or production groundedness validation."
+}

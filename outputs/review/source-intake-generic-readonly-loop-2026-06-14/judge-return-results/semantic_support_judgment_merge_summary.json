@@ -1,0 +1,20 @@
+{
+  "status": "ready_for_arbitration",
+  "checked_at": "2026-06-22T16:19:06+00:00",
+  "judge_a_csv": "outputs\\review\\source-intake-generic-readonly-loop-2026-06-14\\judge-return-results\\returned_judge_a.csv",
+  "judge_b_csv": "outputs\\review\\source-intake-generic-readonly-loop-2026-06-14\\judge-return-results\\returned_judge_b.csv",
+  "base_template_csv": "outputs\\review\\source-intake-generic-readonly-loop-2026-06-14\\results\\semantic_support_judgment_template.csv",
+  "dispatch_integrity_status": "checked_against_base_template",
+  "expected_row_count": 11,
+  "row_count": 11,
+  "completed_judge_a_rows": 11,
+  "completed_judge_b_rows": 11,
+  "agreement_count": 8,
+  "disagreement_count": 3,
+  "missing_or_invalid_count": 0,
+  "arbitration_queue_count": 3,
+  "errors": [],
+  "merged_csv": "outputs\\review\\source-intake-generic-readonly-loop-2026-06-14\\judge-return-results\\semantic_support_judgment_merged.csv",
+  "arbitration_queue_csv": "outputs\\review\\source-intake-generic-readonly-loop-2026-06-14\\judge-return-results\\semantic_support_arbitration_queue.csv",
+  "truth_boundary": "This merges independent semantic-support judgments only. It is not P0 approval, production runtime validation, reviewed truth promotion, or action readiness."
+}

@@ -1,0 +1,28 @@
+{
+  "status": "semantic_support_judgment_completed_with_partial_sufficiency",
+  "checked_at": "2026-06-22T16:21:11Z",
+  "row_count": 11,
+  "judge_a_rows": 11,
+  "judge_b_rows": 11,
+  "arbitration_queue_count": 3,
+  "final_relevance_2_count": 11,
+  "final_sufficiency_2_count": 5,
+  "final_sufficiency_1_count": 6,
+  "final_sufficiency_0_count": 0,
+  "fully_supported_rows": [
+    "judge-row-001",
+    "judge-row-007",
+    "judge-row-008",
+    "judge-row-010",
+    "judge-row-011"
+  ],
+  "partially_sufficient_rows": [
+    "judge-row-002",
+    "judge-row-003",
+    "judge-row-004",
+    "judge-row-005",
+    "judge-row-006",
+    "judge-row-009"
+  ],
+  "truth_boundary": "Independent A/B plus arbiter semantic-support judgment for the judge packet only. This is not Source Intake P0 approval, production runtime validation, reviewed truth promotion, or action readiness."
+}

@@ -1,0 +1,11 @@
+{
+  "status": "warnings_present",
+  "warning_count": 130,
+  "high_risk_manual_review_count": 12,
+  "migration_debt_defer_ok_count": 118,
+  "retrieval_visible_legacy_overlay_compatibility_count": 8,
+  "source_why_saved_placeholder_without_body_reason_count": 4,
+  "proxy_authority_metadata_count": 0,
+  "audit_csv": "outputs/review/source-intake-generic-readonly-loop-2026-06-14/results/source_intake_current_lint_debt_audit.csv",
+  "truth_boundary": "This audit makes current lint debt visible at package level; it does not clear semantic migration debt or prove P0 readiness."
+}

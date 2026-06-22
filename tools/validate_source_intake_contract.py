@@ -44,6 +44,7 @@ CURRENT_GLOBS = [
     "outputs/review/*feedback*.md",
     "outputs/review/*overlay*.md",
     "outputs/review/source_annotations/**/*.md",
+    "outputs/review/project_lens_overlays/*.md",
     "outputs/review/project_overlays/**/*.md",
 ]
 
@@ -338,6 +339,8 @@ def is_intake_surface(path: Path, data: dict[str, Any]) -> bool:
         return True
     if p.startswith("raw/"):
         return True
+    if p.startswith("outputs/review/project_lens_overlays/"):
+        return True
     if p.startswith("outputs/review/project_overlays/"):
         return True
     if (
@@ -377,6 +380,8 @@ def inferred_record_kind(path: Path, data: dict[str, Any]) -> str | None:
         return "context_pack_manifest"
     if p.endswith("feedback-event.md") or p.endswith("-feedback.md"):
         return "feedback_event"
+    if p.startswith("outputs/review/project_lens_overlays/"):
+        return "project_overlay"
     if p.startswith("outputs/review/project_overlays/") or p.endswith("-overlay.md"):
         return "project_overlay"
     return None
@@ -1174,15 +1179,21 @@ def write_outputs(root: Path, out_dir: Path, scope: str, files: list[Path], issu
         status = "pass"
         structural_status = "pass"
         semantic_status = "clear"
-    legacy_project_lens_count = len(list((root / "outputs" / "review" / "_legacy_project_lens").glob("*.md")))
+    retrieval_visible_project_lens_count = len(
+        list((root / "outputs" / "review" / "project_lens_overlays").glob("*.md"))
+    )
+    archived_legacy_project_lens_count = len(list((root / "outputs" / "review" / "_legacy_project_lens").glob("*.md")))
     summary = {
         "scope": scope,
         "files_scanned": len(files),
         "files_validated": validated_count,
         "files_skipped": len(files) - validated_count,
-        "canonical_validated_surfaces_excluding_legacy_lens": validated_count if scope == "current" else None,
-        "legacy_project_lens_excluded_from_canonical_scope": scope == "current",
-        "legacy_project_lens_excluded_count": legacy_project_lens_count if scope == "current" else None,
+        "canonical_validated_surfaces_excluding_legacy_lens": (
+            validated_count - retrieval_visible_project_lens_count if scope == "current" else None
+        ),
+        "legacy_project_lens_compatibility_included_in_current_scope": scope == "current",
+        "legacy_project_lens_compatibility_count": retrieval_visible_project_lens_count if scope == "current" else None,
+        "legacy_project_lens_archive_excluded_count": archived_legacy_project_lens_count if scope == "current" else None,
         "issue_count": len(issues),
         "warning_count": len(warnings),
         "error_count": len(errors),
@@ -1193,7 +1204,7 @@ def write_outputs(root: Path, out_dir: Path, scope: str, files: list[Path], issu
         "warning_breakdown_by_semantic_class": warning_breakdown_by_semantic_class,
         "issue_breakdown_by_semantic_class": issue_breakdown_by_semantic_class,
         "canonical_p0_status": "not_passed" if warnings or errors else "candidate_structural_clear",
-        "truth_boundary": "Structural lint can pass while semantic migration debt remains; this is not Source Intake P0 approval.",
+        "truth_boundary": "Structural lint can pass while semantic migration debt remains; retrieval-visible legacy project_lens overlays are included as compatibility surfaces but do not count as canonical P0 compliance.",
     }
     (out_dir / f"source_intake_{scope}_lint_summary.json").write_text(
         json.dumps(summary, ensure_ascii=False, indent=2),

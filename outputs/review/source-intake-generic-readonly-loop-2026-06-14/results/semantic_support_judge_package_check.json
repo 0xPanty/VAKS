@@ -1,0 +1,19 @@
+{
+  "status": "ready_not_judged",
+  "judge_zip": "outputs/review/source-intake-generic-readonly-loop-2026-06-14/semantic-support-judge-only.zip",
+  "judge_zip_sha256": "5b7ad2b25d1b56a173ea10dee7860c526ba68c094121f94f44be0c569e3dadb4",
+  "included_files": [
+    "SEMANTIC_SUPPORT_JUDGMENT_INSTRUCTIONS.md",
+    "results/semantic_support_judgment_template.csv"
+  ],
+  "excluded_files": [
+    "results/semantic_support_judgment_mapping.csv",
+    "results/internal_semantic_support_self_check.csv"
+  ],
+  "opaque_row_ids": true,
+  "has_judge_identity_fields": true,
+  "has_anchor_source_hash": true,
+  "has_frozen_snapshot_ref": true,
+  "row_count": 11,
+  "truth_boundary": "Judge-only packet contains only instructions and the blank semantic support judgment template with opaque row IDs, judge/arbiter identity fields, source hashes, and frozen snapshot refs; judgments are not completed."
+}

@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import csv
 import json
 import tempfile
@@ -824,7 +825,15 @@ def run_receipt_case(case: dict[str, Any]) -> list[str]:
     return sorted(set(checks))
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Run adversarial Source Intake failure-matrix checks.")
+    parser.add_argument("--out-dir", default=str(OUT_DIR), help="Directory for failure matrix CSV/JSON results.")
+    return parser.parse_args()
+
+
 def main() -> int:
+    args = parse_args()
+    out_dir = Path(args.out_dir)
     root = Path(".").resolve()
     registry = contract.load_registry(root)
     rows: list[dict[str, Any]] = []
@@ -851,8 +860,8 @@ def main() -> int:
             }
         )
 
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
-    with (OUT_DIR / "source_intake_failure_matrix_results.csv").open("w", newline="", encoding="utf-8") as f:
+    out_dir.mkdir(parents=True, exist_ok=True)
+    with (out_dir / "source_intake_failure_matrix_results.csv").open("w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=["id", "scenario", "expected_check", "detected_checks", "blocked"])
         writer.writeheader()
         writer.writerows(rows)
@@ -861,7 +870,7 @@ def main() -> int:
         "blocked_count": sum(1 for row in rows if row["blocked"]),
         "status": "pass" if all(row["blocked"] for row in rows) else "fail",
     }
-    (OUT_DIR / "source_intake_failure_matrix_summary.json").write_text(
+    (out_dir / "source_intake_failure_matrix_summary.json").write_text(
         json.dumps(summary, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )

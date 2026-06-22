@@ -1,0 +1,21 @@
+{
+  "scope": "contract",
+  "files_scanned": 10,
+  "files_validated": 10,
+  "files_skipped": 0,
+  "canonical_validated_surfaces_excluding_legacy_lens": null,
+  "legacy_project_lens_compatibility_included_in_current_scope": false,
+  "legacy_project_lens_compatibility_count": null,
+  "legacy_project_lens_archive_excluded_count": null,
+  "issue_count": 0,
+  "warning_count": 0,
+  "error_count": 0,
+  "status": "pass",
+  "structural_status": "pass",
+  "semantic_status": "clear",
+  "warning_breakdown_by_check": {},
+  "warning_breakdown_by_semantic_class": {},
+  "issue_breakdown_by_semantic_class": {},
+  "canonical_p0_status": "candidate_structural_clear",
+  "truth_boundary": "Structural lint can pass while semantic migration debt remains; retrieval-visible legacy project_lens overlays are included as compatibility surfaces but do not count as canonical P0 compliance."
+}

@@ -1,0 +1,39 @@
+{
+  "status": "commands_pass_with_current_lint_errors",
+  "checked_at": "2026-06-22T15:34:42+00:00",
+  "current_lint_status": "structural_pass_semantic_debt",
+  "current_lint_errors": 1,
+  "current_lint_warnings": 130,
+  "current_lint_debt_audit": {
+    "status": "warnings_present",
+    "warning_count": 130,
+    "high_risk_manual_review_count": 12,
+    "migration_debt_defer_ok_count": 118,
+    "retrieval_visible_legacy_overlay_compatibility_count": 8,
+    "source_why_saved_placeholder_without_body_reason_count": 4,
+    "proxy_authority_metadata_count": 0,
+    "audit_csv": "outputs/review/source-intake-generic-readonly-loop-2026-06-14/results/source_intake_current_lint_debt_audit.csv",
+    "truth_boundary": "This audit makes current lint debt visible at package level; it does not clear semantic migration debt or prove P0 readiness."
+  },
+  "commands": [
+    {
+      "command": "python tools/validate_source_intake_contract.py --scope current --out-dir outputs/review/source-intake-generic-readonly-loop-2026-06-14/results --no-fail",
+      "returncode": 0,
+      "stdout": "{\"scope\": \"current\", \"files_scanned\": 254, \"files_validated\": 200, \"warnings\": 130, \"errors\": 1}",
+      "stderr": ""
+    },
+    {
+      "command": "python tools/validate_source_intake_contract.py --scope contract --out-dir outputs/review/source-intake-generic-readonly-loop-2026-06-14/results --no-fail",
+      "returncode": 0,
+      "stdout": "{\"scope\": \"contract\", \"files_scanned\": 10, \"files_validated\": 10, \"warnings\": 0, \"errors\": 0}",
+      "stderr": ""
+    },
+    {
+      "command": "python tools/validate_source_intake_failure_matrix.py --out-dir outputs/review/source-intake-generic-readonly-loop-2026-06-14/results",
+      "returncode": 0,
+      "stdout": "{\"case_count\": 35, \"blocked_count\": 35, \"status\": \"pass\"}",
+      "stderr": ""
+    }
+  ],
+  "truth_boundary": "Command success means the sandbox checks ran; current lint warnings remain semantic debt and this package is not a P0 pass."
+}

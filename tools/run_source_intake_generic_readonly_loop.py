@@ -6,6 +6,7 @@ package: move from case-scripted pack assembly to a generic read-only assembler.
 
 Scope is intentionally narrow:
 - local Markdown lexical retrieval is live;
+- a sandbox QueryPolicy / authority-bucket receipt is generated before retrieval;
 - pack role assignment uses generic rules, not case_id branches;
 - support gate remains structural, not external semantic judgment;
 - no LLM, no live tool runtime, no writeback, no promotion, no truth mutation;
@@ -84,6 +85,31 @@ ANCHOR_MATCH_STOPWORDS = {
 CANONICAL_RECORD_KIND_ALIASES = {
     "project_lens_overlay": "project_overlay",
 }
+JUDGE_VISIBLE_FIELDS = [
+    "row_id",
+    "query",
+    "answer_use_claim",
+    "anchor_ref",
+    "anchor_source_hash",
+    "frozen_snapshot_ref",
+    "anchor_excerpt",
+]
+JUDGE_A_FIELDS = [
+    *JUDGE_VISIBLE_FIELDS,
+    "judge_a_id",
+    "judge_a_judged_at",
+    "judge_a_relevance_0_2",
+    "judge_a_sufficiency_0_2",
+    "judge_a_notes",
+]
+JUDGE_B_FIELDS = [
+    *JUDGE_VISIBLE_FIELDS,
+    "judge_b_id",
+    "judge_b_judged_at",
+    "judge_b_relevance_0_2",
+    "judge_b_sufficiency_0_2",
+    "judge_b_notes",
+]
 FRESH_NON_FLEXNOTE_ALLOW_CASE_IDS = {
     "G3-05-web-annotation-source-anchor-fresh-allow",
     "G3-06-w3c-prov-boundary-fresh-allow",
@@ -103,6 +129,105 @@ DECOY_CASE_IDS = {
     "G3-16-web-annotation-runtime-stack-decoy",
     "G3-17-w3c-prov-full-ontology-decoy",
 }
+BROKEN_ANCHOR_NEGATIVE_CASE_IDS = {
+    "G3-18-broken-raw-anchor-negative",
+}
+DEFAULT_RESTRICTED_POLICY_CASE_IDS = {
+    "G3-19-restricted-review-raw-anchor-policy",
+    "G3-20-restricted-action-evidence-buckets-policy",
+}
+
+
+RECEIPT_EFFECT_CASES = [
+    {
+        "effect_id": "RX-01-mixed-query-all-buckets-baseline",
+        "query": "FlexNote Extracted Source Facts visual workbench candidate overlay source anchor tag database context pack inspected pages",
+        "query_mode": "review",
+        "intent": "Receipt-effect baseline: broad review policy allows raw/candidate/overlay buckets before ranking.",
+        "policy_variant": "all-buckets-baseline",
+        "allowed_authority_buckets_override": ["reviewed", "raw_anchor", "candidate", "overlay", "source_annotation"],
+        "support_candidate_authority_buckets_override": ["raw_anchor"],
+        "expected_nonzero_exclusion": False,
+    },
+    {
+        "effect_id": "RX-02-mixed-query-raw-anchor-only",
+        "query": "FlexNote Extracted Source Facts visual workbench candidate overlay source anchor tag database context pack inspected pages",
+        "query_mode": "review",
+        "intent": "Receipt-effect treatment: same query but only raw_anchor bucket may enter retrieval.",
+        "policy_variant": "raw-anchor-only",
+        "allowed_authority_buckets_override": ["raw_anchor"],
+        "support_candidate_authority_buckets_override": ["raw_anchor"],
+        "compare_to": "RX-01-mixed-query-all-buckets-baseline",
+        "expected_nonzero_exclusion": True,
+        "expected_excluded_buckets": ["candidate", "overlay"],
+    },
+    {
+        "effect_id": "RX-03-action-query-broad-orientation-baseline",
+        "query": "Use PROV traceability as truth confidence and action basis now",
+        "query_mode": "action",
+        "intent": "Receipt-effect baseline: action query with broad orientation buckets still has no support candidate bucket.",
+        "policy_variant": "broad-orientation-baseline",
+        "allowed_authority_buckets_override": ["reviewed", "raw_anchor", "candidate", "overlay", "source_annotation"],
+        "support_candidate_authority_buckets_override": [],
+        "expected_nonzero_exclusion": False,
+    },
+    {
+        "effect_id": "RX-04-action-query-evidence-buckets-only",
+        "query": "Use PROV traceability as truth confidence and action basis now",
+        "query_mode": "action",
+        "intent": "Receipt-effect treatment: same action query, candidate/overlay buckets excluded before ranking.",
+        "policy_variant": "evidence-buckets-only",
+        "allowed_authority_buckets_override": ["reviewed", "raw_anchor"],
+        "support_candidate_authority_buckets_override": [],
+        "compare_to": "RX-03-action-query-broad-orientation-baseline",
+        "expected_nonzero_exclusion": True,
+        "expected_excluded_buckets": ["candidate", "overlay"],
+    },
+    {
+        "effect_id": "RX-05-source-annotation-all-buckets-baseline",
+        "query": "legacy development sticky marker source annotation sidecar",
+        "query_mode": "review",
+        "intent": "Receipt-effect baseline: source_annotation bucket is available for locator/orientation evidence.",
+        "policy_variant": "source-annotation-baseline",
+        "allowed_authority_buckets_override": ["reviewed", "raw_anchor", "candidate", "overlay", "source_annotation"],
+        "support_candidate_authority_buckets_override": ["raw_anchor"],
+        "expected_nonzero_exclusion": False,
+    },
+    {
+        "effect_id": "RX-06-source-annotation-excluded-raw-anchor-only",
+        "query": "legacy development sticky marker source annotation sidecar",
+        "query_mode": "review",
+        "intent": "Receipt-effect treatment: same query but source_annotation is excluded before ranking.",
+        "policy_variant": "source-annotation-excluded",
+        "allowed_authority_buckets_override": ["raw_anchor"],
+        "support_candidate_authority_buckets_override": ["raw_anchor"],
+        "compare_to": "RX-05-source-annotation-all-buckets-baseline",
+        "expected_nonzero_exclusion": True,
+        "expected_excluded_buckets": ["source_annotation"],
+    },
+    {
+        "effect_id": "RX-07-reviewed-bucket-baseline",
+        "query": "nashsu llm_wiki reviewed library review purpose graph health async review queue",
+        "query_mode": "review",
+        "intent": "Receipt-effect baseline: reviewed bucket is available for reviewed material retention evidence.",
+        "policy_variant": "reviewed-bucket-baseline",
+        "allowed_authority_buckets_override": ["reviewed", "raw_anchor", "candidate", "overlay", "source_annotation"],
+        "support_candidate_authority_buckets_override": ["raw_anchor"],
+        "expected_nonzero_exclusion": False,
+    },
+    {
+        "effect_id": "RX-08-reviewed-bucket-excluded",
+        "query": "nashsu llm_wiki reviewed library review purpose graph health async review queue",
+        "query_mode": "review",
+        "intent": "Receipt-effect treatment: same query but reviewed bucket is excluded before ranking.",
+        "policy_variant": "reviewed-bucket-excluded",
+        "allowed_authority_buckets_override": ["raw_anchor", "candidate", "overlay", "source_annotation"],
+        "support_candidate_authority_buckets_override": ["raw_anchor"],
+        "compare_to": "RX-07-reviewed-bucket-baseline",
+        "expected_nonzero_exclusion": True,
+        "expected_excluded_buckets": ["reviewed"],
+    },
+]
 
 
 CUE_DEPLETED_ALLOW_PRESSURE_QUERIES = [
@@ -186,10 +311,10 @@ GENERIC_QUERIES = [
         "expected_decision": "allowed_readonly",
     },
     {
-        "case_id": "G3-04-canonical-overlay-generic-downgrade",
-        "query": "canonical overlay runtime fixture FlexNote visual workbench project overlay support",
+        "case_id": "G3-04-project-overlay-generic-downgrade",
+        "query": "FlexNote visual workbench project overlay support",
         "query_mode": "action",
-        "intent": "Generic assembler should not let a canonical project overlay become final support.",
+        "intent": "Generic assembler should not let a project overlay become final support.",
         "expected_decision": "blocked_or_downgraded",
     },
     {
@@ -282,6 +407,34 @@ GENERIC_QUERIES = [
         "query_mode": "review",
         "intent": "Decoy: full ontology/runtime terms should not pass as final support through the narrow anchor vocabulary.",
         "expected_decision": "blocked_or_downgraded",
+    },
+    {
+        "case_id": "G3-18-broken-raw-anchor-negative",
+        "query": "FlexNote Extracted Source Facts local-first card tag database inspected pages",
+        "query_mode": "source_inspection",
+        "intent": "Adversarial negative: after generic selection finds a raw support candidate, replace its anchor selector with a missing selector and require the support gate to block it.",
+        "expected_decision": "blocked_or_downgraded",
+        "adversarial_broken_anchor_selector": "missing-runtime-anchor-selector",
+    },
+    {
+        "case_id": "G3-19-restricted-review-raw-anchor-policy",
+        "query": "FlexNote Extracted Source Facts visual workbench candidate overlay source anchor tag database context pack inspected pages",
+        "query_mode": "review",
+        "intent": "Default restricted policy case: only raw_anchor bucket may enter retrieval; candidate/overlay are excluded before ranking.",
+        "expected_decision": "allowed_readonly",
+        "policy_variant": "default-restricted-raw-anchor",
+        "allowed_authority_buckets_override": ["raw_anchor"],
+        "support_candidate_authority_buckets_override": ["raw_anchor"],
+    },
+    {
+        "case_id": "G3-20-restricted-action-evidence-buckets-policy",
+        "query": "Use PROV traceability as truth confidence and action basis now",
+        "query_mode": "action",
+        "intent": "Default restricted action case: only reviewed/raw_anchor buckets may enter retrieval; no support candidate bucket is allowed.",
+        "expected_decision": "blocked_or_downgraded",
+        "policy_variant": "default-restricted-action-evidence",
+        "allowed_authority_buckets_override": ["reviewed", "raw_anchor"],
+        "support_candidate_authority_buckets_override": [],
     },
 ]
 
@@ -385,6 +538,8 @@ def generic_pack_role(hit: base.SearchHit, query_mode: str, support_already_sele
         return "review_input", "", "candidate_distillation_is_review_input_not_support"
     if record_kind == "project_overlay":
         return "review_input", "", "project_overlay_is_project_context_not_support"
+    if record_kind == "reviewed_material":
+        return "review_input", "", "reviewed_material_context_only_not_raw_anchor_support"
     if record_kind != "source_card":
         return "orientation", "", "unknown_record_kind_orientation_only"
 
@@ -422,6 +577,29 @@ def assemble_pack_generic(case: dict[str, Any], hits: list[base.SearchHit], *, m
     if not items:
         raise RuntimeError(f"{case['case_id']}: generic assembler selected no items")
     return items
+
+
+def apply_adversarial_case_mutations(case: dict[str, Any], items: list[dict[str, Any]]) -> list[str]:
+    """Apply explicit adversarial fixture mutations after generic assembly."""
+
+    selector = case.get("adversarial_broken_anchor_selector")
+    if not selector:
+        return []
+
+    for item in items:
+        if item.get("pack_role") != "support":
+            continue
+        original_anchor = item.get("independent_anchor_ref") or ""
+        path_part = original_anchor.split("#", 1)[0] if "#" in original_anchor else item["ref"]
+        item["original_independent_anchor_ref"] = original_anchor
+        item["independent_anchor_ref"] = f"{path_part}#{selector}"
+        item["adversarial_fixture"] = "broken_anchor_selector_after_generic_selection"
+        item["assembler_rule"] = f"{item.get('assembler_rule', 'generic_record_kind_status_anchor_rule')}+adversarial_broken_anchor"
+        return [
+            f"adversarial broken-anchor fixture replaced `{original_anchor}` with `{item['independent_anchor_ref']}`"
+        ]
+
+    return ["adversarial broken-anchor fixture found no generic support item to mutate"]
 
 
 def canonical_record_kind(record_kind: str) -> str:
@@ -522,6 +700,171 @@ def write_csv(path: Path, rows: list[dict[str, Any]], fieldnames: list[str]) -> 
             writer.writerow({k: json.dumps(v, ensure_ascii=False) if isinstance(v, (list, dict)) else v for k, v in row.items()})
 
 
+def run_receipt_effect_tests(corpus: list[base.CorpusDoc], now: str) -> dict[str, Any]:
+    """Run paired QueryPolicy cases that must produce visible bucket exclusions."""
+
+    rows: list[dict[str, Any]] = []
+    for case in RECEIPT_EFFECT_CASES:
+        policy, bucket_receipt, hits = base.retrieve_with_query_policy(case, corpus)
+        top_paths = [hit.doc.rel_path for hit in hits]
+        top_buckets = [base.doc_authority_bucket(hit.doc) for hit in hits]
+        excluded_counts = bucket_receipt.get("excluded_bucket_counts", {})
+        expected_buckets = case.get("expected_excluded_buckets") or []
+        expected_buckets_excluded = all(int(excluded_counts.get(bucket, 0)) > 0 for bucket in expected_buckets)
+        nonzero_exclusion = int(bucket_receipt.get("excluded_doc_count", 0)) > 0
+        rows.append(
+            {
+                "effect_id": case["effect_id"],
+                "compare_to": case.get("compare_to", ""),
+                "query": case["query"],
+                "query_mode": case["query_mode"],
+                "query_policy_id": policy["policy_id"],
+                "policy_variant": case.get("policy_variant", ""),
+                "allowed_authority_buckets": policy["allowed_authority_buckets"],
+                "support_candidate_authority_buckets": policy["support_candidate_authority_buckets"],
+                "pre_filter_doc_count": bucket_receipt["pre_filter_doc_count"],
+                "post_filter_doc_count": bucket_receipt["post_filter_doc_count"],
+                "excluded_doc_count": bucket_receipt["excluded_doc_count"],
+                "excluded_bucket_counts": excluded_counts,
+                "expected_nonzero_exclusion": bool(case.get("expected_nonzero_exclusion")),
+                "nonzero_exclusion": nonzero_exclusion,
+                "expected_buckets_excluded": expected_buckets_excluded if expected_buckets else "",
+                "top_result": top_paths[0] if top_paths else "",
+                "top_result_authority_bucket": top_buckets[0] if top_buckets else "",
+                "top_paths": top_paths,
+                "top_authority_buckets": top_buckets,
+            }
+        )
+
+    by_id = {row["effect_id"]: row for row in rows}
+    pair_rows: list[dict[str, Any]] = []
+    for row in rows:
+        compare_to = row.get("compare_to")
+        if not compare_to:
+            continue
+        baseline = by_id.get(str(compare_to))
+        if not baseline:
+            continue
+        baseline_top_paths = baseline.get("top_paths") or []
+        treatment_top_paths = row.get("top_paths") or []
+        top_result_changed = baseline.get("top_result") != row.get("top_result")
+        top_k_order_changed = baseline_top_paths != treatment_top_paths
+        pair_rows.append(
+            {
+                "baseline_effect_id": baseline["effect_id"],
+                "treatment_effect_id": row["effect_id"],
+                "same_query": baseline["query"] == row["query"],
+                "baseline_allowed_buckets": baseline["allowed_authority_buckets"],
+                "treatment_allowed_buckets": row["allowed_authority_buckets"],
+                "baseline_excluded_doc_count": baseline["excluded_doc_count"],
+                "treatment_excluded_doc_count": row["excluded_doc_count"],
+                "treatment_excluded_bucket_counts": row["excluded_bucket_counts"],
+                "top_result_changed": top_result_changed,
+                "top_k_order_changed": top_k_order_changed,
+                "baseline_top_result": baseline["top_result"],
+                "treatment_top_result": row["top_result"],
+            }
+        )
+
+    write_csv(
+        RESULTS_DIR / "receipt_effect_cases.csv",
+        rows,
+        [
+            "effect_id",
+            "compare_to",
+            "query",
+            "query_mode",
+            "query_policy_id",
+            "policy_variant",
+            "allowed_authority_buckets",
+            "support_candidate_authority_buckets",
+            "pre_filter_doc_count",
+            "post_filter_doc_count",
+            "excluded_doc_count",
+            "excluded_bucket_counts",
+            "expected_nonzero_exclusion",
+            "nonzero_exclusion",
+            "expected_buckets_excluded",
+            "top_result",
+            "top_result_authority_bucket",
+            "top_paths",
+            "top_authority_buckets",
+        ],
+    )
+    write_csv(
+        RESULTS_DIR / "receipt_effect_pair_comparisons.csv",
+        pair_rows,
+        [
+            "baseline_effect_id",
+            "treatment_effect_id",
+            "same_query",
+            "baseline_allowed_buckets",
+            "treatment_allowed_buckets",
+            "baseline_excluded_doc_count",
+            "treatment_excluded_doc_count",
+            "treatment_excluded_bucket_counts",
+            "top_result_changed",
+            "top_k_order_changed",
+            "baseline_top_result",
+            "treatment_top_result",
+        ],
+    )
+
+    expected_treatments = [row for row in rows if row["expected_nonzero_exclusion"]]
+    nonzero_expected = [row for row in expected_treatments if row["nonzero_exclusion"]]
+    expected_bucket_hits = [
+        row for row in expected_treatments if row["expected_buckets_excluded"] is True
+    ]
+    changed_pairs = [row for row in pair_rows if row["top_result_changed"] or row["top_k_order_changed"]]
+    source_annotation_rows = [row for row in rows if "source-annotation" in row["effect_id"]]
+    source_annotation_exclusion_rows = [
+        row for row in rows if int((row.get("excluded_bucket_counts") or {}).get("source_annotation", 0)) > 0
+    ]
+    reviewed_bucket_rows = [row for row in rows if "reviewed-bucket" in row["effect_id"]]
+    reviewed_exclusion_rows = [
+        row for row in rows if int((row.get("excluded_bucket_counts") or {}).get("reviewed", 0)) > 0
+    ]
+    summary = {
+        "status": "pass"
+        if len(nonzero_expected) == len(expected_treatments)
+        and len(expected_bucket_hits) == len(expected_treatments)
+        and bool(changed_pairs)
+        else "fail",
+        "created_at": now,
+        "case_count": len(rows),
+        "paired_comparison_count": len(pair_rows),
+        "expected_nonzero_exclusion_count": len(expected_treatments),
+        "observed_nonzero_exclusion_count": len(nonzero_expected),
+        "expected_bucket_exclusion_count": len(expected_bucket_hits),
+        "top_result_or_order_changed_pair_count": len(changed_pairs),
+        "source_annotation_effect_case_count": len(source_annotation_rows),
+        "source_annotation_retained_case_count": sum(
+            1 for row in source_annotation_rows if row.get("top_result_authority_bucket") == "source_annotation"
+        ),
+        "source_annotation_excluded_case_count": sum(
+            1
+            for row in source_annotation_rows
+            if int((row.get("excluded_bucket_counts") or {}).get("source_annotation", 0)) > 0
+        ),
+        "source_annotation_exclusion_observed_across_all_restricted_pairs": len(source_annotation_exclusion_rows),
+        "reviewed_bucket_effect_case_count": len(reviewed_bucket_rows),
+        "reviewed_bucket_retained_case_count": sum(
+            1 for row in reviewed_bucket_rows if row.get("top_result_authority_bucket") == "reviewed"
+        ),
+        "reviewed_bucket_excluded_case_count": sum(
+            1
+            for row in reviewed_bucket_rows
+            if int((row.get("excluded_bucket_counts") or {}).get("reviewed", 0)) > 0
+        ),
+        "reviewed_bucket_exclusion_observed_across_all_restricted_pairs": len(reviewed_exclusion_rows),
+        "cases_csv": base.rel(RESULTS_DIR / "receipt_effect_cases.csv"),
+        "pair_comparisons_csv": base.rel(RESULTS_DIR / "receipt_effect_pair_comparisons.csv"),
+        "truth_boundary": "Receipt-effect tests demonstrate the bucket-first hook can produce observable corpus exclusions under restricted policies. They do not prove hybrid/vector/graph retrieval or production runtime behavior.",
+    }
+    base.write_json(RESULTS_DIR / "receipt_effect_summary.json", summary)
+    return summary
+
+
 def run_cue_depleted_allow_pressure(corpus: list[base.CorpusDoc], now: str) -> dict[str, Any]:
     rows: list[dict[str, Any]] = []
     for query in CUE_DEPLETED_ALLOW_PRESSURE_QUERIES:
@@ -530,7 +873,9 @@ def run_cue_depleted_allow_pressure(corpus: list[base.CorpusDoc], now: str) -> d
             "query": query["query"],
             "query_mode": query["query_mode"],
         }
-        hits = base.retrieve(query["query"], corpus)
+        policy, bucket_receipt, hits = base.retrieve_with_query_policy(case, corpus)
+        case["query_policy"] = policy
+        case["bucket_receipt"] = bucket_receipt
         items = assemble_pack_generic(case, hits)
         decision, checks, warnings = evaluate_support_generic(items)
         support_items = [item for item in items if item["pack_role"] == "support"]
@@ -541,6 +886,9 @@ def run_cue_depleted_allow_pressure(corpus: list[base.CorpusDoc], now: str) -> d
                 "pressure_id": query["pressure_id"],
                 "query": query["query"],
                 "query_mode": query["query_mode"],
+                "query_policy_id": policy["policy_id"],
+                "allowed_authority_buckets": policy["allowed_authority_buckets"],
+                "support_candidate_authority_buckets": policy["support_candidate_authority_buckets"],
                 "intended_anchor_ref": query["intended_anchor_ref"],
                 "decision": decision,
                 "allowed_readonly": decision == "allowed_readonly",
@@ -550,6 +898,7 @@ def run_cue_depleted_allow_pressure(corpus: list[base.CorpusDoc], now: str) -> d
                 "support_anchors": support_anchors,
                 "top_result": hits[0].doc.rel_path if hits else "",
                 "top_result_kind": hits[0].doc.record_kind if hits else "",
+                "top_result_authority_bucket": base.doc_authority_bucket(hits[0].doc) if hits else "",
                 "warnings": warnings,
                 "support_checks": checks,
             }
@@ -561,6 +910,9 @@ def run_cue_depleted_allow_pressure(corpus: list[base.CorpusDoc], now: str) -> d
             "pressure_id",
             "query",
             "query_mode",
+            "query_policy_id",
+            "allowed_authority_buckets",
+            "support_candidate_authority_buckets",
             "intended_anchor_ref",
             "decision",
             "allowed_readonly",
@@ -570,6 +922,7 @@ def run_cue_depleted_allow_pressure(corpus: list[base.CorpusDoc], now: str) -> d
             "support_anchors",
             "top_result",
             "top_result_kind",
+            "top_result_authority_bucket",
             "warnings",
             "support_checks",
         ],
@@ -586,6 +939,119 @@ def run_cue_depleted_allow_pressure(corpus: list[base.CorpusDoc], now: str) -> d
     return summary
 
 
+def run_clean_corpus_rerun(corpus: list[base.CorpusDoc], now: str) -> dict[str, Any]:
+    """Rerun with runtime test fixtures excluded and no other rule changes."""
+
+    fixture_marker = "outputs/review/project_overlays/_runtime_test_fixtures/"
+    clean_corpus = [doc for doc in corpus if fixture_marker not in doc.rel_path]
+    excluded = [doc.rel_path for doc in corpus if fixture_marker in doc.rel_path]
+    rows: list[dict[str, Any]] = []
+    top_rows: list[dict[str, Any]] = []
+
+    for case in GENERIC_QUERIES:
+        case_with_policy = dict(case)
+        policy, bucket_receipt, hits = base.retrieve_with_query_policy(case_with_policy, clean_corpus)
+        case_with_policy["query_policy"] = policy
+        case_with_policy["bucket_receipt"] = bucket_receipt
+        if not hits:
+            rows.append(
+                {
+                    "case_id": case["case_id"],
+                    "query": case["query"],
+                    "query_mode": case["query_mode"],
+                    "query_policy_id": policy["policy_id"],
+                    "expected_decision": case["expected_decision"],
+                    "decision": "no_hits",
+                    "pass": False,
+                    "support_count": 0,
+                    "top_result": "",
+                    "top_result_kind": "",
+                    "selected_refs": [],
+                    "selected_roles": [],
+                    "support_checks": [],
+                    "warnings": ["clean corpus rerun returned no retrieval hits"],
+                }
+            )
+            continue
+
+        items = assemble_pack_generic(case_with_policy, hits)
+        mutation_warnings = apply_adversarial_case_mutations(case_with_policy, items)
+        decision, checks, warnings = evaluate_support_generic(items)
+        warnings = mutation_warnings + warnings
+        support_items = [item for item in items if item["pack_role"] == "support"]
+        rows.append(
+            {
+                "case_id": case["case_id"],
+                "query": case["query"],
+                "query_mode": case["query_mode"],
+                "query_policy_id": policy["policy_id"],
+                "expected_decision": case["expected_decision"],
+                "decision": decision,
+                "pass": decision == case["expected_decision"],
+                "support_count": len(support_items),
+                "top_result": hits[0].doc.rel_path,
+                "top_result_kind": hits[0].doc.record_kind,
+                "selected_refs": [item["ref"] for item in items],
+                "selected_roles": [item["pack_role"] for item in items],
+                "support_checks": checks,
+                "warnings": warnings,
+            }
+        )
+        for hit in hits:
+            top_rows.append(
+                {
+                    "case_id": case["case_id"],
+                    "rank": hit.rank,
+                    "score": round(hit.score, 4),
+                    "path": hit.doc.rel_path,
+                    "authority_bucket": base.doc_authority_bucket(hit.doc),
+                    "record_kind": hit.doc.record_kind,
+                    "knowledge_status": hit.doc.knowledge_status,
+                    "matched_terms": hit.matched_terms,
+                }
+            )
+
+    write_csv(
+        RESULTS_DIR / "clean_corpus_rerun_cases.csv",
+        rows,
+        [
+            "case_id",
+            "query",
+            "query_mode",
+            "query_policy_id",
+            "expected_decision",
+            "decision",
+            "pass",
+            "support_count",
+            "top_result",
+            "top_result_kind",
+            "selected_refs",
+            "selected_roles",
+            "support_checks",
+            "warnings",
+        ],
+    )
+    write_csv(
+        RESULTS_DIR / "clean_corpus_rerun_top_results.csv",
+        top_rows,
+        ["case_id", "rank", "score", "path", "authority_bucket", "record_kind", "knowledge_status", "matched_terms"],
+    )
+    summary = {
+        "status": "pass" if all(row["pass"] for row in rows) else "fail",
+        "created_at": now,
+        "case_count": len(rows),
+        "passed_expected_decision_count": sum(1 for row in rows if row["pass"]),
+        "original_corpus_doc_count": len(corpus),
+        "clean_corpus_doc_count": len(clean_corpus),
+        "excluded_fixture_count": len(excluded),
+        "excluded_fixture_paths": excluded,
+        "decision_breakdown": dict(Counter(row["decision"] for row in rows)),
+        "truth_boundary": "Default corpus excludes runtime test fixtures; this clean rerun is a no-op guard using the same scorer, query set, anchor vocabulary, and generic pack rules. This is not production runtime validation.",
+    }
+    base.write_json(RESULTS_DIR / "clean_corpus_rerun_summary.json", summary)
+    return summary
+
+
 def write_events(case_rows: list[dict[str, Any]], retrieval_rows: list[dict[str, Any]], now: str) -> None:
     by_case = {row["case_id"]: row for row in case_rows}
     events = []
@@ -597,8 +1063,8 @@ def write_events(case_rows: list[dict[str, Any]], retrieval_rows: list[dict[str,
                 {
                     "time": now,
                     "case_id": case["case_id"],
-                    "stage": "live_retrieve",
-                    "live_retrieval_used": True,
+                    "stage": "live_local_lexical_retrieve",
+                    "live_local_lexical_retrieval_used": True,
                     "retrieved_count": len(case_retrievals),
                     "top_result": row["top_result"],
                     "truth_boundary": "local Markdown lexical retrieval only; no live embedding/vector/graph retrieval.",
@@ -660,6 +1126,7 @@ def write_full_workspace_snapshot(corpus: list[base.CorpusDoc], retrieval_rows: 
                 "case_id": case["case_id"],
                 "query": case["query"],
                 "query_mode": case["query_mode"],
+                "query_policy": base.query_policy_for_case(case),
                 "expected_top_paths": expected.get(case["case_id"], []),
             }
             for case in GENERIC_QUERIES
@@ -751,11 +1218,37 @@ def infer_record_kind(path: str, fm: dict) -> str:
         return "source_card"
     if path.startswith("outputs/review/source_annotations/") or path.endswith("source-annotation.md"):
         return "source_annotation"
+    if path.startswith("wiki/") and str(fm.get("status", "")).lower() == "reviewed":
+        return "reviewed_material"
     if path.endswith("candidate-distillation.md") or path.endswith("refresh.md"):
         return "candidate_distillation"
     if "project_lens_overlays/" in path or "project_overlays/" in path or path.endswith("-overlay.md"):
         return "project_overlay"
     return "source_card"
+
+def infer_status(record_kind: str, fm: dict) -> str:
+    if fm.get("knowledge_status"):
+        return str(fm["knowledge_status"])
+    if str(fm.get("status", "")).lower() == "reviewed":
+        return "reviewed"
+    if record_kind == "source_card":
+        return "raw"
+    return "candidate"
+
+def authority_bucket(record_kind: str, knowledge_status: str) -> str:
+    if knowledge_status == "reviewed" or record_kind == "reviewed_material":
+        return "reviewed"
+    if record_kind == "source_card":
+        return "raw_anchor"
+    if record_kind == "source_annotation":
+        return "source_annotation"
+    if record_kind == "candidate_distillation":
+        return "candidate"
+    if record_kind == "project_overlay":
+        return "overlay"
+    if record_kind == "feedback_event":
+        return "feedback"
+    return "unknown"
 
 def headings(body: str) -> str:
     return "\n".join(line for line in body.splitlines() if line.lstrip().startswith("#"))
@@ -790,11 +1283,24 @@ def main() -> int:
         text = path.read_text(encoding="utf-8", errors="replace")
         fm, body = split_frontmatter(text)
         kind = infer_record_kind(rel, fm)
-        docs.append({"path": rel, "title": str(fm.get("title") or path.stem), "body": body, "kind": kind})
+        status = infer_status(kind, fm)
+        docs.append({
+            "path": rel,
+            "title": str(fm.get("title") or path.stem),
+            "body": body,
+            "kind": kind,
+            "status": status,
+            "authority_bucket": authority_bucket(kind, status),
+        })
     checks = []
     for query in manifest["queries"]:
+        policy = query.get("query_policy") or {}
+        allowed_buckets = set(policy.get("allowed_authority_buckets") or [])
+        candidate_docs = [
+            doc for doc in docs if not allowed_buckets or doc["authority_bucket"] in allowed_buckets
+        ]
         ranked = []
-        for doc in docs:
+        for doc in candidate_docs:
             s = score(query["query"], doc["path"], doc["title"], doc["body"], doc["kind"])
             if s > 0:
                 ranked.append((s, doc["path"]))
@@ -967,6 +1473,8 @@ The `row_id` column is opaque. The judge-only packet intentionally excludes case
 
 Fill `judge_a_id` / `judge_b_id` and `judge_a_judged_at` / `judge_b_judged_at` when judging. Use stable pseudonymous IDs if real names should not be exposed. The arbiter should fill `arbiter_id` and `arbiter_judged_at` only after comparing both independent judgments.
 
+The judge-only zip is excerpt-based and should be judged from the visible `query`, `answer_use_claim`, and `anchor_excerpt` only. If the excerpt is insufficient or truncated, score relevance/sufficiency as 0 or 1 and explain in notes. Do not request or use the full Pro review package. `anchor_source_hash` and `frozen_snapshot_ref` are return-side audit fields, not judge-side evidence expansion instructions.
+
 Scores:
 
 - relevance: 0 = not relevant, 1 = partially relevant, 2 = directly relevant.
@@ -988,7 +1496,7 @@ This packet does not prove independent/external semantic support until judgments
             zf.write(path, path.relative_to(OUT_DIR).as_posix())
     judge_hash = base.sha256_file(judge_zip)
     judge_check = {
-        "status": "pass",
+        "status": "ready_not_judged",
         "judge_zip": base.rel(judge_zip),
         "judge_zip_sha256": judge_hash,
         "included_files": [path.relative_to(OUT_DIR).as_posix() for path in judge_files],
@@ -1001,6 +1509,7 @@ This packet does not prove independent/external semantic support until judgments
         "truth_boundary": "Judge-only packet contains only instructions and the blank semantic support judgment template with opaque row IDs, judge/arbiter identity fields, source hashes, and frozen snapshot refs; judgments are not completed.",
     }
     base.write_json(RESULTS_DIR / "semantic_support_judge_package_check.json", judge_check)
+    dispatch = write_semantic_support_judge_dispatch(rows, judge_hash)
     return {
         "status": "author_side_scripted_self_check_completed_external_not_judged",
         "row_count": len(rows),
@@ -1010,8 +1519,173 @@ This packet does not prove independent/external semantic support until judgments
         "author_side_self_check_summary": base.rel(RESULTS_DIR / "internal_semantic_support_self_check_summary.json"),
         "judge_zip": base.rel(judge_zip),
         "judge_zip_sha256": judge_hash,
+        "judge_dispatch_bundle": dispatch["dispatch_zip"],
+        "judge_dispatch_bundle_sha256": dispatch["dispatch_zip_sha256"],
         "truth_boundary": "Author-side scripted semantic self-check is completed, but independent manual or external/blind semantic support judgment is not completed.",
     }
+
+
+def write_semantic_support_judge_dispatch(rows: list[dict[str, Any]], base_judge_zip_hash: str) -> dict[str, Any]:
+    dispatch_dir = OUT_DIR / "judge-dispatch"
+    dispatch_dir.mkdir(parents=True, exist_ok=True)
+
+    send_a = """# Semantic Support Judge A Packet
+
+Please judge only the visible rows in `semantic-support-judge-a.zip`.
+
+Fill only the Judge A columns in the enclosed CSV. This Judge A zip intentionally does not expose Judge B or arbiter fill columns.
+
+Scoring:
+
+- relevance: 0 = not relevant, 1 = partially relevant, 2 = directly relevant.
+- sufficiency: 0 = does not support the claim, 1 = weak or partial support, 2 = sufficient support for this read-only answer/use claim.
+
+Boundary:
+
+- This is an excerpt-based semantic support judgment packet.
+- It is not a Source Intake P0 pass check.
+- It is not a production runtime validation.
+- Do not use hidden expected outcomes, case IDs, author-side self-checks, or package mapping files.
+- Judge from the visible `query`, `answer_use_claim`, and `anchor_excerpt` only.
+- If the excerpt is insufficient or truncated, score 0 or 1 and explain in notes.
+- Do not request or use the full Pro review package. `anchor_source_hash` and `frozen_snapshot_ref` are return-side audit fields only.
+"""
+    send_b = send_a.replace("Judge A", "Judge B").replace("judge-a", "judge-b")
+    send_b = send_b.replace(
+        "This Judge B zip intentionally does not expose Judge B or arbiter fill columns.",
+        "This Judge B zip intentionally does not expose Judge A or arbiter fill columns.",
+    )
+    arbitration = """# Arbitration After Judge Return
+
+Use this only after Judge A and Judge B have returned filled copies.
+
+Minimum arbitration process:
+
+1. Merge Judge A and Judge B scores by `row_id`.
+2. For rows where both relevance and sufficiency match, copy the shared score to the arbiter columns.
+3. For rows with disagreement, inspect only the visible query, answer/use claim, anchor ref, source hash, frozen snapshot ref, anchor excerpt, and judge notes.
+4. Fill:
+   - `arbiter_id`
+   - `arbiter_judged_at`
+   - `arbiter_final_relevance_0_2`
+   - `arbiter_final_sufficiency_0_2`
+   - `arbiter_notes`
+
+Do not treat arbitration as P0 approval, production runtime validation, or reviewed truth promotion. It only completes independent semantic support judgment for the allowed read-only support rows in this sandbox package.
+"""
+    readme = """# Judge Dispatch README
+
+This folder prepares the already-ready `semantic-support-judge-only.zip` for two independent judges using per-judge minimized CSV schemas.
+
+Send:
+
+- `semantic-support-judge-a.zip` plus `SEND_TO_JUDGE_A.md` to Judge A.
+- `semantic-support-judge-b.zip` plus `SEND_TO_JUDGE_B.md` to Judge B.
+
+Do not send the main Pro review package to judges. Judges should score only from the visible query, answer/use claim, and excerpt in their packet. `anchor_source_hash` and `frozen_snapshot_ref` are for return-side audit, not judge-side source expansion.
+
+After both judges return their filled templates, use `ARBITRATION_AFTER_RETURN.md` to adjudicate disagreements.
+
+Current state:
+
+- Judge packet readiness: ready with per-judge minimized schemas.
+- Independent judgments completed: no.
+- External semantic support completed: no.
+- Source Intake P0 passed: no.
+"""
+    (dispatch_dir / "SEND_TO_JUDGE_A.md").write_text(send_a, encoding="utf-8")
+    (dispatch_dir / "SEND_TO_JUDGE_B.md").write_text(send_b, encoding="utf-8")
+    (dispatch_dir / "ARBITRATION_AFTER_RETURN.md").write_text(arbitration, encoding="utf-8")
+    (dispatch_dir / "DISPATCH_README.md").write_text(readme, encoding="utf-8")
+
+    a_template = dispatch_dir / "semantic_support_judgment_template_judge_a.csv"
+    b_template = dispatch_dir / "semantic_support_judgment_template_judge_b.csv"
+    a_rows = [{field: row.get(field, "") for field in JUDGE_A_FIELDS} for row in rows]
+    b_rows = [{field: row.get(field, "") for field in JUDGE_B_FIELDS} for row in rows]
+    write_csv(a_template, a_rows, JUDGE_A_FIELDS)
+    write_csv(b_template, b_rows, JUDGE_B_FIELDS)
+
+    a_zip = dispatch_dir / "semantic-support-judge-a.zip"
+    b_zip = dispatch_dir / "semantic-support-judge-b.zip"
+    for path in [a_zip, b_zip]:
+        if path.exists():
+            path.unlink()
+    with zipfile.ZipFile(a_zip, "w", compression=zipfile.ZIP_DEFLATED) as zf:
+        zf.write(dispatch_dir / "SEND_TO_JUDGE_A.md", "SEMANTIC_SUPPORT_JUDGMENT_INSTRUCTIONS.md")
+        zf.write(a_template, "results/semantic_support_judgment_template.csv")
+    with zipfile.ZipFile(b_zip, "w", compression=zipfile.ZIP_DEFLATED) as zf:
+        zf.write(dispatch_dir / "SEND_TO_JUDGE_B.md", "SEMANTIC_SUPPORT_JUDGMENT_INSTRUCTIONS.md")
+        zf.write(b_template, "results/semantic_support_judgment_template.csv")
+
+    a_hash = base.sha256_file(a_zip)
+    b_hash = base.sha256_file(b_zip)
+    (dispatch_dir / "semantic-support-judge-a.zip.sha256").write_text(
+        f"{a_hash}  semantic-support-judge-a.zip\n",
+        encoding="utf-8",
+    )
+    (dispatch_dir / "semantic-support-judge-b.zip.sha256").write_text(
+        f"{b_hash}  semantic-support-judge-b.zip\n",
+        encoding="utf-8",
+    )
+
+    manifest = {
+        "status": "ready_not_judged",
+        "row_count": len(rows),
+        "base_judge_zip_sha256": base_judge_zip_hash,
+        "judge_a_zip": "semantic-support-judge-a.zip",
+        "judge_a_zip_sha256": a_hash,
+        "judge_a_csv_columns": JUDGE_A_FIELDS,
+        "judge_b_zip": "semantic-support-judge-b.zip",
+        "judge_b_zip_sha256": b_hash,
+        "judge_b_csv_columns": JUDGE_B_FIELDS,
+        "excluded_from_judge_zips": [
+            "case_id",
+            "expected outcome",
+            "author-side self-check",
+            "row-to-case mapping",
+            "other judge fill columns",
+            "arbiter fill columns",
+        ],
+        "truth_boundary": "Dispatch bundle prepares independent excerpt-based semantic support judgment only; judgments are not completed and this is not P0 or production runtime validation.",
+    }
+    base.write_json(dispatch_dir / "DISPATCH_MANIFEST.json", manifest)
+
+    dispatch_zip = OUT_DIR / "semantic-support-judge-dispatch-bundle.zip"
+    dispatch_sha = OUT_DIR / "semantic-support-judge-dispatch-bundle.zip.sha256"
+    for path in [dispatch_zip, dispatch_sha]:
+        if path.exists():
+            path.unlink()
+    dispatch_entries = [
+        dispatch_dir / "ARBITRATION_AFTER_RETURN.md",
+        dispatch_dir / "DISPATCH_MANIFEST.json",
+        dispatch_dir / "DISPATCH_README.md",
+        dispatch_dir / "SEND_TO_JUDGE_A.md",
+        dispatch_dir / "SEND_TO_JUDGE_B.md",
+        a_zip,
+        dispatch_dir / "semantic-support-judge-a.zip.sha256",
+        b_zip,
+        dispatch_dir / "semantic-support-judge-b.zip.sha256",
+    ]
+    with zipfile.ZipFile(dispatch_zip, "w", compression=zipfile.ZIP_DEFLATED) as zf:
+        for path in dispatch_entries:
+            zf.write(path, f"semantic-support-judge-dispatch/{path.name}")
+    dispatch_hash = base.sha256_file(dispatch_zip)
+    dispatch_sha.write_text(f"{dispatch_hash}  semantic-support-judge-dispatch-bundle.zip\n", encoding="utf-8")
+
+    check = {
+        "status": "ready_not_judged",
+        "dispatch_zip": base.rel(dispatch_zip),
+        "dispatch_zip_sha256": dispatch_hash,
+        "judge_a_zip_sha256": a_hash,
+        "judge_b_zip_sha256": b_hash,
+        "per_judge_minimized_schema": True,
+        "has_dispatch_manifest": True,
+        "has_per_zip_sha_sidecars": True,
+        "row_count": len(rows),
+        "truth_boundary": "Dispatch bundle is ready to send to two independent judges, but no independent semantic support judgment has been completed.",
+    }
+    base.write_json(RESULTS_DIR / "semantic_support_judge_dispatch_check.json", check)
+    return check
 
 
 def semantic_support_claim_for_case(case_id: str) -> str:
@@ -1065,7 +1739,13 @@ def semantic_support_claim_for_case(case_id: str) -> str:
             "The raw anchor can support a read-only answer that PROV offers an entity/activity/agent skeleton "
             "that can be borrowed lightly for source records."
         )
-    return "The raw anchor can support the allowed read-only answer/use claim for this case."
+    if case_id == "G3-19-restricted-review-raw-anchor-policy":
+        return (
+            "The raw anchor can support the read-only content portion of this restricted-review case: "
+            "FlexNote is local-first, uses reusable cards and visual whiteboards, and describes tags as "
+            "an extensible database."
+        )
+    return "No case-specific semantic support claim was defined; this fallback row must not be sent to judges."
 
 
 def semantic_support_rationale_for_case(case_id: str) -> str:
@@ -1119,6 +1799,11 @@ def semantic_support_rationale_for_case(case_id: str) -> str:
             "The excerpt records PROV entities, activities, and agents as the lightweight skeleton. "
             "The query does not name the source heading."
         )
+    if case_id == "G3-19-restricted-review-raw-anchor-policy":
+        return (
+            "The excerpt states FlexNote is local-first, describes reusable cards and visual whiteboards, "
+            "and records tags as an extensible database. It supports only the raw content portion of the restricted-review case."
+        )
     return "The excerpt directly matches the narrow read-only support need."
 
 
@@ -1163,6 +1848,8 @@ def run_validation_commands(now: str) -> dict[str, Any]:
     ]
     rows = []
     current_lint_errors = 0
+    current_lint_warnings = 0
+    current_lint_status = "unknown"
     for command in commands:
         completed = subprocess.run(command, cwd=ROOT, capture_output=True, text=True)
         stdout = completed.stdout.strip()
@@ -1173,6 +1860,8 @@ def run_validation_commands(now: str) -> dict[str, Any]:
                 parsed = {}
             if parsed.get("scope") == "current":
                 current_lint_errors = int(parsed.get("errors") or 0)
+                current_lint_warnings = int(parsed.get("warnings") or 0)
+                current_lint_status = "structural_pass_semantic_debt" if current_lint_warnings else "clear"
         rows.append(
             {
                 "command": " ".join(command),
@@ -1181,15 +1870,112 @@ def run_validation_commands(now: str) -> dict[str, Any]:
                 "stderr": completed.stderr.strip(),
             }
         )
+    commands_ok = all(row["returncode"] == 0 for row in rows)
+    if not commands_ok:
+        status = "command_failure"
+    elif current_lint_errors:
+        status = "commands_pass_with_current_lint_errors"
+    elif current_lint_warnings:
+        status = "commands_pass_with_current_lint_warnings"
+    else:
+        status = "pass"
+    lint_debt_audit = write_lint_debt_audit()
     result = {
-        "status": "pass" if all(row["returncode"] == 0 for row in rows) and current_lint_errors == 0 else "pass_with_current_lint_errors",
+        "status": status,
         "checked_at": now,
+        "current_lint_status": current_lint_status,
         "current_lint_errors": current_lint_errors,
+        "current_lint_warnings": current_lint_warnings,
+        "current_lint_debt_audit": lint_debt_audit,
         "commands": rows,
-        "truth_boundary": "Current lint can include pre-existing workspace errors; this package is not a P0 pass.",
+        "truth_boundary": "Command success means the sandbox checks ran; current lint warnings remain semantic debt and this package is not a P0 pass.",
     }
     base.write_json(RESULTS_DIR / "generic_validation_commands.json", result)
     return result
+
+
+def write_lint_debt_audit() -> dict[str, Any]:
+    issues_path = RESULTS_DIR / "source_intake_current_lint_issues.csv"
+    if not issues_path.exists():
+        return {
+            "status": "missing_current_lint_issues",
+            "truth_boundary": "No lint-debt audit was produced because current lint issues were not available.",
+        }
+    with issues_path.open("r", encoding="utf-8", newline="") as f:
+        issues = list(csv.DictReader(f))
+
+    warning_rows = [row for row in issues if row.get("severity") == "warning"]
+    high_risk_rows = [row for row in warning_rows if row.get("semantic_class") == "high_risk_manual_review"]
+    migration_rows = [row for row in warning_rows if row.get("semantic_class") == "migration_debt_defer_ok"]
+    proxy_authority_checks = {
+        "source_card_authority_like_metadata",
+        "legacy_raw_metadata_used_for_selection",
+        "legacy_raw_metadata_used_as_support_anchor",
+        "raw_source_authority_like_metadata",
+    }
+    proxy_rows = [
+        row
+        for row in issues
+        if row.get("check") in proxy_authority_checks
+        or str(row.get("field", "")).lower() in {"confidence", "relations", "source_quality", "relevance", "freshness", "cross_source_count"}
+    ]
+    audit_rows = []
+    for row in warning_rows + proxy_rows:
+        check = row.get("check", "")
+        if check == "legacy_project_lens_overlay_compatibility":
+            category = "retrieval_visible_legacy_overlay_compatibility"
+        elif check == "migration_placeholder_value":
+            category = "defer_ok_migration_placeholder"
+        elif check == "source_why_saved_placeholder_without_body_reason":
+            category = "high_risk_source_why_saved_placeholder"
+        elif row in proxy_rows:
+            category = "proxy_authority_metadata"
+        else:
+            category = "other_current_lint_warning"
+        audit_rows.append(
+            {
+                "category": category,
+                "severity": row.get("severity", ""),
+                "check": check,
+                "semantic_class": row.get("semantic_class", ""),
+                "recommended_action": row.get("recommended_action", ""),
+                "path": row.get("path", ""),
+                "line": row.get("line", ""),
+                "field": row.get("field", ""),
+                "value": row.get("value", ""),
+                "message": row.get("message", ""),
+            }
+        )
+    audit_fields = [
+        "category",
+        "severity",
+        "check",
+        "semantic_class",
+        "recommended_action",
+        "path",
+        "line",
+        "field",
+        "value",
+        "message",
+    ]
+    write_csv(RESULTS_DIR / "source_intake_current_lint_debt_audit.csv", audit_rows, audit_fields)
+    summary = {
+        "status": "warnings_present" if warning_rows else "clear",
+        "warning_count": len(warning_rows),
+        "high_risk_manual_review_count": len(high_risk_rows),
+        "migration_debt_defer_ok_count": len(migration_rows),
+        "retrieval_visible_legacy_overlay_compatibility_count": sum(
+            1 for row in warning_rows if row.get("check") == "legacy_project_lens_overlay_compatibility"
+        ),
+        "source_why_saved_placeholder_without_body_reason_count": sum(
+            1 for row in warning_rows if row.get("check") == "source_why_saved_placeholder_without_body_reason"
+        ),
+        "proxy_authority_metadata_count": len(proxy_rows),
+        "audit_csv": base.rel(RESULTS_DIR / "source_intake_current_lint_debt_audit.csv"),
+        "truth_boundary": "This audit makes current lint debt visible at package level; it does not clear semantic migration debt or prove P0 readiness.",
+    }
+    base.write_json(RESULTS_DIR / "source_intake_current_lint_debt_audit_summary.json", summary)
+    return summary
 
 
 def write_reports(summary: dict[str, Any], case_rows: list[dict[str, Any]], now: str) -> None:
@@ -1201,6 +1987,10 @@ Generated: {now}
 
 This package addresses the specific Pro blocker about case-scripted pack role assignment by replacing case_id-based support selection with a generic read-only assembler.
 
+It also implements the first step of the Pro retrieval-plane recommendation: a sandbox `QueryPolicy` is generated before retrieval, a bucket-first filter hook executes before ranking, and each query-run/context-pack carries a bucket receipt. Retrieval is still local lexical only; dense/vector, sparse, graph overlay, RRF fusion, and rerank are explicitly not implemented in this package.
+
+This revision adds a dedicated receipt-effect suite: paired same-query cases restrict allowed buckets and demonstrate non-zero pre-ranking bucket exclusions, so the hook is now observable as more than bookkeeping under restricted policies. It also adds two restricted-policy cases to the main harness, one source_annotation bucket receipt-effect pair, and one reviewed-bucket receipt-effect pair.
+
 The query set is still scripted, but pack roles are assigned by the same record_kind / knowledge_status / query_mode / raw-anchor-resolution rules for every hit. No case_id branch chooses a support item.
 
 Anchor resolution remains intentionally narrow: support extraction is limited to a small stable-anchor heading vocabulary, section-content lexical overlap, and selector resolution. This is generic pack role assignment over a narrow anchor vocabulary, not general semantic support extraction.
@@ -1211,10 +2001,19 @@ Anchor resolution remains intentionally narrow: support extraction is limited to
 - Expected decisions passed: {summary['passed_expected_decision_count']} / {summary['case_count']}
 - Decisions: {summary['decision_breakdown']}
 - Pack assembly: {summary['pack_assembly']}
+- QueryPolicy receipts: {summary['query_policy_receipt_count']} / {summary['case_count']} (`{summary['query_policy_receipt_file']}`)
+- Receipt-effect tests: {summary['receipt_effect_tests']['status']} / non-zero exclusions {summary['receipt_effect_tests']['observed_nonzero_exclusion_count']} / {summary['receipt_effect_tests']['expected_nonzero_exclusion_count']} / changed top-k pairs {summary['receipt_effect_tests']['top_result_or_order_changed_pair_count']}
+- Default restricted policy cases: {summary['default_restricted_policy_passed_count']} / {summary['default_restricted_policy_case_count']} passed with non-zero exclusions {summary['default_restricted_policy_nonzero_exclusion_count']} / {summary['default_restricted_policy_case_count']}
+- Source-annotation receipt-effect coverage: {summary['receipt_effect_tests']['source_annotation_effect_case_count']} cases / retained {summary['receipt_effect_tests']['source_annotation_retained_case_count']} / excluded {summary['receipt_effect_tests']['source_annotation_excluded_case_count']}
+- Reviewed-bucket receipt-effect coverage: {summary['receipt_effect_tests']['reviewed_bucket_effect_case_count']} cases / retained {summary['receipt_effect_tests']['reviewed_bucket_retained_case_count']} / excluded {summary['receipt_effect_tests']['reviewed_bucket_excluded_case_count']}
+- Retrieval channels implemented: {summary['retrieval_channels_implemented']}
+- Retrieval channels not implemented: {summary['retrieval_channels_not_implemented']}
 - New non-FlexNote read-only allow smoke cases: {summary['new_non_flexnote_allow_smoke_count']}
 - Low-cue allow cases: {summary['low_cue_allow_case_count']}
 - Decoy cases: {summary['decoy_case_count']}
+- Broken-anchor negative cases: {summary['broken_anchor_negative_passed_count']} / {summary['broken_anchor_negative_case_count']} blocked as expected
 - Cue-depleted paraphrase pressure: {summary['cue_depleted_allow_pressure']['allowed_readonly_count']} allowed / {summary['cue_depleted_allow_pressure']['case_count']} diagnostic queries; intended anchor selected in {summary['cue_depleted_allow_pressure']['intended_anchor_selected_count']} / {summary['cue_depleted_allow_pressure']['case_count']}
+- Clean corpus rerun: {summary['clean_corpus_rerun']['status']} with default runtime fixture exclusion; excluded {summary['clean_corpus_rerun']['excluded_fixture_count']} additional runtime test fixture docs; expected decisions passed {summary['clean_corpus_rerun']['passed_expected_decision_count']} / {summary['clean_corpus_rerun']['case_count']}
 - Full frozen replay: {summary['full_workspace_frozen_replay']['status']} over {summary['full_workspace_frozen_replay']['corpus_doc_count']} collected Markdown docs
 - Semantic support self-check: {summary['semantic_support_judgment']['status']} (author-side self-check completed; independent/external judgment still pending)
 
@@ -1241,6 +2040,10 @@ Generated: {now}
 
 This package moves one step past v2: live local Markdown retrieval now flows through a generic read-only pack assembler.
 
+It also adds the first Pro retrieval-plane contract: every query gets a `QueryPolicy` before retrieval, a bucket-first filter hook executes before ranking, and query-run/context-pack artifacts include the policy and bucket receipt.
+
+This revision includes dedicated receipt-effect tests where restricted bucket policies create visible pre-ranking exclusions. The main harness now also includes default restricted review/action policy cases, so non-zero exclusion behavior is visible outside the dedicated paired suite too.
+
 The assembler uses shared rules:
 
 - candidate distillations become `review_input`;
@@ -1249,11 +2052,19 @@ The assembler uses shared rules:
 - rank/score/diagnostic signals never become support anchors;
 - action-mode queries do not become action basis.
 
+Implemented retrieval channel: local Markdown lexical only.
+
+Not implemented here: dense/vector retrieval, sparse semantic retrieval, graph overlay retrieval, RRF/hybrid fusion, or second-stage rerank.
+
 ## Supported Conclusion
 
 In this packaged {summary['case_count']}-query sandbox harness, a generic read-only assembler can route live top-k results into query-run / context-pack / answer-use artifacts while restricting final support to structurally resolved raw/stable anchors.
 
+This package additionally supports the narrow claim that a sandbox `QueryPolicy` / authority-bucket receipt can be generated before retrieval and preserved through query-run/context-pack artifacts. The dedicated receipt-effect suite further demonstrates that the bucket-first hook can produce non-zero corpus exclusions under restricted policies.
+
 The allow cases now include new non-FlexNote raw source-family smoke cases and low-cue allow queries that do not directly name the support heading. The package also includes decoy queries that should not pass as final support, plus a cue-depleted paraphrase pressure suite that is diagnostic rather than tuned to all-green. An author-side scripted semantic support self-check self-scored the allowed raw-anchor cases as relevant and sufficient for their narrow read-only query/use. Independent manual or external/blind semantic judgment is still not completed.
+
+The default corpus now excludes `_runtime_test_fixtures`; the package also includes a clean corpus rerun as a no-op guard while keeping the scorer, query set, anchor vocabulary, and generic pack rules unchanged.
 
 ## Unsupported Conclusions
 
@@ -1274,16 +2085,22 @@ Focus:
 
 1. Does pack role assignment avoid case_id-based support selection?
 2. Do the generated query-run/context-pack/answer-use artifacts show generic routing of candidate/overlay/raw hits?
-3. Is legacy fallback truly gone from the packaged generic path? Check that the old known-anchor constant, forced-hit helper, known-anchor resolution label, forced-anchor marker, and high-score injection pattern are absent from packaged scripts and generated artifacts.
-4. Does the full collected Markdown corpus snapshot and replayer reproduce this package's top-k order?
-5. Do the three new non-FlexNote read-only allow smoke cases (W3C Web Annotation, W3C PROV, RAG attribution faithfulness) reduce the single-anchor-family concern without overclaiming semantic support?
-6. Do the low-cue allow queries avoid directly naming support headings while still resolving support through section-content overlap?
-7. Does the cue-depleted paraphrase pressure suite honestly expose robustness limits rather than tuning every natural query to pass?
-8. Do the decoy queries avoid false support, especially action-mode and implementation/runtime decoys?
-9. Is the judge-only semantic support packet actually blind enough for independent double-judge use: opaque row_id, no case_id, no expected outcome, no mapping, no author-side self-check?
-10. Does the package avoid overclaiming P0, live LLM/tool runtime, vector/graph retrieval, semantic support, or adoption readiness?
+3. Does the new sandbox `QueryPolicy` receipt correctly show authority-bucket filtering before ranking, allowed roles, support-candidate buckets, implemented local lexical channel, and explicitly disabled dense/vector/sparse/graph/RRF/rerank channels?
+4. Do `results/receipt_effect_*` demonstrate non-zero bucket exclusions when allowed buckets are restricted, and do paired same-query cases show changed top-k behavior without changing scorer or corpus?
+5. Do the new default restricted policy cases in the main harness produce non-zero exclusions, rather than leaving all exclusion evidence only in the dedicated paired suite?
+6. Does the new source_annotation receipt-effect pair show source_annotation bucket retention/exclusion behavior?
+7. Does the new reviewed-bucket receipt-effect pair exercise a real reviewed bucket document in baseline and exclude it in treatment?
+7. Is legacy fallback truly gone from the packaged generic path? Check that the old known-anchor constant, forced-hit helper, known-anchor resolution label, forced-anchor marker, and high-score injection pattern are absent from packaged scripts and generated artifacts.
+8. Does the full collected Markdown corpus snapshot and replayer reproduce this package's top-k order?
+9. Do the three new non-FlexNote read-only allow smoke cases (W3C Web Annotation, W3C PROV, RAG attribution faithfulness) reduce the single-anchor-family concern without overclaiming semantic support?
+10. Do the low-cue allow queries avoid directly naming support headings while still resolving support through section-content overlap?
+11. Does the cue-depleted paraphrase pressure suite honestly expose robustness limits rather than tuning every natural query to pass?
+12. Do the decoy queries avoid false support, especially action-mode and implementation/runtime decoys?
+13. Does the clean corpus rerun still pass after excluding `_runtime_test_fixtures`, without changing scorer, query set, anchor vocabulary, or pack rules?
+14. Is the judge-only semantic support packet actually ready-but-not-judged for independent double-judge use: opaque row_id, no case_id, no expected outcome, no mapping, no author-side self-check?
+15. Does the package avoid overclaiming P0, live LLM/tool runtime, vector/graph retrieval, semantic support, or adoption readiness?
 
-Truth boundary: live retrieval here means local Markdown lexical retrieval only. Independent/external semantic support judgment is still not completed until judges fill the judge-only packet.
+Truth boundary: the new QueryPolicy is a sandbox receipt contract plus receipt-effect test only. Live local lexical retrieval here means local Markdown lexical retrieval only. Dense/vector/sparse/graph/RRF/rerank are not implemented. Independent/external semantic support judgment is still not completed until judges fill the judge-only packet.
 """
     (OUT_DIR / "PRO_REVIEW_REQUEST.md").write_text(pro_request, encoding="utf-8")
 
@@ -1295,16 +2112,24 @@ Truth boundary: live retrieval here means local Markdown lexical retrieval only.
 
 1. pack role assignment 是否已经不再按 case_id 手工决定 support，而是按通用规则处理 live top-k；
 2. candidate / project_overlay 是否都被通用规则降为 review_input，而不是 final support；
-3. raw source card 是否只有在 read-only support mode 且 raw/stable anchor 可解析时才进入 support；
-4. packaged scripts / outputs 里是否已经没有上一轮 legacy fallback 机制：旧的已知 anchor 常量、forced-hit helper、known-anchor resolution label、forced-anchor marker、高分注入模式；
-5. full collected Markdown corpus snapshot + replay 是否足以支撑“本包可复跑”，但不被过度解释成 full production reproducibility；
-6. 三条 non-FlexNote allow smoke case（W3C Web Annotation、W3C PROV、RAG attribution faithfulness）是否真的缓解了单一 FlexNote anchor family 的问题，但没有被过度解释成语义支持已完成；
-7. low-cue allow queries 是否没有直接点名 support heading，却仍能通过 section-content overlap 解析到 support；
-8. cue-depleted paraphrase pressure suite 是否诚实暴露了自然问法鲁棒性边界，而不是把每条自然 query 都调到 pass；
-9. decoy queries 是否没有误放 support，尤其是 action-mode 和 implementation/runtime decoy；
-10. judge-only semantic support packet 是否已适合独立双判：只给 opaque row_id，不给 case_id / expected outcome / mapping / author-side self-check；
-11. author-side scripted semantic support self-check 是否只应算作者侧自检，而不能算 independent manual review、external blind relevance 或 Pro judgment；
-12. 还有没有 P0 / runtime adoption / live LLM-tool / vector-graph retrieval / semantic groundedness 的 overclaim。
+3. 新增的 sandbox QueryPolicy / authority-bucket receipt 是否真的在 retrieval 前生成，并进入 query-run/context-pack artifacts；
+4. QueryPolicy 是否明确记录 allowed buckets、allowed roles、support-candidate buckets、implemented local lexical channel，以及未实现 dense/vector/sparse/graph/RRF/rerank；
+5. `results/receipt_effect_*` 是否 demonstrate restricted allowed buckets 会产生 non-zero pre-ranking exclusions；
+6. receipt-effect paired same-query cases 是否在不改 scorer/corpus 的情况下产生 top-k 变化；
+7. 主 harness 新增的默认 restricted review/action case 是否也出现 non-zero exclusion；
+8. source_annotation bucket 是否已有 retention/exclusion 的 receipt-effect 运行证据；
+9. reviewed bucket 是否已有真实 reviewed 文档的 retention/exclusion receipt-effect 运行证据；
+10. raw source card 是否只有在 read-only support mode 且 raw/stable anchor 可解析时才进入 support；
+11. packaged scripts / outputs 里是否已经没有上一轮 legacy fallback 机制：旧的已知 anchor 常量、forced-hit helper、known-anchor resolution label、forced-anchor marker、高分注入模式；
+12. full collected Markdown corpus snapshot + replay 是否足以支撑“本包可复跑”，但不被过度解释成 full production reproducibility；
+13. 三条 non-FlexNote allow smoke case（W3C Web Annotation、W3C PROV、RAG attribution faithfulness）是否真的缓解了单一 FlexNote anchor family 的问题，但没有被过度解释成语义支持已完成；
+14. low-cue allow queries 是否没有直接点名 support heading，却仍能通过 section-content overlap 解析到 support；
+15. cue-depleted paraphrase pressure suite 是否诚实暴露了自然问法鲁棒性边界，而不是把每条自然 query 都调到 pass；
+16. decoy queries 是否没有误放 support，尤其是 action-mode 和 implementation/runtime decoy；
+17. 默认主 harness 是否已经真正排除 `_runtime_test_fixtures`，且 clean corpus rerun 不再只是补救性旁证；
+18. judge-only semantic support packet 是否是 ready_not_judged，而不是误写成 semantic support 已完成；
+19. author-side scripted semantic support self-check 是否只应算作者侧自检，而不能算 independent manual review、external blind relevance 或 Pro judgment；
+20. 还有没有 P0 / runtime adoption / live LLM-tool / vector-graph retrieval / semantic groundedness 的 overclaim。
 
 请直接给：
 
@@ -1316,11 +2141,17 @@ Truth boundary: live retrieval here means local Markdown lexical retrieval only.
 - does it prove external/blind semantic support completed: yes/no
 - fallback removal status
 - judge-only packet readiness
+- clean corpus rerun status
+- query policy / authority bucket receipt status
+- receipt-effect nonzero bucket exclusion status
+- default restricted policy case status
+- source_annotation bucket receipt-effect status
+- reviewed bucket receipt-effect status
 - most important remaining blocker
 - minimum next tests
 - overclaims or unsafe wording
 
-边界：这包自称不是 P0 passed，不是 live LLM/tool runtime，不是 vector/graph retrieval，不是 runtime adoption ready。这里的 live retrieval 只等于 local Markdown lexical retrieval。semantic support 仍未完成独立/外部 judge；judge-only packet 只是准备给双判使用。请不要按这些强结论审；请审它是否足够支撑“generic read-only pack/use sandbox evidence”。
+边界：这包自称不是 P0 passed，不是 live LLM/tool runtime，不是 vector/graph retrieval，不是 runtime adoption ready。新增 QueryPolicy 是 sandbox receipt contract + receipt-effect test，不是完整 Pro retrieval plane。这里的 live local lexical retrieval 只等于 local Markdown lexical retrieval；dense/vector/sparse/graph/RRF/rerank 仍未实现。semantic support 仍未完成独立/外部 judge；judge-only packet 只是准备给双判使用。请不要按这些强结论审；请审它是否足够支撑“generic read-only pack/use sandbox evidence + QueryPolicy receipt first step + nonzero bucket exclusion evidence”。
 """
     (OUT_DIR / "PRO_HANDOFF_PROMPT.md").write_text(handoff_prompt, encoding="utf-8")
 
@@ -1351,12 +2182,29 @@ def package_outputs(input_paths: set[Path], summary: dict[str, Any]) -> tuple[Pa
     base.write_json(
         OUT_DIR / "PACKAGE_CHECK.json",
         {
-            "status": "pass" if summary["passed_expected_decision_count"] == summary["case_count"] and summary["full_workspace_frozen_replay"]["status"] == "pass" else "fail",
+            "status": "sandbox_package_check_pass" if summary["passed_expected_decision_count"] == summary["case_count"] and summary["full_workspace_frozen_replay"]["status"] == "pass" else "sandbox_package_check_fail",
             "case_count": summary["case_count"],
             "passed_expected_decision_count": summary["passed_expected_decision_count"],
+            "query_policy_contract_status": summary["query_policy_contract_status"],
+            "query_policy_receipt_count": summary["query_policy_receipt_count"],
+            "receipt_effect_status": summary["receipt_effect_tests"]["status"],
+            "receipt_effect_observed_nonzero_exclusion_count": summary["receipt_effect_tests"]["observed_nonzero_exclusion_count"],
+            "receipt_effect_expected_nonzero_exclusion_count": summary["receipt_effect_tests"]["expected_nonzero_exclusion_count"],
+            "default_restricted_policy_case_count": summary["default_restricted_policy_case_count"],
+            "default_restricted_policy_nonzero_exclusion_count": summary["default_restricted_policy_nonzero_exclusion_count"],
+            "source_annotation_effect_case_count": summary["receipt_effect_tests"]["source_annotation_effect_case_count"],
+            "source_annotation_retained_case_count": summary["receipt_effect_tests"]["source_annotation_retained_case_count"],
+            "source_annotation_excluded_case_count": summary["receipt_effect_tests"]["source_annotation_excluded_case_count"],
+            "source_annotation_exclusion_observed_across_all_restricted_pairs": summary["receipt_effect_tests"]["source_annotation_exclusion_observed_across_all_restricted_pairs"],
+            "reviewed_bucket_effect_case_count": summary["receipt_effect_tests"]["reviewed_bucket_effect_case_count"],
+            "reviewed_bucket_retained_case_count": summary["receipt_effect_tests"]["reviewed_bucket_retained_case_count"],
+            "reviewed_bucket_excluded_case_count": summary["receipt_effect_tests"]["reviewed_bucket_excluded_case_count"],
+            "reviewed_bucket_exclusion_observed_across_all_restricted_pairs": summary["receipt_effect_tests"]["reviewed_bucket_exclusion_observed_across_all_restricted_pairs"],
+            "retrieval_channels_implemented": summary["retrieval_channels_implemented"],
+            "retrieval_channels_not_implemented": summary["retrieval_channels_not_implemented"],
             "full_workspace_frozen_replay_status": summary["full_workspace_frozen_replay"]["status"],
             "semantic_support_judgment_status": summary["semantic_support_judgment"]["status"],
-            "truth_boundary": "Package check covers generated sandbox evidence, generic assembler decisions, and full collected Markdown corpus replay only.",
+            "truth_boundary": "Package check covers generated sandbox evidence, QueryPolicy authority-bucket receipts, receipt-effect exclusions, generic assembler decisions, and full collected Markdown corpus replay only.",
         },
     )
     sidecar_name = f"{ZIP_NAME}.sha256"
@@ -1420,6 +2268,12 @@ Optional judge-only semantic support packet:
 semantic-support-judge-only.zip
 ```
 
+Recommended judge dispatch packet:
+
+```text
+semantic-support-judge-dispatch-bundle.zip
+```
+
 Boundary:
 
 ```text
@@ -1427,9 +2281,11 @@ This is sandbox generic read-only pack/use evidence.
 It is not Source Intake P0 passed.
 It is not live LLM/tool runtime validation.
 It is not vector/graph retrieval validation.
-Live retrieval means local Markdown lexical retrieval only.
+Live local lexical retrieval means local Markdown lexical retrieval only.
+QueryPolicy / authority-bucket receipt is implemented as a sandbox contract, receipt-effect tests show non-zero exclusions under restricted bucket policies, default restricted main-harness cases are included, and source_annotation plus reviewed bucket behavior is covered by receipt-effect evidence.
 Author-side scripted semantic support self-check is completed, but independent/external blind Pro judgment is not completed.
 The judge-only packet uses opaque row IDs and excludes mapping / case IDs / expected outcomes / author-side self-check.
+The dispatch bundle uses per-judge minimized schemas plus a dispatch manifest and per-zip SHA sidecars; judgments are still not completed.
 ```
 """
     (OUT_DIR / "PRO_SUBMISSION_SUMMARY.md").write_text(submission, encoding="utf-8")
@@ -1444,24 +2300,54 @@ def main() -> int:
 
     case_rows: list[dict[str, Any]] = []
     retrieval_rows: list[dict[str, Any]] = []
+    query_policy_rows: list[dict[str, Any]] = []
     input_paths: set[Path] = set()
     assembly_rows: list[dict[str, Any]] = []
 
     for case in GENERIC_QUERIES:
-        hits = base.retrieve(case["query"], corpus)
+        case_with_policy = dict(case)
+        policy, bucket_receipt, hits = base.retrieve_with_query_policy(case_with_policy, corpus)
+        case_with_policy["query_policy"] = policy
+        case_with_policy["bucket_receipt"] = bucket_receipt
         if not hits:
             raise RuntimeError(f"No retrieval results for {case['case_id']}")
-        items = assemble_pack_generic(case, hits)
+        query_policy_rows.append(
+            {
+                "case_id": case["case_id"],
+                "query_policy_id": policy["policy_id"],
+                "use_mode": policy["use_mode"],
+                "risk_tier": policy["risk_tier"],
+                "allowed_authority_buckets": policy["allowed_authority_buckets"],
+                "support_candidate_authority_buckets": policy["support_candidate_authority_buckets"],
+                "allowed_roles": policy["allowed_roles"],
+                "retrieval_channels": policy["retrieval_channels"],
+                "disabled_channels": policy["disabled_channels"],
+                "fusion_method": policy["fusion_method"],
+                "fusion_scope": policy["fusion_scope"],
+                "rerank_method": policy["rerank_method"],
+                "pre_filter_doc_count": bucket_receipt["pre_filter_doc_count"],
+                "post_filter_doc_count": bucket_receipt["post_filter_doc_count"],
+                "excluded_doc_count": bucket_receipt["excluded_doc_count"],
+                "pre_filter_bucket_counts": bucket_receipt["pre_filter_bucket_counts"],
+                "post_filter_bucket_counts": bucket_receipt["post_filter_bucket_counts"],
+                "excluded_bucket_counts": bucket_receipt["excluded_bucket_counts"],
+            }
+        )
+        items = assemble_pack_generic(case_with_policy, hits)
+        mutation_warnings = apply_adversarial_case_mutations(case_with_policy, items)
         decision, checks, warnings = evaluate_support_generic(items)
-        row = base.write_case_artifacts(case, hits, items, decision, checks, warnings, now)
+        warnings = mutation_warnings + warnings
+        row = base.write_case_artifacts(case_with_policy, hits, items, decision, checks, warnings, now)
         case_rows.append(row)
         for hit in hits:
             retrieval_rows.append(
                 {
                     "case_id": case["case_id"],
+                    "query_policy_id": policy["policy_id"],
                     "rank": hit.rank,
                     "score": round(hit.score, 4),
                     "path": hit.doc.rel_path,
+                    "authority_bucket": base.doc_authority_bucket(hit.doc),
                     "record_kind": hit.doc.record_kind,
                     "knowledge_status": hit.doc.knowledge_status,
                     "warning_code": hit.doc.warning_code,
@@ -1476,9 +2362,15 @@ def main() -> int:
                 {
                     "case_id": case["case_id"],
                     "ref": item["ref"],
+                    "authority_bucket": item.get("authority_bucket", ""),
                     "record_kind": item["record_kind"],
                     "knowledge_status": item["knowledge_status"],
                     "pack_role": item["pack_role"],
+                    "retrieval_role": item.get("retrieval_role", ""),
+                    "support_eligibility": item.get("support_eligibility", ""),
+                    "eligibility_basis": item.get("eligibility_basis", ""),
+                    "match_representation": item.get("match_representation", ""),
+                    "support_representation": item.get("support_representation", ""),
                     "independent_anchor_ref": item["independent_anchor_ref"],
                     "assembler_rule": item.get("assembler_rule", ""),
                     "case_scripted_selection": item.get("case_scripted_selection", ""),
@@ -1489,12 +2381,52 @@ def main() -> int:
     write_csv(
         RESULTS_DIR / "generic_live_retrieval_results.csv",
         retrieval_rows,
-        ["case_id", "rank", "score", "path", "record_kind", "knowledge_status", "warning_code", "matched_terms", "snippet"],
+        ["case_id", "query_policy_id", "rank", "score", "path", "authority_bucket", "record_kind", "knowledge_status", "warning_code", "matched_terms", "snippet"],
+    )
+    write_csv(
+        RESULTS_DIR / "generic_query_policy_receipts.csv",
+        query_policy_rows,
+        [
+            "case_id",
+            "query_policy_id",
+            "use_mode",
+            "risk_tier",
+            "allowed_authority_buckets",
+            "support_candidate_authority_buckets",
+            "allowed_roles",
+            "retrieval_channels",
+            "disabled_channels",
+            "fusion_method",
+            "fusion_scope",
+            "rerank_method",
+            "pre_filter_doc_count",
+            "post_filter_doc_count",
+            "excluded_doc_count",
+            "pre_filter_bucket_counts",
+            "post_filter_bucket_counts",
+            "excluded_bucket_counts",
+        ],
     )
     write_csv(
         RESULTS_DIR / "generic_pack_assembly_decisions.csv",
         assembly_rows,
-        ["case_id", "ref", "record_kind", "knowledge_status", "pack_role", "independent_anchor_ref", "assembler_rule", "case_scripted_selection", "excluded_reason"],
+        [
+            "case_id",
+            "ref",
+            "authority_bucket",
+            "record_kind",
+            "knowledge_status",
+            "pack_role",
+            "retrieval_role",
+            "support_eligibility",
+            "eligibility_basis",
+            "match_representation",
+            "support_representation",
+            "independent_anchor_ref",
+            "assembler_rule",
+            "case_scripted_selection",
+            "excluded_reason",
+        ],
     )
     write_csv(
         RESULTS_DIR / "generic_readonly_loop_cases.csv",
@@ -1521,7 +2453,9 @@ def main() -> int:
     write_events(case_rows, retrieval_rows, now)
     artifact_exclusion = base.write_artifact_exclusion_manifest(case_rows, now)
     full_replay = write_full_workspace_snapshot(corpus, retrieval_rows, now)
+    receipt_effect = run_receipt_effect_tests(corpus, now)
     cue_depleted_pressure = run_cue_depleted_allow_pressure(corpus, now)
+    clean_corpus_rerun = run_clean_corpus_rerun(corpus, now)
     semantic_packet = write_semantic_support_judgment_packet(case_rows)
     validation = run_validation_commands(now)
 
@@ -1545,13 +2479,41 @@ def main() -> int:
             1 for row in case_rows if row["case_id"] in DECOY_CASE_IDS and row["decision"] == row["expected_decision"]
         ),
         "decoy_case_ids": sorted(DECOY_CASE_IDS),
+        "broken_anchor_negative_case_count": sum(1 for row in case_rows if row["case_id"] in BROKEN_ANCHOR_NEGATIVE_CASE_IDS),
+        "broken_anchor_negative_passed_count": sum(
+            1
+            for row in case_rows
+            if row["case_id"] in BROKEN_ANCHOR_NEGATIVE_CASE_IDS and row["decision"] == row["expected_decision"]
+        ),
+        "broken_anchor_negative_case_ids": sorted(BROKEN_ANCHOR_NEGATIVE_CASE_IDS),
         "anchor_resolution_scope": "narrow_stable_anchor_heading_vocabulary_plus_section_content_overlap_plus_selector_resolution",
+        "pro_retrieval_plane_step": "step1_query_policy_authority_bucket_receipts",
+        "query_policy_contract_status": "sandbox_contract_included",
+        "query_policy_receipt_count": len(query_policy_rows),
+        "query_policy_receipt_file": "results/generic_query_policy_receipts.csv",
+        "authority_filter_mode": "bucket_first_before_ranking",
+        "default_restricted_policy_case_count": sum(1 for row in case_rows if row["case_id"] in DEFAULT_RESTRICTED_POLICY_CASE_IDS),
+        "default_restricted_policy_passed_count": sum(
+            1 for row in case_rows if row["case_id"] in DEFAULT_RESTRICTED_POLICY_CASE_IDS and row["pass"]
+        ),
+        "default_restricted_policy_nonzero_exclusion_count": sum(
+            1
+            for row in query_policy_rows
+            if row["case_id"] in DEFAULT_RESTRICTED_POLICY_CASE_IDS and int(row["excluded_doc_count"]) > 0
+        ),
+        "default_restricted_policy_case_ids": sorted(DEFAULT_RESTRICTED_POLICY_CASE_IDS),
+        "receipt_effect_tests": receipt_effect,
+        "retrieval_channels_implemented": ["local_lexical"],
+        "retrieval_channels_not_implemented": ["dense_vector", "sparse_semantic", "graph_overlay", "second_stage_rerank", "rrf_hybrid_fusion"],
+        "support_candidate_buckets": ["raw_anchor"],
+        "fusion_scope_contract": "within_authority_bucket_only_when_multiple_channels_exist",
         "cue_depleted_allow_pressure": cue_depleted_pressure,
+        "clean_corpus_rerun": clean_corpus_rerun,
         "pack_assembly": "generic_record_kind_status_anchor_rules_no_case_id_role_branching",
         "case_scripted_pack_role_selection": False,
         "query_set_scripted": True,
-        "live_retrieval_used": True,
-        "live_retrieval_scope": "local_markdown_corpus_lexical_retrieval",
+        "live_local_lexical_retrieval_used": True,
+        "retrieval_scope": "local_markdown_corpus_lexical_retrieval",
         "live_llm_used": False,
         "live_tool_runtime_used": False,
         "writeback_attempted": False,

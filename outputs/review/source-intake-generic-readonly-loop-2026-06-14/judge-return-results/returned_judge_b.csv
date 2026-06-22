@@ -1,0 +1,108 @@
+"row_id","query","answer_use_claim","anchor_ref","anchor_source_hash","frozen_snapshot_ref","anchor_excerpt","judge_b_id","judge_b_judged_at","judge_b_relevance_0_2","judge_b_sufficiency_0_2","judge_b_notes"
+"judge-row-001","FlexNote Extracted Source Facts local-first card tag database inspected pages","The raw anchor can support a read-only answer about FlexNote's inspected source facts, including local-first positioning, card/whiteboard model, and tag database features.","raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md#Extracted Source Facts","888f6eac02467a688a294446106759e17a33f79640a8f00633f86211df7dc67d","outputs/review/source-intake-generic-readonly-loop-2026-06-14/frozen_full_workspace_corpus/raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md","## Extracted Source Facts
+
+- FlexNote presents itself as a local-first visual note-taking tool for creators and deep thinkers.
+- Its feature cluster is: infinite canvas, Markdown editing, mind maps, bidirectional links, tag database, video/PDF/web annotations.
+- The card is the main information atom. Cards can be text, PDF, video, web clip, image, audio, mind map, attachment, PDF highlight, or video annotation.
+- Cards are globally unique and reusable: one card can appear in multiple whiteboards, and edits sync to all references.
+- Whiteboards are visual workspaces. They can contain cards, nested cards, connections/arrows, nested whiteboards, thumbnails, navigation, auto layout, and export.
+- Tags are described as an extensible database, not merely labels. Tags can have custom fields, relation fields, filters, and table/board/list views.
+- PDF and video highlights can automatically gener","Judge B","2026-06-23T00:18:05.3973779+08:00","2","2","Directly states local-first positioning, card/whiteboard model, reusable cards, and tag database features; trailing truncation does not affect the core claim."
+"judge-row-002","FlexNote Extracted Source Facts visual workbench candidate overlay source anchor tag database context pack inspected pages","The raw anchor can support the raw-source portion of a mixed-pack read-only answer about FlexNote's visual workbench, cards, tags, and source facts while candidate/overlay items remain review input.","raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md#Extracted Source Facts","888f6eac02467a688a294446106759e17a33f79640a8f00633f86211df7dc67d","outputs/review/source-intake-generic-readonly-loop-2026-06-14/frozen_full_workspace_corpus/raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md","## Extracted Source Facts
+
+- FlexNote presents itself as a local-first visual note-taking tool for creators and deep thinkers.
+- Its feature cluster is: infinite canvas, Markdown editing, mind maps, bidirectional links, tag database, video/PDF/web annotations.
+- The card is the main information atom. Cards can be text, PDF, video, web clip, image, audio, mind map, attachment, PDF highlight, or video annotation.
+- Cards are globally unique and reusable: one card can appear in multiple whiteboards, and edits sync to all references.
+- Whiteboards are visual workspaces. They can contain cards, nested cards, connections/arrows, nested whiteboards, thumbnails, navigation, auto layout, and export.
+- Tags are described as an extensible database, not merely labels. Tags can have custom fields, relation fields, filters, and table/board/list views.
+- PDF and video highlights can automatically gener","Judge B","2026-06-23T00:18:05.3973779+08:00","2","1","Excerpt directly supports the FlexNote raw-source facts about visual workspace, cards, and tags, but it does not itself establish the candidate/overlay review-input boundary."
+"judge-row-003","W3C Web Annotation Source Anchor Text Quote Selector exact prefix suffix","The raw anchor can support a read-only answer that W3C Web Annotation's Text Quote Selector shape informs the vault's source-anchor profile with exact, prefix, and suffix context.","raw/articles/2026-05-30-w3c-web-annotation-source.md#Source Anchor","e16be8aa931cc46d912429b26446ad7efb8ed49ba7a653512e63e37b14fb28c0","outputs/review/source-intake-generic-readonly-loop-2026-06-14/frozen_full_workspace_corpus/raw/articles/2026-05-30-w3c-web-annotation-source.md","## Source Anchor
+
+Short exact source wording:
+
+```text
+""Text Quote Selector""
+""copying it""
+""including some of the text immediately before""
+""after""
+""exact""","Judge B","2026-06-23T00:18:05.3973779+08:00","2","1","Relevant to Text Quote Selector and exact/before/after context, but the visible excerpt is a very short quote list and does not explicitly show prefix/suffix field structure."
+"judge-row-004","W3C PROV 边界 provenance truth confidence citation support","The raw anchor can support a read-only answer that PROV-lite traceability is useful for source identity, capture/extraction activity, and agent trace, but does not decide truth or confidence.","raw/articles/2026-05-29-w3c-prov-source.md#边界","d02636005e119966eb13a08c98a2416f0c99844e72f1740e44901535175e152f","outputs/review/source-intake-generic-readonly-loop-2026-06-14/frozen_full_workspace_corpus/raw/articles/2026-05-29-w3c-prov-source.md","## 边界
+
+```text
+PROV-lite records traceability.
+It does not decide truth.
+It does not raise confidence.
+It does not turn a citation into support.
+```
+
+## 可抽取 Candidate Points","Judge B","2026-06-23T00:18:05.3973779+08:00","2","2","Directly says PROV-lite records traceability and does not decide truth, raise confidence, or turn citation into support."
+"judge-row-005","Correctness is not Faithfulness RAG Attributions 初步看点 citation correctness citation faithfulness evidence support","The raw anchor can support a read-only answer that citation correctness and citation faithfulness should not be conflated, and that a source link is not automatically evidence support.","raw/papers/2026-05-29-rag-attribution-faithfulness-source.md#初步看点","a95728112b9a8a80d61fd956290999e7e125c0cd2637f81c8a7e42ee5f12438a","outputs/review/source-intake-generic-readonly-loop-2026-06-14/frozen_full_workspace_corpus/raw/papers/2026-05-29-rag-attribution-faithfulness-source.md","## 初步看点
+
+- 论文区分 citation correctness 和 citation faithfulness。
+- Citation correctness 关注 cited document 是否支持对应 statement。
+- Citation faithfulness 更严格，要求模型实际依赖引用文档，而不是事后贴相关引用。
+- 本资料库当前只做 evidence support / citation correctness 级别的人工复核，不做因果 faithfulness verification。
+
+## 吸收方式
+
+```text","Judge B","2026-06-23T00:18:05.3973779+08:00","2","1","Directly supports the distinction between citation correctness and faithfulness; the broader source-link-not-automatic-support point is only partially supported by this excerpt."
+"judge-row-006","W3C Web Annotation stable text citation preserve selected text nearby context exact prefix suffix","The raw anchor can support a read-only answer that stable text citations should preserve selected text and nearby context so the evidence span can be re-found.","raw/articles/2026-05-30-w3c-web-annotation-source.md#Source Anchor","e16be8aa931cc46d912429b26446ad7efb8ed49ba7a653512e63e37b14fb28c0","outputs/review/source-intake-generic-readonly-loop-2026-06-14/frozen_full_workspace_corpus/raw/articles/2026-05-30-w3c-web-annotation-source.md","## Source Anchor
+
+Short exact source wording:
+
+```text
+""Text Quote Selector""
+""copying it""
+""including some of the text immediately before""
+""after""
+""exact""","Judge B","2026-06-23T00:18:05.3973779+08:00","2","2","Text Quote Selector excerpt identifies copied selected text plus immediately before/after context and exact wording, enough for the stated stable-text-citation use."
+"judge-row-007","W3C PROV provenance traceability decide truth confidence citation support","The raw anchor can support a read-only answer that provenance traceability does not decide truth, raise confidence, or turn a citation into support.","raw/articles/2026-05-29-w3c-prov-source.md#边界","d02636005e119966eb13a08c98a2416f0c99844e72f1740e44901535175e152f","outputs/review/source-intake-generic-readonly-loop-2026-06-14/frozen_full_workspace_corpus/raw/articles/2026-05-29-w3c-prov-source.md","## 边界
+
+```text
+PROV-lite records traceability.
+It does not decide truth.
+It does not raise confidence.
+It does not turn a citation into support.
+```
+
+## 可抽取 Candidate Points","Judge B","2026-06-23T00:18:05.3973779+08:00","2","2","Directly states provenance traceability does not decide truth, raise confidence, or turn citation into support."
+"judge-row-008","Why should citation correctness and citation faithfulness be treated as separate checks?","The raw anchor can support a read-only answer that citation correctness and citation faithfulness are separate checks.","raw/papers/2026-05-29-rag-attribution-faithfulness-source.md#初步看点","a95728112b9a8a80d61fd956290999e7e125c0cd2637f81c8a7e42ee5f12438a","outputs/review/source-intake-generic-readonly-loop-2026-06-14/frozen_full_workspace_corpus/raw/papers/2026-05-29-rag-attribution-faithfulness-source.md","## 初步看点
+
+- 论文区分 citation correctness 和 citation faithfulness。
+- Citation correctness 关注 cited document 是否支持对应 statement。
+- Citation faithfulness 更严格，要求模型实际依赖引用文档，而不是事后贴相关引用。
+- 本资料库当前只做 evidence support / citation correctness 级别的人工复核，不做因果 faithfulness verification。
+
+## 吸收方式
+
+```text","Judge B","2026-06-23T00:18:05.3973779+08:00","2","2","Directly says the paper distinguishes citation correctness and citation faithfulness, with separate definitions."
+"judge-row-009","Which selector fields preserve the quote and surrounding snippets so a reviewer can re-find a span?","The raw anchor can support a read-only answer that exact, prefix, and suffix fields help preserve the selected quote and surrounding snippets.","raw/articles/2026-05-30-w3c-web-annotation-source.md#Source Anchor","e16be8aa931cc46d912429b26446ad7efb8ed49ba7a653512e63e37b14fb28c0","outputs/review/source-intake-generic-readonly-loop-2026-06-14/frozen_full_workspace_corpus/raw/articles/2026-05-30-w3c-web-annotation-source.md","## Source Anchor
+
+Short exact source wording:
+
+```text
+""Text Quote Selector""
+""copying it""
+""including some of the text immediately before""
+""after""
+""exact""","Judge B","2026-06-23T00:18:05.3973779+08:00","2","1","Excerpt supports exact quote plus before/after surrounding snippets, but it does not explicitly expose prefix and suffix as selector field names."
+"judge-row-010","W3C PROV entities activities agents lightweight provenance skeleton source records","The raw anchor can support a read-only answer that PROV offers an entity/activity/agent skeleton that can be borrowed lightly for source records.","raw/articles/2026-05-29-w3c-prov-source.md#初步看点","d02636005e119966eb13a08c98a2416f0c99844e72f1740e44901535175e152f","outputs/review/source-intake-generic-readonly-loop-2026-06-14/frozen_full_workspace_corpus/raw/articles/2026-05-29-w3c-prov-source.md","## 初步看点
+
+- PROV 的核心描述对象是 entities、activities 和 people/agents involved in producing data or things。
+- PROV-DM 是 W3C provenance family 的 conceptual data model。
+- 这正好可以给本项目的 source provenance 提供轻量词汇，但不要求 source record 承担 review、promotion 或 context-pack 使用日志。
+
+## 吸收方式
+
+```text
+Use PROV-lite, not full PROV.","Judge B","2026-06-23T00:18:05.3973779+08:00","2","2","Directly names entities, activities, and agents and says they can provide lightweight source-provenance vocabulary/PROV-lite."
+"judge-row-011","FlexNote Extracted Source Facts visual workbench candidate overlay source anchor tag database context pack inspected pages","The raw anchor can support the read-only content portion of this restricted-review case: FlexNote is local-first, uses reusable cards and visual whiteboards, and describes tags as an extensible database.","raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md#Extracted Source Facts","888f6eac02467a688a294446106759e17a33f79640a8f00633f86211df7dc67d","outputs/review/source-intake-generic-readonly-loop-2026-06-14/frozen_full_workspace_corpus/raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md","## Extracted Source Facts
+
+- FlexNote presents itself as a local-first visual note-taking tool for creators and deep thinkers.
+- Its feature cluster is: infinite canvas, Markdown editing, mind maps, bidirectional links, tag database, video/PDF/web annotations.
+- The card is the main information atom. Cards can be text, PDF, video, web clip, image, audio, mind map, attachment, PDF highlight, or video annotation.
+- Cards are globally unique and reusable: one card can appear in multiple whiteboards, and edits sync to all references.
+- Whiteboards are visual workspaces. They can contain cards, nested cards, connections/arrows, nested whiteboards, thumbnails, navigation, auto layout, and export.
+- Tags are described as an extensible database, not merely labels. Tags can have custom fields, relation fields, filters, and table/board/list views.
+- PDF and video highlights can automatically gener","Judge B","2026-06-23T00:18:05.3973779+08:00","2","2","Directly states FlexNote is local-first, uses reusable cards in whiteboards, and treats tags as an extensible database."

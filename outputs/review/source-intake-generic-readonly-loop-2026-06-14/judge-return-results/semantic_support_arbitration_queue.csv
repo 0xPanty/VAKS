@@ -1,0 +1,31 @@
+row_id,query,answer_use_claim,anchor_ref,anchor_source_hash,frozen_snapshot_ref,anchor_excerpt,judge_a_id,judge_a_judged_at,judge_a_relevance_0_2,judge_a_sufficiency_0_2,judge_a_notes,judge_b_id,judge_b_judged_at,judge_b_relevance_0_2,judge_b_sufficiency_0_2,judge_b_notes,judge_agreement_status,needs_arbitration,row_validation_errors,arbiter_id,arbiter_judged_at,arbiter_final_relevance_0_2,arbiter_final_sufficiency_0_2,arbiter_notes
+judge-row-004,W3C PROV 边界 provenance truth confidence citation support,"The raw anchor can support a read-only answer that PROV-lite traceability is useful for source identity, capture/extraction activity, and agent trace, but does not decide truth or confidence.",raw/articles/2026-05-29-w3c-prov-source.md#边界,d02636005e119966eb13a08c98a2416f0c99844e72f1740e44901535175e152f,outputs/review/source-intake-generic-readonly-loop-2026-06-14/frozen_full_workspace_corpus/raw/articles/2026-05-29-w3c-prov-source.md,"## 边界
+
+```text
+PROV-lite records traceability.
+It does not decide truth.
+It does not raise confidence.
+It does not turn a citation into support.
+```
+
+## 可抽取 Candidate Points",judge-a,2026-06-23T00:18:20+08:00,2,1,摘录直接支持 traceability 不决定 truth/confidence/citation support；但 source identity、capture/extraction activity、agent trace 未在摘录中展开。,Judge B,2026-06-23T00:18:05.3973779+08:00,2,2,"Directly says PROV-lite records traceability and does not decide truth, raise confidence, or turn citation into support.",disagree,True,,,,,,
+judge-row-005,Correctness is not Faithfulness RAG Attributions 初步看点 citation correctness citation faithfulness evidence support,"The raw anchor can support a read-only answer that citation correctness and citation faithfulness should not be conflated, and that a source link is not automatically evidence support.",raw/papers/2026-05-29-rag-attribution-faithfulness-source.md#初步看点,a95728112b9a8a80d61fd956290999e7e125c0cd2637f81c8a7e42ee5f12438a,outputs/review/source-intake-generic-readonly-loop-2026-06-14/frozen_full_workspace_corpus/raw/papers/2026-05-29-rag-attribution-faithfulness-source.md,"## 初步看点
+
+- 论文区分 citation correctness 和 citation faithfulness。
+- Citation correctness 关注 cited document 是否支持对应 statement。
+- Citation faithfulness 更严格，要求模型实际依赖引用文档，而不是事后贴相关引用。
+- 本资料库当前只做 evidence support / citation correctness 级别的人工复核，不做因果 faithfulness verification。
+
+## 吸收方式
+
+```text",judge-a,2026-06-23T00:18:20+08:00,2,2,摘录明确区分 correctness/faithfulness，并说明 correctness 关注 cited document 是否支持 statement，足以支持不要混同及链接需支持具体陈述。,Judge B,2026-06-23T00:18:05.3973779+08:00,2,1,Directly supports the distinction between citation correctness and faithfulness; the broader source-link-not-automatic-support point is only partially supported by this excerpt.,disagree,True,,,,,,
+judge-row-006,W3C Web Annotation stable text citation preserve selected text nearby context exact prefix suffix,The raw anchor can support a read-only answer that stable text citations should preserve selected text and nearby context so the evidence span can be re-found.,raw/articles/2026-05-30-w3c-web-annotation-source.md#Source Anchor,e16be8aa931cc46d912429b26446ad7efb8ed49ba7a653512e63e37b14fb28c0,outputs/review/source-intake-generic-readonly-loop-2026-06-14/frozen_full_workspace_corpus/raw/articles/2026-05-30-w3c-web-annotation-source.md,"## Source Anchor
+
+Short exact source wording:
+
+```text
+""Text Quote Selector""
+""copying it""
+""including some of the text immediately before""
+""after""
+""exact""",judge-a,2026-06-23T00:18:20+08:00,2,1,摘录支持复制所选文本和前后文；但 stable citation/re-find 目的未直接出现，部分支持。,Judge B,2026-06-23T00:18:05.3973779+08:00,2,2,"Text Quote Selector excerpt identifies copied selected text plus immediately before/after context and exact wording, enough for the stated stable-text-citation use.",disagree,True,,,,,,

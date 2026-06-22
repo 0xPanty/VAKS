@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "created_at": "2026-06-22T15:34:42+00:00",
+  "case_count": 20,
+  "passed_expected_decision_count": 20,
+  "original_corpus_doc_count": 210,
+  "clean_corpus_doc_count": 210,
+  "excluded_fixture_count": 0,
+  "excluded_fixture_paths": [],
+  "decision_breakdown": {
+    "blocked_or_downgraded": 9,
+    "allowed_readonly": 11
+  },
+  "truth_boundary": "Default corpus excludes runtime test fixtures; this clean rerun is a no-op guard using the same scorer, query set, anchor vocabulary, and generic pack rules. This is not production runtime validation."
+}

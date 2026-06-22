@@ -1,0 +1,46 @@
+{
+  "status": "ready_not_judged",
+  "row_count": 11,
+  "base_judge_zip_sha256": "5b7ad2b25d1b56a173ea10dee7860c526ba68c094121f94f44be0c569e3dadb4",
+  "judge_a_zip": "semantic-support-judge-a.zip",
+  "judge_a_zip_sha256": "b2763932bdd5aeb719db0c03b9c214d3bd93d1387c48ca93e55e4ff7550f931c",
+  "judge_a_csv_columns": [
+    "row_id",
+    "query",
+    "answer_use_claim",
+    "anchor_ref",
+    "anchor_source_hash",
+    "frozen_snapshot_ref",
+    "anchor_excerpt",
+    "judge_a_id",
+    "judge_a_judged_at",
+    "judge_a_relevance_0_2",
+    "judge_a_sufficiency_0_2",
+    "judge_a_notes"
+  ],
+  "judge_b_zip": "semantic-support-judge-b.zip",
+  "judge_b_zip_sha256": "42dad5916008c502a1f7234793e38544867e40d45a832c1181016f1afb8c029b",
+  "judge_b_csv_columns": [
+    "row_id",
+    "query",
+    "answer_use_claim",
+    "anchor_ref",
+    "anchor_source_hash",
+    "frozen_snapshot_ref",
+    "anchor_excerpt",
+    "judge_b_id",
+    "judge_b_judged_at",
+    "judge_b_relevance_0_2",
+    "judge_b_sufficiency_0_2",
+    "judge_b_notes"
+  ],
+  "excluded_from_judge_zips": [
+    "case_id",
+    "expected outcome",
+    "author-side self-check",
+    "row-to-case mapping",
+    "other judge fill columns",
+    "arbiter fill columns"
+  ],
+  "truth_boundary": "Dispatch bundle prepares independent excerpt-based semantic support judgment only; judgments are not completed and this is not P0 or production runtime validation."
+}

@@ -1,0 +1,65 @@
+{
+  "status": "ready_not_judged_with_dispatch_baseline_merge_check",
+  "generated_at": "2026-06-22T15:36:36+00:00",
+  "row_count": 11,
+  "baseline_template": "semantic_support_judgment_template_baseline.csv",
+  "baseline_template_sha256": "0352989db11c87c362cd719cd8e42cf3a79342e4736faac6cc96e19e235c9e90",
+  "merge_script": "merge_semantic_support_judgments.py",
+  "merge_script_sha256": "8a1acaa722fb219fcea6151afb604c4fafe86442f18323730089f05c40a7e6cf",
+  "dispatch_integrity_check": "merge script requires --base-template to hard-check expected row IDs and visible fields",
+  "truth_boundary": "Followup kit prepares judge dispatch, return merge, and arbitration only. It is not independent judgment completed, P0 approval, production runtime validation, reviewed truth promotion, or action readiness.",
+  "entries": [
+    {
+      "path": "semantic-support-judge-a.zip",
+      "sha256": "b2763932bdd5aeb719db0c03b9c214d3bd93d1387c48ca93e55e4ff7550f931c"
+    },
+    {
+      "path": "semantic-support-judge-a.zip.sha256",
+      "sha256": "6d87d11cfe171e837a62305543adff6450381e29a97960cdab6ff10f96b74738"
+    },
+    {
+      "path": "semantic-support-judge-b.zip",
+      "sha256": "42dad5916008c502a1f7234793e38544867e40d45a832c1181016f1afb8c029b"
+    },
+    {
+      "path": "semantic-support-judge-b.zip.sha256",
+      "sha256": "9b97724b0d17fbe6d0a35bf820bf21b8222af3447e3883cedea600a35727c0ef"
+    },
+    {
+      "path": "DISPATCH_README.md",
+      "sha256": "37e94c62d8f90b8d440ffe1d263c5a5eff5cf6ba2aa12dce3b75be8f2376be3d"
+    },
+    {
+      "path": "SEND_TO_JUDGE_A.md",
+      "sha256": "1d803a2ceb83fdc976ff0bb3ba1157d56d8493172d427dbfd20e2e73d70601c0"
+    },
+    {
+      "path": "SEND_TO_JUDGE_B.md",
+      "sha256": "e957e5e9801d84ddca02d9ca6cfee613c6f9765baa924285b5780f025faa6db5"
+    },
+    {
+      "path": "ARBITRATION_AFTER_RETURN.md",
+      "sha256": "488bb100e189957f316e3249d48b54ca15b7dde9582b1dbb17f9ec86b92eec74"
+    },
+    {
+      "path": "DISPATCH_MANIFEST.json",
+      "sha256": "34bca2fe4f473fd2839ffb10015478eb3a811e52c998a2abde3aeb495aa2790c"
+    },
+    {
+      "path": "JUDGE_RETURN_WORKFLOW.md",
+      "sha256": "d4eff23eb69b0e134a6f047c4742883d32b4282e729ce2b6fe7ebf2e96c03bdf"
+    },
+    {
+      "path": "merge_semantic_support_judgments.py",
+      "sha256": "8a1acaa722fb219fcea6151afb604c4fafe86442f18323730089f05c40a7e6cf"
+    },
+    {
+      "path": "semantic_support_judgment_merge_summary.json",
+      "sha256": "8099a39e72112a883705f4df35da1e723a511d11418dda0ba2a8203246e3d5a9"
+    },
+    {
+      "path": "semantic_support_judgment_template_baseline.csv",
+      "sha256": "0352989db11c87c362cd719cd8e42cf3a79342e4736faac6cc96e19e235c9e90"
+    }
+  ]
+}
