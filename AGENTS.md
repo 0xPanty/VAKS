@@ -195,6 +195,32 @@ For the full current graph of absorbed patterns, anti-patterns, decisions, sourc
 - `wiki/indexes/knowledge-graph-index.md`
 - `wiki/indexes/memory-tier-reference-index.md`
 
+## VAKS Guard (read-only lazy gate)
+
+`tools/vaks_guard.py` is a read-only checker that enforces existing review,
+evidence, action, feedback, receipt, and runtime-artifact boundaries before
+high-risk exits. It is not a background service, hook, watcher, Obsidian plugin,
+reviewer, truth source, action approval, promotion, or write authority, and it
+never modifies files.
+
+Agent usage rules:
+
+1. Run only with a concrete target. No file / receipt / context to check means
+   do not run it just to look rigorous.
+2. Run only at high-risk exits, never for ordinary capture, browsing, or Q&A.
+3. `block` -> stop and fix; `warn` -> explain; `pass` -> no machine-detectable
+   violation only, not reviewer/action approval or reviewed knowledge.
+
+On-demand invocations:
+
+- before review:              `python tools/vaks_guard.py check <path> --mode review`
+- before action/write:        `python tools/vaks_guard.py check <path> --mode action-preflight`
+- before feedback intake:     `python tools/vaks_guard.py check <path> --mode feedback`
+- retrieval receipt check:    `python tools/vaks_guard.py check <path> --mode retrieval`
+- operation receipt check:    `python tools/vaks_guard.py check <path> --mode operation-preflight`
+- context/runtime select:     `python tools/vaks_guard.py check <path> --mode artifact-selection`
+- after Guard edit/upgrade:   `python tools/vaks_guard.py self-test`
+
 ## Operating Rules
 
 - Answer in Chinese by default.
