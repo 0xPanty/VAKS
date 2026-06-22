@@ -1,0 +1,14 @@
+{
+  "contract_version": "r0.7",
+  "first_run_success": true,
+  "replace_supported": false,
+  "run_id": "vaks-routing-robustness-shadow-r0-7-r2-2026-06-23",
+  "second_run_error_class": "FileExistsError",
+  "second_run_exit_code": 3,
+  "second_run_message": "outputs\\review\\vaks-routing-robustness-shadow-r0-7-r2-2026-06-23 already exists; R0.7 is append-only, use a new directory",
+  "second_run_same_directory_rejected": true,
+  "tested_without_replace_flag": true,
+  "tree_hash_after_second_run": "5fa10f95818065bdcf7ab5e1338ad0af2207be3ec0dfa4443f4ac6dc409405a7",
+  "tree_hash_before_second_run": "5fa10f95818065bdcf7ab5e1338ad0af2207be3ec0dfa4443f4ac6dc409405a7",
+  "tree_hash_unchanged_after_rejected_second_run": true
+}

@@ -1,0 +1,46 @@
+{
+  "append_only": true,
+  "artifact_hashes": {
+    "CONTRACT.md": "8995df2daf010c2f1495bebd909747a9f5721a690543b5d5f1b01e1f4840f6ab",
+    "LIMITS.md": "ab0813a4a7e85f5bf6e16d5394aa51d970d352ca9411f06705e8096078d4e036",
+    "append_only_self_test.json": "f20e6c3ff902942e312899b7b4be42604562e51291341d929edd39c44f0fae54",
+    "paraphrase_groups.jsonl": "c89ffe7a147005ed8fa6767c0e71bd36c521cc30bea0ce761f36ae3bb042fa44",
+    "paraphrase_stability_results.jsonl": "8ce9f0f2b3033608e5e9e962e8fd7fcd73b81ea85fce6b10bf3c04dff2b56b66",
+    "provenance/vaks_routing_robustness.py": "393e28fce31601403376cceea0755540e697aa09ce7cd7fe4c0f2417af2d2c46",
+    "selective_verification_cases.jsonl": "8b020b7ec750bf9c62d4cbc67aeafad94678212b547a8c4c4e11e75864acd96c",
+    "selective_verification_decisions.jsonl": "b3c68cef8ecd5866777e38fd72f2e6357b385519d65bb6a5b301231f4beb9d9a",
+    "shadow_route_decisions.jsonl": "976c7961a6bb2aa180d5052b280951418a0b7db94bd02e18b7bda770e82aba7d",
+    "summary.json": "1f426975606190cc7ad700a226c8d3b17ad0c9841f5b9ba7d3e45b64485d9248",
+    "trusted_policy_cases.jsonl": "16716c96422bf4e348d81bb0da218f253a22d029c5745bbca0a1f49437f50af2"
+  },
+  "contract_version": "r0.7",
+  "not_proven": [
+    "source_intake_p0",
+    "production_runtime",
+    "routing_optimality",
+    "production_latency",
+    "real_traffic_accuracy",
+    "query_feature_extraction_accuracy",
+    "natural_language_paraphrase_robustness",
+    "claim_feature_extraction_accuracy",
+    "reviewed_truth",
+    "reviewer_approval",
+    "promotion",
+    "action_readiness"
+  ],
+  "r0_6_router_source": {
+    "contract_version": "r0.6",
+    "imported": true,
+    "path": "tools\\vaks_assurance_router.py",
+    "run_id": "vaks-adaptive-assurance-routing-r0-6-2026-06-23",
+    "sha256": "f76f42d8d65380b824e6e75ae3b932ba3f4fb03e94b23f19a368a1a9315a95cb"
+  },
+  "read_only": true,
+  "replace_supported": false,
+  "run_id": "vaks-routing-robustness-shadow-r0-7-r2-2026-06-23",
+  "runner_path": "tools/vaks_routing_robustness.py",
+  "runner_provenance_path": "provenance/vaks_routing_robustness.py",
+  "runner_provenance_sha256": "393e28fce31601403376cceea0755540e697aa09ce7cd7fe4c0f2417af2d2c46",
+  "runner_sha256": "393e28fce31601403376cceea0755540e697aa09ce7cd7fe4c0f2417af2d2c46",
+  "shadow_only": true
+}
