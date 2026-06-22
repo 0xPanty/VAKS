@@ -1,0 +1,900 @@
+{
+  "authority_boundary": "Expected test results are regression data only, not reviewer approval or action basis.",
+  "cases": {
+    "action_readiness": {
+      "failure-cases/action-delete-without-rollback-ready.md": {
+        "expected_codes": [
+          "AR_DESTRUCTIVE_MISSING_ROLLBACK"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/candidate-basis-ready.md": {
+        "expected_codes": [
+          "AR_CANDIDATE_BASIS_READY",
+          "AR_MISSING_REVIEWED_ACTION_BASIS"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/context-pack-only-ready.md": {
+        "expected_codes": [
+          "AR_CONTEXT_PACK_ONLY_READY",
+          "AR_MISSING_REVIEWED_ACTION_BASIS"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/destructive-without-rollback-ready.md": {
+        "expected_codes": [
+          "AR_DESTRUCTIVE_MISSING_ROLLBACK"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/diagnostic-pass-basis-ready.md": {
+        "expected_codes": [
+          "AR_DIAGNOSTIC_BASIS_READY",
+          "AR_MISSING_REVIEWED_ACTION_BASIS"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/feedback-basis-ready.md": {
+        "expected_codes": [
+          "AR_FEEDBACK_BASIS_READY",
+          "AR_MISSING_REVIEWED_ACTION_BASIS"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/hidden-warning-trimmed-ready.md": {
+        "expected_codes": [
+          "AR_HIDDEN_WARNING_OR_GAP_READY"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/insufficient-evidence-ready.md": {
+        "expected_codes": [
+          "AR_EVIDENCE_SUFFICIENCY_NOT_SUFFICIENT",
+          "AR_INSUFFICIENT_EVIDENCE_READY"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/missing-evidence-sufficiency-ready.md": {
+        "expected_codes": [
+          "AR_EVIDENCE_SUFFICIENCY_NOT_SUFFICIENT"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/missing-intent-confirmation-ready.md": {
+        "expected_codes": [
+          "AR_MISSING_INTENT_CONFIRMATION"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/missing-reviewed-action-basis-ready.md": {
+        "expected_codes": [
+          "AR_MISSING_REVIEWED_ACTION_BASIS"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/missing-success-criteria-ready.md": {
+        "expected_codes": [
+          "AR_MISSING_SUCCESS_CRITERIA"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/out-of-scope-ready.md": {
+        "expected_codes": [
+          "AR_EVIDENCE_SUFFICIENCY_NOT_SUFFICIENT",
+          "AR_OUT_OF_SCOPE_READY"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/read-only-actor-write-ready.md": {
+        "expected_codes": [
+          "AR_READ_ONLY_ACTOR_WRITE"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/retrieval-rank-basis-ready.md": {
+        "expected_codes": [
+          "AR_MISSING_REVIEWED_ACTION_BASIS",
+          "AR_RETRIEVAL_RANK_BASIS_READY"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/reviewed-write-missing-approval.md": {
+        "expected_codes": [
+          "AR_REVIEWED_WRITE_MISSING_APPROVAL"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/reviewed-write-missing-checked-body-hash.md": {
+        "expected_codes": [
+          "AR_REVIEWED_WRITE_MISSING_CHECKED_BODY_HASH"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/schema-change-missing-owner-final-ready.md": {
+        "expected_codes": [
+          "AR_SCHEMA_CHANGE_MISSING_OWNER_FINAL"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/significant-action-intent-self-disabled-ready.md": {
+        "expected_codes": [
+          "AR_MISSING_INTENT_CONFIRMATION"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/source-summary-basis-ready.md": {
+        "expected_codes": [
+          "AR_MISSING_REVIEWED_ACTION_BASIS",
+          "AR_SOURCE_SUMMARY_BASIS_READY"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/stale-without-replacement-ready.md": {
+        "expected_codes": [
+          "AR_STALE_SUPERSEDED_WITHOUT_REPLACEMENT_READY"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/superseded-without-replacement-ready.md": {
+        "expected_codes": [
+          "AR_STALE_SUPERSEDED_WITHOUT_REPLACEMENT_READY"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/unchecked-evidence-ready.md": {
+        "expected_codes": [
+          "AR_EVIDENCE_SUFFICIENCY_NOT_SUFFICIENT"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/unresolved-risk-ready.md": {
+        "expected_codes": [
+          "AR_UNRESOLVED_RISK_READY"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/weak-evidence-ready.md": {
+        "expected_codes": [
+          "AR_EVIDENCE_SUFFICIENCY_NOT_SUFFICIENT"
+        ],
+        "expected_status": "block"
+      },
+      "fixtures/valid-ordinary-answer-not-action.md": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      },
+      "fixtures/valid-ready-with-replacement-basis.md": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      },
+      "fixtures/valid-reviewed-action-basis.md": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      },
+      "fixtures/valid-suggest-visible-gaps-not-ready.md": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      }
+    },
+    "body_hash": {
+      "failure-cases/body-hash-mismatch.md": {
+        "expected_codes": [
+          "body_hash_mismatch"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/checked-body-hash-mismatch.md": {
+        "expected_codes": [
+          "checked_body_hash_mismatch"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/fixed-approved-missing-body-hash.md": {
+        "expected_codes": [
+          "fixed_or_approved_missing_body_hash"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/template-fixed-missing-body-hash.md": {
+        "expected_codes": [
+          "fixed_or_approved_missing_body_hash"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/writeback-ready-body-changed.md": {
+        "expected_codes": [
+          "writeback_ready_body_changed"
+        ],
+        "expected_status": "block"
+      },
+      "fixtures/valid-approved-candidate.md": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      },
+      "fixtures/valid-crlf-normalization.md": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      },
+      "fixtures/valid-draft-no-hash.md": {
+        "expected_codes": [
+          "body_hash_not_required_for_draft"
+        ],
+        "expected_status": "warn"
+      },
+      "fixtures/valid-heading-normalization.md": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      },
+      "fixtures/valid-template-section-candidate.md": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      }
+    },
+    "failure_matrix": {
+      "failure-cases/duplicate-case-id.json": {
+        "expected_codes": [
+          "MATRIX_DUPLICATE_CASE_ID",
+          "MATRIX_MISSING_REQUIRED_CASE"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/forbidden-authority-claim.json": {
+        "expected_codes": [
+          "MATRIX_FORBIDDEN_AUTHORITY_CLAIM",
+          "MATRIX_MISSING_REQUIRED_CASE"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/missing-case-field.json": {
+        "expected_codes": [
+          "MATRIX_CASE_MISSING_FIELD",
+          "MATRIX_MISSING_REQUIRED_CASE"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/missing-guard-entry.json": {
+        "expected_codes": [
+          "MATRIX_CASE_MISSING_GUARD",
+          "MATRIX_MISSING_REQUIRED_CASE"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/missing-required-case.json": {
+        "expected_codes": [
+          "MATRIX_MISSING_REQUIRED_CASE"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/unblocked-outcome.json": {
+        "expected_codes": [
+          "MATRIX_CASE_NOT_BLOCKING",
+          "MATRIX_MISSING_REQUIRED_CASE"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/unknown-ab-case-id.json": {
+        "expected_codes": [
+          "MATRIX_MISSING_REQUIRED_CASE",
+          "MATRIX_UNKNOWN_CASE_ID"
+        ],
+        "expected_status": "block"
+      },
+      "fixtures/action-boundary-failure-matrix.json": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      },
+      "fixtures/valid-complete-matrix-with-risk-note.json": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      },
+      "fixtures/valid-complete-matrix.json": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      }
+    },
+    "feedback": {
+      "failure-cases/action-basis-allowed-text.md": {
+        "expected_codes": [
+          "FB_ACTION_BASIS_ALLOWED"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/action-basis-allowed.md": {
+        "expected_codes": [
+          "FB_ACTION_BASIS_ALLOWED"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/affects-source-reliability.md": {
+        "expected_codes": [
+          "FB_FORBIDDEN_DIRECT_EFFECT"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/affects-truth-confidence.md": {
+        "expected_codes": [
+          "FB_FORBIDDEN_DIRECT_EFFECT"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/affects-verification-status.md": {
+        "expected_codes": [
+          "FB_FORBIDDEN_DIRECT_EFFECT"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/explicit-correction-without-review-due.md": {
+        "expected_codes": [
+          "FB_EXPLICIT_CORRECTION_WITHOUT_REVIEW_DUE",
+          "FB_NEGATIVE_WITHOUT_REVIEW_PRESSURE"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/global-negative-knowledge-review-completed.md": {
+        "expected_codes": [
+          "FB_GLOBAL_NEGATIVE_KNOWLEDGE_FROM_LOCAL_FEEDBACK"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/global-negative-knowledge-text.md": {
+        "expected_codes": [
+          "FB_GLOBAL_NEGATIVE_KNOWLEDGE_FROM_LOCAL_FEEDBACK"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/global-negative-knowledge.md": {
+        "expected_codes": [
+          "FB_GLOBAL_NEGATIVE_KNOWLEDGE_FROM_LOCAL_FEEDBACK"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/incomplete-never-affects.md": {
+        "expected_codes": [
+          "FB_INCOMPLETE_NEVER_AFFECTS_DIRECTLY"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/missing-scope-binding.md": {
+        "expected_codes": [
+          "FB_MISSING_SCOPE_BINDING"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/mutates-reviewed-note-text.md": {
+        "expected_codes": [
+          "FB_REVIEWED_NOTE_MUTATION"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/mutates-reviewed-relation-text.md": {
+        "expected_codes": [
+          "FB_REVIEWED_RELATION_MUTATION"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/negative-without-review-pressure.md": {
+        "expected_codes": [
+          "FB_NEGATIVE_WITHOUT_REVIEW_PRESSURE"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/promotes-reviewed-knowledge-text.md": {
+        "expected_codes": [
+          "FB_PROMOTION_FROM_FEEDBACK"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/promotion-from-feedback-text.md": {
+        "expected_codes": [
+          "FB_PROMOTION_FROM_FEEDBACK"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/promotion-from-feedback.md": {
+        "expected_codes": [
+          "FB_PROMOTION_FROM_FEEDBACK"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/reviewed-note-mutation-text.md": {
+        "expected_codes": [
+          "FB_REVIEWED_NOTE_MUTATION"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/reviewed-note-mutation.md": {
+        "expected_codes": [
+          "FB_REVIEWED_NOTE_MUTATION"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/reviewed-relation-mutation-text.md": {
+        "expected_codes": [
+          "FB_REVIEWED_RELATION_MUTATION"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/reviewed-relation-mutation.md": {
+        "expected_codes": [
+          "FB_REVIEWED_RELATION_MUTATION"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/reviewed-relation-strength-delta.md": {
+        "expected_codes": [
+          "FB_REVIEWED_RELATION_MUTATION"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/reviewed-relation-strength-text.md": {
+        "expected_codes": [
+          "FB_REVIEWED_RELATION_MUTATION"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/source-reliability-delta.md": {
+        "expected_codes": [
+          "FB_SOURCE_RELIABILITY_MUTATION"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/source-reliability-mutation-allowed-text.md": {
+        "expected_codes": [
+          "FB_SOURCE_RELIABILITY_MUTATION"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/source-reliability-mutation-allowed.md": {
+        "expected_codes": [
+          "FB_SOURCE_RELIABILITY_MUTATION"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/truth-confidence-delta.md": {
+        "expected_codes": [
+          "FB_TRUTH_CONFIDENCE_MUTATION"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/truth-confidence-effect.md": {
+        "expected_codes": [
+          "FB_FORBIDDEN_DIRECT_EFFECT"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/unknown-effect.md": {
+        "expected_codes": [
+          "FB_UNKNOWN_EFFECT"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/verification-status-mutation.md": {
+        "expected_codes": [
+          "FB_VERIFICATION_STATUS_MUTATION"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/wrong-warning-code.md": {
+        "expected_codes": [
+          "FB_MISSING_FEEDBACK_NOT_TRUTH_WARNING"
+        ],
+        "expected_status": "block"
+      },
+      "fixtures/valid-action-outcome.md": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      },
+      "fixtures/valid-explicit-correction-review-due.md": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      },
+      "fixtures/valid-positive-feedback.md": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      },
+      "fixtures/valid-reviewed-local-negative-after-review.md": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      }
+    },
+    "receipt": {
+      "failure-cases/operation-boundary-flag-false.md": {
+        "expected_codes": [
+          "OV_OPERATION_BOUNDARY_FLAG_FALSE"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/operation-candidate-as-action-basis.md": {
+        "expected_codes": [
+          "OV_INVALID_ACTION_BASIS"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/operation-candidate-write-out-of-scope.md": {
+        "expected_codes": [
+          "OV_CANDIDATE_WRITE_OUT_OF_SCOPE"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/operation-checked-body-hash-mismatch.md": {
+        "expected_codes": [
+          "OV_CHECKED_BODY_HASH_MISMATCH"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/operation-delete-without-rollback.md": {
+        "expected_codes": [
+          "OV_ROLLBACK_REQUIRED"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/operation-mainline-write-missing-approval-hash.md": {
+        "expected_codes": [
+          "OV_REVIEWED_WRITE_MISSING_APPROVAL_OR_HASH"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/operation-missing-intent-confirmation.md": {
+        "expected_codes": [
+          "OV_MISSING_INTENT_CONFIRMATION"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/operation-read-only-actor-write.md": {
+        "expected_codes": [
+          "OV_ACTOR_TIER_CANNOT_WRITE"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/operation-receipt-claims-authority.md": {
+        "expected_codes": [
+          "OV_RECEIPT_CLAIMS_AUTHORITY"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/operation-reviewed-write-missing-approval-hash.md": {
+        "expected_codes": [
+          "OV_REVIEWED_WRITE_MISSING_APPROVAL_OR_HASH"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/operation-schema-change-without-owner-final.md": {
+        "expected_codes": [
+          "OV_SCHEMA_CHANGE_MISSING_OWNER_FINAL"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/operation-suggest-only-actor-write.md": {
+        "expected_codes": [
+          "OV_ACTOR_TIER_CANNOT_WRITE"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/operation-unknown-actor-tier-write.md": {
+        "expected_codes": [
+          "OV_UNKNOWN_ACTOR_TIER"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/operation-unknown-operation-mode.md": {
+        "expected_codes": [
+          "OV_UNKNOWN_OPERATION_MODE"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/retrieval-boundary-flag-false.md": {
+        "expected_codes": [
+          "RV_SUPPORT_BOUNDARY_FLAG_FALSE"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/retrieval-candidate-as-support.md": {
+        "expected_codes": [
+          "RV_CANDIDATE_OVERLAY_FEEDBACK_AS_SUPPORT"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/retrieval-cross-bucket-rrf.md": {
+        "expected_codes": [
+          "RV_CROSS_BUCKET_RRF"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/retrieval-feedback-action-basis.md": {
+        "expected_codes": [
+          "RV_CANDIDATE_OVERLAY_FEEDBACK_AS_SUPPORT"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/retrieval-graph-rank-as-trust.md": {
+        "expected_codes": [
+          "RV_GRAPH_RANK_AS_TRUST"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/retrieval-legacy-raw-metadata-used.md": {
+        "expected_codes": [
+          "RV_LEGACY_RAW_METADATA_USED"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/retrieval-missing-independent-anchor.md": {
+        "expected_codes": [
+          "RV_MISSING_INDEPENDENT_SUPPORT_ANCHOR"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/retrieval-receipt-claims-authority.md": {
+        "expected_codes": [
+          "RV_RECEIPT_CLAIMS_AUTHORITY"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/retrieval-selected-by-as-support.md": {
+        "expected_codes": [
+          "RV_SELECTED_BY_AS_SUPPORT"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/retrieval-unknown-authority-bucket.md": {
+        "expected_codes": [
+          "RV_UNKNOWN_AUTHORITY_BUCKET"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/retrieval-unknown-pack-role.md": {
+        "expected_codes": [
+          "RV_UNKNOWN_PACK_ROLE"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/retrieval-url-only-direct-support.md": {
+        "expected_codes": [
+          "RV_URL_ONLY_DIRECT_SUPPORT"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/retrieval-url-only-supported-with-none-role.md": {
+        "expected_codes": [
+          "RV_URL_ONLY_DIRECT_SUPPORT"
+        ],
+        "expected_status": "block"
+      },
+      "fixtures/valid-operation-reviewed-write-receipt.md": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      },
+      "fixtures/valid-operation-suggest-only-proposal.md": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      },
+      "fixtures/valid-retrieval-direct-anchor-receipt.md": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      },
+      "fixtures/valid-retrieval-orientation-receipt.md": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      }
+    },
+    "runtime_artifacts": {
+      "failure-cases/derived-index-selected.json": {
+        "expected_codes": [
+          "RA_RUNTIME_ARTIFACT_SELECTED"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/duplicate-item-id.json": {
+        "expected_codes": [
+          "RA_DUPLICATE_ITEM_ID"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/generated-receipt-action-basis.json": {
+        "expected_codes": [
+          "RA_RUNTIME_ARTIFACT_ACTION_BASIS"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/generated-receipt-pack-role-action-basis.json": {
+        "expected_codes": [
+          "RA_RUNTIME_ARTIFACT_ACTION_BASIS"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/missing-items.json": {
+        "expected_codes": [
+          "RA_MISSING_ITEMS"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/pycache-selected.json": {
+        "expected_codes": [
+          "RA_RUNTIME_ARTIFACT_SELECTED"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/runtime-action-authority-bucket.json": {
+        "expected_codes": [
+          "RA_RUNTIME_ARTIFACT_AUTHORITY_BUCKET"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/runtime-bad-exclusion-reason.json": {
+        "expected_codes": [
+          "RA_RUNTIME_ARTIFACT_BAD_EXCLUSION_REASON"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/runtime-claims-authority.json": {
+        "expected_codes": [
+          "RA_RUNTIME_ARTIFACT_CLAIMS_AUTHORITY"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/runtime-filter-disabled.json": {
+        "expected_codes": [
+          "RA_RUNTIME_FILTER_DISABLED"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/runtime-mislabeled-false.json": {
+        "expected_codes": [
+          "RA_RUNTIME_ARTIFACT_MISLABELED"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/runtime-not-excluded.json": {
+        "expected_codes": [
+          "RA_RUNTIME_ARTIFACT_NOT_EXCLUDED"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/runtime-path-space-mislabeled-selected.json": {
+        "expected_codes": [
+          "RA_RUNTIME_ARTIFACT_MISLABELED",
+          "RA_RUNTIME_ARTIFACT_NOT_EXCLUDED",
+          "RA_RUNTIME_ARTIFACT_SELECTED"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/runtime-path-underscore-mislabeled-selected.json": {
+        "expected_codes": [
+          "RA_RUNTIME_ARTIFACT_MISLABELED",
+          "RA_RUNTIME_ARTIFACT_NOT_EXCLUDED",
+          "RA_RUNTIME_ARTIFACT_SELECTED"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/runtime-raw-authority-bucket.json": {
+        "expected_codes": [
+          "RA_RUNTIME_ARTIFACT_AUTHORITY_BUCKET"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/runtime-reviewed-authority-bucket.json": {
+        "expected_codes": [
+          "RA_RUNTIME_ARTIFACT_AUTHORITY_BUCKET"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/runtime-support-authority-bucket.json": {
+        "expected_codes": [
+          "RA_RUNTIME_ARTIFACT_AUTHORITY_BUCKET"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/suite-output-as-support.json": {
+        "expected_codes": [
+          "RA_RUNTIME_ARTIFACT_AS_SUPPORT"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/suite-output-pack-role-evidence-support.json": {
+        "expected_codes": [
+          "RA_RUNTIME_ARTIFACT_AS_SUPPORT"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/unknown-artifact-kind.json": {
+        "expected_codes": [
+          "RA_UNKNOWN_ARTIFACT_KIND"
+        ],
+        "expected_status": "block"
+      },
+      "fixtures/valid-derived-index-excluded-with-raw-anchor.json": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      },
+      "fixtures/valid-durable-sandbox-doc-not-runtime.json": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      },
+      "fixtures/valid-mixed-corpus-runtime-excluded.json": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      },
+      "fixtures/valid-query-loop-output-excluded.json": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      }
+    },
+    "support_boundary": {
+      "failure-cases/background-context-counted-as-support.md": {
+        "expected_codes": [
+          "background_context_counted_as_support"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/candidate-as-support.md": {
+        "expected_codes": [
+          "candidate_as_support"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/claim-note-self-support-loop.md": {
+        "expected_codes": [
+          "claim_note_self_support_loop"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/feedback-as-support.md": {
+        "expected_codes": [
+          "feedback_as_support"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/inferential-support-missing-reviewer-note.md": {
+        "expected_codes": [
+          "inferential_support_missing_reviewer_note"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/legacy-metadata-support.md": {
+        "expected_codes": [
+          "legacy_metadata_support"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/missing-independent-anchor.md": {
+        "expected_codes": [
+          "support_claim_missing_independent_anchor"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/rank-score-as-support.md": {
+        "expected_codes": [
+          "rank_or_score_as_support_or_trust"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/source-summary-self-support.md": {
+        "expected_codes": [
+          "source_summary_self_support"
+        ],
+        "expected_status": "block"
+      },
+      "failure-cases/url-only-direct-support.md": {
+        "expected_codes": [
+          "url_only_direct_support"
+        ],
+        "expected_status": "block"
+      },
+      "fixtures/valid-background-context-not-support.md": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      },
+      "fixtures/valid-direct-raw-anchor-support.md": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      },
+      "fixtures/valid-inferential-support-with-reviewer-note.md": {
+        "expected_codes": [],
+        "expected_status": "pass"
+      }
+    }
+  },
+  "schema": "vaks_guard_self_test_expected_results_v1",
+  "source": "generated from sandbox validators on copied fixtures; do not treat as architecture authority"
+}

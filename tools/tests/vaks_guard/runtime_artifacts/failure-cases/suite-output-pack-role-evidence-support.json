@@ -1,0 +1,22 @@
+{
+  "record_kind": "runtime_artifact_exclusion_manifest",
+  "scenario_id": "ra-fail-suite-output-pack-role-evidence-support",
+  "expected_valid": false,
+  "expected_codes": ["RA_RUNTIME_ARTIFACT_AS_SUPPORT"],
+  "exclude_runtime_artifacts": true,
+  "items": [
+    {
+      "id": "suite_output_pack_role_evidence_support",
+      "path": "outputs/review/example/suite-output.json",
+      "artifact_kind": "suite_output",
+      "runtime_artifact": true,
+      "seen_by_retrieval": true,
+      "selected": false,
+      "excluded": true,
+      "excluded_reason": "runtime_artifact_excluded",
+      "pack_role": "evidence_support",
+      "evidence_role": "none",
+      "authority_bucket": "runtime_artifact"
+    }
+  ]
+}

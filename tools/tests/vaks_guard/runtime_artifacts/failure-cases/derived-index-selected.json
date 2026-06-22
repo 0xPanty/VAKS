@@ -1,0 +1,21 @@
+{
+  "record_kind": "runtime_artifact_exclusion_manifest",
+  "scenario_id": "ra-fail-derived-index-selected",
+  "expected_valid": false,
+  "expected_codes": ["RA_RUNTIME_ARTIFACT_SELECTED"],
+  "exclude_runtime_artifacts": true,
+  "items": [
+    {
+      "id": "derived_index_selected",
+      "path": "outputs/review/example/derived-index/runtime-index.json",
+      "artifact_kind": "derived_index",
+      "runtime_artifact": true,
+      "seen_by_retrieval": true,
+      "selected": true,
+      "excluded": true,
+      "excluded_reason": "runtime_artifact_excluded",
+      "pack_role": "orientation",
+      "authority_bucket": "runtime_artifact"
+    }
+  ]
+}

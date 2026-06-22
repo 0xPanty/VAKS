@@ -1,0 +1,20 @@
+{
+  "record_kind": "runtime_artifact_exclusion_manifest",
+  "scenario_id": "ra-fail-unknown-artifact-kind",
+  "expected_valid": false,
+  "expected_codes": ["RA_UNKNOWN_ARTIFACT_KIND"],
+  "exclude_runtime_artifacts": true,
+  "items": [
+    {
+      "id": "unknown_kind",
+      "path": "outputs/review/example/unknown.bin",
+      "artifact_kind": "mystery_artifact",
+      "runtime_artifact": false,
+      "seen_by_retrieval": true,
+      "selected": false,
+      "excluded": false,
+      "pack_role": "none",
+      "authority_bucket": "unknown"
+    }
+  ]
+}

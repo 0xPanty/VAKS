@@ -1,0 +1,31 @@
+{
+  "record_kind": "runtime_artifact_exclusion_manifest",
+  "scenario_id": "ra-valid-durable-sandbox-doc-not-runtime",
+  "expected_valid": true,
+  "expected_codes": [],
+  "exclude_runtime_artifacts": true,
+  "items": [
+    {
+      "id": "scenario_contract",
+      "path": "outputs/review/vaks-implementation-sandbox/example/artifact/scenario-contract.md",
+      "artifact_kind": "sandbox_contract",
+      "runtime_artifact": false,
+      "seen_by_retrieval": true,
+      "selected": true,
+      "excluded": false,
+      "pack_role": "orientation",
+      "authority_bucket": "sandbox_documentation"
+    },
+    {
+      "id": "verification_doc",
+      "path": "outputs/review/vaks-implementation-sandbox/example/verification.md",
+      "artifact_kind": "sandbox_verification_doc",
+      "runtime_artifact": false,
+      "seen_by_retrieval": true,
+      "selected": false,
+      "excluded": false,
+      "pack_role": "background_context",
+      "authority_bucket": "sandbox_documentation"
+    }
+  ]
+}

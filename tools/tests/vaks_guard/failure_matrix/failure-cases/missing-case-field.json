@@ -1,0 +1,28 @@
+{
+  "expected_failure_reason": "MATRIX_CASE_MISSING_FIELD",
+  "record_kind": "action_boundary_failure_matrix",
+  "slice_id": "2026-06-15-p0-07-action-boundary-failure-matrix-sandbox",
+  "authority_non_claims": {
+    "mainline_ready": false,
+    "reviewer_approval_created": false,
+    "reviewed_knowledge_created": false,
+    "evidence_support_created": false,
+    "action_basis_created": false,
+    "promotion_authorized": false
+  },
+  "cases": [
+    {
+      "case_id": "AB-01",
+      "title": "body_hash mismatch still approved",
+      "failure_mode": "body drift",
+      "boundary_class": "approval_integrity",
+      "source_refs": ["plan"],
+      "blocked_by": [{"slice_id": "p0-03", "guard": "body_hash_mismatch"}],
+      "expected_outcome": {"status": "blocked", "reason": "hash mismatch"},
+      "fixture_refs": ["p0-03/body-hash-mismatch"],
+      "validator_or_check_refs": ["p0-03/body_hash_validator"],
+      "authority_non_claims": {"mainline_ready": false, "reviewer_approval_created": false, "reviewed_knowledge_created": false, "evidence_support_created": false, "action_basis_created": false, "promotion_authorized": false}
+    }
+  ]
+}
+

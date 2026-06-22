@@ -1,0 +1,8 @@
+{
+  "record_kind": "runtime_artifact_exclusion_manifest",
+  "scenario_id": "ra-fail-missing-items",
+  "expected_valid": false,
+  "expected_codes": ["RA_MISSING_ITEMS"],
+  "exclude_runtime_artifacts": true,
+  "items": []
+}

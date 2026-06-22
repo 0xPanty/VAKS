@@ -1,0 +1,44 @@
+{
+  "record_kind": "runtime_artifact_exclusion_manifest",
+  "scenario_id": "ra-valid-query-loop-output-excluded",
+  "expected_valid": true,
+  "expected_codes": [],
+  "exclude_runtime_artifacts": true,
+  "items": [
+    {
+      "id": "candidate_note_001",
+      "path": "outputs/review/example-candidate-distillation.md",
+      "artifact_kind": "candidate_note",
+      "runtime_artifact": false,
+      "seen_by_retrieval": true,
+      "selected": true,
+      "excluded": false,
+      "pack_role": "review_input",
+      "authority_bucket": "candidate"
+    },
+    {
+      "id": "suite_output_001",
+      "path": "outputs/review/example/suite-output.json",
+      "artifact_kind": "suite_output",
+      "runtime_artifact": true,
+      "seen_by_retrieval": true,
+      "selected": false,
+      "excluded": true,
+      "excluded_reason": "runtime_artifact_excluded",
+      "pack_role": "none",
+      "authority_bucket": "runtime_artifact"
+    },
+    {
+      "id": "generated_receipt_001",
+      "path": "outputs/review/example/generated-receipts/rr-001.md",
+      "artifact_kind": "generated_receipt",
+      "runtime_artifact": true,
+      "seen_by_retrieval": true,
+      "selected": false,
+      "excluded": true,
+      "excluded_reason": "runtime_artifact_excluded",
+      "pack_role": "none",
+      "authority_bucket": "runtime_artifact"
+    }
+  ]
+}

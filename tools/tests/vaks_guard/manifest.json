@@ -1,0 +1,263 @@
+{
+  "copied_cases": {
+    "action_readiness": {
+      "failure_case_file_count": 25,
+      "file_hashes": {
+        "failure-cases/action-delete-without-rollback-ready.md": "9189b279cae7b42f85b3f5415be7b74dec647bd2f1a540a3c9d1346c8fd6c7e7",
+        "failure-cases/candidate-basis-ready.md": "0397ce7a82f9041f71bb206c652b8f67a17dfc0e903396b1564a71b033ec2046",
+        "failure-cases/context-pack-only-ready.md": "a723b3d502109f906afe960b5effeb5d1b4e7d1c69010b233496cd7ccaea0316",
+        "failure-cases/destructive-without-rollback-ready.md": "5a3775d18eca099b0eb2966bd87ae65c0e581775932588de400595bb42f122c0",
+        "failure-cases/diagnostic-pass-basis-ready.md": "227088f69dc4dbad15a86fb4ac401915400cde7bad399eabdf7de81961a968c6",
+        "failure-cases/feedback-basis-ready.md": "193a3a255bedc71e4cbf21cb131ce00374a06a17df49deea2fd70c5a3b1ca45f",
+        "failure-cases/hidden-warning-trimmed-ready.md": "f15a57b37b12bfac97cfb4f29340dc20a5dd82b7b227143842a54a55953efa71",
+        "failure-cases/insufficient-evidence-ready.md": "46131b0afc88b244b2184737a077aef1834e119a2664f2569c2ccf7395bba9be",
+        "failure-cases/missing-evidence-sufficiency-ready.md": "a9950b4a830e8fd02efd44fe656f0f9712cfb22a5e049f0e8b8c8c8396e71911",
+        "failure-cases/missing-intent-confirmation-ready.md": "4120607af06486922e007f98014d7337ac56428a947dcd1b096aab053cc41113",
+        "failure-cases/missing-reviewed-action-basis-ready.md": "cd58570291e08c587955122d5cdcdb176e54e4533b78baa4d3d00e95e01c7aa9",
+        "failure-cases/missing-success-criteria-ready.md": "c5049ff6e63f9a2ef6b33ece690a4a4b58a6e80432da2907d32e19182fc76b39",
+        "failure-cases/out-of-scope-ready.md": "ec63db3197e34c3e65ad6db7219e456cf75b0400556f2dd62b86298e7fb93078",
+        "failure-cases/read-only-actor-write-ready.md": "33f66889739a222c795cb326126a753c9ca6b9358aa8646ba7ca9fae415f09a2",
+        "failure-cases/retrieval-rank-basis-ready.md": "9bfe7df7498b9cbae997f476b333be257a999f88fbe1f22e1f9c59be3fb1daae",
+        "failure-cases/reviewed-write-missing-approval.md": "f507ca29e30fea4b369ad9e5eea16091b4d5291270a6bfef2268cc2dca57abdc",
+        "failure-cases/reviewed-write-missing-checked-body-hash.md": "fb56f9d8c90b9269bd9242e5ac9a079d116613d643ceb47c730b1b019aec7713",
+        "failure-cases/schema-change-missing-owner-final-ready.md": "f000890b79f1bcfa3a30f317ec9a6a8391ec261e3928f2ce4e288e84f1b4b77d",
+        "failure-cases/significant-action-intent-self-disabled-ready.md": "0042def3cc671f640930210294185be68babb488851014cceba134b06376dfed",
+        "failure-cases/source-summary-basis-ready.md": "7da0b23746bbb14a0bc9bc51d55e26a97c793e3ea67096d93d84a53d98aa6836",
+        "failure-cases/stale-without-replacement-ready.md": "62d95dc34de72d39e4b474374a226ade11298f6201d888c9a865cf84ae58f48e",
+        "failure-cases/superseded-without-replacement-ready.md": "34007097f26bc3ff5c540d4ee2920d93bc394df3981845cd7c5ad88d0484ac7c",
+        "failure-cases/unchecked-evidence-ready.md": "9320f4a19a87a1b25382ebd8b677db5c344604c498c7771be16a2132c9b7a1b5",
+        "failure-cases/unresolved-risk-ready.md": "197d9fcd9d0da5e036b6eb6c79341639bf55bf0333dbba17892eee18a526d4fb",
+        "failure-cases/weak-evidence-ready.md": "2fd721e3ad9c88f39c3e0a5bddb4185bc61d108104e7380e424eeb33a313febb",
+        "fixtures/valid-ordinary-answer-not-action.md": "8302e9c8223437352e1259d81e3512a93cd1aa5cfb6e0e8cc6277db4072dd87a",
+        "fixtures/valid-ready-with-replacement-basis.md": "bbae64d5a0e7b6899315553094a95a5b7ec454d6d9af4e0e79faadc8b82cf147",
+        "fixtures/valid-reviewed-action-basis.md": "417b3bfdb339e10eabcba1870f0d71884284b272c38d831f0e16f4a9e7d096b2",
+        "fixtures/valid-suggest-visible-gaps-not-ready.md": "d601a7874c2793ae52e259aedb26898fed1e0b98c58c9d0b037260dbef1b1d48"
+      },
+      "fixture_file_count": 4
+    },
+    "body_hash": {
+      "failure_case_file_count": 9,
+      "file_hashes": {
+        "failure-cases/bodies/checked-hash-mismatch-body.md": "83ef5508dfd44248894613580986d128027db0a2bfeac7feabd482e42bacc8be",
+        "failure-cases/bodies/mismatch-body.md": "c9137fb4c5ba0aa465b8c37803207ae22a16b3619c05104571314196e4b1807c",
+        "failure-cases/bodies/missing-hash-body.md": "94ebcc6a5e094861c4cff411344e5027179b59d79d36f703e4c9b589fbdd056f",
+        "failure-cases/bodies/writeback-changed-body.md": "11f1652c4f112523eb535a3a15bdf922e48cfe5889d16d2e49a2c8149fbe319b",
+        "failure-cases/body-hash-mismatch.md": "4a40cd8f5d2a48a671798c56e13bd22f7864ecff03386a80debf0aafc88bafd9",
+        "failure-cases/checked-body-hash-mismatch.md": "c39bc41915a7bbbddf4256f333cf9300e6d2597731de9160b11cae64cebe7f2e",
+        "failure-cases/fixed-approved-missing-body-hash.md": "cc42978bdc27897311f61998e2636a9184413bc7beb7471b29b66f87354b1444",
+        "failure-cases/template-fixed-missing-body-hash.md": "497e1e70d4e59f522c693c52d7b76f8d6baaf5433eb8d87c562d01ad5ddd0fd0",
+        "failure-cases/writeback-ready-body-changed.md": "26008e6b0330d8b3c2ea284daad53b24de74ac68aad7b9f1f88b3ff54b2479a2",
+        "fixtures/bodies/crlf-normalization-body.md": "01d3560695ec579c0d1a522e2f5564953eaf00c809489209f5064cf0a9d2c458",
+        "fixtures/bodies/draft-body.md": "1d8d8f55d50eb52c53a5bba7f10a1528f68b6ff094c3c3cf327fd186ed6e4291",
+        "fixtures/bodies/heading-normalized-body.md": "fbbd420a56f4fe18077f951ce9bfdfc1e2e736856c83715bbee4cf64b44af29e",
+        "fixtures/bodies/valid-body.md": "75f1979475035879e7cd67ad900d0e09bd8c3666cba35d2b4d2047f2311c0fe0",
+        "fixtures/valid-approved-candidate.md": "3b4268670f29b3c2a6e79f9007e1737467638d29b111b64a65d463608ef3f85f",
+        "fixtures/valid-crlf-normalization.md": "77c6b52a7f5455ed1c085db32be13b4e165ace32030879cbbaa92b59434b3ff3",
+        "fixtures/valid-draft-no-hash.md": "9749c35364a66c59483f355d9021132a72aa61469870ccab1e47d0eefdaa66e6",
+        "fixtures/valid-heading-normalization.md": "9a08d4aa652c5e8ebb760cee7f1d81981259a592bfca183383e8b54ff6c0e9bc",
+        "fixtures/valid-template-section-candidate.md": "11672d4b541e573d694483818d5e40718a2a54b0e721c6b60fd0064f9c20eff2"
+      },
+      "fixture_file_count": 9
+    },
+    "failure_matrix": {
+      "failure_case_file_count": 7,
+      "file_hashes": {
+        "failure-cases/duplicate-case-id.json": "a916a5bc19c984e8e1c4b2021819062dc4626fc8391265b8d2409bddfefc6e72",
+        "failure-cases/forbidden-authority-claim.json": "4cc96bde38257d6a2b465a7a6d9dba240f35532357cc99119cfe3ebbf52ec60b",
+        "failure-cases/missing-case-field.json": "11714d7f33ab04ed1ab6b7ee9f48415484657a860dd6e3c05f866c9c7f01f1de",
+        "failure-cases/missing-guard-entry.json": "c8df3d20350120da64e04e17009230a6038aef43accff8975b3c9903e7479f8f",
+        "failure-cases/missing-required-case.json": "915a66a1729f006197598210797258fd9464d19b7f6b136d0e38c0209146d919",
+        "failure-cases/unblocked-outcome.json": "fc8da1d31bf04c47d174b00979eaa8f1ed8c465cd4bf5a5d0a0e3fe4f15ca4b8",
+        "failure-cases/unknown-ab-case-id.json": "f8b3fe0121f03a4d3a993e07ba46df43b9eb1909cf9a23b64d10c30b952ba059",
+        "fixtures/action-boundary-failure-matrix.json": "ff82dc8cd14179b99dff23b6b78aca3629ad5e80daab16dde44bcae000adaf7f",
+        "fixtures/valid-complete-matrix-with-risk-note.json": "912247126faf6eb7100714dbbb21666f5c4707263c9400d7f6698d5075e6237a",
+        "fixtures/valid-complete-matrix.json": "0f16d40cd06ef4b0dd4d8579ff94b529dcf81e42f9744809b66347d3b0985a30"
+      },
+      "fixture_file_count": 3
+    },
+    "feedback": {
+      "failure_case_file_count": 31,
+      "file_hashes": {
+        "failure-cases/action-basis-allowed-text.md": "278fa7da12951fc8af990f61cd8239220b675dcc91ed3dfbd3776ac10f218688",
+        "failure-cases/action-basis-allowed.md": "9ef95d389239264d96e347b1dafc20f4fc2f93b5d421e9790ed42f24cd3b93e4",
+        "failure-cases/affects-source-reliability.md": "797824147052d29e301bbd21f1d7a1dd727712b85370a22d6d4858e5b33512be",
+        "failure-cases/affects-truth-confidence.md": "d6003f0321742557a90fa7753bfd6b5166b15a63d9a1edcce743b6693a6379ce",
+        "failure-cases/affects-verification-status.md": "92746596f53fbe76f2bd2ef05eecda1630645f3471a07975e2771a8c2fc5d66c",
+        "failure-cases/explicit-correction-without-review-due.md": "fa11c7eb3c4a601cdcf2ec1c265310f89c25d9be44c28c3bab33ede9e7900e16",
+        "failure-cases/global-negative-knowledge-review-completed.md": "82d6bfdb6713168442fbe7ea5e64a6b3c7cedc136adeabc74c9dcc232b402ac3",
+        "failure-cases/global-negative-knowledge-text.md": "cb217213416e01db0321b6ccaa3ede7c97c859caacbe74ab915a1047fcd14427",
+        "failure-cases/global-negative-knowledge.md": "8b47c5d98282ab7cc23a7a028406c71dd2d9f28403123e4b87a26a5ec2cd765b",
+        "failure-cases/incomplete-never-affects.md": "5e44e8755b6c4155a310b754806d3c911e4565fbc8c019b16426fe4522806490",
+        "failure-cases/missing-scope-binding.md": "db2eeb9a1771dcaabde485ef41c571f5c55d56e83d20ff99493be245ecb83aaf",
+        "failure-cases/mutates-reviewed-note-text.md": "4ee032347f2ed1f29ccf1ddd94adf3873fbc5689468f07ec9c4832e1507a49e3",
+        "failure-cases/mutates-reviewed-relation-text.md": "e4c33dedc0ea631dfd521d60f1556d2bb6dc8827ab349c4c8329a618a93bfa30",
+        "failure-cases/negative-without-review-pressure.md": "aec7ccdce16eab4645d8c991822bd226e2c04030c0018d9d16e97e84ba17ea12",
+        "failure-cases/promotes-reviewed-knowledge-text.md": "5480f1d69913a3ff6692aeaf7b4da2c4688d4cad8391a6231eccdfb2e0ff2244",
+        "failure-cases/promotion-from-feedback-text.md": "615d6f0c49d38941a08b0c5289aba9e303b4acc82015439a8fcb4263c1a4739c",
+        "failure-cases/promotion-from-feedback.md": "b51c89b87849dc9f7b98b9dd9e1d0cded29228a7b887d7aab414f5fdadb530cb",
+        "failure-cases/reviewed-note-mutation-text.md": "8ade9dcca230bf1b7554869461cdb26feaba2d0d6102696a394bd5c5c1a921e7",
+        "failure-cases/reviewed-note-mutation.md": "7b0101a3acc86a94ae74f521433017aba7c8a9b38e6297cc3e9bdd5f0025fe2d",
+        "failure-cases/reviewed-relation-mutation-text.md": "d3ae21b8a069a63fd97bff7273a29f0db32bdaba58cba0204a891a97fe586314",
+        "failure-cases/reviewed-relation-mutation.md": "221ac6dc2b508da301f803a4539530953251e9c55063e1124f068f2c56625663",
+        "failure-cases/reviewed-relation-strength-delta.md": "d722fdb6fb3c94c2e14722946173246470b2a18d97ea413c1bb66f673dc51d62",
+        "failure-cases/reviewed-relation-strength-text.md": "e5d490c1ec48f42dc436c3a6b4b1ff0c43308af547b106ad4cecc5dc42966680",
+        "failure-cases/source-reliability-delta.md": "0d5bcba92cdd6673b1ef33b1be6823e23866a554daeb6592623335bd5dd5b436",
+        "failure-cases/source-reliability-mutation-allowed-text.md": "545a8504e8589f64cda61c32a8b7ceef8ee2ca7443fc78dae703eba05f0bccd7",
+        "failure-cases/source-reliability-mutation-allowed.md": "5443fd4cf529839d70217d25c14ead0da3628206a4db6881e45aaa7b06e1ef20",
+        "failure-cases/truth-confidence-delta.md": "eb327891c6b7c30eb6b3763fc65fd6631f134afad248b92799389a42b2f99d29",
+        "failure-cases/truth-confidence-effect.md": "eb790f70bfb1f27492c860188cf0f56fc1f56200c4dbe0ab6fa73913ed9238f0",
+        "failure-cases/unknown-effect.md": "142c03efb3b40e8f69ef8d432e2404cb731ae2e2bcd8f19a4988439d1d43cc79",
+        "failure-cases/verification-status-mutation.md": "04be088a279d66ecec9bb8a85bd3b3f6d6c3994e984c4b8e72707c14784009a1",
+        "failure-cases/wrong-warning-code.md": "2ebc6f4e192c3c590587bf3f499460644873d68538321439317565bf8cd785c8",
+        "fixtures/valid-action-outcome.md": "93b21eee00d2566f515acfa39d0e423b8ad06340f38c7168fa97ec498c8a4df3",
+        "fixtures/valid-explicit-correction-review-due.md": "34e2ff1669d6b16500b26761a139d1d0ba7d2e310ac8200201e029abb7d0c01e",
+        "fixtures/valid-positive-feedback.md": "d81938d6ab590a0faa5c38b16ba4d2476b045f340505aee50b4932098e3f8624",
+        "fixtures/valid-reviewed-local-negative-after-review.md": "bc519aa847931be83987e2de6ec52469b3abd7520c7c0832b39e4ce4a1186e8d"
+      },
+      "fixture_file_count": 4
+    },
+    "receipt": {
+      "failure_case_file_count": 27,
+      "file_hashes": {
+        "failure-cases/operation-boundary-flag-false.md": "a14bf19f8847d65e522ebb29d7eaa995d7735f0127273f9bb5a142dd9b0e2c1d",
+        "failure-cases/operation-candidate-as-action-basis.md": "8e89e35eec15f965c3897fafbc47f22d65be72ad753391a1bf38a49f2bbb9d63",
+        "failure-cases/operation-candidate-write-out-of-scope.md": "00136f71250672358b9634d6d4bed28f0507ff26e652219f12505830a5f74ffc",
+        "failure-cases/operation-checked-body-hash-mismatch.md": "ceba8f9f451c977595afe587fafcf1093934c69659d5ccf52a85bed51bc6e4af",
+        "failure-cases/operation-delete-without-rollback.md": "3ea7d04b5aad18e1fec99f3ae4e961ae51eea25d2cd6919a87ad5b16d2b99c64",
+        "failure-cases/operation-mainline-write-missing-approval-hash.md": "95274552a91182675959550351108e27a247dd20dff2e2ad5147bd3238988cce",
+        "failure-cases/operation-missing-intent-confirmation.md": "6a9eef00b4eb01739219e6825c504c18bff5830eb40592d09bc7050a04d8cf43",
+        "failure-cases/operation-read-only-actor-write.md": "717091dc7033bf5bae8f28f7da9d9bda444027d62d35e56c8370c18aac1af6c2",
+        "failure-cases/operation-receipt-claims-authority.md": "03cee3009896ad5967c61fc326ada4c0ce92ee9bf2807947ed132a29575295ae",
+        "failure-cases/operation-reviewed-write-missing-approval-hash.md": "435d59f0caaf240bbbb195b4dab2ebf17e39a336cccd7fa4754cac214b8844b6",
+        "failure-cases/operation-schema-change-without-owner-final.md": "df2cf128ff276099c35627fe29c0a15f5befc12593ed0290469e721c7d121b33",
+        "failure-cases/operation-suggest-only-actor-write.md": "7b04d1e88e6183c08a185a8d340e0d816ad8cb0d87d3f8a75009de6dbea7dbb7",
+        "failure-cases/operation-unknown-actor-tier-write.md": "068869db839a5ab6966732e1c240a287c3d8175585554deae258297cb3c3f8dd",
+        "failure-cases/operation-unknown-operation-mode.md": "22e8f4d39134751e862b0546ae7f8f3192bb545bc9a17fa238ae39f2fda0f2b0",
+        "failure-cases/retrieval-boundary-flag-false.md": "779a46de0ee7de734d076dfba9a45991d0650aeaf83b51629e10ee9858ace98d",
+        "failure-cases/retrieval-candidate-as-support.md": "4a3c8811f9ed18ae92b3ba3642d54973420c7d263b193aef9109c3f48a5e6840",
+        "failure-cases/retrieval-cross-bucket-rrf.md": "261ea1b8ce49afcdf8c5037a2fde5978438d64e1fbcde5cb6cda42f18b4abfe1",
+        "failure-cases/retrieval-feedback-action-basis.md": "5d5202b360870e7f39eaf75e46886b64a21e014b42986061a15f2aa9997ea001",
+        "failure-cases/retrieval-graph-rank-as-trust.md": "b4c15f2f042c99a7ad45e83d8444b2fd53599030fa967dc0ab526c742758e034",
+        "failure-cases/retrieval-legacy-raw-metadata-used.md": "db2ce03aebeafa295c5c1db529cfa246e73dbf1f5275b2a0df2a082bbea53ea6",
+        "failure-cases/retrieval-missing-independent-anchor.md": "445f02e3a3cdae61206249f07a73fad79cd6c3b4d76de48339db57bee61f5458",
+        "failure-cases/retrieval-receipt-claims-authority.md": "9ffe0bddd84bac854b537a46e9378319319e903977bb2363eb0e193c61aaf579",
+        "failure-cases/retrieval-selected-by-as-support.md": "c7fa3225eaf6cfa8c684d601279a9fbde096572413fc747b3b611adfad33781a",
+        "failure-cases/retrieval-unknown-authority-bucket.md": "7ba2cdfcb03cbf267512b452b83ad91812d4157ab548a659d2d566e153d3e255",
+        "failure-cases/retrieval-unknown-pack-role.md": "838659a519f347cf4f8d810c03166d3f0c7b7f458c25da688c8a4bebf68867e3",
+        "failure-cases/retrieval-url-only-direct-support.md": "e611cc5f31e8112524db7426212f32f84c5f3a9be181c70f9e96d9b7e8acab1a",
+        "failure-cases/retrieval-url-only-supported-with-none-role.md": "5d50118d03729980f82e21b7e2468a31b02482a303501edef5363d6ea8dc5119",
+        "fixtures/valid-operation-reviewed-write-receipt.md": "88437830f1ffbea5a80326f3a1d758bee1101489cb3cfa352ae23eed3e041911",
+        "fixtures/valid-operation-suggest-only-proposal.md": "9a99c1976f3a6bffcb0f6135ea50dbf8d3e5a3074a5ed9abbe58f70ddfd97c82",
+        "fixtures/valid-retrieval-direct-anchor-receipt.md": "a3e9d33b84c9bc8c33dd096bd1061c79c369dc4a60762030c294ad8bd810b5d6",
+        "fixtures/valid-retrieval-orientation-receipt.md": "848466c27ffde982cf9479af3924e4cdbe9f241ce2e997925029bc3a2fa6ecb3"
+      },
+      "fixture_file_count": 4
+    },
+    "runtime_artifacts": {
+      "failure_case_file_count": 20,
+      "file_hashes": {
+        "failure-cases/derived-index-selected.json": "4f2e2970551f9ffcf3bea3d584444da8846fed7189ade09dccbe5c0b488828d3",
+        "failure-cases/duplicate-item-id.json": "80f5aed6e0afb0b47bda1efef9b00da0f076b5b5da8a3cb9c2db7c08e87ee3b1",
+        "failure-cases/generated-receipt-action-basis.json": "4fe8a7c46ad578b441babade7b86423f1d7a74305f15e5987ff32b49fe380ee0",
+        "failure-cases/generated-receipt-pack-role-action-basis.json": "b674eeb7bb0ad10b425391b70a794b7eb9f1e8ddadd7edf04c4c1da2cebaf42f",
+        "failure-cases/missing-items.json": "31efeb01036c0e93d96583b2b024450ee337638adbfb0163860e637d9f13f0c9",
+        "failure-cases/pycache-selected.json": "40b2bd8915342045a3681b374502ba0812d3dbfe0b75b81830bdb1728f3af967",
+        "failure-cases/runtime-action-authority-bucket.json": "1d5b1b1f2c1eaec9e59771381836ba6fcfa20998b3939927ccd5dd7e90ade130",
+        "failure-cases/runtime-bad-exclusion-reason.json": "30f0aefdfbaaadf3fd61f01e9f3fff9b625246520c1bb9840a6456e9dca7bda1",
+        "failure-cases/runtime-claims-authority.json": "434ad49e837b4cd694e80a14eb17e8fdf1b83a57a7c5939176fb41b98e78a41c",
+        "failure-cases/runtime-filter-disabled.json": "440b571747066ad9e188f86ef7db9d6df7d0e8489d5119a43ec4409bbeeae9af",
+        "failure-cases/runtime-mislabeled-false.json": "befdd448d2f89ed8d4eed5b8d6bab7bf71c870f6b053391861a07838d0effaa3",
+        "failure-cases/runtime-not-excluded.json": "2c741ff9623947b0a1e2bebd4503d8e68f9bd52de55af256346a139576e6be6a",
+        "failure-cases/runtime-path-space-mislabeled-selected.json": "003c151086b3560ac98dfc659abfd5d79b492027376737cbf2e9ce8805bc152c",
+        "failure-cases/runtime-path-underscore-mislabeled-selected.json": "ef60bca96748d2fa65a374a70202372f86ac5ba7f98428b8485c53d4deb2571c",
+        "failure-cases/runtime-raw-authority-bucket.json": "1337ed8134cb93b0a625f429ad8a1425eac786ecc38c743d6b360e9ed8159ca3",
+        "failure-cases/runtime-reviewed-authority-bucket.json": "654d1b0ffd4a18aa4cf057912471fd8620147a181fa7ede2346bc44bc2919d39",
+        "failure-cases/runtime-support-authority-bucket.json": "c871876b670fca7a673873e7602aa86d135885b15da99cd23a4e78e4335ec374",
+        "failure-cases/suite-output-as-support.json": "09aebbd502bdb27fa917c7db434f434d5aee5f556a3032eb7fd7674a41eb7099",
+        "failure-cases/suite-output-pack-role-evidence-support.json": "803c48d0171b5cd1761bd57416486dfd3a152d8cb7b00895da29b8d810f5b739",
+        "failure-cases/unknown-artifact-kind.json": "117c3a0c3bd7c781a2ad2ebc749b885a18d7da4f8faa6ac106b6c9c49e0d04c2",
+        "fixtures/valid-derived-index-excluded-with-raw-anchor.json": "267b55d2a3c8386788089fda1abf467c5bec082a7cf9030568266119fb955eb3",
+        "fixtures/valid-durable-sandbox-doc-not-runtime.json": "ce267357d3f17af8cb1040f56ceb9da9d09742bbe2bb9d05a717294826695ce4",
+        "fixtures/valid-mixed-corpus-runtime-excluded.json": "a128378cd36f71ee150086d77c6d4bbab07508f8973021cd98a75deed99b5995",
+        "fixtures/valid-query-loop-output-excluded.json": "2bebccfe44c6605196a094113bdb745a5754571bf004311f9015e3c5cf408fcb"
+      },
+      "fixture_file_count": 4
+    },
+    "support_boundary": {
+      "failure_case_file_count": 10,
+      "file_hashes": {
+        "failure-cases/background-context-counted-as-support.md": "ab7f7e1241b604954fc5f1a73cc0866a60f4c721a72e85d5b9cb25240c082eec",
+        "failure-cases/candidate-as-support.md": "8cad9a0fd7a164c38e1496df4ef97aeee464de8fdbc64c5520ca4f5f5542f763",
+        "failure-cases/claim-note-self-support-loop.md": "6199b83819bda73d2eccff765c479f16a5a95a27a14a8ab59684f2ebb1c20676",
+        "failure-cases/feedback-as-support.md": "123cb8b993ef7729c3566a55f173cfb75224d36327b202dd4222aaad47f971d3",
+        "failure-cases/inferential-support-missing-reviewer-note.md": "99a52a7fb9d75fdea3faa2124f1209f5d74dd33c65361077ece4e9846233f205",
+        "failure-cases/legacy-metadata-support.md": "9f80eb090eeb1f30f704d295a6496fc82f90db11e07632d26d35b3c61add0b44",
+        "failure-cases/missing-independent-anchor.md": "a2f46efe45f6c5eff97d12e44b8f08b14b7703091f7c7c333ad1538254aeec8b",
+        "failure-cases/rank-score-as-support.md": "9f8bda4e8b9962aae45ea3cc37c73202da41dd4fa175adc2a09da823fd8b240b",
+        "failure-cases/source-summary-self-support.md": "5538340507ab1c51f368e9a132ac65e6b63c793f203cd6ed8f9dbc57c6b11d7e",
+        "failure-cases/url-only-direct-support.md": "dec42a2677fd2a45b4e99c603451e6601819f60d479c8ca2ebfbaf13c447972b",
+        "fixtures/valid-background-context-not-support.md": "c91020b6cc8d9f8c69f3781f19564f04cfe65429b045d2b88ada1ce13cd4c193",
+        "fixtures/valid-direct-raw-anchor-support.md": "cc229c8547378d649fe914c02f0b6ff3915ac74c55b7ef99fb08bbaa882b3285",
+        "fixtures/valid-inferential-support-with-reviewer-note.md": "a309ad82a3b1b5832d9868ce3fa1087944356dbb20f41dca64a908e174c69876"
+      },
+      "fixture_file_count": 3
+    }
+  },
+  "expected_results_sha256": "55c74eb31be72c947a87ae5658233f6b74f62800d9961e9b370583959034dccd",
+  "purpose": "Locks copied sandbox validator sources and parity fixtures for VAKS Guard self-test. This manifest is regression evidence only, not reviewed knowledge or promotion authority.",
+  "schema_version": "vaks_guard_manifest_v1",
+  "source_validators": [
+    {
+      "guard": "body_hash",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-03-body-hash-validator-sandbox/artifact/body_hash_validator_sandbox.py",
+      "sha256": "5df4e075b518491b82f1edde4fc8c2e781daff3fe092ef1a436c8eee2a3cb511"
+    },
+    {
+      "guard": "support_boundary",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-04-support-boundary-validator-sandbox/artifact/support_boundary_validator_sandbox.py",
+      "sha256": "c0ed3bbf7cb37ba6df6d0eab077e289768ebdd813687671d4791b39109cc68f8"
+    },
+    {
+      "guard": "action_readiness",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-05-action-readiness-validator-sandbox/artifact/action_readiness_validator_sandbox.py",
+      "sha256": "a9770f3e7f32658b461dd58101eb243bfdd1595dbc7720399d46376d2181b5a4"
+    },
+    {
+      "guard": "feedback",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-06-feedback-validator-sandbox/artifact/feedback_validator_sandbox.py",
+      "sha256": "8f16b1765000d58c2d6a205009857c0c8314e099e1c580d098d4ca718ffcf917"
+    },
+    {
+      "guard": "failure_matrix",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-07-action-boundary-failure-matrix-sandbox/artifact/verify_failure_matrix_sandbox.py",
+      "sha256": "2c32f31ec8a2a59b2bc806e599349a00489e4acbd7c6d20cb174ccf029d0928a"
+    },
+    {
+      "guard": "failure_matrix_oracle",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-07-action-boundary-failure-matrix-sandbox/artifact/action-boundary-failure-matrix.json",
+      "sha256": "ff82dc8cd14179b99dff23b6b78aca3629ad5e80daab16dde44bcae000adaf7f"
+    },
+    {
+      "guard": "receipt",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox/artifact/receipt_validator_pilot.py",
+      "sha256": "865c474dfd2a2bf7c594dd3708d08002165aa53103c66bf9c18d3b70b4ee01e9"
+    },
+    {
+      "guard": "receipt_verifier",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox/artifact/verify_receipt_validator_pilot.py",
+      "sha256": "82d15862cb4bdc26453385eb4c10a2bb1a17133b9bef67b6cd359239df4f153a"
+    },
+    {
+      "guard": "runtime_artifacts",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox/artifact/runtime_artifact_exclusion_test.py",
+      "sha256": "da0b081a9fe410076104ccdc279056e7de507bd5fa30800a53d2a32e8fe19eba"
+    },
+    {
+      "guard": "runtime_artifacts_verifier",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox/artifact/verify_runtime_artifact_exclusion_test.py",
+      "sha256": "a5f5512946ac930435f33328134ef994eaa0db50bc91f399ee1ace92b1245edd"
+    }
+  ],
+  "tool": "vaks_guard",
+  "version": "0.1.0"
+}

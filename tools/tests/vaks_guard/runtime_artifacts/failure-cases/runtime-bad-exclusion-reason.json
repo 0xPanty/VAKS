@@ -1,0 +1,21 @@
+{
+  "record_kind": "runtime_artifact_exclusion_manifest",
+  "scenario_id": "ra-fail-runtime-bad-exclusion-reason",
+  "expected_valid": false,
+  "expected_codes": ["RA_RUNTIME_ARTIFACT_BAD_EXCLUSION_REASON"],
+  "exclude_runtime_artifacts": true,
+  "items": [
+    {
+      "id": "runtime_bad_reason",
+      "path": "outputs/review/example/runtime-cache/cache.json",
+      "artifact_kind": "runtime_cache",
+      "runtime_artifact": true,
+      "seen_by_retrieval": true,
+      "selected": false,
+      "excluded": true,
+      "excluded_reason": "low_quality",
+      "pack_role": "none",
+      "authority_bucket": "runtime_artifact"
+    }
+  ]
+}

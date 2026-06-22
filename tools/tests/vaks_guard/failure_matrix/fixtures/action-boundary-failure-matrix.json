@@ -1,0 +1,507 @@
+{
+  "record_kind": "action_boundary_failure_matrix",
+  "slice_id": "2026-06-15-p0-07-action-boundary-failure-matrix-sandbox",
+  "matrix_scope": "p0_minimum_action_boundary_cases",
+  "truth_boundary": "sandbox_matrix_not_mainline_architecture",
+  "authority_non_claims": {
+    "mainline_ready": false,
+    "reviewer_approval_created": false,
+    "reviewed_knowledge_created": false,
+    "evidence_support_created": false,
+    "action_basis_created": false,
+    "promotion_authorized": false
+  },
+  "cases": [
+    {
+      "case_id": "AB-01",
+      "title": "body_hash mismatch still approved",
+      "failure_mode": "candidate body changed after approval while approval is still treated as current",
+      "boundary_class": "approval_integrity",
+      "source_refs": [
+        "outputs/review/vaks-architecture-upgrade-plan-2026-06-13.md:2259",
+        "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-03-body-hash-validator-sandbox/artifact/failure-case-oracle.md"
+      ],
+      "blocked_by": [
+        {
+          "slice_id": "p0-03",
+          "guard": "body_hash_mismatch"
+        }
+      ],
+      "detection": "Recompute canonical body hash and compare with recorded body_hash before approval/writeback use.",
+      "expected_outcome": {
+        "status": "blocked",
+        "reason": "approval integrity drift"
+      },
+      "fixture_refs": [
+        "p0-03/failure-cases/body-hash-mismatch.md"
+      ],
+      "validator_or_check_refs": [
+        "p0-03/artifact/body_hash_validator_sandbox.py"
+      ],
+      "authority_non_claims": {
+        "mainline_ready": false,
+        "reviewer_approval_created": false,
+        "reviewed_knowledge_created": false,
+        "evidence_support_created": false,
+        "action_basis_created": false,
+        "promotion_authorized": false
+      }
+    },
+    {
+      "case_id": "AB-02",
+      "title": "checked_body_hash mismatch writeback",
+      "failure_mode": "writeback uses a checked body hash that no longer matches the object body",
+      "boundary_class": "writeback_integrity",
+      "source_refs": [
+        "outputs/review/vaks-architecture-upgrade-plan-2026-06-13.md:2260",
+        "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-02-operation-receipt-template-sandbox/artifact/failure-case-oracle.md",
+        "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-03-body-hash-validator-sandbox/artifact/failure-case-oracle.md"
+      ],
+      "blocked_by": [
+        {
+          "slice_id": "p0-03",
+          "guard": "checked_body_hash_mismatch"
+        },
+        {
+          "slice_id": "p0-02",
+          "guard": "reviewed write requires checked body hash"
+        }
+      ],
+      "detection": "Compare checked_body_hash with current canonical body hash in any reviewed write/writeback receipt.",
+      "expected_outcome": {
+        "status": "blocked",
+        "reason": "writeback object does not match checked approval body"
+      },
+      "fixture_refs": [
+        "p0-03/failure-cases/checked-body-hash-mismatch.md",
+        "p0-02/failure-cases/checked-body-hash-mismatch.md"
+      ],
+      "validator_or_check_refs": [
+        "p0-03/artifact/body_hash_validator_sandbox.py",
+        "p0-02/artifact/operation-receipt-template.md"
+      ],
+      "authority_non_claims": {
+        "mainline_ready": false,
+        "reviewer_approval_created": false,
+        "reviewed_knowledge_created": false,
+        "evidence_support_created": false,
+        "action_basis_created": false,
+        "promotion_authorized": false
+      }
+    },
+    {
+      "case_id": "AB-03",
+      "title": "candidate item marked support",
+      "failure_mode": "candidate material is promoted into pack_role support or action basis",
+      "boundary_class": "support_boundary",
+      "source_refs": [
+        "outputs/review/vaks-architecture-upgrade-plan-2026-06-13.md:2261",
+        "SOURCE_INTAKE.md:1451",
+        "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-04-support-boundary-validator-sandbox/artifact/failure-case-oracle.md"
+      ],
+      "blocked_by": [
+        {
+          "slice_id": "p0-04",
+          "guard": "candidate_as_support"
+        },
+        {
+          "slice_id": "p0-01",
+          "guard": "candidate_overlay_feedback_not_support"
+        }
+      ],
+      "detection": "Flag candidate authority_bucket or candidate refs that are marked support/direct support/action basis.",
+      "expected_outcome": {
+        "status": "blocked",
+        "reason": "candidate is review input, not support"
+      },
+      "fixture_refs": [
+        "p0-04/failure-cases/candidate-as-support.md",
+        "p0-01/failure-cases/candidate-as-support.md"
+      ],
+      "validator_or_check_refs": [
+        "p0-04/artifact/support_boundary_validator_sandbox.py",
+        "p0-01/artifact/retrieval-receipt-template.md"
+      ],
+      "authority_non_claims": {
+        "mainline_ready": false,
+        "reviewer_approval_created": false,
+        "reviewed_knowledge_created": false,
+        "evidence_support_created": false,
+        "action_basis_created": false,
+        "promotion_authorized": false
+      }
+    },
+    {
+      "case_id": "AB-04",
+      "title": "URL-only citation marked direct_support",
+      "failure_mode": "a URL or source_ref without inspected span is counted as direct evidence support",
+      "boundary_class": "evidence_anchor",
+      "source_refs": [
+        "outputs/review/vaks-architecture-upgrade-plan-2026-06-13.md:2262",
+        "SOURCE_INTAKE.md:1435",
+        "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-04-support-boundary-validator-sandbox/artifact/failure-case-oracle.md"
+      ],
+      "blocked_by": [
+        {
+          "slice_id": "p0-04",
+          "guard": "url_only_direct_support"
+        },
+        {
+          "slice_id": "p0-01",
+          "guard": "url_only_not_direct_support"
+        }
+      ],
+      "detection": "Require a source span, excerpt, line range, timestamp, or stable artifact anchor before direct_support.",
+      "expected_outcome": {
+        "status": "blocked",
+        "reason": "URL is provenance, not direct support"
+      },
+      "fixture_refs": [
+        "p0-04/failure-cases/url-only-direct-support.md",
+        "p0-01/failure-cases/url-only-direct-support.md"
+      ],
+      "validator_or_check_refs": [
+        "p0-04/artifact/support_boundary_validator_sandbox.py",
+        "p0-01/artifact/retrieval-receipt-template.md"
+      ],
+      "authority_non_claims": {
+        "mainline_ready": false,
+        "reviewer_approval_created": false,
+        "reviewed_knowledge_created": false,
+        "evidence_support_created": false,
+        "action_basis_created": false,
+        "promotion_authorized": false
+      }
+    },
+    {
+      "case_id": "AB-05",
+      "title": "graph_rank marked trust",
+      "failure_mode": "graph/rank/vector score is treated as trust, support, confidence, or action readiness",
+      "boundary_class": "retrieval_authority",
+      "source_refs": [
+        "outputs/review/vaks-architecture-upgrade-plan-2026-06-13.md:2263",
+        "SOURCE_INTAKE.md:1441",
+        "SOURCE_INTAKE.md:1446"
+      ],
+      "blocked_by": [
+        {
+          "slice_id": "p0-04",
+          "guard": "rank_or_score_as_support_or_trust"
+        },
+        {
+          "slice_id": "p0-01",
+          "guard": "selected_by_is_not_support"
+        }
+      ],
+      "detection": "Inspect selected_by/rank/score/graph_rank fields for any trust, support, confidence, or readiness claim.",
+      "expected_outcome": {
+        "status": "blocked",
+        "reason": "rank is retrieval trace, not trust"
+      },
+      "fixture_refs": [
+        "p0-04/failure-cases/rank-score-as-support.md",
+        "p0-01/failure-cases/rank-as-trust.md"
+      ],
+      "validator_or_check_refs": [
+        "p0-04/artifact/support_boundary_validator_sandbox.py",
+        "p0-01/artifact/retrieval-receipt-template.md"
+      ],
+      "authority_non_claims": {
+        "mainline_ready": false,
+        "reviewer_approval_created": false,
+        "reviewed_knowledge_created": false,
+        "evidence_support_created": false,
+        "action_basis_created": false,
+        "promotion_authorized": false
+      }
+    },
+    {
+      "case_id": "AB-06",
+      "title": "feedback modifies truth_confidence",
+      "failure_mode": "feedback event changes truth confidence or equivalent truth field",
+      "boundary_class": "feedback_quarantine",
+      "source_refs": [
+        "outputs/review/vaks-architecture-upgrade-plan-2026-06-13.md:2264",
+        "FEEDBACK.md:97",
+        "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-06-feedback-validator-sandbox/artifact/failure-case-oracle.md"
+      ],
+      "blocked_by": [
+        {
+          "slice_id": "p0-06",
+          "guard": "FB_TRUTH_CONFIDENCE_MUTATION"
+        },
+        {
+          "slice_id": "p0-06",
+          "guard": "FB_FORBIDDEN_DIRECT_EFFECT"
+        }
+      ],
+      "detection": "Check feedback effects and mutation fields for truth_confidence, truth_score, confidence_delta, or equivalent names.",
+      "expected_outcome": {
+        "status": "blocked",
+        "reason": "feedback creates review pressure, not truth mutation"
+      },
+      "fixture_refs": [
+        "p0-06/failure-cases/truth-confidence-delta.md",
+        "p0-06/failure-cases/affects-truth-confidence.md"
+      ],
+      "validator_or_check_refs": [
+        "p0-06/artifact/feedback_validator_sandbox.py"
+      ],
+      "authority_non_claims": {
+        "mainline_ready": false,
+        "reviewer_approval_created": false,
+        "reviewed_knowledge_created": false,
+        "evidence_support_created": false,
+        "action_basis_created": false,
+        "promotion_authorized": false
+      }
+    },
+    {
+      "case_id": "AB-07",
+      "title": "stale point produces ready action basis",
+      "failure_mode": "stale, superseded, or out-of-scope knowledge is marked ready without replacement or narrowed scope",
+      "boundary_class": "action_readiness",
+      "source_refs": [
+        "outputs/review/vaks-architecture-upgrade-plan-2026-06-13.md:2265",
+        "REVIEW_QUEUE.md:892",
+        "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-05-action-readiness-validator-sandbox/artifact/failure-case-oracle.md"
+      ],
+      "blocked_by": [
+        {
+          "slice_id": "p0-05",
+          "guard": "AR_STALE_SUPERSEDED_WITHOUT_REPLACEMENT_READY"
+        }
+      ],
+      "detection": "Check temporal_applicability, replacement_basis_ref, and narrowed_scope_ref before action_readiness ready.",
+      "expected_outcome": {
+        "status": "not_ready",
+        "reason": "stale/superseded basis needs replacement or narrowed scope"
+      },
+      "fixture_refs": [
+        "p0-05/failure-cases/stale-without-replacement-ready.md",
+        "p0-05/failure-cases/superseded-without-replacement-ready.md"
+      ],
+      "validator_or_check_refs": [
+        "p0-05/artifact/action_readiness_validator_sandbox.py"
+      ],
+      "authority_non_claims": {
+        "mainline_ready": false,
+        "reviewer_approval_created": false,
+        "reviewed_knowledge_created": false,
+        "evidence_support_created": false,
+        "action_basis_created": false,
+        "promotion_authorized": false
+      }
+    },
+    {
+      "case_id": "AB-08",
+      "title": "budget trimming hides missing evidence",
+      "failure_mode": "known warning, gap, risk, or missing evidence is trimmed while action readiness remains ready",
+      "boundary_class": "context_visibility",
+      "source_refs": [
+        "outputs/review/vaks-architecture-upgrade-plan-2026-06-13.md:2266",
+        "outputs/review/vaks-architecture-upgrade-plan-2026-06-13.md:357",
+        "DEV_CONTEXT.md:300"
+      ],
+      "blocked_by": [
+        {
+          "slice_id": "p0-05",
+          "guard": "AR_HIDDEN_WARNING_OR_GAP_READY"
+        }
+      ],
+      "detection": "Check warnings_or_gaps_trimmed and missing_evidence_trimmed before ready action basis.",
+      "expected_outcome": {
+        "status": "not_ready",
+        "reason": "known gaps must stay visible or action readiness blocks"
+      },
+      "fixture_refs": [
+        "p0-05/failure-cases/hidden-warning-trimmed-ready.md"
+      ],
+      "validator_or_check_refs": [
+        "p0-05/artifact/action_readiness_validator_sandbox.py"
+      ],
+      "authority_non_claims": {
+        "mainline_ready": false,
+        "reviewer_approval_created": false,
+        "reviewed_knowledge_created": false,
+        "evidence_support_created": false,
+        "action_basis_created": false,
+        "promotion_authorized": false
+      }
+    },
+    {
+      "case_id": "AB-09",
+      "title": "read-only actor writes file",
+      "failure_mode": "read-only or suggest-only actor performs write/delete/schema operation",
+      "boundary_class": "operation_authority",
+      "source_refs": [
+        "outputs/review/vaks-architecture-upgrade-plan-2026-06-13.md:2267",
+        "outputs/review/vaks-architecture-upgrade-plan-2026-06-13.md:616",
+        "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-02-operation-receipt-template-sandbox/artifact/failure-case-oracle.md"
+      ],
+      "blocked_by": [
+        {
+          "slice_id": "p0-05",
+          "guard": "AR_READ_ONLY_ACTOR_WRITE"
+        },
+        {
+          "slice_id": "p0-02",
+          "guard": "read_only_actor_cannot_write"
+        }
+      ],
+      "detection": "Compare actor_tier with operation_mode/action_mode before any write-like action.",
+      "expected_outcome": {
+        "status": "blocked",
+        "reason": "actor tier cannot perform write operation"
+      },
+      "fixture_refs": [
+        "p0-05/failure-cases/read-only-actor-write-ready.md",
+        "p0-02/failure-cases/read-only-actor-write.md"
+      ],
+      "validator_or_check_refs": [
+        "p0-05/artifact/action_readiness_validator_sandbox.py",
+        "p0-02/artifact/operation-receipt-template.md"
+      ],
+      "authority_non_claims": {
+        "mainline_ready": false,
+        "reviewer_approval_created": false,
+        "reviewed_knowledge_created": false,
+        "evidence_support_created": false,
+        "action_basis_created": false,
+        "promotion_authorized": false
+      }
+    },
+    {
+      "case_id": "AB-10",
+      "title": "schema change without owner_final",
+      "failure_mode": "schema change proceeds without owner-final authority",
+      "boundary_class": "schema_authority",
+      "source_refs": [
+        "outputs/review/vaks-architecture-upgrade-plan-2026-06-13.md:2268",
+        "outputs/review/vaks-architecture-upgrade-plan-2026-06-13.md:618",
+        "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-05-action-readiness-validator-sandbox/artifact/failure-case-oracle.md"
+      ],
+      "blocked_by": [
+        {
+          "slice_id": "p0-05",
+          "guard": "AR_SCHEMA_CHANGE_MISSING_OWNER_FINAL"
+        },
+        {
+          "slice_id": "p0-02",
+          "guard": "schema_change_requires_owner_final"
+        }
+      ],
+      "detection": "Check action_mode/operation_mode schema_change and require owner_final before ready/write.",
+      "expected_outcome": {
+        "status": "blocked",
+        "reason": "schema change requires owner-final"
+      },
+      "fixture_refs": [
+        "p0-05/failure-cases/schema-change-missing-owner-final-ready.md",
+        "p0-02/failure-cases/schema-change-without-owner-final.md"
+      ],
+      "validator_or_check_refs": [
+        "p0-05/artifact/action_readiness_validator_sandbox.py",
+        "p0-02/artifact/operation-receipt-template.md"
+      ],
+      "authority_non_claims": {
+        "mainline_ready": false,
+        "reviewer_approval_created": false,
+        "reviewed_knowledge_created": false,
+        "evidence_support_created": false,
+        "action_basis_created": false,
+        "promotion_authorized": false
+      }
+    },
+    {
+      "case_id": "AB-11",
+      "title": "destructive operation without rollback",
+      "failure_mode": "delete, schema, or hard-to-rollback operation proceeds without rollback plan",
+      "boundary_class": "operation_reversibility",
+      "source_refs": [
+        "outputs/review/vaks-architecture-upgrade-plan-2026-06-13.md:2269",
+        "outputs/review/vaks-architecture-upgrade-plan-2026-06-13.md:619",
+        "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-05-action-readiness-validator-sandbox/artifact/failure-case-oracle.md"
+      ],
+      "blocked_by": [
+        {
+          "slice_id": "p0-05",
+          "guard": "AR_DESTRUCTIVE_MISSING_ROLLBACK"
+        },
+        {
+          "slice_id": "p0-02",
+          "guard": "destructive_operation_missing_rollback_plan"
+        }
+      ],
+      "detection": "Check delete/schema_change/rollback_required and require rollback_plan_present before ready/write.",
+      "expected_outcome": {
+        "status": "blocked",
+        "reason": "destructive action needs rollback plan"
+      },
+      "fixture_refs": [
+        "p0-05/failure-cases/destructive-without-rollback-ready.md",
+        "p0-05/failure-cases/action-delete-without-rollback-ready.md",
+        "p0-02/failure-cases/destructive-delete-without-rollback.md"
+      ],
+      "validator_or_check_refs": [
+        "p0-05/artifact/action_readiness_validator_sandbox.py",
+        "p0-02/artifact/operation-receipt-template.md"
+      ],
+      "authority_non_claims": {
+        "mainline_ready": false,
+        "reviewer_approval_created": false,
+        "reviewed_knowledge_created": false,
+        "evidence_support_created": false,
+        "action_basis_created": false,
+        "promotion_authorized": false
+      }
+    },
+    {
+      "case_id": "AB-12",
+      "title": "retrieval receipt crosses authority buckets",
+      "failure_mode": "retrieval receipt merges reviewed, candidate, raw, overlay, or feedback buckets into one authority-looking ranked list",
+      "boundary_class": "retrieval_authority_bucket",
+      "source_refs": [
+        "outputs/review/vaks-architecture-upgrade-plan-2026-06-13.md:2270",
+        "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/artifact/retrieval-receipt-template.md",
+        "SOURCE_INTAKE.md:1440"
+      ],
+      "blocked_by": [
+        {
+          "slice_id": "p0-01",
+          "guard": "same_bucket_rrf_only"
+        },
+        {
+          "slice_id": "p0-01",
+          "guard": "cross_bucket_rank_not_authority"
+        }
+      ],
+      "detection": "Inspect requested_authority_bucket, included_buckets, rrf_scope, selected_by, and support_boundary for cross-bucket authority collapse.",
+      "expected_outcome": {
+        "status": "blocked",
+        "reason": "mixed retrieval can orient only; it cannot create support or authority"
+      },
+      "fixture_refs": [
+        "p0-01/failure-cases/cross-bucket-rrf.md",
+        "p0-01/fixtures/valid-orientation-receipt.md"
+      ],
+      "validator_or_check_refs": [
+        "p0-01/artifact/retrieval-receipt-template.md",
+        "p0-07/artifact/verify_failure_matrix_sandbox.py"
+      ],
+      "authority_non_claims": {
+        "mainline_ready": false,
+        "reviewer_approval_created": false,
+        "reviewed_knowledge_created": false,
+        "evidence_support_created": false,
+        "action_basis_created": false,
+        "promotion_authorized": false
+      }
+    }
+  ],
+  "future_scope_notes": [
+    "R-08 through R-22 remain future risk register coverage and are not claimed closed by this P0-07 sandbox.",
+    "This matrix can seed P1 receipt validators, but it is not itself a mainline validator."
+  ]
+}
+

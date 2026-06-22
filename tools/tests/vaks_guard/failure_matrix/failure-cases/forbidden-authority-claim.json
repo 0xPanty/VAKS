@@ -1,0 +1,15 @@
+{
+  "expected_failure_reason": "MATRIX_FORBIDDEN_AUTHORITY_CLAIM",
+  "record_kind": "action_boundary_failure_matrix",
+  "slice_id": "2026-06-15-p0-07-action-boundary-failure-matrix-sandbox",
+  "authority_non_claims": {
+    "mainline_ready": true,
+    "reviewer_approval_created": false,
+    "reviewed_knowledge_created": false,
+    "evidence_support_created": false,
+    "action_basis_created": false,
+    "promotion_authorized": false
+  },
+  "cases": []
+}
+
