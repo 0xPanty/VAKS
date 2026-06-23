@@ -51,9 +51,11 @@ Each following line is one entry.
   directory, that wrapper is stripped before manifest identity is computed.
 - Empty directory entries do not enter tree identity. They are only used to
   detect ambiguous file/directory conflicts.
-- ZIP filenames are interpreted through Python `zipfile` filename decoding; v1
-  does not claim byte-faithful path recovery when an archive format cannot
-  expose original path bytes.
+- ZIP filenames must reconcile all safety-relevant path representations exposed
+  by the scanner, including `filename`, `orig_filename`, local-header name, and
+  Unicode path extra fields. NUL, control characters, traversal, backslashes,
+  absolute paths, empty segments, or representation conflicts quarantine the
+  capture instead of entering tree identity.
 - TAR member names must be usable as Unicode strings. Non-UTF-8 or otherwise
   ambiguous names must be reported as partial/failed rather than silently
   normalized into identity.
@@ -115,6 +117,16 @@ Hygiene statements record the effective scanner limits under
 `predicate.parameters`; changing limits can legitimately change findings.
 Findings are sorted, deduplicated, and bounded so the same logical input and
 same parameters produce stable hygiene bytes.
+
+Source Capture Envelope v1.0-alpha.1 also records:
+
+- `max_input_blob_size`, the raw input copy limit before archive inspection.
+- `observation.content_type`, the scanner-selected parser/container
+  interpretation, not a filename hint.
+- `producer.implementation` and `checker.implementation`, descriptors for the
+  pinned scanner/validator/schema/policy implementation manifest.
+- `raw_handling.policy.digest`, the canonical digest of the policy that
+  actually decided admitted versus quarantined.
 
 The in-toto Statement shape is a local digest-linked receipt shape in v1. It is
 not signed and must not be treated as an authenticated attestation.

@@ -117,10 +117,29 @@ aliases:
     value: "repo:owner/name@commit"
   - kind: locator
     value: "https://example.com/source"
+  - kind: provider_object_id
+    value: "github.com:repository:R_kgDO..."
 ```
 
 Redirects and canonical links are observations. They must not automatically
 merge source identity.
+
+`provider_object_id` is optional continuity metadata supplied by a provider
+adapter, not by the offline scanner. Its format is:
+
+```text
+<provider-host>:<object-type>:<opaque-provider-id>
+```
+
+Rules:
+
+- Provider host and object type are lowercase.
+- The opaque provider ID is case-sensitive.
+- It is not trust, ownership, authority, or evidence support.
+- Same provider object ID with a new locator means the same source may have
+  been renamed or moved.
+- Same locator with a different provider object ID is a rebound risk and must
+  not silently overwrite the old source identity.
 
 ## Boundary
 

@@ -48,10 +48,16 @@ CAPTURE_METHODS = {"provider_archive", "git_clone", "api", "upload", "local_file
 OBSERVATION_STATES = {"captured", "partial", "failed"}
 CHANGE_STATES = {"first_seen", "same_snapshot", "new_snapshot", "unknown"}
 RAW_DISPOSITIONS = {"admitted", "quarantined", "rejected", "not_evaluated"}
+IMPLEMENTATION_MEDIA_TYPE = "application/vnd.vaks.source-capture-implementation.v1+json"
+CONTENT_TYPE_PROFILE = "vaks-media-type-detection/v1"
+CONTENT_TYPE_BASIS = {"container_parser", "magic_signature", "locator_hint", "fallback"}
+CONTENT_TYPE_HINT_MATCH = {"matched", "mismatch", "no_hint", "not_comparable"}
+VALIDATOR_PROFILES = {"base", "enterprise-alpha1"}
 MAX_MANIFEST_BYTES = 64 * 1024 * 1024
 MAX_HYGIENE_BYTES = 16 * 1024 * 1024
 MAX_MANIFEST_ENTRIES = 100_000
 MAX_STRING_LENGTH = 16_384
+ENTERPRISE_PARAMETER_KEYS = {"max_input_blob_size"}
 REQUIRED_PARAMETER_KEYS = {
     "limits_profile",
     "max_entries",
@@ -146,6 +152,18 @@ def parse_datetime(value: Any, context: str) -> None:
 
 def sha256_bytes(data: bytes) -> str:
     return "sha256:" + hashlib.sha256(data).hexdigest()
+
+
+def canonical_json_bytes(obj: dict[str, Any]) -> bytes:
+    return (json.dumps(obj, allow_nan=False, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n").encode("utf-8")
+
+
+def digest_file(path: Path) -> str:
+    h = hashlib.sha256()
+    with path.open("rb") as fh:
+        for chunk in iter(lambda: fh.read(1024 * 1024), b""):
+            h.update(chunk)
+    return "sha256:" + h.hexdigest()
 
 
 def read_json(path: Path) -> dict[str, Any]:
@@ -346,7 +364,7 @@ def validate_manifest_limits(entries: list[dict[str, Any]], parameters: dict[str
         raise ValidationError("manifest total logical file size exceeds recorded hygiene limit")
 
 
-def validate_capture_semantics(envelope: dict[str, Any]) -> None:
+def validate_capture_semantics(envelope: dict[str, Any], *, profile: str) -> None:
     exact_keys(
         envelope,
         {"schema", "capture_id", "observed_at", "producer", "source", "observation", "snapshot", "change", "inspection_refs", "fidelity", "raw_handling"},
@@ -359,10 +377,16 @@ def validate_capture_semantics(envelope: dict[str, Any]) -> None:
     if not isinstance(capture_id, str) or not CAPTURE_ID_RE.match(capture_id):
         raise ValidationError("capture_id must be a valid urn:uuid")
     parse_datetime(envelope.get("observed_at"), "observed_at")
+    strict = profile == "enterprise-alpha1"
     producer = envelope.get("producer")
-    exact_keys(producer, {"id", "version"}, {"id", "version"}, "producer")
+    producer_required = {"id", "version", "implementation"} if strict else {"id", "version"}
+    exact_keys(producer, producer_required, {"id", "version", "implementation"}, "producer")
     require_string(producer.get("id"), "producer.id")
     require_string(producer.get("version"), "producer.version")
+    if "implementation" in producer:
+        validate_descriptor(producer.get("implementation"), "producer.implementation")
+        if producer["implementation"]["media_type"] != IMPLEMENTATION_MEDIA_TYPE:
+            raise ValidationError("producer.implementation.media_type is invalid")
 
     source = envelope.get("source")
     exact_keys(source, {"source_id", "kind", "requested_locator"}, {"source_id", "kind", "requested_locator", "resolved_locator"}, "source")
@@ -394,12 +418,15 @@ def validate_capture_semantics(envelope: dict[str, Any]) -> None:
         require_string(revision.get("value"), "resolution.revision.value")
 
     observation = envelope.get("observation")
-    exact_keys(observation, {"state", "capture_method", "blob"}, {"state", "capture_method", "blob"}, "observation")
+    observation_required = {"state", "capture_method", "blob", "content_type"} if strict else {"state", "capture_method", "blob"}
+    exact_keys(observation, observation_required, {"state", "capture_method", "blob", "content_type"}, "observation")
     if observation.get("state") not in OBSERVATION_STATES:
         raise ValidationError("observation.state is invalid")
     if observation.get("capture_method") not in CAPTURE_METHODS:
         raise ValidationError("observation.capture_method is invalid")
     validate_descriptor(observation.get("blob"), "observation.blob")
+    if "content_type" in observation:
+        validate_content_type(observation.get("content_type"), observation["blob"].get("media_type"))
 
     snapshot = envelope.get("snapshot")
     exact_keys(snapshot, {"snapshot_id", "kind"}, {"snapshot_id", "kind", "manifest"}, "snapshot")
@@ -472,7 +499,8 @@ def validate_capture_semantics(envelope: dict[str, Any]) -> None:
     if raw.get("disposition") not in RAW_DISPOSITIONS:
         raise ValidationError("raw_handling.disposition is invalid")
     policy = raw.get("policy")
-    exact_keys(policy, {"id"}, {"id", "digest"}, "raw_handling.policy")
+    policy_required = {"id", "digest"} if strict else {"id"}
+    exact_keys(policy, policy_required, {"id", "digest"}, "raw_handling.policy")
     require_string(policy.get("id"), "raw_handling.policy.id")
     if "digest" in policy:
         require_digest(policy.get("digest"), "raw_handling.policy.digest")
@@ -490,7 +518,27 @@ def validate_descriptor(descriptor: Any, context: str) -> None:
     require_digest(descriptor.get("digest"), f"{context}.digest")
 
 
-def validate_hygiene_semantics(hygiene: dict[str, Any]) -> None:
+def validate_content_type(content_type: Any, blob_media_type: Any) -> None:
+    exact_keys(
+        content_type,
+        {"profile", "detected_media_type", "detection_basis", "hint_match"},
+        {"profile", "detected_media_type", "detection_basis", "locator_hint_media_type", "hint_match"},
+        "observation.content_type",
+    )
+    if content_type.get("profile") != CONTENT_TYPE_PROFILE:
+        raise ValidationError("observation.content_type.profile is invalid")
+    detected = require_string(content_type.get("detected_media_type"), "observation.content_type.detected_media_type")
+    if detected != blob_media_type:
+        raise ValidationError("observation.blob.media_type must match observation.content_type.detected_media_type")
+    if content_type.get("detection_basis") not in CONTENT_TYPE_BASIS:
+        raise ValidationError("observation.content_type.detection_basis is invalid")
+    if content_type.get("hint_match") not in CONTENT_TYPE_HINT_MATCH:
+        raise ValidationError("observation.content_type.hint_match is invalid")
+    if "locator_hint_media_type" in content_type:
+        require_string(content_type.get("locator_hint_media_type"), "observation.content_type.locator_hint_media_type")
+
+
+def validate_hygiene_semantics(hygiene: dict[str, Any], *, profile: str) -> None:
     exact_keys(hygiene, {"_type", "subject", "predicateType", "predicate"}, {"_type", "subject", "predicateType", "predicate"}, "hygiene statement")
     if hygiene.get("_type") != "https://in-toto.io/Statement/v1":
         raise ValidationError("hygiene _type is invalid")
@@ -507,21 +555,32 @@ def validate_hygiene_semantics(hygiene: dict[str, Any]) -> None:
     exact_keys(digest_obj, {"sha256"}, {"sha256"}, "hygiene subject[0].digest")
     require_string(digest_obj.get("sha256"), "hygiene subject[0].digest.sha256", pattern=re.compile(r"^[0-9a-f]{64}$"))
     predicate = hygiene.get("predicate")
+    strict = profile == "enterprise-alpha1"
     exact_keys(predicate, {"checker", "execution_state", "profiles", "parameters", "summary", "findings"}, {"checker", "execution_state", "profiles", "parameters", "summary", "findings"}, "hygiene predicate")
     checker = predicate.get("checker")
-    exact_keys(checker, {"id", "version"}, {"id", "version"}, "hygiene predicate.checker")
+    checker_required = {"id", "version", "implementation"} if strict else {"id", "version"}
+    exact_keys(checker, checker_required, {"id", "version", "implementation"}, "hygiene predicate.checker")
     require_string(checker.get("id"), "hygiene predicate.checker.id")
     require_string(checker.get("version"), "hygiene predicate.checker.version")
+    if "implementation" in checker:
+        validate_descriptor(checker.get("implementation"), "hygiene predicate.checker.implementation")
+        if checker["implementation"]["media_type"] != IMPLEMENTATION_MEDIA_TYPE:
+            raise ValidationError("hygiene predicate.checker.implementation.media_type is invalid")
     execution_state = predicate.get("execution_state")
     profiles = predicate.get("profiles")
     parameters = predicate.get("parameters")
     findings = predicate.get("findings")
-    if not isinstance(parameters, dict) or set(parameters) != REQUIRED_PARAMETER_KEYS:
+    parameter_keys = REQUIRED_PARAMETER_KEYS | (ENTERPRISE_PARAMETER_KEYS if strict else set())
+    if not isinstance(parameters, dict) or set(parameters) - (REQUIRED_PARAMETER_KEYS | ENTERPRISE_PARAMETER_KEYS) or not REQUIRED_PARAMETER_KEYS.issubset(parameters):
         raise ValidationError("hygiene predicate.parameters must record the effective v1 limit parameters")
+    if strict and set(parameters) != parameter_keys:
+        raise ValidationError("enterprise-alpha1 hygiene parameters must include max_input_blob_size")
     if parameters.get("limits_profile") != "vaks-default-archive-limits/v1":
         raise ValidationError("hygiene parameters.limits_profile is invalid")
     for key in REQUIRED_PARAMETER_KEYS - {"limits_profile", "max_compression_ratio"}:
         require_positive_int(parameters.get(key), f"hygiene parameters.{key}")
+    if "max_input_blob_size" in parameters:
+        require_positive_int(parameters.get("max_input_blob_size"), "hygiene parameters.max_input_blob_size")
     if (
         type(parameters.get("max_compression_ratio")) not in {int, float}
         or not math.isfinite(parameters["max_compression_ratio"])
@@ -564,15 +623,47 @@ def validate_hygiene_semantics(hygiene: dict[str, Any]) -> None:
         raise ValidationError("hygiene execution_state is invalid")
 
 
-def validate_bundle(bundle: Path) -> dict[str, Any]:
+def load_policy(policy_file: Path | None) -> dict[str, Any] | None:
+    if policy_file is None:
+        return None
+    policy = read_json(policy_file)
+    exact_keys(policy, {"schema", "id", "version", "unsafe_finding", "decision"}, {"schema", "id", "version", "unsafe_finding", "decision"}, "policy")
+    if policy.get("schema") != "urn:vaks:policy:raw-intake:v1":
+        raise ValidationError("policy schema mismatch")
+    require_string(policy.get("id"), "policy.id")
+    require_string(policy.get("version"), "policy.version")
+    unsafe = policy.get("unsafe_finding")
+    exact_keys(unsafe, {"severities", "codes"}, {"severities", "codes"}, "policy.unsafe_finding")
+    severities = unsafe.get("severities")
+    codes = unsafe.get("codes")
+    if not isinstance(severities, list) or not severities or any(item not in {"info", "warning", "hazard", "error"} for item in severities):
+        raise ValidationError("policy unsafe severities are invalid")
+    if not isinstance(codes, list) or not codes or any(not isinstance(item, str) or not item.strip() for item in codes):
+        raise ValidationError("policy unsafe codes are invalid")
+    decision = policy.get("decision")
+    exact_keys(decision, {"unsafe", "complete_without_unsafe"}, {"unsafe", "complete_without_unsafe"}, "policy.decision")
+    if decision.get("unsafe") != "quarantined" or decision.get("complete_without_unsafe") != "admitted":
+        raise ValidationError("policy decision is not supported by alpha.1")
+    policy["_canonical_digest"] = sha256_bytes(canonical_json_bytes(policy_without_internal_keys(policy)))
+    return policy
+
+
+def policy_without_internal_keys(policy: dict[str, Any]) -> dict[str, Any]:
+    return {key: value for key, value in policy.items() if not key.startswith("_")}
+
+
+def validate_bundle(bundle: Path, *, profile: str = "base", policy_file: Path | None = None) -> dict[str, Any]:
+    if profile not in VALIDATOR_PROFILES:
+        raise ValidationError(f"unsupported validator profile: {profile}")
+    policy = load_policy(policy_file)
     envelope_path = require_file(bundle, "capture-envelope.json")
     manifest_path = require_file(bundle, "snapshot-manifest.jsonl")
     hygiene_path = require_file(bundle, "snapshot-hygiene.intoto.json")
 
     envelope = read_json(envelope_path)
     hygiene = read_json(hygiene_path)
-    validate_capture_semantics(envelope)
-    validate_hygiene_semantics(hygiene)
+    validate_capture_semantics(envelope, profile=profile)
+    validate_hygiene_semantics(hygiene, profile=profile)
     manifest_rows, manifest_bytes = parse_manifest(manifest_path)
     manifest_state, manifest_entries = validate_manifest_rows(manifest_rows)
 
@@ -590,6 +681,14 @@ def validate_bundle(bundle: Path) -> dict[str, Any]:
     raw_handling = envelope.get("raw_handling") if isinstance(envelope.get("raw_handling"), dict) else {}
     disposition = raw_handling.get("disposition")
     reason_codes = set(raw_handling.get("reason_codes", [])) if isinstance(raw_handling.get("reason_codes"), list) else set()
+    raw_policy = raw_handling.get("policy") if isinstance(raw_handling.get("policy"), dict) else {}
+    if profile == "enterprise-alpha1":
+        if policy is None:
+            raise ValidationError("enterprise-alpha1 validation requires --policy-file")
+        if raw_policy.get("id") != policy.get("id"):
+            raise ValidationError("raw_handling.policy.id does not match policy file")
+        if raw_policy.get("digest") != policy.get("_canonical_digest"):
+            raise ValidationError("raw_handling.policy.digest does not match policy file")
     predicate = hygiene.get("predicate")
     if not isinstance(predicate, dict):
         raise ValidationError("hygiene predicate must be an object")
@@ -597,6 +696,15 @@ def validate_bundle(bundle: Path) -> dict[str, Any]:
     hygiene_parameters = predicate.get("parameters")
     if not isinstance(hygiene_parameters, dict):
         raise ValidationError("hygiene parameters are missing")
+    if "max_input_blob_size" in hygiene_parameters:
+        blob_size = observation["blob"].get("size")
+        if type(blob_size) is not int or blob_size > hygiene_parameters["max_input_blob_size"]:
+            raise ValidationError("observation.blob.size exceeds recorded max_input_blob_size")
+    if profile == "enterprise-alpha1":
+        producer_impl = envelope.get("producer", {}).get("implementation") if isinstance(envelope.get("producer"), dict) else None
+        checker_impl = predicate.get("checker", {}).get("implementation") if isinstance(predicate.get("checker"), dict) else None
+        if producer_impl != checker_impl:
+            raise ValidationError("producer/checker implementation descriptors must match")
     validate_manifest_limits(manifest_entries, hygiene_parameters)
     manifest_digest = sha256_bytes(manifest_bytes)
     if snapshot_kind == "tree":
@@ -686,7 +794,12 @@ def validate_bundle(bundle: Path) -> dict[str, Any]:
     if summary.get("max_severity") != computed_max_severity(findings):
         raise ValidationError("hygiene max_severity does not match findings")
 
-    hazard_codes = {item.get("code") for item in findings if item.get("severity") in {"hazard", "error"}}
+    if policy is not None:
+        unsafe_codes = set(policy["unsafe_finding"]["codes"])
+        unsafe_severities = set(policy["unsafe_finding"]["severities"])
+        hazard_codes = {item.get("code") for item in findings if item.get("code") in unsafe_codes and item.get("severity") in unsafe_severities}
+    else:
+        hazard_codes = {item.get("code") for item in findings if item.get("severity") in {"hazard", "error"}}
     if disposition in {"admitted", "not_evaluated"} and reason_codes:
         raise ValidationError("admitted/not_evaluated raw handling must not carry reason_codes")
     if hazard_codes:
@@ -712,13 +825,15 @@ def validate_bundle(bundle: Path) -> dict[str, Any]:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Validate a Source Capture Envelope v1 bundle.")
     parser.add_argument("bundle_dir")
+    parser.add_argument("--profile", default="base", choices=sorted(VALIDATOR_PROFILES))
+    parser.add_argument("--policy-file")
     return parser
 
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     try:
-        result = validate_bundle(Path(args.bundle_dir))
+        result = validate_bundle(Path(args.bundle_dir), profile=args.profile, policy_file=Path(args.policy_file) if args.policy_file else None)
     except ValidationError as exc:
         print(json.dumps({"status": "fail", "error": str(exc)}, allow_nan=False, sort_keys=True))
         return 1

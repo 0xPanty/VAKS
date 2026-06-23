@@ -710,7 +710,7 @@ def test_input_copy_failure_creates_no_bundle(tmp: Path) -> None:
     out_dir = tmp / "out-copy-fail"
     original = inspect_source_snapshot.materialize_input_copy
 
-    def fail_copy(path: Path) -> inspect_source_snapshot.MaterializedInput:
+    def fail_copy(path: Path, max_input_blob_size: int) -> inspect_source_snapshot.MaterializedInput:
         raise PermissionError("forced unreadable source")
 
     inspect_source_snapshot.materialize_input_copy = fail_copy  # type: ignore[assignment]
@@ -729,7 +729,7 @@ def test_input_copy_failure_creates_no_bundle(tmp: Path) -> None:
             )
     finally:
         inspect_source_snapshot.materialize_input_copy = original  # type: ignore[assignment]
-    assert rc == 1
+    assert rc == 3
     assert not out_dir.exists()
 
 
@@ -1392,6 +1392,166 @@ def test_zip_deflate_budget_limits_actual_output(tmp: Path) -> None:
     assert size_finding["details"]["actual_size"] == 1025
 
 
+def test_input_blob_size_limit_creates_no_bundle(tmp: Path) -> None:
+    source = tmp / "blob.bin"
+    source.write_bytes(b"ab")
+    out_dir = tmp / "out-limit"
+    stdout = io.StringIO()
+    with redirect_stdout(stdout):
+        rc = inspect_source_snapshot.main(
+            [
+                str(source),
+                "--out",
+                str(out_dir),
+                "--source-id",
+                "vsrc:1:content:sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "--source-kind",
+                "file",
+                "--capture-method",
+                "local_file",
+                "--max-input-blob-size",
+                "1",
+            ]
+        )
+    payload = json.loads(stdout.getvalue())
+    assert rc == 3
+    assert payload["code"] == "CAPTURE_INPUT_BLOB_LIMIT_EXCEEDED"
+    assert payload["bundle_created"] is False
+    assert not out_dir.exists()
+
+    result = run_inspector(
+        source,
+        tmp / "out-limit-exact",
+        "--source-kind",
+        "file",
+        "--capture-method",
+        "local_file",
+        "--max-input-blob-size",
+        "2",
+    )
+    assert result["envelope"]["raw_handling"]["disposition"] == "admitted"
+    assert result["hygiene"]["predicate"]["parameters"]["max_input_blob_size"] == 2
+
+
+def test_media_type_detection_hint_mismatch_and_source_kind_conflict(tmp: Path) -> None:
+    disguised = tmp / "report.pdf"
+    write_zip(disguised, [("repo/a.txt", b"a")])
+    result = run_inspector(disguised, tmp / "out-disguised")
+    observation = result["envelope"]["observation"]
+    assert observation["blob"]["media_type"] == "application/zip"
+    assert observation["content_type"]["detected_media_type"] == "application/zip"
+    assert observation["content_type"]["locator_hint_media_type"] == "application/pdf"
+    assert observation["content_type"]["hint_match"] == "mismatch"
+    assert "MEDIA_TYPE_HINT_MISMATCH" in finding_codes(result)
+    assert result["envelope"]["raw_handling"]["disposition"] == "admitted"
+
+    conflict = run_inspector(
+        disguised,
+        tmp / "out-source-kind-conflict",
+        "--source-kind",
+        "pdf",
+        "--capture-method",
+        "upload",
+        "--source-id",
+        "vsrc:1:opaque:pdf-demo",
+    )
+    assert "SOURCE_KIND_FORMAT_MISMATCH" in finding_codes(conflict)
+    assert conflict["envelope"]["raw_handling"]["disposition"] == "quarantined"
+
+
+def test_tar_and_unknown_blob_media_type_detection(tmp: Path) -> None:
+    tar_path = tmp / "payload.bin"
+    write_tar(tar_path, [("repo/a.txt", b"a")])
+    tar_result = run_inspector(
+        tar_path,
+        tmp / "out-tar-media",
+        "--source-kind",
+        "archive",
+        "--capture-method",
+        "archive_file",
+        "--source-id",
+        "vsrc:1:opaque:tar-demo",
+    )
+    assert tar_result["envelope"]["observation"]["blob"]["media_type"] == "application/x-tar"
+
+    blob = tmp / "unknown"
+    blob.write_bytes(b"not a typed document")
+    blob_result = run_inspector(
+        blob,
+        tmp / "out-unknown-blob",
+        "--source-kind",
+        "file",
+        "--capture-method",
+        "local_file",
+        "--source-id",
+        "vsrc:1:content:sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    )
+    assert blob_result["envelope"]["observation"]["blob"]["media_type"] == "application/octet-stream"
+    assert blob_result["envelope"]["observation"]["content_type"]["detection_basis"] == "fallback"
+
+
+def test_implementation_manifest_mismatch_fails_before_bundle(tmp: Path) -> None:
+    archive = tmp / "clean.zip"
+    write_zip(archive, [("repo/a.txt", b"a")])
+    bad_manifest = tmp / "bad-implementation.json"
+    manifest = json.loads(inspect_source_snapshot.default_implementation_manifest_path().read_text(encoding="utf-8"))
+    manifest["components"][0]["digest"] = "sha256:" + "0" * 64
+    bad_manifest.write_text(json.dumps(manifest, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n", encoding="utf-8")
+    out_dir = tmp / "out-bad-implementation"
+    stdout = io.StringIO()
+    with redirect_stdout(stdout):
+        rc = inspect_source_snapshot.main(
+            [
+                str(archive),
+                "--out",
+                str(out_dir),
+                "--source-id",
+                "vsrc:1:repo:github.com/example/repo",
+                "--source-kind",
+                "repo",
+                "--implementation-manifest",
+                str(bad_manifest),
+            ]
+        )
+    payload = json.loads(stdout.getvalue())
+    assert rc == 4
+    assert payload["code"] == "CAPTURE_IMPLEMENTATION_PIN_MISMATCH"
+    assert payload["bundle_created"] is False
+    assert not out_dir.exists()
+
+
+def test_enterprise_validator_requires_policy_and_implementation_binding(tmp: Path) -> None:
+    archive = tmp / "clean.zip"
+    write_zip(archive, [("repo/a.txt", b"a")])
+    result = run_inspector(archive, tmp / "out-enterprise")
+    out_dir = result["out_dir"]
+    policy_file = inspect_source_snapshot.default_policy_path()
+    validate_source_capture_bundle.validate_bundle(out_dir, profile="enterprise-alpha1", policy_file=policy_file)
+
+    envelope = json.loads((out_dir / "capture-envelope.json").read_text(encoding="utf-8"))
+    del envelope["raw_handling"]["policy"]["digest"]
+    write_json(out_dir / "capture-envelope.json", envelope)
+    try:
+        validate_source_capture_bundle.validate_bundle(out_dir, profile="enterprise-alpha1", policy_file=policy_file)
+    except validate_source_capture_bundle.ValidationError as exc:
+        assert "policy" in str(exc)
+    else:
+        raise AssertionError("enterprise-alpha1 must require policy digest")
+
+    result = run_inspector(archive, tmp / "out-implementation-binding")
+    out_dir = result["out_dir"]
+    envelope = json.loads((out_dir / "capture-envelope.json").read_text(encoding="utf-8"))
+    hygiene = json.loads((out_dir / "snapshot-hygiene.intoto.json").read_text(encoding="utf-8"))
+    hygiene["predicate"]["checker"]["implementation"]["digest"] = "sha256:" + "1" * 64
+    rebind_hygiene_ref(out_dir, envelope, hygiene)
+    try:
+        validate_source_capture_bundle.validate_bundle(out_dir, profile="enterprise-alpha1", policy_file=policy_file)
+    except validate_source_capture_bundle.ValidationError as exc:
+        assert "implementation" in str(exc)
+    else:
+        raise AssertionError("enterprise-alpha1 must bind producer/checker implementation descriptors")
+
+
 def main() -> int:
     tests = [
         test_clean_archive,
@@ -1457,6 +1617,11 @@ def main() -> int:
         test_zip_directory_encryption_and_unsupported_methods_quarantined,
         test_zip_legal_empty_directories_admitted,
         test_zip_deflate_budget_limits_actual_output,
+        test_input_blob_size_limit_creates_no_bundle,
+        test_media_type_detection_hint_mismatch_and_source_kind_conflict,
+        test_tar_and_unknown_blob_media_type_detection,
+        test_implementation_manifest_mismatch_fails_before_bundle,
+        test_enterprise_validator_requires_policy_and_implementation_binding,
     ]
     with tempfile.TemporaryDirectory() as tmp_dir:
         root = Path(tmp_dir)

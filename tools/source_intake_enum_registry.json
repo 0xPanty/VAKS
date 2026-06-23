@@ -73,6 +73,12 @@
       "misleading_orientation",
       "scope_mismatch",
       "anchor_broken_or_source_changed"
+    ],
+    "source_identity.aliases.kind": [
+      "legacy",
+      "locator",
+      "provider_object_id",
+      "snapshot"
     ]
   },
   "legacy_disallowed_examples": {

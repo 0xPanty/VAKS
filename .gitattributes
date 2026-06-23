@@ -1,0 +1,7 @@
+tools/inspect_source_snapshot.py text eol=lf
+tools/validate_source_capture_bundle.py text eol=lf
+tools/source_intake_enum_registry.json text eol=lf
+schemas/source-capture-v1.schema.json text eol=lf
+schemas/snapshot-hygiene-v1.schema.json text eol=lf
+policies/source-capture/raw-intake-default-v1.json text eol=lf
+tools/source_capture_implementation_manifest.json text eol=lf

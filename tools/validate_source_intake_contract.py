@@ -652,6 +652,8 @@ VSRC_RE = re.compile(r"^vsrc:1:([A-Za-z0-9_.-]+):[^\s\x00-\x1f\x7f]+$")
 NO_CONTROL_RE = re.compile(r"^[^\x00-\x1f\x7f]+$")
 CAPTURE_ENVELOPE_REF_RE = re.compile(r"^(?![A-Za-z]:)(?!/)(?!.*\s)(?!.*\\)(?!.*(?:^|/)\.\.(?:/|$)).*/capture-envelope\.json$")
 IDENTITY_PROFILE_RE = re.compile(r"^[a-z0-9][a-z0-9_.-]*/v[0-9]+$")
+PROVIDER_OBJECT_ID_RE = re.compile(r"^[a-z0-9.-]+:[a-z0-9_.-]+:[^\s\x00-\x1f\x7f]+$")
+ALLOWED_SOURCE_ALIAS_KINDS = {"legacy", "snapshot", "locator", "provider_object_id"}
 
 SOURCE_IDENTITY_KEYS = {
     "schema_version",
@@ -888,6 +890,7 @@ def check_source_capture_identity(
             "source_identity.aliases must be a list of typed alias objects.",
         )
     else:
+        seen_aliases: set[tuple[str, str]] = set()
         for idx, alias in enumerate(aliases):
             if not alias and not require_value:
                 continue
@@ -902,26 +905,62 @@ def check_source_capture_identity(
                     "Each source_identity alias must be a mapping with only string kind and value fields.",
                 )
                 continue
-            if not isinstance(alias.get("kind"), str) or is_blank(alias.get("kind")) or has_control_char(alias.get("kind")):
+            alias_kind = alias.get("kind")
+            alias_value = alias.get("value")
+            if not isinstance(alias_kind, str) or is_blank(alias_kind) or has_control_char(alias_kind):
                 add_issue(
                     issues,
                     path,
                     "error",
                     "source_identity_alias_kind",
                     f"source_identity.aliases[{idx}].kind",
-                    alias.get("kind"),
+                    alias_kind,
                     "Each source_identity alias kind must be a non-blank string without control characters.",
                 )
-            if not isinstance(alias.get("value"), str) or is_blank(alias.get("value")) or has_control_char(alias.get("value")):
+            elif alias_kind not in ALLOWED_SOURCE_ALIAS_KINDS:
+                add_issue(
+                    issues,
+                    path,
+                    "error",
+                    "source_identity_alias_kind_unsupported",
+                    f"source_identity.aliases[{idx}].kind",
+                    alias_kind,
+                    "Source identity alias kind must be one of legacy, snapshot, locator, or provider_object_id.",
+                )
+            if not isinstance(alias_value, str) or is_blank(alias_value) or has_control_char(alias_value):
                 add_issue(
                     issues,
                     path,
                     "error",
                     "source_identity_alias_value",
                     f"source_identity.aliases[{idx}].value",
-                    alias.get("value"),
+                    alias_value,
                     "Each source_identity alias value must be a non-blank string without control characters.",
                 )
+                continue
+            if isinstance(alias_kind, str) and isinstance(alias_value, str):
+                pair = (alias_kind, alias_value)
+                if pair in seen_aliases:
+                    add_issue(
+                        issues,
+                        path,
+                        "error",
+                        "source_identity_alias_duplicate",
+                        f"source_identity.aliases[{idx}]",
+                        alias,
+                        "Duplicate source_identity aliases are not allowed.",
+                    )
+                seen_aliases.add(pair)
+                if alias_kind == "provider_object_id" and not PROVIDER_OBJECT_ID_RE.match(alias_value):
+                    add_issue(
+                        issues,
+                        path,
+                        "error",
+                        "source_identity_provider_object_id_format",
+                        f"source_identity.aliases[{idx}].value",
+                        alias_value,
+                        "provider_object_id aliases must use <provider-host>:<object-type>:<opaque-provider-id> with lowercase host and object type.",
+                    )
     latest_ref = data.get("latest_observed_capture_ref")
     if not is_blank(latest_ref):
         if not isinstance(latest_ref, str) or has_control_char(latest_ref) or not CAPTURE_ENVELOPE_REF_RE.match(latest_ref):

@@ -202,12 +202,40 @@ Core values:
 | `support_result` | `supported`, `weak`, `missing_anchor`, `self_support_loop`, `scope_limited`, `not_ready` |
 | `anchor_status` | `exact_verified`, `fuzzy_recovered`, `ambiguous`, `broken`, `source_changed` |
 | `evidence_support_status` | `not_checked`, `supported`, `partial`, `unsupported`, `unclear` |
+| `source_identity.aliases.kind` | `legacy`, `locator`, `provider_object_id`, `snapshot` |
 
 Legacy or descriptive values such as `overlay_state: candidate`,
 `overlay_state: project_sidecar_created`, `promotion_gate:
 evidence_aware_review_required`, and `promotion_gate:
 evidence_aware_review_and_local_benchmark_required` are not allowed machine
 values. Preserve that nuance in prose fields, not in gate enums.
+
+### 1.2.1 Source Capture Envelope v1.0-alpha.1
+
+Structured source capture uses the Source Capture Envelope artifacts for raw
+provenance and intake hygiene only:
+
+```text
+capture-envelope.json
+snapshot-manifest.jsonl
+snapshot-hygiene.intoto.json
+```
+
+Alpha.1 adds operational metadata to make the Raw decision reproducible:
+
+- `max_input_blob_size` limits the raw input before archive parsing.
+- `observation.content_type` records the scanner-selected parser/container
+  interpretation, not a filename or user-provided MIME hint.
+- `producer.implementation` and `checker.implementation` pin the exact
+  scanner/validator/schema/policy implementation manifest.
+- `raw_handling.policy.digest` binds the admitted/quarantined decision to the
+  actual Raw intake policy file.
+- Source Card `provider_object_id` aliases may help provider adapters detect
+  rename, transfer, or locator rebound, but they are not trust or evidence
+  support.
+
+This remains a Capture / Provenance hardening slice. It must not create
+candidate, reviewed, decision, relation, action-basis, or feedback authority.
 
 ### 1.3 No Automatic Authority Promotion
 

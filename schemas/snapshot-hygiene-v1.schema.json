@@ -83,6 +83,9 @@
               "type": "string",
               "minLength": 1,
               "pattern": "\\S"
+            },
+            "implementation": {
+              "$ref": "#/$defs/descriptor"
             }
           }
         },
@@ -122,6 +125,10 @@
               "const": "vaks-default-archive-limits/v1"
             },
             "max_entries": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "max_input_blob_size": {
               "type": "integer",
               "minimum": 1
             },
@@ -314,6 +321,33 @@
     }
   },
   "$defs": {
+    "digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "descriptor": {
+      "type": "object",
+      "required": [
+        "media_type",
+        "size",
+        "digest"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "media_type": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "size": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "digest": {
+          "$ref": "#/$defs/digest"
+        }
+      }
+    },
     "profile": {
       "enum": [
         "archive-safety/v1",

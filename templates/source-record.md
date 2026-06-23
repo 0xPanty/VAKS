@@ -97,6 +97,19 @@ basis.
 is a navigation pointer to the newest known Capture Envelope, not the only
 history and not an action basis.
 
+Optional `source_identity.aliases` may include:
+
+```yaml
+- kind: provider_object_id
+  value: "github.com:repository:R_kgDO..."
+- kind: locator
+  value: "git+https://github.com/old-owner/old-name"
+```
+
+Provider object IDs help detect rename, transfer, or locator rebound when a
+provider adapter supplies them. They are not trust, ownership, evidence support,
+or review status.
+
 Older records may contain `source_integrity`. Treat it as legacy ingest hygiene
 only. New structured captures should use Source Capture Envelope v1 artifacts
 instead of adding more meanings to `source_integrity`.

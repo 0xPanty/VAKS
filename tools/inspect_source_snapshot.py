@@ -31,7 +31,7 @@ import zlib
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Iterable
+from typing import Any, Iterable
 
 import validate_source_capture_bundle
 
@@ -42,7 +42,14 @@ HYGIENE_TYPE = "https://in-toto.io/Statement/v1"
 REPO_HYGIENE_PREDICATE = "urn:vaks:predicate:repo-snapshot-hygiene:v1"
 SOURCE_HYGIENE_PREDICATE = "urn:vaks:predicate:source-snapshot-hygiene:v1"
 INSPECTOR_ID = "vaks.snapshot-inspector"
-INSPECTOR_VERSION = "0.1.0"
+INSPECTOR_VERSION = "1.0-alpha.1"
+IMPLEMENTATION_MEDIA_TYPE = "application/vnd.vaks.source-capture-implementation.v1+json"
+IMPLEMENTATION_SCHEMA = "urn:vaks:schema:source-capture-implementation:v1"
+IMPLEMENTATION_ID = "vaks.source-capture-envelope"
+IMPLEMENTATION_VERSION = "1.0-alpha.1"
+POLICY_SCHEMA = "urn:vaks:policy:raw-intake:v1"
+POLICY_VERSION = "1.0-alpha.1"
+MEDIA_TYPE_DETECTION_PROFILE = "vaks-media-type-detection/v1"
 MANIFEST_PROFILE = "vaks-archive-tree/v1"
 LIMITS_PROFILE = "vaks-default-archive-limits/v1"
 REPO_HYGIENE_PROFILES = [
@@ -104,6 +111,7 @@ SOURCE_ID_RE = re.compile(r"^vsrc:1:[A-Za-z0-9_.-]+:[^\s\x00-\x1f\x7f]+$")
 
 @dataclass(frozen=True)
 class Limits:
+    max_input_blob_size: int = 2 * 1024 * 1024 * 1024
     max_entries: int = 50_000
     max_total_size: int = 512 * 1024 * 1024
     max_entry_size: int = 128 * 1024 * 1024
@@ -116,6 +124,7 @@ class Limits:
 def limits_parameters(limits: Limits) -> dict[str, object]:
     return {
         "limits_profile": LIMITS_PROFILE,
+        "max_input_blob_size": limits.max_input_blob_size,
         "max_entries": limits.max_entries,
         "max_total_size": limits.max_total_size,
         "max_entry_size": limits.max_entry_size,
@@ -127,6 +136,71 @@ def limits_parameters(limits: Limits) -> dict[str, object]:
         "max_finding_paths": MAX_FINDING_PATHS,
         "max_finding_detail_items": MAX_FINDING_DETAIL_ITEMS,
     }
+
+
+class InputBlobLimitExceeded(Exception):
+    def __init__(self, limit: int, observed_at_least: int) -> None:
+        super().__init__(f"input blob exceeds limit {limit} bytes")
+        self.limit = limit
+        self.observed_at_least = observed_at_least
+
+
+class ImplementationPinningError(Exception):
+    def __init__(self, code: str, message: str, *, component: str | None = None) -> None:
+        super().__init__(message)
+        self.code = code
+        self.component = component
+
+
+@dataclass(frozen=True)
+class Descriptor:
+    media_type: str
+    size: int
+    digest: str
+
+    def to_json(self) -> dict[str, object]:
+        return {
+            "media_type": self.media_type,
+            "size": self.size,
+            "digest": self.digest,
+        }
+
+
+@dataclass(frozen=True)
+class ImplementationInfo:
+    root: Path
+    manifest_path: Path
+    descriptor: Descriptor
+
+
+@dataclass(frozen=True)
+class RawIntakePolicy:
+    path: Path
+    id: str
+    digest: str
+    unsafe_codes: set[str]
+    unsafe_severities: set[str]
+    unsafe_disposition: str
+    complete_disposition: str
+
+
+@dataclass(frozen=True)
+class ContentTypeDetection:
+    detected_media_type: str
+    detection_basis: str
+    locator_hint_media_type: str | None
+    hint_match: str
+
+    def to_json(self) -> dict[str, object]:
+        item: dict[str, object] = {
+            "profile": MEDIA_TYPE_DETECTION_PROFILE,
+            "detected_media_type": self.detected_media_type,
+            "detection_basis": self.detection_basis,
+            "hint_match": self.hint_match,
+        }
+        if self.locator_hint_media_type is not None:
+            item["locator_hint_media_type"] = self.locator_hint_media_type
+        return item
 
 
 @dataclass
@@ -184,6 +258,7 @@ class InspectionResult:
     blob_digest: str
     blob_size: int
     media_type: str
+    content_type: ContentTypeDetection
     snapshot_kind: str
     snapshot_id: str
     manifest_bytes: bytes
@@ -217,8 +292,11 @@ def sha256_file(path: Path) -> tuple[str, int]:
     return f"sha256:{h.hexdigest()}", size
 
 
-def materialize_input_copy(path: Path) -> MaterializedInput:
+def materialize_input_copy(path: Path, max_input_blob_size: int) -> MaterializedInput:
     """Copy the source to a private immutable-by-convention blob for inspection."""
+    st = path.stat(follow_symlinks=False)
+    if st.st_size > max_input_blob_size:
+        raise InputBlobLimitExceeded(limit=max_input_blob_size, observed_at_least=st.st_size)
     temp_dir = tempfile.TemporaryDirectory(prefix="vaks-source-capture-")
     temp_root = Path(temp_dir.name)
     try:
@@ -235,6 +313,8 @@ def materialize_input_copy(path: Path) -> MaterializedInput:
             with path.open("rb") as src, os.fdopen(fd, "wb") as dst:
                 for chunk in iter(lambda: src.read(1024 * 1024), b""):
                     size += len(chunk)
+                    if size > max_input_blob_size:
+                        raise InputBlobLimitExceeded(limit=max_input_blob_size, observed_at_least=size)
                     h.update(chunk)
                     dst.write(chunk)
         except Exception:
@@ -265,7 +345,40 @@ def json_bytes(obj: dict[str, object]) -> bytes:
     return (json.dumps(obj, allow_nan=False, ensure_ascii=False, sort_keys=True, indent=2) + "\n").encode("utf-8")
 
 
-def media_type_for(path: Path) -> str:
+def canonical_json_bytes(obj: dict[str, Any]) -> bytes:
+    return (json.dumps(obj, allow_nan=False, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n").encode("utf-8")
+
+
+def reject_duplicate_json_keys(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
+    result: dict[str, Any] = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError(f"duplicate JSON object key: {key}")
+        result[key] = value
+    return result
+
+
+def load_strict_json(path: Path) -> Any:
+    return json.loads(
+        path.read_text(encoding="utf-8"),
+        object_pairs_hook=reject_duplicate_json_keys,
+        parse_constant=lambda value: (_ for _ in ()).throw(ValueError(f"non-standard JSON constant: {value}")),
+    )
+
+
+def digest_file(path: Path) -> str:
+    h = hashlib.sha256()
+    with path.open("rb") as fh:
+        for chunk in iter(lambda: fh.read(1024 * 1024), b""):
+            h.update(chunk)
+    return "sha256:" + h.hexdigest()
+
+
+def script_root() -> Path:
+    return Path(__file__).resolve().parent.parent
+
+
+def locator_media_type_hint(path: Path) -> str | None:
     name = path.name.lower()
     suffix = path.suffix.lower()
     if name.endswith(".zip"):
@@ -286,13 +399,11 @@ def media_type_for(path: Path) -> str:
         return "application/x-xz"
     if suffix == ".pdf":
         return "application/pdf"
-    if suffix in {".html", ".htm"}:
-        return "text/html"
-    if suffix == ".json":
-        return "application/json"
-    if suffix in {".txt", ".md"}:
-        return "text/plain"
-    return "application/octet-stream"
+    return None
+
+
+def media_type_for(path: Path) -> str:
+    return locator_media_type_hint(path) or "application/octet-stream"
 
 
 def archive_kind(path: Path) -> str:
@@ -301,6 +412,209 @@ def archive_kind(path: Path) -> str:
     if tarfile.is_tarfile(path):
         return "tar"
     return "file"
+
+
+def tar_media_type(path: Path) -> str:
+    preview = file_preview(path, 8)
+    if preview.startswith(b"\x1f\x8b"):
+        return "application/gzip"
+    if preview.startswith(b"BZh"):
+        return "application/x-bzip2"
+    if preview.startswith(b"\xfd7zXZ\x00"):
+        return "application/x-xz"
+    return "application/x-tar"
+
+
+def detect_media_type(path: Path, inspection_kind: str, locator_hint: str | None) -> ContentTypeDetection:
+    if inspection_kind == "zip":
+        detected = "application/zip"
+        basis = "container_parser"
+    elif inspection_kind == "tar":
+        detected = tar_media_type(path)
+        basis = "container_parser"
+    else:
+        preview = file_preview(path, 8)
+        if preview.startswith(b"%PDF-"):
+            detected = "application/pdf"
+            basis = "magic_signature"
+        else:
+            detected = "application/octet-stream"
+            basis = "fallback"
+    if locator_hint is None:
+        hint_match = "no_hint"
+    elif locator_hint == detected:
+        hint_match = "matched"
+    else:
+        hint_match = "mismatch"
+    return ContentTypeDetection(
+        detected_media_type=detected,
+        detection_basis=basis,
+        locator_hint_media_type=locator_hint,
+        hint_match=hint_match,
+    )
+
+
+def check_content_type_findings(
+    detection: ContentTypeDetection,
+    source_kind: str,
+    findings: list[Finding],
+    identity_path: Path,
+) -> None:
+    if detection.hint_match == "mismatch":
+        add_finding(
+            findings,
+            "MEDIA_TYPE_HINT_MISMATCH",
+            "warning",
+            SOURCE_FIXITY_PROFILE,
+            "Locator media-type hint differs from the scanner-selected content interpretation.",
+            [identity_path.name],
+            {
+                "locator_hint_media_type": detection.locator_hint_media_type,
+                "detected_media_type": detection.detected_media_type,
+                "detection_profile": MEDIA_TYPE_DETECTION_PROFILE,
+            },
+        )
+    if source_kind == "pdf" and detection.detected_media_type != "application/pdf":
+        add_finding(
+            findings,
+            "SOURCE_KIND_FORMAT_MISMATCH",
+            "hazard",
+            SOURCE_FIXITY_PROFILE,
+            "Declared source kind does not match the scanner-selected content interpretation.",
+            [identity_path.name],
+            {
+                "source_kind": source_kind,
+                "detected_media_type": detection.detected_media_type,
+            },
+        )
+
+
+def default_implementation_manifest_path() -> Path:
+    return script_root() / "tools" / "source_capture_implementation_manifest.json"
+
+
+def default_policy_path() -> Path:
+    return script_root() / "policies" / "source-capture" / "raw-intake-default-v1.json"
+
+
+def validate_descriptor_shape(descriptor: Any, context: str) -> Descriptor:
+    if not isinstance(descriptor, dict):
+        raise ImplementationPinningError("CAPTURE_IMPLEMENTATION_PIN_MISMATCH", f"{context} must be an object")
+    if set(descriptor) != {"media_type", "size", "digest"}:
+        raise ImplementationPinningError("CAPTURE_IMPLEMENTATION_PIN_MISMATCH", f"{context} has invalid keys")
+    media_type = descriptor.get("media_type")
+    size = descriptor.get("size")
+    digest = descriptor.get("digest")
+    if not isinstance(media_type, str) or not media_type.strip():
+        raise ImplementationPinningError("CAPTURE_IMPLEMENTATION_PIN_MISMATCH", f"{context}.media_type is invalid")
+    if type(size) is not int or size < 0:
+        raise ImplementationPinningError("CAPTURE_IMPLEMENTATION_PIN_MISMATCH", f"{context}.size is invalid")
+    if not isinstance(digest, str) or not re.match(r"^sha256:[0-9a-f]{64}$", digest):
+        raise ImplementationPinningError("CAPTURE_IMPLEMENTATION_PIN_MISMATCH", f"{context}.digest is invalid")
+    return Descriptor(media_type=media_type, size=size, digest=digest)
+
+
+def load_implementation_info(manifest_path: Path) -> ImplementationInfo:
+    root = script_root()
+    manifest_path = manifest_path.resolve()
+    try:
+        manifest = load_strict_json(manifest_path)
+    except Exception as exc:
+        raise ImplementationPinningError("CAPTURE_IMPLEMENTATION_PIN_MISMATCH", str(exc)) from exc
+    if not isinstance(manifest, dict):
+        raise ImplementationPinningError("CAPTURE_IMPLEMENTATION_PIN_MISMATCH", "implementation manifest root must be an object")
+    required = {"schema", "id", "version", "components", "runtime"}
+    if set(manifest) != required:
+        raise ImplementationPinningError("CAPTURE_IMPLEMENTATION_PIN_MISMATCH", "implementation manifest has invalid keys")
+    if manifest.get("schema") != IMPLEMENTATION_SCHEMA or manifest.get("id") != IMPLEMENTATION_ID:
+        raise ImplementationPinningError("CAPTURE_IMPLEMENTATION_PIN_MISMATCH", "implementation manifest identity mismatch")
+    if manifest.get("version") != IMPLEMENTATION_VERSION:
+        raise ImplementationPinningError("CAPTURE_IMPLEMENTATION_PIN_MISMATCH", "implementation manifest version mismatch")
+    components = manifest.get("components")
+    if not isinstance(components, list) or not components:
+        raise ImplementationPinningError("CAPTURE_IMPLEMENTATION_PIN_MISMATCH", "implementation manifest components must be a non-empty list")
+    seen_paths: set[str] = set()
+    for idx, component in enumerate(components):
+        if not isinstance(component, dict) or set(component) != {"path", "digest"}:
+            raise ImplementationPinningError("CAPTURE_IMPLEMENTATION_PIN_MISMATCH", f"component {idx} has invalid shape")
+        rel = component.get("path")
+        expected_digest = component.get("digest")
+        if not isinstance(rel, str) or not rel.strip() or "\\" in rel or rel.startswith("/") or ".." in Path(rel).parts:
+            raise ImplementationPinningError("CAPTURE_IMPLEMENTATION_PIN_MISMATCH", f"component {idx} has invalid path")
+        if rel in seen_paths:
+            raise ImplementationPinningError("CAPTURE_IMPLEMENTATION_PIN_MISMATCH", f"duplicate component: {rel}", component=rel)
+        seen_paths.add(rel)
+        if not isinstance(expected_digest, str) or not re.match(r"^sha256:[0-9a-f]{64}$", expected_digest):
+            raise ImplementationPinningError("CAPTURE_IMPLEMENTATION_PIN_MISMATCH", f"component {rel} digest is invalid", component=rel)
+        component_path = (root / rel).resolve()
+        try:
+            component_path.relative_to(root)
+        except ValueError as exc:
+            raise ImplementationPinningError("CAPTURE_IMPLEMENTATION_PIN_MISMATCH", f"component escapes root: {rel}", component=rel) from exc
+        if component_path.is_symlink() or not component_path.is_file():
+            raise ImplementationPinningError("CAPTURE_IMPLEMENTATION_PIN_MISMATCH", f"component missing or unsafe: {rel}", component=rel)
+        actual_digest = digest_file(component_path)
+        if actual_digest != expected_digest:
+            raise ImplementationPinningError("CAPTURE_IMPLEMENTATION_PIN_MISMATCH", f"component digest mismatch: {rel}", component=rel)
+    runtime = manifest.get("runtime")
+    if not isinstance(runtime, dict) or runtime.get("language") != "python" or not isinstance(runtime.get("minimum_version"), str):
+        raise ImplementationPinningError("CAPTURE_IMPLEMENTATION_PIN_MISMATCH", "implementation manifest runtime is invalid")
+    descriptor = Descriptor(
+        media_type=IMPLEMENTATION_MEDIA_TYPE,
+        size=manifest_path.stat().st_size,
+        digest=digest_file(manifest_path),
+    )
+    return ImplementationInfo(root=root, manifest_path=manifest_path, descriptor=descriptor)
+
+
+def load_raw_intake_policy(path: Path, expected_id: str) -> RawIntakePolicy:
+    try:
+        policy = load_strict_json(path)
+    except Exception as exc:
+        raise ImplementationPinningError("CAPTURE_POLICY_PIN_MISMATCH", str(exc)) from exc
+    if not isinstance(policy, dict):
+        raise ImplementationPinningError("CAPTURE_POLICY_PIN_MISMATCH", "policy root must be an object")
+    if set(policy) != {"schema", "id", "version", "unsafe_finding", "decision"}:
+        raise ImplementationPinningError("CAPTURE_POLICY_PIN_MISMATCH", "policy has invalid keys")
+    if policy.get("schema") != POLICY_SCHEMA:
+        raise ImplementationPinningError("CAPTURE_POLICY_PIN_MISMATCH", "policy schema mismatch")
+    policy_id = policy.get("id")
+    if policy_id != expected_id:
+        raise ImplementationPinningError("CAPTURE_POLICY_PIN_MISMATCH", "policy ID does not match CLI policy ID")
+    if policy.get("version") != POLICY_VERSION:
+        raise ImplementationPinningError("CAPTURE_POLICY_PIN_MISMATCH", "policy version mismatch")
+    unsafe = policy.get("unsafe_finding")
+    decision = policy.get("decision")
+    if not isinstance(unsafe, dict) or set(unsafe) != {"codes", "severities"}:
+        raise ImplementationPinningError("CAPTURE_POLICY_PIN_MISMATCH", "policy unsafe_finding has invalid shape")
+    if not isinstance(decision, dict) or set(decision) != {"unsafe", "complete_without_unsafe"}:
+        raise ImplementationPinningError("CAPTURE_POLICY_PIN_MISMATCH", "policy decision has invalid shape")
+    severities = unsafe.get("severities")
+    codes = unsafe.get("codes")
+    if (
+        not isinstance(severities, list)
+        or not severities
+        or any(not isinstance(item, str) or item not in {"hazard", "error", "warning", "info"} for item in severities)
+    ):
+        raise ImplementationPinningError("CAPTURE_POLICY_PIN_MISMATCH", "policy severities are invalid")
+    if not isinstance(codes, list) or not codes or any(not isinstance(item, str) or not item.strip() for item in codes):
+        raise ImplementationPinningError("CAPTURE_POLICY_PIN_MISMATCH", "policy codes are invalid")
+    if len(codes) != len(set(codes)) or len(severities) != len(set(severities)):
+        raise ImplementationPinningError("CAPTURE_POLICY_PIN_MISMATCH", "policy codes/severities must be unique")
+    unsafe_disposition = decision.get("unsafe")
+    complete_disposition = decision.get("complete_without_unsafe")
+    if unsafe_disposition != "quarantined" or complete_disposition != "admitted":
+        raise ImplementationPinningError("CAPTURE_POLICY_PIN_MISMATCH", "policy decision values are not supported by alpha.1")
+    canonical_digest = digest_bytes(canonical_json_bytes(policy))
+    return RawIntakePolicy(
+        path=path,
+        id=policy_id,
+        digest=canonical_digest,
+        unsafe_codes=set(codes),
+        unsafe_severities=set(severities),
+        unsafe_disposition=unsafe_disposition,
+        complete_disposition=complete_disposition,
+    )
 
 
 def suffix_suggests_archive(path: Path) -> bool:
@@ -738,41 +1052,8 @@ def duplicate_paths(paths: list[str]) -> list[str]:
     return sorted(dupes)
 
 
-def unsafe_findings(findings: list[Finding]) -> list[Finding]:
-    unsafe_codes = {
-        "ARCHIVE_ABSOLUTE_PATH",
-        "ARCHIVE_ANCESTOR_PREFIX_CONFLICT",
-        "ARCHIVE_BACKSLASH_PATH",
-        "ARCHIVE_PATH_TRAVERSAL",
-        "ARCHIVE_PATH_INVALID_UTF8",
-        "ARCHIVE_PATH_CONTROL_CHARACTER",
-        "ARCHIVE_PATH_REPRESENTATION_CONFLICT",
-        "ARCHIVE_DOT_OR_EMPTY_SEGMENT",
-        "ARCHIVE_DUPLICATE_ENTRY",
-        "ARCHIVE_EMPTY_PATH_SEGMENT",
-        "ARCHIVE_ENCRYPTED_ENTRY",
-        "ARCHIVE_PARSE_FAILED",
-        "ARCHIVE_SYMLINK_ESCAPE",
-        "ARCHIVE_SYMLINK_TARGET_BACKSLASH",
-        "ARCHIVE_SYMLINK_TARGET_CONTROL_CHARACTER",
-        "ARCHIVE_SYMLINK_TARGET_EMPTY",
-        "ARCHIVE_SYMLINK_TARGET_INVALID_UTF8",
-        "ARCHIVE_SYMLINK_TARGET_LIMIT_EXCEEDED",
-        "ARCHIVE_SPECIAL_FILE",
-        "ARCHIVE_TYPE_COLLISION",
-        "ARCHIVE_UNSUPPORTED_COMPRESSION",
-        "ARCHIVE_ZIP_DATA_DESCRIPTOR_UNSUPPORTED",
-        "ARCHIVE_ZIP_HEADER_CONFLICT",
-        "ARCHIVE_ZIP_STREAM_INTEGRITY_FAILED",
-        "ARCHIVE_ENTRY_LIMIT_EXCEEDED",
-        "ARCHIVE_ENTRY_SIZE_LIMIT_EXCEEDED",
-        "ARCHIVE_TOTAL_SIZE_LIMIT_EXCEEDED",
-        "ARCHIVE_COMPRESSION_RATIO_EXCEEDED",
-        "ARCHIVE_PATH_DEPTH_EXCEEDED",
-        "CAPTURE_INPUT_CHANGED_DURING_SCAN",
-        "SCANNER_UNHANDLED_EXCEPTION",
-    }
-    return [f for f in findings if f.code in unsafe_codes and f.severity in {"hazard", "error"}]
+def unsafe_findings(findings: list[Finding], policy: RawIntakePolicy) -> list[Finding]:
+    return [f for f in findings if f.code in policy.unsafe_codes and f.severity in policy.unsafe_severities]
 
 
 def file_digest_from_zip(
@@ -1589,6 +1870,7 @@ def read_zip_entries(
     *,
     source_kind: str,
     capture_method: str,
+    policy: RawIntakePolicy,
 ) -> tuple[list[Entry], int]:
     entries: list[Entry] = []
     explicit_dirs: set[str] = set()
@@ -1700,10 +1982,10 @@ def read_zip_entries(
             )
         check_tree_model(entries, explicit_dirs, findings)
         check_collision_groups([e.manifest_path for e in entries if e.manifest_path], findings)
-        if not unsafe_findings(findings):
+        if not unsafe_findings(findings, policy):
             actual_total_size = 0
             for info, local_header, raw_path, entry_type in payload_items:
-                if unsafe_findings(findings):
+                if unsafe_findings(findings, policy):
                     break
                 if entry_type == "dir":
                     _digest, output = file_digest_from_zip(
@@ -1740,7 +2022,7 @@ def read_zip_entries(
                     capture_limit=limits.max_symlink_target_size + 1 if entry_type == "symlink" else 512,
                     remaining_total_budget=limits.max_total_size - actual_total_size,
                 )
-                if unsafe_findings(findings):
+                if unsafe_findings(findings, policy):
                     break
                 if entry_type == "symlink":
                     target = decode_symlink_target(payload_preview, raw_path, findings, limits)
@@ -1780,6 +2062,7 @@ def read_tar_entries(
     source_kind: str,
     capture_method: str,
     blob_size: int,
+    policy: RawIntakePolicy,
 ) -> tuple[list[Entry], int]:
     entries: list[Entry] = []
     explicit_dirs: set[str] = set()
@@ -1914,7 +2197,7 @@ def read_tar_entries(
             )
         check_tree_model(entries, explicit_dirs, findings)
         check_collision_groups([e.manifest_path for e in entries if e.manifest_path], findings)
-        if not unsafe_findings(findings):
+        if not unsafe_findings(findings, policy):
             for entry in entries:
                 if entry.tar_member is None:
                     continue
@@ -2035,6 +2318,7 @@ def build_hygiene(
     snapshot_kind: str,
     capture_method: str,
     limits: Limits,
+    implementation: ImplementationInfo,
 ) -> tuple[bytes, str]:
     output_findings = prepared_findings(findings)
     predicate_type = hygiene_predicate_for(source_kind)
@@ -2052,6 +2336,7 @@ def build_hygiene(
             "checker": {
                 "id": INSPECTOR_ID,
                 "version": INSPECTOR_VERSION,
+                "implementation": implementation.descriptor.to_json(),
             },
             "execution_state": execution_state,
             "profiles": hygiene_profiles_for(
@@ -2081,19 +2366,24 @@ def inspect_path(
     blob_digest: str | None = None,
     blob_size: int | None = None,
     display_path: Path | None = None,
+    policy: RawIntakePolicy,
 ) -> InspectionResult:
     if blob_digest is None or blob_size is None:
         blob_digest, blob_size = sha256_file(path)
     kind = archive_kind(path)
     findings: list[Finding] = []
     identity_path = display_path or path
-    media_type = media_type_for(identity_path)
+    locator_hint = locator_media_type_hint(identity_path)
+    content_type = detect_media_type(path, kind, locator_hint)
+    check_content_type_findings(content_type, source_kind, findings, identity_path)
+    media_type = content_type.detected_media_type
     entries: list[Entry] = []
     total_size = blob_size
     required_archive = source_or_method_requires_archive(source_kind, capture_method)
     expected_archive = input_profile == "archive" or required_archive or (
         input_profile == "auto"
         and suffix_suggests_archive(display_path or path)
+        and source_kind != "pdf"
     )
     if input_profile == "blob" and not required_archive:
         kind = "file"
@@ -2107,6 +2397,7 @@ def inspect_path(
                 findings,
                 source_kind=source_kind,
                 capture_method=capture_method,
+                policy=policy,
             )
         except (zipfile.BadZipFile, RuntimeError, NotImplementedError, OSError) as exc:
             add_parse_failed(findings, identity_path, "ZIP archive parsing failed.", exc)
@@ -2120,6 +2411,7 @@ def inspect_path(
                 source_kind=source_kind,
                 capture_method=capture_method,
                 blob_size=blob_size,
+                policy=policy,
             )
         except (tarfile.TarError, RuntimeError, OSError) as exc:
             add_parse_failed(findings, identity_path, "TAR archive parsing failed.", exc)
@@ -2174,12 +2466,12 @@ def inspect_path(
         blob_digest = final_blob_digest
         blob_size = final_blob_size
 
-    unsafe = unsafe_findings(findings)
-    if kind == "file" and not unsafe_findings(findings) and not expected_archive:
+    unsafe = unsafe_findings(findings, policy)
+    if kind == "file" and not unsafe_findings(findings, policy) and not expected_archive:
         snapshot_kind = "blob"
         snapshot_id = "vsnap:1:blob:" + blob_digest
         manifest_bytes = build_manifest(entries, state="blob")
-        disposition = "admitted"
+        disposition = policy.complete_disposition
         reason_codes: list[str] = []
         execution_state = "complete"
     elif unsafe:
@@ -2187,14 +2479,14 @@ def inspect_path(
         manifest_bytes = build_manifest([], state="unavailable", reason_codes=reason_codes)
         snapshot_kind = "blob"
         snapshot_id = "vsnap:1:blob:" + blob_digest
-        disposition = "quarantined"
+        disposition = policy.unsafe_disposition
         execution_state = "failed" if any(f.code == "ARCHIVE_PARSE_FAILED" for f in unsafe) else "partial"
     else:
         manifest_bytes = build_manifest(entries)
         manifest_digest = digest_bytes(manifest_bytes)
         snapshot_kind = "tree"
         snapshot_id = "vsnap:1:tree:" + manifest_digest
-        disposition = "admitted"
+        disposition = policy.complete_disposition
         reason_codes = []
         execution_state = "complete"
 
@@ -2203,6 +2495,7 @@ def inspect_path(
         blob_digest=blob_digest,
         blob_size=blob_size,
         media_type=media_type,
+        content_type=content_type,
         snapshot_kind=snapshot_kind,
         snapshot_id=snapshot_id,
         manifest_bytes=manifest_bytes,
@@ -2229,6 +2522,7 @@ def failed_result_from_exception(
     display_path: Path | None = None,
 ) -> InspectionResult:
     identity_path = display_path or path
+    content_type = detect_media_type(path, "file", locator_media_type_hint(identity_path))
     finding = Finding(
         code="SCANNER_UNHANDLED_EXCEPTION",
         severity="hazard",
@@ -2245,7 +2539,8 @@ def failed_result_from_exception(
     return InspectionResult(
         blob_digest=blob_digest,
         blob_size=blob_size,
-        media_type=media_type_for(identity_path),
+        media_type=content_type.detected_media_type,
+        content_type=content_type,
         snapshot_kind="blob",
         snapshot_id="vsnap:1:blob:" + blob_digest,
         manifest_bytes=manifest_bytes,
@@ -2265,6 +2560,9 @@ def build_capture_envelope(
     hygiene_digest: str,
     hygiene_size: int,
     hygiene_predicate_type: str,
+    *,
+    implementation: ImplementationInfo,
+    policy: RawIntakePolicy,
 ) -> dict[str, object]:
     capture_id = args.capture_id or f"urn:uuid:{uuid.uuid4()}"
     source_id = args.source_id or default_source_id(Path(args.input), result.blob_digest)
@@ -2306,6 +2604,7 @@ def build_capture_envelope(
         "producer": {
             "id": INSPECTOR_ID,
             "version": INSPECTOR_VERSION,
+            "implementation": implementation.descriptor.to_json(),
         },
         "source": source_obj,
         "resolution": resolution,
@@ -2317,6 +2616,7 @@ def build_capture_envelope(
                 "size": result.blob_size,
                 "digest": result.blob_digest,
             },
+            "content_type": result.content_type.to_json(),
         },
         "snapshot": snapshot,
         "change": {
@@ -2337,7 +2637,8 @@ def build_capture_envelope(
         "raw_handling": {
             "disposition": result.disposition,
             "policy": {
-                "id": args.policy_id,
+                "id": policy.id,
+                "digest": policy.digest,
             },
             "reason_codes": result.reason_codes,
         },
@@ -2401,7 +2702,15 @@ def write_exclusive(path: Path, data: bytes) -> None:
             raise
 
 
-def write_outputs(out_dir: Path, input_path: Path, envelope: dict[str, object], manifest: bytes, hygiene: bytes) -> None:
+def write_outputs(
+    out_dir: Path,
+    input_path: Path,
+    envelope: dict[str, object],
+    manifest: bytes,
+    hygiene: bytes,
+    *,
+    policy_file: Path,
+) -> None:
     assert_safe_output_dir(out_dir, input_path)
     parent = out_dir.parent if out_dir.parent != Path("") else Path(".")
     parent.mkdir(parents=True, exist_ok=True)
@@ -2410,7 +2719,7 @@ def write_outputs(out_dir: Path, input_path: Path, envelope: dict[str, object], 
         write_exclusive(staging / "capture-envelope.json", json_bytes(envelope))
         write_exclusive(staging / "snapshot-manifest.jsonl", manifest)
         write_exclusive(staging / "snapshot-hygiene.intoto.json", hygiene)
-        validate_source_capture_bundle.validate_bundle(staging)
+        validate_source_capture_bundle.validate_bundle(staging, profile="enterprise-alpha1", policy_file=policy_file)
         if out_dir.exists():
             if any(out_dir.iterdir()):
                 raise FileExistsError(f"output directory became non-empty before commit: {out_dir}")
@@ -2441,6 +2750,9 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--compared-to-capture-id")
     parser.add_argument("--allow-content-source-fallback", action="store_true")
     parser.add_argument("--policy-id", default="vaks-raw-intake-default")
+    parser.add_argument("--policy-file", default=str(default_policy_path()))
+    parser.add_argument("--implementation-manifest", default=str(default_implementation_manifest_path()))
+    parser.add_argument("--max-input-blob-size", type=int, default=Limits.max_input_blob_size)
     parser.add_argument("--max-entries", type=int, default=Limits.max_entries)
     parser.add_argument("--max-total-size", type=int, default=Limits.max_total_size)
     parser.add_argument("--max-entry-size", type=int, default=Limits.max_entry_size)
@@ -2486,11 +2798,12 @@ def validate_args(parser: argparse.ArgumentParser, args: argparse.Namespace, inp
             parser.error("--change-state same_snapshot/new_snapshot require a valid --compared-to-capture-id")
     if args.change_state == "unknown" and args.compared_to_capture_id is not None:
         parser.error("--change-state unknown must not carry --compared-to-capture-id")
-    for name in ["requested_locator", "resolved_locator", "selector_kind", "policy_id"]:
+    for name in ["requested_locator", "resolved_locator", "selector_kind", "policy_id", "policy_file", "implementation_manifest"]:
         value = getattr(args, name)
         if value is not None and not str(value).strip():
             parser.error(f"--{name.replace('_', '-')} must be non-blank when provided")
     int_limits = {
+        "max_input_blob_size": args.max_input_blob_size,
         "max_entries": args.max_entries,
         "max_total_size": args.max_total_size,
         "max_entry_size": args.max_entry_size,
@@ -2508,6 +2821,7 @@ def validate_args(parser: argparse.ArgumentParser, args: argparse.Namespace, inp
     ):
         parser.error("--max-compression-ratio must be a finite positive number")
     return Limits(
+        max_input_blob_size=args.max_input_blob_size,
         max_entries=args.max_entries,
         max_total_size=args.max_total_size,
         max_entry_size=args.max_entry_size,
@@ -2534,22 +2848,54 @@ def main(argv: list[str] | None = None) -> int:
         )
     limits = validate_args(parser, args, input_path)
     try:
-        materialized = materialize_input_copy(input_path)
-    except Exception as exc:
+        implementation = load_implementation_info(Path(args.implementation_manifest))
+        policy = load_raw_intake_policy(Path(args.policy_file), args.policy_id)
+    except ImplementationPinningError as exc:
+        payload: dict[str, object] = {
+            "status": "fail",
+            "code": exc.code,
+            "error": str(exc),
+            "bundle_created": False,
+        }
+        if exc.component:
+            payload["component"] = exc.component
+        print(json.dumps(payload, allow_nan=False, ensure_ascii=False, sort_keys=True))
+        return 4
+    try:
+        materialized = materialize_input_copy(input_path, limits.max_input_blob_size)
+    except InputBlobLimitExceeded as exc:
         print(
             json.dumps(
                 {
                     "status": "fail",
-                    "error": "input could not be copied and hashed; no capture bundle was created",
-                    "exception_type": type(exc).__name__,
-                    "exception": str(exc),
+                    "code": "CAPTURE_INPUT_BLOB_LIMIT_EXCEEDED",
+                    "limit": exc.limit,
+                    "observed_at_least": exc.observed_at_least,
+                    "bundle_created": False,
                 },
                 allow_nan=False,
                 ensure_ascii=False,
                 sort_keys=True,
             )
         )
-        return 1
+        return 3
+    except Exception as exc:
+        print(
+            json.dumps(
+                {
+                    "status": "fail",
+                    "code": "CAPTURE_INPUT_COPY_FAILED",
+                    "error": "input could not be copied and hashed; no capture bundle was created",
+                    "exception_type": type(exc).__name__,
+                    "exception": str(exc),
+                    "bundle_created": False,
+                },
+                allow_nan=False,
+                ensure_ascii=False,
+                sort_keys=True,
+            )
+        )
+        return 3
     try:
         try:
             result = inspect_path(
@@ -2561,6 +2907,7 @@ def main(argv: list[str] | None = None) -> int:
                 blob_digest=materialized.blob_digest,
                 blob_size=materialized.blob_size,
                 display_path=input_path,
+                policy=policy,
             )
         except Exception as exc:
             result = failed_result_from_exception(
@@ -2581,10 +2928,19 @@ def main(argv: list[str] | None = None) -> int:
             snapshot_kind=result.snapshot_kind,
             capture_method=args.capture_method,
             limits=limits,
+            implementation=implementation,
         )
         hygiene_digest = digest_bytes(hygiene)
-        envelope = build_capture_envelope(args, result, hygiene_digest, len(hygiene), hygiene_predicate_type)
-        write_outputs(Path(args.out), input_path, envelope, result.manifest_bytes, hygiene)
+        envelope = build_capture_envelope(
+            args,
+            result,
+            hygiene_digest,
+            len(hygiene),
+            hygiene_predicate_type,
+            implementation=implementation,
+            policy=policy,
+        )
+        write_outputs(Path(args.out), input_path, envelope, result.manifest_bytes, hygiene, policy_file=policy.path)
         output_findings = prepared_findings(result.findings)
         summary = {
             "capture_envelope": str(Path(args.out) / "capture-envelope.json"),

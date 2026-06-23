@@ -224,6 +224,13 @@ and `aliases`. Capture history, manifests, hygiene findings, and adapter events
 belong in Capture Envelope artifacts or legacy/latest hint namespaces, not in
 `source_identity`.
 
+When structured capture is used, Source Capture Envelope v1.0-alpha.1 records
+the capture event, snapshot identity, manifest, hygiene report, input blob
+limit, media-type interpretation, implementation descriptor, and Raw intake
+policy digest. These are Raw / provenance facts only. They do not create
+reviewed knowledge, evidence support, relation authority, action readiness, or
+trust scoring.
+
 边界：
 
 ```text

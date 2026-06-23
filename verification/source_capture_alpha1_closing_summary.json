@@ -1,0 +1,50 @@
+{
+  "alpha": "source-capture-envelope-v1.0-alpha.1",
+  "baseline_commit": "9e976120",
+  "scope": "PR-A operational hardening only",
+  "implemented": [
+    "raw input blob hard limit",
+    "scanner-selected content type metadata",
+    "implementation manifest pinning",
+    "raw intake policy digest and decision replay",
+    "provider object ID alias contract"
+  ],
+  "not_in_scope": [
+    "Capture Store",
+    "Conformance Corpus",
+    "database",
+    "MCP write layer",
+    "DSSE/Rekor",
+    "full vault migration",
+    "review lane changes",
+    "automatic evidence review"
+  ],
+  "verification": {
+    "py_compile": "pass",
+    "implementation_manifest_check": "pass",
+    "isolated_worktree_check": "pass",
+    "source_capture_selftest": {
+      "passed": 68,
+      "status": "pass"
+    },
+    "source_capture_compat_wrapper": {
+      "passed": 68,
+      "status": "pass"
+    },
+    "source_intake_failure_matrix": {
+      "blocked": 45,
+      "cases": 45,
+      "status": "pass"
+    },
+    "source_intake_contract_lint": {
+      "errors": 0,
+      "warnings": 0,
+      "status": "pass"
+    }
+  },
+  "operational_notes": [
+    "Source-capture implementation components are pinned to LF checkout with .gitattributes so implementation manifest hashes are stable across Windows worktrees.",
+    "The first isolated check exposed CRLF drift; staged blobs were verified against the manifest and the final LF worktree check passed."
+  ],
+  "boundary": "Raw capture/provenance facts only; no reviewed knowledge, evidence support, action basis, trust score, or semantic promotion."
+}

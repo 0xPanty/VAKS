@@ -74,6 +74,9 @@
         },
         "blob": {
           "$ref": "#/$defs/descriptor"
+        },
+        "content_type": {
+          "$ref": "#/$defs/content_type"
         }
       }
     },
@@ -476,6 +479,50 @@
           "type": "string",
           "minLength": 1,
           "pattern": "\\S"
+        },
+        "implementation": {
+          "$ref": "#/$defs/descriptor"
+        }
+      }
+    },
+    "content_type": {
+      "type": "object",
+      "required": [
+        "profile",
+        "detected_media_type",
+        "detection_basis",
+        "hint_match"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "profile": {
+          "const": "vaks-media-type-detection/v1"
+        },
+        "detected_media_type": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "detection_basis": {
+          "enum": [
+            "container_parser",
+            "magic_signature",
+            "locator_hint",
+            "fallback"
+          ]
+        },
+        "locator_hint_media_type": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "hint_match": {
+          "enum": [
+            "matched",
+            "mismatch",
+            "no_hint",
+            "not_comparable"
+          ]
         }
       }
     },
