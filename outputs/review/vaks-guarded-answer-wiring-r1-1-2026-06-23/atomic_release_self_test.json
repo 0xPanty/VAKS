@@ -1,0 +1,24 @@
+{
+  "candidate_release_state": "pending_guard",
+  "committed_answer_policy": "review",
+  "committed_final": {
+    "action_readiness_granted": false,
+    "answer_policy": "review",
+    "atomic_release_phase": "guard_block_fallback",
+    "case_id": "atomic-release-self-test",
+    "citations": [],
+    "evaluation_state": "unavailable",
+    "final_answer_id": "final-atomic-release-self-test",
+    "final_sha256": "32d3e2a384bd53da2700b71ce5e06f192c442eba55c93f1a4bec9af8a6e61a59",
+    "final_text": "核验未通过。该请求需要复核，不能发布未核验结论。\n\n状态：需要复核",
+    "promotion_granted": false,
+    "release_state": "review_required",
+    "reviewed_truth_granted": false,
+    "status_label": "需要复核",
+    "visible_claim_ids": []
+  },
+  "committed_release_state": "review_required",
+  "guard_block_fail_open": false,
+  "guard_status_input": "block",
+  "status": "pass"
+}

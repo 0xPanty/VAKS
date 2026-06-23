@@ -1,0 +1,13 @@
+{
+  "r1_0_status": "pass",
+  "r1_0_zip": {
+    "actual_sha256": "9b98ba71c800e7e1579c56a3e488b1865666d5fe90b7e3e1ff51aa6e32c3f354",
+    "duplicate_count": 0,
+    "entry_count": 11,
+    "expected_sha256": "9b98ba71c800e7e1579c56a3e488b1865666d5fe90b7e3e1ff51aa6e32c3f354",
+    "sha_match": true,
+    "status": "pass",
+    "traversal_count": 0
+  },
+  "status": "pass"
+}

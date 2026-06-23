@@ -1,0 +1,17 @@
+{
+  "r1_1_manifest": {
+    "artifact_hash_count": 67,
+    "status": "pass"
+  },
+  "r1_1_runner_sha256": "660214cb84f9e82704297761b034de33a94498fb934179bbe4573f8ff13eb060",
+  "r1_1_summary_status": "pass",
+  "r1_1_zip": {
+    "actual_sha256": "fdba6ed85099e64a9e2da0120448f6d393c86cf2de598eca99bf1fd7acaaa49c",
+    "bad_entry": null,
+    "declared_sha256": "fdba6ed85099e64a9e2da0120448f6d393c86cf2de598eca99bf1fd7acaaa49c",
+    "duplicate_path_count": 0,
+    "entry_count": 69,
+    "status": "pass"
+  },
+  "status": "pass"
+}

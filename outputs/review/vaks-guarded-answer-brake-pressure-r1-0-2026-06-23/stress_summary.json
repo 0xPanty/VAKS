@@ -1,0 +1,30 @@
+{
+  "baseline_unsafe_total": 215889,
+  "failure_count": 0,
+  "first_failures": [],
+  "guarded_unsafe_total": 0,
+  "latency_observed": {
+    "avg_ms": 0.06966,
+    "max_ms": 23.7574,
+    "p95_ms": 0.1024,
+    "p99_ms": 0.4977,
+    "sample_count": 180000
+  },
+  "latency_slo": {
+    "avg_ms_max": 2.0,
+    "max_ms_max": 300.0,
+    "p95_ms_max": 5.0,
+    "p99_ms_max": 12.0
+  },
+  "latency_slo_checks": {
+    "avg_ok": true,
+    "max_ok": true,
+    "p95_ok": true,
+    "p99_ok": true
+  },
+  "parallel_count": 30000,
+  "status": "pass",
+  "stress_count": 180000,
+  "supported_claim_retention_rate": 1.0,
+  "unsafe_reduction_rate": 1.0
+}

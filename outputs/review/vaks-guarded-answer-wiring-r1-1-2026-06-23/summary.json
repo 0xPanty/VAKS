@@ -1,0 +1,49 @@
+{
+  "atomic_release_self_test_status": "pass",
+  "contract_version": "r1.1",
+  "fallback_case_count": 2,
+  "metrics": {
+    "action_readiness_granted_count": 0,
+    "blocked_claim_literal_exposure_count": 0,
+    "brake_path_latency": {
+      "avg_ms": 0.205928,
+      "max_ms": 93.3719,
+      "p95_ms": 0.4618,
+      "p99_ms": 1.4097,
+      "sample_count": 120000
+    },
+    "brake_path_p95_ms": 0.4618,
+    "candidate_or_rank_as_support_count": 0,
+    "extra_llm_call_count": 0,
+    "guard_block_fail_open_count": 0,
+    "high_risk_fail_open_count": 0,
+    "over_brake_count": 0,
+    "partial_without_allowed_expression_direct_count": 0,
+    "post_render_guard_violation_count": 0,
+    "product_text_issue_count": 0,
+    "released_claim_missing_independent_anchor_count": 0,
+    "status_label_match_rate": 1.0,
+    "supported_claim_preservation_rate": 1.0,
+    "unmapped_material_claim_count": 0,
+    "unsupported_assertion_survival_count": 0,
+    "visible_claim_without_guard_report_count": 0
+  },
+  "not_proven": [
+    "production_runtime_ready",
+    "live_llm_tool_runtime_validated",
+    "vector_graph_hybrid_retrieval_validated",
+    "reviewed_truth",
+    "action_readiness",
+    "end_to_end_production_latency_slo"
+  ],
+  "quality_lift": {
+    "blocked_literal_exposures_after_brake": 0,
+    "status_label_match_rate": 1.0,
+    "supported_claim_preservation_rate": 1.0
+  },
+  "ready_for_guarded_answer_release_sandbox": true,
+  "real_case_count": 33,
+  "run_id": "vaks-guarded-answer-wiring-r1-1-2026-06-23",
+  "status": "pass",
+  "stress_status": "pass"
+}

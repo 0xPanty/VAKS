@@ -1,0 +1,2 @@
+{"answer_policy": "abstain", "case_id": "fallback-001-light-binding-failure", "evaluation_state": "unavailable", "final_text": "核验暂不可用。当前仅返回可查看来源，不发布未核验事实结论。", "high_risk_fail_open": false, "old_draft_released": false, "release_state": "released_degraded"}
+{"answer_policy": "review", "case_id": "fallback-002-strict-brake-unavailable", "evaluation_state": "unavailable", "final_text": "核验暂不可用。该请求需要复核，不能发布未核验结论。", "high_risk_fail_open": false, "old_draft_released": false, "release_state": "review_required"}

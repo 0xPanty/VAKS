@@ -1,0 +1,22 @@
+{
+  "failure_count": 0,
+  "first_failures": [],
+  "latency_observed": {
+    "avg_ms": 0.205928,
+    "max_ms": 93.3719,
+    "p95_ms": 0.4618,
+    "p99_ms": 1.4097,
+    "sample_count": 120000
+  },
+  "latency_slo": {
+    "brake_only_p95_ms_max": 20.0,
+    "brake_only_p99_ms_max": 40.0
+  },
+  "latency_slo_checks": {
+    "p95_ok": true,
+    "p99_ok": true
+  },
+  "parallel_count": 20000,
+  "status": "pass",
+  "stress_count": 120000
+}

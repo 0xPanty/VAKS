@@ -1,0 +1,15 @@
+{
+  "production_control_allowed": false,
+  "read_only_canary_harness_allowed": true,
+  "status": "pass",
+  "summary_status": "pass",
+  "zip_check": {
+    "actual_sha256": "5f6e836d5ca28d62d1f7458330d7353efff35ce6b41e1b866dafc2057ebd32c5",
+    "duplicate_count": 0,
+    "entry_count": 10,
+    "expected_sha256": "5f6e836d5ca28d62d1f7458330d7353efff35ce6b41e1b866dafc2057ebd32c5",
+    "sha_match": true,
+    "status": "pass",
+    "traversal_count": 0
+  }
+}

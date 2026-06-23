@@ -1,0 +1,15 @@
+{
+  "avg_ms": 0.205928,
+  "checks": {
+    "p95_ok": true,
+    "p99_ok": true
+  },
+  "max_ms": 93.3719,
+  "p95_ms": 0.4618,
+  "p99_ms": 1.4097,
+  "sample_count": 120000,
+  "slo": {
+    "brake_only_p95_ms_max": 20.0,
+    "brake_only_p99_ms_max": 40.0
+  }
+}

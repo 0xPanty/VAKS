@@ -1,0 +1,7 @@
+{
+  "first_run_status": "pass",
+  "second_run_error_class": "FileExistsError",
+  "second_run_rejected": true,
+  "status": "pass",
+  "tree_hash_unchanged_after_rejected_second_run": true
+}

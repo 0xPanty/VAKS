@@ -1,0 +1,23 @@
+{
+  "answer_brake_effective": true,
+  "baseline_unsafe_total": 60,
+  "contract_version": "r1.0",
+  "guarded_unsafe_total": 0,
+  "low_risk_direct_preservation_rate": 1.0,
+  "matrix_case_count": 50,
+  "matrix_failed_count": 0,
+  "not_proven": [
+    "real_traffic_route_regret",
+    "live_llm_tool_answer_generation",
+    "vector_graph_hybrid_retrieval",
+    "reviewed_truth",
+    "action_readiness"
+  ],
+  "r0_13_status": "pass",
+  "ready_for_guarded_answer_wiring": true,
+  "run_id": "vaks-guarded-answer-brake-pressure-r1-0-2026-06-23",
+  "status": "pass",
+  "stress_status": "pass",
+  "supported_claim_retention_rate": 1.0,
+  "unsafe_reduction_rate": 1.0
+}

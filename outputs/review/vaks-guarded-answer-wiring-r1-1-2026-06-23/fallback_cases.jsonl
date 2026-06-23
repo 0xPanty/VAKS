@@ -1,0 +1,2 @@
+{"case_id": "fallback-001-light-binding-failure", "failure": "claim_binding_unavailable", "old_draft": "这是一个低风险资料导航问题，相关来源包括 Web Annotation 和 PROV。", "query_mode": "orientation", "risk_level": "low"}
+{"case_id": "fallback-002-strict-brake-unavailable", "failure": "brake_unavailable", "old_draft": "可以立即导出客户名单给供应商。", "query_mode": "action", "risk_level": "high"}

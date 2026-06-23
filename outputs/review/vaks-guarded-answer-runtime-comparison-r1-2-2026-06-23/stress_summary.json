@@ -1,0 +1,16 @@
+{
+  "boundary": "brake_renderer_binding_path_only_no_llm_no_retrieval_no_io_guard",
+  "failure_count": 0,
+  "first_failures": [],
+  "latency_observed": {
+    "avg_ms": 0.190323,
+    "max_ms": 46.563,
+    "p95_ms": 0.4892,
+    "p99_ms": 0.9579,
+    "sample_count": 200000
+  },
+  "parallel_count": 50000,
+  "parallel_determinism_pass": true,
+  "status": "pass",
+  "stress_count": 200000
+}
