@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -647,6 +648,294 @@ def check_source_card_authority_like_metadata(
             )
 
 
+VSRC_RE = re.compile(r"^vsrc:1:([A-Za-z0-9_.-]+):[^\s\x00-\x1f\x7f]+$")
+NO_CONTROL_RE = re.compile(r"^[^\x00-\x1f\x7f]+$")
+CAPTURE_ENVELOPE_REF_RE = re.compile(r"^(?![A-Za-z]:)(?!/)(?!.*\s)(?!.*\\)(?!.*(?:^|/)\.\.(?:/|$)).*/capture-envelope\.json$")
+IDENTITY_PROFILE_RE = re.compile(r"^[a-z0-9][a-z0-9_.-]*/v[0-9]+$")
+
+SOURCE_IDENTITY_KEYS = {
+    "schema_version",
+    "source_id",
+    "kind",
+    "canonical_locator",
+    "identity_profile",
+    "aliases",
+}
+
+SOURCE_IDENTITY_ID_KINDS = {
+    "repo",
+    "doi",
+    "arxiv",
+    "openalex",
+    "video",
+    "opaque",
+    "content",
+}
+
+
+def vsrc_kind(source_id: Any) -> str | None:
+    if not isinstance(source_id, str):
+        return None
+    match = VSRC_RE.match(source_id)
+    return match.group(1) if match else None
+
+
+def has_control_char(value: str) -> bool:
+    return NO_CONTROL_RE.match(value) is None
+
+
+def check_source_capture_identity(
+    issues: list[dict[str, Any]],
+    path: Path,
+    data: dict[str, Any],
+    *,
+    require_value: bool,
+) -> None:
+    top_source_id = data.get("source_id")
+    source_identity = data.get("source_identity")
+    if "source_integrity" in data:
+        add_issue(
+            issues,
+            path,
+            "warning",
+            "legacy_source_integrity_compatibility",
+            "source_integrity",
+            data.get("source_integrity"),
+            "source_integrity is legacy ingest hygiene; new structured capture should use Source Capture Envelope v1 artifacts.",
+            semantic_class="migration_debt_defer_ok",
+            recommended_action="leave legacy records as-is; use source_identity/latest_observed_capture_ref and capture-envelope artifacts when naturally touched",
+        )
+    if source_identity is None:
+        add_issue(
+            issues,
+            path,
+            "warning",
+            "source_identity_missing",
+            "source_identity",
+            None,
+            "Source Card lacks Source Capture Envelope v1 source_identity; legacy records remain readable but new structured captures should include it.",
+            semantic_class="migration_debt_defer_ok",
+            recommended_action="do not bulk migrate; add source_identity on new or naturally touched source records",
+        )
+        return
+    if not isinstance(source_identity, dict):
+        add_issue(
+            issues,
+            path,
+            "error",
+            "source_identity_shape",
+            "source_identity",
+            source_identity,
+            "source_identity must be a mapping when present.",
+        )
+        return
+    extra_keys = sorted(set(source_identity) - SOURCE_IDENTITY_KEYS)
+    for key in extra_keys:
+        add_issue(
+            issues,
+            path,
+            "error",
+            "source_identity_extra_field",
+            f"source_identity.{key}",
+            source_identity.get(key),
+            "source_identity v1 is a lightweight identity mapping; extra fields must live in Capture Envelope artifacts or legacy/latest hint namespaces.",
+        )
+    for key in sorted(SOURCE_IDENTITY_KEYS):
+        if key not in source_identity:
+            add_issue(
+                issues,
+                path,
+                "error",
+                "source_identity_missing_field",
+                f"source_identity.{key}",
+                None,
+                "source_identity v1 requires schema_version, source_id, kind, canonical_locator, identity_profile, and aliases when the mapping is present.",
+            )
+    schema_version = source_identity.get("schema_version")
+    nested_source_id = source_identity.get("source_id")
+    identity_kind = source_identity.get("kind")
+    canonical_locator = source_identity.get("canonical_locator")
+    identity_profile = source_identity.get("identity_profile")
+    aliases = source_identity.get("aliases")
+    if schema_version != 1:
+        add_issue(
+            issues,
+            path,
+            "error",
+            "source_identity_schema_version",
+            "source_identity.schema_version",
+            schema_version,
+            "source_identity.schema_version must be 1 for Source Capture Envelope v1.",
+        )
+    if not is_blank(nested_source_id):
+        if not isinstance(nested_source_id, str) or not VSRC_RE.match(nested_source_id):
+            add_issue(
+                issues,
+                path,
+                "error",
+                "source_identity_id_format",
+                "source_identity.source_id",
+                nested_source_id,
+                "source_identity.source_id must use the vsrc:1 stable source-id format.",
+            )
+        else:
+            id_kind = vsrc_kind(nested_source_id)
+            if id_kind not in SOURCE_IDENTITY_ID_KINDS:
+                add_issue(
+                    issues,
+                    path,
+                    "error",
+                    "source_identity_id_kind",
+                    "source_identity.source_id",
+                    nested_source_id,
+                    "source_identity.source_id uses an unsupported vsrc:1 kind for v1 Source Cards.",
+                )
+            if not is_blank(identity_kind) and identity_kind != id_kind:
+                add_issue(
+                    issues,
+                    path,
+                    "error",
+                    "source_identity_kind_mismatch",
+                    "source_identity.kind",
+                    identity_kind,
+                    "source_identity.kind must match the vsrc:1 kind embedded in source_identity.source_id.",
+                )
+        if isinstance(top_source_id, str) and top_source_id.startswith("vsrc:1:") and top_source_id != nested_source_id:
+            add_issue(
+                issues,
+                path,
+                "error",
+                "source_identity_top_level_mismatch",
+                "source_id",
+                top_source_id,
+                "Top-level source_id mirrors source_identity.source_id when it uses vsrc:1.",
+            )
+    elif require_value and not is_template_path(path):
+        add_issue(
+            issues,
+            path,
+            "error",
+            "source_identity_id_blank",
+            "source_identity.source_id",
+            nested_source_id,
+            "source_identity exists but does not carry a stable source_id.",
+        )
+    if not is_blank(identity_kind):
+        if not isinstance(identity_kind, str) or identity_kind not in SOURCE_IDENTITY_ID_KINDS:
+            add_issue(
+                issues,
+                path,
+                "error",
+                "source_identity_kind",
+                "source_identity.kind",
+                identity_kind,
+                "source_identity.kind must be one of the v1 source identity kinds.",
+            )
+    elif require_value and not is_template_path(path):
+        add_issue(
+            issues,
+            path,
+            "error",
+            "source_identity_kind_blank",
+            "source_identity.kind",
+            identity_kind,
+            "source_identity exists but does not carry a source kind.",
+        )
+    for field, value in [
+        ("canonical_locator", canonical_locator),
+        ("identity_profile", identity_profile),
+    ]:
+        if is_blank(value):
+            if require_value and not is_template_path(path):
+                add_issue(
+                    issues,
+                    path,
+                    "error",
+                    f"source_identity_{field}_blank",
+                    f"source_identity.{field}",
+                    value,
+                    f"source_identity.{field} is required when source_identity is present.",
+                )
+            continue
+        if not isinstance(value, str) or has_control_char(value):
+            add_issue(
+                issues,
+                path,
+                "error",
+                f"source_identity_{field}_format",
+                f"source_identity.{field}",
+                value,
+                f"source_identity.{field} must be a plain string without control characters.",
+            )
+    if not is_blank(identity_profile) and isinstance(identity_profile, str) and not IDENTITY_PROFILE_RE.match(identity_profile):
+        add_issue(
+            issues,
+            path,
+            "error",
+            "source_identity_profile_format",
+            "source_identity.identity_profile",
+            identity_profile,
+            "source_identity.identity_profile must be a versioned profile such as repo-provider-native/v1.",
+        )
+    if not isinstance(aliases, list):
+        add_issue(
+            issues,
+            path,
+            "error",
+            "source_identity_aliases_shape",
+            "source_identity.aliases",
+            aliases,
+            "source_identity.aliases must be a list of typed alias objects.",
+        )
+    else:
+        for idx, alias in enumerate(aliases):
+            if not alias and not require_value:
+                continue
+            if not isinstance(alias, dict) or set(alias) != {"kind", "value"}:
+                add_issue(
+                    issues,
+                    path,
+                    "error",
+                    "source_identity_alias_shape",
+                    f"source_identity.aliases[{idx}]",
+                    alias,
+                    "Each source_identity alias must be a mapping with only string kind and value fields.",
+                )
+                continue
+            if not isinstance(alias.get("kind"), str) or is_blank(alias.get("kind")) or has_control_char(alias.get("kind")):
+                add_issue(
+                    issues,
+                    path,
+                    "error",
+                    "source_identity_alias_kind",
+                    f"source_identity.aliases[{idx}].kind",
+                    alias.get("kind"),
+                    "Each source_identity alias kind must be a non-blank string without control characters.",
+                )
+            if not isinstance(alias.get("value"), str) or is_blank(alias.get("value")) or has_control_char(alias.get("value")):
+                add_issue(
+                    issues,
+                    path,
+                    "error",
+                    "source_identity_alias_value",
+                    f"source_identity.aliases[{idx}].value",
+                    alias.get("value"),
+                    "Each source_identity alias value must be a non-blank string without control characters.",
+                )
+    latest_ref = data.get("latest_observed_capture_ref")
+    if not is_blank(latest_ref):
+        if not isinstance(latest_ref, str) or has_control_char(latest_ref) or not CAPTURE_ENVELOPE_REF_RE.match(latest_ref):
+            add_issue(
+                issues,
+                path,
+                "error",
+                "latest_observed_capture_ref_format",
+                "latest_observed_capture_ref",
+                latest_ref,
+                "latest_observed_capture_ref must be a relative pointer ending in capture-envelope.json.",
+            )
+
+
 def check_legacy_project_lens_overlay(
     issues: list[dict[str, Any]],
     path: Path,
@@ -922,6 +1211,7 @@ def validate_file(root: Path, rel_path: Path, registry: dict[str, Any], issues: 
     if record_kind == "source_card":
         if require_value:
             check_source_card_authority_like_metadata(issues, rel_path, data)
+        check_source_capture_identity(issues, rel_path, data, require_value=require_value)
         for field in ["source_id", "captured_at", "title", "why_saved"]:
             require_field(issues, rel_path, data, field, require_value=require_value)
         require_one_of(issues, rel_path, data, ["source_url", "raw_location"], require_value=require_value)

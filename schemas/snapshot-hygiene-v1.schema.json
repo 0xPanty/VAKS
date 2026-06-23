@@ -1,0 +1,326 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:vaks:schema:snapshot-hygiene:v1",
+  "title": "VAKS Snapshot Hygiene Attestation v1",
+  "type": "object",
+  "required": [
+    "_type",
+    "subject",
+    "predicateType",
+    "predicate"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "_type": {
+      "const": "https://in-toto.io/Statement/v1"
+    },
+    "subject": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "digest"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "enum": [
+              "snapshot-manifest",
+              "capture-blob"
+            ]
+          },
+          "digest": {
+            "type": "object",
+            "required": [
+              "sha256"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          }
+        }
+      }
+    },
+    "predicateType": {
+      "enum": [
+        "urn:vaks:predicate:repo-snapshot-hygiene:v1",
+        "urn:vaks:predicate:source-snapshot-hygiene:v1"
+      ]
+    },
+    "predicate": {
+      "type": "object",
+      "required": [
+        "checker",
+        "execution_state",
+        "profiles",
+        "parameters",
+        "summary",
+        "findings"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "checker": {
+          "type": "object",
+          "required": [
+            "id",
+            "version"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "version": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            }
+          }
+        },
+        "execution_state": {
+          "enum": [
+            "complete",
+            "partial",
+            "failed",
+            "not_run"
+          ]
+        },
+        "profiles": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/profile"
+          }
+        },
+        "parameters": {
+          "type": "object",
+          "required": [
+            "limits_profile",
+            "max_entries",
+            "max_total_size",
+            "max_entry_size",
+            "max_compression_ratio",
+            "max_path_depth",
+            "max_path_length",
+            "max_symlink_target_size",
+            "max_findings_per_code",
+            "max_finding_paths",
+            "max_finding_detail_items"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "limits_profile": {
+              "const": "vaks-default-archive-limits/v1"
+            },
+            "max_entries": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "max_total_size": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "max_entry_size": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "max_compression_ratio": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "max_path_depth": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "max_path_length": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "max_symlink_target_size": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "max_findings_per_code": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "max_finding_paths": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "max_finding_detail_items": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        "summary": {
+          "type": "object",
+          "required": [
+            "finding_count",
+            "max_severity"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "finding_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "max_severity": {
+              "enum": [
+                "none",
+                "info",
+                "warning",
+                "hazard",
+                "error"
+              ]
+            }
+          }
+        },
+        "findings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "code",
+              "severity",
+              "profile",
+              "message"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "code": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "severity": {
+                "enum": [
+                  "info",
+                  "warning",
+                  "hazard",
+                  "error"
+                ]
+              },
+              "profile": {
+                "$ref": "#/$defs/profile"
+              },
+              "message": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "paths": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "details": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "execution_state": {
+                "const": "not_run"
+              }
+            },
+            "required": [
+              "execution_state"
+            ]
+          },
+          "then": {
+            "properties": {
+              "profiles": {
+                "maxItems": 0
+              },
+              "findings": {
+                "maxItems": 0
+              },
+              "summary": {
+                "properties": {
+                  "finding_count": {
+                    "const": 0
+                  },
+                  "max_severity": {
+                    "const": "none"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "execution_state": {
+                "enum": [
+                  "complete",
+                  "partial",
+                  "failed"
+                ]
+              }
+            },
+            "required": [
+              "execution_state"
+            ]
+          },
+          "then": {
+            "properties": {
+              "profiles": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "execution_state": {
+                "enum": [
+                  "partial",
+                  "failed"
+                ]
+              }
+            },
+            "required": [
+              "execution_state"
+            ]
+          },
+          "then": {
+            "properties": {
+              "findings": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "$defs": {
+    "profile": {
+      "enum": [
+        "archive-safety/v1",
+        "repo-portability/v1",
+        "repo-completeness/v1",
+        "source-fixity/v1"
+      ]
+    }
+  }
+}

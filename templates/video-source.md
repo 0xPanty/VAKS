@@ -1,11 +1,20 @@
 ---
 type: source
+record_kind: source_card
 status: source-captured
 title:
 source_id:
 source_uri:
 source_url:
 source_type: video
+source_identity:
+  schema_version: 1
+  source_id:
+  kind: video
+  canonical_locator:
+  identity_profile:
+  aliases: []
+latest_observed_capture_ref:
 platform:
 platform_id:
 author:
@@ -16,8 +25,6 @@ duration:
 captured_at:
 captured_by: Codex
 raw_location: raw/videos/
-processing_mode: inbox
-processing_level: light
 processing_tier: light
 knowledge_status: raw
 overlay_state: none
@@ -33,6 +40,7 @@ truth_mutation_allowed: false
 review_priority: normal
 review_owner: Codex
 formalization_status: raw-only
+why_saved:
 access_boundary: public
 transcript_method: none
 transcript_location:

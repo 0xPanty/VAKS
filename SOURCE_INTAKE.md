@@ -252,7 +252,7 @@ constraints, and review routing should be mandatory.
 
 | Object | Required fields | Optional fields | Boundary |
 |---|---|---|---|
-| Source Card | `source_id`, `source_url` or `raw_location`, `captured_at`, `title`, `why_saved` | `source_hash`, `snapshot_hash`, `adapter_ingest`, `author`, `version_or_commit` | provenance only; no adopt/reject |
+| Source Card | `source_id`, `source_url` or `raw_location`, `captured_at`, `title`, `why_saved` | `source_identity`, `latest_observed_capture_ref`, `adapter_ingest`, `author`, `version_or_commit` | provenance only; no adopt/reject |
 | Source Annotation Sidecar | `annotation_id`, `source_ref`, `selector_type`, one stable selector, `anchor_status`, `annotation_role`, `support_checked`, `evidence_support_status` | `working_copy_ref`, `source_snapshot_ref`, `source_hash`, `content_hash`, `anchor_checked_at`, `anchor_stale`, `anchor_match_count`, `blocked_reason`, `next_action`, `source_digest_required`, `source_digest_ref`, `candidate_refs`, `project_overlay_refs`, `external_annotation_id`, `evidence_packet_ref` when `support_checked: true` | source-local locator; not support, not project verdict |
 | Medium Candidate | `source_ref`, `provisional: true`, `knowledge_status: candidate`, structured summary, candidate points | `open_questions`, `routing_hint`, `point_anchor_refs`, `possible_project_refs` | provisional orientation, not rule |
 | Project Overlay Confirmed | `project_id`, `target_ref`, `overlay_state: confirmed`, `project_borrow_scope`, `project_non_borrow_scope`, `project_reopen_trigger` | `target_hint`, `last_checked_at`, `expires_at`, `confirmation_basis` | project sidecar, not truth |
@@ -1046,7 +1046,7 @@ This does not make capture heavy. Light sources keep the minimal identity fields
 
 Review, promotion, and context-pack usage are not stored as source main fields. They belong to reviewed nodes, promotion records, context packs, or the use ledger.
 
-Source hash / incremental ingest hygiene:
+Legacy source hash / incremental ingest hygiene:
 
 ```yaml
 source_integrity:
@@ -1058,6 +1058,79 @@ source_integrity:
 Source hashes help detect duplicate, changed, unchanged, or deleted source
 material. They are source hygiene only. They do not decide truth, evidence
 support, review verdict, verification status, or action readiness.
+
+`source_integrity` is legacy compatibility. New structured captures should not
+add new meanings to this catch-all field. Use Source Capture Envelope v1:
+
+```text
+Source Card
+-> capture-envelope.json
+-> snapshot-manifest.jsonl
+-> snapshot-hygiene.intoto.json
+```
+
+The v1 contract separates:
+
+```text
+Source    stable upstream identity
+Revision  upstream version claim
+Snapshot  intrinsic observed content identity
+Capture   one observation/capture event
+```
+
+Minimal Source Card pointer:
+
+```yaml
+source_identity:
+  schema_version: 1
+  source_id: "vsrc:1:repo:github.com/owner/name"
+  kind: repo
+  canonical_locator: "git+https://github.com/owner/name"
+  identity_profile: "repo-provider-native/v1"
+  aliases: []
+latest_observed_capture_ref: "raw/captures/<capture-id>/capture-envelope.json"
+```
+
+When `source_identity` appears, it switches the Source Card into v1 strict mode:
+the mapping is limited to `schema_version`, `source_id`, `kind`,
+`canonical_locator`, `identity_profile`, and `aliases`. Capture history,
+manifest details, hygiene findings, adapter events, and review facts belong in
+Capture Envelope / manifest / hygiene artifacts, not inside `source_identity`.
+
+The capture envelope records the actual observation, captured blob, snapshot ID,
+report references, observation/change/fidelity state, and raw handling
+disposition. Snapshot manifests are deterministic logical content descriptions.
+Hygiene attestations bind versioned checker facts to a digest. These are raw
+capture facts only; they do not create trust, evidence support, reviewed
+knowledge, reviewed relations, verification status, or action readiness.
+Repo captures use repo hygiene predicates/profiles. Generic blobs, PDFs, videos,
+web bundles, or isolated files must not automatically inherit repo portability
+or repo completeness conclusions.
+
+Authoritative v1 details live in:
+
+- `docs/source-id-v1.md`
+- `docs/snapshot-manifest-v1.md`
+- `schemas/source-capture-v1.schema.json`
+- `schemas/snapshot-hygiene-v1.schema.json`
+
+Read-only inspector entry point:
+
+```powershell
+python tools/inspect_source_snapshot.py <source-blob-or-archive> --out <explicit-output-dir>
+```
+
+The inspector must not modify Source Cards, candidates, reviewed knowledge, or
+action artifacts.
+
+Inspector defaults are conservative: `change.state` defaults to `unknown`;
+repo/web/video sources require an explicit stable `source_id` unless content
+fallback is explicitly allowed; local absolute `resolved_locator` is not emitted
+unless supplied by the caller.
+
+`raw_handling.disposition: admitted` only means raw-layer admission. It is not a
+verified-source label. `max_severity: none` only means the current checker found
+no known issue under the recorded parameters.
 
 Source adapter ingest contract:
 

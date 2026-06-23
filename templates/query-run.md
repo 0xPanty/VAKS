@@ -1,9 +1,10 @@
 ---
-record_type: query-run
+record_kind: query_run_trace
 status: archived
 created:
 updated:
 query_id:
+query_time:
 session_id:
 turn_id:
 parent_query_id:
@@ -11,6 +12,8 @@ question_summary:
 verbatim_input:
 model_interpretation:
 query_intent: answer | decision | implementation | research | content | memory
+query_mode: orientation
+active_project:
 query_scope:
   project:
   domain:
@@ -26,8 +29,28 @@ activated_routes: []
 included_sources: []
 excluded_candidates: []
 retrieval_mode:
+requested_authority_bucket:
+included_buckets: []
+excluded_buckets: []
 authority_bucket:
 rrf_scope: same_authority_bucket_only
+retrieval_filters:
+  include_candidates: false
+  include_overlays: active_project_only
+selected_items:
+  - ref:
+    record_kind:
+    knowledge_status:
+    pack_role: orientation
+    warning_code:
+    action_basis_allowed: false
+    independent_anchor_ref:
+    selected_by:
+      lexical:
+      semantic:
+      graph:
+      metadata:
+      legacy_raw_metadata: false
 overlay_suggestions:
   - target_ref:
     project_ref:
@@ -39,6 +62,7 @@ overlay_suggestions:
 answer_path: []
 warnings: []
 gaps: []
+human_confirmation_required: false
 support_boundary:
   supported_not_truth: true
   answer_ready_not_action_ready: true
@@ -46,6 +70,10 @@ support_boundary:
   independent_anchor_required: true
   self_support_loop_check:
   support_result: supported | weak | missing_anchor | self_support_loop | scope_limited | not_ready
+support_checks:
+  - claim_ref:
+    independent_anchor_ref:
+    result: supported | weak | missing_anchor | self_support_loop | scope_limited | not_ready
 feedback_summary:
   positive_feedback:
   negative_feedback:

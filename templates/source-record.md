@@ -7,6 +7,14 @@ source_id:
 source_uri:
 source_url:
 source_type: article
+source_identity:
+  schema_version: 1
+  source_id:
+  kind:
+  canonical_locator:
+  identity_profile:
+  aliases: []
+latest_observed_capture_ref:
 author:
 publisher:
 published_at:
@@ -14,10 +22,6 @@ updated_at:
 captured_at:
 captured_by:
 version_or_commit:
-source_integrity:
-  source_hash:
-  snapshot_hash:
-  ingest_state: unknown
 adapter_ingest:
   adapter_name:
   adapter_version:
@@ -89,9 +93,13 @@ Source records provide provenance and findability. They must not carry
 adopt/reject verdicts, truth scores, project borrowing conclusions, or action
 basis.
 
-`source_integrity` is ingest hygiene only. It helps detect new, changed,
-unchanged, or deleted source material, but it does not create evidence support,
-verification status, truth confidence, or action readiness.
+`source_identity` is stable source identity only. `latest_observed_capture_ref`
+is a navigation pointer to the newest known Capture Envelope, not the only
+history and not an action basis.
+
+Older records may contain `source_integrity`. Treat it as legacy ingest hygiene
+only. New structured captures should use Source Capture Envelope v1 artifacts
+instead of adding more meanings to `source_integrity`.
 
 `adapter_ingest` is ingest hygiene only. It records how a source was captured or
 converted and what limits are known. It must not create reviewed wiki nodes,

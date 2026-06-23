@@ -190,6 +190,14 @@ Raw capture 和 source record 不需要一开始填满 evidence、confidence、r
 source_id:
 source_uri:
 source_type:
+source_identity:
+  schema_version: 1
+  source_id:
+  kind:
+  canonical_locator:
+  identity_profile:
+  aliases: []
+latest_observed_capture_ref:
 version_or_commit:
 captured_at:
 captured_by:
@@ -209,6 +217,12 @@ provenance:
   activities: []
   agents: []
 ```
+
+If `source_identity` appears, it uses strict v1 identity shape only:
+`schema_version`, `source_id`, `kind`, `canonical_locator`, `identity_profile`,
+and `aliases`. Capture history, manifests, hygiene findings, and adapter events
+belong in Capture Envelope artifacts or legacy/latest hint namespaces, not in
+`source_identity`.
 
 边界：
 
