@@ -45,6 +45,10 @@ def write_zip_infos(path: Path, entries: list[tuple[zipfile.ZipInfo, bytes]]) ->
             zf.writestr(info, data)
 
 
+def long_manifest_paths(count: int) -> list[tuple[str, bytes]]:
+    return [(f"{idx:04d}-{'a' * 261}", b"a") for idx in range(count)]
+
+
 def write_zip_with_compression(path: Path, entries: list[tuple[str, bytes]], compression: int) -> None:
     with zipfile.ZipFile(path, "w", compression=compression) as zf:
         for name, data in entries:
@@ -237,6 +241,31 @@ def rebind_hygiene_ref(out_dir: Path, envelope: dict[str, Any], hygiene: dict[st
     envelope["inspection_refs"][0]["size"] = len(hygiene_bytes)
     envelope["inspection_refs"][0]["digest"] = inspect_source_snapshot.digest_bytes(hygiene_bytes)
     write_json(out_dir / "capture-envelope.json", envelope)
+
+
+def rewrite_hygiene_findings(out_dir: Path, findings: list[dict[str, Any]]) -> tuple[dict[str, Any], dict[str, Any]]:
+    envelope = json.loads((out_dir / "capture-envelope.json").read_text(encoding="utf-8"))
+    hygiene = json.loads((out_dir / "snapshot-hygiene.intoto.json").read_text(encoding="utf-8"))
+    hygiene["predicate"]["findings"] = findings
+    hygiene["predicate"]["summary"] = {
+        "finding_count": len(findings),
+        "max_severity": validate_source_capture_bundle.computed_max_severity(findings),
+    }
+    rebind_hygiene_ref(out_dir, envelope, hygiene)
+    return envelope, hygiene
+
+
+def assert_enterprise_validator_rejects(out_dir: Path, expected: str) -> None:
+    try:
+        validate_source_capture_bundle.validate_bundle(
+            out_dir,
+            profile="enterprise-alpha1",
+            policy_file=inspect_source_snapshot.default_policy_path(),
+        )
+    except validate_source_capture_bundle.ValidationError as exc:
+        assert expected in str(exc), str(exc)
+    else:
+        raise AssertionError(f"enterprise-alpha1 must reject bundle: {expected}")
 
 
 def write_manifest_rows(out_dir: Path, rows: list[dict[str, Any]]) -> bytes:
@@ -1028,6 +1057,315 @@ def test_input_profile_blob_cannot_override_archive_intent(tmp: Path) -> None:
     expect_bundle_validation_error(out_dir)
 
 
+def test_input_profile_blob_can_force_local_file_blob(tmp: Path) -> None:
+    archive = tmp / "force-blob.zip"
+    write_zip(archive, [("repo/a.txt", b"a")])
+    result = run_inspector(
+        archive,
+        tmp / "out-force-blob",
+        "--source-kind",
+        "file",
+        "--capture-method",
+        "local_file",
+        "--input-profile",
+        "blob",
+        "--source-id",
+        "vsrc:1:content:sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    )
+    envelope = result["envelope"]
+    content_type = envelope["observation"]["content_type"]
+    assert envelope["snapshot"]["kind"] == "blob"
+    assert envelope["raw_handling"]["disposition"] == "admitted"
+    assert envelope["observation"]["blob"]["media_type"] == "application/octet-stream"
+    assert content_type["detected_media_type"] == "application/octet-stream"
+    assert content_type["detection_basis"] == "fallback"
+    assert content_type["locator_hint_media_type"] == "application/zip"
+    assert content_type["hint_match"] == "mismatch"
+    assert "MEDIA_TYPE_HINT_MISMATCH" in finding_codes(result)
+    validate_source_capture_bundle.validate_bundle(
+        result["out_dir"],
+        profile="enterprise-alpha1",
+        policy_file=inspect_source_snapshot.default_policy_path(),
+    )
+
+
+def test_path_too_long_is_portability_warning_not_hard_failure(tmp: Path) -> None:
+    archive = tmp / "long-path.zip"
+    long_name = "a" * 261
+    write_zip(archive, [(f"repo/{long_name}", b"a")])
+    result = run_inspector(archive, tmp / "out-long-path")
+    envelope = result["envelope"]
+    assert envelope["snapshot"]["kind"] == "tree"
+    assert envelope["raw_handling"]["disposition"] == "admitted"
+    assert "PATH_TOO_LONG" in finding_codes(result)
+    assert ("PATH_TOO_LONG", "warning") in {
+        (item["code"], item["severity"]) for item in result["hygiene"]["predicate"]["findings"]
+    }
+    validate_source_capture_bundle.validate_bundle(
+        result["out_dir"],
+        profile="enterprise-alpha1",
+        policy_file=inspect_source_snapshot.default_policy_path(),
+    )
+
+
+def test_bundle_rejects_unbound_path_too_long_warning(tmp: Path) -> None:
+    archive = tmp / "long-path-unbound-warning.zip"
+    long_name = "a" * 261
+    write_zip(archive, [(f"repo/{long_name}", b"a")])
+    result = run_inspector(archive, tmp / "out-long-path-unbound-warning")
+    out_dir = result["out_dir"]
+    envelope = json.loads((out_dir / "capture-envelope.json").read_text(encoding="utf-8"))
+    hygiene = json.loads((out_dir / "snapshot-hygiene.intoto.json").read_text(encoding="utf-8"))
+    for finding in hygiene["predicate"]["findings"]:
+        if finding["code"] == "PATH_TOO_LONG":
+            finding["paths"] = ["short.txt"]
+            break
+    rebind_hygiene_ref(out_dir, envelope, hygiene)
+    try:
+        validate_source_capture_bundle.validate_bundle(
+            out_dir,
+            profile="enterprise-alpha1",
+            policy_file=inspect_source_snapshot.default_policy_path(),
+        )
+    except validate_source_capture_bundle.ValidationError as exc:
+        assert "PATH_TOO_LONG" in str(exc) or "path length" in str(exc)
+    else:
+        raise AssertionError("enterprise-alpha1 must bind PATH_TOO_LONG warnings to the over-limit manifest path")
+
+
+def test_archive_path_hard_limit_is_structured_quarantine(tmp: Path) -> None:
+    exact_limit_archive = tmp / "exact-limit-path.zip"
+    exact_limit_path = "a" * inspect_source_snapshot.MAX_ARCHIVE_PATH_STRING_LENGTH
+    write_zip(exact_limit_archive, [(exact_limit_path, b"a")])
+    exact_result = run_inspector(exact_limit_archive, tmp / "out-exact-limit-path")
+    assert exact_result["envelope"]["snapshot"]["kind"] == "tree"
+    assert exact_result["envelope"]["raw_handling"]["disposition"] == "admitted"
+    assert "PATH_TOO_LONG" in finding_codes(exact_result)
+    validate_source_capture_bundle.validate_bundle(
+        exact_result["out_dir"],
+        profile="enterprise-alpha1",
+        policy_file=inspect_source_snapshot.default_policy_path(),
+    )
+
+    over_limit_archive = tmp / "over-limit-path.zip"
+    over_limit_path = "a" * (inspect_source_snapshot.MAX_ARCHIVE_PATH_STRING_LENGTH + 1)
+    write_zip(over_limit_archive, [(over_limit_path, b"a")])
+    over_result = run_inspector(over_limit_archive, tmp / "out-over-limit-path")
+    assert over_result["envelope"]["snapshot"]["kind"] == "blob"
+    assert over_result["envelope"]["raw_handling"]["disposition"] == "quarantined"
+    assert "ARCHIVE_PATH_LENGTH_LIMIT_EXCEEDED" in finding_codes(over_result)
+    path_limit_findings = [
+        item
+        for item in over_result["hygiene"]["predicate"]["findings"]
+        if item["code"] == "ARCHIVE_PATH_LENGTH_LIMIT_EXCEEDED"
+    ]
+    assert path_limit_findings
+    assert not path_limit_findings[0].get("paths")
+    assert path_limit_findings[0]["details"]["path_length"] == len(over_limit_path)
+    validate_source_capture_bundle.validate_bundle(
+        over_result["out_dir"],
+        profile="enterprise-alpha1",
+        policy_file=inspect_source_snapshot.default_policy_path(),
+    )
+
+    near_zip_limit_archive = tmp / "near-zip-limit-path.zip"
+    near_zip_limit_path = "a" * 65_000
+    write_zip(near_zip_limit_archive, [(near_zip_limit_path, b"a")])
+    near_result = run_inspector(near_zip_limit_archive, tmp / "out-near-zip-limit-path")
+    assert near_result["envelope"]["snapshot"]["kind"] == "blob"
+    assert near_result["envelope"]["raw_handling"]["disposition"] == "quarantined"
+    assert "ARCHIVE_PATH_LENGTH_LIMIT_EXCEEDED" in finding_codes(near_result)
+    validate_source_capture_bundle.validate_bundle(
+        near_result["out_dir"],
+        profile="enterprise-alpha1",
+        policy_file=inspect_source_snapshot.default_policy_path(),
+    )
+
+
+def test_path_too_long_uses_root_stripped_manifest_path(tmp: Path) -> None:
+    archive = tmp / "root-stripped-long-path.zip"
+    final_path = "a" * 259
+    write_zip(archive, [(f"r/{final_path}", b"a")])
+    result = run_inspector(archive, tmp / "out-root-stripped-long-path")
+    assert result["envelope"]["snapshot"]["kind"] == "tree"
+    assert result["envelope"]["raw_handling"]["disposition"] == "admitted"
+    assert "PATH_TOO_LONG" not in finding_codes(result)
+    manifest_entries = [json.loads(line) for line in result["manifest_lines"][1:]]
+    assert manifest_entries == [
+        {
+            "digest": "sha256:ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+            "mode": "100644",
+            "path": final_path,
+            "size": 1,
+            "type": "file",
+        }
+    ]
+    validate_source_capture_bundle.validate_bundle(
+        result["out_dir"],
+        profile="enterprise-alpha1",
+        policy_file=inspect_source_snapshot.default_policy_path(),
+    )
+
+
+def test_quarantined_long_path_does_not_require_complete_manifest_binding(tmp: Path) -> None:
+    archive = tmp / "pdf-long-path.zip"
+    long_name = "a" * 261
+    write_zip(archive, [(long_name, b"a")])
+    result = run_inspector(
+        archive,
+        tmp / "out-pdf-long-path",
+        "--source-kind",
+        "pdf",
+        "--capture-method",
+        "upload",
+        "--source-id",
+        "vsrc:1:opaque:pdf-long-path-demo",
+    )
+    assert result["envelope"]["snapshot"]["kind"] == "blob"
+    assert result["envelope"]["raw_handling"]["disposition"] == "quarantined"
+    assert "PATH_TOO_LONG" in finding_codes(result)
+    assert "SOURCE_KIND_FORMAT_MISMATCH" in finding_codes(result)
+    assert json.loads(result["manifest_lines"][0])["state"] == "unavailable"
+    validate_source_capture_bundle.validate_bundle(
+        result["out_dir"],
+        profile="enterprise-alpha1",
+        policy_file=inspect_source_snapshot.default_policy_path(),
+    )
+
+
+def assert_path_too_long_truncation_case(result: dict[str, Any], expected_truncated: int) -> None:
+    assert result["envelope"]["snapshot"]["kind"] == "tree"
+    assert result["envelope"]["raw_handling"]["disposition"] == "admitted"
+    findings = result["hygiene"]["predicate"]["findings"]
+    explicit = [item for item in findings if item["code"] == "PATH_TOO_LONG"]
+    assert len(explicit) == 100
+    markers = [item for item in findings if item["code"] == "HYGIENE_FINDINGS_TRUNCATED"]
+    if expected_truncated:
+        assert len(markers) == 1
+        assert markers[0]["severity"] == "warning"
+        assert markers[0]["details"]["truncated_by_code"]["PATH_TOO_LONG"] == expected_truncated
+    else:
+        assert not markers
+    validate_source_capture_bundle.validate_bundle(
+        result["out_dir"],
+        profile="enterprise-alpha1",
+        policy_file=inspect_source_snapshot.default_policy_path(),
+    )
+
+
+def test_path_too_long_truncation_marker_replays_zip(tmp: Path) -> None:
+    zip_100 = tmp / "long-paths-100.zip"
+    write_zip(zip_100, long_manifest_paths(100))
+    assert_path_too_long_truncation_case(run_inspector(zip_100, tmp / "out-long-paths-100-zip"), 0)
+
+    zip_101 = tmp / "long-paths-101.zip"
+    write_zip(zip_101, long_manifest_paths(101))
+    assert_path_too_long_truncation_case(run_inspector(zip_101, tmp / "out-long-paths-101-zip"), 1)
+
+    zip_1000 = tmp / "long-paths-1000.zip"
+    write_zip(zip_1000, long_manifest_paths(1000))
+    assert_path_too_long_truncation_case(run_inspector(zip_1000, tmp / "out-long-paths-1000-zip"), 900)
+
+
+def test_path_too_long_truncation_marker_replays_tar(tmp: Path) -> None:
+    tar_101 = tmp / "long-paths-101.tar"
+    write_tar(tar_101, long_manifest_paths(101))
+    assert_path_too_long_truncation_case(run_inspector(tar_101, tmp / "out-long-paths-101-tar"), 1)
+
+    tar_1000 = tmp / "long-paths-1000.tar"
+    write_tar(tar_1000, long_manifest_paths(1000))
+    assert_path_too_long_truncation_case(run_inspector(tar_1000, tmp / "out-long-paths-1000-tar"), 900)
+
+
+def test_truncation_marker_cannot_hide_unsafe_code(tmp: Path) -> None:
+    blob = tmp / "clean.txt"
+    blob.write_bytes(b"clean")
+    result = run_inspector(
+        blob,
+        tmp / "out-truncated-unsafe",
+        "--source-kind",
+        "file",
+        "--capture-method",
+        "local_file",
+        "--source-id",
+        "vsrc:1:content:sha256:3333333333333333333333333333333333333333333333333333333333333333",
+    )
+    marker = {
+        "code": "HYGIENE_FINDINGS_TRUNCATED",
+        "severity": "warning",
+        "profile": "source-fixity/v1",
+        "message": "Hygiene findings were truncated by deterministic report-size limits.",
+        "details": {"truncated_by_code": {"ARCHIVE_PATH_TRAVERSAL": 1}},
+    }
+    rewrite_hygiene_findings(result["out_dir"], result["hygiene"]["predicate"]["findings"] + [marker])
+    assert_enterprise_validator_rejects(result["out_dir"], "HYGIENE_FINDINGS_TRUNCATED")
+
+
+def test_path_too_long_truncation_requires_explicit_prefix(tmp: Path) -> None:
+    archive = tmp / "long-paths-101-missing-explicit.zip"
+    write_zip(archive, long_manifest_paths(101))
+    result = run_inspector(archive, tmp / "out-long-paths-101-missing-explicit")
+    marker = {
+        "code": "HYGIENE_FINDINGS_TRUNCATED",
+        "severity": "warning",
+        "profile": "source-fixity/v1",
+        "message": "Hygiene findings were truncated by deterministic report-size limits.",
+        "details": {"truncated_by_code": {"PATH_TOO_LONG": 101}},
+    }
+    findings = [item for item in result["hygiene"]["predicate"]["findings"] if item["code"] != "PATH_TOO_LONG"]
+    findings = [item for item in findings if item["code"] != "HYGIENE_FINDINGS_TRUNCATED"] + [marker]
+    rewrite_hygiene_findings(result["out_dir"], findings)
+    assert_enterprise_validator_rejects(result["out_dir"], "HYGIENE_FINDINGS_TRUNCATED")
+
+
+def test_truncation_rejects_tampered_max_findings_per_code(tmp: Path) -> None:
+    archive = tmp / "long-paths-101-tampered-cap.zip"
+    write_zip(archive, long_manifest_paths(101))
+    result = run_inspector(archive, tmp / "out-long-paths-101-tampered-cap")
+    out_dir = result["out_dir"]
+    hygiene = result["hygiene"]
+    explicit = [item for item in hygiene["predicate"]["findings"] if item["code"] == "PATH_TOO_LONG"]
+    marker = {
+        "code": "HYGIENE_FINDINGS_TRUNCATED",
+        "severity": "warning",
+        "profile": "source-fixity/v1",
+        "message": "Hygiene findings were truncated by deterministic report-size limits.",
+        "details": {"truncated_by_code": {"PATH_TOO_LONG": 100}},
+    }
+    hygiene["predicate"]["parameters"]["max_findings_per_code"] = 1
+    hygiene["predicate"]["findings"] = [explicit[0], marker]
+    hygiene["predicate"]["summary"] = {
+        "finding_count": len(hygiene["predicate"]["findings"]),
+        "max_severity": validate_source_capture_bundle.computed_max_severity(hygiene["predicate"]["findings"]),
+    }
+    envelope = json.loads((out_dir / "capture-envelope.json").read_text(encoding="utf-8"))
+    rebind_hygiene_ref(out_dir, envelope, hygiene)
+    assert_enterprise_validator_rejects(out_dir, "max_findings_per_code")
+
+
+def test_path_too_long_binding_is_exact_not_suffix(tmp: Path) -> None:
+    long_path = "a" * 261
+    archive = tmp / "long-path-suffix.zip"
+    write_zip(archive, [(long_path, b"a"), (f"x/{long_path}", b"b")])
+    result = run_inspector(archive, tmp / "out-long-path-suffix")
+    findings = [
+        item
+        for item in result["hygiene"]["predicate"]["findings"]
+        if item["code"] != "PATH_TOO_LONG" or item.get("paths") == [f"x/{long_path}"]
+    ]
+    rewrite_hygiene_findings(result["out_dir"], findings)
+    assert_enterprise_validator_rejects(result["out_dir"], "PATH_TOO_LONG")
+
+
+def test_truncation_marker_must_be_unique(tmp: Path) -> None:
+    archive = tmp / "long-paths-101-duplicate-marker.zip"
+    write_zip(archive, long_manifest_paths(101))
+    result = run_inspector(archive, tmp / "out-long-paths-101-duplicate-marker")
+    marker = next(item for item in result["hygiene"]["predicate"]["findings"] if item["code"] == "HYGIENE_FINDINGS_TRUNCATED")
+    rewrite_hygiene_findings(result["out_dir"], result["hygiene"]["predicate"]["findings"] + [dict(marker)])
+    assert_enterprise_validator_rejects(result["out_dir"], "at most once")
+
+
 def test_explicit_directory_prefix_conflict_quarantined(tmp: Path) -> None:
     archive = tmp / "explicit-dir-conflict.zip"
     file_info = zip_info("repo/a", stat.S_IFREG | 0o644)
@@ -1520,6 +1858,84 @@ def test_implementation_manifest_mismatch_fails_before_bundle(tmp: Path) -> None
     assert not out_dir.exists()
 
 
+def test_implementation_manifest_must_pin_required_component_set(tmp: Path) -> None:
+    archive = tmp / "clean.zip"
+    write_zip(archive, [("repo/a.txt", b"a")])
+    schema_digest = inspect_source_snapshot.digest_file(Path("SCHEMA.md"))
+    bad_manifest = tmp / "minimal-implementation.json"
+    bad_manifest.write_text(
+        json.dumps(
+            {
+                "schema": "urn:vaks:schema:source-capture-implementation:v1",
+                "id": "vaks.source-capture-envelope",
+                "version": "1.0-alpha.1",
+                "components": [{"path": "SCHEMA.md", "digest": schema_digest}],
+                "runtime": {"language": "python", "minimum_version": "3.10"},
+            },
+            allow_nan=False,
+            ensure_ascii=False,
+            sort_keys=True,
+            separators=(",", ":"),
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    out_dir = tmp / "out-minimal-implementation"
+    stdout = io.StringIO()
+    with redirect_stdout(stdout):
+        rc = inspect_source_snapshot.main(
+            [
+                str(archive),
+                "--out",
+                str(out_dir),
+                "--source-id",
+                "vsrc:1:repo:github.com/example/repo",
+                "--source-kind",
+                "repo",
+                "--implementation-manifest",
+                str(bad_manifest),
+            ]
+        )
+    payload = json.loads(stdout.getvalue())
+    assert rc == 4
+    assert payload["code"] == "CAPTURE_IMPLEMENTATION_PIN_MISMATCH"
+    assert not out_dir.exists()
+
+
+def test_runtime_policy_must_match_pinned_implementation_policy(tmp: Path) -> None:
+    archive = tmp / "report.pdf"
+    write_zip(archive, [("repo/a.txt", b"a")])
+    default_policy = json.loads(inspect_source_snapshot.default_policy_path().read_text(encoding="utf-8"))
+    default_policy["unsafe_finding"]["codes"].remove("SOURCE_KIND_FORMAT_MISMATCH")
+    custom_policy = tmp / "custom-policy.json"
+    custom_policy.write_text(
+        json.dumps(default_policy, allow_nan=False, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n",
+        encoding="utf-8",
+    )
+    out_dir = tmp / "out-custom-policy"
+    stdout = io.StringIO()
+    with redirect_stdout(stdout):
+        rc = inspect_source_snapshot.main(
+            [
+                str(archive),
+                "--out",
+                str(out_dir),
+                "--source-id",
+                "vsrc:1:opaque:pdf-demo",
+                "--source-kind",
+                "pdf",
+                "--capture-method",
+                "upload",
+                "--policy-file",
+                str(custom_policy),
+            ]
+        )
+    payload = json.loads(stdout.getvalue())
+    assert rc == 4
+    assert payload["code"] == "CAPTURE_POLICY_PIN_MISMATCH"
+    assert not out_dir.exists()
+
+
 def test_enterprise_validator_requires_policy_and_implementation_binding(tmp: Path) -> None:
     archive = tmp / "clean.zip"
     write_zip(archive, [("repo/a.txt", b"a")])
@@ -1550,6 +1966,489 @@ def test_enterprise_validator_requires_policy_and_implementation_binding(tmp: Pa
         assert "implementation" in str(exc)
     else:
         raise AssertionError("enterprise-alpha1 must bind producer/checker implementation descriptors")
+
+
+def test_enterprise_validator_binds_implementation_descriptor_to_manifest(tmp: Path) -> None:
+    archive = tmp / "clean.zip"
+    write_zip(archive, [("repo/a.txt", b"a")])
+    result = run_inspector(archive, tmp / "out-fake-implementation-descriptor")
+    out_dir = result["out_dir"]
+    envelope = json.loads((out_dir / "capture-envelope.json").read_text(encoding="utf-8"))
+    hygiene = json.loads((out_dir / "snapshot-hygiene.intoto.json").read_text(encoding="utf-8"))
+    fake_descriptor = {
+        "media_type": "application/vnd.vaks.source-capture-implementation.v1+json",
+        "size": 1,
+        "digest": "sha256:" + "0" * 64,
+    }
+    envelope["producer"]["implementation"] = fake_descriptor
+    hygiene["predicate"]["checker"]["implementation"] = fake_descriptor
+    rebind_hygiene_ref(out_dir, envelope, hygiene)
+    try:
+        validate_source_capture_bundle.validate_bundle(
+            out_dir,
+            profile="enterprise-alpha1",
+            policy_file=inspect_source_snapshot.default_policy_path(),
+        )
+    except validate_source_capture_bundle.ValidationError as exc:
+        assert "implementation descriptor" in str(exc)
+    else:
+        raise AssertionError("enterprise-alpha1 must bind implementation descriptors to the pinned manifest")
+
+
+def test_enterprise_validator_rejects_unpinned_policy_file(tmp: Path) -> None:
+    blob = tmp / "clean.txt"
+    blob.write_bytes(b"clean")
+    result = run_inspector(
+        blob,
+        tmp / "out-unpinned-policy",
+        "--source-kind",
+        "file",
+        "--capture-method",
+        "local_file",
+        "--source-id",
+        "vsrc:1:content:sha256:" + "3" * 64,
+    )
+    out_dir = result["out_dir"]
+    custom_policy = json.loads(inspect_source_snapshot.default_policy_path().read_text(encoding="utf-8"))
+    custom_policy["unsafe_finding"]["codes"] = ["SOME_OTHER_CODE"]
+    custom_policy_path = tmp / "custom-policy.json"
+    custom_policy_path.write_text(
+        json.dumps(custom_policy, allow_nan=False, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n",
+        encoding="utf-8",
+    )
+    envelope = json.loads((out_dir / "capture-envelope.json").read_text(encoding="utf-8"))
+    hygiene = json.loads((out_dir / "snapshot-hygiene.intoto.json").read_text(encoding="utf-8"))
+    envelope["raw_handling"]["policy"]["digest"] = validate_source_capture_bundle.sha256_bytes(
+        validate_source_capture_bundle.canonical_json_bytes(custom_policy)
+    )
+    rebind_hygiene_ref(out_dir, envelope, hygiene)
+    try:
+        validate_source_capture_bundle.validate_bundle(out_dir, profile="enterprise-alpha1", policy_file=custom_policy_path)
+    except validate_source_capture_bundle.ValidationError as exc:
+        assert "policy file" in str(exc)
+    else:
+        raise AssertionError("enterprise-alpha1 must reject policy files not pinned by the implementation manifest")
+
+
+def test_policy_must_include_hazard_and_error_unsafe_severities(tmp: Path) -> None:
+    weak_policy = json.loads(inspect_source_snapshot.default_policy_path().read_text(encoding="utf-8"))
+    weak_policy["unsafe_finding"]["severities"] = ["error"]
+    weak_policy_path = tmp / "weak-policy.json"
+    weak_policy_path.write_text(
+        json.dumps(weak_policy, allow_nan=False, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n",
+        encoding="utf-8",
+    )
+    try:
+        validate_source_capture_bundle.load_policy(weak_policy_path)
+    except validate_source_capture_bundle.ValidationError as exc:
+        assert "hazard and error" in str(exc)
+    else:
+        raise AssertionError("validator policy loader must reject policies that omit hazard or error")
+
+    archive = tmp / "clean.zip"
+    write_zip(archive, [("repo/a.txt", b"a")])
+    out_dir = tmp / "out-weak-policy"
+    stdout = io.StringIO()
+    with redirect_stdout(stdout):
+        rc = inspect_source_snapshot.main(
+            [
+                str(archive),
+                "--out",
+                str(out_dir),
+                "--source-id",
+                "vsrc:1:repo:github.com/example/repo",
+                "--source-kind",
+                "repo",
+                "--policy-file",
+                str(weak_policy_path),
+            ]
+        )
+    payload = json.loads(stdout.getvalue())
+    assert rc == 4
+    assert payload["code"] == "CAPTURE_POLICY_PIN_MISMATCH"
+    assert not out_dir.exists()
+
+
+def test_enterprise_validator_replays_policy_decision_and_reason_codes(tmp: Path) -> None:
+    blob = tmp / "clean.txt"
+    blob.write_bytes(b"clean")
+    result = run_inspector(
+        blob,
+        tmp / "out-clean-blob",
+        "--source-kind",
+        "file",
+        "--capture-method",
+        "local_file",
+        "--source-id",
+        "vsrc:1:content:sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    )
+    out_dir = result["out_dir"]
+    policy_file = inspect_source_snapshot.default_policy_path()
+    envelope = json.loads((out_dir / "capture-envelope.json").read_text(encoding="utf-8"))
+    hygiene = json.loads((out_dir / "snapshot-hygiene.intoto.json").read_text(encoding="utf-8"))
+    envelope["observation"]["state"] = "partial"
+    envelope["raw_handling"]["disposition"] = "quarantined"
+    envelope["raw_handling"]["reason_codes"] = ["FAKE_REASON"]
+    write_manifest_rows(
+        out_dir,
+        [
+            {
+                "profile": "vaks-archive-tree/v1",
+                "schema": "urn:vaks:schema:snapshot-manifest:v1",
+                "state": "unavailable",
+                "reason_codes": ["FAKE_REASON"],
+            }
+        ],
+    )
+    hygiene["predicate"]["execution_state"] = "partial"
+    hygiene["predicate"]["findings"] = [
+        {
+            "code": "MEDIA_TYPE_HINT_MISMATCH",
+            "severity": "warning",
+            "profile": "source-fixity/v1",
+            "message": "warning only",
+        }
+    ]
+    hygiene["predicate"]["summary"] = {"finding_count": 1, "max_severity": "warning"}
+    rebind_hygiene_ref(out_dir, envelope, hygiene)
+    try:
+        validate_source_capture_bundle.validate_bundle(out_dir, profile="enterprise-alpha1", policy_file=policy_file)
+    except validate_source_capture_bundle.ValidationError as exc:
+        assert "policy replay" in str(exc) or "reason_codes" in str(exc)
+    else:
+        raise AssertionError("enterprise-alpha1 must reject quarantine without policy-unsafe findings")
+
+    pdf_zip = tmp / "report.pdf"
+    write_zip(pdf_zip, [("repo/a.txt", b"a")])
+    conflict = run_inspector(
+        pdf_zip,
+        tmp / "out-pdf-zip",
+        "--source-kind",
+        "pdf",
+        "--capture-method",
+        "upload",
+        "--source-id",
+        "vsrc:1:opaque:pdf-demo",
+    )
+    out_dir = conflict["out_dir"]
+    envelope = json.loads((out_dir / "capture-envelope.json").read_text(encoding="utf-8"))
+    envelope["raw_handling"]["reason_codes"].append("FAKE_EXTRA")
+    rows = [json.loads(line) for line in (out_dir / "snapshot-manifest.jsonl").read_text(encoding="utf-8").splitlines()]
+    rows[0]["reason_codes"] = envelope["raw_handling"]["reason_codes"]
+    write_manifest_rows(out_dir, rows)
+    hygiene = json.loads((out_dir / "snapshot-hygiene.intoto.json").read_text(encoding="utf-8"))
+    rebind_hygiene_ref(out_dir, envelope, hygiene)
+    try:
+        validate_source_capture_bundle.validate_bundle(out_dir, profile="enterprise-alpha1", policy_file=policy_file)
+    except validate_source_capture_bundle.ValidationError as exc:
+        assert "reason_codes" in str(exc)
+    else:
+        raise AssertionError("enterprise-alpha1 must reject extra reason_codes")
+
+
+def test_enterprise_validator_rejects_unknown_hazard_admitted(tmp: Path) -> None:
+    blob = tmp / "clean.txt"
+    blob.write_bytes(b"clean")
+    result = run_inspector(
+        blob,
+        tmp / "out-unknown-hazard",
+        "--source-kind",
+        "file",
+        "--capture-method",
+        "local_file",
+        "--source-id",
+        "vsrc:1:content:sha256:1111111111111111111111111111111111111111111111111111111111111111",
+    )
+    out_dir = result["out_dir"]
+    envelope = json.loads((out_dir / "capture-envelope.json").read_text(encoding="utf-8"))
+    hygiene = json.loads((out_dir / "snapshot-hygiene.intoto.json").read_text(encoding="utf-8"))
+    hygiene["predicate"]["findings"].append(
+        {
+            "code": "UNREGISTERED_SECURITY_HAZARD",
+            "severity": "hazard",
+            "profile": "source-fixity/v1",
+            "message": "synthetic hazard",
+        }
+    )
+    hygiene["predicate"]["summary"] = {
+        "finding_count": len(hygiene["predicate"]["findings"]),
+        "max_severity": validate_source_capture_bundle.computed_max_severity(hygiene["predicate"]["findings"]),
+    }
+    rebind_hygiene_ref(out_dir, envelope, hygiene)
+    try:
+        validate_source_capture_bundle.validate_bundle(out_dir, profile="enterprise-alpha1", policy_file=inspect_source_snapshot.default_policy_path())
+    except validate_source_capture_bundle.ValidationError as exc:
+        assert "policy replay" in str(exc) or "reason_codes" in str(exc)
+    else:
+        raise AssertionError("enterprise-alpha1 must reject admitted bundles with unknown hazard/error findings")
+
+
+def test_enterprise_validator_rejects_policy_code_downgraded_to_warning_admitted(tmp: Path) -> None:
+    blob = tmp / "clean.txt"
+    blob.write_bytes(b"clean")
+    result = run_inspector(
+        blob,
+        tmp / "out-policy-code-warning",
+        "--source-kind",
+        "file",
+        "--capture-method",
+        "local_file",
+        "--source-id",
+        "vsrc:1:content:sha256:2222222222222222222222222222222222222222222222222222222222222222",
+    )
+    out_dir = result["out_dir"]
+    envelope = json.loads((out_dir / "capture-envelope.json").read_text(encoding="utf-8"))
+    hygiene = json.loads((out_dir / "snapshot-hygiene.intoto.json").read_text(encoding="utf-8"))
+    if "archive-safety/v1" not in hygiene["predicate"]["profiles"]:
+        hygiene["predicate"]["profiles"].append("archive-safety/v1")
+        hygiene["predicate"]["profiles"].sort()
+    hygiene["predicate"]["findings"].append(
+        {
+            "code": "ARCHIVE_ZIP_STREAM_INTEGRITY_FAILED",
+            "severity": "warning",
+            "profile": "archive-safety/v1",
+            "message": "synthetic downgraded unsafe code",
+        }
+    )
+    hygiene["predicate"]["summary"] = {
+        "finding_count": len(hygiene["predicate"]["findings"]),
+        "max_severity": validate_source_capture_bundle.computed_max_severity(hygiene["predicate"]["findings"]),
+    }
+    rebind_hygiene_ref(out_dir, envelope, hygiene)
+    try:
+        validate_source_capture_bundle.validate_bundle(out_dir, profile="enterprise-alpha1", policy_file=inspect_source_snapshot.default_policy_path())
+    except validate_source_capture_bundle.ValidationError as exc:
+        assert "policy replay" in str(exc) or "reason_codes" in str(exc)
+    else:
+        raise AssertionError("enterprise-alpha1 must reject admitted bundles with policy-listed unsafe codes even if severity is warning")
+
+
+def test_enterprise_validator_requires_source_kind_media_type_finding(tmp: Path) -> None:
+    archive = tmp / "clean.zip"
+    write_zip(archive, [("repo/a.txt", b"a")])
+    result = run_inspector(
+        archive,
+        tmp / "out-rebound-pdf",
+        "--source-kind",
+        "archive",
+        "--capture-method",
+        "archive_file",
+        "--source-id",
+        "vsrc:1:opaque:archive-demo",
+    )
+    out_dir = result["out_dir"]
+    envelope = json.loads((out_dir / "capture-envelope.json").read_text(encoding="utf-8"))
+    envelope["source"]["kind"] = "pdf"
+    hygiene = json.loads((out_dir / "snapshot-hygiene.intoto.json").read_text(encoding="utf-8"))
+    rebind_hygiene_ref(out_dir, envelope, hygiene)
+    try:
+        validate_source_capture_bundle.validate_bundle(out_dir, profile="enterprise-alpha1", policy_file=inspect_source_snapshot.default_policy_path())
+    except validate_source_capture_bundle.ValidationError as exc:
+        assert "SOURCE_KIND_FORMAT_MISMATCH" in str(exc)
+    else:
+        raise AssertionError("enterprise-alpha1 must reject pdf source kind with non-PDF detected media type")
+
+
+def test_enterprise_validator_rejects_contradictory_hint_match(tmp: Path) -> None:
+    disguised = tmp / "report.pdf"
+    write_zip(disguised, [("repo/a.txt", b"a")])
+    result = run_inspector(disguised, tmp / "out-hint-match")
+    out_dir = result["out_dir"]
+    envelope = json.loads((out_dir / "capture-envelope.json").read_text(encoding="utf-8"))
+    content_type = envelope["observation"]["content_type"]
+    assert content_type["detected_media_type"] == "application/zip"
+    assert content_type["locator_hint_media_type"] == "application/pdf"
+    content_type["hint_match"] = "matched"
+    write_json(out_dir / "capture-envelope.json", envelope)
+    try:
+        validate_source_capture_bundle.validate_bundle(out_dir, profile="enterprise-alpha1", policy_file=inspect_source_snapshot.default_policy_path())
+    except validate_source_capture_bundle.ValidationError as exc:
+        assert "hint_match=matched" in str(exc)
+    else:
+        raise AssertionError("enterprise-alpha1 must reject contradictory hint_match")
+
+
+def test_enterprise_validator_rejects_not_comparable_hint_match(tmp: Path) -> None:
+    disguised = tmp / "report.pdf"
+    write_zip(disguised, [("repo/a.txt", b"a")])
+    result = run_inspector(disguised, tmp / "out-not-comparable")
+    out_dir = result["out_dir"]
+    envelope = json.loads((out_dir / "capture-envelope.json").read_text(encoding="utf-8"))
+    hygiene = json.loads((out_dir / "snapshot-hygiene.intoto.json").read_text(encoding="utf-8"))
+    content_type = envelope["observation"]["content_type"]
+    assert content_type["detected_media_type"] == "application/zip"
+    assert content_type["locator_hint_media_type"] == "application/pdf"
+    content_type["hint_match"] = "not_comparable"
+    hygiene["predicate"]["findings"] = [
+        item for item in hygiene["predicate"]["findings"] if item.get("code") != "MEDIA_TYPE_HINT_MISMATCH"
+    ]
+    hygiene["predicate"]["summary"] = {
+        "finding_count": len(hygiene["predicate"]["findings"]),
+        "max_severity": validate_source_capture_bundle.computed_max_severity(hygiene["predicate"]["findings"]),
+    }
+    rebind_hygiene_ref(out_dir, envelope, hygiene)
+    try:
+        validate_source_capture_bundle.validate_bundle(out_dir, profile="enterprise-alpha1", policy_file=inspect_source_snapshot.default_policy_path())
+    except validate_source_capture_bundle.ValidationError as exc:
+        assert "not_comparable" in str(exc)
+    else:
+        raise AssertionError("enterprise-alpha1 must reject currently unreachable not_comparable hint_match")
+
+
+def test_enterprise_validator_rejects_not_comparable_even_when_hint_matches(tmp: Path) -> None:
+    archive = tmp / "clean.zip"
+    write_zip(archive, [("repo/a.txt", b"a")])
+    result = run_inspector(archive, tmp / "out-not-comparable-matched")
+    out_dir = result["out_dir"]
+    envelope = json.loads((out_dir / "capture-envelope.json").read_text(encoding="utf-8"))
+    content_type = envelope["observation"]["content_type"]
+    content_type["locator_hint_media_type"] = content_type["detected_media_type"]
+    content_type["hint_match"] = "not_comparable"
+    write_json(out_dir / "capture-envelope.json", envelope)
+    try:
+        validate_source_capture_bundle.validate_bundle(out_dir, profile="enterprise-alpha1", policy_file=inspect_source_snapshot.default_policy_path())
+    except validate_source_capture_bundle.ValidationError as exc:
+        assert "not_comparable" in str(exc)
+    else:
+        raise AssertionError("enterprise-alpha1 must reject not_comparable even when hint equals detected media type")
+
+
+def test_enterprise_validator_rejects_locator_hint_basis(tmp: Path) -> None:
+    blob = tmp / "unknown.bin"
+    blob.write_bytes(b"plain")
+    result = run_inspector(
+        blob,
+        tmp / "out-locator-hint-basis",
+        "--source-kind",
+        "file",
+        "--capture-method",
+        "local_file",
+        "--source-id",
+        "vsrc:1:content:sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+    )
+    out_dir = result["out_dir"]
+    envelope = json.loads((out_dir / "capture-envelope.json").read_text(encoding="utf-8"))
+    content_type = envelope["observation"]["content_type"]
+    assert content_type["hint_match"] == "no_hint"
+    content_type["detection_basis"] = "locator_hint"
+    write_json(out_dir / "capture-envelope.json", envelope)
+    try:
+        validate_source_capture_bundle.validate_bundle(out_dir, profile="enterprise-alpha1", policy_file=inspect_source_snapshot.default_policy_path())
+    except validate_source_capture_bundle.ValidationError as exc:
+        assert "detection_basis=locator_hint" in str(exc)
+    else:
+        raise AssertionError("enterprise-alpha1 must reject currently unreachable locator_hint detection basis")
+
+
+def test_enterprise_validator_rejects_tree_pdf_magic_content_type(tmp: Path) -> None:
+    archive = tmp / "clean.zip"
+    write_zip(archive, [("repo/a.txt", b"a")])
+    result = run_inspector(archive, tmp / "out-tree-pdf-magic")
+    out_dir = result["out_dir"]
+    envelope = json.loads((out_dir / "capture-envelope.json").read_text(encoding="utf-8"))
+    blob = envelope["observation"]["blob"]
+    content_type = envelope["observation"]["content_type"]
+    blob["media_type"] = "application/pdf"
+    content_type["detected_media_type"] = "application/pdf"
+    content_type["detection_basis"] = "magic_signature"
+    content_type["locator_hint_media_type"] = "application/pdf"
+    content_type["hint_match"] = "matched"
+    write_json(out_dir / "capture-envelope.json", envelope)
+    try:
+        validate_source_capture_bundle.validate_bundle(out_dir, profile="enterprise-alpha1", policy_file=inspect_source_snapshot.default_policy_path())
+    except validate_source_capture_bundle.ValidationError as exc:
+        assert "tree snapshots require" in str(exc)
+    else:
+        raise AssertionError("enterprise-alpha1 must reject tree snapshots with PDF magic-signature content type")
+
+
+def test_enterprise_validator_rejects_tree_fallback_content_type(tmp: Path) -> None:
+    archive = tmp / "clean.zip"
+    write_zip(archive, [("repo/a.txt", b"a")])
+    result = run_inspector(archive, tmp / "out-tree-fallback")
+    out_dir = result["out_dir"]
+    envelope = json.loads((out_dir / "capture-envelope.json").read_text(encoding="utf-8"))
+    blob = envelope["observation"]["blob"]
+    content_type = envelope["observation"]["content_type"]
+    blob["media_type"] = "application/octet-stream"
+    content_type["detected_media_type"] = "application/octet-stream"
+    content_type["detection_basis"] = "fallback"
+    content_type.pop("locator_hint_media_type", None)
+    content_type["hint_match"] = "no_hint"
+    write_json(out_dir / "capture-envelope.json", envelope)
+    try:
+        validate_source_capture_bundle.validate_bundle(out_dir, profile="enterprise-alpha1", policy_file=inspect_source_snapshot.default_policy_path())
+    except validate_source_capture_bundle.ValidationError as exc:
+        assert "tree snapshots require" in str(exc)
+    else:
+        raise AssertionError("enterprise-alpha1 must reject tree snapshots with fallback content type")
+
+
+def test_enterprise_validator_rejects_zip_with_fallback_basis(tmp: Path) -> None:
+    archive = tmp / "clean.zip"
+    write_zip(archive, [("repo/a.txt", b"a")])
+    result = run_inspector(archive, tmp / "out-zip-fallback")
+    out_dir = result["out_dir"]
+    envelope = json.loads((out_dir / "capture-envelope.json").read_text(encoding="utf-8"))
+    content_type = envelope["observation"]["content_type"]
+    assert content_type["detected_media_type"] == "application/zip"
+    content_type["detection_basis"] = "fallback"
+    write_json(out_dir / "capture-envelope.json", envelope)
+    try:
+        validate_source_capture_bundle.validate_bundle(out_dir, profile="enterprise-alpha1", policy_file=inspect_source_snapshot.default_policy_path())
+    except validate_source_capture_bundle.ValidationError as exc:
+        assert "fallback requires application/octet-stream" in str(exc)
+    else:
+        raise AssertionError("enterprise-alpha1 must reject application/zip with fallback detection basis")
+
+
+def test_enterprise_validator_rejects_admitted_blob_container_parser(tmp: Path) -> None:
+    blob_path = tmp / "plain.bin"
+    blob_path.write_bytes(b"plain")
+    result = run_inspector(
+        blob_path,
+        tmp / "out-blob-container-parser",
+        "--source-kind",
+        "file",
+        "--capture-method",
+        "local_file",
+        "--source-id",
+        "vsrc:1:content:sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+    )
+    out_dir = result["out_dir"]
+    envelope = json.loads((out_dir / "capture-envelope.json").read_text(encoding="utf-8"))
+    blob = envelope["observation"]["blob"]
+    content_type = envelope["observation"]["content_type"]
+    blob["media_type"] = "application/zip"
+    content_type["detected_media_type"] = "application/zip"
+    content_type["detection_basis"] = "container_parser"
+    content_type.pop("locator_hint_media_type", None)
+    content_type["hint_match"] = "no_hint"
+    write_json(out_dir / "capture-envelope.json", envelope)
+    try:
+        validate_source_capture_bundle.validate_bundle(out_dir, profile="enterprise-alpha1", policy_file=inspect_source_snapshot.default_policy_path())
+    except validate_source_capture_bundle.ValidationError as exc:
+        assert "admitted blob snapshots" in str(exc)
+    else:
+        raise AssertionError("enterprise-alpha1 must reject admitted blob snapshots with container_parser content type")
+
+
+def test_enterprise_validator_rejects_container_parser_without_archive_safety(tmp: Path) -> None:
+    archive = tmp / "clean.zip"
+    write_zip(archive, [("repo/a.txt", b"a")])
+    result = run_inspector(archive, tmp / "out-container-no-archive-safety")
+    out_dir = result["out_dir"]
+    envelope = json.loads((out_dir / "capture-envelope.json").read_text(encoding="utf-8"))
+    hygiene = json.loads((out_dir / "snapshot-hygiene.intoto.json").read_text(encoding="utf-8"))
+    assert envelope["observation"]["content_type"]["detection_basis"] == "container_parser"
+    hygiene["predicate"]["profiles"] = ["source-fixity/v1"]
+    rebind_hygiene_ref(out_dir, envelope, hygiene)
+    try:
+        validate_source_capture_bundle.validate_bundle(out_dir, profile="enterprise-alpha1", policy_file=inspect_source_snapshot.default_policy_path())
+    except validate_source_capture_bundle.ValidationError as exc:
+        assert "archive-safety/v1" in str(exc)
+    else:
+        raise AssertionError("enterprise-alpha1 must reject container_parser captures without archive-safety/v1")
 
 
 def main() -> int:
@@ -1603,6 +2502,19 @@ def main() -> int:
         test_bundle_rejects_type_schema_and_profile_bypasses,
         test_zip_repeated_trailing_separator_quarantined,
         test_input_profile_blob_cannot_override_archive_intent,
+        test_input_profile_blob_can_force_local_file_blob,
+        test_path_too_long_is_portability_warning_not_hard_failure,
+        test_bundle_rejects_unbound_path_too_long_warning,
+        test_archive_path_hard_limit_is_structured_quarantine,
+        test_path_too_long_uses_root_stripped_manifest_path,
+        test_quarantined_long_path_does_not_require_complete_manifest_binding,
+        test_path_too_long_truncation_marker_replays_zip,
+        test_path_too_long_truncation_marker_replays_tar,
+        test_truncation_marker_cannot_hide_unsafe_code,
+        test_path_too_long_truncation_requires_explicit_prefix,
+        test_truncation_rejects_tampered_max_findings_per_code,
+        test_path_too_long_binding_is_exact_not_suffix,
+        test_truncation_marker_must_be_unique,
         test_explicit_directory_prefix_conflict_quarantined,
         test_bundle_rejects_blob_admitted_with_failed_or_partial_state,
         test_bundle_rejects_symlink_entry_and_total_size_limit_bypasses,
@@ -1621,7 +2533,25 @@ def main() -> int:
         test_media_type_detection_hint_mismatch_and_source_kind_conflict,
         test_tar_and_unknown_blob_media_type_detection,
         test_implementation_manifest_mismatch_fails_before_bundle,
+        test_implementation_manifest_must_pin_required_component_set,
+        test_runtime_policy_must_match_pinned_implementation_policy,
         test_enterprise_validator_requires_policy_and_implementation_binding,
+        test_enterprise_validator_binds_implementation_descriptor_to_manifest,
+        test_enterprise_validator_rejects_unpinned_policy_file,
+        test_policy_must_include_hazard_and_error_unsafe_severities,
+        test_enterprise_validator_replays_policy_decision_and_reason_codes,
+        test_enterprise_validator_rejects_unknown_hazard_admitted,
+        test_enterprise_validator_rejects_policy_code_downgraded_to_warning_admitted,
+        test_enterprise_validator_requires_source_kind_media_type_finding,
+        test_enterprise_validator_rejects_contradictory_hint_match,
+        test_enterprise_validator_rejects_not_comparable_hint_match,
+        test_enterprise_validator_rejects_not_comparable_even_when_hint_matches,
+        test_enterprise_validator_rejects_locator_hint_basis,
+        test_enterprise_validator_rejects_tree_pdf_magic_content_type,
+        test_enterprise_validator_rejects_tree_fallback_content_type,
+        test_enterprise_validator_rejects_zip_with_fallback_basis,
+        test_enterprise_validator_rejects_admitted_blob_container_parser,
+        test_enterprise_validator_rejects_container_parser_without_archive_safety,
     ]
     with tempfile.TemporaryDirectory() as tmp_dir:
         root = Path(tmp_dir)

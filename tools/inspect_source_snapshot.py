@@ -62,6 +62,7 @@ FINDING_SEVERITY_ORDER = {"info": 1, "warning": 2, "hazard": 3, "error": 4}
 MAX_FINDINGS_PER_CODE = 100
 MAX_FINDING_PATHS = 20
 MAX_FINDING_DETAIL_ITEMS = 20
+MAX_ARCHIVE_PATH_STRING_LENGTH = 16_384
 UNIX_ZIP_CREATE_SYSTEMS = {3, 19}
 ZIP_UNICODE_PATH_EXTRA_ID = 0x7075
 ZIP_DECOMPRESS_OUTPUT_CHUNK_LIMIT = 1024 * 1024
@@ -107,6 +108,14 @@ REVISION_KINDS = [
 ]
 CAPTURE_ID_RE = re.compile(r"^urn:uuid:[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$")
 SOURCE_ID_RE = re.compile(r"^vsrc:1:[A-Za-z0-9_.-]+:[^\s\x00-\x1f\x7f]+$")
+EXPECTED_IMPLEMENTATION_COMPONENTS = {
+    "policies/source-capture/raw-intake-default-v1.json",
+    "schemas/snapshot-hygiene-v1.schema.json",
+    "schemas/source-capture-v1.schema.json",
+    "tools/inspect_source_snapshot.py",
+    "tools/source_intake_enum_registry.json",
+    "tools/validate_source_capture_bundle.py",
+}
 
 
 @dataclass(frozen=True)
@@ -171,6 +180,7 @@ class ImplementationInfo:
     root: Path
     manifest_path: Path
     descriptor: Descriptor
+    component_digests: dict[str, str]
 
 
 @dataclass(frozen=True)
@@ -335,6 +345,10 @@ def file_preview(path: Path, limit: int = 512) -> bytes:
 
 def digest_bytes(data: bytes) -> str:
     return "sha256:" + hashlib.sha256(data).hexdigest()
+
+
+def digest_text(value: str) -> str:
+    return "sha256:" + hashlib.sha256(value.encode("utf-8", "surrogatepass")).hexdigest()
 
 
 def json_line(obj: dict[str, object]) -> str:
@@ -534,6 +548,7 @@ def load_implementation_info(manifest_path: Path) -> ImplementationInfo:
     if not isinstance(components, list) or not components:
         raise ImplementationPinningError("CAPTURE_IMPLEMENTATION_PIN_MISMATCH", "implementation manifest components must be a non-empty list")
     seen_paths: set[str] = set()
+    component_digests: dict[str, str] = {}
     for idx, component in enumerate(components):
         if not isinstance(component, dict) or set(component) != {"path", "digest"}:
             raise ImplementationPinningError("CAPTURE_IMPLEMENTATION_PIN_MISMATCH", f"component {idx} has invalid shape")
@@ -556,15 +571,25 @@ def load_implementation_info(manifest_path: Path) -> ImplementationInfo:
         actual_digest = digest_file(component_path)
         if actual_digest != expected_digest:
             raise ImplementationPinningError("CAPTURE_IMPLEMENTATION_PIN_MISMATCH", f"component digest mismatch: {rel}", component=rel)
+        component_digests[rel] = expected_digest
+    if seen_paths != EXPECTED_IMPLEMENTATION_COMPONENTS:
+        missing = sorted(EXPECTED_IMPLEMENTATION_COMPONENTS - seen_paths)
+        extra = sorted(seen_paths - EXPECTED_IMPLEMENTATION_COMPONENTS)
+        raise ImplementationPinningError(
+            "CAPTURE_IMPLEMENTATION_PIN_MISMATCH",
+            f"implementation manifest component set mismatch; missing={missing}; extra={extra}",
+        )
     runtime = manifest.get("runtime")
-    if not isinstance(runtime, dict) or runtime.get("language") != "python" or not isinstance(runtime.get("minimum_version"), str):
+    if not isinstance(runtime, dict) or set(runtime) != {"language", "minimum_version"}:
+        raise ImplementationPinningError("CAPTURE_IMPLEMENTATION_PIN_MISMATCH", "implementation manifest runtime is invalid")
+    if runtime.get("language") != "python" or runtime.get("minimum_version") != "3.10":
         raise ImplementationPinningError("CAPTURE_IMPLEMENTATION_PIN_MISMATCH", "implementation manifest runtime is invalid")
     descriptor = Descriptor(
         media_type=IMPLEMENTATION_MEDIA_TYPE,
         size=manifest_path.stat().st_size,
         digest=digest_file(manifest_path),
     )
-    return ImplementationInfo(root=root, manifest_path=manifest_path, descriptor=descriptor)
+    return ImplementationInfo(root=root, manifest_path=manifest_path, descriptor=descriptor, component_digests=component_digests)
 
 
 def load_raw_intake_policy(path: Path, expected_id: str) -> RawIntakePolicy:
@@ -601,6 +626,8 @@ def load_raw_intake_policy(path: Path, expected_id: str) -> RawIntakePolicy:
         raise ImplementationPinningError("CAPTURE_POLICY_PIN_MISMATCH", "policy codes are invalid")
     if len(codes) != len(set(codes)) or len(severities) != len(set(severities)):
         raise ImplementationPinningError("CAPTURE_POLICY_PIN_MISMATCH", "policy codes/severities must be unique")
+    if not {"hazard", "error"}.issubset(set(severities)):
+        raise ImplementationPinningError("CAPTURE_POLICY_PIN_MISMATCH", "policy unsafe severities must include hazard and error")
     unsafe_disposition = decision.get("unsafe")
     complete_disposition = decision.get("complete_without_unsafe")
     if unsafe_disposition != "quarantined" or complete_disposition != "admitted":
@@ -685,6 +712,9 @@ def windows_equivalence_key(path: str) -> str:
 
 
 def canonical_archive_path(raw_path: str, findings: list[Finding]) -> str:
+    if len(raw_path) > MAX_ARCHIVE_PATH_STRING_LENGTH:
+        add_path_length_limit_finding(raw_path, findings)
+        return raw_path.replace("\\", "/")
     if any(ord(char) < 0x20 or ord(char) == 0x7F for char in raw_path):
         add_finding(
             findings,
@@ -738,6 +768,23 @@ def zip_path_for_validation(path: str) -> str:
     if path.endswith("/") and not path.endswith("//"):
         return path[:-1]
     return path
+
+
+def add_path_length_limit_finding(path: str, findings: list[Finding]) -> None:
+    add_finding(
+        findings,
+        "ARCHIVE_PATH_LENGTH_LIMIT_EXCEEDED",
+        "hazard",
+        "archive-safety/v1",
+        "Archive path exceeds the implementation hard string limit.",
+        [],
+        {
+            "path_digest": digest_text(path),
+            "path_preview": path[:128],
+            "path_length": len(path),
+            "max_archive_path_string_length": MAX_ARCHIVE_PATH_STRING_LENGTH,
+        },
+    )
 
 
 def add_finding(
@@ -879,7 +926,29 @@ def strip_root(path: str, root: str | None) -> str:
     return path
 
 
-def check_path_hygiene(path: str, findings: list[Finding], limits: Limits) -> None:
+def add_path_too_long_warning(path: str, findings: list[Finding], limits: Limits) -> None:
+    if len(path) > limits.max_path_length:
+        add_finding(
+            findings,
+            "PATH_TOO_LONG",
+            "warning",
+            "repo-portability/v1",
+            "Path exceeds the configured portability length.",
+            [path],
+            {"max_path_length": limits.max_path_length},
+        )
+
+
+def check_path_hygiene(
+    path: str,
+    findings: list[Finding],
+    limits: Limits,
+    *,
+    check_portability_length: bool = True,
+) -> None:
+    if len(path) > MAX_ARCHIVE_PATH_STRING_LENGTH:
+        add_path_length_limit_finding(path, findings)
+        return
     if is_absolute_path(path):
         add_finding(
             findings,
@@ -909,16 +978,8 @@ def check_path_hygiene(path: str, findings: list[Finding], limits: Limits) -> No
             [path],
             {"max_path_depth": limits.max_path_depth},
         )
-    if len(path) > limits.max_path_length:
-        add_finding(
-            findings,
-            "PATH_TOO_LONG",
-            "warning",
-            "repo-portability/v1",
-            "Path exceeds the configured portability length.",
-            [path],
-            {"max_path_length": limits.max_path_length},
-        )
+    if check_portability_length:
+        add_path_too_long_warning(path, findings, limits)
     for part in parts:
         base = part.split(".", 1)[0].upper()
         if base in WINDOWS_RESERVED:
@@ -1053,7 +1114,7 @@ def duplicate_paths(paths: list[str]) -> list[str]:
 
 
 def unsafe_findings(findings: list[Finding], policy: RawIntakePolicy) -> list[Finding]:
-    return [f for f in findings if f.code in policy.unsafe_codes and f.severity in policy.unsafe_severities]
+    return [f for f in findings if f.code in policy.unsafe_codes or f.severity in policy.unsafe_severities]
 
 
 def file_digest_from_zip(
@@ -1702,7 +1763,7 @@ def unicode_path_extra_names(
 def validate_zip_path_representation(path_text: str, label: str, findings: list[Finding], limits: Limits) -> str:
     validation_path = zip_path_for_validation(path_text)
     canonical = canonical_archive_path(validation_path, findings)
-    check_path_hygiene(canonical, findings, limits)
+    check_path_hygiene(canonical, findings, limits, check_portability_length=False)
     return canonical
 
 
@@ -1893,6 +1954,8 @@ def read_zip_entries(
             entry_type = zip_entry_type(info, findings)
             raw_name = validate_zip_path_representations(info, local_header, findings, limits)
             validate_zip_header_consistency(info, local_header, boundaries.get(id(info), zf.start_dir), raw_name, findings)
+            if len(raw_name) > MAX_ARCHIVE_PATH_STRING_LENGTH:
+                continue
             typed_infos.append((info, local_header, raw_name, entry_type))
         raw_names = [raw_path for info, local_header, raw_path, entry_type in typed_infos if entry_type not in {"dir", None}]
         for dupe in duplicate_paths(raw_names):
@@ -1929,10 +1992,12 @@ def read_zip_entries(
                     {"compress_type": info.compress_type},
                 )
             payload_items.append((info, local_header, raw_path, entry_type))
+            manifest_path = strip_root(raw_path, root)
             if entry_type == "dir":
                 manifest_dir = strip_root(zip_path_for_validation(raw_path), root)
                 explicit_dirs.add(manifest_dir)
                 continue
+            add_path_too_long_warning(manifest_path, findings, limits)
             total_size += info.file_size
             if info.file_size > limits.max_entry_size:
                 add_finding(
@@ -1963,7 +2028,7 @@ def read_zip_entries(
             entries.append(
                 Entry(
                     raw_path=raw_path,
-                    manifest_path=strip_root(raw_path, root),
+                    manifest_path=manifest_path,
                     type=entry_type,
                     size=info.file_size,
                     mode=manifest_mode(zip_unix_mode(info) or 0, entry_type),
@@ -2097,7 +2162,10 @@ def read_tar_entries(
                         details={"total_size": total_size, "max_total_size": limits.max_total_size},
                     )
                     break
-            named_members.append((member, canonical_archive_path(member.name, findings)))
+            raw_path = canonical_archive_path(member.name, findings)
+            if len(raw_path) > MAX_ARCHIVE_PATH_STRING_LENGTH:
+                continue
+            named_members.append((member, raw_path))
         raw_names = [raw_path for member, raw_path in named_members if not member.isdir()]
         for dupe in duplicate_paths(raw_names):
             add_finding(
@@ -2111,7 +2179,8 @@ def read_tar_entries(
         root = first_common_archive_root(raw_names) if should_strip_wrapper_root(source_kind, capture_method) else None
         total_size = 0
         for member, raw_path in named_members:
-            check_path_hygiene(raw_path, findings, limits)
+            check_path_hygiene(raw_path, findings, limits, check_portability_length=False)
+            manifest_path = strip_root(raw_path, root)
             if member.isdir():
                 if member.size != 0:
                     add_finding(
@@ -2161,10 +2230,11 @@ def read_tar_entries(
                     {"tar_type": str(member.type)},
                 )
                 continue
+            add_path_too_long_warning(manifest_path, findings, limits)
             entries.append(
                 Entry(
                     raw_path=raw_path,
-                    manifest_path=strip_root(raw_path, root),
+                    manifest_path=manifest_path,
                     type=entry_type,
                     size=member.size,
                     mode=manifest_mode(member.mode, entry_type),
@@ -2288,12 +2358,14 @@ def hygiene_profiles_for(
     *,
     snapshot_kind: str,
     capture_method: str,
+    content_detection_basis: str | None,
 ) -> list[str]:
     profiles: list[str] = []
     if source_kind == "repo":
         profiles.extend(REPO_HYGIENE_PROFILES)
     elif (
-        source_kind == "archive"
+        content_detection_basis == "container_parser"
+        or source_kind == "archive"
         or capture_method_suggests_archive(capture_method)
         or snapshot_kind == "tree"
     ):
@@ -2317,6 +2389,7 @@ def build_hygiene(
     source_kind: str,
     snapshot_kind: str,
     capture_method: str,
+    content_detection_basis: str | None,
     limits: Limits,
     implementation: ImplementationInfo,
 ) -> tuple[bytes, str]:
@@ -2344,6 +2417,7 @@ def build_hygiene(
                 output_findings,
                 snapshot_kind=snapshot_kind,
                 capture_method=capture_method,
+                content_detection_basis=content_detection_basis,
             ),
             "parameters": limits_parameters(limits),
             "summary": {
@@ -2373,12 +2447,6 @@ def inspect_path(
     kind = archive_kind(path)
     findings: list[Finding] = []
     identity_path = display_path or path
-    locator_hint = locator_media_type_hint(identity_path)
-    content_type = detect_media_type(path, kind, locator_hint)
-    check_content_type_findings(content_type, source_kind, findings, identity_path)
-    media_type = content_type.detected_media_type
-    entries: list[Entry] = []
-    total_size = blob_size
     required_archive = source_or_method_requires_archive(source_kind, capture_method)
     expected_archive = input_profile == "archive" or required_archive or (
         input_profile == "auto"
@@ -2387,6 +2455,12 @@ def inspect_path(
     )
     if input_profile == "blob" and not required_archive:
         kind = "file"
+    locator_hint = locator_media_type_hint(identity_path)
+    content_type = detect_media_type(path, kind, locator_hint)
+    check_content_type_findings(content_type, source_kind, findings, identity_path)
+    media_type = content_type.detected_media_type
+    entries: list[Entry] = []
+    total_size = blob_size
     if kind == "file" and expected_archive:
         add_parse_failed(findings, identity_path, "Input was expected to be an archive but could not be parsed as ZIP or TAR.")
     if kind == "zip":
@@ -2522,7 +2596,11 @@ def failed_result_from_exception(
     display_path: Path | None = None,
 ) -> InspectionResult:
     identity_path = display_path or path
-    content_type = detect_media_type(path, "file", locator_media_type_hint(identity_path))
+    try:
+        inspection_kind = archive_kind(path)
+    except Exception:
+        inspection_kind = "file"
+    content_type = detect_media_type(path, inspection_kind, locator_media_type_hint(identity_path))
     finding = Finding(
         code="SCANNER_UNHANDLED_EXCEPTION",
         severity="hazard",
@@ -2710,6 +2788,7 @@ def write_outputs(
     hygiene: bytes,
     *,
     policy_file: Path,
+    implementation_manifest: Path,
 ) -> None:
     assert_safe_output_dir(out_dir, input_path)
     parent = out_dir.parent if out_dir.parent != Path("") else Path(".")
@@ -2719,7 +2798,12 @@ def write_outputs(
         write_exclusive(staging / "capture-envelope.json", json_bytes(envelope))
         write_exclusive(staging / "snapshot-manifest.jsonl", manifest)
         write_exclusive(staging / "snapshot-hygiene.intoto.json", hygiene)
-        validate_source_capture_bundle.validate_bundle(staging, profile="enterprise-alpha1", policy_file=policy_file)
+        validate_source_capture_bundle.validate_bundle(
+            staging,
+            profile="enterprise-alpha1",
+            policy_file=policy_file,
+            implementation_manifest=implementation_manifest,
+        )
         if out_dir.exists():
             if any(out_dir.iterdir()):
                 raise FileExistsError(f"output directory became non-empty before commit: {out_dir}")
@@ -2850,6 +2934,27 @@ def main(argv: list[str] | None = None) -> int:
     try:
         implementation = load_implementation_info(Path(args.implementation_manifest))
         policy = load_raw_intake_policy(Path(args.policy_file), args.policy_id)
+        try:
+            policy_rel = str(Path(args.policy_file).resolve().relative_to(implementation.root)).replace("\\", "/")
+        except ValueError as exc:
+            raise ImplementationPinningError(
+                "CAPTURE_POLICY_PIN_MISMATCH",
+                "runtime policy file is outside the implementation root",
+                component=str(args.policy_file),
+            ) from exc
+        expected_policy_digest = implementation.component_digests.get(policy_rel)
+        if expected_policy_digest is None:
+            raise ImplementationPinningError(
+                "CAPTURE_POLICY_PIN_MISMATCH",
+                "runtime policy file is not pinned by the implementation manifest",
+                component=policy_rel,
+            )
+        if expected_policy_digest != digest_file(policy.path):
+            raise ImplementationPinningError(
+                "CAPTURE_POLICY_PIN_MISMATCH",
+                "runtime policy file digest does not match implementation manifest",
+                component=policy_rel,
+            )
     except ImplementationPinningError as exc:
         payload: dict[str, object] = {
             "status": "fail",
@@ -2927,6 +3032,7 @@ def main(argv: list[str] | None = None) -> int:
             source_kind=args.source_kind,
             snapshot_kind=result.snapshot_kind,
             capture_method=args.capture_method,
+            content_detection_basis=result.content_type.detection_basis,
             limits=limits,
             implementation=implementation,
         )
@@ -2940,7 +3046,15 @@ def main(argv: list[str] | None = None) -> int:
             implementation=implementation,
             policy=policy,
         )
-        write_outputs(Path(args.out), input_path, envelope, result.manifest_bytes, hygiene, policy_file=policy.path)
+        write_outputs(
+            Path(args.out),
+            input_path,
+            envelope,
+            result.manifest_bytes,
+            hygiene,
+            policy_file=policy.path,
+            implementation_manifest=implementation.manifest_path,
+        )
         output_findings = prepared_findings(result.findings)
         summary = {
             "capture_envelope": str(Path(args.out) / "capture-envelope.json"),

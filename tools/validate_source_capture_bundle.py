@@ -49,14 +49,29 @@ OBSERVATION_STATES = {"captured", "partial", "failed"}
 CHANGE_STATES = {"first_seen", "same_snapshot", "new_snapshot", "unknown"}
 RAW_DISPOSITIONS = {"admitted", "quarantined", "rejected", "not_evaluated"}
 IMPLEMENTATION_MEDIA_TYPE = "application/vnd.vaks.source-capture-implementation.v1+json"
+IMPLEMENTATION_SCHEMA = "urn:vaks:schema:source-capture-implementation:v1"
+IMPLEMENTATION_ID = "vaks.source-capture-envelope"
+IMPLEMENTATION_VERSION = "1.0-alpha.1"
 CONTENT_TYPE_PROFILE = "vaks-media-type-detection/v1"
 CONTENT_TYPE_BASIS = {"container_parser", "magic_signature", "locator_hint", "fallback"}
 CONTENT_TYPE_HINT_MATCH = {"matched", "mismatch", "no_hint", "not_comparable"}
+ARCHIVE_MEDIA_TYPES = {"application/zip", "application/x-tar", "application/gzip", "application/x-bzip2", "application/x-xz"}
 VALIDATOR_PROFILES = {"base", "enterprise-alpha1"}
 MAX_MANIFEST_BYTES = 64 * 1024 * 1024
 MAX_HYGIENE_BYTES = 16 * 1024 * 1024
 MAX_MANIFEST_ENTRIES = 100_000
 MAX_STRING_LENGTH = 16_384
+MAX_ARCHIVE_PATH_STRING_LENGTH = MAX_STRING_LENGTH
+PINNED_MAX_FINDINGS_PER_CODE = 100
+POLICY_COMPONENT_PATH = "policies/source-capture/raw-intake-default-v1.json"
+EXPECTED_IMPLEMENTATION_COMPONENTS = {
+    POLICY_COMPONENT_PATH,
+    "schemas/snapshot-hygiene-v1.schema.json",
+    "schemas/source-capture-v1.schema.json",
+    "tools/inspect_source_snapshot.py",
+    "tools/source_intake_enum_registry.json",
+    "tools/validate_source_capture_bundle.py",
+}
 ENTERPRISE_PARAMETER_KEYS = {"max_input_blob_size"}
 REQUIRED_PARAMETER_KEYS = {
     "limits_profile",
@@ -164,6 +179,67 @@ def digest_file(path: Path) -> str:
         for chunk in iter(lambda: fh.read(1024 * 1024), b""):
             h.update(chunk)
     return "sha256:" + h.hexdigest()
+
+
+def script_root() -> Path:
+    return Path(__file__).resolve().parent.parent
+
+
+def default_implementation_manifest_path() -> Path:
+    return script_root() / "tools" / "source_capture_implementation_manifest.json"
+
+
+def load_implementation_manifest(manifest_path: Path) -> dict[str, Any]:
+    root = script_root()
+    manifest = read_json(manifest_path)
+    exact_keys(manifest, {"schema", "id", "version", "components", "runtime"}, {"schema", "id", "version", "components", "runtime"}, "implementation manifest")
+    if manifest.get("schema") != IMPLEMENTATION_SCHEMA or manifest.get("id") != IMPLEMENTATION_ID:
+        raise ValidationError("implementation manifest identity mismatch")
+    if manifest.get("version") != IMPLEMENTATION_VERSION:
+        raise ValidationError("implementation manifest version mismatch")
+    components = manifest.get("components")
+    if not isinstance(components, list) or not components:
+        raise ValidationError("implementation manifest components must be a non-empty list")
+    seen_paths: set[str] = set()
+    component_digests: dict[str, str] = {}
+    for idx, component in enumerate(components):
+        exact_keys(component, {"path", "digest"}, {"path", "digest"}, f"implementation manifest component[{idx}]")
+        rel = require_string(component.get("path"), f"implementation manifest component[{idx}].path")
+        expected_digest = require_digest(component.get("digest"), f"implementation manifest component[{idx}].digest")
+        if "\\" in rel or rel.startswith("/") or ".." in Path(rel).parts:
+            raise ValidationError(f"implementation manifest component path is invalid: {rel}")
+        if rel in seen_paths:
+            raise ValidationError(f"duplicate implementation manifest component: {rel}")
+        seen_paths.add(rel)
+        component_path = (root / rel).resolve()
+        try:
+            component_path.relative_to(root)
+        except ValueError as exc:
+            raise ValidationError(f"implementation manifest component escapes root: {rel}") from exc
+        if not component_path.is_file() or component_path.is_symlink():
+            raise ValidationError(f"implementation manifest component is missing or unsafe: {rel}")
+        actual_digest = digest_file(component_path)
+        if actual_digest != expected_digest:
+            raise ValidationError(f"implementation manifest component digest mismatch: {rel}")
+        component_digests[rel] = expected_digest
+    if seen_paths != EXPECTED_IMPLEMENTATION_COMPONENTS:
+        missing = sorted(EXPECTED_IMPLEMENTATION_COMPONENTS - seen_paths)
+        extra = sorted(seen_paths - EXPECTED_IMPLEMENTATION_COMPONENTS)
+        raise ValidationError(f"implementation manifest component set mismatch; missing={missing}; extra={extra}")
+    runtime = manifest.get("runtime")
+    exact_keys(runtime, {"language", "minimum_version"}, {"language", "minimum_version"}, "implementation manifest runtime")
+    if runtime.get("language") != "python" or runtime.get("minimum_version") != "3.10":
+        raise ValidationError("implementation manifest runtime is invalid")
+    return {
+        "root": root,
+        "path": manifest_path,
+        "descriptor": {
+            "media_type": IMPLEMENTATION_MEDIA_TYPE,
+            "size": manifest_path.stat().st_size,
+            "digest": digest_file(manifest_path),
+        },
+        "component_digests": component_digests,
+    }
 
 
 def read_json(path: Path) -> dict[str, Any]:
@@ -328,7 +404,62 @@ def path_depth(path: str) -> int:
     return len([part for part in path.split("/") if part])
 
 
-def validate_manifest_limits(entries: list[dict[str, Any]], parameters: dict[str, Any]) -> None:
+def finding_counts_by_code(findings: list[dict[str, Any]]) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for item in findings:
+        code = item.get("code")
+        if not isinstance(code, str) or code == "HYGIENE_FINDINGS_TRUNCATED":
+            continue
+        counts[code] = counts.get(code, 0) + 1
+    return counts
+
+
+def truncation_counts_by_code(findings: list[dict[str, Any]]) -> dict[str, int]:
+    markers = [item for item in findings if item.get("code") == "HYGIENE_FINDINGS_TRUNCATED"]
+    if len(markers) > 1:
+        raise ValidationError("HYGIENE_FINDINGS_TRUNCATED must appear at most once")
+    if not markers:
+        return {}
+    marker = markers[0]
+    if marker.get("severity") != "warning":
+        raise ValidationError("HYGIENE_FINDINGS_TRUNCATED must use warning severity")
+    details = marker.get("details")
+    if not isinstance(details, dict):
+        raise ValidationError("HYGIENE_FINDINGS_TRUNCATED must carry details")
+    truncated = details.get("truncated_by_code")
+    if not isinstance(truncated, dict) or not truncated:
+        raise ValidationError("HYGIENE_FINDINGS_TRUNCATED must carry non-empty details.truncated_by_code")
+    result: dict[str, int] = {}
+    for code, value in truncated.items():
+        require_string(code, "HYGIENE_FINDINGS_TRUNCATED details.truncated_by_code key")
+        if type(value) is not int or value < 1:
+            raise ValidationError(f"HYGIENE_FINDINGS_TRUNCATED count for {code} must be a positive integer")
+        result[code] = value
+    return result
+
+
+def validate_truncation_marker(
+    findings: list[dict[str, Any]],
+    truncation_counts: dict[str, int],
+    *,
+    max_findings_per_code: int,
+) -> None:
+    explicit_counts = finding_counts_by_code(findings)
+    for code in truncation_counts:
+        if explicit_counts.get(code, 0) != max_findings_per_code:
+            raise ValidationError(
+                f"HYGIENE_FINDINGS_TRUNCATED for {code} requires exactly max_findings_per_code explicit findings"
+            )
+
+
+def validate_manifest_limits(
+    entries: list[dict[str, Any]],
+    parameters: dict[str, Any],
+    findings: list[dict[str, Any]],
+    *,
+    manifest_state: str,
+    truncation_counts: dict[str, int] | None = None,
+) -> None:
     max_entries = require_positive_int(parameters.get("max_entries"), "hygiene parameters.max_entries")
     max_total_size = require_positive_int(parameters.get("max_total_size"), "hygiene parameters.max_total_size")
     max_entry_size = require_positive_int(parameters.get("max_entry_size"), "hygiene parameters.max_entry_size")
@@ -338,15 +469,34 @@ def validate_manifest_limits(entries: list[dict[str, Any]], parameters: dict[str
         parameters.get("max_symlink_target_size"),
         "hygiene parameters.max_symlink_target_size",
     )
+    max_findings_per_code = require_positive_int(
+        parameters.get("max_findings_per_code"),
+        "hygiene parameters.max_findings_per_code",
+    )
+    truncation_counts = truncation_counts or {}
+    validate_truncation_marker(findings, truncation_counts, max_findings_per_code=max_findings_per_code)
     if len(entries) > max_entries:
         raise ValidationError("manifest entry count exceeds recorded hygiene limit")
     total_size = 0
+    path_too_long_warning_paths: list[str] = []
+    for idx, item in enumerate(findings):
+        if item.get("code") != "PATH_TOO_LONG":
+            continue
+        if item.get("severity") != "warning":
+            raise ValidationError("PATH_TOO_LONG must use warning severity")
+        paths = item.get("paths")
+        if not isinstance(paths, list) or len(paths) != 1 or not isinstance(paths[0], str):
+            raise ValidationError(f"PATH_TOO_LONG finding[{idx}] must bind exactly one manifest path")
+        path_too_long_warning_paths.append(paths[0])
+    if len(path_too_long_warning_paths) != len(set(path_too_long_warning_paths)):
+        raise ValidationError("PATH_TOO_LONG findings must bind distinct manifest paths")
+    actual_too_long_paths: list[str] = []
     for idx, entry in enumerate(entries, start=2):
         path = str(entry.get("path"))
         if path_depth(path) > max_path_depth:
             raise ValidationError(f"manifest line {idx} path depth exceeds recorded hygiene limit")
         if len(path) > max_path_length:
-            raise ValidationError(f"manifest line {idx} path length exceeds recorded hygiene limit")
+            actual_too_long_paths.append(path)
         if entry.get("type") == "file":
             size = require_nonnegative_int(entry.get("size"), f"manifest line {idx} size")
             if size > max_entry_size:
@@ -362,6 +512,20 @@ def validate_manifest_limits(entries: list[dict[str, Any]], parameters: dict[str
             total_size += target_size
     if total_size > max_total_size:
         raise ValidationError("manifest total logical file size exceeds recorded hygiene limit")
+    if manifest_state == "complete":
+        expected_paths = sorted(actual_too_long_paths)
+        expected_explicit_paths = expected_paths[:max_findings_per_code]
+        expected_truncated_count = max(0, len(expected_paths) - max_findings_per_code)
+        if sorted(path_too_long_warning_paths) != expected_explicit_paths:
+            raise ValidationError("PATH_TOO_LONG findings must exactly match the deterministic over-limit manifest path prefix")
+        observed_truncated_count = truncation_counts.get("PATH_TOO_LONG", 0)
+        if observed_truncated_count != expected_truncated_count:
+            raise ValidationError("PATH_TOO_LONG truncation count does not match deterministic manifest replay")
+    elif path_too_long_warning_paths and "PATH_TOO_LONG" in truncation_counts:
+        # Unavailable/blob manifests have no tree entries to replay, but the report-size
+        # marker still proves the scanner retained the deterministic explicit prefix.
+        if len(path_too_long_warning_paths) != max_findings_per_code:
+            raise ValidationError("PATH_TOO_LONG truncation marker requires max_findings_per_code explicit findings")
 
 
 def validate_capture_semantics(envelope: dict[str, Any], *, profile: str) -> None:
@@ -426,7 +590,7 @@ def validate_capture_semantics(envelope: dict[str, Any], *, profile: str) -> Non
         raise ValidationError("observation.capture_method is invalid")
     validate_descriptor(observation.get("blob"), "observation.blob")
     if "content_type" in observation:
-        validate_content_type(observation.get("content_type"), observation["blob"].get("media_type"))
+        validate_content_type(observation.get("content_type"), observation["blob"].get("media_type"), strict=strict)
 
     snapshot = envelope.get("snapshot")
     exact_keys(snapshot, {"snapshot_id", "kind"}, {"snapshot_id", "kind", "manifest"}, "snapshot")
@@ -518,7 +682,7 @@ def validate_descriptor(descriptor: Any, context: str) -> None:
     require_digest(descriptor.get("digest"), f"{context}.digest")
 
 
-def validate_content_type(content_type: Any, blob_media_type: Any) -> None:
+def validate_content_type(content_type: Any, blob_media_type: Any, *, strict: bool) -> None:
     exact_keys(
         content_type,
         {"profile", "detected_media_type", "detection_basis", "hint_match"},
@@ -530,12 +694,38 @@ def validate_content_type(content_type: Any, blob_media_type: Any) -> None:
     detected = require_string(content_type.get("detected_media_type"), "observation.content_type.detected_media_type")
     if detected != blob_media_type:
         raise ValidationError("observation.blob.media_type must match observation.content_type.detected_media_type")
-    if content_type.get("detection_basis") not in CONTENT_TYPE_BASIS:
+    detection_basis = content_type.get("detection_basis")
+    if detection_basis not in CONTENT_TYPE_BASIS:
         raise ValidationError("observation.content_type.detection_basis is invalid")
-    if content_type.get("hint_match") not in CONTENT_TYPE_HINT_MATCH:
+    hint_match = content_type.get("hint_match")
+    if hint_match not in CONTENT_TYPE_HINT_MATCH:
         raise ValidationError("observation.content_type.hint_match is invalid")
+    if strict and detection_basis == "locator_hint":
+        raise ValidationError("observation.content_type.detection_basis=locator_hint is not supported by enterprise-alpha1")
+    if strict and hint_match == "not_comparable":
+        raise ValidationError("observation.content_type.hint_match=not_comparable is not supported by enterprise-alpha1")
+    if strict:
+        if detection_basis == "container_parser" and detected not in ARCHIVE_MEDIA_TYPES:
+            raise ValidationError("observation.content_type.detection_basis=container_parser requires an archive media type")
+        if detection_basis == "magic_signature" and detected != "application/pdf":
+            raise ValidationError("observation.content_type.detection_basis=magic_signature requires application/pdf")
+        if detection_basis == "fallback" and detected != "application/octet-stream":
+            raise ValidationError("observation.content_type.detection_basis=fallback requires application/octet-stream")
+    locator_hint = content_type.get("locator_hint_media_type")
     if "locator_hint_media_type" in content_type:
-        require_string(content_type.get("locator_hint_media_type"), "observation.content_type.locator_hint_media_type")
+        locator_hint = require_string(content_type.get("locator_hint_media_type"), "observation.content_type.locator_hint_media_type")
+    if hint_match == "matched":
+        if locator_hint is None or locator_hint != detected:
+            raise ValidationError("observation.content_type.hint_match=matched requires locator_hint_media_type equal to detected_media_type")
+    elif hint_match == "mismatch":
+        if locator_hint is None or locator_hint == detected:
+            raise ValidationError("observation.content_type.hint_match=mismatch requires a differing locator_hint_media_type")
+    elif hint_match == "no_hint":
+        if locator_hint is not None:
+            raise ValidationError("observation.content_type.hint_match=no_hint must not carry locator_hint_media_type")
+    elif hint_match == "not_comparable":
+        if locator_hint is None:
+            raise ValidationError("observation.content_type.hint_match=not_comparable requires locator_hint_media_type")
 
 
 def validate_hygiene_semantics(hygiene: dict[str, Any], *, profile: str) -> None:
@@ -579,6 +769,8 @@ def validate_hygiene_semantics(hygiene: dict[str, Any], *, profile: str) -> None
         raise ValidationError("hygiene parameters.limits_profile is invalid")
     for key in REQUIRED_PARAMETER_KEYS - {"limits_profile", "max_compression_ratio"}:
         require_positive_int(parameters.get(key), f"hygiene parameters.{key}")
+    if strict and parameters.get("max_findings_per_code") != PINNED_MAX_FINDINGS_PER_CODE:
+        raise ValidationError("enterprise-alpha1 requires hygiene parameters.max_findings_per_code = 100")
     if "max_input_blob_size" in parameters:
         require_positive_int(parameters.get("max_input_blob_size"), "hygiene parameters.max_input_blob_size")
     if (
@@ -640,6 +832,10 @@ def load_policy(policy_file: Path | None) -> dict[str, Any] | None:
         raise ValidationError("policy unsafe severities are invalid")
     if not isinstance(codes, list) or not codes or any(not isinstance(item, str) or not item.strip() for item in codes):
         raise ValidationError("policy unsafe codes are invalid")
+    if len(codes) != len(set(codes)) or len(severities) != len(set(severities)):
+        raise ValidationError("policy unsafe codes/severities must be unique")
+    if not {"hazard", "error"}.issubset(set(severities)):
+        raise ValidationError("policy unsafe severities must include hazard and error")
     decision = policy.get("decision")
     exact_keys(decision, {"unsafe", "complete_without_unsafe"}, {"unsafe", "complete_without_unsafe"}, "policy.decision")
     if decision.get("unsafe") != "quarantined" or decision.get("complete_without_unsafe") != "admitted":
@@ -652,9 +848,17 @@ def policy_without_internal_keys(policy: dict[str, Any]) -> dict[str, Any]:
     return {key: value for key, value in policy.items() if not key.startswith("_")}
 
 
-def validate_bundle(bundle: Path, *, profile: str = "base", policy_file: Path | None = None) -> dict[str, Any]:
+def validate_bundle(
+    bundle: Path,
+    *,
+    profile: str = "base",
+    policy_file: Path | None = None,
+    implementation_manifest: Path | None = None,
+) -> dict[str, Any]:
     if profile not in VALIDATOR_PROFILES:
         raise ValidationError(f"unsupported validator profile: {profile}")
+    strict = profile == "enterprise-alpha1"
+    implementation = load_implementation_manifest(implementation_manifest or default_implementation_manifest_path()) if strict else None
     policy = load_policy(policy_file)
     envelope_path = require_file(bundle, "capture-envelope.json")
     manifest_path = require_file(bundle, "snapshot-manifest.jsonl")
@@ -680,7 +884,8 @@ def validate_bundle(bundle: Path, *, profile: str = "base", policy_file: Path | 
     archive_intent = source.get("kind") == "archive" or capture_method in {"provider_archive", "archive_file"}
     raw_handling = envelope.get("raw_handling") if isinstance(envelope.get("raw_handling"), dict) else {}
     disposition = raw_handling.get("disposition")
-    reason_codes = set(raw_handling.get("reason_codes", [])) if isinstance(raw_handling.get("reason_codes"), list) else set()
+    reason_codes_list = raw_handling.get("reason_codes", []) if isinstance(raw_handling.get("reason_codes"), list) else []
+    reason_codes = set(reason_codes_list)
     raw_policy = raw_handling.get("policy") if isinstance(raw_handling.get("policy"), dict) else {}
     if profile == "enterprise-alpha1":
         if policy is None:
@@ -705,7 +910,26 @@ def validate_bundle(bundle: Path, *, profile: str = "base", policy_file: Path | 
         checker_impl = predicate.get("checker", {}).get("implementation") if isinstance(predicate.get("checker"), dict) else None
         if producer_impl != checker_impl:
             raise ValidationError("producer/checker implementation descriptors must match")
-    validate_manifest_limits(manifest_entries, hygiene_parameters)
+        if producer_impl != implementation["descriptor"]:
+            raise ValidationError("producer/checker implementation descriptor does not match implementation manifest")
+        try:
+            policy_rel = str(Path(policy_file).resolve().relative_to(implementation["root"])).replace("\\", "/")
+        except ValueError as exc:
+            raise ValidationError("enterprise policy file must be under the implementation root") from exc
+        if policy_rel != POLICY_COMPONENT_PATH:
+            raise ValidationError("enterprise policy file must be the implementation-pinned policy component")
+        if digest_file(Path(policy_file)) != implementation["component_digests"][POLICY_COMPONENT_PATH]:
+            raise ValidationError("enterprise policy file digest does not match implementation manifest policy component")
+    predicate = hygiene.get("predicate")
+    findings_for_limits = predicate.get("findings") if isinstance(predicate, dict) and isinstance(predicate.get("findings"), list) else []
+    truncation_counts = truncation_counts_by_code(findings_for_limits)
+    validate_manifest_limits(
+        manifest_entries,
+        hygiene_parameters,
+        findings_for_limits,
+        manifest_state=manifest_state,
+        truncation_counts=truncation_counts,
+    )
     manifest_digest = sha256_bytes(manifest_bytes)
     if snapshot_kind == "tree":
         if manifest_state != "complete":
@@ -794,10 +1018,34 @@ def validate_bundle(bundle: Path, *, profile: str = "base", policy_file: Path | 
     if summary.get("max_severity") != computed_max_severity(findings):
         raise ValidationError("hygiene max_severity does not match findings")
 
+    finding_codes = {item.get("code") for item in findings}
+    finding_pairs = {(item.get("code"), item.get("severity")) for item in findings}
+    content_type = observation.get("content_type") if isinstance(observation.get("content_type"), dict) else {}
+    detected_media_type = content_type.get("detected_media_type")
+    if source.get("kind") == "pdf" and detected_media_type != "application/pdf":
+        if ("SOURCE_KIND_FORMAT_MISMATCH", "hazard") not in finding_pairs:
+            raise ValidationError("source.kind=pdf with non-PDF detected media type requires SOURCE_KIND_FORMAT_MISMATCH hazard finding")
+    if content_type.get("hint_match") == "mismatch":
+        if ("MEDIA_TYPE_HINT_MISMATCH", "warning") not in finding_pairs:
+            raise ValidationError("media-type hint mismatch requires MEDIA_TYPE_HINT_MISMATCH warning finding")
+
     if policy is not None:
         unsafe_codes = set(policy["unsafe_finding"]["codes"])
         unsafe_severities = set(policy["unsafe_finding"]["severities"])
-        hazard_codes = {item.get("code") for item in findings if item.get("code") in unsafe_codes and item.get("severity") in unsafe_severities}
+        policy_unsafe_codes = sorted(
+            {
+                item.get("code")
+                for item in findings
+                if item.get("code") in unsafe_codes or item.get("severity") in unsafe_severities
+            }
+            | {code for code in truncation_counts if code in unsafe_codes}
+        )
+        hazard_codes = set(policy_unsafe_codes)
+        expected_disposition = policy["decision"]["unsafe"] if policy_unsafe_codes else policy["decision"]["complete_without_unsafe"]
+        if disposition != expected_disposition:
+            raise ValidationError("raw_handling.disposition does not match policy replay")
+        if sorted(reason_codes_list) != policy_unsafe_codes:
+            raise ValidationError("raw_handling.reason_codes must exactly match policy-unsafe finding codes")
     else:
         hazard_codes = {item.get("code") for item in findings if item.get("severity") in {"hazard", "error"}}
     if disposition in {"admitted", "not_evaluated"} and reason_codes:
@@ -809,6 +1057,17 @@ def validate_bundle(bundle: Path, *, profile: str = "base", policy_file: Path | 
             raise ValidationError("hazard/error findings must be included in raw_handling.reason_codes")
 
     profiles = predicate.get("profiles")
+    detection_basis = content_type.get("detection_basis")
+    if strict:
+        if snapshot_kind == "tree":
+            if detection_basis != "container_parser":
+                raise ValidationError("tree snapshots require observation.content_type.detection_basis=container_parser")
+            if detected_media_type not in ARCHIVE_MEDIA_TYPES:
+                raise ValidationError("tree snapshots require an archive detected media type")
+        if snapshot_kind == "blob" and disposition == "admitted" and detection_basis == "container_parser":
+            raise ValidationError("admitted blob snapshots must not use observation.content_type.detection_basis=container_parser")
+        if detection_basis == "container_parser" and "archive-safety/v1" not in profiles:
+            raise ValidationError("container_parser captures must carry archive-safety/v1 hygiene profile")
     if (archive_intent or snapshot_kind == "tree") and "archive-safety/v1" not in profiles:
         raise ValidationError("archive/tree captures must carry archive-safety/v1 hygiene profile")
 
@@ -827,13 +1086,19 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("bundle_dir")
     parser.add_argument("--profile", default="base", choices=sorted(VALIDATOR_PROFILES))
     parser.add_argument("--policy-file")
+    parser.add_argument("--implementation-manifest", default=str(default_implementation_manifest_path()))
     return parser
 
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     try:
-        result = validate_bundle(Path(args.bundle_dir), profile=args.profile, policy_file=Path(args.policy_file) if args.policy_file else None)
+        result = validate_bundle(
+            Path(args.bundle_dir),
+            profile=args.profile,
+            policy_file=Path(args.policy_file) if args.policy_file else None,
+            implementation_manifest=Path(args.implementation_manifest) if args.implementation_manifest else None,
+        )
     except ValidationError as exc:
         print(json.dumps({"status": "fail", "error": str(exc)}, allow_nan=False, sort_keys=True))
         return 1
