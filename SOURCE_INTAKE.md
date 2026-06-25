@@ -237,6 +237,12 @@ Alpha.1 adds operational metadata to make the Raw decision reproducible:
 This remains a Capture / Provenance hardening slice. It must not create
 candidate, reviewed, decision, relation, action-basis, or feedback authority.
 
+Source Capture Store v1 is an optional persistence layer for these validated
+Raw Capture artifacts. It stores the bundle, optional raw blob, validation
+context, and a local storage receipt for retention/fixity only. It is documented
+in `docs/source-capture-store-v1.md` and must not be treated as source trust,
+evidence support, reviewed knowledge, or action readiness.
+
 ### 1.3 No Automatic Authority Promotion
 
 Any migration from raw, candidate, overlay, or feedback material into reviewed

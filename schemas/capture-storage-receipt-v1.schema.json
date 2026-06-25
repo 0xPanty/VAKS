@@ -1,0 +1,206 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:vaks:schema:capture-storage-receipt:v1",
+  "title": "VAKS Capture Storage Receipt v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "capture_id",
+    "stored_at",
+    "store",
+    "bundle",
+    "raw_blob",
+    "validation_context",
+    "storage_state"
+  ],
+  "properties": {
+    "schema": {
+      "const": "urn:vaks:schema:capture-storage-receipt:v1"
+    },
+    "capture_id": {
+      "type": "string",
+      "pattern": "^urn:uuid:[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$"
+    },
+    "stored_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "store": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "instance_id",
+        "layout"
+      ],
+      "properties": {
+        "instance_id": {
+          "type": "string",
+          "pattern": "^urn:uuid:[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$"
+        },
+        "layout": {
+          "const": "vaks-source-capture-store/v1"
+        }
+      }
+    },
+    "bundle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "digest_profile",
+        "digest",
+        "artifacts"
+      ],
+      "properties": {
+        "digest_profile": {
+          "const": "vaks-capture-bundle-id/v1"
+        },
+        "digest": {
+          "$ref": "#/$defs/sha256"
+        },
+        "artifacts": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "$ref": "#/$defs/artifact"
+          }
+        }
+      }
+    },
+    "raw_blob": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "retention_state",
+            "media_type",
+            "size",
+            "digest",
+            "store_path"
+          ],
+          "properties": {
+            "retention_state": {
+              "const": "retained"
+            },
+            "media_type": {
+              "type": "string",
+              "minLength": 1
+            },
+            "size": {
+              "$ref": "#/$defs/nonnegativeInteger"
+            },
+            "digest": {
+              "$ref": "#/$defs/sha256"
+            },
+            "store_path": {
+              "$ref": "#/$defs/storePath"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "retention_state",
+            "reason",
+            "expected_digest",
+            "expected_size"
+          ],
+          "properties": {
+            "retention_state": {
+              "const": "not_retained"
+            },
+            "reason": {
+              "const": "not_provided"
+            },
+            "expected_digest": {
+              "$ref": "#/$defs/sha256"
+            },
+            "expected_size": {
+              "$ref": "#/$defs/nonnegativeInteger"
+            }
+          }
+        }
+      ]
+    },
+    "validation_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "implementation",
+        "policy"
+      ],
+      "properties": {
+        "implementation": {
+          "$ref": "#/$defs/storedDescriptor"
+        },
+        "policy": {
+          "$ref": "#/$defs/storedDescriptor"
+        }
+      }
+    },
+    "storage_state": {
+      "const": "retained"
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "nonnegativeInteger": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "storePath": {
+      "type": "string",
+      "pattern": "^(?!/)(?!.*\\\\)(?!.*(^|/)\\.\\.?(/|$))[A-Za-z0-9._/-]+$"
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "size",
+        "digest"
+      ],
+      "properties": {
+        "name": {
+          "enum": [
+            "capture-envelope.json",
+            "snapshot-hygiene.intoto.json",
+            "snapshot-manifest.jsonl"
+          ]
+        },
+        "size": {
+          "$ref": "#/$defs/nonnegativeInteger"
+        },
+        "digest": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "storedDescriptor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "size",
+        "digest",
+        "store_path"
+      ],
+      "properties": {
+        "size": {
+          "$ref": "#/$defs/nonnegativeInteger"
+        },
+        "digest": {
+          "$ref": "#/$defs/sha256"
+        },
+        "store_path": {
+          "$ref": "#/$defs/storePath"
+        }
+      }
+    }
+  }
+}

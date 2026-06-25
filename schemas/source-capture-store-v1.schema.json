@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:vaks:schema:source-capture-store:v1",
+  "title": "VAKS Source Capture Store v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "layout_version",
+    "store_instance_id",
+    "created_at",
+    "content_addressing"
+  ],
+  "properties": {
+    "schema": {
+      "const": "urn:vaks:schema:source-capture-store:v1"
+    },
+    "layout_version": {
+      "const": "1"
+    },
+    "store_instance_id": {
+      "type": "string",
+      "pattern": "^urn:uuid:[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "content_addressing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "algorithm",
+        "layout"
+      ],
+      "properties": {
+        "algorithm": {
+          "const": "sha256"
+        },
+        "layout": {
+          "const": "prefix-2/v1"
+        }
+      }
+    }
+  }
+}

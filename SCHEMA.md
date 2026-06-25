@@ -231,6 +231,11 @@ policy digest. These are Raw / provenance facts only. They do not create
 reviewed knowledge, evidence support, relation authority, action readiness, or
 trust scoring.
 
+Source Capture Store v1 may persist validated capture bundles, optional raw
+blobs, validation context, and local storage receipts. This is a retention and
+fixity layer only. See `docs/source-capture-store-v1.md`; it does not change
+Source Card truth, reviewed knowledge, evidence support, or action authority.
+
 边界：
 
 ```text
