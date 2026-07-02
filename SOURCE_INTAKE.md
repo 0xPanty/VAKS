@@ -268,6 +268,7 @@ Use state names that make authority visible:
 |---|---|---|---|
 | `LightRaw` | source identity and findability only | create source card and basic metadata | confirm source identity / why saved |
 | `SourceAnnotated` | source-local span was marked for later use | create annotation sidecar and optional footnote handle | confirm only when it persists beyond scratch |
+| `FragmentCandidate` | source-missing idea, weak lead, possible quote, or question | create low-authority fragment inbox record | source recovery or discard before evidence/review use |
 | `MediumCandidate` | provisional summary and candidate points | draft summary and routing hints | confirm provisional persistence |
 | `OverlaySuggested` | project match suggestion in trace/inbox only | create transient suggestion | required before persistence |
 | `OverlayConfirmed` | project-scoped sidecar | draft scope language | required for persistence and closeout |
@@ -288,10 +289,51 @@ constraints, and review routing should be mandatory.
 |---|---|---|---|
 | Source Card | `source_id`, `source_url` or `raw_location`, `captured_at`, `title`, `why_saved` | `source_identity`, `latest_observed_capture_ref`, `adapter_ingest`, `author`, `version_or_commit` | provenance only; no adopt/reject |
 | Source Annotation Sidecar | `annotation_id`, `source_ref`, `selector_type`, one stable selector, `anchor_status`, `annotation_role`, `support_checked`, `evidence_support_status` | `working_copy_ref`, `source_snapshot_ref`, `source_hash`, `content_hash`, `anchor_checked_at`, `anchor_stale`, `anchor_match_count`, `blocked_reason`, `next_action`, `source_digest_required`, `source_digest_ref`, `candidate_refs`, `project_overlay_refs`, `external_annotation_id`, `evidence_packet_ref` when `support_checked: true` | source-local locator; not support, not project verdict |
+| Fragment Candidate | `fragment_id`, `candidate_class: fragment_only`, `fragment`, `provenance`, `retrieval_policy`, `usage_policy`, `state` | `source_hint`, `source_recovery.attempts`, `merged_into`, `discarded_reason` | pre-source idea/lead only; not evidence, not reviewed, not action |
 | Medium Candidate | `source_ref`, `provisional: true`, `knowledge_status: candidate`, structured summary, candidate points | `open_questions`, `routing_hint`, `point_anchor_refs`, `possible_project_refs` | provisional orientation, not rule |
 | Project Overlay Confirmed | `project_id`, `target_ref`, `overlay_state: confirmed`, `project_borrow_scope`, `project_non_borrow_scope`, `project_reopen_trigger` | `target_hint`, `last_checked_at`, `expires_at`, `confirmation_basis` | project sidecar, not truth |
 | Heavy Review Open | `claim`, `source_anchor_refs` or `evidence_anchor_refs`, `warrant`, `scope`, `gaps`, `residual_risk`, `review_status` | `assumptions`, `known_counterevidence`, `reviewer`, `reviewed_at` | review input, not review pass |
 | Feedback Event | `event_kind`, `target_ref`, `project_ref` or `observed_in_context`, `event_time`, `review_pressure_effect` | `query_run_ref`, `temporary_project_warning`, `note` | append-only use event |
+
+Fragment Candidate is the source-missing inbox object. It preserves useful
+ideas, weak leads, possible quotes, questions, and pattern hints without
+pretending that they are Source Cards, Source Captures, Source Annotations, or
+normal Candidate Distillations.
+
+Rules:
+
+- `record_kind: fragment_candidate`
+- `knowledge_status: candidate`
+- `candidate_class: fragment_only`
+- `retrieval_policy.policy_kind: orientation_only`
+- `retrieval_policy.pack_allowed: activation_only`
+- `retrieval_policy.warning_code: missing_source_provenance`
+- `usage_policy.pack_content_allowed: false`
+- `usage_policy.pack_pointer_allowed: true`
+- `usage_policy.evidence_support_allowed: false`
+- `usage_policy.reviewed_knowledge_allowed: false`
+- `usage_policy.action_basis_allowed: false`
+
+Fragment candidates may seed source recovery or orientation. They must not
+become evidence support, reviewed knowledge, exact quotes, action basis, Source
+Capture Store inputs, or Source Annotation targets. If a source is recovered,
+create the formal source/annotation/candidate object and mark the fragment as
+`merged`; do not upgrade the fragment in place.
+
+State rules:
+
+- `source_recovery.status != found` requires `recovered_source_ref: null`.
+- `source_recovery.status: found` requires `fragment_state: merged` and a
+  non-empty `recovered_source_ref`.
+- `fragment_state != merged` requires `merged_into: null`.
+- `fragment_state: merged` requires `merged_into.kind` and `merged_into.ref`.
+- `provenance.status: source_unknown` cannot also declare found source recovery.
+- Named nested objects use exact field sets. `source_recovery.attempts[]` is an
+  exact-shape process log; each item may only use `method`, `query`, `outcome`,
+  and `result_ref`. Attempts must not carry formal `recovered_source_ref` or
+  `merged_into` pointers, or source/evidence/review/action short-name, `*_ref`,
+  URI/locator/citation/support, or anchor fields. Weak URL hints belong only in
+  `provenance.source_hint.possible_url`.
 
 Placeholder fields are not all equal:
 

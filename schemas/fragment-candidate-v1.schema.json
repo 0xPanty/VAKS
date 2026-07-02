@@ -1,0 +1,424 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:vaks:schema:fragment-candidate:v1",
+  "title": "VAKS Fragment Candidate v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "record_kind",
+    "fragment_id",
+    "created_at",
+    "created_by",
+    "knowledge_status",
+    "candidate_class",
+    "processing_tier",
+    "fragment",
+    "provenance",
+    "retrieval_policy",
+    "usage_policy",
+    "state",
+    "tags"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "provenance": {
+            "properties": {
+              "source_recovery": {
+                "properties": {
+                  "status": {
+                    "not": {
+                      "const": "found"
+                    }
+                  }
+                },
+                "required": ["status"]
+              }
+            },
+            "required": ["source_recovery"]
+          }
+        },
+        "required": ["provenance"]
+      },
+      "then": {
+        "properties": {
+          "provenance": {
+            "properties": {
+              "source_recovery": {
+                "properties": {
+                  "recovered_source_ref": {
+                    "const": null
+                  }
+                },
+                "required": ["recovered_source_ref"]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "provenance": {
+            "properties": {
+              "source_recovery": {
+                "properties": {
+                  "status": {
+                    "const": "found"
+                  }
+                },
+                "required": ["status"]
+              }
+            },
+            "required": ["source_recovery"]
+          }
+        },
+        "required": ["provenance"]
+      },
+      "then": {
+        "properties": {
+          "provenance": {
+            "properties": {
+              "source_recovery": {
+                "properties": {
+                  "recovered_source_ref": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": ["recovered_source_ref"]
+              }
+            }
+          },
+          "state": {
+            "properties": {
+              "fragment_state": {
+                "const": "merged"
+              },
+              "merged_into": {
+                "type": "object"
+              }
+            },
+            "required": ["fragment_state", "merged_into"]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "provenance": {
+            "properties": {
+              "status": {
+                "const": "source_unknown"
+              },
+              "source_recovery": {
+                "properties": {
+                  "status": {
+                    "const": "found"
+                  }
+                },
+                "required": ["status"]
+              }
+            },
+            "required": ["status", "source_recovery"]
+          }
+        },
+        "required": ["provenance"]
+      },
+      "then": false
+    },
+    {
+      "if": {
+        "properties": {
+          "state": {
+            "properties": {
+              "fragment_state": {
+                "const": "merged"
+              }
+            },
+            "required": ["fragment_state"]
+          }
+        },
+        "required": ["state"]
+      },
+      "then": {
+        "properties": {
+          "state": {
+            "properties": {
+              "merged_into": {
+                "type": "object"
+              }
+            },
+            "required": ["merged_into"]
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "state": {
+            "properties": {
+              "merged_into": {
+                "const": null
+              }
+            },
+            "required": ["merged_into"]
+          }
+        }
+      }
+    }
+  ],
+  "properties": {
+    "schema": {
+      "const": "urn:vaks:schema:fragment-candidate:v1"
+    },
+    "record_kind": {
+      "const": "fragment_candidate"
+    },
+    "fragment_id": {
+      "type": "string",
+      "pattern": "^urn:uuid:[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "created_by": {
+      "type": "string",
+      "minLength": 1
+    },
+    "knowledge_status": {
+      "const": "candidate"
+    },
+    "candidate_class": {
+      "const": "fragment_only"
+    },
+    "processing_tier": {
+      "const": "light"
+    },
+    "fragment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "language",
+        "content_digest",
+        "quote_exactness",
+        "literal_quote_allowed"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "idea",
+            "claim_like",
+            "quote_like",
+            "question",
+            "pattern_hint",
+            "risk_hint",
+            "task_hint",
+            "term"
+          ]
+        },
+        "language": {
+          "enum": ["zh", "en", "unknown"]
+        },
+        "content_digest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "quote_exactness": {
+          "enum": ["not_applicable", "unverified"]
+        },
+        "literal_quote_allowed": {
+          "const": false
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "source_hint", "source_recovery"],
+      "properties": {
+        "status": {
+          "enum": [
+            "self_authored",
+            "memory_trace",
+            "source_hint_only",
+            "source_unknown"
+          ]
+        },
+        "source_hint": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "hint_text",
+            "possible_title",
+            "possible_author",
+            "possible_url",
+            "possible_platform",
+            "possible_timeframe",
+            "hint_confidence"
+          ],
+          "properties": {
+            "hint_text": {
+              "type": ["string", "null"]
+            },
+            "possible_title": {
+              "type": ["string", "null"]
+            },
+            "possible_author": {
+              "type": ["string", "null"]
+            },
+            "possible_url": {
+              "type": ["string", "null"]
+            },
+            "possible_platform": {
+              "type": ["string", "null"]
+            },
+            "possible_timeframe": {
+              "type": ["string", "null"]
+            },
+            "hint_confidence": {
+              "enum": ["none", "low", "medium"]
+            }
+          }
+        },
+        "source_recovery": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "recovered_source_ref", "attempts"],
+          "properties": {
+            "status": {
+              "enum": ["not_attempted", "needed", "failed", "found"]
+            },
+            "recovered_source_ref": {
+              "type": ["string", "null"]
+            },
+            "attempts": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "method": {
+                    "type": ["string", "null"]
+                  },
+                  "query": {
+                    "type": ["string", "null"]
+                  },
+                  "outcome": {
+                    "type": ["string", "null"]
+                  },
+                  "result_ref": {
+                    "type": ["string", "null"]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "retrieval_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "policy_kind",
+        "pack_allowed",
+        "action_basis_allowed",
+        "warning_code"
+      ],
+      "properties": {
+        "policy_kind": {
+          "const": "orientation_only"
+        },
+        "pack_allowed": {
+          "const": "activation_only"
+        },
+        "action_basis_allowed": {
+          "const": false
+        },
+        "warning_code": {
+          "const": "missing_source_provenance"
+        }
+      }
+    },
+    "usage_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pack_content_allowed",
+        "pack_pointer_allowed",
+        "action_basis_allowed",
+        "evidence_support_allowed",
+        "reviewed_knowledge_allowed"
+      ],
+      "properties": {
+        "pack_content_allowed": {
+          "const": false
+        },
+        "pack_pointer_allowed": {
+          "const": true
+        },
+        "action_basis_allowed": {
+          "const": false
+        },
+        "evidence_support_allowed": {
+          "const": false
+        },
+        "reviewed_knowledge_allowed": {
+          "const": false
+        }
+      }
+    },
+    "state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fragment_state", "merged_into", "discarded_reason"],
+      "properties": {
+        "fragment_state": {
+          "enum": [
+            "inbox",
+            "source_recovery_needed",
+            "parked",
+            "merged",
+            "discarded"
+          ]
+        },
+        "merged_into": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "required": ["kind", "ref"],
+          "properties": {
+            "kind": {
+              "enum": [
+                "source_card",
+                "source_annotation",
+                "candidate_distillation"
+              ]
+            },
+            "ref": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "discarded_reason": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "contains": {
+        "const": "fragment"
+      }
+    }
+  }
+}

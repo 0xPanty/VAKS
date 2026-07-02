@@ -25,6 +25,7 @@ CONTRACT_FILES = [
     "templates/source-annotation.md",
     "templates/video-source.md",
     "templates/candidate-distillation.md",
+    "templates/fragment-candidate.md",
     "templates/project-overlay.md",
     "templates/query-run.md",
     "templates/feedback-event.md",
@@ -47,6 +48,7 @@ CURRENT_GLOBS = [
     "outputs/review/source_annotations/**/*.md",
     "outputs/review/project_lens_overlays/*.md",
     "outputs/review/project_overlays/**/*.md",
+    "fragments/**/*.md",
 ]
 
 SOURCE_INTAKE_RECORD_KINDS = {
@@ -59,6 +61,7 @@ SOURCE_INTAKE_RECORD_KINDS = {
     "heavy_review_open",
     "context_pack_manifest",
     "query_run_trace",
+    "fragment_candidate",
 }
 
 TYPE_RECORD_KIND_ALIASES = {
@@ -75,6 +78,7 @@ TYPE_RECORD_KIND_ALIASES = {
     "heavy_review_open": "heavy_review_open",
     "context_pack_manifest": "context_pack_manifest",
     "query_run_trace": "query_run_trace",
+    "fragment_candidate": "fragment_candidate",
 }
 
 FORBIDDEN_INTAKE_FIELDS = {
@@ -167,6 +171,91 @@ SOURCE_CARD_HARD_AUTHORITY_FIELDS = {
     "confidence",
     "relations",
 }
+
+FRAGMENT_FORBIDDEN_KEYS = {
+    "action",
+    "source_id",
+    "source_snapshot_id",
+    "source_snapshot_ref",
+    "capture_id",
+    "annotation_id",
+    "annotation_target",
+    "authority",
+    "citation",
+    "claim_support",
+    "evidence",
+    "source_anchor",
+    "source_anchor_ref",
+    "source",
+    "source_ref",
+    "source_refs",
+    "source_anchor_refs",
+    "source_card_ref",
+    "source_capture_ref",
+    "source_locator",
+    "source_url",
+    "capture_ref",
+    "annotation_ref",
+    "evidence_ref",
+    "evidence_packet_ref",
+    "evidence_support_ref",
+    "evidence_items",
+    "itemReviewed",
+    "review",
+    "review_ref",
+    "review_status",
+    "reviewed_knowledge_ref",
+    "support",
+    "target",
+    "truth_confidence",
+    "action_ref",
+    "action_basis_ref",
+    "action_readiness",
+    "evidence_support_status",
+    "action_basis_allowed",
+    "evidence_support_allowed",
+    "reviewed_knowledge_allowed",
+    "pack_content_allowed",
+    "action_basis_status",
+    "reviewed_knowledge_status",
+    "recovered_source_ref",
+    "merged_into",
+}
+
+FRAGMENT_ALLOWED_FORBIDDEN_KEY_PATHS = {
+    "state.merged_into",
+    "state.merged_into.ref",
+    "provenance.source_recovery.recovered_source_ref",
+    "retrieval_policy.action_basis_allowed",
+    "usage_policy.pack_content_allowed",
+    "usage_policy.action_basis_allowed",
+    "usage_policy.evidence_support_allowed",
+    "usage_policy.reviewed_knowledge_allowed",
+}
+
+FRAGMENT_FIELDS = {"kind", "language", "content_digest", "quote_exactness", "literal_quote_allowed"}
+FRAGMENT_PROVENANCE_FIELDS = {"status", "source_hint", "source_recovery"}
+FRAGMENT_SOURCE_HINT_FIELDS = {
+    "hint_text",
+    "possible_title",
+    "possible_author",
+    "possible_url",
+    "possible_platform",
+    "possible_timeframe",
+    "hint_confidence",
+}
+FRAGMENT_SOURCE_RECOVERY_FIELDS = {"status", "recovered_source_ref", "attempts"}
+FRAGMENT_SOURCE_RECOVERY_ATTEMPT_FIELDS = {"method", "query", "outcome", "result_ref"}
+FRAGMENT_RETRIEVAL_POLICY_FIELDS = {"policy_kind", "pack_allowed", "action_basis_allowed", "warning_code"}
+FRAGMENT_USAGE_POLICY_FIELDS = {
+    "pack_content_allowed",
+    "pack_pointer_allowed",
+    "action_basis_allowed",
+    "evidence_support_allowed",
+    "reviewed_knowledge_allowed",
+}
+FRAGMENT_STATE_FIELDS = {"fragment_state", "merged_into", "discarded_reason"}
+FRAGMENT_MERGED_INTO_FIELDS = {"kind", "ref"}
 
 
 def extract_frontmatter_text(path: Path) -> str | None:
@@ -375,6 +464,8 @@ def inferred_record_kind(path: Path, data: dict[str, Any]) -> str | None:
         return "source_annotation"
     if p.endswith("candidate-distillation.md") or p.endswith("refresh.md"):
         return "candidate_distillation"
+    if p.startswith("fragments/") or p.endswith("fragment-candidate.md"):
+        return "fragment_candidate"
     if "query-run" in p:
         return "query_run_trace"
     if "context-pack" in p:
@@ -519,6 +610,39 @@ def require_mapping(
         return
     if data.get(field) is not None and not isinstance(data.get(field), dict):
         add_issue(issues, path, "error", "field_shape", field, data.get(field), f"{field} must be a mapping.")
+
+
+def walk_mapping_keys(obj: Any, prefix: str = "") -> list[tuple[str, Any]]:
+    result: list[tuple[str, Any]] = []
+    if isinstance(obj, dict):
+        for key, value in obj.items():
+            field = f"{prefix}.{key}" if prefix else str(key)
+            result.append((field, value))
+            result.extend(walk_mapping_keys(value, field))
+    elif isinstance(obj, list):
+        for idx, value in enumerate(obj):
+            result.extend(walk_mapping_keys(value, f"{prefix}[{idx}]"))
+    return result
+
+
+def check_exact_mapping_keys(
+    issues: list[dict[str, Any]],
+    path: Path,
+    value: dict[str, Any],
+    allowed: set[str],
+    field: str,
+) -> None:
+    extra = sorted(set(value) - allowed)
+    if extra:
+        add_issue(
+            issues,
+            path,
+            "error",
+            "fragment_extra_nested_field",
+            field,
+            ", ".join(extra),
+            f"{field} has unsupported fields: {', '.join(extra)}.",
+        )
 
 
 def body_has_candidate_points(text: str) -> bool:
@@ -1163,7 +1287,7 @@ def validate_file(root: Path, rel_path: Path, registry: dict[str, Any], issues: 
             "Use record_kind, not record_type, for Source Intake machine kind.",
         )
 
-    for field in ["record_kind", "processing_tier", "knowledge_status", "overlay_state", "review_pressure", "promotion_gate", "query_mode", "event_kind", "anchor_status", "evidence_support_status"]:
+    for field in ["record_kind", "candidate_class", "processing_tier", "knowledge_status", "overlay_state", "review_pressure", "promotion_gate", "query_mode", "event_kind", "anchor_status", "evidence_support_status"]:
         if field in data:
             check_enum(issues, registry, rel_path, field, data.get(field))
 
@@ -1304,6 +1428,227 @@ def validate_file(root: Path, rel_path: Path, registry: dict[str, Any], issues: 
                 "evidence_packet_ref",
                 data.get("evidence_packet_ref"),
                 "A checked annotation must point to the Evidence Packet that performed evidence_support.",
+            )
+
+    if record_kind == "fragment_candidate":
+        for field in ["fragment_id", "candidate_class", "fragment", "provenance", "retrieval_policy", "usage_policy", "state"]:
+            require_field(issues, rel_path, data, field, require_value=require_value)
+        require_mapping(issues, rel_path, data, "fragment", require_value=require_value)
+        require_mapping(issues, rel_path, data, "provenance", require_value=require_value)
+        require_mapping(issues, rel_path, data, "usage_policy", require_value=require_value)
+        require_mapping(issues, rel_path, data, "state", require_value=require_value)
+        if knowledge_status != "candidate":
+            add_issue(
+                issues,
+                rel_path,
+                "error",
+                "fragment_candidate_status",
+                "knowledge_status",
+                knowledge_status,
+                "Fragment candidates are low-authority candidate records and must use knowledge_status: candidate.",
+            )
+        if data.get("candidate_class") != "fragment_only":
+            add_issue(
+                issues,
+                rel_path,
+                "error",
+                "fragment_candidate_class",
+                "candidate_class",
+                data.get("candidate_class"),
+                "Fragment candidates must serialize candidate_class: fragment_only.",
+            )
+        if data.get("processing_tier") != "light":
+            add_issue(
+                issues,
+                rel_path,
+                "error",
+                "fragment_candidate_processing_tier",
+                "processing_tier",
+                data.get("processing_tier"),
+                "Fragment candidates are inbox records and must use processing_tier: light.",
+            )
+        fragment = data.get("fragment") if isinstance(data.get("fragment"), dict) else {}
+        provenance = data.get("provenance") if isinstance(data.get("provenance"), dict) else {}
+        usage_policy = data.get("usage_policy") if isinstance(data.get("usage_policy"), dict) else {}
+        state = data.get("state") if isinstance(data.get("state"), dict) else {}
+        source_hint = provenance.get("source_hint") if isinstance(provenance.get("source_hint"), dict) else {}
+        source_recovery = provenance.get("source_recovery") if isinstance(provenance.get("source_recovery"), dict) else {}
+        merged_into = state.get("merged_into") if isinstance(state.get("merged_into"), dict) else {}
+        if isinstance(fragment, dict):
+            check_exact_mapping_keys(issues, rel_path, fragment, FRAGMENT_FIELDS, "fragment")
+        if isinstance(provenance, dict):
+            check_exact_mapping_keys(issues, rel_path, provenance, FRAGMENT_PROVENANCE_FIELDS, "provenance")
+        if isinstance(source_hint, dict):
+            check_exact_mapping_keys(issues, rel_path, source_hint, FRAGMENT_SOURCE_HINT_FIELDS, "provenance.source_hint")
+        if isinstance(source_recovery, dict):
+            check_exact_mapping_keys(issues, rel_path, source_recovery, FRAGMENT_SOURCE_RECOVERY_FIELDS, "provenance.source_recovery")
+            attempts = source_recovery.get("attempts")
+            if isinstance(attempts, list):
+                for idx, attempt in enumerate(attempts):
+                    field = f"provenance.source_recovery.attempts[{idx}]"
+                    if not isinstance(attempt, dict):
+                        add_issue(
+                            issues,
+                            rel_path,
+                            "error",
+                            "fragment_recovery_attempt_shape",
+                            field,
+                            attempt,
+                            "Fragment source recovery attempts must be mappings.",
+                        )
+                    else:
+                        check_exact_mapping_keys(issues, rel_path, attempt, FRAGMENT_SOURCE_RECOVERY_ATTEMPT_FIELDS, field)
+        if isinstance(policy, dict):
+            check_exact_mapping_keys(issues, rel_path, policy, FRAGMENT_RETRIEVAL_POLICY_FIELDS, "retrieval_policy")
+        if isinstance(usage_policy, dict):
+            check_exact_mapping_keys(issues, rel_path, usage_policy, FRAGMENT_USAGE_POLICY_FIELDS, "usage_policy")
+        if isinstance(state, dict):
+            check_exact_mapping_keys(issues, rel_path, state, FRAGMENT_STATE_FIELDS, "state")
+        if isinstance(merged_into, dict):
+            check_exact_mapping_keys(issues, rel_path, merged_into, FRAGMENT_MERGED_INTO_FIELDS, "state.merged_into")
+        for enum_field, issue_field, value in [
+            ("fragment.kind", "fragment.kind", fragment.get("kind")),
+            ("fragment.language", "fragment.language", fragment.get("language")),
+            ("fragment.quote_exactness", "fragment.quote_exactness", fragment.get("quote_exactness")),
+            ("provenance.status", "provenance.status", provenance.get("status")),
+            ("provenance.source_recovery.status", "provenance.source_recovery.status", source_recovery.get("status")),
+            ("state.fragment_state", "state.fragment_state", state.get("fragment_state")),
+            ("state.merged_into.kind", "state.merged_into.kind", merged_into.get("kind")),
+        ]:
+            if value is not None:
+                check_enum_as(issues, registry, rel_path, enum_field, issue_field, value)
+        if policy.get("policy_kind") != "orientation_only":
+            add_issue(issues, rel_path, "error", "fragment_policy", "retrieval_policy.policy_kind", policy.get("policy_kind"), "Fragment candidates are orientation-only.")
+        if policy.get("pack_allowed") != "activation_only":
+            add_issue(issues, rel_path, "error", "fragment_policy", "retrieval_policy.pack_allowed", policy.get("pack_allowed"), "Fragment candidates may only enter packs as activation pointers.")
+        if policy.get("action_basis_allowed") is not False:
+            add_issue(issues, rel_path, "error", "fragment_policy", "retrieval_policy.action_basis_allowed", policy.get("action_basis_allowed"), "Fragment candidates cannot support action.")
+        if policy.get("warning_code") != "missing_source_provenance":
+            add_issue(issues, rel_path, "error", "fragment_policy", "retrieval_policy.warning_code", policy.get("warning_code"), "Fragment candidates must carry missing_source_provenance.")
+        expected_usage = {
+            "pack_content_allowed": False,
+            "pack_pointer_allowed": True,
+            "action_basis_allowed": False,
+            "evidence_support_allowed": False,
+            "reviewed_knowledge_allowed": False,
+        }
+        for field, expected in expected_usage.items():
+            if usage_policy.get(field) is not expected:
+                add_issue(
+                    issues,
+                    rel_path,
+                    "error",
+                    "fragment_usage_policy",
+                    f"usage_policy.{field}",
+                    usage_policy.get(field),
+                    f"Fragment usage_policy.{field} must be {str(expected).lower()}.",
+                )
+        for key_path, _value in walk_mapping_keys(data):
+            key = key_path.split(".")[-1]
+            if key in FRAGMENT_FORBIDDEN_KEYS and key_path not in FRAGMENT_ALLOWED_FORBIDDEN_KEY_PATHS:
+                add_issue(
+                    issues,
+                    rel_path,
+                    "error",
+                    "fragment_forbidden_source_field",
+                    key_path,
+                    _value,
+                    "Fragment candidates must not declare source/capture/evidence/review/action fields at any nesting level.",
+                )
+        if fragment.get("kind") == "quote_like" and source_recovery.get("status") != "found":
+            if fragment.get("literal_quote_allowed") is not False or fragment.get("quote_exactness") != "unverified":
+                add_issue(
+                    issues,
+                    rel_path,
+                    "error",
+                    "fragment_quote_unverified",
+                    "fragment.literal_quote_allowed",
+                    fragment.get("literal_quote_allowed"),
+                    "quote_like fragments without recovered source must stay unverified and literal_quote_allowed: false.",
+                )
+        if source_recovery.get("status") != "found" and source_recovery.get("recovered_source_ref") is not None:
+            add_issue(
+                issues,
+                rel_path,
+                "error",
+                "fragment_recovered_ref_not_allowed",
+                "provenance.source_recovery.recovered_source_ref",
+                source_recovery.get("recovered_source_ref"),
+                "recovered_source_ref is allowed only when source_recovery.status is found.",
+            )
+        if provenance.get("status") == "source_unknown" and source_recovery.get("status") == "found":
+            add_issue(
+                issues,
+                rel_path,
+                "error",
+                "fragment_source_unknown_found_conflict",
+                "provenance.source_recovery.status",
+                source_recovery.get("status"),
+                "source_unknown fragments cannot also declare found source recovery.",
+            )
+        if state.get("fragment_state") != "merged" and state.get("merged_into") is not None:
+            add_issue(
+                issues,
+                rel_path,
+                "error",
+                "fragment_merged_target_not_allowed",
+                "state.merged_into",
+                state.get("merged_into"),
+                "merged_into is allowed only when fragment_state is merged.",
+            )
+        if state.get("fragment_state") == "merged" and (not merged_into.get("kind") or not merged_into.get("ref")):
+            add_issue(
+                issues,
+                rel_path,
+                "error",
+                "fragment_merged_without_target",
+                "state.merged_into",
+                state.get("merged_into"),
+                "Merged fragments must point to the formal object they merged into.",
+            )
+        if source_recovery.get("status") == "found":
+            recovered_ref = source_recovery.get("recovered_source_ref")
+            if not isinstance(recovered_ref, str) or recovered_ref.strip() == "":
+                add_issue(
+                    issues,
+                    rel_path,
+                    "error",
+                    "fragment_recovered_ref_type_invalid",
+                    "provenance.source_recovery.recovered_source_ref",
+                    recovered_ref,
+                    "found source recovery needs non-empty string recovered_source_ref.",
+                )
+        if state.get("fragment_state") == "merged" and isinstance(merged_into, dict):
+            merged_ref = merged_into.get("ref")
+            if not isinstance(merged_ref, str) or merged_ref.strip() == "":
+                add_issue(
+                    issues,
+                    rel_path,
+                    "error",
+                    "fragment_merged_ref_type_invalid",
+                    "state.merged_into.ref",
+                    merged_ref,
+                    "merged fragments need non-empty string merged_into.ref.",
+                )
+        if state.get("fragment_state") == "merged" and merged_into.get("kind") in {"source_card", "source_annotation"} and source_recovery.get("status") != "found":
+            add_issue(
+                issues,
+                rel_path,
+                "error",
+                "fragment_merged_source_without_found",
+                "provenance.source_recovery.status",
+                source_recovery.get("status"),
+                "Merged source/source-annotation targets require source_recovery.status: found.",
+            )
+        if source_recovery.get("status") == "found" and state.get("fragment_state") != "merged":
+            add_issue(
+                issues,
+                rel_path,
+                "error",
+                "fragment_found_not_merged",
+                "state.fragment_state",
+                state.get("fragment_state"),
+                "found source recovery must be represented by fragment_state: merged.",
             )
 
     if record_kind == "project_overlay":

@@ -1,5 +1,5 @@
 {
-  "version": "2026-06-14-source-annotation-v1",
+  "version": "2026-07-01-fragment-candidate-v1",
   "fail_closed": true,
   "enums": {
     "record_kind": [
@@ -11,10 +11,49 @@
       "heavy_review_open",
       "context_pack_manifest",
       "query_run_trace",
-      "overlay_suggestion"
+      "overlay_suggestion",
+      "fragment_candidate"
     ],
+    "candidate_class": ["fragment_only"],
     "processing_tier": ["light", "medium", "heavy"],
     "knowledge_status": ["raw", "candidate", "reviewed"],
+    "fragment.kind": [
+      "idea",
+      "claim_like",
+      "quote_like",
+      "question",
+      "pattern_hint",
+      "risk_hint",
+      "task_hint",
+      "term"
+    ],
+    "fragment.language": ["zh", "en", "unknown"],
+    "fragment.quote_exactness": ["not_applicable", "unverified"],
+    "provenance.status": [
+      "self_authored",
+      "memory_trace",
+      "source_hint_only",
+      "source_unknown"
+    ],
+    "provenance.source_hint.hint_confidence": ["none", "low", "medium"],
+    "provenance.source_recovery.status": [
+      "not_attempted",
+      "needed",
+      "failed",
+      "found"
+    ],
+    "state.fragment_state": [
+      "inbox",
+      "source_recovery_needed",
+      "parked",
+      "merged",
+      "discarded"
+    ],
+    "state.merged_into.kind": [
+      "source_card",
+      "source_annotation",
+      "candidate_distillation"
+    ],
     "overlay_state": ["none", "confirmed", "archived"],
     "review_pressure": ["none", "review_due", "blocked"],
     "retrieval_policy.policy_kind": [
@@ -41,7 +80,8 @@
       "archived_overlay_excluded",
       "feedback_not_truth",
       "heavy_review_open_not_passed",
-      "context_pack_not_action_basis"
+      "context_pack_not_action_basis",
+      "missing_source_provenance"
     ],
     "promotion_gate": ["none", "v0_2_13_required"],
     "query_mode": ["orientation", "source_inspection", "review", "action"],
