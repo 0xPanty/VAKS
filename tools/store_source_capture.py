@@ -64,6 +64,16 @@ class StoreInfo:
     meta: dict[str, Any]
 
 
+@dataclass(frozen=True)
+class VerifiedStoredCapture:
+    capture_id: str
+    capture_dir: str
+    bundle_digest: str
+    raw_blob_retention_state: str
+    raw_blob_digest: str
+    raw_blob_store_path: str | None
+
+
 def now_z() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
@@ -259,13 +269,18 @@ def load_store(root: Path) -> StoreInfo:
     require_existing_dir(root, "STORE_ROOT_UNSAFE", "store root")
     store_json = root / "store.json"
     require_regular_file(store_json, "STORE_MISSING", "store.json")
-    meta = read_json(store_json)
-    validate_source_capture_bundle.exact_keys(
-        meta,
-        {"schema", "layout_version", "store_instance_id", "created_at", "content_addressing"},
-        {"schema", "layout_version", "store_instance_id", "created_at", "content_addressing"},
-        "store.json",
-    )
+    try:
+        meta = read_json(store_json)
+        validate_source_capture_bundle.exact_keys(
+            meta,
+            {"schema", "layout_version", "store_instance_id", "created_at", "content_addressing"},
+            {"schema", "layout_version", "store_instance_id", "created_at", "content_addressing"},
+            "store.json",
+        )
+    except validate_source_capture_bundle.ValidationError as exc:
+        raise StoreError("STORE_INVALID", str(exc)) from exc
+    except (OSError, UnicodeError) as exc:
+        raise StoreError("STORE_IO_ERROR", f"could not read store.json: {exc}") from exc
     if meta.get("schema") != STORE_SCHEMA or meta.get("layout_version") != STORE_LAYOUT_VERSION:
         raise StoreError("STORE_UNSUPPORTED_LAYOUT", "store layout is unsupported")
     if not isinstance(meta.get("store_instance_id"), str) or not meta["store_instance_id"].startswith("urn:uuid:"):
@@ -809,6 +824,8 @@ def verify_receipt_against_capture(
         if raw_blob["digest"] != expected_digest or raw_blob["size"] != expected_size or raw_blob["media_type"] != expected_media_type:
             raise StoreError("STORE_RAW_BLOB_MISMATCH", "receipt raw_blob does not match envelope")
         blob_path = store.root / raw_blob["store_path"]
+        if not blob_path.exists() and not blob_path.is_symlink():
+            raise StoreError("STORE_RAW_BLOB_MISSING", "retained raw blob is missing from CAS")
         blob_desc = hash_existing_regular_file(blob_path, "STORE_RAW_BLOB_MISMATCH", "stored raw blob")
         if blob_desc.digest != raw_blob["digest"] or blob_desc.size != raw_blob["size"]:
             raise StoreError("STORE_RAW_BLOB_MISMATCH", "stored raw blob does not match receipt")
@@ -817,25 +834,42 @@ def verify_receipt_against_capture(
             raise StoreError("STORE_RAW_BLOB_MISMATCH", "not-retained raw blob expectation does not match envelope")
 
 
-def verify_capture(args: argparse.Namespace) -> dict[str, Any]:
-    store = load_store(Path(args.store_root))
-    capture_id = args.capture_id
-    capture_dir = store.root / "captures" / capture_dir_name(capture_id)
+def verify_stored_capture(store: StoreInfo, capture_dir: Path) -> VerifiedStoredCapture:
     require_existing_dir(capture_dir, "STORE_CAPTURE_MISSING", "capture directory")
     receipt = load_receipt(capture_dir / "capture-storage-receipt.json")
     verify_receipt_against_capture(
         store,
         capture_dir,
         receipt,
-        implementation_manifest=Path(args.implementation_manifest),
-        policy_file=Path(args.policy_file),
         enterprise_revalidate=False,
     )
+    raw_blob = receipt["raw_blob"]
+    if raw_blob["retention_state"] == "retained":
+        raw_digest = raw_blob["digest"]
+        raw_store_path = raw_blob["store_path"]
+    else:
+        raw_digest = raw_blob["expected_digest"]
+        raw_store_path = None
+    return VerifiedStoredCapture(
+        capture_id=receipt["capture_id"],
+        capture_dir=f"captures/{capture_dir.name}",
+        bundle_digest=receipt["bundle"]["digest"],
+        raw_blob_retention_state=raw_blob["retention_state"],
+        raw_blob_digest=raw_digest,
+        raw_blob_store_path=raw_store_path,
+    )
+
+
+def verify_capture(args: argparse.Namespace) -> dict[str, Any]:
+    store = load_store(Path(args.store_root))
+    capture_id = args.capture_id
+    capture_dir = store.root / "captures" / capture_dir_name(capture_id)
+    verified = verify_stored_capture(store, capture_dir)
     return {
         "status": "pass",
-        "capture_id": receipt["capture_id"],
-        "bundle_digest": receipt["bundle"]["digest"],
-        "raw_blob_retention_state": receipt["raw_blob"]["retention_state"],
+        "capture_id": verified.capture_id,
+        "bundle_digest": verified.bundle_digest,
+        "raw_blob_retention_state": verified.raw_blob_retention_state,
     }
 
 

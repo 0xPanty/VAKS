@@ -162,6 +162,9 @@ python tools/store_source_capture.py put `
 python tools/store_source_capture.py verify-capture `
   --store-root source-capture-store `
   --capture-id urn:uuid:00000000-0000-4000-8000-000000000000
+
+python tools/verify_source_capture_store.py `
+  --store-root source-capture-store
 ```
 
 ## Put Rules
@@ -195,3 +198,39 @@ authorization.
 
 The store index is intentionally out of scope for PR-B1. Future indexes must be
 rebuildable from `captures/` and must not become the source of truth.
+
+## Full Store Verification
+
+`tools/verify_source_capture_store.py` verifies one Store instance without
+modifying it. It reuses the same historical capture verification used by
+`verify-capture`; every retained capture must pass receipt, bundle, validation
+context, implementation manifest, policy replay, and raw blob fixity checks.
+The report is emitted to stdout; B2.1 intentionally does not write report files.
+
+The report schema is
+`urn:vaks:schema:source-capture-store-verification-report:v1`.
+
+Status meanings:
+
+- `pass`: every capture and referenced CAS blob verified, with no warnings.
+- `pass_with_warnings`: every capture verified, but non-authoritative issues
+  such as a valid orphan CAS blob were found.
+- `fail`: at least one capture, receipt, context, referenced blob, or CAS object
+  failed verification.
+- `indeterminate`: the Store was not stable enough to verify, for example
+  `.staging/` was non-empty or the inventory changed during scanning.
+
+Rules:
+
+- the verifier is read-only and performs no repair;
+- all reported paths are Store-relative POSIX paths; unsafe bytes are UTF-8
+  percent-encoded;
+- orphan CAS blobs are warnings if their bytes match their digest path;
+- missing blobs referenced by retained receipts are errors;
+- `.staging/` residue or concurrent Store changes are indeterminate, not proof
+  of source corruption;
+- the report's `assurance_scope` states that it attests only to local retention
+  and fixity.
+
+The verification report must not be interpreted as source authenticity,
+evidentiary support, review status, action authorization, or mainline readiness.
