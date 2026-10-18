@@ -1,0 +1,524 @@
+{
+  "schema": "vaks.sanitized-reference-archive.v1",
+  "created_at_utc": "2026-10-18T17:55:26.782697+00:00",
+  "purpose": "Sanitized derivative of a research source snapshot for private GitHub migration; incomplete by design, not a deployable upstream package.",
+  "source": {
+    "repository_relative_path": "raw/repos/_snapshots/infiniflow-ragflow-5a04ac0864808bb3309e0b5735b56ad5a03d2efd.zip",
+    "formal_vault_path": "H:\\Obsidian\\资料库\\raw\\repos\\_snapshots\\infiniflow-ragflow-5a04ac0864808bb3309e0b5735b56ad5a03d2efd.zip",
+    "sha256": "ff942b3336e7e7900dbfa74812c955e2c345f200b73277631095a55ca99c7afa",
+    "bytes": 49290667,
+    "zip_entries": 3852,
+    "repository_and_formal_originals_match": true,
+    "declared_upstream_project": "https://github.com/infiniflow/ragflow",
+    "filename_embedded_revision": "5a04ac0864808bb3309e0b5735b56ad5a03d2efd",
+    "upstream_revision_verified_online": false
+  },
+  "sanitized_copy": {
+    "repository_relative_path": "docs/migration/sanitized-reference-files/raw/repos/_snapshots/infiniflow-ragflow-5a04ac0864808bb3309e0b5735b56ad5a03d2efd.sanitized.zip",
+    "sha256": "695866e2425f774375839b4e74295cfdd2ac70a391061c6961ecebdb6b589e8b",
+    "bytes": 49244638,
+    "zip_entries": 3834,
+    "removed_entry_count": 18,
+    "transformation": "Omitted complete entries; preserved every retained entry byte exactly. ZIP container metadata/compression may differ."
+  },
+  "removed_entries": [
+    {
+      "entry_path": "agent/templates/stock_market_research_assistant.json",
+      "original_entry_sha256": "e54d5983f6bcfc7077c237984f81b5e8a0cfdd3587d92aa3f4e037d20b91e7d7",
+      "original_uncompressed_bytes": 88474,
+      "reason": "Non-placeholder Tavily credential-shaped value; validity unverified.",
+      "observed_line_numbers": [
+        60,
+        654
+      ]
+    },
+    {
+      "entry_path": "agent/test/dsl_examples/categorize_and_agent_with_tavily.json",
+      "original_entry_sha256": "e12c7fec87ed0b528346d011ae1b38e175f5fcc7374cf332f5ee4228bfeeb1e9",
+      "original_uncompressed_bytes": 3066,
+      "reason": "Non-placeholder Tavily credential-shaped value; test location alone does not establish safe fixture status.",
+      "observed_line_numbers": [
+        56
+      ]
+    },
+    {
+      "entry_path": "agent/test/dsl_examples/iteration.json",
+      "original_entry_sha256": "794275c3253014225b1bae25e202ba08039e7a691ef99f76b45669dbc664775b",
+      "original_uncompressed_bytes": 4112,
+      "reason": "Non-placeholder Tavily credential-shaped value; validity unverified.",
+      "observed_line_numbers": [
+        50
+      ]
+    },
+    {
+      "entry_path": "agent/test/dsl_examples/tavily_and_generate.json",
+      "original_entry_sha256": "d9c9f63e0f4e9eb9463c3b6ba2a91d7a142209f266c02e0093e40c505f4bfb7b",
+      "original_uncompressed_bytes": 2148,
+      "reason": "Non-placeholder Tavily credential-shaped value; validity unverified.",
+      "observed_line_numbers": [
+        17
+      ]
+    },
+    {
+      "entry_path": "common/data_source/box_connector.py",
+      "original_entry_sha256": "846bd68c9a824e1534f92ac9f90827ecc5c6e400b748d3097c0983084dc17293",
+      "original_uncompressed_bytes": 7240,
+      "reason": "Non-placeholder hard-coded OAuth client_secret in a commented example; validity unverified.",
+      "observed_line_numbers": [
+        176
+      ]
+    },
+    {
+      "entry_path": "conf/private.pem",
+      "original_entry_sha256": "f5d04b8765db230d5c32bcf08cc96dbaa1f519393080ac4c78774d2a7fcaf92f",
+      "original_uncompressed_bytes": 1773,
+      "reason": "Encrypted RSA private key; ownership and redistribution safety unverified. Not decrypted.",
+      "observed_line_numbers": [
+        1,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ]
+    },
+    {
+      "entry_path": "docs/administrator/admin/ragflow_cli.md",
+      "original_entry_sha256": "7f521541740f25572eb13b2af9e4c18bf3bf5e0cda480e42719201eb3ec3d8d0",
+      "original_uncompressed_bytes": 24548,
+      "reason": "Non-placeholder RAGFlow credential-shaped value or exact copy of an ambiguous token in another removed entry; validity unverified. Example, documentation or local-endpoint context does not prove harmlessness.",
+      "observed_line_numbers": [
+        373,
+        387,
+        396
+      ]
+    },
+    {
+      "entry_path": "example/http/chat_assistant_example.sh",
+      "original_entry_sha256": "ba590c51e6df6b1ec662ebe102063e75326c1e66490763ceb721a64df143bdcd",
+      "original_uncompressed_bytes": 3401,
+      "reason": "Non-placeholder RAGFlow credential-shaped value or exact copy of an ambiguous token in another removed entry; validity unverified. Example, documentation or local-endpoint context does not prove harmlessness.",
+      "observed_line_numbers": [
+        20
+      ]
+    },
+    {
+      "entry_path": "example/http/chunk_example.sh",
+      "original_entry_sha256": "a5b20515475e33d11bc643a988a82f93024ef71d07f8b4d1a9dc0fa12e54540e",
+      "original_uncompressed_bytes": 3362,
+      "reason": "Non-placeholder RAGFlow credential-shaped value or exact copy of an ambiguous token in another removed entry; validity unverified. Example, documentation or local-endpoint context does not prove harmlessness.",
+      "observed_line_numbers": [
+        20
+      ]
+    },
+    {
+      "entry_path": "example/http/dataset_example.sh",
+      "original_entry_sha256": "9b6d6d1b32d750dfdcb3ebc65fcced2cf2603ede9df5ab8e0a18c26216c06888",
+      "original_uncompressed_bytes": 2069,
+      "reason": "Non-placeholder RAGFlow credential-shaped value or exact copy of an ambiguous token in another removed entry; validity unverified. Example, documentation or local-endpoint context does not prove harmlessness.",
+      "observed_line_numbers": [
+        22,
+        32,
+        42,
+        48,
+        55
+      ]
+    },
+    {
+      "entry_path": "example/http/retrieval_example.sh",
+      "original_entry_sha256": "8c97322519e7587d0b67d4a1964e0e1407ae5d53abd32b8fb83f579bcfbe3d55",
+      "original_uncompressed_bytes": 2526,
+      "reason": "Non-placeholder RAGFlow credential-shaped value or exact copy of an ambiguous token in another removed entry; validity unverified. Example, documentation or local-endpoint context does not prove harmlessness.",
+      "observed_line_numbers": [
+        20
+      ]
+    },
+    {
+      "entry_path": "example/sdk/chat_assistant_example.py",
+      "original_entry_sha256": "78b30f9f257c24ba4aaef57d0ac5e07f50a4c1922d1c3db26b452e9fef9cabc0",
+      "original_uncompressed_bytes": 3451,
+      "reason": "Non-placeholder RAGFlow credential-shaped value or exact copy of an ambiguous token in another removed entry; validity unverified. Example, documentation or local-endpoint context does not prove harmlessness.",
+      "observed_line_numbers": [
+        27
+      ]
+    },
+    {
+      "entry_path": "example/sdk/chunk_example.py",
+      "original_entry_sha256": "4df6f2a6fa6f903d3d3f99f7ac5c92823df9d0f71a8fedc78ed8eba40fe4843e",
+      "original_uncompressed_bytes": 3177,
+      "reason": "Non-placeholder RAGFlow credential-shaped value or exact copy of an ambiguous token in another removed entry; validity unverified. Example, documentation or local-endpoint context does not prove harmlessness.",
+      "observed_line_numbers": [
+        28
+      ]
+    },
+    {
+      "entry_path": "example/sdk/dataset_example.py",
+      "original_entry_sha256": "d483b3691fca06f8a2c4ad913bf9a1d5f46a4cd0d0aa1d77e11c071ad94c7f41",
+      "original_uncompressed_bytes": 1621,
+      "reason": "Non-placeholder RAGFlow credential-shaped value or exact copy of an ambiguous token in another removed entry; validity unverified. Example, documentation or local-endpoint context does not prove harmlessness.",
+      "observed_line_numbers": [
+        25
+      ]
+    },
+    {
+      "entry_path": "example/sdk/retrieval_example.py",
+      "original_entry_sha256": "3346dd27a1b43f45c53698f2c4c3219ea4e224c7303d7e5f4778edacb0f455b9",
+      "original_uncompressed_bytes": 3591,
+      "reason": "Non-placeholder RAGFlow credential-shaped value or exact copy of an ambiguous token in another removed entry; validity unverified. Example, documentation or local-endpoint context does not prove harmlessness.",
+      "observed_line_numbers": [
+        28
+      ]
+    },
+    {
+      "entry_path": "mcp/client/client.py",
+      "original_entry_sha256": "999ca3757a132be67038f4e650dee8ebc16b4dbf5c3e156fc4238b6b6a13a3cb",
+      "original_uncompressed_bytes": 1990,
+      "reason": "Non-placeholder RAGFlow credential-shaped value or exact copy of an ambiguous token in another removed entry; validity unverified. Example, documentation or local-endpoint context does not prove harmlessness.",
+      "observed_line_numbers": [
+        25,
+        27
+      ]
+    },
+    {
+      "entry_path": "mcp/client/streamable_http_client.py",
+      "original_entry_sha256": "20159d16fcfb2f0da853fbff15775a0093c370a8c4efbe64ef71a8dd891c88e1",
+      "original_uncompressed_bytes": 2070,
+      "reason": "Non-placeholder RAGFlow credential-shaped value or exact copy of an ambiguous token in another removed entry; validity unverified. Example, documentation or local-endpoint context does not prove harmlessness.",
+      "observed_line_numbers": [
+        23,
+        25
+      ]
+    },
+    {
+      "entry_path": "sdk/python/test.py",
+      "original_entry_sha256": "7f4efc8c9be868dd191d7018e0c993baa3f59e965622e8ef151e21b2e59c3e9b",
+      "original_uncompressed_bytes": 696,
+      "reason": "Non-placeholder RAGFlow credential-shaped value or exact copy of an ambiguous token in another removed entry; validity unverified. Example, documentation or local-endpoint context does not prove harmlessness.",
+      "observed_line_numbers": [
+        3
+      ]
+    }
+  ],
+  "verification": {
+    "originals_unchanged": true,
+    "zip_crc_check": "pass",
+    "all_retained_entry_sha256_equal_original": true,
+    "expected_entry_set_exact": true,
+    "duplicate_entries": false,
+    "unsafe_paths": false,
+    "symlinks": false,
+    "case_or_unicode_collisions": false,
+    "known_sensitive_needles_checked": 33,
+    "remaining_exact_sensitive_matches": 0,
+    "remaining_private_key_headers": 0,
+    "unclassified_hits_in_examined_patterns": 0,
+    "patterns_checked": [
+      "private_key",
+      "github",
+      "openai",
+      "google",
+      "aws",
+      "slack",
+      "stripe",
+      "jwt",
+      "Tavily/RAGFlow tokens",
+      "quoted credential assignments >=12 characters"
+    ],
+    "reviewed_remaining_matches": [
+      {
+        "entry_path": "conf/service_conf.yaml",
+        "line": 29,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      },
+      {
+        "entry_path": "docker/docker-compose.yml",
+        "line": 20,
+        "pattern": "provider_token",
+        "classification": "explicit_placeholder_or_test_stub"
+      },
+      {
+        "entry_path": "docker/docker-compose.yml",
+        "line": 71,
+        "pattern": "provider_token",
+        "classification": "explicit_placeholder_or_test_stub"
+      },
+      {
+        "entry_path": "docs/develop/mcp/mcp_client_example.md",
+        "line": 104,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      },
+      {
+        "entry_path": "docs/references/python_api_reference.md",
+        "line": 77,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      },
+      {
+        "entry_path": "internal/server/variable.go",
+        "line": 51,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      },
+      {
+        "entry_path": "internal/utility/oauth/client_test.go",
+        "line": 138,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      },
+      {
+        "entry_path": "rag/svr/discord_svr.py",
+        "line": 26,
+        "pattern": "provider_token",
+        "classification": "explicit_placeholder_or_test_stub"
+      },
+      {
+        "entry_path": "test/testcases/restful_api/test_user_tenant_routes_unit.py",
+        "line": 374,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      },
+      {
+        "entry_path": "test/testcases/restful_api/test_user_tenant_routes_unit.py",
+        "line": 932,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      },
+      {
+        "entry_path": "test/testcases/restful_api/test_user_tenant_routes_unit.py",
+        "line": 945,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      },
+      {
+        "entry_path": "test/testcases/restful_api/test_user_tenant_routes_unit.py",
+        "line": 968,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      },
+      {
+        "entry_path": "test/testcases/restful_api/test_user_tenant_routes_unit.py",
+        "line": 980,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      },
+      {
+        "entry_path": "test/testcases/restful_api/test_user_tenant_routes_unit.py",
+        "line": 980,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      },
+      {
+        "entry_path": "test/testcases/restful_api/test_user_tenant_routes_unit.py",
+        "line": 991,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      },
+      {
+        "entry_path": "test/testcases/restful_api/test_user_tenant_routes_unit.py",
+        "line": 992,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      },
+      {
+        "entry_path": "test/testcases/test_web_api/test_system_app/test_system_routes_unit.py",
+        "line": 108,
+        "pattern": "provider_token",
+        "classification": "explicit_placeholder_or_test_stub"
+      },
+      {
+        "entry_path": "test/testcases/test_web_api/test_user_app/test_user_app_unit.py",
+        "line": 86,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      },
+      {
+        "entry_path": "test/testcases/test_web_api/test_user_app/test_user_app_unit.py",
+        "line": 656,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      },
+      {
+        "entry_path": "test/testcases/test_web_api/test_user_app/test_user_app_unit.py",
+        "line": 669,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      },
+      {
+        "entry_path": "test/testcases/test_web_api/test_user_app/test_user_app_unit.py",
+        "line": 692,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      },
+      {
+        "entry_path": "test/testcases/test_web_api/test_user_app/test_user_app_unit.py",
+        "line": 704,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      },
+      {
+        "entry_path": "test/testcases/test_web_api/test_user_app/test_user_app_unit.py",
+        "line": 704,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      },
+      {
+        "entry_path": "test/testcases/test_web_api/test_user_app/test_user_app_unit.py",
+        "line": 715,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      },
+      {
+        "entry_path": "test/testcases/test_web_api/test_user_app/test_user_app_unit.py",
+        "line": 716,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      },
+      {
+        "entry_path": "tools/firecrawl/example_usage.py",
+        "line": 210,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      },
+      {
+        "entry_path": "tools/firecrawl/example_usage.py",
+        "line": 221,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      },
+      {
+        "entry_path": "web/src/assets/svg/chunk-method/media-01.svg",
+        "line": 77,
+        "pattern": "google",
+        "classification": "embedded_image_false_positive"
+      },
+      {
+        "entry_path": "web/src/assets/svg/next-login-bg.svg",
+        "line": 21,
+        "pattern": "google",
+        "classification": "embedded_image_false_positive"
+      },
+      {
+        "entry_path": "web/src/pages/login-next/index.tsx",
+        "line": 134,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      },
+      {
+        "entry_path": "web/src/pages/user-setting/profile/hooks/use-profile.ts",
+        "line": 23,
+        "pattern": "generic_assignment",
+        "classification": "reviewed_default_mock_or_identifier"
+      }
+    ],
+    "classification_notes": [
+      {
+        "entry_path": "conf/service_conf.yaml",
+        "reason": "Distributed default password: exactly equals docker/.env OPENSEARCH_PASSWORD and values in docker/service_conf.yaml.template and helm/values.yaml."
+      },
+      {
+        "entry_path": "internal/server/variable.go",
+        "reason": "Explicit DefaultSecretKey fallback constant, not a supplied account credential."
+      },
+      {
+        "entry_path": "internal/utility/oauth/client_test.go",
+        "reason": "Mock OAuth response served by a test HTTP server."
+      },
+      {
+        "entry_path": "docs/develop/mcp/mcp_client_example.md",
+        "reason": "Explicit dummy/example API-key value."
+      },
+      {
+        "entry_path": "docs/references/python_api_reference.md",
+        "reason": "Explicit API-key placeholder."
+      },
+      {
+        "entry_path": "docker/docker-compose.yml",
+        "reason": "Repeated-character token placeholders."
+      },
+      {
+        "entry_path": "rag/svr/discord_svr.py",
+        "reason": "Repeated-character token placeholder."
+      },
+      {
+        "entry_path": "test/testcases/test_web_api/test_system_app/test_system_routes_unit.py",
+        "reason": "Deterministic sequential-character confirmation-token stub in a monkeypatched test function."
+      },
+      {
+        "entry_path": "test/testcases/restful_api/test_user_tenant_routes_unit.py",
+        "reason": "Dummy users, mock OAuth responses and monkeypatched request fixtures."
+      },
+      {
+        "entry_path": "test/testcases/test_web_api/test_user_app/test_user_app_unit.py",
+        "reason": "Dummy users, mock OAuth responses and monkeypatched request fixtures."
+      },
+      {
+        "entry_path": "test/testcases/test_web_api/test_system_app/test_apps_init_unit.py",
+        "reason": "Invalid/deterministic-token test fixtures."
+      },
+      {
+        "entry_path": "common/constants.py",
+        "reason": "Environment-variable identifiers, not credential values."
+      },
+      {
+        "entry_path": "tools/firecrawl/example_usage.py",
+        "reason": "Illustrative short example values."
+      },
+      {
+        "entry_path": "web/src/pages/login-next/index.tsx",
+        "reason": "Password autocomplete/UI-mode string."
+      },
+      {
+        "entry_path": "web/src/pages/user-setting/profile/hooks/use-profile.ts",
+        "reason": "UI method identifier."
+      },
+      {
+        "entry_path": "web/src/assets/svg/chunk-method/media-01.svg",
+        "reason": "Google-key regex coincidence inside a base64 image data URI."
+      },
+      {
+        "entry_path": "web/src/assets/svg/next-login-bg.svg",
+        "reason": "Google-key regex coincidence inside a base64 image data URI."
+      }
+    ]
+  },
+  "execution_boundary": {
+    "archived_code_executed": false,
+    "network_or_paid_api_called": false,
+    "credentials_validated_against_provider": false,
+    "private_key_decrypted": false,
+    "modified_original_files": false,
+    "files_created": [
+      "docs/migration/sanitized-reference-files/raw/repos/_snapshots/infiniflow-ragflow-5a04ac0864808bb3309e0b5735b56ad5a03d2efd.sanitized.zip",
+      "docs/migration/2026-10-19-ragflow-redaction.json"
+    ]
+  },
+  "limitations": [
+    "Static pattern inspection is not proof of absence of every secret. Binary/OCR, arbitrary encodings, obfuscation and undocumented credential formats were not exhaustively examined.",
+    "Ambiguous tokens were removed conservatively; validity, ownership, revocation and redistribution authorization were not tested.",
+    "Explicit placeholders, mocked test responses and distributed default configuration values remain and must not be treated as secure deployment credentials.",
+    "The original archive remains local and must stay excluded from GitHub/Release uploads. Its recorded hash preserves provenance but does not certify upstream identity or authorization.",
+    "Removed code, examples and docs can break builds or examples. The derivative is for reference research and confers no VAKS truth promotion or production-readiness claim."
+  ],
+  "secret_values_recorded": false
+}
