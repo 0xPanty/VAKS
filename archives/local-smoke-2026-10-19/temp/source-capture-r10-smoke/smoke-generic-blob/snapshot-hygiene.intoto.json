@@ -1,0 +1,40 @@
+{
+  "_type": "https://in-toto.io/Statement/v1",
+  "predicate": {
+    "checker": {
+      "id": "vaks.snapshot-inspector",
+      "version": "0.1.0"
+    },
+    "execution_state": "complete",
+    "findings": [],
+    "parameters": {
+      "limits_profile": "vaks-default-archive-limits/v1",
+      "max_compression_ratio": 100.0,
+      "max_entries": 50000,
+      "max_entry_size": 134217728,
+      "max_finding_detail_items": 20,
+      "max_finding_paths": 20,
+      "max_findings_per_code": 100,
+      "max_path_depth": 100,
+      "max_path_length": 260,
+      "max_symlink_target_size": 4096,
+      "max_total_size": 536870912
+    },
+    "profiles": [
+      "source-fixity/v1"
+    ],
+    "summary": {
+      "finding_count": 0,
+      "max_severity": "none"
+    }
+  },
+  "predicateType": "urn:vaks:predicate:source-snapshot-hygiene:v1",
+  "subject": [
+    {
+      "digest": {
+        "sha256": "d5c9b9e7a574e3abea4f4cdfbf930a7495b623b464ba09f248b2bb1fefff7868"
+      },
+      "name": "capture-blob"
+    }
+  ]
+}

@@ -27,6 +27,12 @@
 
 研究来源、来源锚点、source annotations、Project Overlay、模板、schemas、tests、实验完整结果及历史评审 ZIP 均是有价值的恢复材料。目录名出现 production / ready / pass 不能脱离该目录的 LIMITS、契约和日期作能力结论。
 
+当前进度应由最新 handoff、实际代码及对应版本的运行收据相互核对。`IMPLEMENTATION_BLUEPRINT.md` 的旧 `Current Stop Point` / `Next concrete action`，以及 `docs/source-capture-store-v1.md` 的早期 PR-B1 范围说明，保留的是当时阶段；不要据此否定后续已存在的实现，或直接重复执行旧 TODO。
+
+R1.6 的历史实现基线是 [r217 provenance 脚本](../outputs/review/vaks-disposable-vault-trial-r1-6-r217-2026-06-26/provenance/vaks_disposable_vault_trial_r1_6.py)。续接时将它与当前 `tools/vaks_disposable_vault_trial_r1_6.py` 比较；r217 的完成收据只对应历史快照，不证明当前 r218 通过。
+
+当前 r218 正式文件发布实验有意限定 Windows/NTFS，代码中的 `require_windows_ntfs` 会拒绝非 Windows 或非 NTFS 环境。Mac 不能仅修改 H 盘路径或绕过检查来获得同等验收；需要另做 Mac 平台实现与验证。该限制不阻止先完成 Mac 基础环境自检及其他开发工作。
+
 ## 正式 vault 的补齐办法
 
 正式 vault 为 `H:\Obsidian\资料库`，工程为当前 Git 仓库。保险方案三份原始路径此前缺失，但 Pro 包内存在字节相同副本；本次将原路径补齐，便于 Mac 继续维护与跳转。

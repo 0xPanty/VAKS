@@ -1,0 +1,64 @@
+{
+  "capture_id": "urn:uuid:00000000-0000-4000-8000-000000000201",
+  "change": {
+    "compared_to_capture_id": null,
+    "state": "unknown"
+  },
+  "fidelity": {
+    "state": "not_checked"
+  },
+  "inspection_refs": [
+    {
+      "digest": "sha256:9f2a2218df89002654fc2b271cc3b76041a3775355da3b34af8d6ad0427df944",
+      "media_type": "application/vnd.in-toto+json",
+      "predicate_type": "urn:vaks:predicate:repo-snapshot-hygiene:v1",
+      "size": 3094
+    }
+  ],
+  "observation": {
+    "blob": {
+      "digest": "sha256:4ff7d4564cc0f5ae3cc25639c03060ec37d2cd51b05b85db33db888c55693356",
+      "media_type": "application/zip",
+      "size": 67108061
+    },
+    "capture_method": "provider_archive",
+    "state": "captured"
+  },
+  "observed_at": "2026-06-24T00:00:00Z",
+  "producer": {
+    "id": "vaks.snapshot-inspector",
+    "version": "0.1.0"
+  },
+  "raw_handling": {
+    "disposition": "admitted",
+    "policy": {
+      "id": "vaks-raw-intake-default"
+    },
+    "reason_codes": []
+  },
+  "resolution": {
+    "revision": {
+      "kind": "git_commit",
+      "value": "8085eeb61d03cadeb74eff2352afc148a3fa202c"
+    },
+    "selector": {
+      "kind": "path",
+      "value": ""
+    }
+  },
+  "schema": "urn:vaks:schema:source-capture:v1",
+  "snapshot": {
+    "kind": "tree",
+    "manifest": {
+      "digest": "sha256:5da9ff1747cd226c8f5cb589341b412c074fa83a5cd4d1ce0d5744b2212cac57",
+      "media_type": "application/vnd.vaks.snapshot-manifest.v1+jsonl",
+      "size": 54223
+    },
+    "snapshot_id": "vsnap:1:tree:sha256:5da9ff1747cd226c8f5cb589341b412c074fa83a5cd4d1ce0d5744b2212cac57"
+  },
+  "source": {
+    "kind": "repo",
+    "requested_locator": "raw/repos/_snapshots/2026-06-23-linxiv-dev-linXiv-8085eeb-source.zip",
+    "source_id": "vsrc:1:repo:github.com/linxiv-dev/linXiv"
+  }
+}

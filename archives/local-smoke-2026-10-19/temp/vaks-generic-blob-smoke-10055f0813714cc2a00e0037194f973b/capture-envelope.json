@@ -1,0 +1,55 @@
+{
+  "capture_id": "urn:uuid:277ce7fc-ec8e-4922-8d78-4abba64445ff",
+  "change": {
+    "compared_to_capture_id": null,
+    "state": "unknown"
+  },
+  "fidelity": {
+    "state": "not_checked"
+  },
+  "inspection_refs": [
+    {
+      "digest": "sha256:6f9ddea988a32ed2be7798a4ede5bddc5da0f172ad840a4b695f5384f92f5dc9",
+      "media_type": "application/vnd.in-toto+json",
+      "predicate_type": "urn:vaks:predicate:source-snapshot-hygiene:v1",
+      "size": 1006
+    }
+  ],
+  "observation": {
+    "blob": {
+      "digest": "sha256:e997afd18e5f6be004fc193aed2c90291e68ab2c7599a62538c935b7fca6ab0f",
+      "media_type": "application/octet-stream",
+      "size": 10
+    },
+    "capture_method": "local_file",
+    "state": "captured"
+  },
+  "observed_at": "2026-06-22T22:55:56Z",
+  "producer": {
+    "id": "vaks.snapshot-inspector",
+    "version": "0.1.0"
+  },
+  "raw_handling": {
+    "disposition": "admitted",
+    "policy": {
+      "id": "vaks-raw-intake-default"
+    },
+    "reason_codes": []
+  },
+  "resolution": {
+    "selector": {
+      "kind": "path",
+      "value": ""
+    }
+  },
+  "schema": "urn:vaks:schema:source-capture:v1",
+  "snapshot": {
+    "kind": "blob",
+    "snapshot_id": "vsnap:1:blob:sha256:e997afd18e5f6be004fc193aed2c90291e68ab2c7599a62538c935b7fca6ab0f"
+  },
+  "source": {
+    "kind": "file",
+    "requested_locator": "temp/vaks-generic-blob-5b55fddf4b514d12b6e469ca30380301.bin",
+    "source_id": "vsrc:1:content:sha256:e997afd18e5f6be004fc193aed2c90291e68ab2c7599a62538c935b7fca6ab0f"
+  }
+}

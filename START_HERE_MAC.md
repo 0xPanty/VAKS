@@ -19,6 +19,10 @@ git status
 3. [实现顺序](IMPLEMENTATION_BLUEPRINT.md)、[Schema](SCHEMA.md)、[源码捕获存储](docs/source-capture-store-v1.md)。
 4. [保险团队产品方案 draft-2](outputs/review/2026-09-26-vaks-insurance-team-plan-candidate.md)、[Pro 原文评审](outputs/review/2026-09-27-baoyouju-vaks-pro-review-response.md)。
 
+判断当前进度时，以最新 handoff、实际代码及对应版本的运行收据相互核对；旧路线图中的 `Current Stop Point`、`Next concrete action` 或早期 PR 范围说明仅记录当时阶段，不直接作为今天的 TODO，也不代表后续实现不存在。
+
+若续接 R1.6，先对照 [r217 的历史实现基线](outputs/review/vaks-disposable-vault-trial-r1-6-r217-2026-06-26/provenance/vaks_disposable_vault_trial_r1_6.py) 与当前 `tools/vaks_disposable_vault_trial_r1_6.py`。r217 的运行结果只对应其 provenance 快照，不能用于验收尚无完成收据的 r218。
+
 给 Mac 上的新 Agent 的恢复提示：
 
 > 这是 VAKS 的跨机开发恢复。先读 START_HERE_MAC.md 和最新 handoff，再按 AGENTS.md 阅读当前架构。核实当前分支、修改和实现状态。outputs/review 中的实验、评审、通过记录不是生产能力或自动采纳决议。先给出当前状态和一个最小开发切口，不重新堆一套架构；后续实施以我当前要求为准。Windows 盘符是历史环境，不是 Mac 上可执行的默认配置。
@@ -62,5 +66,6 @@ python tools/restore_migration_assets.py --download
 
 - `tools/new-video-source-card.ps1` 调用 Windows `powershell`；`tools/finalize-video-intake.ps1` 默认写 H 盘。Mac 不能原样运行这条流程，先显式适配调用与目标路径。
 - R1.4 / R1.6 实验仍含 `H:/Obsidian/资料库`，且 R1.6 含 Windows 属性 / junction 检查。在 Mac 上该字符串不等同于 Windows 绝对路径；先适配再运行。
+- r218 的正式文件发布实验有 Windows/NTFS 硬限制：`require_windows_ntfs` 会拒绝其他平台或文件系统。修改 H 盘路径不足以在 Mac 获得同等验收；不要删除、跳过或绕过该检查。若需要 Mac 文件发布能力，应另做平台实现与验证，不能继承 Windows/NTFS 的结论。普通代码阅读与上述基础自检不依赖 r218。
 - 不为迁移全库转换编码、换行或重写历史路径：现有来源锚点、hash、实验记录依赖原始字节。仅将当前工作配置改为 Mac 路径。
 - Git 同步项目内容与历史，不同步浏览器会话、API 密钥、系统 Python 或其他机器环境。Mac 上的运行结果必须重新验证。

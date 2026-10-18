@@ -1,0 +1,691 @@
+{
+  "schema": "vaks.historical-smoke-archive.v1",
+  "created_at_utc": "2026-10-18T18:32:14.210654+00:00",
+  "status": "historical_scratch_evidence_only",
+  "source_root": "temp/",
+  "archive_root": "archives/local-smoke-2026-10-19",
+  "source_file_count": 26,
+  "source_bytes": 243756,
+  "metadata_files": [
+    "README.md",
+    "manifest.json"
+  ],
+  "content_review": {
+    "scope": "All bytes of the 26 listed source files were read as UTF-8; all JSON objects and JSONL records were parsed; scalar field types, source/path metadata and five synthetic test inputs were inspected. No code was executed.",
+    "utf8_files_read": 26,
+    "json_files_parsed": 14,
+    "jsonl_files_parsed": 7,
+    "json_objects_or_jsonl_records_parsed": 1321,
+    "plain_synthetic_text_inputs": 5,
+    "patterns_examined": [
+      "private_key",
+      "provider_credential",
+      "jwt",
+      "credential_assignment",
+      "url_userinfo",
+      "cn_mobile",
+      "hk_id",
+      "cn_id",
+      "email"
+    ],
+    "credential_or_real_personal_data_findings_after_review": 0,
+    "unresolved_findings": 0,
+    "email_like_pattern_matches": 76,
+    "email_false_positive_reason": "Every match is a /path field for a src-tauri/icons PNG asset with an @1x/@2x/@3x scale suffix; none is a contact address.",
+    "email_false_positive_locations": [
+      {
+        "original_path": "temp/source-capture-r10-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 102,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r10-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 135,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r10-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 136,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r10-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 137,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r10-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 138,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r10-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 139,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r10-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 140,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r10-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 141,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r10-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 142,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r10-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 143,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r10-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 144,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r10-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 145,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r10-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 146,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r10-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 147,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r10-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 148,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r10-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 149,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r10-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 150,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r10-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 151,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r10-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 152,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r9-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 102,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r9-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 135,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r9-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 136,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r9-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 137,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r9-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 138,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r9-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 139,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r9-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 140,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r9-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 141,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r9-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 142,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r9-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 143,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r9-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 144,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r9-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 145,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r9-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 146,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r9-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 147,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r9-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 148,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r9-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 149,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r9-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 150,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r9-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 151,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/source-capture-r9-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+        "record_number": 152,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/snapshot-manifest.jsonl",
+        "record_number": 102,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/snapshot-manifest.jsonl",
+        "record_number": 135,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/snapshot-manifest.jsonl",
+        "record_number": 136,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/snapshot-manifest.jsonl",
+        "record_number": 137,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/snapshot-manifest.jsonl",
+        "record_number": 138,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/snapshot-manifest.jsonl",
+        "record_number": 139,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/snapshot-manifest.jsonl",
+        "record_number": 140,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/snapshot-manifest.jsonl",
+        "record_number": 141,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/snapshot-manifest.jsonl",
+        "record_number": 142,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/snapshot-manifest.jsonl",
+        "record_number": 143,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/snapshot-manifest.jsonl",
+        "record_number": 144,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/snapshot-manifest.jsonl",
+        "record_number": 145,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/snapshot-manifest.jsonl",
+        "record_number": 146,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/snapshot-manifest.jsonl",
+        "record_number": 147,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/snapshot-manifest.jsonl",
+        "record_number": 148,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/snapshot-manifest.jsonl",
+        "record_number": 149,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/snapshot-manifest.jsonl",
+        "record_number": 150,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/snapshot-manifest.jsonl",
+        "record_number": 151,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/snapshot-manifest.jsonl",
+        "record_number": 152,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/snapshot-manifest.jsonl",
+        "record_number": 102,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/snapshot-manifest.jsonl",
+        "record_number": 135,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/snapshot-manifest.jsonl",
+        "record_number": 136,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/snapshot-manifest.jsonl",
+        "record_number": 137,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/snapshot-manifest.jsonl",
+        "record_number": 138,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/snapshot-manifest.jsonl",
+        "record_number": 139,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/snapshot-manifest.jsonl",
+        "record_number": 140,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/snapshot-manifest.jsonl",
+        "record_number": 141,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/snapshot-manifest.jsonl",
+        "record_number": 142,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/snapshot-manifest.jsonl",
+        "record_number": 143,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/snapshot-manifest.jsonl",
+        "record_number": 144,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/snapshot-manifest.jsonl",
+        "record_number": 145,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/snapshot-manifest.jsonl",
+        "record_number": 146,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/snapshot-manifest.jsonl",
+        "record_number": 147,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/snapshot-manifest.jsonl",
+        "record_number": 148,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/snapshot-manifest.jsonl",
+        "record_number": 149,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/snapshot-manifest.jsonl",
+        "record_number": 150,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/snapshot-manifest.jsonl",
+        "record_number": 151,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      },
+      {
+        "original_path": "temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/snapshot-manifest.jsonl",
+        "record_number": 152,
+        "field": "/path",
+        "classification": "retina_png_asset_filename_not_contact_data"
+      }
+    ],
+    "limitations": "Bounded static content review; no exhaustive guarantee for unknown credential formats or arbitrary obfuscation. No external credential validation or customer-data service was used."
+  },
+  "preservation_check": {
+    "all_26_source_files_unchanged": true,
+    "all_26_archive_sha256_match_source": true,
+    "original_relative_paths_preserved": true,
+    "source_file_bytes_rewritten": false
+  },
+  "interpretation_limits": [
+    "Historical scratch/evidence only.",
+    "No contemporaneous full execution logs or complete environment were established by this archive. Do not infer a verified test run or production readiness from these files alone.",
+    "Existing result/status fields are preserved source data, not newly validated claims.",
+    "No reviewed-truth promotion, permission grant or deployment is implied."
+  ],
+  "files": [
+    {
+      "original_path": "temp/source-capture-r10-smoke/generic-blob.txt",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/source-capture-r10-smoke/generic-blob.txt",
+      "bytes": 26,
+      "sha256": "d5c9b9e7a574e3abea4f4cdfbf930a7495b623b464ba09f248b2bb1fefff7868",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/source-capture-r10-smoke/smoke-generic-blob/capture-envelope.json",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/source-capture-r10-smoke/smoke-generic-blob/capture-envelope.json",
+      "bytes": 1426,
+      "sha256": "537af082606b639b7342b7dc82d1d5b2a1549c12fd515c17f4617e76a3ad2dd7",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/source-capture-r10-smoke/smoke-generic-blob/snapshot-hygiene.intoto.json",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/source-capture-r10-smoke/smoke-generic-blob/snapshot-hygiene.intoto.json",
+      "bytes": 1006,
+      "sha256": "516a059a3617e235d386fc8fddfcf54902a69d6e965042a8e687d879e1e0b0d6",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/source-capture-r10-smoke/smoke-generic-blob/snapshot-manifest.jsonl",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/source-capture-r10-smoke/smoke-generic-blob/snapshot-manifest.jsonl",
+      "bytes": 98,
+      "sha256": "92cdc4a570c64ab0353e5805603c78c0508841067141548bd26adb6471e05d21",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/source-capture-r10-smoke/smoke-linxiv/capture-envelope.json",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/source-capture-r10-smoke/smoke-linxiv/capture-envelope.json",
+      "bytes": 1790,
+      "sha256": "c1a2874c69e8a6c300790b707fa6dc43dd529da875367b4f803c687368f3e51b",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/source-capture-r10-smoke/smoke-linxiv/snapshot-hygiene.intoto.json",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/source-capture-r10-smoke/smoke-linxiv/snapshot-hygiene.intoto.json",
+      "bytes": 3094,
+      "sha256": "9f2a2218df89002654fc2b271cc3b76041a3775355da3b34af8d6ad0427df944",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/source-capture-r10-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/source-capture-r10-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+      "bytes": 54223,
+      "sha256": "5da9ff1747cd226c8f5cb589341b412c074fa83a5cd4d1ce0d5744b2212cac57",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/source-capture-r9-smoke/generic-blob.txt",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/source-capture-r9-smoke/generic-blob.txt",
+      "bytes": 25,
+      "sha256": "8e41953adf04ebaa121fe59d089295a8c2e2825d9a6d35575253df7abcb50703",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/source-capture-r9-smoke/smoke-generic-blob/capture-envelope.json",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/source-capture-r9-smoke/smoke-generic-blob/capture-envelope.json",
+      "bytes": 1424,
+      "sha256": "b47c984fdc58feab7665c5510047f9e5d34de4775ade6989a9daba8d2ae72cb3",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/source-capture-r9-smoke/smoke-generic-blob/snapshot-hygiene.intoto.json",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/source-capture-r9-smoke/smoke-generic-blob/snapshot-hygiene.intoto.json",
+      "bytes": 1006,
+      "sha256": "5614a8d20330c201c6a0874831b1a465b449bcdb1d47bd68496ab0bceb802da9",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/source-capture-r9-smoke/smoke-generic-blob/snapshot-manifest.jsonl",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/source-capture-r9-smoke/smoke-generic-blob/snapshot-manifest.jsonl",
+      "bytes": 98,
+      "sha256": "92cdc4a570c64ab0353e5805603c78c0508841067141548bd26adb6471e05d21",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/source-capture-r9-smoke/smoke-linxiv/capture-envelope.json",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/source-capture-r9-smoke/smoke-linxiv/capture-envelope.json",
+      "bytes": 1790,
+      "sha256": "58fd68be1bd1fe9d0b866c1132e3e9b7a04e0862f50cd8f5195a56d33966f8a4",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/source-capture-r9-smoke/smoke-linxiv/snapshot-hygiene.intoto.json",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/source-capture-r9-smoke/smoke-linxiv/snapshot-hygiene.intoto.json",
+      "bytes": 3094,
+      "sha256": "9f2a2218df89002654fc2b271cc3b76041a3775355da3b34af8d6ad0427df944",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/source-capture-r9-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/source-capture-r9-smoke/smoke-linxiv/snapshot-manifest.jsonl",
+      "bytes": 54223,
+      "sha256": "5da9ff1747cd226c8f5cb589341b412c074fa83a5cd4d1ce0d5744b2212cac57",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/vaks-generic-blob-5b55fddf4b514d12b6e469ca30380301.bin",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/vaks-generic-blob-5b55fddf4b514d12b6e469ca30380301.bin",
+      "bytes": 10,
+      "sha256": "e997afd18e5f6be004fc193aed2c90291e68ab2c7599a62538c935b7fca6ab0f",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/vaks-generic-blob-smoke-10055f0813714cc2a00e0037194f973b/capture-envelope.json",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/vaks-generic-blob-smoke-10055f0813714cc2a00e0037194f973b/capture-envelope.json",
+      "bytes": 1508,
+      "sha256": "f8a8fbc2aca6775e112ac06ea6361770707527453c6543ca26e103c0ff12d1d7",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/vaks-generic-blob-smoke-10055f0813714cc2a00e0037194f973b/snapshot-hygiene.intoto.json",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/vaks-generic-blob-smoke-10055f0813714cc2a00e0037194f973b/snapshot-hygiene.intoto.json",
+      "bytes": 1006,
+      "sha256": "6f9ddea988a32ed2be7798a4ede5bddc5da0f172ad840a4b695f5384f92f5dc9",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/vaks-generic-blob-smoke-10055f0813714cc2a00e0037194f973b/snapshot-manifest.jsonl",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/vaks-generic-blob-smoke-10055f0813714cc2a00e0037194f973b/snapshot-manifest.jsonl",
+      "bytes": 98,
+      "sha256": "92cdc4a570c64ab0353e5805603c78c0508841067141548bd26adb6471e05d21",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/capture-envelope.json",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/capture-envelope.json",
+      "bytes": 1790,
+      "sha256": "b6196133173d54c260d3c904f45f9cb2dea965c3c1261ebbffeaa156265084d2",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/snapshot-hygiene.intoto.json",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/snapshot-hygiene.intoto.json",
+      "bytes": 2671,
+      "sha256": "24bfc9a66f0eb700e4a38516029e8cb8ce9e9d8fe23a8d8510b8c69d23bd1127",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/snapshot-manifest.jsonl",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/vaks-linxiv-p0-p7-smoke-c6030b39fba941c1ad926ecc65848eb5/snapshot-manifest.jsonl",
+      "bytes": 54223,
+      "sha256": "5da9ff1747cd226c8f5cb589341b412c074fa83a5cd4d1ce0d5744b2212cac57",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/capture-envelope.json",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/capture-envelope.json",
+      "bytes": 1790,
+      "sha256": "650762668d33642aa32f7b411a587c9b737c43c53ca1c4c468654628a9ba87b1",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/snapshot-hygiene.intoto.json",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/snapshot-hygiene.intoto.json",
+      "bytes": 3094,
+      "sha256": "9f2a2218df89002654fc2b271cc3b76041a3775355da3b34af8d6ad0427df944",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/snapshot-manifest.jsonl",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/vaks-linxiv-r4-smoke-bdda4d4102564613a6a8e426cf3d5f73/snapshot-manifest.jsonl",
+      "bytes": 54223,
+      "sha256": "5da9ff1747cd226c8f5cb589341b412c074fa83a5cd4d1ce0d5744b2212cac57",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/vaks-r4-generic-blob-1c8d935794a5404e94dd0625bf13709c.bin",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/vaks-r4-generic-blob-1c8d935794a5404e94dd0625bf13709c.bin",
+      "bytes": 10,
+      "sha256": "e997afd18e5f6be004fc193aed2c90291e68ab2c7599a62538c935b7fca6ab0f",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    },
+    {
+      "original_path": "temp/vaks-r5-generic-blob-a958d23ff2544f838397c93dcee1d02a.bin",
+      "archive_path": "archives/local-smoke-2026-10-19/temp/vaks-r5-generic-blob-a958d23ff2544f838397c93dcee1d02a.bin",
+      "bytes": 10,
+      "sha256": "e997afd18e5f6be004fc193aed2c90291e68ab2c7599a62538c935b7fca6ab0f",
+      "content_review": "all_bytes_read_utf8; structured_metadata_or_synthetic_smoke_input; no_unresolved_sensitive_findings"
+    }
+  ]
+}

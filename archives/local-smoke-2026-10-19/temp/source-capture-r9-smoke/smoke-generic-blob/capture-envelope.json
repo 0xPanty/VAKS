@@ -1,0 +1,55 @@
+{
+  "capture_id": "urn:uuid:00000000-0000-4000-8000-000000000102",
+  "change": {
+    "compared_to_capture_id": null,
+    "state": "unknown"
+  },
+  "fidelity": {
+    "state": "not_checked"
+  },
+  "inspection_refs": [
+    {
+      "digest": "sha256:5614a8d20330c201c6a0874831b1a465b449bcdb1d47bd68496ab0bceb802da9",
+      "media_type": "application/vnd.in-toto+json",
+      "predicate_type": "urn:vaks:predicate:source-snapshot-hygiene:v1",
+      "size": 1006
+    }
+  ],
+  "observation": {
+    "blob": {
+      "digest": "sha256:8e41953adf04ebaa121fe59d089295a8c2e2825d9a6d35575253df7abcb50703",
+      "media_type": "text/plain",
+      "size": 25
+    },
+    "capture_method": "local_file",
+    "state": "captured"
+  },
+  "observed_at": "2026-06-23T00:00:00Z",
+  "producer": {
+    "id": "vaks.snapshot-inspector",
+    "version": "0.1.0"
+  },
+  "raw_handling": {
+    "disposition": "admitted",
+    "policy": {
+      "id": "vaks-raw-intake-default"
+    },
+    "reason_codes": []
+  },
+  "resolution": {
+    "selector": {
+      "kind": "path",
+      "value": ""
+    }
+  },
+  "schema": "urn:vaks:schema:source-capture:v1",
+  "snapshot": {
+    "kind": "blob",
+    "snapshot_id": "vsnap:1:blob:sha256:8e41953adf04ebaa121fe59d089295a8c2e2825d9a6d35575253df7abcb50703"
+  },
+  "source": {
+    "kind": "file",
+    "requested_locator": "temp/source-capture-r9-smoke/generic-blob.txt",
+    "source_id": "vsrc:1:content:manual-r9-smoke"
+  }
+}

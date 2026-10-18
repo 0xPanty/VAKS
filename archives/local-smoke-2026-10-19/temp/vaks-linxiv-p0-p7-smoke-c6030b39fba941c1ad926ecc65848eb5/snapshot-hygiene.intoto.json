@@ -1,0 +1,94 @@
+{
+  "_type": "https://in-toto.io/Statement/v1",
+  "predicate": {
+    "checker": {
+      "id": "vaks.snapshot-inspector",
+      "version": "0.1.0"
+    },
+    "execution_state": "complete",
+    "findings": [
+      {
+        "code": "PATH_CASE_COLLISION",
+        "details": {
+          "group": [
+            "storage/config/sql/tables/PROJECT_TO_TAG.SQL",
+            "storage/config/sql/tables/PROJECT_TO_TAG.sql"
+          ]
+        },
+        "message": "Paths collide after case folding.",
+        "paths": [
+          "storage/config/sql/tables/PROJECT_TO_TAG.SQL",
+          "storage/config/sql/tables/PROJECT_TO_TAG.sql"
+        ],
+        "profile": "repo-portability/v1",
+        "severity": "warning"
+      },
+      {
+        "code": "PATH_CASE_COLLISION",
+        "details": {
+          "group": [
+            "storage/config/sql/tables/TAG.SQL",
+            "storage/config/sql/tables/TAG.sql"
+          ]
+        },
+        "message": "Paths collide after case folding.",
+        "paths": [
+          "storage/config/sql/tables/TAG.SQL",
+          "storage/config/sql/tables/TAG.sql"
+        ],
+        "profile": "repo-portability/v1",
+        "severity": "warning"
+      },
+      {
+        "code": "PATH_WINDOWS_EQUIVALENCE_COLLISION",
+        "details": {
+          "group": [
+            "storage/config/sql/tables/PROJECT_TO_TAG.SQL",
+            "storage/config/sql/tables/PROJECT_TO_TAG.sql"
+          ]
+        },
+        "message": "Paths collide under Windows path equivalence.",
+        "paths": [
+          "storage/config/sql/tables/PROJECT_TO_TAG.SQL",
+          "storage/config/sql/tables/PROJECT_TO_TAG.sql"
+        ],
+        "profile": "repo-portability/v1",
+        "severity": "warning"
+      },
+      {
+        "code": "PATH_WINDOWS_EQUIVALENCE_COLLISION",
+        "details": {
+          "group": [
+            "storage/config/sql/tables/TAG.SQL",
+            "storage/config/sql/tables/TAG.sql"
+          ]
+        },
+        "message": "Paths collide under Windows path equivalence.",
+        "paths": [
+          "storage/config/sql/tables/TAG.SQL",
+          "storage/config/sql/tables/TAG.sql"
+        ],
+        "profile": "repo-portability/v1",
+        "severity": "warning"
+      }
+    ],
+    "profiles": [
+      "archive-safety/v1",
+      "repo-portability/v1",
+      "repo-completeness/v1"
+    ],
+    "summary": {
+      "finding_count": 4,
+      "max_severity": "warning"
+    }
+  },
+  "predicateType": "urn:vaks:predicate:repo-snapshot-hygiene:v1",
+  "subject": [
+    {
+      "digest": {
+        "sha256": "5da9ff1747cd226c8f5cb589341b412c074fa83a5cd4d1ce0d5744b2212cac57"
+      },
+      "name": "snapshot-manifest"
+    }
+  ]
+}

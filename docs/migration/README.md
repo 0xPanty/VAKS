@@ -12,6 +12,8 @@
 | `2026-10-19-redactions.json` | 两份含 JWT 的公开来源下载文件处理记录；原件留在本地，提供脱敏参考副本 |
 | `2026-10-19-ragflow-redaction.json` | 第三方 RAGFlow 源码归档中凭据／私钥内容的剔除记录及安全副本哈希 |
 | `sanitized-reference-files/` | 脱敏参考副本，不是原始证据；原来源 hash 不适用于这些副本 |
+| [2026-10-19-post-upload-audit.md](2026-10-19-post-upload-audit.md) / [JSON](2026-10-19-post-upload-audit.json) | 上传后审计：基准为 `c53c336`，含 28061 个 Git 文件、1704 个正式 vault 文件去向、6 个 Release 资产和原始历史；不包含后续补充文件 |
+| [历史 smoke 归档](../../archives/local-smoke-2026-10-19/README.md) | 原 `temp/` 的 26 个历史文件另行按原路径保存，加 README 与 manifest 共 28 个新文件；仅作历史证据 |
 
 源文件和归档副本的候选／历史状态保持不变。正式 vault 与工程都有独有材料；此次迁移不是把正式 vault 宣布为唯一当前代码来源。历史评审 ZIP 保留当时内容，不重写其 manifest。
 
@@ -35,7 +37,7 @@ python tools/restore_migration_assets.py --download
 
 - 根目录个人陈述和三张证件照：与 VAKS 无关。
 - `.git` 的本机配置和凭据、`.obsidian` 配置／插件／布局、空 `.codex` / `.agents` 本机目录、系统依赖。
-- `temp/`、Python 缓存、一次性 `_disposable_vault_workspace/` 和运行锁。实验代码、结果、契约、fixtures 和 r218 未见完成结果这一事实仍保存。
+- 原始 `temp/` 仍不纳入 Git；其中 26 个历史 smoke 文件已另行存入 `archives/local-smoke-2026-10-19/temp/`，并附审核说明与哈希清单。Python 缓存、一次性 `_disposable_vault_workspace/` 和运行锁继续排除。实验代码、结果、契约、fixtures 和 r218 未见完成结果这一事实仍保存。
 - 两个含 JWT 的原始下载文件，以及含未确认凭据与私钥的原始 RAGFlow ZIP。保留其本地原件与原 SHA256；上传可阅读的脱敏副本，避免改变原始证据后伪装成原件。
 
 六个大文件属于“在 Release 单独保存”，不属于遗漏。基础源文件、候选笔记和实验报告没有因文件数量多而整体排除。
