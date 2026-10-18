@@ -1,0 +1,8 @@
+{
+  "fixture": "valid-source-hash-binding",
+  "checks": {
+    "source_hashes.manual_submission_brief_sha256": "418aef12624f9aa74d4967a02b6533a37e233553dd22b90a37665524e7410daa",
+    "source_hashes.response_capture_card_sha256": "2b2d6b8d29cdca16c9be2d024f5b90a6b4d10a3f574b61ffce4348cd7bc7e71a"
+  },
+  "expected": true
+}

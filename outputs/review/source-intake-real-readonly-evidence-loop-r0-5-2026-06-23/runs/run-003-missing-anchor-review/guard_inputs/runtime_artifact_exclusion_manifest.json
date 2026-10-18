@@ -1,0 +1,87 @@
+{
+  "record_kind": "runtime_artifact_exclusion_manifest",
+  "scenario_id": "run-003-missing-anchor-review-runtime-artifact-exclusion",
+  "exclude_runtime_artifacts": true,
+  "items": [
+    {
+      "id": "item-001",
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/xxiivv-oscean-source.md",
+      "artifact_kind": "raw_anchor",
+      "selected": true,
+      "seen_by_retrieval": true,
+      "runtime_artifact": false,
+      "is_runtime_artifact": false,
+      "excluded": false
+    },
+    {
+      "id": "item-002",
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/mayfrost-guides-source.md",
+      "artifact_kind": "raw_anchor",
+      "selected": true,
+      "seen_by_retrieval": true,
+      "runtime_artifact": false,
+      "is_runtime_artifact": false,
+      "excluded": false
+    },
+    {
+      "id": "item-003",
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/dotnet-dotnet-api-docs-source.md",
+      "artifact_kind": "raw_anchor",
+      "selected": true,
+      "seen_by_retrieval": true,
+      "runtime_artifact": false,
+      "is_runtime_artifact": false,
+      "excluded": false
+    },
+    {
+      "id": "item-004",
+      "path": "raw/repos/2026-06-11-trimstray-the-book-of-secret-knowledge-source.md",
+      "artifact_kind": "raw_anchor",
+      "selected": true,
+      "seen_by_retrieval": true,
+      "runtime_artifact": false,
+      "is_runtime_artifact": false,
+      "excluded": false
+    },
+    {
+      "id": "item-005",
+      "path": "raw/papers/2026-06-07-aal-ruller-pkm-second-brain-ai-companian-source.md",
+      "artifact_kind": "raw_anchor",
+      "selected": true,
+      "seen_by_retrieval": true,
+      "runtime_artifact": false,
+      "is_runtime_artifact": false,
+      "excluded": false
+    },
+    {
+      "id": "item-006",
+      "path": "raw/repos/2026-05-27-dusk-obsidian-vault-source.md",
+      "artifact_kind": "raw_anchor",
+      "selected": true,
+      "seen_by_retrieval": true,
+      "runtime_artifact": false,
+      "is_runtime_artifact": false,
+      "excluded": false
+    },
+    {
+      "id": "item-007",
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/hundredrabbits-100r-co-source.md",
+      "artifact_kind": "raw_anchor",
+      "selected": true,
+      "seen_by_retrieval": true,
+      "runtime_artifact": false,
+      "is_runtime_artifact": false,
+      "excluded": false
+    },
+    {
+      "id": "item-008",
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/hundredrabbits-grimgrains-source.md",
+      "artifact_kind": "raw_anchor",
+      "selected": true,
+      "seen_by_retrieval": true,
+      "runtime_artifact": false,
+      "is_runtime_artifact": false,
+      "excluded": false
+    }
+  ]
+}

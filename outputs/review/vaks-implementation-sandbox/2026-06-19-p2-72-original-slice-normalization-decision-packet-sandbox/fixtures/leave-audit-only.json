@@ -1,0 +1,10 @@
+{
+  "fixture_id": "leave-audit-only",
+  "decision_option": "leave_audit_only",
+  "expected": {
+    "requires_separate_user_approval": false,
+    "would_edit_old_slices": false,
+    "allowed_now": true,
+    "normalization_applied": false
+  }
+}

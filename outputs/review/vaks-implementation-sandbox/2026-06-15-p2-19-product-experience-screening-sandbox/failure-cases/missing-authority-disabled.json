@@ -1,0 +1,1 @@
+{"case_id":"missing-authority-disabled","base_fixture":"fixtures/valid-product-experience-screening.json","mutations":[{"op":"set_candidate","id":"P2-PX-01","path":"/authority_flags/all_authority_changes_disabled","value":false}]}

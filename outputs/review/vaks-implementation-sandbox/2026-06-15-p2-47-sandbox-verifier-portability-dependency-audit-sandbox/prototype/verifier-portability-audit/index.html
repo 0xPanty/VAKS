@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verifier Portability Audit</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f8fafc; color: #1f2933; }
+    main { max-width: 980px; margin: 0 auto; padding: 28px 18px 44px; }
+    h1 { margin: 0 0 8px; font-size: 28px; }
+    .summary { color: #526273; max-width: 820px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 18px; background: #fff; border: 1px solid #d9e1ec; }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #e6edf5; }
+    .notice { margin-top: 16px; border-left: 4px solid #2f6fed; background: #edf4ff; padding: 12px 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Verifier Portability Audit</h1>
+    <p class="summary">static sandbox portability audit only. Verifiers scanned 41; blocking verifiers 0; not runtime certification; not enterprise production; not action basis.</p>
+    <table>
+      <thead><tr><th>Signal</th><th>Value</th></tr></thead>
+      <tbody><tr><td>verifier_count</td><td>41</td></tr>
+<tr><td>static_portability_pass_count</td><td>41</td></tr>
+<tr><td>blocking_verifier_count</td><td>0</td></tr>
+<tr><td>warning_verifier_count</td><td>28</td></tr>
+<tr><td>external_import_verifier_count</td><td>0</td></tr>
+<tr><td>forbidden_import_verifier_count</td><td>0</td></tr>
+<tr><td>forbidden_token_verifier_count</td><td>0</td></tr>
+<tr><td>warning_token_verifier_count</td><td>8</td></tr>
+<tr><td>syntax_error_verifier_count</td><td>0</td></tr>
+<tr><td>subprocess_warning_count</td><td>8</td></tr>
+<tr><td>synthetic_probe_count</td><td>8</td></tr>
+<tr><td>synthetic_probe_pass_count</td><td>8</td></tr>
+<tr><td>all_synthetic_probes_pass</td><td>True</td></tr></tbody>
+    </table>
+    <section class="notice">This prototype does not execute old verifiers, install dependencies, access network, write vault files, commit, push, sync, or promote.</section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

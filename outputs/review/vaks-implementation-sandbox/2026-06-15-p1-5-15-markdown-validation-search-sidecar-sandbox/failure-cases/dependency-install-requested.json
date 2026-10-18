@@ -1,0 +1,11 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "dependency-install-requested",
+  "expected_valid": false,
+  "expected_codes": ["MS_DEPENDENCY_INSTALL_FORBIDDEN"],
+  "patch": {
+    "runtime": {
+      "dependency_install_requested": true
+    }
+  }
+}

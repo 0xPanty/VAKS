@@ -1,0 +1,42 @@
+{
+  "record_kind": "post_opus_user_approval_control_card",
+  "slice_id": "2026-06-19-p2-104-post-opus-user-approval-decision-packet-sandbox",
+  "outcome_matrix_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-103-opus-outcome-action-gate-matrix-sandbox/artifact/opus-outcome-action-gate-matrix.json",
+  "packet_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-104-post-opus-user-approval-decision-packet-sandbox/artifact/post-opus-user-approval-decision-packet.md",
+  "required_preconditions": {
+    "actual_opus_result_present": true,
+    "validated_opus_pass_present": true,
+    "exact_user_approval_present": true
+  },
+  "current_state": {
+    "dry_run_only": true,
+    "actual_opus_result_present": false,
+    "validated_opus_pass_present": false,
+    "user_approval_present": false,
+    "ready_for_merge_proposal": false,
+    "mainline_merge_allowed": false,
+    "goal_complete_now": false
+  },
+  "exact_approval_phrase": "I explicitly approve post-Opus mainline consideration for VAKS sandbox closeout: prepare a separate merge proposal only; do not merge, promote, commit, push, sync, or write reviewed knowledge/action basis without my next explicit approval.",
+  "p2_103_pass_gate": {
+    "allowed_next_actions": [
+      "retain_raw_opus_result_in_sandbox",
+      "run_result_intake_validator",
+      "prepare_user_approval_decision_packet"
+    ],
+    "required_user_state": "explicit_user_mainline_approval_still_required",
+    "mainline_actions_require_separate_user_approval": true
+  },
+  "post_exact_approval_allowed_state": {
+    "prepare_merge_proposal_only": true,
+    "mainline_merge_allowed": false,
+    "promotion_allowed": false,
+    "reviewed_knowledge_write_allowed": false,
+    "evidence_support_write_allowed": false,
+    "action_basis_allowed": false,
+    "commit_allowed": false,
+    "push_allowed": false,
+    "sync_allowed": false,
+    "goal_complete_now": false
+  }
+}

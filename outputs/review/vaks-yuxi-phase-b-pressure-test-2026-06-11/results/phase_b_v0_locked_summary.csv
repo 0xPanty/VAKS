@@ -1,0 +1,9 @@
+﻿corpus,mode,queries,resolvable_queries,hit_at_5,hit_at_10,mrr,action_leakage_rate,forbidden_top1_rate,cross_bucket_violation_rate,warning_coverage_risk,clickback_coverage,hash_coverage,adapter_coverage,receipt_coverage,stale_detection_rate
+full,baseline_file_lexical,30,30,27/30,30/30,0.7294,1.0000,0.9500,0.9500,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000
+full,vaks_b_bucket_local,30,30,30/30,30/30,0.8528,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000
+full,vaks_b_bucketless,30,30,28/30,29/30,0.9030,0.8000,0.8000,0.8000,1.0000,1.0000,1.0000,1.0000,1.0000,0.0000
+full,yuxi_native_profile,30,30,28/30,29/30,0.9030,1.0000,0.8000,0.8000,0.0000,1.0000,0.0000,0.0000,0.0000,0.0000
+primary,baseline_file_lexical,30,30,27/30,29/30,0.8170,1.0000,1.0000,1.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000
+primary,vaks_b_bucket_local,30,30,30/30,30/30,0.9083,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000
+primary,vaks_b_bucketless,30,30,29/30,30/30,0.9333,0.5500,0.5500,0.5500,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000
+primary,yuxi_native_profile,30,30,29/30,30/30,0.9333,1.0000,0.5500,0.5500,0.0000,1.0000,0.0000,0.0000,0.0000,0.0000

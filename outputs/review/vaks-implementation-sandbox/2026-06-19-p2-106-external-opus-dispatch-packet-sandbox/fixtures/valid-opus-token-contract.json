@@ -1,0 +1,9 @@
+{
+  "fixture": "valid-opus-token-contract",
+  "expected_tokens": [
+    "OPUS_PASS_SANDBOX_CLOSEOUT",
+    "OPUS_REVISE_SANDBOX_CLOSEOUT",
+    "OPUS_BLOCKED_NEEDS_USER"
+  ],
+  "expected": true
+}

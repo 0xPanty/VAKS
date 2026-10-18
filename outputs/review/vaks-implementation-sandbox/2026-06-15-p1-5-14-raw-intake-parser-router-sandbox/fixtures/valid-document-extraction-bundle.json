@@ -1,0 +1,104 @@
+{
+  "record_kind": "raw_intake_parser_router_manifest",
+  "scenario_id": "valid-document-extraction-bundle",
+  "expected_valid": true,
+  "expected_codes": [],
+  "original": {
+    "path": "fixtures/raw/manual-fixture.pdf",
+    "sha256": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+    "source_type": "pdf",
+    "access_mode": "user_provided",
+    "private_or_account_content": false,
+    "uses_cookies": false
+  },
+  "router": {
+    "modality": "document",
+    "route": "document_parse",
+    "lazy_routing": true,
+    "heavy_parser_always_on": false,
+    "selected_adapter": "markitdown_fixture_adapter",
+    "selected_by": ["source_type", "file_extension"],
+    "route_reason": "PDF-like document route"
+  },
+  "parser": {
+    "adapter_name": "markitdown_fixture_adapter",
+    "adapter_version": "0.1-sandbox",
+    "runtime": "fixture_only_python_stdlib",
+    "parser_config_hash": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+    "model_flags": [],
+    "known_limits": ["layout fidelity not proven", "tables need later review"],
+    "license_family": "permissive",
+    "license_reviewed": true,
+    "model_locality": "local",
+    "locality_reviewed": true,
+    "installed_dependency": false,
+    "full_runtime_core_dependency": false
+  },
+  "outputs": {
+    "markdown_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/fixtures/extracted/manual-fixture.md",
+    "json_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/fixtures/extracted/manual-fixture.json",
+    "metadata_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/fixtures/extracted/manual-fixture.metadata.json",
+    "chunks_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/fixtures/extracted/manual-fixture.chunks.json",
+    "scratch_only": false,
+    "retained_outputs": [
+      {
+        "kind": "markdown",
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/fixtures/extracted/manual-fixture.md",
+        "output_hash": "sha256:3333333333333333333333333333333333333333333333333333333333333333",
+        "knowledge_status": "raw"
+      },
+      {
+        "kind": "chunks",
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/fixtures/extracted/manual-fixture.chunks.json",
+        "output_hash": "sha256:4444444444444444444444444444444444444444444444444444444444444444",
+        "knowledge_status": "candidate"
+      }
+    ]
+  },
+  "anchors": {
+    "source_hash_on_anchors": true,
+    "page_refs": [
+      {
+        "id": "page-1",
+        "selector": "page=1",
+        "source_hash": "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+      }
+    ],
+    "timestamp_refs": [],
+    "region_refs": [],
+    "url_refs": []
+  },
+  "boundary": {
+    "knowledge_status": "raw",
+    "parser_output_is_support": false,
+    "action_basis_allowed": false,
+    "truth_mutation_allowed": false,
+    "reviewed_knowledge_created": false,
+    "reviewed_relation_created": false,
+    "evidence_support_created": false,
+    "promotion_ready": false,
+    "mainline_ready": false
+  },
+  "source_card": {
+    "record_kind": "source_card",
+    "knowledge_status": "raw",
+    "target_path": "raw/articles/manual-fixture-source.md",
+    "retrieval_policy": {
+      "policy_kind": "source_identity_only",
+      "pack_allowed": "drilldown_required",
+      "action_basis_allowed": false,
+      "warning_code": "raw_is_provenance_only"
+    }
+  },
+  "candidate_distillation": {
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "provisional": true,
+    "retrieval_policy": {
+      "policy_kind": "orientation_only",
+      "pack_allowed": "activation_only",
+      "action_basis_allowed": false,
+      "warning_code": "candidate_not_action_basis"
+    }
+  }
+}

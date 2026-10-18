@@ -1,0 +1,11 @@
+{
+  "fixture": "result-intake-template-linked",
+  "intake_schema_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-96-opus-result-intake-skeleton-sandbox/artifact/opus-result-intake-schema.json",
+  "required_fields": [
+    "raw_conclusion_token",
+    "reviewed_evidence",
+    "boundary_verdict",
+    "raw_response_path"
+  ],
+  "expected": true
+}

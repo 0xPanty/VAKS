@@ -1,0 +1,1 @@
+{"extends":"fixtures/valid-frontmatter-validation-check.json","scenario_id":"search-buckets-missing","expected_valid":false,"expected_codes":["MS_BUCKETS_MISSING"],"patch":{"search":{"included_buckets":[],"excluded_buckets":[]}}}

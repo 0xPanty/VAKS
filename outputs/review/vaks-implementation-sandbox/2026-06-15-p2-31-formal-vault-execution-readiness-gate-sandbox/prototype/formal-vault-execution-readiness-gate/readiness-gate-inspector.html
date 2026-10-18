@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" data-sandbox-only="true" data-readiness-only="true" data-non-executable="true" data-no-formal-vault-access="true" data-no-write="true" data-no-sync="true" data-no-authority="true" data-no-permission="true">
+<head><meta charset="utf-8"><title>Readiness Gate Inspector</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 24px; color: #202124; background: #f7f7f2; }
+main { max-width: 920px; }
+button { margin: 0 8px 8px 0; padding: 7px 10px; border: 1px solid #777; background: #fff; }
+section { border-top: 1px solid #ccc; padding: 14px 0; }
+code { background: #ecebe4; padding: 1px 4px; }
+</style></head>
+<body><main>
+<h1>Readiness Gate Inspector</h1>
+<p>Sandbox-only read-only readiness view. No approval or permission is created here.</p>
+<button data-filter="all">All</button>
+<button data-filter="contract">Contract</button>
+<button data-filter="checks">Checks</button>
+<button data-filter="receipt">Receipt</button>
+<button data-filter="stops">Stops</button>
+<section data-kind="contract"><h2>Contract</h2><p>Separate future confirmation and execution slice required.</p></section>
+<section data-kind="checks"><h2>Checks</h2><p>10 readiness inputs, none collected as execution permission.</p></section>
+<section data-kind="receipt"><h2>Receipt</h2><p>Gate hash <code>974ab9762341fe2ae95c3c33d4d38c13a98b69b9a465745484e1cd0684e0a6e4</code></p></section>
+<section data-kind="stops"><h2>Stops</h2><p>Any real vault operation stops this sandbox.</p></section>
+</main></body></html>

@@ -1,0 +1,1 @@
+{"extends":"fixtures/valid-frontmatter-validation-check.json","scenario_id":"cross-bucket-fusion","expected_valid":false,"expected_codes":["MS_CROSS_BUCKET_FUSION"],"patch":{"search":{"cross_bucket_fusion":true}}}

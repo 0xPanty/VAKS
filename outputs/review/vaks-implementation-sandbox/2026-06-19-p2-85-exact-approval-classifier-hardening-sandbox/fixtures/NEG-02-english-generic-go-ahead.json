@@ -1,0 +1,16 @@
+{
+  "case_id": "NEG-02-english-generic-go-ahead",
+  "kind": "negative",
+  "input_text": "go ahead and make it product grade",
+  "expected_match": false,
+  "expected_class": "not_approval",
+  "result": {
+    "input_sha256": "715cf4a9d7a43df4b9fe3d51d15d41a1d685910c1a573c1d04f67805fba9ed41",
+    "matched_exact_phrase": false,
+    "approval_class": "not_approval",
+    "old_file_write_allowed_by_this_slice": false,
+    "requires_future_executor_slice": false,
+    "reason": "not an exact p2-75 approval phrase"
+  },
+  "passed": true
+}

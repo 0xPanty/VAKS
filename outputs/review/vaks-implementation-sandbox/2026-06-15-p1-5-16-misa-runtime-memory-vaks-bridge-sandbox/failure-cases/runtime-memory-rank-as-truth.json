@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "runtime-memory-rank-as-truth",
+  "expected_valid": false,
+  "expected_codes": ["MB_AUTHORITY_CONFUSION"],
+  "patch": {"runtime_memory": {"memory_rank_claims_truth": true}}
+}

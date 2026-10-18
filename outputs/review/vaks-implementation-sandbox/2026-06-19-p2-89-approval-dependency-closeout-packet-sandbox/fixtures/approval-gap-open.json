@@ -1,0 +1,5 @@
+{
+  "case_id": "approval-gap-open",
+  "blocking_condition": "missing_exact_p2_75_user_approval",
+  "exact_approval_collected": false
+}

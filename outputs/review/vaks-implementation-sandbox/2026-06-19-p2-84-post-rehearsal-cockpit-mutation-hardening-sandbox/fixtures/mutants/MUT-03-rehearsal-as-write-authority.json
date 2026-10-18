@@ -1,0 +1,152 @@
+{
+  "record_kind": "sandbox_post_rehearsal_goal_state_cockpit",
+  "slice_id": "2026-06-19-p2-83-post-rehearsal-goal-state-cockpit-sandbox",
+  "created_at": "2026-06-18T22:40:04.856766+00:00",
+  "source_inputs": {
+    "p2_74_operator_surface": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-74-original-20-operator-status-surface-sandbox/artifact/original_20_operator_status_surface.json",
+    "p2_75_approval_request": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-75-old-file-status-normalization-approval-request-sandbox/artifact/old_file_status_normalization_approval_request.json",
+    "p2_77_readiness_gate": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-77-old-file-status-normalization-executor-readiness-gate-sandbox/artifact/old_file_status_normalization_executor_readiness_gate.json",
+    "p2_78_gap_ledger": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-78-goal-completion-gap-ledger-sandbox/artifact/goal_completion_gap_ledger.json",
+    "p2_80_transaction_package": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-80-old-file-status-normalization-transaction-package-sandbox/artifact/old_file_status_normalization_transaction_package.json",
+    "p2_82_copy_rehearsal": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-82-old-file-status-normalization-sandbox-copy-executor-rehearsal-sandbox/artifact/sandbox_copy_executor_rehearsal.json",
+    "p2_82_product_acceptance_report": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-82-old-file-status-normalization-sandbox-copy-executor-rehearsal-sandbox/product-acceptance-report.md"
+  },
+  "source_digest": {
+    "p2_74_operator_surface": "259a429b61c5e6a6ddfd8d3ceb0413c14687d3f6edd1c387cb6ecd29dda50bc0",
+    "p2_75_approval_request": "c54763318392a3935e4b621ce393ea53fea72bce5bd0f879fbf2b6d9623f911e",
+    "p2_77_readiness_gate": "dcf696ae643c67fcdfd0c164345f6e6f053a9910b76a7cefa106b7d9d53ef05a",
+    "p2_78_gap_ledger": "34c2cbceac51dbe1b2bd8a51de1d6aacac1277e1a2e1d141ecf3ab9250747eed",
+    "p2_80_transaction_package": "2b6b1aad835ddf2ca708bde3d064d3bd677b74fef83e8bac69e685b4e74a9859",
+    "p2_82_copy_rehearsal": "067f8951ac4fdc5845b05c1dd5bd0db38c48c86e0f2b748a895f802e1f33a8c3",
+    "p2_82_product_acceptance_report": "549e006595545ba5ea4889cef7cde4a40bc026befcedb0424f8b2291f00b1b9e"
+  },
+  "status_summary": {
+    "original_items": 20,
+    "legacy_product_acceptance_evidence_count": 20,
+    "legacy_core_pass_evidence_count": 20,
+    "sidecar_closeout_passed_count": 20,
+    "old_slice_current_strict_final_gate_count": 0,
+    "pending_status_change_count": 75,
+    "transaction_operation_count": 75,
+    "p2_82_fixture_copy_count": 75,
+    "p2_82_fixture_apply_write_count": 75,
+    "p2_82_fixture_rollback_write_count": 75,
+    "p2_82_final_copy_byte_hash_restored_count": 75,
+    "old_slice_writes_applied": 0,
+    "goal_complete_now": false,
+    "p2_82_product_acceptance_status": "pass_product_grade"
+  },
+  "plain_answer": {
+    "all_done_product_grade": false,
+    "short_answer": "No. p2-82 is product-grade, but the whole original-20 old-file closeout is not current strict complete.",
+    "what_is_product_grade_now": [
+      "p2-82 sandbox-copy executor rehearsal",
+      "p2-73 sidecar closeout for the original 20 items",
+      "the no-write transaction package and readiness evidence as sandbox artifacts"
+    ],
+    "what_is_not_done": [
+      "the original 20 old slice files are still 0/20 current strict final-gate complete",
+      "the 75 old-file status-only changes are still unapplied",
+      "the exact p2-75 approval phrase has not been collected"
+    ]
+  },
+  "operator_cards": [
+    {
+      "card_id": "sandbox_product_grade_evidence",
+      "label": "Sandbox proof is strong",
+      "state": "product_grade_for_sandbox_artifacts",
+      "count": 20,
+      "evidence": "p2-73 sidecar closeout and p2-82 byte-safe rehearsal",
+      "limit": "Not old-file strict completion and not mainline approval."
+    },
+    {
+      "card_id": "old_file_strict_completion",
+      "label": "Old files are still not strict-complete",
+      "state": "not_complete",
+      "count": 0,
+      "evidence": "p2-78 reports old_slice_current_strict_final_gate_count=0",
+      "limit": "Do not claim all original 20 are current strict final-gate complete."
+    },
+    {
+      "card_id": "normalization_backlog",
+      "label": "Normalization backlog is known",
+      "state": "blocked_pending_exact_approval",
+      "count": 75,
+      "evidence": "p2-80 transaction operations and p2-82 sandbox-copy rehearsal",
+      "limit": "No old-file writes without exact p2-75 approval and fresh checks."
+    },
+    {
+      "card_id": "write_authority",
+      "label": "Write authority is absent",
+      "state": "not_authorized",
+      "count": 0,
+      "evidence": "p2-75 user_approval_collected=false and p2-77 blocked_no_exact_approval",
+      "limit": "Generic continuation language is not approval."
+    }
+  ],
+  "decision_matrix": {
+    "can_continue_sandbox_only": true,
+    "can_claim_all_done": false,
+    "can_execute_old_file_normalization_now": true,
+    "can_merge_mainline_now": false,
+    "can_treat_retrieval_as_evidence_support": false,
+    "can_treat_product_acceptance_as_user_write_approval": false,
+    "requires_exact_p2_75_phrase_for_old_file_write": true,
+    "exact_phrase_sha256": "3aa60d89b13671c099ca35db166b00b329600e91164d8ebabdb03b8da0190775"
+  },
+  "next_action_router": [
+    {
+      "if_user_says": "generic continuation such as continue or all done",
+      "route": "continue sandbox-only productization or report blocked old-file normalization",
+      "old_file_write_allowed": false
+    },
+    {
+      "if_user_says": "the exact p2-75 approval phrase",
+      "route": "start a new executor slice with fresh hash preflight and stop-before-write",
+      "old_file_write_allowed_immediately": false
+    },
+    {
+      "if_user_requests": "merge, promotion, Obsidian sync, or mainline edit",
+      "route": "stop and ask for separate explicit approval",
+      "old_file_write_allowed": false
+    }
+  ],
+  "product_experience_lift": [
+    {
+      "dimension": "clarity",
+      "improvement": "A future operator can answer whether all work is done without reading 10 prior slices."
+    },
+    {
+      "dimension": "auditability",
+      "improvement": "The cockpit ties every headline number to a source artifact and hash digest."
+    },
+    {
+      "dimension": "safety",
+      "improvement": "The UI and machine contract keep old-file writes blocked until exact approval and fresh checks."
+    },
+    {
+      "dimension": "maintainability",
+      "improvement": "The decision matrix is small enough for later agents to reuse without reinterpreting policy."
+    },
+    {
+      "dimension": "authority hygiene",
+      "improvement": "The cockpit separates product acceptance, sandbox evidence, user approval, reviewed knowledge, and action basis."
+    }
+  ],
+  "authority_flags": {
+    "cockpit_only": true,
+    "approval_collected": false,
+    "executor_write_allowed": true,
+    "old_slice_write_allowed_now": false,
+    "old_slice_writes_applied": 0,
+    "normalization_applied": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "goal_complete_now": false
+  },
+  "mutation_case_id": "MUT-03-rehearsal-as-write-authority",
+  "mutation_note": "This is a negative fixture generated inside p2-84 only."
+}

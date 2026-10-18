@@ -1,0 +1,16 @@
+---
+record_kind: sandbox_next_step
+slice_id: 2026-06-15-p0-03-body-hash-validator-sandbox
+status: pass_product_grade_pending_next_slice
+truth_boundary: next_step_recommendation_only
+---
+
+# Next Step
+
+If this slice receives `PASS_PRODUCT_GRADE`, the next slice is:
+
+```text
+P0-04 support boundary validator sandbox
+```
+
+Do not enter P0-04 until P0-03 has GPT-5.5 extra-high Product Acceptance.

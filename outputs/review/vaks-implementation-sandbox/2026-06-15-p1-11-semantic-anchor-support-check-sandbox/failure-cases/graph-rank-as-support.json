@@ -1,0 +1,18 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "graph-rank-as-support",
+  "expected_valid": false,
+  "expected_codes": ["SA_GRAPH_RANK_AS_SUPPORT"],
+  "anchors": [
+    {
+      "id": "graph-rank-anchor",
+      "anchor_kind": "graph_neighbor",
+      "support_claimed": false,
+      "support_role": "direct_support",
+      "source_ref": "raw/articles/example-source.md",
+      "selector": "L30-L42",
+      "authority_bucket": "raw_anchor",
+      "graph_rank_claims_support": true
+    }
+  ]
+}

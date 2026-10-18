@@ -1,0 +1,9 @@
+{
+  "fixture_id": "plain-language-status-buckets",
+  "expected_cards": [
+    "product_grade_sidecar_ready",
+    "old_files_not_current_strict_complete",
+    "old_file_normalization_requires_user_approval",
+    "mainline_not_authorized"
+  ]
+}

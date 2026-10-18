@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Crawl-delay: 30
+
+Sitemap: https://reminds-app.com/sitemap.xml
+Sitemap: https://forum.reminds-app.com/sitemap.xml

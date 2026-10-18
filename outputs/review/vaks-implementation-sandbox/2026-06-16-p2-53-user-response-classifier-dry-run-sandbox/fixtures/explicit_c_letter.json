@@ -1,0 +1,11 @@
+{
+  "input_text": "C",
+  "case_id": "explicit_C",
+  "expected_result": "future_mainline_merge_scope_question_only",
+  "expected_safe_next_step": "ask_user_for_separate_allowed_paths_and_scope",
+  "automatic_execution": false,
+  "requires_clarification": false,
+  "requires_new_scope": true,
+  "requires_separate_user_approval": true,
+  "requires_explicit_allowed_paths": true
+}

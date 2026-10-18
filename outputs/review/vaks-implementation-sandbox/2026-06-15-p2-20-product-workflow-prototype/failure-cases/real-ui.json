@@ -1,0 +1,1 @@
+{"case_id":"real-ui","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/scope/creates_production_ui","value":true}]}

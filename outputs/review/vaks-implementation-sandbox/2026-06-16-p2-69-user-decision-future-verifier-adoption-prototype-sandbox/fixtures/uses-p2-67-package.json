@@ -1,0 +1,7 @@
+{
+  "fixture_id": "uses-p2-67-package",
+  "expected": {
+    "package_slice_id": "2026-06-16-p2-67-user-decision-strict-status-package-sandbox",
+    "verifier_uses_package_api": true
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "Wikiterra/wikiterra-vault",
+  "source_url": "https://github.com/Wikiterra/wikiterra-vault",
+  "checked_commit": "78397aa5b10cb30d7a9182af6ce8b80a8c5f0a28",
+  "checked_at": "2026-06-11",
+  "inspection_method": "local git checkout; inspected README, root inventory, index.md, editing guide, .obsidian plugin tree, .gitignore, and representative contested-content notes",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "vault-identity",
+      "why": "Describes the vault as an Obsidian Markdown vault deployed on the web and lists plugins/theme."
+    },
+    {
+      "path": "index.md",
+      "kind": "published-home-note",
+      "why": "Uses dg-home and dg-publish frontmatter and exposes public project framing."
+    },
+    {
+      "path": "wikiterra/edicion.md",
+      "kind": "edit-rules",
+      "why": "Defines public editing norms and asks contributors to use evidence/references."
+    },
+    {
+      "path": ".obsidian/plugins/*",
+      "kind": "bundled-plugin-risk",
+      "why": "Tracks Obsidian plugin JavaScript/manifests/styles/data in the repository."
+    },
+    {
+      "path": ".gitignore",
+      "kind": "tool-state-boundary",
+      "why": "Ignores Digital Garden plugin, Obsidian app state, workspace files, .env, media, and package artifacts."
+    },
+    {
+      "path": "modelos-Terra/comparacion-modelos-Terra.md; poder-corrupto/nasa.md; poder-corrupto/masoneria.md",
+      "kind": "high-risk-content",
+      "why": "Representative files show flat-earth, NASA, and conspiracy-oriented claims unsuitable for borrowing as knowledge."
+    }
+  ],
+  "observed_counts": {
+    "git_tracked_files": 110,
+    "obsidian_plugin_or_theme_files": 35,
+    "non_obsidian_content_files": 75
+  },
+  "known_limits": [
+    "Content contains high-risk pseudoscientific and conspiracy claims.",
+    "Publication flags do not indicate review status.",
+    "Bundled plugin JavaScript creates supply-chain and repo-hygiene concerns.",
+    "External image hosts are fragile and should not count as retained evidence."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

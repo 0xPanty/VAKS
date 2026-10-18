@@ -1,0 +1,73 @@
+{
+  "record_kind": "sandbox_approval_dependency_closeout_packet",
+  "slice_id": "2026-06-19-p2-89-approval-dependency-closeout-packet-sandbox",
+  "created_at": "2026-06-18T23:40:18.440876+00:00",
+  "source_inputs": {
+    "p2_75_approval_contract": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-75-old-file-status-normalization-approval-request-sandbox/artifact/old_file_status_normalization_approval_request_contract.json",
+    "p2_86_gate_chain": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-86-approval-to-prewrite-gate-chain-sandbox/artifact/approval_to_prewrite_gate_chain.json",
+    "p2_87_diff_preview": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-87-old-file-status-normalization-diff-preview-sandbox/artifact/old_file_status_normalization_diff_preview.json",
+    "p2_88_user_decision_packet": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-88-old-file-normalization-user-decision-packet-sandbox/artifact/old_file_normalization_user_decision_packet.json"
+  },
+  "source_digest": {
+    "p2_75_approval_contract": "335f4522075762909b40de26703a85805a0194c2cfa0ea6dd73dfd5318bba6c3",
+    "p2_86_gate_chain": "66f856d3b857d5e745c9b2e11a9e18e197be1f627f75d159b914cf3997710519",
+    "p2_87_diff_preview": "5b88ee7ca0a2b4719cf24e175c2d8fca06ceccb5898aa3fd377519a97be33b92",
+    "p2_88_user_decision_packet": "b4c09b21aa85a7f84c813364f8cfaccd7c574018bc96488b47d67005ba4e4799"
+  },
+  "technical_readiness": {
+    "status": "ready_for_user_decision_not_ready_to_write",
+    "original_items": 20,
+    "status_changes": 75,
+    "preview_operation_count": 75,
+    "prewrite_hash_match_count": 75,
+    "body_unchanged_count": 75,
+    "non_status_frontmatter_unchanged_count": 75,
+    "old_slice_writes_applied": 0,
+    "decision_option_count": 4,
+    "p2_86_positive_ready_count": 1,
+    "p2_86_negative_blocked_count": 7
+  },
+  "approval_dependency": {
+    "blocking_condition": "missing_exact_p2_75_user_approval",
+    "exact_approval_phrase": "I explicitly approve p2-75 old-file status-only normalization: apply the 75 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only. Do not edit body content, artifacts, tools, templates, wiki truth layers, main architecture docs, README, Obsidian vault, commit, push, or sync.",
+    "exact_approval_collected": false,
+    "generic_language_is_not_approval": true,
+    "decision_packet": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-88-old-file-normalization-user-decision-packet-sandbox/artifact/old_file_normalization_user_decision_packet.json"
+  },
+  "executor_status": {
+    "executor_write_allowed_now": false,
+    "ready_for_prewrite_confirmation_only": true,
+    "requires_exact_approval_before_executor_slice": true,
+    "requires_fresh_prewrite_gate_after_approval": true,
+    "requires_stop_before_any_old_file_write": true,
+    "old_slice_write_allowed": false
+  },
+  "operator_summary": {
+    "plain_verdict": "All known sandbox preparation artifacts are product-grade through p2-88, but old-file normalization is not applied and the full goal is not complete.",
+    "safe_next_actions": [
+      "Wait for the exact p2-75 approval phrase.",
+      "If the exact phrase is provided, run a fresh prewrite gate before any executor write.",
+      "If approval is withheld, leave old files unchanged and keep this as the closeout state."
+    ],
+    "unsafe_actions": [
+      "Do not treat continue, all done, go ahead, or product-grade as approval.",
+      "Do not write old files from this packet.",
+      "Do not merge mainline, promote knowledge, create reviewed knowledge, evidence support, or action basis from this packet."
+    ]
+  },
+  "authority_flags": {
+    "closeout_packet_only": true,
+    "user_approval_collected": false,
+    "packet_authorizes_write": false,
+    "executor_write_allowed": false,
+    "old_slice_write_allowed": false,
+    "old_slice_writes_applied": 0,
+    "normalization_applied": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "goal_complete_now": false
+  }
+}

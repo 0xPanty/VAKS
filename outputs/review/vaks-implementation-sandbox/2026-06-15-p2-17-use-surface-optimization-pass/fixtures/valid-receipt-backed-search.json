@@ -1,0 +1,16 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "valid-receipt-backed-search",
+  "expected_valid": true,
+  "expected_codes": [],
+  "patch": {
+    "search_surface": {
+      "receipt_backed": true,
+      "selected_by_is_support": false,
+      "query_hit_is_support": false,
+      "raw_topk_is_trust": false,
+      "context_pack_is_action_basis": false,
+      "action_mode_requires": ["context_pack", "support_check", "action_readiness_check"]
+    }
+  }
+}

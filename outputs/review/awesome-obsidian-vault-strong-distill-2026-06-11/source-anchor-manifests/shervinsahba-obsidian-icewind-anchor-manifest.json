@@ -1,0 +1,49 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "shervinsahba/obsidian-icewind",
+  "source_url": "https://github.com/shervinsahba/obsidian-icewind",
+  "checked_commit": "7b090ba92c86de284431c42dfc7badbc7a15f5ef",
+  "checked_at": "2026-06-11",
+  "inspection_method": "shallow git clone plus README, Home note, campaign/entity folders, templates, Dataview queries, publication frontmatter, and base file inspection",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "workflow-explanation",
+      "why": "Explains the hosted notebook, Dataview usage, Digital Garden publishing, and session-to-entity workflow."
+    },
+    {
+      "path": "Home.md",
+      "kind": "published-home-and-dashboard",
+      "why": "Uses Digital Garden frontmatter and a Dataview table to expose session summaries on the public home page."
+    },
+    {
+      "path": "_templates/NPC Template.md",
+      "kind": "entity-template",
+      "why": "Defines entity metadata and a Dataview query that lists session interactions for the current entity."
+    },
+    {
+      "path": "_templates/Session Template.md",
+      "kind": "event-log-template",
+      "why": "Defines session metadata, participant fields, summary, and log structure."
+    },
+    {
+      "path": "Characters/, Places/, Journal/, Lore/",
+      "kind": "domain-vault-structure",
+      "why": "Shows a real content vault organized around entities, places, logs, and supporting lore."
+    },
+    {
+      "path": "Untitled.base",
+      "kind": "obsidian-base-artifact",
+      "why": "Shows a small Obsidian Bases artifact present in the vault."
+    }
+  ],
+  "known_limits": [
+    "This is a domain-specific personal/campaign vault; content must not be imported into VAKS knowledge.",
+    "Dataview-generated pages are derived projections and not reviewed relations.",
+    "The workflow depends on disciplined session logging and manual link quality."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

@@ -1,0 +1,44 @@
+{
+  "record_kind": "runtime_artifact_exclusion_manifest",
+  "scenario_id": "ra-valid-mixed-corpus-runtime-excluded",
+  "expected_valid": true,
+  "expected_codes": [],
+  "exclude_runtime_artifacts": true,
+  "items": [
+    {
+      "id": "reviewed_note_001",
+      "path": "wiki/summaries/example-reviewed-summary.md",
+      "artifact_kind": "reviewed_summary",
+      "runtime_artifact": false,
+      "seen_by_retrieval": true,
+      "selected": true,
+      "excluded": false,
+      "pack_role": "orientation",
+      "authority_bucket": "reviewed"
+    },
+    {
+      "id": "pycache_001",
+      "path": "outputs/review/example/artifact/__pycache__/runner.cpython-310.pyc",
+      "artifact_kind": "python_cache",
+      "runtime_artifact": true,
+      "seen_by_retrieval": true,
+      "selected": false,
+      "excluded": true,
+      "excluded_reason": "runtime_artifact_excluded",
+      "pack_role": "none",
+      "authority_bucket": "runtime_artifact"
+    },
+    {
+      "id": "log_001",
+      "path": "outputs/review/example/run-output/query-loop.log",
+      "artifact_kind": "execution_log",
+      "runtime_artifact": true,
+      "seen_by_retrieval": true,
+      "selected": false,
+      "excluded": true,
+      "excluded_reason": "runtime_artifact_excluded",
+      "pack_role": "none",
+      "authority_bucket": "runtime_artifact"
+    }
+  ]
+}

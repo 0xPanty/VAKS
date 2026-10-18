@@ -1,0 +1,51 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>p2-73 Sidecar Closeout Ledger</title><style>body{font-family:Segoe UI,Arial,sans-serif;max-width:1100px;margin:32px auto;line-height:1.5}pre{white-space:pre-wrap;background:#f6f8fa;padding:16px;border-radius:6px}</style></head><body><pre># Original 20 Current-Strict Sidecar Closeout Ledger
+
+Sandbox-only sidecar ledger. It does not edit old slice reports.
+
+## Summary
+
+- original items covered: `20`
+- source Product Acceptance evidence: `20`
+- source core pass evidence: `20`
+- old slice current strict final-gate count: `0`
+- sidecar closeout passed count: `20`
+- dry-run status changes from p2-72: `75`
+- old slice writes applied: `0`
+
+## Authority Boundary
+
+- This is sidecar evidence only.
+- It does not normalize old slice frontmatter.
+- It does not claim the old slice files are current strict final-gate complete.
+- It does not create mainline readiness, promotion readiness, reviewed knowledge, evidence support, action basis, or user approval.
+
+## Item Ledger
+
+| Plan | Slice | Sidecar passed | Old strict final-gate | Old slice modified |
+|---|---|---:|---:|---:|
+| P0-01 | `2026-06-15-p0-01-retrieval-receipt-template-sandbox` | True | False | False |
+| P0-02 | `2026-06-15-p0-02-operation-receipt-template-sandbox` | True | False | False |
+| P0-03 | `2026-06-15-p0-03-body-hash-validator-sandbox` | True | False | False |
+| P0-04 | `2026-06-15-p0-04-support-boundary-validator-sandbox` | True | False | False |
+| P0-05 | `2026-06-15-p0-05-action-readiness-validator-sandbox` | True | False | False |
+| P0-06 | `2026-06-15-p0-06-feedback-validator-sandbox` | True | False | False |
+| P0-07 | `2026-06-15-p0-07-action-boundary-failure-matrix-sandbox` | True | False | False |
+| P1-08 | `2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox` | True | False | False |
+| P1-09 | `2026-06-15-p1-09-read-only-query-loop-pilot-sandbox` | True | False | False |
+| P1-10 | `2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox` | True | False | False |
+| P1-11 | `2026-06-15-p1-11-semantic-anchor-support-check-sandbox` | True | False | False |
+| P1.5-12 | `2026-06-15-p1-5-12-robust-rag-retrieval-sandbox` | True | False | False |
+| P1.5-13 | `2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox` | True | False | False |
+| P1.5-14 | `2026-06-15-p1-5-14-raw-intake-parser-router-sandbox` | True | False | False |
+| P1.5-15 | `2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox` | True | False | False |
+| P1.5-16 | `2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox` | True | False | False |
+| P2-17 | `2026-06-15-p2-17-use-surface-optimization-pass` | True | False | False |
+| P2-18 | `2026-06-15-p2-18-bases-cockpit-prototype` | True | False | False |
+| P2-19 | `2026-06-15-p2-19-product-experience-screening-sandbox` | True | False | False |
+| P2-20 | `2026-06-15-p2-20-product-workflow-prototype` | True | False | False |
+
+## Next Decision
+
+A future old-slice status-only normalization remains blocked until the user separately and explicitly approves that write scope.
+</pre></body></html>

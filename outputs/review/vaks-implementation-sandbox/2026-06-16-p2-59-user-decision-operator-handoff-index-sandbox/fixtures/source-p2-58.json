@@ -1,0 +1,1 @@
+{"fixture_kind":"source_entry_expected","slice_id":"2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox","operator_use":"prove p2-57 static boundary scan regression still passes","product_pass":true,"reviewer_pass":true,"boundary_pass":true,"final_gate_declared":true}

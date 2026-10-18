@@ -1,0 +1,20 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "frontmatter-authority-field-allowed",
+  "expected_valid": false,
+  "expected_codes": ["MS_FORBIDDEN_FRONTMATTER_ALLOWED"],
+  "patch": {
+    "validation": {
+      "path_scopes": [
+        {
+          "id": "bad-frontmatter-authority-field",
+          "glob": "fixtures/copied-subset/candidate-distillation.md",
+          "allowed_fields": ["record_kind", "knowledge_status", "truth_confidence"],
+          "required_fields": ["record_kind", "knowledge_status", "evidence_support"],
+          "unknown_enum_allowed": false,
+          "forbidden_fields_allowed": false
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "record_kind": "single_file_opus_review_dossier_failure_cases",
+  "slice_id": "2026-06-19-p2-98-single-file-opus-review-dossier-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "P2-98-FAIL-01-missing-dossier",
+      "must_fail_when": "The single-file dossier is missing."
+    },
+    {
+      "case_id": "P2-98-FAIL-02-missing-evidence-digest",
+      "must_fail_when": "The dossier omits one of p2-91, p2-92, p2-94, p2-96, or p2-97."
+    },
+    {
+      "case_id": "P2-98-FAIL-03-wrong-opus-token-set",
+      "must_fail_when": "The dossier changes or expands the allowed Opus conclusion tokens."
+    },
+    {
+      "case_id": "P2-98-FAIL-04-opus-approval-claimed",
+      "must_fail_when": "The dossier claims actual Opus approval."
+    },
+    {
+      "case_id": "P2-98-FAIL-05-mainline-or-truth-authority-claimed",
+      "must_fail_when": "The dossier claims mainline readiness, reviewed knowledge, evidence support, or action basis."
+    },
+    {
+      "case_id": "P2-98-FAIL-06-goal-complete-claimed",
+      "must_fail_when": "The dossier claims the overall goal is complete."
+    },
+    {
+      "case_id": "P2-98-FAIL-07-no-intake-instruction",
+      "must_fail_when": "The dossier omits the requirement for later sandbox-only result intake."
+    },
+    {
+      "case_id": "P2-98-FAIL-08-protected-path-write",
+      "must_fail_when": "This slice writes outside its own sandbox path."
+    }
+  ]
+}

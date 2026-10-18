@@ -1,0 +1,10 @@
+{
+  "fixture_id": "exact-approval-future-scenario",
+  "input_kind": "future_user_message_exact_phrase",
+  "expected": {
+    "approval_phrase_matched": true,
+    "future_readiness": "ready_for_executor_prewrite_confirmation",
+    "still_requires_fresh_preflight": true,
+    "still_requires_stop_before_write": true
+  }
+}

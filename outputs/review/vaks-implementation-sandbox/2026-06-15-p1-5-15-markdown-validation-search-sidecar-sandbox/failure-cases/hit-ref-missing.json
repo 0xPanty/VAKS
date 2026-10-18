@@ -1,0 +1,19 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "hit-ref-missing",
+  "expected_valid": false,
+  "expected_codes": ["MS_HIT_REF_MISSING"],
+  "patch": {
+    "search": {
+      "hits": [
+        {
+          "id": "hit-without-ref",
+          "authority_bucket": "raw_anchor",
+          "pack_role": "anchor",
+          "selected_by": ["bm25"],
+          "action_basis_allowed": false
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "TfTHacker/DashboardPlusPlus",
+  "source_url": "https://github.com/TfTHacker/DashboardPlusPlus",
+  "checked_commit": "e202bb286cd92d7986407293c0a4a33789fef2bd",
+  "checked_at": "2026-06-11",
+  "inspection_method": "shallow git clone plus README, Obsidian vault files, dashboard note, plugin config, CSS snippets, and plugin list",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "vault-template-identity",
+      "why": "Identifies the repo as an Obsidian vault demonstrating the Dashboard++ method."
+    },
+    {
+      "path": "Dashboard++.md",
+      "kind": "dashboard-note",
+      "why": "Single home dashboard with cssclasses, banner, sectioned navigation, inline Dataview recent/favorite/stats queries, and domain buckets."
+    },
+    {
+      "path": ".obsidian/community-plugins.json",
+      "kind": "plugin-bundle",
+      "why": "Lists bundled plugin dependencies including Dataview, homepage, banners, and UI helpers."
+    },
+    {
+      "path": ".obsidian/plugins/dataview/data.json",
+      "kind": "query-runtime-config",
+      "why": "Shows Dataview inline JS/query settings, refresh settings, and render behavior."
+    },
+    {
+      "path": ".obsidian/snippets/dashboard.css",
+      "kind": "presentation-layer",
+      "why": "CSS class-based dashboard layout, bullet hiding, flex wrapping, full-width preview, and Dataview list support."
+    }
+  ],
+  "known_limits": [
+    "This is a demonstration vault/template, not a knowledge review system.",
+    "Dataview and inline JS create useful live surfaces but are not evidence support.",
+    "Bundled plugins are runtime dependencies and should not be assumed safe for VAKS without separate plugin review."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

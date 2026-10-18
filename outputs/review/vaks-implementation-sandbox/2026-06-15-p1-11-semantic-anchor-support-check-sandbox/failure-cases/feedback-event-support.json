@@ -1,0 +1,17 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "feedback-event-support",
+  "expected_valid": false,
+  "expected_codes": ["SA_FEEDBACK_AS_SUPPORT"],
+  "anchors": [
+    {
+      "id": "feedback-event-anchor",
+      "anchor_kind": "feedback_event",
+      "support_claimed": true,
+      "support_role": "direct_support",
+      "source_ref": "outputs/feedback/example-feedback-event.md",
+      "selector": "feedback:f-01",
+      "authority_bucket": "feedback"
+    }
+  ]
+}

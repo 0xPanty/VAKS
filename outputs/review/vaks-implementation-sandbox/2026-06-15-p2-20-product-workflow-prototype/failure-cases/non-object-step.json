@@ -1,0 +1,1 @@
+{"case_id":"non-object-step","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/steps/0","value":"not an object"}]}

@@ -1,0 +1,1 @@
+{"extends":"fixtures/valid-frontmatter-validation-check.json","scenario_id":"non-deterministic-output","expected_valid":false,"expected_codes":["MS_DETERMINISTIC_JSON_REQUIRED"],"patch":{"validation":{"output_format":"text","deterministic_output":false}}}

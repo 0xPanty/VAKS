@@ -1,0 +1,94 @@
+{
+  "record_kind": "sandbox_old_file_status_normalization_executor_readiness_gate",
+  "slice_id": "2026-06-19-p2-77-old-file-status-normalization-executor-readiness-gate-sandbox",
+  "created_at": "2026-06-18T21:19:35.286142+00:00",
+  "source_inputs": {
+    "p2_75_approval_request_json": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-75-old-file-status-normalization-approval-request-sandbox/artifact/old_file_status_normalization_approval_request.json",
+    "p2_76_executor_preflight_json": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-76-old-file-status-normalization-executor-preflight-sandbox/artifact/old_file_status_normalization_executor_preflight.json"
+  },
+  "current_user_text": "Continue working toward the active thread goal. objective: 全部落地啊",
+  "exact_approval_phrase_ref": {
+    "source": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-75-old-file-status-normalization-approval-request-sandbox/artifact/old_file_status_normalization_approval_request.json",
+    "exact_phrase_sha256_hint": "not_computed_in_this_slice",
+    "phrase_text": "I explicitly approve p2-75 old-file status-only normalization: apply the 75 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only. Do not edit body content, artifacts, tools, templates, wiki truth layers, main architecture docs, README, Obsidian vault, commit, push, or sync."
+  },
+  "preflight_summary": {
+    "target_change_count": 75,
+    "target_file_count": 75,
+    "target_old_slice_count": 20,
+    "preflight_missing_target_count": 0,
+    "preflight_status_mismatch_count": 0,
+    "rollback_entry_count": 75
+  },
+  "current_decision": {
+    "readiness": "blocked_no_exact_approval",
+    "approval_phrase_matched": false,
+    "preflight_clean": true,
+    "executor_write_allowed": false,
+    "old_slice_writes_applied": 0,
+    "blocked_reason": "Current continuation text is not the exact p2-75 approval phrase."
+  },
+  "future_exact_approval_scenario": {
+    "input_kind": "future_user_message_exact_phrase",
+    "approval_phrase_matched": true,
+    "readiness": "ready_for_executor_prewrite_confirmation",
+    "still_requires_fresh_preflight": true,
+    "still_requires_boundary_audit": true,
+    "still_requires_stop_before_write": true,
+    "executor_write_allowed_immediately": false
+  },
+  "future_exact_approval_preflight_drift_scenario": {
+    "input_kind": "future_user_message_exact_phrase_with_drifted_preflight",
+    "approval_phrase_matched": true,
+    "preflight_clean": false,
+    "representative_drift": {
+      "missing_target_count": 1,
+      "current_status_mismatch_count": 1
+    },
+    "readiness": "blocked_preflight_drift",
+    "executor_write_allowed": false,
+    "old_slice_writes_applied": 0,
+    "blocked_reason": "Exact approval cannot override preflight drift."
+  },
+  "generic_language_scenarios": [
+    {
+      "input_text": "继续",
+      "approval_phrase_matched": false,
+      "readiness": "blocked_no_exact_approval"
+    },
+    {
+      "input_text": "全部落地",
+      "approval_phrase_matched": false,
+      "readiness": "blocked_no_exact_approval"
+    },
+    {
+      "input_text": "可以",
+      "approval_phrase_matched": false,
+      "readiness": "blocked_no_exact_approval"
+    },
+    {
+      "input_text": "go ahead",
+      "approval_phrase_matched": false,
+      "readiness": "blocked_no_exact_approval"
+    },
+    {
+      "input_text": "complete the goal",
+      "approval_phrase_matched": false,
+      "readiness": "blocked_no_exact_approval"
+    }
+  ],
+  "authority_flags": {
+    "executor_readiness_gate_only": true,
+    "approval_collected": false,
+    "executor_write_allowed": false,
+    "old_slice_write_allowed_now": false,
+    "old_slice_writes_applied": 0,
+    "normalization_applied": false,
+    "rollback_applied": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false
+  }
+}

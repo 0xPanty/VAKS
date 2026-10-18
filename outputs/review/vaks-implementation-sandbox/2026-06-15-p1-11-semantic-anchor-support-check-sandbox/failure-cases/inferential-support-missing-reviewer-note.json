@@ -1,0 +1,18 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "inferential-support-missing-reviewer-note",
+  "expected_valid": false,
+  "expected_codes": ["SA_INFERENTIAL_SUPPORT_MISSING_REVIEWER_NOTE"],
+  "anchors": [
+    {
+      "id": "inferential-missing-note-anchor",
+      "anchor_kind": "code_line_range",
+      "support_claimed": true,
+      "support_role": "inferential_support",
+      "source_ref": "raw/repos/example-repo/src/module.py",
+      "line_range": "L11-L23",
+      "commit_sha": "abc1234",
+      "authority_bucket": "source_anchor"
+    }
+  ]
+}

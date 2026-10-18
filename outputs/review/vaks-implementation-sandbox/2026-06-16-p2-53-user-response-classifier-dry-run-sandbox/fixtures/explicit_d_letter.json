@@ -1,0 +1,11 @@
+{
+  "input_text": "D",
+  "case_id": "explicit_D",
+  "expected_result": "park_or_reject_sandbox_chain",
+  "expected_safe_next_step": "acknowledge_park_or_reject_status",
+  "automatic_execution": false,
+  "requires_clarification": false,
+  "requires_new_scope": false,
+  "requires_separate_user_approval": false,
+  "requires_explicit_allowed_paths": false
+}

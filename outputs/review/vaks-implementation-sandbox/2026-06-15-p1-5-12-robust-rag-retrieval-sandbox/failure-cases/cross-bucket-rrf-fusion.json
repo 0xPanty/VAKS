@@ -1,0 +1,46 @@
+{
+  "record_kind": "robust_rag_retrieval_manifest",
+  "scenario_id": "cross-bucket-rrf-fusion",
+  "expected_valid": false,
+  "expected_codes": ["RR_CROSS_BUCKET_FUSION"],
+  "query": {
+    "query_mode": "orientation",
+    "verbatim_input": "Blend everything by rank.",
+    "question_summary": "Improper cross-bucket fusion.",
+    "action_sensitive": false,
+    "verbatim_preserved": true
+  },
+  "route_selection": {
+    "selected": "hybrid_bucketed",
+    "authority_buckets_included": ["reviewed", "candidate"],
+    "authority_buckets_excluded": ["feedback", "runtime_artifact"],
+    "selected_context_types": ["reviewed_node", "candidate_point"],
+    "forbidden_support_types": ["retrieval_score", "graph_rank", "community_report_summary", "llm_extracted_relation"]
+  },
+  "retrieval_config": {"bucket_filter_first": true, "rrf_within_bucket_only": true, "exclude_runtime_artifacts": true},
+  "fusion_groups": [
+    {"id": "bad-cross-bucket-fusion", "authority_buckets": ["reviewed", "candidate"], "item_ids": ["reviewed-a", "candidate-a"]}
+  ],
+  "retrieved_items": [
+    {
+      "id": "reviewed-a",
+      "ref": "wiki/concepts/example.md",
+      "record_kind": "reviewed_note",
+      "authority_bucket": "reviewed",
+      "pack_role": "orientation",
+      "selected": true,
+      "excluded": false,
+      "selected_by": {"lexical": true}
+    },
+    {
+      "id": "candidate-a",
+      "ref": "outputs/review/candidate.md",
+      "record_kind": "candidate_note",
+      "authority_bucket": "candidate",
+      "pack_role": "review_input",
+      "selected": true,
+      "excluded": false,
+      "selected_by": {"semantic": true}
+    }
+  ]
+}

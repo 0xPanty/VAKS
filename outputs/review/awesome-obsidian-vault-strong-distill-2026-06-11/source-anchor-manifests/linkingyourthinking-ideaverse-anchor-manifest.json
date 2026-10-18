@@ -1,0 +1,40 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "Linking Your Thinking Ideaverse",
+  "source_url": "https://www.linkingyourthinking.com/ideaverse-for-obsidian/onboarding-ideaverse",
+  "checked_commit": "not_applicable_live_web_source",
+  "checked_at": "2026-06-11",
+  "inspection_method": "web inspection of public onboarding and lesson pages; attempted public download produced incomplete zip-like file and was not used as vault snapshot",
+  "anchors": [
+    {
+      "path": "https://www.linkingyourthinking.com/ideaverse-for-obsidian/onboarding-ideaverse",
+      "kind": "public-onboarding-page",
+      "why": "Documents download links, separate-vault installation, plugin trust step, Home Basic and Ideaverse Map entry points, and platform-specific instructions."
+    },
+    {
+      "path": "https://www.linkingyourthinking.com/ideaverse-for-obsidian/ideaverse-lesson-1-overview",
+      "kind": "first-lesson-page",
+      "why": "Documents link inspection, uplinks, indexes/maps, paragraph links, and guidance not to overdo linking."
+    },
+    {
+      "path": "C:/Users/Administrator/.codex/vaks-source-cache/awesome-obsidian-vault-strong-2026-06-11/ideaverse-lyt/ideaverse-lite-download",
+      "kind": "incomplete-download-attempt",
+      "why": "Public download attempt produced an 18062200-byte zip-like partial file that failed archive validation with missing end-of-central-directory record."
+    }
+  ],
+  "observed_counts": {
+    "web_pages_inspected": 2,
+    "download_attempts": 1,
+    "validated_archives": 0,
+    "partial_download_bytes": 18062200
+  },
+  "known_limits": [
+    "No complete vault archive was validated in this run.",
+    "The onboarding page contains observed count/name inconsistencies between Lite and Pro installation text.",
+    "Live web pages can drift and should not be treated as stable source snapshots."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

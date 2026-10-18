@@ -1,0 +1,43 @@
+{
+  "record_kind": "p2_109_failure_case_manifest",
+  "oracle_role": "contamination_cases_must_fail_with_expected_code",
+  "failure_case_count": 6,
+  "cases": [
+    {
+      "id": "body_hash_tampered",
+      "guard": "p0-03",
+      "expected_result": "valid_false",
+      "expected_code": "body_hash_mismatch"
+    },
+    {
+      "id": "candidate_claimed_as_support",
+      "guard": "p0-04",
+      "expected_result": "valid_false",
+      "expected_code": "candidate_as_support"
+    },
+    {
+      "id": "destructive_action_without_rollback",
+      "guard": "p0-05",
+      "expected_result": "status_fail",
+      "expected_code": "AR_DESTRUCTIVE_MISSING_ROLLBACK"
+    },
+    {
+      "id": "feedback_truth_confidence_mutation",
+      "guard": "p0-06",
+      "expected_result": "status_fail",
+      "expected_code": "FB_TRUTH_CONFIDENCE_MUTATION"
+    },
+    {
+      "id": "retrieval_candidate_as_support",
+      "guard": "p1-08",
+      "expected_result": "valid_false",
+      "expected_code": "RV_CANDIDATE_OVERLAY_FEEDBACK_AS_SUPPORT"
+    },
+    {
+      "id": "runtime_pycache_selected",
+      "guard": "p1-10",
+      "expected_result": "valid_false",
+      "expected_code": "RA_RUNTIME_ARTIFACT_SELECTED"
+    }
+  ]
+}

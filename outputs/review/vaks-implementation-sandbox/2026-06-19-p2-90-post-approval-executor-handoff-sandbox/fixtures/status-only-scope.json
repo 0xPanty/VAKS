@@ -1,0 +1,6 @@
+{
+  "case_id": "status-only-scope",
+  "operation_count": 75,
+  "allowed_field": "frontmatter.status",
+  "body_content_edits_allowed": false
+}

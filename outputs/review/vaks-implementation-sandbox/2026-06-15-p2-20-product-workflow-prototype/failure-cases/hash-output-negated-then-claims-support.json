@@ -1,0 +1,1 @@
+{"case_id":"hash-output-negated-then-claims-support","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/steps/8/output_contract/0","value":"Not evidence support. Hash is evidence support for this claim."}]}

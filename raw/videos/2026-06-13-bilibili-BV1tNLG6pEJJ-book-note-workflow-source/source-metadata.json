@@ -1,0 +1,48 @@
+{
+  "record_kind": "source_metadata",
+  "source_id": "bilibili-BV1tNLG6pEJJ",
+  "source_url": "https://www.bilibili.com/video/BV1tNLG6pEJJ/",
+  "platform": "bilibili",
+  "bvid": "BV1tNLG6pEJJ",
+  "aid": 116584421136502,
+  "cid": 38381748273,
+  "title": "如何用一套流程搞定读书笔记 ：2 年读书笔记实践分享",
+  "description": "如何用一套流程搞定读书笔记，让读过的书，变成你的收获。",
+  "owner": "reminds_AI卡片笔记",
+  "published_at": "2026-05-16 21:14:14 +08:00",
+  "duration_seconds": 558,
+  "cover_url": "http://i2.hdslb.com/bfs/archive/33e9634c1e944c7107d1f7462b7b458b7735ea12.jpg",
+  "first_frame_url": "http://i1.hdslb.com/bfs/storyff/_00000fsarjk8q6r5e29jr0724lfhiib_firsti.jpg",
+  "captured_at": "2026-06-13 20:33:04 +08:00",
+  "stats_at_capture": {
+    "view": 2699,
+    "favorite": 268,
+    "coin": 24,
+    "reply": 9,
+    "share": 4,
+    "like": 72,
+    "note": "time_sensitive_public_api_snapshot_not_evidence"
+  },
+  "key_entity_confidence": {
+    "confirmed": [
+      "BVID BV1tNLG6pEJJ",
+      "title from Bilibili public API",
+      "owner reminds_AI卡片笔记",
+      "pubdate 2026-05-16 21:14:14 +08:00",
+      "reminds supports WeChat Reading highlight sync to 闪念 according to official docs"
+    ],
+    "likely": [
+      "ASR Remix/Remanse refers to reminds",
+      "book title 认知觉醒",
+      "book title 卡片笔记写作法",
+      "book title 为什么学生不喜欢上学"
+    ],
+    "unclear": [
+      "exact UI labels shown in video",
+      "exact AI cloze prompt/settings",
+      "exact daily review algorithm"
+    ]
+  },
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

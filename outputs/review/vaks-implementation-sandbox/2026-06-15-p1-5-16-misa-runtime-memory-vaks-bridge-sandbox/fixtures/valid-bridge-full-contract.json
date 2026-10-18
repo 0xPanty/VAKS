@@ -1,0 +1,147 @@
+{
+  "record_kind": "misa_runtime_memory_vaks_bridge_manifest",
+  "scenario_id": "valid-bridge-full-contract",
+  "expected_valid": true,
+  "expected_codes": [],
+  "scope": {
+    "sandbox_fixture_only": true,
+    "dependency_install_requested": false,
+    "agentmemory_install_requested": false,
+    "real_misa_runtime_started": false,
+    "real_agentmemory_runtime_started": false,
+    "hooks_enabled": false,
+    "background_service": false,
+    "background_memory_sync": false,
+    "mcp_write_tool_exposed": false,
+    "broad_mcp_save_tool": false,
+    "broad_mcp_delete_tool": false,
+    "broad_mcp_export_tool": false,
+    "obsidian_sync_requested": false,
+    "obsidian_export_as_knowledge": false,
+    "allowed_write_paths": [
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox/"
+    ]
+  },
+  "runtime_memory": {
+    "status": "quarantined_runtime_memory",
+    "allowed_memory_types": ["session_observation", "preference_slot", "pending_work", "tool_result"],
+    "writes_vaks_reviewed_layer": false,
+    "direct_vaks_writeback": false,
+    "memory_rank_claims_truth": false,
+    "retention_score_claims_truth": false,
+    "entries": [
+      {
+        "id": "session-observation",
+        "ref": "fixtures/runtime/session-observation.json",
+        "memory_type": "session_observation",
+        "source_observation_ids": ["obs-2026-06-15-001"],
+        "action_basis_allowed": false
+      },
+      {
+        "id": "preference-slot",
+        "ref": "fixtures/runtime/preference-slot.json",
+        "memory_type": "preference_slot",
+        "source_observation_ids": [],
+        "action_basis_allowed": false
+      },
+      {
+        "id": "pending-work",
+        "ref": "fixtures/runtime/pending-work.json",
+        "memory_type": "pending_work",
+        "source_observation_ids": [],
+        "action_basis_allowed": false
+      }
+    ]
+  },
+  "context_adapter": {
+    "mode": "read_only_context_pack_fetch",
+    "read_only": true,
+    "authority_bucket_first": true,
+    "cross_bucket_fusion": false,
+    "context_injection_labeled": true,
+    "warnings_visible": true,
+    "included_buckets": ["reviewed", "candidate", "raw_anchor"],
+    "excluded_buckets": ["feedback", "runtime_memory"],
+    "context_pack_refs": ["fixtures/context-packs/vaks-context-pack-readonly.json"],
+    "items": [
+      {
+        "id": "reviewed-orientation",
+        "ref": "fixtures/context-packs/reviewed-orientation-note.md",
+        "authority_bucket": "reviewed",
+        "pack_role": "orientation",
+        "warning_code": "orientation_not_action_basis",
+        "selected_by": ["context_pack", "bucket_filter"],
+        "action_basis_allowed": false,
+        "selected_by_claims_authority": false
+      },
+      {
+        "id": "candidate-review-input",
+        "ref": "fixtures/context-packs/candidate-review-input.md",
+        "authority_bucket": "candidate",
+        "pack_role": "review_input",
+        "warning_code": "candidate_not_support",
+        "selected_by": ["context_pack", "semantic"],
+        "action_basis_allowed": false,
+        "selected_by_claims_authority": false
+      }
+    ]
+  },
+  "writeback": {
+    "allowed_record_types": ["feedback_event", "candidate_signal", "review_due"],
+    "operation_receipt_ref": "fixtures/receipts/bridge-operation-receipt.json",
+    "memory_save_direct_vaks_writeback": false,
+    "on_memory_write_direct_vaks_writeback": false,
+    "records": [
+      {
+        "id": "feedback-event",
+        "ref": "fixtures/writeback/feedback-event.json",
+        "record_type": "feedback_event",
+        "receipt_id": "mb-receipt-001",
+        "feedback_mutates_truth": false,
+        "writeback_direct_to_reviewed": false
+      },
+      {
+        "id": "candidate-signal",
+        "ref": "fixtures/writeback/candidate-signal.json",
+        "record_type": "candidate_signal",
+        "receipt_id": "mb-receipt-001",
+        "candidate_signal_promotes": false,
+        "writeback_direct_to_reviewed": false
+      },
+      {
+        "id": "review-due",
+        "ref": "fixtures/writeback/review-due.json",
+        "record_type": "review_due",
+        "receipt_id": "mb-receipt-001",
+        "review_due_invalidates_truth": false,
+        "writeback_direct_to_reviewed": false
+      }
+    ]
+  },
+  "action_readiness": {
+    "vaks_action_readiness_check_required": true,
+    "support_sufficiency": "insufficient",
+    "action_ready": false,
+    "action_basis_allowed": false,
+    "uses_runtime_memory_as_action_basis": false,
+    "blocker_codes": ["missing_reviewed_support", "action_readiness_gate_required"],
+    "context_pack_ref": "fixtures/context-packs/vaks-context-pack-readonly.json",
+    "operation_receipt_ref": "fixtures/receipts/bridge-operation-receipt.json"
+  },
+  "use_loop_trace": {
+    "trace_ref": "fixtures/use-loop/read-only-bridge-trace.json",
+    "read_only": true,
+    "tool_writes": false,
+    "authority_labels_visible": true,
+    "warnings_visible": true,
+    "action_basis_allowed": false
+  },
+  "boundary": {
+    "reviewed_write_allowed": false,
+    "truth_mutation_allowed": false,
+    "evidence_support_created": false,
+    "action_basis_allowed": false,
+    "promotion_ready": false,
+    "mainline_ready": false
+  }
+}

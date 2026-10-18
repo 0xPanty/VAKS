@@ -1,0 +1,66 @@
+{
+  "p0_query_replay_check_status": "pass",
+  "error_count": 0,
+  "errors": [],
+  "counts": {
+    "replay_rows": 7200
+  },
+  "artifacts": [
+    {
+      "path": "results\\phase_b_p0_query_level_replay.csv",
+      "exists": true,
+      "bytes": 6613724
+    },
+    {
+      "path": "results\\phase_b_p0_query_level_metrics.csv",
+      "exists": true,
+      "bytes": 163827
+    },
+    {
+      "path": "results\\phase_b_p0_summary.csv",
+      "exists": true,
+      "bytes": 4259
+    },
+    {
+      "path": "results\\phase_b_p0_clean_vaks_only_summary.csv",
+      "exists": true,
+      "bytes": 771
+    },
+    {
+      "path": "results\\phase_b_metric_dictionary.json",
+      "exists": true,
+      "bytes": 4458
+    },
+    {
+      "path": "PHASE_B_METRIC_DICTIONARY.md",
+      "exists": true,
+      "bytes": 3167
+    },
+    {
+      "path": "PHASE_B_P0_QUERY_LEVEL_REPLAY_REPORT.md",
+      "exists": true,
+      "bytes": 2783
+    }
+  ],
+  "query_metrics": {
+    "query_metric_count": 720,
+    "recomputed_query_metric_count": 720
+  },
+  "summary": {
+    "summary_count": 32,
+    "recomputed_summary_count": 32
+  },
+  "metric_dictionary": {
+    "metric_count": 11
+  },
+  "worktree": {
+    "status": [
+      " M DEV_CONTEXT.md",
+      " M IMPLEMENTATION_BLUEPRINT.md",
+      " M MEMORY_TIER.md",
+      " M SOURCE_INTAKE.md",
+      "?? outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/"
+    ],
+    "staged_paths": []
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "writeback-review-due-invalidates-truth",
+  "expected_valid": false,
+  "expected_codes": ["MB_REVIEW_DUE_INVALIDATES_TRUTH"],
+  "allowed_extra_codes": ["MB_AUTHORITY_CONFUSION"],
+  "patch": {"writeback": {"records": [{"id": "review-due-invalidates", "ref": "fixtures/writeback/review-due.json", "record_type": "review_due", "receipt_id": "mb-receipt-001", "review_due_invalidates_truth": true, "writeback_direct_to_reviewed": false}]}}
+}

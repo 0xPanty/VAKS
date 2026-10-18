@@ -1,0 +1,66 @@
+{
+  "record_kind": "evidence_support_check_pack_repair_fixture_candidate",
+  "status": "candidate_only",
+  "topic_id": "source-intake-routing",
+  "query": "pressure test repairing weak support by adding a required anchor into the current pack",
+  "truth_boundary": "pack_repair_sandbox_fixture_only_not_truth",
+  "action_basis_allowed": false,
+  "answer_candidate": [
+    "The repaired pack records that the original natural-question action pack needed a pack-containment repair.",
+    "The selector/snippet navigation boundary is now available through the repaired pack supplemental anchor.",
+    "The repaired pack includes SOURCE_INTAKE.md as an anchor_queue source with action_basis_allowed=false."
+  ],
+  "claims": [
+    {
+      "claim_id": "pr1",
+      "claim_text": "The repaired pack records that the original natural-question action pack needed a pack-containment repair.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/checks/source-intake-routing-workbench-pack-query-e2e-action-repaired-generated.md"
+      ],
+      "must_match_any": [
+        "pack-containment test exposed one support span that existed only as explicit_fixture_ref outside the current pack",
+        "repair_reason"
+      ],
+      "required_support_channels": [
+        "context_pack_metadata"
+      ],
+      "warrant": "This should pass because the repair reason is recorded in the repaired pack metadata."
+    },
+    {
+      "claim_id": "pr2",
+      "claim_text": "The selector/snippet navigation boundary is now available through the repaired pack supplemental anchor.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/19_SOURCE_INTAKE_ROUTING_WORKBENCH_HARDENING.md"
+      ],
+      "must_match_any": [
+        "selector/snippet is not evidence support",
+        "snippet_status: navigation_snippet_not_evidence",
+        "A snippet is not evidence support"
+      ],
+      "required_support_channels": [
+        "anchor_queue"
+      ],
+      "warrant": "This should pass because the repaired pack explicitly added the hardening note as a supplemental non-action-basis anchor."
+    },
+    {
+      "claim_id": "pr3",
+      "claim_text": "The repaired pack includes SOURCE_INTAKE.md as an anchor_queue source with action_basis_allowed=false.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "SOURCE_INTAKE.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/checks/source-intake-routing-workbench-pack-query-e2e-action-repaired-generated.md"
+      ],
+      "must_match_any": [
+        "action_basis_allowed: false",
+        "action_basis_allowed=false"
+      ],
+      "required_support_channels": [
+        "anchor_queue",
+        "context_pack_metadata"
+      ],
+      "warrant": "This should pass because SOURCE_INTAKE.md is included as an anchor_queue item in the repaired pack."
+    }
+  ]
+}

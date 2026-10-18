@@ -1,0 +1,54 @@
+{
+  "record_kind": "sandbox_original_20_current_strict_sidecar_closeout_contract",
+  "slice_id": "2026-06-19-p2-73-original-20-current-strict-sidecar-closeout-ledger-sandbox",
+  "contract_version": "1.0",
+  "source_inputs": {
+    "p2_71_audit_json": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-71-original-slice-closeout-normalization-audit-sandbox/artifact/original_slice_closeout_normalization_audit.json",
+    "p2_72_decision_packet_json": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-72-original-slice-normalization-decision-packet-sandbox/artifact/original_slice_normalization_decision_packet.json",
+    "p2_67_strict_status_package": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-67-user-decision-strict-status-package-sandbox/artifact/strict_status_package.py"
+  },
+  "expected_summary": {
+    "original_items_covered": 20,
+    "source_product_acceptance_evidence_count": 20,
+    "source_core_pass_evidence_count": 20,
+    "source_old_slice_current_strict_final_gate_count": 0,
+    "sidecar_closeout_passed_count": 20,
+    "old_slice_writes_applied": 0
+  },
+  "authority_flags": {
+    "sidecar_only": true,
+    "old_slice_write_allowed": false,
+    "old_slice_writes_applied": 0,
+    "normalization_applied": false,
+    "user_approval_collected": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "claim_old_slices_current_strict_complete": false
+  },
+  "required_final_gate_statuses": {
+    "verification": "local_verification_passed",
+    "reviewer": "review_pass_no_blocker",
+    "boundary": "pass_boundary",
+    "product": "pass_product_grade",
+    "next_step": "pass_product_grade_pending_next_slice"
+  },
+  "required_fixture_ids": [
+    "sidecar-ledger-happy-path",
+    "old-slice-normalization-remains-unapplied",
+    "current-strict-sidecar-not-old-final-gate",
+    "future-agent-consumption-contract"
+  ],
+  "required_failure_case_ids": [
+    "SC-FAIL-01-missing-original-item",
+    "SC-FAIL-02-product-evidence-missing",
+    "SC-FAIL-03-old-slice-write-applied",
+    "SC-FAIL-04-claims-old-slices-current-strict-complete",
+    "SC-FAIL-05-user-approval-inferred",
+    "SC-FAIL-06-normalization-applied",
+    "SC-FAIL-07-authority-flag-mainline-ready",
+    "SC-FAIL-08-required-final-gate-statuses-drift"
+  ]
+}

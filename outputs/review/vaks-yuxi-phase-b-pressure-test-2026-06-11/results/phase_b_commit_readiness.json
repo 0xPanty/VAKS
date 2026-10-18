@@ -1,0 +1,102 @@
+{
+  "artifact_kind": "vaks_phase_b_commit_readiness",
+  "built_at": "2026-06-11T09:25:21+00:00",
+  "compared_against_previous_version": "phase_b_keep_stop_synthesis",
+  "commit_readiness_status": "ready_pending_user_approval",
+  "commit_without_user_approval_allowed": false,
+  "recommended_commit_scope": {
+    "mainline_docs": [
+      "SOURCE_INTAKE.md",
+      "IMPLEMENTATION_BLUEPRINT.md",
+      "DEV_CONTEXT.md",
+      "MEMORY_TIER.md"
+    ],
+    "sandbox_evidence_bundle": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/"
+  },
+  "excluded_from_commit_scope": [
+    "SCHEMA.md",
+    "REVIEW_QUEUE.md",
+    "templates/architecture-review-window-prompt.md"
+  ],
+  "suggested_commit_message": "docs(vaks): record phase b yuxi retrieval adapter guardrails",
+  "why_this_is_positive": [
+    "keeps the positive Phase B evidence durable",
+    "commits only the validated documentation patch and sandbox evidence",
+    "does not claim runtime adoption or C-lite readiness",
+    "preserves explicit blockers for promotion, writeback, and action basis"
+  ],
+  "keep_stop_summary": {
+    "status": "pass",
+    "errors": 0,
+    "decision": "keep_phase_b_as_sandbox_candidate",
+    "positive_value_confirmed": true,
+    "no_boundary_leak_confirmed": true,
+    "runtime_adoption_allowed": false,
+    "c_lite_allowed": false,
+    "original_yuxi_runtime_validated": false
+  },
+  "prior_gates": {
+    "minimal_doc_patch": {
+      "status": "pass",
+      "errors": 0
+    },
+    "promotion_gate": {
+      "status": "pass",
+      "errors": 0
+    },
+    "adapter_contract": {
+      "status": "pass",
+      "errors": 0
+    },
+    "runtime_feasibility": {
+      "status": "pass",
+      "errors": 0
+    }
+  },
+  "current_worktree_evidence": {
+    "core_status_lines": [
+      " M DEV_CONTEXT.md",
+      " M IMPLEMENTATION_BLUEPRINT.md",
+      " M MEMORY_TIER.md",
+      " M SOURCE_INTAKE.md"
+    ],
+    "sandbox_status_lines": [
+      "?? outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/"
+    ],
+    "doc_diff_numstat": [
+      {
+        "path": "DEV_CONTEXT.md",
+        "added": "10",
+        "deleted": "0"
+      },
+      {
+        "path": "IMPLEMENTATION_BLUEPRINT.md",
+        "added": "13",
+        "deleted": "0"
+      },
+      {
+        "path": "MEMORY_TIER.md",
+        "added": "7",
+        "deleted": "0"
+      },
+      {
+        "path": "SOURCE_INTAKE.md",
+        "added": "32",
+        "deleted": "0"
+      }
+    ],
+    "changed_core_docs_observed": [
+      "DEV_CONTEXT.md",
+      "IMPLEMENTATION_BLUEPRINT.md",
+      "MEMORY_TIER.md",
+      "SOURCE_INTAKE.md"
+    ]
+  },
+  "hard_stops": [
+    "no_commit_without_user_approval",
+    "do_not_stage_scema_review_queue_or_templates",
+    "do_not_claim_original_yuxi_runtime_validated",
+    "do_not_start_c_lite_from_this_commit",
+    "do_not_treat_sandbox_outputs_as_reviewed_truth"
+  ]
+}

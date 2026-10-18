@@ -1,0 +1,8 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "status-can-approve",
+  "expected_valid": false,
+  "expected_codes": ["US_STATUS_CAN_APPROVE"],
+  "allowed_extra_codes": ["US_AUTHORITY_CONFUSION"],
+  "patch": {"status_surfaces": [{"id": "operator_status", "shows": ["blocked", "stale", "missing_anchor", "hash_mismatch", "action_not_ready", "dirty_state"], "can_approve": true, "mutates_truth": false, "can_promote": false}]}
+}

@@ -1,0 +1,134 @@
+[
+  {
+    "failure_id": "F01-product-pass-missing",
+    "description": "A source slice loses Product PASS.",
+    "mutation": {"set_source": {"slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox", "key": "product_pass", "value": false}},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F02-reviewer-pass-missing",
+    "description": "A source slice loses Reviewer pass.",
+    "mutation": {"set_source": {"slice_id": "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox", "key": "reviewer_pass", "value": false}},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F03-boundary-pass-missing",
+    "description": "A source slice loses Boundary pass.",
+    "mutation": {"set_source": {"slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox", "key": "boundary_pass", "value": false}},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F04-verification-missing",
+    "description": "A source slice loses verification evidence.",
+    "mutation": {"set_source": {"slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox", "key": "verification_present", "value": false}},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F05-final_gate-fails",
+    "description": "The p2-56 final_gate proof fails.",
+    "mutation": {"set_top": {"p2_56_final_gate_passed": false}},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F06-automatic_execution-enabled",
+    "description": "Top-level automatic_execution becomes true.",
+    "mutation": {"set_top": {"automatic_execution": true}},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F07-mainline-ready-overclaim",
+    "description": "Top-level mainline readiness becomes true.",
+    "mutation": {"set_top": {"mainline_ready": true}},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F08-promotion-ready-overclaim",
+    "description": "Top-level promotion readiness becomes true.",
+    "mutation": {"set_top": {"promotion_ready": true}},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F09-action_basis-ready-overclaim",
+    "description": "Top-level action_basis readiness becomes true.",
+    "mutation": {"set_top": {"action_basis_ready": true}},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F10-top-must_not-merge-removed",
+    "description": "The top-level must_not list no longer blocks merge_mainline.",
+    "mutation": {"remove_top_must_not": "merge_mainline"},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F11-scenario-ready-to-execute",
+    "description": "A scenario row becomes ready_to_execute.",
+    "mutation": {"set_demo_row": {"scenario_id": "option_c", "key": "ready_to_execute", "value": true}},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F12-scenario-must_not-sync-removed",
+    "description": "A scenario row loses sync_obsidian from must_not.",
+    "mutation": {"remove_row_must_not": {"scenario_id": "option_b", "value": "sync_obsidian"}},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F13-source-slice-dropped",
+    "description": "A source slice is absent from the regression source list.",
+    "mutation": {"drop_source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox"},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F14-readout-overclaims-mainline",
+    "description": "The readout claims a merge-like permission.",
+    "mutation": {"append_readout": "可以合并"},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F15-chain-count-drift",
+    "description": "The chain source count no longer matches the actual source set.",
+    "mutation": {"set_count": {"key": "source_count", "value": 5}},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F16-scenario-count-drift",
+    "description": "The demo scenario count is corrupted.",
+    "mutation": {"set_demo_summary": {"scenario_count": 0}},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F17-dependency-install-overclaim",
+    "description": "The readout advertises dependency installation.",
+    "mutation": {"append_readout": "pip install unsafe-package"},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F18-service-start-overclaim",
+    "description": "The readout advertises a background service.",
+    "mutation": {"append_readout": "background service started"},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F19-hook-install-overclaim",
+    "description": "The readout advertises a hook installation.",
+    "mutation": {"append_readout": "hook installed"},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F20-mcp_write-overclaim",
+    "description": "The readout advertises MCP write behavior.",
+    "mutation": {"append_readout": "MCP write completed"},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F21-git-commit-overclaim",
+    "description": "The readout advertises a git commit.",
+    "mutation": {"append_readout": "git commit created"},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F22-git-push-overclaim",
+    "description": "The readout advertises a git push.",
+    "mutation": {"append_readout": "git push completed"},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  }
+]

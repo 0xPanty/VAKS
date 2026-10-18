@@ -1,0 +1,6 @@
+{
+  "fixture": "zip-present-and-hash-matched",
+  "zip_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-100-opus-review-transfer-package-sandbox/artifact/opus-review-transfer-package.zip",
+  "zip_sha256": "2fa20d453406757c0e53abc2c2ad9842264c35359d1e12b203ea5113273b2640",
+  "expected": true
+}

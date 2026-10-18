@@ -1,0 +1,333 @@
+{
+  "artifact_kind": "phase_b_top11_20_item_receipts_summary",
+  "truth_boundary": "top11_20_receipts_are_local_replay_evidence",
+  "action_basis_allowed": false,
+  "receipt_rank_window": [
+    11,
+    20
+  ],
+  "metric_result_limit": 20,
+  "governance_window": 10,
+  "summary_rows": [
+    {
+      "test_set": "holdout_used",
+      "corpus": "full",
+      "mode": "baseline_file_lexical",
+      "queries": 15,
+      "receipt_rows_rank_11_20": 150,
+      "expected_receipt_rows": 150,
+      "queries_with_first_hit_11_20": 0,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "holdout_used",
+      "corpus": "full",
+      "mode": "vaks_b_adapter_skeleton",
+      "queries": 15,
+      "receipt_rows_rank_11_20": 150,
+      "expected_receipt_rows": 150,
+      "queries_with_first_hit_11_20": 2,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "holdout_used",
+      "corpus": "full",
+      "mode": "vaks_b_adapter_v1",
+      "queries": 15,
+      "receipt_rows_rank_11_20": 150,
+      "expected_receipt_rows": 150,
+      "queries_with_first_hit_11_20": 2,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "holdout_used",
+      "corpus": "full",
+      "mode": "vaks_b_adapter_v1_1",
+      "queries": 15,
+      "receipt_rows_rank_11_20": 150,
+      "expected_receipt_rows": 150,
+      "queries_with_first_hit_11_20": 2,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "holdout_used",
+      "corpus": "full",
+      "mode": "vaks_b_bucket_local",
+      "queries": 15,
+      "receipt_rows_rank_11_20": 150,
+      "expected_receipt_rows": 150,
+      "queries_with_first_hit_11_20": 2,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "holdout_used",
+      "corpus": "full",
+      "mode": "vaks_b_bucketless",
+      "queries": 15,
+      "receipt_rows_rank_11_20": 150,
+      "expected_receipt_rows": 150,
+      "queries_with_first_hit_11_20": 1,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "holdout_used",
+      "corpus": "full",
+      "mode": "vaks_only_lexical_bucket",
+      "queries": 15,
+      "receipt_rows_rank_11_20": 150,
+      "expected_receipt_rows": 150,
+      "queries_with_first_hit_11_20": 1,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "holdout_used",
+      "corpus": "full",
+      "mode": "yuxi_native_profile",
+      "queries": 15,
+      "receipt_rows_rank_11_20": 150,
+      "expected_receipt_rows": 150,
+      "queries_with_first_hit_11_20": 1,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "holdout_used",
+      "corpus": "primary",
+      "mode": "baseline_file_lexical",
+      "queries": 15,
+      "receipt_rows_rank_11_20": 150,
+      "expected_receipt_rows": 150,
+      "queries_with_first_hit_11_20": 1,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "holdout_used",
+      "corpus": "primary",
+      "mode": "vaks_b_adapter_skeleton",
+      "queries": 15,
+      "receipt_rows_rank_11_20": 150,
+      "expected_receipt_rows": 150,
+      "queries_with_first_hit_11_20": 2,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "holdout_used",
+      "corpus": "primary",
+      "mode": "vaks_b_adapter_v1",
+      "queries": 15,
+      "receipt_rows_rank_11_20": 150,
+      "expected_receipt_rows": 150,
+      "queries_with_first_hit_11_20": 2,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "holdout_used",
+      "corpus": "primary",
+      "mode": "vaks_b_adapter_v1_1",
+      "queries": 15,
+      "receipt_rows_rank_11_20": 150,
+      "expected_receipt_rows": 150,
+      "queries_with_first_hit_11_20": 2,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "holdout_used",
+      "corpus": "primary",
+      "mode": "vaks_b_bucket_local",
+      "queries": 15,
+      "receipt_rows_rank_11_20": 150,
+      "expected_receipt_rows": 150,
+      "queries_with_first_hit_11_20": 5,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "holdout_used",
+      "corpus": "primary",
+      "mode": "vaks_b_bucketless",
+      "queries": 15,
+      "receipt_rows_rank_11_20": 150,
+      "expected_receipt_rows": 150,
+      "queries_with_first_hit_11_20": 1,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "holdout_used",
+      "corpus": "primary",
+      "mode": "vaks_only_lexical_bucket",
+      "queries": 15,
+      "receipt_rows_rank_11_20": 150,
+      "expected_receipt_rows": 150,
+      "queries_with_first_hit_11_20": 1,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "holdout_used",
+      "corpus": "primary",
+      "mode": "yuxi_native_profile",
+      "queries": 15,
+      "receipt_rows_rank_11_20": 150,
+      "expected_receipt_rows": 150,
+      "queries_with_first_hit_11_20": 1,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "main",
+      "corpus": "full",
+      "mode": "baseline_file_lexical",
+      "queries": 30,
+      "receipt_rows_rank_11_20": 300,
+      "expected_receipt_rows": 300,
+      "queries_with_first_hit_11_20": 1,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "main",
+      "corpus": "full",
+      "mode": "vaks_b_adapter_skeleton",
+      "queries": 30,
+      "receipt_rows_rank_11_20": 300,
+      "expected_receipt_rows": 300,
+      "queries_with_first_hit_11_20": 0,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "main",
+      "corpus": "full",
+      "mode": "vaks_b_adapter_v1",
+      "queries": 30,
+      "receipt_rows_rank_11_20": 300,
+      "expected_receipt_rows": 300,
+      "queries_with_first_hit_11_20": 0,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "main",
+      "corpus": "full",
+      "mode": "vaks_b_adapter_v1_1",
+      "queries": 30,
+      "receipt_rows_rank_11_20": 300,
+      "expected_receipt_rows": 300,
+      "queries_with_first_hit_11_20": 0,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "main",
+      "corpus": "full",
+      "mode": "vaks_b_bucket_local",
+      "queries": 30,
+      "receipt_rows_rank_11_20": 300,
+      "expected_receipt_rows": 300,
+      "queries_with_first_hit_11_20": 0,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "main",
+      "corpus": "full",
+      "mode": "vaks_b_bucketless",
+      "queries": 30,
+      "receipt_rows_rank_11_20": 300,
+      "expected_receipt_rows": 300,
+      "queries_with_first_hit_11_20": 1,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "main",
+      "corpus": "full",
+      "mode": "vaks_only_lexical_bucket",
+      "queries": 30,
+      "receipt_rows_rank_11_20": 300,
+      "expected_receipt_rows": 300,
+      "queries_with_first_hit_11_20": 1,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "main",
+      "corpus": "full",
+      "mode": "yuxi_native_profile",
+      "queries": 30,
+      "receipt_rows_rank_11_20": 300,
+      "expected_receipt_rows": 300,
+      "queries_with_first_hit_11_20": 1,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "main",
+      "corpus": "primary",
+      "mode": "baseline_file_lexical",
+      "queries": 30,
+      "receipt_rows_rank_11_20": 300,
+      "expected_receipt_rows": 300,
+      "queries_with_first_hit_11_20": 2,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "main",
+      "corpus": "primary",
+      "mode": "vaks_b_adapter_skeleton",
+      "queries": 30,
+      "receipt_rows_rank_11_20": 300,
+      "expected_receipt_rows": 300,
+      "queries_with_first_hit_11_20": 0,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "main",
+      "corpus": "primary",
+      "mode": "vaks_b_adapter_v1",
+      "queries": 30,
+      "receipt_rows_rank_11_20": 300,
+      "expected_receipt_rows": 300,
+      "queries_with_first_hit_11_20": 0,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "main",
+      "corpus": "primary",
+      "mode": "vaks_b_adapter_v1_1",
+      "queries": 30,
+      "receipt_rows_rank_11_20": 300,
+      "expected_receipt_rows": 300,
+      "queries_with_first_hit_11_20": 0,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "main",
+      "corpus": "primary",
+      "mode": "vaks_b_bucket_local",
+      "queries": 30,
+      "receipt_rows_rank_11_20": 300,
+      "expected_receipt_rows": 300,
+      "queries_with_first_hit_11_20": 0,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "main",
+      "corpus": "primary",
+      "mode": "vaks_b_bucketless",
+      "queries": 30,
+      "receipt_rows_rank_11_20": 300,
+      "expected_receipt_rows": 300,
+      "queries_with_first_hit_11_20": 0,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "main",
+      "corpus": "primary",
+      "mode": "vaks_only_lexical_bucket",
+      "queries": 30,
+      "receipt_rows_rank_11_20": 300,
+      "expected_receipt_rows": 300,
+      "queries_with_first_hit_11_20": 1,
+      "missing_first_hit_receipts": 0
+    },
+    {
+      "test_set": "main",
+      "corpus": "primary",
+      "mode": "yuxi_native_profile",
+      "queries": 30,
+      "receipt_rows_rank_11_20": 300,
+      "expected_receipt_rows": 300,
+      "queries_with_first_hit_11_20": 0,
+      "missing_first_hit_receipts": 0
+    }
+  ]
+}

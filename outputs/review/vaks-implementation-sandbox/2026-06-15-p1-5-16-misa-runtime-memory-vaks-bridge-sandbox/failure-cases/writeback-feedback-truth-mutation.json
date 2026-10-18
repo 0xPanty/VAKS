@@ -1,0 +1,8 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "writeback-feedback-truth-mutation",
+  "expected_valid": false,
+  "expected_codes": ["MB_FEEDBACK_TRUTH_MUTATION"],
+  "allowed_extra_codes": ["MB_AUTHORITY_CONFUSION"],
+  "patch": {"writeback": {"records": [{"id": "feedback-truth", "ref": "fixtures/writeback/feedback-event.json", "record_type": "feedback_event", "receipt_id": "mb-receipt-001", "feedback_mutates_truth": true, "writeback_direct_to_reviewed": false}]}}
+}

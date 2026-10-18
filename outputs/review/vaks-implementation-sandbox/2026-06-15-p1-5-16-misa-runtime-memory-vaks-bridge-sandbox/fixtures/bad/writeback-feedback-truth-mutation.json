@@ -1,0 +1,7 @@
+{
+  "record_kind": "feedback_event_fixture",
+  "feedback_id": "fb-bad-truth-mutation",
+  "feedback_mutates_truth": true,
+  "truth_mutation_allowed": true,
+  "truth_boundary": "bad-fixture-for-negative-test"
+}

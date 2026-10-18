@@ -1,0 +1,16 @@
+{
+  "case_id": "explicit_C",
+  "input_text": "C",
+  "expected_result": "future_mainline_merge_scope_question_only",
+  "expected_action": "ask_for_separate_mainline_review_scope",
+  "requires_new_scope": true,
+  "requires_separate_user_approval": true,
+  "requires_explicit_allowed_paths": true,
+  "must_not": [
+    "mainline_merge",
+    "promotion",
+    "sync",
+    "commit",
+    "push"
+  ]
+}

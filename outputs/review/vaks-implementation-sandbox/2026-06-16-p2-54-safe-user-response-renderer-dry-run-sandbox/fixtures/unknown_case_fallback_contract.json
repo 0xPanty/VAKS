@@ -1,0 +1,12 @@
+{
+  "input_text": "__synthetic_unknown_case__",
+  "expected_case_id": "unknown_case_fallback",
+  "expected_reply_id": "stop_for_unknown_classifier_case",
+  "expected_next_step": "stop_and_ask_for_clarification",
+  "automatic_execution": false,
+  "must_contain_any": [
+    "不会",
+    "不执行"
+  ],
+  "must_not_contain_positive_execution": true
+}

@@ -1,0 +1,16 @@
+{
+  "case_id": "NEG-05-wrong-count",
+  "kind": "negative",
+  "input_text": "I explicitly approve p2-75 old-file status-only normalization: apply the 74 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only. Do not edit body content, artifacts, tools, templates, wiki truth layers, main architecture docs, README, Obsidian vault, commit, push, or sync.",
+  "expected_match": false,
+  "expected_class": "not_approval",
+  "result": {
+    "input_sha256": "d1ab2ebfcf8408744aa539bf9be7aefdf771dee4849409d02646b7a0d0b5bbd9",
+    "matched_exact_phrase": false,
+    "approval_class": "not_approval",
+    "old_file_write_allowed_by_this_slice": false,
+    "requires_future_executor_slice": false,
+    "reason": "not an exact p2-75 approval phrase"
+  },
+  "passed": true
+}

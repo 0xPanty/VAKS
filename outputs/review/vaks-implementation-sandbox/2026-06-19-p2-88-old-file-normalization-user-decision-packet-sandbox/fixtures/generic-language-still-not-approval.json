@@ -1,0 +1,12 @@
+{
+  "case_id": "generic-language-still-not-approval",
+  "non_approval_examples": [
+    "继续",
+    "全部落地",
+    "都做完",
+    "可以",
+    "go ahead",
+    "make it product grade"
+  ],
+  "generic_language_is_not_approval": true
+}

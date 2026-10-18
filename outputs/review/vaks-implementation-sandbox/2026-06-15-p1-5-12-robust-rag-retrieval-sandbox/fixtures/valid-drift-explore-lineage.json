@@ -1,0 +1,72 @@
+{
+  "record_kind": "robust_rag_retrieval_manifest",
+  "scenario_id": "valid-drift-explore-lineage",
+  "expected_valid": true,
+  "expected_codes": [],
+  "query": {
+    "query_mode": "source_inspection",
+    "verbatim_input": "Explore whether DRIFT-style retrieval helps find missing context.",
+    "question_summary": "Explore DRIFT retrieval for missing context discovery.",
+    "action_sensitive": false,
+    "verbatim_preserved": true
+  },
+  "route_selection": {
+    "selected": "drift_explore",
+    "why_selected": "Start with theme primer, then follow local entity expansion.",
+    "query_lineage": [
+      "original: Explore whether DRIFT-style retrieval helps find missing context.",
+      "follow_up: expand local source anchors around the theme."
+    ],
+    "authority_buckets_included": ["review_input", "raw_anchor"],
+    "authority_buckets_excluded": ["feedback", "runtime_artifact", "project_overlay"],
+    "selected_context_types": ["theme_briefing", "text_unit_anchor"],
+    "forbidden_support_types": ["retrieval_score", "graph_rank", "community_report_summary", "llm_extracted_relation"]
+  },
+  "retrieval_config": {
+    "bucket_filter_first": true,
+    "rrf_within_bucket_only": true,
+    "exclude_runtime_artifacts": true
+  },
+  "fusion_groups": [
+    {
+      "id": "drift-review-input",
+      "authority_buckets": ["review_input"],
+      "item_ids": ["drift-theme-a"]
+    },
+    {
+      "id": "drift-raw-anchor",
+      "authority_buckets": ["raw_anchor"],
+      "item_ids": ["drift-anchor-a"]
+    }
+  ],
+  "retrieved_items": [
+    {
+      "id": "drift-theme-a",
+      "ref": "outputs/review/theme-briefings/drift-primer.md",
+      "path": "outputs/review/theme-briefings/drift-primer.md",
+      "record_kind": "theme_briefing",
+      "authority_bucket": "review_input",
+      "pack_role": "orientation",
+      "selected": true,
+      "excluded": false,
+      "selected_by": {"lexical": false, "semantic": true, "graph": true, "metadata": false}
+    },
+    {
+      "id": "drift-anchor-a",
+      "ref": "raw/articles/example-source.md#L90-L110",
+      "path": "raw/articles/example-source.md",
+      "record_kind": "text_unit",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "anchor",
+      "selected": true,
+      "excluded": false,
+      "selected_by": {"lexical": true, "semantic": true, "graph": false, "metadata": true}
+    }
+  ],
+  "generated_answer": {
+    "has_citations": true,
+    "support_checks_passed": false,
+    "sufficiency_checked": false,
+    "claims_action_basis": false
+  }
+}

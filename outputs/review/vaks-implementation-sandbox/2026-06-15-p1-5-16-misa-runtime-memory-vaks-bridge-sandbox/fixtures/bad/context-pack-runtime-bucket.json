@@ -1,0 +1,18 @@
+{
+  "record_kind": "vaks_context_pack_fixture",
+  "pack_id": "ctx-bad-runtime-bucket",
+  "query_mode": "orientation",
+  "read_only": true,
+  "included_buckets": ["reviewed", "runtime_memory"],
+  "excluded_buckets": ["feedback"],
+  "items": [
+    {
+      "id": "runtime-memory-context",
+      "ref": "fixtures/runtime/session-observation.json",
+      "authority_bucket": "runtime_memory",
+      "pack_role": "orientation",
+      "action_basis_allowed": false
+    }
+  ],
+  "truth_boundary": "bad-fixture-for-negative-test"
+}

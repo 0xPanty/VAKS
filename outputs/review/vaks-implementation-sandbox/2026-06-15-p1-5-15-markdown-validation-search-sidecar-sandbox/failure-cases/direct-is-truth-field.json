@@ -1,0 +1,21 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "direct-is-truth-field",
+  "expected_valid": false,
+  "expected_codes": ["MS_AUTHORITY_CONFUSION"],
+  "patch": {
+    "search": {
+      "hits": [
+        {
+          "id": "truthy-hit-alias",
+          "ref": "fixtures/copied-subset/raw-repo-source.md",
+          "authority_bucket": "raw_anchor",
+          "pack_role": "anchor",
+          "selected_by": ["bm25"],
+          "action_basis_allowed": false,
+          "is_truth": true
+        }
+      ]
+    }
+  }
+}

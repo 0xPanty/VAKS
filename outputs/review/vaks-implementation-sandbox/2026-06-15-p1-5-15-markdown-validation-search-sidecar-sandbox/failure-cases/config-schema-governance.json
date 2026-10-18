@@ -1,0 +1,1 @@
+{"extends":"fixtures/valid-frontmatter-validation-check.json","scenario_id":"config-schema-governance","expected_valid":false,"expected_codes":["MS_CONFIG_SCHEMA_GOVERNANCE_FORBIDDEN"],"patch":{"config_contract":{"schema_governance":true,"config_claims_schema_governance":true}}}

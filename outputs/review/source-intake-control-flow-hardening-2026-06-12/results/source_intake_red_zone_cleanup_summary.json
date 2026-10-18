@@ -1,0 +1,5 @@
+{
+  "changed_files": 11,
+  "truth_boundary": "mechanical frontmatter cleanup only; no reviewed truth promotion",
+  "csv": "outputs/review/source-intake-control-flow-hardening-2026-06-12/results/source_intake_red_zone_cleanup.csv"
+}

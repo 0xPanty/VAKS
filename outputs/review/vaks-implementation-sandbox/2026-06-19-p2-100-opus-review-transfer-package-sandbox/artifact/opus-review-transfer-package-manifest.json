@@ -1,0 +1,41 @@
+{
+  "record_kind": "opus_review_transfer_package_manifest",
+  "slice_id": "2026-06-19-p2-100-opus-review-transfer-package-sandbox",
+  "source_slice_id": "2026-06-19-p2-99-portable-opus-evidence-bundle-sandbox",
+  "created_at": "2026-06-19T10:40:57.169755+00:00",
+  "summary": {
+    "transfer_ready": true,
+    "zip_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-100-opus-review-transfer-package-sandbox/artifact/opus-review-transfer-package.zip",
+    "zip_sha256": "2fa20d453406757c0e53abc2c2ad9842264c35359d1e12b203ea5113273b2640",
+    "zip_size_bytes": 70104,
+    "content_manifest_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-100-opus-review-transfer-package-sandbox/artifact/transfer-package-contents-manifest.json",
+    "content_manifest_sha256": "40a18f43e3a7ba23520b276072e382ad61c5c9c01873c02ea122f9689bd388f2",
+    "content_count": 27,
+    "p2_99_file_count": 26,
+    "source_bundle_ready": true,
+    "source_snapshot_count": 9,
+    "source_hash_match_count": 9,
+    "actual_opus_result_present": false,
+    "opus_approval_claimed": false,
+    "mainline_ready": false,
+    "goal_complete_now": false
+  },
+  "source_slice_statuses": {
+    "verification.md": "local_verification_passed",
+    "reviewer-report.md": "review_pass_no_blocker",
+    "boundary-audit.md": "pass_boundary",
+    "product-acceptance-report.md": "pass_product_grade",
+    "next-step.md": "pass_product_grade_pending_next_slice"
+  },
+  "authority_flags": {
+    "transfer_package_only": true,
+    "actual_opus_result_present": false,
+    "opus_approval_claimed": false,
+    "mainline_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "goal_complete_now": false
+  },
+  "required_external_next_step": "Send the ZIP to Opus, retain the raw Opus response in a later sandbox-only intake slice, then validate that result separately."
+}

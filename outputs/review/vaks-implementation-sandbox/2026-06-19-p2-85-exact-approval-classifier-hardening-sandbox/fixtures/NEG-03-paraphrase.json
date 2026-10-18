@@ -1,0 +1,16 @@
+{
+  "case_id": "NEG-03-paraphrase",
+  "kind": "negative",
+  "input_text": "I approve the old-file status normalization for the 20 sandbox slices. Do not change anything else.",
+  "expected_match": false,
+  "expected_class": "not_approval",
+  "result": {
+    "input_sha256": "d8ccd417d30165df338db17c78dbfd2a45b8eb8573309e69d1872bb05100e686",
+    "matched_exact_phrase": false,
+    "approval_class": "not_approval",
+    "old_file_write_allowed_by_this_slice": false,
+    "requires_future_executor_slice": false,
+    "reason": "not an exact p2-75 approval phrase"
+  },
+  "passed": true
+}

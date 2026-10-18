@@ -1,0 +1,12 @@
+{
+  "case_id": "prototype-markdown-action-basis",
+  "note": "Prototype claims action basis.",
+  "prototype_tamper": {
+    "kind": "markdown_replace",
+    "file": "04 Stop Conditions.md",
+    "content": "action basis: yes"
+  },
+  "expected_errors": [
+    "prototype_text_authority_confusion:04 Stop Conditions.md:action_basis_yes"
+  ]
+}

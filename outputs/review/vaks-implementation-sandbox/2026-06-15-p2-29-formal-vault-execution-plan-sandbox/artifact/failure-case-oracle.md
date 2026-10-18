@@ -1,0 +1,148 @@
+# Failure Case Oracle
+
+Case count: 144
+
+- `01-forbidden-formal_vault_read.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:formal_vault_read`
+- `02-forbidden-formal_vault_scan.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:formal_vault_scan`
+- `03-forbidden-formal_vault_write.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:formal_vault_write`
+- `04-forbidden-formal_vault_hash.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:formal_vault_hash`
+- `05-forbidden-formal_vault_snapshot.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:formal_vault_snapshot`
+- `06-forbidden-formal_vault_state_check.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:formal_vault_state_check`
+- `07-forbidden-obsidian_sync.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:obsidian_sync`
+- `08-forbidden-commit.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:commit`
+- `09-forbidden-push.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:push`
+- `10-forbidden-promotion.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:promotion`
+- `11-forbidden-dependency_install.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:dependency_install`
+- `12-forbidden-background_service.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:background_service`
+- `13-forbidden-mcp_write_tool.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:mcp_write_tool`
+- `14-forbidden-hooks.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:hooks`
+- `15-forbidden-real_base_files.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:real_base_files`
+- `16-forbidden-production_ui.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:production_ui`
+- `17-forbidden-local_storage_write.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:local_storage_write`
+- `18-forbidden-network_post.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:network_post`
+- `19-forbidden-actual_approval_collection.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:actual_approval_collection`
+- `20-forbidden-actual_user_approval.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:actual_user_approval`
+- `21-forbidden-actual_user_decision_collection.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:actual_user_decision_collection`
+- `22-forbidden-user_approval_inference.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:user_approval_inference`
+- `23-forbidden-real_user_text_storage.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:real_user_text_storage`
+- `24-forbidden-real_user_text_capture.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:real_user_text_capture`
+- `25-forbidden-write_gate_opening.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:write_gate_opening`
+- `26-forbidden-execution_performed.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:execution_performed`
+- `27-forbidden-snapshot_taken.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:snapshot_taken`
+- `28-forbidden-rollback_executed.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:rollback_executed`
+- `29-forbidden-hash_before_collected.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:hash_before_collected`
+- `30-forbidden-hash_after_collected.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:hash_after_collected`
+- `31-forbidden-action_basis_creation.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:action_basis_creation`
+- `32-forbidden-reviewed_knowledge_creation.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:reviewed_knowledge_creation`
+- `33-forbidden-external_notification.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:external_notification`
+- `34-forbidden-shell_command_emitted.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:shell_command_emitted`
+- `35-forbidden-copy_command_emitted.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:copy_command_emitted`
+- `36-forbidden-absolute_vault_path_resolved.json` -> `execution_plan_hash_mismatch, forbidden_operation_enabled:absolute_vault_path_resolved`
+- `37-control-sandbox_only-false.json` -> `execution_plan_hash_mismatch, plan_control_not_true:sandbox_only`
+- `38-control-plan_only-false.json` -> `execution_plan_hash_mismatch, plan_control_not_true:plan_only`
+- `39-control-non_executable-false.json` -> `execution_plan_hash_mismatch, plan_control_not_true:non_executable`
+- `40-control-operator_must_stop_before_execution-false.json` -> `execution_plan_hash_mismatch, plan_control_not_true:operator_must_stop_before_execution`
+- `41-control-separate_future_user_confirmation_required-false.json` -> `execution_plan_hash_mismatch, plan_control_not_true:separate_future_user_confirmation_required`
+- `42-control-separate_future_execution_slice_required-false.json` -> `execution_plan_hash_mismatch, plan_control_not_true:separate_future_execution_slice_required`
+- `43-control-validator_is_not_reviewer-false.json` -> `execution_plan_hash_mismatch, plan_control_not_true:validator_is_not_reviewer`
+- `44-control-product_acceptance_is_not_formal_vault_approval-false.json` -> `execution_plan_hash_mismatch, plan_control_not_true:product_acceptance_is_not_formal_vault_approval`
+- `45-control-preflight_pass_is_not_execution_permission-false.json` -> `execution_plan_hash_mismatch, plan_control_not_true:preflight_pass_is_not_execution_permission`
+- `46-control-target_hashes_are_source_hashes_only-false.json` -> `execution_plan_hash_mismatch, plan_control_not_true:target_hashes_are_source_hashes_only`
+- `47-control-dirty_state_blocks_execution-false.json` -> `execution_plan_hash_mismatch, plan_control_not_true:dirty_state_blocks_execution`
+- `48-control-execution_allowed_now-true.json` -> `execution_plan_hash_mismatch, plan_control_not_false:execution_allowed_now`
+- `49-control-formal_vault_access_allowed_now-true.json` -> `execution_plan_hash_mismatch, plan_control_not_false:formal_vault_access_allowed_now`
+- `50-control-formal_vault_state_check_allowed_now-true.json` -> `execution_plan_hash_mismatch, plan_control_not_false:formal_vault_state_check_allowed_now`
+- `51-control-formal_vault_write_allowed_now-true.json` -> `execution_plan_hash_mismatch, plan_control_not_false:formal_vault_write_allowed_now`
+- `52-control-formal_vault_hash_allowed_now-true.json` -> `execution_plan_hash_mismatch, plan_control_not_false:formal_vault_hash_allowed_now`
+- `53-control-formal_vault_snapshot_allowed_now-true.json` -> `execution_plan_hash_mismatch, plan_control_not_false:formal_vault_snapshot_allowed_now`
+- `54-control-user_confirmation_collected_now-true.json` -> `execution_plan_hash_mismatch, plan_control_not_false:user_confirmation_collected_now`
+- `55-control-actual_user_text_stored-true.json` -> `execution_plan_hash_mismatch, plan_control_not_false:actual_user_text_stored`
+- `56-control-contains_commands-true.json` -> `execution_plan_hash_mismatch, plan_control_not_false:contains_commands`
+- `57-control-command_export_enabled-true.json` -> `execution_plan_hash_mismatch, plan_control_not_false:command_export_enabled`
+- `58-control-copy_paste_command_enabled-true.json` -> `execution_plan_hash_mismatch, plan_control_not_false:copy_paste_command_enabled`
+- `59-control-absolute_vault_paths_present-true.json` -> `execution_plan_hash_mismatch, plan_control_not_false:absolute_vault_paths_present`
+- `60-control-sync_commit_push_promotion_allowed-true.json` -> `execution_plan_hash_mismatch, plan_control_not_false:sync_commit_push_promotion_allowed`
+- `61-source-hash-1-source_preflight_hash.json` -> `execution_plan_hash_mismatch, source_hash_claim_mismatch:source_preflight_hash`
+- `62-source-hash-2-source_preflight_input_bundle_hash.json` -> `execution_plan_hash_mismatch, source_hash_claim_mismatch:source_preflight_input_bundle_hash`
+- `63-source-hash-3-source_packet_hash.json` -> `execution_plan_hash_mismatch, source_hash_claim_mismatch:source_packet_hash`
+- `64-source-hash-4-source_packet_scope_hash.json` -> `execution_plan_hash_mismatch, source_hash_claim_mismatch:source_packet_scope_hash`
+- `65-source-hash-5-source_target_manifest_hash.json` -> `execution_plan_hash_mismatch, source_hash_claim_mismatch:source_target_manifest_hash`
+- `66-source-hash-6-source_required_preflight_hash.json` -> `execution_plan_hash_mismatch, source_hash_claim_mismatch:source_required_preflight_hash`
+- `67-source-hash-7-source_receipt_preflight_hash.json` -> `execution_plan_hash_mismatch, source_hash_claim_mismatch:source_receipt_preflight_hash`
+- `68-source-inputs-missing.json` -> `execution_plan_hash_mismatch, source_inputs_mismatch`
+- `69-source-inputs-bad-sha.json` -> `execution_plan_hash_mismatch, source_inputs_mismatch`
+- `70-source-input-bundle-drift.json` -> `execution_plan_hash_mismatch, source_input_bundle_hash_mismatch`
+- `71-target-missing-one.json` -> `execution_plan_hash_mismatch, target_manifest_hash_mismatch, target_scope_ids_mismatch`
+- `72-target-extra-one.json` -> `execution_plan_hash_mismatch, target_manifest_hash_mismatch, target_not_in_preflight_scope:extra_target, target_scope_ids_mismatch`
+- `73-target-relative-drift.json` -> `execution_plan_hash_mismatch, target_manifest_hash_mismatch, target_relative_target_mismatch:native_home`
+- `74-target-source-path-drift.json` -> `execution_plan_hash_mismatch, target_manifest_hash_mismatch, target_source_path_mismatch:native_home`
+- `75-target-source-hash-drift.json` -> `execution_plan_hash_mismatch, target_manifest_hash_mismatch, target_source_sha256_mismatch:native_home`
+- `76-target-content-binding-drift.json` -> `execution_plan_hash_mismatch, target_content_binding_mismatch:native_home, target_manifest_hash_mismatch`
+- `77-target-absolute-path.json` -> `dangerous_value:$.target_manifest[0].relative_target:absolute_formal_vault_path, execution_plan_hash_mismatch, target_manifest_hash_mismatch, target_relative_path_unsafe:native_home, target_relative_target_mismatch:native_home`
+- `78-target-parent-traversal.json` -> `execution_plan_hash_mismatch, target_manifest_hash_mismatch, target_relative_path_unsafe:native_home, target_relative_target_mismatch:native_home`
+- `79-target-resolved-now.json` -> `execution_plan_hash_mismatch, target_flag_not_false:native_home:formal_vault_target_resolved, target_manifest_hash_mismatch`
+- `80-target-exists-checked-now.json` -> `execution_plan_hash_mismatch, target_flag_not_false:native_home:formal_vault_target_exists_checked, target_manifest_hash_mismatch`
+- `81-target-write-enabled-now.json` -> `execution_plan_hash_mismatch, target_flag_not_false:native_home:write_enabled_now, target_manifest_hash_mismatch`
+- `82-target-execution-enabled-now.json` -> `execution_plan_hash_mismatch, target_flag_not_false:native_home:execution_enabled_now, target_manifest_hash_mismatch`
+- `83-target-hash-before-collected.json` -> `execution_plan_hash_mismatch, target_flag_not_false:native_home:hash_before_collected, target_manifest_hash_mismatch`
+- `84-target-hash-after-collected.json` -> `execution_plan_hash_mismatch, target_flag_not_false:native_home:hash_after_collected, target_manifest_hash_mismatch`
+- `85-target-manifest-hash-drift.json` -> `execution_plan_hash_mismatch, target_manifest_hash_mismatch`
+- `86-contract-kind-drift.json` -> `contract_field_mismatch:contract_kind, execution_plan_hash_mismatch`
+- `87-contract-executes-true.json` -> `contract_field_mismatch:current_slice_executes, execution_plan_hash_mismatch`
+- `88-contract-vault-access-allowed.json` -> `contract_field_mismatch:formal_vault_access_disallowed, execution_plan_hash_mismatch`
+- `89-contract-plan-executable.json` -> `contract_field_mismatch:plan_is_non_executable, execution_plan_hash_mismatch`
+- `90-contract-preflight-hash-drift.json` -> `contract_required_preflight_hash_mismatch, execution_plan_hash_mismatch`
+- `91-contract-scope-ids-drift.json` -> `contract_scope_ids_mismatch, execution_plan_hash_mismatch`
+- `92-steps-missing-one.json` -> `execution_plan_hash_mismatch, execution_plan_step_ids_mismatch`
+- `93-steps-extra-one.json` -> `execution_plan_hash_mismatch, execution_plan_step_ids_mismatch`
+- `94-step-status-executable.json` -> `execution_plan_hash_mismatch, step_status_mismatch:source_binding_reconfirm`
+- `95-step-perform-now.json` -> `execution_plan_hash_mismatch, step_flag_not_false:source_binding_reconfirm:perform_now`
+- `96-step-writes-now.json` -> `execution_plan_hash_mismatch, step_flag_not_false:source_binding_reconfirm:writes_now`
+- `97-step-vault-access-now.json` -> `execution_plan_hash_mismatch, step_flag_not_false:source_binding_reconfirm:formal_vault_access_now`
+- `98-step-state-check-now.json` -> `execution_plan_hash_mismatch, step_flag_not_false:source_binding_reconfirm:formal_vault_state_check_now`
+- `99-step-hash-now.json` -> `execution_plan_hash_mismatch, step_flag_not_false:source_binding_reconfirm:hash_now`
+- `100-step-snapshot-now.json` -> `execution_plan_hash_mismatch, step_flag_not_false:source_binding_reconfirm:snapshot_now`
+- `101-step-sync-now.json` -> `execution_plan_hash_mismatch, step_flag_not_false:source_binding_reconfirm:sync_now`
+- `102-step-future-confirmation-missing.json` -> `execution_plan_hash_mismatch, step_flag_not_true:source_binding_reconfirm:requires_future_user_confirmation`
+- `103-step-future-slice-missing.json` -> `execution_plan_hash_mismatch, step_flag_not_true:source_binding_reconfirm:requires_future_execution_slice`
+- `104-step-command-present.json` -> `dangerous_value:$.execution_plan_steps[0].command:copy_item, execution_plan_hash_mismatch, step_forbidden_field_nonempty:source_binding_reconfirm:command`
+- `105-step-absolute-target-present.json` -> `dangerous_value:$.execution_plan_steps[0].absolute_target_path:absolute_formal_vault_path, execution_plan_hash_mismatch, step_forbidden_field_nonempty:source_binding_reconfirm:absolute_target_path`
+- `106-step-copy-tool-present.json` -> `dangerous_value:$.execution_plan_steps[0].copy_tool:copy_item, execution_plan_hash_mismatch, step_forbidden_field_nonempty:source_binding_reconfirm:copy_tool`
+- `107-sample-approved-executable-plan.json` -> `approved_sample_executable_plan_created, execution_plan_hash_mismatch`
+- `108-sample-approved-executes.json` -> `execution_plan_hash_mismatch, plan_sample_flag_not_false:synthetic_approved_preflight_plan:execution_performed`
+- `109-sample-approved-writes.json` -> `execution_plan_hash_mismatch, plan_sample_flag_not_false:synthetic_approved_preflight_plan:formal_vault_write_allowed_now`
+- `110-sample-approved-action-basis.json` -> `execution_plan_hash_mismatch, plan_sample_flag_not_false:synthetic_approved_preflight_plan:action_basis_created`
+- `111-sample-denied-plan-created.json` -> `blocked_sample_plan_draft_created:synthetic_denied_preflight_plan, execution_plan_hash_mismatch`
+- `112-sample-denied-wrong-result.json` -> `execution_plan_hash_mismatch, plan_sample_result_mismatch:synthetic_denied_preflight_plan`
+- `113-sample-revision-plan-created.json` -> `blocked_sample_plan_draft_created:synthetic_revision_preflight_plan, execution_plan_hash_mismatch`
+- `114-sample-dirty-plan-created.json` -> `blocked_sample_plan_draft_created:synthetic_dirty_state_plan_block, execution_plan_hash_mismatch`
+- `115-sample-real-user-input.json` -> `execution_plan_hash_mismatch, plan_sample_flag_not_false:synthetic_approved_preflight_plan:actual_user_input`
+- `116-sample-real-user-text-stored.json` -> `execution_plan_hash_mismatch, plan_sample_flag_not_false:synthetic_approved_preflight_plan:real_user_text_stored`
+- `117-sample-vault-state-inspected.json` -> `execution_plan_hash_mismatch, plan_sample_flag_not_false:synthetic_approved_preflight_plan:formal_vault_state_inspected`
+- `118-sample-scope-ids-drift.json` -> `execution_plan_hash_mismatch, plan_sample_scope_ids_mismatch:synthetic_approved_preflight_plan`
+- `119-receipt-approval-collected.json` -> `execution_plan_hash_mismatch, receipt_flag_not_false:approval_collected_now`
+- `120-receipt-vault-accessed.json` -> `execution_plan_hash_mismatch, receipt_flag_not_false:formal_vault_accessed`
+- `121-receipt-executed.json` -> `execution_plan_hash_mismatch, receipt_flag_not_false:execution_performed`
+- `122-receipt-write-performed.json` -> `execution_plan_hash_mismatch, receipt_flag_not_false:write_performed`
+- `123-receipt-sync-performed.json` -> `execution_plan_hash_mismatch, receipt_flag_not_false:sync_performed`
+- `124-receipt-commit-performed.json` -> `execution_plan_hash_mismatch, receipt_flag_not_false:commit_performed`
+- `125-receipt-promotion-performed.json` -> `execution_plan_hash_mismatch, receipt_flag_not_false:promotion_performed`
+- `126-receipt-status-drift.json` -> `execution_plan_hash_mismatch, receipt_status_mismatch`
+- `127-receipt-non-claims-missing.json` -> `execution_plan_hash_mismatch, receipt_non_claims_missing`
+- `128-execution-plan-hash-drift.json` -> `execution_plan_hash_mismatch`
+- `129-metric-floor-too-low.json` -> `execution_plan_hash_mismatch, product_metric_failure_case_floor_too_low`
+- `130-unknown-top-level-command.json` -> `dangerous_value:$.shell_command:absolute_formal_vault_path, dangerous_value:$.shell_command:copy_item, execution_plan_hash_mismatch, unknown_key:config:shell_command, unknown_top_level_key:shell_command`
+- `131-unknown-top-level-absolute-path.json` -> `dangerous_value:$.absolute_vault_path:absolute_formal_vault_path, execution_plan_hash_mismatch, unknown_key:config:absolute_vault_path, unknown_top_level_key:absolute_vault_path`
+- `132-unknown-top-level-sync-command.json` -> `dangerous_value:$.formal_vault_sync_command:absolute_formal_vault_path, dangerous_value:$.formal_vault_sync_command:robocopy, execution_plan_hash_mismatch, unknown_key:config:formal_vault_sync_command, unknown_top_level_key:formal_vault_sync_command`
+- `133-unknown-target-field.json` -> `dangerous_value:$.target_manifest[0].shell_command:copy_item, execution_plan_hash_mismatch, target_manifest_hash_mismatch, unknown_key:target_manifest[native_home]:shell_command`
+- `134-unknown-step-field.json` -> `dangerous_value:$.execution_plan_steps[0].formal_vault_sync_command:robocopy, execution_plan_hash_mismatch, unknown_key:execution_plan_steps[source_binding_reconfirm]:formal_vault_sync_command`
+- `135-unknown-sample-field.json` -> `dangerous_value:$.plan_samples[0].absolute_vault_path:absolute_formal_vault_path, execution_plan_hash_mismatch, unknown_key:plan_samples[synthetic_approved_preflight_plan]:absolute_vault_path`
+- `136-unknown-receipt-field.json` -> `dangerous_value:$.non_execution_plan_receipt.write_command:copy_item, execution_plan_hash_mismatch, unknown_key:non_execution_plan_receipt:write_command`
+- `137-unknown-safe-top-level-field.json` -> `execution_plan_hash_mismatch, unknown_key:config:operator_note, unknown_top_level_key:operator_note`
+- `138-stop-conditions-command-replaced-rehashed.json` -> `stop_conditions_mismatch`
+- `139-stop-conditions-command-appended-rehashed.json` -> `stop_conditions_mismatch`
+- `140-stop-conditions-order-reversed-rehashed.json` -> `stop_conditions_mismatch`
+- `141-scenario-mode-drift-rehashed.json` -> `scenario_mode_not_allowed`
+- `142-read-only-sources-drift-rehashed.json` -> `read_only_sources_mismatch`
+- `143-max-journey-steps-drift-rehashed.json` -> `product_metric_max_journey_steps_mismatch`
+- `144-purpose-authority-confusion-rehashed.json` -> `purpose_mismatch`

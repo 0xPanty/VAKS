@@ -1,0 +1,1 @@
+{"extends":"fixtures/valid-frontmatter-validation-check.json","scenario_id":"unknown-bucket","expected_valid":false,"expected_codes":["MS_UNKNOWN_BUCKET"],"patch":{"search":{"included_buckets":["trusted_magic"],"excluded_buckets":["feedback"]}}}

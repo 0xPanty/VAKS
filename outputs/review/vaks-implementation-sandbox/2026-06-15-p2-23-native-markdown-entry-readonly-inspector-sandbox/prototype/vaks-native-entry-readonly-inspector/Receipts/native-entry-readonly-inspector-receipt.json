@@ -1,0 +1,37 @@
+{
+  "record_kind": "sandbox_native_entry_readonly_inspector_receipt",
+  "slice_id": "2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox",
+  "source_slice": "2026-06-15-p2-22-formalization-readiness-polish-sandbox",
+  "generated_at_utc": "2026-06-15T09:02:34+00:00",
+  "write_scope": [
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/"
+  ],
+  "source_hashes": {
+    "source_next_step": "801b0dfce12f46f4a99500e3d40fcb933af536a0bebbd9dda605e9fa40b60308",
+    "source_verification": "2a33aeb4cd7606e23147ae3951452c4b3411c835dbe4c2807c3d4c9b5f5f9177",
+    "source_product_acceptance": "8d155341af34bc12afb19430b6789af0c99dffb95290ee0e0d7a836319014c7d",
+    "source_contract": "2e05a4cf67426786d7753c637541ba72ff5a4e6eca9c27ecd285dbdc3a77955f",
+    "source_pilot_home": "c35adff2c4dfaf6b5ba3952a5b431fba0b426c3ebb7320987f4dbe2e9d4da3c3"
+  },
+  "forbidden_operations": {
+    "formal_vault_write": false,
+    "obsidian_sync": false,
+    "commit": false,
+    "push": false,
+    "promotion": false,
+    "dependency_install": false,
+    "background_service": false,
+    "mcp_write_tool": false,
+    "hooks": false,
+    "real_base_files": false,
+    "production_ui": false,
+    "local_storage_write": false,
+    "network_post": false
+  },
+  "non_claims": [
+    "not reviewed knowledge",
+    "not evidence support",
+    "not action basis",
+    "not mainline approval"
+  ]
+}

@@ -1,0 +1,544 @@
+[
+  {
+    "file": "01-forbidden-formal_vault_read.json",
+    "expected_failures": [
+      "forbidden_operation:formal_vault_read"
+    ]
+  },
+  {
+    "file": "02-forbidden-formal_vault_scan.json",
+    "expected_failures": [
+      "forbidden_operation:formal_vault_scan"
+    ]
+  },
+  {
+    "file": "03-forbidden-formal_vault_write.json",
+    "expected_failures": [
+      "forbidden_operation:formal_vault_write"
+    ]
+  },
+  {
+    "file": "04-forbidden-formal_vault_hash.json",
+    "expected_failures": [
+      "forbidden_operation:formal_vault_hash"
+    ]
+  },
+  {
+    "file": "05-forbidden-formal_vault_snapshot.json",
+    "expected_failures": [
+      "forbidden_operation:formal_vault_snapshot"
+    ]
+  },
+  {
+    "file": "06-forbidden-formal_vault_state_check.json",
+    "expected_failures": [
+      "forbidden_operation:formal_vault_state_check"
+    ]
+  },
+  {
+    "file": "07-forbidden-obsidian_sync.json",
+    "expected_failures": [
+      "forbidden_operation:obsidian_sync"
+    ]
+  },
+  {
+    "file": "08-forbidden-commit.json",
+    "expected_failures": [
+      "forbidden_operation:commit"
+    ]
+  },
+  {
+    "file": "09-forbidden-push.json",
+    "expected_failures": [
+      "forbidden_operation:push"
+    ]
+  },
+  {
+    "file": "10-forbidden-promotion.json",
+    "expected_failures": [
+      "forbidden_operation:promotion"
+    ]
+  },
+  {
+    "file": "11-forbidden-dependency_install.json",
+    "expected_failures": [
+      "forbidden_operation:dependency_install"
+    ]
+  },
+  {
+    "file": "12-forbidden-background_service.json",
+    "expected_failures": [
+      "forbidden_operation:background_service"
+    ]
+  },
+  {
+    "file": "13-forbidden-mcp_write_tool.json",
+    "expected_failures": [
+      "forbidden_operation:mcp_write_tool"
+    ]
+  },
+  {
+    "file": "14-forbidden-hooks.json",
+    "expected_failures": [
+      "forbidden_operation:hooks"
+    ]
+  },
+  {
+    "file": "15-forbidden-real_base_files.json",
+    "expected_failures": [
+      "forbidden_operation:real_base_files"
+    ]
+  },
+  {
+    "file": "16-forbidden-production_ui.json",
+    "expected_failures": [
+      "forbidden_operation:production_ui"
+    ]
+  },
+  {
+    "file": "17-forbidden-local_storage_write.json",
+    "expected_failures": [
+      "forbidden_operation:local_storage_write"
+    ]
+  },
+  {
+    "file": "18-forbidden-network_post.json",
+    "expected_failures": [
+      "forbidden_operation:network_post"
+    ]
+  },
+  {
+    "file": "19-forbidden-actual_approval_collection.json",
+    "expected_failures": [
+      "forbidden_operation:actual_approval_collection"
+    ]
+  },
+  {
+    "file": "20-forbidden-actual_user_approval.json",
+    "expected_failures": [
+      "forbidden_operation:actual_user_approval"
+    ]
+  },
+  {
+    "file": "21-forbidden-actual_user_decision_collection.json",
+    "expected_failures": [
+      "forbidden_operation:actual_user_decision_collection"
+    ]
+  },
+  {
+    "file": "22-forbidden-user_approval_inference.json",
+    "expected_failures": [
+      "forbidden_operation:user_approval_inference"
+    ]
+  },
+  {
+    "file": "23-forbidden-real_user_text_storage.json",
+    "expected_failures": [
+      "forbidden_operation:real_user_text_storage"
+    ]
+  },
+  {
+    "file": "24-forbidden-real_user_text_capture.json",
+    "expected_failures": [
+      "forbidden_operation:real_user_text_capture"
+    ]
+  },
+  {
+    "file": "25-forbidden-write_gate_opening.json",
+    "expected_failures": [
+      "forbidden_operation:write_gate_opening"
+    ]
+  },
+  {
+    "file": "26-forbidden-execution_performed.json",
+    "expected_failures": [
+      "forbidden_operation:execution_performed"
+    ]
+  },
+  {
+    "file": "27-forbidden-snapshot_taken.json",
+    "expected_failures": [
+      "forbidden_operation:snapshot_taken"
+    ]
+  },
+  {
+    "file": "28-forbidden-rollback_executed.json",
+    "expected_failures": [
+      "forbidden_operation:rollback_executed"
+    ]
+  },
+  {
+    "file": "29-forbidden-hash_before_collected.json",
+    "expected_failures": [
+      "forbidden_operation:hash_before_collected"
+    ]
+  },
+  {
+    "file": "30-forbidden-hash_after_collected.json",
+    "expected_failures": [
+      "forbidden_operation:hash_after_collected"
+    ]
+  },
+  {
+    "file": "31-forbidden-action_basis_creation.json",
+    "expected_failures": [
+      "forbidden_operation:action_basis_creation"
+    ]
+  },
+  {
+    "file": "32-forbidden-reviewed_knowledge_creation.json",
+    "expected_failures": [
+      "forbidden_operation:reviewed_knowledge_creation"
+    ]
+  },
+  {
+    "file": "33-forbidden-external_notification.json",
+    "expected_failures": [
+      "forbidden_operation:external_notification"
+    ]
+  },
+  {
+    "file": "34-source-input-path-missing.json",
+    "expected_failures": [
+      "source_input_path_missing:source_intake_config"
+    ]
+  },
+  {
+    "file": "35-source-input-hash-mismatch.json",
+    "expected_failures": [
+      "source_input_hash_mismatch:source_intake_config"
+    ]
+  },
+  {
+    "file": "36-source-input-bundle-hash-mismatch.json",
+    "expected_failures": [
+      "source_input_bundle_hash_mismatch"
+    ]
+  },
+  {
+    "file": "37-source-intake-gate-hash-mismatch.json",
+    "expected_failures": [
+      "source_intake_gate_hash_mismatch"
+    ]
+  },
+  {
+    "file": "38-source-packet-hash-mismatch.json",
+    "expected_failures": [
+      "source_packet_hash_mismatch"
+    ]
+  },
+  {
+    "file": "39-source-bundle-hash-mismatch.json",
+    "expected_failures": [
+      "source_packet_source_bundle_hash_mismatch"
+    ]
+  },
+  {
+    "file": "40-source-scope-hash-mismatch.json",
+    "expected_failures": [
+      "source_packet_scope_hash_mismatch"
+    ]
+  },
+  {
+    "file": "41-preflight-hash-missing.json",
+    "expected_failures": [
+      "preflight_hash_missing",
+      "contract_preflight_hash_mismatch",
+      "sample_preflight_hash_mismatch:synthetic_approved_reference_preflight",
+      "sample_preflight_hash_mismatch:synthetic_denied_reference_preflight",
+      "sample_preflight_hash_mismatch:synthetic_dirty_state_preflight_block",
+      "sample_preflight_hash_mismatch:synthetic_revision_reference_preflight",
+      "sample_required_preflight_hash_mismatch:synthetic_approved_reference_preflight",
+      "sample_required_preflight_hash_mismatch:synthetic_denied_reference_preflight",
+      "sample_required_preflight_hash_mismatch:synthetic_dirty_state_preflight_block",
+      "sample_required_preflight_hash_mismatch:synthetic_revision_reference_preflight"
+    ]
+  },
+  {
+    "file": "42-preflight-hash-mismatch.json",
+    "expected_failures": [
+      "preflight_hash_mismatch",
+      "non_execution_receipt_preflight_hash_mismatch",
+      "contract_preflight_hash_mismatch",
+      "sample_preflight_hash_mismatch:synthetic_approved_reference_preflight",
+      "sample_preflight_hash_mismatch:synthetic_denied_reference_preflight",
+      "sample_preflight_hash_mismatch:synthetic_dirty_state_preflight_block",
+      "sample_preflight_hash_mismatch:synthetic_revision_reference_preflight",
+      "sample_required_preflight_hash_mismatch:synthetic_approved_reference_preflight",
+      "sample_required_preflight_hash_mismatch:synthetic_denied_reference_preflight",
+      "sample_required_preflight_hash_mismatch:synthetic_dirty_state_preflight_block",
+      "sample_required_preflight_hash_mismatch:synthetic_revision_reference_preflight"
+    ]
+  },
+  {
+    "file": "43-target-absolute-path.json",
+    "expected_failures": [
+      "target_path_not_relative:native_home",
+      "target_relative_target_mismatch:native_home"
+    ]
+  },
+  {
+    "file": "44-target-parent-traversal.json",
+    "expected_failures": [
+      "target_path_not_relative:native_home",
+      "target_relative_target_mismatch:native_home"
+    ]
+  },
+  {
+    "file": "45-extra-target-requested.json",
+    "expected_failures": [
+      "target_manifest_scope_mismatch",
+      "target_not_in_packet_scope:extra_target",
+      "too_many_targets"
+    ]
+  },
+  {
+    "file": "46-target-source-hash-missing.json",
+    "expected_failures": [
+      "target_source_hash_missing:native_home",
+      "target_source_hash_mismatch:native_home"
+    ]
+  },
+  {
+    "file": "47-target-state-checked.json",
+    "expected_failures": [
+      "target_formal_vault_state_checked:native_home"
+    ]
+  },
+  {
+    "file": "48-target-snapshot-taken.json",
+    "expected_failures": [
+      "target_snapshot_taken:native_home"
+    ]
+  },
+  {
+    "file": "49-target-hash-before-collected.json",
+    "expected_failures": [
+      "target_hash_before_collected:native_home"
+    ]
+  },
+  {
+    "file": "50-target-write-enabled.json",
+    "expected_failures": [
+      "target_write_enabled_now:native_home"
+    ]
+  },
+  {
+    "file": "51-target-relative-drift.json",
+    "expected_failures": [
+      "target_relative_target_mismatch:native_home"
+    ]
+  },
+  {
+    "file": "52-target-source-path-drift.json",
+    "expected_failures": [
+      "target_source_path_mismatch:native_home"
+    ]
+  },
+  {
+    "file": "53-target-source-sha-drift.json",
+    "expected_failures": [
+      "target_source_hash_mismatch:native_home"
+    ]
+  },
+  {
+    "file": "54-sample-not-synthetic.json",
+    "expected_failures": [
+      "sample_not_synthetic:synthetic_approved_reference_preflight"
+    ]
+  },
+  {
+    "file": "55-sample-actual-user-input.json",
+    "expected_failures": [
+      "sample_uses_actual_user_input:synthetic_approved_reference_preflight"
+    ]
+  },
+  {
+    "file": "56-sample-real-user-text-stored.json",
+    "expected_failures": [
+      "sample_stores_real_user_text:synthetic_approved_reference_preflight"
+    ]
+  },
+  {
+    "file": "57-sample-captured-user-text.json",
+    "expected_failures": [
+      "sample_captures_user_text:synthetic_approved_reference_preflight"
+    ]
+  },
+  {
+    "file": "58-sample-missing-decision-reference.json",
+    "expected_failures": [
+      "sample_missing_decision_reference:synthetic_approved_reference_preflight"
+    ]
+  },
+  {
+    "file": "59-sample-intake-hash-mismatch.json",
+    "expected_failures": [
+      "sample_intake_gate_hash_mismatch:synthetic_approved_reference_preflight"
+    ]
+  },
+  {
+    "file": "60-sample-packet-hash-mismatch.json",
+    "expected_failures": [
+      "sample_packet_hash_mismatch:synthetic_approved_reference_preflight"
+    ]
+  },
+  {
+    "file": "61-sample-scope-hash-mismatch.json",
+    "expected_failures": [
+      "sample_scope_hash_mismatch:synthetic_approved_reference_preflight"
+    ]
+  },
+  {
+    "file": "62-sample-check-false.json",
+    "expected_failures": [
+      "sample_preflight_check_failed:synthetic_approved_reference_preflight:formal_vault_not_accessed"
+    ]
+  },
+  {
+    "file": "63-sample-execution-performed.json",
+    "expected_failures": [
+      "sample_execution_performed:synthetic_approved_reference_preflight"
+    ]
+  },
+  {
+    "file": "64-sample-formal-vault-accessed.json",
+    "expected_failures": [
+      "sample_accesses_formal_vault:synthetic_approved_reference_preflight"
+    ]
+  },
+  {
+    "file": "65-sample-state-inspected.json",
+    "expected_failures": [
+      "sample_inspects_formal_vault_state:synthetic_approved_reference_preflight"
+    ]
+  },
+  {
+    "file": "66-sample-snapshot-taken.json",
+    "expected_failures": [
+      "sample_snapshot_taken:synthetic_approved_reference_preflight"
+    ]
+  },
+  {
+    "file": "67-sample-hash-before-collected.json",
+    "expected_failures": [
+      "sample_hash_before_collected:synthetic_approved_reference_preflight"
+    ]
+  },
+  {
+    "file": "68-sample-allows-write.json",
+    "expected_failures": [
+      "sample_allows_formal_vault_write_now:synthetic_approved_reference_preflight"
+    ]
+  },
+  {
+    "file": "69-sample-creates-action-basis.json",
+    "expected_failures": [
+      "sample_creates_action_basis:synthetic_approved_reference_preflight"
+    ]
+  },
+  {
+    "file": "70-approved-actionable-result.json",
+    "expected_failures": [
+      "approved_sample_result_actionable:synthetic_approved_reference_preflight",
+      "approved_sample_result_bad:synthetic_approved_reference_preflight"
+    ]
+  },
+  {
+    "file": "71-deny-allows-execution.json",
+    "expected_failures": [
+      "denied_sample_executes:synthetic_denied_reference_preflight"
+    ]
+  },
+  {
+    "file": "72-deny-wrong-result.json",
+    "expected_failures": [
+      "denied_sample_result_bad:synthetic_denied_reference_preflight"
+    ]
+  },
+  {
+    "file": "73-revise-allows-execution.json",
+    "expected_failures": [
+      "revise_sample_executes:synthetic_revision_reference_preflight"
+    ]
+  },
+  {
+    "file": "74-revise-wrong-result.json",
+    "expected_failures": [
+      "revise_sample_result_bad:synthetic_revision_reference_preflight"
+    ]
+  },
+  {
+    "file": "75-dirty-state-does-not-block.json",
+    "expected_failures": [
+      "dirty_sample_result_bad:synthetic_dirty_state_preflight_block"
+    ]
+  },
+  {
+    "file": "76-contract-allows-execution.json",
+    "expected_failures": [
+      "contract_allows_execution"
+    ]
+  },
+  {
+    "file": "77-contract-allows-vault-access.json",
+    "expected_failures": [
+      "contract_allows_formal_vault_access"
+    ]
+  },
+  {
+    "file": "78-contract-missing-separate-execution.json",
+    "expected_failures": [
+      "contract_missing_separate_execution_slice"
+    ]
+  },
+  {
+    "file": "79-contract-missing-check.json",
+    "expected_failures": [
+      "contract_missing_required_preflight_check:formal_vault_not_accessed"
+    ]
+  },
+  {
+    "file": "80-receipt-claims-execution.json",
+    "expected_failures": [
+      "non_execution_receipt_claims_execution"
+    ]
+  },
+  {
+    "file": "81-receipt-formal-vault-accessed.json",
+    "expected_failures": [
+      "non_execution_receipt_formal_vault_accessed"
+    ]
+  },
+  {
+    "file": "82-receipt-hash-collected.json",
+    "expected_failures": [
+      "non_execution_receipt_hash_before_collected"
+    ]
+  },
+  {
+    "file": "83-authority-confusing-text.json",
+    "expected_failures": [
+      "authority_confusing_text"
+    ]
+  },
+  {
+    "file": "84-too-few-failure-cases.json",
+    "expected_failures": [
+      "minimum_failure_cases_too_low"
+    ]
+  },
+  {
+    "file": "85-inspector-execute-button.json",
+    "expected_failures": [
+      "inspector_buttons_not_allowlisted",
+      "inspector_control_not_allowed:button:execute"
+    ]
+  },
+  {
+    "file": "86-missing-stop-condition-execution.json",
+    "expected_failures": [
+      "missing_stop_condition:execution requested"
+    ]
+  }
+]

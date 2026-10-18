@@ -1,5 +1,6 @@
 ---
 type: source
+record_kind: source_card
 status: source-captured
 title: "ArthurYangX/nano-NotebookLM"
 source_url: https://github.com/ArthurYangX/nano-NotebookLM
@@ -21,12 +22,9 @@ topics:
 projects:
   - verified-vault
 evidence_level: primary
+source_integrity:
+  capture_confidence: 4
 source_status: source-captured
-source_quality: 4
-freshness: 5
-relevance: 5
-confidence: 4
-cross_source_count: 1
 related_patterns:
   - wiki/patterns/hybrid-vector-bm25-rrf-with-graph-neighborhood.md
   - wiki/patterns/generated-graph-human-edit-overlay.md
@@ -34,8 +32,24 @@ related_patterns:
 tags:
   - repo-source
   - architecture-reference
+knowledge_status: raw
+processing_tier: light
+source_id: https://github.com/ArthurYangX/nano-NotebookLM
+why_saved: see_body_or_legacy_record
+retrieval_policy:
+  policy_kind: source_identity_only
+  pack_allowed: drilldown_required
+  action_basis_allowed: false
+  warning_code: raw_is_provenance_only
+promotion_gate: none
+action_basis_allowed: false
+truth_mutation_allowed: false
+legacy_raw_metadata:
+  source_quality: 4
+  freshness: 5
+  relevance: 5
+  cross_source_count: 1
 ---
-
 # 来源记录：ArthurYangX/nano-NotebookLM
 
 ## 为什么收录

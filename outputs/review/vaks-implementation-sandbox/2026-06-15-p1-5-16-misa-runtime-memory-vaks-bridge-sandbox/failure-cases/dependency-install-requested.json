@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "dependency-install-requested",
+  "expected_valid": false,
+  "expected_codes": ["MB_DEPENDENCY_INSTALL_FORBIDDEN"],
+  "patch": {"scope": {"agentmemory_install_requested": true}}
+}

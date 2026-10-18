@@ -1,0 +1,670 @@
+{
+  "record_kind": "vaks_product_experience_screening",
+  "slice_id": "2026-06-15-p2-19-product-experience-screening-sandbox",
+  "screening_version": "sandbox-v1",
+  "prototype_note": "Copied JSON product-experience screening backlog only; not production UI and not an Obsidian Base.",
+  "scope": {
+    "sandbox_only": true,
+    "product_build": false,
+    "allowed_write_paths": [
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-19-product-experience-screening-sandbox/"
+    ],
+    "write_targets": [
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-19-product-experience-screening-sandbox/prototype/product-experience-screening-backlog.json"
+    ],
+    "creates_real_ui": false,
+    "creates_real_base_files": false,
+    "starts_runtime_or_service": false,
+    "installs_dependencies": false,
+    "uses_mcp_write_tools": false,
+    "runs_hooks": false,
+    "runs_long_automation": false,
+    "syncs_obsidian": false,
+    "commits": false,
+    "pushes": false,
+    "promotes_mainline": false
+  },
+  "forbidden_import_controls": {
+    "admin_dashboard_before_validators": false,
+    "star_graph_as_confidence": false,
+    "heatmap_as_confidence": false,
+    "ai_summary_as_evidence_support": false,
+    "sqlite_as_reviewed_truth_source": false,
+    "subscription_as_knowledge_authority": false,
+    "consumer_onboarding_hides_boundaries": false
+  },
+  "screening_output_fields": [
+    "keep / park / reject",
+    "required validators",
+    "target layer",
+    "boundary warning",
+    "source inspiration",
+    "minimal wireflow"
+  ],
+  "p2_20_handoff": {
+    "workflow_goal": "Build a sandbox-only product workflow prototype around capture, status, candidate review, context export, receipts, layer badges, and dirty-state guardrails.",
+    "selected_candidate_ids": [
+      "P2-PX-01",
+      "P2-PX-09",
+      "P2-PX-11",
+      "P2-PX-14",
+      "P2-PX-02",
+      "P2-PX-03",
+      "P2-PX-05",
+      "P2-PX-06",
+      "P2-PX-13",
+      "P2-PX-15"
+    ],
+    "parked_candidate_ids": [
+      "P2-PX-04",
+      "P2-PX-07",
+      "P2-PX-08",
+      "P2-PX-10",
+      "P2-PX-12"
+    ],
+    "rejected_candidate_ids": [],
+    "handoff_boundary": "P2-20 may prototype a workflow only in sandbox; it cannot create production UI, real Bases, reviewed writes, or action authority."
+  },
+  "candidates": [
+    {
+      "id": "P2-PX-01",
+      "rank": 1,
+      "candidate": "Capability Circle / Boundary Page",
+      "decision": "keep",
+      "source_inspiration": [
+        "Reminds capability-circle expression",
+        "VAKS use-surface reality check"
+      ],
+      "target_layer": "product explanation",
+      "required_validators": [
+        "product-boundary-copy-check",
+        "non-authority-copy-check"
+      ],
+      "boundary_warning": "Explains existing rules only; cannot define schema, approve review, or promote knowledge.",
+      "minimal_wireflow": [
+        "Open capability page",
+        "Choose raw, candidate, review, context, or action lane",
+        "Show what the lane can and cannot do"
+      ],
+      "rationale": "Keep because ordinary users and future agents need a short boundary entry before touching long manuals.",
+      "p2_20_role": "first workflow boundary gate",
+      "exposes_boundaries": true,
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_activity_as_confidence": false,
+        "treats_hash_as_evidence_support": false,
+        "treats_badge_as_promotion": false,
+        "treats_navigation_as_authority": false,
+        "runs_mobile_full_review": false,
+        "exposes_reviewed_write_tool": false
+      }
+    },
+    {
+      "id": "P2-PX-09",
+      "rank": 2,
+      "candidate": "Product Onboarding",
+      "decision": "keep",
+      "source_inspiration": [
+        "Reminds onboarding sequence",
+        "TimeFriend workflow-first product explanation"
+      ],
+      "target_layer": "product education",
+      "required_validators": [
+        "boundary-disclosure-check",
+        "no-consumer-boundary-hiding-check"
+      ],
+      "boundary_warning": "Must expose candidate, review, evidence, context-pack, action, and feedback boundaries instead of hiding them.",
+      "minimal_wireflow": [
+        "Start onboarding",
+        "Explain capture to candidate",
+        "Explain review to context pack",
+        "Explain action and feedback boundaries"
+      ],
+      "rationale": "Keep because onboarding converts strict architecture into a usable product surface without changing the architecture.",
+      "p2_20_role": "guided first-run explanation",
+      "exposes_boundaries": true,
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_activity_as_confidence": false,
+        "treats_hash_as_evidence_support": false,
+        "treats_badge_as_promotion": false,
+        "treats_navigation_as_authority": false,
+        "runs_mobile_full_review": false,
+        "exposes_reviewed_write_tool": false
+      }
+    },
+    {
+      "id": "P2-PX-11",
+      "rank": 3,
+      "candidate": "Home / Operator Status Surface",
+      "decision": "keep",
+      "source_inspiration": [
+        "P2-17 use-surface optimization pass",
+        "P2-18 operator cockpit"
+      ],
+      "target_layer": "workbench navigation",
+      "required_validators": [
+        "status-display-only-check",
+        "base-cockpit-display-only-check"
+      ],
+      "boundary_warning": "Shows status only; cannot approve, mutate truth, infer readiness, or replace validators.",
+      "minimal_wireflow": [
+        "Open home",
+        "See blocked, stale, missing anchor, hash mismatch, and action-not-ready states",
+        "Jump to the relevant sandbox artifact"
+      ],
+      "rationale": "Keep because P2 target requires a short status page before long manuals.",
+      "p2_20_role": "workflow home surface",
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_activity_as_confidence": false,
+        "treats_hash_as_evidence_support": false,
+        "treats_badge_as_promotion": false,
+        "treats_navigation_as_authority": false,
+        "runs_mobile_full_review": false,
+        "exposes_reviewed_write_tool": false
+      }
+    },
+    {
+      "id": "P2-PX-14",
+      "rank": 4,
+      "candidate": "Layer Badge System",
+      "decision": "keep",
+      "source_inspiration": [
+        "P2-17 layer badge check",
+        "Reminds simple product language"
+      ],
+      "target_layer": "product explanation",
+      "required_validators": [
+        "badge-display-only-check",
+        "badge-not-promotion-check"
+      ],
+      "boundary_warning": "Badge displays boundary state only; badge cannot promote, approve, or create evidence support.",
+      "minimal_wireflow": [
+        "Render raw/candidate/reviewed/action/feedback badge",
+        "Show tooltip with allowed use",
+        "Block badge-based promotion"
+      ],
+      "rationale": "Keep because badge language helps users know whether a thing is orientation, review input, or action material.",
+      "p2_20_role": "persistent boundary marker",
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_activity_as_confidence": false,
+        "treats_hash_as_evidence_support": false,
+        "treats_badge_as_promotion": false,
+        "treats_navigation_as_authority": false,
+        "runs_mobile_full_review": false,
+        "exposes_reviewed_write_tool": false
+      }
+    },
+    {
+      "id": "P2-PX-02",
+      "rank": 5,
+      "candidate": "Quick Capture Inbox",
+      "decision": "keep",
+      "source_inspiration": [
+        "Reminds fleeting capture",
+        "TimeFriend low-cost input"
+      ],
+      "target_layer": "raw/candidate intake",
+      "required_validators": [
+        "retrieval-receipt-validator",
+        "body-hash-validator",
+        "no-reviewed-write-check"
+      ],
+      "boundary_warning": "Can create raw/candidate input only; cannot write reviewed truth or reviewed relations.",
+      "minimal_wireflow": [
+        "Drop source, note, link, image, or voice transcript",
+        "Write raw/candidate receipt",
+        "Route to candidate or review queue"
+      ],
+      "rationale": "Keep because low-friction intake is needed, but it must stay quarantined as raw or candidate.",
+      "p2_20_role": "capture entry",
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_activity_as_confidence": false,
+        "treats_hash_as_evidence_support": false,
+        "treats_badge_as_promotion": false,
+        "treats_navigation_as_authority": false,
+        "runs_mobile_full_review": false,
+        "exposes_reviewed_write_tool": false
+      }
+    },
+    {
+      "id": "P2-PX-03",
+      "rank": 6,
+      "candidate": "Candidate Inbox / Review Funnel",
+      "decision": "keep",
+      "source_inspiration": [
+        "Reminds card processing",
+        "VAKS review queue"
+      ],
+      "target_layer": "candidate/review queue",
+      "required_validators": [
+        "review-queue-state-check",
+        "support-boundary-validator",
+        "no-approval-check"
+      ],
+      "boundary_warning": "Shows review queue state only; cannot imply approval or promotion.",
+      "minimal_wireflow": [
+        "Open candidate inbox",
+        "Filter by missing evidence, risk, hash drift, or review_due",
+        "Create review input packet"
+      ],
+      "rationale": "Keep because the product needs a visible bridge from capture to review without collapsing the layers.",
+      "p2_20_role": "candidate-to-review funnel",
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_activity_as_confidence": false,
+        "treats_hash_as_evidence_support": false,
+        "treats_badge_as_promotion": false,
+        "treats_navigation_as_authority": false,
+        "runs_mobile_full_review": false,
+        "exposes_reviewed_write_tool": false
+      }
+    },
+    {
+      "id": "P2-PX-05",
+      "rank": 7,
+      "candidate": "Review Due Calendar",
+      "decision": "keep",
+      "source_inspiration": [
+        "TimeFriend calendar and review loop",
+        "VAKS review_due pressure"
+      ],
+      "target_layer": "review pressure",
+      "required_validators": [
+        "feedback-validator",
+        "review-due-not-truth-mutation-check"
+      ],
+      "boundary_warning": "Due state creates review pressure only; it does not mutate truth confidence.",
+      "minimal_wireflow": [
+        "Open review due calendar",
+        "Inspect due claim, decision, context pack, or candidate",
+        "Route to review queue"
+      ],
+      "rationale": "Keep because stale and contested material needs an ergonomic surface that does not change truth by itself.",
+      "p2_20_role": "review pressure surface",
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_activity_as_confidence": false,
+        "treats_hash_as_evidence_support": false,
+        "treats_badge_as_promotion": false,
+        "treats_navigation_as_authority": false,
+        "runs_mobile_full_review": false,
+        "exposes_reviewed_write_tool": false
+      }
+    },
+    {
+      "id": "P2-PX-06",
+      "rank": 8,
+      "candidate": "Context Pack / Evidence Packet Export",
+      "decision": "keep",
+      "source_inspiration": [
+        "TimeFriend export package",
+        "VAKS evidence/context envelope"
+      ],
+      "target_layer": "context/action prep",
+      "required_validators": [
+        "support-boundary-validator",
+        "action-readiness-validator",
+        "operation-receipt-validator"
+      ],
+      "boundary_warning": "Export is not action-ready by itself; action readiness requires the separate gate.",
+      "minimal_wireflow": [
+        "Choose candidate or decision",
+        "Assemble source anchors, support, gaps, scope, and risks",
+        "Export sandbox packet with non-claims"
+      ],
+      "rationale": "Keep because VAKS product value depends on portable, auditable context rather than pretty summaries.",
+      "p2_20_role": "context/evidence export step",
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_activity_as_confidence": false,
+        "treats_hash_as_evidence_support": false,
+        "treats_badge_as_promotion": false,
+        "treats_navigation_as_authority": false,
+        "runs_mobile_full_review": false,
+        "exposes_reviewed_write_tool": false
+      }
+    },
+    {
+      "id": "P2-PX-13",
+      "rank": 9,
+      "candidate": "One-Click Sync + Hash Receipt View",
+      "decision": "keep",
+      "source_inspiration": [
+        "P2-17 hash and sync visibility",
+        "Reminds data-control messaging"
+      ],
+      "target_layer": "source hygiene / operations",
+      "required_validators": [
+        "operation-receipt-validator",
+        "hash-not-support-check"
+      ],
+      "boundary_warning": "Hash match is process integrity only; it is not evidence support or truth confidence.",
+      "minimal_wireflow": [
+        "Open receipt view",
+        "Show source hash, body hash, operation receipt, and mismatch state",
+        "Block unsafe sync/action if dirty"
+      ],
+      "rationale": "Keep because the product needs visible process integrity without confusing integrity with support.",
+      "p2_20_role": "receipt and hash status step",
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_activity_as_confidence": false,
+        "treats_hash_as_evidence_support": false,
+        "treats_badge_as_promotion": false,
+        "treats_navigation_as_authority": false,
+        "runs_mobile_full_review": false,
+        "exposes_reviewed_write_tool": false
+      }
+    },
+    {
+      "id": "P2-PX-15",
+      "rank": 10,
+      "candidate": "Worktree / Dirty-State Guardrail",
+      "decision": "keep",
+      "source_inspiration": [
+        "P2-17 dirty-state guardrail",
+        "operator cockpit risk state"
+      ],
+      "target_layer": "operator safety",
+      "required_validators": [
+        "dirty-state-guardrail",
+        "dirty-not-knowledge-check"
+      ],
+      "boundary_warning": "Dirty state may block risky actions; it does not judge knowledge or truth.",
+      "minimal_wireflow": [
+        "Detect target and outside dirty state",
+        "Show whether risky action is blocked",
+        "Require explicit human step for protected actions"
+      ],
+      "rationale": "Keep because existing dirty tree reality needs productized safety around action, sync, and promotion paths.",
+      "p2_20_role": "safety gate around workflow completion",
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_activity_as_confidence": false,
+        "treats_hash_as_evidence_support": false,
+        "treats_badge_as_promotion": false,
+        "treats_navigation_as_authority": false,
+        "runs_mobile_full_review": false,
+        "exposes_reviewed_write_tool": false
+      }
+    },
+    {
+      "id": "P2-PX-04",
+      "rank": 11,
+      "candidate": "Activation Timeline / Activity Calendar",
+      "decision": "park",
+      "source_inspiration": [
+        "TimeFriend timeline and heatmap",
+        "VAKS activation tier"
+      ],
+      "target_layer": "activation/workbench",
+      "required_validators": [
+        "activity-not-confidence-check",
+        "rank-not-trust-check"
+      ],
+      "boundary_warning": "Activity is activation only; it cannot raise confidence, evidence support, or action readiness.",
+      "minimal_wireflow": [
+        "List recent source/candidate/review/context/feedback events",
+        "Click through to files",
+        "Display activation-only warning"
+      ],
+      "rationale": "Park because it is valuable but needs a richer event model before becoming a workflow core.",
+      "p2_20_role": "",
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_activity_as_confidence": false,
+        "treats_hash_as_evidence_support": false,
+        "treats_badge_as_promotion": false,
+        "treats_navigation_as_authority": false,
+        "runs_mobile_full_review": false,
+        "exposes_reviewed_write_tool": false
+      }
+    },
+    {
+      "id": "P2-PX-12",
+      "rank": 12,
+      "candidate": "Total Research Map / MOC",
+      "decision": "park",
+      "source_inspiration": [
+        "VAKS research navigation",
+        "graph and MOC product references"
+      ],
+      "target_layer": "research navigation",
+      "required_validators": [
+        "navigation-not-authority-check",
+        "relation-boundary-check"
+      ],
+      "boundary_warning": "Navigation helps orientation only; it cannot create reviewed relations or authority.",
+      "minimal_wireflow": [
+        "Open research map",
+        "Filter by source, candidate, reviewed, and action surfaces",
+        "Jump to anchored artifacts"
+      ],
+      "rationale": "Park because a map is useful after the core workflow is clear, but risky if it visually implies authority.",
+      "p2_20_role": "",
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_activity_as_confidence": false,
+        "treats_hash_as_evidence_support": false,
+        "treats_badge_as_promotion": false,
+        "treats_navigation_as_authority": false,
+        "runs_mobile_full_review": false,
+        "exposes_reviewed_write_tool": false
+      }
+    },
+    {
+      "id": "P2-PX-10",
+      "rank": 13,
+      "candidate": "MISA Read-Only Context Entry",
+      "decision": "park",
+      "source_inspiration": [
+        "TimeFriend API/entry idea",
+        "P1.5 MISA runtime memory / VAKS bridge"
+      ],
+      "target_layer": "MISA bridge",
+      "required_validators": [
+        "misa-readonly-check",
+        "candidate-feedback-receipt-check",
+        "no-reviewed-write-check"
+      ],
+      "boundary_warning": "MISA reads/searches first; writes only candidate or feedback receipts, never reviewed truth.",
+      "minimal_wireflow": [
+        "MISA asks for context",
+        "VAKS returns read-only context envelope",
+        "MISA may append candidate or feedback receipt"
+      ],
+      "rationale": "Park because the bridge exists in sandbox, but product workflow should first prove the human/operator surface.",
+      "p2_20_role": "",
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_activity_as_confidence": false,
+        "treats_hash_as_evidence_support": false,
+        "treats_badge_as_promotion": false,
+        "treats_navigation_as_authority": false,
+        "runs_mobile_full_review": false,
+        "exposes_reviewed_write_tool": false
+      }
+    },
+    {
+      "id": "P2-PX-07",
+      "rank": 14,
+      "candidate": "Mobile Capture Shell",
+      "decision": "park",
+      "source_inspiration": [
+        "Reminds mobile capture",
+        "TimeFriend mobile/App Store capture"
+      ],
+      "target_layer": "capture only",
+      "required_validators": [
+        "raw-candidate-quarantine-check",
+        "mobile-no-full-review-check"
+      ],
+      "boundary_warning": "Phone path stops at raw/candidate capture; it cannot run full review or action approval.",
+      "minimal_wireflow": [
+        "Receive text, link, image, or voice",
+        "Save raw/candidate receipt",
+        "Show desktop/review handoff"
+      ],
+      "rationale": "Park because mobile capture is high value but requires runtime/product work outside this sandbox.",
+      "p2_20_role": "",
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_activity_as_confidence": false,
+        "treats_hash_as_evidence_support": false,
+        "treats_badge_as_promotion": false,
+        "treats_navigation_as_authority": false,
+        "runs_mobile_full_review": false,
+        "exposes_reviewed_write_tool": false
+      }
+    },
+    {
+      "id": "P2-PX-08",
+      "rank": 15,
+      "candidate": "Thin MCP / LLM Entry Surface",
+      "decision": "park",
+      "source_inspiration": [
+        "Reminds restrained MCP entry",
+        "VAKS agent memory quarantine"
+      ],
+      "target_layer": "read/candidate/feedback bridge",
+      "required_validators": [
+        "mcp-read-candidate-feedback-only-check",
+        "no-reviewed-write-tool-check"
+      ],
+      "boundary_warning": "LLM/MCP entry may read and write candidate or feedback receipts only; no reviewed-write tool.",
+      "minimal_wireflow": [
+        "LLM requests read-only context",
+        "Tool returns layer-marked results",
+        "Optional candidate/feedback receipt is appended"
+      ],
+      "rationale": "Park because MCP tooling is powerful but must wait for an explicit write-tool approval boundary.",
+      "p2_20_role": "",
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_activity_as_confidence": false,
+        "treats_hash_as_evidence_support": false,
+        "treats_badge_as_promotion": false,
+        "treats_navigation_as_authority": false,
+        "runs_mobile_full_review": false,
+        "exposes_reviewed_write_tool": false
+      }
+    }
+  ],
+  "non_claims": {
+    "screening_not_product_build": true,
+    "screening_not_reviewed_knowledge": true,
+    "screening_not_evidence_support": true,
+    "screening_not_action_basis": true,
+    "screening_not_reviewer_approval": true,
+    "screening_not_mainline_readiness": true
+  }
+}

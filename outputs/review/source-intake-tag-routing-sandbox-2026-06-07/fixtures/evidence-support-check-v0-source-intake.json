@@ -1,0 +1,75 @@
+{
+  "record_kind": "evidence_support_check_fixture_candidate",
+  "status": "candidate_only",
+  "topic_id": "source-intake-routing",
+  "query": "can this candidate be used as action basis",
+  "truth_boundary": "sandbox_fixture_only_not_truth",
+  "action_basis_allowed": false,
+  "answer_candidate": [
+    "No. The current source-intake-routing sandbox cannot be used as action basis.",
+    "Action mode prepares an anchor_queue only; evidence support check must run before any action-facing use.",
+    "Candidate and project overlay material are excluded from default action support.",
+    "Selector and snippet fields help navigation only; they are not evidence support."
+  ],
+  "claims": [
+    {
+      "claim_id": "c1",
+      "claim_text": "The current source-intake-routing sandbox cannot be used as action basis.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/README.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/19_SOURCE_INTAKE_ROUTING_WORKBENCH_HARDENING.md"
+      ],
+      "must_match_any": [
+        "not action basis",
+        "action_basis_allowed: false"
+      ],
+      "warrant": "The sandbox package and hardening note explicitly mark the work as not action basis."
+    },
+    {
+      "claim_id": "c2",
+      "claim_text": "Action mode prepares an anchor_queue only; evidence support check must run before action-facing use.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/checks/source-intake-routing-workbench-pack-query-action-generated.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/19_SOURCE_INTAKE_ROUTING_WORKBENCH_HARDENING.md"
+      ],
+      "must_match_any": [
+        "Builder only prepares an anchor_queue; evidence support check has not run",
+        "required_next_step: evidence support check",
+        "required_next_step: open raw/reviewed anchors and run evidence support check before action-facing use"
+      ],
+      "warrant": "The generated action pack and hardening note both state that anchor_queue is preparation only and still needs evidence support checking."
+    },
+    {
+      "claim_id": "c3",
+      "claim_text": "Candidate and project overlay material are excluded from default action support.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/checks/source-intake-routing-workbench-hardening-v0-1-test.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/19_SOURCE_INTAKE_ROUTING_WORKBENCH_HARDENING.md"
+      ],
+      "must_match_any": [
+        "items_candidate=false",
+        "Candidate / overlay / audit output is excluded from action support",
+        "Candidate and overlay material are not in default action items"
+      ],
+      "warrant": "The hardening test and design note both record the exclusion of candidate/overlay material from action support."
+    },
+    {
+      "claim_id": "c4",
+      "claim_text": "Selector and snippet fields help navigation only; they are not evidence support.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/checks/source-intake-routing-workbench-hardening-v0-1-test.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/19_SOURCE_INTAKE_ROUTING_WORKBENCH_HARDENING.md"
+      ],
+      "must_match_any": [
+        "selector/snippet is not evidence support",
+        "snippet_status: navigation_snippet_not_evidence",
+        "A snippet is not evidence support"
+      ],
+      "warrant": "The selector/snippet boundary is explicitly recorded as navigation-only."
+    }
+  ]
+}

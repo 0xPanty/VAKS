@@ -1,0 +1,10 @@
+{
+  "case_id": "mainline-and-truth-boundaries-false",
+  "mainline_ready": false,
+  "reviewed_knowledge_ready": false,
+  "evidence_support_ready": false,
+  "action_basis_ready": false,
+  "commit_push_sync_ready": false,
+  "goal_complete_now": false,
+  "passed": true
+}

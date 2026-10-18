@@ -1,0 +1,78 @@
+[
+  {
+    "failure_id": "transcript_claims_execution",
+    "mutation": {
+      "transcript_append": "我会开始执行。"
+    },
+    "must_fail_reason": "positive execution language must be rejected"
+  },
+  {
+    "failure_id": "transcript_claims_merge",
+    "mutation": {
+      "transcript_append": "可以合并主线。"
+    },
+    "must_fail_reason": "merge authorization wording must be rejected"
+  },
+  {
+    "failure_id": "missing_must_not_section",
+    "mutation": {
+      "remove_top_level_must_not": true
+    },
+    "must_fail_reason": "top-level must_not is required"
+  },
+  {
+    "failure_id": "scenario_missing_must_not",
+    "mutation": {
+      "scenario_id": "option_b",
+      "remove_scenario_must_not": "commit"
+    },
+    "must_fail_reason": "scenario must_not boundary must be complete"
+  },
+  {
+    "failure_id": "scenario_execution_true",
+    "mutation": {
+      "scenario_id": "option_c",
+      "set_scenario_automatic_execution": true
+    },
+    "must_fail_reason": "scenario automatic_execution must remain false"
+  },
+  {
+    "failure_id": "scenario_ready_to_execute_true",
+    "mutation": {
+      "scenario_id": "execution_words",
+      "set_scenario_ready_to_execute": true
+    },
+    "must_fail_reason": "scenario ready_to_execute must remain false"
+  },
+  {
+    "failure_id": "scenario_case_mismatch",
+    "mutation": {
+      "scenario_id": "multiple",
+      "set_case_id": "explicit_B"
+    },
+    "must_fail_reason": "scenario classifier case must match expected fixture"
+  },
+  {
+    "failure_id": "scenario_reply_mismatch",
+    "mutation": {
+      "scenario_id": "ambiguous",
+      "set_reply_id": "ask_readonly_planning_scope"
+    },
+    "must_fail_reason": "scenario reply id must match expected fixture"
+  },
+  {
+    "failure_id": "unknown_fallback_missing",
+    "mutation": {
+      "scenario_id": "unknown_fallback",
+      "set_reply_id": "ask_one_clarification"
+    },
+    "must_fail_reason": "unknown fallback scenario must keep stop_for_unknown_classifier_case"
+  },
+  {
+    "failure_id": "upstream_not_checked",
+    "mutation": {
+      "upstream_gate_required": false
+    },
+    "must_fail_reason": "final gate must require upstream p2-55 final gate"
+  }
+]

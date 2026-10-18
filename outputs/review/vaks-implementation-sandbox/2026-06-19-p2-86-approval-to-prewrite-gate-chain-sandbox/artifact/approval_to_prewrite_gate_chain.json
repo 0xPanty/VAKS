@@ -1,0 +1,239 @@
+{
+  "record_kind": "sandbox_approval_to_prewrite_gate_chain",
+  "slice_id": "2026-06-19-p2-86-approval-to-prewrite-gate-chain-sandbox",
+  "created_at": "2026-06-18T23:06:45.351334+00:00",
+  "source_inputs": {
+    "p2_85_classifier": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-85-exact-approval-classifier-hardening-sandbox/artifact/exact_approval_classifier_hardening.json",
+    "p2_80_transaction_package": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-80-old-file-status-normalization-transaction-package-sandbox/artifact/old_file_status_normalization_transaction_package.json",
+    "p2_82_copy_rehearsal": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-82-old-file-status-normalization-sandbox-copy-executor-rehearsal-sandbox/artifact/sandbox_copy_executor_rehearsal.json",
+    "p2_83_cockpit": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-83-post-rehearsal-goal-state-cockpit-sandbox/artifact/post_rehearsal_goal_state_cockpit.json"
+  },
+  "source_digest": {
+    "p2_85_classifier": "a60e83b40f52e7ad1f1465a0fef8c36cbf11454fa1f546bdc5aa82c34be444d9",
+    "p2_80_transaction_package": "2b6b1aad835ddf2ca708bde3d064d3bd677b74fef83e8bac69e685b4e74a9859",
+    "p2_82_copy_rehearsal": "067f8951ac4fdc5845b05c1dd5bd0db38c48c86e0f2b748a895f802e1f33a8c3",
+    "p2_83_cockpit": "b0b27f02f6fe471b4fd753e30952738ca6a576bb34c0265ae9a217f72ef795e7"
+  },
+  "summary": {
+    "target_count": 75,
+    "fresh_hash_match_count": 75,
+    "fresh_hash_mismatch_count": 0,
+    "fresh_missing_count": 0,
+    "p2_82_final_copy_byte_hash_restored_count": 75,
+    "p2_83_goal_complete_now": false,
+    "scenario_count": 8,
+    "positive_ready_count": 1,
+    "negative_blocked_count": 7,
+    "executor_write_allowed_now": false,
+    "old_slice_writes_applied": 0,
+    "user_approval_collected_by_this_slice": false
+  },
+  "preflight_summary": {
+    "target_count": 75,
+    "exists_count": 75,
+    "hash_match_count": 75,
+    "hash_mismatch_count": 0,
+    "missing_count": 0
+  },
+  "gate_results": [
+    {
+      "scenario_id": "POS-01-exact-clean-prewrite-ready",
+      "description": "Exact approval fixture, clean hash preflight, rehearsal present, boundary passed.",
+      "approval": {
+        "matched_exact_phrase": true,
+        "approval_class": "exact_p2_75_approval",
+        "fixture_match_is_user_approval": false
+      },
+      "hash_match_count": 75,
+      "hash_target_count": 75,
+      "hash_clean": true,
+      "rehearsal_ok": true,
+      "boundary_ok": true,
+      "blockers": [],
+      "gate_state": "ready_for_prewrite_confirmation",
+      "ready_for_prewrite_confirmation": true,
+      "executor_write_allowed_now": false,
+      "old_slice_writes_applied": 0,
+      "requires_stop_before_write": true,
+      "fixture_match_is_user_approval": false
+    },
+    {
+      "scenario_id": "NEG-01-generic-continuation",
+      "description": "Generic continuation is not approval.",
+      "approval": {
+        "matched_exact_phrase": false,
+        "approval_class": "not_approval",
+        "fixture_match_is_user_approval": false
+      },
+      "hash_match_count": 75,
+      "hash_target_count": 75,
+      "hash_clean": true,
+      "rehearsal_ok": true,
+      "boundary_ok": true,
+      "blockers": [
+        "blocked_no_exact_approval"
+      ],
+      "gate_state": "blocked_no_exact_approval",
+      "ready_for_prewrite_confirmation": false,
+      "executor_write_allowed_now": false,
+      "old_slice_writes_applied": 0,
+      "requires_stop_before_write": true,
+      "fixture_match_is_user_approval": false
+    },
+    {
+      "scenario_id": "NEG-02-product-acceptance-as-approval",
+      "description": "Product Acceptance cannot substitute for user approval.",
+      "approval": {
+        "matched_exact_phrase": false,
+        "approval_class": "not_approval",
+        "fixture_match_is_user_approval": false
+      },
+      "hash_match_count": 75,
+      "hash_target_count": 75,
+      "hash_clean": true,
+      "rehearsal_ok": true,
+      "boundary_ok": true,
+      "blockers": [
+        "blocked_no_exact_approval",
+        "blocked_product_acceptance_is_not_user_approval"
+      ],
+      "gate_state": "blocked_no_exact_approval",
+      "ready_for_prewrite_confirmation": false,
+      "executor_write_allowed_now": false,
+      "old_slice_writes_applied": 0,
+      "requires_stop_before_write": true,
+      "fixture_match_is_user_approval": false
+    },
+    {
+      "scenario_id": "NEG-03-hash-drift",
+      "description": "Exact phrase cannot override fresh hash drift.",
+      "approval": {
+        "matched_exact_phrase": true,
+        "approval_class": "exact_p2_75_approval",
+        "fixture_match_is_user_approval": false
+      },
+      "hash_match_count": 74,
+      "hash_target_count": 75,
+      "hash_clean": false,
+      "rehearsal_ok": true,
+      "boundary_ok": true,
+      "blockers": [
+        "blocked_prewrite_hash_or_missing_target"
+      ],
+      "gate_state": "blocked_prewrite_hash_or_missing_target",
+      "ready_for_prewrite_confirmation": false,
+      "executor_write_allowed_now": false,
+      "old_slice_writes_applied": 0,
+      "requires_stop_before_write": true,
+      "fixture_match_is_user_approval": false
+    },
+    {
+      "scenario_id": "NEG-04-missing-rehearsal",
+      "description": "Exact phrase cannot skip p2-82 byte-safe rehearsal evidence.",
+      "approval": {
+        "matched_exact_phrase": true,
+        "approval_class": "exact_p2_75_approval",
+        "fixture_match_is_user_approval": false
+      },
+      "hash_match_count": 75,
+      "hash_target_count": 75,
+      "hash_clean": true,
+      "rehearsal_ok": false,
+      "boundary_ok": true,
+      "blockers": [
+        "blocked_missing_byte_safe_rehearsal"
+      ],
+      "gate_state": "blocked_missing_byte_safe_rehearsal",
+      "ready_for_prewrite_confirmation": false,
+      "executor_write_allowed_now": false,
+      "old_slice_writes_applied": 0,
+      "requires_stop_before_write": true,
+      "fixture_match_is_user_approval": false
+    },
+    {
+      "scenario_id": "NEG-05-boundary-not-passed",
+      "description": "Exact phrase cannot override failed boundary audit.",
+      "approval": {
+        "matched_exact_phrase": true,
+        "approval_class": "exact_p2_75_approval",
+        "fixture_match_is_user_approval": false
+      },
+      "hash_match_count": 75,
+      "hash_target_count": 75,
+      "hash_clean": true,
+      "rehearsal_ok": true,
+      "boundary_ok": false,
+      "blockers": [
+        "blocked_boundary_not_passed"
+      ],
+      "gate_state": "blocked_boundary_not_passed",
+      "ready_for_prewrite_confirmation": false,
+      "executor_write_allowed_now": false,
+      "old_slice_writes_applied": 0,
+      "requires_stop_before_write": true,
+      "fixture_match_is_user_approval": false
+    },
+    {
+      "scenario_id": "NEG-06-mainline-request",
+      "description": "Exact old-file normalization phrase does not grant mainline authority.",
+      "approval": {
+        "matched_exact_phrase": true,
+        "approval_class": "exact_p2_75_approval",
+        "fixture_match_is_user_approval": false
+      },
+      "hash_match_count": 75,
+      "hash_target_count": 75,
+      "hash_clean": true,
+      "rehearsal_ok": true,
+      "boundary_ok": true,
+      "blockers": [
+        "blocked_mainline_authority_request"
+      ],
+      "gate_state": "blocked_mainline_authority_request",
+      "ready_for_prewrite_confirmation": false,
+      "executor_write_allowed_now": false,
+      "old_slice_writes_applied": 0,
+      "requires_stop_before_write": true,
+      "fixture_match_is_user_approval": false
+    },
+    {
+      "scenario_id": "NEG-07-immediate-write-request",
+      "description": "Even a clean chain reaches prewrite confirmation, not immediate old-file write.",
+      "approval": {
+        "matched_exact_phrase": true,
+        "approval_class": "exact_p2_75_approval",
+        "fixture_match_is_user_approval": false
+      },
+      "hash_match_count": 75,
+      "hash_target_count": 75,
+      "hash_clean": true,
+      "rehearsal_ok": true,
+      "boundary_ok": true,
+      "blockers": [
+        "blocked_immediate_write_request"
+      ],
+      "gate_state": "blocked_immediate_write_request",
+      "ready_for_prewrite_confirmation": false,
+      "executor_write_allowed_now": false,
+      "old_slice_writes_applied": 0,
+      "requires_stop_before_write": true,
+      "fixture_match_is_user_approval": false
+    }
+  ],
+  "authority_flags": {
+    "gate_chain_only": true,
+    "fixture_exact_phrase_is_user_approval": false,
+    "approval_collected": false,
+    "ready_for_prewrite_is_write_authority": false,
+    "executor_write_allowed": false,
+    "old_slice_write_allowed": false,
+    "old_slice_writes_applied": 0,
+    "normalization_applied": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "goal_complete_now": false
+  }
+}

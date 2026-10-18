@@ -1,0 +1,8 @@
+{
+  "case_id": "no-mainline-or-truth-authority",
+  "mainline_ready": false,
+  "reviewed_knowledge_ready": false,
+  "evidence_support_ready": false,
+  "action_basis_ready": false,
+  "passed": true
+}

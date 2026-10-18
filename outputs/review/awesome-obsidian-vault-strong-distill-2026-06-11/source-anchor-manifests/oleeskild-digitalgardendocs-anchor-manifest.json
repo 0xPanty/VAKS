@@ -1,0 +1,49 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "oleeskild/digitalgardendocs",
+  "source_url": "https://github.com/oleeskild/digitalgardendocs",
+  "checked_commit": "9af25f78cc32214fe7cb828876f7a94faaf8860b",
+  "checked_at": "2026-06-11",
+  "inspection_method": "shallow git clone plus README, package scripts, Eleventy helper/component tree, note-settings docs, build-pipeline docs, access-token docs, and Obsidian Bases docs",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "digital-garden-template-and-css-surface",
+      "why": "Identifies the template for the Digital Garden Obsidian Plugin and documents extensive CSS customization variables."
+    },
+    {
+      "path": "package.json",
+      "kind": "build-runtime",
+      "why": "Defines Eleventy, Sass, theme-fetch, build, start, and test scripts with Node runtime expectations."
+    },
+    {
+      "path": "src/site/notes/Getting Started/03 Note settings.md",
+      "kind": "publication-settings",
+      "why": "Documents global and note-specific publication settings such as search, graph, backlinks, TOC, filetree, and frontmatter overrides."
+    },
+    {
+      "path": "src/site/notes/Advanced/Configure build pipeline.md",
+      "kind": "extension-hooks",
+      "why": "Documents user setup hooks for Eleventy and markdown-it customization."
+    },
+    {
+      "path": "src/site/notes/Advanced/Fine grained access token.md",
+      "kind": "credential-scope-guidance",
+      "why": "Recommends repo-scoped access tokens rather than broad account tokens."
+    },
+    {
+      "path": "src/site/notes/Advanced/Obsidian Bases.md",
+      "kind": "bases-publish-boundary",
+      "why": "Documents that Bases queries run at build time against published notes only and may differ from the local vault."
+    }
+  ],
+  "known_limits": [
+    "Publishing settings are projection controls, not review approval.",
+    "Graph/search/backlinks/Bases output are public-site views, not reviewed relations or evidence support.",
+    "Access tokens and build hooks require security review before any VAKS use."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

@@ -1,0 +1,15 @@
+{
+  "record_kind": "derived_cache_manifest_fixture",
+  "slice_id": "2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox",
+  "cache_path": "symbolic:.mdvs/copied-subset",
+  "cache_path_kind": "symbolic_derived_cache",
+  "status": "derived_cache",
+  "rebuildable": true,
+  "committed": false,
+  "source_state_hash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+  "indexer_id": "mdvs-reference-fixture",
+  "indexer_version": "0.8.0-reference",
+  "model_id": "local-fixture",
+  "rebuild_boundary": "copied-subset-only",
+  "truth_boundary": "cache-manifest-fixture-not-truth-database"
+}

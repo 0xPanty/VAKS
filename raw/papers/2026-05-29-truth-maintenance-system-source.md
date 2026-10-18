@@ -1,5 +1,6 @@
 ---
 type: source
+record_kind: source_card
 status: source-captured
 title: "A Truth Maintenance System"
 source_id: 2026-05-29-truth-maintenance-system-source
@@ -14,8 +15,6 @@ captured_by: Codex
 version_or_commit: "Artificial Intelligence 12(3), 1979"
 source_status: active
 raw_location: "external"
-processing_mode: immediate
-processing_level: light
 review_priority: normal
 review_owner: Codex
 formalization_status: candidate-generated
@@ -34,6 +33,17 @@ tags:
   - source
   - paper
   - architecture-reference
+knowledge_status: raw
+processing_tier: light
+why_saved: see_body_or_legacy_record
+retrieval_policy:
+  policy_kind: source_identity_only
+  pack_allowed: drilldown_required
+  action_basis_allowed: false
+  warning_code: raw_is_provenance_only
+promotion_gate: none
+action_basis_allowed: false
+truth_mutation_allowed: false
 ---
 
 # A Truth Maintenance System

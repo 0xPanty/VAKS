@@ -1,0 +1,44 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "dotnet/dotnet-api-docs",
+  "source_url": "https://github.com/dotnet/dotnet-api-docs",
+  "checked_commit": "7340c9a6293ebbb9a1200a8089ca4dd862cf1ce2",
+  "checked_at": "2026-06-11",
+  "inspection_method": "partial clone with object inspection; inspected README, docfx config, open publishing config, XML API record, and contributing guide",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "repo-identity",
+      "why": "Defines repo as .NET API reference docs and distinguishes conceptual docs/source-code-comment ownership."
+    },
+    {
+      "path": "docfx.json",
+      "kind": "metadata-build-config",
+      "why": "Contains build content rules, global metadata, file metadata, generated-reference flags, contributor openness by path, feedback system configuration."
+    },
+    {
+      "path": ".openpublishing.publish.config.json",
+      "kind": "publishing-pipeline",
+      "why": "Defines ECMA XML to YAML conversion, build targets, dependent packages, preview pull request, branch mapping, and publishing settings."
+    },
+    {
+      "path": "xml/Microsoft.Extensions.AI.Evaluation.Quality/GroundednessEvaluator.xml",
+      "kind": "structured-reference-record",
+      "why": "Example XML API record with signatures, assembly versions, docs, remarks, evaluator score caveat, and model-performance warning."
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "kind": "contribution-boundary",
+      "why": "Points contributors to broader .NET docs contribution process."
+    }
+  ],
+  "known_limits": [
+    "Sparse checkout was imperfect; Git object inspection was used for key anchors.",
+    "This is a generated/reference documentation pipeline, not a Markdown vault truth model.",
+    "AI evaluator documentation is source material only; its scores are not VAKS truth confidence."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

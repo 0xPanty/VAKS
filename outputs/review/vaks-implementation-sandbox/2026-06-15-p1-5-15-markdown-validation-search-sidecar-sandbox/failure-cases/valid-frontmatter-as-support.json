@@ -1,0 +1,1 @@
+{"extends":"fixtures/valid-frontmatter-validation-check.json","scenario_id":"valid-frontmatter-as-support","expected_valid":false,"expected_codes":["MS_FRONTMATTER_AS_SUPPORT"],"patch":{"validation":{"valid_frontmatter_claims_support":true}}}

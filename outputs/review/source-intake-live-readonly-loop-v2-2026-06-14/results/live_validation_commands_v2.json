@@ -1,0 +1,26 @@
+{
+  "status": "pass",
+  "checked_at": "2026-06-14T01:42:43+00:00",
+  "current_lint_errors": 0,
+  "commands": [
+    {
+      "command": "python tools/validate_source_intake_contract.py --scope current --out-dir outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/results --no-fail",
+      "returncode": 0,
+      "stdout": "{\"scope\": \"current\", \"files_scanned\": 239, \"files_validated\": 185, \"warnings\": 122, \"errors\": 0}",
+      "stderr": ""
+    },
+    {
+      "command": "python tools/validate_source_intake_contract.py --scope contract --out-dir outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/results --no-fail",
+      "returncode": 0,
+      "stdout": "{\"scope\": \"contract\", \"files_scanned\": 10, \"files_validated\": 10, \"warnings\": 0, \"errors\": 0}",
+      "stderr": ""
+    },
+    {
+      "command": "python tools/validate_source_intake_failure_matrix.py --out-dir outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/results",
+      "returncode": 0,
+      "stdout": "{\"case_count\": 35, \"blocked_count\": 35, \"status\": \"pass\"}",
+      "stderr": ""
+    }
+  ],
+  "truth_boundary": "Current lint may surface pre-existing workspace issues; that does not make this v2 live package a P0 pass."
+}

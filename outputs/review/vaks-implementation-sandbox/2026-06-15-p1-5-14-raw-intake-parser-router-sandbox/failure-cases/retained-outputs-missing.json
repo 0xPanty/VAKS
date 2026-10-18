@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "retained-outputs-missing",
+  "expected_valid": false,
+  "expected_codes": ["RP_RETAINED_OUTPUTS_MISSING"],
+  "patch": {"outputs": {"metadata_path": "", "retained_outputs": []}}
+}

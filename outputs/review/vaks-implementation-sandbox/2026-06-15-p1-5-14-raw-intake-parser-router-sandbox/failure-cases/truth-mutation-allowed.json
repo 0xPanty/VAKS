@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "truth-mutation-allowed",
+  "expected_valid": false,
+  "expected_codes": ["RP_TRUTH_MUTATION_FORBIDDEN"],
+  "patch": {"boundary": {"truth_mutation_allowed": true}}
+}

@@ -1,0 +1,28 @@
+{
+  "calibration_check_status": "pass",
+  "error_count": 0,
+  "errors": [],
+  "case_count": 24,
+  "evaluation_count": 24,
+  "summary": {
+    "artifact_kind": "phase_b_p1_promotion_gate_calibration_summary",
+    "truth_boundary": "synthetic_gate_calibration_not_promotion",
+    "calibration_status": "pass",
+    "case_count": 24,
+    "positive_case_count": 12,
+    "negative_case_count": 12,
+    "true_positive_count": 12,
+    "false_negative_count": 0,
+    "true_negative_count": 12,
+    "false_positive_count": 0,
+    "true_positive_rate": 1.0,
+    "false_positive_rate": 0.0,
+    "promotion_allowed_count": 12,
+    "action_basis_allowed_count": 0,
+    "automatic_promotion_allowed_count": 0,
+    "formal_writeback_allowed_count": 0,
+    "truth_confidence_change_allowed_count": 0,
+    "reviewed_relation_creation_allowed_count": 0,
+    "built_at": "2026-06-11T12:44:42+00:00"
+  }
+}

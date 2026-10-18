@@ -1,0 +1,92 @@
+[
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-2026-06-14/query_runs/LIVE-01-candidate-misuse-blocked-or-downgraded-query-run.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "query_run",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:37:48+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-2026-06-14/context_packs/LIVE-01-candidate-misuse-blocked-or-downgraded-context-pack.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "context_pack",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:37:48+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-2026-06-14/answer_use/LIVE-01-candidate-misuse-blocked-or-downgraded-answer-use.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "answer_use",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:37:48+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-2026-06-14/query_runs/LIVE-02-real-raw-anchor-readonly-allow-query-run.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "query_run",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:37:48+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-2026-06-14/context_packs/LIVE-02-real-raw-anchor-readonly-allow-context-pack.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "context_pack",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:37:48+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-2026-06-14/answer_use/LIVE-02-real-raw-anchor-readonly-allow-answer-use.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "answer_use",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:37:48+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-2026-06-14/query_runs/LIVE-03-mixed-pack-support-selection-allow-query-run.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "query_run",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:37:48+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-2026-06-14/context_packs/LIVE-03-mixed-pack-support-selection-allow-context-pack.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "context_pack",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:37:48+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-2026-06-14/answer_use/LIVE-03-mixed-pack-support-selection-allow-answer-use.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "answer_use",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:37:48+00:00",
+    "eligible_for_default_index": false
+  }
+]

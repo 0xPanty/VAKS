@@ -1,0 +1,164 @@
+---
+record_kind: sandbox_verification
+slice_id: 2026-06-15-p2-20-product-workflow-prototype
+status: local_verification_passed
+truth_boundary: sandbox_verification_only
+---
+
+# Verification
+
+## Baseline
+
+Start-of-slice baseline:
+
+```text
+git status --short count: 253
+target path existed before slice: False
+target path status before slice: empty / path missing
+```
+
+The dirty tree outside this target path is treated as pre-existing baseline per
+user instruction. Final audit only checks writes attributable to this slice.
+
+Previous-slice prerequisite:
+
+```text
+P2-19 Product Acceptance conclusion: PASS_PRODUCT_GRADE
+```
+
+## Commands
+
+Syntax check:
+
+```powershell
+python -B -c "import ast, pathlib; paths=['outputs/review/vaks-implementation-sandbox/2026-06-15-p2-20-product-workflow-prototype/artifact/product_workflow_validator.py','outputs/review/vaks-implementation-sandbox/2026-06-15-p2-20-product-workflow-prototype/artifact/verify_product_workflow.py']; [ast.parse(pathlib.Path(p).read_text(encoding='utf-8'), filename=p) for p in paths]; print('syntax_ok')"
+```
+
+Suite:
+
+```powershell
+python -B outputs/review/vaks-implementation-sandbox/2026-06-15-p2-20-product-workflow-prototype/artifact/verify_product_workflow.py
+```
+
+Observed summary:
+
+```text
+positive_fixtures: 2
+prototype_artifacts: 1
+failure_cases: 44
+passed: true
+failures: []
+target __pycache__: none
+```
+
+## Positive Artifacts
+
+- `fixtures/valid-product-workflow.json`
+- `prototype/product-workflow-prototype.json`
+
+Both contain the 11-step sandbox workflow.
+
+## Failure Cases
+
+The 44 failure cases are listed in `artifact/failure-case-oracle.md`.
+
+Failure expectations are not stored in failure-case files. Failure-case files
+only mutate the valid fixture; the verifier reads expected issue codes from the
+independent oracle.
+
+## Workflow Summary
+
+```text
+WF-01 capability_boundary
+WF-02 onboarding
+WF-03 home_status
+WF-04 layer_badge
+WF-05 quick_capture
+WF-06 candidate_funnel
+WF-07 review_due
+WF-08 context_export
+WF-09 hash_receipt
+WF-10 dirty_guardrail
+WF-11 action_boundary_exit
+```
+
+The workflow answers the five P2 questions: where to put material, what state it
+is in, whether it is orientation/review/action, what blocks promotion/action,
+and what receipt proves authority did not silently mutate.
+
+## Non-Claims
+
+The suite passing does not approve product build, real UI, real Bases, Obsidian
+sync, reviewed knowledge, evidence support, reviewed relations, reviewer
+approval, action basis, mainline readiness, commit, push, or promotion.
+
+## Reviewer Repair Notes
+
+First Reviewer pass returned `REVIEW_BLOCKED`; Builder repaired inside this
+sandbox path only:
+
+- validator now checks `source_screening_ref` points to the P2-19 screening
+  prototype and that the target exists;
+- workflow steps now include `workflow_key`;
+- validator now checks fixed WF-01..WF-11 mapping to the P2-19 kept candidates;
+- path boundary checks now use resolved paths, so `..` traversal is blocked and
+  valid absolute inside paths are allowed;
+- validator now catches copy-level authority claims even when boolean flags stay
+  false;
+- validator now type-guards malformed scope and non-object steps;
+- new failure cases cover wrong mapping, wrong source ref, path traversal,
+  absolute outside path, malformed scope, truthy malformed scope, non-object
+  step, and authority-claiming copy in purpose, boundary copy,
+  allowed-user-value, and output-contract positions.
+
+Current local verification after repair:
+
+```text
+positive_fixtures: 2
+prototype_artifacts: 1
+failure_cases: 44
+passed: true
+failures: []
+target __pycache__: none
+```
+
+Second Reviewer repair notes:
+
+- copy-level authority checks now remove known safe negated boundary phrases and
+  continue scanning the remaining text, instead of allowing an entire segment;
+- WF-11 positive boundary copy was reworded to avoid repeating a positive
+  authority phrase after a negated one;
+- new failure cases cover same-field negation followed by authority claims for
+  action-basis and evidence-support copy in both `boundary_copy` and
+  `output_contract`.
+
+## Independent Review Gates
+
+Reviewer:
+
+```text
+REVIEW_PASS
+agent_id: 019ec9e0-9649-78e3-8ad8-a3b4ab3840b7
+```
+
+Boundary Auditor:
+
+```text
+BOUNDARY_PASS
+agent_id: 019ec9e0-c140-7253-b3d7-6f97b8bbaf00
+```
+
+These gates did not equal Product Acceptance. GPT-5.5 extra-high Product
+Acceptance was completed separately before P2-20 closed as product-grade.
+
+Product Acceptance:
+
+```text
+PASS_PRODUCT_GRADE
+agent_id: 019ec9e4-f33a-7a73-9230-528da7d74d65
+model: GPT-5.5
+reasoning: xhigh
+```
+
+The Product Acceptance Agent found no required fixes. P2-20 is closed as a
+product-grade sandbox artifact only.

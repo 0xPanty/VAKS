@@ -1,0 +1,20 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "valid-stable-url-captured-section-support",
+  "expected_valid": true,
+  "expected_codes": [],
+  "anchors": [
+    {
+      "id": "captured-url-section-anchor",
+      "anchor_kind": "stable_url_with_capture_date",
+      "support_claimed": true,
+      "support_role": "direct_support",
+      "source_ref": "https://example.com/source",
+      "captured_date": "2026-06-15",
+      "fragment": "#section-3",
+      "hash": "sha256:d931f2e1d9000000000000000000000000000000000000000000000000000000",
+      "authority_bucket": "source_anchor",
+      "selected_by_semantic": true
+    }
+  ]
+}

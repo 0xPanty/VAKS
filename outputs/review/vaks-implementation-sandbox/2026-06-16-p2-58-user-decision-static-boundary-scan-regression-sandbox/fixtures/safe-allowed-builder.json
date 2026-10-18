@@ -1,0 +1,10 @@
+{
+  "fixture_id": "safe_allowed_builder",
+  "description": "The two explicitly allowed p2-57 builder writes remain permitted.",
+  "source": "READOUT.write_text(result[\"readout_markdown\"] + \"\\n\", encoding=\"utf-8\")\nPROTOTYPE.write_text(render_html(result), encoding=\"utf-8\")\n",
+  "allowed_write_lines": [
+    "READOUT.write_text(result[\"readout_markdown\"] + \"\\n\", encoding=\"utf-8\")",
+    "PROTOTYPE.write_text(render_html(result), encoding=\"utf-8\")"
+  ],
+  "expected_issues": []
+}

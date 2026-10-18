@@ -1,0 +1,38 @@
+{
+  "record_kind": "opus_result_intake_skeleton_failure_cases",
+  "slice_id": "2026-06-19-p2-96-opus-result-intake-skeleton-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "P2-96-FAIL-01-invalid-opus-token",
+      "must_fail_when": "A future result uses a conclusion token outside the three p2-94 allowed tokens."
+    },
+    {
+      "case_id": "P2-96-FAIL-02-approval-without-result",
+      "must_fail_when": "The skeleton claims Opus approval while no actual Opus response exists."
+    },
+    {
+      "case_id": "P2-96-FAIL-03-mainline-approval-confusion",
+      "must_fail_when": "A sandbox or Opus pass is treated as mainline approval."
+    },
+    {
+      "case_id": "P2-96-FAIL-04-truth-authority-confusion",
+      "must_fail_when": "A sandbox or Opus pass is treated as reviewed knowledge, evidence support, or action basis."
+    },
+    {
+      "case_id": "P2-96-FAIL-05-missing-reviewed-evidence-list",
+      "must_fail_when": "A future result lacks a list of evidence files Opus says it reviewed."
+    },
+    {
+      "case_id": "P2-96-FAIL-06-missing-boundary-verdict",
+      "must_fail_when": "A future result lacks a boundary verdict."
+    },
+    {
+      "case_id": "P2-96-FAIL-07-result-overwrites-placeholder",
+      "must_fail_when": "A real Opus result overwrites this placeholder instead of a later sandbox intake slice."
+    },
+    {
+      "case_id": "P2-96-FAIL-08-protected-path-write",
+      "must_fail_when": "This slice writes outside its own sandbox path."
+    }
+  ]
+}

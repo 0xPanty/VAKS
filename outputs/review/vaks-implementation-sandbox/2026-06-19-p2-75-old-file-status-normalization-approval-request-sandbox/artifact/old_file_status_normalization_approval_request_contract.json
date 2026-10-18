@@ -1,0 +1,63 @@
+{
+  "record_kind": "sandbox_old_file_status_normalization_approval_request_contract",
+  "slice_id": "2026-06-19-p2-75-old-file-status-normalization-approval-request-sandbox",
+  "contract_version": "1.0",
+  "expected_numbers": {
+    "original_items": 20,
+    "status_changes": 75,
+    "old_file_current_strict_final_gate": 0,
+    "sidecar_closeout_passed": 20,
+    "old_slice_writes_applied": 0
+  },
+  "exact_approval_phrase": "I explicitly approve p2-75 old-file status-only normalization: apply the 75 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only. Do not edit body content, artifacts, tools, templates, wiki truth layers, main architecture docs, README, Obsidian vault, commit, push, or sync.",
+  "authority_flags": {
+    "approval_request_only": true,
+    "user_approval_collected": false,
+    "old_slice_write_allowed_now": false,
+    "old_slice_writes_applied": 0,
+    "normalization_applied": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false
+  },
+  "future_if_approved_scope": {
+    "allowed_edit_kind": "status_only_frontmatter_normalization",
+    "allowed_field": "frontmatter.status",
+    "allowed_change_source": "p2-72 dry_run_manifest.status_changes",
+    "expected_change_count": 75,
+    "allowed_target_family": "outputs/review/vaks-implementation-sandbox/2026-06-15-p*-*/{verification.md,reviewer-report.md,boundary-audit.md,product-acceptance-report.md,next-step.md}",
+    "body_content_edits_allowed": false,
+    "artifact_edits_allowed": false,
+    "mainline_edits_allowed": false,
+    "templates_tools_edits_allowed": false,
+    "wiki_truth_layer_edits_allowed": false,
+    "obsidian_sync_allowed": false,
+    "commit_push_allowed": false
+  },
+  "non_approval_examples": [
+    "继续",
+    "全部落地",
+    "都做完",
+    "可以",
+    "go ahead",
+    "make it product grade"
+  ],
+  "required_fixture_ids": [
+    "exact-approval-phrase",
+    "generic-continuation-not-approval",
+    "future-scope-status-only",
+    "request-is-not-approval"
+  ],
+  "required_failure_case_ids": [
+    "AR-FAIL-01-generic-language-counts-as-approval",
+    "AR-FAIL-02-request-packet-allows-old-writes-now",
+    "AR-FAIL-03-change-count-not-75",
+    "AR-FAIL-04-body-edits-allowed",
+    "AR-FAIL-05-mainline-or-tools-allowed",
+    "AR-FAIL-06-obsidian-sync-allowed",
+    "AR-FAIL-07-approval-collected-true",
+    "AR-FAIL-08-action-basis-created"
+  ]
+}

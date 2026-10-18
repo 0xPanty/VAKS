@@ -1,0 +1,138 @@
+{
+  "refreshed_support_check_status": "pass",
+  "error_count": 0,
+  "errors": [],
+  "counts": {
+    "refreshed_support_checks": 90,
+    "source_set:main": 60,
+    "corpus:primary": 45,
+    "evidence_items": 389,
+    "already_current_items": 321,
+    "source_span_available": 389,
+    "current_source_hash_match": 389,
+    "refreshed_items": 68,
+    "corpus:full": 45,
+    "source_set:holdout": 30,
+    "blocked_no_source_anchor": 2
+  },
+  "summary": {
+    "artifact_kind": "vaks_phase_b_refreshed_support_check_summary",
+    "refreshed_support_check_count": 90,
+    "source_refresh_count": 90,
+    "evidence_item_count": 389,
+    "source_span_available_count": 389,
+    "current_source_hash_match_count": 389,
+    "source_refresh_needed_count": 0,
+    "refreshed_item_count": 68,
+    "already_current_item_count": 321,
+    "blocked_no_source_anchor_count": 2,
+    "support_passed_count": 0,
+    "support_counts_for_promotion_count": 0,
+    "action_basis_allowed_count": 0,
+    "evidence_packet_allowed_count": 0,
+    "evidence_sufficiency_passed_count": 0,
+    "output_path": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-yuxi-phase-b-pressure-test-2026-06-11\\results\\phase_b_refreshed_support_check_candidates.jsonl",
+    "built_at": "2026-06-10T21:43:08+00:00"
+  },
+  "previous_support_summary": {
+    "artifact_kind": "vaks_phase_b_evidence_support_check_summary",
+    "support_check_count": 90,
+    "source_envelope_count": 90,
+    "evidence_item_count": 389,
+    "source_span_available_count": 389,
+    "current_source_hash_match_count": 321,
+    "source_refresh_needed_count": 68,
+    "blocked_no_source_anchor_count": 2,
+    "support_passed_count": 0,
+    "support_counts_for_promotion_count": 0,
+    "action_basis_allowed_count": 0,
+    "evidence_packet_allowed_count": 0,
+    "evidence_sufficiency_passed_count": 0,
+    "output_path": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-yuxi-phase-b-pressure-test-2026-06-11\\results\\phase_b_evidence_support_check_candidates.jsonl",
+    "built_at": "2026-06-10T21:31:30+00:00"
+  },
+  "source_refresh_summary": {
+    "artifact_kind": "vaks_phase_b_source_refresh_summary",
+    "source_refresh_count": 90,
+    "source_support_check_count": 90,
+    "refresh_item_count": 389,
+    "source_span_available_count": 389,
+    "pre_refresh_mismatch_count": 68,
+    "post_refresh_mismatch_count": 0,
+    "refreshed_item_count": 68,
+    "already_current_item_count": 321,
+    "blocked_no_source_anchor_count": 2,
+    "support_passed_count": 0,
+    "support_counts_for_promotion_count": 0,
+    "action_basis_allowed_count": 0,
+    "evidence_packet_allowed_count": 0,
+    "evidence_sufficiency_passed_count": 0,
+    "output_path": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-yuxi-phase-b-pressure-test-2026-06-11\\results\\phase_b_source_refresh_candidates.jsonl",
+    "built_at": "2026-06-10T21:36:58+00:00"
+  },
+  "artifacts": [
+    {
+      "path": "results/phase_b_refreshed_support_check_candidates.jsonl",
+      "exists": true,
+      "bytes": 1015938
+    },
+    {
+      "path": "results/phase_b_refreshed_support_check_candidate_summary.json",
+      "exists": true,
+      "bytes": 825
+    },
+    {
+      "path": "results/phase_b_source_refresh_candidates.jsonl",
+      "exists": true,
+      "bytes": 1125318
+    },
+    {
+      "path": "results/phase_b_source_refresh_candidate_check.json",
+      "exists": true,
+      "bytes": 2640
+    },
+    {
+      "path": "PHASE_B_SOURCE_REFRESH_CANDIDATE_DECISION.md",
+      "exists": true,
+      "bytes": 3722
+    }
+  ],
+  "prior_gates": {
+    "source_refresh": {
+      "status": "pass",
+      "errors": 0
+    },
+    "evidence_support_check": {
+      "status": "pass",
+      "errors": 0
+    },
+    "evidence_envelope": {
+      "status": "pass",
+      "errors": 0
+    },
+    "context_pack": {
+      "status": "pass",
+      "errors": 0
+    },
+    "runtime_feasibility": {
+      "status": "pass",
+      "errors": 0
+    },
+    "minimal_doc_patch": {
+      "status": "pass",
+      "errors": 0
+    },
+    "contract": {
+      "status": "pass",
+      "errors": 0
+    }
+  },
+  "core_docs": {
+    "dirty": [
+      " M DEV_CONTEXT.md",
+      " M IMPLEMENTATION_BLUEPRINT.md",
+      " M MEMORY_TIER.md",
+      " M SOURCE_INTAKE.md"
+    ]
+  }
+}

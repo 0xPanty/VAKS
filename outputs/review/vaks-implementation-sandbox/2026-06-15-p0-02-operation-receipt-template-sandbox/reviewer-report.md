@@ -1,0 +1,64 @@
+---
+record_kind: sandbox_reviewer_report
+slice_id: 2026-06-15-p0-02-operation-receipt-template-sandbox
+reviewer_role: read_only
+status: review_pass_no_blocker
+truth_boundary: reviewer_report_is_not_product_acceptance
+---
+
+# Reviewer Report
+
+## Round 1
+
+Conclusion:
+
+```text
+REVIEW_REVISE_REQUIRED
+```
+
+Findings:
+
+1. `suggest` mode wording was internally ambiguous: the actor matrix said
+   `suggest_only` cannot write, but the operation-mode notes said `suggest`
+   could create an advisory record.
+2. Acceptance gate files were still pending; local verification must not be
+   confused with Reviewer, Boundary Auditor, or Product Acceptance.
+3. Failure cases were useful but did not yet expose a single
+   `expected_failure_reason` oracle for future validator pilots.
+
+## Builder Repair
+
+Repairs made inside the approved sandbox path only:
+
+- changed `artifact/operation-receipt-template.md` so `suggest` explicitly has
+  no filesystem mutation, and any written advisory record becomes a separate
+  `candidate_write` operation with its own approved write scope;
+- added `expected_failure_reason` to all 9 failure cases;
+- added `artifact/failure-case-oracle.md`;
+- updated `source-map.md` and `verification.md`.
+
+## Recheck
+
+Conclusion:
+
+```text
+REVIEW_PASS_NO_BLOCKER
+```
+
+Findings:
+
+- Round 1 `suggest` / `suggest_only` write ambiguity is repaired. `suggest`
+  now explicitly has no filesystem mutation, and writing an advisory record
+  requires a separate `candidate_write` operation with its own approved scope.
+- All 9 failure cases now have one `expected_failure_reason`, and
+  `artifact/failure-case-oracle.md` maps each case to its expected primary
+  reason for future validator pilots.
+- This report correctly keeps local verification, Reviewer, Boundary Auditor,
+  and Product Acceptance as separate gates.
+- No blocker, no obvious overdesign blocker, no maintainability blocker.
+
+Residual risk:
+
+- `boundary-audit.md` and `product-acceptance-report.md` still needed their
+  final gate results at the time of the read-only Reviewer Round 2.
+- This Reviewer conclusion is not Product Acceptance.

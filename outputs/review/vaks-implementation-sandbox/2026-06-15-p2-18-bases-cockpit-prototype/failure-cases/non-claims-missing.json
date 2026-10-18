@@ -1,0 +1,1 @@
+{"extends": "fixtures/valid-bases-cockpit.json", "scenario_id": "non-claims-missing", "expected_valid": false, "expected_codes": ["BC_NON_CLAIMS_MISSING"], "patch": {"non_claims": ["not_real_bases"]}}

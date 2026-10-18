@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "context-cross-bucket-fusion",
+  "expected_valid": false,
+  "expected_codes": ["MB_CROSS_BUCKET_FUSION"],
+  "patch": {"context_adapter": {"cross_bucket_fusion": true}}
+}

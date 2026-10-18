@@ -1,0 +1,98 @@
+{
+  "record_kind": "sandbox_post_approval_executor_handoff",
+  "slice_id": "2026-06-19-p2-90-post-approval-executor-handoff-sandbox",
+  "created_at": "2026-06-18T23:47:40.473588+00:00",
+  "source_inputs": {
+    "p2_80_transaction_package": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-80-old-file-status-normalization-transaction-package-sandbox/artifact/old_file_status_normalization_transaction_package.json",
+    "p2_89_approval_dependency_closeout": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-89-approval-dependency-closeout-packet-sandbox/artifact/approval_dependency_closeout_packet.json"
+  },
+  "source_digest": {
+    "p2_80_transaction_package": "2b6b1aad835ddf2ca708bde3d064d3bd677b74fef83e8bac69e685b4e74a9859",
+    "p2_89_approval_dependency_closeout": "f7b3d89b0fa6424110dfb1092ad63554528b2e5df9621b35f2efaea419698115"
+  },
+  "current_status": {
+    "exact_approval_collected_now": false,
+    "executor_write_allowed_now": false,
+    "old_slice_writes_applied": 0,
+    "goal_complete_now": false,
+    "blocking_condition": "missing_exact_p2_75_user_approval"
+  },
+  "future_prerequisites": {
+    "exact_approval_phrase": "I explicitly approve p2-75 old-file status-only normalization: apply the 75 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only. Do not edit body content, artifacts, tools, templates, wiki truth layers, main architecture docs, README, Obsidian vault, commit, push, or sync.",
+    "exact_approval_required": true,
+    "fresh_prewrite_gate_required_after_approval": true,
+    "fresh_boundary_audit_required_after_approval": true,
+    "stop_before_any_write_required": true
+  },
+  "executor_scope_if_future_gate_passes": {
+    "allowed_edit_kind": "status_only_frontmatter_normalization",
+    "allowed_field": "frontmatter.status",
+    "operation_count": 75,
+    "unique_target_file_count": 75,
+    "target_file_counts": {
+      "boundary-audit.md": 20,
+      "next-step.md": 20,
+      "product-acceptance-report.md": 2,
+      "reviewer-report.md": 16,
+      "verification.md": 17
+    },
+    "allowed_target_family": "outputs/review/vaks-implementation-sandbox/2026-06-15-p*-*/{verification.md,reviewer-report.md,boundary-audit.md,product-acceptance-report.md,next-step.md}",
+    "body_content_edits_allowed": false,
+    "artifact_edits_allowed": false,
+    "tools_templates_edits_allowed": false,
+    "wiki_truth_layer_edits_allowed": false,
+    "mainline_edits_allowed": false,
+    "obsidian_sync_allowed": false,
+    "commit_push_allowed": false
+  },
+  "future_executor_stages": [
+    {
+      "stage_id": "stage_1_exact_approval_intake",
+      "required_result": "exact phrase matched",
+      "write_allowed": false
+    },
+    {
+      "stage_id": "stage_2_fresh_prewrite_recheck",
+      "required_result": "75 targets exist and match required hashes at execution time",
+      "write_allowed": false
+    },
+    {
+      "stage_id": "stage_3_boundary_reconfirmation",
+      "required_result": "only old report frontmatter.status writes are in scope",
+      "write_allowed": false
+    },
+    {
+      "stage_id": "stage_4_explicit_stop_before_write",
+      "required_result": "executor reports the exact target set and waits for final command if policy still requires it",
+      "write_allowed": false
+    },
+    {
+      "stage_id": "stage_5_status_only_apply_if_authorized",
+      "required_result": "apply only status lines, then verify body/non-status frontmatter unchanged",
+      "write_allowed": "future_only_after_all_prior_gates"
+    }
+  ],
+  "future_verification_requirements": [
+    "75 target files changed only in frontmatter.status.",
+    "0 body-content changes.",
+    "0 non-status-frontmatter changes.",
+    "No artifact, tools, templates, wiki truth layer, mainline, README, or Obsidian writes.",
+    "Rollback material preserved.",
+    "Reviewer, Boundary Auditor, GPT-5.5 Product Acceptance, and final gate complete for the executor slice."
+  ],
+  "authority_flags": {
+    "handoff_only": true,
+    "user_approval_collected": false,
+    "handoff_authorizes_write": false,
+    "executor_write_allowed_now": false,
+    "old_slice_write_allowed_now": false,
+    "old_slice_writes_applied": 0,
+    "normalization_applied": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "goal_complete_now": false
+  }
+}

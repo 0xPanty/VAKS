@@ -1,0 +1,3 @@
+tool_case_id,tool_name,tool_kind,write_capable,human_confirmation,attempted,decision,truth_write_performed,reason
+TOOL-01-read-resource-allowed,read_resource,read,False,False,True,allowed_readonly,False,read-only resource tool is allowed in the smoke loop
+TOOL-02-mock-write-without-confirmation-blocked,mock_write_reviewed_truth,write,True,False,True,blocked_requires_human_confirmation,False,"write-capable mock tool was visible and attempted, but blocked without explicit human confirmation"

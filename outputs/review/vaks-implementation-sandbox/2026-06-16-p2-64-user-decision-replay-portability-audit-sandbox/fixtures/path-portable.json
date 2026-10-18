@@ -1,0 +1,10 @@
+{
+  "fixture_id": "path-portable",
+  "expected": {
+    "stable_paths": true,
+    "source_paths_under_p2_63": true,
+    "write_path_under_p2_64": true
+  },
+  "source_slice_id": "2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox",
+  "notes": "The replay portability audit must not depend on protected mainline paths or generated scratch outside the sandbox."
+}

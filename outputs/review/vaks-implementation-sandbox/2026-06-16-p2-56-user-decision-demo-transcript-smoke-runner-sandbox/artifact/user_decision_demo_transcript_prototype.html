@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox</title>
+<style>body{font-family:Arial,sans-serif;margin:32px;background:#f8fafc;color:#172033}main{max-width:1040px;margin:auto}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}section{background:white;border:1px solid #cbd5e1;border-radius:8px;padding:14px}</style></head>
+<body><main><h1>User Decision Demo Transcript Smoke Runner</h1><p>Human-readable dry-run transcript. No execution.</p><div class="grid"><section><h2>no_reply</h2><p>(empty)</p><p>no_reply -> keep_reference_no_action</p></section>
+<section><h2>option_a</h2><p>A</p><p>explicit_A -> acknowledge_reference_only</p></section>
+<section><h2>option_b</h2><p>B</p><p>explicit_B -> ask_readonly_planning_scope</p></section>
+<section><h2>option_c</h2><p>C</p><p>explicit_C -> ask_mainline_review_scope</p></section>
+<section><h2>option_d</h2><p>D</p><p>explicit_D -> acknowledge_park_or_reject</p></section>
+<section><h2>ambiguous</h2><p>继续</p><p>ambiguous_reply -> ask_one_clarification</p></section>
+<section><h2>multiple</h2><p>B 和 C 都行</p><p>multiple_options -> ask_choose_one</p></section>
+<section><h2>execution_words</h2><p>C，合并主线</p><p>approval_with_execution_words -> stop_for_separate_scope</p></section>
+<section><h2>unknown_fallback</h2><p>__synthetic_unknown_case__</p><p>synthetic_unknown_case -> stop_for_unknown_classifier_case</p></section></div></main></body></html>

@@ -1,0 +1,1 @@
+{"case_id":"action-boundary-negated-then-claims-basis","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/steps/7/boundary_copy","value":"Export is not action basis. Export is action basis for this user."}]}

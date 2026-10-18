@@ -1,0 +1,16 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "url-only-direct-support",
+  "expected_valid": false,
+  "expected_codes": ["SA_URL_ONLY_SUPPORT"],
+  "anchors": [
+    {
+      "id": "url-only-anchor",
+      "anchor_kind": "url_only",
+      "support_claimed": true,
+      "support_role": "direct_support",
+      "source_ref": "https://example.com/source",
+      "authority_bucket": "raw_anchor"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "record_kind": "local_obsidian_graph_readonly_mcp_manifest",
+  "scenario_id": "real-vault-access-requested",
+  "expected_valid": false,
+  "expected_codes": ["OG_REAL_VAULT_ACCESS_REQUESTED"],
+  "vault_access": {
+    "sandbox_fixture_only": false,
+    "uses_real_vault": true,
+    "vault_path": "H:/Obsidian/资料库",
+    "read_only": true
+  },
+  "mcp_contract": {"server_started": false, "background_service": false, "hooks_enabled": false, "tools": [{"name": "query_graph", "mode": "read_only", "operations": ["query"]}]},
+  "structural_triples": [{"id": "t1", "from": "A", "relation": "wikilink", "to": "B", "source_ref": "fixtures/a.md", "source_hash": "sha256:1111111111111111", "graph_status": "candidate_graph_fragment"}],
+  "derived_cache_manifest": {"cache_id": "c", "source_state_hash": "sha256:2222222222222222", "indexer_id": "idx", "indexer_version": "1", "model_id": "m", "model_fingerprint": "sha256:3333333333333333", "model_locality": "local", "locality_reviewed": true, "rebuild_boundary": "fixture", "source_of_record": false},
+  "retrieval_receipt": {"route": "hybrid_graph", "included_buckets": ["review_input"], "excluded_buckets": ["feedback"], "bucket_filter_first": true, "selected_by_channels": ["vector", "bm25", "temporal", "synonym"]}
+}

@@ -1,0 +1,6 @@
+{
+  "case_id": "protected-paths-not-written",
+  "p2_91_protected_path_writes": 0,
+  "p2_92_protected_path_writes": 0,
+  "passed": true
+}

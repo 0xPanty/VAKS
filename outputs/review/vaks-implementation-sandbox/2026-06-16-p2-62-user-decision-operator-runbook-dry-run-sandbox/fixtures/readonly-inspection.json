@@ -1,0 +1,8 @@
+{
+  "fixture_id": "readonly-inspection",
+  "description": "Read-only inspection requests may continue without creating authority.",
+  "request_kinds": [
+    "inspect_readiness_brief",
+    "inspect_frozen_handoff_chain"
+  ]
+}

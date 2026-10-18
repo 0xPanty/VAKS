@@ -1,0 +1,46 @@
+{
+  "record_kind": "opus_review_transfer_package_failure_cases",
+  "slice_id": "2026-06-19-p2-100-opus-review-transfer-package-sandbox",
+  "failure_cases": [
+    {
+      "id": "missing_zip",
+      "expectation": "Verifier fails if the ZIP is missing."
+    },
+    {
+      "id": "zip_hash_mismatch",
+      "expectation": "Verifier fails if the ZIP SHA256 does not match the manifest and sha256 file."
+    },
+    {
+      "id": "missing_content_manifest",
+      "expectation": "Verifier fails if the ZIP omits transfer-package-contents-manifest.json."
+    },
+    {
+      "id": "missing_dossier_snapshot",
+      "expectation": "Verifier fails if the p2-98 dossier snapshot is absent from the ZIP."
+    },
+    {
+      "id": "archive_source_hash_mismatch",
+      "expectation": "Verifier fails if any archived file hash diverges from its source hash."
+    },
+    {
+      "id": "opus_approval_overclaim",
+      "expectation": "Verifier fails if the package claims Opus approval."
+    },
+    {
+      "id": "mainline_ready_overclaim",
+      "expectation": "Verifier fails if the package claims mainline readiness."
+    },
+    {
+      "id": "truth_or_action_authority_overclaim",
+      "expectation": "Verifier fails if the package claims reviewed knowledge, evidence support, or action basis."
+    },
+    {
+      "id": "goal_complete_overclaim",
+      "expectation": "Verifier fails if the package claims the full goal is complete."
+    },
+    {
+      "id": "runtime_cache_in_archive",
+      "expectation": "Verifier fails if __pycache__, .pyc, or temporary files appear in the package."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "valid-semantic-orientation-no-support",
+  "expected_valid": true,
+  "expected_codes": [],
+  "anchors": [
+    {
+      "id": "semantic-orientation-only",
+      "anchor_kind": "semantic_vector_hit",
+      "support_claimed": false,
+      "support_role": "orientation",
+      "pack_role": "orientation",
+      "source_ref": "outputs/review/example-query-orientation.md#rank-1",
+      "authority_bucket": "review_input",
+      "selected_by_semantic": true,
+      "semantic_score_claims_support": false,
+      "graph_rank_claims_support": false
+    }
+  ]
+}

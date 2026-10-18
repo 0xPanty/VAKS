@@ -1,0 +1,62 @@
+{
+  "record_kind": "sandbox_old_file_status_normalization_transaction_package_contract",
+  "slice_id": "2026-06-19-p2-80-old-file-status-normalization-transaction-package-sandbox",
+  "contract_version": "1.0",
+  "expected_summary": {
+    "transaction_operation_count": 75,
+    "unique_target_file_count": 75,
+    "target_old_slice_count": 20,
+    "current_status_mismatch_count": 0,
+    "proposed_status_already_applied_count": 0,
+    "missing_target_count": 0,
+    "frontmatter_invalid_count": 0,
+    "hash_record_count": 75,
+    "write_applied_count": 0,
+    "old_slice_writes_applied": 0
+  },
+  "expected_gate": {
+    "requires_exact_p2_75_approval": true,
+    "approval_collected_now": false,
+    "p2_77_readiness": "blocked_no_exact_approval",
+    "p2_79_fresh_drift_recheck_passed": true,
+    "requires_fresh_hash_check_before_write": true,
+    "requires_boundary_audit_before_write": true,
+    "requires_stop_before_write": true,
+    "executor_write_allowed_now": false,
+    "transaction_package_is_not_approval": true
+  },
+  "authority_flags": {
+    "transaction_package_only": true,
+    "approval_collected": false,
+    "executor_write_allowed": false,
+    "old_slice_write_allowed_now": false,
+    "old_slice_writes_applied": 0,
+    "normalization_applied": false,
+    "rollback_applied": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "goal_complete_now": false
+  },
+  "required_fixture_ids": [
+    "transaction-counts-and-hashes",
+    "no-write-authority",
+    "rollback-status-preserved",
+    "fresh-hash-precondition-required",
+    "future-executor-must-stop-before-write"
+  ],
+  "required_failure_case_ids": [
+    "TX-FAIL-01-missing-transaction-operation",
+    "TX-FAIL-02-target-hash-missing",
+    "TX-FAIL-03-before-status-drift-ignored",
+    "TX-FAIL-04-proposed-status-already-applied-ignored",
+    "TX-FAIL-05-rollback-status-missing",
+    "TX-FAIL-06-transaction-package-treated-as-approval",
+    "TX-FAIL-07-executor-write-allowed-now",
+    "TX-FAIL-08-old-slice-write-applied",
+    "TX-FAIL-09-fresh-hash-check-not-required",
+    "TX-FAIL-10-mainline-or-action-authority-created"
+  ]
+}

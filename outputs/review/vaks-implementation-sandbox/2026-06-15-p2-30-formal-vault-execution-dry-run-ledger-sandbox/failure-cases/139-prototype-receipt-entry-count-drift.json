@@ -1,0 +1,13 @@
+{
+  "case_id": "prototype-receipt-entry-count-drift",
+  "description": "Prototype receipt entry count drifts.",
+  "expected_errors": [
+    "prototype_receipt_entry_count_mismatch"
+  ],
+  "prototype_tamper": {
+    "kind": "receipt_update",
+    "updates": {
+      "entry_count": 99
+    }
+  }
+}

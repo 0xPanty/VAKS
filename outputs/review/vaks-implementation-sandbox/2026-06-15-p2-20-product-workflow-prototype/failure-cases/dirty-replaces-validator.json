@@ -1,0 +1,1 @@
+{"case_id":"dirty-replaces-validator","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/steps/9/authority_flags/replaces_validators","value":true}]}

@@ -1,0 +1,78 @@
+{
+  "capture_id": "urn:uuid:f215f345-bd8b-473b-b943-3a11f96c3dee",
+  "change": {
+    "compared_to_capture_id": null,
+    "state": "first_seen"
+  },
+  "fidelity": {
+    "state": "not_checked"
+  },
+  "inspection_refs": [
+    {
+      "digest": "sha256:48e18d9cf9e20422ddfb4c8bee63297442decd04285c336ee44419bd89e0e55f",
+      "media_type": "application/vnd.in-toto+json",
+      "predicate_type": "urn:vaks:predicate:repo-snapshot-hygiene:v1",
+      "size": 1348
+    }
+  ],
+  "observation": {
+    "blob": {
+      "digest": "sha256:77a0397a7bced20f79267af0f69da571dc68dcfa91c6249f1a76592b42cf86e4",
+      "media_type": "application/zip",
+      "size": 14295557
+    },
+    "capture_method": "git_clone",
+    "content_type": {
+      "detected_media_type": "application/zip",
+      "detection_basis": "container_parser",
+      "hint_match": "matched",
+      "locator_hint_media_type": "application/zip",
+      "profile": "vaks-media-type-detection/v1"
+    },
+    "state": "captured"
+  },
+  "observed_at": "2026-08-02T06:59:23+08:00",
+  "producer": {
+    "id": "vaks.snapshot-inspector",
+    "implementation": {
+      "digest": "sha256:06f7d1dffe9b58baa99e265726323b8b5f2059ad57f9747961e4526170008c9e",
+      "media_type": "application/vnd.vaks.source-capture-implementation.v1+json",
+      "size": 999
+    },
+    "version": "1.0-alpha.1"
+  },
+  "raw_handling": {
+    "disposition": "admitted",
+    "policy": {
+      "digest": "sha256:85878b9a435d599863c1d66f56706ea860f956fd46ea2c507e7c0e46a1ed7eb0",
+      "id": "vaks-raw-intake-default"
+    },
+    "reason_codes": []
+  },
+  "resolution": {
+    "revision": {
+      "kind": "git_commit",
+      "value": "0d447560bc3c9a8dfa0bfb5e78d32dbe77416cd3"
+    },
+    "selector": {
+      "kind": "git_commit",
+      "value": "0d447560bc3c9a8dfa0bfb5e78d32dbe77416cd3"
+    }
+  },
+  "schema": "urn:vaks:schema:source-capture:v1",
+  "snapshot": {
+    "kind": "tree",
+    "manifest": {
+      "digest": "sha256:b8b3a0e1ce0a80e7aa8e9b0f29c7f25267f0bde6216d6f5f5041d07e6dc366f3",
+      "media_type": "application/vnd.vaks.snapshot-manifest.v1+jsonl",
+      "size": 204519
+    },
+    "snapshot_id": "vsnap:1:tree:sha256:b8b3a0e1ce0a80e7aa8e9b0f29c7f25267f0bde6216d6f5f5041d07e6dc366f3"
+  },
+  "source": {
+    "kind": "repo",
+    "requested_locator": "https://github.com/semantica-agi/semantica",
+    "resolved_locator": "https://github.com/semantica-agi/semantica/tree/0d447560bc3c9a8dfa0bfb5e78d32dbe77416cd3",
+    "source_id": "vsrc:1:repo:github.com/semantica-agi/semantica"
+  }
+}

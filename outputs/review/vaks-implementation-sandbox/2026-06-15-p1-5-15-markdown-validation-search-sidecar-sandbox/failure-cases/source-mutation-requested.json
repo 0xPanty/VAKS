@@ -1,0 +1,1 @@
+{"extends":"fixtures/valid-frontmatter-validation-check.json","scenario_id":"source-mutation-requested","expected_valid":false,"expected_codes":["MS_SOURCE_MUTATION_FORBIDDEN"],"patch":{"scope":{"writes_source_files":true}}}

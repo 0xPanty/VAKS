@@ -1,0 +1,12 @@
+{
+  "fixture_id": "exact-approval-required-before-old-normalization",
+  "expected": {
+    "exact_p2_75_approval_required": true,
+    "current_text_matches_exact_approval": false,
+    "generic_language_is_not_approval": true,
+    "executor_write_allowed": false,
+    "future_exact_approval_requires_fresh_preflight": true,
+    "future_exact_approval_requires_boundary_audit": true,
+    "future_exact_approval_requires_stop_before_write": true
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "missing-boundary-block",
+  "expected_valid": false,
+  "expected_codes": ["MS_MISSING_BOUNDARY"],
+  "patch": {
+    "boundary": {
+      "__delete__": true
+    }
+  }
+}

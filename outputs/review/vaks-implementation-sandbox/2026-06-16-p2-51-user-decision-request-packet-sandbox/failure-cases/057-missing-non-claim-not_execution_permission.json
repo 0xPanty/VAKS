@@ -1,0 +1,151 @@
+{
+  "record_kind": "sandbox_user_decision_request_packet",
+  "slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+  "version": "0.1.0",
+  "generated_at": "2026-06-16",
+  "purpose": "ask the user for the next decision without executing any decision",
+  "truth_boundary": "decision_request_packet_not_approval_or_execution_authority",
+  "write_scope": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/",
+  "source_closeout": {
+    "slice_id": "2026-06-16-p2-50-final-sandbox-closeout-readiness-dossier-sandbox",
+    "source_root": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-50-final-sandbox-closeout-readiness-dossier-sandbox",
+    "final_gate_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-16-p2-50-final-sandbox-closeout-readiness-dossier-sandbox\\artifact\\verify_closeout_readiness_dossier.py --final-gate",
+    "product_acceptance_report": {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-50-final-sandbox-closeout-readiness-dossier-sandbox/product-acceptance-report.md",
+      "exists": true,
+      "size_bytes": 1488,
+      "sha256": "c3c4420b8fae3e3e57772d71b0feb43d8598bf8d60af39d14d949c2df1d5c5a5",
+      "frontmatter_status": "pass_product_grade"
+    },
+    "next_step": {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-50-final-sandbox-closeout-readiness-dossier-sandbox/next-step.md",
+      "exists": true,
+      "size_bytes": 841,
+      "sha256": "40798e806c76efb05150583b12441ab394b2314afbff566cf4d150a6456d65bb",
+      "frontmatter_status": "pass_product_grade_pending_user_decision"
+    },
+    "primary_artifact": {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-50-final-sandbox-closeout-readiness-dossier-sandbox/artifact/final-sandbox-closeout-readiness-dossier.json",
+      "exists": true,
+      "size_bytes": 26387,
+      "sha256": "3e07d6614bf931785c198c72fe9a8c17c2277e2aa41fec42b1681ce725cf8b8f",
+      "frontmatter_status": null
+    },
+    "verifier": {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-50-final-sandbox-closeout-readiness-dossier-sandbox/artifact/verify_closeout_readiness_dossier.py",
+      "exists": true,
+      "size_bytes": 8133,
+      "sha256": "9833dfbced60dbfb09d2fb05ce71e409168ec4dc39a8cadf600bbe419197bf16",
+      "frontmatter_status": null
+    }
+  },
+  "request_prompt": {
+    "title": "请选择 VAKS sandbox 下一步",
+    "plain_language": "sandbox 链条已经产品级通过；现在只能请你选择下一步方向，不能自动执行任何合并、发布、同步、写库或行动依据。",
+    "requires_explicit_user_reply": true,
+    "no_default_execution": true,
+    "safe_default_if_no_reply": "A_keep_sandbox_reference"
+  },
+  "decision_options": [
+    {
+      "option_id": "A_keep_sandbox_reference",
+      "label": "Keep sandbox as reference only",
+      "recommended_default": true,
+      "what_it_means": "Do not start promotion or mainline work; use the sandbox chain as reference evidence only.",
+      "automatic_execution": false,
+      "requires_new_scope": false,
+      "requires_separate_user_approval": false,
+      "allowed_next_action": "none"
+    },
+    {
+      "option_id": "B_start_readonly_promotion_review_plan",
+      "label": "Authorize a new read-only promotion review planning slice",
+      "recommended_default": false,
+      "what_it_means": "Prepare a separate read-only review plan that identifies candidate mainline scope without writing mainline files.",
+      "automatic_execution": false,
+      "requires_new_scope": true,
+      "requires_separate_user_approval": true,
+      "allowed_next_action": "new_readonly_sandbox_or_plan_only"
+    },
+    {
+      "option_id": "C_request_mainline_merge_scope",
+      "label": "Authorize asking for a separately scoped mainline merge review",
+      "recommended_default": false,
+      "what_it_means": "Ask the user to explicitly name allowed mainline paths before any merge work starts.",
+      "automatic_execution": false,
+      "requires_new_scope": true,
+      "requires_separate_user_approval": true,
+      "allowed_next_action": "ask_for_explicit_path_scope_only"
+    },
+    {
+      "option_id": "D_park_or_reject_sandbox_chain",
+      "label": "Park or reject the sandbox chain",
+      "recommended_default": false,
+      "what_it_means": "Record no further action unless the user later reopens the topic.",
+      "automatic_execution": false,
+      "requires_new_scope": false,
+      "requires_separate_user_approval": false,
+      "allowed_next_action": "none"
+    }
+  ],
+  "forbidden_next_actions": {
+    "promotion": false,
+    "mainline_merge": false,
+    "formal_vault_write": false,
+    "obsidian_sync": false,
+    "commit": false,
+    "push": false,
+    "release": false,
+    "reviewed_knowledge_creation": false,
+    "evidence_support_creation": false,
+    "action_basis_creation": false,
+    "template_write": false,
+    "tool_write": false,
+    "dependency_install": false,
+    "background_service": false,
+    "hooks": false,
+    "mcp_write_tool": false
+  },
+  "readiness_flags": {
+    "decision_request_packet_ready": true,
+    "ready_to_ask_user": true,
+    "ready_to_execute_user_choice": false,
+    "user_choice_collected": false,
+    "promotion_ready": false,
+    "mainline_merge_ready": false,
+    "formal_vault_write_ready": false,
+    "action_basis_ready": false,
+    "commit_ready": false,
+    "push_ready": false
+  },
+  "stop_conditions": [
+    "p2_50_final_gate_failed",
+    "user_decision_option_missing",
+    "option_grants_automatic_execution",
+    "option_skips_separate_approval_for_execution_path",
+    "forbidden_next_action_enabled",
+    "protected_path_write_required",
+    "authority_confusion_detected"
+  ],
+  "required_non_claims": [
+    "not approval",
+    "not promotion",
+    "not mainline merge",
+    "not release",
+    "not formal vault write",
+    "not Obsidian sync",
+    "not commit",
+    "not push",
+    "not reviewed knowledge",
+    "not evidence support",
+    "not action basis",
+    "not auto advance"
+  ],
+  "acceptance_contract": {
+    "requires_reviewer_pass": true,
+    "requires_boundary_pass": true,
+    "requires_gpt_5_5_extra_high_product_acceptance": true,
+    "p2_50_final_gate_must_pass": true,
+    "product_acceptance_does_not_collect_user_choice": true
+  }
+}

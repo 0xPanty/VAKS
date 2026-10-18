@@ -1,0 +1,20 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "runtime-memory-invalid-type",
+  "expected_valid": false,
+  "expected_codes": ["MB_MEMORY_TYPE_INVALID"],
+  "allowed_extra_codes": ["MB_MEMORY_TYPE_NOT_ALLOWED_BY_MANIFEST"],
+  "patch": {
+    "runtime_memory": {
+      "entries": [
+        {
+          "id": "reviewed-claim-memory",
+          "ref": "fixtures/bad/runtime-reviewed-claim-memory.json",
+          "memory_type": "reviewed_claim",
+          "source_observation_ids": ["obs-2026-06-15-001"],
+          "action_basis_allowed": false
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "record_kind": "sandbox_static_boundary_scan_regression_contract",
+  "slice_id": "2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox",
+  "source_slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+  "truth_boundary": "static_scan_regression_not_general_security_or_execution_authority",
+  "status": "built_pending_review",
+  "purpose": "make the p2-57 static boundary scan regression-testable against live safe sources and synthetic dangerous snippets",
+  "source_final_gate_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox\\artifact\\verify_user_decision_chain_regression_bundle.py --final-gate",
+  "live_positive_sources": [
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/artifact/run_user_decision_chain_regression_bundle.py",
+      "allowed_write_lines": []
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/artifact/build_user_decision_chain_regression_bundle.py",
+      "allowed_write_lines": [
+        "READOUT.write_text(result[\"readout_markdown\"] + \"\\n\", encoding=\"utf-8\")",
+        "PROTOTYPE.write_text(render_html(result), encoding=\"utf-8\")"
+      ]
+    }
+  ],
+  "scanner_limits": [
+    "This is not a general security sandbox.",
+    "This is not execution authority.",
+    "This is not mainline approval.",
+    "This is not promotion approval.",
+    "This scanner checks explicit command surfaces and known dangerous strings; it is not complete program verification.",
+    "Passing this scanner does not authorize commit, push, sync, dependency install, service start, hook install, MCP write, reviewed knowledge, evidence support, or action basis."
+  ],
+  "output_contract": {
+    "automatic_execution": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "action_basis_ready": false,
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  "ordinary_agent_usage": {
+    "run_regression": "python -B artifact/static_boundary_scan_regression.py",
+    "default_verifier": "python -B artifact/verify_static_boundary_scan_regression.py",
+    "final_gate": "python -B artifact/verify_static_boundary_scan_regression.py --final-gate",
+    "rebuild": "Builder-only: python -B artifact/build_static_boundary_scan_regression_readout.py"
+  }
+}

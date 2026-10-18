@@ -1,0 +1,132 @@
+{
+  "branch_decision_brief_check_status": "pass",
+  "error_count": 0,
+  "errors": [],
+  "brief": {
+    "artifact_kind": "vaks_phase_b_branch_decision_brief",
+    "built_at": "2026-06-11T11:39:19+00:00",
+    "compared_against_previous_version": "phase_b_pre_commit_manifest",
+    "branch_decision_brief_status": "ready_for_user_choice",
+    "commit_without_user_approval_allowed": false,
+    "stage_performed": false,
+    "commit_performed": false,
+    "recommended_branch": "user_approved_commit",
+    "available_branches": [
+      {
+        "branch": "user_approved_commit",
+        "status": "ready_pending_user_approval",
+        "meaning": "Commit the validated four docs plus Phase B sandbox evidence bundle."
+      },
+      {
+        "branch": "original_yuxi_full_stack_test",
+        "status": "blocked_until_docker_or_remote_runner",
+        "meaning": "Run original Yuxi only when Docker/Compose or a remote runner exists."
+      },
+      {
+        "branch": "c_lite_sandbox",
+        "status": "not_allowed_without_new_user_gate",
+        "meaning": "Requires an explicit new user approval and a fresh validator."
+      },
+      {
+        "branch": "runtime_adoption",
+        "status": "not_allowed",
+        "meaning": "Current evidence does not approve runtime/default adoption."
+      }
+    ],
+    "commit_scope": {
+      "mainline_docs": [
+        "SOURCE_INTAKE.md",
+        "IMPLEMENTATION_BLUEPRINT.md",
+        "DEV_CONTEXT.md",
+        "MEMORY_TIER.md"
+      ],
+      "sandbox_evidence_bundle": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/"
+    },
+    "manifest_snapshot": {
+      "status": "ready_pending_user_approval",
+      "file_count": 236,
+      "total_bytes": 71820410
+    },
+    "prior_gates": {
+      "pre_commit_manifest": {
+        "status": "pass",
+        "errors": 0
+      },
+      "next_action_gate": {
+        "status": "pass",
+        "errors": 0
+      },
+      "commit_readiness": {
+        "status": "pass",
+        "errors": 0
+      },
+      "keep_stop": {
+        "status": "pass",
+        "errors": 0
+      }
+    },
+    "worktree": {
+      "status_lines": [
+        " M DEV_CONTEXT.md",
+        " M IMPLEMENTATION_BLUEPRINT.md",
+        " M MEMORY_TIER.md",
+        " M SOURCE_INTAKE.md",
+        "?? outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/"
+      ],
+      "staged_paths": []
+    },
+    "copy_paste_prompt": "继续 VAKS Phase B。先读 outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_BRANCH_DECISION_BRIEF.md。 当前只能在三条路中选：批准提交、提供 Docker/远程 runner 测原版 Yuxi、或明确开新的 C-lite 沙盒 gate。 不要自动 commit，不要自动 C-lite，不要声称 runtime adoption。"
+  },
+  "artifacts": [
+    {
+      "path": "results/phase_b_branch_decision_brief.json",
+      "exists": true,
+      "bytes": 2553
+    },
+    {
+      "path": "PHASE_B_BRANCH_DECISION_BRIEF.md",
+      "exists": true,
+      "bytes": 2051
+    },
+    {
+      "path": "PHASE_B_BRANCH_DECISION_BRIEF_DECISION.md",
+      "exists": true,
+      "bytes": 835
+    },
+    {
+      "path": "results/phase_b_pre_commit_manifest_check.json",
+      "exists": true,
+      "bytes": 70119
+    },
+    {
+      "path": "PHASE_B_PRE_COMMIT_MANIFEST_DECISION.md",
+      "exists": true,
+      "bytes": 799
+    }
+  ],
+  "prior_gates": {
+    "pre_commit_manifest": {
+      "status": "pass",
+      "errors": 0
+    },
+    "next_action_gate": {
+      "status": "pass",
+      "errors": 0
+    },
+    "commit_readiness": {
+      "status": "pass",
+      "errors": 0
+    },
+    "keep_stop": {
+      "status": "pass",
+      "errors": 0
+    }
+  },
+  "worktree": {
+    "staged_paths": []
+  },
+  "text": {
+    "brief_bytes": 1981,
+    "decision_bytes": 801
+  }
+}

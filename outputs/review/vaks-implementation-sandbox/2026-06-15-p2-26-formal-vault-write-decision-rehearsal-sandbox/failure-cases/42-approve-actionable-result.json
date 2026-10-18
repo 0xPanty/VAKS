@@ -1,0 +1,571 @@
+{
+  "slice_id": "2026-06-15-p2-26-formal-vault-write-decision-rehearsal-sandbox",
+  "source_slice": "2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox",
+  "rehearsal_version": "p2-26-decision-rehearsal-v1",
+  "purpose": "Simulate approve, deny, and revise outcomes against the P2-25 approval packet without collecting approval or accessing the formal vault.",
+  "formal_vault_path_label": "formal Obsidian vault path is a label only; it is not accessed in this slice",
+  "write_scope": [
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-26-formal-vault-write-decision-rehearsal-sandbox/"
+  ],
+  "read_only_sources": [
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/next-step.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/product-acceptance-report.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/verification.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/reviewer-report.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/boundary-audit.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/source-map.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/fixtures/valid-approval-packet-config.json",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/artifact/formal-vault-write-approval-packet-contract.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/prototype/formal-vault-write-approval-packet/Receipts/formal-vault-write-approval-packet-receipt.json",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/prototype/formal-vault-write-approval-packet/01 Scope Dossier.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/prototype/formal-vault-write-approval-packet/02 Future Approval Questions.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/prototype/formal-vault-write-approval-packet/03 Non Approval Receipt.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/prototype/formal-vault-write-approval-packet/04 Decision Record Template.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/prototype/formal-vault-write-approval-packet/05 Source And Hash Binding.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/prototype/formal-vault-write-approval-packet/06 Stop Conditions.md"
+  ],
+  "operations": {
+    "formal_vault_read": false,
+    "formal_vault_scan": false,
+    "formal_vault_write": false,
+    "formal_vault_hash": false,
+    "formal_vault_snapshot": false,
+    "obsidian_sync": false,
+    "commit": false,
+    "push": false,
+    "promotion": false,
+    "dependency_install": false,
+    "background_service": false,
+    "mcp_write_tool": false,
+    "hooks": false,
+    "real_base_files": false,
+    "production_ui": false,
+    "local_storage_write": false,
+    "network_post": false,
+    "actual_approval_collection": false,
+    "actual_user_approval": false,
+    "user_approval_inference": false,
+    "action_basis_creation": false,
+    "reviewed_knowledge_creation": false,
+    "external_notification": false,
+    "default_read_only": true,
+    "rebuild_requires_explicit_flag": true
+  },
+  "boundary_phrases": [
+    "sandbox only",
+    "decision rehearsal only",
+    "synthetic decisions only",
+    "not actual approval",
+    "approval not collected",
+    "formal vault not accessed",
+    "dry-run only",
+    "not reviewed knowledge",
+    "not evidence support",
+    "not action basis",
+    "does not approve",
+    "no formal vault write",
+    "no formal vault read",
+    "no sync",
+    "no commit",
+    "no push",
+    "no promotion",
+    "requires separate user approval"
+  ],
+  "source_inputs": [
+    {
+      "id": "source_next_step",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/next-step.md",
+      "source_sha256": "24bd141bc18398791177b1bcfa9daf8f2e56905b7c553fe2540c2ee9aa8eab0c",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_product_acceptance",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/product-acceptance-report.md",
+      "source_sha256": "1978e94a80c2b33e87ae7b6eb62c8ba0c3382d327721f0f6635e76a55a54a388",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_verification",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/verification.md",
+      "source_sha256": "7899646b14e57ab0d678a0f22ce6d64713a5a1c5142b57f53f45369724918ff7",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_reviewer_report",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/reviewer-report.md",
+      "source_sha256": "a30ec19f26dd37c990155d50caea75f2cbc1d75c7510acc32051892710c5c5f3",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_boundary_audit",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/boundary-audit.md",
+      "source_sha256": "0c27d011fdc8d9394f460085d61b3bdc75cf40bd48a4259f42dbe2d70123c757",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_map",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/source-map.md",
+      "source_sha256": "64267c00b302b5eefd61168dbcc3913b6925189c25d2ad2fefdd0652f4423239",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_config",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/fixtures/valid-approval-packet-config.json",
+      "source_sha256": "51c4a7f639b0d1bde387b4177cb0ab3cfa03b0e35f0a13978b0aaec12969fda5",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_contract",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/artifact/formal-vault-write-approval-packet-contract.md",
+      "source_sha256": "4eea2b5f0b61f6507996858db0dfb063f94f09065a49ac8b8fbedbf9ab465a80",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_receipt",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/prototype/formal-vault-write-approval-packet/Receipts/formal-vault-write-approval-packet-receipt.json",
+      "source_sha256": "e0b13d48d0eede7c8fdc0c8f66ada12e5fba30825c9477867b44845f49814c4a",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_scope_dossier",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/prototype/formal-vault-write-approval-packet/01 Scope Dossier.md",
+      "source_sha256": "5cbefc28051979e41bf30ef02f1ebe2a23c69fb566d95b6ca184665950fa597c",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_questions",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/prototype/formal-vault-write-approval-packet/02 Future Approval Questions.md",
+      "source_sha256": "59ccfcaae3b2eb78473243db9c1a535d2b5c423fec93543f043cbb91ab248654",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_non_approval_receipt",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/prototype/formal-vault-write-approval-packet/03 Non Approval Receipt.md",
+      "source_sha256": "9dc44526a62f73f2b26505d674488c7ea2bf88b84aa7972f4f61aac09b76b8cc",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_decision_template",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/prototype/formal-vault-write-approval-packet/04 Decision Record Template.md",
+      "source_sha256": "db092955a24dbc26385c3fbecdece7e0d83694e486d30be47e1f4743f124c95c",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_hash_binding",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/prototype/formal-vault-write-approval-packet/05 Source And Hash Binding.md",
+      "source_sha256": "f3462b20ed57d60ceb1a9feb31f26329ac4414013dafa0ba195cef0be9ba2fdb",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_stop_conditions",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/prototype/formal-vault-write-approval-packet/06 Stop Conditions.md",
+      "source_sha256": "c84e2bf82e5071781900dc9f61a03a67333c57d67f487b26aea404bc7c7bffef",
+      "content_binding": "exact_source_sha256"
+    }
+  ],
+  "source_input_bundle_hash": "88a53d0d92e2ca7e0c5933e350d5e9f3d8ff823b188f9e1db9fa076a6d05f626",
+  "source_packet_hash": "51244c5051881dfac5ac5648d34908bbf0a74ce1794f8f2868ff6b3378866cb3",
+  "source_packet_source_bundle_hash": "4e7f8cdc4042a6858fcf42796843821391fe6c44e0e55e9e11206eda653f95ad",
+  "source_packet_scope_hash": "f5ec5589dc4e983bda3b274bae47766bc58424a98e40363a6437e94b93f5b4e2",
+  "source_packet_version": "p2-25-approval-packet-v1",
+  "decision_rules": {
+    "synthetic_only": true,
+    "actual_user_input_disallowed": true,
+    "actual_approval_collection_disallowed": true,
+    "approved_outcome_not_actionable": true,
+    "requires_packet_hash": "51244c5051881dfac5ac5648d34908bbf0a74ce1794f8f2868ff6b3378866cb3",
+    "requires_source_bundle_hash": "4e7f8cdc4042a6858fcf42796843821391fe6c44e0e55e9e11206eda653f95ad",
+    "requires_scope_hash": "f5ec5589dc4e983bda3b274bae47766bc58424a98e40363a6437e94b93f5b4e2",
+    "requires_all_question_ids_for_approved": [
+      "future_approve_exact_scope",
+      "future_approve_source_bindings",
+      "future_approve_rollback_hash_checks",
+      "future_approve_no_sync_commit_push_promotion"
+    ],
+    "deny_always_blocks_write": true,
+    "revise_always_blocks_write": true,
+    "extra_files_always_block": true,
+    "sync_commit_push_promotion_always_block": true,
+    "dirty_state_blocks_write": true,
+    "rollback_and_hash_ack_required_for_approved": true
+  },
+  "decision_scenarios": [
+    {
+      "id": "synthetic_approve_exact_packet",
+      "decision_verdict": "APPROVED_BY_USER",
+      "synthetic_only": true,
+      "actual_user_input": false,
+      "user_approval_text_present": false,
+      "synthetic_user_text": "SYNTHETIC ONLY: all required future confirmation phrases, packet hash, source bundle hash, and scope hash are present.",
+      "confirmed_question_ids": [
+        "future_approve_exact_scope",
+        "future_approve_source_bindings",
+        "future_approve_rollback_hash_checks",
+        "future_approve_no_sync_commit_push_promotion"
+      ],
+      "hash_claims": {
+        "packet_hash": "51244c5051881dfac5ac5648d34908bbf0a74ce1794f8f2868ff6b3378866cb3",
+        "source_bundle_hash": "4e7f8cdc4042a6858fcf42796843821391fe6c44e0e55e9e11206eda653f95ad",
+        "scope_hash": "f5ec5589dc4e983bda3b274bae47766bc58424a98e40363a6437e94b93f5b4e2"
+      },
+      "explicit_exclusions_ack": [
+        "obsidian_sync",
+        "commit",
+        "push",
+        "promotion"
+      ],
+      "extra_files_requested": false,
+      "rollback_ack": true,
+      "hash_ack": true,
+      "dirty_state_ack": true,
+      "expected_result": "READY_TO_WRITE",
+      "next_gate": "future_separately_approved_write_slice_required",
+      "formal_vault_write_allowed_now": false,
+      "formal_vault_accessed": false,
+      "approval_collected_now": false,
+      "action_basis_created": false,
+      "reviewed_knowledge_created": false,
+      "mainline_merge_allowed": false,
+      "sync_allowed": false,
+      "commit_allowed": false,
+      "push_allowed": false,
+      "promotion_allowed": false,
+      "required_rehearsal_hash": "291afae0ae1782461e77f887cd78dc7239ac5f090dbfc258ca19aa6ac8ed36cb"
+    },
+    {
+      "id": "synthetic_deny_write",
+      "decision_verdict": "DENIED_BY_USER",
+      "synthetic_only": true,
+      "actual_user_input": false,
+      "user_approval_text_present": false,
+      "synthetic_user_text": "SYNTHETIC ONLY: user denies the write request.",
+      "confirmed_question_ids": [],
+      "hash_claims": {
+        "packet_hash": "51244c5051881dfac5ac5648d34908bbf0a74ce1794f8f2868ff6b3378866cb3",
+        "source_bundle_hash": "4e7f8cdc4042a6858fcf42796843821391fe6c44e0e55e9e11206eda653f95ad",
+        "scope_hash": "f5ec5589dc4e983bda3b274bae47766bc58424a98e40363a6437e94b93f5b4e2"
+      },
+      "explicit_exclusions_ack": [
+        "obsidian_sync",
+        "commit",
+        "push",
+        "promotion"
+      ],
+      "extra_files_requested": false,
+      "rollback_ack": false,
+      "hash_ack": false,
+      "dirty_state_ack": false,
+      "expected_result": "BLOCKED_BY_SYNTHETIC_DENIAL",
+      "next_gate": "stop_and_record_denial_only",
+      "formal_vault_write_allowed_now": false,
+      "formal_vault_accessed": false,
+      "approval_collected_now": false,
+      "action_basis_created": false,
+      "reviewed_knowledge_created": false,
+      "mainline_merge_allowed": false,
+      "sync_allowed": false,
+      "commit_allowed": false,
+      "push_allowed": false,
+      "promotion_allowed": false,
+      "required_rehearsal_hash": "291afae0ae1782461e77f887cd78dc7239ac5f090dbfc258ca19aa6ac8ed36cb"
+    },
+    {
+      "id": "synthetic_needs_revision",
+      "decision_verdict": "NEEDS_REVISION",
+      "synthetic_only": true,
+      "actual_user_input": false,
+      "user_approval_text_present": false,
+      "synthetic_user_text": "SYNTHETIC ONLY: user asks to revise scope before any future write.",
+      "confirmed_question_ids": [],
+      "hash_claims": {
+        "packet_hash": "51244c5051881dfac5ac5648d34908bbf0a74ce1794f8f2868ff6b3378866cb3",
+        "source_bundle_hash": "4e7f8cdc4042a6858fcf42796843821391fe6c44e0e55e9e11206eda653f95ad",
+        "scope_hash": "f5ec5589dc4e983bda3b274bae47766bc58424a98e40363a6437e94b93f5b4e2"
+      },
+      "explicit_exclusions_ack": [
+        "obsidian_sync",
+        "commit",
+        "push",
+        "promotion"
+      ],
+      "extra_files_requested": false,
+      "rollback_ack": false,
+      "hash_ack": false,
+      "dirty_state_ack": false,
+      "expected_result": "BLOCKED_PENDING_PACKET_REVISION",
+      "next_gate": "revise_packet_in_future_sandbox_only",
+      "formal_vault_write_allowed_now": false,
+      "formal_vault_accessed": false,
+      "approval_collected_now": false,
+      "action_basis_created": false,
+      "reviewed_knowledge_created": false,
+      "mainline_merge_allowed": false,
+      "sync_allowed": false,
+      "commit_allowed": false,
+      "push_allowed": false,
+      "promotion_allowed": false,
+      "required_rehearsal_hash": "291afae0ae1782461e77f887cd78dc7239ac5f090dbfc258ca19aa6ac8ed36cb"
+    }
+  ],
+  "non_approval_receipt": {
+    "approval_collected_now": false,
+    "actual_user_input_used": false,
+    "formal_vault_accessed": false,
+    "current_status": "synthetic_decision_rehearsal_complete_pending_review",
+    "non_claims": [
+      "not actual approval",
+      "not formal vault approval",
+      "not sync approval",
+      "not commit approval",
+      "not push approval",
+      "not promotion approval",
+      "not action basis",
+      "not reviewed knowledge",
+      "not evidence support"
+    ],
+    "rehearsal_hash": "291afae0ae1782461e77f887cd78dc7239ac5f090dbfc258ca19aa6ac8ed36cb"
+  },
+  "stop_conditions": [
+    "actual user approval collection requested",
+    "formal vault read requested",
+    "formal vault scan requested",
+    "formal vault write requested",
+    "formal vault hash or snapshot requested",
+    "absolute vault path requested",
+    "Obsidian sync requested",
+    "commit or push requested",
+    "promotion requested",
+    "decision inferred from silence or prior PASS",
+    "packet hash mismatch",
+    "source bundle hash mismatch",
+    "scope hash mismatch",
+    "rehearsal hash mismatch",
+    "approved synthetic scenario treated as action basis",
+    "denied or revise scenario allows write",
+    "extra files requested",
+    "rollback or hash acknowledgement missing for synthetic approval"
+  ],
+  "inspector_controls": {
+    "inputs": [
+      {
+        "id": "q",
+        "type": "search",
+        "purpose": "filter"
+      }
+    ],
+    "buttons": [
+      {
+        "label": "All",
+        "filter": "all"
+      },
+      {
+        "label": "Scenarios",
+        "filter": "scenarios"
+      },
+      {
+        "label": "Rules",
+        "filter": "rules"
+      },
+      {
+        "label": "Receipt",
+        "filter": "receipt"
+      },
+      {
+        "label": "Stops",
+        "filter": "stops"
+      }
+    ]
+  },
+  "product_metrics": {
+    "required_positive_fixtures": 3,
+    "minimum_failure_cases": 54,
+    "required_decision_scenarios": 3,
+    "max_journey_steps": 3
+  },
+  "rehearsal_hash_material": {
+    "rehearsal_version": "p2-26-decision-rehearsal-v1",
+    "source_slice": "2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox",
+    "source_input_bundle_hash": "88a53d0d92e2ca7e0c5933e350d5e9f3d8ff823b188f9e1db9fa076a6d05f626",
+    "source_packet_hash": "51244c5051881dfac5ac5648d34908bbf0a74ce1794f8f2868ff6b3378866cb3",
+    "source_packet_source_bundle_hash": "4e7f8cdc4042a6858fcf42796843821391fe6c44e0e55e9e11206eda653f95ad",
+    "source_packet_scope_hash": "f5ec5589dc4e983bda3b274bae47766bc58424a98e40363a6437e94b93f5b4e2",
+    "decision_rules": {
+      "synthetic_only": true,
+      "actual_user_input_disallowed": true,
+      "actual_approval_collection_disallowed": true,
+      "approved_outcome_not_actionable": true,
+      "requires_packet_hash": "51244c5051881dfac5ac5648d34908bbf0a74ce1794f8f2868ff6b3378866cb3",
+      "requires_source_bundle_hash": "4e7f8cdc4042a6858fcf42796843821391fe6c44e0e55e9e11206eda653f95ad",
+      "requires_scope_hash": "f5ec5589dc4e983bda3b274bae47766bc58424a98e40363a6437e94b93f5b4e2",
+      "requires_all_question_ids_for_approved": [
+        "future_approve_exact_scope",
+        "future_approve_source_bindings",
+        "future_approve_rollback_hash_checks",
+        "future_approve_no_sync_commit_push_promotion"
+      ],
+      "deny_always_blocks_write": true,
+      "revise_always_blocks_write": true,
+      "extra_files_always_block": true,
+      "sync_commit_push_promotion_always_block": true,
+      "dirty_state_blocks_write": true,
+      "rollback_and_hash_ack_required_for_approved": true
+    },
+    "decision_scenarios": [
+      {
+        "id": "synthetic_approve_exact_packet",
+        "decision_verdict": "APPROVED_BY_USER",
+        "synthetic_only": true,
+        "actual_user_input": false,
+        "user_approval_text_present": false,
+        "synthetic_user_text": "SYNTHETIC ONLY: all required future confirmation phrases, packet hash, source bundle hash, and scope hash are present.",
+        "confirmed_question_ids": [
+          "future_approve_exact_scope",
+          "future_approve_source_bindings",
+          "future_approve_rollback_hash_checks",
+          "future_approve_no_sync_commit_push_promotion"
+        ],
+        "hash_claims": {
+          "packet_hash": "51244c5051881dfac5ac5648d34908bbf0a74ce1794f8f2868ff6b3378866cb3",
+          "source_bundle_hash": "4e7f8cdc4042a6858fcf42796843821391fe6c44e0e55e9e11206eda653f95ad",
+          "scope_hash": "f5ec5589dc4e983bda3b274bae47766bc58424a98e40363a6437e94b93f5b4e2"
+        },
+        "explicit_exclusions_ack": [
+          "obsidian_sync",
+          "commit",
+          "push",
+          "promotion"
+        ],
+        "extra_files_requested": false,
+        "rollback_ack": true,
+        "hash_ack": true,
+        "dirty_state_ack": true,
+        "expected_result": "READY_TO_WRITE",
+        "next_gate": "future_separately_approved_write_slice_required",
+        "formal_vault_write_allowed_now": false,
+        "formal_vault_accessed": false,
+        "approval_collected_now": false,
+        "action_basis_created": false,
+        "reviewed_knowledge_created": false,
+        "mainline_merge_allowed": false,
+        "sync_allowed": false,
+        "commit_allowed": false,
+        "push_allowed": false,
+        "promotion_allowed": false
+      },
+      {
+        "id": "synthetic_deny_write",
+        "decision_verdict": "DENIED_BY_USER",
+        "synthetic_only": true,
+        "actual_user_input": false,
+        "user_approval_text_present": false,
+        "synthetic_user_text": "SYNTHETIC ONLY: user denies the write request.",
+        "confirmed_question_ids": [],
+        "hash_claims": {
+          "packet_hash": "51244c5051881dfac5ac5648d34908bbf0a74ce1794f8f2868ff6b3378866cb3",
+          "source_bundle_hash": "4e7f8cdc4042a6858fcf42796843821391fe6c44e0e55e9e11206eda653f95ad",
+          "scope_hash": "f5ec5589dc4e983bda3b274bae47766bc58424a98e40363a6437e94b93f5b4e2"
+        },
+        "explicit_exclusions_ack": [
+          "obsidian_sync",
+          "commit",
+          "push",
+          "promotion"
+        ],
+        "extra_files_requested": false,
+        "rollback_ack": false,
+        "hash_ack": false,
+        "dirty_state_ack": false,
+        "expected_result": "BLOCKED_BY_SYNTHETIC_DENIAL",
+        "next_gate": "stop_and_record_denial_only",
+        "formal_vault_write_allowed_now": false,
+        "formal_vault_accessed": false,
+        "approval_collected_now": false,
+        "action_basis_created": false,
+        "reviewed_knowledge_created": false,
+        "mainline_merge_allowed": false,
+        "sync_allowed": false,
+        "commit_allowed": false,
+        "push_allowed": false,
+        "promotion_allowed": false
+      },
+      {
+        "id": "synthetic_needs_revision",
+        "decision_verdict": "NEEDS_REVISION",
+        "synthetic_only": true,
+        "actual_user_input": false,
+        "user_approval_text_present": false,
+        "synthetic_user_text": "SYNTHETIC ONLY: user asks to revise scope before any future write.",
+        "confirmed_question_ids": [],
+        "hash_claims": {
+          "packet_hash": "51244c5051881dfac5ac5648d34908bbf0a74ce1794f8f2868ff6b3378866cb3",
+          "source_bundle_hash": "4e7f8cdc4042a6858fcf42796843821391fe6c44e0e55e9e11206eda653f95ad",
+          "scope_hash": "f5ec5589dc4e983bda3b274bae47766bc58424a98e40363a6437e94b93f5b4e2"
+        },
+        "explicit_exclusions_ack": [
+          "obsidian_sync",
+          "commit",
+          "push",
+          "promotion"
+        ],
+        "extra_files_requested": false,
+        "rollback_ack": false,
+        "hash_ack": false,
+        "dirty_state_ack": false,
+        "expected_result": "BLOCKED_PENDING_PACKET_REVISION",
+        "next_gate": "revise_packet_in_future_sandbox_only",
+        "formal_vault_write_allowed_now": false,
+        "formal_vault_accessed": false,
+        "approval_collected_now": false,
+        "action_basis_created": false,
+        "reviewed_knowledge_created": false,
+        "mainline_merge_allowed": false,
+        "sync_allowed": false,
+        "commit_allowed": false,
+        "push_allowed": false,
+        "promotion_allowed": false
+      }
+    ],
+    "non_approval_receipt": {
+      "approval_collected_now": false,
+      "actual_user_input_used": false,
+      "formal_vault_accessed": false,
+      "current_status": "synthetic_decision_rehearsal_complete_pending_review",
+      "non_claims": [
+        "not actual approval",
+        "not formal vault approval",
+        "not sync approval",
+        "not commit approval",
+        "not push approval",
+        "not promotion approval",
+        "not action basis",
+        "not reviewed knowledge",
+        "not evidence support"
+      ]
+    },
+    "stop_conditions": [
+      "actual user approval collection requested",
+      "formal vault read requested",
+      "formal vault scan requested",
+      "formal vault write requested",
+      "formal vault hash or snapshot requested",
+      "absolute vault path requested",
+      "Obsidian sync requested",
+      "commit or push requested",
+      "promotion requested",
+      "decision inferred from silence or prior PASS",
+      "packet hash mismatch",
+      "source bundle hash mismatch",
+      "scope hash mismatch",
+      "rehearsal hash mismatch",
+      "approved synthetic scenario treated as action basis",
+      "denied or revise scenario allows write",
+      "extra files requested",
+      "rollback or hash acknowledgement missing for synthetic approval"
+    ]
+  },
+  "rehearsal_hash": "291afae0ae1782461e77f887cd78dc7239ac5f090dbfc258ca19aa6ac8ed36cb",
+  "expected_failures": [
+    "approved_scenario_result_actionable:synthetic_approve_exact_packet",
+    "approved_scenario_result_bad:synthetic_approve_exact_packet"
+  ]
+}

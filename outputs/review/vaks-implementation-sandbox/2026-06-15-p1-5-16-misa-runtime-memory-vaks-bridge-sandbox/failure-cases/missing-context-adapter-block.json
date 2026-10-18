@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "missing-context-adapter-block",
+  "expected_valid": false,
+  "expected_codes": ["MB_MISSING_CONTEXT_ADAPTER"],
+  "patch": {"context_adapter": {"__delete__": true}}
+}

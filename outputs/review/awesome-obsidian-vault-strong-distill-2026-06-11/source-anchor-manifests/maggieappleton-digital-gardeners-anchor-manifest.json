@@ -1,0 +1,44 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "MaggieAppleton/digital-gardeners",
+  "source_url": "https://github.com/MaggieAppleton/digital-gardeners",
+  "checked_commit": "5bdd8509dc6e142a889d3343c8f8e1af674f287a",
+  "checked_at": "2026-06-11",
+  "inspection_method": "shallow git clone plus README, Next.js pages/components, MDX garden entries, search build script, and MDX loading utilities",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "directory-purpose",
+      "why": "Frames the project as a curated directory and resource set for digital gardens, tools, theory, and examples."
+    },
+    {
+      "path": "gardens/*.mdx",
+      "kind": "catalog-entry-format",
+      "why": "Stores individual garden entries as structured MDX content rather than as an opaque list."
+    },
+    {
+      "path": "utils/mdxUtils.js",
+      "kind": "content-loader",
+      "why": "Defines the garden content path and loads MDX files into the site data flow."
+    },
+    {
+      "path": "scripts/build-search.js",
+      "kind": "search-index-generation",
+      "why": "Builds a searchable projection from source content for browsing."
+    },
+    {
+      "path": "pages/*.js and components/*",
+      "kind": "public-directory-projection",
+      "why": "Renders garden cards, detail pages, and directory navigation as a public-facing projection."
+    }
+  ],
+  "known_limits": [
+    "This is a curated public directory, not a reviewed knowledge base.",
+    "Digital-garden philosophy is useful framing but cannot replace VAKS candidate/review/truth boundaries.",
+    "Directory inclusion is not evidence support or endorsement."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

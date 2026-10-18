@@ -1,0 +1,9 @@
+{
+  "fixture_id": "park-shared-helper",
+  "option_id": "shared_helper_or_tools",
+  "expected": {
+    "decision": "PARK_REQUIRES_SEPARATE_USER_APPROVAL",
+    "requires_user_separate_approval": true,
+    "write_scope": "shared helper or tools path"
+  }
+}

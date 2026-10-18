@@ -1,0 +1,122 @@
+[
+  {
+    "file": "01-forbidden-formal-vault-write.json",
+    "expected_failures": [
+      "forbidden_operation:formal_vault_write"
+    ]
+  },
+  {
+    "file": "02-obsidian-sync-enabled.json",
+    "expected_failures": [
+      "forbidden_operation:obsidian_sync"
+    ]
+  },
+  {
+    "file": "03-commit-enabled.json",
+    "expected_failures": [
+      "forbidden_operation:commit"
+    ]
+  },
+  {
+    "file": "04-push-enabled.json",
+    "expected_failures": [
+      "forbidden_operation:push"
+    ]
+  },
+  {
+    "file": "05-promotion-enabled.json",
+    "expected_failures": [
+      "forbidden_operation:promotion"
+    ]
+  },
+  {
+    "file": "06-dependency-install-enabled.json",
+    "expected_failures": [
+      "forbidden_operation:dependency_install"
+    ]
+  },
+  {
+    "file": "07-background-service-enabled.json",
+    "expected_failures": [
+      "forbidden_operation:background_service"
+    ]
+  },
+  {
+    "file": "08-real-base-files-enabled.json",
+    "expected_failures": [
+      "forbidden_operation:real_base_files"
+    ]
+  },
+  {
+    "file": "09-missing-sandbox-boundary.json",
+    "expected_failures": [
+      "missing_boundary_phrase:sandbox only"
+    ]
+  },
+  {
+    "file": "10-missing-action-basis-boundary.json",
+    "expected_failures": [
+      "missing_boundary_phrase:not action basis"
+    ]
+  },
+  {
+    "file": "11-authority-confusing-surface.json",
+    "expected_failures": [
+      "authority_confusing_label"
+    ]
+  },
+  {
+    "file": "12-journey-too-deep.json",
+    "expected_failures": [
+      "journey_too_deep:new_user_first_run"
+    ]
+  },
+  {
+    "file": "13-journey-missing-stop-condition.json",
+    "expected_failures": [
+      "journey_missing_stop_condition:daily_triage"
+    ]
+  },
+  {
+    "file": "14-missing-receipt-surface.json",
+    "expected_failures": [
+      "missing_surface:receipt_inspector"
+    ]
+  },
+  {
+    "file": "15-missing-decision-option.json",
+    "expected_failures": [
+      "missing_decision_option:hybrid_pilot_path"
+    ]
+  },
+  {
+    "file": "16-decision-option-without-approval.json",
+    "expected_failures": [
+      "decision_option_without_user_approval:obsidian_native_markdown_bases"
+    ]
+  },
+  {
+    "file": "17-missing-product-acceptance-gate.json",
+    "expected_failures": [
+      "missing_acceptance_gate:reviewer_boundary_product_acceptance"
+    ]
+  },
+  {
+    "file": "18-outside-write-scope.json",
+    "expected_failures": [
+      "invalid_write_scope"
+    ]
+  },
+  {
+    "file": "19-wrong-source-slice.json",
+    "expected_failures": [
+      "wrong_source_slice"
+    ]
+  },
+  {
+    "file": "20-too-few-failure-cases.json",
+    "expected_failures": [
+      "minimum_failure_cases_too_low"
+    ]
+  }
+]

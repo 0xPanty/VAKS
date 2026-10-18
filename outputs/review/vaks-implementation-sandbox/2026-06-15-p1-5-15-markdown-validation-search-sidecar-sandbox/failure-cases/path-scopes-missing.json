@@ -1,0 +1,1 @@
+{"extends":"fixtures/valid-frontmatter-validation-check.json","scenario_id":"path-scopes-missing","expected_valid":false,"expected_codes":["MS_PATH_SCOPES_MISSING"],"patch":{"validation":{"path_scopes":[]}}}

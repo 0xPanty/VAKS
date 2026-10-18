@@ -1,0 +1,12 @@
+{
+  "raw_conclusion_token": "OPUS_APPROVES_MAINLINE",
+  "reviewed_evidence": [],
+  "blockers": [],
+  "boundary_verdict": "mainline_approval",
+  "raw_response_path": "artifact/raw-opus-result.md",
+  "mainline_approval": true,
+  "reviewed_knowledge": true,
+  "evidence_support": true,
+  "action_basis": true,
+  "commit_push_sync": true
+}

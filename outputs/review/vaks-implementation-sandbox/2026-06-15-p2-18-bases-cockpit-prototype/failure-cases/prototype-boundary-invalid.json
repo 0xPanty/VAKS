@@ -1,0 +1,1 @@
+{"extends": "prototype/bases-cockpit-prototype.json", "scenario_id": "prototype-boundary-invalid", "patch": {"prototype_boundary": "real_obsidian_bases"}}

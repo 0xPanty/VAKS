@@ -1,0 +1,87 @@
+{
+  "record_kind": "sandbox_frontmatter_status_hardening",
+  "slice_id": "2026-06-16-p2-65-user-decision-frontmatter-status-hardening-sandbox",
+  "source_slice_id": "2026-06-16-p2-64-user-decision-replay-portability-audit-sandbox",
+  "purpose": "strict YAML-frontmatter status parsing for user-decision closeout gates",
+  "frontmatter_status_hardening_ready": true,
+  "parser_contract": {
+    "requires_opening_frontmatter_delimiter": true,
+    "requires_closing_frontmatter_delimiter": true,
+    "requires_exactly_one_status_in_frontmatter": true,
+    "requires_non_empty_status": true,
+    "ignores_body_status_mentions": true,
+    "does_not_substring_match_pass_tokens": true
+  },
+  "source_statuses": {
+    "verification": {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-64-user-decision-replay-portability-audit-sandbox/verification.md",
+      "valid_frontmatter": true,
+      "status": "local_verification_passed",
+      "expected_status": "local_verification_passed",
+      "matches_expected": true,
+      "body_status_mentions": []
+    },
+    "reviewer": {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-64-user-decision-replay-portability-audit-sandbox/reviewer-report.md",
+      "valid_frontmatter": true,
+      "status": "review_pass_no_blocker",
+      "expected_status": "review_pass_no_blocker",
+      "matches_expected": true,
+      "body_status_mentions": []
+    },
+    "boundary": {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-64-user-decision-replay-portability-audit-sandbox/boundary-audit.md",
+      "valid_frontmatter": true,
+      "status": "pass_boundary",
+      "expected_status": "pass_boundary",
+      "matches_expected": true,
+      "body_status_mentions": []
+    },
+    "product": {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-64-user-decision-replay-portability-audit-sandbox/product-acceptance-report.md",
+      "valid_frontmatter": true,
+      "status": "pass_product_grade",
+      "expected_status": "pass_product_grade",
+      "matches_expected": true,
+      "body_status_mentions": []
+    },
+    "next_step": {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-64-user-decision-replay-portability-audit-sandbox/next-step.md",
+      "valid_frontmatter": true,
+      "status": "pass_product_grade_pending_next_slice",
+      "expected_status": "pass_product_grade_pending_next_slice",
+      "matches_expected": true,
+      "body_status_mentions": []
+    }
+  },
+  "sample_behavior": {
+    "frontmatter_status_wins": true,
+    "body_status_mentions_detected_not_used": true
+  },
+  "readiness_flags": {
+    "automatic_execution": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "formal_vault_ready": false,
+    "obsidian_sync_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "user_approval_collected": false
+  },
+  "hard_no": [
+    "do_not_execute_user_decision_option",
+    "do_not_merge_mainline",
+    "do_not_promote",
+    "do_not_sync_obsidian",
+    "do_not_commit",
+    "do_not_push",
+    "do_not_install_dependencies",
+    "do_not_start_background_service",
+    "do_not_use_mcp_write_tool",
+    "do_not_create_reviewed_knowledge",
+    "do_not_create_evidence_support",
+    "do_not_create_action_basis",
+    "do_not_collect_user_approval_by_inference"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "fixture_id": "dirty-tree-baseline-is-not-completion-evidence",
+  "expected": {
+    "dirty_tree_is_pre_existing_baseline": true,
+    "dirty_tree_can_block_completion_claim": false,
+    "dirty_tree_can_prove_completion": false,
+    "current_slice_path_audit_still_required": true
+  }
+}

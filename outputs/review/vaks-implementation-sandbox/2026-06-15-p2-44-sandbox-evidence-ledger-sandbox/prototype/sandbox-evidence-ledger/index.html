@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sandbox Evidence Ledger</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f7f8fb; color: #17202a; }
+    main { max-width: 1180px; margin: 0 auto; padding: 28px 18px 44px; }
+    h1 { margin: 0 0 8px; font-size: 30px; }
+    .summary { color: #455565; max-width: 840px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin: 20px 0; }
+    .card { background: #ffffff; border: 1px solid #d9e1ec; border-radius: 8px; padding: 14px; }
+    .card span { display: block; margin-top: 8px; color: #526273; font-size: 13px; }
+    .card strong { display: block; font-size: 18px; }
+    .metric strong { margin-top: 8px; font-size: 24px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 14px; background: #ffffff; border: 1px solid #d9e1ec; }
+    th, td { text-align: left; border-bottom: 1px solid #e5ebf2; padding: 8px 10px; font-size: 13px; }
+    th { background: #eef3f9; }
+    .notice { margin-top: 16px; border-left: 4px solid #2f6fed; background: #edf4ff; padding: 12px 14px; color: #1f3150; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Sandbox Evidence Ledger</h1>
+    <p class="summary">Evidence view for whether the sandbox work landed, was tested, improved the system, and remains non-production.</p>
+    <section class="cards">
+      <article class="card metric"><span>Source slices</span><strong>43</strong></article>
+      <article class="card metric"><span>Product PASS</span><strong>43</strong></article>
+      <article class="card metric"><span>Verification</span><strong>43</strong></article>
+      <article class="card metric"><span>Original plan PASS</span><strong>20</strong></article>
+    </section>
+    <section class="cards"><article class="card" data-improvement="receipt_boundaries_are_visible"><strong>Receipt boundaries are visible</strong><span>Retrieval, operation, and promotion-adjacent paths now have inspectable receipts or dry-run packets.</span></article>
+<article class="card" data-improvement="validators_have_negative_cases"><strong>Validators have negative cases</strong><span>Validator slices include failure cases so a green check cannot hide known bad paths.</span></article>
+<article class="card" data-improvement="retrieval_is_separated_from_support"><strong>Retrieval is separated from support</strong><span>Retrieval can find candidates, but the ledger preserves that selected_by is not support.</span></article>
+<article class="card" data-improvement="product_surfaces_preserve_authority_boundaries"><strong>Product surfaces preserve authority boundaries</strong><span>Dashboards, briefs, and prototypes expose state without granting approval, truth, support, or action authority.</span></article>
+<article class="card" data-improvement="formal_vault_paths_are_dry_run_only"><strong>Formal-vault paths are dry-run only</strong><span>Formal-vault planning, preflight, and request packets stay inside sandbox and do not touch the vault.</span></article>
+<article class="card" data-improvement="follow_up_agents_have_blind_run_regression"><strong>Follow-up agents have blind-run regression</strong><span>Independent follow-up-agent runs are tested so authority confusion is caught before continuation.</span></article>
+<article class="card" data-improvement="promotion_requires_separate_approval"><strong>Promotion requires separate approval</strong><span>The latest dry-run packet makes mainline, formal vault, template/tool, commit/push, and action-basis movement separately approvable.</span></article></section>
+    <h2>Original Plan Coverage</h2>
+    <table><thead><tr><th>ID</th><th>Phase</th><th>Slice</th><th>Product PASS</th><th>Verification</th></tr></thead><tbody><tr data-plan-item="P0-01"><td>P0-01</td><td>P0</td><td>retrieval receipt template sandbox</td><td>True</td><td>True</td></tr>
+<tr data-plan-item="P0-02"><td>P0-02</td><td>P0</td><td>operation receipt template sandbox</td><td>True</td><td>True</td></tr>
+<tr data-plan-item="P0-03"><td>P0-03</td><td>P0</td><td>body hash validator sandbox</td><td>True</td><td>True</td></tr>
+<tr data-plan-item="P0-04"><td>P0-04</td><td>P0</td><td>support boundary validator sandbox</td><td>True</td><td>True</td></tr>
+<tr data-plan-item="P0-05"><td>P0-05</td><td>P0</td><td>action readiness validator sandbox</td><td>True</td><td>True</td></tr>
+<tr data-plan-item="P0-06"><td>P0-06</td><td>P0</td><td>feedback validator sandbox</td><td>True</td><td>True</td></tr>
+<tr data-plan-item="P0-07"><td>P0-07</td><td>P0</td><td>action-boundary failure matrix</td><td>True</td><td>True</td></tr>
+<tr data-plan-item="P1-08"><td>P1-08</td><td>P1</td><td>retrieval/operation receipt validator pilot</td><td>True</td><td>True</td></tr>
+<tr data-plan-item="P1-09"><td>P1-09</td><td>P1</td><td>read-only query loop pilot</td><td>True</td><td>True</td></tr>
+<tr data-plan-item="P1-10"><td>P1-10</td><td>P1</td><td>runtime artifact exclusion test</td><td>True</td><td>True</td></tr>
+<tr data-plan-item="P1-11"><td>P1-11</td><td>P1</td><td>semantic anchor support check</td><td>True</td><td>True</td></tr>
+<tr data-plan-item="P1.5-12"><td>P1.5-12</td><td>P1.5</td><td>robust RAG retrieval sandbox</td><td>True</td><td>True</td></tr>
+<tr data-plan-item="P1.5-13"><td>P1.5-13</td><td>P1.5</td><td>local Obsidian graph retrieval / read-only MCP sandbox</td><td>True</td><td>True</td></tr>
+<tr data-plan-item="P1.5-14"><td>P1.5-14</td><td>P1.5</td><td>raw intake parser router sandbox</td><td>True</td><td>True</td></tr>
+<tr data-plan-item="P1.5-15"><td>P1.5-15</td><td>P1.5</td><td>markdown validation/search sidecar sandbox</td><td>True</td><td>True</td></tr>
+<tr data-plan-item="P1.5-16"><td>P1.5-16</td><td>P1.5</td><td>MISA runtime memory / VAKS bridge sandbox</td><td>True</td><td>True</td></tr>
+<tr data-plan-item="P2-17"><td>P2-17</td><td>P2</td><td>use-surface optimization pass</td><td>True</td><td>True</td></tr>
+<tr data-plan-item="P2-18"><td>P2-18</td><td>P2</td><td>Bases cockpit prototype</td><td>True</td><td>True</td></tr>
+<tr data-plan-item="P2-19"><td>P2-19</td><td>P2</td><td>product experience screening sandbox</td><td>True</td><td>True</td></tr>
+<tr data-plan-item="P2-20"><td>P2-20</td><td>P2</td><td>product workflow prototype</td><td>True</td><td>True</td></tr></tbody></table>
+    <h2>Current Sandbox Slices</h2>
+    <table><thead><tr><th>Slice</th><th>Product PASS</th><th>Verification</th><th>Reviewer</th><th>Boundary</th></tr></thead><tbody><tr data-source-slice="2026-06-15-p0-01-retrieval-receipt-template-sandbox"><td>2026-06-15-p0-01-retrieval-receipt-template-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p0-02-operation-receipt-template-sandbox"><td>2026-06-15-p0-02-operation-receipt-template-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p0-03-body-hash-validator-sandbox"><td>2026-06-15-p0-03-body-hash-validator-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p0-04-support-boundary-validator-sandbox"><td>2026-06-15-p0-04-support-boundary-validator-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p0-05-action-readiness-validator-sandbox"><td>2026-06-15-p0-05-action-readiness-validator-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p0-06-feedback-validator-sandbox"><td>2026-06-15-p0-06-feedback-validator-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p0-07-action-boundary-failure-matrix-sandbox"><td>2026-06-15-p0-07-action-boundary-failure-matrix-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox"><td>2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p1-09-read-only-query-loop-pilot-sandbox"><td>2026-06-15-p1-09-read-only-query-loop-pilot-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox"><td>2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p1-11-semantic-anchor-support-check-sandbox"><td>2026-06-15-p1-11-semantic-anchor-support-check-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p1-5-12-robust-rag-retrieval-sandbox"><td>2026-06-15-p1-5-12-robust-rag-retrieval-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox"><td>2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p1-5-14-raw-intake-parser-router-sandbox"><td>2026-06-15-p1-5-14-raw-intake-parser-router-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox"><td>2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox"><td>2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-17-use-surface-optimization-pass"><td>2026-06-15-p2-17-use-surface-optimization-pass</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-18-bases-cockpit-prototype"><td>2026-06-15-p2-18-bases-cockpit-prototype</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-19-product-experience-screening-sandbox"><td>2026-06-15-p2-19-product-experience-screening-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-20-product-workflow-prototype"><td>2026-06-15-p2-20-product-workflow-prototype</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-21-silky-obsidian-workbench-sandbox"><td>2026-06-15-p2-21-silky-obsidian-workbench-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-22-formalization-readiness-polish-sandbox"><td>2026-06-15-p2-22-formalization-readiness-polish-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox"><td>2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox"><td>2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox"><td>2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-26-formal-vault-write-decision-rehearsal-sandbox"><td>2026-06-15-p2-26-formal-vault-write-decision-rehearsal-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-27-formal-vault-user-decision-intake-gate-sandbox"><td>2026-06-15-p2-27-formal-vault-user-decision-intake-gate-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-28-formal-vault-execution-preflight-dry-run-sandbox"><td>2026-06-15-p2-28-formal-vault-execution-preflight-dry-run-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-29-formal-vault-execution-plan-sandbox"><td>2026-06-15-p2-29-formal-vault-execution-plan-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox"><td>2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox"><td>2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox"><td>2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox"><td>2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox"><td>2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-35-formal-vault-status-surface-handoff-packet-sandbox"><td>2026-06-15-p2-35-formal-vault-status-surface-handoff-packet-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox"><td>2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-37-formal-vault-operator-workflow-usability-screening-sandbox"><td>2026-06-15-p2-37-formal-vault-operator-workflow-usability-screening-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-38-formal-vault-follow-up-agent-blind-run-sandbox"><td>2026-06-15-p2-38-formal-vault-follow-up-agent-blind-run-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-39-blind-run-regression-maintenance-sandbox"><td>2026-06-15-p2-39-blind-run-regression-maintenance-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-40-sandbox-product-grade-rollup-dashboard-sandbox"><td>2026-06-15-p2-40-sandbox-product-grade-rollup-dashboard-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-41-sandbox-operator-decision-brief-sandbox"><td>2026-06-15-p2-41-sandbox-operator-decision-brief-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-42-sandbox-executive-readiness-brief-sandbox"><td>2026-06-15-p2-42-sandbox-executive-readiness-brief-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr data-source-slice="2026-06-15-p2-43-sandbox-promotion-request-dry-run-sandbox"><td>2026-06-15-p2-43-sandbox-promotion-request-dry-run-sandbox</td><td>True</td><td>True</td><td>True</td><td>True</td></tr></tbody></table>
+    <section class="notice">Sandbox product-grade operator experience only: not enterprise production, not mainline ready, not action basis.</section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

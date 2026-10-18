@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "heavy-parser-always-on",
+  "expected_valid": false,
+  "expected_codes": ["RP_HEAVY_PARSER_ALWAYS_ON"],
+  "patch": {"router": {"heavy_parser_always_on": true}}
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "missing-vaks-validators-block",
+  "expected_valid": false,
+  "expected_codes": ["MS_MISSING_VAKS_VALIDATORS"],
+  "patch": {
+    "vaks_validators": {
+      "__delete__": true
+    }
+  }
+}

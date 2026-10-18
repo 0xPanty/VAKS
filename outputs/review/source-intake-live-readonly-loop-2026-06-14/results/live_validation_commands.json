@@ -1,0 +1,25 @@
+{
+  "status": "pass",
+  "checked_at": "2026-06-14T01:37:48+00:00",
+  "commands": [
+    {
+      "command": "python tools/validate_source_intake_contract.py --scope current --out-dir outputs/review/source-intake-live-readonly-loop-2026-06-14/results --no-fail",
+      "returncode": 0,
+      "stdout": "{\"scope\": \"current\", \"files_scanned\": 239, \"files_validated\": 185, \"warnings\": 122, \"errors\": 0}",
+      "stderr": ""
+    },
+    {
+      "command": "python tools/validate_source_intake_contract.py --scope contract --out-dir outputs/review/source-intake-live-readonly-loop-2026-06-14/results --no-fail",
+      "returncode": 0,
+      "stdout": "{\"scope\": \"contract\", \"files_scanned\": 10, \"files_validated\": 10, \"warnings\": 0, \"errors\": 0}",
+      "stderr": ""
+    },
+    {
+      "command": "python tools/validate_source_intake_failure_matrix.py --out-dir outputs/review/source-intake-live-readonly-loop-2026-06-14/results",
+      "returncode": 0,
+      "stdout": "{\"case_count\": 33, \"blocked_count\": 33, \"status\": \"pass\"}",
+      "stderr": ""
+    }
+  ],
+  "truth_boundary": "Validator outputs are included for audit continuity; they do not convert this live-readonly smoke into Source Intake P0 approval."
+}

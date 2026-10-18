@@ -1,0 +1,300 @@
+[
+  {
+    "case_id": "RT-01-candidate-support-block",
+    "risk_target": "candidate_as_support",
+    "expected": "blocked",
+    "decision": "blocked_or_downgraded",
+    "passed": true,
+    "runtime_errors": [
+      "diagnostic_signal_as_support_without_anchor",
+      "non_support_record_as_support",
+      "support_missing_independent_anchor",
+      "supported_without_independent_anchor"
+    ],
+    "structural_error_checks": [
+      "diagnostic_signal_as_support",
+      "non_support_record_marked_support",
+      "support_missing_independent_anchor"
+    ],
+    "anchor_resolution_status": "not_checked",
+    "anchor_resolution_detail": {
+      "status": "not_checked",
+      "reason": "anchor ref has no selector",
+      "method": "loose_path_selector_string_match_not_heading_or_line_binding"
+    },
+    "anchor_resolution_count": 1,
+    "anchor_error_checks": [
+      "support_anchor_not_resolved"
+    ],
+    "all_error_checks": [
+      "diagnostic_signal_as_support",
+      "diagnostic_signal_as_support_without_anchor",
+      "non_support_record_as_support",
+      "non_support_record_marked_support",
+      "support_anchor_not_resolved",
+      "support_missing_independent_anchor",
+      "supported_without_independent_anchor"
+    ],
+    "query_run_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/query_runs/RT-01-candidate-support-block-query-run.md",
+    "context_pack_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/context_packs/RT-01-candidate-support-block-context-pack.md",
+    "answer_draft_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/answer_drafts/RT-01-candidate-support-block-answer-draft.md",
+    "writeback_attempted": false,
+    "promotion_attempted": false,
+    "truth_mutation_attempted": false
+  },
+  {
+    "case_id": "RT-02-overlay-support-block",
+    "risk_target": "overlay_as_support",
+    "expected": "blocked",
+    "decision": "blocked_or_downgraded",
+    "passed": true,
+    "runtime_errors": [
+      "non_support_record_as_support"
+    ],
+    "structural_error_checks": [
+      "non_support_record_marked_support"
+    ],
+    "anchor_resolution_status": "missing",
+    "anchor_resolution_detail": {
+      "status": "missing",
+      "reason": "anchor file missing",
+      "path": "raw/articles/example-source.md",
+      "selector": "L12-L18",
+      "method": "loose_path_selector_string_match_not_heading_or_line_binding"
+    },
+    "anchor_resolution_count": 1,
+    "anchor_error_checks": [
+      "support_anchor_not_resolved"
+    ],
+    "all_error_checks": [
+      "non_support_record_as_support",
+      "non_support_record_marked_support",
+      "support_anchor_not_resolved"
+    ],
+    "query_run_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/query_runs/RT-02-overlay-support-block-query-run.md",
+    "context_pack_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/context_packs/RT-02-overlay-support-block-context-pack.md",
+    "answer_draft_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/answer_drafts/RT-02-overlay-support-block-answer-draft.md",
+    "writeback_attempted": false,
+    "promotion_attempted": false,
+    "truth_mutation_attempted": false
+  },
+  {
+    "case_id": "RT-03-raw-summary-without-anchor-block",
+    "risk_target": "raw_summary_without_anchor",
+    "expected": "blocked",
+    "decision": "blocked_or_downgraded",
+    "passed": true,
+    "runtime_errors": [
+      "diagnostic_signal_as_support_without_anchor",
+      "support_missing_independent_anchor",
+      "supported_without_independent_anchor"
+    ],
+    "structural_error_checks": [
+      "diagnostic_signal_as_support",
+      "support_missing_independent_anchor"
+    ],
+    "anchor_resolution_status": "not_checked",
+    "anchor_resolution_detail": {
+      "status": "not_checked",
+      "reason": "anchor ref has no selector",
+      "method": "loose_path_selector_string_match_not_heading_or_line_binding"
+    },
+    "anchor_resolution_count": 1,
+    "anchor_error_checks": [
+      "support_anchor_not_resolved"
+    ],
+    "all_error_checks": [
+      "diagnostic_signal_as_support",
+      "diagnostic_signal_as_support_without_anchor",
+      "support_anchor_not_resolved",
+      "support_missing_independent_anchor",
+      "supported_without_independent_anchor"
+    ],
+    "query_run_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/query_runs/RT-03-raw-summary-without-anchor-block-query-run.md",
+    "context_pack_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/context_packs/RT-03-raw-summary-without-anchor-block-context-pack.md",
+    "answer_draft_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/answer_drafts/RT-03-raw-summary-without-anchor-block-answer-draft.md",
+    "writeback_attempted": false,
+    "promotion_attempted": false,
+    "truth_mutation_attempted": false
+  },
+  {
+    "case_id": "RT-04-graph-neighbor-support-block",
+    "risk_target": "graph_selected_signal_as_support",
+    "expected": "blocked",
+    "decision": "blocked_or_downgraded",
+    "passed": true,
+    "runtime_errors": [
+      "diagnostic_or_legacy_anchor_as_support"
+    ],
+    "structural_error_checks": [],
+    "anchor_resolution_status": "not_checked",
+    "anchor_resolution_detail": {
+      "status": "not_checked",
+      "reason": "anchor ref has no selector",
+      "method": "loose_path_selector_string_match_not_heading_or_line_binding"
+    },
+    "anchor_resolution_count": 1,
+    "anchor_error_checks": [
+      "support_anchor_not_resolved"
+    ],
+    "all_error_checks": [
+      "diagnostic_or_legacy_anchor_as_support",
+      "support_anchor_not_resolved"
+    ],
+    "query_run_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/query_runs/RT-04-graph-neighbor-support-block-query-run.md",
+    "context_pack_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/context_packs/RT-04-graph-neighbor-support-block-context-pack.md",
+    "answer_draft_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/answer_drafts/RT-04-graph-neighbor-support-block-answer-draft.md",
+    "writeback_attempted": false,
+    "promotion_attempted": false,
+    "truth_mutation_attempted": false
+  },
+  {
+    "case_id": "RT-05-rank-score-support-block",
+    "risk_target": "rank_score_as_support",
+    "expected": "blocked",
+    "decision": "blocked_or_downgraded",
+    "passed": true,
+    "runtime_errors": [
+      "diagnostic_or_legacy_anchor_as_support"
+    ],
+    "structural_error_checks": [],
+    "anchor_resolution_status": "not_checked",
+    "anchor_resolution_detail": {
+      "status": "not_checked",
+      "reason": "anchor ref has no selector",
+      "method": "loose_path_selector_string_match_not_heading_or_line_binding"
+    },
+    "anchor_resolution_count": 1,
+    "anchor_error_checks": [
+      "support_anchor_not_resolved"
+    ],
+    "all_error_checks": [
+      "diagnostic_or_legacy_anchor_as_support",
+      "support_anchor_not_resolved"
+    ],
+    "query_run_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/query_runs/RT-05-rank-score-support-block-query-run.md",
+    "context_pack_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/context_packs/RT-05-rank-score-support-block-context-pack.md",
+    "answer_draft_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/answer_drafts/RT-05-rank-score-support-block-answer-draft.md",
+    "writeback_attempted": false,
+    "promotion_attempted": false,
+    "truth_mutation_attempted": false
+  },
+  {
+    "case_id": "RT-06-legacy-raw-metadata-support-block",
+    "risk_target": "legacy_raw_metadata_as_support",
+    "expected": "blocked",
+    "decision": "blocked_or_downgraded",
+    "passed": true,
+    "runtime_errors": [
+      "diagnostic_or_legacy_anchor_as_support",
+      "legacy_raw_metadata_selected"
+    ],
+    "structural_error_checks": [
+      "legacy_raw_metadata_used_as_support_anchor",
+      "legacy_raw_metadata_used_for_selection"
+    ],
+    "anchor_resolution_status": "not_checked",
+    "anchor_resolution_detail": {
+      "status": "not_checked",
+      "reason": "anchor ref has no selector",
+      "method": "loose_path_selector_string_match_not_heading_or_line_binding"
+    },
+    "anchor_resolution_count": 1,
+    "anchor_error_checks": [
+      "support_anchor_not_resolved"
+    ],
+    "all_error_checks": [
+      "diagnostic_or_legacy_anchor_as_support",
+      "legacy_raw_metadata_selected",
+      "legacy_raw_metadata_used_as_support_anchor",
+      "legacy_raw_metadata_used_for_selection",
+      "support_anchor_not_resolved"
+    ],
+    "query_run_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/query_runs/RT-06-legacy-raw-metadata-support-block-query-run.md",
+    "context_pack_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/context_packs/RT-06-legacy-raw-metadata-support-block-context-pack.md",
+    "answer_draft_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/answer_drafts/RT-06-legacy-raw-metadata-support-block-answer-draft.md",
+    "writeback_attempted": false,
+    "promotion_attempted": false,
+    "truth_mutation_attempted": false
+  },
+  {
+    "case_id": "RT-07-safe-raw-anchor-readonly-allow",
+    "risk_target": "real_raw_anchor_allow",
+    "expected": "allowed_readonly",
+    "decision": "allowed_readonly",
+    "passed": true,
+    "runtime_errors": [],
+    "structural_error_checks": [],
+    "anchor_resolution_status": "exists",
+    "anchor_resolution_detail": {
+      "status": "exists",
+      "path": "raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md",
+      "selector": "Extracted Source Facts",
+      "method": "loose_path_selector_string_match_not_heading_or_line_binding"
+    },
+    "anchor_resolution_count": 1,
+    "anchor_error_checks": [],
+    "all_error_checks": [],
+    "query_run_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/query_runs/RT-07-safe-raw-anchor-readonly-allow-query-run.md",
+    "context_pack_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/context_packs/RT-07-safe-raw-anchor-readonly-allow-context-pack.md",
+    "answer_draft_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/answer_drafts/RT-07-safe-raw-anchor-readonly-allow-answer-draft.md",
+    "writeback_attempted": false,
+    "promotion_attempted": false,
+    "truth_mutation_attempted": false
+  },
+  {
+    "case_id": "RT-08-broken-raw-anchor-block",
+    "risk_target": "real_raw_anchor_broken_selector",
+    "expected": "blocked",
+    "decision": "blocked_or_downgraded",
+    "passed": true,
+    "runtime_errors": [],
+    "structural_error_checks": [],
+    "anchor_resolution_status": "missing",
+    "anchor_resolution_detail": {
+      "status": "missing",
+      "reason": "selector not found in file",
+      "path": "raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md",
+      "selector": "missing-runtime-anchor-selector",
+      "method": "loose_path_selector_string_match_not_heading_or_line_binding"
+    },
+    "anchor_resolution_count": 1,
+    "anchor_error_checks": [
+      "support_anchor_not_resolved"
+    ],
+    "all_error_checks": [
+      "support_anchor_not_resolved"
+    ],
+    "query_run_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/query_runs/RT-08-broken-raw-anchor-block-query-run.md",
+    "context_pack_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/context_packs/RT-08-broken-raw-anchor-block-context-pack.md",
+    "answer_draft_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/answer_drafts/RT-08-broken-raw-anchor-block-answer-draft.md",
+    "writeback_attempted": false,
+    "promotion_attempted": false,
+    "truth_mutation_attempted": false
+  },
+  {
+    "case_id": "RT-09-mixed-pack-support-selection-allow",
+    "risk_target": "mixed_pack_support_selection",
+    "expected": "allowed_readonly",
+    "decision": "allowed_readonly",
+    "passed": true,
+    "runtime_errors": [],
+    "structural_error_checks": [],
+    "anchor_resolution_status": "exists",
+    "anchor_resolution_detail": {
+      "status": "exists",
+      "path": "raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md",
+      "selector": "Extracted Source Facts",
+      "method": "loose_path_selector_string_match_not_heading_or_line_binding"
+    },
+    "anchor_resolution_count": 1,
+    "anchor_error_checks": [],
+    "all_error_checks": [],
+    "query_run_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/query_runs/RT-09-mixed-pack-support-selection-allow-query-run.md",
+    "context_pack_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/context_packs/RT-09-mixed-pack-support-selection-allow-context-pack.md",
+    "answer_draft_path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/answer_drafts/RT-09-mixed-pack-support-selection-allow-answer-draft.md",
+    "writeback_attempted": false,
+    "promotion_attempted": false,
+    "truth_mutation_attempted": false
+  }
+]

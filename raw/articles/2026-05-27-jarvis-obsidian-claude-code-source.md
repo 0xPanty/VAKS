@@ -1,5 +1,6 @@
 ---
 type: source
+record_kind: source_card
 status: source-captured
 title: "How to Build a JARVIS Inside Obsidian With Claude Code"
 source_url:
@@ -9,7 +10,6 @@ publisher:
 published_at:
 captured_at: 2026-05-27
 captured_by: Codex
-processing_mode: immediate
 review_priority: normal
 review_owner: Codex
 formalization_status: reviewed
@@ -24,15 +24,12 @@ projects:
 sources: []
 verification_status: single-source
 evidence_level: anecdotal
-source_quality: 3
-freshness: 4
-relevance: 3
-confidence: medium
-cross_source_count: 1
+source_integrity:
+  capture_confidence: medium
 verified_by: Codex review of user-pasted text
 last_verified: 2026-05-27
 next_review: 2026-06-03
-relations:
+candidate_relation_suggestions:
   - target: "[[2026-05-27-jarvis-content-vault-review]]"
     type: derived_from
     strength: 5
@@ -56,8 +53,25 @@ tags:
   - content-workflow
   - obsidian
   - claude-code
+knowledge_status: raw
+processing_tier: light
+source_id: legacy:2026-05-27-jarvis-obsidian-claude-code-source
+why_saved: see_body_or_legacy_record
+retrieval_policy:
+  policy_kind: source_identity_only
+  pack_allowed: drilldown_required
+  action_basis_allowed: false
+  warning_code: raw_is_provenance_only
+promotion_gate: none
+action_basis_allowed: false
+truth_mutation_allowed: false
+raw_location: C:/Users/Administrator/Documents/资料库/raw/articles/2026-05-27-jarvis-obsidian-claude-code-source.md
+legacy_raw_metadata:
+  source_quality: 3
+  freshness: 4
+  relevance: 3
+  cross_source_count: 1
 ---
-
 # 来源记录：JARVIS inside Obsidian with Claude Code
 
 ## 为什么收录

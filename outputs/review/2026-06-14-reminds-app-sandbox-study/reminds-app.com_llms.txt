@@ -1,0 +1,109 @@
+﻿# reminds
+
+> reminds 是一款为终身学习者量身打造的 AI 卡片笔记。通过轻松无压力的记录，丰富多样的连接，科学智能的回顾和方便快捷的调用，帮助热爱思考的学习者，用每一次记录，助力未来。
+
+笔记助力未来 — 你的首款 AI 卡片笔记
+
+## 网站结构
+
+- [首页](https://reminds-app.com/)：reminds 是一款为终身学习者量身打造的 AI 卡片笔记。通过轻松无压力的记录，丰富多样的连接，科学智能的回顾和方便快捷的调用，帮助热爱思考的学习者，用每一次记录，助力未来。
+- [会员](https://reminds-app.com/membership)：卡片笔记的完整能力，助力终身学习者用每一次记录，助力未来。享受无限闪念记录、MindPilot 智能探索、知识星图、科学回顾等高级功能，构建专属第二大脑，实现思维成长。
+- [re.ism](https://reminds-app.com/reism)：re.ism 是一种文化，一种不断通过学习，追求自我成长，实现自我价值的文化。信奉 re.ism 的人，是爱学习的人、积极向内求生长的人、善良和真诚的人。通过践行 re.ism，我们可以更加勇敢地面对未来。
+- [卡片笔记法](https://reminds-app.com/zettelkasten)：卡片笔记法是一套从阅读、思考到写作的完整工作流。了解原子化卡片、文献盒与主卡片盒、闪念与永久笔记，以及如何在 reminds 中记录、连接、回顾并创造。
+- [MindPilot](https://reminds-app.com/mindpilot)：reminds 2.0 带来思考力画布和 AI Agent，让笔记不只是记录，更是思考的画布和能干活的 AI 助手，自由探索无限可能。
+- [探索](https://reminds-app.com/doc)：探索更多关于 reminds 信息，包括但不限于 reminds 的品牌故事、使用文档、产品介绍、常见问题解答等内容，帮助用户更好地了解和使用 reminds。
+- [具体文档页](https://reminds-app.com/doc/content/{uuid})：具体文档页
+
+## 获取页面 Markdown
+
+所有页面支持 `?format=md` 查询参数，返回纯 Markdown 内容，适合 LLM 爬取。
+
+### 示例
+
+- 首页：https://reminds-app.com/?format=md
+- 会员：https://reminds-app.com/membership?format=md
+- re.ism：https://reminds-app.com/reism?format=md
+- 卡片笔记法：https://reminds-app.com/zettelkasten?format=md
+- MindPilot：https://reminds-app.com/mindpilot?format=md
+- 文档索引：https://reminds-app.com/doc?format=md
+- 文档内容：https://reminds-app.com/doc/content/{uuid}?format=md
+
+## MCP 服务器（reminds-mcp）
+
+reminds 提供 MCP 服务器，可与支持 MCP 协议的 AI 客户端集成。
+
+### 前置条件
+
+获取 API 密钥：打开 reminds → 设置 → 安全 → 开发者 → API 密钥
+
+### 支持的工具
+
+- **create_fleeting**：创建闪念（HTML 格式）
+- **get_fleeting**：获取闪念内容
+- **search_notes**：语义搜索笔记（支持 qa 精确问答和 retrieval 广泛检索两种模式）
+- **get_notes**：批量获取笔记内容
+
+### 集成方式
+
+#### 本地模式
+
+适合有 Node.js 环境的用户，通过 npx 运行本地 MCP 服务器。
+适用客户端：Cursor、Windsurf、Claude Code 等。
+
+```json
+{
+  "mcpServers": {
+    "reminds-mcp": {
+      "command": "npx",
+      "args": ["-y", "reminds-mcp"],
+      "env": {
+        "API_KEY": "<你的 API 密钥>"
+      }
+    }
+  }
+}
+```
+
+#### HTTP 模式一
+
+适合无 Node.js 环境、客户端支持非 OAuth HTTP MCP 的用户，直接连接远程服务器。
+
+```json
+{
+  "mcpServers": {
+    "reminds-mcp": {
+      "type": "http",
+      "url": "https://api.reminds-app.com/api/v1/mcp",
+      "headers": {
+        "X-Api-Key": "<你的 API 密钥>"
+      }
+    }
+  }
+}
+```
+
+#### HTTP 模式二
+
+适合需要 OAuth 认证的客户端（如 Claude Desktop），使用 Remote MCP Server URL。
+在客户端中添加 Remote MCP Server，填入以下地址：
+
+```
+https://api.reminds-app.com/api/v1/mcp
+```
+
+客户端会自动完成 OAuth 认证流程，通过手机验证码登录后即可使用。
+
+## App 下载
+
+- [Mac (Apple 芯片)](https://dl.reminds-app.com/release/mac/arm64/reminds-mac-arm64-2.4.0-beta(579).dmg)
+- [Mac (Intel 芯片)](https://dl.reminds-app.com/release/mac/x64/reminds-mac-x64-2.4.0-beta(579).dmg)
+- [Windows](https://dl.reminds-app.com/release/win/x64/reminds-win-x64-2.4.0-beta.zip)
+- [iOS](https://apps.apple.com/cn/app/reminds-ai-%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0/id6749525488)
+- [Android](https://dl.reminds-app.com/release/mobile/android/reminds-release-1.5.0(132).apk)
+
+## 更多信息
+
+- [官网](https://reminds-app.com)
+- [文档中心](https://reminds-app.com/doc)
+- [隐私政策](https://reminds-app.com/doc/content/9f9732af-6e07-405c-b205-079995ead21a)
+- [服务条款](https://reminds-app.com/doc/content/93965813-f205-4694-891a-ddbf65c3bc6b)

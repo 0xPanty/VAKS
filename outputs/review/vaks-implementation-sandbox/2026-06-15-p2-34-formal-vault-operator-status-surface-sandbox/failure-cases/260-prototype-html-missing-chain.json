@@ -1,0 +1,20 @@
+{
+  "case_id": "prototype-html-missing-chain",
+  "note": "HTML loses displayed chain.",
+  "prototype_tamper": {
+    "kind": "html_replace",
+    "file": "operator-status-surface.html",
+    "content": "<html data-sandbox-only=\"true\" data-status-only=\"true\" data-non-executable=\"true\" data-no-formal-vault-access=\"true\" data-no-write=\"true\" data-no-sync=\"true\" data-no-authority=\"true\" data-no-approval=\"true\" data-no-user-wording=\"true\" data-no-command=\"true\"><body>Status surface</body></html>"
+  },
+  "expected_errors": [
+    "html_stage_card_count_mismatch:0:expected:4",
+    "html_missing_stage_slice:p2_30_dry_run_ledger",
+    "html_missing_stage_label:p2_30_dry_run_ledger",
+    "html_missing_stage_slice:p2_31_readiness_gate",
+    "html_missing_stage_label:p2_31_readiness_gate",
+    "html_missing_stage_slice:p2_32_request_packet",
+    "html_missing_stage_label:p2_32_request_packet",
+    "html_missing_stage_slice:p2_33_request_screening",
+    "html_missing_stage_label:p2_33_request_screening"
+  ]
+}

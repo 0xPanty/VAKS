@@ -1,0 +1,80 @@
+文章
+
+查看新帖子
+对话
+Dami-Defi
+@DamiDefi
+I Replaced My Entire Research Stack With Obsidian and Claude. Here Is the Full System.
+For two years I ran five different tools to do one job.
+Notion for organising research projects and storing articles I intended to read. Readwise for capturing highlights from everything I actually read. X bookmarks for saving tweets, threads, and links in the moment and never finding them again. Browser bookmarks for the articles I saved with the best intentions and never revisited. ChatGPT for the quick analysis questions I needed answered before moving on.
+Five tools. Five different places to look for the same piece of information. Five different mental models for what lived where.
+The system felt comprehensive until I needed something from it. Then it felt like five locked rooms with no master key.
+Four months ago I shut all of it down and rebuilt everything inside Obsidian with Claude as the intelligence layer. I have not opened Notion for research once since. I cancelled one subscription and deleted two apps. And the quality of my research output is better than it was when I had more tools.
+Here is the full system.
+Why Five Tools Was Actually Zero Systems
+The problem was never the tools. Each one did its job reasonably well in isolation.
+The problem was that they did not talk to each other in any way that was useful to me. A highlight in Readwise had no relationship to a project in Notion unless I manually created that relationship. A link saved in X bookmarks had no connection to a Claude conversation unless I manually retrieved it. Every insight lived in a silo and the work of connecting silos fell entirely on me.
+That is the tax nobody talks about when they recommend their research stack. The connection cost. Every time I needed to synthesise across tools I paid it in time and mental load. Multiplied across hundreds of research sessions over two years, that cost was enormous.
+The shift I made was architectural, not cosmetic. Instead of asking which tools were best at their individual jobs, I asked which system would make connections automatically. The answer was a single environment where everything lived together and Claude could reason across all of it without me routing information manually between applications.
+What the System Looks Like Now
+Everything lives in one Obsidian vault. One place. One search. One context window when Claude needs to reason across it.
+The vault has six folders and nothing else:
+00-Inbox — everything lands here first. No organisation at capture time.
+01-Sources — processed articles, papers, reports, transcripts. One note per source.
+02-Ideas — atomic observations, reactions, patterns. One idea per note.
+03-Projects — active research threads. Each one links to relevant sources and ideas.
+04-Outputs — finished articles, threads, reports. What came out the other side.
+05-Claude — the CLAUDE.md file, skill files, and session logs.
+The rule that makes this work: everything goes into Inbox first and gets processed later. Capture speed is non-negotiable. If saving something takes more than ten seconds, it will not get saved.
+How Each of the Five Tools Got Replaced
+Notion → Obsidian Projects folder
+Notion was where I kept research projects: a database of topics, a page per project, links to relevant articles, status fields, and sub-pages for notes. It looked organised. In practice I had 34 projects, 11 of which I had not touched in three months, and finding anything required navigating through nested pages that had not been updated since I created them.
+The Projects folder in Obsidian does the same job with two differences. Every project note is plain text, which means Claude can read and reason across all of them simultaneously. And there are no status fields or database views creating the illusion of organisation without the substance of it. A project note either has recent activity or it does not. That honesty is more useful than a database that says everything is "In Progress."
+Readwise → Obsidian Inbox + Readwise Official Plugin
+Readwise still runs in the background as the capture mechanism for everything I highlight in Reader. But instead of highlights living in Readwise and requiring a separate export step, the Readwise Official plugin for Obsidian pushes every highlight directly into my Inbox as a note the moment I make it. The highlight arrives in Obsidian within minutes. I process it into the Sources folder when I have time.
+The difference: my highlights are now in the same environment as my ideas and projects. When Claude runs a weekly synthesis, it reads my highlights from this week alongside my existing project notes and finds connections between them automatically. In Readwise, those highlights sat in a separate application that nothing else could reason across.
+X Bookmarks → Telegram Bot to Obsidian Inbox
+X bookmarks were the worst graveyard in my entire stack. The problem is specific to how the platform works: you save a tweet in the moment because it contains something useful, and then it disappears into a reverse-chronological list with no organisation, no search worth using, and no way to connect it to anything else you have saved. I had over 800 bookmarked tweets when I shut this down. I had meaningfully revisited maybe 30 of them.
+The fix is the same Telegram bot that handles browser links. When I find a tweet or thread worth saving I forward it to the bot with a one-line note on why it matters. It lands in Obsidian Inbox within 30 seconds. The content of the tweet and my note about it become a single note that Claude can reason across alongside everything else in the vault.
+The graveyard is now empty. Everything that used to die in X bookmarks either gets processed into the vault or does not get saved at all, which turns out to be the correct outcome for most of it.
+Browser Bookmarks → Same Telegram Bot
+Browser bookmarks had the same disease as X bookmarks: organised folders that looked like a system and functioned like a cemetery. The Telegram bot handles these too. Any link from any browser on any device goes to the bot, lands in Inbox, and gets processed when I sit down to work.
+The difference from before is not the capture step. The difference is what happens after. A browser bookmark sits in a folder and waits to be remembered. An Obsidian Inbox note gets reviewed by Claude every Sunday and connected to whatever else arrived that week. Same link, completely different fate.
+ChatGPT → Claude Projects with vault context
+This is the replacement that changed the quality of my research outputs most significantly.
+The issue with using ChatGPT or Claude in a separate tab for research questions was context. Every session started fresh. I would ask a question, get an answer, close the tab, and the answer had no relationship to any previous research I had done. The AI was smart. It just did not know anything about my specific work.
+Claude Projects fixed this. I loaded my CLAUDE.md file, my active project notes, and my best source notes as project knowledge. Now when I ask Claude a research question it is not answering from training data alone. It is reasoning from months of my own accumulated thinking and flagging where my existing notes conflict with or support what it is finding.
+The first week I ran this I asked Claude to analyse a narrative I had been tracking. It came back with three connections to notes I had written six weeks apart that I had completely forgotten were related. That does not happen in a fresh ChatGPT tab. It only happens when the AI has context.
+The Weekly Synthesis That Replaced My Monday Morning Review
+Every Monday morning I used to spend 30 to 45 minutes reviewing what I had read and saved the previous week, trying to find the threads worth pursuing. It felt productive. Looking back it was mostly me reminding myself that information existed without doing anything useful with it.
+Now Claude runs the review automatically every Sunday evening and the output is waiting when I open my laptop Monday morning.
+Prompt
+Read all notes added to my Obsidian vault in the last 7 days across every folder.Produce a weekly synthesis with four sections:1. Connections: Two or three non-obvious links between things I captured separately this week. Each connection must reference the specific notes by title. If the connection is obvious it does not qualify.2. Patterns: Any theme or argument that appears across three or more notes from this week. Name it in one sentence. List the notes.3. Contradictions: Any two notes where my stated positions or saved claims conflict with each other. Quote the relevant line from each. Do not resolve it.4. Highest-value source: The single note from this week most worth developing further. One sentence on why.Do not summarise what I read. Synthesise what it means across the full week.
+The output from this prompt on a good week is better than anything I produced from 45 minutes of manual review. On a slow research week it is still useful because it tells me clearly what I am not thinking about.
+The New Source Template
+Every article, paper, report, or transcript I process from Inbox to Sources gets filed using the same template. This matters because consistent structure is what lets Claude reason across sources without getting confused by inconsistent formatting.
+The template:
+Prompt
+I am going to paste a piece of content. Process it into a source note using this exact structure:Title: [original title] Source: [publication or author] Date: [date] Type: [article / paper / transcript / report]Core argument: [one sentence — what is the central claim?]Key points: — [three to five bullet points, each a complete standalone idea]My reaction: [leave this blank — I will fill it in]Connections to existing notes: [search my vault for any notes this source relates to and list them by title]Open question: [what does this source leave unanswered?][PASTE CONTENT HERE]
+The connections field at the bottom is the one that matters most. Every time I process a new source Claude scans my existing vault and tells me what it connects to. That is the manual work that used to happen in my head, inconsistently and incompletely, now happening automatically every time a new source enters the system.
+What Four Months of Running This Actually Looks Like
+Month one felt like setup and adjustment. I was rebuilding capture habits and the vault was thin enough that the weekly synthesis was not finding much.
+Month two was when the connections started. Enough material had accumulated that Claude was surfacing links between things I had genuinely forgotten were related. The Monday synthesis became something I looked forward to rather than a task I ran out of obligation.
+Month three was when I noticed I had stopped context-switching. No Notion tab. No Readwise tab. No separate ChatGPT window. Everything I needed for research was in one environment. The friction I had normalised over two years of running five tools was simply gone.
+Month four is now. The vault has enough accumulated thinking that the weekly synthesis regularly surfaces something worth writing about that I would not have found manually. The connections it makes between notes from different weeks are the source material for a significant portion of what I publish.
+The before stack cost me approximately $30 per month across the paid tools in the stack. The current stack costs my Claude subscription and nothing else. That is not why I switched. But it is worth noting.
+The One Thing That Will Break This System
+Inconsistent capture.
+Every other part of this system is automated or structured enough to survive a bad week. The weekly synthesis still runs. The source template still works. Claude still has context.
+But if capture breaks down, the whole thing degrades within two weeks. The vault gets stale. The synthesis has nothing interesting to surface. The connections stop appearing.
+The Telegram bot is the single most important piece of infrastructure in the system because it removes every possible excuse for not capturing something. Phone, desktop, any device. Forward the link. Done. If you build this and only implement one thing from the capture layer, make it that.
+How to Build This in One Weekend
+Saturday morning: Install Obsidian. Create the six-folder structure. Install the Readwise Official plugin and connect your Readwise account. Set up the Telegram bot using Zapier or Make to create Obsidian notes from forwarded links.
+Saturday afternoon: Write your CLAUDE.md file. This is the highest-leverage hour in the entire build. Fill it with real specifics about your work, your audience, your content pillars, and your research focus. Vague CLAUDE.md files produce vague outputs.
+Saturday evening: Process your five most important existing research sources into the Sources folder using the template above. These seed notes give Claude something to connect new captures against from day one.
+Sunday: Set up a Claude Project. Load your CLAUDE.md and your five seed notes as project knowledge. Run the weekly synthesis prompt manually and read the output. Adjust the prompt based on what is useful and what is noise.
+Week one: Capture everything through Inbox. Process sources into the Sources folder each evening. Run the synthesis manually on Sunday. Do not automate anything yet.
+Week two: Automate the Sunday synthesis trigger using N8N or Zapier. Let the system run without you managing it.
+The five tools I replaced took two years to accumulate. The system that replaced them took one weekend to build.
+I should have done it earlier.
+Follow @damidefi on X for daily Claude AI tools, the full system stack, and the journey to 100K. Bookmark this. Share it with one person still paying for five tools to do one job.

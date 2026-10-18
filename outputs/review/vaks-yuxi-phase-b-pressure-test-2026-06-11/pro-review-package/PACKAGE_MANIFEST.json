@@ -1,0 +1,79 @@
+{
+  "package_kind": "vaks_yuxi_phase_b_pro_review_package",
+  "created_at": "2026-06-11",
+  "truth_boundary": "external_review_packet_not_review_result",
+  "action_basis_allowed": false,
+  "file_count": 14,
+  "files": [
+    {
+      "path": "PRO_REVIEW_REQUEST.md",
+      "bytes": 2821,
+      "sha256": "5c16f8d41097f04070eab1396185bb589089b0a19311abfcf1b5249d7ec3b5a7"
+    },
+    {
+      "path": "PHASE_B_BRANCH_DECISION_BRIEF.md",
+      "bytes": 2051,
+      "sha256": "09a9cbd20b383ecc0f5ce95a6bc6fac20d9fafb35d9abd77d5421085a96793c1"
+    },
+    {
+      "path": "PHASE_B_KEEP_STOP_SYNTHESIS_PACKET.md",
+      "bytes": 3403,
+      "sha256": "0e62713f9aabff833a9ea1a1c301cdcb865016f36b06f40e5f144beb169abaae"
+    },
+    {
+      "path": "PHASE_B_PRESSURE_REPORT.md",
+      "bytes": 4466,
+      "sha256": "69fd82474c9df95d6f6c2aa54364e0550f03e6897bae45afea5595ba606834cc"
+    },
+    {
+      "path": "PHASE_B_HOLDOUT_PRESSURE_REPORT.md",
+      "bytes": 4153,
+      "sha256": "e040315c4b34449cc295e89e456525613488faf5204761959e31dc402a6cca06"
+    },
+    {
+      "path": "PHASE_B_PROMOTION_GATE_DECISION.md",
+      "bytes": 3931,
+      "sha256": "f37a7257f28d87e65474acb773ee900b3af8521671408a2f511b60fea9cb94e3"
+    },
+    {
+      "path": "PHASE_B_ADAPTER_SPEC.md",
+      "bytes": 14917,
+      "sha256": "7d206268b2dd114caebd818cf1382470d68aca0238b550da435990c07a958c52"
+    },
+    {
+      "path": "PHASE_B_BRANCH_DECISION_BRIEF_DECISION.md",
+      "bytes": 835,
+      "sha256": "e7120c586114ac369e4851254329ecaeb597aad1e9d6f7086c9fcd40f8d8b122"
+    },
+    {
+      "path": "PHASE_B_PRE_COMMIT_MANIFEST_DECISION.md",
+      "bytes": 799,
+      "sha256": "a6c30802ee20144bf5da02e04564bc566ddbd7c16aa5b2e4155cc4e14dd9041d"
+    },
+    {
+      "path": "results/phase_b_summary.csv",
+      "bytes": 1865,
+      "sha256": "1d2db81f3832d1a21ba31e65bca8973aac0e03ec2b258ee0151eef3bbd469d43"
+    },
+    {
+      "path": "results/phase_b_holdout_summary.csv",
+      "bytes": 1859,
+      "sha256": "4415524567c9ab9b11cb402e11e4ffa6392eca3ec1e0bc55b37279ce6a580e03"
+    },
+    {
+      "path": "results/phase_b_promotion_gate_evaluation_summary.json",
+      "bytes": 1202,
+      "sha256": "9ea365b635878931d9f35b8b264ebdc45d3d2e703e444b005dfb72a4392843e0"
+    },
+    {
+      "path": "results/phase_b_keep_stop_synthesis.json",
+      "bytes": 13359,
+      "sha256": "0d275497bcfdfbf3bac4813171d8f77e64a52809c1e1096c3d9472383f6a68b6"
+    },
+    {
+      "path": "results/phase_b_branch_decision_brief.json",
+      "bytes": 2553,
+      "sha256": "4b5e8a19c8f010fdd865c41f10305c28f8a3b610160e01d75a9523daf5d95f7f"
+    }
+  ]
+}

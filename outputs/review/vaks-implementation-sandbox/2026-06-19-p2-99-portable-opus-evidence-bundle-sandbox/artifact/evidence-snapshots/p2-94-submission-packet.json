@@ -1,0 +1,108 @@
+{
+  "record_kind": "opus_review_submission_packet",
+  "slice_id": "2026-06-19-p2-94-opus-review-submission-packet-sandbox",
+  "created_at": "2026-06-19T09:51:19.245729+00:00",
+  "summary": {
+    "evidence_item_count": 7,
+    "review_question_count": 6,
+    "required_conclusion_token_count": 3,
+    "p2_93_external_review_packet_ready": true,
+    "p2_93_opus_approval_claimed": false,
+    "p2_91_old_slice_writes_applied": 75,
+    "p2_91_protected_path_writes": 0,
+    "p2_92_status_operation_count": 75,
+    "p2_92_current_strict_complete_original_item_count": 20,
+    "submission_packet_ready": true,
+    "opus_review_performed": false,
+    "opus_approval_claimed": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "goal_complete_now": false
+  },
+  "manifest": {
+    "record_kind": "opus_review_evidence_manifest",
+    "slice_id": "2026-06-19-p2-94-opus-review-submission-packet-sandbox",
+    "created_at": "2026-06-19T09:51:19.245729+00:00",
+    "evidence_items": [
+      {
+        "id": "EVIDENCE-P2-93-PACKET-MD",
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-93-opus-reviewable-closeout-packet-sandbox/artifact/opus_reviewable_closeout_packet.md",
+        "purpose": "Human-readable closeout packet for external Opus review.",
+        "required": true
+      },
+      {
+        "id": "EVIDENCE-P2-93-CHECKLIST",
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-93-opus-reviewable-closeout-packet-sandbox/artifact/opus-review-checklist.md",
+        "purpose": "External review checklist.",
+        "required": true
+      },
+      {
+        "id": "EVIDENCE-P2-93-PACKET-JSON",
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-93-opus-reviewable-closeout-packet-sandbox/artifact/opus_reviewable_closeout_packet.json",
+        "purpose": "Machine-readable closeout packet summary.",
+        "required": true
+      },
+      {
+        "id": "EVIDENCE-P2-93-VERIFICATION",
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-93-opus-reviewable-closeout-packet-sandbox/verification.md",
+        "purpose": "p2-93 final gate evidence.",
+        "required": true
+      },
+      {
+        "id": "EVIDENCE-P2-93-PRODUCT",
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-93-opus-reviewable-closeout-packet-sandbox/product-acceptance-report.md",
+        "purpose": "GPT-5.5 Product Acceptance for p2-93.",
+        "required": true
+      },
+      {
+        "id": "EVIDENCE-P2-92-AUDIT",
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-92-post-apply-current-strict-closeout-audit-sandbox/artifact/post_apply_current_strict_closeout_audit.json",
+        "purpose": "Post-apply current-strict closeout audit for original 20 slices.",
+        "required": true
+      },
+      {
+        "id": "EVIDENCE-P2-91-EXECUTOR",
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-91-old-file-status-normalization-executor-apply-sandbox/artifact/old_file_status_normalization_executor_apply.json",
+        "purpose": "Approved old-file status-only normalization executor evidence.",
+        "required": true
+      }
+    ],
+    "review_questions": [
+      "Does the packet prove p2-91 applied only the approved 75 old-file frontmatter status changes?",
+      "Does p2-92 prove the original 20 sandbox slices now satisfy current strict closeout labels?",
+      "Is body content preserved for all 75 old report files?",
+      "Is non-status frontmatter preserved for all 75 old report files?",
+      "Does any artifact confuse sandbox closeout with mainline merge, reviewed knowledge, evidence support, action basis, or Opus approval?",
+      "Is the evidence sufficient for external acceptance of sandbox closeout, while still requiring separate user approval for any mainline integration?"
+    ],
+    "derived_from": {
+      "p2_93_external_review_packet_ready": true,
+      "p2_93_opus_approval_claimed": false,
+      "p2_91_old_slice_writes_applied": 75,
+      "p2_92_current_strict_complete_original_item_count": 20,
+      "p2_92_status_operation_count": 75
+    }
+  },
+  "submission_prompt_path": "artifact/opus-review-submission-prompt.md",
+  "result_intake_gate_path": "artifact/opus-result-intake-gate.md",
+  "allowed_external_conclusions": [
+    "OPUS_PASS_SANDBOX_CLOSEOUT",
+    "OPUS_REVISE_SANDBOX_CLOSEOUT",
+    "OPUS_BLOCKED_NEEDS_USER"
+  ],
+  "authority_flags": {
+    "submission_packet_only": true,
+    "opus_review_performed": false,
+    "opus_approval_claimed": false,
+    "mainline_merge": false,
+    "promotion": false,
+    "reviewed_knowledge": false,
+    "evidence_support": false,
+    "action_basis": false,
+    "user_mainline_approval": false,
+    "commit_push_sync": false
+  }
+}

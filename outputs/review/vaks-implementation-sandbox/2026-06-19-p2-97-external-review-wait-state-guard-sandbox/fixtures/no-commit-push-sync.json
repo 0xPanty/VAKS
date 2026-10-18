@@ -1,0 +1,7 @@
+{
+  "case_id": "no-commit-push-sync",
+  "commit_push_sync_ready": false,
+  "may_merge_mainline": false,
+  "may_claim_complete": false,
+  "passed": true
+}

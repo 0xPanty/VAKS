@@ -1,0 +1,9 @@
+{
+  "fixture_id": "preflight-happy-path-no-approval",
+  "expected": {
+    "target_change_count": 75,
+    "approval_present": false,
+    "executor_write_allowed": false,
+    "old_slice_writes_applied": 0
+  }
+}

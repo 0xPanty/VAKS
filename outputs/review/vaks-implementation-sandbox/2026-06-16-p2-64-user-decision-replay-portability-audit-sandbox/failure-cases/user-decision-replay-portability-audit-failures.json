@@ -1,0 +1,441 @@
+[
+  {
+    "failure_id": "reject_dependency_install_required",
+    "risk": "dependency install would break portability",
+    "mutation": {
+      "set_path": {
+        "path": ["dependency_audit", "dependency_install_required"],
+        "value": true
+      }
+    },
+    "expected_rejection": "dependency install required",
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_network_required",
+    "risk": "network requirement would make replay non-portable",
+    "mutation": {
+      "set_path": {
+        "path": ["dependency_audit", "network_required"],
+        "value": true
+      }
+    },
+    "expected_rejection": "network required",
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_mcp_required",
+    "risk": "MCP write or read dependency would exceed sandbox portability",
+    "mutation": {
+      "set_path": {
+        "path": ["dependency_audit", "mcp_required"],
+        "value": true
+      }
+    },
+    "expected_rejection": "mcp required",
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_background_service_required",
+    "risk": "service startup would violate the no background service boundary",
+    "mutation": {
+      "set_path": {
+        "path": ["dependency_audit", "background_service_required"],
+        "value": true
+      }
+    },
+    "expected_rejection": "background service required",
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_builder_execution_token",
+    "risk": "execution token in builder would mean the audit might run source commands",
+    "mutation": {
+      "set_path": {
+        "path": ["execution_audit", "builder_process_execution_tokens"],
+        "value": ["subprocess"]
+      }
+    },
+    "expected_rejection": "builder process execution tokens present",
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_unstable_path",
+    "risk": "unstable path would prevent replay handoff",
+    "mutation": {
+      "set_path": {
+        "path": ["path_audit", "stable_paths"],
+        "value": false
+      }
+    },
+    "expected_rejection": "stable paths not true",
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_source_path_outside_source_slice",
+    "risk": "source path outside p2-63 could smuggle protected mainline dependency",
+    "mutation": {
+      "set_path": {
+        "path": ["path_audit", "source_paths"],
+        "value": ["README.md"]
+      }
+    },
+    "expected_rejection": "source path outside source slice",
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_clear_commands_false",
+    "risk": "unclear command would make operator replay unsafe",
+    "mutation": {
+      "set_path": {
+        "path": ["command_audit", "clear_commands"],
+        "value": false
+      }
+    },
+    "expected_rejection": "clear commands not true",
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_final_gate_command_missing_flag",
+    "risk": "command audit without final gate would miss closeout state",
+    "mutation": {
+      "set_path": {
+        "path": ["command_audit", "commands", "final_gate"],
+        "value": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox\\artifact\\verify_user_decision_runbook_replay_regression.py"
+      }
+    },
+    "expected_rejection": "final gate command missing flag",
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_replay_not_ready",
+    "risk": "replay readiness drift would invalidate portability handoff",
+    "mutation": {
+      "set_path": {
+        "path": ["source_summary", "replay_ready"],
+        "value": false
+      }
+    },
+    "expected_rejection": "source replay not ready",
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_replay_count_drift",
+    "risk": "replay count drift would hide missing regression coverage",
+    "mutation": {
+      "set_path": {
+        "path": ["source_summary", "replay_count"],
+        "value": 14
+      }
+    },
+    "expected_rejection": "replay count drift",
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_mainline_ready_true",
+    "risk": "mainline readiness cannot be inferred from sandbox portability",
+    "mutation": {
+      "set_path": {
+        "path": ["readiness_flags", "mainline_ready"],
+        "value": true
+      }
+    },
+    "expected_rejection": "mainline ready not false",
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_promotion_ready_true",
+    "risk": "promotion readiness cannot be inferred from replay audit",
+    "mutation": {
+      "set_path": {
+        "path": ["readiness_flags", "promotion_ready"],
+        "value": true
+      }
+    },
+    "expected_rejection": "promotion ready not false",
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_action_basis_ready_true",
+    "risk": "action_basis readiness cannot be inferred from replay audit",
+    "mutation": {
+      "set_path": {
+        "path": ["readiness_flags", "action_basis_ready"],
+        "value": true
+      }
+    },
+    "expected_rejection": "action basis ready not false",
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_user_approval_collected_true",
+    "risk": "user_approval cannot be inferred from a replay pass",
+    "mutation": {
+      "set_path": {
+        "path": ["readiness_flags", "user_approval_collected"],
+        "value": true
+      }
+    },
+    "expected_rejection": "user approval collected not false",
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_dangerous_claim_text",
+    "risk": "dangerous text can create authority confusion in operator handoff",
+    "mutation": {
+      "set_path": {
+        "path": ["purpose"],
+        "value": "execution approved"
+      }
+    },
+    "expected_rejection": "dangerous phrase in audit object",
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_hard_no_removed",
+    "risk": "missing hard_no weakens boundary transfer",
+    "mutation": {
+      "remove_hard_no": "do_not_commit"
+    },
+    "expected_rejection": "hard_no incomplete",
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  }
+]

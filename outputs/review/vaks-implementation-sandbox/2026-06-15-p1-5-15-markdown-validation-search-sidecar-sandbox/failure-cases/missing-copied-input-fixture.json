@@ -1,0 +1,11 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "missing-copied-input-fixture",
+  "expected_valid": false,
+  "expected_codes": ["MS_FIXTURE_PATH_MISSING"],
+  "patch": {
+    "scope": {
+      "input_paths": ["fixtures/copied-subset/missing-input.md"]
+    }
+  }
+}

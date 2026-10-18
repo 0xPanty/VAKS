@@ -1,0 +1,39 @@
+{
+  "platform": "bilibili",
+  "platform_id": "BV1DJVY61E3J",
+  "source_uri": "bilibili:BV1DJVY61E3J",
+  "url": "https://www.bilibili.com/video/BV1DJVY61E3J/",
+  "title": "Obsidian三大使用障碍 | 科学深度解析",
+  "author": "猫猫带星号",
+  "publisher": "猫猫带星号",
+  "owner_mid": 11292045,
+  "aid": 116657804673694,
+  "cid": 38701174527,
+  "published_at": "2026-05-29T20:16:50+08:00",
+  "duration_seconds": 504,
+  "description": "从认知心理学和行为科学角度，系统性拆解Obsidian用户面临的三大典型障碍：记录动机不足导致笔记入口瘫痪、处理动机不足造成信息流转停滞、输出动机不足使知识无法外化。深入分析背后的认知错配、终态前置、目标置换、存储幻觉等底层逻辑，帮助大家真正理解并突破笔记工具的使用困境。",
+  "pic": "http://i1.hdslb.com/bfs/archive/4dc0ea3aee72bc66e0ab0ac5c32186c0b413ec65.jpg",
+  "stat": {
+    "aid": 116657804673694,
+    "view": 1174,
+    "danmaku": 0,
+    "reply": 4,
+    "favorite": 139,
+    "coin": 10,
+    "share": 6,
+    "now_rank": 0,
+    "his_rank": 0,
+    "like": 36,
+    "dislike": 0,
+    "evaluation": "",
+    "vt": 0
+  },
+  "argue_info": {
+    "argue_msg": "个人观点，仅供参考",
+    "argue_type": 0,
+    "argue_link": ""
+  },
+  "captured_at": "2026-06-04T16:06:41+08:00",
+  "metadata_fetch_method": "bilibili_public_view_api",
+  "public_subtitle_entries": []
+}

@@ -1,0 +1,223 @@
+{
+  "001-top-level-record-kind.json": [
+    "top_level_record_kind"
+  ],
+  "002-top-level-slice-id.json": [
+    "top_level_slice_id"
+  ],
+  "003-top-level-version.json": [
+    "top_level_version"
+  ],
+  "004-top-level-truth-boundary.json": [
+    "top_level_truth_boundary"
+  ],
+  "005-top-level-write-scope.json": [
+    "top_level_write_scope"
+  ],
+  "006-source-slice-id.json": [
+    "source_closeout_slice_id"
+  ],
+  "007-source-final-gate-command.json": [
+    "source_final_gate_command"
+  ],
+  "008-source-product-status.json": [
+    "source_product_status"
+  ],
+  "009-source-next-step-status.json": [
+    "source_next_step_status"
+  ],
+  "010-prompt-no-explicit-reply.json": [
+    "prompt_does_not_require_explicit_user_reply"
+  ],
+  "011-prompt-default-execution.json": [
+    "prompt_allows_default_execution"
+  ],
+  "012-prompt-unsafe-default.json": [
+    "prompt_unsafe_default"
+  ],
+  "013-prompt-missing-no-auto-language.json": [
+    "prompt_missing_no_auto_execute_language"
+  ],
+  "014-option-count.json": [
+    "decision_option_count",
+    "decision_option_default",
+    "decision_option_order"
+  ],
+  "015-option-order.json": [
+    "decision_option_order"
+  ],
+  "016-option-default.json": [
+    "decision_option_default"
+  ],
+  "017-option-auto-execution.json": [
+    "option_automatic_execution_B_start_readonly_promotion_review_plan"
+  ],
+  "018-option-forbidden-action.json": [
+    "option_forbidden_next_action_B_start_readonly_promotion_review_plan"
+  ],
+  "019-option-missing-new-scope.json": [
+    "option_requires_new_scope_B_start_readonly_promotion_review_plan"
+  ],
+  "020-option-missing-separate-approval.json": [
+    "option_requires_separate_user_approval_C_request_mainline_merge_scope"
+  ],
+  "021-option-unsafe-label.json": [
+    "option_label_missing_authorize_B_start_readonly_promotion_review_plan"
+  ],
+  "022-decision-packet-not-ready.json": [
+    "decision_request_packet_not_ready"
+  ],
+  "023-not-ready-to-ask.json": [
+    "not_ready_to_ask_user"
+  ],
+  "024-extra-non-claim.json": [
+    "extra_non_claim"
+  ],
+  "025-forbidden-action-promotion.json": [
+    "forbidden_next_action_promotion_enabled"
+  ],
+  "026-forbidden-action-mainline_merge.json": [
+    "forbidden_next_action_mainline_merge_enabled"
+  ],
+  "027-forbidden-action-formal_vault_write.json": [
+    "forbidden_next_action_formal_vault_write_enabled"
+  ],
+  "028-forbidden-action-obsidian_sync.json": [
+    "forbidden_next_action_obsidian_sync_enabled"
+  ],
+  "029-forbidden-action-commit.json": [
+    "forbidden_next_action_commit_enabled"
+  ],
+  "030-forbidden-action-push.json": [
+    "forbidden_next_action_push_enabled"
+  ],
+  "031-forbidden-action-release.json": [
+    "forbidden_next_action_release_enabled"
+  ],
+  "032-forbidden-action-reviewed_knowledge_creation.json": [
+    "forbidden_next_action_reviewed_knowledge_creation_enabled"
+  ],
+  "033-forbidden-action-evidence_support_creation.json": [
+    "forbidden_next_action_evidence_support_creation_enabled"
+  ],
+  "034-forbidden-action-action_basis_creation.json": [
+    "forbidden_next_action_action_basis_creation_enabled"
+  ],
+  "035-forbidden-action-template_write.json": [
+    "forbidden_next_action_template_write_enabled"
+  ],
+  "036-forbidden-action-tool_write.json": [
+    "forbidden_next_action_tool_write_enabled"
+  ],
+  "037-forbidden-action-dependency_install.json": [
+    "forbidden_next_action_dependency_install_enabled"
+  ],
+  "038-forbidden-action-background_service.json": [
+    "forbidden_next_action_background_service_enabled"
+  ],
+  "039-forbidden-action-hooks.json": [
+    "forbidden_next_action_hooks_enabled"
+  ],
+  "040-forbidden-action-mcp_write_tool.json": [
+    "forbidden_next_action_mcp_write_tool_enabled"
+  ],
+  "041-readiness-ready_to_execute_user_choice.json": [
+    "readiness_ready_to_execute_user_choice_not_false"
+  ],
+  "042-readiness-user_choice_collected.json": [
+    "readiness_user_choice_collected_not_false"
+  ],
+  "043-readiness-promotion_ready.json": [
+    "readiness_promotion_ready_not_false"
+  ],
+  "044-readiness-mainline_merge_ready.json": [
+    "readiness_mainline_merge_ready_not_false"
+  ],
+  "045-readiness-formal_vault_write_ready.json": [
+    "readiness_formal_vault_write_ready_not_false"
+  ],
+  "046-readiness-action_basis_ready.json": [
+    "readiness_action_basis_ready_not_false"
+  ],
+  "047-readiness-commit_ready.json": [
+    "readiness_commit_ready_not_false"
+  ],
+  "048-readiness-push_ready.json": [
+    "readiness_push_ready_not_false"
+  ],
+  "049-missing-stop-p2_50_final_gate_failed.json": [
+    "missing_stop_condition_p2_50_final_gate_failed"
+  ],
+  "050-missing-stop-user_decision_option_missing.json": [
+    "missing_stop_condition_user_decision_option_missing"
+  ],
+  "051-missing-stop-option_grants_automatic_execution.json": [
+    "missing_stop_condition_option_grants_automatic_execution"
+  ],
+  "052-missing-stop-option_skips_separate_approval_for_execution_path.json": [
+    "missing_stop_condition_option_skips_separate_approval_for_execution_path"
+  ],
+  "053-missing-stop-forbidden_next_action_enabled.json": [
+    "missing_stop_condition_forbidden_next_action_enabled"
+  ],
+  "054-missing-stop-protected_path_write_required.json": [
+    "missing_stop_condition_protected_path_write_required"
+  ],
+  "055-missing-stop-authority_confusion_detected.json": [
+    "missing_stop_condition_authority_confusion_detected"
+  ],
+  "056-missing-non-claim-not_approval.json": [
+    "missing_non_claim_not_approval"
+  ],
+  "057-missing-non-claim-not_execution_permission.json": [
+    "missing_non_claim_not_execution_permission"
+  ],
+  "058-missing-non-claim-not_promotion.json": [
+    "missing_non_claim_not_promotion"
+  ],
+  "059-missing-non-claim-not_mainline_merge.json": [
+    "missing_non_claim_not_mainline_merge"
+  ],
+  "060-missing-non-claim-not_release.json": [
+    "missing_non_claim_not_release"
+  ],
+  "061-missing-non-claim-not_formal_vault_write.json": [
+    "missing_non_claim_not_formal_vault_write"
+  ],
+  "062-missing-non-claim-not_Obsidian_sync.json": [
+    "missing_non_claim_not_Obsidian_sync"
+  ],
+  "063-missing-non-claim-not_commit.json": [
+    "missing_non_claim_not_commit"
+  ],
+  "064-missing-non-claim-not_push.json": [
+    "missing_non_claim_not_push"
+  ],
+  "065-missing-non-claim-not_reviewed_knowledge.json": [
+    "missing_non_claim_not_reviewed_knowledge"
+  ],
+  "066-missing-non-claim-not_evidence_support.json": [
+    "missing_non_claim_not_evidence_support"
+  ],
+  "067-missing-non-claim-not_action_basis.json": [
+    "missing_non_claim_not_action_basis"
+  ],
+  "068-missing-non-claim-not_auto_advance.json": [
+    "missing_non_claim_not_auto_advance"
+  ],
+  "069-acceptance-contract-requires_reviewer_pass.json": [
+    "acceptance_contract_requires_reviewer_pass"
+  ],
+  "070-acceptance-contract-requires_boundary_pass.json": [
+    "acceptance_contract_requires_boundary_pass"
+  ],
+  "071-acceptance-contract-requires_gpt_5_5_extra_high_product_acceptance.json": [
+    "acceptance_contract_requires_gpt_5_5_extra_high_product_acceptance"
+  ],
+  "072-acceptance-contract-p2_50_final_gate_must_pass.json": [
+    "acceptance_contract_p2_50_final_gate_must_pass"
+  ],
+  "073-acceptance-contract-product_acceptance_does_not_collect_user_choice.json": [
+    "acceptance_contract_product_acceptance_does_not_collect_user_choice"
+  ]
+}

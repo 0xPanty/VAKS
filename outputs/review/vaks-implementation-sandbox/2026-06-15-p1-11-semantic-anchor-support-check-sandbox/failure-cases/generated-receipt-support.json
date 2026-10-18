@@ -1,0 +1,20 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "generated-receipt-support",
+  "expected_valid": false,
+  "expected_codes": ["SA_RUNTIME_ARTIFACT_AS_SUPPORT"],
+  "anchors": [
+    {
+      "id": "generated-receipt-anchor",
+      "anchor_kind": "generated_receipt",
+      "support_claimed": true,
+      "support_role": "direct_support",
+      "source_ref": "outputs/review/generated-receipts/query-receipt.json",
+      "anchor_path": "outputs/review/generated-receipts/query-receipt.json",
+      "artifact_kind": "generated_receipt",
+      "runtime_artifact": true,
+      "selector": "receipt:item-1",
+      "authority_bucket": "raw_anchor"
+    }
+  ]
+}

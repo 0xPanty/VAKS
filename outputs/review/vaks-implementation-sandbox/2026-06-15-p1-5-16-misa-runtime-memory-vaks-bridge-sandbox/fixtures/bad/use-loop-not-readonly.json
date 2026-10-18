@@ -1,0 +1,13 @@
+{
+  "record_kind": "read_only_bridge_use_loop_trace_fixture",
+  "trace_id": "bad-use-loop-not-readonly",
+  "query_id": "query-p1-5-16-bad-not-readonly",
+  "read_only": false,
+  "tool_writes": false,
+  "context_pack_ref": "fixtures/context-packs/vaks-context-pack-readonly.json",
+  "authority_labels_visible": true,
+  "warnings_visible": true,
+  "action_basis_allowed": false,
+  "answer_boundary": "orientation_only_not_action_basis",
+  "truth_boundary": "bad_fixture_should_fail_not_readonly"
+}

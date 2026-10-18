@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en"
+  data-sandbox-only="true"
+  data-read-only-workflow="true"
+  data-non-executable="true"
+  data-no-formal-vault-access="true"
+  data-no-write="true"
+  data-no-sync="true"
+  data-no-authority="true"
+  data-no-approval="true"
+  data-no-user-wording="true"
+  data-no-command="true">
+<head>
+  <meta charset="utf-8">
+  <title>P2-36 Read-Only Product Workflow</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; background: #f7f7f4; color: #20201d; }
+    header { max-width: 980px; }
+    .toolbar { display: flex; gap: 8px; margin: 18px 0; }
+    button { border: 1px solid #888; background: #fff; padding: 8px 12px; border-radius: 6px; cursor: default; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; max-width: 1180px; }
+    .step { background: #fff; border: 1px solid #d7d3c8; border-radius: 8px; padding: 14px; min-height: 230px; }
+    .badge { display: inline-block; font-size: 12px; padding: 3px 6px; border: 1px solid #726f66; border-radius: 999px; margin-bottom: 8px; }
+    .stop { color: #7a1f1f; font-weight: 700; }
+    code { overflow-wrap: anywhere; }
+    @media (max-width: 820px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>READ_ONLY_PRODUCT_WORKFLOW</h1>
+    <p><code>2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox</code></p>
+    <p>This is a sandbox-only workflow surface. It shows the path from request screening to status surface to handoff prebrief, and stops before any formal-vault execution.</p>
+  </header>
+  <section class="toolbar" aria-label="Inert visual filters">
+    <button type="button" data-filter="all">All</button>
+    <button type="button" data-filter="stop">Stop lines</button>
+  </section>
+  <main class="grid">
+    <article class="step" data-step="request_screening">
+      <span class="badge">Step 1</span>
+      <h2>Request screening</h2>
+      <p><code>2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox</code></p>
+      <p>Show whether the formal-vault related request is reviewable, denied, or missing confirmation.</p>
+      <p class="stop">STOP_BEFORE_FORMAL_VAULT_EXECUTION</p>
+    </article>
+    <article class="step" data-step="operator_status_surface">
+      <span class="badge">Step 2</span>
+      <h2>Status surface</h2>
+      <p><code>2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox</code></p>
+      <p>Show chain status, stop lines, and non-authority boundaries in one operator surface.</p>
+      <p class="stop">No action basis, no mainline readiness.</p>
+    </article>
+    <article class="step" data-step="handoff_prebrief">
+      <span class="badge">Step 3</span>
+      <h2>Handoff prebrief</h2>
+      <p><code>2026-06-15-p2-35-formal-vault-status-surface-handoff-packet-sandbox</code></p>
+      <p>Recover or prebrief the next agent without treating the handoff as approval.</p>
+      <p class="stop">FRESH_SANDBOX_ONLY_NEXT_STEP</p>
+    </article>
+  </main>
+</body>
+</html>

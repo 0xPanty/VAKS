@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en"
+  data-sandbox-only="true"
+  data-usability-screening="true"
+  data-non-executable="true"
+  data-no-formal-vault-access="true"
+  data-no-write="true"
+  data-no-sync="true"
+  data-no-authority="true"
+  data-no-approval="true"
+  data-no-user-wording="true"
+  data-no-command="true">
+<head>
+  <meta charset="utf-8">
+  <title>P2-37 Usability Screening</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; background: #f6f7f7; color: #1f2424; }
+    header { max-width: 960px; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; max-width: 1160px; }
+    .task { background: #fff; border: 1px solid #d0d8d8; border-radius: 8px; padding: 14px; min-height: 220px; }
+    .label { display: inline-block; border: 1px solid #697676; border-radius: 999px; padding: 3px 8px; font-size: 12px; margin-bottom: 8px; }
+    .safe { color: #155c44; font-weight: 700; }
+    .stop { color: #7a1f1f; font-weight: 700; }
+    code { overflow-wrap: anywhere; }
+    @media (max-width: 820px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>USABILITY_SCREENING</h1>
+    <p><code>2026-06-15-p2-37-formal-vault-operator-workflow-usability-screening-sandbox</code></p>
+    <p><code>2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox</code></p>
+    <p>READ_ONLY_INSPECTION_ONLY / STOP_BEFORE_BOUNDARY_CROSSING / FRESH_SANDBOX_ONLY</p>
+  </header>
+  <main class="grid">
+    <article class="task" data-task="read_only_recovery">
+      <span class="label">Task 1</span>
+      <h2>Read-only recovery</h2>
+      <p>Expected: inspect P2-36 only.</p>
+      <p class="safe">No approval, no command, no vault access.</p>
+    </article>
+    <article class="task" data-task="formal_vault_request_stop">
+      <span class="label">Task 2</span>
+      <h2>Boundary stop</h2>
+      <p>Expected: stop and ask only if boundary crossing is needed.</p>
+      <p class="stop">STOP_BEFORE_BOUNDARY_CROSSING</p>
+    </article>
+    <article class="task" data-task="fresh_sandbox_continuation">
+      <span class="label">Task 3</span>
+      <h2>Fresh sandbox continuation</h2>
+      <p>Expected: start a fresh sandbox path for any next work.</p>
+      <p class="safe">FRESH_SANDBOX_ONLY</p>
+    </article>
+  </main>
+</body>
+</html>

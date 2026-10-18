@@ -1,0 +1,8 @@
+{
+  "fixture_id": "blocked-old-file-normalization",
+  "expected": {
+    "old_slice_write_allowed": false,
+    "normalization_applied": false,
+    "user_approval_collected": false
+  }
+}

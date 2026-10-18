@@ -1,0 +1,6 @@
+{
+  "case_id": "dossier-and-guard-carried",
+  "dossier_ready": true,
+  "guard_state": "STOP_WAIT_EXTERNAL_OPUS_REVIEW",
+  "passed": true
+}

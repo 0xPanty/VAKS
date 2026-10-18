@@ -1,0 +1,5 @@
+{
+  "case_id": "prewrite-hashes-match",
+  "expected_prewrite_hash_match_count": 75,
+  "observed_prewrite_hash_match_count": 75
+}

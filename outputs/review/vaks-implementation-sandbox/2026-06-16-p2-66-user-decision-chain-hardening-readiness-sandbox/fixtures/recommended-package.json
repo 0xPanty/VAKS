@@ -1,0 +1,9 @@
+{
+  "fixture_id": "recommended-package",
+  "option_id": "sandbox_chain_hardening_package",
+  "expected": {
+    "decision": "RECOMMENDED_NEXT",
+    "requires_user_separate_approval": false,
+    "write_scope": "new sandbox path only"
+  }
+}

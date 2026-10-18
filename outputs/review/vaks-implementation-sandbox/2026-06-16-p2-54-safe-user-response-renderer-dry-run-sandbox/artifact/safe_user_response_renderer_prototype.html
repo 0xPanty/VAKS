@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 32px; color: #172033; background: #f8fafc; }
+    main { max-width: 1040px; margin: 0 auto; }
+    h1 { font-size: 28px; }
+    .summary { border-left: 4px solid #2563eb; padding: 12px 16px; background: #eff6ff; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-top: 20px; }
+    .case { border: 1px solid #cbd5e1; border-radius: 8px; padding: 14px; background: white; }
+    h2 { font-size: 16px; margin: 0 0 8px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Safe User Response Renderer</h1>
+    <div class="summary">Dry-run replies only. No option execution.</div>
+    <div class="grid">
+        <section class="case">
+          <h2>no_reply</h2>
+          <p><strong>keep_reference_no_action</strong></p>
+          <p>当前没有收到新的选择。我会保持 sandbox 作为参考，不执行任何选项，也不会合并、同步、提交、推送或写入正式层。</p>
+          <p><strong>Next:</strong> wait_or_report_reference_only</p>
+        </section>
+        
+
+        <section class="case">
+          <h2>explicit_A</h2>
+          <p><strong>acknowledge_reference_only</strong></p>
+          <p>收到，按 A 处理：只保留 sandbox 作为参考。我不会合并、promotion、sync、commit、push，也不会写入 reviewed knowledge、evidence support 或 action basis。</p>
+          <p><strong>Next:</strong> no_action_reference_only</p>
+        </section>
+        
+
+        <section class="case">
+          <h2>explicit_B</h2>
+          <p><strong>ask_readonly_planning_scope</strong></p>
+          <p>收到 B 的方向。下一步只能先确认单独的只读规划范围；在你明确范围前，我不会启动新 slice，也不会合并、同步、提交、推送或 promotion。</p>
+          <p><strong>Next:</strong> ask_for_separate_read_only_scope</p>
+        </section>
+        
+
+        <section class="case">
+          <h2>explicit_C</h2>
+          <p><strong>ask_mainline_review_scope</strong></p>
+          <p>收到 C 的方向。需要你单独批准主线评审范围和允许路径；在此之前我不会改主线、合并、同步、提交、推送或写入正式层。</p>
+          <p><strong>Next:</strong> ask_for_allowed_paths_and_scope</p>
+        </section>
+        
+
+        <section class="case">
+          <h2>explicit_D</h2>
+          <p><strong>acknowledge_park_or_reject</strong></p>
+          <p>收到 D。我会把 sandbox 链按搁置或拒绝理解，但不会改主线、不会删除既有产物，也不会同步、提交或推送。</p>
+          <p><strong>Next:</strong> acknowledge_no_mutation</p>
+        </section>
+        
+
+        <section class="case">
+          <h2>ambiguous_reply</h2>
+          <p><strong>ask_one_clarification</strong></p>
+          <p>这句话还不能确定是 A、B、C 还是 D。我先停下，不执行任何选项。请只回复一个选项：A、B、C 或 D。</p>
+          <p><strong>Next:</strong> ask_one_short_clarification</p>
+        </section>
+        
+
+        <section class="case">
+          <h2>multiple_options</h2>
+          <p><strong>ask_choose_one</strong></p>
+          <p>你同时提到了多个选项。我先停下，不执行任何选项。请只选择一个：A、B、C 或 D。</p>
+          <p><strong>Next:</strong> ask_user_to_choose_one_option</p>
+        </section>
+        
+
+        <section class="case">
+          <h2>approval_with_execution_words</h2>
+          <p><strong>stop_for_separate_scope</strong></p>
+          <p>这条回复包含执行、合并、同步、提交、推送或写入正式层的语义。我现在停止，不执行。若要越过 sandbox 边界，需要你单独给出明确范围和允许路径。</p>
+          <p><strong>Next:</strong> stop_and_ask_for_separate_explicit_scope</p>
+        </section>
+        
+
+        <section class="case">
+          <h2>unknown_case_fallback</h2>
+          <p><strong>stop_for_unknown_classifier_case</strong></p>
+          <p>分类结果不在已知安全集合内。我现在停止，不执行任何选项。请重新明确选择 A、B、C 或 D，或单独给出明确范围。</p>
+          <p><strong>Next:</strong> stop_and_ask_for_clarification</p>
+        </section>
+        </div>
+  </main>
+</body>
+</html>

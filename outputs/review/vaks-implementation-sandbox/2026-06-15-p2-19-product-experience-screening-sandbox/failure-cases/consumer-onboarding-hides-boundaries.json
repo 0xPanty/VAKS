@@ -1,0 +1,1 @@
+{"case_id":"consumer-onboarding-hides-boundaries","base_fixture":"fixtures/valid-product-experience-screening.json","mutations":[{"op":"set","path":"/forbidden_import_controls/consumer_onboarding_hides_boundaries","value":true}]}

@@ -1,0 +1,14 @@
+{
+  "fixture": "no-approval-before-opus",
+  "operator_state": {
+    "ready_to_submit_to_opus": true,
+    "actual_opus_result_present": false,
+    "opus_approval_claimed": false,
+    "mainline_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "goal_complete_now": false
+  },
+  "expected": true
+}

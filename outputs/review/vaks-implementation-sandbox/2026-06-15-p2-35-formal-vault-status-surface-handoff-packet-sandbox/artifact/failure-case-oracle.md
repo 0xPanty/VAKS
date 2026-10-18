@@ -1,0 +1,189 @@
+# Failure Case Oracle
+
+Case count: 185
+
+- `001-operation-formal_vault_read.json` -> operation_not_false:formal_vault_read
+- `002-operation-formal_vault_scan.json` -> operation_not_false:formal_vault_scan
+- `003-operation-formal_vault_write.json` -> operation_not_false:formal_vault_write
+- `004-operation-formal_vault_hash.json` -> operation_not_false:formal_vault_hash
+- `005-operation-formal_vault_snapshot.json` -> operation_not_false:formal_vault_snapshot
+- `006-operation-formal_vault_state_check.json` -> operation_not_false:formal_vault_state_check
+- `007-operation-obsidian_sync.json` -> operation_not_false:obsidian_sync
+- `008-operation-commit.json` -> operation_not_false:commit
+- `009-operation-push.json` -> operation_not_false:push
+- `010-operation-promotion.json` -> operation_not_false:promotion
+- `011-operation-dependency_install.json` -> operation_not_false:dependency_install
+- `012-operation-background_service.json` -> operation_not_false:background_service
+- `013-operation-mcp_write_tool.json` -> operation_not_false:mcp_write_tool
+- `014-operation-hooks.json` -> operation_not_false:hooks
+- `015-operation-approval_collection.json` -> operation_not_false:approval_collection
+- `016-operation-user_instruction_collection.json` -> operation_not_false:user_instruction_collection
+- `017-operation-user_wording_storage.json` -> operation_not_false:user_wording_storage
+- `018-operation-command_emitted.json` -> operation_not_false:command_emitted
+- `019-operation-absolute_vault_path_resolved.json` -> operation_not_false:absolute_vault_path_resolved
+- `020-operation-execution_permission_granted.json` -> operation_not_false:execution_permission_granted
+- `021-operation-execution_performed.json` -> operation_not_false:execution_performed
+- `022-operation-action_basis_creation.json` -> operation_not_false:action_basis_creation
+- `023-operation-reviewed_knowledge_creation.json` -> operation_not_false:reviewed_knowledge_creation
+- `024-operation-evidence_support_creation.json` -> operation_not_false:evidence_support_creation
+- `025-operation-mainline_merge.json` -> operation_not_false:mainline_merge
+- `026-operation-dirty_tree_repair.json` -> operation_not_false:dirty_tree_repair
+- `027-operation-handoff_auto_advance.json` -> operation_not_false:handoff_auto_advance
+- `028-control-sandbox_only.json` -> handoff_control_mismatch:sandbox_only
+- `029-control-handoff_only.json` -> handoff_control_mismatch:handoff_only
+- `030-control-read_only_source_bound.json` -> handoff_control_mismatch:read_only_source_bound
+- `031-control-fresh_sandbox_required_for_next_work.json` -> handoff_control_mismatch:fresh_sandbox_required_for_next_work
+- `032-control-non_executable.json` -> handoff_control_mismatch:non_executable
+- `033-control-no_formal_vault_access.json` -> handoff_control_mismatch:no_formal_vault_access
+- `034-control-no_approval_collection.json` -> handoff_control_mismatch:no_approval_collection
+- `035-control-no_user_instruction.json` -> handoff_control_mismatch:no_user_instruction
+- `036-control-no_user_wording.json` -> handoff_control_mismatch:no_user_wording
+- `037-control-no_commands.json` -> handoff_control_mismatch:no_commands
+- `038-control-no_absolute_vault_paths.json` -> handoff_control_mismatch:no_absolute_vault_paths
+- `039-control-no_truth_mutation.json` -> handoff_control_mismatch:no_truth_mutation
+- `040-control-no_mainline_claim.json` -> handoff_control_mismatch:no_mainline_claim
+- `041-control-status_surface_is_not_authority.json` -> handoff_control_mismatch:status_surface_is_not_authority
+- `042-control-handoff_packet_is_not_authority.json` -> handoff_control_mismatch:handoff_packet_is_not_authority
+- `043-control-product_acceptance_is_not_formal_vault_approval.json` -> handoff_control_mismatch:product_acceptance_is_not_formal_vault_approval
+- `044-control-operator_must_stop_before_execution.json` -> handoff_control_mismatch:operator_must_stop_before_execution
+- `045-control-execution_allowed_now.json` -> handoff_control_mismatch:execution_allowed_now
+- `046-control-formal_vault_access_allowed_now.json` -> handoff_control_mismatch:formal_vault_access_allowed_now
+- `047-control-approval_collected_now.json` -> handoff_control_mismatch:approval_collected_now
+- `048-control-action_basis_ready.json` -> handoff_control_mismatch:action_basis_ready
+- `049-control-reviewed_knowledge_created.json` -> handoff_control_mismatch:reviewed_knowledge_created
+- `050-control-evidence_support_created.json` -> handoff_control_mismatch:evidence_support_created
+- `051-control-mainline_ready.json` -> handoff_control_mismatch:mainline_ready
+- `052-control-dirty_tree_fixed.json` -> handoff_control_mismatch:dirty_tree_fixed
+- `053-control-auto_advance_allowed.json` -> handoff_control_mismatch:auto_advance_allowed
+- `054-source-input-0-sha-drift.json` -> source_inputs_mismatch
+- `055-source-input-1-sha-drift.json` -> source_inputs_mismatch
+- `056-source-input-2-sha-drift.json` -> source_inputs_mismatch
+- `057-source-input-3-sha-drift.json` -> source_inputs_mismatch
+- `058-source-input-4-sha-drift.json` -> source_inputs_mismatch
+- `059-source-input-5-sha-drift.json` -> source_inputs_mismatch
+- `060-source-input-6-sha-drift.json` -> source_inputs_mismatch
+- `061-source-input-7-sha-drift.json` -> source_inputs_mismatch
+- `062-source-input-8-sha-drift.json` -> source_inputs_mismatch
+- `063-source-input-9-sha-drift.json` -> source_inputs_mismatch
+- `064-source-status-slice-plan-md-drift.json` -> source_status_not_met:slice-plan.md, source_statuses_mismatch
+- `065-source-status-source-map-md-drift.json` -> source_status_not_met:source-map.md, source_statuses_mismatch
+- `066-source-status-verification-md-drift.json` -> source_status_not_met:verification.md, source_statuses_mismatch
+- `067-source-status-reviewer-report-md-drift.json` -> source_status_not_met:reviewer-report.md, source_statuses_mismatch
+- `068-source-status-boundary-audit-md-drift.json` -> source_status_not_met:boundary-audit.md, source_statuses_mismatch
+- `069-source-status-product-acceptance-report-md-drift.json` -> source_status_not_met:product-acceptance-report.md, source_statuses_mismatch
+- `070-source-status-next-step-md-drift.json` -> source_status_not_met:next-step.md, source_statuses_mismatch
+- `071-binding-product_status.json` -> source_binding_bad_status:product_status, source_surface_binding_mismatch
+- `072-binding-reviewer_status.json` -> source_binding_bad_status:reviewer_status, source_surface_binding_mismatch
+- `073-binding-boundary_status.json` -> source_binding_bad_status:boundary_status, source_surface_binding_mismatch
+- `074-binding-verification_status.json` -> source_binding_bad_status:verification_status, source_surface_binding_mismatch
+- `075-binding-next_status.json` -> source_binding_bad_status:next_status, source_surface_binding_mismatch
+- `076-binding-status_surface_hash.json` -> source_surface_binding_mismatch
+- `077-binding-surface_result.json` -> source_surface_binding_mismatch
+- `078-binding-source_slice_count.json` -> source_surface_binding_mismatch
+- `079-binding-source_input_count.json` -> source_surface_binding_mismatch
+- `080-binding-badge_count.json` -> source_surface_binding_mismatch
+- `081-binding-stop_line_count.json` -> source_surface_binding_mismatch
+- `082-binding-formal_vault_accessed.json` -> source_binding_flag_not_false:formal_vault_accessed, source_surface_binding_mismatch
+- `083-binding-approval_collected_now.json` -> source_binding_flag_not_false:approval_collected_now, source_surface_binding_mismatch
+- `084-binding-user_instruction_collected.json` -> source_binding_flag_not_false:user_instruction_collected, source_surface_binding_mismatch
+- `085-binding-user_wording_stored.json` -> source_binding_flag_not_false:user_wording_stored, source_surface_binding_mismatch
+- `086-binding-execution_permission_granted.json` -> source_binding_flag_not_false:execution_permission_granted, source_surface_binding_mismatch
+- `087-binding-execution_performed.json` -> source_binding_flag_not_false:execution_performed, source_surface_binding_mismatch
+- `088-binding-write_performed.json` -> source_binding_flag_not_false:write_performed, source_surface_binding_mismatch
+- `089-binding-sync_performed.json` -> source_binding_flag_not_false:sync_performed, source_surface_binding_mismatch
+- `090-binding-mainline_ready.json` -> source_binding_flag_not_false:mainline_ready, source_surface_binding_mismatch
+- `091-binding-status_used_as_action_basis.json` -> source_binding_flag_not_false:status_used_as_action_basis, source_surface_binding_mismatch
+- `092-binding-dirty_tree_fixed.json` -> source_binding_flag_not_false:dirty_tree_fixed, source_surface_binding_mismatch
+- `093-payload-packet_id-wrong-id.json` -> handoff_payload_mismatch
+- `094-payload-packet_id-python-tools-promote.py---sync.json` -> dangerous_value:$.handoff_payload.packet_id:promote_py, dangerous_value:$.handoff_payload.packet_id:python_command, dangerous_value:$.handoff_payload.packet_id:sync_flag, handoff_payload_mismatch
+- `095-payload-handoff_mode-wrong-mode.json` -> handoff_payload_mismatch
+- `096-payload-handoff_result-READY.json` -> handoff_payload_mismatch
+- `097-payload-source_surface_hash-11111111111111111111111111111111.json` -> handoff_payload_mismatch
+- `098-payload-next_work_must_use_fresh_sandbox-False.json` -> handoff_payload_fresh_sandbox_not_true, handoff_payload_mismatch
+- `099-payload-allowed_next_write_scope_pattern-H-Obsidian.json` -> dangerous_value:$.handoff_payload.allowed_next_write_scope_pattern:absolute_formal_vault_path, handoff_payload_mismatch
+- `100-payload-forbidden_next_actions-value.json` -> handoff_payload_mismatch
+- `101-payload-required_next_checks-value.json` -> handoff_payload_mismatch
+- `102-payload-operator_stop_summary-ready-to-execute.json` -> dangerous_value:$.handoff_payload.operator_stop_summary:ready_to_execute, handoff_payload_mismatch
+- `103-payload-actual_approval_collected-True.json` -> handoff_payload_flag_not_false:actual_approval_collected, handoff_payload_mismatch
+- `104-payload-actual_user_wording_stored-True.json` -> handoff_payload_flag_not_false:actual_user_wording_stored, handoff_payload_mismatch
+- `105-payload-commands_supplied-True.json` -> handoff_payload_flag_not_false:commands_supplied, handoff_payload_mismatch
+- `106-payload-formal_vault_paths_present-True.json` -> handoff_payload_flag_not_false:formal_vault_paths_present, handoff_payload_mismatch
+- `107-payload-execution_permission_granted-True.json` -> handoff_payload_flag_not_false:execution_permission_granted, handoff_payload_mismatch
+- `108-payload-handoff_used_as_action_basis-True.json` -> handoff_payload_flag_not_false:handoff_used_as_action_basis, handoff_payload_mismatch
+- `109-payload-mainline_ready-True.json` -> handoff_payload_flag_not_false:mainline_ready, handoff_payload_mismatch
+- `110-payload-dirty_tree_fixed-True.json` -> handoff_payload_flag_not_false:dirty_tree_fixed, handoff_payload_mismatch
+- `111-payload-non_claims-value.json` -> handoff_payload_mismatch, handoff_payload_non_claims_missing
+- `112-check-p2_34_product_pass_present-status.json` -> handoff_check_status_mismatch:p2_34_product_pass_present, handoff_checks_mismatch
+- `113-check-p2_34_product_pass_present-collected.json` -> handoff_check_collected_now_not_false:p2_34_product_pass_present, handoff_checks_mismatch
+- `114-check-p2_34_surface_hash_bound-status.json` -> handoff_check_status_mismatch:p2_34_surface_hash_bound, handoff_checks_mismatch
+- `115-check-p2_34_surface_hash_bound-collected.json` -> handoff_check_collected_now_not_false:p2_34_surface_hash_bound, handoff_checks_mismatch
+- `116-check-p2_34_status_chain_visible-status.json` -> handoff_check_status_mismatch:p2_34_status_chain_visible, handoff_checks_mismatch
+- `117-check-p2_34_status_chain_visible-collected.json` -> handoff_check_collected_now_not_false:p2_34_status_chain_visible, handoff_checks_mismatch
+- `118-check-handoff_requires_fresh_sandbox-status.json` -> handoff_check_status_mismatch:handoff_requires_fresh_sandbox, handoff_checks_mismatch
+- `119-check-handoff_requires_fresh_sandbox-collected.json` -> handoff_check_collected_now_not_false:handoff_requires_fresh_sandbox, handoff_checks_mismatch
+- `120-check-handoff_no_formal_vault-status.json` -> handoff_check_status_mismatch:handoff_no_formal_vault, handoff_checks_mismatch
+- `121-check-handoff_no_formal_vault-collected.json` -> handoff_check_collected_now_not_false:handoff_no_formal_vault, handoff_checks_mismatch
+- `122-check-handoff_no_approval_collection-status.json` -> handoff_check_status_mismatch:handoff_no_approval_collection, handoff_checks_mismatch
+- `123-check-handoff_no_approval_collection-collected.json` -> handoff_check_collected_now_not_false:handoff_no_approval_collection, handoff_checks_mismatch
+- `124-check-handoff_no_user_wording-status.json` -> handoff_check_status_mismatch:handoff_no_user_wording, handoff_checks_mismatch
+- `125-check-handoff_no_user_wording-collected.json` -> handoff_check_collected_now_not_false:handoff_no_user_wording, handoff_checks_mismatch
+- `126-check-handoff_no_commands_or_paths-status.json` -> handoff_check_status_mismatch:handoff_no_commands_or_paths, handoff_checks_mismatch
+- `127-check-handoff_no_commands_or_paths-collected.json` -> handoff_check_collected_now_not_false:handoff_no_commands_or_paths, handoff_checks_mismatch
+- `128-check-handoff_not_action_basis-status.json` -> handoff_check_status_mismatch:handoff_not_action_basis, handoff_checks_mismatch
+- `129-check-handoff_not_action_basis-collected.json` -> handoff_check_collected_now_not_false:handoff_not_action_basis, handoff_checks_mismatch
+- `130-check-handoff_not_mainline_ready-status.json` -> handoff_check_status_mismatch:handoff_not_mainline_ready, handoff_checks_mismatch
+- `131-check-handoff_not_mainline_ready-collected.json` -> handoff_check_collected_now_not_false:handoff_not_mainline_ready, handoff_checks_mismatch
+- `132-receipt-record_kind.json` -> receipt_record_kind_mismatch
+- `133-receipt-slice_id.json` -> receipt_slice_id_mismatch
+- `134-receipt-source_slice.json` -> receipt_source_slice_mismatch
+- `135-receipt-handoff_result.json` -> receipt_handoff_result_mismatch
+- `136-receipt-source_input_count.json` -> receipt_source_input_count_mismatch
+- `137-receipt-check_count.json` -> receipt_check_count_mismatch
+- `138-receipt-formal_vault_accessed.json` -> receipt_flag_not_false:formal_vault_accessed
+- `139-receipt-approval_collected_now.json` -> receipt_flag_not_false:approval_collected_now
+- `140-receipt-user_instruction_collected.json` -> receipt_flag_not_false:user_instruction_collected
+- `141-receipt-user_wording_stored.json` -> receipt_flag_not_false:user_wording_stored
+- `142-receipt-execution_permission_granted.json` -> receipt_flag_not_false:execution_permission_granted
+- `143-receipt-execution_performed.json` -> receipt_flag_not_false:execution_performed
+- `144-receipt-write_performed.json` -> receipt_flag_not_false:write_performed
+- `145-receipt-sync_performed.json` -> receipt_flag_not_false:sync_performed
+- `146-receipt-commit_performed.json` -> receipt_flag_not_false:commit_performed
+- `147-receipt-push_performed.json` -> receipt_flag_not_false:push_performed
+- `148-receipt-promotion_performed.json` -> receipt_flag_not_false:promotion_performed
+- `149-receipt-mainline_ready.json` -> receipt_flag_not_false:mainline_ready
+- `150-receipt-handoff_used_as_action_basis.json` -> receipt_flag_not_false:handoff_used_as_action_basis
+- `151-receipt-dirty_tree_fixed.json` -> receipt_flag_not_false:dirty_tree_fixed
+- `152-receipt-auto_advanced.json` -> receipt_flag_not_false:auto_advanced
+- `153-receipt-handoff_packet_hash.json` -> receipt_handoff_packet_hash_mismatch
+- `154-receipt-non_claims.json` -> receipt_non_claims_missing
+- `155-metric-required_positive_fixtures.json` -> metric_positive_fixtures_mismatch
+- `156-metric-minimum_failure_cases.json` -> metric_failure_case_floor_too_low
+- `157-metric-required_source_inputs.json` -> metric_source_inputs_mismatch
+- `158-metric-required_handoff_checks.json` -> metric_handoff_checks_mismatch
+- `159-metric-manual_negative_probes.json` -> metric_manual_negative_probes_mismatch
+- `160-metric-max_handoff_steps.json` -> metric_max_handoff_steps_mismatch
+- `161-top-level-slice-id.json` -> slice_id_mismatch
+- `162-top-level-source-slice.json` -> source_slice_mismatch
+- `163-top-level-version.json` -> handoff_packet_version_mismatch
+- `164-top-level-boundary.json` -> truth_boundary_mismatch
+- `165-top-level-purpose.json` -> purpose_mismatch
+- `166-top-level-mode.json` -> handoff_mode_not_allowed, handoff_payload_mismatch, receipt_handoff_result_mismatch
+- `167-top-level-write-scope.json` -> write_scope_mismatch
+- `168-top-level-read-sources.json` -> read_only_sources_mismatch
+- `169-top-level-extra-key.json` -> unknown_key:config:unexpected
+- `170-top-level-command-string.json` -> dangerous_value:$.unexpected:promote_py, dangerous_value:$.unexpected:python_command, dangerous_value:$.unexpected:sync_flag, unknown_key:config:unexpected
+- `171-hash-drift.json` -> handoff_packet_hash_mismatch
+- `172-prototype-markdown-missing-markers.json` -> prototype_markdown_missing_marker:2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox, prototype_markdown_missing_marker:HANDOFF_PACKET_READY_FOR_READ_ONLY_NEXT_AGENT, prototype_markdown_missing_marker:HANDOFF_PACKET_READY_FOR_SANDBOX_WORKFLOW_PROTOTYPE, prototype_markdown_missing_marker:HANDOFF_PACKET_READY_FOR_STOP_OR_PARK_RECORD
+- `173-prototype-markdown-command.json` -> prototype_text_dangerous:04 Reviewer Packet.md:python_command, prototype_text_dangerous:04 Reviewer Packet.md:promote_py, prototype_text_dangerous:04 Reviewer Packet.md:sync_flag
+- `174-prototype-markdown-approval.json` -> prototype_text_dangerous:03 Stop Conditions.md:approval_collected_marker
+- `175-prototype-markdown-action-basis.json` -> prototype_text_dangerous:02 Allowed Continuations.md:action_basis_marker
+- `176-prototype-markdown-mainline.json` -> prototype_text_dangerous:02 Allowed Continuations.md:mainline_ready_marker
+- `177-prototype-markdown-may-execute.json` -> prototype_text_authority_confusion:03 Stop Conditions.md:may_execute
+- `178-prototype-html-command.json` -> prototype_text_dangerous:handoff-packet-inspector.html:python_command, prototype_text_dangerous:handoff-packet-inspector.html:promote_py, prototype_text_dangerous:handoff-packet-inspector.html:sync_flag, html_missing_attr:data-sandbox-only="true", html_missing_attr:data-handoff-only="true", html_missing_attr:data-non-executable="true", html_missing_attr:data-no-formal-vault-access="true", html_missing_attr:data-no-write="true", html_missing_attr:data-no-sync="true", html_missing_attr:data-no-authority="true", html_missing_attr:data-no-approval="true", html_missing_attr:data-no-user-wording="true", html_missing_attr:data-no-command="true", html_handoff_card_count_mismatch:0:expected:3, html_missing_handoff_result:HANDOFF_PACKET_READY_FOR_READ_ONLY_NEXT_AGENT, html_missing_handoff_result:HANDOFF_PACKET_READY_FOR_SANDBOX_WORKFLOW_PROTOTYPE, html_missing_handoff_result:HANDOFF_PACKET_READY_FOR_STOP_OR_PARK_RECORD, html_missing_source_slice
+- `179-prototype-html-missing-attrs.json` -> html_missing_attr:data-sandbox-only="true", html_missing_attr:data-handoff-only="true", html_missing_attr:data-non-executable="true", html_missing_attr:data-no-formal-vault-access="true", html_missing_attr:data-no-write="true", html_missing_attr:data-no-sync="true", html_missing_attr:data-no-authority="true", html_missing_attr:data-no-approval="true", html_missing_attr:data-no-user-wording="true", html_missing_attr:data-no-command="true", html_handoff_card_count_mismatch:0:expected:3, html_missing_handoff_result:HANDOFF_PACKET_READY_FOR_READ_ONLY_NEXT_AGENT, html_missing_handoff_result:HANDOFF_PACKET_READY_FOR_SANDBOX_WORKFLOW_PROTOTYPE, html_missing_handoff_result:HANDOFF_PACKET_READY_FOR_STOP_OR_PARK_RECORD, html_missing_source_slice
+- `180-prototype-html-missing-cards.json` -> html_handoff_card_count_mismatch:0:expected:3, html_missing_handoff_result:HANDOFF_PACKET_READY_FOR_READ_ONLY_NEXT_AGENT, html_missing_handoff_result:HANDOFF_PACKET_READY_FOR_SANDBOX_WORKFLOW_PROTOTYPE, html_missing_handoff_result:HANDOFF_PACKET_READY_FOR_STOP_OR_PARK_RECORD, html_missing_source_slice
+- `181-prototype-html-run-now.json` -> prototype_text_authority_confusion:handoff-packet-inspector.html:run_now, html_missing_attr:data-sandbox-only="true", html_missing_attr:data-handoff-only="true", html_missing_attr:data-non-executable="true", html_missing_attr:data-no-formal-vault-access="true", html_missing_attr:data-no-write="true", html_missing_attr:data-no-sync="true", html_missing_attr:data-no-authority="true", html_missing_attr:data-no-approval="true", html_missing_attr:data-no-user-wording="true", html_missing_attr:data-no-command="true", html_handoff_card_count_mismatch:0:expected:3, html_missing_handoff_result:HANDOFF_PACKET_READY_FOR_READ_ONLY_NEXT_AGENT, html_missing_handoff_result:HANDOFF_PACKET_READY_FOR_SANDBOX_WORKFLOW_PROTOTYPE, html_missing_handoff_result:HANDOFF_PACKET_READY_FOR_STOP_OR_PARK_RECORD, html_missing_source_slice
+- `182-prototype-receipt-permission.json` -> prototype_receipt_flag_not_false:execution_permission_granted
+- `183-prototype-receipt-check-count.json` -> prototype_receipt_check_count_mismatch
+- `184-prototype-receipt-action-basis.json` -> prototype_receipt_flag_not_false:handoff_used_as_action_basis
+- `185-prototype-receipt-non-claims.json` -> prototype_receipt_non_claims_missing

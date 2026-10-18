@@ -1,0 +1,5 @@
+{
+  "fixture_id": "manual-verification-prompt",
+  "description": "Manual p2-60 final-gate wording should route to manual read-only verification.",
+  "case_id": "manual_drift_check_cn"
+}

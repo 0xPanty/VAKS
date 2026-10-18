@@ -1,0 +1,12 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "mcp-write-tool-exposed",
+  "expected_valid": false,
+  "expected_codes": ["MS_MCP_WRITE_TOOL_FORBIDDEN"],
+  "patch": {
+    "runtime": {
+      "mcp_write_tool_exposed": true,
+      "write_tool_enabled": true
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "raw-input-path-not-fixture",
+  "expected_valid": false,
+  "expected_codes": ["MS_PATH_OUTSIDE_SANDBOX"],
+  "patch": {
+    "scope": {
+      "input_paths": ["raw/articles/not-a-copied-fixture.md"]
+    }
+  }
+}

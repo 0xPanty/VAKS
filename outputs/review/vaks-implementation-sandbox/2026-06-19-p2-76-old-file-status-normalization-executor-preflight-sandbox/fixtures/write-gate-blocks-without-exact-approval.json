@@ -1,0 +1,9 @@
+{
+  "fixture_id": "write-gate-blocks-without-exact-approval",
+  "expected": {
+    "requires_exact_p2_75_approval_phrase": true,
+    "p2_75_packet_is_not_approval": true,
+    "generic_language_is_not_approval": true,
+    "old_slice_write_allowed_now": false
+  }
+}

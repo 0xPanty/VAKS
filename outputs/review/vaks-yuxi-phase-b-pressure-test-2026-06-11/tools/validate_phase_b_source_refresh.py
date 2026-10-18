@@ -1,0 +1,306 @@
+import json
+import subprocess
+from collections import Counter
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[4]
+SANDBOX_DIR = Path(__file__).resolve().parents[1]
+RESULTS_DIR = SANDBOX_DIR / "results"
+REFRESH_PATH = RESULTS_DIR / "phase_b_source_refresh_candidates.jsonl"
+SUMMARY_PATH = RESULTS_DIR / "phase_b_source_refresh_candidate_summary.json"
+REPORT_PATH = SANDBOX_DIR / "PHASE_B_SOURCE_REFRESH_CANDIDATE_CHECK.md"
+JSON_REPORT_PATH = RESULTS_DIR / "phase_b_source_refresh_candidate_check.json"
+
+APPROVED_MINIMAL_PATCH_SET = {
+    "SOURCE_INTAKE.md",
+    "IMPLEMENTATION_BLUEPRINT.md",
+    "DEV_CONTEXT.md",
+    "MEMORY_TIER.md",
+}
+
+CORE_DOCS = [
+    "AGENTS.md",
+    "README.md",
+    "FUSION_ARCHITECTURE_V0_2_DRAFT.md",
+    "SECOND_BRAIN_MODEL.md",
+    "ARCHITECTURE_PRINCIPLES.md",
+    "SCHEMA.md",
+    "IMPLEMENTATION_BLUEPRINT.md",
+    "SOURCE_INTAKE.md",
+    "REFERENCE_REVIEW_PROTOCOL.md",
+    "MEMORY_TIER.md",
+    "DEV_CONTEXT.md",
+    "REVIEW_QUEUE.md",
+    "FEEDBACK.md",
+    "templates/architecture-review-window-prompt.md",
+]
+
+REQUIRED_ARTIFACTS = [
+    "results/phase_b_source_refresh_candidates.jsonl",
+    "results/phase_b_source_refresh_candidate_summary.json",
+    "results/phase_b_evidence_support_check_candidates.jsonl",
+    "results/phase_b_evidence_support_check_candidate_check.json",
+    "PHASE_B_EVIDENCE_SUPPORT_CHECK_CANDIDATE_DECISION.md",
+]
+
+
+def add_error(errors: list[dict], code: str, detail: str) -> None:
+    errors.append({"code": code, "detail": detail})
+
+
+def load_jsonl(path: Path):
+    with path.open(encoding="utf-8") as handle:
+        for line_no, line in enumerate(handle, start=1):
+            line = line.strip()
+            if line:
+                yield line_no, json.loads(line)
+
+
+def read_json(path: Path) -> dict:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def validate_refresh_item(errors: list[dict], line_no: int, item: dict, counts: Counter) -> None:
+    counts["refresh_items"] += 1
+    anchor = item.get("source_anchor") or {}
+    support = item.get("evidence_support") or {}
+    status = item.get("refresh_status")
+    if status == "refreshed_current_source_hash":
+        counts["refreshed_items"] += 1
+    elif status == "already_current":
+        counts["already_current_items"] += 1
+    else:
+        add_error(errors, "bad_refresh_item_status", f"line {line_no}:{item.get('evidence_item_id')}:{status}")
+    if not item.get("previous_current_source_hash_matches_receipt"):
+        counts["pre_refresh_mismatch"] += 1
+        if status != "refreshed_current_source_hash":
+            add_error(errors, "mismatch_not_refreshed", f"line {line_no}:{item.get('evidence_item_id')}")
+        if "source_hash_refreshed" not in set(item.get("warning_codes") or []):
+            add_error(errors, "missing_refreshed_warning", f"line {line_no}:{item.get('evidence_item_id')}")
+    if not item.get("refreshed_source_hash_matches_current"):
+        counts["post_refresh_mismatch"] += 1
+        add_error(errors, "post_refresh_hash_mismatch", f"line {line_no}:{item.get('evidence_item_id')}")
+    if "source_hash_mismatch_requires_refresh" in set(item.get("warning_codes") or []):
+        add_error(errors, "stale_refresh_warning_leftover", f"line {line_no}:{item.get('evidence_item_id')}")
+    if not anchor.get("source_span_available"):
+        add_error(errors, "missing_source_span_after_refresh", f"line {line_no}:{item.get('evidence_item_id')}")
+    else:
+        counts["source_span_available"] += 1
+    if not anchor.get("quote_or_excerpt"):
+        add_error(errors, "missing_quote_or_excerpt", f"line {line_no}:{item.get('evidence_item_id')}")
+    if not anchor.get("source_hash") or anchor.get("source_hash") != anchor.get("current_source_hash"):
+        add_error(errors, "bad_refreshed_source_hash", f"line {line_no}:{item.get('evidence_item_id')}")
+    if support.get("span_supports_target") != "unclear":
+        add_error(errors, "semantic_support_auto_pass", f"line {line_no}:{support.get('span_supports_target')}")
+    if support.get("evidence_role") != "background_context":
+        add_error(errors, "bad_evidence_role", f"line {line_no}:{support.get('evidence_role')}")
+    if item.get("support_counts_for_promotion") is not False:
+        add_error(errors, "promotion_support_leak", f"line {line_no}:{item.get('evidence_item_id')}")
+
+
+def validate_refresh_record(errors: list[dict], line_no: int, record: dict, counts: Counter) -> None:
+    counts["source_refresh_records"] += 1
+    counts[f"source_set:{record.get('source_set')}"] += 1
+    counts[f"corpus:{record.get('corpus')}"] += 1
+    policy = record.get("refresh_policy") or {}
+    boundary = record.get("source_support_boundary") or {}
+    if record.get("artifact_kind") != "vaks_phase_b_source_refresh_candidate":
+        add_error(errors, "bad_artifact_kind", f"line {line_no}")
+    if record.get("truth_boundary") != "source_refresh_candidate_not_support":
+        add_error(errors, "bad_truth_boundary", f"line {line_no}:{record.get('truth_boundary')}")
+    for key in ["action_basis_allowed", "evidence_packet_allowed", "evidence_sufficiency_passed"]:
+        if record.get(key) is not False:
+            add_error(errors, f"{key}_leak", f"line {line_no}:{record.get(key)}")
+    if int(record.get("support_passed_count") or 0) != 0:
+        add_error(errors, "support_passed_leak", f"line {line_no}:{record.get('support_passed_count')}")
+    if int(record.get("support_counts_for_promotion_count") or 0) != 0:
+        add_error(errors, "promotion_support_leak", f"line {line_no}:{record.get('support_counts_for_promotion_count')}")
+    if policy.get("refresh_scope") != "source_hash_and_span_snapshot_only":
+        add_error(errors, "bad_refresh_scope", f"line {line_no}:{policy.get('refresh_scope')}")
+    if policy.get("rerank_or_retrieve_changed") is not False:
+        add_error(errors, "rerank_changed_in_refresh", f"line {line_no}")
+    if policy.get("semantic_support_reviewed") is not False:
+        add_error(errors, "semantic_support_reviewed_leak", f"line {line_no}")
+    if policy.get("action_basis_allowed") is not False or policy.get("evidence_packet_allowed") is not False:
+        add_error(errors, "policy_permission_leak", f"line {line_no}")
+    if boundary.get("action_basis_allowed") is not False:
+        add_error(errors, "source_support_action_basis_leak", f"line {line_no}")
+    if boundary.get("evidence_packet_allowed") is not False:
+        add_error(errors, "source_support_packet_leak", f"line {line_no}")
+    if boundary.get("evidence_sufficiency_passed") is not False:
+        add_error(errors, "source_support_sufficiency_leak", f"line {line_no}")
+    items = record.get("refresh_items") or []
+    if record.get("source_refresh_status") == "blocked_no_source_anchor":
+        counts["blocked_no_source_anchor"] += 1
+        if items:
+            add_error(errors, "blocked_record_has_refresh_items", f"line {line_no}")
+        return
+    if record.get("source_refresh_status") != "refreshed_snapshot_candidate":
+        add_error(errors, "bad_refresh_status", f"line {line_no}:{record.get('source_refresh_status')}")
+    if not items:
+        add_error(errors, "missing_refresh_items", f"line {line_no}")
+    for item in items:
+        validate_refresh_item(errors, line_no, item, counts)
+
+
+def validate_prior_gates(errors: list[dict]) -> dict:
+    support = read_json(RESULTS_DIR / "phase_b_evidence_support_check_candidate_check.json")
+    envelope = read_json(RESULTS_DIR / "phase_b_evidence_envelope_candidate_check.json")
+    context_pack = read_json(RESULTS_DIR / "phase_b_context_pack_candidate_check.json")
+    runtime = read_json(RESULTS_DIR / "phase_b_runtime_feasibility_check.json")
+    minimal = read_json(RESULTS_DIR / "phase_b_minimal_doc_patch_check.json")
+    contract = read_json(RESULTS_DIR / "phase_b_adapter_contract_test.json")
+    gates = {
+        "evidence_support_check": (support.get("evidence_support_check_status"), support.get("error_count")),
+        "evidence_envelope": (envelope.get("evidence_envelope_status"), envelope.get("error_count")),
+        "context_pack": (context_pack.get("context_pack_status"), context_pack.get("error_count")),
+        "runtime_feasibility": (runtime.get("runtime_feasibility_status"), runtime.get("error_count")),
+        "minimal_doc_patch": (minimal.get("minimal_doc_patch_status"), minimal.get("error_count")),
+        "contract": (contract.get("contract_status"), contract.get("error_count")),
+    }
+    for name, (status, error_count) in gates.items():
+        if status != "pass" or int(error_count if error_count is not None else -1) != 0:
+            add_error(errors, "prior_gate_not_pass", f"{name}: {status} / {error_count}")
+    return {name: {"status": status, "errors": error_count} for name, (status, error_count) in gates.items()}
+
+
+def validate_artifacts(errors: list[dict]) -> list[dict]:
+    artifacts = []
+    for rel in REQUIRED_ARTIFACTS:
+        path = SANDBOX_DIR / rel
+        exists = path.exists()
+        artifacts.append({"path": rel, "exists": exists, "bytes": path.stat().st_size if exists else 0})
+        if not exists:
+            add_error(errors, "missing_required_artifact", rel)
+        elif path.stat().st_size == 0:
+            add_error(errors, "empty_required_artifact", rel)
+    return artifacts
+
+
+def validate_core_doc_scope(errors: list[dict]) -> dict:
+    proc = subprocess.run(["git", "status", "--porcelain", "--", *CORE_DOCS], cwd=ROOT, text=True, capture_output=True)
+    dirty = [line for line in proc.stdout.splitlines() if line.strip()]
+    dirty_paths = {line[3:].strip() for line in dirty}
+    unexpected = sorted(dirty_paths - APPROVED_MINIMAL_PATCH_SET)
+    if unexpected:
+        add_error(errors, "unexpected_core_doc_changed", ",".join(unexpected))
+    return {"dirty": dirty}
+
+
+def validate_all() -> dict:
+    errors: list[dict] = []
+    counts: Counter = Counter()
+    summary = read_json(SUMMARY_PATH)
+    if int(summary.get("source_refresh_count") or 0) != 90:
+        add_error(errors, "summary_source_refresh_count_mismatch", str(summary.get("source_refresh_count")))
+    if int(summary.get("pre_refresh_mismatch_count") or 0) <= 0:
+        add_error(errors, "missing_positive_pre_refresh_mismatch", str(summary.get("pre_refresh_mismatch_count")))
+    for key in [
+        "post_refresh_mismatch_count",
+        "support_passed_count",
+        "support_counts_for_promotion_count",
+        "action_basis_allowed_count",
+        "evidence_packet_allowed_count",
+        "evidence_sufficiency_passed_count",
+    ]:
+        value = summary.get(key)
+        if int(value if value is not None else -1) != 0:
+            add_error(errors, f"summary_{key}_leak", str(value))
+    for line_no, record in load_jsonl(REFRESH_PATH):
+        validate_refresh_record(errors, line_no, record, counts)
+    expected_pairs = [
+        ("source_refresh_records", "source_refresh_count"),
+        ("refresh_items", "refresh_item_count"),
+        ("source_span_available", "source_span_available_count"),
+        ("pre_refresh_mismatch", "pre_refresh_mismatch_count"),
+        ("post_refresh_mismatch", "post_refresh_mismatch_count"),
+        ("refreshed_items", "refreshed_item_count"),
+        ("already_current_items", "already_current_item_count"),
+        ("blocked_no_source_anchor", "blocked_no_source_anchor_count"),
+    ]
+    for count_key, summary_key in expected_pairs:
+        if int(counts.get(count_key, 0)) != int(summary.get(summary_key) or 0):
+            add_error(errors, f"{count_key}_mismatch", f"{counts.get(count_key, 0)} != {summary.get(summary_key)}")
+    artifacts = validate_artifacts(errors)
+    prior_gates = validate_prior_gates(errors)
+    core_docs = validate_core_doc_scope(errors)
+    result = {
+        "source_refresh_status": "pass" if not errors else "fail",
+        "error_count": len(errors),
+        "errors": errors,
+        "counts": dict(counts),
+        "summary": summary,
+        "artifacts": artifacts,
+        "prior_gates": prior_gates,
+        "core_docs": core_docs,
+    }
+    JSON_REPORT_PATH.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+    write_markdown(result)
+    return result
+
+
+def write_markdown(result: dict) -> None:
+    lines = [
+        "---",
+        "record_kind: sandbox_source_refresh_candidate_check",
+        f"status: {result['source_refresh_status']}",
+        "project_id: VAKS",
+        "created_at: 2026-06-11",
+        "truth_boundary: source_refresh_candidate_not_support",
+        "action_basis_allowed: false",
+        "---",
+        "",
+        "# Phase B Source Refresh Candidate Check",
+        "",
+        "## Result",
+        "",
+        "```text",
+        f"source refresh status: {result['source_refresh_status']}",
+        f"error count: {result['error_count']}",
+        f"source refresh count: {result['counts'].get('source_refresh_records', 0)}",
+        f"refresh item count: {result['counts'].get('refresh_items', 0)}",
+        f"source_span_available_count: {result['counts'].get('source_span_available', 0)}",
+        f"pre_refresh_mismatch_count: {result['summary'].get('pre_refresh_mismatch_count')}",
+        f"post_refresh_mismatch_count: {result['summary'].get('post_refresh_mismatch_count')}",
+        f"refreshed_item_count: {result['summary'].get('refreshed_item_count')}",
+        f"already_current_item_count: {result['summary'].get('already_current_item_count')}",
+        f"blocked_no_source_anchor_count: {result['summary'].get('blocked_no_source_anchor_count')}",
+        f"support_passed_count: {result['summary'].get('support_passed_count')}",
+        f"action_basis_allowed_count: {result['summary'].get('action_basis_allowed_count')}",
+        "```",
+        "",
+        "## Compared Floor",
+        "",
+        "```text",
+        "previous version: Evidence Support Check candidate assembly",
+        "required: reduce hash mismatch without semantic support or action leakage",
+        "```",
+        "",
+        "## Prior Gates",
+        "",
+        "```text",
+    ]
+    for name, gate in result["prior_gates"].items():
+        lines.append(f"{name}: {gate['status']} / {gate['errors']} errors")
+    lines.extend(["```", "", "## Errors", ""])
+    if result["errors"]:
+        for error in result["errors"]:
+            lines.append(f"- {error['code']}: {error['detail']}")
+    else:
+        lines.append("- none")
+    lines.append("")
+    REPORT_PATH.write_text("\n".join(lines), encoding="utf-8")
+
+
+def main() -> int:
+    result = validate_all()
+    print(f"source refresh status: {result['source_refresh_status']}")
+    print(f"source refresh count: {result['counts'].get('source_refresh_records', 0)}")
+    print(f"refresh item count: {result['counts'].get('refresh_items', 0)}")
+    print(f"error count: {result['error_count']}")
+    return 0 if not result["errors"] else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

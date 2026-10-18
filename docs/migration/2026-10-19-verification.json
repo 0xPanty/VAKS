@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-19",
+  "snapshot": "pre-upload staged project payload; verification record and final sanitized archive added afterward",
+  "file_count": 28057,
+  "bytes": 838931707,
+  "working_bytes_vs_staged_mismatch_count": 0,
+  "mac_case_unicode_collision_count": 0,
+  "files_over_50_MiB_count": 0,
+  "invalid_path_or_mode_count": 0,
+  "large_release_asset_count": 6,
+  "large_release_asset_bytes": 550647508,
+  "vault_files_restored": 891,
+  "vault_alternate_versions_archived": 135,
+  "prior_commits_preserved": 57,
+  "tests": {
+    "platform": "Windows",
+    "python": "3.12.14",
+    "implementation_manifest_components": 6,
+    "guard_self_test": "pass (7 families, 160 case hashes)",
+    "source_capture_passed": 99,
+    "source_capture_store_passed": 62,
+    "restore_helper": "6 local assets hashes verified; unsafe paths and tampered content refused",
+    "macOS_executed": false
+  },
+  "notes": [
+    "Git index matches local file bytes after applying byte-preserving attributes; working files not rewritten.",
+    "Final snapshot and remote verification are recorded by git commit and release metadata.",
+    "Secret-format scans are bounded diagnostics, not proof of absence."
+  ]
+}

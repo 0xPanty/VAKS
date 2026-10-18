@@ -1,0 +1,33 @@
+{
+  "record_kind": "runtime_artifact_exclusion_manifest",
+  "scenario_id": "ra-valid-derived-index-excluded-with-raw-anchor",
+  "expected_valid": true,
+  "expected_codes": [],
+  "exclude_runtime_artifacts": true,
+  "items": [
+    {
+      "id": "raw_anchor_001",
+      "path": "raw/articles/example-source.md#L10-L18",
+      "artifact_kind": "raw_anchor",
+      "runtime_artifact": false,
+      "seen_by_retrieval": true,
+      "selected": true,
+      "excluded": false,
+      "pack_role": "support",
+      "evidence_role": "direct_support",
+      "authority_bucket": "raw_anchor"
+    },
+    {
+      "id": "derived_index_001",
+      "path": "outputs/review/example/derived-index/runtime-index.json",
+      "artifact_kind": "derived_index",
+      "runtime_artifact": true,
+      "seen_by_retrieval": true,
+      "selected": false,
+      "excluded": true,
+      "excluded_reason": "runtime_artifact_excluded",
+      "pack_role": "none",
+      "authority_bucket": "runtime_artifact"
+    }
+  ]
+}

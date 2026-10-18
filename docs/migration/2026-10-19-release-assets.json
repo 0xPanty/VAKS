@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-19",
+  "repository": "0xPanty/VAKS",
+  "tag": "migration-2026-10-19",
+  "assets": [
+    {
+      "path": "raw/repos/_snapshots/2026-06-11-PaddlePaddle-PaddleOCR-71c7fef-source.zip",
+      "asset_name": "2026-06-11-PaddlePaddle-PaddleOCR-71c7fef-source.zip",
+      "bytes": 118060629,
+      "sha256": "7ec1d91c0a3f2426c05442115ca2f22206e63dfb6f6bc5684cfb56fcee1aea3b"
+    },
+    {
+      "path": "raw/repos/_snapshots/2026-06-23-linxiv-dev-linXiv-8085eeb-source.zip",
+      "asset_name": "2026-06-23-linxiv-dev-linXiv-8085eeb-source.zip",
+      "bytes": 67108061,
+      "sha256": "4ff7d4564cc0f5ae3cc25639c03060ec37d2cd51b05b85db33db888c55693356"
+    },
+    {
+      "path": "raw/repos/_snapshots/Bowen-0x00-obsidian-excalidraw-plugin-ymjr-3fa4ace442c3d455c05172e1b1894033572e6b47.zip",
+      "asset_name": "Bowen-0x00-obsidian-excalidraw-plugin-ymjr-3fa4ace442c3d455c05172e1b1894033572e6b47.zip",
+      "bytes": 108789579,
+      "sha256": "e91eede1a56ff9ac17b68f4eb5e4f7767957cb31228094d2c0fd235f23ea0149"
+    },
+    {
+      "path": "raw/repos/_snapshots/Bowen-0x00-obsidian-excalidraw-scripts-1d0edb6beac48efe92b5a19c22cef701bc3a54e5.zip",
+      "asset_name": "Bowen-0x00-obsidian-excalidraw-scripts-1d0edb6beac48efe92b5a19c22cef701bc3a54e5.zip",
+      "bytes": 76183472,
+      "sha256": "b2cb8e4c4be76fd05f7869263bb6872363f614dc893b9081273d8df2395e9e70"
+    },
+    {
+      "path": "raw/repos/_snapshots/jc2255-log-collect-ai-analytics-3a960f4e7aa23a2558df0b7eea813b656ecb3166.zip",
+      "asset_name": "jc2255-log-collect-ai-analytics-3a960f4e7aa23a2558df0b7eea813b656ecb3166.zip",
+      "bytes": 119861464,
+      "sha256": "05b72b98049ccf4b2908974f1ee4fe27da8643eaff2fd2f8bbf4188b5057bdb5"
+    },
+    {
+      "path": "outputs/review/2026-06-14-reminds-app-sandbox-study/downloads/reminds-release-1.5.0-132.apk",
+      "asset_name": "reminds-release-1.5.0-132.apk",
+      "bytes": 60644303,
+      "sha256": "7925f7be46cdb8078e2b70bd36064f748ae3716d6a08541e34ff3bc9a21de2c7"
+    }
+  ]
+}

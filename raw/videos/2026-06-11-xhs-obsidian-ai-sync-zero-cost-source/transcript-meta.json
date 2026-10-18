@@ -1,0 +1,23 @@
+{
+  "status": "ok",
+  "transcript_method": "local_asr",
+  "asr_engine": "faster-whisper",
+  "asr_model": "small",
+  "asr_device": "cuda",
+  "asr_compute_type": "float16",
+  "language_requested": "zh",
+  "language_detected": "zh",
+  "language_probability": 1,
+  "duration": 371.1013125,
+  "vad_filter": true,
+  "beam_size": 5,
+  "started_at": "2026-06-11T05:41:13.990971+08:00",
+  "finished_at": "2026-06-11T05:41:48.051024+08:00",
+  "elapsed_seconds": 34.06,
+  "segments_count": 177,
+  "transcript_chars": 2338,
+  "cookies_used": false,
+  "cloud_api_used": false,
+  "private_account_used": false,
+  "quality_note": "ASR raw text; proper nouns, UI labels, commands, settings, and product names require visual/source confirmation."
+}

@@ -1,0 +1,186 @@
+{
+  "record_kind": "sandbox_chain_hardening_readiness",
+  "slice_id": "2026-06-16-p2-66-user-decision-chain-hardening-readiness-sandbox",
+  "source_slice_id": "2026-06-16-p2-65-user-decision-frontmatter-status-hardening-sandbox",
+  "purpose": "decide the next safe sandbox step after strict frontmatter status hardening",
+  "chain_hardening_readiness_ready": true,
+  "source_statuses": {
+    "verification": {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-65-user-decision-frontmatter-status-hardening-sandbox/verification.md",
+      "status": "local_verification_passed",
+      "expected_status": "local_verification_passed",
+      "matches_expected": true
+    },
+    "reviewer": {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-65-user-decision-frontmatter-status-hardening-sandbox/reviewer-report.md",
+      "status": "review_pass_no_blocker",
+      "expected_status": "review_pass_no_blocker",
+      "matches_expected": true
+    },
+    "boundary": {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-65-user-decision-frontmatter-status-hardening-sandbox/boundary-audit.md",
+      "status": "pass_boundary",
+      "expected_status": "pass_boundary",
+      "matches_expected": true
+    },
+    "product": {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-65-user-decision-frontmatter-status-hardening-sandbox/product-acceptance-report.md",
+      "status": "pass_product_grade",
+      "expected_status": "pass_product_grade",
+      "matches_expected": true
+    },
+    "next_step": {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-65-user-decision-frontmatter-status-hardening-sandbox/next-step.md",
+      "status": "pass_product_grade_pending_next_slice",
+      "expected_status": "pass_product_grade_pending_next_slice",
+      "matches_expected": true
+    }
+  },
+  "source_verifier_path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-65-user-decision-frontmatter-status-hardening-sandbox/artifact/verify_frontmatter_status_hardening.py",
+  "decision_options": [
+    {
+      "option_id": "sandbox_chain_hardening_package",
+      "label": "Package strict status helper for sandbox reuse",
+      "decision": "RECOMMENDED_NEXT",
+      "why": "Keeps changes inside a new sandbox while making p2-65 reusable by future user-decision gates.",
+      "write_scope": "new sandbox path only",
+      "requires_user_separate_approval": false,
+      "allowed_actions": [
+        "create sandbox package artifact",
+        "write package contract",
+        "write fixtures and failure cases",
+        "run local verifier"
+      ],
+      "forbidden_actions": [
+        "do_not_modify_old_slices",
+        "do_not_create_shared_helper",
+        "do_not_merge_mainline",
+        "do_not_promote",
+        "do_not_sync_obsidian",
+        "do_not_commit",
+        "do_not_push",
+        "do_not_install_dependencies",
+        "do_not_start_background_service",
+        "do_not_use_mcp_write_tool",
+        "do_not_create_reviewed_knowledge",
+        "do_not_create_evidence_support",
+        "do_not_create_action_basis",
+        "do_not_collect_user_approval_by_inference"
+      ]
+    },
+    {
+      "option_id": "old_slice_backfill",
+      "label": "Backfill older p2-63/p2-64 verifiers",
+      "decision": "PARK_REQUIRES_SEPARATE_USER_APPROVAL",
+      "why": "Would modify older sandbox artifacts and risks rewriting accepted historical evidence.",
+      "write_scope": "older sandbox paths",
+      "requires_user_separate_approval": true,
+      "allowed_actions": [],
+      "forbidden_actions": [
+        "do_not_modify_old_slices",
+        "do_not_create_shared_helper",
+        "do_not_merge_mainline",
+        "do_not_promote",
+        "do_not_sync_obsidian",
+        "do_not_commit",
+        "do_not_push",
+        "do_not_install_dependencies",
+        "do_not_start_background_service",
+        "do_not_use_mcp_write_tool",
+        "do_not_create_reviewed_knowledge",
+        "do_not_create_evidence_support",
+        "do_not_create_action_basis",
+        "do_not_collect_user_approval_by_inference"
+      ]
+    },
+    {
+      "option_id": "shared_helper_or_tools",
+      "label": "Move parser into a shared helper or tools path",
+      "decision": "PARK_REQUIRES_SEPARATE_USER_APPROVAL",
+      "why": "Would touch shared/tooling paths that are outside the current sandbox permission.",
+      "write_scope": "shared helper or tools path",
+      "requires_user_separate_approval": true,
+      "allowed_actions": [],
+      "forbidden_actions": [
+        "do_not_modify_old_slices",
+        "do_not_create_shared_helper",
+        "do_not_merge_mainline",
+        "do_not_promote",
+        "do_not_sync_obsidian",
+        "do_not_commit",
+        "do_not_push",
+        "do_not_install_dependencies",
+        "do_not_start_background_service",
+        "do_not_use_mcp_write_tool",
+        "do_not_create_reviewed_knowledge",
+        "do_not_create_evidence_support",
+        "do_not_create_action_basis",
+        "do_not_collect_user_approval_by_inference"
+      ]
+    },
+    {
+      "option_id": "return_to_broader_p2_workflow",
+      "label": "Return to broader P2 product workflow backlog",
+      "decision": "ALLOW_AFTER_RECORDING_HANDOFF",
+      "why": "p2-65 is closed; returning to backlog is valid if the next slice records the handoff and does not imply merge.",
+      "write_scope": "new sandbox path only",
+      "requires_user_separate_approval": false,
+      "allowed_actions": [
+        "write sandbox handoff",
+        "write next backlog selection record"
+      ],
+      "forbidden_actions": [
+        "do_not_modify_old_slices",
+        "do_not_create_shared_helper",
+        "do_not_merge_mainline",
+        "do_not_promote",
+        "do_not_sync_obsidian",
+        "do_not_commit",
+        "do_not_push",
+        "do_not_install_dependencies",
+        "do_not_start_background_service",
+        "do_not_use_mcp_write_tool",
+        "do_not_create_reviewed_knowledge",
+        "do_not_create_evidence_support",
+        "do_not_create_action_basis",
+        "do_not_collect_user_approval_by_inference"
+      ]
+    }
+  ],
+  "recommended_next_slice": {
+    "slice_id": "2026-06-16-p2-67-user-decision-strict-status-package-sandbox",
+    "purpose": "package the p2-65 strict status parser as a reusable sandbox artifact without modifying old slices or shared tools",
+    "write_scope": "new sandbox path only"
+  },
+  "readiness_flags": {
+    "dependency_install_required": false,
+    "network_required": false,
+    "mcp_required": false,
+    "background_service_required": false,
+    "automatic_execution": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "formal_vault_ready": false,
+    "obsidian_sync_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "user_approval_collected": false
+  },
+  "hard_no": [
+    "do_not_modify_old_slices",
+    "do_not_create_shared_helper",
+    "do_not_merge_mainline",
+    "do_not_promote",
+    "do_not_sync_obsidian",
+    "do_not_commit",
+    "do_not_push",
+    "do_not_install_dependencies",
+    "do_not_start_background_service",
+    "do_not_use_mcp_write_tool",
+    "do_not_create_reviewed_knowledge",
+    "do_not_create_evidence_support",
+    "do_not_create_action_basis",
+    "do_not_collect_user_approval_by_inference"
+  ]
+}

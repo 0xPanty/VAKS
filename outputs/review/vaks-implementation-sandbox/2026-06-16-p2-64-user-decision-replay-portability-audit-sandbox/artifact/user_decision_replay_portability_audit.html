@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Decision Replay Portability Audit</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 32px; color: #1f2937; background: #f8fafc; }
+    main { max-width: 1080px; margin: 0 auto; }
+    table { width: 100%; border-collapse: collapse; background: #fff; }
+    th, td { border: 1px solid #d1d5db; padding: 8px; text-align: left; vertical-align: top; }
+    th { background: #e5e7eb; }
+    code { white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>User Decision Replay Portability Audit</h1>
+  <p>Sandbox-only audit. It does not approve execution, merge, promotion, sync, reviewed knowledge, evidence support, action basis, or user approval.</p>
+  <p><strong>Portability ready:</strong> True<br><strong>Replay count:</strong> 15</p>
+  <table><thead><tr><th>Command</th><th>How to run</th></tr></thead><tbody><tr><td>build_replay</td><td><code>python -B .\outputs\review\vaks-implementation-sandbox\2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox\artifact\build_user_decision_runbook_replay_regression.py</code></td></tr><tr><td>verify_replay</td><td><code>python -B .\outputs\review\vaks-implementation-sandbox\2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox\artifact\verify_user_decision_runbook_replay_regression.py</code></td></tr><tr><td>final_gate</td><td><code>python -B .\outputs\review\vaks-implementation-sandbox\2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox\artifact\verify_user_decision_runbook_replay_regression.py --final-gate</code></td></tr></tbody></table>
+  <h2>Operator sequence</h2>
+  <ol><li>Read the p2-64 audit first.</li><li>Run the p2-63 default verifier before using replay outputs.</li><li>Run the p2-63 final gate only when validating closeout state.</li><li>Stop if either command fails.</li><li>Do not treat a pass as execution, merge, promotion, sync, reviewed knowledge, evidence support, action basis, or user approval.</li></ol>
+  <h2>Hard no</h2>
+  <ul><li>do_not_execute_user_decision_option</li><li>do_not_merge_mainline</li><li>do_not_promote</li><li>do_not_sync_obsidian</li><li>do_not_commit</li><li>do_not_push</li><li>do_not_install_dependencies</li><li>do_not_start_background_service</li><li>do_not_use_mcp_write_tool</li><li>do_not_create_reviewed_knowledge</li><li>do_not_create_evidence_support</li><li>do_not_create_action_basis</li><li>do_not_collect_user_approval_by_inference</li></ul>
+</main>
+</body>
+</html>

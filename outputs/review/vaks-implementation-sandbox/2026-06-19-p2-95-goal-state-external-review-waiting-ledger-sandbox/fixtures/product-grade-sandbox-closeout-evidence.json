@@ -1,0 +1,8 @@
+{
+  "case_id": "product-grade-sandbox-closeout-evidence",
+  "tracked_closeout_slice_count": 4,
+  "tracked_closeout_final_gate_complete_count": 4,
+  "tracked_closeout_product_grade_count": 4,
+  "sandbox_closeout_evidence_product_grade": true,
+  "passed": true
+}

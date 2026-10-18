@@ -1,0 +1,53 @@
+# Failure Case Oracle
+
+| File | Expected failure |
+| --- | --- |
+| `01-forbidden-formal_vault_read.json` | `forbidden_operation:formal_vault_read` |
+| `02-forbidden-formal_vault_scan.json` | `forbidden_operation:formal_vault_scan` |
+| `03-forbidden-formal_vault_write.json` | `forbidden_operation:formal_vault_write` |
+| `04-forbidden-obsidian_sync.json` | `forbidden_operation:obsidian_sync` |
+| `05-forbidden-commit.json` | `forbidden_operation:commit` |
+| `06-forbidden-push.json` | `forbidden_operation:push` |
+| `07-forbidden-promotion.json` | `forbidden_operation:promotion` |
+| `08-forbidden-dependency_install.json` | `forbidden_operation:dependency_install` |
+| `09-forbidden-background_service.json` | `forbidden_operation:background_service` |
+| `10-forbidden-mcp_write_tool.json` | `forbidden_operation:mcp_write_tool` |
+| `11-forbidden-hooks.json` | `forbidden_operation:hooks` |
+| `12-forbidden-real_base_files.json` | `forbidden_operation:real_base_files` |
+| `13-forbidden-production_ui.json` | `forbidden_operation:production_ui` |
+| `14-forbidden-local_storage_write.json` | `forbidden_operation:local_storage_write` |
+| `15-forbidden-network_post.json` | `forbidden_operation:network_post` |
+| `16-forbidden-approval_collection.json` | `forbidden_operation:approval_collection` |
+| `17-forbidden-user_approval_inference.json` | `forbidden_operation:user_approval_inference` |
+| `18-forbidden-external_notification.json` | `forbidden_operation:external_notification` |
+| `19-absolute-scope-target.json` | `scope_target_absolute_or_forbidden:native_home` |
+| `20-scope-write-enabled-now.json` | `scope_write_enabled_now:native_home` |
+| `21-scope-already-approved.json` | `scope_approval_status_not_requested:native_home` |
+| `22-scope-missing-user-approval.json` | `scope_missing_future_user_approval:native_home` |
+| `23-source-input-path-missing.json` | `source_input_path_missing:source_config` |
+| `24-source-input-hash-mismatch.json` | `source_input_hash_mismatch:source_config` |
+| `25-scope-source-hash-mismatch.json` | `scope_source_hash_mismatch:native_home` |
+| `26-question-collects-approval-now.json` | `approval_question_collects_now:future_approve_exact_scope` |
+| `27-question-default-approve.json` | `approval_question_not_deny:future_approve_exact_scope` |
+| `28-question-missing-scope-ids.json` | `approval_question_missing_scope_binding:future_approve_exact_scope` |
+| `29-question-missing-packet-hash.json` | `approval_question_missing_packet_hash:future_approve_exact_scope` |
+| `30-question-missing-source-bundle-hash.json` | `approval_question_missing_source_bundle_hash:future_approve_exact_scope` |
+| `31-question-missing-scope-hash.json` | `approval_question_missing_scope_hash:future_approve_exact_scope` |
+| `32-question-weak-phrase.json` | `approval_question_weak_confirmation_phrase:future_approve_exact_scope` |
+| `33-question-missing-sync-exclusion.json` | `approval_question_missing_exclusion:future_approve_exact_scope:obsidian_sync` |
+| `34-decision-template-not-blank.json` | `decision_template_not_blank_only` |
+| `35-decision-template-approved-now.json` | `decision_template_approved_now` |
+| `36-decision-template-prefill-approval.json` | `decision_template_prefills_approval` |
+| `37-nonapproval-receipt-claims-approval.json` | `non_approval_receipt_claims_approval` |
+| `38-receipt-formal-vault-accessed.json` | `non_approval_receipt_formal_vault_accessed` |
+| `39-missing-stop-formal-vault-write.json` | `missing_stop_condition:formal vault write` |
+| `40-authority-confusing-text.json` | `authority_confusing_text` |
+| `41-too-few-failure-cases.json` | `minimum_failure_cases_too_low` |
+| `42-inspector-approve-button.json` | `inspector_control_not_allowed:button:approve` |
+| `43-source-path-outside-source-slice.json` | `source_input_path_invalid:source_config` |
+| `44-packet-hash-missing.json` | `packet_hash_missing` |
+| `45-packet-hash-mismatch.json` | `packet_hash_mismatch` |
+| `46-source-bundle-hash-mismatch.json` | `source_bundle_hash_mismatch` |
+| `47-scope-hash-mismatch.json` | `scope_hash_mismatch` |
+| `48-question-required-packet-hash-mismatch.json` | `approval_question_packet_hash_value_mismatch:future_approve_exact_scope` |
+| `49-inferred-approval-text.json` | `authority_confusing_text` |

@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "status-flags-missing",
+  "expected_valid": false,
+  "expected_codes": ["US_STATUS_FLAGS_MISSING"],
+  "patch": {"status_surfaces": [{"id": "operator_status", "shows": ["blocked"], "can_approve": false, "mutates_truth": false, "can_promote": false}]}
+}

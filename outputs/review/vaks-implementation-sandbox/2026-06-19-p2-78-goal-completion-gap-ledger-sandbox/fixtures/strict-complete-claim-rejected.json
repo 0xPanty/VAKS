@@ -1,0 +1,8 @@
+{
+  "fixture_id": "strict-complete-claim-rejected",
+  "claim": "All original 20 slices are current strict final-gate complete.",
+  "expected": {
+    "claim_allowed": false,
+    "reason": "old_slice_current_strict_final_gate_count is 0 and pending_status_change_count is 75"
+  }
+}

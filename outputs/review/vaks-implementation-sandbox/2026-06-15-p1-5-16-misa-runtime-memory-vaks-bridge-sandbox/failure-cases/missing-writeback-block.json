@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "missing-writeback-block",
+  "expected_valid": false,
+  "expected_codes": ["MB_MISSING_WRITEBACK"],
+  "patch": {"writeback": {"__delete__": true}}
+}

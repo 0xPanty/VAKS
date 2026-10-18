@@ -1,0 +1,7 @@
+{
+  "record_kind": "closeout_dossier_prototype_receipt",
+  "slice_id": "2026-06-16-p2-50-final-sandbox-closeout-readiness-dossier-sandbox",
+  "source_slice_count": 6,
+  "request_category_count": 5,
+  "truth_boundary": "sandbox_closeout_readiness_not_promotion_or_action_authority"
+}

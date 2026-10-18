@@ -1,0 +1,435 @@
+{
+  "record_kind": "vaks_silky_obsidian_workbench_config",
+  "slice_id": "2026-06-15-p2-21-silky-obsidian-workbench-sandbox",
+  "scope": {
+    "sandbox_only": true,
+    "target_vault_path": "prototype/vaks-silky-workbench-vault",
+    "write_targets": [
+      "prototype/vaks-silky-workbench-vault/",
+      "prototype/vaks-silky-workbench-vault/cockpit.html"
+    ],
+    "formal_vault_write": false,
+    "obsidian_sync": false,
+    "production_ui": false,
+    "real_base_files": false,
+    "starts_runtime_or_service": false,
+    "installs_dependencies": false,
+    "uses_mcp_write_tools": true,
+    "runs_hooks": false,
+    "runs_long_automation": false,
+    "commits": false,
+    "pushes": false,
+    "promotes_mainline": false,
+    "writes_reviewed_truth": false,
+    "creates_evidence_support": false,
+    "creates_action_basis": false
+  },
+  "boundary_copy": [
+    "sandbox only",
+    "not reviewed knowledge",
+    "not evidence support",
+    "not action basis",
+    "does not approve",
+    "no sync",
+    "no commit",
+    "no push"
+  ],
+  "frontier_patterns": [
+    {
+      "id": "obsidian_bases_filtered_views",
+      "source": "Obsidian Bases views",
+      "borrowed": "filtered table/card/list thinking for status surfaces",
+      "vaks_boundary": "views display state only; filters are not approval"
+    },
+    {
+      "id": "tana_supertag_typed_objects",
+      "source": "Tana Supertags",
+      "borrowed": "typed objects with fields and collection views",
+      "vaks_boundary": "typed cards do not create reviewed relations"
+    },
+    {
+      "id": "capacities_object_first_capture",
+      "source": "Capacities object-first notes",
+      "borrowed": "capture as objects instead of forcing folder choice first",
+      "vaks_boundary": "capture creates raw/candidate orientation only"
+    },
+    {
+      "id": "notebooklm_sources_chat_studio",
+      "source": "NotebookLM Sources/Chat/Studio",
+      "borrowed": "three-panel movement between source, question, and generated artifact",
+      "vaks_boundary": "generated output is not evidence support by default"
+    },
+    {
+      "id": "notebooklm_goal_focused_chat",
+      "source": "NotebookLM goal-focused chat",
+      "borrowed": "goal-scoped work modes for different user intents",
+      "vaks_boundary": "goal mode cannot override validators"
+    },
+    {
+      "id": "vaks_boundary_preserving_status",
+      "source": "VAKS P0-P2 sandbox results",
+      "borrowed": "receipts, validators, status, and action boundary as visible product rails",
+      "vaks_boundary": "status and receipts do not become authority"
+    }
+  ],
+  "workbench_lanes": [
+    {
+      "id": "capture_now",
+      "label": "Capture Now",
+      "primary_action": "drop source, note, transcript, or repo into quarantine",
+      "boundary": "raw/candidate only; not reviewed knowledge",
+      "icon": "inbox"
+    },
+    {
+      "id": "triage_status",
+      "label": "Triage Status",
+      "primary_action": "see blocked, stale, dirty, and missing-anchor states",
+      "boundary": "status display only; does not approve",
+      "icon": "pulse"
+    },
+    {
+      "id": "review_radar",
+      "label": "Review Radar",
+      "primary_action": "route candidates with gaps into review pressure",
+      "boundary": "review_due is pressure, not truth mutation",
+      "icon": "radar"
+    },
+    {
+      "id": "receipt_center",
+      "label": "Receipt Center",
+      "primary_action": "inspect hash, source, operation, and product acceptance receipts",
+      "boundary": "hash receipt is process integrity, not evidence support",
+      "icon": "receipt"
+    },
+    {
+      "id": "action_boundary",
+      "label": "Action Boundary",
+      "primary_action": "stop before action until action readiness and sufficiency pass",
+      "boundary": "this workbench is not action basis",
+      "icon": "stop"
+    },
+    {
+      "id": "next_step",
+      "label": "Next Safe Step",
+      "primary_action": "show the one bounded next move",
+      "boundary": "next step is guidance only; no commit, no push, no sync",
+      "icon": "arrow"
+    }
+  ],
+  "search_targets": [
+    "PASS_PRODUCT_GRADE",
+    "not action basis",
+    "not evidence support",
+    "reviewed knowledge",
+    "dirty state",
+    "review due",
+    "hash receipt",
+    "next safe step"
+  ],
+  "journeys": [
+    {
+      "id": "capture_to_receipt",
+      "start": "Capture Now",
+      "end": "Receipt Center",
+      "max_steps": 3,
+      "boundary_check": "raw/candidate only; receipt is not evidence support"
+    },
+    {
+      "id": "status_to_blocker",
+      "start": "Home",
+      "end": "blocked reason",
+      "max_steps": 2,
+      "boundary_check": "status does not approve"
+    },
+    {
+      "id": "review_to_evidence",
+      "start": "Review Radar",
+      "end": "Evidence & Receipts",
+      "max_steps": 3,
+      "boundary_check": "candidate is not support"
+    },
+    {
+      "id": "action_exit",
+      "start": "Action Boundary",
+      "end": "not-action-basis stop",
+      "max_steps": 1,
+      "boundary_check": "workbench is not action basis"
+    },
+    {
+      "id": "return_to_next_step",
+      "start": "Any card",
+      "end": "Next Safe Step",
+      "max_steps": 2,
+      "boundary_check": "no commit, no push, no sync"
+    }
+  ],
+  "experience_metrics": {
+    "max_clicks_to_status": 2,
+    "max_clicks_to_boundary": 2,
+    "max_clicks_to_receipt": 2,
+    "formal_vault_file_delta_allowed": 0,
+    "broken_wikilinks_allowed": 0
+  },
+  "slice_cards": [
+    {
+      "slice_id": "2026-06-15-p0-01-retrieval-receipt-template-sandbox",
+      "stage": "P0",
+      "product_status": "pass_product_grade",
+      "user_value": "retrieval has an explicit receipt before anyone treats it as useful context",
+      "next_safe_step": "open product acceptance, then next-step, before touching any mainline file",
+      "verification_ref": "../../../2026-06-15-p0-01-retrieval-receipt-template-sandbox/verification.md",
+      "boundary_ref": "../../../2026-06-15-p0-01-retrieval-receipt-template-sandbox/boundary-audit.md",
+      "product_ref": "../../../2026-06-15-p0-01-retrieval-receipt-template-sandbox/product-acceptance-report.md",
+      "card_verification_ref": "../../../../2026-06-15-p0-01-retrieval-receipt-template-sandbox/verification.md",
+      "card_boundary_ref": "../../../../2026-06-15-p0-01-retrieval-receipt-template-sandbox/boundary-audit.md",
+      "card_product_ref": "../../../../2026-06-15-p0-01-retrieval-receipt-template-sandbox/product-acceptance-report.md"
+    },
+    {
+      "slice_id": "2026-06-15-p0-02-operation-receipt-template-sandbox",
+      "stage": "P0",
+      "product_status": "pass_product_grade",
+      "user_value": "operations show what ran, what changed, and what stayed blocked",
+      "next_safe_step": "open product acceptance, then next-step, before touching any mainline file",
+      "verification_ref": "../../../2026-06-15-p0-02-operation-receipt-template-sandbox/verification.md",
+      "boundary_ref": "../../../2026-06-15-p0-02-operation-receipt-template-sandbox/boundary-audit.md",
+      "product_ref": "../../../2026-06-15-p0-02-operation-receipt-template-sandbox/product-acceptance-report.md",
+      "card_verification_ref": "../../../../2026-06-15-p0-02-operation-receipt-template-sandbox/verification.md",
+      "card_boundary_ref": "../../../../2026-06-15-p0-02-operation-receipt-template-sandbox/boundary-audit.md",
+      "card_product_ref": "../../../../2026-06-15-p0-02-operation-receipt-template-sandbox/product-acceptance-report.md"
+    },
+    {
+      "slice_id": "2026-06-15-p0-03-body-hash-validator-sandbox",
+      "stage": "P0",
+      "product_status": "pass_product_grade",
+      "user_value": "body drift is caught before downstream use",
+      "next_safe_step": "open product acceptance, then next-step, before touching any mainline file",
+      "verification_ref": "../../../2026-06-15-p0-03-body-hash-validator-sandbox/verification.md",
+      "boundary_ref": "../../../2026-06-15-p0-03-body-hash-validator-sandbox/boundary-audit.md",
+      "product_ref": "../../../2026-06-15-p0-03-body-hash-validator-sandbox/product-acceptance-report.md",
+      "card_verification_ref": "../../../../2026-06-15-p0-03-body-hash-validator-sandbox/verification.md",
+      "card_boundary_ref": "../../../../2026-06-15-p0-03-body-hash-validator-sandbox/boundary-audit.md",
+      "card_product_ref": "../../../../2026-06-15-p0-03-body-hash-validator-sandbox/product-acceptance-report.md"
+    },
+    {
+      "slice_id": "2026-06-15-p0-04-support-boundary-validator-sandbox",
+      "stage": "P0",
+      "product_status": "pass_product_grade",
+      "user_value": "support claims are separated from provenance and background",
+      "next_safe_step": "open product acceptance, then next-step, before touching any mainline file",
+      "verification_ref": "../../../2026-06-15-p0-04-support-boundary-validator-sandbox/verification.md",
+      "boundary_ref": "../../../2026-06-15-p0-04-support-boundary-validator-sandbox/boundary-audit.md",
+      "product_ref": "../../../2026-06-15-p0-04-support-boundary-validator-sandbox/product-acceptance-report.md",
+      "card_verification_ref": "../../../../2026-06-15-p0-04-support-boundary-validator-sandbox/verification.md",
+      "card_boundary_ref": "../../../../2026-06-15-p0-04-support-boundary-validator-sandbox/boundary-audit.md",
+      "card_product_ref": "../../../../2026-06-15-p0-04-support-boundary-validator-sandbox/product-acceptance-report.md"
+    },
+    {
+      "slice_id": "2026-06-15-p0-05-action-readiness-validator-sandbox",
+      "stage": "P0",
+      "product_status": "pass_product_grade",
+      "user_value": "action basis is blocked until readiness checks pass",
+      "next_safe_step": "open product acceptance, then next-step, before touching any mainline file",
+      "verification_ref": "../../../2026-06-15-p0-05-action-readiness-validator-sandbox/verification.md",
+      "boundary_ref": "../../../2026-06-15-p0-05-action-readiness-validator-sandbox/boundary-audit.md",
+      "product_ref": "../../../2026-06-15-p0-05-action-readiness-validator-sandbox/product-acceptance-report.md",
+      "card_verification_ref": "../../../../2026-06-15-p0-05-action-readiness-validator-sandbox/verification.md",
+      "card_boundary_ref": "../../../../2026-06-15-p0-05-action-readiness-validator-sandbox/boundary-audit.md",
+      "card_product_ref": "../../../../2026-06-15-p0-05-action-readiness-validator-sandbox/product-acceptance-report.md"
+    },
+    {
+      "slice_id": "2026-06-15-p0-06-feedback-validator-sandbox",
+      "stage": "P0",
+      "product_status": "pass_product_grade",
+      "user_value": "feedback creates review pressure without mutating truth",
+      "next_safe_step": "open product acceptance, then next-step, before touching any mainline file",
+      "verification_ref": "../../../2026-06-15-p0-06-feedback-validator-sandbox/verification.md",
+      "boundary_ref": "../../../2026-06-15-p0-06-feedback-validator-sandbox/boundary-audit.md",
+      "product_ref": "../../../2026-06-15-p0-06-feedback-validator-sandbox/product-acceptance-report.md",
+      "card_verification_ref": "../../../../2026-06-15-p0-06-feedback-validator-sandbox/verification.md",
+      "card_boundary_ref": "../../../../2026-06-15-p0-06-feedback-validator-sandbox/boundary-audit.md",
+      "card_product_ref": "../../../../2026-06-15-p0-06-feedback-validator-sandbox/product-acceptance-report.md"
+    },
+    {
+      "slice_id": "2026-06-15-p0-07-action-boundary-failure-matrix-sandbox",
+      "stage": "P0",
+      "product_status": "pass_product_grade",
+      "user_value": "known action-boundary failures become visible test cases",
+      "next_safe_step": "open product acceptance, then next-step, before touching any mainline file",
+      "verification_ref": "../../../2026-06-15-p0-07-action-boundary-failure-matrix-sandbox/verification.md",
+      "boundary_ref": "../../../2026-06-15-p0-07-action-boundary-failure-matrix-sandbox/boundary-audit.md",
+      "product_ref": "../../../2026-06-15-p0-07-action-boundary-failure-matrix-sandbox/product-acceptance-report.md",
+      "card_verification_ref": "../../../../2026-06-15-p0-07-action-boundary-failure-matrix-sandbox/verification.md",
+      "card_boundary_ref": "../../../../2026-06-15-p0-07-action-boundary-failure-matrix-sandbox/boundary-audit.md",
+      "card_product_ref": "../../../../2026-06-15-p0-07-action-boundary-failure-matrix-sandbox/product-acceptance-report.md"
+    },
+    {
+      "slice_id": "2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox",
+      "stage": "P1",
+      "product_status": "pass_product_grade",
+      "user_value": "retrieval and operation receipts can be validated together",
+      "next_safe_step": "open product acceptance, then next-step, before touching any mainline file",
+      "verification_ref": "../../../2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox/verification.md",
+      "boundary_ref": "../../../2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox/boundary-audit.md",
+      "product_ref": "../../../2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox/product-acceptance-report.md",
+      "card_verification_ref": "../../../../2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox/verification.md",
+      "card_boundary_ref": "../../../../2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox/boundary-audit.md",
+      "card_product_ref": "../../../../2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox/product-acceptance-report.md"
+    },
+    {
+      "slice_id": "2026-06-15-p1-09-read-only-query-loop-pilot-sandbox",
+      "stage": "P1",
+      "product_status": "pass_product_grade",
+      "user_value": "query loops stay read-only and explain their limits",
+      "next_safe_step": "open product acceptance, then next-step, before touching any mainline file",
+      "verification_ref": "../../../2026-06-15-p1-09-read-only-query-loop-pilot-sandbox/verification.md",
+      "boundary_ref": "../../../2026-06-15-p1-09-read-only-query-loop-pilot-sandbox/boundary-audit.md",
+      "product_ref": "../../../2026-06-15-p1-09-read-only-query-loop-pilot-sandbox/product-acceptance-report.md",
+      "card_verification_ref": "../../../../2026-06-15-p1-09-read-only-query-loop-pilot-sandbox/verification.md",
+      "card_boundary_ref": "../../../../2026-06-15-p1-09-read-only-query-loop-pilot-sandbox/boundary-audit.md",
+      "card_product_ref": "../../../../2026-06-15-p1-09-read-only-query-loop-pilot-sandbox/product-acceptance-report.md"
+    },
+    {
+      "slice_id": "2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox",
+      "stage": "P1",
+      "product_status": "pass_product_grade",
+      "user_value": "runtime artifacts are excluded from knowledge surfaces",
+      "next_safe_step": "open product acceptance, then next-step, before touching any mainline file",
+      "verification_ref": "../../../2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox/verification.md",
+      "boundary_ref": "../../../2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox/boundary-audit.md",
+      "product_ref": "../../../2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox/product-acceptance-report.md",
+      "card_verification_ref": "../../../../2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox/verification.md",
+      "card_boundary_ref": "../../../../2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox/boundary-audit.md",
+      "card_product_ref": "../../../../2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox/product-acceptance-report.md"
+    },
+    {
+      "slice_id": "2026-06-15-p1-11-semantic-anchor-support-check-sandbox",
+      "stage": "P1",
+      "product_status": "pass_product_grade",
+      "user_value": "semantic anchors are checked before support is claimed",
+      "next_safe_step": "open product acceptance, then next-step, before touching any mainline file",
+      "verification_ref": "../../../2026-06-15-p1-11-semantic-anchor-support-check-sandbox/verification.md",
+      "boundary_ref": "../../../2026-06-15-p1-11-semantic-anchor-support-check-sandbox/boundary-audit.md",
+      "product_ref": "../../../2026-06-15-p1-11-semantic-anchor-support-check-sandbox/product-acceptance-report.md",
+      "card_verification_ref": "../../../../2026-06-15-p1-11-semantic-anchor-support-check-sandbox/verification.md",
+      "card_boundary_ref": "../../../../2026-06-15-p1-11-semantic-anchor-support-check-sandbox/boundary-audit.md",
+      "card_product_ref": "../../../../2026-06-15-p1-11-semantic-anchor-support-check-sandbox/product-acceptance-report.md"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-12-robust-rag-retrieval-sandbox",
+      "stage": "P1.5",
+      "product_status": "pass_product_grade",
+      "user_value": "robust retrieval ranks context without becoming trust",
+      "next_safe_step": "open product acceptance, then next-step, before touching any mainline file",
+      "verification_ref": "../../../2026-06-15-p1-5-12-robust-rag-retrieval-sandbox/verification.md",
+      "boundary_ref": "../../../2026-06-15-p1-5-12-robust-rag-retrieval-sandbox/boundary-audit.md",
+      "product_ref": "../../../2026-06-15-p1-5-12-robust-rag-retrieval-sandbox/product-acceptance-report.md",
+      "card_verification_ref": "../../../../2026-06-15-p1-5-12-robust-rag-retrieval-sandbox/verification.md",
+      "card_boundary_ref": "../../../../2026-06-15-p1-5-12-robust-rag-retrieval-sandbox/boundary-audit.md",
+      "card_product_ref": "../../../../2026-06-15-p1-5-12-robust-rag-retrieval-sandbox/product-acceptance-report.md"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox",
+      "stage": "P1.5",
+      "product_status": "pass_product_grade",
+      "user_value": "local graph retrieval stays read-only and non-authoritative",
+      "next_safe_step": "open product acceptance, then next-step, before touching any mainline file",
+      "verification_ref": "../../../2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox/verification.md",
+      "boundary_ref": "../../../2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox/boundary-audit.md",
+      "product_ref": "../../../2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox/product-acceptance-report.md",
+      "card_verification_ref": "../../../../2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox/verification.md",
+      "card_boundary_ref": "../../../../2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox/boundary-audit.md",
+      "card_product_ref": "../../../../2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox/product-acceptance-report.md"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-14-raw-intake-parser-router-sandbox",
+      "stage": "P1.5",
+      "product_status": "pass_product_grade",
+      "user_value": "raw intake routes material without premature interpretation",
+      "next_safe_step": "open product acceptance, then next-step, before touching any mainline file",
+      "verification_ref": "../../../2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/verification.md",
+      "boundary_ref": "../../../2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/boundary-audit.md",
+      "product_ref": "../../../2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/product-acceptance-report.md",
+      "card_verification_ref": "../../../../2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/verification.md",
+      "card_boundary_ref": "../../../../2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/boundary-audit.md",
+      "card_product_ref": "../../../../2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/product-acceptance-report.md"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox",
+      "stage": "P1.5",
+      "product_status": "pass_product_grade",
+      "user_value": "markdown validation and search become a sidecar, not a truth layer",
+      "next_safe_step": "open product acceptance, then next-step, before touching any mainline file",
+      "verification_ref": "../../../2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/verification.md",
+      "boundary_ref": "../../../2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/boundary-audit.md",
+      "product_ref": "../../../2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/product-acceptance-report.md",
+      "card_verification_ref": "../../../../2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/verification.md",
+      "card_boundary_ref": "../../../../2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/boundary-audit.md",
+      "card_product_ref": "../../../../2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/product-acceptance-report.md"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox",
+      "stage": "P1.5",
+      "product_status": "pass_product_grade",
+      "user_value": "MISA memory bridge is quarantined from VAKS truth",
+      "next_safe_step": "open product acceptance, then next-step, before touching any mainline file",
+      "verification_ref": "../../../2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox/verification.md",
+      "boundary_ref": "../../../2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox/boundary-audit.md",
+      "product_ref": "../../../2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox/product-acceptance-report.md",
+      "card_verification_ref": "../../../../2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox/verification.md",
+      "card_boundary_ref": "../../../../2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox/boundary-audit.md",
+      "card_product_ref": "../../../../2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox/product-acceptance-report.md"
+    },
+    {
+      "slice_id": "2026-06-15-p2-17-use-surface-optimization-pass",
+      "stage": "P2",
+      "product_status": "pass_product_grade",
+      "user_value": "use surfaces are prioritized around entry, status, and receipts",
+      "next_safe_step": "open product acceptance, then next-step, before touching any mainline file",
+      "verification_ref": "../../../2026-06-15-p2-17-use-surface-optimization-pass/verification.md",
+      "boundary_ref": "../../../2026-06-15-p2-17-use-surface-optimization-pass/boundary-audit.md",
+      "product_ref": "../../../2026-06-15-p2-17-use-surface-optimization-pass/product-acceptance-report.md",
+      "card_verification_ref": "../../../../2026-06-15-p2-17-use-surface-optimization-pass/verification.md",
+      "card_boundary_ref": "../../../../2026-06-15-p2-17-use-surface-optimization-pass/boundary-audit.md",
+      "card_product_ref": "../../../../2026-06-15-p2-17-use-surface-optimization-pass/product-acceptance-report.md"
+    },
+    {
+      "slice_id": "2026-06-15-p2-18-bases-cockpit-prototype",
+      "stage": "P2",
+      "product_status": "pass_product_grade",
+      "user_value": "cockpit prototype gives operator status without authority",
+      "next_safe_step": "open product acceptance, then next-step, before touching any mainline file",
+      "verification_ref": "../../../2026-06-15-p2-18-bases-cockpit-prototype/verification.md",
+      "boundary_ref": "../../../2026-06-15-p2-18-bases-cockpit-prototype/boundary-audit.md",
+      "product_ref": "../../../2026-06-15-p2-18-bases-cockpit-prototype/product-acceptance-report.md",
+      "card_verification_ref": "../../../../2026-06-15-p2-18-bases-cockpit-prototype/verification.md",
+      "card_boundary_ref": "../../../../2026-06-15-p2-18-bases-cockpit-prototype/boundary-audit.md",
+      "card_product_ref": "../../../../2026-06-15-p2-18-bases-cockpit-prototype/product-acceptance-report.md"
+    },
+    {
+      "slice_id": "2026-06-15-p2-19-product-experience-screening-sandbox",
+      "stage": "P2",
+      "product_status": "pass_product_grade",
+      "user_value": "product candidates are screened before workflow build",
+      "next_safe_step": "open product acceptance, then next-step, before touching any mainline file",
+      "verification_ref": "../../../2026-06-15-p2-19-product-experience-screening-sandbox/verification.md",
+      "boundary_ref": "../../../2026-06-15-p2-19-product-experience-screening-sandbox/boundary-audit.md",
+      "product_ref": "../../../2026-06-15-p2-19-product-experience-screening-sandbox/product-acceptance-report.md",
+      "card_verification_ref": "../../../../2026-06-15-p2-19-product-experience-screening-sandbox/verification.md",
+      "card_boundary_ref": "../../../../2026-06-15-p2-19-product-experience-screening-sandbox/boundary-audit.md",
+      "card_product_ref": "../../../../2026-06-15-p2-19-product-experience-screening-sandbox/product-acceptance-report.md"
+    },
+    {
+      "slice_id": "2026-06-15-p2-20-product-workflow-prototype",
+      "stage": "P2",
+      "product_status": "pass_product_grade",
+      "user_value": "product workflow shows where to go and where to stop",
+      "next_safe_step": "open product acceptance, then next-step, before touching any mainline file",
+      "verification_ref": "../../../2026-06-15-p2-20-product-workflow-prototype/verification.md",
+      "boundary_ref": "../../../2026-06-15-p2-20-product-workflow-prototype/boundary-audit.md",
+      "product_ref": "../../../2026-06-15-p2-20-product-workflow-prototype/product-acceptance-report.md",
+      "card_verification_ref": "../../../../2026-06-15-p2-20-product-workflow-prototype/verification.md",
+      "card_boundary_ref": "../../../../2026-06-15-p2-20-product-workflow-prototype/boundary-audit.md",
+      "card_product_ref": "../../../../2026-06-15-p2-20-product-workflow-prototype/product-acceptance-report.md"
+    }
+  ]
+}

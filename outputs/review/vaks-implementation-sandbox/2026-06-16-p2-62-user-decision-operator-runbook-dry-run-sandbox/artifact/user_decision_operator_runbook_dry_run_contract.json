@@ -1,0 +1,50 @@
+{
+  "record_kind": "sandbox_user_decision_operator_runbook_dry_run_contract",
+  "slice_id": "2026-06-16-p2-62-user-decision-operator-runbook-dry-run-sandbox",
+  "source_slice_id": "2026-06-16-p2-61-user-decision-freeze-operator-readiness-brief-sandbox",
+  "purpose": "dry-run operator runbook for safe use of the p2-61 readiness brief",
+  "generation_contract": {
+    "source_execution_by_builder": false,
+    "source_reads": [
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-61-user-decision-freeze-operator-readiness-brief-sandbox/artifact/user_decision_freeze_operator_readiness_brief.json",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-61-user-decision-freeze-operator-readiness-brief-sandbox/verification.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-61-user-decision-freeze-operator-readiness-brief-sandbox/reviewer-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-61-user-decision-freeze-operator-readiness-brief-sandbox/boundary-audit.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-61-user-decision-freeze-operator-readiness-brief-sandbox/product-acceptance-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-61-user-decision-freeze-operator-readiness-brief-sandbox/next-step.md"
+    ]
+  },
+  "output_contract": {
+    "dry_run_only": true,
+    "automatic_execution": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "formal_vault_ready": false,
+    "obsidian_sync_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "user_approval_collected": false,
+    "allowed_decisions": [
+      "ALLOW_READ_ONLY_INSPECTION",
+      "ALLOW_MANUAL_READONLY_VERIFICATION"
+    ],
+    "stop_decision": "STOP_REQUIRE_SEPARATE_USER_APPROVAL",
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_install_hooks",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  }
+}

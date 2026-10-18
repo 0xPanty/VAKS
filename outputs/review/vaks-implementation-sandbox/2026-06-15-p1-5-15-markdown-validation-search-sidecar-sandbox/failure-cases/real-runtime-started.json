@@ -1,0 +1,12 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "real-runtime-started",
+  "expected_valid": false,
+  "expected_codes": ["MS_REAL_RUNTIME_FORBIDDEN"],
+  "patch": {
+    "runtime": {
+      "real_runtime_started": true,
+      "executes_mdvs_binary": true
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "source-card-relations-top-level",
+  "expected_valid": false,
+  "expected_codes": ["RP_SOURCE_CARD_AUTHORITY_FIELD"],
+  "patch": {"source_card": {"relations": [{"to": "reviewed-node", "kind": "supports"}]}}
+}

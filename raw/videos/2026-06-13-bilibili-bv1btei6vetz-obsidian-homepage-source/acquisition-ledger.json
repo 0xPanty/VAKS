@@ -1,0 +1,103 @@
+[
+  {
+    "time": "2026-06-13T11:21:44.444353+00:00",
+    "method": "public_view_api",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "code": 0,
+    "elapsed_seconds": 0.11
+  },
+  {
+    "time": "2026-06-13T11:21:44.605660+00:00",
+    "method": "public_subtitle_api_1",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "code": 0,
+    "elapsed_seconds": 0.16
+  },
+  {
+    "time": "2026-06-13T11:21:44.702025+00:00",
+    "method": "public_subtitle_api_2",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "code": 0,
+    "elapsed_seconds": 0.1
+  },
+  {
+    "time": "2026-06-13T11:21:44.703065+00:00",
+    "method": "public_subtitle_check",
+    "status": "empty",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "subtitle_api_count": 2
+  },
+  {
+    "time": "2026-06-13T11:21:44.827157+00:00",
+    "method": "public_playurl_api",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "code": 0,
+    "elapsed_seconds": 0.12
+  },
+  {
+    "time": "2026-06-13T11:22:27.750942+00:00",
+    "method": "asr_engine_selection",
+    "status": "openai_whisper_cached_model",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "note": "Using cached openai-whisper small.pt because local faster-whisper model cache is unavailable."
+  },
+  {
+    "time": "2026-06-13T11:22:27.839817+00:00",
+    "method": "public_view_api_for_openai_whisper",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "code": 0,
+    "elapsed_seconds": 0.09
+  },
+  {
+    "time": "2026-06-13T11:22:27.949149+00:00",
+    "method": "public_playurl_api_for_openai_whisper",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "code": 0,
+    "elapsed_seconds": 0.11
+  },
+  {
+    "time": "2026-06-13T11:22:28.277173+00:00",
+    "method": "download_public_audio",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "bytes": 2643454,
+    "sha256": "dedec5e88285564feaf2944200c5c262c0eb3eef7f1007ffcf4c9fdd3ac2756c",
+    "elapsed_seconds": 0.33,
+    "media_path": "C:\\Users\\Administrator\\.codex\\video-research\\2026-06-13-bilibili-bv1btei6vetz-vaks\\asr-vaks\\audio-30216-0.m4s"
+  },
+  {
+    "time": "2026-06-13T11:23:28.453465+00:00",
+    "method": "local_asr_openai_whisper",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "model": "small",
+    "device": "cuda",
+    "segment_count": 106,
+    "text_chars": 1487,
+    "elapsed_seconds": 60.18
+  },
+  {
+    "time": "2026-06-13T11:23:28.454466+00:00",
+    "method": "delete_scratch_media",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "media_path": "C:\\Users\\Administrator\\.codex\\video-research\\2026-06-13-bilibili-bv1btei6vetz-vaks\\asr-vaks\\audio-30216-0.m4s"
+  }
+]

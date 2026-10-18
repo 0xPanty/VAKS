@@ -1,0 +1,4 @@
+{
+  "fixture_id": "must-not",
+  "description": "The manifest must preserve authority boundaries and forbid execution-like meanings."
+}

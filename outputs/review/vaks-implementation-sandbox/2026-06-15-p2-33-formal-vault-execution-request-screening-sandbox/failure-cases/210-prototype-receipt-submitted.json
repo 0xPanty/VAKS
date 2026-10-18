@@ -1,0 +1,13 @@
+{
+  "case_id": "prototype-receipt-submitted",
+  "note": "Prototype receipt sends packet.",
+  "prototype_tamper": {
+    "kind": "receipt_update",
+    "updates": {
+      "packet_submitted": true
+    }
+  },
+  "expected_errors": [
+    "prototype_receipt_flag_not_false:packet_submitted"
+  ]
+}

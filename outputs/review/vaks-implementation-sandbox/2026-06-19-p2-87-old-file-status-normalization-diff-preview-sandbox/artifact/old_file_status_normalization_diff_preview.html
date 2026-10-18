@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>p2-87 Status Diff Preview</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f7f8fa; color: #1d2530; }
+    main { max-width: 1180px; margin: 0 auto; padding: 32px 20px; }
+    h1 { font-size: 28px; margin: 0 0 16px; letter-spacing: 0; }
+    .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-bottom: 22px; }
+    .metric { background: #fff; border: 1px solid #d9e0e8; border-radius: 8px; padding: 14px; }
+    .metric span { display: block; color: #596575; font-size: 13px; }
+    .metric strong { display: block; font-size: 24px; margin-top: 6px; }
+    table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #d9e0e8; font-size: 13px; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e9ef; vertical-align: top; }
+    th { color: #526070; }
+    .boundary { margin-top: 20px; background: #fff4f2; border-left: 4px solid #a63d40; padding: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>p2-87 Status Diff Preview</h1>
+    <section class="metrics">
+      <div class="metric"><span>Operations</span><strong>75</strong></div>
+      <div class="metric"><span>Prewrite hash match</span><strong>75/75</strong></div>
+      <div class="metric"><span>Body unchanged</span><strong>75/75</strong></div>
+      <div class="metric"><span>Old writes</span><strong>0</strong></div>
+    </section>
+    <table>
+      <thead><tr><th>#</th><th>Target</th><th>Before</th><th>Proposed</th><th>Body Unchanged</th></tr></thead>
+      <tbody><tr><td>1</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/verification.md</td><td>pass</td><td>local_verification_passed</td><td>true</td></tr>
+<tr><td>2</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/reviewer-report.md</td><td>pass</td><td>review_pass_no_blocker</td><td>true</td></tr>
+<tr><td>3</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/boundary-audit.md</td><td>pass</td><td>pass_boundary</td><td>true</td></tr>
+<tr><td>4</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/product-acceptance-report.md</td><td>pass_product_grade_round_2</td><td>pass_product_grade</td><td>true</td></tr>
+<tr><td>5</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/next-step.md</td><td>pending_acceptance</td><td>pass_product_grade_pending_next_slice</td><td>true</td></tr>
+<tr><td>6</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-02-operation-receipt-template-sandbox/verification.md</td><td>local_verification_pass</td><td>local_verification_passed</td><td>true</td></tr>
+<tr><td>7</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-02-operation-receipt-template-sandbox/reviewer-report.md</td><td>review_pass_no_blocker_round_2</td><td>review_pass_no_blocker</td><td>true</td></tr>
+<tr><td>8</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-02-operation-receipt-template-sandbox/boundary-audit.md</td><td>boundary_pass_no_blocker_round_2</td><td>pass_boundary</td><td>true</td></tr>
+<tr><td>9</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-02-operation-receipt-template-sandbox/next-step.md</td><td>pending_product_acceptance</td><td>pass_product_grade_pending_next_slice</td><td>true</td></tr>
+<tr><td>10</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-03-body-hash-validator-sandbox/verification.md</td><td>local_verification_pass</td><td>local_verification_passed</td><td>true</td></tr>
+<tr><td>11</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-03-body-hash-validator-sandbox/reviewer-report.md</td><td>review_pass_no_blocker_round_2</td><td>review_pass_no_blocker</td><td>true</td></tr>
+<tr><td>12</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-03-body-hash-validator-sandbox/boundary-audit.md</td><td>boundary_pass_no_blocker_round_2</td><td>pass_boundary</td><td>true</td></tr>
+<tr><td>13</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-03-body-hash-validator-sandbox/next-step.md</td><td>pending_product_acceptance</td><td>pass_product_grade_pending_next_slice</td><td>true</td></tr>
+<tr><td>14</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-04-support-boundary-validator-sandbox/verification.md</td><td>local_verification_pass</td><td>local_verification_passed</td><td>true</td></tr>
+<tr><td>15</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-04-support-boundary-validator-sandbox/reviewer-report.md</td><td>review_pass_no_blocker_round_2</td><td>review_pass_no_blocker</td><td>true</td></tr>
+<tr><td>16</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-04-support-boundary-validator-sandbox/boundary-audit.md</td><td>boundary_pass_no_blocker_round_2</td><td>pass_boundary</td><td>true</td></tr>
+<tr><td>17</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-04-support-boundary-validator-sandbox/next-step.md</td><td>pending_product_acceptance</td><td>pass_product_grade_pending_next_slice</td><td>true</td></tr>
+<tr><td>18</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-05-action-readiness-validator-sandbox/verification.md</td><td>pass</td><td>local_verification_passed</td><td>true</td></tr>
+<tr><td>19</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-05-action-readiness-validator-sandbox/boundary-audit.md</td><td>boundary_pass_no_blocker</td><td>pass_boundary</td><td>true</td></tr>
+<tr><td>20</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-05-action-readiness-validator-sandbox/next-step.md</td><td>pending_acceptance</td><td>pass_product_grade_pending_next_slice</td><td>true</td></tr>
+<tr><td>21</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-06-feedback-validator-sandbox/verification.md</td><td>pass</td><td>local_verification_passed</td><td>true</td></tr>
+<tr><td>22</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-06-feedback-validator-sandbox/boundary-audit.md</td><td>boundary_pass_no_blocker</td><td>pass_boundary</td><td>true</td></tr>
+<tr><td>23</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-06-feedback-validator-sandbox/next-step.md</td><td>pending_acceptance</td><td>pass_product_grade_pending_next_slice</td><td>true</td></tr>
+<tr><td>24</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-07-action-boundary-failure-matrix-sandbox/verification.md</td><td>pass</td><td>local_verification_passed</td><td>true</td></tr>
+<tr><td>25</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-07-action-boundary-failure-matrix-sandbox/boundary-audit.md</td><td>boundary_pass_no_blocker</td><td>pass_boundary</td><td>true</td></tr>
+<tr><td>26</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p0-07-action-boundary-failure-matrix-sandbox/next-step.md</td><td>pending_acceptance</td><td>pass_product_grade_pending_next_slice</td><td>true</td></tr>
+<tr><td>27</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox/reviewer-report.md</td><td>review_pass_no_blocker_after_revision</td><td>review_pass_no_blocker</td><td>true</td></tr>
+<tr><td>28</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox/boundary-audit.md</td><td>boundary_pass_no_blocker_after_revision</td><td>pass_boundary</td><td>true</td></tr>
+<tr><td>29</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox/next-step.md</td><td>pending_product_acceptance</td><td>pass_product_grade_pending_next_slice</td><td>true</td></tr>
+<tr><td>30</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-09-read-only-query-loop-pilot-sandbox/reviewer-report.md</td><td>review_pass_no_blocker_after_refinement</td><td>review_pass_no_blocker</td><td>true</td></tr>
+<tr><td>31</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-09-read-only-query-loop-pilot-sandbox/boundary-audit.md</td><td>boundary_pass_no_blocker_after_refinement</td><td>pass_boundary</td><td>true</td></tr>
+<tr><td>32</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-09-read-only-query-loop-pilot-sandbox/next-step.md</td><td>pending_product_acceptance</td><td>pass_product_grade_pending_next_slice</td><td>true</td></tr>
+<tr><td>33</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox/reviewer-report.md</td><td>review_pass_no_blocker_after_revision</td><td>review_pass_no_blocker</td><td>true</td></tr>
+<tr><td>34</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox/boundary-audit.md</td><td>boundary_pass_no_blocker_after_revision</td><td>pass_boundary</td><td>true</td></tr>
+<tr><td>35</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox/product-acceptance-report.md</td><td>pass_product_grade_after_revision</td><td>pass_product_grade</td><td>true</td></tr>
+<tr><td>36</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox/next-step.md</td><td>pending_product_acceptance</td><td>pass_product_grade_pending_next_slice</td><td>true</td></tr>
+<tr><td>37</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-11-semantic-anchor-support-check-sandbox/verification.md</td><td>local_verification_passed_pending_review</td><td>local_verification_passed</td><td>true</td></tr>
+<tr><td>38</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-11-semantic-anchor-support-check-sandbox/boundary-audit.md</td><td>boundary_pass_no_blocker</td><td>pass_boundary</td><td>true</td></tr>
+<tr><td>39</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-11-semantic-anchor-support-check-sandbox/next-step.md</td><td>pending_product_acceptance</td><td>pass_product_grade_pending_next_slice</td><td>true</td></tr>
+<tr><td>40</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-12-robust-rag-retrieval-sandbox/verification.md</td><td>local_verification_passed_pending_review</td><td>local_verification_passed</td><td>true</td></tr>
+<tr><td>41</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-12-robust-rag-retrieval-sandbox/reviewer-report.md</td><td>review_pass_no_blocker_after_repair</td><td>review_pass_no_blocker</td><td>true</td></tr>
+<tr><td>42</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-12-robust-rag-retrieval-sandbox/boundary-audit.md</td><td>boundary_pass_no_blocker_after_repair</td><td>pass_boundary</td><td>true</td></tr>
+<tr><td>43</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-12-robust-rag-retrieval-sandbox/next-step.md</td><td>pending_product_acceptance</td><td>pass_product_grade_pending_next_slice</td><td>true</td></tr>
+<tr><td>44</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox/verification.md</td><td>local_verification_passed_pending_reacceptance</td><td>local_verification_passed</td><td>true</td></tr>
+<tr><td>45</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox/reviewer-report.md</td><td>reviewer_pass_no_blocker_after_product_revision</td><td>review_pass_no_blocker</td><td>true</td></tr>
+<tr><td>46</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox/boundary-audit.md</td><td>boundary_pass_no_blocker_after_product_revision</td><td>pass_boundary</td><td>true</td></tr>
+<tr><td>47</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox/next-step.md</td><td>pending_product_reacceptance</td><td>pass_product_grade_pending_next_slice</td><td>true</td></tr>
+<tr><td>48</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/verification.md</td><td>local_verification_passed_pending_recheck_after_boundary_repair</td><td>local_verification_passed</td><td>true</td></tr>
+<tr><td>49</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/reviewer-report.md</td><td>reviewer_pass_no_blocker</td><td>review_pass_no_blocker</td><td>true</td></tr>
+<tr><td>50</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/boundary-audit.md</td><td>boundary_pass_no_blocker</td><td>pass_boundary</td><td>true</td></tr>
+<tr><td>51</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/next-step.md</td><td>pending_product_acceptance</td><td>pass_product_grade_pending_next_slice</td><td>true</td></tr>
+<tr><td>52</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/verification.md</td><td>local_verification_passed_pending_review</td><td>local_verification_passed</td><td>true</td></tr>
+<tr><td>53</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/reviewer-report.md</td><td>review_pass_after_product_revision</td><td>review_pass_no_blocker</td><td>true</td></tr>
+<tr><td>54</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/boundary-audit.md</td><td>boundary_pass_after_product_revision</td><td>pass_boundary</td><td>true</td></tr>
+<tr><td>55</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/next-step.md</td><td>pass_product_grade_next_slice_allowed</td><td>pass_product_grade_pending_next_slice</td><td>true</td></tr>
+<tr><td>56</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox/verification.md</td><td>local_verification_passed_pending_review</td><td>local_verification_passed</td><td>true</td></tr>
+<tr><td>57</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox/reviewer-report.md</td><td>review_pass_after_third_revision</td><td>review_pass_no_blocker</td><td>true</td></tr>
+<tr><td>58</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox/boundary-audit.md</td><td>boundary_pass_after_third_revision</td><td>pass_boundary</td><td>true</td></tr>
+<tr><td>59</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox/next-step.md</td><td>pass_product_grade_enter_p2_17</td><td>pass_product_grade_pending_next_slice</td><td>true</td></tr>
+<tr><td>60</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p2-17-use-surface-optimization-pass/verification.md</td><td>local_verification_passed_pending_review</td><td>local_verification_passed</td><td>true</td></tr>
+<tr><td>61</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p2-17-use-surface-optimization-pass/reviewer-report.md</td><td>review_pass_after_first_revision</td><td>review_pass_no_blocker</td><td>true</td></tr>
+<tr><td>62</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p2-17-use-surface-optimization-pass/boundary-audit.md</td><td>boundary_pass_after_first_revision</td><td>pass_boundary</td><td>true</td></tr>
+<tr><td>63</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p2-17-use-surface-optimization-pass/next-step.md</td><td>pass_product_grade_enter_p2_18</td><td>pass_product_grade_pending_next_slice</td><td>true</td></tr>
+<tr><td>64</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p2-18-bases-cockpit-prototype/verification.md</td><td>local_verification_passed_reviewer_boundary_product_passed</td><td>local_verification_passed</td><td>true</td></tr>
+<tr><td>65</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p2-18-bases-cockpit-prototype/reviewer-report.md</td><td>reviewer_pass</td><td>review_pass_no_blocker</td><td>true</td></tr>
+<tr><td>66</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p2-18-bases-cockpit-prototype/boundary-audit.md</td><td>boundary_pass</td><td>pass_boundary</td><td>true</td></tr>
+<tr><td>67</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p2-18-bases-cockpit-prototype/next-step.md</td><td>pass_product_grade_next_p2_19</td><td>pass_product_grade_pending_next_slice</td><td>true</td></tr>
+<tr><td>68</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p2-19-product-experience-screening-sandbox/verification.md</td><td>local_verification_passed_reviewer_boundary_product_passed</td><td>local_verification_passed</td><td>true</td></tr>
+<tr><td>69</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p2-19-product-experience-screening-sandbox/reviewer-report.md</td><td>reviewer_pass</td><td>review_pass_no_blocker</td><td>true</td></tr>
+<tr><td>70</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p2-19-product-experience-screening-sandbox/boundary-audit.md</td><td>boundary_pass</td><td>pass_boundary</td><td>true</td></tr>
+<tr><td>71</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p2-19-product-experience-screening-sandbox/next-step.md</td><td>pass_product_grade_next_p2_20</td><td>pass_product_grade_pending_next_slice</td><td>true</td></tr>
+<tr><td>72</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p2-20-product-workflow-prototype/verification.md</td><td>local_verification_reviewer_boundary_product_acceptance_passed</td><td>local_verification_passed</td><td>true</td></tr>
+<tr><td>73</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p2-20-product-workflow-prototype/reviewer-report.md</td><td>reviewer_pass</td><td>review_pass_no_blocker</td><td>true</td></tr>
+<tr><td>74</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p2-20-product-workflow-prototype/boundary-audit.md</td><td>boundary_pass</td><td>pass_boundary</td><td>true</td></tr>
+<tr><td>75</td><td>outputs/review/vaks-implementation-sandbox/2026-06-15-p2-20-product-workflow-prototype/next-step.md</td><td>sandbox_series_complete_pending_user_mainline_decision</td><td>pass_product_grade_pending_next_slice</td><td>true</td></tr></tbody>
+    </table>
+    <section class="boundary">Preview only. No old slice files are written or authorized by this artifact.</section>
+  </main>
+</body>
+</html>

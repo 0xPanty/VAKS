@@ -1,5 +1,6 @@
 ---
 type: source
+record_kind: source_card
 status: source-captured
 title: "kepano/kepano-obsidian source review"
 source_url: "https://github.com/kepano/kepano-obsidian"
@@ -7,7 +8,6 @@ source_type: repo
 captured_at: 2026-05-27
 captured_by: Codex
 raw_location: "temporary clone: %TEMP%/codex-kepano-obsidian"
-processing_mode: immediate
 review_priority: normal
 review_owner: Codex
 formalization_status: candidate-generated
@@ -24,7 +24,7 @@ source_family: obsidian-vault-template
 upstream_sources:
   - "https://stephango.com/vault"
 verification_status: single-source
-relations:
+candidate_relation_suggestions:
   - target: "[[2026-05-27-kepano-obsidian-architecture-review]]"
     type: derived_from
     strength: 5
@@ -41,8 +41,19 @@ tags:
   - kepano
   - memory-tier
   - bases
+knowledge_status: raw
+processing_tier: light
+source_id: "https://github.com/kepano/kepano-obsidian"
+why_saved: see_body_or_legacy_record
+retrieval_policy:
+  policy_kind: source_identity_only
+  pack_allowed: drilldown_required
+  action_basis_allowed: false
+  warning_code: raw_is_provenance_only
+promotion_gate: none
+action_basis_allowed: false
+truth_mutation_allowed: false
 ---
-
 # Source Record: kepano/kepano-obsidian
 
 ## Why captured

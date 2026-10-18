@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "context-labels-missing",
+  "expected_valid": false,
+  "expected_codes": ["MB_CONTEXT_LABELS_MISSING"],
+  "patch": {"context_adapter": {"context_injection_labeled": false}}
+}

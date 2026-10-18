@@ -1,0 +1,11 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "missing-search-cache-block",
+  "expected_valid": false,
+  "expected_codes": ["MS_MISSING_CACHE"],
+  "patch": {
+    "search_cache": {
+      "__delete__": true
+    }
+  }
+}

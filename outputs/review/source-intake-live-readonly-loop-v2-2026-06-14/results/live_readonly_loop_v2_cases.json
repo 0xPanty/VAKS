@@ -1,0 +1,241 @@
+[
+  {
+    "case_id": "V2-01-candidate-safe-downgrade",
+    "query": "mnemosyne vector memory candidate final support action basis",
+    "query_mode": "action",
+    "expected_decision": "blocked_or_downgraded",
+    "decision": "blocked_or_downgraded",
+    "pass": true,
+    "retrieved_count": 12,
+    "selected_count": 1,
+    "support_count": 0,
+    "top_result": "outputs/review/2026-06-11-AxDSan-mnemosyne-candidate-distillation.md",
+    "top_result_kind": "candidate_distillation",
+    "query_run": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/query_runs/V2-01-candidate-safe-downgrade-query-run.md",
+    "context_pack": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/context_packs/V2-01-candidate-safe-downgrade-context-pack.md",
+    "answer_use": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/answer_use/V2-01-candidate-safe-downgrade-answer-use.md",
+    "warnings": [
+      "candidate_distillation routed to review_input: outputs/review/2026-06-11-AxDSan-mnemosyne-candidate-distillation.md"
+    ],
+    "support_checks": [
+      {
+        "claim_ref": "no_final_support_selected",
+        "independent_anchor_ref": "",
+        "result": "not_ready",
+        "resolution": {
+          "status": "not_checked",
+          "reason": "no support items"
+        },
+        "reason": "retrieved_items_remain_review_input_or_orientation_only"
+      }
+    ]
+  },
+  {
+    "case_id": "V2-02-real-raw-anchor-natural-allow",
+    "query": "FlexNote Extracted Source Facts local-first card tag database inspected pages",
+    "query_mode": "source_inspection",
+    "expected_decision": "allowed_readonly",
+    "decision": "allowed_readonly",
+    "pass": true,
+    "retrieved_count": 12,
+    "selected_count": 1,
+    "support_count": 1,
+    "top_result": "raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md",
+    "top_result_kind": "source_card",
+    "query_run": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/query_runs/V2-02-real-raw-anchor-natural-allow-query-run.md",
+    "context_pack": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/context_packs/V2-02-real-raw-anchor-natural-allow-context-pack.md",
+    "answer_use": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/answer_use/V2-02-real-raw-anchor-natural-allow-answer-use.md",
+    "warnings": [],
+    "support_checks": [
+      {
+        "claim_ref": "raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md",
+        "independent_anchor_ref": "raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md#Extracted Source Facts",
+        "result": "supported",
+        "resolution": {
+          "status": "resolved",
+          "path": "raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md",
+          "selector": "Extracted Source Facts",
+          "source_hash": "888f6eac02467a688a294446106759e17a33f79640a8f00633f86211df7dc67d",
+          "heading_match": true,
+          "string_match": true,
+          "method": "path_selector_heading_or_string_resolution",
+          "semantic_support_status": "not_external_judged",
+          "freshness_or_drift_status": "source_hash_captured_no_remote_drift_check"
+        },
+        "reason": "resolved_raw_stable_anchor"
+      }
+    ]
+  },
+  {
+    "case_id": "V2-03-mixed-pack-no-fallback-allow",
+    "query": "FlexNote Extracted Source Facts visual workbench candidate overlay source anchor tag database context pack inspected pages",
+    "query_mode": "review",
+    "expected_decision": "allowed_readonly",
+    "decision": "allowed_readonly",
+    "pass": true,
+    "retrieved_count": 12,
+    "selected_count": 4,
+    "support_count": 1,
+    "top_result": "outputs/review/2026-06-13-flexnote-docs-candidate-distillation.md",
+    "top_result_kind": "candidate_distillation",
+    "query_run": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/query_runs/V2-03-mixed-pack-no-fallback-allow-query-run.md",
+    "context_pack": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/context_packs/V2-03-mixed-pack-no-fallback-allow-context-pack.md",
+    "answer_use": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/answer_use/V2-03-mixed-pack-no-fallback-allow-answer-use.md",
+    "warnings": [
+      "candidate_distillation routed to review_input: outputs/review/2026-06-13-flexnote-docs-candidate-distillation.md",
+      "project_overlay routed to review_input: outputs/review/project_lens_overlays/2026-06-13-flexnote-vaks-visual-knowledge-workbench-overlay.md",
+      "candidate_distillation routed to orientation: outputs/review/2026-06-13-bilibili-book-note-workflow-candidate-distillation.md"
+    ],
+    "support_checks": [
+      {
+        "claim_ref": "raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md",
+        "independent_anchor_ref": "raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md#Extracted Source Facts",
+        "result": "supported",
+        "resolution": {
+          "status": "resolved",
+          "path": "raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md",
+          "selector": "Extracted Source Facts",
+          "source_hash": "888f6eac02467a688a294446106759e17a33f79640a8f00633f86211df7dc67d",
+          "heading_match": true,
+          "string_match": true,
+          "method": "path_selector_heading_or_string_resolution",
+          "semantic_support_status": "not_external_judged",
+          "freshness_or_drift_status": "source_hash_captured_no_remote_drift_check"
+        },
+        "reason": "resolved_raw_stable_anchor"
+      }
+    ]
+  },
+  {
+    "case_id": "V2-04-adversarial-candidate-mislabeled-support",
+    "query": "mnemosyne vector memory candidate final support action basis",
+    "query_mode": "action",
+    "expected_decision": "blocked_or_downgraded",
+    "decision": "blocked_or_downgraded",
+    "pass": true,
+    "retrieved_count": 12,
+    "selected_count": 1,
+    "support_count": 0,
+    "top_result": "outputs/review/2026-06-11-AxDSan-mnemosyne-candidate-distillation.md",
+    "top_result_kind": "candidate_distillation",
+    "query_run": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/query_runs/V2-04-adversarial-candidate-mislabeled-support-query-run.md",
+    "context_pack": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/context_packs/V2-04-adversarial-candidate-mislabeled-support-context-pack.md",
+    "answer_use": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/answer_use/V2-04-adversarial-candidate-mislabeled-support-answer-use.md",
+    "warnings": [],
+    "support_checks": [
+      {
+        "claim_ref": "outputs/review/2026-06-11-AxDSan-mnemosyne-candidate-distillation.md",
+        "independent_anchor_ref": "",
+        "result": "not_ready",
+        "resolution": {
+          "status": "not_checked",
+          "reason": "anchor ref has no selector",
+          "method": "path_selector_heading_or_string_resolution"
+        },
+        "reason": "non_raw_source_item_cannot_be_final_support"
+      }
+    ]
+  },
+  {
+    "case_id": "V2-05-adversarial-overlay-mislabeled-support",
+    "query": "FlexNote visual workbench overlay project borrow support source anchor",
+    "query_mode": "action",
+    "expected_decision": "blocked_or_downgraded",
+    "decision": "blocked_or_downgraded",
+    "pass": true,
+    "retrieved_count": 12,
+    "selected_count": 1,
+    "support_count": 0,
+    "top_result": "outputs/review/project_lens_overlays/2026-06-13-flexnote-vaks-visual-knowledge-workbench-overlay.md",
+    "top_result_kind": "project_overlay",
+    "query_run": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/query_runs/V2-05-adversarial-overlay-mislabeled-support-query-run.md",
+    "context_pack": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/context_packs/V2-05-adversarial-overlay-mislabeled-support-context-pack.md",
+    "answer_use": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/answer_use/V2-05-adversarial-overlay-mislabeled-support-answer-use.md",
+    "warnings": [],
+    "support_checks": [
+      {
+        "claim_ref": "outputs/review/project_lens_overlays/2026-06-13-flexnote-vaks-visual-knowledge-workbench-overlay.md",
+        "independent_anchor_ref": "raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md#Extracted Source Facts",
+        "result": "not_ready",
+        "resolution": {
+          "status": "resolved",
+          "path": "raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md",
+          "selector": "Extracted Source Facts",
+          "source_hash": "888f6eac02467a688a294446106759e17a33f79640a8f00633f86211df7dc67d",
+          "heading_match": true,
+          "string_match": true,
+          "method": "path_selector_heading_or_string_resolution",
+          "semantic_support_status": "not_external_judged",
+          "freshness_or_drift_status": "source_hash_captured_no_remote_drift_check"
+        },
+        "reason": "non_raw_source_item_cannot_be_final_support"
+      }
+    ]
+  },
+  {
+    "case_id": "V2-06-adversarial-rank-diagnostic-mislabeled-support",
+    "query": "FlexNote visual workbench source anchor candidate overlay tag database context pack",
+    "query_mode": "action",
+    "expected_decision": "blocked_or_downgraded",
+    "decision": "blocked_or_downgraded",
+    "pass": true,
+    "retrieved_count": 12,
+    "selected_count": 1,
+    "support_count": 0,
+    "top_result": "outputs/review/2026-06-13-flexnote-docs-candidate-distillation.md",
+    "top_result_kind": "candidate_distillation",
+    "query_run": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/query_runs/V2-06-adversarial-rank-diagnostic-mislabeled-support-query-run.md",
+    "context_pack": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/context_packs/V2-06-adversarial-rank-diagnostic-mislabeled-support-context-pack.md",
+    "answer_use": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/answer_use/V2-06-adversarial-rank-diagnostic-mislabeled-support-answer-use.md",
+    "warnings": [],
+    "support_checks": [
+      {
+        "claim_ref": "outputs/review/2026-06-13-flexnote-docs-candidate-distillation.md",
+        "independent_anchor_ref": "retrieval_rank:1:score:89.5000",
+        "result": "not_ready",
+        "resolution": {
+          "status": "not_checked",
+          "reason": "anchor ref has no selector",
+          "method": "path_selector_heading_or_string_resolution"
+        },
+        "reason": "non_raw_source_item_cannot_be_final_support"
+      }
+    ]
+  },
+  {
+    "case_id": "V2-07-adversarial-canonical-overlay-mislabeled-support",
+    "query": "canonical overlay runtime fixture FlexNote visual workbench project overlay support",
+    "query_mode": "action",
+    "expected_decision": "blocked_or_downgraded",
+    "decision": "blocked_or_downgraded",
+    "pass": true,
+    "retrieved_count": 12,
+    "selected_count": 1,
+    "support_count": 0,
+    "top_result": "outputs/review/project_overlays/_runtime_test_fixtures/2026-06-14-flexnote-canonical-overlay-runtime-fixture.md",
+    "top_result_kind": "project_overlay",
+    "query_run": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/query_runs/V2-07-adversarial-canonical-overlay-mislabeled-support-query-run.md",
+    "context_pack": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/context_packs/V2-07-adversarial-canonical-overlay-mislabeled-support-context-pack.md",
+    "answer_use": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/answer_use/V2-07-adversarial-canonical-overlay-mislabeled-support-answer-use.md",
+    "warnings": [],
+    "support_checks": [
+      {
+        "claim_ref": "outputs/review/project_overlays/_runtime_test_fixtures/2026-06-14-flexnote-canonical-overlay-runtime-fixture.md",
+        "independent_anchor_ref": "raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md#Extracted Source Facts",
+        "result": "not_ready",
+        "resolution": {
+          "status": "resolved",
+          "path": "raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md",
+          "selector": "Extracted Source Facts",
+          "source_hash": "888f6eac02467a688a294446106759e17a33f79640a8f00633f86211df7dc67d",
+          "heading_match": true,
+          "string_match": true,
+          "method": "path_selector_heading_or_string_resolution",
+          "semantic_support_status": "not_external_judged",
+          "freshness_or_drift_status": "source_hash_captured_no_remote_drift_check"
+        },
+        "reason": "non_raw_source_item_cannot_be_final_support"
+      }
+    ]
+  }
+]

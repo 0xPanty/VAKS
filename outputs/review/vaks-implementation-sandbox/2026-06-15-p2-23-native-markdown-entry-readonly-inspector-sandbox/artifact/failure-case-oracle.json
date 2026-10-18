@@ -1,0 +1,134 @@
+[
+  {
+    "file": "01-forbidden-formal_vault_write.json",
+    "expected_failures": [
+      "forbidden_operation:formal_vault_write"
+    ]
+  },
+  {
+    "file": "02-forbidden-obsidian_sync.json",
+    "expected_failures": [
+      "forbidden_operation:obsidian_sync"
+    ]
+  },
+  {
+    "file": "03-forbidden-commit.json",
+    "expected_failures": [
+      "forbidden_operation:commit"
+    ]
+  },
+  {
+    "file": "04-forbidden-push.json",
+    "expected_failures": [
+      "forbidden_operation:push"
+    ]
+  },
+  {
+    "file": "05-forbidden-promotion.json",
+    "expected_failures": [
+      "forbidden_operation:promotion"
+    ]
+  },
+  {
+    "file": "06-forbidden-dependency_install.json",
+    "expected_failures": [
+      "forbidden_operation:dependency_install"
+    ]
+  },
+  {
+    "file": "07-forbidden-background_service.json",
+    "expected_failures": [
+      "forbidden_operation:background_service"
+    ]
+  },
+  {
+    "file": "08-forbidden-mcp_write_tool.json",
+    "expected_failures": [
+      "forbidden_operation:mcp_write_tool"
+    ]
+  },
+  {
+    "file": "09-forbidden-hooks.json",
+    "expected_failures": [
+      "forbidden_operation:hooks"
+    ]
+  },
+  {
+    "file": "10-forbidden-real_base_files.json",
+    "expected_failures": [
+      "forbidden_operation:real_base_files"
+    ]
+  },
+  {
+    "file": "11-forbidden-production_ui.json",
+    "expected_failures": [
+      "forbidden_operation:production_ui"
+    ]
+  },
+  {
+    "file": "12-forbidden-local_storage_write.json",
+    "expected_failures": [
+      "forbidden_operation:local_storage_write"
+    ]
+  },
+  {
+    "file": "13-forbidden-network_post.json",
+    "expected_failures": [
+      "forbidden_operation:network_post"
+    ]
+  },
+  {
+    "file": "14-missing-native-home.json",
+    "expected_failures": [
+      "missing_native_page:native_home"
+    ]
+  },
+  {
+    "file": "15-missing-readonly-inspector-boundary.json",
+    "expected_failures": [
+      "missing_boundary_phrase:read-only inspector"
+    ]
+  },
+  {
+    "file": "16-authority-confusing-page.json",
+    "expected_failures": [
+      "authority_confusing_text"
+    ]
+  },
+  {
+    "file": "17-journey-too-long.json",
+    "expected_failures": [
+      "journey_too_deep:native_first_run"
+    ]
+  },
+  {
+    "file": "18-journey-missing-stop-condition.json",
+    "expected_failures": [
+      "journey_missing_stop_condition:status_to_stop"
+    ]
+  },
+  {
+    "file": "19-inspector-view-missing.json",
+    "expected_failures": [
+      "missing_inspector_view:receipt_lanes"
+    ]
+  },
+  {
+    "file": "20-outside-write-scope.json",
+    "expected_failures": [
+      "invalid_write_scope"
+    ]
+  },
+  {
+    "file": "21-inspector-save-control.json",
+    "expected_failures": [
+      "inspector_control_not_allowed:button:save"
+    ]
+  },
+  {
+    "file": "22-too-few-failure-cases.json",
+    "expected_failures": [
+      "minimum_failure_cases_too_low"
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "missing-source-ref-support",
+  "expected_valid": false,
+  "expected_codes": ["SA_MISSING_SOURCE_REF"],
+  "anchors": [
+    {
+      "id": "missing-source-ref-anchor",
+      "anchor_kind": "raw_excerpt",
+      "support_claimed": true,
+      "support_role": "direct_support",
+      "selector": "L10-L18",
+      "authority_bucket": "raw_anchor"
+    }
+  ]
+}

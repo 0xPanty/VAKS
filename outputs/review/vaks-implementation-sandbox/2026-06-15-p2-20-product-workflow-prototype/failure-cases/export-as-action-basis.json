@@ -1,0 +1,1 @@
+{"case_id":"export-as-action-basis","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/steps/7/authority_flags/treats_export_as_action_basis","value":true}]}

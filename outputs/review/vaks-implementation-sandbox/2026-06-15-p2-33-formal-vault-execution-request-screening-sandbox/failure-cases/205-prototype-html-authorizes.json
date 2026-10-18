@@ -1,0 +1,12 @@
+{
+  "case_id": "prototype-html-authorizes",
+  "note": "HTML claims authority.",
+  "prototype_tamper": {
+    "kind": "html_replace",
+    "file": "request-screening-inspector.html",
+    "content": "<html data-sandbox-only=\"true\" data-screening-only=\"true\" data-non-executable=\"true\" data-no-formal-vault-access=\"true\" data-no-write=\"true\" data-no-sync=\"true\" data-no-authority=\"true\" data-no-permission=\"true\" data-no-actual-user-wording=\"true\" data-no-submission=\"true\"><body>Screening authorizes execution</body></html>"
+  },
+  "expected_errors": [
+    "prototype_text_authority_confusion:request-screening-inspector.html:authorizes_execution"
+  ]
+}

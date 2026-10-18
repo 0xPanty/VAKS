@@ -1,0 +1,38 @@
+{
+  "record_kind": "sandbox_failure_case_matrix",
+  "slice_id": "2026-06-19-p2-73-original-20-current-strict-sidecar-closeout-ledger-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "SC-FAIL-01-missing-original-item",
+      "must_fail_when": "ledger covers fewer than 20 original planned items"
+    },
+    {
+      "case_id": "SC-FAIL-02-product-evidence-missing",
+      "must_fail_when": "any original item lacks Product Acceptance evidence in the source audit"
+    },
+    {
+      "case_id": "SC-FAIL-03-old-slice-write-applied",
+      "must_fail_when": "old_slice_writes_applied is not zero or any item has old_slice_modified=true"
+    },
+    {
+      "case_id": "SC-FAIL-04-claims-old-slices-current-strict-complete",
+      "must_fail_when": "the ledger claims original old slice files are current strict final-gate complete"
+    },
+    {
+      "case_id": "SC-FAIL-05-user-approval-inferred",
+      "must_fail_when": "the ledger treats generic user pressure as explicit old-slice edit approval"
+    },
+    {
+      "case_id": "SC-FAIL-06-normalization-applied",
+      "must_fail_when": "normalization_applied is true"
+    },
+    {
+      "case_id": "SC-FAIL-07-authority-flag-mainline-ready",
+      "must_fail_when": "the sidecar marks mainline, promotion, reviewed knowledge, evidence support, or action basis ready"
+    },
+    {
+      "case_id": "SC-FAIL-08-required-final-gate-statuses-drift",
+      "must_fail_when": "required final-gate status vocabulary drifts from the p2-67 strict status vocabulary without being marked as target requirements rather than current report state"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "checked_count": 5,
+  "decode_error_count": 0,
+  "mismatch_count": 0,
+  "missing_count": 0,
+  "rows": [
+    {
+      "actual_hmac": "d2cb1c177068c8b3da974e2c5d0bee91503baecec407620ee0772b4e44d5a029",
+      "decode_error_class": "",
+      "exists": true,
+      "expected_hmac": "d2cb1c177068c8b3da974e2c5d0bee91503baecec407620ee0772b4e44d5a029",
+      "matches_committed_text": true,
+      "relative_path": ".vaks_runtime/released/answer-0001.md",
+      "request_id": "trial-001-happy-release"
+    },
+    {
+      "actual_hmac": "d2cb1c177068c8b3da974e2c5d0bee91503baecec407620ee0772b4e44d5a029",
+      "decode_error_class": "",
+      "exists": true,
+      "expected_hmac": "d2cb1c177068c8b3da974e2c5d0bee91503baecec407620ee0772b4e44d5a029",
+      "matches_committed_text": true,
+      "relative_path": ".vaks_runtime/released/answer-0008.md",
+      "request_id": "trial-008-pre-guard-stream-attempt"
+    },
+    {
+      "actual_hmac": "f3c2345edd073e807b847acc786377e4c517ab7da8acebdddced81143d716496",
+      "decode_error_class": "",
+      "exists": true,
+      "expected_hmac": "f3c2345edd073e807b847acc786377e4c517ab7da8acebdddced81143d716496",
+      "matches_committed_text": true,
+      "relative_path": ".vaks_runtime/released/answer-0012.md",
+      "request_id": "trial-012-second-happy-release"
+    },
+    {
+      "actual_hmac": "f3c2345edd073e807b847acc786377e4c517ab7da8acebdddced81143d716496",
+      "decode_error_class": "",
+      "exists": true,
+      "expected_hmac": "f3c2345edd073e807b847acc786377e4c517ab7da8acebdddced81143d716496",
+      "matches_committed_text": true,
+      "relative_path": ".vaks_runtime/released/answer-0015.md",
+      "request_id": "trial-015-candidate-to-candidate-overwrite"
+    },
+    {
+      "actual_hmac": "f3c2345edd073e807b847acc786377e4c517ab7da8acebdddced81143d716496",
+      "decode_error_class": "",
+      "exists": true,
+      "expected_hmac": "f3c2345edd073e807b847acc786377e4c517ab7da8acebdddced81143d716496",
+      "matches_committed_text": true,
+      "relative_path": ".vaks_runtime/released/answer-0017.md",
+      "request_id": "trial-017-candidate-to-fallback-overwrite"
+    }
+  ]
+}

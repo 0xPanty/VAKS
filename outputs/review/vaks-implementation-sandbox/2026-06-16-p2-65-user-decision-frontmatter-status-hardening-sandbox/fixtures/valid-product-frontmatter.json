@@ -1,0 +1,9 @@
+{
+  "fixture_id": "valid-product-frontmatter",
+  "document": "---\nslice_id: sample\nstatus: pass_product_grade\n---\n\n# Product Acceptance Report\n\nThe body may mention PASS_PRODUCT_GRADE, but the parser trusts only frontmatter.",
+  "expected": {
+    "valid": true,
+    "status": "pass_product_grade",
+    "body_status_ignored": false
+  }
+}

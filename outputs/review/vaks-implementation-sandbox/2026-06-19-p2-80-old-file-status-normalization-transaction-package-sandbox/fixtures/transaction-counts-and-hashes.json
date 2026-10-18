@@ -1,0 +1,10 @@
+{
+  "fixture_id": "transaction-counts-and-hashes",
+  "expected": {
+    "transaction_operation_count": 75,
+    "unique_target_file_count": 75,
+    "target_old_slice_count": 20,
+    "hash_record_count": 75,
+    "all_hashes_sha256_hex": true
+  }
+}

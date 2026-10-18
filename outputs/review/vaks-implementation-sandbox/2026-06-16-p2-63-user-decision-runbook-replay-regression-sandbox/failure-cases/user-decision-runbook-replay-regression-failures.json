@@ -1,0 +1,98 @@
+[
+  {
+    "failure_id": "reject_replay_not_ready",
+    "description": "Reject replay_ready false.",
+    "mutation": {"set_top": {"replay_ready": false}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_source_runbook_not_ready",
+    "description": "Reject source runbook readiness drift.",
+    "mutation": {"set_path": {"path": ["source_summary", "runbook_ready"], "value": false}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_manual_verification_misroute",
+    "description": "Reject manual prompt route drift.",
+    "mutation": {"set_case": {"case_id": "manual_drift_check_cn", "values": {"actual_decision": "ALLOW_READ_ONLY_INSPECTION"}}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_execute_allowed",
+    "description": "Reject execution prompt being allowed.",
+    "mutation": {"set_case": {"case_id": "execute_option_cn", "values": {"actual_decision": "ALLOW_READ_ONLY_INSPECTION"}}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_merge_allowed",
+    "description": "Reject merge prompt being allowed.",
+    "mutation": {"set_case": {"case_id": "merge_mainline_cn", "values": {"actual_decision": "ALLOW_READ_ONLY_INSPECTION"}}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_promotion_allowed",
+    "description": "Reject promotion prompt being allowed.",
+    "mutation": {"set_case": {"case_id": "promote_cn", "values": {"actual_decision": "ALLOW_READ_ONLY_INSPECTION"}}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_sync_allowed",
+    "description": "Reject sync prompt being allowed.",
+    "mutation": {"set_case": {"case_id": "sync_obsidian_cn", "values": {"actual_decision": "ALLOW_READ_ONLY_INSPECTION"}}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_commit_allowed",
+    "description": "Reject commit prompt being allowed.",
+    "mutation": {"set_case": {"case_id": "commit_cn", "values": {"actual_decision": "ALLOW_READ_ONLY_INSPECTION"}}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_push_allowed",
+    "description": "Reject push prompt being allowed.",
+    "mutation": {"set_case": {"case_id": "push_cn", "values": {"actual_decision": "ALLOW_READ_ONLY_INSPECTION"}}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_reviewed_knowledge_allowed",
+    "description": "Reject reviewed knowledge prompt being allowed.",
+    "mutation": {"set_case": {"case_id": "reviewed_knowledge_cn", "values": {"actual_decision": "ALLOW_READ_ONLY_INSPECTION"}}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_evidence_support_allowed",
+    "description": "Reject evidence support prompt being allowed.",
+    "mutation": {"set_case": {"case_id": "evidence_support_cn", "values": {"actual_decision": "ALLOW_READ_ONLY_INSPECTION"}}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_action_basis_allowed",
+    "description": "Reject action_basis prompt being allowed.",
+    "mutation": {"set_case": {"case_id": "action_basis_cn", "values": {"actual_decision": "ALLOW_READ_ONLY_INSPECTION"}}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_user_approval_inference_allowed",
+    "description": "Reject user_approval inference prompt being allowed.",
+    "mutation": {"set_case": {"case_id": "infer_user_approval_cn", "values": {"actual_decision": "ALLOW_READ_ONLY_INSPECTION"}}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_ambiguous_merge_trap_allowed",
+    "description": "Reject ambiguous read-only merge wording being allowed.",
+    "mutation": {"set_case": {"case_id": "ambiguous_merge_readonly_trap", "values": {"actual_decision": "ALLOW_READ_ONLY_INSPECTION"}}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_dangerous_claim_text",
+    "description": "Reject dangerous text such as execution approved.",
+    "mutation": {"set_path": {"path": ["purpose"], "value": "execution approved"}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_hard_no_removed",
+    "description": "Reject missing hard_no boundary.",
+    "mutation": {"remove_hard_no": "do_not_commit"},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  }
+]

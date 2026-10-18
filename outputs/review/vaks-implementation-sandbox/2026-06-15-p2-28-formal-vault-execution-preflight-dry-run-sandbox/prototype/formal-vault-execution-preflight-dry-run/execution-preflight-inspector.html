@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en" data-sandbox-only="true" data-execution-preflight-only="true" data-dry-run-only="true" data-no-approval="true" data-no-real-user-text-storage="true" data-no-formal-vault-access="true" data-no-execution="true" data-no-write="true" data-no-sync="true" data-no-authority="true">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formal Vault Execution Preflight Dry-Run</title>
+  <style>
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: #172026; background: #f7faf8; }
+    header { padding: 24px 28px 16px; background: #fff; border-bottom: 1px solid #d8dee4; }
+    h1 { margin: 0 0 8px; font-size: 30px; letter-spacing: 0; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 18px; padding: 18px 28px 32px; }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
+    input { min-width: 280px; height: 40px; padding: 0 12px; border: 1px solid #d8dee4; border-radius: 6px; }
+    button { height: 40px; border: 1px solid #d8dee4; background: #fff; border-radius: 6px; padding: 0 12px; font-weight: 700; }
+    button.active { border-color: #256f68; color: #256f68; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
+    .card, aside { background: #fff; border: 1px solid #d8dee4; border-radius: 8px; padding: 14px; }
+    .card h3 { margin: 4px 0 8px; font-size: 18px; }
+    .card p, aside li { color: #52616b; line-height: 1.45; }
+    .eyebrow { margin: 0; color: #256f68; text-transform: uppercase; font-size: 12px; font-weight: 700; }
+    aside { align-self: start; position: sticky; top: 16px; }
+    @media (max-width: 860px) { .layout { grid-template-columns: 1fr; padding: 16px; } input { min-width: 100%; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Formal Vault Execution Preflight Dry-Run</h1>
+    <p>Sandbox-only preflight. Approval not collected. It cannot approve, inspect the formal vault, execute, write, sync, read the formal vault, write the formal vault, or collect hashes from the vault.</p>
+  </header>
+  <div class="layout">
+    <main>
+      <div class="toolbar" data-role="preflight-filter">
+        <input id="q" type="search" placeholder="Search checklist, targets, blocks, receipt, stops">
+        <button type="button" class="active" data-filter="all">All</button> <button type="button" data-filter="checklist">Checklist</button> <button type="button" data-filter="targets">Targets</button> <button type="button" data-filter="blocks">Blocks</button> <button type="button" data-filter="receipt">Receipt</button> <button type="button" data-filter="stops">Stops</button>
+      </div>
+      <div class="grid" data-role="preflight-cards">
+        <article class="card" data-kind="checklist" data-search="checklist preflight dry run no execution">
+  <p class="eyebrow">checklist</p>
+  <h3>Preflight Checklist</h3>
+  <p>Checklist shape is complete only as a dry-run.</p>
+  <strong>7c4ea5f23a2b14bdbc583eb0b014b14eb79883805382ddc00ae4e336b169bce1</strong>
+</article>
+<article class="card" data-kind="targets" data-search="targets relative manifest no formal vault state inspection">
+  <p class="eyebrow">targets</p>
+  <h3>Dry Run Target Manifest</h3>
+  <p>Targets are relative labels; formal vault target state is not inspected.</p>
+  <strong>write_enabled_now=false</strong>
+</article>
+<article class="card" data-kind="blocks" data-search="deny revise dirty state block execution">
+  <p class="eyebrow">blocks</p>
+  <h3>Blocking Outcomes</h3>
+  <p>Deny, revise, and missing dirty-state acknowledgement block execution.</p>
+  <strong>execution_performed=false</strong>
+</article>
+<article class="card" data-kind="receipt" data-search="non execution receipt formal vault not accessed hash not collected">
+  <p class="eyebrow">receipt</p>
+  <h3>Non Execution Receipt</h3>
+  <p>No approval, user text, vault access, state check, snapshot, hash, or write happened.</p>
+  <strong>not execution readiness</strong>
+</article>
+<article class="card" data-kind="stops" data-search="stop conditions no sync no commit no push no promotion no execution">
+  <p class="eyebrow">stops</p>
+  <h3>Stop Conditions</h3>
+  <p>Stop on execution request, formal vault access, hash/snapshot request, sync, commit, push, or promotion.</p>
+  <strong>does not execute</strong>
+</article>
+      </div>
+    </main>
+    <aside data-role="boundary-rail">
+      <h2>Boundary Rail</h2>
+      <ul>
+        <li>sandbox only</li>
+        <li>execution preflight dry-run only</li>
+        <li>not actual approval</li>
+        <li>approval not collected</li>
+        <li>formal vault not accessed</li>
+        <li>formal vault state not inspected</li>
+        <li>execution not performed</li>
+        <li>snapshot not taken</li>
+        <li>hashes not collected from formal vault</li>
+        <li>no formal vault read / no formal vault write</li>
+        <li>not evidence support / not action basis</li>
+        <li>no sync / no commit / no push / no promotion</li>
+      </ul>
+    </aside>
+  </div>
+  <script type="application/json" id="preflight-data">
+{
+  "preflight_contract": {
+    "contract_kind": "formal_vault_execution_preflight_dry_run",
+    "current_slice_executes": false,
+    "current_slice_collects_approval": false,
+    "formal_vault_access_disallowed": true,
+    "formal_vault_state_inspection_disallowed": true,
+    "real_user_text_storage_disallowed": true,
+    "separate_future_execution_slice_required": true,
+    "separate_final_user_confirmation_required": true,
+    "approved_reference_not_executable_here": true,
+    "deny_blocks_execution": true,
+    "revise_blocks_execution": true,
+    "dirty_state_blocks_execution": true,
+    "extra_targets_block_execution": true,
+    "sync_commit_push_promotion_blocked": true,
+    "snapshot_plan_required_not_executed": true,
+    "rollback_plan_required_not_executed": true,
+    "hash_plan_required_not_executed": true,
+    "default_result": "BLOCKED_NOT_EXECUTED",
+    "required_source_intake_gate_hash": "f9f0f7a0ac4fc75bae06c492e82a38646d1ae88b1c99829b478f5ca10ce5cf96",
+    "required_packet_hash": "51244c5051881dfac5ac5648d34908bbf0a74ce1794f8f2868ff6b3378866cb3",
+    "required_source_bundle_hash": "4e7f8cdc4042a6858fcf42796843821391fe6c44e0e55e9e11206eda653f95ad",
+    "required_scope_hash": "f5ec5589dc4e983bda3b274bae47766bc58424a98e40363a6437e94b93f5b4e2",
+    "required_scope_ids": [
+      "native_home",
+      "status_board",
+      "receipt_index",
+      "boundary_stop",
+      "readonly_inspector"
+    ],
+    "required_exclusions": [
+      "obsidian_sync",
+      "commit",
+      "push",
+      "promotion"
+    ],
+    "required_preflight_checks": [
+      "source_product_passed",
+      "intake_gate_hash_match",
+      "packet_hash_match",
+      "source_bundle_hash_match",
+      "scope_hash_match",
+      "target_scope_exact",
+      "targets_relative_only",
+      "no_extra_targets",
+      "formal_vault_not_accessed",
+      "formal_vault_state_not_inspected",
+      "snapshot_plan_present_not_executed",
+      "rollback_plan_present_not_executed",
+      "hash_plan_present_not_executed",
+      "no_sync_commit_push_promotion",
+      "real_user_text_not_stored",
+      "separate_execution_slice_required"
+    ],
+    "required_preflight_hash": "7c4ea5f23a2b14bdbc583eb0b014b14eb79883805382ddc00ae4e336b169bce1"
+  },
+  "target_manifest": [
+    {
+      "id": "native_home",
+      "relative_target": "VAKS-Workbench-Draft/00 Native Home.md",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/00 Native Home.md",
+      "source_sha256": "8d69253089dc6d704bda107a291e5fd32e493d6c7f3cbc993549175ddbdac11b",
+      "content_binding": "exact_source_sha256",
+      "target_path_relative_only": true,
+      "formal_vault_target_resolved": false,
+      "formal_vault_target_exists_checked": false,
+      "snapshot_taken": false,
+      "hash_before_collected": false,
+      "hash_after_collected": false,
+      "write_enabled_now": false,
+      "dry_run_only": true
+    },
+    {
+      "id": "status_board",
+      "relative_target": "VAKS-Workbench-Draft/02 Status Board.md",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/02 Status Board.md",
+      "source_sha256": "f882d70b1761f9cc57148f9d5134cf92b5c8a9d9713b2c17c4a8865ab6749324",
+      "content_binding": "exact_source_sha256",
+      "target_path_relative_only": true,
+      "formal_vault_target_resolved": false,
+      "formal_vault_target_exists_checked": false,
+      "snapshot_taken": false,
+      "hash_before_collected": false,
+      "hash_after_collected": false,
+      "write_enabled_now": false,
+      "dry_run_only": true
+    },
+    {
+      "id": "receipt_index",
+      "relative_target": "VAKS-Workbench-Draft/03 Receipt Index.md",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/03 Receipt Index.md",
+      "source_sha256": "1729f2662ee8021526ff57fae565e9e3a7357596599d4fdca63e4171f0048cfc",
+      "content_binding": "exact_source_sha256",
+      "target_path_relative_only": true,
+      "formal_vault_target_resolved": false,
+      "formal_vault_target_exists_checked": false,
+      "snapshot_taken": false,
+      "hash_before_collected": false,
+      "hash_after_collected": false,
+      "write_enabled_now": false,
+      "dry_run_only": true
+    },
+    {
+      "id": "boundary_stop",
+      "relative_target": "VAKS-Workbench-Draft/04 Boundary Stop.md",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/04 Boundary Stop.md",
+      "source_sha256": "9e5560a2ee7eab313c6a31e7b42b05991883f2b98993073d0b20da6521953945",
+      "content_binding": "exact_source_sha256",
+      "target_path_relative_only": true,
+      "formal_vault_target_resolved": false,
+      "formal_vault_target_exists_checked": false,
+      "snapshot_taken": false,
+      "hash_before_collected": false,
+      "hash_after_collected": false,
+      "write_enabled_now": false,
+      "dry_run_only": true
+    },
+    {
+      "id": "readonly_inspector",
+      "relative_target": "VAKS-Workbench-Draft/readonly-inspector.html",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/readonly-inspector.html",
+      "source_sha256": "b367c6225e55e77845d586c2f96832ea539de79033bcf5341d4a15921082e203",
+      "content_binding": "exact_source_sha256",
+      "target_path_relative_only": true,
+      "formal_vault_target_resolved": false,
+      "formal_vault_target_exists_checked": false,
+      "snapshot_taken": false,
+      "hash_before_collected": false,
+      "hash_after_collected": false,
+      "write_enabled_now": false,
+      "dry_run_only": true
+    }
+  ],
+  "preflight_samples": [
+    {
+      "id": "synthetic_approved_reference_preflight",
+      "decision_verdict": "APPROVED_BY_USER",
+      "decision_reference_kind": "synthetic_future_approval_reference",
+      "decision_reference_present": true,
+      "rollback_plan_present": true,
+      "hash_plan_present": true,
+      "snapshot_plan_present": true,
+      "dirty_state_ack": true,
+      "expected_preflight_result": "PREFLIGHT_DRY_RUN_COMPLETE_NOT_EXECUTABLE",
+      "next_gate": "future_separately_approved_execution_slice_required",
+      "synthetic_only": true,
+      "actual_user_input": false,
+      "approval_collected_now": false,
+      "real_user_text_stored": false,
+      "captured_user_text": "",
+      "formal_vault_accessed": false,
+      "formal_vault_state_inspected": false,
+      "snapshot_taken": false,
+      "rollback_executed": false,
+      "hash_before_collected": false,
+      "hash_after_collected": false,
+      "execution_performed": false,
+      "formal_vault_write_allowed_now": false,
+      "action_basis_created": false,
+      "reviewed_knowledge_created": false,
+      "sync_allowed": false,
+      "commit_allowed": false,
+      "push_allowed": false,
+      "promotion_allowed": false,
+      "extra_targets_requested": false,
+      "scope_ids": [
+        "native_home",
+        "status_board",
+        "receipt_index",
+        "boundary_stop",
+        "readonly_inspector"
+      ],
+      "hash_claims": {
+        "intake_gate_hash": "f9f0f7a0ac4fc75bae06c492e82a38646d1ae88b1c99829b478f5ca10ce5cf96",
+        "packet_hash": "51244c5051881dfac5ac5648d34908bbf0a74ce1794f8f2868ff6b3378866cb3",
+        "source_bundle_hash": "4e7f8cdc4042a6858fcf42796843821391fe6c44e0e55e9e11206eda653f95ad",
+        "scope_hash": "f5ec5589dc4e983bda3b274bae47766bc58424a98e40363a6437e94b93f5b4e2",
+        "preflight_hash": "7c4ea5f23a2b14bdbc583eb0b014b14eb79883805382ddc00ae4e336b169bce1"
+      },
+      "explicit_exclusions_ack": [
+        "obsidian_sync",
+        "commit",
+        "push",
+        "promotion"
+      ],
+      "preflight_checks": {
+        "source_product_passed": true,
+        "intake_gate_hash_match": true,
+        "packet_hash_match": true,
+        "source_bundle_hash_match": true,
+        "scope_hash_match": true,
+        "target_scope_exact": true,
+        "targets_relative_only": true,
+        "no_extra_targets": true,
+        "formal_vault_not_accessed": true,
+        "formal_vault_state_not_inspected": true,
+        "snapshot_plan_present_not_executed": true,
+        "rollback_plan_present_not_executed": true,
+        "hash_plan_present_not_executed": true,
+        "no_sync_commit_push_promotion": true,
+        "real_user_text_not_stored": true,
+        "separate_execution_slice_required": true
+      },
+      "required_preflight_hash": "7c4ea5f23a2b14bdbc583eb0b014b14eb79883805382ddc00ae4e336b169bce1"
+    },
+    {
+      "id": "synthetic_denied_reference_preflight",
+      "decision_verdict": "DENIED_BY_USER",
+      "decision_reference_kind": "synthetic_future_denial_reference",
+      "decision_reference_present": true,
+      "rollback_plan_present": false,
+      "hash_plan_present": false,
+      "snapshot_plan_present": false,
+      "dirty_state_ack": false,
+      "expected_preflight_result": "BLOCKED_BY_DENIAL_NOT_EXECUTED",
+      "next_gate": "stop_and_record_denial_only",
+      "synthetic_only": true,
+      "actual_user_input": false,
+      "approval_collected_now": false,
+      "real_user_text_stored": false,
+      "captured_user_text": "",
+      "formal_vault_accessed": false,
+      "formal_vault_state_inspected": false,
+      "snapshot_taken": false,
+      "rollback_executed": false,
+      "hash_before_collected": false,
+      "hash_after_collected": false,
+      "execution_performed": false,
+      "formal_vault_write_allowed_now": false,
+      "action_basis_created": false,
+      "reviewed_knowledge_created": false,
+      "sync_allowed": false,
+      "commit_allowed": false,
+      "push_allowed": false,
+      "promotion_allowed": false,
+      "extra_targets_requested": false,
+      "scope_ids": [
+        "native_home",
+        "status_board",
+        "receipt_index",
+        "boundary_stop",
+        "readonly_inspector"
+      ],
+      "hash_claims": {
+        "intake_gate_hash": "f9f0f7a0ac4fc75bae06c492e82a38646d1ae88b1c99829b478f5ca10ce5cf96",
+        "packet_hash": "51244c5051881dfac5ac5648d34908bbf0a74ce1794f8f2868ff6b3378866cb3",
+        "source_bundle_hash": "4e7f8cdc4042a6858fcf42796843821391fe6c44e0e55e9e11206eda653f95ad",
+        "scope_hash": "f5ec5589dc4e983bda3b274bae47766bc58424a98e40363a6437e94b93f5b4e2",
+        "preflight_hash": "7c4ea5f23a2b14bdbc583eb0b014b14eb79883805382ddc00ae4e336b169bce1"
+      },
+      "explicit_exclusions_ack": [
+        "obsidian_sync",
+        "commit",
+        "push",
+        "promotion"
+      ],
+      "preflight_checks": {
+        "source_product_passed": true,
+        "intake_gate_hash_match": true,
+        "packet_hash_match": true,
+        "source_bundle_hash_match": true,
+        "scope_hash_match": true,
+        "target_scope_exact": true,
+        "targets_relative_only": true,
+        "no_extra_targets": true,
+        "formal_vault_not_accessed": true,
+        "formal_vault_state_not_inspected": true,
+        "snapshot_plan_present_not_executed": true,
+        "rollback_plan_present_not_executed": true,
+        "hash_plan_present_not_executed": true,
+        "no_sync_commit_push_promotion": true,
+        "real_user_text_not_stored": true,
+        "separate_execution_slice_required": true
+      },
+      "required_preflight_hash": "7c4ea5f23a2b14bdbc583eb0b014b14eb79883805382ddc00ae4e336b169bce1"
+    },
+    {
+      "id": "synthetic_revision_reference_preflight",
+      "decision_verdict": "NEEDS_REVISION",
+      "decision_reference_kind": "synthetic_future_revision_reference",
+      "decision_reference_present": true,
+      "rollback_plan_present": false,
+      "hash_plan_present": false,
+      "snapshot_plan_present": false,
+      "dirty_state_ack": false,
+      "expected_preflight_result": "BLOCKED_PENDING_PACKET_REVISION_NOT_EXECUTED",
+      "next_gate": "revise_packet_in_future_sandbox_only",
+      "synthetic_only": true,
+      "actual_user_input": false,
+      "approval_collected_now": false,
+      "real_user_text_stored": false,
+      "captured_user_text": "",
+      "formal_vault_accessed": false,
+      "formal_vault_state_inspected": false,
+      "snapshot_taken": false,
+      "rollback_executed": false,
+      "hash_before_collected": false,
+      "hash_after_collected": false,
+      "execution_performed": false,
+      "formal_vault_write_allowed_now": false,
+      "action_basis_created": false,
+      "reviewed_knowledge_created": false,
+      "sync_allowed": false,
+      "commit_allowed": false,
+      "push_allowed": false,
+      "promotion_allowed": false,
+      "extra_targets_requested": false,
+      "scope_ids": [
+        "native_home",
+        "status_board",
+        "receipt_index",
+        "boundary_stop",
+        "readonly_inspector"
+      ],
+      "hash_claims": {
+        "intake_gate_hash": "f9f0f7a0ac4fc75bae06c492e82a38646d1ae88b1c99829b478f5ca10ce5cf96",
+        "packet_hash": "51244c5051881dfac5ac5648d34908bbf0a74ce1794f8f2868ff6b3378866cb3",
+        "source_bundle_hash": "4e7f8cdc4042a6858fcf42796843821391fe6c44e0e55e9e11206eda653f95ad",
+        "scope_hash": "f5ec5589dc4e983bda3b274bae47766bc58424a98e40363a6437e94b93f5b4e2",
+        "preflight_hash": "7c4ea5f23a2b14bdbc583eb0b014b14eb79883805382ddc00ae4e336b169bce1"
+      },
+      "explicit_exclusions_ack": [
+        "obsidian_sync",
+        "commit",
+        "push",
+        "promotion"
+      ],
+      "preflight_checks": {
+        "source_product_passed": true,
+        "intake_gate_hash_match": true,
+        "packet_hash_match": true,
+        "source_bundle_hash_match": true,
+        "scope_hash_match": true,
+        "target_scope_exact": true,
+        "targets_relative_only": true,
+        "no_extra_targets": true,
+        "formal_vault_not_accessed": true,
+        "formal_vault_state_not_inspected": true,
+        "snapshot_plan_present_not_executed": true,
+        "rollback_plan_present_not_executed": true,
+        "hash_plan_present_not_executed": true,
+        "no_sync_commit_push_promotion": true,
+        "real_user_text_not_stored": true,
+        "separate_execution_slice_required": true
+      },
+      "required_preflight_hash": "7c4ea5f23a2b14bdbc583eb0b014b14eb79883805382ddc00ae4e336b169bce1"
+    },
+    {
+      "id": "synthetic_dirty_state_preflight_block",
+      "decision_verdict": "APPROVED_BY_USER",
+      "decision_reference_kind": "synthetic_future_approval_reference",
+      "decision_reference_present": true,
+      "rollback_plan_present": true,
+      "hash_plan_present": true,
+      "snapshot_plan_present": true,
+      "dirty_state_ack": false,
+      "expected_preflight_result": "BLOCKED_BY_DIRTY_STATE_ACK_MISSING_NOT_EXECUTED",
+      "next_gate": "stop_until_future_dirty_state_ack",
+      "synthetic_only": true,
+      "actual_user_input": false,
+      "approval_collected_now": false,
+      "real_user_text_stored": false,
+      "captured_user_text": "",
+      "formal_vault_accessed": false,
+      "formal_vault_state_inspected": false,
+      "snapshot_taken": false,
+      "rollback_executed": false,
+      "hash_before_collected": false,
+      "hash_after_collected": false,
+      "execution_performed": false,
+      "formal_vault_write_allowed_now": false,
+      "action_basis_created": false,
+      "reviewed_knowledge_created": false,
+      "sync_allowed": false,
+      "commit_allowed": false,
+      "push_allowed": false,
+      "promotion_allowed": false,
+      "extra_targets_requested": false,
+      "scope_ids": [
+        "native_home",
+        "status_board",
+        "receipt_index",
+        "boundary_stop",
+        "readonly_inspector"
+      ],
+      "hash_claims": {
+        "intake_gate_hash": "f9f0f7a0ac4fc75bae06c492e82a38646d1ae88b1c99829b478f5ca10ce5cf96",
+        "packet_hash": "51244c5051881dfac5ac5648d34908bbf0a74ce1794f8f2868ff6b3378866cb3",
+        "source_bundle_hash": "4e7f8cdc4042a6858fcf42796843821391fe6c44e0e55e9e11206eda653f95ad",
+        "scope_hash": "f5ec5589dc4e983bda3b274bae47766bc58424a98e40363a6437e94b93f5b4e2",
+        "preflight_hash": "7c4ea5f23a2b14bdbc583eb0b014b14eb79883805382ddc00ae4e336b169bce1"
+      },
+      "explicit_exclusions_ack": [
+        "obsidian_sync",
+        "commit",
+        "push",
+        "promotion"
+      ],
+      "preflight_checks": {
+        "source_product_passed": true,
+        "intake_gate_hash_match": true,
+        "packet_hash_match": true,
+        "source_bundle_hash_match": true,
+        "scope_hash_match": true,
+        "target_scope_exact": true,
+        "targets_relative_only": true,
+        "no_extra_targets": true,
+        "formal_vault_not_accessed": true,
+        "formal_vault_state_not_inspected": true,
+        "snapshot_plan_present_not_executed": true,
+        "rollback_plan_present_not_executed": true,
+        "hash_plan_present_not_executed": true,
+        "no_sync_commit_push_promotion": true,
+        "real_user_text_not_stored": true,
+        "separate_execution_slice_required": true
+      },
+      "required_preflight_hash": "7c4ea5f23a2b14bdbc583eb0b014b14eb79883805382ddc00ae4e336b169bce1"
+    }
+  ],
+  "non_execution_receipt": {
+    "approval_collected_now": false,
+    "actual_user_input_used": false,
+    "real_user_text_stored": false,
+    "formal_vault_accessed": false,
+    "formal_vault_state_inspected": false,
+    "execution_performed": false,
+    "snapshot_taken": false,
+    "hash_before_collected": false,
+    "hash_after_collected": false,
+    "current_status": "execution_preflight_dry_run_defined_pending_review",
+    "non_claims": [
+      "not actual approval",
+      "not a user decision record",
+      "not formal vault approval",
+      "not execution readiness",
+      "not sync approval",
+      "not commit approval",
+      "not push approval",
+      "not promotion approval",
+      "not action basis",
+      "not reviewed knowledge",
+      "not evidence support"
+    ],
+    "preflight_hash": "7c4ea5f23a2b14bdbc583eb0b014b14eb79883805382ddc00ae4e336b169bce1"
+  },
+  "stop_conditions": [
+    "actual user approval collection requested",
+    "actual user decision collection requested",
+    "real user text storage requested",
+    "formal vault read requested",
+    "formal vault scan requested",
+    "formal vault write requested",
+    "formal vault state inspection requested",
+    "formal vault hash or snapshot requested",
+    "absolute vault path requested",
+    "Obsidian sync requested",
+    "commit or push requested",
+    "promotion requested",
+    "execution requested",
+    "decision inferred from silence or prior PASS",
+    "intake gate hash mismatch",
+    "packet hash mismatch",
+    "source bundle hash mismatch",
+    "scope hash mismatch",
+    "preflight hash mismatch",
+    "target manifest mismatch",
+    "extra targets requested",
+    "target path is absolute or parent traversal",
+    "approved reference treated as executable",
+    "denied or revise reference allows execution",
+    "dirty-state acknowledgement missing",
+    "snapshot, rollback, or hash plan missing"
+  ]
+}
+  </script>
+  <script>
+    const input = document.getElementById('q');
+    const cards = Array.from(document.querySelectorAll('.card'));
+    const buttons = Array.from(document.querySelectorAll('button[data-filter]'));
+    let filter = 'all';
+    function applyFilter() {
+      const query = input.value.toLowerCase();
+      cards.forEach(card => {
+        const okFilter = filter === 'all' || card.dataset.kind === filter;
+        const okQuery = !query || card.dataset.search.toLowerCase().includes(query) || card.textContent.toLowerCase().includes(query);
+        card.hidden = !(okFilter && okQuery);
+      });
+    }
+    buttons.forEach(btn => btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filter = btn.dataset.filter;
+      applyFilter();
+    }));
+    input.addEventListener('input', applyFilter);
+  </script>
+</body>
+</html>

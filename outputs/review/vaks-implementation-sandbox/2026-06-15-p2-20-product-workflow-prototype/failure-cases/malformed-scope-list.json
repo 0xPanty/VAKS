@@ -1,0 +1,1 @@
+{"case_id":"malformed-scope-list","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/scope","value":["not an object"]}]}

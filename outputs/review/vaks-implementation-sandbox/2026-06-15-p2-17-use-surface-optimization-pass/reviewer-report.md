@@ -1,0 +1,65 @@
+---
+record_kind: sandbox_reviewer_report
+slice_id: 2026-06-15-p2-17-use-surface-optimization-pass
+status: review_pass_no_blocker
+truth_boundary: reviewer_report_only
+---
+
+# Reviewer Report
+
+## Reviewer Scope
+
+Read-only review for:
+
+- bugs;
+- missing tests;
+- overdesign;
+- maintainability;
+- fixture and failure-case coverage;
+- whether local verification really exercises the use-surface contract.
+
+## Current Conclusion
+
+```text
+REVIEW_PASS
+```
+
+First Reviewer pass returned `REVIEW_BLOCKED` because the delivered prototype
+artifact was not validated by the suite and was not itself a complete valid
+contract manifest. Builder repaired this inside the sandbox path:
+
+- `prototype/operator-use-surface-blueprint.json` now extends the valid
+  blueprint contract and is validator-valid;
+- `verify_use_surface_optimization_pass.py` validates prototype artifacts;
+- `source-map.md` now uses the implemented
+  `user_questions.orientation_review_or_action` key.
+
+Current local verification:
+
+```text
+positive_fixtures: 6
+prototype_artifacts: 1
+failure_cases: 31
+passed: true
+target __pycache__: none
+```
+
+Reviewer revalidation:
+
+```text
+agent_id: 019ec9a2-e3d6-7c41-97f7-611a7bcda040
+conclusion: REVIEW_PASS
+```
+
+Reviewer findings:
+
+- no blocking findings;
+- verifier includes `prototype/*.json` and passed 6 fixtures, 1 prototype, and
+  31 failure cases;
+- prototype validates cleanly and extends the valid contract;
+- protected Obsidian path matching is case-insensitive and the
+  `H:/Obsidian/test.md` bypass case fails as expected;
+- forbidden runtime/sync fields cover UI/runtime/background/hooks/automation,
+  sync, commit, and push;
+- source-map uses `user_questions.orientation_review_or_action`, with no stale
+  `use_scope` references remaining.

@@ -1,0 +1,1 @@
+{"extends": "fixtures/valid-bases-cockpit.json", "scenario_id": "obsidian-case-protected-path", "expected_valid": false, "expected_codes": ["BC_PROTECTED_PATH_TARGET"], "allowed_extra_codes": ["BC_WRITE_PATH_OUTSIDE_SLICE"], "patch": {"scope": {"allowed_write_paths": ["H:/Obsidian/review-candidates.base"]}}}

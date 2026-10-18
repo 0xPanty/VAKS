@@ -1,0 +1,177 @@
+{
+  "sampling": "every_30_seconds",
+  "frames": [
+    {
+      "time_seconds": 0,
+      "timestamp": "00:00",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0000s.jpg"
+    },
+    {
+      "time_seconds": 30,
+      "timestamp": "00:30",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0030s.jpg"
+    },
+    {
+      "time_seconds": 60,
+      "timestamp": "01:00",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0060s.jpg"
+    },
+    {
+      "time_seconds": 90,
+      "timestamp": "01:30",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0090s.jpg"
+    },
+    {
+      "time_seconds": 120,
+      "timestamp": "02:00",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0120s.jpg"
+    },
+    {
+      "time_seconds": 150,
+      "timestamp": "02:30",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0150s.jpg"
+    },
+    {
+      "time_seconds": 180,
+      "timestamp": "03:00",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0180s.jpg"
+    },
+    {
+      "time_seconds": 210,
+      "timestamp": "03:30",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0210s.jpg"
+    },
+    {
+      "time_seconds": 240,
+      "timestamp": "04:00",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0240s.jpg"
+    },
+    {
+      "time_seconds": 270,
+      "timestamp": "04:30",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0270s.jpg"
+    },
+    {
+      "time_seconds": 300,
+      "timestamp": "05:00",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0300s.jpg"
+    },
+    {
+      "time_seconds": 330,
+      "timestamp": "05:30",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0330s.jpg"
+    },
+    {
+      "time_seconds": 360,
+      "timestamp": "06:00",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0360s.jpg"
+    },
+    {
+      "time_seconds": 390,
+      "timestamp": "06:30",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0390s.jpg"
+    },
+    {
+      "time_seconds": 420,
+      "timestamp": "07:00",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0420s.jpg"
+    },
+    {
+      "time_seconds": 450,
+      "timestamp": "07:30",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0450s.jpg"
+    },
+    {
+      "time_seconds": 480,
+      "timestamp": "08:00",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0480s.jpg"
+    },
+    {
+      "time_seconds": 510,
+      "timestamp": "08:30",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0510s.jpg"
+    },
+    {
+      "time_seconds": 540,
+      "timestamp": "09:00",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0540s.jpg"
+    },
+    {
+      "time_seconds": 570,
+      "timestamp": "09:30",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0570s.jpg"
+    },
+    {
+      "time_seconds": 600,
+      "timestamp": "10:00",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0600s.jpg"
+    },
+    {
+      "time_seconds": 630,
+      "timestamp": "10:30",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0630s.jpg"
+    },
+    {
+      "time_seconds": 660,
+      "timestamp": "11:00",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0660s.jpg"
+    },
+    {
+      "time_seconds": 690,
+      "timestamp": "11:30",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0690s.jpg"
+    },
+    {
+      "time_seconds": 720,
+      "timestamp": "12:00",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0720s.jpg"
+    },
+    {
+      "time_seconds": 750,
+      "timestamp": "12:30",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0750s.jpg"
+    },
+    {
+      "time_seconds": 780,
+      "timestamp": "13:00",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0780s.jpg"
+    },
+    {
+      "time_seconds": 810,
+      "timestamp": "13:30",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0810s.jpg"
+    },
+    {
+      "time_seconds": 840,
+      "timestamp": "14:00",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0840s.jpg"
+    },
+    {
+      "time_seconds": 870,
+      "timestamp": "14:30",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0870s.jpg"
+    },
+    {
+      "time_seconds": 900,
+      "timestamp": "15:00",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0900s.jpg"
+    },
+    {
+      "time_seconds": 930,
+      "timestamp": "15:30",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0930s.jpg"
+    },
+    {
+      "time_seconds": 960,
+      "timestamp": "16:00",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0960s.jpg"
+    },
+    {
+      "time_seconds": 990,
+      "timestamp": "16:30",
+      "path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\frames-480p\\frame_0990s.jpg"
+    }
+  ],
+  "contact_sheet": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\contact-sheet-30s-480p.jpg",
+  "video_media_source": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\video-32-2.m4s"
+}

@@ -1,0 +1,16 @@
+{
+  "case_id": "prototype-html-missing-cards",
+  "note": "HTML loses cards.",
+  "prototype_tamper": {
+    "kind": "html_replace",
+    "file": "handoff-packet-inspector.html",
+    "content": "<html data-sandbox-only=\"true\" data-handoff-only=\"true\" data-non-executable=\"true\" data-no-formal-vault-access=\"true\" data-no-write=\"true\" data-no-sync=\"true\" data-no-authority=\"true\" data-no-approval=\"true\" data-no-user-wording=\"true\" data-no-command=\"true\"><body>Handoff</body></html>"
+  },
+  "expected_errors": [
+    "html_handoff_card_count_mismatch:0:expected:3",
+    "html_missing_handoff_result:HANDOFF_PACKET_READY_FOR_READ_ONLY_NEXT_AGENT",
+    "html_missing_handoff_result:HANDOFF_PACKET_READY_FOR_SANDBOX_WORKFLOW_PROTOTYPE",
+    "html_missing_handoff_result:HANDOFF_PACKET_READY_FOR_STOP_OR_PARK_RECORD",
+    "html_missing_source_slice"
+  ]
+}

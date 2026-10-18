@@ -1,5 +1,6 @@
 ---
 type: source
+record_kind: source_card
 status: source-captured
 title: "Operating system for thinking with AI"
 source_url:
@@ -17,12 +18,9 @@ topics:
 projects:
   - 资料库
 evidence_level: anecdotal
+source_integrity:
+  capture_confidence: 3
 source_status: single-source
-source_quality: 3
-freshness: 3
-relevance: 5
-confidence: 3
-cross_source_count: 1
 verified_by:
 last_verified:
 next_review:
@@ -37,8 +35,25 @@ tags:
   - source/ai-vault
   - source/obsidian
   - status/single-source
+knowledge_status: raw
+processing_tier: light
+source_id: legacy:2026-01-thinking-os-with-ai-vault-source
+why_saved: see_body_or_legacy_record
+retrieval_policy:
+  policy_kind: source_identity_only
+  pack_allowed: drilldown_required
+  action_basis_allowed: false
+  warning_code: raw_is_provenance_only
+promotion_gate: none
+action_basis_allowed: false
+truth_mutation_allowed: false
+raw_location: C:/Users/Administrator/Documents/资料库/raw/articles/2026-01-thinking-os-with-ai-vault-source.md
+legacy_raw_metadata:
+  source_quality: 3
+  freshness: 3
+  relevance: 5
+  cross_source_count: 1
 ---
-
 # 来源记录：Operating system for thinking with AI
 
 ## 为什么收录

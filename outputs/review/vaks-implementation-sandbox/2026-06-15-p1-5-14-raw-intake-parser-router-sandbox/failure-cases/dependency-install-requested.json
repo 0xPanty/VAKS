@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "dependency-install-requested",
+  "expected_valid": false,
+  "expected_codes": ["RP_DEPENDENCY_INSTALL_FORBIDDEN"],
+  "patch": {"parser": {"dependency_install_requested": true}}
+}

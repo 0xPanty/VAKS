@@ -1,0 +1,12 @@
+{
+  "case_id": "prototype-markdown-permission-yes",
+  "description": "Prototype Markdown says permission yes.",
+  "expected_errors": [
+    "prototype_text_authority_confusion:02 Readiness Checks.md:execution_permission_yes"
+  ],
+  "prototype_tamper": {
+    "kind": "markdown_replace",
+    "file": "02 Readiness Checks.md",
+    "content": "execution permission: yes"
+  }
+}

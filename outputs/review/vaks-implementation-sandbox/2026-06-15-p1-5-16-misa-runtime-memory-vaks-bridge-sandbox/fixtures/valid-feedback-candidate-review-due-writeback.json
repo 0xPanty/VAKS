@@ -1,0 +1,11 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "valid-feedback-candidate-review-due-writeback",
+  "expected_valid": true,
+  "expected_codes": [],
+  "patch": {
+    "writeback": {
+      "allowed_record_types": ["feedback_event", "candidate_signal", "review_due"]
+    }
+  }
+}

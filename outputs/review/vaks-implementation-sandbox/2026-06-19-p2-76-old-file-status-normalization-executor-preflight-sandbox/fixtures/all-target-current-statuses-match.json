@@ -1,0 +1,8 @@
+{
+  "fixture_id": "all-target-current-statuses-match",
+  "expected": {
+    "missing_target_count": 0,
+    "current_status_mismatch_count": 0,
+    "all_targets_match_manifest_current_status": true
+  }
+}

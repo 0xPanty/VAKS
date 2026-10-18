@@ -1,0 +1,10 @@
+{
+  "fixture_id": "command-portable",
+  "expected": {
+    "clear_commands": true,
+    "uses_python_b_flag": true,
+    "final_gate_command_has_final_gate": true
+  },
+  "source_slice_id": "2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox",
+  "notes": "Commands must be explicit relative workspace commands, not hidden shell wrappers."
+}

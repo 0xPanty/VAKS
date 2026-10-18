@@ -1,0 +1,63 @@
+{
+  "record_kind": "robust_rag_retrieval_manifest",
+  "scenario_id": "valid-reviewed-only-rrf",
+  "expected_valid": true,
+  "expected_codes": [],
+  "query": {
+    "query_mode": "orientation",
+    "verbatim_input": "Show reviewed retrieval-related notes only.",
+    "question_summary": "Retrieve reviewed retrieval notes.",
+    "action_sensitive": false,
+    "verbatim_preserved": true
+  },
+  "route_selection": {
+    "selected": "hybrid_bucketed",
+    "why_selected": "Hybrid lexical, semantic, temporal retrieval inside reviewed bucket.",
+    "authority_buckets_included": ["reviewed"],
+    "authority_buckets_excluded": ["raw_anchor", "candidate", "project_overlay", "feedback", "runtime_artifact"],
+    "selected_context_types": ["reviewed_node"],
+    "forbidden_support_types": ["retrieval_score", "graph_rank", "community_report_summary", "llm_extracted_relation"]
+  },
+  "retrieval_config": {
+    "bucket_filter_first": true,
+    "rrf_within_bucket_only": true,
+    "exclude_runtime_artifacts": true
+  },
+  "fusion_groups": [
+    {
+      "id": "reviewed-only-rrf",
+      "authority_buckets": ["reviewed"],
+      "item_ids": ["reviewed-note-a", "reviewed-note-b"]
+    }
+  ],
+  "retrieved_items": [
+    {
+      "id": "reviewed-note-a",
+      "ref": "wiki/concepts/retrieval-boundary.md",
+      "path": "wiki/concepts/retrieval-boundary.md",
+      "record_kind": "reviewed_note",
+      "authority_bucket": "reviewed",
+      "pack_role": "orientation",
+      "selected": true,
+      "excluded": false,
+      "selected_by": {"lexical": true, "semantic": true, "temporal": true, "metadata": true}
+    },
+    {
+      "id": "reviewed-note-b",
+      "ref": "wiki/concepts/context-pack.md",
+      "path": "wiki/concepts/context-pack.md",
+      "record_kind": "reviewed_note",
+      "authority_bucket": "reviewed",
+      "pack_role": "orientation",
+      "selected": true,
+      "excluded": false,
+      "selected_by": {"lexical": true, "semantic": false, "temporal": true, "metadata": true}
+    }
+  ],
+  "generated_answer": {
+    "has_citations": true,
+    "support_checks_passed": false,
+    "sufficiency_checked": false,
+    "claims_action_basis": false
+  }
+}

@@ -1,0 +1,311 @@
+{
+  "slice_id": "2026-06-20-p2-109-obsidian-disposable-vault-absorption-pilot-sandbox",
+  "passed": true,
+  "failures": [],
+  "summary": {
+    "guard_count": 7,
+    "positive_case_count": 7,
+    "positive_hits": 7,
+    "failure_case_count": 6,
+    "expected_failure_hits": 6,
+    "fixture_oracle_used": true,
+    "failure_oracle_used": true,
+    "positive_oracle_case_count": 7,
+    "failure_oracle_case_count": 6,
+    "positive_oracle_sha256": "82896ef4604f4fdc652007d88eb2798bc5be7ac7b44ce1e4da668ccf85138280",
+    "failure_oracle_sha256": "cb28f08c034fad7eb5b0d3b66b1ef12c7c988ce1b924d10ae4f112e4e1691af5",
+    "disposable_vault_created": true,
+    "disposable_vault_deleted": true,
+    "runtime_samples_retained": false,
+    "formal_obsidian_vault_touched": false,
+    "mainline_files_touched": false,
+    "tools_promoted": false,
+    "templates_touched": false,
+    "wiki_truth_layers_touched": false,
+    "commit_push_sync": false,
+    "mainline_ready": false,
+    "action_basis_created": false,
+    "reviewed_knowledge_created": false
+  },
+  "case_results": [
+    {
+      "case_id": "body_hash_valid",
+      "guard": "p0-03",
+      "runtime_sample_path": "wiki/claims/body-hash-valid.md",
+      "runtime_sample_sha256": "b8fe5bcd022194c2c117bc593040b8b90e03fe7ec94706b65222e5fc6c233a04",
+      "return_code": 0,
+      "payload": {
+        "authority_boundary": {
+          "sandbox_not_mainline": true,
+          "validator_pass_is_not_action_basis": true,
+          "validator_pass_is_not_reviewed_knowledge": true,
+          "validator_pass_is_not_reviewer_approval": true
+        },
+        "candidate_body_location": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-implementation-sandbox\\2026-06-20-p2-109-obsidian-disposable-vault-absorption-pilot-sandbox\\artifact\\_disposable_vault_runtime\\Disposable-Obsidian-VAKS-Test-Vault\\wiki\\claims\\bodies\\body-hash-body.md",
+        "codes": [],
+        "computed_body_hash": "6158b5dbedc2241487077cc943f8fd5a8752ed32e9ad73ccb0e0358ce3873e7e",
+        "record": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-implementation-sandbox\\2026-06-20-p2-109-obsidian-disposable-vault-absorption-pilot-sandbox\\artifact\\_disposable_vault_runtime\\Disposable-Obsidian-VAKS-Test-Vault\\wiki\\claims\\body-hash-valid.md",
+        "valid": true,
+        "warnings": []
+      }
+    },
+    {
+      "case_id": "body_hash_tampered",
+      "guard": "p0-03",
+      "runtime_sample_path": "wiki/claims/body-hash-tampered.md",
+      "runtime_sample_sha256": "58b83414d60cee4ec77fdfe289e3bf253c5f510de63e10d2a343bf030138ef38",
+      "return_code": 1,
+      "payload": {
+        "authority_boundary": {
+          "sandbox_not_mainline": true,
+          "validator_pass_is_not_action_basis": true,
+          "validator_pass_is_not_reviewed_knowledge": true,
+          "validator_pass_is_not_reviewer_approval": true
+        },
+        "candidate_body_location": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-implementation-sandbox\\2026-06-20-p2-109-obsidian-disposable-vault-absorption-pilot-sandbox\\artifact\\_disposable_vault_runtime\\Disposable-Obsidian-VAKS-Test-Vault\\wiki\\claims\\bodies\\body-hash-body.md",
+        "codes": [
+          "body_hash_mismatch"
+        ],
+        "computed_body_hash": "6158b5dbedc2241487077cc943f8fd5a8752ed32e9ad73ccb0e0358ce3873e7e",
+        "record": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-implementation-sandbox\\2026-06-20-p2-109-obsidian-disposable-vault-absorption-pilot-sandbox\\artifact\\_disposable_vault_runtime\\Disposable-Obsidian-VAKS-Test-Vault\\wiki\\claims\\body-hash-tampered.md",
+        "valid": false,
+        "warnings": []
+      }
+    },
+    {
+      "case_id": "support_boundary_valid",
+      "guard": "p0-04",
+      "runtime_sample_path": "wiki/claims/support-boundary-valid.md",
+      "runtime_sample_sha256": "e5fec25565d8a18752543485c328bfda12e801271e3210b82183948b542f425c",
+      "return_code": 0,
+      "payload": {
+        "authority_boundary": {
+          "sandbox_not_mainline": true,
+          "validator_pass_is_not_action_basis": true,
+          "validator_pass_is_not_evidence_support": true,
+          "validator_pass_is_not_reviewed_knowledge": true,
+          "validator_pass_is_not_reviewer_approval": true
+        },
+        "codes": [],
+        "record": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-implementation-sandbox\\2026-06-20-p2-109-obsidian-disposable-vault-absorption-pilot-sandbox\\artifact\\_disposable_vault_runtime\\Disposable-Obsidian-VAKS-Test-Vault\\wiki\\claims\\support-boundary-valid.md",
+        "valid": true,
+        "warnings": []
+      }
+    },
+    {
+      "case_id": "candidate_claimed_as_support",
+      "guard": "p0-04",
+      "runtime_sample_path": "wiki/claims/support-boundary-candidate-as-support.md",
+      "runtime_sample_sha256": "efacd2d38266f5bc5cbc407ca9ae477176cf588f0febfb3b2b8ef5bf988aa15d",
+      "return_code": 1,
+      "payload": {
+        "authority_boundary": {
+          "sandbox_not_mainline": true,
+          "validator_pass_is_not_action_basis": true,
+          "validator_pass_is_not_evidence_support": true,
+          "validator_pass_is_not_reviewed_knowledge": true,
+          "validator_pass_is_not_reviewer_approval": true
+        },
+        "codes": [
+          "candidate_as_support"
+        ],
+        "record": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-implementation-sandbox\\2026-06-20-p2-109-obsidian-disposable-vault-absorption-pilot-sandbox\\artifact\\_disposable_vault_runtime\\Disposable-Obsidian-VAKS-Test-Vault\\wiki\\claims\\support-boundary-candidate-as-support.md",
+        "valid": false,
+        "warnings": []
+      }
+    },
+    {
+      "case_id": "action_readiness_valid",
+      "guard": "p0-05",
+      "runtime_sample_path": "actions/action-readiness-valid.md",
+      "runtime_sample_sha256": "8dda25cb93221b787c094098f7de3eb4c5793c6b09ee2ed1488a59d2f8c59bbf",
+      "return_code": 0,
+      "payload": {
+        "action_id": "AR-DISP-VALID",
+        "issues": [],
+        "record": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-implementation-sandbox\\2026-06-20-p2-109-obsidian-disposable-vault-absorption-pilot-sandbox\\artifact\\_disposable_vault_runtime\\Disposable-Obsidian-VAKS-Test-Vault\\actions\\action-readiness-valid.md",
+        "status": "pass"
+      }
+    },
+    {
+      "case_id": "destructive_action_without_rollback",
+      "guard": "p0-05",
+      "runtime_sample_path": "actions/action-delete-without-rollback.md",
+      "runtime_sample_sha256": "482a7328f52d719981eba497c6629ef8b400ccbecb96fba1e4e22d00ef0caa21",
+      "return_code": 1,
+      "payload": {
+        "action_id": "AR-DISP-FAIL",
+        "issues": [
+          {
+            "code": "AR_DESTRUCTIVE_MISSING_ROLLBACK",
+            "message": "destructive or hard-to-rollback action needs a rollback plan."
+          }
+        ],
+        "record": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-implementation-sandbox\\2026-06-20-p2-109-obsidian-disposable-vault-absorption-pilot-sandbox\\artifact\\_disposable_vault_runtime\\Disposable-Obsidian-VAKS-Test-Vault\\actions\\action-delete-without-rollback.md",
+        "status": "fail"
+      }
+    },
+    {
+      "case_id": "feedback_valid",
+      "guard": "p0-06",
+      "runtime_sample_path": "feedback/feedback-valid.md",
+      "runtime_sample_sha256": "987d9f0c49b861b47054eec97cab13ab7ebba0b507450683c959fc3a8c3eda79",
+      "return_code": 0,
+      "payload": {
+        "feedback_id": "FB-DISP-VALID",
+        "issues": [],
+        "record": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-implementation-sandbox\\2026-06-20-p2-109-obsidian-disposable-vault-absorption-pilot-sandbox\\artifact\\_disposable_vault_runtime\\Disposable-Obsidian-VAKS-Test-Vault\\feedback\\feedback-valid.md",
+        "status": "pass"
+      }
+    },
+    {
+      "case_id": "feedback_truth_confidence_mutation",
+      "guard": "p0-06",
+      "runtime_sample_path": "feedback/feedback-truth-confidence-mutation.md",
+      "runtime_sample_sha256": "571377e587256786d546c91ed8e8aa22183396ce7dbeec12d18f3c2b0fb819ab",
+      "return_code": 1,
+      "payload": {
+        "feedback_id": "FB-DISP-FAIL",
+        "issues": [
+          {
+            "code": "FB_FORBIDDEN_DIRECT_EFFECT",
+            "message": "feedback cannot directly affect truth, verification, source reliability, reviewed notes, or reviewed relations."
+          },
+          {
+            "code": "FB_TRUTH_CONFIDENCE_MUTATION",
+            "message": "feedback cannot directly modify truth confidence."
+          }
+        ],
+        "record": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-implementation-sandbox\\2026-06-20-p2-109-obsidian-disposable-vault-absorption-pilot-sandbox\\artifact\\_disposable_vault_runtime\\Disposable-Obsidian-VAKS-Test-Vault\\feedback\\feedback-truth-confidence-mutation.md",
+        "status": "fail"
+      }
+    },
+    {
+      "case_id": "failure_matrix_valid",
+      "guard": "p0-07",
+      "runtime_sample_path": "matrices/action-boundary-failure-matrix.json",
+      "runtime_sample_sha256": "ff82dc8cd14179b99dff23b6b78aca3629ad5e80daab16dde44bcae000adaf7f",
+      "return_code": 0,
+      "payload": {
+        "issues": [],
+        "matrix": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-implementation-sandbox\\2026-06-20-p2-109-obsidian-disposable-vault-absorption-pilot-sandbox\\artifact\\_disposable_vault_runtime\\Disposable-Obsidian-VAKS-Test-Vault\\matrices\\action-boundary-failure-matrix.json",
+        "status": "pass"
+      }
+    },
+    {
+      "case_id": "receipt_valid",
+      "guard": "p1-08",
+      "runtime_sample_path": "receipts/retrieval-receipt-valid.md",
+      "runtime_sample_sha256": "f35105c490932f2b09c9d4b67bf4c34bf27a9c2860bb4b2b8655894c04a0b5c6",
+      "return_code": 0,
+      "payload": {
+        "authority_non_claims": {
+          "receipt_not_action_basis": true,
+          "receipt_not_evidence_support": true,
+          "receipt_not_reviewed_knowledge": true,
+          "sandbox_not_mainline": true,
+          "validator_pass_not_reviewer_approval": true
+        },
+        "issue_codes": [],
+        "issues": [],
+        "path": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-implementation-sandbox\\2026-06-20-p2-109-obsidian-disposable-vault-absorption-pilot-sandbox\\artifact\\_disposable_vault_runtime\\Disposable-Obsidian-VAKS-Test-Vault\\receipts\\retrieval-receipt-valid.md",
+        "record_kind": "retrieval_receipt",
+        "valid": true
+      }
+    },
+    {
+      "case_id": "retrieval_candidate_as_support",
+      "guard": "p1-08",
+      "runtime_sample_path": "receipts/retrieval-candidate-as-support.md",
+      "runtime_sample_sha256": "2485a66b7ee00c93682f058afc2d2286bd0d3c8dd9563410e42105e4c0ec2718",
+      "return_code": 0,
+      "payload": {
+        "authority_non_claims": {
+          "receipt_not_action_basis": true,
+          "receipt_not_evidence_support": true,
+          "receipt_not_reviewed_knowledge": true,
+          "sandbox_not_mainline": true,
+          "validator_pass_not_reviewer_approval": true
+        },
+        "issue_codes": [
+          "RV_CANDIDATE_OVERLAY_FEEDBACK_AS_SUPPORT"
+        ],
+        "issues": [
+          {
+            "code": "RV_CANDIDATE_OVERLAY_FEEDBACK_AS_SUPPORT",
+            "message": "candidate, overlay, source annotation, or feedback items cannot be support or action basis."
+          }
+        ],
+        "path": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-implementation-sandbox\\2026-06-20-p2-109-obsidian-disposable-vault-absorption-pilot-sandbox\\artifact\\_disposable_vault_runtime\\Disposable-Obsidian-VAKS-Test-Vault\\receipts\\retrieval-candidate-as-support.md",
+        "record_kind": "retrieval_receipt",
+        "valid": false
+      }
+    },
+    {
+      "case_id": "runtime_artifact_exclusion_valid",
+      "guard": "p1-10",
+      "runtime_sample_path": "runtime/runtime-exclusion-valid.json",
+      "runtime_sample_sha256": "4f15b47de8d830b75a1a4e98e9c18909522f2060643c8dc930c4e4635ce50aa9",
+      "return_code": 0,
+      "payload": {
+        "excluded_runtime_artifact_ids": [
+          "pycache_001"
+        ],
+        "issue_codes": [],
+        "issues": [],
+        "runtime_artifact_ids": [
+          "pycache_001"
+        ],
+        "runtime_artifact_non_claims": {
+          "runtime_artifacts_not_action_basis": true,
+          "runtime_artifacts_not_evidence_support": true,
+          "runtime_artifacts_not_reviewed_knowledge": true,
+          "runtime_filter_pass_not_reviewer_approval": true,
+          "sandbox_not_mainline": true
+        },
+        "scenario_id": "ra-disp-valid-mixed-corpus-runtime-excluded",
+        "selected_item_ids": [
+          "reviewed_note_001"
+        ],
+        "valid": true
+      }
+    },
+    {
+      "case_id": "runtime_pycache_selected",
+      "guard": "p1-10",
+      "runtime_sample_path": "runtime/runtime-pycache-selected.json",
+      "runtime_sample_sha256": "e5e87b022b5bbe12bd6ec76916086ccfe944949cf378c82fa26ecc1f9778be7f",
+      "return_code": 0,
+      "payload": {
+        "excluded_runtime_artifact_ids": [
+          "pycache_selected"
+        ],
+        "issue_codes": [
+          "RA_RUNTIME_ARTIFACT_SELECTED"
+        ],
+        "issues": [
+          {
+            "code": "RA_RUNTIME_ARTIFACT_SELECTED",
+            "item_id": "pycache_selected",
+            "message": "runtime artifact cannot be selected for query context."
+          }
+        ],
+        "runtime_artifact_ids": [
+          "pycache_selected"
+        ],
+        "runtime_artifact_non_claims": {
+          "runtime_artifacts_not_action_basis": true,
+          "runtime_artifacts_not_evidence_support": true,
+          "runtime_artifacts_not_reviewed_knowledge": true,
+          "runtime_filter_pass_not_reviewer_approval": true,
+          "sandbox_not_mainline": true
+        },
+        "scenario_id": "ra-disp-fail-pycache-selected",
+        "selected_item_ids": [
+          "pycache_selected"
+        ],
+        "valid": false
+      }
+    }
+  ]
+}

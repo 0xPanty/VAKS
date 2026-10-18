@@ -1,0 +1,3 @@
+﻿test_set,corpus,mode,queries,resolvable_queries,hit_at_5,hit_at_10,mrr,action_leakage_rate,forbidden_top1_rate,cross_bucket_violation_rate,warning_coverage_risk,clickback_coverage,hash_coverage,adapter_coverage,receipt_coverage,stale_detection_rate
+adversarial_fresh,full,vaks_only_lexical_bucket,30,30,26/30,26/30,0.7211,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,1.0000,1.0000,0.0000
+adversarial_fresh,primary,vaks_only_lexical_bucket,30,30,26/30,27/30,0.7537,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,1.0000,1.0000,0.0000

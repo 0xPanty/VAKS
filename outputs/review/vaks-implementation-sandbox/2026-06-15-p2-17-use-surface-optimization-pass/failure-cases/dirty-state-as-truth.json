@@ -1,0 +1,8 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "dirty-state-as-truth",
+  "expected_valid": false,
+  "expected_codes": ["US_DIRTY_STATE_AS_KNOWLEDGE"],
+  "allowed_extra_codes": ["US_AUTHORITY_CONFUSION"],
+  "patch": {"guardrails": {"dirty_state_judges_knowledge": true}}
+}

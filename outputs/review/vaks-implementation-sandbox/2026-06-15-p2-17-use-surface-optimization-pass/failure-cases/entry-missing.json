@@ -1,0 +1,11 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "entry-missing",
+  "expected_valid": false,
+  "expected_codes": ["US_REQUIRED_ENTRY_MISSING"],
+  "patch": {
+    "entries": [
+      {"id": "add_source", "backend_artifact": "source_card", "boundary_label": "provenance_only", "receipt_required": false, "can_approve": false, "can_write_reviewed": false, "can_promote": false, "creates_action_basis": false}
+    ]
+  }
+}

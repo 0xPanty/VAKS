@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://timefriend.xin/favicon.ico",
+    "file": "assets/favicon.ico",
+    "bytes": 0,
+    "status": "error: Cannot find path 'C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\2026-06-14-timefriend-sandbox-study\\assets\\favicon.ico' because it does not exist."
+  },
+  {
+    "url": "https://timefriend.xin/assets/index-DGxeQ1mx.js",
+    "file": "assets/index-DGxeQ1mx.js",
+    "bytes": 0,
+    "status": "error: Cannot find path 'C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\2026-06-14-timefriend-sandbox-study\\assets\\index-DGxeQ1mx.js' because it does not exist."
+  },
+  {
+    "url": "https://timefriend.xin/assets/index-cgtDKvxs.css",
+    "file": "assets/index-cgtDKvxs.css",
+    "bytes": 0,
+    "status": "error: Cannot find path 'C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\2026-06-14-timefriend-sandbox-study\\assets\\index-cgtDKvxs.css' because it does not exist."
+  }
+]

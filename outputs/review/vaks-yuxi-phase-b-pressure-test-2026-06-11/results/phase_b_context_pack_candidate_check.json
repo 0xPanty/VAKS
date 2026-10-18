@@ -1,0 +1,83 @@
+{
+  "context_pack_status": "pass",
+  "error_count": 0,
+  "errors": [],
+  "counts": {
+    "packs": 90,
+    "source_set:main": 60,
+    "corpus:primary": 45,
+    "packs_with_suppressed_receipt_action_flags": 36,
+    "corpus:full": 45,
+    "source_set:holdout": 30
+  },
+  "summary": {
+    "artifact_kind": "vaks_phase_b_context_pack_summary",
+    "pack_count": 90,
+    "source_sets": [
+      "holdout",
+      "main"
+    ],
+    "corpora": [
+      "full",
+      "primary"
+    ],
+    "action_basis_allowed_count": 0,
+    "packs_with_suppressed_receipt_action_flags": 36,
+    "output_path": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-yuxi-phase-b-pressure-test-2026-06-11\\results\\phase_b_context_pack_candidates.jsonl",
+    "built_at": "2026-06-10T21:14:55+00:00"
+  },
+  "artifacts": [
+    {
+      "path": "PHASE_B_CONTEXT_PACK_CANDIDATE_DECISION.md",
+      "exists": true,
+      "bytes": 2451
+    },
+    {
+      "path": "PHASE_B_CONTEXT_PACK_CANDIDATE_CHECK.md",
+      "exists": true,
+      "bytes": 783
+    },
+    {
+      "path": "PHASE_B_RUNTIME_FEASIBILITY_DECISION.md",
+      "exists": true,
+      "bytes": 2023
+    },
+    {
+      "path": "results/phase_b_context_pack_candidates.jsonl",
+      "exists": true,
+      "bytes": 1072391
+    },
+    {
+      "path": "results/phase_b_context_pack_candidate_summary.json",
+      "exists": true,
+      "bytes": 495
+    },
+    {
+      "path": "results/phase_b_runtime_feasibility_check.json",
+      "exists": true,
+      "bytes": 1158
+    }
+  ],
+  "prior_gates": {
+    "runtime_feasibility": {
+      "status": "pass",
+      "errors": 0
+    },
+    "minimal_doc_patch": {
+      "status": "pass",
+      "errors": 0
+    },
+    "contract": {
+      "status": "pass",
+      "errors": 0
+    }
+  },
+  "core_docs": {
+    "dirty": [
+      " M DEV_CONTEXT.md",
+      " M IMPLEMENTATION_BLUEPRINT.md",
+      " M MEMORY_TIER.md",
+      " M SOURCE_INTAKE.md"
+    ]
+  }
+}

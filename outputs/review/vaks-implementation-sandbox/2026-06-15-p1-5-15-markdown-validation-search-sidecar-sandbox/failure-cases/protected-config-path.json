@@ -1,0 +1,11 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "protected-config-path",
+  "expected_valid": false,
+  "expected_codes": ["MS_PROTECTED_PATH_TARGET"],
+  "patch": {
+    "config_contract": {
+      "contract_path": "tools/mdvs.toml"
+    }
+  }
+}

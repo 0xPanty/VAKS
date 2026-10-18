@@ -1,0 +1,11 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "absolute-wiki-claims-input-path",
+  "expected_valid": false,
+  "expected_codes": ["MS_PROTECTED_PATH_TARGET"],
+  "patch": {
+    "scope": {
+      "input_paths": ["C:/Users/Administrator/Documents/资料库/wiki/claims/real-claim.md"]
+    }
+  }
+}

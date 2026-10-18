@@ -1,0 +1,1 @@
+{"case_id":"status-copy-claims-approval","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/steps/2/boundary_copy","value":"Status approves review and makes the item action ready."}]}

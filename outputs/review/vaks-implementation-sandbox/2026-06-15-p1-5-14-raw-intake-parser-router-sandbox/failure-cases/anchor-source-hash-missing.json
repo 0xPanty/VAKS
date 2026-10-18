@@ -1,0 +1,14 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "anchor-source-hash-missing",
+  "expected_valid": false,
+  "expected_codes": ["RP_ANCHOR_HASH_MISSING"],
+  "patch": {
+    "anchors": {
+      "source_hash_on_anchors": false,
+      "page_refs": [
+        {"id": "page-1", "selector": "page=1", "source_hash": ""}
+      ]
+    }
+  }
+}

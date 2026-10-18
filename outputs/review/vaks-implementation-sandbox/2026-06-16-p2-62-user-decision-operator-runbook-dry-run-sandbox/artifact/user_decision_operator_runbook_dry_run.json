@@ -1,0 +1,172 @@
+{
+  "record_kind": "sandbox_user_decision_operator_runbook_dry_run",
+  "slice_id": "2026-06-16-p2-62-user-decision-operator-runbook-dry-run-sandbox",
+  "source_slice_id": "2026-06-16-p2-61-user-decision-freeze-operator-readiness-brief-sandbox",
+  "purpose": "dry-run operator runbook for safe use of the p2-61 readiness brief",
+  "dry_run_only": true,
+  "source_execution_by_builder": false,
+  "runbook_ready": true,
+  "source_summary": {
+    "brief_ready": true,
+    "entry_count": 268,
+    "source_slice_count": 9,
+    "manual_verification_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-16-p2-60-user-decision-index-freeze-checksum-sandbox\\artifact\\verify_user_decision_index_freeze_checksum.py --final-gate",
+    "manual_verification_automated_by_source": false,
+    "source_status": {
+      "verification_status": "local_verification_passed",
+      "reviewer_passed": true,
+      "boundary_passed": true,
+      "product_acceptance_passed": true,
+      "next_step_status": "pass_product_grade_pending_next_slice"
+    }
+  },
+  "operator_decision_table": [
+    {
+      "request_kind": "inspect_readiness_brief",
+      "decision": "ALLOW_READ_ONLY_INSPECTION",
+      "reason": "p2-61 brief is product-accepted sandbox guidance and may be inspected read-only.",
+      "manual_only": false,
+      "writes_files": false,
+      "creates_authority": false
+    },
+    {
+      "request_kind": "inspect_frozen_handoff_chain",
+      "decision": "ALLOW_READ_ONLY_INSPECTION",
+      "reason": "p2-61 allows using p2-60 freeze as sandbox handoff integrity input only.",
+      "manual_only": false,
+      "writes_files": false,
+      "creates_authority": false
+    },
+    {
+      "request_kind": "manual_drift_check",
+      "decision": "ALLOW_MANUAL_READONLY_VERIFICATION",
+      "reason": "operator may manually run the p2-61 recorded p2-60 final-gate command; this artifact does not run it.",
+      "manual_only": true,
+      "writes_files": false,
+      "creates_authority": false
+    },
+    {
+      "request_kind": "execute_user_decision_option",
+      "decision": "STOP_REQUIRE_SEPARATE_USER_APPROVAL",
+      "reason": "This request crosses sandbox handoff boundaries and needs separate explicit user approval.",
+      "manual_only": false,
+      "writes_files": false,
+      "creates_authority": false
+    },
+    {
+      "request_kind": "merge_mainline",
+      "decision": "STOP_REQUIRE_SEPARATE_USER_APPROVAL",
+      "reason": "This request crosses sandbox handoff boundaries and needs separate explicit user approval.",
+      "manual_only": false,
+      "writes_files": false,
+      "creates_authority": false
+    },
+    {
+      "request_kind": "promote",
+      "decision": "STOP_REQUIRE_SEPARATE_USER_APPROVAL",
+      "reason": "This request crosses sandbox handoff boundaries and needs separate explicit user approval.",
+      "manual_only": false,
+      "writes_files": false,
+      "creates_authority": false
+    },
+    {
+      "request_kind": "sync_obsidian",
+      "decision": "STOP_REQUIRE_SEPARATE_USER_APPROVAL",
+      "reason": "This request crosses sandbox handoff boundaries and needs separate explicit user approval.",
+      "manual_only": false,
+      "writes_files": false,
+      "creates_authority": false
+    },
+    {
+      "request_kind": "commit",
+      "decision": "STOP_REQUIRE_SEPARATE_USER_APPROVAL",
+      "reason": "This request crosses sandbox handoff boundaries and needs separate explicit user approval.",
+      "manual_only": false,
+      "writes_files": false,
+      "creates_authority": false
+    },
+    {
+      "request_kind": "push",
+      "decision": "STOP_REQUIRE_SEPARATE_USER_APPROVAL",
+      "reason": "This request crosses sandbox handoff boundaries and needs separate explicit user approval.",
+      "manual_only": false,
+      "writes_files": false,
+      "creates_authority": false
+    },
+    {
+      "request_kind": "create_reviewed_knowledge",
+      "decision": "STOP_REQUIRE_SEPARATE_USER_APPROVAL",
+      "reason": "This request crosses sandbox handoff boundaries and needs separate explicit user approval.",
+      "manual_only": false,
+      "writes_files": false,
+      "creates_authority": false
+    },
+    {
+      "request_kind": "create_evidence_support",
+      "decision": "STOP_REQUIRE_SEPARATE_USER_APPROVAL",
+      "reason": "This request crosses sandbox handoff boundaries and needs separate explicit user approval.",
+      "manual_only": false,
+      "writes_files": false,
+      "creates_authority": false
+    },
+    {
+      "request_kind": "create_action_basis",
+      "decision": "STOP_REQUIRE_SEPARATE_USER_APPROVAL",
+      "reason": "This request crosses sandbox handoff boundaries and needs separate explicit user approval.",
+      "manual_only": false,
+      "writes_files": false,
+      "creates_authority": false
+    },
+    {
+      "request_kind": "infer_user_approval",
+      "decision": "STOP_REQUIRE_SEPARATE_USER_APPROVAL",
+      "reason": "This request crosses sandbox handoff boundaries and needs separate explicit user approval.",
+      "manual_only": false,
+      "writes_files": false,
+      "creates_authority": false
+    }
+  ],
+  "allowed_decisions": [
+    "ALLOW_READ_ONLY_INSPECTION",
+    "ALLOW_MANUAL_READONLY_VERIFICATION"
+  ],
+  "stop_decision": "STOP_REQUIRE_SEPARATE_USER_APPROVAL",
+  "readiness_flags": {
+    "automatic_execution": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "formal_vault_ready": false,
+    "obsidian_sync_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "user_approval_collected": false
+  },
+  "hard_no": [
+    "do_not_execute_user_decision_option",
+    "do_not_merge_mainline",
+    "do_not_promote",
+    "do_not_sync_obsidian",
+    "do_not_commit",
+    "do_not_push",
+    "do_not_install_dependencies",
+    "do_not_start_background_service",
+    "do_not_install_hooks",
+    "do_not_use_mcp_write_tool",
+    "do_not_create_reviewed_knowledge",
+    "do_not_create_evidence_support",
+    "do_not_create_action_basis",
+    "do_not_collect_user_approval_by_inference"
+  ],
+  "required_non_claims": [
+    "This runbook is a dry-run only.",
+    "This runbook is not user approval.",
+    "This runbook is not execution authority.",
+    "This runbook is not mainline approval.",
+    "This runbook is not promotion approval.",
+    "This runbook is not Obsidian sync approval.",
+    "This runbook is not reviewed knowledge.",
+    "This runbook is not evidence support.",
+    "This runbook is not action basis."
+  ]
+}

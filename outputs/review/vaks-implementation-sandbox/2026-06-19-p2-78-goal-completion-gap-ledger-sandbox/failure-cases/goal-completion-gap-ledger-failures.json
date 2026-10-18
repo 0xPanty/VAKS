@@ -1,0 +1,46 @@
+{
+  "record_kind": "sandbox_failure_case_matrix",
+  "slice_id": "2026-06-19-p2-78-goal-completion-gap-ledger-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "GC-FAIL-01-legacy-pass-claimed-current-strict-complete",
+      "must_fail_when": "legacy Product Acceptance evidence is reported as current strict final-gate completion"
+    },
+    {
+      "case_id": "GC-FAIL-02-sidecar-closeout-claimed-old-file-normalization",
+      "must_fail_when": "p2-73 sidecar closeout is treated as old slice file normalization"
+    },
+    {
+      "case_id": "GC-FAIL-03-p2-75-request-packet-treated-as-approval",
+      "must_fail_when": "the p2-75 approval request packet is treated as user approval"
+    },
+    {
+      "case_id": "GC-FAIL-04-p2-76-clean-preflight-treated-as-approval",
+      "must_fail_when": "clean p2-76 preflight is treated as authorization to write old slices"
+    },
+    {
+      "case_id": "GC-FAIL-05-p2-77-blocked-gate-ignored",
+      "must_fail_when": "p2-77 blocked_no_exact_approval is ignored and executor write is allowed"
+    },
+    {
+      "case_id": "GC-FAIL-06-generic-continuation-accepted-as-approval",
+      "must_fail_when": "generic continuation language such as continue or 全部落地 is accepted as old-file normalization approval"
+    },
+    {
+      "case_id": "GC-FAIL-07-dirty-tree-used-as-completion-evidence",
+      "must_fail_when": "pre-existing dirty tree state is used to prove goal completion"
+    },
+    {
+      "case_id": "GC-FAIL-08-goal-marked-complete-with-zero-old-strict-final-gates",
+      "must_fail_when": "goal_complete_now is true while old_slice_current_strict_final_gate_count is 0"
+    },
+    {
+      "case_id": "GC-FAIL-09-product-grade-claim-without-product-acceptance",
+      "must_fail_when": "a slice is called product-grade without GPT-5.5 extra-high Product Acceptance PASS"
+    },
+    {
+      "case_id": "GC-FAIL-10-gap-ledger-creates-mainline-or-action-authority",
+      "must_fail_when": "the gap ledger creates mainline readiness, promotion readiness, reviewed knowledge, evidence support, or action basis"
+    }
+  ]
+}

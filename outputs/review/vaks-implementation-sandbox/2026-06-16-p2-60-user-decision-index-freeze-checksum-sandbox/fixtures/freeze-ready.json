@@ -1,0 +1,6 @@
+{
+  "fixture_id": "freeze-ready",
+  "description": "A valid manifest requires zero missing source files and the p2-59 final gate.",
+  "freeze_ready": true,
+  "latest_source_final_gate_passed": true
+}

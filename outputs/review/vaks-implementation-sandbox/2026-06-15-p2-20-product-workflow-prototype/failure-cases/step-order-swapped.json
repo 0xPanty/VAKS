@@ -1,0 +1,1 @@
+{"case_id":"step-order-swapped","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"swap_steps","a":0,"b":1}]}

@@ -1,0 +1,101 @@
+{
+  "artifact_kind": "vaks_phase_b_metric_dictionary",
+  "truth_boundary": "metric_dictionary_not_truth_layer",
+  "action_basis_allowed": false,
+  "metric_result_limit": 20,
+  "replay_result_limit": 10,
+  "governance_window": 10,
+  "support_buckets": [
+    "core_framework",
+    "reviewed"
+  ],
+  "risk_buckets": [
+    "candidate",
+    "diagnostic",
+    "feedback",
+    "overlay",
+    "qa",
+    "raw",
+    "summary",
+    "unknown"
+  ],
+  "metrics": [
+    {
+      "metric": "hit_at_5",
+      "level": "query aggregate",
+      "definition": "A query is counted when the harness first_hit_rank over the top20 local run is <= 5.",
+      "denominator": "Resolvable queries for that test_set/corpus/mode.",
+      "notes": "Top10 replay independently checks rows whose first_hit_rank is within 10; ranks >10 remain query-level paired outcomes."
+    },
+    {
+      "metric": "hit_at_10",
+      "level": "query aggregate",
+      "definition": "A query is counted when the harness first_hit_rank over the top20 local run is <= 10.",
+      "denominator": "Resolvable queries for that test_set/corpus/mode.",
+      "notes": "Top10 replay should contain the matching hit when this metric is true."
+    },
+    {
+      "metric": "mrr",
+      "level": "query aggregate",
+      "definition": "Mean reciprocal rank over the local top20 run; query contribution is 1 / first_hit_rank, or 0 if no expected-term hit appears in top20.",
+      "denominator": "Resolvable queries for that test_set/corpus/mode.",
+      "notes": "This is a retrieval diagnostic, not truth confidence."
+    },
+    {
+      "metric": "action_leakage_rate",
+      "level": "risk-query aggregate",
+      "definition": "For action/evidence queries, true when top1 is not support bucket or any risky top10 result has no warning.",
+      "denominator": "Queries whose intent is action or evidence.",
+      "notes": "This is the strongest current governance signal."
+    },
+    {
+      "metric": "forbidden_top1_rate",
+      "level": "risk-query aggregate",
+      "definition": "For action/evidence queries, true when rank 1 is not in support buckets.",
+      "denominator": "Queries whose intent is action or evidence.",
+      "notes": "Support buckets are core_framework and reviewed."
+    },
+    {
+      "metric": "cross_bucket_violation_rate",
+      "level": "risk-query aggregate",
+      "definition": "For action/evidence queries, true when risky buckets appear before the first support bucket in top10, or no support appears.",
+      "denominator": "Queries whose intent is action or evidence.",
+      "notes": "Measures authority-like ranking collapse."
+    },
+    {
+      "metric": "warning_coverage_risk",
+      "level": "risk-query aggregate",
+      "definition": "For risky top10 results, fraction that carry a warning_code; if no risky result appears, the query receives 1.0.",
+      "denominator": "Risky top10 results within each risk query, then averaged by query.",
+      "notes": "Soft guardrail only; not a hard safety control."
+    },
+    {
+      "metric": "clickback_coverage",
+      "level": "query aggregate",
+      "definition": "Average top10 fraction with clickback-present behavior.",
+      "denominator": "Top10 result rows per query, then averaged by query.",
+      "notes": "Baseline file lexical has 0 by design in the current harness."
+    },
+    {
+      "metric": "hash_coverage",
+      "level": "query aggregate",
+      "definition": "Average top10 fraction with source_hash/chunk_hash available.",
+      "denominator": "Top10 result rows per query, then averaged by query.",
+      "notes": "Used for auditability, not evidence support."
+    },
+    {
+      "metric": "receipt_coverage",
+      "level": "query aggregate",
+      "definition": "Average top10 fraction produced through adapter receipt behavior.",
+      "denominator": "Top10 result rows per query, then averaged by query.",
+      "notes": "Receipt does not create action basis."
+    },
+    {
+      "metric": "stale_detection_rate",
+      "level": "stale query aggregate",
+      "definition": "Detected stale top10 results divided by exposed stale top10 results for stale-pressure queries, including holdout_stale.",
+      "denominator": "Exposed stale results in stale-pressure queries.",
+      "notes": "P0 fixes the earlier ambiguity where holdout_stale was not counted by the older summary helper."
+    }
+  ]
+}

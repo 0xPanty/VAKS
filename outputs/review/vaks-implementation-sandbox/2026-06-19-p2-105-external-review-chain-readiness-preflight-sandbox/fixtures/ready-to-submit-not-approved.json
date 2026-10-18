@@ -1,0 +1,14 @@
+{
+  "fixture": "ready-to-submit-not-approved",
+  "ready_to_submit_external_opus": true,
+  "actual_opus_result_present": false,
+  "validated_opus_pass_present": false,
+  "user_approval_present": false,
+  "checks": {
+    "summary.ready_to_submit_external_opus": true,
+    "summary.actual_opus_result_present": false,
+    "summary.validated_opus_pass_present": false,
+    "summary.user_approval_present": false
+  },
+  "expected": true
+}

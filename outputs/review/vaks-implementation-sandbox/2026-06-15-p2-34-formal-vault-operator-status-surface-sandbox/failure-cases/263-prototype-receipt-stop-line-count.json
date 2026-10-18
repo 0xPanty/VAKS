@@ -1,0 +1,13 @@
+{
+  "case_id": "prototype-receipt-stop-line-count",
+  "note": "Receipt stop line count drifts.",
+  "prototype_tamper": {
+    "kind": "receipt_update",
+    "updates": {
+      "stop_line_count": 99
+    }
+  },
+  "expected_errors": [
+    "prototype_receipt_stop_line_count_mismatch"
+  ]
+}

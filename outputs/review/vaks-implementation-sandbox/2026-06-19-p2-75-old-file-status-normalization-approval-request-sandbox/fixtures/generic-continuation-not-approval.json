@@ -1,0 +1,14 @@
+{
+  "fixture_id": "generic-continuation-not-approval",
+  "input_texts": [
+    "继续",
+    "全部落地",
+    "都做完",
+    "可以",
+    "go ahead",
+    "make it product grade"
+  ],
+  "expected": {
+    "all_generic_inputs_rejected_as_approval": true
+  }
+}

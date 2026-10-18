@@ -1,0 +1,17 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "support-role-invalid",
+  "expected_valid": false,
+  "expected_codes": ["SA_SUPPORT_ROLE_INVALID"],
+  "anchors": [
+    {
+      "id": "support-role-invalid-anchor",
+      "anchor_kind": "raw_excerpt",
+      "support_claimed": true,
+      "support_role": "background_context",
+      "source_ref": "raw/articles/example-source.md",
+      "selector": "L70-L82",
+      "authority_bucket": "raw_anchor"
+    }
+  ]
+}

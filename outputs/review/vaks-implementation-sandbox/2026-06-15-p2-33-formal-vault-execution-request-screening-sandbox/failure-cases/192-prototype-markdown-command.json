@@ -1,0 +1,14 @@
+{
+  "case_id": "prototype-markdown-command",
+  "note": "Prototype text contains command.",
+  "prototype_tamper": {
+    "kind": "markdown_replace",
+    "file": "05 Reviewer Packet.md",
+    "content": "python tools/promote.py --sync"
+  },
+  "expected_errors": [
+    "prototype_text_dangerous:05 Reviewer Packet.md:python_command",
+    "prototype_text_dangerous:05 Reviewer Packet.md:promote_py",
+    "prototype_text_dangerous:05 Reviewer Packet.md:sync_flag"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "writeback-receipt-missing",
+  "expected_valid": false,
+  "expected_codes": ["MB_FIXTURE_PATH_MISSING"],
+  "patch": {
+    "writeback": {"operation_receipt_ref": "fixtures/receipts/missing-receipt.json"},
+    "action_readiness": {"operation_receipt_ref": "fixtures/receipts/missing-receipt.json"}
+  }
+}

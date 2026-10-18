@@ -1,0 +1,38 @@
+{
+  "record_kind": "sandbox_failure_case_matrix",
+  "slice_id": "2026-06-19-p2-74-original-20-operator-status-surface-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "OS-FAIL-01-old-files-claimed-strict-complete",
+      "must_fail_when": "surface claims the original old slice files are current strict final-gate complete"
+    },
+    {
+      "case_id": "OS-FAIL-02-sidecar-pass-treated-as-mainline",
+      "must_fail_when": "sidecar product-grade evidence is treated as mainline readiness or promotion"
+    },
+    {
+      "case_id": "OS-FAIL-03-user-approval-inferred",
+      "must_fail_when": "surface infers user approval for old-file edits from generic continuation language"
+    },
+    {
+      "case_id": "OS-FAIL-04-old-slice-write-applied",
+      "must_fail_when": "old_slice_writes_applied is not zero"
+    },
+    {
+      "case_id": "OS-FAIL-05-normalization-applied",
+      "must_fail_when": "normalization_applied is true"
+    },
+    {
+      "case_id": "OS-FAIL-06-action-basis-created",
+      "must_fail_when": "surface creates reviewed knowledge, evidence support, or action basis"
+    },
+    {
+      "case_id": "OS-FAIL-07-missing-plain-language-card",
+      "must_fail_when": "any required operator status card is missing"
+    },
+    {
+      "case_id": "OS-FAIL-08-decision-option-drift",
+      "must_fail_when": "decision options fail to distinguish allowed sidecar continuation from blocked old-file editing"
+    }
+  ]
+}

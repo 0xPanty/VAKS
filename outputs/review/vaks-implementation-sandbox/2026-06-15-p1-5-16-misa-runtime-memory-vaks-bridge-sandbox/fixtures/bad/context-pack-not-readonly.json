@@ -1,0 +1,10 @@
+{
+  "record_kind": "vaks_context_pack_fixture",
+  "pack_id": "ctx-bad-not-readonly",
+  "query_mode": "orientation",
+  "read_only": false,
+  "included_buckets": ["reviewed", "candidate"],
+  "excluded_buckets": ["feedback", "runtime_memory"],
+  "items": [],
+  "truth_boundary": "bad-fixture-for-negative-test"
+}

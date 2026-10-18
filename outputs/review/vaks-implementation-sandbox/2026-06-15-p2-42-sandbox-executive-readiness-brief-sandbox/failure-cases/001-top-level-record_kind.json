@@ -1,0 +1,247 @@
+{
+  "record_kind": "wrong",
+  "slice_id": "2026-06-15-p2-42-sandbox-executive-readiness-brief-sandbox",
+  "version": "sandbox-executive-readiness-brief-v1",
+  "truth_boundary": "sandbox_executive_readiness_brief_not_authority",
+  "purpose": "compact executive and operator readiness brief for sandbox product-grade status",
+  "write_scope": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-42-sandbox-executive-readiness-brief-sandbox/",
+  "view": "executive-readiness",
+  "source_snapshot": {
+    "source_slice_id": "2026-06-15-p2-41-sandbox-operator-decision-brief-sandbox",
+    "decision_brief_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-41-sandbox-operator-decision-brief-sandbox/artifact/decision-brief.json",
+    "decision_brief_sha256": "2c4cb5d603537967ca3543c2358a6eb261a7bf359621b28282e7088d0dff12cc",
+    "product_report_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-41-sandbox-operator-decision-brief-sandbox/product-acceptance-report.md",
+    "product_report_sha256": "c7cbc460b99d5a50cc926e03090f0004ccaa7a1d4959b2e058b52b30265f99f2",
+    "source_product_status": "pass_product_grade",
+    "source_product_pass_text": true,
+    "plain_verdict": "sandbox_product_grade_operator_ready_not_enterprise_production",
+    "completed_sandbox_slices": 39,
+    "product_grade_sandbox_slices": 39,
+    "verified_sandbox_slices": 39,
+    "revision_history_slices": 8,
+    "enterprise_experience_status": "operator_grade_sandbox_experience_not_full_enterprise_production",
+    "operator_next_step": "continue only in a fresh sandbox slice unless the user separately approves a boundary-crossing action"
+  },
+  "executive_verdict": "SANDBOX_PRODUCT_GRADE_OPERATOR_READY_NOT_ENTERPRISE_PRODUCTION",
+  "scorecard": {
+    "completed_sandbox_slices": 39,
+    "product_grade_sandbox_slices": 39,
+    "verified_sandbox_slices": 39,
+    "revision_history_slices": 8,
+    "operator_experience_grade": "sandbox_product_grade",
+    "enterprise_production_grade": "not_ready"
+  },
+  "landed_capabilities": [
+    {
+      "id": "receipt_and_hash_boundary",
+      "label": "Receipts and hash boundaries",
+      "summary": "Retrieval and operation outputs now carry inspectable receipts and source/hash boundaries.",
+      "status": "sandbox_product_grade",
+      "authority": "sandbox_only"
+    },
+    {
+      "id": "validator_failure_matrix",
+      "label": "Validator failure matrix",
+      "summary": "Validators are paired with negative cases so green checks cannot hide known boundary failures.",
+      "status": "sandbox_product_grade",
+      "authority": "sandbox_only"
+    },
+    {
+      "id": "read_only_query_and_retrieval",
+      "label": "Read-only query and retrieval pilots",
+      "summary": "Query and retrieval pilots remain inspect-only and cannot create truth, evidence, or action authority.",
+      "status": "sandbox_product_grade",
+      "authority": "sandbox_only"
+    },
+    {
+      "id": "formal_vault_preflight_dry_run",
+      "label": "Formal-vault preflight dry runs",
+      "summary": "Formal-vault work is represented as dry-run packets and gates, not as actual vault access.",
+      "status": "sandbox_product_grade",
+      "authority": "sandbox_only"
+    },
+    {
+      "id": "operator_status_and_workflow_surfaces",
+      "label": "Operator status and workflow surfaces",
+      "summary": "Operators can inspect status, next steps, approval requirements, and stop conditions.",
+      "status": "sandbox_product_grade",
+      "authority": "sandbox_only"
+    },
+    {
+      "id": "follow_up_agent_blind_run_regression",
+      "label": "Follow-up-agent blind-run regression",
+      "summary": "Independent agents are tested against prompts to catch authority confusion before continuation.",
+      "status": "sandbox_product_grade",
+      "authority": "sandbox_only"
+    },
+    {
+      "id": "rollup_and_decision_brief_surfaces",
+      "label": "Rollup and decision brief surfaces",
+      "summary": "Completed sandbox slices are summarized into readable rollups and decision briefs.",
+      "status": "sandbox_product_grade",
+      "authority": "sandbox_only"
+    }
+  ],
+  "positive_improvements": [
+    {
+      "id": "retrieval_no_longer_counts_as_support",
+      "label": "Retrieval no longer counts as support",
+      "summary": "Finding a source is separated from proving that it supports a point.",
+      "direction": "positive",
+      "authority": "sandbox_evidence_only"
+    },
+    {
+      "id": "sandbox_pass_no_longer_counts_as_mainline",
+      "label": "Sandbox pass no longer counts as mainline",
+      "summary": "Product-grade sandbox artifacts remain outside main architecture until separately approved.",
+      "direction": "positive",
+      "authority": "sandbox_evidence_only"
+    },
+    {
+      "id": "validator_pass_no_longer_counts_as_approval",
+      "label": "Validator pass no longer counts as approval",
+      "summary": "Automated validation is evidence for review, not reviewer or product acceptance.",
+      "direction": "positive",
+      "authority": "sandbox_evidence_only"
+    },
+    {
+      "id": "agent_decision_no_longer_counts_as_action_basis",
+      "label": "Agent decision no longer counts as action basis",
+      "summary": "Agent judgments are constrained to sandbox observations unless a separate authority exists.",
+      "direction": "positive",
+      "authority": "sandbox_evidence_only"
+    },
+    {
+      "id": "operator_can_see_pass_verification_revision_status",
+      "label": "Operator can see pass, verification, and revision status",
+      "summary": "The rollup exposes Product PASS counts, verification coverage, and revision history.",
+      "direction": "positive",
+      "authority": "sandbox_evidence_only"
+    },
+    {
+      "id": "boundary_crossing_now_requires_explicit_separate_approval",
+      "label": "Boundary crossing requires explicit separate approval",
+      "summary": "Formal vault, promotion, merge, commit, push, sync, and action-basis use remain blocked.",
+      "direction": "positive",
+      "authority": "sandbox_evidence_only"
+    }
+  ],
+  "non_production_gaps": [
+    {
+      "id": "not_promoted_to_mainline",
+      "status": "not_satisfied_for_production"
+    },
+    {
+      "id": "not_written_to_formal_vault",
+      "status": "not_satisfied_for_production"
+    },
+    {
+      "id": "not_synced_to_obsidian",
+      "status": "not_satisfied_for_production"
+    },
+    {
+      "id": "not_deployed_or_multi_user_operationalized",
+      "status": "not_satisfied_for_production"
+    },
+    {
+      "id": "not_enterprise_permissioned_or_monitored",
+      "status": "not_satisfied_for_production"
+    },
+    {
+      "id": "not_reviewed_knowledge_or_action_basis",
+      "status": "not_satisfied_for_production"
+    }
+  ],
+  "approval_requirements": [
+    {
+      "id": "formal vault scan/write/sync",
+      "required_before_action": true,
+      "authorized_now": false
+    },
+    {
+      "id": "mainline merge",
+      "required_before_action": true,
+      "authorized_now": false
+    },
+    {
+      "id": "promotion",
+      "required_before_action": true,
+      "authorized_now": false
+    },
+    {
+      "id": "commit",
+      "required_before_action": true,
+      "authorized_now": false
+    },
+    {
+      "id": "push",
+      "required_before_action": true,
+      "authorized_now": false
+    },
+    {
+      "id": "using sandbox output as action basis",
+      "required_before_action": true,
+      "authorized_now": false
+    },
+    {
+      "id": "moving artifacts into templates or tools",
+      "required_before_action": true,
+      "authorized_now": false
+    }
+  ],
+  "readiness_flags": {
+    "sandbox_operator_ready": true,
+    "enterprise_production_ready": false,
+    "mainline_ready": false,
+    "formal_vault_ready": false,
+    "action_basis_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false
+  },
+  "operation_performed_flags": {
+    "formal_vault_read": false,
+    "formal_vault_scan": false,
+    "formal_vault_write": false,
+    "formal_vault_hash": false,
+    "formal_vault_snapshot": false,
+    "formal_vault_state_check": false,
+    "obsidian_sync": false,
+    "commit": false,
+    "push": false,
+    "promotion": false,
+    "dependency_install": false,
+    "background_service": false,
+    "mcp_write_tool": false,
+    "hooks": false,
+    "approval_collection": false,
+    "user_instruction_collection": false,
+    "user_wording_storage": false,
+    "command_emitted": false,
+    "execution_permission_granted": false,
+    "execution_performed": false,
+    "action_basis_creation": false,
+    "reviewed_knowledge_creation": false,
+    "evidence_support_creation": false,
+    "mainline_merge": false,
+    "dirty_tree_repair": false,
+    "auto_advance": false
+  },
+  "required_non_claims": [
+    "not enterprise production ready",
+    "not formal vault approval",
+    "not formal vault state",
+    "not formal vault access",
+    "not Obsidian sync",
+    "not user approval",
+    "not execution permission",
+    "not command surface",
+    "not reviewed knowledge",
+    "not evidence support",
+    "not action basis",
+    "not mainline readiness",
+    "not promotion approval",
+    "not dirty-tree repair",
+    "not auto advance"
+  ],
+  "next_decision": "continue sandbox hardening or request separate approval for any boundary-crossing action"
+}

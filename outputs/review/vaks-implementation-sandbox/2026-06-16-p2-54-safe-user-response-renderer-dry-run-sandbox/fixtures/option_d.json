@@ -1,0 +1,12 @@
+{
+  "input_text": "D",
+  "expected_case_id": "explicit_D",
+  "expected_reply_id": "acknowledge_park_or_reject",
+  "expected_next_step": "acknowledge_no_mutation",
+  "automatic_execution": false,
+  "must_contain_any": [
+    "不会",
+    "不执行"
+  ],
+  "must_not_contain_positive_execution": true
+}

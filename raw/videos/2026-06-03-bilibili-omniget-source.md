@@ -1,5 +1,6 @@
 ---
 type: source
+record_kind: source_card
 status: source-captured
 title: "夯到爆！！Github 又出狠活神器！斩获 3.9K Stars，一款开源免费的全能下载软件，完全属于碾压同级别的存在！！"
 source_id: bilibili-BV1LY5J6pEZD
@@ -16,8 +17,6 @@ duration: 102s
 captured_at: "2026-06-03 19:53:10 +08:00"
 captured_by: Codex
 raw_location: raw/videos/2026-06-03-bilibili-omniget-source.md
-processing_mode: immediate
-processing_level: medium
 review_priority: normal
 review_owner: Codex
 formalization_status: raw-only
@@ -44,6 +43,17 @@ tags:
   - raw-video
   - bilibili
   - candidate-only
+knowledge_status: raw
+processing_tier: light
+why_saved: see_body_or_legacy_record
+retrieval_policy:
+  policy_kind: source_identity_only
+  pack_allowed: drilldown_required
+  action_basis_allowed: false
+  warning_code: raw_is_provenance_only
+promotion_gate: none
+action_basis_allowed: false
+truth_mutation_allowed: false
 ---
 
 # 视频资料：OmniGet 下载与本地学习工具介绍

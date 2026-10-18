@@ -1,0 +1,172 @@
+# Failure Case Oracle
+
+Case count: 168
+
+- `001-operation-formal_vault_read.json` -> `operation_not_false:formal_vault_read, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `002-operation-formal_vault_scan.json` -> `operation_not_false:formal_vault_scan, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `003-operation-formal_vault_write.json` -> `operation_not_false:formal_vault_write, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `004-operation-formal_vault_hash.json` -> `operation_not_false:formal_vault_hash, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `005-operation-formal_vault_snapshot.json` -> `operation_not_false:formal_vault_snapshot, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `006-operation-formal_vault_state_check.json` -> `operation_not_false:formal_vault_state_check, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `007-operation-obsidian_sync.json` -> `operation_not_false:obsidian_sync, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `008-operation-commit.json` -> `operation_not_false:commit, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `009-operation-push.json` -> `operation_not_false:push, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `010-operation-promotion.json` -> `operation_not_false:promotion, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `011-operation-dependency_install.json` -> `operation_not_false:dependency_install, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `012-operation-background_service.json` -> `operation_not_false:background_service, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `013-operation-mcp_write_tool.json` -> `operation_not_false:mcp_write_tool, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `014-operation-hooks.json` -> `operation_not_false:hooks, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `015-operation-real_base_files.json` -> `operation_not_false:real_base_files, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `016-operation-production_ui.json` -> `operation_not_false:production_ui, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `017-operation-local_storage_write.json` -> `operation_not_false:local_storage_write, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `018-operation-network_post.json` -> `operation_not_false:network_post, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `019-operation-actual_approval_collection.json` -> `operation_not_false:actual_approval_collection, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `020-operation-actual_user_approval.json` -> `operation_not_false:actual_user_approval, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `021-operation-actual_user_decision_collection.json` -> `operation_not_false:actual_user_decision_collection, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `022-operation-user_approval_inference.json` -> `operation_not_false:user_approval_inference, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `023-operation-real_user_text_storage.json` -> `operation_not_false:real_user_text_storage, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `024-operation-real_user_text_capture.json` -> `operation_not_false:real_user_text_capture, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `025-operation-write_gate_opening.json` -> `operation_not_false:write_gate_opening, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `026-operation-execution_performed.json` -> `operation_not_false:execution_performed, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `027-operation-snapshot_taken.json` -> `operation_not_false:snapshot_taken, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `028-operation-rollback_executed.json` -> `operation_not_false:rollback_executed, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `029-operation-hash_before_collected.json` -> `operation_not_false:hash_before_collected, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `030-operation-hash_after_collected.json` -> `operation_not_false:hash_after_collected, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `031-operation-action_basis_creation.json` -> `operation_not_false:action_basis_creation, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `032-operation-reviewed_knowledge_creation.json` -> `operation_not_false:reviewed_knowledge_creation, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `033-operation-external_notification.json` -> `operation_not_false:external_notification, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `034-operation-shell_command_emitted.json` -> `operation_not_false:shell_command_emitted, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `035-operation-copy_command_emitted.json` -> `operation_not_false:copy_command_emitted, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `036-operation-absolute_vault_path_resolved.json` -> `operation_not_false:absolute_vault_path_resolved, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `037-operation-readiness_gate_promoted_to_execution_permission.json` -> `operation_not_false:readiness_gate_promoted_to_execution_permission, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `038-operation-readiness_gate_used_as_action_basis.json` -> `operation_not_false:readiness_gate_used_as_action_basis, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `039-control-sandbox_only.json` -> `gate_control_mismatch:sandbox_only, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `040-control-read_only_gate.json` -> `gate_control_mismatch:read_only_gate, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `041-control-dry_run_input_only.json` -> `gate_control_mismatch:dry_run_input_only, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `042-control-non_executable.json` -> `gate_control_mismatch:non_executable, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `043-control-operator_must_stop_before_execution.json` -> `gate_control_mismatch:operator_must_stop_before_execution, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `044-control-separate_future_user_confirmation_required.json` -> `gate_control_mismatch:separate_future_user_confirmation_required, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `045-control-separate_future_execution_slice_required.json` -> `gate_control_mismatch:separate_future_execution_slice_required, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `046-control-separate_future_formal_vault_state_check_required.json` -> `gate_control_mismatch:separate_future_formal_vault_state_check_required, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `047-control-validator_is_not_reviewer.json` -> `gate_control_mismatch:validator_is_not_reviewer, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `048-control-product_acceptance_is_not_formal_vault_approval.json` -> `gate_control_mismatch:product_acceptance_is_not_formal_vault_approval, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `049-control-readiness_pass_is_not_execution_permission.json` -> `gate_control_mismatch:readiness_pass_is_not_execution_permission, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `050-control-readiness_gate_is_not_action_basis.json` -> `gate_control_mismatch:readiness_gate_is_not_action_basis, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `051-control-readiness_gate_is_not_reviewed_knowledge.json` -> `gate_control_mismatch:readiness_gate_is_not_reviewed_knowledge, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `052-control-readiness_gate_is_not_evidence_support.json` -> `gate_control_mismatch:readiness_gate_is_not_evidence_support, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `053-control-dirty_state_blocks_execution.json` -> `gate_control_mismatch:dirty_state_blocks_execution, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `054-control-execution_allowed_now.json` -> `gate_control_mismatch:execution_allowed_now, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `055-control-formal_vault_access_allowed_now.json` -> `gate_control_mismatch:formal_vault_access_allowed_now, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `056-control-formal_vault_state_check_allowed_now.json` -> `gate_control_mismatch:formal_vault_state_check_allowed_now, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `057-control-formal_vault_write_allowed_now.json` -> `gate_control_mismatch:formal_vault_write_allowed_now, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `058-control-formal_vault_hash_allowed_now.json` -> `gate_control_mismatch:formal_vault_hash_allowed_now, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `059-control-formal_vault_snapshot_allowed_now.json` -> `gate_control_mismatch:formal_vault_snapshot_allowed_now, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `060-control-user_confirmation_collected_now.json` -> `gate_control_mismatch:user_confirmation_collected_now, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `061-control-actual_user_text_stored.json` -> `gate_control_mismatch:actual_user_text_stored, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `062-control-contains_commands.json` -> `gate_control_mismatch:contains_commands, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `063-control-command_export_enabled.json` -> `gate_control_mismatch:command_export_enabled, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `064-control-copy_paste_command_enabled.json` -> `gate_control_mismatch:copy_paste_command_enabled, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `065-control-absolute_vault_paths_present.json` -> `gate_control_mismatch:absolute_vault_paths_present, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `066-control-sync_commit_push_promotion_allowed.json` -> `gate_control_mismatch:sync_commit_push_promotion_allowed, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `067-control-gate_can_be_replayed.json` -> `gate_control_mismatch:gate_can_be_replayed, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `068-control-gate_result_can_be_used_as_action_basis.json` -> `gate_control_mismatch:gate_result_can_be_used_as_action_basis, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `069-source-input-0-sha-drift.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, source_inputs_mismatch`
+- `070-source-input-1-sha-drift.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, source_inputs_mismatch`
+- `071-source-input-2-sha-drift.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, source_inputs_mismatch`
+- `072-source-input-3-sha-drift.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, source_inputs_mismatch`
+- `073-source-input-4-sha-drift.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, source_inputs_mismatch`
+- `074-source-input-5-sha-drift.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, source_inputs_mismatch`
+- `075-source-input-6-sha-drift.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, source_inputs_mismatch`
+- `076-source-input-7-sha-drift.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, source_inputs_mismatch`
+- `077-source-input-8-sha-drift.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, source_inputs_mismatch`
+- `078-source-status-product-acceptance-report-md-drift.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, source_status_not_met:product-acceptance-report.md, source_statuses_mismatch`
+- `079-source-status-reviewer-report-md-drift.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, source_status_not_met:reviewer-report.md, source_statuses_mismatch`
+- `080-source-status-boundary-audit-md-drift.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, source_status_not_met:boundary-audit.md, source_statuses_mismatch`
+- `081-source-status-next-step-md-drift.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, source_status_not_met:next-step.md, source_statuses_mismatch`
+- `082-source-status-verification-md-drift.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, source_status_not_met:verification.md, source_statuses_mismatch`
+- `083-source-status-source-map-md-drift.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, source_status_not_met:source-map.md, source_statuses_mismatch`
+- `084-p2-30-binding-product_acceptance_status-drift.json` -> `p2_30_binding_mismatch, p2_30_product_acceptance_not_pass, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `085-p2-30-binding-reviewer_status-drift.json` -> `p2_30_binding_mismatch, p2_30_reviewer_not_pass, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `086-p2-30-binding-boundary_status-drift.json` -> `p2_30_binding_mismatch, p2_30_boundary_not_pass, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `087-p2-30-binding-ledger_hash-drift.json` -> `p2_30_binding_mismatch, p2_30_ledger_hash_receipt_mismatch, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `088-p2-30-binding-ledger_receipt_hash-drift.json` -> `p2_30_binding_mismatch, p2_30_ledger_hash_receipt_mismatch, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `089-p2-30-binding-ledger_entry_count-drift.json` -> `p2_30_binding_mismatch, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `090-p2-30-binding-ledger_target_count-drift.json` -> `p2_30_binding_mismatch, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `091-p2-30-binding-ledger_used_as_action_basis-drift.json` -> `p2_30_binding_flag_not_false:ledger_used_as_action_basis, p2_30_binding_mismatch, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `092-p2-30-binding-formal_vault_accessed-drift.json` -> `p2_30_binding_flag_not_false:formal_vault_accessed, p2_30_binding_mismatch, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `093-p2-30-binding-write_performed-drift.json` -> `p2_30_binding_flag_not_false:write_performed, p2_30_binding_mismatch, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `094-p2-30-binding-sync_performed-drift.json` -> `p2_30_binding_flag_not_false:sync_performed, p2_30_binding_mismatch, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `095-p2-30-binding-promotion_performed-drift.json` -> `p2_30_binding_flag_not_false:promotion_performed, p2_30_binding_mismatch, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `096-request-unknown-mode.json` -> `readiness_check_status_mismatch:commands_absent, readiness_check_status_mismatch:dirty_tree_policy, readiness_check_status_mismatch:final_human_go_no_go, readiness_check_status_mismatch:future_formal_vault_state_check, readiness_check_status_mismatch:future_snapshot_and_rollback_plan, readiness_check_status_mismatch:future_user_confirmation, readiness_check_status_mismatch:no_current_execution_permission, readiness_check_status_mismatch:p2_30_ledger_hash_bound, readiness_check_status_mismatch:p2_30_product_pass_present, readiness_check_status_mismatch:source_hashes_current, readiness_gate_hash_mismatch, receipt_gate_result_mismatch, receipt_readiness_gate_hash_mismatch, request_gate_result_mismatch, request_id_mismatch, request_mode_not_allowed`
+- `097-request-ready-result.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, request_gate_result_mismatch`
+- `098-request-actual-confirmation.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, request_flag_not_false:actual_user_confirmation_collected`
+- `099-request-real-user-text-stored.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, request_flag_not_false:actual_user_text_stored`
+- `100-request-formal-vault-state-checked.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, request_flag_not_false:actual_formal_vault_state_checked`
+- `101-request-commands-supplied.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, request_flag_not_false:actual_commands_supplied`
+- `102-request-action-basis.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, request_flag_not_false:requested_action_basis`
+- `103-request-execution-now.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, request_flag_not_false:requested_execution_now`
+- `104-request-not-synthetic.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, request_flag_not_true:synthetic_only`
+- `105-request-command.json` -> `dangerous_value:$.request_envelope.command:absolute_formal_vault_path, dangerous_value:$.request_envelope.command:copy_item, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, request_forbidden_field_nonempty:command`
+- `106-request-absolute-target.json` -> `dangerous_value:$.request_envelope.absolute_target_path:absolute_formal_vault_path, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, request_forbidden_field_nonempty:absolute_target_path`
+- `107-request-real-user-text.json` -> `dangerous_value:$.request_envelope.real_user_text:approve_execution_now, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, request_forbidden_field_nonempty:real_user_text`
+- `108-request-id-real-user-text-rehashed.json` -> `request_id_mismatch`
+- `109-request-id-command-rehashed.json` -> `dangerous_value:$.request_envelope.request_id:promote_py, dangerous_value:$.request_envelope.request_id:python_command, dangerous_value:$.request_envelope.request_id:sync_flag, request_id_mismatch`
+- `110-request-id-approval-now-rehashed.json` -> `dangerous_value:$.request_envelope.request_id:approve_execution_now, request_id_mismatch`
+- `111-request-id-execute-now-rehashed.json` -> `dangerous_value:$.request_envelope.request_id:execute_now_phrase, request_id_mismatch`
+- `112-check-p2_30_product_pass_present-status-drift.json` -> `readiness_check_status_mismatch:p2_30_product_pass_present, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `113-check-p2_30_product_pass_present-collects-now.json` -> `readiness_check_current_slice_collects_not_false:p2_30_product_pass_present, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `114-check-p2_30_ledger_hash_bound-status-drift.json` -> `readiness_check_status_mismatch:p2_30_ledger_hash_bound, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `115-check-p2_30_ledger_hash_bound-collects-now.json` -> `readiness_check_current_slice_collects_not_false:p2_30_ledger_hash_bound, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `116-check-source_hashes_current-status-drift.json` -> `readiness_check_status_mismatch:source_hashes_current, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `117-check-source_hashes_current-collects-now.json` -> `readiness_check_current_slice_collects_not_false:source_hashes_current, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `118-check-no_current_execution_permission-status-drift.json` -> `readiness_check_status_mismatch:no_current_execution_permission, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `119-check-no_current_execution_permission-collects-now.json` -> `readiness_check_current_slice_collects_not_false:no_current_execution_permission, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `120-check-future_user_confirmation-status-drift.json` -> `readiness_check_status_mismatch:future_user_confirmation, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `121-check-future_user_confirmation-collects-now.json` -> `readiness_check_current_slice_collects_not_false:future_user_confirmation, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `122-check-future_formal_vault_state_check-status-drift.json` -> `readiness_check_status_mismatch:future_formal_vault_state_check, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `123-check-future_formal_vault_state_check-collects-now.json` -> `readiness_check_current_slice_collects_not_false:future_formal_vault_state_check, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `124-check-future_snapshot_and_rollback_plan-status-drift.json` -> `readiness_check_status_mismatch:future_snapshot_and_rollback_plan, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `125-check-future_snapshot_and_rollback_plan-collects-now.json` -> `readiness_check_current_slice_collects_not_false:future_snapshot_and_rollback_plan, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `126-check-commands_absent-status-drift.json` -> `readiness_check_status_mismatch:commands_absent, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `127-check-commands_absent-collects-now.json` -> `readiness_check_current_slice_collects_not_false:commands_absent, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `128-check-dirty_tree_policy-status-drift.json` -> `readiness_check_status_mismatch:dirty_tree_policy, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `129-check-dirty_tree_policy-collects-now.json` -> `readiness_check_current_slice_collects_not_false:dirty_tree_policy, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `130-check-final_human_go_no_go-status-drift.json` -> `readiness_check_status_mismatch:final_human_go_no_go, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `131-check-final_human_go_no_go-collects-now.json` -> `readiness_check_current_slice_collects_not_false:final_human_go_no_go, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `132-receipt-record-kind.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, receipt_record_kind_mismatch`
+- `133-receipt-slice-id.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, receipt_slice_id_mismatch`
+- `134-receipt-source-slice.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, receipt_source_slice_mismatch`
+- `135-receipt-gate-result.json` -> `readiness_gate_hash_mismatch, receipt_gate_result_mismatch, receipt_readiness_gate_hash_mismatch`
+- `136-receipt-formal-vault-access.json` -> `readiness_gate_hash_mismatch, receipt_flag_not_false:formal_vault_accessed, receipt_readiness_gate_hash_mismatch`
+- `137-receipt-state-inspected.json` -> `readiness_gate_hash_mismatch, receipt_flag_not_false:formal_vault_state_inspected, receipt_readiness_gate_hash_mismatch`
+- `138-receipt-approval-collected.json` -> `readiness_gate_hash_mismatch, receipt_flag_not_false:approval_collected_now, receipt_readiness_gate_hash_mismatch`
+- `139-receipt-execution-permission.json` -> `readiness_gate_hash_mismatch, receipt_flag_not_false:execution_permission_granted, receipt_readiness_gate_hash_mismatch`
+- `140-receipt-write-performed.json` -> `readiness_gate_hash_mismatch, receipt_flag_not_false:write_performed, receipt_readiness_gate_hash_mismatch`
+- `141-receipt-sync-performed.json` -> `readiness_gate_hash_mismatch, receipt_flag_not_false:sync_performed, receipt_readiness_gate_hash_mismatch`
+- `142-receipt-gate-action-basis.json` -> `readiness_gate_hash_mismatch, receipt_flag_not_false:gate_used_as_action_basis, receipt_readiness_gate_hash_mismatch`
+- `143-receipt-check-count.json` -> `readiness_gate_hash_mismatch, receipt_check_count_mismatch, receipt_readiness_gate_hash_mismatch`
+- `144-receipt-source-count.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, receipt_source_count_mismatch`
+- `145-receipt-non-claims.json` -> `readiness_gate_hash_mismatch, receipt_non_claims_missing, receipt_readiness_gate_hash_mismatch`
+- `146-top-level-unknown-command.json` -> `dangerous_value:$.shell_command:absolute_formal_vault_path, dangerous_value:$.shell_command:copy_item, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, unknown_key:config:shell_command`
+- `147-top-level-unknown-safe.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, unknown_key:config:operator_note`
+- `148-write-scope-drift.json` -> `readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch, write_scope_mismatch`
+- `149-read-only-sources-drift.json` -> `read_only_sources_mismatch, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `150-purpose-drift-rehashed.json` -> `dangerous_value:$.purpose:approved_for_execution, purpose_mismatch`
+- `151-gate-mode-drift-rehashed.json` -> `gate_mode_mismatch`
+- `152-metric-failure-floor-low.json` -> `metric_failure_case_floor_too_low, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `153-metric-check-count-drift.json` -> `metric_readiness_checks_mismatch, readiness_gate_hash_mismatch, receipt_readiness_gate_hash_mismatch`
+- `154-hash-drift.json` -> `readiness_gate_hash_mismatch`
+- `155-receipt-hash-drift.json` -> `receipt_readiness_gate_hash_mismatch`
+- `156-prototype-markdown-command.json` -> `prototype_text_dangerous:00 Readiness Gate Home.md:copy_item, prototype_text_dangerous:00 Readiness Gate Home.md:absolute_formal_vault_path`
+- `157-prototype-markdown-ready.json` -> `prototype_text_dangerous:01 Gate Contract.md:ready_to_execute`
+- `158-prototype-markdown-permission.json` -> `prototype_text_dangerous:02 Readiness Checks.md:execution_permission_granted, prototype_text_authority_confusion:02 Readiness Checks.md:execution_permission`
+- `159-prototype-markdown-permission-yes.json` -> `prototype_text_authority_confusion:02 Readiness Checks.md:execution_permission_yes`
+- `160-prototype-markdown-approval-yes.json` -> `prototype_text_authority_confusion:03 Non Permission Receipt.md:formal_vault_approval_yes`
+- `161-prototype-markdown-action-basis-yes.json` -> `prototype_text_authority_confusion:05 Reviewer Packet.md:action_basis_yes`
+- `162-prototype-receipt-command.json` -> `dangerous_value:$.prototype_receipt.shell_command:absolute_formal_vault_path, dangerous_value:$.prototype_receipt.shell_command:copy_item, unknown_key:prototype_receipt:shell_command`
+- `163-prototype-receipt-hash.json` -> `prototype_receipt_gate_hash_mismatch`
+- `164-prototype-receipt-slice.json` -> `prototype_receipt_slice_id_mismatch`
+- `165-prototype-receipt-source.json` -> `prototype_receipt_source_slice_mismatch`
+- `166-prototype-receipt-permission.json` -> `prototype_receipt_flag_not_false:execution_permission_granted`
+- `167-prototype-receipt-action-basis.json` -> `prototype_receipt_flag_not_false:gate_used_as_action_basis`
+- `168-prototype-receipt-non-claims.json` -> `prototype_receipt_non_claims_missing`

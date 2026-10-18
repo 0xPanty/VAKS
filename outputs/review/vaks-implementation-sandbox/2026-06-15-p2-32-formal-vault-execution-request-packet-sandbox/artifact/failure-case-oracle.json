@@ -1,0 +1,949 @@
+{
+  "record_kind": "sandbox_failure_case_oracle",
+  "slice_id": "2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox",
+  "case_count": 189,
+  "cases": {
+    "001-operation-formal_vault_read.json": [
+      "operation_not_false:formal_vault_read",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "002-operation-formal_vault_scan.json": [
+      "operation_not_false:formal_vault_scan",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "003-operation-formal_vault_write.json": [
+      "operation_not_false:formal_vault_write",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "004-operation-formal_vault_hash.json": [
+      "operation_not_false:formal_vault_hash",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "005-operation-formal_vault_snapshot.json": [
+      "operation_not_false:formal_vault_snapshot",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "006-operation-formal_vault_state_check.json": [
+      "operation_not_false:formal_vault_state_check",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "007-operation-obsidian_sync.json": [
+      "operation_not_false:obsidian_sync",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "008-operation-commit.json": [
+      "operation_not_false:commit",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "009-operation-push.json": [
+      "operation_not_false:push",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "010-operation-promotion.json": [
+      "operation_not_false:promotion",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "011-operation-dependency_install.json": [
+      "operation_not_false:dependency_install",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "012-operation-background_service.json": [
+      "operation_not_false:background_service",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "013-operation-mcp_write_tool.json": [
+      "operation_not_false:mcp_write_tool",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "014-operation-hooks.json": [
+      "operation_not_false:hooks",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "015-operation-real_base_files.json": [
+      "operation_not_false:real_base_files",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "016-operation-production_ui.json": [
+      "operation_not_false:production_ui",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "017-operation-local_storage_write.json": [
+      "operation_not_false:local_storage_write",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "018-operation-network_post.json": [
+      "operation_not_false:network_post",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "019-operation-actual_approval_collection.json": [
+      "operation_not_false:actual_approval_collection",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "020-operation-actual_user_approval.json": [
+      "operation_not_false:actual_user_approval",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "021-operation-actual_user_decision_collection.json": [
+      "operation_not_false:actual_user_decision_collection",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "022-operation-user_approval_inference.json": [
+      "operation_not_false:user_approval_inference",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "023-operation-real_user_text_storage.json": [
+      "operation_not_false:real_user_text_storage",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "024-operation-real_user_text_capture.json": [
+      "operation_not_false:real_user_text_capture",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "025-operation-write_gate_opening.json": [
+      "operation_not_false:write_gate_opening",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "026-operation-execution_performed.json": [
+      "operation_not_false:execution_performed",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "027-operation-snapshot_taken.json": [
+      "operation_not_false:snapshot_taken",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "028-operation-rollback_executed.json": [
+      "operation_not_false:rollback_executed",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "029-operation-hash_before_collected.json": [
+      "operation_not_false:hash_before_collected",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "030-operation-hash_after_collected.json": [
+      "operation_not_false:hash_after_collected",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "031-operation-action_basis_creation.json": [
+      "operation_not_false:action_basis_creation",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "032-operation-reviewed_knowledge_creation.json": [
+      "operation_not_false:reviewed_knowledge_creation",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "033-operation-external_notification.json": [
+      "operation_not_false:external_notification",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "034-operation-shell_command_emitted.json": [
+      "operation_not_false:shell_command_emitted",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "035-operation-copy_command_emitted.json": [
+      "operation_not_false:copy_command_emitted",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "036-operation-absolute_vault_path_resolved.json": [
+      "operation_not_false:absolute_vault_path_resolved",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "037-operation-request_packet_promoted_to_execution_permission.json": [
+      "operation_not_false:request_packet_promoted_to_execution_permission",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "038-operation-request_packet_used_as_action_basis.json": [
+      "operation_not_false:request_packet_used_as_action_basis",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "039-control-sandbox_only.json": [
+      "packet_control_mismatch:sandbox_only",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "040-control-synthetic_packet_only.json": [
+      "packet_control_mismatch:synthetic_packet_only",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "041-control-readiness_gate_screenable.json": [
+      "packet_control_mismatch:readiness_gate_screenable",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "042-control-non_executable.json": [
+      "packet_control_mismatch:non_executable",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "043-control-no_real_user_text.json": [
+      "packet_control_mismatch:no_real_user_text",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "044-control-no_actual_approval.json": [
+      "packet_control_mismatch:no_actual_approval",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "045-control-no_formal_vault_paths.json": [
+      "packet_control_mismatch:no_formal_vault_paths",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "046-control-no_commands.json": [
+      "packet_control_mismatch:no_commands",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "047-control-operator_must_stop_before_execution.json": [
+      "packet_control_mismatch:operator_must_stop_before_execution",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "048-control-separate_future_user_confirmation_required.json": [
+      "packet_control_mismatch:separate_future_user_confirmation_required",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "049-control-separate_future_execution_slice_required.json": [
+      "packet_control_mismatch:separate_future_execution_slice_required",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "050-control-separate_future_formal_vault_state_check_required.json": [
+      "packet_control_mismatch:separate_future_formal_vault_state_check_required",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "051-control-product_acceptance_is_not_formal_vault_approval.json": [
+      "packet_control_mismatch:product_acceptance_is_not_formal_vault_approval",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "052-control-request_packet_is_not_execution_permission.json": [
+      "packet_control_mismatch:request_packet_is_not_execution_permission",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "053-control-request_packet_is_not_action_basis.json": [
+      "packet_control_mismatch:request_packet_is_not_action_basis",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "054-control-request_packet_is_not_reviewed_knowledge.json": [
+      "packet_control_mismatch:request_packet_is_not_reviewed_knowledge",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "055-control-request_packet_is_not_evidence_support.json": [
+      "packet_control_mismatch:request_packet_is_not_evidence_support",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "056-control-execution_allowed_now.json": [
+      "packet_control_mismatch:execution_allowed_now",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "057-control-formal_vault_access_allowed_now.json": [
+      "packet_control_mismatch:formal_vault_access_allowed_now",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "058-control-formal_vault_write_allowed_now.json": [
+      "packet_control_mismatch:formal_vault_write_allowed_now",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "059-control-formal_vault_hash_allowed_now.json": [
+      "packet_control_mismatch:formal_vault_hash_allowed_now",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "060-control-formal_vault_snapshot_allowed_now.json": [
+      "packet_control_mismatch:formal_vault_snapshot_allowed_now",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "061-control-user_confirmation_collected_now.json": [
+      "packet_control_mismatch:user_confirmation_collected_now",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "062-control-actual_user_text_stored.json": [
+      "packet_control_mismatch:actual_user_text_stored",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "063-control-contains_commands.json": [
+      "packet_control_mismatch:contains_commands",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "064-control-absolute_vault_paths_present.json": [
+      "packet_control_mismatch:absolute_vault_paths_present",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "065-control-sync_commit_push_promotion_allowed.json": [
+      "packet_control_mismatch:sync_commit_push_promotion_allowed",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "066-control-packet_can_be_replayed.json": [
+      "packet_control_mismatch:packet_can_be_replayed",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "067-control-packet_result_can_be_used_as_action_basis.json": [
+      "packet_control_mismatch:packet_result_can_be_used_as_action_basis",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "068-source-input-0-sha-drift.json": [
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch",
+      "source_inputs_mismatch"
+    ],
+    "069-source-input-1-sha-drift.json": [
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch",
+      "source_inputs_mismatch"
+    ],
+    "070-source-input-2-sha-drift.json": [
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch",
+      "source_inputs_mismatch"
+    ],
+    "071-source-input-3-sha-drift.json": [
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch",
+      "source_inputs_mismatch"
+    ],
+    "072-source-input-4-sha-drift.json": [
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch",
+      "source_inputs_mismatch"
+    ],
+    "073-source-input-5-sha-drift.json": [
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch",
+      "source_inputs_mismatch"
+    ],
+    "074-source-input-6-sha-drift.json": [
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch",
+      "source_inputs_mismatch"
+    ],
+    "075-source-input-7-sha-drift.json": [
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch",
+      "source_inputs_mismatch"
+    ],
+    "076-source-input-8-sha-drift.json": [
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch",
+      "source_inputs_mismatch"
+    ],
+    "077-source-status-product-acceptance-report-md-drift.json": [
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch",
+      "source_status_not_met:product-acceptance-report.md",
+      "source_statuses_mismatch"
+    ],
+    "078-source-status-reviewer-report-md-drift.json": [
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch",
+      "source_status_not_met:reviewer-report.md",
+      "source_statuses_mismatch"
+    ],
+    "079-source-status-boundary-audit-md-drift.json": [
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch",
+      "source_status_not_met:boundary-audit.md",
+      "source_statuses_mismatch"
+    ],
+    "080-source-status-next-step-md-drift.json": [
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch",
+      "source_status_not_met:next-step.md",
+      "source_statuses_mismatch"
+    ],
+    "081-source-status-verification-md-drift.json": [
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch",
+      "source_status_not_met:verification.md",
+      "source_statuses_mismatch"
+    ],
+    "082-source-status-source-map-md-drift.json": [
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch",
+      "source_status_not_met:source-map.md",
+      "source_statuses_mismatch"
+    ],
+    "083-p2-31-binding-product_acceptance_status-drift.json": [
+      "p2_31_binding_mismatch",
+      "p2_31_product_acceptance_not_pass",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "084-p2-31-binding-reviewer_status-drift.json": [
+      "p2_31_binding_mismatch",
+      "p2_31_reviewer_not_pass",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "085-p2-31-binding-boundary_status-drift.json": [
+      "p2_31_binding_mismatch",
+      "p2_31_boundary_not_pass",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "086-p2-31-binding-readiness_gate_hash-drift.json": [
+      "p2_31_binding_mismatch",
+      "p2_31_gate_hash_receipt_mismatch",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "087-p2-31-binding-readiness_receipt_hash-drift.json": [
+      "p2_31_binding_mismatch",
+      "p2_31_gate_hash_receipt_mismatch",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "088-p2-31-binding-readiness_check_count-drift.json": [
+      "p2_31_binding_mismatch",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "089-p2-31-binding-readiness_source_count-drift.json": [
+      "p2_31_binding_mismatch",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "090-p2-31-binding-execution_permission_granted-drift.json": [
+      "p2_31_binding_flag_not_false:execution_permission_granted",
+      "p2_31_binding_mismatch",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "091-p2-31-binding-gate_used_as_action_basis-drift.json": [
+      "p2_31_binding_flag_not_false:gate_used_as_action_basis",
+      "p2_31_binding_mismatch",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "092-p2-31-binding-formal_vault_accessed-drift.json": [
+      "p2_31_binding_flag_not_false:formal_vault_accessed",
+      "p2_31_binding_mismatch",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "093-p2-31-binding-write_performed-drift.json": [
+      "p2_31_binding_flag_not_false:write_performed",
+      "p2_31_binding_mismatch",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "094-p2-31-binding-sync_performed-drift.json": [
+      "p2_31_binding_flag_not_false:sync_performed",
+      "p2_31_binding_mismatch",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "095-p2-31-binding-promotion_performed-drift.json": [
+      "p2_31_binding_flag_not_false:promotion_performed",
+      "p2_31_binding_mismatch",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "096-schema-packet_id-not-required.json": [
+      "packet_schema_flag_mismatch:packet_id",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "097-schema-packet_id-real-content.json": [
+      "packet_schema_flag_mismatch:packet_id",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "098-schema-packet_mode-not-required.json": [
+      "packet_schema_flag_mismatch:packet_mode",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "099-schema-packet_mode-real-content.json": [
+      "packet_schema_flag_mismatch:packet_mode",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "100-schema-synthetic_confirmation_reference-not-required.json": [
+      "packet_schema_flag_mismatch:synthetic_confirmation_reference",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "101-schema-synthetic_confirmation_reference-real-content.json": [
+      "packet_schema_flag_mismatch:synthetic_confirmation_reference",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "102-schema-operator_decision_reference-not-required.json": [
+      "packet_schema_flag_mismatch:operator_decision_reference",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "103-schema-operator_decision_reference-real-content.json": [
+      "packet_schema_flag_mismatch:operator_decision_reference",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "104-schema-scope_reference-not-required.json": [
+      "packet_schema_flag_mismatch:scope_reference",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "105-schema-scope_reference-real-content.json": [
+      "packet_schema_flag_mismatch:scope_reference",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "106-schema-target_manifest_reference-not-required.json": [
+      "packet_schema_flag_mismatch:target_manifest_reference",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "107-schema-target_manifest_reference-real-content.json": [
+      "packet_schema_flag_mismatch:target_manifest_reference",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "108-schema-readiness_gate_projection-not-required.json": [
+      "packet_schema_flag_mismatch:readiness_gate_projection",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "109-schema-readiness_gate_projection-real-content.json": [
+      "packet_schema_flag_mismatch:readiness_gate_projection",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "110-schema-non_claims-not-required.json": [
+      "packet_schema_flag_mismatch:non_claims",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "111-schema-non_claims-real-content.json": [
+      "packet_schema_flag_mismatch:non_claims",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "112-packet-id-real-text-rehashed.json": [
+      "packet_id_mismatch"
+    ],
+    "113-packet-id-command-rehashed.json": [
+      "dangerous_value:$.request_packet.packet_id:promote_py",
+      "dangerous_value:$.request_packet.packet_id:python_command",
+      "dangerous_value:$.request_packet.packet_id:sync_flag",
+      "packet_id_mismatch"
+    ],
+    "114-packet-mode-drift.json": [
+      "packet_mode_mismatch",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "115-packet-result-ready.json": [
+      "packet_result_mismatch",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "116-packet-not-synthetic.json": [
+      "packet_flag_not_true:synthetic_only",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "117-packet-actual-confirmation.json": [
+      "packet_flag_not_false:actual_user_confirmation_collected",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "118-packet-real-text-stored.json": [
+      "packet_flag_not_false:actual_user_text_stored",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "119-packet-formal-vault-state-checked.json": [
+      "packet_flag_not_false:actual_formal_vault_state_checked",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "120-packet-commands-supplied.json": [
+      "packet_flag_not_false:actual_commands_supplied",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "121-packet-execution-now.json": [
+      "packet_flag_not_false:requested_execution_now",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "122-packet-action-basis.json": [
+      "packet_flag_not_false:requested_action_basis",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "123-packet-actual-user-text.json": [
+      "dangerous_value:$.request_packet.actual_user_text:approve_execution_now",
+      "dangerous_value:$.request_packet.actual_user_text:real_user_text_marker",
+      "packet_forbidden_field_nonempty:actual_user_text",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "124-packet-command.json": [
+      "dangerous_value:$.request_packet.command:absolute_formal_vault_path",
+      "dangerous_value:$.request_packet.command:copy_item",
+      "packet_forbidden_field_nonempty:command",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "125-packet-absolute-path.json": [
+      "dangerous_value:$.request_packet.absolute_target_path:absolute_formal_vault_path",
+      "packet_forbidden_field_nonempty:absolute_target_path",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "126-packet-approval-text.json": [
+      "dangerous_value:$.request_packet.approval_text:approve_execution_now",
+      "packet_forbidden_field_nonempty:approval_text",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "127-packet-non-claims.json": [
+      "packet_non_claims_missing",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "128-projection-target-slice.json": [
+      "projection_target_gate_slice_mismatch",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "129-projection-target-version.json": [
+      "projection_target_gate_version_mismatch",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "130-projection-request-mode.json": [
+      "projection_target_request_mode_mismatch",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "131-projection-request-id-command.json": [
+      "dangerous_value:$.readiness_gate_projection.projected_request_id:promote_py",
+      "dangerous_value:$.readiness_gate_projection.projected_request_id:python_command",
+      "dangerous_value:$.readiness_gate_projection.projected_request_id:sync_flag",
+      "projection_request_id_mismatch",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "132-projection-gate-result-ready.json": [
+      "projection_gate_result_mismatch",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "133-projection-not-screenable.json": [
+      "projection_flag_not_true:screenable_by_p2_31",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "134-projection-is-submission.json": [
+      "projection_flag_not_true:projection_is_not_submission",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "135-projection-collects-approval.json": [
+      "projection_flag_not_true:projection_collects_no_approval",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "136-projection-contains-command.json": [
+      "projection_flag_not_true:projection_contains_no_commands",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "137-projection-contains-path.json": [
+      "projection_flag_not_true:projection_contains_no_formal_vault_paths",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "138-receipt-record-kind.json": [
+      "receipt_record_kind_mismatch",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "139-receipt-slice-id.json": [
+      "receipt_request_packet_hash_mismatch",
+      "receipt_slice_id_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "140-receipt-source-slice.json": [
+      "receipt_request_packet_hash_mismatch",
+      "receipt_source_slice_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "141-receipt-packet-result.json": [
+      "receipt_packet_result_mismatch",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "142-receipt-formal-vault-access.json": [
+      "receipt_flag_not_false:formal_vault_accessed",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "143-receipt-state-inspected.json": [
+      "receipt_flag_not_false:formal_vault_state_inspected",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "144-receipt-approval-collected.json": [
+      "receipt_flag_not_false:approval_collected_now",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "145-receipt-real-user-input.json": [
+      "receipt_flag_not_false:actual_user_input_used",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "146-receipt-real-user-text.json": [
+      "receipt_flag_not_false:real_user_text_stored",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "147-receipt-execution-permission.json": [
+      "receipt_flag_not_false:execution_permission_granted",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "148-receipt-write-performed.json": [
+      "receipt_flag_not_false:write_performed",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "149-receipt-sync-performed.json": [
+      "receipt_flag_not_false:sync_performed",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "150-receipt-submitted-to-gate.json": [
+      "receipt_flag_not_false:packet_submitted_to_gate",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "151-receipt-action-basis.json": [
+      "receipt_flag_not_false:packet_used_as_action_basis",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "152-receipt-field-count.json": [
+      "receipt_field_count_mismatch",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "153-receipt-source-count.json": [
+      "receipt_request_packet_hash_mismatch",
+      "receipt_source_count_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "154-receipt-hash.json": [
+      "receipt_request_packet_hash_mismatch"
+    ],
+    "155-receipt-non-claims.json": [
+      "receipt_non_claims_missing",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "156-top-level-unknown-command.json": [
+      "dangerous_value:$.shell_command:absolute_formal_vault_path",
+      "dangerous_value:$.shell_command:copy_item",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch",
+      "unknown_key:config:shell_command"
+    ],
+    "157-top-level-unknown-safe.json": [
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch",
+      "unknown_key:config:operator_note"
+    ],
+    "158-write-scope-drift.json": [
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch",
+      "write_scope_mismatch"
+    ],
+    "159-read-only-sources-drift.json": [
+      "read_only_sources_mismatch",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "160-purpose-drift-rehashed.json": [
+      "dangerous_value:$.purpose:approved_for_execution",
+      "purpose_mismatch"
+    ],
+    "161-packet-mode-top-level-drift.json": [
+      "packet_id_mismatch",
+      "packet_mode_mismatch",
+      "packet_mode_not_allowed",
+      "packet_operator_decision_reference_mismatch",
+      "packet_result_mismatch",
+      "packet_synthetic_confirmation_reference_mismatch",
+      "projection_gate_result_mismatch",
+      "projection_request_id_mismatch",
+      "projection_target_request_mode_mismatch",
+      "receipt_packet_result_mismatch",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "162-metric-failure-floor-low.json": [
+      "metric_failure_case_floor_too_low",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "163-metric-field-count-drift.json": [
+      "metric_packet_fields_mismatch",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "164-metric-manual-probes-drift.json": [
+      "metric_manual_negative_probes_mismatch",
+      "receipt_request_packet_hash_mismatch",
+      "request_packet_hash_mismatch"
+    ],
+    "165-hash-drift.json": [
+      "request_packet_hash_mismatch"
+    ],
+    "166-prototype-markdown-command.json": [
+      "prototype_text_dangerous:00 Request Packet Home.md:copy_item",
+      "prototype_text_dangerous:00 Request Packet Home.md:absolute_formal_vault_path"
+    ],
+    "167-prototype-markdown-ready.json": [
+      "prototype_text_dangerous:01 Packet Contract.md:ready_to_execute"
+    ],
+    "168-prototype-markdown-approval-collected.json": [
+      "prototype_text_authority_confusion:03 Non Submission Receipt.md:approval_collected_yes"
+    ],
+    "169-prototype-markdown-packet-submitted.json": [
+      "prototype_text_authority_confusion:05 Reviewer Packet.md:packet_submitted_yes"
+    ],
+    "170-prototype-markdown-permission-yes.json": [
+      "prototype_text_authority_confusion:02 Packet Fields.md:execution_permission_yes"
+    ],
+    "171-prototype-markdown-approval-yes.json": [
+      "prototype_text_authority_confusion:02 Packet Fields.md:formal_vault_approval_yes"
+    ],
+    "172-prototype-markdown-action-basis-yes.json": [
+      "prototype_text_authority_confusion:02 Packet Fields.md:action_basis_yes"
+    ],
+    "173-prototype-markdown-real-user-text.json": [
+      "prototype_text_dangerous:02 Packet Fields.md:approve_execution_now",
+      "prototype_text_dangerous:02 Packet Fields.md:real_user_text_marker"
+    ],
+    "174-prototype-markdown-authorizes-execution.json": [
+      "prototype_text_authority_confusion:01 Packet Contract.md:authorizes_execution"
+    ],
+    "175-prototype-markdown-may-execute.json": [
+      "prototype_text_authority_confusion:04 Stop Conditions.md:may_execute"
+    ],
+    "176-prototype-markdown-permission-collected.json": [
+      "prototype_text_authority_confusion:03 Non Submission Receipt.md:permission_collected"
+    ],
+    "177-prototype-markdown-approval-obtained.json": [
+      "prototype_text_authority_confusion:03 Non Submission Receipt.md:approval_obtained"
+    ],
+    "178-prototype-html-command.json": [
+      "prototype_text_dangerous:request-packet-inspector.html:copy_item",
+      "prototype_text_dangerous:request-packet-inspector.html:absolute_formal_vault_path",
+      "html_forbidden_token:copy-item"
+    ],
+    "179-prototype-html-missing-attrs.json": [
+      "html_missing_attr:data-sandbox-only=\"true\"",
+      "html_missing_attr:data-request-packet-only=\"true\"",
+      "html_missing_attr:data-non-executable=\"true\"",
+      "html_missing_attr:data-no-formal-vault-access=\"true\"",
+      "html_missing_attr:data-no-write=\"true\"",
+      "html_missing_attr:data-no-sync=\"true\"",
+      "html_missing_attr:data-no-authority=\"true\"",
+      "html_missing_attr:data-no-permission=\"true\"",
+      "html_missing_attr:data-no-real-user-text=\"true\""
+    ],
+    "180-prototype-html-submit-button.json": [
+      "prototype_text_authority_confusion:request-packet-inspector.html:submit_packet"
+    ],
+    "181-prototype-html-authorizes-execution.json": [
+      "prototype_text_authority_confusion:request-packet-inspector.html:authorizes_execution"
+    ],
+    "182-prototype-receipt-command.json": [
+      "dangerous_value:$.prototype_receipt.shell_command:absolute_formal_vault_path",
+      "dangerous_value:$.prototype_receipt.shell_command:copy_item",
+      "unknown_key:prototype_receipt:shell_command"
+    ],
+    "183-prototype-receipt-hash.json": [
+      "prototype_receipt_packet_hash_mismatch"
+    ],
+    "184-prototype-receipt-slice.json": [
+      "prototype_receipt_slice_id_mismatch"
+    ],
+    "185-prototype-receipt-source.json": [
+      "prototype_receipt_source_slice_mismatch"
+    ],
+    "186-prototype-receipt-permission.json": [
+      "prototype_receipt_flag_not_false:execution_permission_granted"
+    ],
+    "187-prototype-receipt-submitted.json": [
+      "prototype_receipt_flag_not_false:packet_submitted_to_gate"
+    ],
+    "188-prototype-receipt-action-basis.json": [
+      "prototype_receipt_flag_not_false:packet_used_as_action_basis"
+    ],
+    "189-prototype-receipt-non-claims.json": [
+      "prototype_receipt_non_claims_missing"
+    ]
+  }
+}

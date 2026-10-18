@@ -1,0 +1,64 @@
+{
+  "record_kind": "video_acquisition_ledger",
+  "source_id": "bilibili-BV1tNLG6pEJJ",
+  "source_url": "https://www.bilibili.com/video/BV1tNLG6pEJJ/",
+  "created_at": "2026-06-13 20:33:04 +08:00",
+  "boundary": {
+    "access": "public",
+    "cookies_used": false,
+    "cloud_apis_used": false,
+    "private_favorites_or_member_content_used": false,
+    "candidate_only": true,
+    "action_basis_allowed": false,
+    "truth_mutation_allowed": false
+  },
+  "steps": [
+    {
+      "step": "public_metadata_probe",
+      "status": "ok",
+      "evidence": "Bilibili public view API returned title, owner, aid, cid, duration, pubdate."
+    },
+    {
+      "step": "public_subtitle_probe",
+      "status": "no_public_subtitle",
+      "evidence": "player/v2 returned need_login_subtitle=true and no public subtitle entries."
+    },
+    {
+      "step": "yt_dlp_probe",
+      "status": "failed_without_cookies",
+      "evidence": "python -m yt_dlp metadata probe hit Bilibili HTTP 412; no cookie fallback used."
+    },
+    {
+      "step": "public_playurl_probe",
+      "status": "ok",
+      "evidence": "x/player/wbi/playurl returned DASH audio streams; selected audio id 30280."
+    },
+    {
+      "step": "audio_download",
+      "status": "ok",
+      "evidence": "Downloaded public DASH audio to scratch with Bilibili referer/user-agent."
+    },
+    {
+      "step": "ffmpeg_convert",
+      "status": "ok",
+      "evidence": "Converted m4s audio to wav locally."
+    },
+    {
+      "step": "local_asr",
+      "status": "ok",
+      "evidence": "openai-whisper small, language Chinese, device cuda; generated txt/srt/vtt/tsv/json."
+    },
+    {
+      "step": "project_visible_artifacts",
+      "status": "ok",
+      "evidence": "Saved transcript, segments, metadata, and ledger under raw/videos/2026-06-13-bilibili-BV1tNLG6pEJJ-book-note-workflow-source/."
+    },
+    {
+      "step": "scratch_media_cleanup",
+      "status": "ok",
+      "evidence": "finalize-video-intake.ps1 -DeleteScratchMedia deleted scratch audio.m4s, audio.wav, and playurl.json after Obsidian sync hash verification."
+    }
+  ],
+  "scratch_root": "C:\\Users\\Administrator\\.codex\\video-research\\2026-06-13-bilibili-BV1tNLG6pEJJ",
+  "artifact_root": "raw/videos/2026-06-13-bilibili-BV1tNLG6pEJJ-book-note-workflow-source"
+}

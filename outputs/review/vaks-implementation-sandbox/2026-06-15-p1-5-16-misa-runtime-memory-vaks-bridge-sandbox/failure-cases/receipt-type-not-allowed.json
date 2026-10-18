@@ -1,0 +1,24 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "receipt-type-not-allowed",
+  "expected_valid": false,
+  "expected_codes": ["MB_RECEIPT_TYPE_NOT_ALLOWED"],
+  "patch": {
+    "writeback": {
+      "operation_receipt_ref": "fixtures/bad/receipt-feedback-only.json",
+      "records": [
+        {
+          "id": "candidate-not-allowed-by-receipt",
+          "ref": "fixtures/writeback/candidate-signal.json",
+          "record_type": "candidate_signal",
+          "receipt_id": "mb-receipt-feedback-only",
+          "candidate_signal_promotes": false,
+          "writeback_direct_to_reviewed": false
+        }
+      ]
+    },
+    "action_readiness": {
+      "operation_receipt_ref": "fixtures/bad/receipt-feedback-only.json"
+    }
+  }
+}

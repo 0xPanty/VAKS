@@ -1,0 +1,27 @@
+{
+  "scenario_id": "POS-01-exact-clean-prewrite-ready",
+  "description": "Exact approval fixture, clean hash preflight, rehearsal present, boundary passed.",
+  "user_text": "I explicitly approve p2-75 old-file status-only normalization: apply the 75 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only. Do not edit body content, artifacts, tools, templates, wiki truth layers, main architecture docs, README, Obsidian vault, commit, push, or sync.",
+  "expected_gate_state": "ready_for_prewrite_confirmation",
+  "result": {
+    "scenario_id": "POS-01-exact-clean-prewrite-ready",
+    "description": "Exact approval fixture, clean hash preflight, rehearsal present, boundary passed.",
+    "approval": {
+      "matched_exact_phrase": true,
+      "approval_class": "exact_p2_75_approval",
+      "fixture_match_is_user_approval": false
+    },
+    "hash_match_count": 75,
+    "hash_target_count": 75,
+    "hash_clean": true,
+    "rehearsal_ok": true,
+    "boundary_ok": true,
+    "blockers": [],
+    "gate_state": "ready_for_prewrite_confirmation",
+    "ready_for_prewrite_confirmation": true,
+    "executor_write_allowed_now": false,
+    "old_slice_writes_applied": 0,
+    "requires_stop_before_write": true,
+    "fixture_match_is_user_approval": false
+  }
+}

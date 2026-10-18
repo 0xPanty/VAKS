@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "action-mode-gate-missing",
+  "expected_valid": false,
+  "expected_codes": ["US_ACTION_MODE_GATE_MISSING"],
+  "patch": {"search_surface": {"action_mode_requires": ["context_pack"]}}
+}

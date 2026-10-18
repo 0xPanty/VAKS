@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "context-pack-missing-fixture",
+  "expected_valid": false,
+  "expected_codes": ["MB_FIXTURE_PATH_MISSING"],
+  "patch": {"context_adapter": {"context_pack_refs": ["fixtures/context-packs/missing.json"]}}
+}

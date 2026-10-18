@@ -1,0 +1,15 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "anchors-missing",
+  "expected_valid": false,
+  "expected_codes": ["RP_ANCHORS_MISSING"],
+  "patch": {
+    "anchors": {
+      "source_hash_on_anchors": true,
+      "page_refs": [],
+      "timestamp_refs": [],
+      "region_refs": [],
+      "url_refs": []
+    }
+  }
+}

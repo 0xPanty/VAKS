@@ -1,0 +1,49 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "interneto/interneto.github.io",
+  "source_url": "https://github.com/interneto/interneto.github.io",
+  "checked_commit": "9ff6e8efe2a686052d844d9d6028baa7b9469060",
+  "checked_at": "2026-06-11",
+  "inspection_method": "shallow git clone plus README, CLAUDE.md, Astro content schema, data/catalog files, toolbox installer scripts, package metadata, and deploy/runtime notes",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "resource-directory-purpose",
+      "why": "Describes a resource discovery and curation platform with categories, link map, compatibility toolbox, posts, and docs."
+    },
+    {
+      "path": "CLAUDE.md",
+      "kind": "agent-facing-repo-map",
+      "why": "Explains commands, CI, build-time scripts vs browser scripts, content collections, toolbox data, routes, layouts, and styling."
+    },
+    {
+      "path": "src/content.config.ts",
+      "kind": "content-collection-schema",
+      "why": "Defines categories and posts collections with explicit schemas over Markdown/MDX."
+    },
+    {
+      "path": "scripts/ and scripts/config/categories.js",
+      "kind": "build-time-data-conversion",
+      "why": "Contains conversion, markdown lint, icon download, SVG optimization, and category config scripts."
+    },
+    {
+      "path": "src/scripts/toolbox-installer/web-directory.ts",
+      "kind": "client-side-directory-filtering",
+      "why": "Sanitizes tags, resolves icons, builds fallback search links, filters entries, and reports counts."
+    },
+    {
+      "path": "public/pkgs/* and src/data/*",
+      "kind": "static-catalog-data",
+      "why": "Stores package/link catalog data consumed by interactive directory and toolbox pages."
+    }
+  ],
+  "known_limits": [
+    "This is a resource directory, not an evidence-reviewed knowledge base.",
+    "Toolbox command generation and package lists must not be used as VAKS action basis.",
+    "Loose schemas and generated category Markdown require explicit provenance if adapted."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

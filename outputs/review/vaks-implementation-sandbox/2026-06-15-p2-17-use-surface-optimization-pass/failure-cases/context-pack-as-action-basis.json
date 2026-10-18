@@ -1,0 +1,8 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "context-pack-as-action-basis",
+  "expected_valid": false,
+  "expected_codes": ["US_CONTEXT_PACK_AS_ACTION_BASIS"],
+  "allowed_extra_codes": ["US_AUTHORITY_CONFUSION"],
+  "patch": {"search_surface": {"context_pack_is_action_basis": true}}
+}

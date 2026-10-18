@@ -1,0 +1,1 @@
+{"extends": "fixtures/valid-bases-cockpit.json", "scenario_id": "commit-or-push", "expected_valid": false, "expected_codes": ["BC_RUNTIME_OR_SYNC_FORBIDDEN"], "patch": {"scope": {"commit_or_push": true}}}

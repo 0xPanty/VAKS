@@ -1,0 +1,1 @@
+{"case_id":"protected-path-target","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/scope/write_targets/0","value":"templates/product-workflow.md"}]}

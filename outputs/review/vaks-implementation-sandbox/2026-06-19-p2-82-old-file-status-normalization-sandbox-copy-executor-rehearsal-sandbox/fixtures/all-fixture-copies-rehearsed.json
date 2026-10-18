@@ -1,0 +1,9 @@
+{
+  "fixture_id": "all-fixture-copies-rehearsed",
+  "expected": {
+    "fixture_copy_count": 75,
+    "fixture_apply_write_count": 75,
+    "fixture_rollback_write_count": 75,
+    "rehearsal_failure_count": 0
+  }
+}

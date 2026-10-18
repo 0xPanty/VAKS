@@ -1,0 +1,38 @@
+{
+  "record_kind": "old_file_normalization_user_decision_packet_failure_cases",
+  "slice_id": "2026-06-19-p2-88-old-file-normalization-user-decision-packet-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "P2-88-FAIL-01-missing-exact-approval-phrase",
+      "must_fail_when": "The decision packet omits or alters the exact p2-75 approval phrase."
+    },
+    {
+      "case_id": "P2-88-FAIL-02-generic-language-treated-as-approval",
+      "must_fail_when": "Generic language such as continue, go ahead, or all done is treated as approval."
+    },
+    {
+      "case_id": "P2-88-FAIL-03-preview-count-not-75",
+      "must_fail_when": "The packet does not carry the 75-operation p2-87 preview evidence."
+    },
+    {
+      "case_id": "P2-88-FAIL-04-preview-cleanliness-not-proven",
+      "must_fail_when": "Hash match, body unchanged, non-status frontmatter unchanged, or old-write counts are wrong."
+    },
+    {
+      "case_id": "P2-88-FAIL-05-packet-authorizes-write",
+      "must_fail_when": "The decision packet claims to authorize or execute old-file writes."
+    },
+    {
+      "case_id": "P2-88-FAIL-06-p2-75-gap-closed-without-user",
+      "must_fail_when": "The artifact marks p2-75 exact approval as collected."
+    },
+    {
+      "case_id": "P2-88-FAIL-07-mainline-or-truth-authority",
+      "must_fail_when": "The packet implies merge, promotion, reviewed knowledge, evidence support, or action basis."
+    },
+    {
+      "case_id": "P2-88-FAIL-08-missing-non-approval-option",
+      "must_fail_when": "The packet lacks withhold, revise, or reject/park options."
+    }
+  ]
+}

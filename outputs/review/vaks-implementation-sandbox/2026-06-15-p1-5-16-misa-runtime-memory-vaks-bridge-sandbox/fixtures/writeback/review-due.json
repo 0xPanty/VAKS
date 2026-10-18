@@ -1,0 +1,7 @@
+{
+  "record_kind": "review_due_fixture",
+  "review_due_id": "rd-2026-06-15-001",
+  "reason": "explicit correction or scoped negative feedback creates review pressure",
+  "review_due_invalidates_truth": false,
+  "truth_boundary": "review-due-not-proof-of-invalidity"
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "missing-scope-block",
+  "expected_valid": false,
+  "expected_codes": ["MS_MISSING_SCOPE"],
+  "patch": {
+    "scope": {
+      "__delete__": true
+    }
+  }
+}

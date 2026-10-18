@@ -1,0 +1,8 @@
+{
+  "fixture_id": "body-literal-not-status",
+  "document": "---\nstatus: product_acceptance_pending\n---\n\nPASS_PRODUCT_GRADE\nstatus: pass_product_grade",
+  "expected": {
+    "strict_status": "product_acceptance_pending",
+    "body_literal_ignored": true
+  }
+}

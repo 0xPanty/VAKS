@@ -1,0 +1,113 @@
+[
+  {
+    "time": "2026-06-04T12:34:07.577562+00:00",
+    "method": "public_view_api",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "code": 0,
+    "elapsed_seconds": 0.43
+  },
+  {
+    "time": "2026-06-04T12:34:08.035523+00:00",
+    "method": "public_subtitle_api_1",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "code": 0,
+    "elapsed_seconds": 0.46
+  },
+  {
+    "time": "2026-06-04T12:34:08.454647+00:00",
+    "method": "public_subtitle_api_2",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "code": 0,
+    "elapsed_seconds": 0.42
+  },
+  {
+    "time": "2026-06-04T12:34:08.456124+00:00",
+    "method": "public_subtitle_check",
+    "status": "empty",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "subtitle_api_count": 2
+  },
+  {
+    "time": "2026-06-04T12:34:08.877142+00:00",
+    "method": "public_playurl_api",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "code": 0,
+    "elapsed_seconds": 0.42
+  },
+  {
+    "time": "2026-06-04T12:35:16.397628+00:00",
+    "method": "download_public_audio",
+    "status": "failed",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "audio_id": 30280,
+    "mirror_index": 0,
+    "error": "HTTPSConnectionPool(host='upos-sz-mirrorcosov.bilivideo.com', port=443): Read timed out.",
+    "elapsed_seconds": 67.52
+  },
+  {
+    "time": "2026-06-04T12:35:48.269003+00:00",
+    "method": "download_public_audio",
+    "status": "failed",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "audio_id": 30280,
+    "mirror_index": 1,
+    "error": "('Connection broken: IncompleteRead(17726186 bytes read, 553668 more expected)', IncompleteRead(17726186 bytes read, 553668 more expected))",
+    "elapsed_seconds": 31.87
+  },
+  {
+    "time": "2026-06-04T12:36:20.076811+00:00",
+    "method": "download_public_audio",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "audio_id": 30280,
+    "mirror_index": 2,
+    "bytes": 18279854,
+    "sha256": "e99a31a8148c648a08b6598e5af1d39a3dc1b6cb4912f4b8fa46df3ef07c2fd0",
+    "elapsed_seconds": 31.81,
+    "media_path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\asr-vaks\\audio-30280-2.m4s"
+  },
+  {
+    "time": "2026-06-04T12:38:04.503687+00:00",
+    "method": "local_gpu_asr",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "source_url": "https://www.bilibili.com/video/BV1iSVG6eEsj/?spm_id_from=333.1387.favlist.content.click&vd_source=db18be3c563dfea2398744bc3cacb799",
+    "bvid": "BV1iSVG6eEsj",
+    "aid": 116662284062479,
+    "cid": 38717557909,
+    "transcript_method": "local_asr",
+    "asr_engine": "faster-whisper",
+    "model": "small",
+    "device": "cuda",
+    "compute_type": "float16",
+    "language": "zh",
+    "language_probability": 1,
+    "duration": 995.718125,
+    "segment_count": 438,
+    "text_chars": 5243,
+    "elapsed_seconds": 99.97,
+    "captured_at": "2026-06-04T12:38:04.502688+00:00",
+    "quality_notes": "local ASR from public Bilibili audio; raw source text, not reviewed knowledge; proper nouns need confidence checks"
+  },
+  {
+    "time": "2026-06-04T12:38:04.533673+00:00",
+    "method": "delete_scratch_media",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "media_path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\asr-vaks\\audio-30280-2.m4s"
+  }
+]

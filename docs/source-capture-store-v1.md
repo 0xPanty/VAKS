@@ -36,6 +36,8 @@ source-capture-store/
 │       │   ├── source-capture-implementation-manifest.json
 │       │   └── raw-intake-policy.json
 │       └── capture-storage-receipt.json
+├── indexes/
+│   └── source-snapshot-index.jsonl
 └── .staging/
 ```
 
@@ -165,6 +167,13 @@ python tools/store_source_capture.py verify-capture `
 
 python tools/verify_source_capture_store.py `
   --store-root source-capture-store
+
+python tools/rebuild_source_snapshot_index.py `
+  --store-root source-capture-store
+
+python tools/rebuild_source_snapshot_index.py `
+  --store-root source-capture-store `
+  --check
 ```
 
 ## Put Rules
@@ -234,3 +243,44 @@ Rules:
 
 The verification report must not be interpreted as source authenticity,
 evidentiary support, review status, action authorization, or mainline readiness.
+
+## Deterministic Source Snapshot Index
+
+`tools/rebuild_source_snapshot_index.py` rebuilds
+`indexes/source-snapshot-index.jsonl` from verified captures. The index is a
+derived projection for lookup and deduplication. It is not a source of truth and
+must be deletable and rebuildable from `captures/`.
+
+Before generating bytes, the tool runs full Store verification. If any capture,
+referenced raw blob, receipt, validation context, or Store layout check fails,
+the rebuild fails and an existing index is left unchanged. Valid orphan CAS blobs
+remain verification warnings and are not written as index entries.
+
+The JSONL file uses:
+
+- one deterministic header record;
+- one entry per verified capture;
+- canonical JSON, UTF-8, LF line endings;
+- no `generated_at`, local absolute paths, or filesystem-order-dependent fields;
+- entry sorting by UTF-8 bytes of `source_id`, `snapshot_id`, then `capture_id`.
+
+`--check` is read-only. It regenerates the expected bytes in memory and compares
+them with the existing index. It does not create `indexes/`, write reports, or
+repair drift.
+
+Write rules:
+
+- `indexes/` is created lazily only during rebuild, never during `--check`;
+- `indexes/` and `source-snapshot-index.jsonl` must not be symlinks or reparse
+  points;
+- output is staged and atomically replaces the old index only after the Store
+  remains stable through verification and projection;
+- after staging the new index bytes, the tool performs a final Store truth
+  inventory check before `os.replace`; index temp files do not count as Store
+  truth changes;
+- if the Store changes during rebuild, the result is indeterminate and the old
+  index remains untouched.
+
+The index schema is `urn:vaks:index:source-snapshot:v1`. It records source,
+snapshot, capture, bundle digest, and raw-blob retention pointers only. It does
+not create candidate, reviewed, evidence-support, feedback, or action objects.

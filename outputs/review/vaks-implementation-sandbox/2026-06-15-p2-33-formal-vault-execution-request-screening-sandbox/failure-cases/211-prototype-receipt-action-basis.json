@@ -1,0 +1,13 @@
+{
+  "case_id": "prototype-receipt-action-basis",
+  "note": "Prototype receipt claims action basis.",
+  "prototype_tamper": {
+    "kind": "receipt_update",
+    "updates": {
+      "screening_used_as_action_basis": true
+    }
+  },
+  "expected_errors": [
+    "prototype_receipt_flag_not_false:screening_used_as_action_basis"
+  ]
+}

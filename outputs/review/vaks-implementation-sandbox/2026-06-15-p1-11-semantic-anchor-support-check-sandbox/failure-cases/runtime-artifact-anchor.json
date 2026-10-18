@@ -1,0 +1,19 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "runtime-artifact-anchor",
+  "expected_valid": false,
+  "expected_codes": ["SA_RUNTIME_ARTIFACT_ANCHOR"],
+  "anchors": [
+    {
+      "id": "runtime-orientation-anchor",
+      "anchor_kind": "semantic_vector_hit",
+      "support_claimed": false,
+      "support_role": "orientation",
+      "source_ref": "outputs/review/vaks-implementation-sandbox/example/suite_output.json",
+      "anchor_path": "outputs/review/vaks-implementation-sandbox/example/suite_output.json",
+      "artifact_kind": "suite_output",
+      "authority_bucket": "review_input",
+      "selected_by_semantic": true
+    }
+  ]
+}

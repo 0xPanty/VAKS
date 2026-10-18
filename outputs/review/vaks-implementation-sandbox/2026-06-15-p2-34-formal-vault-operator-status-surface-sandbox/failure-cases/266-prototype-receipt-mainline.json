@@ -1,0 +1,13 @@
+{
+  "case_id": "prototype-receipt-mainline",
+  "note": "Receipt claims mainline readiness.",
+  "prototype_tamper": {
+    "kind": "receipt_update",
+    "updates": {
+      "mainline_ready": true
+    }
+  },
+  "expected_errors": [
+    "prototype_receipt_flag_not_false:mainline_ready"
+  ]
+}

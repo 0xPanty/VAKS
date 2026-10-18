@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Decision Operator Handoff Index</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 32px; color: #1f2937; background: #f8fafc; }
+    main { max-width: 1120px; margin: 0 auto; }
+    table { width: 100%; border-collapse: collapse; background: #fff; }
+    th, td { border: 1px solid #d1d5db; padding: 8px; text-align: left; font-size: 14px; }
+    th { background: #e5e7eb; }
+    .summary { margin: 18px 0; padding: 14px; background: #fff; border: 1px solid #d1d5db; border-radius: 8px; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>User Decision Operator Handoff Index</h1>
+  <p>Sandbox-only routing surface. It is not a user decision, execution authority, mainline approval, promotion approval, Obsidian sync approval, reviewed knowledge, evidence support, or action basis.</p>
+  <section class="summary">
+    <strong>Latest gate passed:</strong> True<br>
+    <strong>Source chain ready:</strong> True<br>
+    <strong>Self reports passed:</strong> True<br>
+    <strong>Handoff ready:</strong> True<br>
+    <strong>Entries:</strong> 8
+  </section>
+  <table>
+    <thead><tr><th>Slice</th><th>Product</th><th>Reviewer</th><th>Boundary</th><th>Verification</th><th>Gate command</th><th>Operator use</th></tr></thead>
+    <tbody><tr><td>2026-06-16-p2-51-user-decision-request-packet-sandbox</td><td>PASS</td><td>PASS</td><td>PASS</td><td>local_verification_passed_pending_review</td><td>python -B .\outputs\review\vaks-implementation-sandbox\2026-06-16-p2-51-user-decision-request-packet-sandbox\artifact\verify_user_decision_request_packet.py --final-gate</td><td>read available decision options only</td></tr><tr><td>2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox</td><td>PASS</td><td>PASS</td><td>PASS</td><td>local_verification_passed</td><td>python -B .\outputs\review\vaks-implementation-sandbox\2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox\artifact\verify_user_decision_no_auto_advance_guard.py --final-gate</td><td>confirm selected option still requires scoped follow-up</td></tr><tr><td>2026-06-16-p2-53-user-response-classifier-dry-run-sandbox</td><td>PASS</td><td>PASS</td><td>PASS</td><td>local_verification_passed</td><td>python -B .\outputs\review\vaks-implementation-sandbox\2026-06-16-p2-53-user-response-classifier-dry-run-sandbox\artifact\verify_user_response_classifier_dry_run.py --final-gate</td><td>classify A/B/C/D/ambiguous/execution-word replies without action</td></tr><tr><td>2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox</td><td>PASS</td><td>PASS</td><td>PASS</td><td>local_verification_passed</td><td>python -B .\outputs\review\vaks-implementation-sandbox\2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox\artifact\verify_safe_user_response_renderer.py --final-gate</td><td>render safe Chinese next reply without action</td></tr><tr><td>2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox</td><td>PASS</td><td>PASS</td><td>PASS</td><td>local_verification_passed</td><td>python -B .\outputs\review\vaks-implementation-sandbox\2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox\artifact\verify_user_decision_e2e_simulator.py --final-gate</td><td>simulate classifier to renderer chain without execution</td></tr><tr><td>2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox</td><td>PASS</td><td>PASS</td><td>PASS</td><td>local_verification_passed</td><td>python -B .\outputs\review\vaks-implementation-sandbox\2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox\artifact\verify_user_decision_demo_transcript_smoke_runner.py --final-gate</td><td>show human-readable non-executing transcript</td></tr><tr><td>2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox</td><td>PASS</td><td>PASS</td><td>PASS</td><td>local_verification_passed</td><td>python -B .\outputs\review\vaks-implementation-sandbox\2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox\artifact\verify_user_decision_chain_regression_bundle.py --final-gate</td><td>prove p2-51 through p2-56 guard chain still passes</td></tr><tr><td>2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox</td><td>PASS</td><td>PASS</td><td>PASS</td><td>local_verification_passed</td><td>python -B .\outputs\review\vaks-implementation-sandbox\2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox\artifact\verify_static_boundary_scan_regression.py --final-gate</td><td>prove p2-57 static boundary scan regression still passes</td></tr></tbody>
+  </table>
+  <section><h2>must_not</h2><ul><li>execute_option</li><li>merge_mainline</li><li>promote</li><li>sync_obsidian</li><li>commit</li><li>push</li><li>install_dependencies</li><li>start_background_service</li><li>install_hooks</li><li>use_mcp_write_tool</li><li>write_reviewed_knowledge</li><li>create_evidence_support</li><li>create_action_basis</li><li>start_future_slice_by_inference</li></ul></section>
+</main>
+</body>
+</html>

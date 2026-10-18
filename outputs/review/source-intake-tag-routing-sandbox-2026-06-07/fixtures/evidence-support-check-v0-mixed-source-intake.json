@@ -1,0 +1,82 @@
+{
+  "record_kind": "evidence_support_check_mixed_fixture_candidate",
+  "status": "candidate_only",
+  "topic_id": "source-intake-routing",
+  "query": "pressure test mixed supported and unsupported answer claims",
+  "truth_boundary": "mixed_sandbox_fixture_only_not_truth",
+  "action_basis_allowed": false,
+  "answer_candidate": [
+    "Action mode prepares an anchor_queue only; evidence support check must run before any action-facing use.",
+    "Selector and snippet fields help navigation only; they are not evidence support.",
+    "The workbench has a reviewer-approved citation faithfulness check for final answers.",
+    "The current source-intake-routing sandbox can be used as action basis."
+  ],
+  "claims": [
+    {
+      "claim_id": "m1",
+      "claim_text": "Action mode prepares an anchor_queue only; evidence support check must run before any action-facing use.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/checks/source-intake-routing-workbench-pack-query-action-generated.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/19_SOURCE_INTAKE_ROUTING_WORKBENCH_HARDENING.md"
+      ],
+      "must_match_any": [
+        "Builder only prepares an anchor_queue; evidence support check has not run",
+        "required_next_step: evidence support check",
+        "required_next_step: open raw/reviewed anchors and run evidence support check before action-facing use"
+      ],
+      "warrant": "The generated action pack and hardening note both state that anchor_queue is preparation only and still needs evidence support checking."
+    },
+    {
+      "claim_id": "m2",
+      "claim_text": "Selector and snippet fields help navigation only; they are not evidence support.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/checks/source-intake-routing-workbench-hardening-v0-1-test.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/19_SOURCE_INTAKE_ROUTING_WORKBENCH_HARDENING.md"
+      ],
+      "must_match_any": [
+        "selector/snippet is not evidence support",
+        "snippet_status: navigation_snippet_not_evidence",
+        "A snippet is not evidence support"
+      ],
+      "warrant": "The selector/snippet boundary is explicitly recorded as navigation-only."
+    },
+    {
+      "claim_id": "m3",
+      "claim_text": "The workbench has a reviewer-approved citation faithfulness check for final answers.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/21_EVIDENCE_SUPPORT_CHECK_V0_LANDING.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/20_EVIDENCE_SUPPORT_CHECK_REFERENCE_DISTILLATION.md"
+      ],
+      "must_match_any": [
+        "reviewer-approved citation faithfulness check",
+        "citation_faithfulness_checked: true",
+        "causal citation faithfulness checked"
+      ],
+      "failure_origin_if_missing": [
+        "missing_evidence_or_unavailable_support"
+      ],
+      "warrant": "This should fail because v0 explicitly does not check citation faithfulness."
+    },
+    {
+      "claim_id": "m4",
+      "claim_text": "The current source-intake-routing sandbox can be used as action basis.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/README.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/21_EVIDENCE_SUPPORT_CHECK_V0_LANDING.md"
+      ],
+      "must_match_any": [
+        "can be used as action basis",
+        "action_basis_allowed: true",
+        "not_action_basis: false"
+      ],
+      "failure_origin_if_missing": [
+        "scope_mismatch_or_overclaim"
+      ],
+      "warrant": "This should fail because the sandbox is explicitly not action basis."
+    }
+  ]
+}

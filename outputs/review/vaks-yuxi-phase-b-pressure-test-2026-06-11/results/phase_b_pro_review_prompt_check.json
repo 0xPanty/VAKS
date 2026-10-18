@@ -1,0 +1,74 @@
+{
+  "prompt_status": "pass",
+  "error_count": 0,
+  "errors": [],
+  "artifacts": [
+    {
+      "path": "PHASE_B_PRO_REVIEW_PROMPT.md",
+      "exists": true,
+      "bytes": 6377
+    },
+    {
+      "path": "PHASE_B_PRO_REVIEW_PROMPT_DECISION.md",
+      "exists": true,
+      "bytes": 1892
+    },
+    {
+      "path": "PHASE_B_MAINLINE_READINESS_PACKET.md",
+      "exists": true,
+      "bytes": 7373
+    },
+    {
+      "path": "PHASE_B_MAINLINE_READINESS_DECISION.md",
+      "exists": true,
+      "bytes": 2173
+    },
+    {
+      "path": "PHASE_B_MAINLINE_READINESS_CHECK.md",
+      "exists": true,
+      "bytes": 668
+    },
+    {
+      "path": "results/phase_b_mainline_readiness_check.json",
+      "exists": true,
+      "bytes": 1352
+    },
+    {
+      "path": "results/phase_b_integration_readiness_check.json",
+      "exists": true,
+      "bytes": 4510
+    },
+    {
+      "path": "results/phase_b_adapter_contract_test.json",
+      "exists": true,
+      "bytes": 2276
+    }
+  ],
+  "prompt": {
+    "bytes": 6377
+  },
+  "prior_gates": {
+    "mainline_readiness": {
+      "status": "pass",
+      "errors": 0
+    },
+    "integration_readiness": {
+      "status": "pass",
+      "errors": 0
+    },
+    "contract": {
+      "status": "pass",
+      "errors": 0
+    }
+  },
+  "core_docs": {
+    "returncode": 0,
+    "dirty": [
+      " M DEV_CONTEXT.md",
+      " M IMPLEMENTATION_BLUEPRINT.md",
+      " M MEMORY_TIER.md",
+      " M SOURCE_INTAKE.md"
+    ],
+    "approved_patch_dirty": true
+  }
+}

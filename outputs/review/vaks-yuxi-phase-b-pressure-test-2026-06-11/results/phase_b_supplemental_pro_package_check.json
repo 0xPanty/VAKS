@@ -1,0 +1,55 @@
+{
+  "supplemental_pro_package_status": "pass",
+  "error_count": 0,
+  "errors": [],
+  "package_dir": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-yuxi-phase-b-pressure-test-2026-06-11\\pro-review-supplemental-package",
+  "package_zip": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-yuxi-phase-b-pressure-test-2026-06-11\\vaks-yuxi-phase-b-p0-p1-supplemental-pro-review-package.zip",
+  "package_file_count": 122,
+  "zip_bytes": 8547694,
+  "required_checks": {
+    "p0_query_replay": [
+      "pass",
+      0
+    ],
+    "frozen_corpus_manifest": [
+      "pass",
+      0
+    ],
+    "top11_20_item_receipts": [
+      "pass",
+      0
+    ],
+    "frozen_rerun_v2": [
+      "pass",
+      0
+    ],
+    "blind_relevance_packet": [
+      "pass",
+      0
+    ],
+    "external_relevance_judgment_kit": [
+      "pending_external_judgment",
+      0
+    ],
+    "external_blind_query_set_kit": [
+      "pending_external_queries",
+      0
+    ],
+    "p1_adversarial": [
+      "pass",
+      0
+    ],
+    "p1_promotion_gate_calibration": [
+      "pass",
+      0
+    ],
+    "agent_blind": [
+      "pass",
+      0
+    ],
+    "next_step_specs": [
+      "pass",
+      0
+    ]
+  }
+}

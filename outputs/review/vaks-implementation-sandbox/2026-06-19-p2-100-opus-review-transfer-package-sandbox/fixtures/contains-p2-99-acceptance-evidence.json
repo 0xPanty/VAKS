@@ -1,0 +1,11 @@
+{
+  "fixture": "contains-p2-99-acceptance-evidence",
+  "required_archive_paths": [
+    "p2-99-portable-opus-evidence-bundle/verification.md",
+    "p2-99-portable-opus-evidence-bundle/reviewer-report.md",
+    "p2-99-portable-opus-evidence-bundle/boundary-audit.md",
+    "p2-99-portable-opus-evidence-bundle/product-acceptance-report.md",
+    "p2-99-portable-opus-evidence-bundle/next-step.md"
+  ],
+  "expected": true
+}

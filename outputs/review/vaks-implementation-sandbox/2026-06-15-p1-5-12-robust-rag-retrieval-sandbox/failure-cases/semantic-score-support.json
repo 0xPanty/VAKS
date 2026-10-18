@@ -1,0 +1,44 @@
+{
+  "record_kind": "robust_rag_retrieval_manifest",
+  "scenario_id": "semantic-score-support",
+  "expected_valid": false,
+  "expected_codes": ["RR_SEMANTIC_ANCHOR_BOUNDARY_FAILED"],
+  "query": {
+    "query_mode": "review",
+    "verbatim_input": "Does semantic similarity support this point?",
+    "question_summary": "Semantic score support misuse.",
+    "action_sensitive": false,
+    "verbatim_preserved": true
+  },
+  "route_selection": {
+    "selected": "basic_vector",
+    "authority_buckets_included": ["raw_anchor"],
+    "authority_buckets_excluded": ["candidate", "feedback", "runtime_artifact"],
+    "selected_context_types": ["raw_source_anchor"],
+    "forbidden_support_types": ["retrieval_score", "graph_rank", "community_report_summary", "llm_extracted_relation"]
+  },
+  "retrieval_config": {"bucket_filter_first": true, "rrf_within_bucket_only": true, "exclude_runtime_artifacts": true},
+  "retrieved_items": [
+    {
+      "id": "semantic-score-anchor",
+      "ref": "raw/articles/example-source.md#L10-L18",
+      "record_kind": "raw_excerpt",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "support",
+      "support_claimed": true,
+      "selected": true,
+      "excluded": false,
+      "selected_by": {"semantic": true},
+      "semantic_anchor": {
+        "id": "semantic-score-anchor-inner",
+        "anchor_kind": "semantic_vector_hit",
+        "support_claimed": false,
+        "support_role": "direct_support",
+        "source_ref": "raw/articles/example-source.md",
+        "selector": "L10-L18",
+        "authority_bucket": "raw_anchor",
+        "semantic_score_claims_support": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "context-item-not-in-pack",
+  "expected_valid": false,
+  "expected_codes": ["MB_CONTEXT_ITEM_NOT_IN_PACK"],
+  "patch": {
+    "context_adapter": {
+      "items": [
+        {
+          "id": "candidate-review-input-not-in-pack",
+          "ref": "fixtures/context-packs/candidate-review-input.md",
+          "authority_bucket": "candidate",
+          "pack_role": "review_input",
+          "warning_code": "candidate_not_support",
+          "selected_by": ["context_pack"],
+          "action_basis_allowed": false
+        }
+      ]
+    }
+  }
+}

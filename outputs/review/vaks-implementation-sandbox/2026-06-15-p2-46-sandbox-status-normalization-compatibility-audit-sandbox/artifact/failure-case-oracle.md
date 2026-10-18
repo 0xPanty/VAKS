@@ -1,0 +1,49 @@
+# Failure Case Oracle
+
+Slice: `2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox`
+
+Total cases: 43
+
+- `001-top-level-record_kind.json` -> `record_kind_mismatch`
+- `002-top-level-slice_id.json` -> `slice_id_mismatch`
+- `003-top-level-version.json` -> `version_mismatch`
+- `004-top-level-truth_boundary.json` -> `truth_boundary_mismatch`
+- `005-top-level-purpose.json` -> `purpose_mismatch`
+- `006-top-level-write_scope.json` -> `write_scope_mismatch`
+- `007-bad-view.json` -> `view_not_allowed:wrong`
+- `008-extra-release-approval-claim.json` -> `unknown_top_level_field:release_approval_claim`
+- `009-source-snapshot-drift.json` -> `source_snapshot_mismatch`
+- `010-inventory-drift.json` -> `report_inventory_mismatch`
+- `011-summary-count-drift.json` -> `canonical_summary_mismatch, examined_slice_count_mismatch`
+- `012-gate-pass-count-drift.json` -> `canonical_summary_mismatch, gate_pass_count_mismatch`
+- `013-unknown-status-count.json` -> `canonical_summary_mismatch, unknown_status_present`
+- `014-legacy-ambiguity-removed.json` -> `canonical_summary_mismatch, legacy_ambiguous_status_inventory_missing`
+- `015-slice-gate-false.json` -> `report_inventory_mismatch, slice_gate_not_pass:2026-06-15-p0-01-retrieval-receipt-template-sandbox`
+- `016-normalized-status-blocking.json` -> `report_inventory_mismatch, blocking_status:2026-06-15-p0-01-retrieval-receipt-template-sandbox:slice-plan.md`
+- `017-normalized-status-unknown.json` -> `report_inventory_mismatch, unknown_status:2026-06-15-p0-01-retrieval-receipt-template-sandbox:slice-plan.md`
+- `018-negative-product-status-not-pass.json` -> `report_inventory_mismatch, unknown_status:2026-06-15-p0-01-retrieval-receipt-template-sandbox:product-acceptance-report.md, blocking_status:2026-06-15-p0-01-retrieval-receipt-template-sandbox:product-acceptance-report.md`
+- `019-negative-verification-status-not-passed.json` -> `report_inventory_mismatch, unknown_status:2026-06-15-p0-01-retrieval-receipt-template-sandbox:verification.md, blocking_status:2026-06-15-p0-01-retrieval-receipt-template-sandbox:verification.md`
+- `020-negative-reviewer-status-failed.json` -> `report_inventory_mismatch, unknown_status:2026-06-15-p0-01-retrieval-receipt-template-sandbox:reviewer-report.md, blocking_status:2026-06-15-p0-01-retrieval-receipt-template-sandbox:reviewer-report.md`
+- `021-negative-boundary-status-failed.json` -> `report_inventory_mismatch, unknown_status:2026-06-15-p0-01-retrieval-receipt-template-sandbox:boundary-audit.md, blocking_status:2026-06-15-p0-01-retrieval-receipt-template-sandbox:boundary-audit.md`
+- `022-negative-next-step-status-blocked.json` -> `report_inventory_mismatch, unknown_status:2026-06-15-p0-01-retrieval-receipt-template-sandbox:next-step.md, blocking_status:2026-06-15-p0-01-retrieval-receipt-template-sandbox:next-step.md`
+- `023-ambiguous-marked-blocking.json` -> `ambiguous_status_inventory_mismatch, ambiguous_status_marked_blocking:2026-06-15-p0-01-retrieval-receipt-template-sandbox:slice-plan.md`
+- `024-agent-rule-missing.json` -> `agent_rules_mismatch, agent_rule_missing:do not edit old slices`
+- `025-readiness-mainline-true.json` -> `readiness_flag_not_false:mainline_ready`
+- `026-readiness-reacceptance-true.json` -> `readiness_flag_not_false:re_acceptance_performed`
+- `027-operation-old-slice-modified.json` -> `operation_performed_not_false:legacy_slice_modified`
+- `028-operation-commit.json` -> `operation_performed_not_false:commit`
+- `029-missing-non-claim-not-re-acceptance.json` -> `required_non_claims_mismatch`
+- `030-missing-non-claim-not-release-approval.json` -> `required_non_claims_mismatch`
+- `031-missing-non-claim-not-promotion-approval.json` -> `required_non_claims_mismatch`
+- `032-missing-non-claim-not-mainline-ready.json` -> `required_non_claims_mismatch`
+- `033-missing-non-claim-not-enterprise-production-ready.json` -> `required_non_claims_mismatch`
+- `034-missing-non-claim-not-formal-vault-approval.json` -> `required_non_claims_mismatch`
+- `035-missing-non-claim-not-Obsidian-sync.json` -> `required_non_claims_mismatch`
+- `036-missing-non-claim-not-commit.json` -> `required_non_claims_mismatch`
+- `037-missing-non-claim-not-push.json` -> `required_non_claims_mismatch`
+- `038-missing-non-claim-not-reviewed-knowledge.json` -> `required_non_claims_mismatch`
+- `039-missing-non-claim-not-evidence-support.json` -> `required_non_claims_mismatch`
+- `040-missing-non-claim-not-action-basis.json` -> `required_non_claims_mismatch`
+- `041-missing-non-claim-not-old-slice-edit.json` -> `required_non_claims_mismatch`
+- `042-missing-non-claim-not-auto-advance.json` -> `required_non_claims_mismatch`
+- `043-extra-non-claim.json` -> `required_non_claims_mismatch`

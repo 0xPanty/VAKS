@@ -1,0 +1,16 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "unknown-anchor-kind",
+  "expected_valid": false,
+  "expected_codes": ["SA_UNKNOWN_ANCHOR_KIND"],
+  "anchors": [
+    {
+      "id": "unknown-anchor",
+      "anchor_kind": "machine_guess_blob",
+      "support_claimed": false,
+      "support_role": "orientation",
+      "source_ref": "outputs/review/example.md",
+      "authority_bucket": "review_input"
+    }
+  ]
+}

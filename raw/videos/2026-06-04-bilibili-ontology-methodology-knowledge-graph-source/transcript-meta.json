@@ -1,0 +1,16 @@
+{
+  "bvid": "BV1e2V66gE63",
+  "method": "public subtitle checks via Bilibili view/player APIs -> public playurl audio chunk download -> local ASR",
+  "engine": "faster-whisper",
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16",
+  "language": "zh",
+  "language_probability": 1,
+  "duration": 1726.464,
+  "segment_count": 753,
+  "text_chars": 8351,
+  "elapsed_seconds": 153.78,
+  "media_retention": "scratch media to be deleted after project artifacts are copied",
+  "generated_at": "2026-06-04T17:23:36.735038+08:00"
+}

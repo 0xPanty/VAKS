@@ -1,0 +1,48 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "noodleslove/notes",
+  "source_url": "https://github.com/noodleslove/notes",
+  "checked_commit": "ec7705a4c4bf7a3a5160b22a17534488d5c6cdd3",
+  "checked_at": "2026-06-11",
+  "inspection_method": "local git checkout; inspected README, root file tree, Cheatsheet.md, API note examples, ML Models README, and topic folders",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "project-identity-risk",
+      "why": "Contains generic Best-README-Template residue despite the repository being a mixed technical notes corpus."
+    },
+    {
+      "path": "Cheatsheet.md",
+      "kind": "recall-note",
+      "why": "Shows flat SQL interview Q&A without source anchors."
+    },
+    {
+      "path": "CSES WebDev/APIs/Event-API.md",
+      "kind": "api-note-template",
+      "why": "Documents endpoint, method, parameters, request body, response examples, and errors."
+    },
+    {
+      "path": "ML Models/README.md",
+      "kind": "copied-curriculum-material",
+      "why": "Carries Microsoft ML for Beginners curriculum README content and badges, requiring source-credit quarantine."
+    },
+    {
+      "path": "Algorithms/; Data Structures/; Full Stack/; Blockchain/; AWS Cloud Solution/; ML Models/",
+      "kind": "topic-folders",
+      "why": "Provide broad activation hints but no reviewed taxonomy."
+    }
+  ],
+  "observed_counts": {
+    "git_tracked_files": 87,
+    "top_level_topic_directories": 7
+  },
+  "known_limits": [
+    "README is stale and partly boilerplate.",
+    "Many notes lack explicit source spans.",
+    "Some material appears copied from external curricula and must not be treated as original local knowledge."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

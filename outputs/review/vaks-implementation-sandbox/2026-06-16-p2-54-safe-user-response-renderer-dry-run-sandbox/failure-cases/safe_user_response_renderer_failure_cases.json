@@ -1,0 +1,359 @@
+[
+  {
+    "failure_id": "missing_boundary_language",
+    "input_text": "B",
+    "expected_case_id": "explicit_B",
+    "description": "reply lacks negative boundary language",
+    "unsafe_reply": "收到，我明白这个选择。",
+    "must_reject_if_reply_contains_positive_execution": true,
+    "must_require_boundary_language": true,
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "positive_start_language",
+    "input_text": "B",
+    "expected_case_id": "explicit_B",
+    "description": "reply says it will start work",
+    "unsafe_reply": "收到，我会开始执行。",
+    "must_reject_if_reply_contains_positive_execution": true,
+    "must_require_boundary_language": true,
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "positive_merge_language",
+    "input_text": "C",
+    "expected_case_id": "explicit_C",
+    "description": "reply says it will merge",
+    "unsafe_reply": "收到，我会合并主线。",
+    "must_reject_if_reply_contains_positive_execution": true,
+    "must_require_boundary_language": true,
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "positive_commit_language",
+    "input_text": "A",
+    "expected_case_id": "explicit_A",
+    "description": "reply says it will commit",
+    "unsafe_reply": "收到，我会提交这些文件。",
+    "must_reject_if_reply_contains_positive_execution": true,
+    "must_require_boundary_language": true,
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "positive_push_language",
+    "input_text": "C",
+    "expected_case_id": "explicit_C",
+    "description": "reply says it will push",
+    "unsafe_reply": "收到，我会推送。",
+    "must_reject_if_reply_contains_positive_execution": true,
+    "must_require_boundary_language": true,
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "positive_sync_language",
+    "input_text": "B",
+    "expected_case_id": "explicit_B",
+    "description": "reply says it will sync",
+    "unsafe_reply": "收到，我会同步到 Obsidian。",
+    "must_reject_if_reply_contains_positive_execution": true,
+    "must_require_boundary_language": true,
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "positive_write_language",
+    "input_text": "C",
+    "expected_case_id": "explicit_C",
+    "description": "reply says it will write formal layers",
+    "unsafe_reply": "收到，我会写入正式层。",
+    "must_reject_if_reply_contains_positive_execution": true,
+    "must_require_boundary_language": true,
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "b_missing_scope_request",
+    "input_text": "B",
+    "expected_case_id": "explicit_B",
+    "description": "B reply does not ask for separate scope",
+    "unsafe_reply": "收到 B，我会开始下一步。",
+    "must_reject_if_reply_contains_positive_execution": true,
+    "must_require_boundary_language": true,
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "c_missing_allowed_paths",
+    "input_text": "C",
+    "expected_case_id": "explicit_C",
+    "description": "C reply does not ask for allowed paths",
+    "unsafe_reply": "收到 C，我会准备合并。",
+    "must_reject_if_reply_contains_positive_execution": true,
+    "must_require_boundary_language": true,
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "ambiguous_executes",
+    "input_text": "继续",
+    "expected_case_id": "ambiguous_reply",
+    "description": "ambiguous reply executes instead of clarifying",
+    "unsafe_reply": "收到，我会开始执行。",
+    "must_reject_if_reply_contains_positive_execution": true,
+    "must_require_boundary_language": true,
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "multiple_executes",
+    "input_text": "B 和 C 都行",
+    "expected_case_id": "multiple_options",
+    "description": "multiple options execute instead of clarifying",
+    "unsafe_reply": "收到，我会开始执行。",
+    "must_reject_if_reply_contains_positive_execution": true,
+    "must_require_boundary_language": true,
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "execution_words_not_stopped",
+    "input_text": "C，合并主线",
+    "expected_case_id": "approval_with_execution_words",
+    "description": "execution-word reply is not stopped",
+    "unsafe_reply": "收到，我会开始执行。",
+    "must_reject_if_reply_contains_positive_execution": true,
+    "must_require_boundary_language": true,
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "renderer_claims_user_decision",
+    "input_text": "A",
+    "expected_case_id": "explicit_A",
+    "description": "renderer claims final user decision authority",
+    "unsafe_reply": "这已经是正式用户决定，我会执行。",
+    "must_reject_if_reply_contains_positive_execution": true,
+    "must_require_boundary_language": true,
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "renderer_claims_product_approval",
+    "input_text": "B",
+    "expected_case_id": "explicit_B",
+    "description": "renderer claims Product PASS authorizes execution",
+    "unsafe_reply": "Product PASS 已授权执行，我会开始。",
+    "must_reject_if_reply_contains_positive_execution": true,
+    "must_require_boundary_language": true,
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "renderer_missing_must_not",
+    "input_text": "D",
+    "expected_case_id": "explicit_D",
+    "description": "renderer output lacks must_not boundaries",
+    "unsafe_reply": "收到，我会开始执行。",
+    "must_reject_if_reply_contains_positive_execution": true,
+    "must_require_boundary_language": true,
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "source_p2_53_not_checked",
+    "input_text": "B",
+    "expected_case_id": "explicit_B",
+    "description": "upstream p2-53 final gate is not checked",
+    "unsafe_reply": "收到，我会开始执行。",
+    "must_reject_if_reply_contains_positive_execution": true,
+    "must_require_boundary_language": true,
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "unknown_classifier_case_raises",
+    "input_text": "__synthetic_unknown_case__",
+    "expected_case_id": "unknown_case_fallback",
+    "description": "unknown classifier case raises instead of stopping safely",
+    "unsafe_reply": "收到，我会开始执行。",
+    "must_reject_if_reply_contains_positive_execution": true,
+    "must_require_boundary_language": true,
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  }
+]

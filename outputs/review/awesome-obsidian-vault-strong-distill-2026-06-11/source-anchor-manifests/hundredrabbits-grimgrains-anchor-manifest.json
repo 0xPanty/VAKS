@@ -1,0 +1,50 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "hundredrabbits/Grimgrains",
+  "source_url": "https://github.com/hundredrabbits/Grimgrains",
+  "checked_commit": "8e39b292837f3889bb591e4c10fd2ec09af93866",
+  "checked_at": "2026-06-11",
+  "inspection_method": "local git checkout; inspected README, C source model, recipe constructors, ingredient constructors, generated site, assets, and build script",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "source-identity",
+      "why": "Identifies the repository as website sources written in C and gives the local build command."
+    },
+    {
+      "path": "src/main.c",
+      "kind": "typed-content-model",
+      "why": "Defines Recipe, RecipePart, Serving, and helper functions such as create_recipe, create_part, add_instruction, and add_serving."
+    },
+    {
+      "path": "src/recipes.c",
+      "kind": "content-as-code",
+      "why": "Stores recipes as typed constructor calls with parts, instructions, ingredient links, dates, time, and portion strings."
+    },
+    {
+      "path": "src/ingredients.c",
+      "kind": "ingredient-ontology",
+      "why": "Defines ingredients and child ingredients with descriptions and crosslinks to related ingredients or nutrition pages."
+    },
+    {
+      "path": "src/build.sh",
+      "kind": "strict-build-lint",
+      "why": "Formats, compiles with strict warning flags and sanitizers, generates the site, and removes the binary."
+    }
+  ],
+  "observed_counts": {
+    "src_files": 13,
+    "generated_site_files": 347,
+    "media_files": 529,
+    "link_files": 2
+  },
+  "known_limits": [
+    "The C content-generator approach is too heavy for VAKS Markdown-first mainline.",
+    "Ingredient descriptions and nutrition-like text are not reviewed evidence for VAKS.",
+    "Generated site pages are outputs, not source-of-truth records."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

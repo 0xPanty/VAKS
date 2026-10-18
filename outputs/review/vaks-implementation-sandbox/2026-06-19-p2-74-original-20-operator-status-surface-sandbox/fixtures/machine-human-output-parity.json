@@ -1,0 +1,10 @@
+{
+  "fixture_id": "machine-human-output-parity",
+  "expected": {
+    "has_json": true,
+    "has_markdown": true,
+    "has_html": true,
+    "markdown_mentions_old_file_count": true,
+    "markdown_mentions_sidecar_count": true
+  }
+}

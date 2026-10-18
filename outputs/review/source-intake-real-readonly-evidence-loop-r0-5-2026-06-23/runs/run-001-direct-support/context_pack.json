@@ -1,0 +1,219 @@
+{
+  "run_id": "run-001-direct-support",
+  "pack_contract": "support_candidate_not_support",
+  "items": [
+    {
+      "item_id": "item-001",
+      "source_ref": "raw/repos/2026-05-27-knowledge-base-server-source.md",
+      "source_snapshot_hash": "be138c5b99e6351f444f8aee37e9000b7821b89e8f357e8a11911ba9e245853c",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "orientation",
+      "scope_fit": "unknown",
+      "temporal_fit": "unknown",
+      "anchor": {
+        "exact": "",
+        "prefix": "",
+        "suffix": "",
+        "location_hint": "",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 1,
+      "diagnostic_score": 30.0,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    },
+    {
+      "item_id": "item-002",
+      "source_ref": "raw/repos/2026-05-27-dusk-obsidian-vault-source.md",
+      "source_snapshot_hash": "fda2831fec735c8e20c8c2cf28875629d3ae8256d73b527be2fa3c75ad5b50a1",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "orientation",
+      "scope_fit": "unknown",
+      "temporal_fit": "unknown",
+      "anchor": {
+        "exact": "",
+        "prefix": "",
+        "suffix": "",
+        "location_hint": "",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 2,
+      "diagnostic_score": 29.0,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    },
+    {
+      "item_id": "item-003",
+      "source_ref": "raw/articles/2026-05-30-w3c-web-annotation-source.md",
+      "source_snapshot_hash": "e16be8aa931cc46d912429b26446ad7efb8ed49ba7a653512e63e37b14fb28c0",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "support_candidate",
+      "scope_fit": "matched",
+      "temporal_fit": "current",
+      "anchor": {
+        "exact": "## Source Anchor Short exact source wording: ```text \"Text Quote Selector\" \"copying it\" \"including some of the text immediately before\" \"after\" \"exact\" \"prefix\" \"suffix\" ``` Extracted point: ```text A stable text anchor should not only name a source. It should preserve the selected text and nearby context so the reviewer can re-find the evidence span. ``` Readable source context: ```text The W3C selector describes a text span by preserving the selected text plus nearby before/after context. Its model names the selected text `exact`, with `prefix` and `suffix` as surrounding snippets. ```",
+        "prefix": "pec: W3C Web Annotation Data Model Section: 4.2.4 Text Quote Selector URL: https://www.w3.org/TR/annotation-model/#text-quote-selector Checked: 2026-05-30 ```",
+        "suffix": "## Adopt ```text source_anchor: url_or_path exact_quote prefix suffix captured_at heavy optional: position content_hash archived_url checked",
+        "location_hint": "heading:Source Anchor",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 3,
+      "diagnostic_score": 28.5,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    },
+    {
+      "item_id": "item-004",
+      "source_ref": "raw/repos/2026-05-27-kagantic-vault-structure-source.md",
+      "source_snapshot_hash": "be1fc4bd29ef877afa5c5a1e289f1eff1b1efc5afc26c9eb549bacf13d647833",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "orientation",
+      "scope_fit": "unknown",
+      "temporal_fit": "unknown",
+      "anchor": {
+        "exact": "",
+        "prefix": "",
+        "suffix": "",
+        "location_hint": "",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 4,
+      "diagnostic_score": 28.0,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    },
+    {
+      "item_id": "item-005",
+      "source_ref": "raw/videos/2026-06-04-youtube-hermes-obsidian-source.md",
+      "source_snapshot_hash": "4d58e7a6f9d936d58756152801e2b12b588d5440c331730b7d3bc5621d83e65b",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "orientation",
+      "scope_fit": "unknown",
+      "temporal_fit": "unknown",
+      "anchor": {
+        "exact": "",
+        "prefix": "",
+        "suffix": "",
+        "location_hint": "",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 5,
+      "diagnostic_score": 26.0,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    },
+    {
+      "item_id": "item-006",
+      "source_ref": "raw/repos/2026-06-11-awesome-obsidian-vault/maggieappleton-digital-gardeners-source.md",
+      "source_snapshot_hash": "36273939b6ddb5cc4fa89945675a28139eda408b3c54c516a59a10b33fc13668",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "orientation",
+      "scope_fit": "unknown",
+      "temporal_fit": "unknown",
+      "anchor": {
+        "exact": "",
+        "prefix": "",
+        "suffix": "",
+        "location_hint": "",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 6,
+      "diagnostic_score": 24.5,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    },
+    {
+      "item_id": "item-007",
+      "source_ref": "raw/articles/2026-06-11-cyrilxbt-n8n-obsidian-business-brain-source.md",
+      "source_snapshot_hash": "bad5a9420c69f4c7be23a4d483b18faf1136d58127f98ab80b3331f053b827c9",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "orientation",
+      "scope_fit": "unknown",
+      "temporal_fit": "unknown",
+      "anchor": {
+        "exact": "",
+        "prefix": "",
+        "suffix": "",
+        "location_hint": "",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 7,
+      "diagnostic_score": 23.0,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    },
+    {
+      "item_id": "item-008",
+      "source_ref": "raw/repos/2026-05-27-kepano-obsidian-source.md",
+      "source_snapshot_hash": "927127052d181b160c23ee65e8704191efd53bc3473467a3e8fdc098cfdc2527",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "orientation",
+      "scope_fit": "unknown",
+      "temporal_fit": "unknown",
+      "anchor": {
+        "exact": "",
+        "prefix": "",
+        "suffix": "",
+        "location_hint": "",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 8,
+      "diagnostic_score": 22.5,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    }
+  ],
+  "not_proven": [
+    "reviewed_support",
+    "reviewed_truth",
+    "action_basis"
+  ]
+}

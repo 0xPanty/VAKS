@@ -1,0 +1,38 @@
+{
+  "record_kind": "sandbox_failure_case_matrix",
+  "slice_id": "2026-06-19-p2-76-old-file-status-normalization-executor-preflight-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "EP-FAIL-01-approval-present-without-future-user-message",
+      "must_fail_when": "preflight treats p2-75 packet or generic language as approval"
+    },
+    {
+      "case_id": "EP-FAIL-02-executor-write-allowed-without-approval",
+      "must_fail_when": "executor_write_allowed is true while approval_present is false"
+    },
+    {
+      "case_id": "EP-FAIL-03-target-status-drift",
+      "must_fail_when": "a target file's current frontmatter status differs from p2-72 manifest current_status"
+    },
+    {
+      "case_id": "EP-FAIL-04-missing-target-file",
+      "must_fail_when": "any p2-72 target path is missing"
+    },
+    {
+      "case_id": "EP-FAIL-05-body-edit-in-plan",
+      "must_fail_when": "preflight includes body/content edits or fields other than frontmatter.status"
+    },
+    {
+      "case_id": "EP-FAIL-06-rollback-entry-missing",
+      "must_fail_when": "any proposed change lacks rollback status"
+    },
+    {
+      "case_id": "EP-FAIL-07-old-slice-write-applied",
+      "must_fail_when": "preflight applies any old-slice write"
+    },
+    {
+      "case_id": "EP-FAIL-08-mainline-or-action-authority-created",
+      "must_fail_when": "preflight creates mainline readiness, promotion, reviewed knowledge, evidence support, or action basis"
+    }
+  ]
+}

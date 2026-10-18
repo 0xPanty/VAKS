@@ -1,0 +1,66 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "kepano/kepano-obsidian",
+  "source_url": "https://github.com/kepano/kepano-obsidian",
+  "checked_commit": "473697347a0eaac790a6596229c741b3915f3b77",
+  "checked_at": "2026-06-11",
+  "inspection_method": "local evidence-backed skip; inspected existing source record, architecture review, extracted patterns, anti-pattern, and indexes",
+  "anchors": [
+    {
+      "path": "raw/repos/2026-05-27-kepano-obsidian-source.md",
+      "kind": "existing-source-review",
+      "why": "Contains source-level capture of the repo, checked commit, vault map, templates, Bases, config, takeaways, limits, and candidate points."
+    },
+    {
+      "path": "wiki/summaries/2026-05-27-kepano-obsidian-architecture-review.md",
+      "kind": "existing-architecture-review",
+      "why": "Maps Kepano to VAKS activation/dev-context and explicitly rejects truth-layer adoption."
+    },
+    {
+      "path": "wiki/patterns/property-driven-context-workbench.md",
+      "kind": "absorbed-pattern",
+      "why": "Captures properties and views as context workbench rather than folder movement."
+    },
+    {
+      "path": "wiki/patterns/link-overlap-related-context-surface.md",
+      "kind": "absorbed-pattern",
+      "why": "Captures link/backlink/tag overlap as candidate relatedness, not truth."
+    },
+    {
+      "path": "wiki/patterns/random-revisit-cold-memory-maintenance.md",
+      "kind": "absorbed-pattern",
+      "why": "Captures bounded revisit as cold-memory maintenance."
+    },
+    {
+      "path": "wiki/anti-patterns/derived-relatedness-as-truth-signal.md",
+      "kind": "absorbed-anti-pattern",
+      "why": "Protects against treating organic relatedness signals as evidence or reviewed relations."
+    },
+    {
+      "path": "wiki/indexes/memory-tier-reference-index.md",
+      "kind": "index-evidence",
+      "why": "Lists Kepano as adapted reference and maps its extracted patterns and risk boundary."
+    },
+    {
+      "path": "wiki/indexes/knowledge-graph-index.md",
+      "kind": "index-evidence",
+      "why": "Records Kepano source/review/pattern/anti-pattern absorption in the knowledge graph index."
+    }
+  ],
+  "observed_counts": {
+    "existing_source_records": 1,
+    "existing_architecture_reviews": 1,
+    "existing_patterns": 3,
+    "existing_anti_patterns": 1,
+    "existing_indexes_checked": 2
+  },
+  "known_limits": [
+    "This is a skip because existing local review covers the same repo and commit, not because the source is low value.",
+    "If upstream changes materially, a fresh source-level distillation should be run.",
+    "Existing Kepano-derived material remains candidate/reviewed-local architecture context, not automatic action basis."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

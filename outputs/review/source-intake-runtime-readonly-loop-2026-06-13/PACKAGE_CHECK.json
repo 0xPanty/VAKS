@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "file_count": 60,
+  "errors": [],
+  "runtime_summary_status": "pass",
+  "truth_boundary": "Package integrity and runtime dry-run evidence only; not Source Intake P0 approval."
+}

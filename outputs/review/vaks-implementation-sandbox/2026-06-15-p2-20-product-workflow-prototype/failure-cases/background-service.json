@@ -1,0 +1,1 @@
+{"case_id":"background-service","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/scope/starts_runtime_or_service","value":true}]}

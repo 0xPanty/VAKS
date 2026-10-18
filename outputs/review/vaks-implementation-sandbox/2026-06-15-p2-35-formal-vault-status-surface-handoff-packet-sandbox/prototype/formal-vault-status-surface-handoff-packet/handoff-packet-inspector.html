@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" data-sandbox-only="true" data-handoff-only="true" data-non-executable="true" data-no-formal-vault-access="true" data-no-write="true" data-no-sync="true" data-no-authority="true" data-no-approval="true" data-no-user-wording="true" data-no-command="true">
+<head>
+  <meta charset="utf-8">
+  <title>Formal Vault Status Surface Handoff Packet</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #5b6472;
+      --line: #cbd5e1;
+      --panel: #f8fafc;
+      --ok: #047857;
+      font-family: Arial, sans-serif;
+    }
+    body { margin: 0; color: var(--ink); background: #fff; }
+    main { max-width: 980px; margin: 0 auto; padding: 24px; }
+    h1 { margin: 0 0 8px; font-size: 26px; letter-spacing: 0; }
+    .sub { color: var(--muted); margin: 0 0 18px; line-height: 1.5; }
+    .toolbar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+    button { border: 1px solid var(--line); border-radius: 6px; background: #fff; padding: 8px 10px; cursor: default; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+    .card { border: 1px solid var(--line); border-radius: 8px; background: var(--panel); padding: 14px; }
+    .badge { display: inline-block; border-radius: 999px; padding: 3px 8px; color: var(--ok); border: 1px solid #a7f3d0; background: #ecfdf5; font-size: 12px; }
+    code { overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Formal Vault Status Surface Handoff Packet</h1>
+    <p class="sub">Source: <code>2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox</code>. Sandbox handoff only; no approval, no commands, no formal vault access, no run authority.</p>
+    <div class="toolbar" aria-label="local display filters only">
+      <button type="button" data-filter="all">All</button>
+      <button type="button" data-filter="handoff">Handoffs</button>
+    </div>
+    <section class="grid">
+      <article class="card" data-kind="handoff">
+        <span class="badge">handoff</span>
+        <h2>next agent read only handoff</h2>
+        <p><code>HANDOFF_PACKET_READY_FOR_READ_ONLY_NEXT_AGENT</code></p>
+      </article>
+<article class="card" data-kind="handoff">
+        <span class="badge">handoff</span>
+        <h2>product workflow prebrief handoff</h2>
+        <p><code>HANDOFF_PACKET_READY_FOR_SANDBOX_WORKFLOW_PROTOTYPE</code></p>
+      </article>
+<article class="card" data-kind="handoff">
+        <span class="badge">handoff</span>
+        <h2>pause or park handoff</h2>
+        <p><code>HANDOFF_PACKET_READY_FOR_STOP_OR_PARK_RECORD</code></p>
+      </article>
+    </section>
+  </main>
+  <script>
+    const buttons = Array.from(document.querySelectorAll("button[data-filter]"));
+    const cards = Array.from(document.querySelectorAll("[data-kind]"));
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+        cards.forEach((card) => {
+          card.hidden = filter !== "all" && card.dataset.kind !== filter;
+        });
+      });
+    });
+  </script>
+</body>
+</html>

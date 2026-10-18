@@ -1,0 +1,12 @@
+{
+  "fixture_id": "exact-approval-preflight-drift-blocked",
+  "input_kind": "future_user_message_exact_phrase_with_drifted_preflight",
+  "expected": {
+    "approval_phrase_matched": true,
+    "preflight_clean": false,
+    "readiness": "blocked_preflight_drift",
+    "executor_write_allowed": false,
+    "old_slice_writes_applied": 0,
+    "blocked_reason": "Exact approval cannot override preflight drift."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "input_text": "选B，先做只读规划",
+  "case_id": "explicit_B",
+  "expected_result": "future_readonly_promotion_review_planning_request_only",
+  "expected_safe_next_step": "ask_user_for_separate_read_only_review_planning_scope",
+  "automatic_execution": false,
+  "requires_clarification": false,
+  "requires_new_scope": true,
+  "requires_separate_user_approval": true,
+  "requires_explicit_allowed_paths": false
+}

@@ -1,0 +1,1 @@
+{"case_id":"missing-non-claims","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"delete","path":"/non_claims"}]}

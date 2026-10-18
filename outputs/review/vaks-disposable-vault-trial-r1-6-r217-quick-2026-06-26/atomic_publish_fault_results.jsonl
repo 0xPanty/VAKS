@@ -1,0 +1,1 @@
+{"allowed":false,"atomic_strategy":"staged_temp_hardlink_no_clobber","case_id":"after_staging_write_fault","created":false,"staging_dir_exists_after":false,"staging_temp_created":true,"staging_temp_exists_after":false,"target_exists_after":false,"write_error_class":"RuntimeError"}

@@ -1,0 +1,8 @@
+{
+  "fixture_id": "current-strict-sidecar-not-old-final-gate",
+  "expected": {
+    "source_old_slice_current_strict_final_gate_count": 0,
+    "claim_old_slices_current_strict_complete": false,
+    "sidecar_only": true
+  }
+}

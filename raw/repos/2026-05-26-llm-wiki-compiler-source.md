@@ -1,5 +1,6 @@
 ---
 type: source
+record_kind: source_card
 status: source-captured
 created: 2026-05-26
 updated: 2026-05-26
@@ -23,19 +24,16 @@ sources:
   - "raw/repos/_snapshots/llm-wiki-compiler-main-2026-05-26.zip"
 verification_status: primary-source
 evidence_level: primary
-confidence: high
+source_integrity:
+  capture_confidence: high
 last_verified: 2026-05-26
 next_review: 2026-06-02
-source_quality: 4
-freshness: 5
-relevance: 5
-cross_source_count: 1
 snapshot_path: "raw/repos/_snapshots/llm-wiki-compiler-main-2026-05-26.zip"
 related_claims: []
 related_concepts:
   - "[[2026-04-04-karpathy-llm-wiki-pattern]]"
   - "[[2026-05-26-llm-wiki-compiler-architecture-review]]"
-relations:
+candidate_relation_suggestions:
   - target: "[[review-gated-compile-queue]]"
     type: supports
     strength: 5
@@ -67,8 +65,24 @@ tags:
   - source/repo
   - knowledge-system
   - llm-wiki
+knowledge_status: raw
+processing_tier: light
+source_id: "https://github.com/atomicstrata/llm-wiki-compiler"
+why_saved: see_body_or_legacy_record
+retrieval_policy:
+  policy_kind: source_identity_only
+  pack_allowed: drilldown_required
+  action_basis_allowed: false
+  warning_code: raw_is_provenance_only
+promotion_gate: none
+action_basis_allowed: false
+truth_mutation_allowed: false
+legacy_raw_metadata:
+  source_quality: 4
+  freshness: 5
+  relevance: 5
+  cross_source_count: 1
 ---
-
 # 来源记录：atomicstrata/llm-wiki-compiler
 
 ## 为什么收录

@@ -1,0 +1,13 @@
+{
+  "case_id": "prototype-receipt-permission",
+  "note": "Receipt grants execution.",
+  "prototype_tamper": {
+    "kind": "receipt_update",
+    "updates": {
+      "execution_permission_granted": true
+    }
+  },
+  "expected_errors": [
+    "prototype_receipt_flag_not_false:execution_permission_granted"
+  ]
+}

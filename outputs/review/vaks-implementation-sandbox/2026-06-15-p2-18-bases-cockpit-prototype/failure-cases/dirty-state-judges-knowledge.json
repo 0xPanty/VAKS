@@ -1,0 +1,1 @@
+{"extends": "fixtures/valid-bases-cockpit.json", "scenario_id": "dirty-state-judges-knowledge", "expected_valid": false, "expected_codes": ["BC_DIRTY_STATE_AS_KNOWLEDGE"], "allowed_extra_codes": ["BC_AUTHORITY_CONFUSION"], "patch": {"operator_states": {"dirty_state_judges_knowledge": true}}}

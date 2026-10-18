@@ -1,0 +1,245 @@
+{
+  "run_id": "run-002-qualified-partial",
+  "pack_contract": "support_candidate_not_support",
+  "items": [
+    {
+      "item_id": "item-001",
+      "source_ref": "raw/articles/2026-05-29-w3c-prov-source.md",
+      "source_snapshot_hash": "d02636005e119966eb13a08c98a2416f0c99844e72f1740e44901535175e152f",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "support_candidate",
+      "scope_fit": "matched",
+      "temporal_fit": "current",
+      "anchor": {
+        "exact": "## 初步看点 - PROV 的核心描述对象是 entities、activities 和 people/agents involved in producing data or things。 - PROV-DM 是 W3C provenance family 的 conceptual data model。 - 这正好可以给本项目的 source provenance 提供轻量词汇，但不要求 source record 承担 review、promotion 或 context-pack 使用日志。",
+        "prefix": "Note, 2013-04-30 - PROV-DM：W3C Recommendation, 2013-04-30 - 原始链接： - https://www.w3.org/TR/prov-overview/ - https://www.w3.org/TR/prov-dm/ - 采集方式：官方文档网页核验",
+        "suffix": "## 吸收方式 ```text Use PROV-lite, not full PROV. entity: source identity and version activity: capture and extraction in the source record review, promoti",
+        "location_hint": "heading:初步看点",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 1,
+      "diagnostic_score": 49.0,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    },
+    {
+      "item_id": "item-002",
+      "source_ref": "raw/articles/2026-05-29-w3c-prov-source.md",
+      "source_snapshot_hash": "d02636005e119966eb13a08c98a2416f0c99844e72f1740e44901535175e152f",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "support_candidate",
+      "scope_fit": "matched",
+      "temporal_fit": "current",
+      "anchor": {
+        "exact": "## 边界 ```text PROV-lite records traceability. It does not decide truth. It does not raise confidence. It does not turn a citation into support. ```",
+        "prefix": "rsion activity: capture and extraction in the source record review, promotion, and context-pack use in their own records agent: human, model, tool ```",
+        "suffix": "## 可抽取 Candidate Points 1. Source provenance should track the material, the handling activity, and the responsible agent. 2. Source trace can borrow PROV's ent",
+        "location_hint": "heading:边界",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 1,
+      "diagnostic_score": 49.0,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    },
+    {
+      "item_id": "item-003",
+      "source_ref": "raw/repos/2026-06-14-rohitg00-agentmemory-source.md",
+      "source_snapshot_hash": "28ba0a38756b80bd67732ad47ecd4e265455e116593f63620dc6442884e39d9c",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "orientation",
+      "scope_fit": "unknown",
+      "temporal_fit": "unknown",
+      "anchor": {
+        "exact": "",
+        "prefix": "",
+        "suffix": "",
+        "location_hint": "",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 2,
+      "diagnostic_score": 44.0,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    },
+    {
+      "item_id": "item-004",
+      "source_ref": "raw/videos/2026-06-04-youtube-hermes-obsidian-source.md",
+      "source_snapshot_hash": "4d58e7a6f9d936d58756152801e2b12b588d5440c331730b7d3bc5621d83e65b",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "orientation",
+      "scope_fit": "unknown",
+      "temporal_fit": "unknown",
+      "anchor": {
+        "exact": "",
+        "prefix": "",
+        "suffix": "",
+        "location_hint": "",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 3,
+      "diagnostic_score": 43.5,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    },
+    {
+      "item_id": "item-005",
+      "source_ref": "raw/repos/2026-05-27-knowledge-base-server-source.md",
+      "source_snapshot_hash": "be138c5b99e6351f444f8aee37e9000b7821b89e8f357e8a11911ba9e245853c",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "orientation",
+      "scope_fit": "unknown",
+      "temporal_fit": "unknown",
+      "anchor": {
+        "exact": "",
+        "prefix": "",
+        "suffix": "",
+        "location_hint": "",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 4,
+      "diagnostic_score": 40.0,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    },
+    {
+      "item_id": "item-006",
+      "source_ref": "raw/repos/2026-06-08-Yaozhuwa-easy-typing-obsidian-source.md",
+      "source_snapshot_hash": "b7abe7b06abbb6a6d3db1e6cf010587f0b44f948985bf2ab69e43757a1d82d88",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "orientation",
+      "scope_fit": "unknown",
+      "temporal_fit": "unknown",
+      "anchor": {
+        "exact": "",
+        "prefix": "",
+        "suffix": "",
+        "location_hint": "",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 5,
+      "diagnostic_score": 39.5,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    },
+    {
+      "item_id": "item-007",
+      "source_ref": "raw/repos/2026-06-11-awesome-obsidian-vault/cyanvoxel-obsidian-vault-template-source.md",
+      "source_snapshot_hash": "b7dce1d2b1d283c4f77c3a24fbb6dc14aaf8a1c52e57a298deaf7eecb8026b13",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "orientation",
+      "scope_fit": "unknown",
+      "temporal_fit": "unknown",
+      "anchor": {
+        "exact": "",
+        "prefix": "",
+        "suffix": "",
+        "location_hint": "",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 6,
+      "diagnostic_score": 38.5,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    },
+    {
+      "item_id": "item-008",
+      "source_ref": "raw/repos/2026-06-11-AxDSan-mnemosyne-source.md",
+      "source_snapshot_hash": "22ee07b6c37dfbe8c0c905d1ef46eb464e5635207bc4e0c6b2702f8520565a9d",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "orientation",
+      "scope_fit": "unknown",
+      "temporal_fit": "unknown",
+      "anchor": {
+        "exact": "",
+        "prefix": "",
+        "suffix": "",
+        "location_hint": "",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 7,
+      "diagnostic_score": 36.0,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    },
+    {
+      "item_id": "item-009",
+      "source_ref": "raw/repos/2026-06-12-breferrari-obsidian-mind-source.md",
+      "source_snapshot_hash": "f3a16afdd0e9f060c68674c59cb3719a536710f185d19a3d7b9095d945557f4b",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "orientation",
+      "scope_fit": "unknown",
+      "temporal_fit": "unknown",
+      "anchor": {
+        "exact": "",
+        "prefix": "",
+        "suffix": "",
+        "location_hint": "",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 8,
+      "diagnostic_score": 36.0,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    }
+  ],
+  "not_proven": [
+    "reviewed_support",
+    "reviewed_truth",
+    "action_basis"
+  ]
+}

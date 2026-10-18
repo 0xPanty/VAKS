@@ -1,0 +1,62 @@
+{
+  "record_kind": "opus_external_review_operator_control_card",
+  "slice_id": "2026-06-19-p2-101-opus-external-review-operator-kit-sandbox",
+  "transfer_slice_id": "2026-06-19-p2-100-opus-review-transfer-package-sandbox",
+  "intake_schema_slice_id": "2026-06-19-p2-96-opus-result-intake-skeleton-sandbox",
+  "inputs": {
+    "transfer_manifest_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-100-opus-review-transfer-package-sandbox/artifact/opus-review-transfer-package-manifest.json",
+    "transfer_sha_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-100-opus-review-transfer-package-sandbox/artifact/opus-review-transfer-package-sha256.txt",
+    "intake_schema_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-96-opus-result-intake-skeleton-sandbox/artifact/opus-result-intake-schema.json"
+  },
+  "outputs": {
+    "runbook_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-101-opus-external-review-operator-kit-sandbox/artifact/opus-external-review-operator-runbook.md",
+    "submission_message_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-101-opus-external-review-operator-kit-sandbox/artifact/opus-external-review-submission-message.md",
+    "intake_template_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-101-opus-external-review-operator-kit-sandbox/artifact/opus-result-intake-template.md"
+  },
+  "transfer_package": {
+    "zip_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-100-opus-review-transfer-package-sandbox/artifact/opus-review-transfer-package.zip",
+    "zip_sha256": "2fa20d453406757c0e53abc2c2ad9842264c35359d1e12b203ea5113273b2640",
+    "sha_file_text": "2fa20d453406757c0e53abc2c2ad9842264c35359d1e12b203ea5113273b2640  opus-review-transfer-package.zip",
+    "zip_hash_matches_sha_file": true,
+    "transfer_ready": true,
+    "actual_opus_result_present": false,
+    "opus_approval_claimed": false,
+    "mainline_ready": false,
+    "goal_complete_now": false
+  },
+  "intake_schema": {
+    "allowed_conclusion_tokens": [
+      "OPUS_PASS_SANDBOX_CLOSEOUT",
+      "OPUS_REVISE_SANDBOX_CLOSEOUT",
+      "OPUS_BLOCKED_NEEDS_USER"
+    ],
+    "required_fields_when_result_exists": [
+      "raw_conclusion_token",
+      "reviewed_evidence",
+      "boundary_verdict",
+      "raw_response_path"
+    ],
+    "boundary_requirements": {
+      "mainline_approval": false,
+      "reviewed_knowledge": false,
+      "evidence_support": false,
+      "action_basis": false,
+      "commit_push_sync": false
+    }
+  },
+  "operator_state": {
+    "ready_to_submit_to_opus": true,
+    "actual_opus_result_present": false,
+    "opus_approval_claimed": false,
+    "mainline_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "goal_complete_now": false
+  },
+  "sha256": {
+    "runbook": "67e59026b3326548ccd44013fa53f95d728262aad042ffe05a88136d47a8efec",
+    "submission_message": "e484bd6ad51d8fdf79b58b266efe3a56f78b28f12ca60d902287db83c78fae16",
+    "intake_template": "28b71595c4fda36004e1988ef0d7e4ee2f374be1e6aa21d65ad898965e8387d3"
+  }
+}

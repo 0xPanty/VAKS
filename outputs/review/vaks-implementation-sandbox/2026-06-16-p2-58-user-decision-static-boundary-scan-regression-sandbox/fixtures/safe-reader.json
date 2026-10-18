@@ -1,0 +1,7 @@
+{
+  "fixture_id": "safe_reader",
+  "description": "Read-only file access has no boundary issue.",
+  "source": "from pathlib import Path\n\ntext = Path('input.md').read_text(encoding='utf-8')\nprint(text)\n",
+  "allowed_write_lines": [],
+  "expected_issues": []
+}

@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "protected-output-path",
+  "expected_valid": false,
+  "expected_codes": ["RP_PROTECTED_PATH_TARGET"],
+  "patch": {"outputs": {"markdown_path": "tools/generated-parser-output.md"}}
+}

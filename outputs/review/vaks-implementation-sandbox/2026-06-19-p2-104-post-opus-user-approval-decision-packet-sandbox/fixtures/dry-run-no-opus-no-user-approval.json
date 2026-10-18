@@ -1,0 +1,21 @@
+{
+  "record_kind": "post_opus_user_approval_decision_dry_run",
+  "dry_run_only": true,
+  "actual_opus_result_present": false,
+  "validated_opus_pass_present": false,
+  "user_approval_present": false,
+  "exact_approval_phrase": "I explicitly approve post-Opus mainline consideration for VAKS sandbox closeout: prepare a separate merge proposal only; do not merge, promote, commit, push, sync, or write reviewed knowledge/action basis without my next explicit approval.",
+  "user_message": "",
+  "allowed_next_state": "not_ready_for_mainline_consideration",
+  "authority_flags": {
+    "mainline_merge_allowed": false,
+    "promotion_allowed": false,
+    "reviewed_knowledge_write_allowed": false,
+    "evidence_support_write_allowed": false,
+    "action_basis_allowed": false,
+    "commit_allowed": false,
+    "push_allowed": false,
+    "sync_allowed": false,
+    "goal_complete_now": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "background-indexer-enabled",
+  "expected_valid": false,
+  "expected_codes": ["MS_BACKGROUND_INDEXER_FORBIDDEN"],
+  "patch": {
+    "runtime": {
+      "background_indexer_enabled": true,
+      "watch_mode_enabled": true
+    }
+  }
+}

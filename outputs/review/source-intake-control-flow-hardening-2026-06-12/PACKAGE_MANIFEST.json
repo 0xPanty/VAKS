@@ -1,0 +1,1402 @@
+{
+  "package": "source-intake-control-flow-hardening-pro-review-package.zip",
+  "created_at": "2026-06-12",
+  "scope": "VAKS Source Intake control-flow hardening Pro-review package",
+  "truth_boundary": "evidence package only; not reviewed knowledge or action basis",
+  "current_lint_corpus_included": true,
+  "current_lint_corpus_file_count": 225,
+  "file_count": 278,
+  "missing": [],
+  "files": [
+    {
+      "path": "SOURCE_INTAKE.md",
+      "bytes": 44546,
+      "sha256": "669ca7185a976cf05a56d03d513957ec96230ea705530956ec9ccb5bdb8ef23a"
+    },
+    {
+      "path": "outputs/feedback/README.md",
+      "bytes": 492,
+      "sha256": "e945740f036d50afffe5418c3f489be7f98b7099789d42a91dd9d955e5934b25"
+    },
+    {
+      "path": "outputs/qa/2026-05-26-evidence-backed-design-validation.md",
+      "bytes": 1906,
+      "sha256": "2b3d9701c2bcbf87c7f6f82bd5d43c7d1fb40640b2cf7fb8f97a325ebeb7bb99"
+    },
+    {
+      "path": "outputs/qa/2026-05-26-evolvable-design-system.md",
+      "bytes": 1346,
+      "sha256": "c3935d8116c659c9751de2b2ffd23368376fc3af35290a4e1d669667df8302ac"
+    },
+    {
+      "path": "outputs/qa/2026-05-26-gbrain-second-brain-design-analysis.md",
+      "bytes": 5572,
+      "sha256": "1f8393901a01078dc0088ea67b8365e19e2f960fc58ceb79c604f4c826c45bd6"
+    },
+    {
+      "path": "outputs/qa/2026-05-26-llm-wiki-fusion-conflict-check.md",
+      "bytes": 1812,
+      "sha256": "7bf58d5903c711bb14d79d8338cfb5b36aaf2b421041cab6c7485f51c6733e1e"
+    },
+    {
+      "path": "outputs/qa/2026-05-26-llm-wiki-implementation-extraction.md",
+      "bytes": 8355,
+      "sha256": "a02d1b6dac5f080b52ff6792b6265b84deed11dd9701956899e51bf637424713"
+    },
+    {
+      "path": "outputs/qa/2026-05-26-llm-wiki-value-analysis.md",
+      "bytes": 3149,
+      "sha256": "a9ed3f478d922af8a0d794f715fa6a7450ddf7091c115ed69d389528e6cba029"
+    },
+    {
+      "path": "outputs/qa/2026-05-26-llm-wiki-vs-verified-knowledge-system.md",
+      "bytes": 2981,
+      "sha256": "fd3aabe03567964c837fb721faad4539cc75d96ba770be90c456384ce982fed6"
+    },
+    {
+      "path": "outputs/qa/2026-05-26-nano-notebooklm-kg-vector-index-analysis.md",
+      "bytes": 3147,
+      "sha256": "1cdbb23eec8abc95b88f7ac7736c5e0d3c64355c8d73c4a6d073950dd38a1e0a"
+    },
+    {
+      "path": "outputs/qa/2026-05-26-negative-evidence-and-scientific-adoption.md",
+      "bytes": 1883,
+      "sha256": "e8162a020912b759b015ff1d3d3ebd8d850ccc30460b9a806dcdb801416ae3b5"
+    },
+    {
+      "path": "outputs/qa/2026-05-26-obsidian-ai-series-integration.md",
+      "bytes": 2051,
+      "sha256": "230ece4e2b846cf0bf3f6728c965a3c99c62cc2a535c9d4e097990b466292eb9"
+    },
+    {
+      "path": "outputs/qa/2026-05-26-obsidian-base-hub-analysis.md",
+      "bytes": 2873,
+      "sha256": "faee13f6d35a644ef88190eab23103f5b6da5da205d257d7b96a4aeb111c96a7"
+    },
+    {
+      "path": "outputs/qa/2026-05-26-obsidian-bases-properties-layer-check.md",
+      "bytes": 3688,
+      "sha256": "f36c229bde3c5d3d4f442fe2d3127bfee79ce1faa6153ac8c3cae1ea77ab1be1"
+    },
+    {
+      "path": "outputs/qa/2026-05-26-obsidian-second-brain-implementation-extraction.md",
+      "bytes": 4100,
+      "sha256": "09e5853b8106cd2c5dac801eee450e711875ea5840e5d1ca09f89f8a954b59e5"
+    },
+    {
+      "path": "outputs/qa/2026-05-26-obsidian-second-brain-value-analysis.md",
+      "bytes": 3880,
+      "sha256": "0fe3853263cf4adf362292207267dac13b41a1acea0fb582654c0c6375eb712c"
+    },
+    {
+      "path": "outputs/qa/2026-05-26-second-brain-design-fusion.md",
+      "bytes": 1631,
+      "sha256": "c6dc836f5e55966ba9a7da800f510553d20f91cca9bad712524139cbf433992f"
+    },
+    {
+      "path": "outputs/qa/2026-05-26-source-verification-trust-model.md",
+      "bytes": 2285,
+      "sha256": "340c5dea2390f2f6ad219e8aa2cace97622e5cb7e2f923b82db300cfee0b26d4"
+    },
+    {
+      "path": "outputs/qa/2026-05-26-thinking-os-vault-analysis.md",
+      "bytes": 2730,
+      "sha256": "648b86ca66b0b962b7391d20d45d8be9fb656f8653e07571831d3ac2e54bc834"
+    },
+    {
+      "path": "outputs/qa/2026-05-26-verified-vault-api-for-agent-gbrain.md",
+      "bytes": 2408,
+      "sha256": "fda894c1693efc80f21b88765983ec427078d840ce35d99bc2e8d830e98f93e7"
+    },
+    {
+      "path": "outputs/qa/2026-05-26-yanhua-superbrain-content-factory-analysis.md",
+      "bytes": 3077,
+      "sha256": "98a55fcca6b4d6a23748c64ac2feb8e2aaef703db462c4b910ea77503702d5c0"
+    },
+    {
+      "path": "outputs/qa/2026-05-27-alpha-point-collision-research.md",
+      "bytes": 5153,
+      "sha256": "b970200e017d89c9920206f51264cd294d8966288689737a6d8a0c09256a4e18"
+    },
+    {
+      "path": "outputs/qa/2026-05-27-conversation-derived-feedback-routing-research.md",
+      "bytes": 5663,
+      "sha256": "8303048f77f4e5f297f937f208b09b6372d902e1e0c95ae5f5c60c9ff4a69c30"
+    },
+    {
+      "path": "outputs/qa/2026-06-08-obsidian-bases-design-research.md",
+      "bytes": 23476,
+      "sha256": "eeab329f784563b4f60487ffaf6f689eb9bb38db3fc7b79db8d7be67d5c4f85c"
+    },
+    {
+      "path": "outputs/qa/2026-06-09-obsidian-bases-first-batch-closeout.md",
+      "bytes": 4352,
+      "sha256": "f37c21daf35aabe763eafd41444aee88f6793636b01f70e664ceb4d045a209ca"
+    },
+    {
+      "path": "outputs/review/2026-06-07-aal-ruller-pkm-second-brain-ai-companian-candidate-distillation.md",
+      "bytes": 11218,
+      "sha256": "4dfe92c9f8069dc17df11abc9275e7de592853c692aaa3f415e6ba974319a214"
+    },
+    {
+      "path": "outputs/review/2026-06-08-Momoyu404-geminese-candidate-distillation.md",
+      "bytes": 7532,
+      "sha256": "d95b42c4d50f299fb9322fb7d5270e00e16eee67eacde4fe8dc78231da4d0799"
+    },
+    {
+      "path": "outputs/review/2026-06-08-Yaozhuwa-easy-typing-obsidian-candidate-distillation.md",
+      "bytes": 8122,
+      "sha256": "6f50870287dc237b1dfb071cdd319e10fe43b20b2ce8303d7b868f95ed17fcfd"
+    },
+    {
+      "path": "outputs/review/2026-06-08-bilibili-claudian-obsidian-skill-workflow-candidate-distillation.md",
+      "bytes": 6726,
+      "sha256": "769215c982a13c9bd434e5241b6f83a18e0fbdaaa6f9a518c0f447b127869cd0"
+    },
+    {
+      "path": "outputs/review/2026-06-08-bilibili-codex-obsidian-minimal-loop-candidate-distillation.md",
+      "bytes": 5321,
+      "sha256": "7d0d108e0712194e1d82dc4b84bffc330e5c68acabb4ba346cfb0b835f88cf6d"
+    },
+    {
+      "path": "outputs/review/2026-06-08-bilibili-ioto-obsidian-knowledge-production-system-candidate-distillation.md",
+      "bytes": 8589,
+      "sha256": "2acebe3ef58f6e9872e1e586aad46155e1291d5f747ba3765b247fc35407d7b5"
+    },
+    {
+      "path": "outputs/review/2026-06-08-bilibili-modular-obsidian-official-site-candidate-distillation.md",
+      "bytes": 4874,
+      "sha256": "78dad48ba8e6e2d165c021705000cd65a60d0bef231338d1fd6c77b9ddcee539"
+    },
+    {
+      "path": "outputs/review/2026-06-08-bilibili-obsidian-outlinks-graph-candidate-distillation.md",
+      "bytes": 4437,
+      "sha256": "a67dc11ca4083d17f7da2ad356cfb84109bfe48c72f5f218b6646c3e5708f750"
+    },
+    {
+      "path": "outputs/review/2026-06-08-bilibili-pdf-to-obsidian-paper-intake-candidate-distillation.md",
+      "bytes": 6379,
+      "sha256": "d135c0b1b6d56d0d7eafe8fdd3c0cfc19ef153f2db8197aa013ade705542f4b3"
+    },
+    {
+      "path": "outputs/review/2026-06-08-cbrain-knowledge-system-mindmap-candidate-distillation.md",
+      "bytes": 7092,
+      "sha256": "0ea68c875f42774bd5bb85e20583eeee6a02dee15d065d4a88d1a9387601c307"
+    },
+    {
+      "path": "outputs/review/2026-06-08-sumruler-typora-theme-phycat-candidate-distillation.md",
+      "bytes": 5794,
+      "sha256": "2cb1eac842da647acab9ada2e8140bf5ea1804b19ec751b112ab46ed5ab38132"
+    },
+    {
+      "path": "outputs/review/2026-06-08-xhs-agent-first-knowledge-base-candidate-distillation.md",
+      "bytes": 9162,
+      "sha256": "bcc1aaa472012ffc33e6dc22f1fe724ff4acca4f6a6ce5214d29ef9b20775cff"
+    },
+    {
+      "path": "outputs/review/2026-06-08-xhs-codex-obsidian-ai-daily-course-candidate-distillation.md",
+      "bytes": 5873,
+      "sha256": "4b8652004f7bbc79d604baa41ed2c0b55cb67be5f7d3d782930d5f848477a190"
+    },
+    {
+      "path": "outputs/review/2026-06-08-xhs-nocode-wep-ai-knowledge-base-candidate-distillation.md",
+      "bytes": 9592,
+      "sha256": "90876b430a70c7b615dd05f6cd7deed5a34e17dcb42d6a088a02a9334a8249b6"
+    },
+    {
+      "path": "outputs/review/2026-06-11-AxDSan-mnemosyne-candidate-distillation.md",
+      "bytes": 11875,
+      "sha256": "95939bb236c67d7dba28e880c3cc280d0bb79d01f47706f1914f3aef5183496e"
+    },
+    {
+      "path": "outputs/review/2026-06-11-PaddlePaddle-PaddleOCR-candidate-distillation.md",
+      "bytes": 10602,
+      "sha256": "bdf0f9045aae266725831616c10e88ba7adc2718df5ce927a597a2ad3062308e"
+    },
+    {
+      "path": "outputs/review/2026-06-11-RyanCodrai-turbovec-0-8-0-refresh.md",
+      "bytes": 6613,
+      "sha256": "f1a68550118bd22693153e1f37ba76a28bb59473555e1f7362fd1da18dbe1ab5"
+    },
+    {
+      "path": "outputs/review/2026-06-11-RyanCodrai-turbovec-candidate-distillation.md",
+      "bytes": 8562,
+      "sha256": "245c07226c481552e6ad7130f63ef1cfee8dcf0c1997096d737ba6a64913e719"
+    },
+    {
+      "path": "outputs/review/2026-06-11-bilibili-get-note-ai-knowledge-workflow-candidate-distillation.md",
+      "bytes": 6635,
+      "sha256": "96c1e9f8c36e2df3c915b07bab02ea602553a87d73703dc5eb92e15f857991db"
+    },
+    {
+      "path": "outputs/review/2026-06-11-bilibili-obsidian-workspaces-layout-candidate-distillation.md",
+      "bytes": 5057,
+      "sha256": "c9b818b9957908cd31c7b17197695c189c87dcaa116a544b46bd8d5c15ff585c"
+    },
+    {
+      "path": "outputs/review/2026-06-11-cyrilxbt-n8n-obsidian-business-brain-candidate-distillation.md",
+      "bytes": 10674,
+      "sha256": "55cbc6ef060c0891c4704fefd91e985185554c25abda29af42814f0e99bd1eaa"
+    },
+    {
+      "path": "outputs/review/2026-06-11-guoxun-onefeed-candidate-distillation.md",
+      "bytes": 7944,
+      "sha256": "190687de48f1046fbe077626f70a48509e547a2ea0f0e507d3779f7bb5c53347"
+    },
+    {
+      "path": "outputs/review/2026-06-11-safishamsi-graphify-candidate-distillation.md",
+      "bytes": 8441,
+      "sha256": "570fdd61549384443adf42d624180f9f10473a7ae831daf1c0b8bc8548917ab4"
+    },
+    {
+      "path": "outputs/review/2026-06-11-trimstray-the-book-of-secret-knowledge-candidate-distillation.md",
+      "bytes": 6311,
+      "sha256": "d60d8c1379ccd0910172ec43700366eefdf816a6b8aa99b07de29e2e2d3afe25"
+    },
+    {
+      "path": "outputs/review/2026-06-11-xhs-obsidian-ai-sync-zero-cost-candidate-distillation.md",
+      "bytes": 8462,
+      "sha256": "40fbe9cf80412c5b9d34046a0727571b84598f7a000134c2349bfe4c9594e6c5"
+    },
+    {
+      "path": "outputs/review/2026-06-11-zhizhuodemao-ai-reverse-toolkit-candidate-distillation.md",
+      "bytes": 9414,
+      "sha256": "49ee05517f0a837826db5e5c58fb00621ca1d9df805699788a61df47c613ac50"
+    },
+    {
+      "path": "outputs/review/2026-06-12-bilibili-apex-knowledge-schema-rag-candidate-distillation.md",
+      "bytes": 10833,
+      "sha256": "540154444469d9087008dc25db570e7fc72afc40043226fad4801eabb22d1798"
+    },
+    {
+      "path": "outputs/review/2026-06-12-breferrari-obsidian-mind-candidate-distillation.md",
+      "bytes": 10497,
+      "sha256": "a8fe634cba55b59c4348f056d0ba1052d7f0b3815cd1092429e1a944f3359b19"
+    },
+    {
+      "path": "outputs/review/2026-06-12-uthvah-sync-embeds-candidate-distillation.md",
+      "bytes": 12932,
+      "sha256": "8bb5069adbbb370ca51bdc002455e8e08fbfd78bfd22dc4c0f30c9f76f8230ce"
+    },
+    {
+      "path": "outputs/review/2026-06-13-Xinghongia-Kova-candidate-distillation.md",
+      "bytes": 9750,
+      "sha256": "e1de059e4165b93013a9bde88c58bb6055983718b41b2dc9c3955c262660d338"
+    },
+    {
+      "path": "outputs/review/2026-06-13-bilibili-book-note-workflow-candidate-distillation.md",
+      "bytes": 13876,
+      "sha256": "b4f0812941e2939688fb04ac05ff5078f3b47307f77a151238bb8e60300c7151"
+    },
+    {
+      "path": "outputs/review/2026-06-13-bilibili-edge-recall-contextual-active-recall-candidate-distillation.md",
+      "bytes": 9535,
+      "sha256": "8242851f349003dcde33540994edbd9a0018f57092e747634485f264091d5913"
+    },
+    {
+      "path": "outputs/review/2026-06-13-bilibili-obsidian-homepage-plugin-workbench-candidate-distillation.md",
+      "bytes": 10251,
+      "sha256": "42c844a6c02cd25e7c3c4f87d4ab0d39490569bfccffc75b1b7292966ff3da85"
+    },
+    {
+      "path": "outputs/review/2026-06-13-flexnote-docs-candidate-distillation.md",
+      "bytes": 10202,
+      "sha256": "875108c0ae9d3a00c2e666d3cd4f04eb9475e1a6143fc19c3ec27c3d37928aaf"
+    },
+    {
+      "path": "outputs/review/_legacy_project_lens/2026-06-11-ai-reverse-toolkit-agent-workflow.md",
+      "bytes": 5308,
+      "sha256": "430fe59f930a591bc698b40c25ff7945b4bfb26a44c95b8abc135f0aa6f4f8c1"
+    },
+    {
+      "path": "outputs/review/_legacy_project_lens/2026-06-11-cyrilxbt-n8n-obsidian-business-brain-overlay.md",
+      "bytes": 6624,
+      "sha256": "b4e1045d41b14aa50acc444bf63a5f701dd08e1d26543d7d0154e1ce6ba1c5d3"
+    },
+    {
+      "path": "outputs/review/_legacy_project_lens/2026-06-11-graphify-graph-retrieval-layer.md",
+      "bytes": 4329,
+      "sha256": "cc9d441b00c49c8303537712e83af293469fc03c42f533cea6f66b7486caa21f"
+    },
+    {
+      "path": "outputs/review/_legacy_project_lens/2026-06-11-mnemosyne-vector-memory-layer.md",
+      "bytes": 5978,
+      "sha256": "f1b2fecf4c2c909bfca05dbdf6c0dfda17a021198eca418bc7da2ece0c386375"
+    },
+    {
+      "path": "outputs/review/_legacy_project_lens/2026-06-11-onefeed-search-recommendation-fusion.md",
+      "bytes": 3714,
+      "sha256": "b75491342b12f11641a9d4ef921f92359b9754f15077464d7dea028c884ac5b1"
+    },
+    {
+      "path": "outputs/review/_legacy_project_lens/2026-06-11-paddleocr-document-intake-parser.md",
+      "bytes": 6326,
+      "sha256": "c98d3138535bbd7c6413a8babf443ee2cfdd1c27e45e0238236fb32f324345db"
+    },
+    {
+      "path": "outputs/review/_legacy_project_lens/2026-06-11-the-book-of-secret-knowledge-curated-index-overlay.md",
+      "bytes": 4086,
+      "sha256": "292f86ea945aed69f5c96967da38e2fcf433a8a52d15cada568c937675f9929b"
+    },
+    {
+      "path": "outputs/review/_legacy_project_lens/2026-06-11-turbovec-vector-retrieval-cache.md",
+      "bytes": 4653,
+      "sha256": "a717094123daf29e93f2c83f39f373d6874b07acd86b60fb3dc3ae058a573c3c"
+    },
+    {
+      "path": "outputs/review/_legacy_project_lens/2026-06-12-apex-knowledge-schema-rag-retrieval-overlay.md",
+      "bytes": 6798,
+      "sha256": "e620625951fef89ced5a6bff75d682c4315301e5955b473a0b0f7b72adef0418"
+    },
+    {
+      "path": "outputs/review/_legacy_project_lens/2026-06-12-obsidian-mind-agent-workbench-overlay.md",
+      "bytes": 6868,
+      "sha256": "9a0acdf3f779d7102bb498c367e356ff04f292b63541db8c02179713614b71a8"
+    },
+    {
+      "path": "outputs/review/_legacy_project_lens/2026-06-12-sync-embeds-obsidian-workbench-overlay.md",
+      "bytes": 6274,
+      "sha256": "161fba0de3568e6c37c4fcc0df39a81ad09d8cd7ab323d029543b4bad1c3f83c"
+    },
+    {
+      "path": "outputs/review/_legacy_project_lens/2026-06-13-Xinghongia-Kova-vaks-local-ai-note-client-overlay.md",
+      "bytes": 5144,
+      "sha256": "c91a44657cc74b3f94f62d8161cd86c181f39f9631b7a8ff4756c8826a921f61"
+    },
+    {
+      "path": "outputs/review/_legacy_project_lens/CLOSEOUT_PROTOCOL.md",
+      "bytes": 6781,
+      "sha256": "a34db36791d15caf118da8507ac8c9cc5b2bbd674ab3fa83d180985f90050c7a"
+    },
+    {
+      "path": "outputs/review/_legacy_project_lens/CLOSEOUT_PROTOCOL_OBSIDIAN_TEST_2026-06-05.md",
+      "bytes": 4550,
+      "sha256": "4c0f301ddb9e30a59602e5b23ba372e2ba65d9c994e1c1adda34da0a56f92066"
+    },
+    {
+      "path": "outputs/review/_legacy_project_lens/INDEX.md",
+      "bytes": 2944,
+      "sha256": "7552635ce428bb8cd4a86a0a7da4d293c8751d28e79da3dbc362a93ac873f6f2"
+    },
+    {
+      "path": "outputs/review/_legacy_project_lens/VAKS-closeout-manifest-2026-06-05.md",
+      "bytes": 7334,
+      "sha256": "a69241fd6dcd5cfa885e33e2bff5b548cdecd04fb4f5a100da7f6f284efda90b"
+    },
+    {
+      "path": "outputs/review/_legacy_project_lens/VAKS.md",
+      "bytes": 17046,
+      "sha256": "3a1bcfba71686661762e17678addac699d6de92a7f0bf52a3a57438811e838f4"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/CHECK_RESULTS.md",
+      "bytes": 6993,
+      "sha256": "92ccad1a4ddc42435c5a8abf2b8fd4e8ebbfb628c0bbedb7adf3087fd720425c"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/FINAL_WARNING_POLICY_DECISION.md",
+      "bytes": 3787,
+      "sha256": "8c27ae1f6903cce4f01657fd37ab5ed60b15e0ed33f22c338548e58044139b12"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/MIGRATION_REPORT.md",
+      "bytes": 8163,
+      "sha256": "70d71f6abc2c62e469befa178a417a1b442c6778b3f5d6e28a4f1b792fc95c54"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/MIGRATION_STRATEGY_DECISION.md",
+      "bytes": 3564,
+      "sha256": "31ff264940fca934ef78d389ef514f7cdd75c9f0cb8f4a31335a3a74474f7ea6"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/MINIMUM_FIX_CHECKLIST.md",
+      "bytes": 3475,
+      "sha256": "aa2d5d06479f391453fbce8b92b26307f717fd5f6e739766d8771dc3d8595eba"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/MINIMUM_TEST_CASES.md",
+      "bytes": 4088,
+      "sha256": "ba825e137038ddb16eee4ab8a4effcc0098631634ae8720019d82ca3ab467c1a"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/NOTES_FOR_USER.md",
+      "bytes": 3995,
+      "sha256": "2f3fc72636c8b6958d845371574de5324be1984b533f3aef66c8cce32ccddfe1"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/PRO_REVIEW_REQUEST.md",
+      "bytes": 14398,
+      "sha256": "ea83c68c962a28641c91595d1633819339716ed9ea91484822fe45224a149bb1"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/README.md",
+      "bytes": 8806,
+      "sha256": "1895dd6d56c46bb8f35bbe0c9676abc0a1b71d708053203a06ef6ea03c1a3b07"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/RUNTIME_RISK_MATRIX.md",
+      "bytes": 4375,
+      "sha256": "cd51b9f8d7b11ce89ee1374145871f2bbae99dd6d4213df1e9c0363cdfc04332"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/WARNING_CLASSIFICATION.md",
+      "bytes": 6682,
+      "sha256": "409fbf39109a88a94b174957af9748053e406505f25e8423d9be7fb3c65e2556"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/results/source_intake_contract_lint_issues.csv",
+      "bytes": 80,
+      "sha256": "c1a5c7ea2e3863d91f6a8d2eaab0e49ab0679831d6fc349c473d3328d044b316"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/results/source_intake_contract_lint_summary.json",
+      "bytes": 730,
+      "sha256": "6405d2b27c4097773a49eac9cb6db2c22ed884e3de4019b8fc1ecae08407bdce"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/results/source_intake_current_lint_corpus_manifest.csv",
+      "bytes": 36028,
+      "sha256": "e1de918ab83f670252defdc36043d7845698f39dcde0341a576a42280af097f2"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/results/source_intake_current_lint_corpus_manifest.json",
+      "bytes": 347,
+      "sha256": "e7fcac0f621b340be914742471f6b6ff2efc61589f9cda10ea93a9f504a7cdf7"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/results/source_intake_current_lint_issues.csv",
+      "bytes": 47671,
+      "sha256": "c40a7fca68e99f26974b7720849781ecc7052b5d585c42056be9f8ffd36ec9ab"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/results/source_intake_current_lint_summary.json",
+      "bytes": 1004,
+      "sha256": "8fc47fd578d9d2693bc4813f954f862979f198eef15de47aca1b26ae1c62cddb"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/results/source_intake_failure_matrix_results.csv",
+      "bytes": 4384,
+      "sha256": "10e3b502865e5267fa479e77aa1cdbcef0fc658f6480bbdc580cb226f02674ef"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/results/source_intake_failure_matrix_summary.json",
+      "bytes": 69,
+      "sha256": "4c13a6e6aa687e1add8c9d9766f50f0b8e50994017cec2d1f5423dd3b0867d4e"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/results/source_intake_legacy_project_lens_compatibility.csv",
+      "bytes": 2331,
+      "sha256": "50bde2757689d4869033bfabd6f70bc84ba8bb4debeab473d933628ac716fadd"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/results/source_intake_legacy_project_lens_compatibility.json",
+      "bytes": 800,
+      "sha256": "14dfb8e221b8f537fdfe42c968fd8f525fb3190c99e6ccf00fa0061ff820f6bf"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/results/source_intake_legacy_project_lens_tombstone.md",
+      "bytes": 4787,
+      "sha256": "016416d4de6fdf7943f0a466a5502371d471a63b21416e102f653352abfa985a"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/results/source_intake_nonisomorphic_mapping_policy.csv",
+      "bytes": 3367,
+      "sha256": "c6b76c5cc93231ed501a7e4f6468d48c2ba27bbd0853796cf0ff34da269d1c40"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/results/source_intake_red_zone_cleanup.csv",
+      "bytes": 1802,
+      "sha256": "c076507cf14705ecaa4f2ff1e01d1b4dea08ec459e0fdf8e4b877be195eb8dde"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/results/source_intake_red_zone_cleanup_summary.json",
+      "bytes": 235,
+      "sha256": "441975e5b8bfd1c11619a50553b33b499fd587773f872866f17bb631df7a1a7f"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/results/source_intake_semantic_migration_ledger.csv",
+      "bytes": 126,
+      "sha256": "0c1c3e521233dceb2dcf17757f739162a44ab55825d7ba1fbbe050c3bd77383b"
+    },
+    {
+      "path": "outputs/review/source-intake-control-flow-hardening-2026-06-12/results/source_intake_semantic_migration_summary.json",
+      "bytes": 757,
+      "sha256": "f32c2cf6af0b8b0923bbdcf6c17af8a0e7d27cdf4fbcaca0007d31a4032a5163"
+    },
+    {
+      "path": "raw/articles/2026-01-thinking-os-with-ai-vault-source.md",
+      "bytes": 4056,
+      "sha256": "e382ff3bee9d9a036701e087b6b2ef3134bcea7914e846995fa59521cee49096"
+    },
+    {
+      "path": "raw/articles/2026-04-04-karpathy-llm-wiki-source.md",
+      "bytes": 5832,
+      "sha256": "d304599c0ac49bad2c7c0dc70ae2b1ddb992b1621fac50277398b1a8ef6a17e8"
+    },
+    {
+      "path": "raw/articles/2026-05-27-automated-obsidian-daily-brief-source.md",
+      "bytes": 5064,
+      "sha256": "6e8c4e02b0c63c274865b47db56c07b23e4b80c2cd7bb2b288431cedfbf9d8f3"
+    },
+    {
+      "path": "raw/articles/2026-05-27-jarvis-obsidian-claude-code-source.md",
+      "bytes": 4777,
+      "sha256": "3119d55bad71ff84f3eb1f5f040cac6c9f176182b3eeaa90feda37aea654a2c3"
+    },
+    {
+      "path": "raw/articles/2026-05-29-graphiti-zep-temporal-validity-source.md",
+      "bytes": 3143,
+      "sha256": "aef5884cee01986b1d29bda321126632866da520935220407bdfecf4d4ce7790"
+    },
+    {
+      "path": "raw/articles/2026-05-29-w3c-prov-source.md",
+      "bytes": 3846,
+      "sha256": "d02636005e119966eb13a08c98a2416f0c99844e72f1740e44901535175e152f"
+    },
+    {
+      "path": "raw/articles/2026-05-30-w3c-web-annotation-source.md",
+      "bytes": 2868,
+      "sha256": "e16be8aa931cc46d912429b26446ad7efb8ed49ba7a653512e63e37b14fb28c0"
+    },
+    {
+      "path": "raw/articles/2026-05-obsidian-claude-ai-superbrain-content-factory-source.md",
+      "bytes": 5239,
+      "sha256": "0e26e6a0fdc50e590e224c31d0a9503db2c8dbefa2934d4d593b2c64d31a5b0c"
+    },
+    {
+      "path": "raw/articles/2026-06-08-cbrain-knowledge-system-mindmap-source.md",
+      "bytes": 6971,
+      "sha256": "f227e5c207c5313c9c287969c3dff9283257650ba0d3ee17f32f1c106171ca68"
+    },
+    {
+      "path": "raw/articles/2026-06-08-xhs-codex-obsidian-ai-daily-course-source.md",
+      "bytes": 7272,
+      "sha256": "04190555754213b602f44e3a197af376ba79224906f68d1ebbfdd29ae8a1665b"
+    },
+    {
+      "path": "raw/articles/2026-06-08-xhs-codex-obsidian-ai-daily-course-source/image-index.md",
+      "bytes": 3364,
+      "sha256": "694545268bb6ab3c154ef9bea4c71f1c20124aa699d403819d8404ed25fe211d"
+    },
+    {
+      "path": "raw/articles/2026-06-11-cyrilxbt-n8n-obsidian-business-brain-source.md",
+      "bytes": 7069,
+      "sha256": "bad5a9420c69f4c7be23a4d483b18faf1136d58127f98ab80b3331f053b827c9"
+    },
+    {
+      "path": "raw/articles/2026-06-13-flexnote-docs-source.md",
+      "bytes": 6886,
+      "sha256": "b60e969515a9f112f85797ac62a52c3536515147a64149353c824eeeb5127800"
+    },
+    {
+      "path": "raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md",
+      "bytes": 5124,
+      "sha256": "888f6eac02467a688a294446106759e17a33f79640a8f00633f86211df7dc67d"
+    },
+    {
+      "path": "raw/papers/2026-05-29-a2rag-source.md",
+      "bytes": 3536,
+      "sha256": "b872e97062a703f9d57bf3e508b1cc6b70f64b853ef83e7dd600212459573622"
+    },
+    {
+      "path": "raw/papers/2026-05-29-crag-source.md",
+      "bytes": 3158,
+      "sha256": "05e23c70cc65cb7cf98f17d8f66eb9560851020fda7d15e7f6bb70ff4a295be5"
+    },
+    {
+      "path": "raw/papers/2026-05-29-dung-argumentation-framework-source.md",
+      "bytes": 2669,
+      "sha256": "ecffbd1d862b5bf7d31a955c9120f1b8171cb7d320fc825b236aec8a464c6b75"
+    },
+    {
+      "path": "raw/papers/2026-05-29-graphfc-source.md",
+      "bytes": 3439,
+      "sha256": "54df60e15d56d99a7e84f282e927f5627808f15128517503d27e33eaea728697"
+    },
+    {
+      "path": "raw/papers/2026-05-29-hipporag-source.md",
+      "bytes": 3242,
+      "sha256": "f4b03d754084385de70cdc972083dca19d82e8a6fb0c72432025e90e5c4240b7"
+    },
+    {
+      "path": "raw/papers/2026-05-29-lightrag-source.md",
+      "bytes": 3091,
+      "sha256": "75d3a3a23534d2292a1d9bced235520017dd65e8b260714124e3592d7254fcc2"
+    },
+    {
+      "path": "raw/papers/2026-05-29-memgpt-activation-tier-source.md",
+      "bytes": 2565,
+      "sha256": "41f85bec6e3ae3f00cd28690e8e013a91c00af7de22fae5bc3fa6e9309d7e16d"
+    },
+    {
+      "path": "raw/papers/2026-05-29-papertrail-source.md",
+      "bytes": 3731,
+      "sha256": "eaa48d6220495517565da2525e50a9b0dbfc963657ee4a986066711a0adbdb31"
+    },
+    {
+      "path": "raw/papers/2026-05-29-prove-provenance-verification-source.md",
+      "bytes": 3433,
+      "sha256": "0babaa8a6d48949250c0415a23e7aa0a60fd5322e57749fbdfee10ec89b1d9c7"
+    },
+    {
+      "path": "raw/papers/2026-05-29-rag-attribution-faithfulness-source.md",
+      "bytes": 3477,
+      "sha256": "a95728112b9a8a80d61fd956290999e7e125c0cd2637f81c8a7e42ee5f12438a"
+    },
+    {
+      "path": "raw/papers/2026-05-29-reflexion-source.md",
+      "bytes": 2541,
+      "sha256": "1c8e3cc34450fb81ca7e2478d14cc0f1b969a8a9e0c6df2b0bb3e9246675760a"
+    },
+    {
+      "path": "raw/papers/2026-05-29-rmm-reflective-memory-management-source.md",
+      "bytes": 2768,
+      "sha256": "5008ef3e67dbaa9e8a59b0aac3705ae02cff519c3b048e242cc9a1a7ab801558"
+    },
+    {
+      "path": "raw/papers/2026-05-29-self-rag-source.md",
+      "bytes": 3090,
+      "sha256": "bac87b27cceaf21387b8efd4e78dd082652b046f194d05bda291fb6404cf46a5"
+    },
+    {
+      "path": "raw/papers/2026-05-29-truth-maintenance-system-source.md",
+      "bytes": 2587,
+      "sha256": "45de568800408dd6c33982741a07df393aac68ab172142a2b3db7ac1bb29a494"
+    },
+    {
+      "path": "raw/papers/2026-05-29-veriscore-source.md",
+      "bytes": 3502,
+      "sha256": "a609544eed2628ad2b53a305414ae77ccdfd4e8bbb5d67df145cd851126b4614"
+    },
+    {
+      "path": "raw/papers/2026-05-30-wicer-source.md",
+      "bytes": 2899,
+      "sha256": "47e330a039bf2a71ab6e7b34666fba7d88a20e4adfdcf0f2ab02273daecbb50a"
+    },
+    {
+      "path": "raw/papers/2026-06-07-aal-ruller-pkm-second-brain-ai-companian-source.md",
+      "bytes": 8274,
+      "sha256": "34c134ce7bde93e4b18666d6e52ef27cf86733f2d78c1745fb6db30a56e4e431"
+    },
+    {
+      "path": "raw/papers/2026-06-11-guoxun-onefeed-source.md",
+      "bytes": 9333,
+      "sha256": "042595fa848562f552dcf6bce1bcfdcb020391cef53e3c01515b0a4216f3df9c"
+    },
+    {
+      "path": "raw/repos/2026-05-26-gbrain-source.md",
+      "bytes": 5229,
+      "sha256": "2810159e1df51f7149260598fb4013892c5d839efe9434f65a194bcf8486eff5"
+    },
+    {
+      "path": "raw/repos/2026-05-26-llm-wiki-compiler-source.md",
+      "bytes": 7253,
+      "sha256": "857e85d06fddfae6f2352f49c45f8a50206a54bfb81fde2163ddf8cab1ce4296"
+    },
+    {
+      "path": "raw/repos/2026-05-26-llm-wiki-source.md",
+      "bytes": 3655,
+      "sha256": "a76dbbbab1a449258cc78ba64ad0e5ade497c6465262e3756356df056490f81c"
+    },
+    {
+      "path": "raw/repos/2026-05-26-nano-notebooklm-source.md",
+      "bytes": 3854,
+      "sha256": "c622b9ed37f6b3f850a436c71876be49acd728290d576f1fdb1b5b9c28a17ef6"
+    },
+    {
+      "path": "raw/repos/2026-05-26-obsidian-ai-orange-book-source.md",
+      "bytes": 4670,
+      "sha256": "0bfadc5241b61c0c4c3da330bfaa5c8c4af7284a6003c4613b421ff81186d1a0"
+    },
+    {
+      "path": "raw/repos/2026-05-26-obsidian-base-hub-source.md",
+      "bytes": 4937,
+      "sha256": "ae96ef12df6bb773f80621a468574ddc32450f76cff871442269a3e435e9b16c"
+    },
+    {
+      "path": "raw/repos/2026-05-26-obsidian-second-brain-source.md",
+      "bytes": 3404,
+      "sha256": "45ad46cc8681da1082314d33ce5c9d29db7706ce1e2fb23516427a43bd06a741"
+    },
+    {
+      "path": "raw/repos/2026-05-27-dusk-obsidian-vault-source.md",
+      "bytes": 10683,
+      "sha256": "fda2831fec735c8e20c8c2cf28875629d3ae8256d73b527be2fa3c75ad5b50a1"
+    },
+    {
+      "path": "raw/repos/2026-05-27-kagantic-vault-structure-source.md",
+      "bytes": 8780,
+      "sha256": "be1fc4bd29ef877afa5c5a1e289f1eff1b1efc5afc26c9eb549bacf13d647833"
+    },
+    {
+      "path": "raw/repos/2026-05-27-kepano-obsidian-source.md",
+      "bytes": 8004,
+      "sha256": "927127052d181b160c23ee65e8704191efd53bc3473467a3e8fdc098cfdc2527"
+    },
+    {
+      "path": "raw/repos/2026-05-27-knowledge-base-server-source.md",
+      "bytes": 14229,
+      "sha256": "be138c5b99e6351f444f8aee37e9000b7821b89e8f357e8a11911ba9e245853c"
+    },
+    {
+      "path": "raw/repos/2026-05-27-obsidian-para-source.md",
+      "bytes": 6871,
+      "sha256": "b8459539d044552d34fbb7a1f1200a3779a808a5629d910ee8b98839344c93df"
+    },
+    {
+      "path": "raw/repos/2026-05-27-openkb-source.md",
+      "bytes": 7263,
+      "sha256": "5e61ee62bb44242f4af5c44e03d37e38bf704ed4db4f7cbf1cc6f8b75c80c854"
+    },
+    {
+      "path": "raw/repos/2026-05-29-graphrag-source.md",
+      "bytes": 3840,
+      "sha256": "25ce73bce935993ebcd4e4e7e0d04e2743801cec4b8aaaec9c512a535367b6e9"
+    },
+    {
+      "path": "raw/repos/2026-05-29-rka-source.md",
+      "bytes": 3964,
+      "sha256": "e7738356e54d00f0cf49e368f554ecef0ac8d558623a07f799af484cc9a95bcf"
+    },
+    {
+      "path": "raw/repos/2026-06-08-Momoyu404-geminese-source.md",
+      "bytes": 6300,
+      "sha256": "2565f7e1d26844f8903efe7d3a9c2e2b36f72e7404dbc551b5c07a586cb13c05"
+    },
+    {
+      "path": "raw/repos/2026-06-08-MrXujiang-NO-CRM-source.md",
+      "bytes": 9253,
+      "sha256": "57b77845673393e2f3b72ae7fe9e185565b73ae1566029408fbab27a1802c7fc"
+    },
+    {
+      "path": "raw/repos/2026-06-08-MrXujiang-Nocode-Wep-source.md",
+      "bytes": 8814,
+      "sha256": "1143fdde791c42c84ada9c0986bec264393e4c0df00f729a459a6e16ee512a18"
+    },
+    {
+      "path": "raw/repos/2026-06-08-Yaozhuwa-easy-typing-obsidian-source.md",
+      "bytes": 12298,
+      "sha256": "b7abe7b06abbb6a6d3db1e6cf010587f0b44f948985bf2ab69e43757a1d82d88"
+    },
+    {
+      "path": "raw/repos/2026-06-08-sumruler-typora-theme-phycat-source.md",
+      "bytes": 10665,
+      "sha256": "f15a19a3295e00581daa675b3bc33e1baa133bac713ee3782b652e0eee1f2dba"
+    },
+    {
+      "path": "raw/repos/2026-06-11-AxDSan-mnemosyne-source.md",
+      "bytes": 10066,
+      "sha256": "22ee07b6c37dfbe8c0c905d1ef46eb464e5635207bc4e0c6b2702f8520565a9d"
+    },
+    {
+      "path": "raw/repos/2026-06-11-PaddlePaddle-PaddleOCR-source.md",
+      "bytes": 9559,
+      "sha256": "ce8543a925ea709c235815ac4017e1b569df19aa5ad0a038be53c30899496433"
+    },
+    {
+      "path": "raw/repos/2026-06-11-RyanCodrai-turbovec-source.md",
+      "bytes": 5717,
+      "sha256": "de7bdab4ae748abd40a9a6edeb85f25c884cfc860059c545d7fba00dd7946b46"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/alexiachen-my-notes-source.md",
+      "bytes": 3142,
+      "sha256": "7d1bfe66fc378b0db674259426656b2bb0c2ab46be78fa0d7d941d03794f66d6"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/anduin2017-howtocook-source.md",
+      "bytes": 3578,
+      "sha256": "d8ef93ec3c131c469650285714f5765a2a8d6f7d71a747dcae81db86d0b5c8f9"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/bytebytegohq-system-design-101-source.md",
+      "bytes": 3216,
+      "sha256": "d4be1b5b42047d6b6f6d3ac1d2cc44e6856a9b13f3fb0c9d2c55e0aa09684bf7"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/clarklab-chowdown-source.md",
+      "bytes": 2973,
+      "sha256": "24a2cffe98c9ac8feb9a8bfeb10a949e2f4b6a1dfb01ddb25bbfb1c7a84f5702"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/cyanvoxel-obsidian-vault-template-source.md",
+      "bytes": 3589,
+      "sha256": "b7dce1d2b1d283c4f77c3a24fbb6dc14aaf8a1c52e57a298deaf7eecb8026b13"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/data-engineering-community-data-engineering-wiki-source.md",
+      "bytes": 3513,
+      "sha256": "1e533267461c50636d7339fef4b9edd002a7396bdfd2a5343311f3aca2450585"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/dotnet-dotnet-api-docs-source.md",
+      "bytes": 3423,
+      "sha256": "bcad764c012d956a4b083e8d55bc74d1e9c7058d31da44e5538446fe24d1cd26"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/douglaslassance-cookbook-source.md",
+      "bytes": 2897,
+      "sha256": "87470dae7788f003071d79cd426a5482b2c8b4847817e23459f3247b3b2aca6b"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/dpapathanasiou-recipes-source.md",
+      "bytes": 3178,
+      "sha256": "bd241a41dbae509a75e64b78db828dcd0b49d853d2eee50c7e16b9ca907b810f"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/fmhy-edit-source.md",
+      "bytes": 2817,
+      "sha256": "431ff406f0c56aabda0584d32c82254926eb3dbcab2e8c221d4a29e318fc90f8"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/frorozcol-recetas-cocina-source.md",
+      "bytes": 3534,
+      "sha256": "dad1479d6c00847b76effbeb5f2ef29345c039d154e3464acce892cbcdad53a0"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/giallozafferano-recipe-site-source.md",
+      "bytes": 2680,
+      "sha256": "7455ed08f6eeca124b265d2acc826808f24d0acd3ee9587be6214317309027b1"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/groepl-obsidian-templates-source.md",
+      "bytes": 3446,
+      "sha256": "f31edf795ea2017e277215439c6a16c25dbc049b3813c7f80aab7a6105631802"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/hundredrabbits-100r-co-source.md",
+      "bytes": 3130,
+      "sha256": "87ff62baf3f0df4b8d33addee6aab007181982248a46b1cb14f3fd9f4e6413fc"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/hundredrabbits-grimgrains-source.md",
+      "bytes": 4000,
+      "sha256": "0955dac0dc7804c3a82bc28a10a4925f425e05429b5085f423195e5cdbbd94b6"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/ideaverse-lyt-nick-milo-source.md",
+      "bytes": 2729,
+      "sha256": "47007d8f9654bab23af13449ebb8a8965f36f0cce6102a4f7b12886eb5f03c2e"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/interneto-interneto-github-io-source.md",
+      "bytes": 3101,
+      "sha256": "41e7fd565e955c104a53bdf8f4057d2bea44b5ff782c5494ad96814ab4c09893"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/javascript-tutorial-en-javascript-info-source.md",
+      "bytes": 3300,
+      "sha256": "5deb4d4713066acc352ec3d232dcf249b97a5854b6ba887987e77a4d48bbe6b0"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/jimbrig-kaas-source.md",
+      "bytes": 3295,
+      "sha256": "8a07f4e2de5d6184cdc4800ebfce49e7099cf36c4bf095efd1123080c9ae7504"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/keyvanakbary-learning-notes-source.md",
+      "bytes": 3421,
+      "sha256": "fa958739874cc3faa7b480288073da5e7a74cf3b8f34f13eea588723ec019f89"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/lukesmithxyz-based-cooking-source.md",
+      "bytes": 4079,
+      "sha256": "4a0099616e993ade3051db14cb6b9f37acbaf855497117515404ebc60cbc66f7"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/lyz-code-blue-book-source.md",
+      "bytes": 3182,
+      "sha256": "1d3ac0d528a58450edb8a06b00a4e733420c855ac9ff418c5c887816e87f42ad"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/maggieappleton-digital-gardeners-source.md",
+      "bytes": 3721,
+      "sha256": "36273939b6ddb5cc4fa89945675a28139eda408b3c54c516a59a10b33fc13668"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/mayfrost-guides-source.md",
+      "bytes": 3216,
+      "sha256": "50b6396a4380a6931eda8c39283b31c2bb94b2bbe1dcb954a542aae7ae83eff4"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/microsoft-devcookbook-source.md",
+      "bytes": 3312,
+      "sha256": "4e0d9a395085617441d06632591b77ee078914b702de1355077174677fa21ce4"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/microsoftdocs-sql-docs-source.md",
+      "bytes": 2935,
+      "sha256": "2fbeda55864e9b55bd07ed93e851f1ab8786b889461f02a4576d9050c4cc9fc7"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/nikitavoloboev-knowledge-source.md",
+      "bytes": 3145,
+      "sha256": "0a8d58291e9f5f780f6da0e1dfaf755937bb7b4c8f0b0ebd3ea1d0dd8394fc45"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/noodleslove-notes-source.md",
+      "bytes": 3243,
+      "sha256": "4869b959276509046c7712683f7cb45eff400682c8c364e163e74f5db56e6f61"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/obsidian-community-obsidian-hub-source.md",
+      "bytes": 3349,
+      "sha256": "d8c740132926dfa4568185cf26d221ce114d170d00675f898337ecb3aba2783b"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/obsidian-pkm-vault-gatekeeperwiki-source.md",
+      "bytes": 2936,
+      "sha256": "1362be966d0f60567888f905113cc866ada85330c2cf1ea954b45c3e6115e758"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/obsidian-pkm-vault-recetas-cocina-source.md",
+      "bytes": 3659,
+      "sha256": "3a76bdd30bbd4e09807d4b45688e5f0354620cc61b6af9e452eee387c3abbd0f"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/oleeskild-digitalgardendocs-source.md",
+      "bytes": 3359,
+      "sha256": "57aef8f4ee2d0fcd4ad742c9fa1ab12cfacc0fb51dcb65768a9e32a9017b57d4"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/ossu-computer-science-source.md",
+      "bytes": 3155,
+      "sha256": "1d8c8c7c3be1ce5e8dafba0177eeab051c7782ec0b7e1235f4c2da44cb1d977d"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/rekkabell-kokorobot-source.md",
+      "bytes": 3164,
+      "sha256": "3c97acb69604bedcbdf5f048655fe138b4696768bd8e6ee215cd51c4a1de7019"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/rknightuk-intersect-source.md",
+      "bytes": 3107,
+      "sha256": "949acdabc9167b8eba71c122e75d09035b447fb2ca4d64bcd76f59a180716e4e"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/rstacruz-cheatsheets-source.md",
+      "bytes": 3127,
+      "sha256": "58a3346e9d41b8ee17bd3ddada4fbe61e84b2ec8a3715d8dbaec8ef3bc97abc8"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/shervinsahba-obsidian-icewind-source.md",
+      "bytes": 3414,
+      "sha256": "e507fb391c926eb8a1580a9f2d714b5eddc292f06aae0f55d4a135a669e351c5"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/tfthacker-dashboardplusplus-source.md",
+      "bytes": 3342,
+      "sha256": "7710de863bf815fc45b2467b6beac4e020f3982e0723ca6ee30184b945592dee"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/thatotherandrew-obsidian-digital-garden-source.md",
+      "bytes": 3479,
+      "sha256": "086075a249e2ab606266702a9a903b91643b722c5c2433d881b871557f318963"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/uroybd-topobon-source.md",
+      "bytes": 3228,
+      "sha256": "a0776d34c71e6fd0e704b80983435cf0f49692c6c98074683d5b7257b86c4d0c"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/vercel-labs-skills-source.md",
+      "bytes": 3073,
+      "sha256": "1ec3e0bf6b81a35075c744857d6b53a200a5ebd623c9788827af26c91d5a6bbe"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/voltagent-awesome-agent-skills-source.md",
+      "bytes": 3190,
+      "sha256": "e32b3a20cb3860adc82fbe101252ae80c99a360c2b9e489affd0e9bfe422e5bd"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/wikiterra-wikiterra-vault-source.md",
+      "bytes": 3223,
+      "sha256": "1809d59ca7d4dafbc4bdc604631eaa4bf231e6b0685e7b4e7993a7348f7f36b5"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/xxiivv-oscean-source.md",
+      "bytes": 3492,
+      "sha256": "1f74fd8af7db3a04159e3a3676eafc90123eb483e10d3c0cfb99aa6a9f92119d"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/xy-241-cs-notes-source.md",
+      "bytes": 2853,
+      "sha256": "10ace9ffebe6ca0ab7edca4e6a18dc05a3f3c2c7cf8a4c15c45471fc8f8413cf"
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/ykerus-obsidian-templates-source.md",
+      "bytes": 3085,
+      "sha256": "b4b1a7dc27d32a863bb16f2172f13403a57ed0e4ef80a0c16d2005f3cca183a6"
+    },
+    {
+      "path": "raw/repos/2026-06-11-obsidian-pkm-vault-awesome-obsidian-vault-source.md",
+      "bytes": 4493,
+      "sha256": "bbf66798dcfd1529ff269a4352c41c5e14868f1e309c91e05a02ab3a6d33d7b5"
+    },
+    {
+      "path": "raw/repos/2026-06-11-safishamsi-graphify-source.md",
+      "bytes": 7613,
+      "sha256": "d8b2b00bf782010353fcdeef45d51338bc503af9c81fb5194125e7d6f23785dc"
+    },
+    {
+      "path": "raw/repos/2026-06-11-trimstray-the-book-of-secret-knowledge-source.md",
+      "bytes": 8442,
+      "sha256": "d6b103a922b2759806c92b69986cdffb710883e0065bd5963d48f524fb438751"
+    },
+    {
+      "path": "raw/repos/2026-06-11-zhizhuodemao-ai-reverse-toolkit-source.md",
+      "bytes": 6749,
+      "sha256": "932d7467bdfc0a641b00621bcb11dbac513efbf0a1244c8c8911a3afa3f69550"
+    },
+    {
+      "path": "raw/repos/2026-06-12-breferrari-obsidian-mind-source.md",
+      "bytes": 14014,
+      "sha256": "f3a16afdd0e9f060c68674c59cb3719a536710f185d19a3d7b9095d945557f4b"
+    },
+    {
+      "path": "raw/repos/2026-06-12-uthvah-sync-embeds-source.md",
+      "bytes": 12767,
+      "sha256": "04ea9dd6ae38034d23fcdd1168c1e13dfff93941165fdec2504d9afd6dbaa4e2"
+    },
+    {
+      "path": "raw/repos/2026-06-13-Xinghongia-Kova-source.md",
+      "bytes": 11264,
+      "sha256": "30c452b033bf52446be6408e1ca8f78100530af0aa588355fa0a4a99b6b362ff"
+    },
+    {
+      "path": "raw/videos/2026-06-03-bilibili-omniget-source.md",
+      "bytes": 11680,
+      "sha256": "1d2734b87561451a6d083fe1cabffbaa35a64c77e0ce7857c5a1fa1b1bfa4548"
+    },
+    {
+      "path": "raw/videos/2026-06-03-bilibili-omniget-source/segments.md",
+      "bytes": 2185,
+      "sha256": "70666d83378c4fcc1397b61a051489d950688c89a13eabc0aeb9d152421cf4b4"
+    },
+    {
+      "path": "raw/videos/2026-06-04-bilibili-obsidian-8-plugins-source.md",
+      "bytes": 15928,
+      "sha256": "7022daaf2414c0424aba38a05e4fc4fe582503277859a0c368bca7de39513a20"
+    },
+    {
+      "path": "raw/videos/2026-06-04-bilibili-obsidian-8-plugins-source/segments.md",
+      "bytes": 15694,
+      "sha256": "35de61b5aa9bb9746487538313ffbd46c0fb91e581b1ae9b7c3f25c8b93a3771"
+    },
+    {
+      "path": "raw/videos/2026-06-04-youtube-hermes-obsidian-source.md",
+      "bytes": 28624,
+      "sha256": "4d58e7a6f9d936d58756152801e2b12b588d5440c331730b7d3bc5621d83e65b"
+    },
+    {
+      "path": "raw/videos/2026-06-04-youtube-hermes-obsidian-source/segments.md",
+      "bytes": 14116,
+      "sha256": "aa8b6f5dd90e8627b5cf5382307da43ec70149b9e1f4d35f2bdb39c5b2c28fea"
+    },
+    {
+      "path": "raw/videos/2026-06-08-bilibili-claudian-obsidian-skill-workflow-source.md",
+      "bytes": 13998,
+      "sha256": "472e46db47ff77fbd39a09d84a0b47a069bdacd770a630de1888e39e8bcb8665"
+    },
+    {
+      "path": "raw/videos/2026-06-08-bilibili-claudian-obsidian-skill-workflow-source/segments.md",
+      "bytes": 3633,
+      "sha256": "78a6404536a46a9f43ed994a25d1059c5cc2c1d4007bb5027854bb1c89b18ee9"
+    },
+    {
+      "path": "raw/videos/2026-06-08-bilibili-codex-obsidian-knowledge-loop-source.md",
+      "bytes": 12254,
+      "sha256": "540ed58b9c1a70edbc8194c1f2f1fde2b38752852d9d926c131a11d3c8d5b8f4"
+    },
+    {
+      "path": "raw/videos/2026-06-08-bilibili-codex-obsidian-knowledge-loop-source/segments.md",
+      "bytes": 2401,
+      "sha256": "5f878ec1817b395b8410d318a09848635c3038af5e2d0bb241d22aa34291ba36"
+    },
+    {
+      "path": "raw/videos/2026-06-08-bilibili-ioto-obsidian-knowledge-production-system-source.md",
+      "bytes": 15439,
+      "sha256": "31ba0fbb7ae8603770ac69d174759410638633b9f4ced3b38ee803fd4c2f0347"
+    },
+    {
+      "path": "raw/videos/2026-06-08-bilibili-ioto-obsidian-knowledge-production-system-source/segments.md",
+      "bytes": 16015,
+      "sha256": "409d53b3ae3ad69b85b3d1e679bf0ba0cc1653702979d74af48ad04a0bf8141f"
+    },
+    {
+      "path": "raw/videos/2026-06-08-bilibili-modular-obsidian-official-site-source.md",
+      "bytes": 12208,
+      "sha256": "a4af4dab2b47e3b68df6361a76a2f3c0e7495e23f37966d4c6166d6bb56a06d3"
+    },
+    {
+      "path": "raw/videos/2026-06-08-bilibili-modular-obsidian-official-site-source/segments.md",
+      "bytes": 2263,
+      "sha256": "7956499db56beb557107001d6184356b2e71d57bbdcfdcb655c68b743f46a702"
+    },
+    {
+      "path": "raw/videos/2026-06-08-bilibili-obsidian-outlinks-graph-source.md",
+      "bytes": 11982,
+      "sha256": "3e279bec2240c0d925ac1281a1b7bd8e0d693dd0b4b28410289ea1f613cbadbe"
+    },
+    {
+      "path": "raw/videos/2026-06-08-bilibili-obsidian-outlinks-graph-source/segments.md",
+      "bytes": 4984,
+      "sha256": "68512940502e2f390762c2c636a09bfdd5e59d8283317c49e3c9c3ae18546c76"
+    },
+    {
+      "path": "raw/videos/2026-06-08-bilibili-pdf-to-obsidian-knowledge-node-source.md",
+      "bytes": 13740,
+      "sha256": "7cfc44acf2831df38ab253fffa081d4b333129808afe0de83a7d8bf030742755"
+    },
+    {
+      "path": "raw/videos/2026-06-08-bilibili-pdf-to-obsidian-knowledge-node-source/segments.md",
+      "bytes": 3071,
+      "sha256": "45d63d2f3eaab08671d558d0c1ad86833db9950e892ad9673b0dfa7bef04d817"
+    },
+    {
+      "path": "raw/videos/2026-06-08-xhs-ai-knowledge-base-source.md",
+      "bytes": 14979,
+      "sha256": "74b1611681444a7e4fcef3b26acb3c53c212693cc4b9cdbb7421c7f52005c329"
+    },
+    {
+      "path": "raw/videos/2026-06-08-xhs-ai-knowledge-base-source/segments.md",
+      "bytes": 4122,
+      "sha256": "ecb88e48736aaacd55122f55355ff6c1a38db1f9987fae64b012aefb93d14dab"
+    },
+    {
+      "path": "raw/videos/2026-06-08-xhs-knowledge-base-not-use-source.md",
+      "bytes": 15259,
+      "sha256": "70f4303e60d8b5e7a132c61725d01cad48dd11e45959497d752744885843b639"
+    },
+    {
+      "path": "raw/videos/2026-06-08-xhs-knowledge-base-not-use-source/segments.md",
+      "bytes": 5270,
+      "sha256": "19aed7025be793bd2fa37f9c0df35b14dad66a3b73be1dbace6641f8c0f6fcd9"
+    },
+    {
+      "path": "raw/videos/2026-06-11-bilibili-bv13ndqbtehs-source.md",
+      "bytes": 12973,
+      "sha256": "3fd5ac01ade1f667f1ff81720ebcb1f37a27883e851769db8308b3ef41e4762a"
+    },
+    {
+      "path": "raw/videos/2026-06-11-bilibili-bv13ndqbtehs-source/segments.md",
+      "bytes": 3523,
+      "sha256": "fb0d6e04bce88bbb3fd120a1f0c318278be93e7536a57939b82bcc8044b86b34"
+    },
+    {
+      "path": "raw/videos/2026-06-11-bilibili-bv1kfea6keqy-source.md",
+      "bytes": 15010,
+      "sha256": "856729fa8c1f842748bd8969991d9c650ac17f50ae45e6194feba7405d1cde03"
+    },
+    {
+      "path": "raw/videos/2026-06-11-bilibili-bv1kfea6keqy-source/segments.md",
+      "bytes": 12001,
+      "sha256": "a974039be9898d2fca4feb3a5cdde6492d4cd4a79031077cb389000e34096acf"
+    },
+    {
+      "path": "raw/videos/2026-06-11-xhs-obsidian-ai-sync-zero-cost-source.md",
+      "bytes": 17728,
+      "sha256": "e04cfdb6f7ae3818dab9736abb53309b9a5ac9a23883d727ed9aede97342cf0c"
+    },
+    {
+      "path": "raw/videos/2026-06-11-xhs-obsidian-ai-sync-zero-cost-source/segments.md",
+      "bytes": 9548,
+      "sha256": "ac4d1a35432b13543606089880c74ea192f75ac1f0f708a808230734353d6d4d"
+    },
+    {
+      "path": "raw/videos/2026-06-12-bilibili-bv1jtgq6cese-source.md",
+      "bytes": 18463,
+      "sha256": "7c3a660b57bb57afcd79665207925743366159472f4ba18218d1a04ea1818850"
+    },
+    {
+      "path": "raw/videos/2026-06-12-bilibili-bv1jtgq6cese-source/segments.md",
+      "bytes": 15252,
+      "sha256": "fcccf9ee2ec01fe35c23a22cf558bc2f4ae9a92b3d7a8bbdcc3ee4857d63f760"
+    },
+    {
+      "path": "raw/videos/2026-06-12-bilibili-bv1rko5buefg-build-knowledge-base-from-zero-source.md",
+      "bytes": 15309,
+      "sha256": "a322082c2a044430d0a71790e3f8700b7496d476bcd1bb4bc880920545e67e3a"
+    },
+    {
+      "path": "raw/videos/2026-06-12-bilibili-bv1rko5buefg-build-knowledge-base-from-zero-source/segments.md",
+      "bytes": 16390,
+      "sha256": "0175cc295815947e7c0f861f68bd5692b7ed6701d16b03f87d3884a61c204abf"
+    },
+    {
+      "path": "raw/videos/2026-06-12-bilibili-bv1ujddbgeaf-chem-olympiad-knowledge-base-source.md",
+      "bytes": 12441,
+      "sha256": "49af2cd53d2390c29466aa76305874322c82b0622ee4426d241fdb9d074c77b6"
+    },
+    {
+      "path": "raw/videos/2026-06-12-bilibili-bv1ujddbgeaf-chem-olympiad-knowledge-base-source/segments.md",
+      "bytes": 3444,
+      "sha256": "33e5329711651e7063b28e58a8a9c2581bc38ca0049ef95cd9e51b9326f29e15"
+    },
+    {
+      "path": "raw/videos/2026-06-13-bilibili-BV1tNLG6pEJJ-book-note-workflow-source.md",
+      "bytes": 12668,
+      "sha256": "4cc09907fe7c4cc8b359e7782311ea118938ea9f705beb11d8dd7f4c28722ec5"
+    },
+    {
+      "path": "raw/videos/2026-06-13-bilibili-BV1tNLG6pEJJ-book-note-workflow-source/segments.md",
+      "bytes": 14755,
+      "sha256": "e36e0129833ab95e9cd9e8e8d442001ab8cad80b19426d832751cbcc6c44b906"
+    },
+    {
+      "path": "raw/videos/2026-06-13-bilibili-bv1btei6vetz-obsidian-homepage-source.md",
+      "bytes": 10927,
+      "sha256": "032f70a42db935274d61edd7aa8eb68a1c8ccb643cacb674d0962199af1d6a62"
+    },
+    {
+      "path": "raw/videos/2026-06-13-bilibili-bv1btei6vetz-obsidian-homepage-source/segments.md",
+      "bytes": 6177,
+      "sha256": "5f2276f534506971266ced8d7df93b5c4d2bf033b175371bac29ecd55f4da507"
+    },
+    {
+      "path": "raw/videos/2026-06-13-bilibili-bv1rlvg6oeut-edge-recall-source.md",
+      "bytes": 11061,
+      "sha256": "5b960c2d667dfedc54f5ad6a02fbb9b0e7fde20543e2812293246f8a6e59cb55"
+    },
+    {
+      "path": "raw/videos/2026-06-13-bilibili-bv1rlvg6oeut-edge-recall-source/segments.md",
+      "bytes": 5581,
+      "sha256": "a8522ef67c0d76d7355847ccb11c59923e82522067a2cb0d4f3dea65191b2dc1"
+    },
+    {
+      "path": "templates/anti-pattern.md",
+      "bytes": 2302,
+      "sha256": "ef015a36d693c1456aaf6eaf6cbbfeb2401e6b0c5dc691acb9dc635f26fcd641"
+    },
+    {
+      "path": "templates/architecture-review-window-prompt.md",
+      "bytes": 5458,
+      "sha256": "08f0e529108eef9228671904b0bfe8f1e417934639fded598f5638c2b30c2b82"
+    },
+    {
+      "path": "templates/candidate-distillation.md",
+      "bytes": 1157,
+      "sha256": "87fb69b1318e57255a98b8f5d0eecd5839de7f598cd4e6c0226f7641a2e84fbc"
+    },
+    {
+      "path": "templates/claim-record.md",
+      "bytes": 5631,
+      "sha256": "de292cef2a85ea2a087f72fc87bab0cd491e689db0750e023bbd5b526e18fbb1"
+    },
+    {
+      "path": "templates/context-pack-manifest.md",
+      "bytes": 1342,
+      "sha256": "b74abe4aaddb47fed82a00bf7d27aaf85a863201b8ee7a9303d74e6dc3bf1468"
+    },
+    {
+      "path": "templates/decision-record.md",
+      "bytes": 4332,
+      "sha256": "6cc2d74b2a942659f13e06fb389799b52af676cd2f639adf59f0bc08083816d0"
+    },
+    {
+      "path": "templates/design-pattern.md",
+      "bytes": 2661,
+      "sha256": "2b16924fe5fefadbddc29cb51929adcbd5f6b9618798e6659d71985de5dcef81"
+    },
+    {
+      "path": "templates/dev-context-pack.md",
+      "bytes": 10627,
+      "sha256": "06203ab865fb47beba9e37e1fed381a05a425fc85078f755c8591ff9faff1e1d"
+    },
+    {
+      "path": "templates/development-insight.md",
+      "bytes": 255,
+      "sha256": "2565793dee2da22f7da05296abbf8397d585c71e459c6ab1317d370ffe458527"
+    },
+    {
+      "path": "templates/feedback-event.md",
+      "bytes": 1512,
+      "sha256": "2b4485207aee7f0cae0b4d4ff76688e580999c305f99db898bc133e198e2b350"
+    },
+    {
+      "path": "templates/heavy-review-open.md",
+      "bytes": 1359,
+      "sha256": "871055ca009ba621c57bdeb8158c2453fc995a8a08991dd4f99567f90ee93800"
+    },
+    {
+      "path": "templates/library-review.md",
+      "bytes": 3847,
+      "sha256": "4e4063b956c70cb19cf3692614105638eb73537e8b372002410d675c418e27e4"
+    },
+    {
+      "path": "templates/maintenance-manifest.md",
+      "bytes": 1439,
+      "sha256": "b9e5a1108a4707dbfc9c3f2d2473ce76ca8a79912b7a483c82c0d00b9f84a29b"
+    },
+    {
+      "path": "templates/project-overlay.md",
+      "bytes": 1599,
+      "sha256": "d9bcd9f660fc759e190e01426d7bc02e6dc0dee40492e02a183342895922d19f"
+    },
+    {
+      "path": "templates/query-run.md",
+      "bytes": 3795,
+      "sha256": "2831b595b260fcd609a8cf76eae2a8d48b72049d658a4b29b0a8c743939e7b82"
+    },
+    {
+      "path": "templates/review-candidate.md",
+      "bytes": 12919,
+      "sha256": "1190a5aeea583f82dc954859407b9e7b78cc9232513a680791b3779c7a3a2fac"
+    },
+    {
+      "path": "templates/source-record.md",
+      "bytes": 4269,
+      "sha256": "581391d980539fc4644ec5427b8b04f89c5cb10b5b9209969952abb72a9a1cde"
+    },
+    {
+      "path": "templates/video-source.md",
+      "bytes": 4078,
+      "sha256": "70647e7e66b51087145c8eca27261329fd8fcc755d9a047a485253ca96a5f0b0"
+    },
+    {
+      "path": "tools/build_source_intake_hardening_package.py",
+      "bytes": 9136,
+      "sha256": "d471cd54fac275285b73a852589a94ba43f7d3eaf32aa5b38ccd1e67e61257ce"
+    },
+    {
+      "path": "tools/clear_source_intake_red_zone.py",
+      "bytes": 8214,
+      "sha256": "36af79b16c46411fa16fac9366ea6a55e2b3716c6425fe21fc492f6caf6fd414"
+    },
+    {
+      "path": "tools/normalize_source_intake_fields.py",
+      "bytes": 13526,
+      "sha256": "a92df82aee48e66afdd32b47906f564c47481b284354b0175d2aad0aadffbd8b"
+    },
+    {
+      "path": "tools/preserve_source_intake_legacy_fields.py",
+      "bytes": 10563,
+      "sha256": "13924e52388e829080063beafcf0b576ca7e6a8937f30a69726ca580f976ad0b"
+    },
+    {
+      "path": "tools/relocate_legacy_project_lens.py",
+      "bytes": 6601,
+      "sha256": "0ecee50876d1d554b798954560dcb3bfbd44f95a50359182d20c7b33f4319656"
+    },
+    {
+      "path": "tools/source_intake_enum_registry.json",
+      "bytes": 2183,
+      "sha256": "4a8b95a7cd601171ec6bab5b30533eb748336e7f3aa81fe3741b94c034850d5f"
+    },
+    {
+      "path": "tools/validate_source_intake_contract.py",
+      "bytes": 44447,
+      "sha256": "8189d73466d0c13d8c8e6e4c2853790b46870bb670bd082c65d167661935a602"
+    },
+    {
+      "path": "tools/validate_source_intake_failure_matrix.py",
+      "bytes": 31628,
+      "sha256": "29c64c565c57161f648e7f3ffc99225cd59c52193a316ffae4cc788bdcdba5c6"
+    },
+    {
+      "path": "tools/validate_source_intake_hardening_package.py",
+      "bytes": 2692,
+      "sha256": "425e0e6d8a133179e5dcd99253b0daadb7d8ebf84a5011fc102149811154eda3"
+    }
+  ]
+}

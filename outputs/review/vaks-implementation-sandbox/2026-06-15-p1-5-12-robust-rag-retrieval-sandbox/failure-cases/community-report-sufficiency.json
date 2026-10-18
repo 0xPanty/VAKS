@@ -1,0 +1,34 @@
+{
+  "record_kind": "robust_rag_retrieval_manifest",
+  "scenario_id": "community-report-sufficiency",
+  "expected_valid": false,
+  "expected_codes": ["RR_COMMUNITY_REPORT_SUFFICIENCY"],
+  "query": {
+    "query_mode": "review",
+    "verbatim_input": "Is the theme report enough?",
+    "question_summary": "Community sufficiency misuse.",
+    "action_sensitive": false,
+    "verbatim_preserved": true
+  },
+  "route_selection": {
+    "selected": "global_theme",
+    "authority_buckets_included": ["review_input"],
+    "authority_buckets_excluded": ["feedback", "runtime_artifact"],
+    "selected_context_types": ["theme_briefing"],
+    "forbidden_support_types": ["retrieval_score", "graph_rank", "community_report_summary", "llm_extracted_relation"]
+  },
+  "retrieval_config": {"bucket_filter_first": true, "rrf_within_bucket_only": true, "exclude_runtime_artifacts": true},
+  "retrieved_items": [
+    {
+      "id": "community-report",
+      "ref": "outputs/review/theme-briefings/community.md",
+      "record_kind": "community_report",
+      "authority_bucket": "review_input",
+      "pack_role": "orientation",
+      "selected": true,
+      "excluded": false,
+      "selected_by": {"graph": true, "semantic": true},
+      "satisfies_evidence_sufficiency": true
+    }
+  ]
+}

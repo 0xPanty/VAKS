@@ -1,0 +1,440 @@
+[
+  {
+    "file": "01-forbidden-formal_vault_read.json",
+    "expected_failures": [
+      "forbidden_operation:formal_vault_read"
+    ]
+  },
+  {
+    "file": "02-forbidden-formal_vault_scan.json",
+    "expected_failures": [
+      "forbidden_operation:formal_vault_scan"
+    ]
+  },
+  {
+    "file": "03-forbidden-formal_vault_write.json",
+    "expected_failures": [
+      "forbidden_operation:formal_vault_write"
+    ]
+  },
+  {
+    "file": "04-forbidden-formal_vault_hash.json",
+    "expected_failures": [
+      "forbidden_operation:formal_vault_hash"
+    ]
+  },
+  {
+    "file": "05-forbidden-formal_vault_snapshot.json",
+    "expected_failures": [
+      "forbidden_operation:formal_vault_snapshot"
+    ]
+  },
+  {
+    "file": "06-forbidden-obsidian_sync.json",
+    "expected_failures": [
+      "forbidden_operation:obsidian_sync"
+    ]
+  },
+  {
+    "file": "07-forbidden-commit.json",
+    "expected_failures": [
+      "forbidden_operation:commit"
+    ]
+  },
+  {
+    "file": "08-forbidden-push.json",
+    "expected_failures": [
+      "forbidden_operation:push"
+    ]
+  },
+  {
+    "file": "09-forbidden-promotion.json",
+    "expected_failures": [
+      "forbidden_operation:promotion"
+    ]
+  },
+  {
+    "file": "10-forbidden-dependency_install.json",
+    "expected_failures": [
+      "forbidden_operation:dependency_install"
+    ]
+  },
+  {
+    "file": "11-forbidden-background_service.json",
+    "expected_failures": [
+      "forbidden_operation:background_service"
+    ]
+  },
+  {
+    "file": "12-forbidden-mcp_write_tool.json",
+    "expected_failures": [
+      "forbidden_operation:mcp_write_tool"
+    ]
+  },
+  {
+    "file": "13-forbidden-hooks.json",
+    "expected_failures": [
+      "forbidden_operation:hooks"
+    ]
+  },
+  {
+    "file": "14-forbidden-real_base_files.json",
+    "expected_failures": [
+      "forbidden_operation:real_base_files"
+    ]
+  },
+  {
+    "file": "15-forbidden-production_ui.json",
+    "expected_failures": [
+      "forbidden_operation:production_ui"
+    ]
+  },
+  {
+    "file": "16-forbidden-local_storage_write.json",
+    "expected_failures": [
+      "forbidden_operation:local_storage_write"
+    ]
+  },
+  {
+    "file": "17-forbidden-network_post.json",
+    "expected_failures": [
+      "forbidden_operation:network_post"
+    ]
+  },
+  {
+    "file": "18-forbidden-actual_approval_collection.json",
+    "expected_failures": [
+      "forbidden_operation:actual_approval_collection"
+    ]
+  },
+  {
+    "file": "19-forbidden-actual_user_approval.json",
+    "expected_failures": [
+      "forbidden_operation:actual_user_approval"
+    ]
+  },
+  {
+    "file": "20-forbidden-actual_user_decision_collection.json",
+    "expected_failures": [
+      "forbidden_operation:actual_user_decision_collection"
+    ]
+  },
+  {
+    "file": "21-forbidden-user_approval_inference.json",
+    "expected_failures": [
+      "forbidden_operation:user_approval_inference"
+    ]
+  },
+  {
+    "file": "22-forbidden-action_basis_creation.json",
+    "expected_failures": [
+      "forbidden_operation:action_basis_creation"
+    ]
+  },
+  {
+    "file": "23-forbidden-reviewed_knowledge_creation.json",
+    "expected_failures": [
+      "forbidden_operation:reviewed_knowledge_creation"
+    ]
+  },
+  {
+    "file": "24-forbidden-external_notification.json",
+    "expected_failures": [
+      "forbidden_operation:external_notification"
+    ]
+  },
+  {
+    "file": "25-forbidden-real_user_text_storage.json",
+    "expected_failures": [
+      "forbidden_operation:real_user_text_storage"
+    ]
+  },
+  {
+    "file": "26-forbidden-real_user_text_capture.json",
+    "expected_failures": [
+      "forbidden_operation:real_user_text_capture"
+    ]
+  },
+  {
+    "file": "27-forbidden-write_gate_opening.json",
+    "expected_failures": [
+      "forbidden_operation:write_gate_opening"
+    ]
+  },
+  {
+    "file": "28-source-input-path-missing.json",
+    "expected_failures": [
+      "source_input_path_missing:source_rehearsal_config"
+    ]
+  },
+  {
+    "file": "29-source-input-hash-mismatch.json",
+    "expected_failures": [
+      "source_input_hash_mismatch:source_rehearsal_config"
+    ]
+  },
+  {
+    "file": "30-source-input-bundle-hash-mismatch.json",
+    "expected_failures": [
+      "source_input_bundle_hash_mismatch"
+    ]
+  },
+  {
+    "file": "31-source-rehearsal-hash-mismatch.json",
+    "expected_failures": [
+      "source_rehearsal_hash_mismatch"
+    ]
+  },
+  {
+    "file": "32-source-packet-hash-mismatch.json",
+    "expected_failures": [
+      "source_packet_hash_mismatch"
+    ]
+  },
+  {
+    "file": "33-source-packet-source-bundle-hash-mismatch.json",
+    "expected_failures": [
+      "source_packet_source_bundle_hash_mismatch"
+    ]
+  },
+  {
+    "file": "34-source-packet-scope-hash-mismatch.json",
+    "expected_failures": [
+      "source_packet_scope_hash_mismatch"
+    ]
+  },
+  {
+    "file": "35-intake-gate-hash-missing.json",
+    "expected_failures": [
+      "intake_gate_hash_missing",
+      "contract_intake_gate_hash_mismatch",
+      "sample_intake_gate_hash_mismatch:future_approve_reference_capture",
+      "sample_intake_gate_hash_mismatch:future_deny_reference_capture",
+      "sample_intake_gate_hash_mismatch:future_revision_reference_capture",
+      "sample_required_intake_gate_hash_mismatch:future_approve_reference_capture",
+      "sample_required_intake_gate_hash_mismatch:future_deny_reference_capture",
+      "sample_required_intake_gate_hash_mismatch:future_revision_reference_capture"
+    ]
+  },
+  {
+    "file": "36-intake-gate-hash-mismatch.json",
+    "expected_failures": [
+      "intake_gate_hash_mismatch",
+      "non_approval_receipt_intake_gate_hash_mismatch",
+      "contract_intake_gate_hash_mismatch",
+      "sample_intake_gate_hash_mismatch:future_approve_reference_capture",
+      "sample_intake_gate_hash_mismatch:future_deny_reference_capture",
+      "sample_intake_gate_hash_mismatch:future_revision_reference_capture",
+      "sample_required_intake_gate_hash_mismatch:future_approve_reference_capture",
+      "sample_required_intake_gate_hash_mismatch:future_deny_reference_capture",
+      "sample_required_intake_gate_hash_mismatch:future_revision_reference_capture"
+    ]
+  },
+  {
+    "file": "37-missing-approve-sample.json",
+    "expected_failures": [
+      "missing_intake_sample:future_approve_reference_capture",
+      "too_few_intake_samples"
+    ]
+  },
+  {
+    "file": "38-sample-not-synthetic.json",
+    "expected_failures": [
+      "sample_not_synthetic:future_approve_reference_capture"
+    ]
+  },
+  {
+    "file": "39-sample-actual-user-input.json",
+    "expected_failures": [
+      "sample_uses_actual_user_input:future_approve_reference_capture"
+    ]
+  },
+  {
+    "file": "40-sample-real-user-text-stored.json",
+    "expected_failures": [
+      "sample_stores_real_user_text:future_approve_reference_capture"
+    ]
+  },
+  {
+    "file": "41-sample-captured-user-text-present.json",
+    "expected_failures": [
+      "sample_captures_user_text:future_approve_reference_capture"
+    ]
+  },
+  {
+    "file": "42-sample-missing-future-text-reference.json",
+    "expected_failures": [
+      "sample_missing_future_text_reference:future_approve_reference_capture"
+    ]
+  },
+  {
+    "file": "43-approve-missing-packet-hash.json",
+    "expected_failures": [
+      "sample_packet_hash_mismatch:future_approve_reference_capture"
+    ]
+  },
+  {
+    "file": "44-approve-wrong-source-bundle-hash.json",
+    "expected_failures": [
+      "sample_source_bundle_hash_mismatch:future_approve_reference_capture"
+    ]
+  },
+  {
+    "file": "45-approve-wrong-scope-hash.json",
+    "expected_failures": [
+      "sample_scope_hash_mismatch:future_approve_reference_capture"
+    ]
+  },
+  {
+    "file": "46-approve-wrong-rehearsal-hash.json",
+    "expected_failures": [
+      "sample_rehearsal_hash_mismatch:future_approve_reference_capture"
+    ]
+  },
+  {
+    "file": "47-approve-missing-confirmation-phrase.json",
+    "expected_failures": [
+      "approved_missing_confirmation_phrase:future_approve_reference_capture:future_approve_exact_scope"
+    ]
+  },
+  {
+    "file": "48-approve-missing-exclusion-ack.json",
+    "expected_failures": [
+      "approved_missing_exclusion_ack:future_approve_reference_capture:promotion"
+    ]
+  },
+  {
+    "file": "49-approve-missing-rollback-ack.json",
+    "expected_failures": [
+      "approved_missing_rollback_ack:future_approve_reference_capture"
+    ]
+  },
+  {
+    "file": "50-approve-missing-hash-ack.json",
+    "expected_failures": [
+      "approved_missing_hash_ack:future_approve_reference_capture"
+    ]
+  },
+  {
+    "file": "51-approve-missing-dirty-state-ack.json",
+    "expected_failures": [
+      "approved_missing_dirty_state_ack:future_approve_reference_capture"
+    ]
+  },
+  {
+    "file": "52-approve-allows-write-now.json",
+    "expected_failures": [
+      "sample_allows_formal_vault_write_now:future_approve_reference_capture"
+    ]
+  },
+  {
+    "file": "53-approve-creates-action-basis.json",
+    "expected_failures": [
+      "sample_creates_action_basis:future_approve_reference_capture"
+    ]
+  },
+  {
+    "file": "54-approve-actionable-result.json",
+    "expected_failures": [
+      "approved_sample_result_actionable:future_approve_reference_capture",
+      "approved_sample_result_bad:future_approve_reference_capture"
+    ]
+  },
+  {
+    "file": "55-deny-allows-write.json",
+    "expected_failures": [
+      "denied_sample_allows_write:future_deny_reference_capture"
+    ]
+  },
+  {
+    "file": "56-deny-wrong-result.json",
+    "expected_failures": [
+      "denied_sample_result_bad:future_deny_reference_capture"
+    ]
+  },
+  {
+    "file": "57-revise-allows-write.json",
+    "expected_failures": [
+      "revise_sample_allows_write:future_revision_reference_capture"
+    ]
+  },
+  {
+    "file": "58-revise-wrong-result.json",
+    "expected_failures": [
+      "revise_sample_result_bad:future_revision_reference_capture"
+    ]
+  },
+  {
+    "file": "59-contract-missing-required-field.json",
+    "expected_failures": [
+      "contract_missing_required_future_field:intake_gate_hash"
+    ]
+  },
+  {
+    "file": "60-rule-allows-current-approval-collection.json",
+    "expected_failures": [
+      "contract_allows_current_approval_collection"
+    ]
+  },
+  {
+    "file": "61-rule-allows-real-user-text-storage.json",
+    "expected_failures": [
+      "contract_allows_real_user_text_storage"
+    ]
+  },
+  {
+    "file": "62-rule-allows-approval-inference.json",
+    "expected_failures": [
+      "contract_missing_future_user_turn_required"
+    ]
+  },
+  {
+    "file": "63-rule-approved-actionable.json",
+    "expected_failures": [
+      "contract_allows_approved_outcome_actionable"
+    ]
+  },
+  {
+    "file": "64-receipt-claims-approval.json",
+    "expected_failures": [
+      "non_approval_receipt_claims_approval"
+    ]
+  },
+  {
+    "file": "65-receipt-real-user-text-stored.json",
+    "expected_failures": [
+      "non_approval_receipt_real_user_text_stored"
+    ]
+  },
+  {
+    "file": "66-receipt-formal-vault-accessed.json",
+    "expected_failures": [
+      "non_approval_receipt_formal_vault_accessed"
+    ]
+  },
+  {
+    "file": "67-authority-confusing-text.json",
+    "expected_failures": [
+      "authority_confusing_text"
+    ]
+  },
+  {
+    "file": "68-too-few-failure-cases.json",
+    "expected_failures": [
+      "minimum_failure_cases_too_low"
+    ]
+  },
+  {
+    "file": "69-inspector-approve-button.json",
+    "expected_failures": [
+      "inspector_control_not_allowed:button:approve",
+      "inspector_buttons_not_allowlisted"
+    ]
+  },
+  {
+    "file": "70-missing-stop-condition-real-user-text.json",
+    "expected_failures": [
+      "missing_stop_condition:real user text storage"
+    ]
+  }
+]

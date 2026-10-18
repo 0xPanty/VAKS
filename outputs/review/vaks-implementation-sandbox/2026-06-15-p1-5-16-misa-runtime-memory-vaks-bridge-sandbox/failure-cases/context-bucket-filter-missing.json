@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "context-bucket-filter-missing",
+  "expected_valid": false,
+  "expected_codes": ["MB_BUCKET_FILTER_NOT_FIRST"],
+  "patch": {"context_adapter": {"authority_bucket_first": false}}
+}

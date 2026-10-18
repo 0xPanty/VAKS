@@ -1,0 +1,12 @@
+{
+  "input_text": "B 和 C 都行",
+  "expected_case_id": "multiple_options",
+  "expected_reply_id": "ask_choose_one",
+  "expected_next_step": "ask_user_to_choose_one_option",
+  "automatic_execution": false,
+  "must_contain_any": [
+    "不会",
+    "不执行"
+  ],
+  "must_not_contain_positive_execution": true
+}

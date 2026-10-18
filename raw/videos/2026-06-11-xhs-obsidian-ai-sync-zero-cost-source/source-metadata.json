@@ -1,0 +1,25 @@
+{
+  "platform": "xiaohongshu",
+  "platform_id": "69ff308d0000000023006171",
+  "source_uri": "xiaohongshu:69ff308d0000000023006171",
+  "short_url": "http://xhslink.com/o/3fNueiiVu86",
+  "resolved_url": "https://www.xiaohongshu.com/discovery/item/69ff308d0000000023006171",
+  "share_url": "https://www.xiaohongshu.com/discovery/item/69ff308d0000000023006171?app_platform=ios&app_version=9.33.4&share_from_user_hidden=true&xsec_source=app_share&type=video&xsec_token=CBtZPdoQNl3lf17W8_BowdEopRI9ch3jkmtgMFXpyT_W0=&author_share=1&xhsshare=CopyLink&shareRedId=N0k7OTRKO002NzUyOTgwNjczOTo0S0c5&apptime=1781127391&share_id=0546bc5093504cd98a77a3e6aec8fb8a",
+  "title": "obsidian+AI知识管理第一步-0成本多端同步",
+  "author": "我是菜菜(学习版)",
+  "description": "还在为 Obsidian 多端同步发愁？🙋‍♀️\n我试过好几个方案，踩了两个大坑，最后终于找到一个 0成本、全平台的方法，Win + Mac + iPhone + 安卓全部搞定，分享给同样在纠结的你。\n---\n📋 市面主流方案，先看清楚再选\n• 官方同步 → 最省心，但每月约30元，不差钱可以直接上\n• iCloud → 苹果全家桶首选，但 Windows 版极其不稳定，别碰\n• 网盘直接同步 → 免费且实时，但手机端同步不了\n• 插件同步 → 多平台小白最优解 ✅\n• Git / Syncthing / LiveSync → 技术向，适合有代码基础的人\n---\n❌ 我踩过的两个坑，帮你省时间\n① Google Drive 插件：对网络稳定性要求极高，VPN 稍抖 Token 就清空，重新认证还必须把仓库清空重来，陷入无限循环，直接放弃\n② 坚果云：免费版限上下行流量，初次同步内容稍多就触发限流、反复 503，等半小时都解决不了\n---\n✅ 最终方案：Remotely Save + OneDrive\n选这个组合的原因很简单——\n插件上线时间久、下载量大，稳定性有保障；\nOneDrive 个人版免费 5GB，以文字为主的仓库绰绰有余。\n---\n⚙️ 必须注意的几个设置\n\t\n• 并行度：默认值 5 改成 1~2，太大容易卡死同步\n• 仓库名称：每台设备必须完全一致，包括大小写和空格\n• 同步方向这样分配效果最好 👇\nWindows → 双向同步（作为主基准端）\nMac / 手机 → 增量推送（只上传，不下载）\n手机只用来记碎片想法，打开电脑时自动拉过来，完美。\n---\n⚠️ 最后几个避坑提醒\n不要开「同步配置文件夹」，会导致多端配置互相打架；\n同步失败时检查「修改超过百分比则终止同步」这个保护开关，调高或设为 100% 即可。\n💾 无论同步多稳定，操作前备份、每周手动拷贝仓库到移动硬盘，是每个 Obsidian 用户的基本修养。\n---\n有问题欢迎评论区留言，我会一一回复 🙌\n#学习效率[话题]# #obsidian[话题]# #同步[话题]#",
+  "keywords": [
+    "学习效率",
+    "obsidian",
+    "同步"
+  ],
+  "duration": "06:11",
+  "last_update_time_ms": 1778332215000,
+  "video_url_public": "https://sns-video-qc.xhscdn.com/stream/79/110/258/01e9ff302f15c9df4f0370019e0cd6800b_258.mp4?sign=8a6ec0c5c0f716da5ea1f86cec26ada1&t=6a2e771e",
+  "video_size_bytes_expected": null,
+  "captured_at": "2026-06-11T05:40:48.205210+08:00",
+  "metadata_fetch_method": "public_xiaohongshu_ssr_state_and_meta",
+  "cookies_used": false,
+  "cloud_api_used": false,
+  "private_account_used": false
+}

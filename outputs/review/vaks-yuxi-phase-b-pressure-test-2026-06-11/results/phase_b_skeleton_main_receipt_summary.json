@@ -1,0 +1,16 @@
+[
+  {
+    "corpus": "primary",
+    "receipt_path": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-yuxi-phase-b-pressure-test-2026-06-11\\results\\phase_b_skeleton_main_primary_retrieval_receipts.jsonl",
+    "queries": 30,
+    "results": 300,
+    "indexed_at": "2026-06-10T20:27:40+00:00"
+  },
+  {
+    "corpus": "full",
+    "receipt_path": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-yuxi-phase-b-pressure-test-2026-06-11\\results\\phase_b_skeleton_main_full_retrieval_receipts.jsonl",
+    "queries": 30,
+    "results": 300,
+    "indexed_at": "2026-06-10T20:28:50+00:00"
+  }
+]

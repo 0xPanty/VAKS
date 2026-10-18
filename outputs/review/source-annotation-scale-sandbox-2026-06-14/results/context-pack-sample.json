@@ -1,0 +1,205 @@
+{
+  "context_pack_id": "ctx-source-annotation-scale-sandbox-001",
+  "query": {
+    "summary": "sandbox export for annotation workbench scale test",
+    "mode": "orientation",
+    "active_project": "VAKS"
+  },
+  "authority_gate": {
+    "included_buckets": [
+      "source_annotation",
+      "raw_source"
+    ],
+    "action_basis_requested": false,
+    "action_basis_allowed": false
+  },
+  "selected_items": [
+    {
+      "ref": "samples/annotations/ann-obsidian-001.md",
+      "record_kind": "source_annotation",
+      "knowledge_status": "candidate",
+      "pack_role": "review_input",
+      "source_ref": "samples/sources/obsidian-workbench.md",
+      "annotation_role": "possible_support",
+      "anchor_status": "exact_verified",
+      "support_checked": false,
+      "evidence_support_status": "not_checked",
+      "evidence_packet_ref": null,
+      "action_basis_allowed": false,
+      "warning_code": "annotation_not_support",
+      "selected_by": {
+        "metadata": true,
+        "lexical": true,
+        "semantic": false,
+        "graph": false
+      }
+    },
+    {
+      "ref": "samples/annotations/ann-obsidian-002.md",
+      "record_kind": "source_annotation",
+      "knowledge_status": "candidate",
+      "pack_role": "review_input",
+      "source_ref": "samples/sources/obsidian-workbench.md",
+      "annotation_role": "bookmark",
+      "anchor_status": "exact_verified",
+      "support_checked": false,
+      "evidence_support_status": "not_checked",
+      "evidence_packet_ref": null,
+      "action_basis_allowed": false,
+      "warning_code": "annotation_not_support",
+      "selected_by": {
+        "metadata": true,
+        "lexical": true,
+        "semantic": false,
+        "graph": false
+      }
+    },
+    {
+      "ref": "samples/annotations/ann-obsidian-003.md",
+      "record_kind": "source_annotation",
+      "knowledge_status": "candidate",
+      "pack_role": "review_input",
+      "source_ref": "samples/sources/obsidian-workbench.md",
+      "annotation_role": "implementation_note",
+      "anchor_status": "exact_verified",
+      "support_checked": false,
+      "evidence_support_status": "not_checked",
+      "evidence_packet_ref": null,
+      "action_basis_allowed": false,
+      "warning_code": "annotation_not_support",
+      "selected_by": {
+        "metadata": true,
+        "lexical": true,
+        "semantic": false,
+        "graph": false
+      }
+    },
+    {
+      "ref": "samples/annotations/ann-obsidian-004.md",
+      "record_kind": "source_annotation",
+      "knowledge_status": "candidate",
+      "pack_role": "review_input",
+      "source_ref": "samples/sources/obsidian-workbench.md",
+      "annotation_role": "candidate_seed",
+      "anchor_status": "fuzzy_recovered",
+      "support_checked": false,
+      "evidence_support_status": "not_checked",
+      "evidence_packet_ref": null,
+      "action_basis_allowed": false,
+      "warning_code": "annotation_not_support",
+      "selected_by": {
+        "metadata": true,
+        "lexical": true,
+        "semantic": false,
+        "graph": false
+      }
+    },
+    {
+      "ref": "samples/annotations/ann-obsidian-005.md",
+      "record_kind": "source_annotation",
+      "knowledge_status": "candidate",
+      "pack_role": "review_input",
+      "source_ref": "samples/sources/obsidian-workbench.md",
+      "annotation_role": "possible_support",
+      "anchor_status": "exact_verified",
+      "support_checked": false,
+      "evidence_support_status": "not_checked",
+      "evidence_packet_ref": null,
+      "action_basis_allowed": false,
+      "warning_code": "annotation_not_support",
+      "selected_by": {
+        "metadata": true,
+        "lexical": true,
+        "semantic": false,
+        "graph": false
+      }
+    },
+    {
+      "ref": "samples/annotations/ann-obsidian-006.md",
+      "record_kind": "source_annotation",
+      "knowledge_status": "candidate",
+      "pack_role": "review_input",
+      "source_ref": "samples/sources/obsidian-workbench.md",
+      "annotation_role": "bookmark",
+      "anchor_status": "exact_verified",
+      "support_checked": false,
+      "evidence_support_status": "not_checked",
+      "evidence_packet_ref": null,
+      "action_basis_allowed": false,
+      "warning_code": "annotation_not_support",
+      "selected_by": {
+        "metadata": true,
+        "lexical": true,
+        "semantic": false,
+        "graph": false
+      }
+    }
+  ],
+  "resolved_source_spans": [
+    {
+      "anchor_ref": "samples/sources/obsidian-workbench.md#ann-obsidian-001",
+      "source_ref": "samples/sources/obsidian-workbench.md",
+      "excerpt": "how Markdown records as filtered tables. They are useful for inbox, project lens, source drilldown, and repair queues. A Base view is a surface for work. It is not a truth layer. Inline footnotes are comfortable because the reading mode can hide detail behind a small mark",
+      "may_count_as_support": false,
+      "support_check_required": true
+    },
+    {
+      "anchor_ref": "samples/sources/obsidian-workbench.md#ann-obsidian-002",
+      "source_ref": "samples/sources/obsidian-workbench.md",
+      "excerpt": "how Markdown records as filtered tables. They are useful for inbox, project lens, source drilldown, and repair queues. A Base view is a surface for work. It is not a truth layer. Inline footnotes are comfortable because the reading mode can hide detail behind a small mark",
+      "may_count_as_support": false,
+      "support_check_required": true
+    },
+    {
+      "anchor_ref": "samples/sources/obsidian-workbench.md#ann-obsidian-003",
+      "source_ref": "samples/sources/obsidian-workbench.md",
+      "excerpt": "how Markdown records as filtered tables. They are useful for inbox, project lens, source drilldown, and repair queues. A Base view is a surface for work. It is not a truth layer. Inline footnotes are comfortable because the reading mode can hide detail behind a small mark",
+      "may_count_as_support": false,
+      "support_check_required": true
+    },
+    {
+      "anchor_ref": "samples/sources/obsidian-workbench.md#ann-obsidian-004",
+      "source_ref": "samples/sources/obsidian-workbench.md",
+      "excerpt": "how Markdown records as filtered tables. They are useful for inbox, project lens, source drilldown, and repair queues. A Base view is a surface for work. It is not a truth layer. Inline footnotes are comfortable because the reading mode can hide detail behind a small mark",
+      "may_count_as_support": false,
+      "support_check_required": true
+    },
+    {
+      "anchor_ref": "samples/sources/obsidian-workbench.md#ann-obsidian-005",
+      "source_ref": "samples/sources/obsidian-workbench.md",
+      "excerpt": "ause the reading mode can hide detail behind a small marker. The canonical record should still live in a sidecar file. Long selector text should stay out of the default table.",
+      "may_count_as_support": false,
+      "support_check_required": true
+    },
+    {
+      "anchor_ref": "samples/sources/obsidian-workbench.md#ann-obsidian-006",
+      "source_ref": "samples/sources/obsidian-workbench.md",
+      "excerpt": "how Markdown records as filtered tables. They are useful for inbox, project lens, source drilldown, and repair queues. A Base view is a surface for work. It is not a truth layer. Inline footnotes are comfortable because the reading mode can hide detail behind a small mark",
+      "may_count_as_support": false,
+      "support_check_required": true
+    }
+  ],
+  "coverage_overview": {
+    "supported": 0,
+    "weakly_supported": 0,
+    "challenged": 0,
+    "missing_evidence": 6,
+    "out_of_scope": 0,
+    "risk_flags": [
+      "annotation_not_support"
+    ]
+  },
+  "coverage_map": [],
+  "evidence_sufficiency": {
+    "state": "insufficient",
+    "checked_for": "context_pack",
+    "required_next_step": "needs_review"
+  },
+  "action_readiness": {
+    "state": "not_ready",
+    "reason": "source annotations are locators, not evidence support"
+  },
+  "warnings": [
+    "annotation_not_support"
+  ]
+}

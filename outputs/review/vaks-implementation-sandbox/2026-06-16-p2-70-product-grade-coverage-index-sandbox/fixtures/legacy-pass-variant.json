@@ -1,0 +1,14 @@
+{
+  "fixture_id": "legacy-pass-variant",
+  "reports": {
+    "verification": "---\nstatus: local_verification_passed\n---\n",
+    "reviewer": "---\nstatus: review_pass_no_blocker\n---\n",
+    "boundary": "---\nstatus: pass_boundary\n---\n",
+    "product": "---\nstatus: pass_product_grade_round_2\n---\n",
+    "next_step": "---\nstatus: pending_acceptance\n---\n"
+  },
+  "expected": {
+    "canonical_strict_pass": false,
+    "legacy_pass_variant": true
+  }
+}

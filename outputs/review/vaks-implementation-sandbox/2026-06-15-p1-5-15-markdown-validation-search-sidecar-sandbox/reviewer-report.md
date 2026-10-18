@@ -1,0 +1,89 @@
+---
+record_kind: sandbox_reviewer_report
+slice_id: 2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox
+status: review_pass_no_blocker
+truth_boundary: reviewer_report_only
+---
+
+# Reviewer Report
+
+## Reviewer Scope
+
+Read-only review for:
+
+- bugs;
+- missing tests;
+- overdesign;
+- maintainability;
+- fixture and failure-case coverage;
+- whether local verification really exercises the contract.
+
+## Current Conclusion
+
+```text
+REVIEW_PASS
+```
+
+## Final Reviewer Result
+
+Final read-only Reviewer conclusion:
+
+```text
+REVIEW_PASS
+Remaining findings: None
+Coverage gaps: None
+Maintainability notes: None
+Recommend Product Acceptance: yes
+```
+
+## Revision History
+
+The first Reviewer pass returned `REVIEW_BLOCKED` for:
+
+- path boundary fail-open;
+- required block omission;
+- forbidden frontmatter authority fields;
+- hit bucket membership;
+- authority alias gaps.
+
+Builder repaired these inside the approved sandbox path only. A second pass
+returned `REVIEW_PASS` with two non-blocking gaps. Builder then added mandatory
+hit refs and a dedicated `MS_PATH_OUTSIDE_FIXTURES` fixture. Final Reviewer
+pass returned `REVIEW_PASS` with no remaining findings, gaps, or maintainability
+notes.
+
+## Verification Seen By Reviewer
+
+```text
+positive_fixtures: 4
+failure_cases: 54
+passed: true
+target __pycache__: none
+```
+
+Reviewer approval is not Product Acceptance, reviewed knowledge, evidence
+support, action basis, promotion, or mainline readiness.
+
+## Product-Driven Revision Pending Revalidation
+
+Product Acceptance returned `REVISE_BEFORE_NEXT` after the Reviewer pass because
+referenced copied Markdown/config/cache fixtures did not exist. Builder added
+real readable fixture files, symbolic cache semantics, and missing-fixture
+failure cases. Current local verification is:
+
+```text
+positive_fixtures: 4
+failure_cases: 59
+passed: true
+target __pycache__: none
+```
+
+Reviewer revalidated this updated state and returned:
+
+```text
+REVIEW_PASS
+Remaining findings: None
+Coverage gaps: None
+Maintainability notes: None
+Recommend Product Acceptance: yes
+```

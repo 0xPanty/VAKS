@@ -1,0 +1,8 @@
+function d(t){return t.desktop}function s(t){return`${t.mobile} 375w,
+    ${t.desktop} 1024w,
+    ${t.desktopHD} 2048w
+  `.trim().replace(/\s+/g," ")}function c(t){return`(max-width: 599px) calc(375px / ${t}),
+    (min-width: 600px) and (max-width: 1439px) calc(1024px / ${t}),
+    (min-width: 1440px) calc(2048px / ${t})
+  `.trim().replace(/\s+/g," ")}function i(t){return t.split(`
+`).map(n=>`<p>${n}</p>`).join("")}function r(t,n,o){return Math.floor((o-n*(t-1))/t)}function a(t){return typeof window=="undefined"?"":getComputedStyle(document.documentElement).getPropertyValue(t)}const l=t=>{const n=parseInt(a("--r-padding-x-size")),o=parseInt(a("--r-gap-between-card")),e=Math.floor((t-2*n-o)/3);return console.log("screenWidth",t),console.log("xPaddingSize",n),console.log("cardGap",o),console.log("twoOddCardsWidthUnit",e),e},g=t=>{const n=parseInt(a("--r-padding-x-size")),o=parseInt(a("--r-gap-between-card")),e=r(2,o,t-2*n).toString()+"px";return console.log("screenWidth",t),console.log("xPaddingSize",n),console.log("cardGap",o),console.log("twoCardsWidth",e),e},p=t=>{const n=parseInt(a("--r-padding-x-size")),o=parseInt(a("--r-gap-between-card")),e=r(3,o,t-2*n).toString()+"px";return console.log("screenWidth",t),console.log("xPaddingSize",n),console.log("cardGap",o),console.log("threeCardsWidth",e),e},x=t=>{const n=parseInt(a("--r-padding-x-size")),o=parseInt(a("--r-gap-between-card")),e=r(4,o,t-2*n).toString()+"px";return console.log("screenWidth",t),console.log("xPaddingSize",n),console.log("cardGap",o),console.log("fourCardsWidth",e),e};export{g as a,x as b,p as c,l as d,d as e,s as f,a as g,c as h,i};

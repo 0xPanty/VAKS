@@ -1,0 +1,48 @@
+{
+  "record_kind": "sandbox_user_decision_index_freeze_checksum_contract",
+  "slice_id": "2026-06-16-p2-60-user-decision-index-freeze-checksum-sandbox",
+  "source_slice_ids": [
+    "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+    "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+    "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+    "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+    "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+    "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+    "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+    "2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox",
+    "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox"
+  ],
+  "truth_boundary": "checksum_freeze_not_user_decision_or_execution_authority",
+  "hash_algorithm": "sha256_bytes",
+  "latest_source_status_method": "read_existing_reports_no_script_execution",
+  "latest_source_status_paths": [
+    "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/verification.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/reviewer-report.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/boundary-audit.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/product-acceptance-report.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/next-step.md"
+  ],
+  "selection_rule": "freeze required root docs plus artifact, fixtures, and failure-cases files for p2-51 through p2-59",
+  "output_contract": {
+    "automatic_execution": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "action_basis_ready": false,
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "install_dependencies",
+      "start_background_service",
+      "install_hooks",
+      "use_mcp_write_tool",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  }
+}

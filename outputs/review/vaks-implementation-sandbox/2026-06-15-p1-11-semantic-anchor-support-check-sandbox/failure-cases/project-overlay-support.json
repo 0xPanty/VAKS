@@ -1,0 +1,17 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "project-overlay-support",
+  "expected_valid": false,
+  "expected_codes": ["SA_CANDIDATE_AS_SUPPORT"],
+  "anchors": [
+    {
+      "id": "project-overlay-anchor",
+      "anchor_kind": "project_overlay",
+      "support_claimed": true,
+      "support_role": "direct_support",
+      "source_ref": "outputs/review/project-overlay-example.md",
+      "selector": "scope-note:s-02",
+      "authority_bucket": "project_overlay"
+    }
+  ]
+}

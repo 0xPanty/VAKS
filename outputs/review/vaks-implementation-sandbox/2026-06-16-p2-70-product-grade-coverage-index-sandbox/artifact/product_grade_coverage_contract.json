@@ -1,0 +1,26 @@
+{
+  "record_kind": "sandbox_product_grade_coverage_contract",
+  "slice_id": "2026-06-16-p2-70-product-grade-coverage-index-sandbox",
+  "purpose": "index sandbox product-grade evidence from report frontmatter only",
+  "input_contract": {
+    "scan_root": "outputs/review/vaks-implementation-sandbox",
+    "status_source": "strict_yaml_frontmatter_only",
+    "status_parser_source_slice": "2026-06-16-p2-67-user-decision-strict-status-package-sandbox",
+    "ignore_body_literals": true,
+    "ignore_code_literals": true,
+    "do_not_modify_scanned_slices": true
+  },
+  "output_contract": {
+    "canonical_pass_requires_product_status": "pass_product_grade",
+    "canonical_pass_requires_next_step_status": "pass_product_grade_pending_next_slice",
+    "legacy_pass_variants_are_not_canonical_final_gate": true,
+    "coverage_index_is_not_mainline_readiness": true,
+    "coverage_index_is_not_promotion_approval": true,
+    "coverage_index_is_not_reviewed_knowledge": true,
+    "coverage_index_is_not_action_basis": true,
+    "dependency_install_required": false,
+    "network_required": false,
+    "mcp_required": false,
+    "background_service_required": false
+  }
+}

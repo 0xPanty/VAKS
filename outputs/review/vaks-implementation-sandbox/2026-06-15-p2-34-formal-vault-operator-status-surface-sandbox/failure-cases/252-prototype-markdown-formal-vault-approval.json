@@ -1,0 +1,12 @@
+{
+  "case_id": "prototype-markdown-formal-vault-approval",
+  "note": "Prototype grants formal approval.",
+  "prototype_tamper": {
+    "kind": "markdown_replace",
+    "file": "02 Status Badges.md",
+    "content": "formal vault approval: yes"
+  },
+  "expected_errors": [
+    "prototype_text_dangerous:02 Status Badges.md:formal_vault_approval_marker"
+  ]
+}

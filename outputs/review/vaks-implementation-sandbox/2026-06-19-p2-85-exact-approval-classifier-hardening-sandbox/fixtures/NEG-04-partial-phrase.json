@@ -1,0 +1,16 @@
+{
+  "case_id": "NEG-04-partial-phrase",
+  "kind": "negative",
+  "input_text": "I explicitly approve p2-75 old-file status-only normalization: apply the 75 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only..",
+  "expected_match": false,
+  "expected_class": "not_approval",
+  "result": {
+    "input_sha256": "3f030e493000c95c56a2ac5ee199802f99c74bc88e79ac4a26cdec248883a544",
+    "matched_exact_phrase": false,
+    "approval_class": "not_approval",
+    "old_file_write_allowed_by_this_slice": false,
+    "requires_future_executor_slice": false,
+    "reason": "not an exact p2-75 approval phrase"
+  },
+  "passed": true
+}

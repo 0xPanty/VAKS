@@ -1,0 +1,18 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "retained-output-hash-missing",
+  "expected_valid": false,
+  "expected_codes": ["RP_OUTPUT_HASH_MISSING"],
+  "patch": {
+    "outputs": {
+      "retained_outputs": [
+        {
+          "kind": "markdown",
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/fixtures/extracted/manual-fixture.md",
+          "output_hash": "",
+          "knowledge_status": "raw"
+        }
+      ]
+    }
+  }
+}

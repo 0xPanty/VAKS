@@ -1,0 +1,90 @@
+[
+  {
+    "failure_id": "reject_package_only_adoption_true",
+    "risk": "package_only adoption is not a product outcome; a future verifier prototype must still define scope, reports, fixtures, and gates",
+    "mutation": {"set_path": {"path": ["adoption_contract", "package_only_adoption"], "value": true}},
+    "hard_no": [
+      "do_not_modify_old_slices",
+      "do_not_create_shared_helper",
+      "do_not_edit_tools",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_package_missing_self_check",
+    "risk": "package_missing must be a structured rejection, not an implicit product pass",
+    "mutation": {"set_path": {"path": ["package_self_check", "package_exists"], "value": false}},
+    "hard_no": [
+      "do_not_modify_old_slices",
+      "do_not_create_shared_helper",
+      "do_not_edit_tools",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_package_wrong_slice_self_check",
+    "risk": "package_wrong source must not be accepted as strict status adoption",
+    "mutation": {"set_path": {"path": ["package_self_check", "uses_package_slice"], "value": false}},
+    "hard_no": [
+      "do_not_modify_old_slices",
+      "do_not_create_shared_helper",
+      "do_not_edit_tools",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_package_api_missing_self_check",
+    "risk": "package_api missing or incompatible must be a structured rejection",
+    "mutation": {"set_path": {"path": ["package_self_check", "package_api_available"], "value": false}},
+    "hard_no": [
+      "do_not_modify_old_slices",
+      "do_not_create_shared_helper",
+      "do_not_edit_tools",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  }
+]

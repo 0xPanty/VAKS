@@ -1,0 +1,512 @@
+[
+  {
+    "file": "AdminDashboardView-C43TreDc.js",
+    "bytes": 215237,
+    "terms": {
+      "VIP": 28,
+      "小程序": 3,
+      "注册": 10,
+      "记录": 28,
+      "邮箱": 14,
+      "AI": 22,
+      "分析": 14,
+      "订阅": 32,
+      "Token": 14,
+      "微信": 4,
+      "登录": 15,
+      "统计": 20,
+      "复盘": 13,
+      "API": 2,
+      "删除": 39,
+      "时间": 36,
+      "免费": 6,
+      "会员": 36,
+      "同步": 1,
+      "导出": 8,
+      "下载": 5,
+      "待办": 6,
+      "标签": 5,
+      "验证码": 1,
+      "上传": 3,
+      "图片": 4,
+      "语音": 5,
+      "任务": 3,
+      "时区": 2
+    }
+  },
+  {
+    "file": "AdminDashboardView-CzbN2ASm.css",
+    "bytes": 7723,
+    "terms": {}
+  },
+  {
+    "file": "AdminLoginView-BuRi257i.css",
+    "bytes": 976,
+    "terms": {}
+  },
+  {
+    "file": "AdminLoginView-Q00dQOkb.js",
+    "bytes": 4203,
+    "terms": {
+      "验证码": 8,
+      "API": 1,
+      "登录": 7,
+      "邮箱": 3
+    }
+  },
+  {
+    "file": "AnalyticsView-BGsg6F--.css",
+    "bytes": 15620,
+    "terms": {
+      "标签": 1
+    }
+  },
+  {
+    "file": "AnalyticsView-BzNO0CcO.js",
+    "bytes": 340847,
+    "terms": {
+      "时间": 13,
+      "标签": 6,
+      "复盘": 8,
+      "记录": 9,
+      "导出": 36,
+      "统计": 4,
+      "VIP": 12,
+      "API": 5,
+      "分析": 4,
+      "同步": 2,
+      "AI": 744,
+      "Token": 35,
+      "待办": 1,
+      "图片": 1
+    }
+  },
+  {
+    "file": "CompletedTasksView-BFRd_QWw.js",
+    "bytes": 10770,
+    "terms": {
+      "任务": 1
+    }
+  },
+  {
+    "file": "CompletedTasksView-Di3dXGKB.css",
+    "bytes": 7928,
+    "terms": {}
+  },
+  {
+    "file": "DiaryView-BpLGed6u.css",
+    "bytes": 115649,
+    "terms": {}
+  },
+  {
+    "file": "DiaryView-Fi9ivshD.js",
+    "bytes": 101338,
+    "terms": {
+      "时间": 4,
+      "复盘": 7,
+      "删除": 3,
+      "图片": 2,
+      "上传": 2,
+      "记录": 2,
+      "导出": 1,
+      "VIP": 7
+    }
+  },
+  {
+    "file": "GapAnalysisView-JTQeSW9m.js",
+    "bytes": 9077,
+    "terms": {}
+  },
+  {
+    "file": "HelpCenterView-BB994cZT.js",
+    "bytes": 198149,
+    "terms": {
+      "记录": 292,
+      "时间": 375,
+      "语音": 21,
+      "小程序": 56,
+      "同步": 100,
+      "待办": 137,
+      "任务": 153,
+      "VIP": 106,
+      "日历": 74,
+      "导出": 112,
+      "标签": 223,
+      "AI": 119,
+      "分析": 183,
+      "复盘": 104,
+      "图片": 48,
+      "统计": 50,
+      "微信": 44,
+      "注册": 7,
+      "邮箱": 10,
+      "洞察": 12,
+      "免费": 44,
+      "下载": 39,
+      "App Store": 4,
+      "会员": 100,
+      "隐私": 9,
+      "删除": 33,
+      "登录": 15,
+      "周期": 6,
+      "时区": 2,
+      "订阅": 50,
+      "上传": 10,
+      "API": 6,
+      "Token": 21,
+      "协议": 2
+    }
+  },
+  {
+    "file": "HelpCenterView-BF-zxCwU.css",
+    "bytes": 80870,
+    "terms": {}
+  },
+  {
+    "file": "InboxView-BgMvwLy_.css",
+    "bytes": 57332,
+    "terms": {}
+  },
+  {
+    "file": "InboxView-HqvgOLuB.js",
+    "bytes": 51988,
+    "terms": {
+      "统计": 1,
+      "删除": 5,
+      "标签": 2,
+      "任务": 13
+    }
+  },
+  {
+    "file": "index-CelCbz22.js",
+    "bytes": 4118,
+    "terms": {}
+  },
+  {
+    "file": "index-cgtDKvxs.css",
+    "bytes": 562962,
+    "terms": {
+      "图片": 1
+    }
+  },
+  {
+    "file": "InsightsView-Cdwcuepg.js",
+    "bytes": 14072,
+    "terms": {}
+  },
+  {
+    "file": "jszip.min-DmNMeufm.js",
+    "bytes": 188889,
+    "terms": {
+      "AI": 1,
+      "Token": 15
+    }
+  },
+  {
+    "file": "LoginView-0j3KkrBI.js",
+    "bytes": 32392,
+    "terms": {
+      "邮箱": 17,
+      "注册": 9,
+      "登录": 3,
+      "验证码": 11,
+      "时间": 1,
+      "API": 1,
+      "Token": 2,
+      "微信": 2
+    }
+  },
+  {
+    "file": "LoginView-DULq3uNV.css",
+    "bytes": 7537,
+    "terms": {}
+  },
+  {
+    "file": "PatternAnalysisView-NCT7DDCI.js",
+    "bytes": 13173,
+    "terms": {}
+  },
+  {
+    "file": "PaymentSuccessView-BKVmAe2A.js",
+    "bytes": 5601,
+    "terms": {}
+  },
+  {
+    "file": "PaymentSuccessView-C_sLPLd-.css",
+    "bytes": 1889,
+    "terms": {}
+  },
+  {
+    "file": "ResetPasswordView-D28TCHO8.js",
+    "bytes": 4400,
+    "terms": {
+      "Token": 1
+    }
+  },
+  {
+    "file": "SettingsTest-CXOkbg-Y.js",
+    "bytes": 54841,
+    "terms": {
+      "Token": 41,
+      "上传": 1,
+      "订阅": 1,
+      "验证码": 1,
+      "邮箱": 1,
+      "微信": 4,
+      "登录": 1,
+      "时区": 2,
+      "API": 1,
+      "VIP": 3,
+      "任务": 1
+    }
+  },
+  {
+    "file": "SettingsTest-_urmA247.css",
+    "bytes": 26324,
+    "terms": {}
+  },
+  {
+    "file": "SubscriptionView-CegA7r-a.css",
+    "bytes": 19375,
+    "terms": {}
+  },
+  {
+    "file": "SubscriptionView-CQDPRMih.js",
+    "bytes": 21237,
+    "terms": {
+      "订阅": 1,
+      "Token": 1,
+      "登录": 1,
+      "免费": 1
+    }
+  },
+  {
+    "file": "TagManagementView-BCayLDj0.js",
+    "bytes": 36925,
+    "terms": {
+      "标签": 44,
+      "记录": 10,
+      "删除": 9,
+      "VIP": 5,
+      "会员": 1,
+      "API": 1
+    }
+  },
+  {
+    "file": "TagManagementView-CS04jLMl.css",
+    "bytes": 11662,
+    "terms": {
+      "标签": 1
+    }
+  },
+  {
+    "file": "TaskDetailPanel-BhdurwPM.css",
+    "bytes": 32829,
+    "terms": {}
+  },
+  {
+    "file": "TaskDetailPanel-DYyfbnbk.js",
+    "bytes": 36643,
+    "terms": {
+      "任务": 6,
+      "标签": 4,
+      "时间": 2,
+      "删除": 2
+    }
+  },
+  {
+    "file": "TimelineView-BvD1R6rn.css",
+    "bytes": 127081,
+    "terms": {}
+  },
+  {
+    "file": "TimelineView-Dv8uHth4.js",
+    "bytes": 151359,
+    "terms": {
+      "VIP": 14,
+      "标签": 3,
+      "时间": 29,
+      "记录": 14,
+      "统计": 1,
+      "订阅": 6,
+      "导出": 11,
+      "免费": 1,
+      "下载": 1,
+      "图片": 1,
+      "AI": 1,
+      "复盘": 15,
+      "删除": 22,
+      "待办": 7,
+      "会员": 1,
+      "任务": 2
+    }
+  },
+  {
+    "file": "TodoCalendarView-B4g01KnU.css",
+    "bytes": 8472,
+    "terms": {}
+  },
+  {
+    "file": "TodoCalendarView-CxCMyosu.js",
+    "bytes": 7823,
+    "terms": {
+      "待办": 1,
+      "任务": 2,
+      "订阅": 1
+    }
+  },
+  {
+    "file": "TodoHistoryView-B-mGLs1Y.js",
+    "bytes": 16652,
+    "terms": {
+      "任务": 2,
+      "记录": 1,
+      "订阅": 1
+    }
+  },
+  {
+    "file": "TodoHistoryView-PoJAl8sR.css",
+    "bytes": 9909,
+    "terms": {}
+  },
+  {
+    "file": "TodoModal-B0ANjWWB.js",
+    "bytes": 26953,
+    "terms": {
+      "标签": 13,
+      "任务": 4,
+      "时间": 1,
+      "删除": 1
+    }
+  },
+  {
+    "file": "TodoModal-CmEL8WhA.css",
+    "bytes": 12240,
+    "terms": {}
+  },
+  {
+    "file": "TodoView-CDvNXn3o.css",
+    "bytes": 127927,
+    "terms": {
+      "任务": 1
+    }
+  },
+  {
+    "file": "TodoView-DbTDvArj.js",
+    "bytes": 102872,
+    "terms": {
+      "待办": 16,
+      "任务": 63,
+      "时间": 8,
+      "记录": 9,
+      "图片": 1,
+      "标签": 17,
+      "导出": 4,
+      "删除": 2,
+      "订阅": 1,
+      "VIP": 1,
+      "同步": 1,
+      "分析": 2,
+      "日历": 1
+    }
+  },
+  {
+    "file": "unifiedExport-DsurIdvo.js",
+    "bytes": 852412,
+    "terms": {
+      "删除": 9,
+      "任务": 1,
+      "图片": 39,
+      "上传": 17,
+      "同步": 1,
+      "Token": 83,
+      "API": 1,
+      "AI": 8,
+      "语音": 8,
+      "复盘": 27,
+      "导出": 9,
+      "VIP": 3,
+      "下载": 1,
+      "时间": 22,
+      "记录": 18,
+      "标签": 1
+    }
+  },
+  {
+    "file": "VerifyEmailView-jj6aUFmC.js",
+    "bytes": 4114,
+    "terms": {
+      "Token": 1
+    }
+  },
+  {
+    "file": "VipOverlay-BWrFcNQ7.js",
+    "bytes": 3341,
+    "terms": {
+      "VIP": 4,
+      "订阅": 3,
+      "时间": 2,
+      "标签": 3,
+      "统计": 1,
+      "待办": 4,
+      "任务": 3,
+      "日历": 1,
+      "导出": 3,
+      "AI": 1,
+      "分析": 3,
+      "记录": 1,
+      "免费": 1
+    }
+  },
+  {
+    "file": "VipOverlay-khlMZwHC.css",
+    "bytes": 3344,
+    "terms": {}
+  },
+  {
+    "file": "WechatBindView-Cj7Ragq_.js",
+    "bytes": 4238,
+    "terms": {
+      "Token": 2,
+      "验证码": 6,
+      "邮箱": 3,
+      "微信": 1
+    }
+  },
+  {
+    "file": "WechatBindView-DRpZO_0w.css",
+    "bytes": 3748,
+    "terms": {}
+  },
+  {
+    "file": "WeekView-CR3rE_L-.css",
+    "bytes": 48452,
+    "terms": {}
+  },
+  {
+    "file": "WeekView-D5tN_tWf.js",
+    "bytes": 33037,
+    "terms": {
+      "任务": 19,
+      "删除": 7,
+      "订阅": 1,
+      "待办": 2,
+      "日历": 1
+    }
+  },
+  {
+    "file": "WelcomeView-C1Q79YzI.css",
+    "bytes": 19742,
+    "terms": {}
+  },
+  {
+    "file": "WelcomeView-SpfvzQ_I.js",
+    "bytes": 17745,
+    "terms": {
+      "时间": 2,
+      "分析": 1,
+      "记录": 1,
+      "AI": 1
+    }
+  }
+]

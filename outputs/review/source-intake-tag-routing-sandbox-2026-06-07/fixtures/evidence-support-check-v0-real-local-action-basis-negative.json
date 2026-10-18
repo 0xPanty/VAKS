@@ -1,0 +1,88 @@
+{
+  "record_kind": "evidence_support_check_real_local_negative_fixture_candidate",
+  "status": "candidate_only",
+  "topic_id": "source-intake-routing",
+  "query": "real local negative sample: overclaim smoke lint as action basis or semantic proof",
+  "truth_boundary": "real_local_negative_sandbox_fixture_only_not_truth",
+  "action_basis_allowed": false,
+  "answer_candidate": [
+    "The answer draft smoke output can be used as action basis.",
+    "Smoke lint is reviewer approval.",
+    "Existing claim_refs prove semantic support.",
+    "Smoke lint performs coverage and omission review."
+  ],
+  "claims": [
+    {
+      "claim_id": "rn1",
+      "claim_text": "The answer draft smoke output can be used as action basis.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/22_ANSWER_DRAFT_SMOKE_V0_OPUS_REVIEW_BRIEF.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/README.md"
+      ],
+      "must_match_any": [
+        "answer draft smoke = action basis",
+        "can be used as action basis",
+        "action_basis_allowed: true"
+      ],
+      "failure_origin_if_missing": [
+        "scope_mismatch_or_overclaim"
+      ],
+      "warrant": "This should fail because the local docs say answer-draft smoke is not action basis."
+    },
+    {
+      "claim_id": "rn2",
+      "claim_text": "Smoke lint is reviewer approval.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/22_ANSWER_DRAFT_SMOKE_V0_OPUS_REVIEW_BRIEF.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/checks/answer-draft-smoke-v0-test.md"
+      ],
+      "must_match_any": [
+        "smoke lint = reviewer approval",
+        "smoke lint is reviewer approval",
+        "reviewer_approval: true"
+      ],
+      "failure_origin_if_missing": [
+        "scope_mismatch_or_overclaim"
+      ],
+      "warrant": "This should fail because the local brief labels smoke lint as diagnostic, not approval."
+    },
+    {
+      "claim_id": "rn3",
+      "claim_text": "Existing claim_refs prove semantic support.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/22_ANSWER_DRAFT_SMOKE_V0_OPUS_REVIEW_BRIEF.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/checks/answer-draft-smoke-v0-test.md"
+      ],
+      "must_match_any": [
+        "claim_refs prove semantic support",
+        "valid claim_refs prove semantic support",
+        "semantic_support_checked: true"
+      ],
+      "failure_origin_if_missing": [
+        "semantic_faithfulness_not_checked"
+      ],
+      "warrant": "This should fail because the local docs say claim_refs are handles, not semantic proof."
+    },
+    {
+      "claim_id": "rn4",
+      "claim_text": "Smoke lint performs coverage and omission review.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/22_ANSWER_DRAFT_SMOKE_V0_OPUS_REVIEW_BRIEF.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/checks/answer-draft-smoke-v0-test.md"
+      ],
+      "must_match_any": [
+        "smoke lint performs coverage",
+        "smoke lint performs omission review",
+        "coverage_or_omission_checked: true"
+      ],
+      "failure_origin_if_missing": [
+        "coverage_or_omission_not_checked"
+      ],
+      "warrant": "This should fail because coverage and omission are explicitly outside smoke lint."
+    }
+  ]
+}

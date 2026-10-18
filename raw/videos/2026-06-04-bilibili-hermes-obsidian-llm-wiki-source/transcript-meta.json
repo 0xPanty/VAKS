@@ -1,0 +1,19 @@
+{
+  "source_url": "https://www.bilibili.com/video/BV16hZFB5ERM/",
+  "bvid": "BV16hZFB5ERM",
+  "aid": 116470822476749,
+  "cid": 37850188927,
+  "transcript_method": "local_asr",
+  "asr_engine": "faster-whisper",
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16",
+  "language": "zh",
+  "language_probability": 1,
+  "duration": 845.392125,
+  "segment_count": 93,
+  "text_chars": 5151,
+  "elapsed_seconds": 112.75,
+  "captured_at": "2026-06-04T15:15:44.700883+00:00",
+  "quality_notes": "local ASR from public Bilibili audio; raw source text, not reviewed knowledge; proper nouns need confidence checks"
+}

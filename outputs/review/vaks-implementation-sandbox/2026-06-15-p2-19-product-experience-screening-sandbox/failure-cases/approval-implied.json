@@ -1,0 +1,1 @@
+{"case_id":"approval-implied","base_fixture":"fixtures/valid-product-experience-screening.json","mutations":[{"op":"set_candidate","id":"P2-PX-03","path":"/authority_flags/approves_review","value":true}]}

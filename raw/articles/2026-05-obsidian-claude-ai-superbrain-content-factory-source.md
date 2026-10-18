@@ -1,5 +1,6 @@
 ---
 type: source
+record_kind: source_card
 status: source-captured
 title: "如何基于 Obsidian 和 Claude 打造 AI 时代超级大脑？"
 source_url:
@@ -20,12 +21,9 @@ projects:
   - 资料库
   - AI短剧
 evidence_level: anecdotal
+source_integrity:
+  capture_confidence: 4
 source_status: single-source
-source_quality: 4
-freshness: 4
-relevance: 5
-confidence: 4
-cross_source_count: 2
 verified_by:
   - "Claudian GitHub README"
   - "Claude Code official docs for skills and permissions"
@@ -42,8 +40,25 @@ tags:
   - source/obsidian-ai
   - source/content-factory
   - status/single-source
+knowledge_status: raw
+processing_tier: light
+source_id: legacy:2026-05-obsidian-claude-ai-superbrain-content-factory-source
+why_saved: see_body_or_legacy_record
+retrieval_policy:
+  policy_kind: source_identity_only
+  pack_allowed: drilldown_required
+  action_basis_allowed: false
+  warning_code: raw_is_provenance_only
+promotion_gate: none
+action_basis_allowed: false
+truth_mutation_allowed: false
+raw_location: C:/Users/Administrator/Documents/资料库/raw/articles/2026-05-obsidian-claude-ai-superbrain-content-factory-source.md
+legacy_raw_metadata:
+  source_quality: 4
+  freshness: 4
+  relevance: 5
+  cross_source_count: 2
 ---
-
 # 来源记录：Obsidian + Claude 超级大脑内容工厂
 
 ## 为什么收录

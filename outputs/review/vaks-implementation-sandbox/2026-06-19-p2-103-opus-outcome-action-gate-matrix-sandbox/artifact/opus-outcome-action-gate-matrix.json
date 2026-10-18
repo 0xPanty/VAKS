@@ -1,0 +1,148 @@
+{
+  "record_kind": "opus_outcome_action_gate_matrix",
+  "slice_id": "2026-06-19-p2-103-opus-outcome-action-gate-matrix-sandbox",
+  "inputs": {
+    "intake_schema_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-96-opus-result-intake-skeleton-sandbox/artifact/opus-result-intake-schema.json",
+    "dry_run_manifest_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-102-opus-result-intake-dry-run-validator-sandbox/artifact/opus-result-intake-dry-run-manifest.json"
+  },
+  "allowed_conclusion_tokens": [
+    "OPUS_PASS_SANDBOX_CLOSEOUT",
+    "OPUS_REVISE_SANDBOX_CLOSEOUT",
+    "OPUS_BLOCKED_NEEDS_USER"
+  ],
+  "dry_run_validator_summary": {
+    "dry_run_validator_ready": true,
+    "valid_fixture_count": 3,
+    "failure_case_count": 21,
+    "actual_opus_result_present": false,
+    "opus_approval_claimed": false,
+    "mainline_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "goal_complete_now": false
+  },
+  "outcomes": {
+    "OPUS_PASS_SANDBOX_CLOSEOUT": {
+      "token": "OPUS_PASS_SANDBOX_CLOSEOUT",
+      "allowed_next_actions": [
+        "retain_raw_opus_result_in_sandbox",
+        "run_result_intake_validator",
+        "prepare_user_approval_decision_packet"
+      ],
+      "required_user_state": "explicit_user_mainline_approval_still_required",
+      "stop_state": "await_user_decision_after_validated_opus_pass",
+      "authority_flags": {
+        "mainline_merge_allowed": false,
+        "promotion_allowed": false,
+        "reviewed_knowledge_write_allowed": false,
+        "evidence_support_write_allowed": false,
+        "action_basis_allowed": false,
+        "commit_allowed": false,
+        "push_allowed": false,
+        "sync_allowed": false,
+        "goal_complete_now": false,
+        "external_opus_result_required": true,
+        "mainline_actions_require_separate_user_approval": true,
+        "sandbox_only": true
+      },
+      "prohibited_actions": [
+        "automatic_mainline_merge",
+        "automatic_promotion",
+        "write_reviewed_knowledge",
+        "write_evidence_support",
+        "create_action_basis",
+        "commit",
+        "push",
+        "obsidian_sync"
+      ]
+    },
+    "OPUS_REVISE_SANDBOX_CLOSEOUT": {
+      "token": "OPUS_REVISE_SANDBOX_CLOSEOUT",
+      "allowed_next_actions": [
+        "retain_raw_opus_result_in_sandbox",
+        "create_revision_slice_in_sandbox",
+        "rerun_reviewer_boundary_product_acceptance"
+      ],
+      "required_user_state": "no_mainline_approval",
+      "stop_state": "stay_in_current_sandbox_program",
+      "authority_flags": {
+        "mainline_merge_allowed": false,
+        "promotion_allowed": false,
+        "reviewed_knowledge_write_allowed": false,
+        "evidence_support_write_allowed": false,
+        "action_basis_allowed": false,
+        "commit_allowed": false,
+        "push_allowed": false,
+        "sync_allowed": false,
+        "goal_complete_now": false,
+        "external_opus_result_required": true,
+        "mainline_actions_require_separate_user_approval": true,
+        "sandbox_only": true
+      },
+      "prohibited_actions": [
+        "automatic_mainline_merge",
+        "automatic_promotion",
+        "write_reviewed_knowledge",
+        "write_evidence_support",
+        "create_action_basis",
+        "commit",
+        "push",
+        "obsidian_sync"
+      ]
+    },
+    "OPUS_BLOCKED_NEEDS_USER": {
+      "token": "OPUS_BLOCKED_NEEDS_USER",
+      "allowed_next_actions": [
+        "retain_raw_opus_result_in_sandbox",
+        "stop_and_ask_user"
+      ],
+      "required_user_state": "user_input_required_before_next_action",
+      "stop_state": "blocked_needs_user",
+      "authority_flags": {
+        "mainline_merge_allowed": false,
+        "promotion_allowed": false,
+        "reviewed_knowledge_write_allowed": false,
+        "evidence_support_write_allowed": false,
+        "action_basis_allowed": false,
+        "commit_allowed": false,
+        "push_allowed": false,
+        "sync_allowed": false,
+        "goal_complete_now": false,
+        "external_opus_result_required": true,
+        "mainline_actions_require_separate_user_approval": true,
+        "sandbox_only": true
+      },
+      "prohibited_actions": [
+        "automatic_mainline_merge",
+        "automatic_promotion",
+        "write_reviewed_knowledge",
+        "write_evidence_support",
+        "create_action_basis",
+        "commit",
+        "push",
+        "obsidian_sync"
+      ]
+    }
+  },
+  "global_invariants": {
+    "automatic_mainline_merge": false,
+    "automatic_promotion": false,
+    "reviewed_knowledge_write": false,
+    "evidence_support_write": false,
+    "action_basis": false,
+    "commit_push_sync": false,
+    "goal_complete_now": false,
+    "external_opus_result_is_not_user_mainline_approval": true
+  },
+  "summary": {
+    "outcome_count": 3,
+    "allowed_token_count": 3,
+    "all_outcomes_have_user_gate": true,
+    "pass_does_not_authorize_merge": true,
+    "actual_opus_result_present": false,
+    "opus_approval_claimed": false,
+    "mainline_ready": false,
+    "goal_complete_now": false
+  }
+}

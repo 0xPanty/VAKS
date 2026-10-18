@@ -1,0 +1,8 @@
+{
+  "fixture_id": "rollback-status-preserved",
+  "expected": {
+    "rollback_status_equals_manifest_current_status": true,
+    "rollback_applied": false,
+    "write_applied_count": 0
+  }
+}

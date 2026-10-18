@@ -1,0 +1,50 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "hundredrabbits/100r.co",
+  "source_url": "https://github.com/hundredrabbits/100r.co",
+  "checked_commit": "951d91d6e6c4c0b5f3605fd00bf090719c5e1534",
+  "checked_at": "2026-06-11",
+  "inspection_method": "local git checkout; inspected README, makefile, src/main.c, RSS feed, generated site, and folder counts",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "project-identity",
+      "why": "Identifies the website source, C build flow, contribution route, and license split."
+    },
+    {
+      "path": "makefile",
+      "kind": "build-recipe",
+      "why": "Shows site generation from source and clean targets."
+    },
+    {
+      "path": "src/main.c",
+      "kind": "static-generator",
+      "why": "Implements template injection, local link normalization, generated indexes, edit links, footers, and orphan inspection."
+    },
+    {
+      "path": "links/rss.xml",
+      "kind": "change-feed",
+      "why": "Records site/project updates as feed entries."
+    },
+    {
+      "path": "site/",
+      "kind": "generated-output",
+      "why": "Contains generated rendered projection separate from source."
+    }
+  ],
+  "observed_counts": {
+    "media_files": 2294,
+    "other_files": 16,
+    "site_files": 326,
+    "src_files": 329
+  },
+  "known_limits": [
+    "Generated references and orphan checks are maintenance signals, not reviewed relations.",
+    "The C implementation is not a recommended VAKS core dependency.",
+    "Project content and assets are outside the borrow scope."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

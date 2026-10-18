@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sandbox Executive Readiness Brief</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f7f8fb; color: #17202a; }
+    main { max-width: 1040px; margin: 0 auto; padding: 28px 18px 44px; }
+    h1 { margin: 0 0 8px; font-size: 30px; }
+    .summary { color: #465667; max-width: 800px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin: 20px 0; }
+    .card, .panel { background: #ffffff; border: 1px solid #d9e1ec; border-radius: 8px; padding: 14px; }
+    .card span { color: #526273; font-size: 13px; }
+    .card strong { display: block; margin-top: 8px; font-size: 24px; }
+    .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+    li { margin: 7px 0; }
+    .notice { margin-top: 16px; border-left: 4px solid #2f6fed; background: #edf4ff; padding: 12px 14px; color: #1f3150; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Sandbox Executive Readiness Brief</h1>
+    <p class="summary">SANDBOX_PRODUCT_GRADE_OPERATOR_READY_NOT_ENTERPRISE_PRODUCTION - not enterprise production ready.</p>
+    <section class="cards">
+      <article class="card"><span>Completed sandbox slices</span><strong>39</strong></article>
+      <article class="card"><span>Product-grade sandbox slices</span><strong>39</strong></article>
+      <article class="card"><span>Verified sandbox slices</span><strong>39</strong></article>
+      <article class="card"><span>Revision-history slices</span><strong>8</strong></article>
+      <article class="card"><span>Landed capabilities</span><strong>7</strong></article>
+    </section>
+    <section class="columns">
+      <article class="panel"><h2>Landed capabilities</h2><ul><li data-capability="receipt_and_hash_boundary"><strong>Receipts and hash boundaries</strong><span>Retrieval and operation outputs now carry inspectable receipts and source/hash boundaries.</span></li>
+<li data-capability="validator_failure_matrix"><strong>Validator failure matrix</strong><span>Validators are paired with negative cases so green checks cannot hide known boundary failures.</span></li>
+<li data-capability="read_only_query_and_retrieval"><strong>Read-only query and retrieval pilots</strong><span>Query and retrieval pilots remain inspect-only and cannot create truth, evidence, or action authority.</span></li>
+<li data-capability="formal_vault_preflight_dry_run"><strong>Formal-vault preflight dry runs</strong><span>Formal-vault work is represented as dry-run packets and gates, not as actual vault access.</span></li>
+<li data-capability="operator_status_and_workflow_surfaces"><strong>Operator status and workflow surfaces</strong><span>Operators can inspect status, next steps, approval requirements, and stop conditions.</span></li>
+<li data-capability="follow_up_agent_blind_run_regression"><strong>Follow-up-agent blind-run regression</strong><span>Independent agents are tested against prompts to catch authority confusion before continuation.</span></li>
+<li data-capability="rollup_and_decision_brief_surfaces"><strong>Rollup and decision brief surfaces</strong><span>Completed sandbox slices are summarized into readable rollups and decision briefs.</span></li></ul></article>
+      <article class="panel"><h2>Positive improvements</h2><ul><li data-improvement="retrieval_no_longer_counts_as_support"><strong>Retrieval no longer counts as support</strong><span>Finding a source is separated from proving that it supports a point.</span></li>
+<li data-improvement="sandbox_pass_no_longer_counts_as_mainline"><strong>Sandbox pass no longer counts as mainline</strong><span>Product-grade sandbox artifacts remain outside main architecture until separately approved.</span></li>
+<li data-improvement="validator_pass_no_longer_counts_as_approval"><strong>Validator pass no longer counts as approval</strong><span>Automated validation is evidence for review, not reviewer or product acceptance.</span></li>
+<li data-improvement="agent_decision_no_longer_counts_as_action_basis"><strong>Agent decision no longer counts as action basis</strong><span>Agent judgments are constrained to sandbox observations unless a separate authority exists.</span></li>
+<li data-improvement="operator_can_see_pass_verification_revision_status"><strong>Operator can see pass, verification, and revision status</strong><span>The rollup exposes Product PASS counts, verification coverage, and revision history.</span></li>
+<li data-improvement="boundary_crossing_now_requires_explicit_separate_approval"><strong>Boundary crossing requires explicit separate approval</strong><span>Formal vault, promotion, merge, commit, push, sync, and action-basis use remain blocked.</span></li></ul></article>
+      <article class="panel"><h2>Non-production gaps</h2><ul><li data-gap="not_promoted_to_mainline">not_promoted_to_mainline</li>
+<li data-gap="not_written_to_formal_vault">not_written_to_formal_vault</li>
+<li data-gap="not_synced_to_obsidian">not_synced_to_obsidian</li>
+<li data-gap="not_deployed_or_multi_user_operationalized">not_deployed_or_multi_user_operationalized</li>
+<li data-gap="not_enterprise_permissioned_or_monitored">not_enterprise_permissioned_or_monitored</li>
+<li data-gap="not_reviewed_knowledge_or_action_basis">not_reviewed_knowledge_or_action_basis</li></ul></article>
+      <article class="panel"><h2>Separate approvals</h2><ul><li data-approval="formal vault scan/write/sync">formal vault scan/write/sync</li>
+<li data-approval="mainline merge">mainline merge</li>
+<li data-approval="promotion">promotion</li>
+<li data-approval="commit">commit</li>
+<li data-approval="push">push</li>
+<li data-approval="using sandbox output as action basis">using sandbox output as action basis</li>
+<li data-approval="moving artifacts into templates or tools">moving artifacts into templates or tools</li></ul></article>
+    </section>
+    <section class="notice">not formal vault approval; not action basis; not mainline readiness; not reviewed knowledge; not evidence support.</section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

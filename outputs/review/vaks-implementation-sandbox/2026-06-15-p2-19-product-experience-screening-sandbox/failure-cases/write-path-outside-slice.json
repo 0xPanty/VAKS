@@ -1,0 +1,1 @@
+{"case_id":"write-path-outside-slice","base_fixture":"fixtures/valid-product-experience-screening.json","mutations":[{"op":"append_write_target","value":"outputs/review/not-this-slice/product-experience-screen.json"}]}

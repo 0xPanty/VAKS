@@ -1,0 +1,691 @@
+[
+  {
+    "failure_id": "missing_no_reply_case",
+    "description": "response_policy lacks no_reply safe default",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "no_reply_not_A",
+    "description": "no_reply does not default to A_keep_sandbox_reference",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "no_reply_executes_action",
+    "description": "no_reply allows execution",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "explicit_A_executes_action",
+    "description": "explicit A allows execution",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "explicit_B_executes_now",
+    "description": "explicit B auto-executes planning or promotion",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "explicit_B_missing_new_scope",
+    "description": "explicit B does not require new scope",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "explicit_B_missing_separate_approval",
+    "description": "explicit B does not require separate user approval",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "explicit_C_executes_merge",
+    "description": "explicit C auto-executes merge",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "explicit_C_missing_explicit_paths",
+    "description": "explicit C does not require explicit allowed paths",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "explicit_C_missing_separate_approval",
+    "description": "explicit C does not require separate user approval",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "explicit_D_promotes_rejection",
+    "description": "explicit D mutates mainline or reviewed knowledge",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "ambiguous_reply_executes",
+    "description": "ambiguous reply does anything other than ask clarification",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "ambiguous_reply_no_clarification",
+    "description": "ambiguous reply fails to require clarification",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "multiple_options_executes",
+    "description": "multiple options do anything other than ask clarification",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "execution_words_allowed",
+    "description": "approval with execution words is not stopped",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "commit_enabled",
+    "description": "commit forbidden operation is true",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "push_enabled",
+    "description": "push forbidden operation is true",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "obsidian_sync_enabled",
+    "description": "obsidian_sync forbidden operation is true",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "mainline_merge_enabled",
+    "description": "mainline_merge forbidden operation is true",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "promotion_enabled",
+    "description": "promotion forbidden operation is true",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "release_enabled",
+    "description": "release forbidden operation is true",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "reviewed_knowledge_enabled",
+    "description": "reviewed_knowledge_write forbidden operation is true",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "evidence_support_enabled",
+    "description": "evidence_support_creation forbidden operation is true",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "action_basis_enabled",
+    "description": "action_basis_creation forbidden operation is true",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "template_write_enabled",
+    "description": "template_write forbidden operation is true",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "tool_write_enabled",
+    "description": "tool_write forbidden operation is true",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "dependency_install_enabled",
+    "description": "dependency_install forbidden operation is true",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "background_service_enabled",
+    "description": "background_service forbidden operation is true",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "hook_install_enabled",
+    "description": "hook_install forbidden operation is true",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "mcp_write_enabled",
+    "description": "mcp_write_tool forbidden operation is true",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "auto_advance_true",
+    "description": "auto_advance_allowed readiness flag is true",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "ready_to_execute_true",
+    "description": "ready_to_execute readiness flag is true",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "mainline_ready_true",
+    "description": "mainline_ready readiness flag is true",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "promotion_ready_true",
+    "description": "promotion_ready readiness flag is true",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "action_basis_ready_true",
+    "description": "action_basis_ready readiness flag is true",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "source_slice_missing",
+    "description": "source p2-51 slice is not referenced",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "source_final_gate_missing",
+    "description": "p2-51 final gate command is missing",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "source_final_gate_not_final",
+    "description": "p2-51 command does not include --final-gate",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "truth_boundary_missing",
+    "description": "truth boundary does not say guard is not authority",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "non_claims_missing",
+    "description": "required non-claims are missing",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "rebuild_not_builder_only",
+    "description": "rebuild command is not marked Builder-only",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "ordinary_agent_uses_rebuild",
+    "description": "ordinary usage points agents at rebuild",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "allowed_next_message_allows_open",
+    "description": "allowed_next_message contains open or start wording",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "allowed_next_message_allows_execution",
+    "description": "allowed_next_message contains execute, run, merge, promote, commit, push, sync, or write wording",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "allowed_next_message_missing_approval_scope",
+    "description": "B/C allowed_next_message does not ask for separate scope or approval before future work",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "fixture_result_contract_drift",
+    "description": "positive fixture expected_result no longer matches the response policy",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "fixture_action_contract_drift",
+    "description": "positive fixture expected_action no longer matches the response policy",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "fixture_scope_contract_drift",
+    "description": "positive fixture scope or approval flags no longer match the response policy",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "fixture_missing_false_scope_flags",
+    "description": "positive fixture omits explicit false scope or approval flags",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "fixture_missing_no_reply",
+    "description": "no_reply positive fixture is missing",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "fixture_missing_explicit_A",
+    "description": "explicit A positive fixture is missing",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "fixture_missing_explicit_B",
+    "description": "explicit B positive fixture is missing",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  },
+  {
+    "failure_id": "fixture_missing_explicit_C",
+    "description": "explicit C positive fixture is missing",
+    "expected_guard_response": "reject_or_stop",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "write_reviewed_knowledge",
+      "create_action_basis"
+    ]
+  }
+]

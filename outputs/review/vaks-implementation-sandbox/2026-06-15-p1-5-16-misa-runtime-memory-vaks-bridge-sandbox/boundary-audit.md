@@ -1,0 +1,59 @@
+---
+record_kind: sandbox_boundary_audit
+slice_id: 2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox
+status: pass_boundary
+truth_boundary: boundary_audit_only
+---
+
+# Boundary Audit
+
+## Boundary Scope
+
+Read-only audit for:
+
+- protected path writes;
+- real MISA/Hermes/agentmemory runtime execution;
+- dependency installation;
+- MCP write tools;
+- hooks/background services/sync;
+- Obsidian vault reads/writes/sync;
+- sandbox output being framed as mainline architecture;
+- runtime memory, context-pack fetch, feedback/candidate/review_due writeback,
+  receipts, rank, selected_by, or validator pass being framed as support,
+  reviewed knowledge, reviewer approval, action basis, promotion, or mainline
+  readiness.
+
+## Current Conclusion
+
+```text
+BOUNDARY_PASS
+```
+
+## Notes
+
+Boundary Auditor previously returned `BOUNDARY_PASS` before the third
+Reviewer-driven repair. Because Builder changed validator logic and fixtures
+after that pass, Boundary Auditor revalidated this updated state and returned
+`BOUNDARY_PASS`.
+
+Third-revision Boundary Auditor pass:
+
+```text
+agent_id: 019ec988-f08a-7203-a91b-afeb63bf1573
+conclusion: BOUNDARY_PASS
+```
+
+Boundary findings:
+
+- no protected-path or authority-scope violation found;
+- git attribution for the current slice shows only the sandbox directory as
+  untracked, while dirty tree outside remains pre-existing baseline;
+- no dependency installation, real runtime, hooks, background service, MCP write
+  tools, Obsidian sync, promotion, commit, or push found;
+- runtime memory remains quarantined and is not treated as reviewed knowledge,
+  support, or action basis;
+- context/retrieval hit remains read-only context, not evidence support;
+- `feedback_event`, `candidate_signal`, and `review_due` writeback fixtures do
+  not mutate truth, promote knowledge, or invalidate truth directly;
+- verifier passed with 5 positive fixtures, 65 failure cases, and no target
+  `__pycache__`.

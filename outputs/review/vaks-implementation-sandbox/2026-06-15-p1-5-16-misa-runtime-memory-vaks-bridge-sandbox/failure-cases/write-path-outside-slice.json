@@ -1,0 +1,13 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "write-path-outside-slice",
+  "expected_valid": false,
+  "expected_codes": ["MB_WRITE_PATH_OUTSIDE_SLICE"],
+  "patch": {
+    "scope": {
+      "allowed_write_paths": [
+        "C:/outside/outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox/"
+      ]
+    }
+  }
+}

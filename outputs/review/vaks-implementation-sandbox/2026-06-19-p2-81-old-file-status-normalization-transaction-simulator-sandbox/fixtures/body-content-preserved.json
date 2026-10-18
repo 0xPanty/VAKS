@@ -1,0 +1,7 @@
+{
+  "fixture_id": "body-content-preserved",
+  "expected": {
+    "body_unchanged_count": 75,
+    "body_change_count": 0
+  }
+}

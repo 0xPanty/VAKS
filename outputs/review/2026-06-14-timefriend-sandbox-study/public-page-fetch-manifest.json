@@ -1,0 +1,34 @@
+[
+  {
+    "url": "https://masir1128.github.io/timefriend-privacy/",
+    "file": "privacy.html",
+    "status": "ok",
+    "bytes": 7602,
+    "sha256": "3D9E22D8AAAE7628152380D9F56D4B7B4619E1F32B6F8594574EADCCD2D8A07F",
+    "error": null
+  },
+  {
+    "url": "https://masir1128.github.io/timefriend-terms/",
+    "file": "terms.html",
+    "status": "ok",
+    "bytes": 9115,
+    "sha256": "70D613E3ACFBA24FD2876FCBACAF639E1E111EF4D54BAF70761C47673F37D6A3",
+    "error": null
+  },
+  {
+    "url": "https://timefriend.xin/robots.txt",
+    "file": "timefriend.xin_robots.txt",
+    "status": "curl_exit_28",
+    "bytes": 0,
+    "sha256": null,
+    "error": null
+  },
+  {
+    "url": "https://timefriend.xin/sitemap.xml",
+    "file": "timefriend.xin_sitemap.xml",
+    "status": "curl_exit_28",
+    "bytes": 0,
+    "sha256": null,
+    "error": null
+  }
+]

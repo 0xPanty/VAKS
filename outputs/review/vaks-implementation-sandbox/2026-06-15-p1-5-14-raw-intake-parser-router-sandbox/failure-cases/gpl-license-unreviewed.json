@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "gpl-license-unreviewed",
+  "expected_valid": false,
+  "expected_codes": ["RP_LICENSE_REVIEW_REQUIRED"],
+  "patch": {"parser": {"license_family": "gpl", "license_reviewed": false}}
+}

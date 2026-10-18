@@ -1,0 +1,188 @@
+
+CyrilXBT
+@cyrilXBT
+How to Set Up Obsidian From Scratch So It Works for Your Brain and Not Against It
+Most people set up Obsidian wrong.
+They spend hours watching YouTube tutorials, installing 30 plugins, building a folder system that looks beautiful in screenshots — and then never open the app again because it takes 10 minutes just to figure out where to put a thought.
+The problem isn't Obsidian.
+The problem is they built a system for an imaginary version of themselves — the hyper-organized, never-distracted, always-reflecting person they wish they were.
+This guide is for who you actually are.
+You have ideas at random times. You don't always process them immediately. You forget things constantly. You want your notes to be useful — not just stored.
+Let's build that.
+Why Most Note-Taking Systems Fail
+Before you touch Obsidian, you need to understand why the last system you tried didn't work.
+It failed for one of three reasons:
+Too much friction to capture. If it takes more than 10 seconds to write something down, you won't do it. You'll tell yourself you'll remember. You won't.
+No path from note to action. Most notes are captured and never opened again. They're a graveyard of good intentions. A system that doesn't connect notes to what you're actually doing is just a fancy archive.
+Structure that fights how you think. The perfectly nested folder system works for the person who created it on a Sunday afternoon. It doesn't work for Monday morning when you're in a hurry and just need to put something somewhere.
+Obsidian can solve all three of these. But only if you set it up in the right order.
+The Right Order to Set Up Obsidian
+Here's what most guides get wrong: they start with folders and plugins.
+Start with behavior. Build the vault around how you already think, not how you think you should think.
+Step 1: Capture first. Organize later.
+Step 2: Build the minimum structure needed — nothing more.
+Step 3: Add plugins only when you hit a real problem.
+Step 4: Create a review loop that surfaces what matters.
+Every section below follows this order.
+Step 1: Create Your Inbox
+The first thing you build in Obsidian is not a folder structure.
+It's an inbox.
+Open Obsidian. Create one note called Inbox. This is where everything goes first — ideas, tasks, links, quotes, half-formed thoughts. No organizing. No tagging. Just dumping.
+Inbox.md
+This does two things. It removes the decision of "where does this go" when you're in a hurry. And it gives you a weekly processing ritual that keeps the system clean.
+The rule: capture fast, organize later.
+If you find yourself thinking about where to put a note while you're writing it — stop. Put it in Inbox and move on.
+Step 2: Build the Minimum Folder Structure
+Now you need somewhere for notes to go after the inbox. But keep it brutal.
+Most people build 15 folders. You need 4.
+📁 00 - Inbox
+📁 01 - Notes
+📁 02 - Projects
+📁 03 - Resources
+Here's what goes where:
+00 - Inbox — everything lands here first. Unprocessed, unorganized, doesn't matter.
+01 - Notes — evergreen ideas. Things you want to keep and think about over time. One idea per note. Named clearly.
+02 - Projects — one folder per active project. Notes that are tied to something you're currently working on. When the project ends, archive it.
+03 - Resources — reference material. Articles you've summarized, book notes, documentation. Stuff you'll search for later but don't actively think about.
+That's it. Do not add more until you've used this for 30 days and hit a real limitation.
+# Folder structure template
+00 - Inbox/
+01 - Notes/
+02 - Projects/
+  └── Project Name/
+03 - Resources/
+  └── Books/
+  └── Articles/
+Step 3: The Note Format That Makes Linking Effortless
+Random notes stay random. Connected notes become knowledge.
+The difference is a consistent format that makes linking feel natural.
+Use this template for every note in your 01 - Notes folder:
+markdown
+# Note Title
+
+**Created:** {{date}}
+**Tags:** #topic #subtopic
+**Related:** [[Link to related note]]
+
+---
+
+## The Idea
+
+One clear statement of what this note is about.
+Write it like you're explaining it to yourself in 6 months.
+
+## Why It Matters
+
+Why does this idea matter to you right now?
+What problem does it solve? What does it connect to?
+
+## Links and Questions
+
+- [[Related Note 1]]
+- [[Related Note 2]]
+- What question does this raise?
+The Related field at the top is the most important part. Every time you create a note, ask yourself: what does this connect to? Then link it.
+This is how the graph view in Obsidian becomes useful instead of decorative.
+Step 4: The Daily Note (Done Right)
+Most people use the daily note wrong. They treat it like a diary — and then never look at it again.
+Use it as a working surface, not a log.
+Install the core plugin: Daily Notes (already built into Obsidian, just enable it).
+Then use this template:
+markdown
+# {{date}}
+
+## Today's Focus
+- [ ] Top priority 1
+- [ ] Top priority 2
+- [ ] Top priority 3
+
+## Captures
+(anything you need to remember — drop it here fast)
+
+## Processing
+(notes from inbox to move, links to make, ideas to develop)
+
+## End of Day
+- What actually got done?
+- What needs to move to tomorrow?
+- One thing worth remembering from today?
+The daily note is your command center. It connects to everything else. It's where you start the morning and close the loop at night.
+Step 5: The 5 Plugins Worth Installing (And Nothing Else)
+Plugins are where Obsidian users go to waste an entire Saturday.
+Here are the only 5 worth installing when you're starting out:
+1. Templater — create templates for notes, daily notes, and projects. Saves time and keeps formatting consistent.
+Community plugin → search "Templater" → install
+2. Dataview — query your notes like a database. Useful once you have 100+ notes and want to see things like "show me all notes tagged #idea created this month."
+Community plugin → search "Dataview" → install
+3. Calendar — a visual calendar view for your daily notes. Makes it easy to navigate backwards and see patterns.
+Community plugin → search "Calendar" → install
+4. QuickAdd — capture to your inbox from anywhere without opening the full app. The fastest way to reduce friction.
+Community plugin → search "QuickAdd" → install
+5. Obsidian Git — automatic backups to GitHub. Set it once and never lose a note again.
+Community plugin → search "Obsidian Git" → install
+Everything else is optional. Add plugins to solve specific problems you're actually having — not problems you imagine you might have someday.
+Step 6: The Weekly Review That Makes Everything Stick
+A system without a review loop is just slow forgetting.
+Every Sunday (or whatever day your week ends), spend 20 minutes on this:
+markdown
+## Weekly Review Checklist
+
+### Clear
+- [ ] Process everything in Inbox
+- [ ] Move captures from daily notes into proper notes
+- [ ] Archive completed projects
+
+### Review
+- [ ] Scan this week's daily notes
+- [ ] Open 3 random notes from 01 - Notes and ask: is this still true? what does it connect to?
+- [ ] Check open tasks across projects
+
+### Plan
+- [ ] What are the 3 most important things next week?
+- [ ] Create project notes for anything new starting
+- [ ] What note do I want to develop further this week?
+The "open 3 random notes" step is the most underrated part of any note-taking system. It forces connections across time. It surfaces ideas you forgot you had. It turns your vault from an archive into a thinking partner.
+Step 7: The Naming Convention That Makes Search Actually Work
+Bad note names:
+untitled 47
+ideas
+stuff from meeting
+link i found
+Good note names:
+Why constraints make creativity easier
+The 2-minute rule for processing inbox
+Book Notes - Thinking Fast and Slow
+Project - Q3 Content Calendar
+Rules for naming notes:
+Be specific enough that you know what's inside without opening it.
+Name it for retrieval, not for filing. Ask: what words would I search for when I need this?
+Use natural language. Not PKM-MOC-fleeting-001. Just: Why I stopped using folders as my main organization system.
+The System at a Glance
+Here's everything together:
+YOUR OBSIDIAN SETUP
+
+📁 Structure
+├── 00 - Inbox        ← everything lands here
+├── 01 - Notes        ← developed ideas, one per note
+├── 02 - Projects     ← active work only
+└── 03 - Resources    ← reference material
+
+📋 Daily Workflow
+Morning → open daily note → set 3 priorities
+During day → capture to inbox (no organizing)
+Evening → close loop in daily note
+
+🔄 Weekly Review (20 min)
+Clear inbox → review random notes → plan next week
+
+🔌 Plugins (5 only to start)
+Templater · Dataview · Calendar · QuickAdd · Obsidian Git
+The Mindset Shift That Changes Everything
+Here's the thing nobody tells you.
+The goal of a note-taking system is not to capture everything.
+It's to think better.
+Obsidian is not a storage system. It's a thinking environment. Every note you write is a conversation with your future self. Every link you make is a bet that two ideas are worth connecting.
+The system works when you stop asking "where does this go?" and start asking "what does this connect to?"
+Set it up simple.
+Keep it simple.
+And let it grow only as fast as your actual needs demand.

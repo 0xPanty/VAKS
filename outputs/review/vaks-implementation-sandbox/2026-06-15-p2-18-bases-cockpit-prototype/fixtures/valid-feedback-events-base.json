@@ -1,0 +1,1 @@
+{"extends": "fixtures/valid-bases-cockpit.json", "scenario_id": "valid-feedback-events-base", "expected_valid": true, "expected_codes": []}

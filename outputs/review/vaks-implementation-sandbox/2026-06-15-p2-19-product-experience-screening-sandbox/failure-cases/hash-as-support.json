@@ -1,0 +1,1 @@
+{"case_id":"hash-as-support","base_fixture":"fixtures/valid-product-experience-screening.json","mutations":[{"op":"set_candidate","id":"P2-PX-13","path":"/authority_flags/treats_hash_as_evidence_support","value":true}]}

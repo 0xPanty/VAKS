@@ -1,0 +1,8 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "writeback-memory-save-direct",
+  "expected_valid": false,
+  "expected_codes": ["MB_DIRECT_MEMORY_WRITEBACK_FORBIDDEN"],
+  "allowed_extra_codes": ["MB_AUTHORITY_CONFUSION"],
+  "patch": {"writeback": {"memory_save_direct_vaks_writeback": true}}
+}

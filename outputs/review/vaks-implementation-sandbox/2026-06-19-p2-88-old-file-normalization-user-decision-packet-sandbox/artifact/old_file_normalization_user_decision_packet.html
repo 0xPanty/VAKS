@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>p2-88 Old-File Normalization Decision Packet</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; color: #202832; background: #f7f8fa; }
+    main { max-width: 1080px; margin: 0 auto; padding: 32px 20px; }
+    h1 { font-size: 28px; margin: 0 0 16px; letter-spacing: 0; }
+    h2 { font-size: 18px; margin-top: 24px; }
+    .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+    .metric { background: #fff; border: 1px solid #d9e0e8; border-radius: 8px; padding: 14px; }
+    .metric span { display: block; color: #596575; font-size: 13px; }
+    .metric strong { display: block; margin-top: 6px; font-size: 24px; }
+    pre { white-space: pre-wrap; background: #1f2933; color: #f4f7fb; border-radius: 8px; padding: 14px; }
+    table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #d9e0e8; }
+    th, td { padding: 9px 10px; border-bottom: 1px solid #e6ebf0; text-align: left; vertical-align: top; }
+    .boundary { margin-top: 20px; background: #fff4f2; border-left: 4px solid #a63d40; padding: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>p2-88 Old-File Normalization Decision Packet</h1>
+    <section class="metrics">
+      <div class="metric"><span>Preview operations</span><strong>75</strong></div>
+      <div class="metric"><span>Hash matches</span><strong>75/75</strong></div>
+      <div class="metric"><span>Body unchanged</span><strong>75/75</strong></div>
+      <div class="metric"><span>Old writes</span><strong>0</strong></div>
+    </section>
+    <h2>Exact Approval Phrase</h2>
+    <pre>I explicitly approve p2-75 old-file status-only normalization: apply the 75 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only. Do not edit body content, artifacts, tools, templates, wiki truth layers, main architecture docs, README, Obsidian vault, commit, push, or sync.</pre>
+    <h2>Decision Options</h2>
+    <table><thead><tr><th>Option</th><th>Write Allowed By Packet</th><th>Effect</th></tr></thead><tbody><tr><td>approve_with_exact_phrase</td><td>false</td><td>Allows a later executor slice to perform a final prewrite confirmation flow. This packet itself still does not write old files.</td></tr>
+<tr><td>withhold_approval</td><td>false</td><td>Keep original old-file statuses unchanged. The original 20 remain normalization candidates rather than current strict closeout.</td></tr>
+<tr><td>request_revision</td><td>false</td><td>Stay in sandbox and revise a future decision packet or preview artifact before any old-file write.</td></tr>
+<tr><td>reject_or_park</td><td>false</td><td>Record that the old-file status-only normalization is not being applied without a later separate approval.</td></tr></tbody></table>
+    <h2>Target File Counts</h2>
+    <ul><li><code>boundary-audit.md</code>: 20</li>
+<li><code>next-step.md</code>: 20</li>
+<li><code>product-acceptance-report.md</code>: 2</li>
+<li><code>reviewer-report.md</code>: 16</li>
+<li><code>verification.md</code>: 17</li></ul>
+    <section class="boundary">Decision packet only. It is not approval, write authority, merge, promotion, reviewed knowledge, evidence support, action basis, or goal completion.</section>
+  </main>
+</body>
+</html>

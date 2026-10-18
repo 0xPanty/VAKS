@@ -1,0 +1,100 @@
+{
+  "frozen_rerun_v2_check_status": "pass",
+  "error_count": 0,
+  "errors": [],
+  "artifacts": {
+    "artifacts": [
+      {
+        "path": "results\\phase_b_frozen_rerun_v2_manifest.json",
+        "exists": true,
+        "bytes": 2194
+      },
+      {
+        "path": "results\\phase_b_frozen_rerun_v2_corpus_manifest.csv",
+        "exists": true,
+        "bytes": 1624782
+      },
+      {
+        "path": "results\\phase_b_frozen_rerun_v2_query_manifest.csv",
+        "exists": true,
+        "bytes": 15689
+      },
+      {
+        "path": "results\\phase_b_frozen_rerun_v2_top20_items.csv",
+        "exists": true,
+        "bytes": 12063685
+      },
+      {
+        "path": "results\\phase_b_frozen_rerun_v2_top1_10_replay.csv",
+        "exists": true,
+        "bytes": 6057177
+      },
+      {
+        "path": "results\\phase_b_frozen_rerun_v2_top11_20_receipts.csv",
+        "exists": true,
+        "bytes": 6007048
+      },
+      {
+        "path": "results\\phase_b_frozen_rerun_v2_query_metrics.csv",
+        "exists": true,
+        "bytes": 238930
+      },
+      {
+        "path": "results\\phase_b_frozen_rerun_v2_summary.csv",
+        "exists": true,
+        "bytes": 5582
+      },
+      {
+        "path": "PHASE_B_FROZEN_RERUN_V2_REPORT.md",
+        "exists": true,
+        "bytes": 1009
+      }
+    ]
+  },
+  "run_identity": {
+    "run_id": "phase_b_frozen_rerun_v2_20260611T142435Z",
+    "observed": {
+      "corpus_manifest": [
+        "phase_b_frozen_rerun_v2_20260611T142435Z"
+      ],
+      "query_manifest": [
+        "phase_b_frozen_rerun_v2_20260611T142435Z"
+      ],
+      "top20_items": [
+        "phase_b_frozen_rerun_v2_20260611T142435Z"
+      ],
+      "top1_10_replay": [
+        "phase_b_frozen_rerun_v2_20260611T142435Z"
+      ],
+      "top11_20_receipts": [
+        "phase_b_frozen_rerun_v2_20260611T142435Z"
+      ],
+      "query_metrics": [
+        "phase_b_frozen_rerun_v2_20260611T142435Z"
+      ],
+      "summary": [
+        "phase_b_frozen_rerun_v2_20260611T142435Z"
+      ]
+    }
+  },
+  "manifest": {
+    "corpus_manifest_rows": 4793,
+    "query_manifest_rows": 45
+  },
+  "split_exports": {
+    "top20_rows": 14400,
+    "top1_10_rows": 7200,
+    "top11_20_rows": 7200
+  },
+  "query_metrics": {
+    "query_metric_rows": 720,
+    "recomputed_query_metric_rows": 720,
+    "incomplete_rank_windows": 0,
+    "metric_mismatch_count": 0
+  },
+  "summary": {
+    "summary_rows": 32,
+    "recomputed_summary_rows": 32,
+    "summary_mismatch_count": 0
+  }
+}

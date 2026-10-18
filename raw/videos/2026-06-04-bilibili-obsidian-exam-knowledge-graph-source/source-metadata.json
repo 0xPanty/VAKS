@@ -1,0 +1,58 @@
+{
+  "platform": "bilibili",
+  "platform_id": "BV1g8Vq6xEG3",
+  "source_uri": "bilibili:BV1g8Vq6xEG3",
+  "url": "https://www.bilibili.com/video/BV1g8Vq6xEG3/",
+  "title": "颠覆传统学习备考，搭建个人知识库",
+  "author": "二营长意大利炮ljz",
+  "publisher": "二营长意大利炮ljz",
+  "owner_mid": 417260755,
+  "aid": "116678893705976",
+  "cid": "38792595672",
+  "mission_id": 4065027,
+  "published_at": "2026-06-02T13:42:41+08:00",
+  "duration_seconds": 192,
+  "description": "这是我 vibe coding 的 Obsidian 知识图谱插件，基于中级会计备考的实际场景自主开发。\n\n核心观点：AI 是杠杆，私有化知识库是支点。普通人不一定能定制 AI 这根杠杆，但可以根据自己的需求持续打造知识库这个支点。\n\n视频展示了：\n- 以每个考点为独立单元，借助 AI 拆解官方教材\n- 内环知识考点 + 外环历年真题的知识图谱关联\n- AI 自动批改答题、回写掌握度到笔记属性\n- 考点热力图与知识图谱入口\n- 本地 Markdown 存储，数据安全、长期可用\n\n无论 AI 模型如何迭代，这份定制化、私有化的知识库都能作为你使用 AI 的支点。\n\n如果您需要套用该模式定制自己的知识库，欢迎留言交流。",
+  "pic": "http://i0.hdslb.com/bfs/archive/29fab5f2c92a50537c9059fe91d73b80c0f92e77.jpg",
+  "stat": {
+    "aid": 116678893705976,
+    "view": 246,
+    "danmaku": 0,
+    "reply": 5,
+    "favorite": 33,
+    "coin": 2,
+    "share": 2,
+    "now_rank": 0,
+    "his_rank": 0,
+    "like": 12,
+    "dislike": 0,
+    "evaluation": "",
+    "vt": 0
+  },
+  "argue_info": {
+    "argue_msg": "个人观点，仅供参考",
+    "argue_type": 0,
+    "argue_link": ""
+  },
+  "captured_at": "2026-06-04T16:27:52+08:00",
+  "metadata_fetch_method": "bilibili_public_view_api",
+  "public_subtitle_entries": [],
+  "player_subtitle_counts": [
+    {
+      "api": "Bilibili player/v2 bvid+cid",
+      "count": 0
+    },
+    {
+      "api": "Bilibili player/v2 aid+cid",
+      "count": 0
+    },
+    {
+      "api": "Bilibili player/wbi/v2 bvid+cid",
+      "count": 0
+    },
+    {
+      "api": "Bilibili player/wbi/v2 aid+cid",
+      "count": 0
+    }
+  ]
+}

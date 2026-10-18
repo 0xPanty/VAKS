@@ -1,0 +1,50 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "XXIIVV/oscean",
+  "source_url": "https://github.com/XXIIVV/oscean",
+  "checked_commit": "6e16d5d139a6d84b363865172ab60a8a195945ec",
+  "checked_at": "2026-06-11",
+  "inspection_method": "local git checkout; inspected README, makefile, source/site folders, media counts, and link feeds",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "project-identity",
+      "why": "Describes Oscean as a Uxn/Uxntal static wiki with plain-text tables and build commands."
+    },
+    {
+      "path": "makefile",
+      "kind": "build-recipe",
+      "why": "Shows reproducible generation of ROMs, link XML, docs index, and site output."
+    },
+    {
+      "path": "links/tw.txt",
+      "kind": "chronological-link-feed",
+      "why": "Shows timestamped link/event records that can inspire episode-style provenance."
+    },
+    {
+      "path": "src/",
+      "kind": "source-program",
+      "why": "Contains custom source for the static wiki generator."
+    },
+    {
+      "path": "site/",
+      "kind": "generated-output",
+      "why": "Contains rendered site projection separate from source."
+    }
+  ],
+  "observed_counts": {
+    "media_files": 1865,
+    "other_files": 345,
+    "site_files": 579,
+    "src_files": 785
+  },
+  "known_limits": [
+    "The custom Uxn toolchain is not a practical VAKS dependency.",
+    "Generated link maps are navigation aids, not reviewed relations.",
+    "Personal-site content and media should not be imported."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

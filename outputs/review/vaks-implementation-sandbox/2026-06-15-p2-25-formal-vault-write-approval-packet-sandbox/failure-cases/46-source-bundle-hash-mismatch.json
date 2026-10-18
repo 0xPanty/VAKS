@@ -1,0 +1,595 @@
+{
+  "slice_id": "2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox",
+  "source_slice": "2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox",
+  "packet_version": "p2-25-approval-packet-v1",
+  "purpose": "Prepare a future formal-vault write approval packet without collecting approval or accessing the formal vault.",
+  "formal_vault_path_label": "formal Obsidian vault path is a label only; it is not accessed in this slice",
+  "write_scope": [
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/"
+  ],
+  "read_only_sources": [
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/next-step.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/product-acceptance-report.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/verification.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/reviewer-report.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/boundary-audit.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/source-map.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/fixtures/valid-write-plan-config.json",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/artifact/formal-vault-write-plan-dry-run-contract.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/prototype/formal-vault-write-plan-dry-run/Receipts/formal-vault-write-plan-dry-run-receipt.json",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/prototype/formal-vault-write-plan-dry-run/01 Proposed File List.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/prototype/formal-vault-write-plan-dry-run/02 Approval Prompt Matrix.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/prototype/formal-vault-write-plan-dry-run/03 Rollback Manifest.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/prototype/formal-vault-write-plan-dry-run/04 Hash Check Plan.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/prototype/formal-vault-write-plan-dry-run/05 Stop Conditions.md"
+  ],
+  "operations": {
+    "formal_vault_read": false,
+    "formal_vault_scan": false,
+    "formal_vault_write": false,
+    "obsidian_sync": false,
+    "commit": false,
+    "push": false,
+    "promotion": false,
+    "dependency_install": false,
+    "background_service": false,
+    "mcp_write_tool": false,
+    "hooks": false,
+    "real_base_files": false,
+    "production_ui": false,
+    "local_storage_write": false,
+    "network_post": false,
+    "approval_collection": false,
+    "user_approval_inference": false,
+    "external_notification": false,
+    "default_read_only": true,
+    "rebuild_requires_explicit_flag": true
+  },
+  "boundary_phrases": [
+    "sandbox only",
+    "approval packet draft only",
+    "not actual approval",
+    "approval not collected",
+    "formal vault not accessed",
+    "dry-run only",
+    "not reviewed knowledge",
+    "not evidence support",
+    "not action basis",
+    "does not approve",
+    "no formal vault write",
+    "no formal vault read",
+    "no sync",
+    "no commit",
+    "no push",
+    "no promotion",
+    "requires separate user approval"
+  ],
+  "source_packet_inputs": [
+    {
+      "id": "source_next_step",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/next-step.md",
+      "source_sha256": "2c0437b7e2e9bbde7c2ec4270be541a42c28a7ac650dce9deb9f6a579acf239b",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_product_acceptance",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/product-acceptance-report.md",
+      "source_sha256": "4f24ca022ecee4b498e2ecf81db295d8e8f9ee8d353b46c7dcb61ceb254bffdc",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_verification",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/verification.md",
+      "source_sha256": "9c8ed00632d3d367c860bfd6a5a9393bdf713de9a323f7bf569cdb582af3e708",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_reviewer_report",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/reviewer-report.md",
+      "source_sha256": "95c3bf626e11645fee3839fd06cc1f65f8617faaa4269705206815ad40c55782",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_boundary_audit",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/boundary-audit.md",
+      "source_sha256": "c929ad492caea6a7147af1354dc4ea769b736824c38ac12477822d57b9402966",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_map",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/source-map.md",
+      "source_sha256": "ebab361da752c59b510d53d9b8b7698e67f15ff33516ab6c633e6652896e65b2",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_config",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/fixtures/valid-write-plan-config.json",
+      "source_sha256": "1069d502b9f7c2b65f5fbc3dbf9ef93baa8d1e86f2cd5a1b2589d2d9bfd1c849",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_contract",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/artifact/formal-vault-write-plan-dry-run-contract.md",
+      "source_sha256": "b6ef9b6a82836d8d5e9da173c590e7b2cc761d6ce44016b54b1e00414c88e9d0",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_receipt",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/prototype/formal-vault-write-plan-dry-run/Receipts/formal-vault-write-plan-dry-run-receipt.json",
+      "source_sha256": "b6b01b30d65c0a89b65ca07dad6fe1518de10dc22a3e30e99c067861f97e9edc",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_file_list",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/prototype/formal-vault-write-plan-dry-run/01 Proposed File List.md",
+      "source_sha256": "120826bcda88d65dd24c63d71e48bd9512ff99cbf2e5e677cdf2e0cb759ce270",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_approval_matrix",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/prototype/formal-vault-write-plan-dry-run/02 Approval Prompt Matrix.md",
+      "source_sha256": "b54c981eafada53284a8dfe0e84887f19f6b344317e80b83eb7ed8699af09197",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_rollback_manifest",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/prototype/formal-vault-write-plan-dry-run/03 Rollback Manifest.md",
+      "source_sha256": "6b728754124a4f3246cd57873bbd2dc5a19ce70f22cf9b92c4ff3e9ec9c27293",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_hash_plan",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/prototype/formal-vault-write-plan-dry-run/04 Hash Check Plan.md",
+      "source_sha256": "56006990b448a4b9a0ab822c5be949c13d8435da76acf4a515e878f702dc5d71",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "id": "source_stop_conditions",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/prototype/formal-vault-write-plan-dry-run/05 Stop Conditions.md",
+      "source_sha256": "4ec3aabf37972b5cc6c04795d6d715f59c5dd5caf3db04bf0552dd6af7580498",
+      "content_binding": "exact_source_sha256"
+    }
+  ],
+  "source_bundle_hash": "deadbeef",
+  "approval_scope": {
+    "source_plan_version": "p2-24-dry-run-v1",
+    "source_scope_hash": "not_present_in_source",
+    "scope_hash": "f5ec5589dc4e983bda3b274bae47766bc58424a98e40363a6437e94b93f5b4e2",
+    "items": [
+      {
+        "id": "native_home",
+        "relative_target": "VAKS-Workbench-Draft/00 Native Home.md",
+        "p2_24_source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/00 Native Home.md",
+        "p2_24_source_sha256": "8d69253089dc6d704bda107a291e5fd32e493d6c7f3cbc993549175ddbdac11b",
+        "content_binding": "exact_source_sha256",
+        "future_write_requires_user_approval": true,
+        "approval_status": "not_requested",
+        "write_enabled_now": false,
+        "dry_run_only": true
+      },
+      {
+        "id": "status_board",
+        "relative_target": "VAKS-Workbench-Draft/02 Status Board.md",
+        "p2_24_source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/02 Status Board.md",
+        "p2_24_source_sha256": "f882d70b1761f9cc57148f9d5134cf92b5c8a9d9713b2c17c4a8865ab6749324",
+        "content_binding": "exact_source_sha256",
+        "future_write_requires_user_approval": true,
+        "approval_status": "not_requested",
+        "write_enabled_now": false,
+        "dry_run_only": true
+      },
+      {
+        "id": "receipt_index",
+        "relative_target": "VAKS-Workbench-Draft/03 Receipt Index.md",
+        "p2_24_source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/03 Receipt Index.md",
+        "p2_24_source_sha256": "1729f2662ee8021526ff57fae565e9e3a7357596599d4fdca63e4171f0048cfc",
+        "content_binding": "exact_source_sha256",
+        "future_write_requires_user_approval": true,
+        "approval_status": "not_requested",
+        "write_enabled_now": false,
+        "dry_run_only": true
+      },
+      {
+        "id": "boundary_stop",
+        "relative_target": "VAKS-Workbench-Draft/04 Boundary Stop.md",
+        "p2_24_source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/04 Boundary Stop.md",
+        "p2_24_source_sha256": "9e5560a2ee7eab313c6a31e7b42b05991883f2b98993073d0b20da6521953945",
+        "content_binding": "exact_source_sha256",
+        "future_write_requires_user_approval": true,
+        "approval_status": "not_requested",
+        "write_enabled_now": false,
+        "dry_run_only": true
+      },
+      {
+        "id": "readonly_inspector",
+        "relative_target": "VAKS-Workbench-Draft/readonly-inspector.html",
+        "p2_24_source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/readonly-inspector.html",
+        "p2_24_source_sha256": "b367c6225e55e77845d586c2f96832ea539de79033bcf5341d4a15921082e203",
+        "content_binding": "exact_source_sha256",
+        "future_write_requires_user_approval": true,
+        "approval_status": "not_requested",
+        "write_enabled_now": false,
+        "dry_run_only": true
+      }
+    ]
+  },
+  "approval_questions": [
+    {
+      "id": "future_approve_exact_scope",
+      "question": "In a future separately approved slice, do you approve writing exactly the listed relative targets to the formal vault?",
+      "applies_to_scope_ids": [
+        "native_home",
+        "status_board",
+        "receipt_index",
+        "boundary_stop",
+        "readonly_inspector"
+      ],
+      "collects_approval_now": false,
+      "approval_status": "not_requested",
+      "default": "deny",
+      "future_confirmation_phrase": "APPROVE EXACT P2 25 PACKET SCOPE FOR FUTURE WRITE ONLY",
+      "requires_future_user_turn": true,
+      "requires_packet_hash": true,
+      "requires_source_bundle_hash": true,
+      "requires_scope_hash": true,
+      "blocks_until_answered": [
+        "formal_vault_write"
+      ],
+      "excludes": [
+        "obsidian_sync",
+        "commit",
+        "push",
+        "promotion"
+      ],
+      "required_packet_hash": "7cc073ca5e095b44bad25d0a682f1bd0e07ad57a92172e97896884496d959956",
+      "required_source_bundle_hash": "deadbeef",
+      "required_scope_hash": "f5ec5589dc4e983bda3b274bae47766bc58424a98e40363a6437e94b93f5b4e2"
+    },
+    {
+      "id": "future_approve_source_bindings",
+      "question": "In a future separately approved slice, do you accept the exact source SHA256 bindings as the only allowed content basis?",
+      "applies_to_scope_ids": [
+        "native_home",
+        "status_board",
+        "receipt_index",
+        "boundary_stop",
+        "readonly_inspector"
+      ],
+      "collects_approval_now": false,
+      "approval_status": "not_requested",
+      "default": "deny",
+      "future_confirmation_phrase": "APPROVE EXACT SOURCE HASH BINDINGS FOR FUTURE WRITE ONLY",
+      "requires_future_user_turn": true,
+      "requires_packet_hash": true,
+      "requires_source_bundle_hash": true,
+      "requires_scope_hash": true,
+      "blocks_until_answered": [
+        "formal_vault_write"
+      ],
+      "excludes": [
+        "obsidian_sync",
+        "commit",
+        "push",
+        "promotion"
+      ],
+      "required_packet_hash": "7cc073ca5e095b44bad25d0a682f1bd0e07ad57a92172e97896884496d959956",
+      "required_source_bundle_hash": "deadbeef",
+      "required_scope_hash": "f5ec5589dc4e983bda3b274bae47766bc58424a98e40363a6437e94b93f5b4e2"
+    },
+    {
+      "id": "future_approve_rollback_hash_checks",
+      "question": "In a future separately approved slice, do you approve requiring snapshot, rollback, and hash-before/hash-after checks before any write?",
+      "applies_to_scope_ids": [
+        "native_home",
+        "status_board",
+        "receipt_index",
+        "boundary_stop",
+        "readonly_inspector"
+      ],
+      "collects_approval_now": false,
+      "approval_status": "not_requested",
+      "default": "deny",
+      "future_confirmation_phrase": "APPROVE ROLLBACK AND HASH GATES FOR FUTURE WRITE ONLY",
+      "requires_future_user_turn": true,
+      "requires_packet_hash": true,
+      "requires_source_bundle_hash": true,
+      "requires_scope_hash": true,
+      "blocks_until_answered": [
+        "formal_vault_write"
+      ],
+      "excludes": [
+        "obsidian_sync",
+        "commit",
+        "push",
+        "promotion"
+      ],
+      "required_packet_hash": "7cc073ca5e095b44bad25d0a682f1bd0e07ad57a92172e97896884496d959956",
+      "required_source_bundle_hash": "deadbeef",
+      "required_scope_hash": "f5ec5589dc4e983bda3b274bae47766bc58424a98e40363a6437e94b93f5b4e2"
+    },
+    {
+      "id": "future_approve_no_sync_commit_push_promotion",
+      "question": "In a future separately approved slice, do you confirm that write approval still excludes sync, commit, push, and promotion unless separately approved?",
+      "applies_to_scope_ids": [
+        "native_home",
+        "status_board",
+        "receipt_index",
+        "boundary_stop",
+        "readonly_inspector"
+      ],
+      "collects_approval_now": false,
+      "approval_status": "not_requested",
+      "default": "deny",
+      "future_confirmation_phrase": "APPROVE NO SYNC COMMIT PUSH OR PROMOTION FOR FUTURE WRITE",
+      "requires_future_user_turn": true,
+      "requires_packet_hash": true,
+      "requires_source_bundle_hash": true,
+      "requires_scope_hash": true,
+      "blocks_until_answered": [
+        "obsidian_sync",
+        "commit",
+        "push",
+        "promotion"
+      ],
+      "excludes": [
+        "obsidian_sync",
+        "commit",
+        "push",
+        "promotion"
+      ],
+      "required_packet_hash": "7cc073ca5e095b44bad25d0a682f1bd0e07ad57a92172e97896884496d959956",
+      "required_source_bundle_hash": "deadbeef",
+      "required_scope_hash": "f5ec5589dc4e983bda3b274bae47766bc58424a98e40363a6437e94b93f5b4e2"
+    }
+  ],
+  "decision_record_template": {
+    "status": "template_only",
+    "approved_now": false,
+    "blank_fields_only": true,
+    "must_not_prefill_approval": true,
+    "default_verdict": "NEEDS_REVISION",
+    "future_verdict_values": [
+      "APPROVED_BY_USER",
+      "DENIED_BY_USER",
+      "NEEDS_REVISION"
+    ],
+    "required_future_fields": [
+      "user_exact_text",
+      "timestamp_utc",
+      "packet_hash",
+      "source_bundle_hash",
+      "scope_hash",
+      "operator_or_agent_id",
+      "explicit_denials",
+      "rollback_ack",
+      "hash_ack"
+    ],
+    "required_packet_hash": "7cc073ca5e095b44bad25d0a682f1bd0e07ad57a92172e97896884496d959956",
+    "required_source_bundle_hash": "deadbeef",
+    "required_scope_hash": "f5ec5589dc4e983bda3b274bae47766bc58424a98e40363a6437e94b93f5b4e2"
+  },
+  "non_approval_receipt": {
+    "approval_collected_now": false,
+    "user_approval_text_present": false,
+    "formal_vault_accessed": false,
+    "current_status": "packet_ready_for_future_user_decision",
+    "non_claims": [
+      "not actual approval",
+      "not formal vault approval",
+      "not sync approval",
+      "not commit approval",
+      "not push approval",
+      "not promotion approval",
+      "not action basis"
+    ]
+  },
+  "ambiguity_blockers": [
+    "future user response missing exact confirmation phrase",
+    "future response does not cite packet hash",
+    "future response does not cite source bundle hash",
+    "future response does not cite scope hash",
+    "future response asks for extra files",
+    "future response asks for sync, commit, push, or promotion",
+    "source hash mismatch",
+    "scope hash mismatch",
+    "dirty tree or unexpected formal vault file state"
+  ],
+  "stop_conditions": [
+    "formal vault read requested",
+    "formal vault scan requested",
+    "formal vault write requested before future approval",
+    "absolute vault path requested",
+    "Obsidian sync requested",
+    "commit or push requested",
+    "promotion requested",
+    "approval collection requested in this slice",
+    "approval inferred from silence or prior PASS",
+    "missing exact future confirmation phrase",
+    "packet hash missing",
+    "source bundle hash missing",
+    "scope hash missing",
+    "source hash mismatch",
+    "scope mismatch",
+    "rollback or hash gate removed"
+  ],
+  "inspector_controls": {
+    "inputs": [
+      {
+        "id": "q",
+        "type": "search",
+        "purpose": "filter"
+      }
+    ],
+    "buttons": [
+      {
+        "label": "All",
+        "filter": "all"
+      },
+      {
+        "label": "Scope",
+        "filter": "scope"
+      },
+      {
+        "label": "Questions",
+        "filter": "questions"
+      },
+      {
+        "label": "Receipt",
+        "filter": "receipt"
+      },
+      {
+        "label": "Stops",
+        "filter": "stops"
+      }
+    ]
+  },
+  "product_metrics": {
+    "required_positive_fixtures": 2,
+    "minimum_failure_cases": 48,
+    "required_scope_items": 5,
+    "required_approval_questions": 4,
+    "max_journey_steps": 3
+  },
+  "packet_hash_material": {
+    "packet_version": "p2-25-approval-packet-v1",
+    "source_slice": "2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox",
+    "source_bundle_hash": "deadbeef",
+    "scope_hash": "f5ec5589dc4e983bda3b274bae47766bc58424a98e40363a6437e94b93f5b4e2",
+    "approval_questions": [
+      {
+        "id": "future_approve_exact_scope",
+        "applies_to_scope_ids": [
+          "native_home",
+          "status_board",
+          "receipt_index",
+          "boundary_stop",
+          "readonly_inspector"
+        ],
+        "future_confirmation_phrase": "APPROVE EXACT P2 25 PACKET SCOPE FOR FUTURE WRITE ONLY",
+        "default": "deny",
+        "excludes": [
+          "obsidian_sync",
+          "commit",
+          "push",
+          "promotion"
+        ],
+        "blocks_until_answered": [
+          "formal_vault_write"
+        ]
+      },
+      {
+        "id": "future_approve_source_bindings",
+        "applies_to_scope_ids": [
+          "native_home",
+          "status_board",
+          "receipt_index",
+          "boundary_stop",
+          "readonly_inspector"
+        ],
+        "future_confirmation_phrase": "APPROVE EXACT SOURCE HASH BINDINGS FOR FUTURE WRITE ONLY",
+        "default": "deny",
+        "excludes": [
+          "obsidian_sync",
+          "commit",
+          "push",
+          "promotion"
+        ],
+        "blocks_until_answered": [
+          "formal_vault_write"
+        ]
+      },
+      {
+        "id": "future_approve_rollback_hash_checks",
+        "applies_to_scope_ids": [
+          "native_home",
+          "status_board",
+          "receipt_index",
+          "boundary_stop",
+          "readonly_inspector"
+        ],
+        "future_confirmation_phrase": "APPROVE ROLLBACK AND HASH GATES FOR FUTURE WRITE ONLY",
+        "default": "deny",
+        "excludes": [
+          "obsidian_sync",
+          "commit",
+          "push",
+          "promotion"
+        ],
+        "blocks_until_answered": [
+          "formal_vault_write"
+        ]
+      },
+      {
+        "id": "future_approve_no_sync_commit_push_promotion",
+        "applies_to_scope_ids": [
+          "native_home",
+          "status_board",
+          "receipt_index",
+          "boundary_stop",
+          "readonly_inspector"
+        ],
+        "future_confirmation_phrase": "APPROVE NO SYNC COMMIT PUSH OR PROMOTION FOR FUTURE WRITE",
+        "default": "deny",
+        "excludes": [
+          "obsidian_sync",
+          "commit",
+          "push",
+          "promotion"
+        ],
+        "blocks_until_answered": [
+          "obsidian_sync",
+          "commit",
+          "push",
+          "promotion"
+        ]
+      }
+    ],
+    "decision_record_template": {
+      "status": "template_only",
+      "default_verdict": "NEEDS_REVISION",
+      "future_verdict_values": [
+        "APPROVED_BY_USER",
+        "DENIED_BY_USER",
+        "NEEDS_REVISION"
+      ],
+      "required_future_fields": [
+        "user_exact_text",
+        "timestamp_utc",
+        "packet_hash",
+        "source_bundle_hash",
+        "scope_hash",
+        "operator_or_agent_id",
+        "explicit_denials",
+        "rollback_ack",
+        "hash_ack"
+      ]
+    },
+    "non_approval_receipt": {
+      "approval_collected_now": false,
+      "formal_vault_accessed": false,
+      "current_status": "packet_ready_for_future_user_decision"
+    },
+    "stop_conditions": [
+      "formal vault read requested",
+      "formal vault scan requested",
+      "formal vault write requested before future approval",
+      "absolute vault path requested",
+      "Obsidian sync requested",
+      "commit or push requested",
+      "promotion requested",
+      "approval collection requested in this slice",
+      "approval inferred from silence or prior PASS",
+      "missing exact future confirmation phrase",
+      "packet hash missing",
+      "source bundle hash missing",
+      "scope hash missing",
+      "source hash mismatch",
+      "scope mismatch",
+      "rollback or hash gate removed"
+    ]
+  },
+  "packet_hash": "7cc073ca5e095b44bad25d0a682f1bd0e07ad57a92172e97896884496d959956",
+  "expected_failures": [
+    "source_bundle_hash_mismatch"
+  ]
+}

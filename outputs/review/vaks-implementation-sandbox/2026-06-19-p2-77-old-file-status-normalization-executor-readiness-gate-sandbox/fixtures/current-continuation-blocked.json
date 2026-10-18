@@ -1,0 +1,9 @@
+{
+  "fixture_id": "current-continuation-blocked",
+  "input_text": "Continue working toward the active thread goal. objective: 全部落地啊",
+  "expected": {
+    "readiness": "blocked_no_exact_approval",
+    "approval_phrase_matched": false,
+    "executor_write_allowed": false
+  }
+}

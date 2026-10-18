@@ -1,0 +1,64 @@
+{
+  "source_url": "http://xhslink.com/o/3fNueiiVu86",
+  "platform": "xiaohongshu",
+  "platform_id": "69ff308d0000000023006171",
+  "access_boundary": "public",
+  "subtitle_status": "public transcript/subtitle not found; public note description available",
+  "transcript_method": "local_asr plus public note description",
+  "steps": [
+    {
+      "at": "2026-06-11T05:40:48.205210+08:00",
+      "method": "resolve_short_link",
+      "status": "ok",
+      "result": "Resolved xhslink short URL to public Xiaohongshu item id 69ff308d0000000023006171.",
+      "cookies_used": false,
+      "cloud_api_used": false,
+      "private_account_used": false
+    },
+    {
+      "at": "2026-06-11T05:40:48.205210+08:00",
+      "method": "public_xiaohongshu_ssr_state_and_meta",
+      "status": "ok",
+      "result": "Captured public note title, author, description, duration, and public video stream URL from SSR/meta.",
+      "cookies_used": false,
+      "cloud_api_used": false,
+      "private_account_used": false
+    },
+    {
+      "at": "2026-06-11T05:41:13.990971+08:00",
+      "method": "download_public_video_stream",
+      "status": "ok",
+      "result": "Downloaded public mp4 to scratch for local ASR; video URL is signed/ephemeral and not a stable source identity.",
+      "bytes": 21022404,
+      "sha256": "9360fc34a8e1cef2ef97397c839848eb1609c749259cdbf64624bdbf1b2e16d9",
+      "cookies_used": false,
+      "cloud_api_used": false,
+      "private_account_used": false
+    },
+    {
+      "at": "2026-06-11T05:41:13.990971+08:00",
+      "method": "ffmpeg_extract_wav",
+      "status": "ok",
+      "result": "Extracted 16kHz mono wav from public mp4 for local ASR.",
+      "bytes": 11875320,
+      "sha256": "0375badbda6ebc5025ec85989e65932af5e2bf8614b51d8163ffb7cf20c07f57",
+      "cookies_used": false,
+      "cloud_api_used": false,
+      "private_account_used": false
+    },
+    {
+      "at": "2026-06-11T05:41:48.051024+08:00",
+      "method": "local_asr_faster_whisper_small_cuda",
+      "status": "ok",
+      "result": "Generated transcript.txt, segments.md, segments.json, and transcript-meta.json.",
+      "segments_count": 177,
+      "transcript_chars": 2338,
+      "cookies_used": false,
+      "cloud_api_used": false,
+      "private_account_used": false
+    }
+  ],
+  "media_retention": "temporary mp4 and wav are scratch only and should be deleted after project-visible artifact sync/hash verification",
+  "scratch_path": "C:\\Users\\Administrator\\.codex\\video-research\\xhs-69ff308d-obsidian-ai-sync-zero-cost",
+  "artifact_boundary": "Retained text artifacts must live under raw/videos/<slug>/ and Obsidian; .codex scratch is not durable retention."
+}

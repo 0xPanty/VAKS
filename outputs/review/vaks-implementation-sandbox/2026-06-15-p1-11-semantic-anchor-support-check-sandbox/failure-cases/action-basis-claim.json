@@ -1,0 +1,18 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "action-basis-claim",
+  "expected_valid": false,
+  "expected_codes": ["SA_ANCHOR_CLAIMS_ACTION_BASIS"],
+  "anchors": [
+    {
+      "id": "action-basis-anchor",
+      "anchor_kind": "raw_excerpt",
+      "support_claimed": true,
+      "support_role": "direct_support",
+      "source_ref": "raw/articles/example-source.md",
+      "selector": "L21-L29",
+      "authority_bucket": "raw_anchor",
+      "anchor_claims": ["action_basis"]
+    }
+  ]
+}

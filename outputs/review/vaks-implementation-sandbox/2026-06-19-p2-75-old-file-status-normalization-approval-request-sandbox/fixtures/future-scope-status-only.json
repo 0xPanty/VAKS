@@ -1,0 +1,10 @@
+{
+  "fixture_id": "future-scope-status-only",
+  "expected": {
+    "expected_change_count": 75,
+    "allowed_field": "frontmatter.status",
+    "body_content_edits_allowed": false,
+    "artifact_edits_allowed": false,
+    "mainline_edits_allowed": false
+  }
+}

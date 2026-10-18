@@ -1,0 +1,121 @@
+{
+  "record_kind": "sandbox_post_rehearsal_cockpit_mutation_hardening",
+  "slice_id": "2026-06-19-p2-84-post-rehearsal-cockpit-mutation-hardening-sandbox",
+  "created_at": "2026-06-18T22:49:32.010617+00:00",
+  "source_inputs": {
+    "p2_83_cockpit": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-83-post-rehearsal-goal-state-cockpit-sandbox/artifact/post_rehearsal_goal_state_cockpit.json",
+    "p2_83_failure_cases": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-83-post-rehearsal-goal-state-cockpit-sandbox/failure-cases/post-rehearsal-goal-state-cockpit-failures.json",
+    "p2_83_product_acceptance_report": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-83-post-rehearsal-goal-state-cockpit-sandbox/product-acceptance-report.md"
+  },
+  "source_digest": {
+    "p2_83_cockpit": "b0b27f02f6fe471b4fd753e30952738ca6a576bb34c0265ae9a217f72ef795e7",
+    "p2_83_failure_cases": "10a8eeb79adf757b91bcf07504aef4c69ee9cf1e9d56fa8f16c9fb520675b104",
+    "p2_83_product_acceptance_report": "7ac16ae0dfa590c48407681ac00f92e4ada3d0a18cbefc8f72c2207e06bc2c80"
+  },
+  "summary": {
+    "baseline_passed": true,
+    "baseline_failure_count": 0,
+    "mutation_count": 8,
+    "expected_mutation_fail_count": 8,
+    "unexpected_pass_count": 0,
+    "unexpected_failure_count": 0,
+    "old_slice_writes_applied": 0,
+    "p2_83_files_modified": 0
+  },
+  "baseline_validation_failures": [],
+  "mutation_results": [
+    {
+      "case_id": "MUT-01-all-done-overclaim",
+      "source_failure_case": "P2-83-FAIL-01-all-done-overclaim",
+      "expected_failure_code": "all_done_overclaim",
+      "observed_failures": [
+        "all_done_overclaim"
+      ],
+      "failed_as_expected": true,
+      "fixture_path": "fixtures/mutants/MUT-01-all-done-overclaim.json"
+    },
+    {
+      "case_id": "MUT-02-generic-continuation-as-approval",
+      "source_failure_case": "P2-83-FAIL-02-generic-continuation-as-approval",
+      "expected_failure_code": "generic_continuation_as_approval",
+      "observed_failures": [
+        "generic_continuation_as_approval"
+      ],
+      "failed_as_expected": true,
+      "fixture_path": "fixtures/mutants/MUT-02-generic-continuation-as-approval.json"
+    },
+    {
+      "case_id": "MUT-03-rehearsal-as-write-authority",
+      "source_failure_case": "P2-83-FAIL-03-rehearsal-as-write-authority",
+      "expected_failure_code": "rehearsal_as_write_authority",
+      "observed_failures": [
+        "rehearsal_as_write_authority"
+      ],
+      "failed_as_expected": true,
+      "fixture_path": "fixtures/mutants/MUT-03-rehearsal-as-write-authority.json"
+    },
+    {
+      "case_id": "MUT-04-missing-byte-safety-rollup",
+      "source_failure_case": "P2-83-FAIL-04-missing-byte-safety-rollup",
+      "expected_failure_code": "missing_byte_safety_rollup",
+      "observed_failures": [
+        "missing_byte_safety_rollup"
+      ],
+      "failed_as_expected": true,
+      "fixture_path": "fixtures/mutants/MUT-04-missing-byte-safety-rollup.json"
+    },
+    {
+      "case_id": "MUT-05-stale-pre-p2-82-status-surface",
+      "source_failure_case": "P2-83-FAIL-05-stale-pre-p2-82-status-surface",
+      "expected_failure_code": "stale_pre_p2_82_status_surface",
+      "observed_failures": [
+        "stale_pre_p2_82_status_surface"
+      ],
+      "failed_as_expected": true,
+      "fixture_path": "fixtures/mutants/MUT-05-stale-pre-p2-82-status-surface.json"
+    },
+    {
+      "case_id": "MUT-06-mainline-authority-confusion",
+      "source_failure_case": "P2-83-FAIL-06-mainline-authority-confusion",
+      "expected_failure_code": "mainline_authority_confusion",
+      "observed_failures": [
+        "mainline_authority_confusion"
+      ],
+      "failed_as_expected": true,
+      "fixture_path": "fixtures/mutants/MUT-06-mainline-authority-confusion.json"
+    },
+    {
+      "case_id": "MUT-07-product-acceptance-as-user-approval",
+      "source_failure_case": "P2-83-FAIL-07-product-acceptance-confusion",
+      "expected_failure_code": "product_acceptance_as_user_approval",
+      "observed_failures": [
+        "product_acceptance_as_user_approval"
+      ],
+      "failed_as_expected": true,
+      "fixture_path": "fixtures/mutants/MUT-07-product-acceptance-as-user-approval.json"
+    },
+    {
+      "case_id": "MUT-08-path-boundary-violation",
+      "source_failure_case": "P2-83-FAIL-08-path-boundary-violation",
+      "expected_failure_code": "path_boundary_violation",
+      "observed_failures": [
+        "path_boundary_violation"
+      ],
+      "failed_as_expected": true,
+      "fixture_path": "fixtures/mutants/MUT-08-path-boundary-violation.json"
+    }
+  ],
+  "authority_flags": {
+    "mutation_hardening_only": true,
+    "p2_83_write_allowed": false,
+    "old_slice_write_allowed": false,
+    "old_slice_writes_applied": 0,
+    "normalization_applied": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "goal_complete_now": false
+  }
+}

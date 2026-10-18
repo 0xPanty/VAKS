@@ -1,0 +1,15 @@
+{
+  "selected_items": [
+    {
+      "record_kind": "source_annotation",
+      "pack_role": "review_input",
+      "warning_code": "annotation_not_support",
+      "action_basis_allowed": true
+    }
+  ],
+  "coverage_map": [],
+  "resolved_source_spans": [],
+  "warnings": [
+    "annotation_not_support"
+  ]
+}

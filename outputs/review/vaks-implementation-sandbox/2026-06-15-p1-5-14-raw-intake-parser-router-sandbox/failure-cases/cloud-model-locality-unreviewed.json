@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "cloud-model-locality-unreviewed",
+  "expected_valid": false,
+  "expected_codes": ["RP_MODEL_LOCALITY_UNREVIEWED"],
+  "patch": {"parser": {"model_locality": "cloud_default", "locality_reviewed": false}}
+}

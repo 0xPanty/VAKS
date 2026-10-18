@@ -1,0 +1,1 @@
+{"extends":"fixtures/valid-frontmatter-validation-check.json","scenario_id":"sidecar-replaces-vaks-validators","expected_valid":false,"expected_codes":["MS_REPLACES_VAKS_VALIDATORS"],"patch":{"vaks_validators":{"run_separately":false,"replaced_by_sidecar":true}}}

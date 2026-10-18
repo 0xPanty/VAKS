@@ -1,0 +1,13 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "write-path-outside-slice",
+  "expected_valid": false,
+  "expected_codes": ["US_WRITE_PATH_OUTSIDE_SLICE"],
+  "patch": {
+    "scope": {
+      "allowed_write_paths": [
+        "C:/outside/outputs/review/vaks-implementation-sandbox/2026-06-15-p2-17-use-surface-optimization-pass/"
+      ]
+    }
+  }
+}

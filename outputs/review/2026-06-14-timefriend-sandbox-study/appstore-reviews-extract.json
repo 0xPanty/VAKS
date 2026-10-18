@@ -1,0 +1,57 @@
+[
+  {
+    "$kind": "Review",
+    "id": "13552062742",
+    "title": "非常适合记录生活和工作",
+    "date": "2025-12-25T04:38:42.000Z",
+    "dateText": "* null *",
+    "contents": "这是一款非常适合记录工作和生活的软件，能够清晰地看到过去的日子，干了什么做了什么，并且具备AI复盘和AI数据分析的功能，能够通过AI的功能去分析过去一个月一周或者一年甚至更多的记录，系统会帮你记录所有的细节，你也许遗忘的记不清楚的细节。",
+    "rating": 5,
+    "reviewerName": "喜仔Plus",
+    "dateAuthorText": "* null * · 喜仔Plus"
+  },
+  {
+    "$kind": "Review",
+    "id": "13331851951",
+    "title": "一款好用的时间记录软件",
+    "date": "2025-10-30T02:25:44.000Z",
+    "dateText": "* null *",
+    "contents": "最近看到一个观点是注意力是我们最宝贵的认知资源，而时间放在哪里注意力就放在了哪里，很喜欢这款软件的标签化时间管理和复盘功能，也有网页版可供使用，祝越做越好～",
+    "rating": 5,
+    "reviewerName": "一切发生的事情都有利于我",
+    "dateAuthorText": "* null * · 一切发生的事情都有利于我"
+  },
+  {
+    "$kind": "Review",
+    "id": "14045276876",
+    "title": "时间记录的好帮手",
+    "date": "2026-05-09T13:56:40.000Z",
+    "dateText": "* null *",
+    "contents": "非常不错的一款时间记录app，坚持用了几个月了，继续加油",
+    "rating": 5,
+    "reviewerName": "Vanchenlong",
+    "dateAuthorText": "* null * · Vanchenlong"
+  },
+  {
+    "$kind": "Review",
+    "id": "14045488470",
+    "title": "功能多，同步的平台多，但bug修复慢",
+    "date": "2026-05-09T14:59:16.000Z",
+    "dateText": "* null *",
+    "contents": "功能非常多哈，还接入了各种ai。但目前时间记录这个最基础和主要功能有挺多bug的，有点影响使用体验。",
+    "rating": 4,
+    "reviewerName": "ktzyt",
+    "dateAuthorText": "* null * · ktzyt"
+  },
+  {
+    "$kind": "Review",
+    "id": "13952946268",
+    "title": "时间填写建议",
+    "date": "2026-04-13T09:09:49.000Z",
+    "dateText": "* null *",
+    "contents": "在选择时间时希望可以不从当前时间开始，而是从上一事件记录的末尾时间开始",
+    "rating": 4,
+    "reviewerName": ".”1111",
+    "dateAuthorText": "* null * · .”1111"
+  }
+]

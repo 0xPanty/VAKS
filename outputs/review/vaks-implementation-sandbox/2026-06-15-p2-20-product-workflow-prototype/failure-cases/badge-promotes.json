@@ -1,0 +1,1 @@
+{"case_id":"badge-promotes","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/steps/3/authority_flags/treats_badge_as_promotion","value":true}]}

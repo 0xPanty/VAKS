@@ -1,0 +1,18 @@
+[
+  {
+    "original_path": "outputs/review/2026-06-14-reminds-app-sandbox-study/assets/article-store.df342ff2.js",
+    "original_sha256": "99990708ff6415fb6a86ef9cb214c49ebaa7462ec6db6786ec68a8a1400f71da",
+    "sanitized_path": "docs/migration/sanitized-reference-files/outputs/review/2026-06-14-reminds-app-sandbox-study/assets/article-store.df342ff2.js",
+    "sanitized_sha256": "4bac54f751a3b082e256a0d0704cb91cbaef12e1fae86314ae9896f2f5070ee1",
+    "replacements": 1,
+    "reason": "Downloaded reference contained JWT-shaped credentials or signed URLs. Original retained locally; sanitized copy is not original evidence."
+  },
+  {
+    "original_path": "raw/articles/2026-06-08-cbrain-knowledge-system-mindmap-source/cbrain-map-type3.json",
+    "original_sha256": "e2b453bece44f9ff54cb7d873df2556f898bdccd43701d2b9d8ea2130423d41b",
+    "sanitized_path": "docs/migration/sanitized-reference-files/raw/articles/2026-06-08-cbrain-knowledge-system-mindmap-source/cbrain-map-type3.json",
+    "sanitized_sha256": "5f1469a54871b672733d8a7456c339bb2ff86b3cade13d5a2db61f047ddcf772",
+    "replacements": 2,
+    "reason": "Downloaded reference contained JWT-shaped credentials or signed URLs. Original retained locally; sanitized copy is not original evidence."
+  }
+]

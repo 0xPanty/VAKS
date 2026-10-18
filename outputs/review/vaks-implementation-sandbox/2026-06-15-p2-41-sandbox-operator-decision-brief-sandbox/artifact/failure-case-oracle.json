@@ -1,0 +1,273 @@
+{
+  "slice_id": "2026-06-15-p2-41-sandbox-operator-decision-brief-sandbox",
+  "cases": {
+    "001-top-level-record_kind.json": [
+      "record_kind_mismatch"
+    ],
+    "002-top-level-slice_id.json": [
+      "slice_id_mismatch"
+    ],
+    "003-top-level-version.json": [
+      "version_mismatch"
+    ],
+    "004-top-level-truth_boundary.json": [
+      "truth_boundary_mismatch"
+    ],
+    "005-top-level-purpose.json": [
+      "purpose_mismatch"
+    ],
+    "006-top-level-write_scope.json": [
+      "write_scope_mismatch"
+    ],
+    "007-source_snapshot-drift.json": [
+      "source_snapshot_mismatch",
+      "source_product_status_not_pass",
+      "source_product_pass_text_missing",
+      "source_slice_count_mismatch",
+      "product_pass_count_mismatch",
+      "verification_present_count_mismatch",
+      "revision_slice_count_mismatch"
+    ],
+    "008-safe_summary-drift.json": [
+      "safe_summary_mismatch"
+    ],
+    "009-decision_options-drift.json": [
+      "decision_options_mismatch"
+    ],
+    "010-required_separate_approvals-drift.json": [
+      "required_separate_approvals_mismatch"
+    ],
+    "011-plain-verdict-drift.json": [
+      "plain_verdict_mismatch"
+    ],
+    "012-source-product-status-not-pass.json": [
+      "source_snapshot_mismatch",
+      "source_product_status_not_pass"
+    ],
+    "013-source-product-pass-text-missing.json": [
+      "source_snapshot_mismatch",
+      "source_product_pass_text_missing"
+    ],
+    "014-source-slice-count-drift.json": [
+      "source_snapshot_mismatch",
+      "source_slice_count_mismatch"
+    ],
+    "015-product-pass-count-drift.json": [
+      "source_snapshot_mismatch",
+      "product_pass_count_mismatch"
+    ],
+    "016-verification-count-drift.json": [
+      "source_snapshot_mismatch",
+      "verification_present_count_mismatch"
+    ],
+    "017-revision-count-drift.json": [
+      "source_snapshot_mismatch",
+      "revision_slice_count_mismatch"
+    ],
+    "018-non-pass-slices-present.json": [
+      "source_snapshot_mismatch",
+      "non_pass_slices_present"
+    ],
+    "019-missing-verification-present.json": [
+      "source_snapshot_mismatch",
+      "missing_verification_slices_present"
+    ],
+    "020-source-authority-mainline.json": [
+      "source_snapshot_mismatch",
+      "source_rollup_authority_not_false:mainline"
+    ],
+    "021-source-authority-formal_vault.json": [
+      "source_snapshot_mismatch",
+      "source_rollup_authority_not_false:formal_vault"
+    ],
+    "022-source-authority-action_basis.json": [
+      "source_snapshot_mismatch",
+      "source_rollup_authority_not_false:action_basis"
+    ],
+    "023-decision-continue_sandbox_hardening-authorized-now.json": [
+      "decision_options_mismatch",
+      "decision_operation_authorized:continue_sandbox_hardening"
+    ],
+    "024-decision-prepare_promotion_request_packet-authorized-now.json": [
+      "decision_options_mismatch",
+      "decision_operation_authorized:prepare_promotion_request_packet"
+    ],
+    "025-decision-formal_vault_work-authorized-now.json": [
+      "decision_options_mismatch",
+      "decision_operation_authorized:formal_vault_work"
+    ],
+    "026-decision-mainline_merge_commit_push-authorized-now.json": [
+      "decision_options_mismatch",
+      "decision_operation_authorized:mainline_merge_commit_push"
+    ],
+    "027-decision-use_as_action_basis-authorized-now.json": [
+      "decision_options_mismatch",
+      "decision_operation_authorized:use_as_action_basis"
+    ],
+    "028-decision-formal_vault_work-approval-false.json": [
+      "decision_options_mismatch",
+      "decision_missing_user_approval:formal_vault_work"
+    ],
+    "029-decision-mainline_merge_commit_push-approval-false.json": [
+      "decision_options_mismatch",
+      "decision_missing_user_approval:mainline_merge_commit_push"
+    ],
+    "030-decision-use_as_action_basis-approval-false.json": [
+      "decision_options_mismatch",
+      "decision_missing_user_approval:use_as_action_basis"
+    ],
+    "031-operation-formal_vault_read.json": [
+      "operation_not_false:formal_vault_read"
+    ],
+    "032-operation-formal_vault_scan.json": [
+      "operation_not_false:formal_vault_scan"
+    ],
+    "033-operation-formal_vault_write.json": [
+      "operation_not_false:formal_vault_write"
+    ],
+    "034-operation-formal_vault_hash.json": [
+      "operation_not_false:formal_vault_hash"
+    ],
+    "035-operation-formal_vault_snapshot.json": [
+      "operation_not_false:formal_vault_snapshot"
+    ],
+    "036-operation-formal_vault_state_check.json": [
+      "operation_not_false:formal_vault_state_check"
+    ],
+    "037-operation-obsidian_sync.json": [
+      "operation_not_false:obsidian_sync"
+    ],
+    "038-operation-commit.json": [
+      "operation_not_false:commit"
+    ],
+    "039-operation-push.json": [
+      "operation_not_false:push"
+    ],
+    "040-operation-promotion.json": [
+      "operation_not_false:promotion"
+    ],
+    "041-operation-dependency_install.json": [
+      "operation_not_false:dependency_install"
+    ],
+    "042-operation-background_service.json": [
+      "operation_not_false:background_service"
+    ],
+    "043-operation-mcp_write_tool.json": [
+      "operation_not_false:mcp_write_tool"
+    ],
+    "044-operation-hooks.json": [
+      "operation_not_false:hooks"
+    ],
+    "045-operation-approval_collection.json": [
+      "operation_not_false:approval_collection"
+    ],
+    "046-operation-user_instruction_collection.json": [
+      "operation_not_false:user_instruction_collection"
+    ],
+    "047-operation-user_wording_storage.json": [
+      "operation_not_false:user_wording_storage"
+    ],
+    "048-operation-command_emitted.json": [
+      "operation_not_false:command_emitted"
+    ],
+    "049-operation-execution_permission_granted.json": [
+      "operation_not_false:execution_permission_granted"
+    ],
+    "050-operation-execution_performed.json": [
+      "operation_not_false:execution_performed"
+    ],
+    "051-operation-action_basis_creation.json": [
+      "operation_not_false:action_basis_creation"
+    ],
+    "052-operation-reviewed_knowledge_creation.json": [
+      "operation_not_false:reviewed_knowledge_creation"
+    ],
+    "053-operation-evidence_support_creation.json": [
+      "operation_not_false:evidence_support_creation"
+    ],
+    "054-operation-mainline_merge.json": [
+      "operation_not_false:mainline_merge"
+    ],
+    "055-operation-dirty_tree_repair.json": [
+      "operation_not_false:dirty_tree_repair"
+    ],
+    "056-operation-auto_advance.json": [
+      "operation_not_false:auto_advance"
+    ],
+    "057-control-source_rollup_pass_required.json": [
+      "brief_control_not_true:source_rollup_pass_required"
+    ],
+    "058-control-all_product_pass_count_visible.json": [
+      "brief_control_not_true:all_product_pass_count_visible"
+    ],
+    "059-control-verification_count_visible.json": [
+      "brief_control_not_true:verification_count_visible"
+    ],
+    "060-control-revision_history_visible.json": [
+      "brief_control_not_true:revision_history_visible"
+    ],
+    "061-control-fresh_sandbox_only_for_continuation.json": [
+      "brief_control_not_true:fresh_sandbox_only_for_continuation"
+    ],
+    "062-control-separate_approval_for_formal_vault.json": [
+      "brief_control_not_true:separate_approval_for_formal_vault"
+    ],
+    "063-control-separate_approval_for_mainline.json": [
+      "brief_control_not_true:separate_approval_for_mainline"
+    ],
+    "064-control-no_action_basis_claim.json": [
+      "brief_control_not_true:no_action_basis_claim"
+    ],
+    "065-control-no_evidence_support_claim.json": [
+      "brief_control_not_true:no_evidence_support_claim"
+    ],
+    "066-control-no_reviewed_knowledge_claim.json": [
+      "brief_control_not_true:no_reviewed_knowledge_claim"
+    ],
+    "067-missing-non-claim-not-formal-vault-approval.json": [
+      "required_non_claims_missing"
+    ],
+    "068-missing-non-claim-not-formal-vault-state.json": [
+      "required_non_claims_missing"
+    ],
+    "069-missing-non-claim-not-formal-vault-access.json": [
+      "required_non_claims_missing"
+    ],
+    "070-missing-non-claim-not-Obsidian-sync.json": [
+      "required_non_claims_missing"
+    ],
+    "071-missing-non-claim-not-user-approval.json": [
+      "required_non_claims_missing"
+    ],
+    "072-missing-non-claim-not-user-instruction.json": [
+      "required_non_claims_missing"
+    ],
+    "073-missing-non-claim-not-execution-permission.json": [
+      "required_non_claims_missing"
+    ],
+    "074-missing-non-claim-not-command-surface.json": [
+      "required_non_claims_missing"
+    ],
+    "075-missing-non-claim-not-reviewed-knowledge.json": [
+      "required_non_claims_missing"
+    ],
+    "076-missing-non-claim-not-evidence-support.json": [
+      "required_non_claims_missing"
+    ],
+    "077-missing-non-claim-not-action-basis.json": [
+      "required_non_claims_missing"
+    ],
+    "078-missing-non-claim-not-mainline-readiness.json": [
+      "required_non_claims_missing"
+    ],
+    "079-missing-non-claim-not-promotion-approval.json": [
+      "required_non_claims_missing"
+    ],
+    "080-missing-non-claim-not-dirty-tree-repair.json": [
+      "required_non_claims_missing"
+    ],
+    "081-missing-non-claim-not-auto-advance.json": [
+      "required_non_claims_missing"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "missing-cache-manifest-fixture",
+  "expected_valid": false,
+  "expected_codes": ["MS_FIXTURE_PATH_MISSING"],
+  "patch": {
+    "search_cache": {
+      "cache_manifest_path": "fixtures/cache-manifests/missing-cache-manifest.json"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"extends":"fixtures/valid-frontmatter-validation-check.json","scenario_id":"direct-promotion-field","expected_valid":false,"expected_codes":["MS_AUTHORITY_CLAIM_FORBIDDEN"],"patch":{"boundary":{"promotion":true}}}

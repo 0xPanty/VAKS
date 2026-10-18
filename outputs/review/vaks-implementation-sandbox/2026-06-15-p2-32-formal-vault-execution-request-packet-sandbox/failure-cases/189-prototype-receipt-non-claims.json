@@ -1,0 +1,11 @@
+{
+  "case_id": "prototype-receipt-non-claims",
+  "description": "Prototype receipt non-claims removed.",
+  "expected_errors": [
+    "prototype_receipt_non_claims_missing"
+  ],
+  "prototype_tamper": {
+    "kind": "receipt_replace_non_claims",
+    "non_claims": []
+  }
+}

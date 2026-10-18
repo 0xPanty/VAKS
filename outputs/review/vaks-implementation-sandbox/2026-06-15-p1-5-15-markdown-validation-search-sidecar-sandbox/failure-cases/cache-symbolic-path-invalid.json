@@ -1,0 +1,13 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "cache-symbolic-path-invalid",
+  "expected_valid": false,
+  "expected_codes": ["MS_CACHE_SYMBOLIC_PATH_INVALID"],
+  "patch": {
+    "search_cache": {
+      "cache_path": ".mdvs/copied-subset",
+      "cache_path_kind": "symbolic_derived_cache",
+      "cache_path_symbolic": true
+    }
+  }
+}

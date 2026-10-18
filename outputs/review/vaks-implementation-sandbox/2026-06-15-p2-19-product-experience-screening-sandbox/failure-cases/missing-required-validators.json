@@ -1,0 +1,1 @@
+{"case_id":"missing-required-validators","base_fixture":"fixtures/valid-product-experience-screening.json","mutations":[{"op":"set_candidate","id":"P2-PX-02","path":"/required_validators","value":[]}]}

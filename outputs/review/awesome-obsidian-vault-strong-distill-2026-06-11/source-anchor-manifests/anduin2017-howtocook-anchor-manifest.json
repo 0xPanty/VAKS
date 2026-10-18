@@ -1,0 +1,55 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "Anduin2017/HowToCook",
+  "source_url": "https://github.com/Anduin2017/HowToCook",
+  "checked_commit": "b457738abd37d2621f22d59ff9fb065fcc4528da",
+  "checked_at": "2026-06-11",
+  "inspection_method": "git object inspection after interrupted checkout left the working tree incomplete; inspected README, template, manual lint, PR template, README generator, code of conduct, and tracked file counts",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "project-identity-and-navigation",
+      "why": "Explains the goal: precise, formalized recipes for programmers; links website, Docker viewer, contribution instructions, tips, and generated recipe index."
+    },
+    {
+      "path": "dishes/template/示例菜/示例菜.md",
+      "kind": "strict-template",
+      "why": "Defines required title shape, difficulty, calories, sections, calculation formulas, ordered operations, additional content, and footer."
+    },
+    {
+      "path": ".github/manual_lint.js",
+      "kind": "domain-lint",
+      "why": "Validates filenames, required headings, difficulty/calorie lines, ordered operations, imprecise units, pronouns, footer, description length, image alt text, and file references."
+    },
+    {
+      "path": ".github/pull_request_template.md",
+      "kind": "review-gate",
+      "why": "Requires automated checks before human review and asks contributor to confirm licensing/public-domain status."
+    },
+    {
+      "path": ".github/readme-generate.js",
+      "kind": "generated-index",
+      "why": "Walks Markdown files, groups categories, sorts entries, and regenerates README navigation from a template."
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "kind": "project-principles",
+      "why": "States the value of precision, formalization, machine readability, non-commercial posture, and derivative boundaries."
+    }
+  ],
+  "observed_counts": {
+    "tracked_files": 734,
+    "dish_tree_files": 719,
+    "tip_files": 17,
+    "github_workflow_or_helper_files": 6
+  },
+  "known_limits": [
+    "The cooking corpus itself is not VAKS evidence.",
+    "The repository's public-domain/Unlicense policy is source-specific and should not become a VAKS default.",
+    "Strict lint is valuable for promotion or action-facing artifacts, but should not burden ordinary VAKS capture."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

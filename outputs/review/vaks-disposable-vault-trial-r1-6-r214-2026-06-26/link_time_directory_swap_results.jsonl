@@ -1,0 +1,1 @@
+{"allowed":false,"case_id":"link_time_junction_swap_before_hardlink","created":false,"hook_called":true,"junction_ok":false,"junction_status":"not_attempted","outside_file_exists":false,"staging_dir_exists_after":false,"staging_temp_created":true,"staging_temp_exists_after":false,"validation_valid_before_swap":true,"violation":false,"write_error_class":"OSError"}

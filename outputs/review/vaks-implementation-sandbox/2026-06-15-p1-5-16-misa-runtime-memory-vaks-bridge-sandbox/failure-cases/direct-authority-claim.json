@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "direct-authority-claim",
+  "expected_valid": false,
+  "expected_codes": ["MB_AUTHORITY_CLAIM_FORBIDDEN"],
+  "patch": {"runtime_memory": {"memory_claims": ["reviewed_knowledge"]}}
+}

@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "hook-enabled",
+  "expected_valid": false,
+  "expected_codes": ["US_RUNTIME_OR_SYNC_FORBIDDEN"],
+  "patch": {"scope": {"hook_enabled": true}}
+}

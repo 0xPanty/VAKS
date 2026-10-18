@@ -1,0 +1,8 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "writeback-record-direct-to-reviewed",
+  "expected_valid": false,
+  "expected_codes": ["MB_REVIEWED_WRITE_FORBIDDEN"],
+  "allowed_extra_codes": ["MB_AUTHORITY_CONFUSION"],
+  "patch": {"writeback": {"records": [{"id": "direct-reviewed", "ref": "fixtures/writeback/candidate-signal.json", "record_type": "candidate_signal", "receipt_id": "mb-receipt-001", "candidate_signal_promotes": false, "writeback_direct_to_reviewed": true}]}}
+}

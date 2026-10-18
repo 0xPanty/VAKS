@@ -1,0 +1,1807 @@
+{
+  "record_kind": "sandbox_verifier_portability_dependency_audit",
+  "slice_id": "2026-06-15-p2-47-sandbox-verifier-portability-dependency-audit-sandbox",
+  "version": "sandbox-verifier-portability-dependency-audit-v1",
+  "truth_boundary": "portability_audit_is_static_sandbox_evidence_not_runtime_certification",
+  "purpose": "audit sandbox verifier scripts for static portability, dependency, and default-review safety signals",
+  "write_scope": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-47-sandbox-verifier-portability-dependency-audit-sandbox/",
+  "view": "verifier-portability-audit",
+  "source_snapshot": {
+    "source_status_slice_id": "2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox",
+    "source_status_audit_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox/artifact/status-normalization-audit.json",
+    "source_status_audit_sha256": "3a9696bbefd0f9ab47284ccb2c7a446be2cb8a239a18656e916279910d0f174b",
+    "source_status_product_report_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox/product-acceptance-report.md",
+    "source_status_product_report_sha256": "c91951c80e1880315187994836c5350d3b149dcf0378ca23afab4453e495bece",
+    "source_status_product_status": "pass_product_grade",
+    "source_examined_slice_count": 44,
+    "source_unknown_status_count": 0,
+    "source_gate_pass_count": 44
+  },
+  "portability_policy": {
+    "analysis_mode": "static_read_only",
+    "does_not_execute_old_verifiers": true,
+    "does_not_install_dependencies": true,
+    "stdlib_and_slice_local_imports_only": true,
+    "external_or_network_imports_block": true,
+    "forbidden_operation_tokens_block": true,
+    "boundary_word_tokens_warn": true,
+    "subprocess_is_warning_not_auto_failure": true,
+    "default_read_only_claim_limit": "static audit only; not runtime certification"
+  },
+  "scanner_scope": {
+    "glob": "outputs/review/vaks-implementation-sandbox/*/artifact/verify*.py",
+    "included_verifier_count": 41,
+    "excludes": [
+      "non-verifier builders",
+      "prototype scripts",
+      "formal vault",
+      "tools outside sandbox"
+    ]
+  },
+  "verifier_inventory": [
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-07-action-boundary-failure-matrix-sandbox/artifact/verify_failure_matrix_sandbox.py",
+      "slice_id": "2026-06-15-p0-07-action-boundary-failure-matrix-sandbox",
+      "sha256": "2c32f31ec8a2a59b2bc806e599349a00489e4acbd7c6d20cb174ccf029d0928a",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "dataclasses",
+        "json",
+        "pathlib",
+        "sys",
+        "typing"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [],
+      "risk_notes": [],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox/artifact/verify_receipt_validator_pilot.py",
+      "slice_id": "2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox",
+      "sha256": "82d15862cb4bdc26453385eb4c10a2bb1a17133b9bef67b6cd359239df4f153a",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "importlib",
+        "json",
+        "pathlib",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [],
+      "risk_notes": [],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-09-read-only-query-loop-pilot-sandbox/artifact/verify_read_only_query_loop_pilot.py",
+      "slice_id": "2026-06-15-p1-09-read-only-query-loop-pilot-sandbox",
+      "sha256": "9dd8280600361ca80f8fe01eb8c7e2f6691057b350c50532f6bac1a74bf433c4",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "importlib",
+        "json",
+        "pathlib",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [],
+      "risk_notes": [],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox/artifact/verify_runtime_artifact_exclusion_test.py",
+      "slice_id": "2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox",
+      "sha256": "a5f5512946ac930435f33328134ef994eaa0db50bc91f399ee1ace92b1245edd",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "importlib",
+        "json",
+        "pathlib",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [],
+      "risk_notes": [],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-11-semantic-anchor-support-check-sandbox/artifact/verify_semantic_anchor_support_check.py",
+      "slice_id": "2026-06-15-p1-11-semantic-anchor-support-check-sandbox",
+      "sha256": "dabe441c8b55323bb51563b070419780dd975227848a62cf929728fe5a1e5481",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "importlib",
+        "json",
+        "pathlib",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [],
+      "risk_notes": [],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-12-robust-rag-retrieval-sandbox/artifact/verify_robust_rag_retrieval_sandbox.py",
+      "slice_id": "2026-06-15-p1-5-12-robust-rag-retrieval-sandbox",
+      "sha256": "d1542841666901d12ad2be2fe07fa03d9b7fbf90d469ebdd8fd49257e3926794",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "importlib",
+        "json",
+        "pathlib",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [],
+      "risk_notes": [],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox/artifact/verify_local_obsidian_graph_readonly_mcp_sandbox.py",
+      "slice_id": "2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox",
+      "sha256": "136d4e9f87ecbb1f58907688ace08559a8d48bc1f0de43ebf3ca8af14ee59a6d",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "importlib",
+        "json",
+        "pathlib",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [
+        {
+          "token": "mcp_write",
+          "reason": "mcp_write_boundary_word"
+        }
+      ],
+      "cli_flags": [],
+      "risk_notes": [
+        "warning_tokens_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/artifact/verify_raw_intake_parser_router_sandbox.py",
+      "slice_id": "2026-06-15-p1-5-14-raw-intake-parser-router-sandbox",
+      "sha256": "92e723afffbc8ea090790d924413702f16b5461e81673b5361caaec0b76d8fff",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "importlib",
+        "json",
+        "pathlib",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [],
+      "risk_notes": [],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/artifact/verify_markdown_validation_search_sidecar_sandbox.py",
+      "slice_id": "2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox",
+      "sha256": "5d910c7bf2d35fac6ce1fd1e6bf118435765e7ad0c247d2aeed3afe3cdc5047b",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "importlib",
+        "json",
+        "pathlib",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [],
+      "risk_notes": [],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox/artifact/verify_misa_runtime_memory_vaks_bridge_sandbox.py",
+      "slice_id": "2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox",
+      "sha256": "3cd9d79a361c14eadde12681661d57005339524b05afe4f2f646a778745e8bdf",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "importlib",
+        "json",
+        "pathlib",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [],
+      "risk_notes": [],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-17-use-surface-optimization-pass/artifact/verify_use_surface_optimization_pass.py",
+      "slice_id": "2026-06-15-p2-17-use-surface-optimization-pass",
+      "sha256": "95936d14f1c4523ec8d777b73b53eff673fdabe2f9badb97bfa736212985fe1a",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "sys",
+        "use_surface_optimizer"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [],
+      "risk_notes": [],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-18-bases-cockpit-prototype/artifact/verify_bases_cockpit_prototype.py",
+      "slice_id": "2026-06-15-p2-18-bases-cockpit-prototype",
+      "sha256": "9c5c874dde6f78b86ce9810d122565f006cf9e85f29f7cfc3dbec02127c36d1e",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "bases_cockpit_validator",
+        "json",
+        "pathlib",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [],
+      "risk_notes": [],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-19-product-experience-screening-sandbox/artifact/verify_product_experience_screening.py",
+      "slice_id": "2026-06-15-p2-19-product-experience-screening-sandbox",
+      "sha256": "87fb6d0a3d5c5211642ed08753e1eb4dec8621b226baf144388bffaa12607485",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "copy",
+        "importlib",
+        "json",
+        "pathlib",
+        "sys",
+        "typing"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [],
+      "risk_notes": [],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-20-product-workflow-prototype/artifact/verify_product_workflow.py",
+      "slice_id": "2026-06-15-p2-20-product-workflow-prototype",
+      "sha256": "8d42b85cd692a956df188f14b0aee3b1977205bc7d24bef3cf3cb7d3311273b7",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "copy",
+        "importlib",
+        "json",
+        "pathlib",
+        "sys",
+        "typing"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [],
+      "risk_notes": [],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/artifact/verify_silky_workbench.py",
+      "slice_id": "2026-06-15-p2-21-silky-obsidian-workbench-sandbox",
+      "sha256": "f285083d91eca28179db5c454f2963027fc67b930d621e5bd64cd6eb2557c3c5",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "hashlib",
+        "json",
+        "pathlib",
+        "shutil",
+        "silky_workbench_builder",
+        "silky_workbench_validator",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "typing"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [
+        "subprocess"
+      ],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "subprocess_present_review_for_default_path",
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-22-formalization-readiness-polish-sandbox/artifact/verify_formalization_readiness.py",
+      "slice_id": "2026-06-15-p2-22-formalization-readiness-polish-sandbox",
+      "sha256": "814cef56b807b45254ddc3f640bec7ceee7fc2fa294ca9e4c0b2754ca6e4ac51",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "html",
+        "importlib",
+        "json",
+        "pathlib",
+        "re",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [
+        {
+          "token": "H:\\\\Obsidian",
+          "reason": "formal_vault_path_boundary_word"
+        },
+        {
+          "token": "mcp_write",
+          "reason": "mcp_write_boundary_word"
+        }
+      ],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "warning_tokens_present",
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/artifact/verify_native_entry_readonly_inspector.py",
+      "slice_id": "2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox",
+      "sha256": "586da1acccc28b21f245024b48fead8c67c0cf5edd4a04d0a4fe358a24ff722b",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "html",
+        "importlib",
+        "json",
+        "pathlib",
+        "re",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [
+        {
+          "token": "mcp_write",
+          "reason": "mcp_write_boundary_word"
+        }
+      ],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "warning_tokens_present",
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/artifact/verify_formal_vault_write_plan.py",
+      "slice_id": "2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox",
+      "sha256": "fa78b7045f88621fec2deb8f8825b500b6d0ab65c29b53e8f4f0ca08cad80016",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "html",
+        "importlib",
+        "json",
+        "pathlib",
+        "re",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [
+        {
+          "token": "mcp_write",
+          "reason": "mcp_write_boundary_word"
+        }
+      ],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "warning_tokens_present",
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/artifact/verify_approval_packet.py",
+      "slice_id": "2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox",
+      "sha256": "1e51f2ae2e99b38fb7fe555fe95b74b2a7cb5c2983e7681ccbee22fd066286c5",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "hashlib",
+        "html",
+        "importlib",
+        "json",
+        "pathlib",
+        "re",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [
+        {
+          "token": "mcp_write",
+          "reason": "mcp_write_boundary_word"
+        }
+      ],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "warning_tokens_present",
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-26-formal-vault-write-decision-rehearsal-sandbox/artifact/verify_decision_rehearsal.py",
+      "slice_id": "2026-06-15-p2-26-formal-vault-write-decision-rehearsal-sandbox",
+      "sha256": "7d7f89187ec2c2f7e5deb3d9022c9b6dae168a99a1f4a4cd6c8b23544a729564",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "hashlib",
+        "html",
+        "importlib",
+        "json",
+        "pathlib",
+        "re",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [
+        {
+          "token": "mcp_write",
+          "reason": "mcp_write_boundary_word"
+        }
+      ],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "warning_tokens_present",
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-27-formal-vault-user-decision-intake-gate-sandbox/artifact/verify_user_decision_intake_gate.py",
+      "slice_id": "2026-06-15-p2-27-formal-vault-user-decision-intake-gate-sandbox",
+      "sha256": "05e610eba5d8ad9006e0ac1c7bd6bbb2ca4ec4d44d5a69627b42ddd2de5dfbca",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "hashlib",
+        "html",
+        "importlib",
+        "json",
+        "pathlib",
+        "re",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [
+        {
+          "token": "mcp_write",
+          "reason": "mcp_write_boundary_word"
+        }
+      ],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "warning_tokens_present",
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-28-formal-vault-execution-preflight-dry-run-sandbox/artifact/verify_execution_preflight.py",
+      "slice_id": "2026-06-15-p2-28-formal-vault-execution-preflight-dry-run-sandbox",
+      "sha256": "cbbafd1ca671a5714cc27c61ea7a86059d02e7bd6b56aa656f9c50ec9946ed69",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "hashlib",
+        "html",
+        "importlib",
+        "json",
+        "pathlib",
+        "re",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [
+        {
+          "token": "mcp_write",
+          "reason": "mcp_write_boundary_word"
+        }
+      ],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "warning_tokens_present",
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-29-formal-vault-execution-plan-sandbox/artifact/verify_execution_plan.py",
+      "slice_id": "2026-06-15-p2-29-formal-vault-execution-plan-sandbox",
+      "sha256": "53415a9412f31d2391afa416014e1c0320955dface54353d552cdd3fd413cf4e",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "execution_plan_common",
+        "json",
+        "subprocess",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [
+        "subprocess"
+      ],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "subprocess_present_review_for_default_path",
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/artifact/verify_dry_run_ledger.py",
+      "slice_id": "2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox",
+      "sha256": "c0603aba1ee2322f8b1bcd716aee7313d16528f39e6d5c27ba741c4b61299331",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "dry_run_ledger_common",
+        "json",
+        "subprocess",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [
+        "subprocess"
+      ],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "subprocess_present_review_for_default_path",
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/artifact/verify_readiness_gate.py",
+      "slice_id": "2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox",
+      "sha256": "13d62722a4147837b777653ea6063422ab827652377381b5b78277069aef1247",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "json",
+        "readiness_gate_common",
+        "subprocess",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [
+        "subprocess"
+      ],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "subprocess_present_review_for_default_path",
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/artifact/verify_request_packet.py",
+      "slice_id": "2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox",
+      "sha256": "747ede1b51c1bf9a2f41a09463adc6f5505bbdaa59956c39cb2a8b4b42551e60",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "json",
+        "request_packet_common",
+        "subprocess",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [
+        "subprocess"
+      ],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "subprocess_present_review_for_default_path",
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/artifact/verify_request_screening.py",
+      "slice_id": "2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox",
+      "sha256": "ba1d6f9776745aeac3a54fedd40f0342ecd968928881d96b6bf9995db5d8d54f",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "json",
+        "request_screening_common",
+        "subprocess",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [
+        "subprocess"
+      ],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "subprocess_present_review_for_default_path",
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/artifact/verify_status_surface.py",
+      "slice_id": "2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox",
+      "sha256": "6fbe3c82561ab30b793cd88261e1599a50402fdfd981f9b52a906e4cff726348",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "json",
+        "status_surface_common",
+        "subprocess",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [
+        "subprocess"
+      ],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "subprocess_present_review_for_default_path",
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-35-formal-vault-status-surface-handoff-packet-sandbox/artifact/verify_handoff_packet.py",
+      "slice_id": "2026-06-15-p2-35-formal-vault-status-surface-handoff-packet-sandbox",
+      "sha256": "e3922f5ad68c2e63437279fb13f6423b8011023d14605d79c229383d7fd07324",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "handoff_packet_common",
+        "json",
+        "subprocess",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [
+        "subprocess"
+      ],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "subprocess_present_review_for_default_path",
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox/artifact/verify_workflow_prototype.py",
+      "slice_id": "2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox",
+      "sha256": "f4b685678f6484e12809a3a8c572cfd5bc7d36487e96495ab5ba5ed79cbafb47",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "build_workflow_prototype",
+        "json",
+        "sys",
+        "workflow_prototype_common"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-37-formal-vault-operator-workflow-usability-screening-sandbox/artifact/verify_usability_screening.py",
+      "slice_id": "2026-06-15-p2-37-formal-vault-operator-workflow-usability-screening-sandbox",
+      "sha256": "a945d0eee80434f57ec47ce280621dc740d12b746798ce26831d771277b5e207",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "build_usability_screening",
+        "json",
+        "sys",
+        "usability_screening_common"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-38-formal-vault-follow-up-agent-blind-run-sandbox/artifact/verify_blind_run.py",
+      "slice_id": "2026-06-15-p2-38-formal-vault-follow-up-agent-blind-run-sandbox",
+      "sha256": "a97861ffa634dee69951e189150b2b6f51f395d666d4f8a847e96f71c6c64eb5",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "blind_run_common",
+        "build_blind_run",
+        "json",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-39-blind-run-regression-maintenance-sandbox/artifact/verify_regression_pack.py",
+      "slice_id": "2026-06-15-p2-39-blind-run-regression-maintenance-sandbox",
+      "sha256": "2c96436f3720cea12bdf06be6bd4e87c343e164d1b8314244e77d753f3ee44cc",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "build_regression_pack",
+        "json",
+        "regression_common",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-40-sandbox-product-grade-rollup-dashboard-sandbox/artifact/verify_rollup_dashboard.py",
+      "slice_id": "2026-06-15-p2-40-sandbox-product-grade-rollup-dashboard-sandbox",
+      "sha256": "346a62502fbddaffc6ac85780c74af15eaf56cc7c8a8c64cb96ea394620fee76",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "build_rollup_dashboard",
+        "json",
+        "rollup_common",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-41-sandbox-operator-decision-brief-sandbox/artifact/verify_decision_brief.py",
+      "slice_id": "2026-06-15-p2-41-sandbox-operator-decision-brief-sandbox",
+      "sha256": "e3f39a8dcf8dde3898e4394745bfb18d4335ea6bc0be219a265029212a9ea9d2",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "brief_common",
+        "build_decision_brief",
+        "json",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-42-sandbox-executive-readiness-brief-sandbox/artifact/verify_readiness_brief.py",
+      "slice_id": "2026-06-15-p2-42-sandbox-executive-readiness-brief-sandbox",
+      "sha256": "357fae27ea3a03ffa7fd12f9355f99f8c0868e18774aa8f87205aeee4ee82edd",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "build_readiness_brief",
+        "json",
+        "readiness_common",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-43-sandbox-promotion-request-dry-run-sandbox/artifact/verify_promotion_request.py",
+      "slice_id": "2026-06-15-p2-43-sandbox-promotion-request-dry-run-sandbox",
+      "sha256": "bdee875db91ab5367262da512813965012d062ff52338c3018a76e4f8e2913c9",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "build_promotion_request",
+        "json",
+        "promotion_common",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-44-sandbox-evidence-ledger-sandbox/artifact/verify_evidence_ledger.py",
+      "slice_id": "2026-06-15-p2-44-sandbox-evidence-ledger-sandbox",
+      "sha256": "cccf0a8755067c45e85c32d5182e62f8327d29d7ed90a12aa4d90c93ed4b7f81",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "build_evidence_ledger",
+        "evidence_common",
+        "json",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox/artifact/verify_release_candidate_handoff.py",
+      "slice_id": "2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox",
+      "sha256": "b9aeb357a22e7c56d7a6903d308eb52383d18b46a533d44cbce33795be5b6f89",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "build_release_candidate_handoff",
+        "handoff_common",
+        "json",
+        "sys"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox/artifact/verify_status_normalization_audit.py",
+      "slice_id": "2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox",
+      "sha256": "6c73c22e540897951ad0d5707d479e0050693490597845ab3e45d22c4a75a5e8",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "json",
+        "status_audit"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-47-sandbox-verifier-portability-dependency-audit-sandbox/artifact/verify_portability_audit.py",
+      "slice_id": "2026-06-15-p2-47-sandbox-verifier-portability-dependency-audit-sandbox",
+      "sha256": "e6b90bdff007d546ee484bab22128cab62e33f6a74e9f08972b7b90f763e3076",
+      "syntax_ok": true,
+      "syntax_error": null,
+      "imports": [
+        "__future__",
+        "argparse",
+        "json",
+        "portability_audit"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "warning_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [],
+      "cli_flags": [
+        "--final-gate",
+        "--rebuild"
+      ],
+      "risk_notes": [
+        "explicit_rebuild_mode_present"
+      ],
+      "blocking_issues": [],
+      "static_portability_pass": true
+    }
+  ],
+  "summary": {
+    "verifier_count": 41,
+    "static_portability_pass_count": 41,
+    "blocking_verifier_count": 0,
+    "warning_verifier_count": 28,
+    "external_import_verifier_count": 0,
+    "forbidden_import_verifier_count": 0,
+    "forbidden_token_verifier_count": 0,
+    "warning_token_verifier_count": 8,
+    "syntax_error_verifier_count": 0,
+    "subprocess_warning_count": 8,
+    "synthetic_probe_count": 8,
+    "synthetic_probe_pass_count": 8,
+    "all_synthetic_probes_pass": true
+  },
+  "risk_inventory": [
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox/artifact/verify_local_obsidian_graph_readonly_mcp_sandbox.py",
+      "slice_id": "2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "warning_tokens_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [
+        {
+          "token": "mcp_write",
+          "reason": "mcp_write_boundary_word"
+        }
+      ]
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/artifact/verify_silky_workbench.py",
+      "slice_id": "2026-06-15-p2-21-silky-obsidian-workbench-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "subprocess_present_review_for_default_path",
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": []
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-22-formalization-readiness-polish-sandbox/artifact/verify_formalization_readiness.py",
+      "slice_id": "2026-06-15-p2-22-formalization-readiness-polish-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "warning_tokens_present",
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [
+        {
+          "token": "H:\\\\Obsidian",
+          "reason": "formal_vault_path_boundary_word"
+        },
+        {
+          "token": "mcp_write",
+          "reason": "mcp_write_boundary_word"
+        }
+      ]
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/artifact/verify_native_entry_readonly_inspector.py",
+      "slice_id": "2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "warning_tokens_present",
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [
+        {
+          "token": "mcp_write",
+          "reason": "mcp_write_boundary_word"
+        }
+      ]
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/artifact/verify_formal_vault_write_plan.py",
+      "slice_id": "2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "warning_tokens_present",
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [
+        {
+          "token": "mcp_write",
+          "reason": "mcp_write_boundary_word"
+        }
+      ]
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/artifact/verify_approval_packet.py",
+      "slice_id": "2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "warning_tokens_present",
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [
+        {
+          "token": "mcp_write",
+          "reason": "mcp_write_boundary_word"
+        }
+      ]
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-26-formal-vault-write-decision-rehearsal-sandbox/artifact/verify_decision_rehearsal.py",
+      "slice_id": "2026-06-15-p2-26-formal-vault-write-decision-rehearsal-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "warning_tokens_present",
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [
+        {
+          "token": "mcp_write",
+          "reason": "mcp_write_boundary_word"
+        }
+      ]
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-27-formal-vault-user-decision-intake-gate-sandbox/artifact/verify_user_decision_intake_gate.py",
+      "slice_id": "2026-06-15-p2-27-formal-vault-user-decision-intake-gate-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "warning_tokens_present",
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [
+        {
+          "token": "mcp_write",
+          "reason": "mcp_write_boundary_word"
+        }
+      ]
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-28-formal-vault-execution-preflight-dry-run-sandbox/artifact/verify_execution_preflight.py",
+      "slice_id": "2026-06-15-p2-28-formal-vault-execution-preflight-dry-run-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "warning_tokens_present",
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": [
+        {
+          "token": "mcp_write",
+          "reason": "mcp_write_boundary_word"
+        }
+      ]
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-29-formal-vault-execution-plan-sandbox/artifact/verify_execution_plan.py",
+      "slice_id": "2026-06-15-p2-29-formal-vault-execution-plan-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "subprocess_present_review_for_default_path",
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": []
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/artifact/verify_dry_run_ledger.py",
+      "slice_id": "2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "subprocess_present_review_for_default_path",
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": []
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/artifact/verify_readiness_gate.py",
+      "slice_id": "2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "subprocess_present_review_for_default_path",
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": []
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/artifact/verify_request_packet.py",
+      "slice_id": "2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "subprocess_present_review_for_default_path",
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": []
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/artifact/verify_request_screening.py",
+      "slice_id": "2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "subprocess_present_review_for_default_path",
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": []
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/artifact/verify_status_surface.py",
+      "slice_id": "2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "subprocess_present_review_for_default_path",
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": []
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-35-formal-vault-status-surface-handoff-packet-sandbox/artifact/verify_handoff_packet.py",
+      "slice_id": "2026-06-15-p2-35-formal-vault-status-surface-handoff-packet-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "subprocess_present_review_for_default_path",
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": []
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox/artifact/verify_workflow_prototype.py",
+      "slice_id": "2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": []
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-37-formal-vault-operator-workflow-usability-screening-sandbox/artifact/verify_usability_screening.py",
+      "slice_id": "2026-06-15-p2-37-formal-vault-operator-workflow-usability-screening-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": []
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-38-formal-vault-follow-up-agent-blind-run-sandbox/artifact/verify_blind_run.py",
+      "slice_id": "2026-06-15-p2-38-formal-vault-follow-up-agent-blind-run-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": []
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-39-blind-run-regression-maintenance-sandbox/artifact/verify_regression_pack.py",
+      "slice_id": "2026-06-15-p2-39-blind-run-regression-maintenance-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": []
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-40-sandbox-product-grade-rollup-dashboard-sandbox/artifact/verify_rollup_dashboard.py",
+      "slice_id": "2026-06-15-p2-40-sandbox-product-grade-rollup-dashboard-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": []
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-41-sandbox-operator-decision-brief-sandbox/artifact/verify_decision_brief.py",
+      "slice_id": "2026-06-15-p2-41-sandbox-operator-decision-brief-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": []
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-42-sandbox-executive-readiness-brief-sandbox/artifact/verify_readiness_brief.py",
+      "slice_id": "2026-06-15-p2-42-sandbox-executive-readiness-brief-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": []
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-43-sandbox-promotion-request-dry-run-sandbox/artifact/verify_promotion_request.py",
+      "slice_id": "2026-06-15-p2-43-sandbox-promotion-request-dry-run-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": []
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-44-sandbox-evidence-ledger-sandbox/artifact/verify_evidence_ledger.py",
+      "slice_id": "2026-06-15-p2-44-sandbox-evidence-ledger-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": []
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox/artifact/verify_release_candidate_handoff.py",
+      "slice_id": "2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": []
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox/artifact/verify_status_normalization_audit.py",
+      "slice_id": "2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": []
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-47-sandbox-verifier-portability-dependency-audit-sandbox/artifact/verify_portability_audit.py",
+      "slice_id": "2026-06-15-p2-47-sandbox-verifier-portability-dependency-audit-sandbox",
+      "blocking_issues": [],
+      "risk_notes": [
+        "explicit_rebuild_mode_present"
+      ],
+      "external_imports": [],
+      "forbidden_imports": [],
+      "forbidden_tokens": [],
+      "warning_tokens": []
+    }
+  ],
+  "synthetic_probes": [
+    {
+      "id": "stdlib_and_local_ok",
+      "expected_blockers": [],
+      "actual_blockers": [],
+      "expected_risk_note": null,
+      "actual_risk_notes": [],
+      "passed": true
+    },
+    {
+      "id": "external_requests_import_blocks",
+      "expected_blockers": [
+        "external_imports_present",
+        "forbidden_imports_present"
+      ],
+      "actual_blockers": [
+        "external_imports_present",
+        "forbidden_imports_present"
+      ],
+      "expected_risk_note": null,
+      "actual_risk_notes": [],
+      "passed": true
+    },
+    {
+      "id": "socket_import_blocks",
+      "expected_blockers": [
+        "forbidden_imports_present"
+      ],
+      "actual_blockers": [
+        "forbidden_imports_present"
+      ],
+      "expected_risk_note": null,
+      "actual_risk_notes": [],
+      "passed": true
+    },
+    {
+      "id": "syntax_error_blocks",
+      "expected_blockers": [
+        "syntax_not_portable"
+      ],
+      "actual_blockers": [
+        "syntax_not_portable"
+      ],
+      "expected_risk_note": null,
+      "actual_risk_notes": [],
+      "passed": true
+    },
+    {
+      "id": "dependency_install_token_blocks",
+      "expected_blockers": [
+        "forbidden_tokens_present"
+      ],
+      "actual_blockers": [
+        "forbidden_tokens_present"
+      ],
+      "expected_risk_note": null,
+      "actual_risk_notes": [],
+      "passed": true
+    },
+    {
+      "id": "formal_vault_path_token_warns",
+      "expected_blockers": [],
+      "actual_blockers": [],
+      "expected_risk_note": "warning_tokens_present",
+      "actual_risk_notes": [
+        "warning_tokens_present"
+      ],
+      "passed": true
+    },
+    {
+      "id": "subprocess_warns_not_blocks",
+      "expected_blockers": [],
+      "actual_blockers": [],
+      "expected_risk_note": "subprocess_present_review_for_default_path",
+      "actual_risk_notes": [
+        "subprocess_present_review_for_default_path"
+      ],
+      "passed": true
+    },
+    {
+      "id": "unknown_local_import_blocks",
+      "expected_blockers": [
+        "external_imports_present"
+      ],
+      "actual_blockers": [
+        "external_imports_present"
+      ],
+      "expected_risk_note": null,
+      "actual_risk_notes": [],
+      "passed": true
+    }
+  ],
+  "agent_run_guide": [
+    "run this p2-47 verifier first for a static portability check",
+    "then run the target slice's own default verifier when needed",
+    "do not run old verifiers with --rebuild during review unless acting as Builder inside that slice",
+    "subprocess warnings require human inspection of default path behavior"
+  ],
+  "readiness_flags": {
+    "portability_audit_ready": true,
+    "runtime_certified": false,
+    "enterprise_production_ready": false,
+    "mainline_ready": false,
+    "formal_vault_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "release_approved": false,
+    "promotion_approved": false
+  },
+  "operation_performed_flags": {
+    "old_verifier_executed": false,
+    "legacy_slice_modified": false,
+    "dependency_install": false,
+    "network_access": false,
+    "background_service": false,
+    "mcp_write_tool": false,
+    "hooks": false,
+    "formal_vault_read": false,
+    "formal_vault_write": false,
+    "obsidian_sync": false,
+    "commit": false,
+    "push": false,
+    "promotion": false,
+    "mainline_merge": false,
+    "auto_advance": false
+  },
+  "required_non_claims": [
+    "not runtime certification",
+    "not dependency installation",
+    "not old verifier execution",
+    "not old-slice edit",
+    "not release approval",
+    "not promotion approval",
+    "not mainline ready",
+    "not enterprise production ready",
+    "not formal vault approval",
+    "not Obsidian sync",
+    "not commit",
+    "not push",
+    "not reviewed knowledge",
+    "not evidence support",
+    "not action basis",
+    "not auto advance"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "Giallozafferano recipe site",
+  "source_url": "https://www.giallozafferano.com/",
+  "checked_commit": null,
+  "checked_at": "2026-06-11",
+  "inspection_method": "live web inspection with web tool; opened home page, sample recipe page, and about page",
+  "anchors": [
+    {
+      "path": "https://www.giallozafferano.com/",
+      "kind": "homepage-navigation",
+      "why": "Shows global navigation, recipe categories, latest recipes, curated collections, regional/theme sections, rating/time cards, editorial features, and multilingual links."
+    },
+    {
+      "path": "https://www.giallozafferano.com/recipes/Genoese-pesto-Pesto-alla-genovese.html",
+      "kind": "recipe-detail-page",
+      "why": "Shows category, badges, difficulty, prep time, serving, cost, author, presentation, related recipes, ingredients, preparation, storage, tips, and AI-translation note."
+    },
+    {
+      "path": "https://www.giallozafferano.com/about-us.html",
+      "kind": "editorial-process",
+      "why": "Describes editorial scale, team/talent model, recipe selection, testing, shoots, publishing, and corporate ownership."
+    },
+    {
+      "path": "footer/legal links",
+      "kind": "policy-and-owner-links",
+      "why": "Footer exposes owner, terms, privacy, cookie policy, disclaimer, code of ethics, and group links."
+    }
+  ],
+  "known_limits": [
+    "This is a live commercial website, not a repository snapshot.",
+    "Recipe ratings, editorial statements, and AI-translation notes are not VAKS evidence support.",
+    "Commercial content structure may change after the checked date."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

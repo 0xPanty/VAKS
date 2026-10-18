@@ -1,0 +1,2848 @@
+{
+  "pre_commit_manifest_check_status": "pass",
+  "error_count": 0,
+  "errors": [],
+  "manifest": {
+    "artifact_kind": "vaks_phase_b_pre_commit_manifest",
+    "built_at": "2026-06-11T20:48:31+00:00",
+    "compared_against_previous_version": "phase_b_next_action_gate",
+    "pre_commit_manifest_status": "ready_pending_user_approval",
+    "commit_without_user_approval_allowed": false,
+    "commit_performed": false,
+    "stage_performed": false,
+    "recommended_commit_scope": {
+      "mainline_docs": [
+        "SOURCE_INTAKE.md",
+        "IMPLEMENTATION_BLUEPRINT.md",
+        "DEV_CONTEXT.md",
+        "MEMORY_TIER.md"
+      ],
+      "sandbox_evidence_bundle": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/"
+    },
+    "excluded_from_scope": [
+      "SCHEMA.md",
+      "REVIEW_QUEUE.md",
+      "templates/architecture-review-window-prompt.md"
+    ],
+    "circular_audit_artifacts_excluded_from_hash_manifest": [
+      "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_PRE_COMMIT_MANIFEST_CHECK.md",
+      "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_PRE_COMMIT_MANIFEST_DECISION.md",
+      "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_PRE_COMMIT_MANIFEST_PACKET.md",
+      "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_pre_commit_manifest.json",
+      "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_pre_commit_manifest_check.json"
+    ],
+    "file_count": 453,
+    "total_bytes": 189724373,
+    "file_records": [
+      {
+        "path": "DEV_CONTEXT.md",
+        "bytes": 10942,
+        "sha256": "a4db77d046f9b096eb49f34c72a27c1e932e4d1d2b76af9f152a8ef88c255fb5",
+        "git_status": " M"
+      },
+      {
+        "path": "IMPLEMENTATION_BLUEPRINT.md",
+        "bytes": 17405,
+        "sha256": "9365e24f682feae97ff8533648c5ceea78aaa72f810869f4dd7383b26fd20790",
+        "git_status": " M"
+      },
+      {
+        "path": "MEMORY_TIER.md",
+        "bytes": 9827,
+        "sha256": "a408d7cfee3738bfa0fcea9604da2d033fff5f99880ba04d359b4af4587eca7f",
+        "git_status": " M"
+      },
+      {
+        "path": "SOURCE_INTAKE.md",
+        "bytes": 33015,
+        "sha256": "99085563972e272dc4bed36fab1c06450ca30a54c07ab301bfaf6278a1d6364e",
+        "git_status": " M"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/COMPLETION_AUDIT.md",
+        "bytes": 2816,
+        "sha256": "ca2da5c7fb05c893674e8287f494880564ac6ed7d78cafb5d034892337c75706",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/KEEP_DECISION.md",
+        "bytes": 1615,
+        "sha256": "576799098d092aea0948943bb9654a64ee2b08ad8654bb88bd91bd35a312c2b4",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_ADAPTER_CONTRACT_TEST.md",
+        "bytes": 1057,
+        "sha256": "96373a89593ea1f7441ecb05e9a68d27ef51564a0ec59780f716f93b49d6b396",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_ADAPTER_SPEC.md",
+        "bytes": 14917,
+        "sha256": "7d206268b2dd114caebd818cf1382470d68aca0238b550da435990c07a958c52",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_ADVERSARIAL_ITERATION_COMPARISON.md",
+        "bytes": 3297,
+        "sha256": "21df1856b1483f34b5ed3353f7ec987b06d7b3995039092633fd94de4b2e5a02",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_ADVERSARIAL_PRESSURE_REPORT.md",
+        "bytes": 4466,
+        "sha256": "51fdf2ca2c69d856e99c9508b88945e07dfa1c678c46667ab80c07ca5802167f",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_ADVERSARIAL_SKELETON_ITERATION_COMPARISON.md",
+        "bytes": 2549,
+        "sha256": "c201c4c2a412406613c8e5e6bd1c217ac229c7eb29ede253283cb6f47195d351",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_ADVERSARIAL_V11_ITERATION_COMPARISON.md",
+        "bytes": 2525,
+        "sha256": "ae4d402c63e0f2cb22909cfd7e65e7a1375ac71ba66877bd9534a7832c12f6cf",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_AGENT_BLIND_AUDIT_CHECK.md",
+        "bytes": 332,
+        "sha256": "b66155560b04f161be7aff93b9167f07d75e5acf944419b27c86f1f32f168b34",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_AGENT_BLIND_AUDIT_REPORT.md",
+        "bytes": 2711,
+        "sha256": "661b3e882f969ac7b3b585d923e48222cd884fa7c8167094babf4a6d66c83636",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_AGENT_BLIND_ITERATION_COMPARISON.md",
+        "bytes": 2782,
+        "sha256": "5fa3d4dff729afa53cf64dd1dd63dfc05547d05220f47047321c324e7fb0ef55",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_AGENT_BLIND_PRESSURE_REPORT.md",
+        "bytes": 4466,
+        "sha256": "a49739451c139ee5743222136e2f8738fd8b91ece9ff8c2f0f1fb92bebf7ae6b",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_AGENT_BLIND_SKELETON_ITERATION_COMPARISON.md",
+        "bytes": 2549,
+        "sha256": "bb314b2840f03ee71fe230bec9c69aff8eb0d3a517e11877890a2333392b2981",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_AGENT_BLIND_V11_ITERATION_COMPARISON.md",
+        "bytes": 2525,
+        "sha256": "f5ebb38a701f068a0aef0823341f2220035b500cdb0355189913ff4134a05c77",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_BLIND_RELEVANCE_CHECK.md",
+        "bytes": 736,
+        "sha256": "3083a89acd1a25e7c5d84cec58fccba474abdd417ac019d3c0e2fff8183a4bc0",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_BLIND_RELEVANCE_JUDGMENT_INSTRUCTIONS.md",
+        "bytes": 1044,
+        "sha256": "23a339e4c45ad92f465e947a05205d30031eec11f174a94a347ab00fae6f7fa1",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_BLIND_RELEVANCE_PILOT_REPORT.md",
+        "bytes": 827,
+        "sha256": "22ddefa1d428441152aa2fd2019acd6f953009836bcecc05dc320dcd6a18afb1",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_BRANCH_DECISION_BRIEF.md",
+        "bytes": 2051,
+        "sha256": "09a9cbd20b383ecc0f5ce95a6bc6fac20d9fafb35d9abd77d5421085a96793c1",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_BRANCH_DECISION_BRIEF_CHECK.md",
+        "bytes": 716,
+        "sha256": "f4f7bfa5a2077864a55ae1e2400d73cad092b18bded486f1cbafb10504e7153a",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_BRANCH_DECISION_BRIEF_DECISION.md",
+        "bytes": 835,
+        "sha256": "e7120c586114ac369e4851254329ecaeb597aad1e9d6f7086c9fcd40f8d8b122",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_COMMIT_READINESS_CHECK.md",
+        "bytes": 989,
+        "sha256": "62b637064ce9af66194ff7f6d1a7077a7ece23a8daaf79bf56c87a8b8ac5f467",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_COMMIT_READINESS_DECISION.md",
+        "bytes": 1034,
+        "sha256": "9e09a4b813d6e4ffe735ae0e18cc423a460dc078cdab557ee614546575c9c26a",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_COMMIT_READINESS_PACKET.md",
+        "bytes": 2070,
+        "sha256": "d44411b10a6905c5225721b35494317e10db1cd9ff5442dbd3bb6311b34bf8b5",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_CONTEXT_PACK_CANDIDATE_CHECK.md",
+        "bytes": 783,
+        "sha256": "e857baec980c724fbc8776d7d6520c2ea76858a6a36453f20aa4f91feded2fd1",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_CONTEXT_PACK_CANDIDATE_DECISION.md",
+        "bytes": 2451,
+        "sha256": "98ea557f5d7a85bd0879d6db5f3d240f31b3a7fe562b55b5306419ce2b9a27d0",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_CONTRACT_TEST_DECISION.md",
+        "bytes": 2736,
+        "sha256": "bccbe9144a8a7c0a0568111bde50095ab9ee20a7af89f2cfba6c882bd2e1d106",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_EVIDENCE_ENVELOPE_CANDIDATE_CHECK.md",
+        "bytes": 930,
+        "sha256": "7b8460c77db542963b7b6f6c1d350d6c73856d70593bb4ef64a2a26c362b2065",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_EVIDENCE_ENVELOPE_CANDIDATE_DECISION.md",
+        "bytes": 2984,
+        "sha256": "b9ea8e025e125ef246ef7d386818cf7b160dc452017ec732f62dd3a60646dddb",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_EVIDENCE_SUPPORT_CHECK_CANDIDATE_CHECK.md",
+        "bytes": 1055,
+        "sha256": "ceffac32721db89ca858e8e7fb486d181a5f30f38b0e806d7024906abf2c8300",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_EVIDENCE_SUPPORT_CHECK_CANDIDATE_DECISION.md",
+        "bytes": 3551,
+        "sha256": "de5c2b191584b2cd76f0e88531fbe200418ce1f935091a1b79099e9f23924520",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_EXTERNAL_BLIND_QUERY_SET_KIT.md",
+        "bytes": 2434,
+        "sha256": "43e2a6be7c8b1805b054c83134b3c93ff66a2517f7a544a2f012c02d390628f9",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_EXTERNAL_BLIND_QUERY_SET_KIT_CHECK.md",
+        "bytes": 1047,
+        "sha256": "9a80d4d7c3469360b58036c113228b091d1004f60c25812f3ee2c10d2ffd70c4",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_EXTERNAL_RELEVANCE_JUDGMENT_KIT.md",
+        "bytes": 2129,
+        "sha256": "e8b143d8af8681735d622b0a1fb2d5ca0bd3829278c81f1be0e9bb56e4cb3e4e",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_EXTERNAL_RELEVANCE_JUDGMENT_KIT_CHECK.md",
+        "bytes": 1022,
+        "sha256": "b48a91918f9fd8e7bd1a6bda57c5ab177a6814ef564ee766e42dfa796e25673a",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_EXTERNAL_REVIEW_DECISION.md",
+        "bytes": 1977,
+        "sha256": "29772d0bc3922dfc50d8f69c266e797129aa987ae0896638690907be45eafda4",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_EXTERNAL_REVIEW_RESULT.md",
+        "bytes": 3647,
+        "sha256": "a5c816ead7ba1df326dfd45394dd7d5ecd8ecc6a49d3448393efd5ab427a9a71",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_EXTERNAL_REVIEW_RESULT_CHECK.md",
+        "bytes": 764,
+        "sha256": "545dd30cf710189e4970687338d481d26cc42f73219e6de2b726d5a37a22a5bb",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_EXTERNAL_VALIDATION_NEXT_STEPS.md",
+        "bytes": 5044,
+        "sha256": "54174c934f0e014a8bb4d7cc1b2113c0e576299d0d0d1cb1607eaeb72e777043",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_FROZEN_CORPUS_MANIFEST.md",
+        "bytes": 1040,
+        "sha256": "d9b3bf9ff358d6890969e18a9510d8f9837fa8f7bfffc679db154aa346dfa5b4",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_FROZEN_CORPUS_MANIFEST_CHECK.md",
+        "bytes": 555,
+        "sha256": "37cd3a07cefeb378b2930953c8e4c82123170b6ef0a5558081dbbdeb3975c690",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_FROZEN_RERUN_V2_CHECK.md",
+        "bytes": 725,
+        "sha256": "70bf7070675841999e16887136fd4794aa5bd3f2e72956921849995f2643e9ec",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_FROZEN_RERUN_V2_REPORT.md",
+        "bytes": 1105,
+        "sha256": "e80062ce84095db6f34428bd3402c99c56d4a8906717d46519cc51b2bf098d09",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_HOLDOUT_ITERATION_COMPARISON.md",
+        "bytes": 3046,
+        "sha256": "1f8f152fde6b2550e2dd178fd235657eb1ee1094ef181002838efb9f5d8e193f",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_HOLDOUT_PRESSURE_REPORT.md",
+        "bytes": 4153,
+        "sha256": "e040315c4b34449cc295e89e456525613488faf5204761959e31dc402a6cca06",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_HOLDOUT_SKELETON_ITERATION_COMPARISON.md",
+        "bytes": 2549,
+        "sha256": "b0d3c93a70e3029dc69b4d735a8a8dbdc8cc96ce53a8ada9b8d1b75bcc7ba202",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_HOLDOUT_V11_ITERATION_COMPARISON.md",
+        "bytes": 2787,
+        "sha256": "a3401d1d1c76282f28acc559e34dfdae4b9a95c6449236eed5d2ba6b7b1ef402",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_INTEGRATION_READINESS_CHECK.md",
+        "bytes": 1127,
+        "sha256": "51f7df5c035f950404905531084f5a19d3c69b95fc175fea6aea52451de4277b",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_INTEGRATION_READINESS_DECISION.md",
+        "bytes": 2513,
+        "sha256": "9eeebc3356d10177df257fc24b8d1b89d39053c5ee12d49b32b6976dd05054b5",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_INTEGRATION_READINESS_PACKAGE.md",
+        "bytes": 8416,
+        "sha256": "015b50e0c842193b1d468dc7d91f12c7c2ceab7a7f8cd01ed9849d4e6aab1cb6",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_INTERNAL_RELEVANCE_JUDGMENT_REPORT.md",
+        "bytes": 921,
+        "sha256": "245b9bb5ede860bcbcefcfdcf1e408571cfe960c36aa6b6ada97ae9c14bd35d3",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_ITERATION_COMPARISON.md",
+        "bytes": 2833,
+        "sha256": "18e2fc130ab15862efa00c71947cfce955236bf87a02fea7177a2cbdf9b884cf",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_KEEP_STOP_SYNTHESIS_CHECK.md",
+        "bytes": 1338,
+        "sha256": "9255986329e9fbaa260e22df566fc177ff0b2e38a6cefe015df3ba836ac8bbf4",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_KEEP_STOP_SYNTHESIS_DECISION.md",
+        "bytes": 1290,
+        "sha256": "b064f4163d46ae3b013d74420528d08be6f36250be4d5af7271df0cfb6c82601",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_KEEP_STOP_SYNTHESIS_PACKET.md",
+        "bytes": 3403,
+        "sha256": "0e62713f9aabff833a9ea1a1c301cdcb865016f36b06f40e5f144beb169abaae",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_MAINLINE_READINESS_CHECK.md",
+        "bytes": 668,
+        "sha256": "1a0b5d4ed5cd5231e2785036bafb2f6f6fe21fcfa788bb67097e32cc36dc5c2c",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_MAINLINE_READINESS_DECISION.md",
+        "bytes": 2173,
+        "sha256": "941caa5cf808f79b0fa797a6b05ecfba8fa03ba125a30fa9643fcd4ce373e738",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_MAINLINE_READINESS_PACKET.md",
+        "bytes": 7373,
+        "sha256": "75c0b6ba98151791278771c245c2bf4d8036e45e4509e8eb2eca075d1af7030a",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_METRIC_DICTIONARY.md",
+        "bytes": 3167,
+        "sha256": "2be2e6093841ac718fa4b8cd9ac691b32cfb3890e102c485b16b53a2c3f5a106",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_MINIMAL_DOC_PATCH_CHECK.md",
+        "bytes": 821,
+        "sha256": "f28a5f94fd8637b38ba2ef8293d1c6967225359e30bea518ed9396519a31d7d3",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_MINIMAL_DOC_PATCH_DECISION.md",
+        "bytes": 2283,
+        "sha256": "8a632479a77558cccec32fc879b8aa60397af6d8d533ce085fed970d51c0c3cc",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_NEXT_ACTION_GATE_CHECK.md",
+        "bytes": 905,
+        "sha256": "a6a32bcf7fc13f54bb3dc743cf2e7fdeb25128be8e7d2354b33c45eed2b17297",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_NEXT_ACTION_GATE_DECISION.md",
+        "bytes": 1013,
+        "sha256": "7994c1a8564a2d09a572d40c40dc80ee01d89eb1ca4e3188d3d63cbe2a8821e7",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_NEXT_ACTION_GATE_PACKET.md",
+        "bytes": 2034,
+        "sha256": "2298e352e52567a489187abee623fc46875d11a8ab31c60800be0c950c801722",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_NEXT_STEP_SPECS_CHECK.md",
+        "bytes": 463,
+        "sha256": "aafd8fa9ccd5e073ec4a8c51afd804a3206790f9eaecfbf89eb3cacd6725a3aa",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_ORIGINAL_YUXI_RUNTIME_FEASIBILITY.md",
+        "bytes": 1509,
+        "sha256": "8dfaa4a0c73b56cd35a1f4bc670eb62d4125e1795f563b5efaa6da2cb93e2b16",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_P0_P1_SUPPLEMENTAL_PRESSURE_REPORT.md",
+        "bytes": 7947,
+        "sha256": "2215f9fe4155200b6e381127720b2be6b42eabd7ec9c499be9990271136de842",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_P0_QUERY_LEVEL_REPLAY_CHECK.md",
+        "bytes": 632,
+        "sha256": "b2061f62c72b93b1a7aee7b4f07b1e2d4d3b957ebace34e8e34b5a5a9ad585ee",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_P0_QUERY_LEVEL_REPLAY_REPORT.md",
+        "bytes": 2783,
+        "sha256": "24b63aa4fe908a019cb40007cbb96f7b762a76a4cfd4d9df4581339fcee6014f",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_P1_ADVERSARIAL_AUDIT_CHECK.md",
+        "bytes": 337,
+        "sha256": "00e3aa71370218a59672b3e890be71d16807d5fc720e6fabba24ea18964599b4",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_P1_ADVERSARIAL_AUDIT_REPORT.md",
+        "bytes": 2491,
+        "sha256": "d5a11a6d00af9aa17454a99584f1e6b4176299df049d1c716ca33023fe16d3cf",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_P1_PROMOTION_GATE_CALIBRATION_CHECK.md",
+        "bytes": 380,
+        "sha256": "731d05e481bbe482f685f7a5e8a6f7686363d9b46e1ab5510813a1917fa567b9",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_P1_PROMOTION_GATE_CALIBRATION_REPORT.md",
+        "bytes": 974,
+        "sha256": "41cc05131c9a6e50b571aeb1942de16cbcfe9f123e858880e74b83c7d457aebd",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_PRESSURE_REPORT.md",
+        "bytes": 4466,
+        "sha256": "69fd82474c9df95d6f6c2aa54364e0550f03e6897bae45afea5595ba606834cc",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_PROMOTION_GATE_CHECK.md",
+        "bytes": 1275,
+        "sha256": "034170ae114c65df67e228d4c2afa37a8c2e84b6513dc7bb8022d62f3e8e4548",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_PROMOTION_GATE_DECISION.md",
+        "bytes": 3931,
+        "sha256": "f37a7257f28d87e65474acb773ee900b3af8521671408a2f511b60fea9cb94e3",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_PRO_REVIEW_PROMPT.md",
+        "bytes": 6377,
+        "sha256": "73186112be2f97a0543deb7170272aada085019cf2e293e12fd0adfadc6b97f0",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_PRO_REVIEW_PROMPT_CHECK.md",
+        "bytes": 722,
+        "sha256": "888fa063f2b838f0de16a538cbe97e19d7a78e75ae2c33349208d0505ffe3625",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_PRO_REVIEW_PROMPT_DECISION.md",
+        "bytes": 1892,
+        "sha256": "12dbb392f813267f0677f389fe0973a5b55370dbb846cfd0cc07997af815d4ab",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_READ_ONLY_ANSWER_LOOP_PILOT_SPEC.md",
+        "bytes": 3134,
+        "sha256": "ddcfc4f2f784e2cce0565b4a6bd730fd5fe360ab68630377b2cc27aae97baeca",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_REFRESHED_SUPPORT_CHECK_CANDIDATE_CHECK.md",
+        "bytes": 1267,
+        "sha256": "b87b9d0cb0e7fb82c1a353ddd05934b6f06964aa544454c7b2e56f97058c9bf9",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_REFRESHED_SUPPORT_CHECK_CANDIDATE_DECISION.md",
+        "bytes": 3867,
+        "sha256": "94bacaab4b5a4265c01106f1a06c00c6a881778fe8c641cbaccdca43faf81e00",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_REVIEW_QUEUE_PACKET_CHECK.md",
+        "bytes": 1191,
+        "sha256": "850b2f8ec606858d2b6d73a085a762fdaafd534a695d0b35cfce87692517f22e",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_REVIEW_QUEUE_PACKET_DECISION.md",
+        "bytes": 3849,
+        "sha256": "4ec8b0b8b32179d893cc2e3da85d80918e85e9aeb593f788cf21547cc82d7e98",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_RUNTIME_FEASIBILITY_CHECK.md",
+        "bytes": 657,
+        "sha256": "ed8cd91323bd01e7f5f80d530be4e61070a9ce7e92c5f1d1d0455d897d2d33d2",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_RUNTIME_FEASIBILITY_DECISION.md",
+        "bytes": 2023,
+        "sha256": "90a4ae192a7f2bfa4ce5562705960dfeabfc1f051c04b5b6398ce23eff4896cd",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_RUNTIME_FEASIBILITY_REPORT.md",
+        "bytes": 3055,
+        "sha256": "1fd885ab101ab8df1e4f8e314924ad70355d2c13d894eff4f266f57bec779991",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_SIMULATED_REVIEWER_OUTCOME_CHECK.md",
+        "bytes": 1279,
+        "sha256": "3586b387004731eebb7de9e9a4daea251fe4bca77f65ced325b76cd881e4c458",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_SIMULATED_REVIEWER_OUTCOME_DECISION.md",
+        "bytes": 3976,
+        "sha256": "bb0061d34cb896b9ac20e8aed0a13dd0d2f05ebf052ca86ec274676af6e2601b",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_SKELETON_ITERATION_COMPARISON.md",
+        "bytes": 2549,
+        "sha256": "24bf2204531e5a164bb851c362433a9409d85b0dab174d543351d46789ce1d1f",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_SKELETON_VS_V11_DECISION.md",
+        "bytes": 3484,
+        "sha256": "29f5b557696e3c50322e0cd434741e4cdd23038e41b99d9f67bb866550029c11",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_SOURCE_REFRESH_CANDIDATE_CHECK.md",
+        "bytes": 1058,
+        "sha256": "f918bab9fa875320b14d24f3d16dfda1b77d8cfdc77b344c4bb8bc458efee7ae",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_SOURCE_REFRESH_CANDIDATE_DECISION.md",
+        "bytes": 3722,
+        "sha256": "06a189c9182fc75779f1ffaac411ad2b28f8d2d78b9f86a618d36c485d4c6383",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_SUPPLEMENTAL_COMPLETION_AUDIT.md",
+        "bytes": 5537,
+        "sha256": "56eda476d5c0b5df33facd82386260c412827198f78f7676a1fe1bd4aff58720",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_SUPPLEMENTAL_PRO_PACKAGE_CHECK.md",
+        "bytes": 363,
+        "sha256": "027de82f48ceb2db65025fc31b6cbe22a69502558335a6431a75c41e4732b563",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_TOP11_20_ITEM_RECEIPTS_CHECK.md",
+        "bytes": 621,
+        "sha256": "7957172fe15469388aceb612a5143385d7d4a959ca8316bf5c85c6a45199a84d",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_TOP11_20_ITEM_RECEIPTS_REPORT.md",
+        "bytes": 1154,
+        "sha256": "8c27481730346190787705347a0d9a66e3b2487d23a0c4cc47f36e837c03ef01",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_V11_ITERATION_COMPARISON.md",
+        "bytes": 2525,
+        "sha256": "fa4f95fe9156cce32dfdc14ed66a32f54697f5994aeac23dbfe68bd385d2a1a2",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_V11_VS_V1_DECISION.md",
+        "bytes": 2683,
+        "sha256": "8cc4ee4c17a4e58a7ba9bf7b282f016a3af2753ec685884b55253f2523c0352b",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PHASE_B_V1_VS_LOCKED_BASELINE.md",
+        "bytes": 2983,
+        "sha256": "72bb30a137c2c312e0241278b1f4a5fcbd380ee25a1352e66988a32a62963ee2",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PRO_REVIEW_REQUEST.md",
+        "bytes": 2821,
+        "sha256": "5c16f8d41097f04070eab1396185bb589089b0a19311abfcf1b5249d7ec3b5a7",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/PRO_SUPPLEMENTAL_REVIEW_REQUEST.md",
+        "bytes": 10544,
+        "sha256": "560e5b1e178da1e50029ecb383e6c550ba715c1b7296479954020a4c94b80c1c",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/external/YUXI_LOCAL_REPO_EVIDENCE.md",
+        "bytes": 1891,
+        "sha256": "ff17a4e910200917c90bdbd27c3b608a823627bace9cf601913df597993736ff",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/external/YUXI_RUNTIME_FEASIBILITY_EVIDENCE.md",
+        "bytes": 2518,
+        "sha256": "5e1aebbaebbc451e5f78677739acee0389bb1cfbe43e2d5f3a0693de0bb4cd0d",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/findings.md",
+        "bytes": 45671,
+        "sha256": "cb3d54d022809011053be06f5443a31ccfeba8b299ecc0d19eed2ef1e92ae858",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-package/PACKAGE_MANIFEST.json",
+        "bytes": 2679,
+        "sha256": "d204448dd5ba2e7bb5d6d838322cd6d70d68315c6f2df62d0327c9e3bdc603b4",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-package/PHASE_B_ADAPTER_SPEC.md",
+        "bytes": 14917,
+        "sha256": "7d206268b2dd114caebd818cf1382470d68aca0238b550da435990c07a958c52",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-package/PHASE_B_BRANCH_DECISION_BRIEF.md",
+        "bytes": 2051,
+        "sha256": "09a9cbd20b383ecc0f5ce95a6bc6fac20d9fafb35d9abd77d5421085a96793c1",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-package/PHASE_B_BRANCH_DECISION_BRIEF_DECISION.md",
+        "bytes": 835,
+        "sha256": "e7120c586114ac369e4851254329ecaeb597aad1e9d6f7086c9fcd40f8d8b122",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-package/PHASE_B_HOLDOUT_PRESSURE_REPORT.md",
+        "bytes": 4153,
+        "sha256": "e040315c4b34449cc295e89e456525613488faf5204761959e31dc402a6cca06",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-package/PHASE_B_KEEP_STOP_SYNTHESIS_PACKET.md",
+        "bytes": 3403,
+        "sha256": "0e62713f9aabff833a9ea1a1c301cdcb865016f36b06f40e5f144beb169abaae",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-package/PHASE_B_PRESSURE_REPORT.md",
+        "bytes": 4466,
+        "sha256": "69fd82474c9df95d6f6c2aa54364e0550f03e6897bae45afea5595ba606834cc",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-package/PHASE_B_PRE_COMMIT_MANIFEST_DECISION.md",
+        "bytes": 799,
+        "sha256": "a6c30802ee20144bf5da02e04564bc566ddbd7c16aa5b2e4155cc4e14dd9041d",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-package/PHASE_B_PROMOTION_GATE_DECISION.md",
+        "bytes": 3931,
+        "sha256": "f37a7257f28d87e65474acb773ee900b3af8521671408a2f511b60fea9cb94e3",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-package/PRO_REVIEW_REQUEST.md",
+        "bytes": 2821,
+        "sha256": "5c16f8d41097f04070eab1396185bb589089b0a19311abfcf1b5249d7ec3b5a7",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-package/results/phase_b_branch_decision_brief.json",
+        "bytes": 2553,
+        "sha256": "4b5e8a19c8f010fdd865c41f10305c28f8a3b610160e01d75a9523daf5d95f7f",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-package/results/phase_b_holdout_summary.csv",
+        "bytes": 1859,
+        "sha256": "4415524567c9ab9b11cb402e11e4ffa6392eca3ec1e0bc55b37279ce6a580e03",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-package/results/phase_b_keep_stop_synthesis.json",
+        "bytes": 13359,
+        "sha256": "0d275497bcfdfbf3bac4813171d8f77e64a52809c1e1096c3d9472383f6a68b6",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-package/results/phase_b_promotion_gate_evaluation_summary.json",
+        "bytes": 1202,
+        "sha256": "9ea365b635878931d9f35b8b264ebdc45d3d2e703e444b005dfb72a4392843e0",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-package/results/phase_b_summary.csv",
+        "bytes": 1865,
+        "sha256": "1d2db81f3832d1a21ba31e65bca8973aac0e03ec2b258ee0151eef3bbd469d43",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PACKAGE_MANIFEST.json",
+        "bytes": 22742,
+        "sha256": "0bbbe85fd7e9452bb79de705d306b5434d58ca55a5c30e0b142a6572dac816d5",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_AGENT_BLIND_AUDIT_CHECK.md",
+        "bytes": 332,
+        "sha256": "b66155560b04f161be7aff93b9167f07d75e5acf944419b27c86f1f32f168b34",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_AGENT_BLIND_AUDIT_REPORT.md",
+        "bytes": 2711,
+        "sha256": "661b3e882f969ac7b3b585d923e48222cd884fa7c8167094babf4a6d66c83636",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_BLIND_RELEVANCE_CHECK.md",
+        "bytes": 736,
+        "sha256": "3083a89acd1a25e7c5d84cec58fccba474abdd417ac019d3c0e2fff8183a4bc0",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_BLIND_RELEVANCE_JUDGMENT_INSTRUCTIONS.md",
+        "bytes": 1044,
+        "sha256": "23a339e4c45ad92f465e947a05205d30031eec11f174a94a347ab00fae6f7fa1",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_BLIND_RELEVANCE_PILOT_REPORT.md",
+        "bytes": 827,
+        "sha256": "22ddefa1d428441152aa2fd2019acd6f953009836bcecc05dc320dcd6a18afb1",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_EXTERNAL_BLIND_QUERY_SET_KIT.md",
+        "bytes": 2434,
+        "sha256": "43e2a6be7c8b1805b054c83134b3c93ff66a2517f7a544a2f012c02d390628f9",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_EXTERNAL_BLIND_QUERY_SET_KIT_CHECK.md",
+        "bytes": 1047,
+        "sha256": "9a80d4d7c3469360b58036c113228b091d1004f60c25812f3ee2c10d2ffd70c4",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_EXTERNAL_RELEVANCE_JUDGMENT_KIT.md",
+        "bytes": 2129,
+        "sha256": "e8b143d8af8681735d622b0a1fb2d5ca0bd3829278c81f1be0e9bb56e4cb3e4e",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_EXTERNAL_RELEVANCE_JUDGMENT_KIT_CHECK.md",
+        "bytes": 1022,
+        "sha256": "b48a91918f9fd8e7bd1a6bda57c5ab177a6814ef564ee766e42dfa796e25673a",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_EXTERNAL_VALIDATION_NEXT_STEPS.md",
+        "bytes": 5044,
+        "sha256": "54174c934f0e014a8bb4d7cc1b2113c0e576299d0d0d1cb1607eaeb72e777043",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_FROZEN_CORPUS_MANIFEST.md",
+        "bytes": 1040,
+        "sha256": "d9b3bf9ff358d6890969e18a9510d8f9837fa8f7bfffc679db154aa346dfa5b4",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_FROZEN_CORPUS_MANIFEST_CHECK.md",
+        "bytes": 555,
+        "sha256": "37cd3a07cefeb378b2930953c8e4c82123170b6ef0a5558081dbbdeb3975c690",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_FROZEN_RERUN_V2_CHECK.md",
+        "bytes": 725,
+        "sha256": "70bf7070675841999e16887136fd4794aa5bd3f2e72956921849995f2643e9ec",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_FROZEN_RERUN_V2_REPORT.md",
+        "bytes": 1105,
+        "sha256": "e80062ce84095db6f34428bd3402c99c56d4a8906717d46519cc51b2bf098d09",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_INTERNAL_RELEVANCE_JUDGMENT_REPORT.md",
+        "bytes": 921,
+        "sha256": "245b9bb5ede860bcbcefcfdcf1e408571cfe960c36aa6b6ada97ae9c14bd35d3",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_METRIC_DICTIONARY.md",
+        "bytes": 3167,
+        "sha256": "2be2e6093841ac718fa4b8cd9ac691b32cfb3890e102c485b16b53a2c3f5a106",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_NEXT_STEP_SPECS_CHECK.md",
+        "bytes": 463,
+        "sha256": "aafd8fa9ccd5e073ec4a8c51afd804a3206790f9eaecfbf89eb3cacd6725a3aa",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_ORIGINAL_YUXI_RUNTIME_FEASIBILITY.md",
+        "bytes": 1509,
+        "sha256": "8dfaa4a0c73b56cd35a1f4bc670eb62d4125e1795f563b5efaa6da2cb93e2b16",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_P0_P1_SUPPLEMENTAL_PRESSURE_REPORT.md",
+        "bytes": 7947,
+        "sha256": "2215f9fe4155200b6e381127720b2be6b42eabd7ec9c499be9990271136de842",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_P0_QUERY_LEVEL_REPLAY_CHECK.md",
+        "bytes": 632,
+        "sha256": "b2061f62c72b93b1a7aee7b4f07b1e2d4d3b957ebace34e8e34b5a5a9ad585ee",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_P0_QUERY_LEVEL_REPLAY_REPORT.md",
+        "bytes": 2783,
+        "sha256": "24b63aa4fe908a019cb40007cbb96f7b762a76a4cfd4d9df4581339fcee6014f",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_P1_ADVERSARIAL_AUDIT_CHECK.md",
+        "bytes": 337,
+        "sha256": "00e3aa71370218a59672b3e890be71d16807d5fc720e6fabba24ea18964599b4",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_P1_ADVERSARIAL_AUDIT_REPORT.md",
+        "bytes": 2491,
+        "sha256": "d5a11a6d00af9aa17454a99584f1e6b4176299df049d1c716ca33023fe16d3cf",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_P1_PROMOTION_GATE_CALIBRATION_CHECK.md",
+        "bytes": 380,
+        "sha256": "731d05e481bbe482f685f7a5e8a6f7686363d9b46e1ab5510813a1917fa567b9",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_P1_PROMOTION_GATE_CALIBRATION_REPORT.md",
+        "bytes": 974,
+        "sha256": "41cc05131c9a6e50b571aeb1942de16cbcfe9f123e858880e74b83c7d457aebd",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_READ_ONLY_ANSWER_LOOP_PILOT_SPEC.md",
+        "bytes": 3134,
+        "sha256": "ddcfc4f2f784e2cce0565b4a6bd730fd5fe360ab68630377b2cc27aae97baeca",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_SUPPLEMENTAL_COMPLETION_AUDIT.md",
+        "bytes": 5537,
+        "sha256": "56eda476d5c0b5df33facd82386260c412827198f78f7676a1fe1bd4aff58720",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_TOP11_20_ITEM_RECEIPTS_CHECK.md",
+        "bytes": 621,
+        "sha256": "7957172fe15469388aceb612a5143385d7d4a959ca8316bf5c85c6a45199a84d",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PHASE_B_TOP11_20_ITEM_RECEIPTS_REPORT.md",
+        "bytes": 1154,
+        "sha256": "8c27481730346190787705347a0d9a66e3b2487d23a0c4cc47f36e837c03ef01",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/PRO_SUPPLEMENTAL_REVIEW_REQUEST.md",
+        "bytes": 10544,
+        "sha256": "560e5b1e178da1e50029ecb383e6c550ba715c1b7296479954020a4c94b80c1c",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/findings.md",
+        "bytes": 45671,
+        "sha256": "cb3d54d022809011053be06f5443a31ccfeba8b299ecc0d19eed2ef1e92ae858",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/progress.md",
+        "bytes": 42731,
+        "sha256": "1ec79e1a226b11c1cd6164ae71526b5b7d06a63d5aba6ab1a042f1dd84db4756",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/queries_phase_b.jsonl",
+        "bytes": 8740,
+        "sha256": "dd18af0c0e03b77626c095116fde79c6e8c4b4ca6e14d01dbece2b51f3014d8c",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/queries_phase_b_adversarial.jsonl",
+        "bytes": 8682,
+        "sha256": "aecfe8faf626842121c23f0a8a6bdf9e035a86add2679bee87d18f5377a72e2b",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/queries_phase_b_agent_blind.jsonl",
+        "bytes": 9847,
+        "sha256": "b72ae271b46bd173d92e6c9ac5fdc35a903c918decc1b7665563f30a8269090c",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/queries_phase_b_blind_relevance.jsonl",
+        "bytes": 21578,
+        "sha256": "43520d99020c88b97aa682cddddd2175a7d607e022c6cda085f59230d48ae8d0",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/queries_phase_b_external_blind_template.jsonl",
+        "bytes": 2280,
+        "sha256": "023a6b5d72c377930615202853af249f9e7743e862b8123341a20732c5881d70",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/queries_phase_b_holdout.jsonl",
+        "bytes": 4448,
+        "sha256": "2c55a45a524e833e500d110b4741d7a0f5ebf413fcc352ce0227f9dae293b0bf",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_adversarial_query_metrics.csv",
+        "bytes": 90735,
+        "sha256": "b7afc3a8f168ae395c5ebb4961f02e8ff2b1bc959ab00ed4596d6d4254fae202",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_adversarial_summary.csv",
+        "bytes": 1865,
+        "sha256": "6937a970fcefe5c8a30473f6bbc768c80b51e60c690731f1acca3f07b5cea57d",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_adversarial_top_results.csv",
+        "bytes": 2894829,
+        "sha256": "9dc5110c37ef15ddbb24bd2728c959bb0b48029cbb05a16f13567ad3a1401c01",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_agent_blind_audit.json",
+        "bytes": 1665,
+        "sha256": "59d9d7583f6dddfb3a30da7148630fd485b02d5425f287f41422d1e28b2d8cc9",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_agent_blind_audit_check.json",
+        "bytes": 1901,
+        "sha256": "a8fba238fd177eaa81e9af224a28817feb3e36d6808077076d323ecdb94dfc0b",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_agent_blind_clean_vaks_only_query_metrics.csv",
+        "bytes": 12997,
+        "sha256": "824477b8384decaf95d18bc124b1d56f23a9afcd57a83830cde99755005c1d71",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_agent_blind_clean_vaks_only_summary.csv",
+        "bytes": 518,
+        "sha256": "ffff07cd45ef6a07a28e293604d4d67837c404461d27085b6b8dc8303e8dd8d4",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_agent_blind_combined_summary.csv",
+        "bytes": 2307,
+        "sha256": "d18402dcb1f7c2f2c99ddc24bdad94f239a11defafae9bbbf7ad8613924fe2fe",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_agent_blind_query_metrics.csv",
+        "bytes": 84910,
+        "sha256": "6e52e2e91cbe6da4a7195bae8bbcf598d415aef199d6acdc063aebe17872185e",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_agent_blind_summary.csv",
+        "bytes": 1865,
+        "sha256": "6c1922f2306027d3c412a29a1f62695d3a5a3aabc84f894abc92fc9f51ed297d",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_agent_blind_top_results.csv",
+        "bytes": 2837907,
+        "sha256": "ffdf8111af215e75058112542e08f6a4b230d7d58ecaba5696b5eb680e9b7196",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_blind_relevance_check.json",
+        "bytes": 1245,
+        "sha256": "e51f1d77133072640b4403e4f15dd0c867cb21e64b92ba7f8f9c0c972445a73e",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_blind_relevance_external_judgment_mapping.csv",
+        "bytes": 158117,
+        "sha256": "600d3fe0e0fee6aff42d4bc4f2e8749e5e9260875cd48a84afae0894c41ebece",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_blind_relevance_external_judgment_template.csv",
+        "bytes": 1013271,
+        "sha256": "8fed41521838d77210386879d3ab75a7c8721c7991f44ef3eb9535df20ec1384",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_blind_relevance_judged_summary.csv",
+        "bytes": 642,
+        "sha256": "8f0d6983ac04c7561faa7dea8516cef5911bc9fc9ae1609e7503480e249a1a3d",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_blind_relevance_judgment_packet.csv",
+        "bytes": 1125540,
+        "sha256": "6fc36fc5052ca8fcf3f18a825fc5c0e6402f40212400898af79bc5604ca4ed11",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_blind_relevance_judgments.csv",
+        "bytes": 1285397,
+        "sha256": "888b470b5c20c625c49d8f86405c46bdf42091b413e7b348851a0e0b46ae59e2",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_blind_relevance_manifest.json",
+        "bytes": 1820,
+        "sha256": "4e0623c3d339254ffe2d81c45453ee43665fe83b22e38d8c2f12e77eae011ef8",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_blind_relevance_query_manifest.csv",
+        "bytes": 23184,
+        "sha256": "8e09260c378b448b7e5efd7ce82d26f0386c00c17118e972dc1cc7cf315fca9c",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_blind_relevance_top20_items.csv",
+        "bytes": 2286300,
+        "sha256": "22419bcb0ac856a88aca071dcc9d3fbe4a63221b24480e6e5a206d6433f1c1a8",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_external_blind_query_author_manifest_template.json",
+        "bytes": 407,
+        "sha256": "2c4ed32eb20f7fdd2d5aa464aa36467fa50f7f9f818ccee46f79c085b61a1591",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_external_blind_query_set_kit.json",
+        "bytes": 1120,
+        "sha256": "0448163b4367ab8bed917d32f578e0c184a842f02558d60f06b60c6de360e639",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_external_blind_query_set_kit_check.json",
+        "bytes": 1064,
+        "sha256": "3f6d3d7d9e798035eb4de6cfc51d649c5e38f62930b079c69c0734edb0ce1a11",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_external_relevance_judgment_kit.json",
+        "bytes": 1007,
+        "sha256": "9b90c1803751ec0c7c5f85cea819e4ae7d750590fa18fbb32fe307353edcd5db",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_external_relevance_judgment_kit_check.json",
+        "bytes": 1551,
+        "sha256": "6ac062ddb859e7ee684d138e0592e0d4881564d1521493475d629672b78cc9ef",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_frozen_corpus_manifest.csv",
+        "bytes": 1552890,
+        "sha256": "9735117f56c1a3d10e61982e5936b56cae1fb81122a2ace436522f6ed70595e8",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_frozen_corpus_manifest.json",
+        "bytes": 2517782,
+        "sha256": "c6cbbd70bf973630262cf8ecf28d3f1345a4a57054a1d044b39336d921a9ae68",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_frozen_corpus_manifest_check.json",
+        "bytes": 693,
+        "sha256": "0a4e7a11faeb9456d3c60a7e4ba108a16c135880143fb6fa3375ff9030b35a3d",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_frozen_rerun_v2_check.json",
+        "bytes": 2579,
+        "sha256": "88df18cd518db4eb8cd94f8d8569da3891b3a32c3bd7466188e9600a0c3e0791",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_frozen_rerun_v2_corpus_manifest.csv",
+        "bytes": 1624782,
+        "sha256": "a7c0db84a298915d352a8d10c9e993e24dac908f35dcc35d3b156fbf746869c7",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_frozen_rerun_v2_manifest.json",
+        "bytes": 2194,
+        "sha256": "658b0168489afb0445ffcef71d9585d530e233248e7eb334cc3f80ca2095811c",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_frozen_rerun_v2_query_manifest.csv",
+        "bytes": 15689,
+        "sha256": "46c2f7083ae9b312744fd287afc293f7ae097ea734147f79ba69ab9f6c511049",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_frozen_rerun_v2_query_metrics.csv",
+        "bytes": 238930,
+        "sha256": "3c28ff2f34beb16cb0d208d21dbe037a0661a061dcce567e7af64dc8326f0bee",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_frozen_rerun_v2_summary.csv",
+        "bytes": 5582,
+        "sha256": "de58b419f25377e470676885fa14822968eea8336db2189fb140cf323ed9d38e",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_frozen_rerun_v2_top11_20_receipts.csv",
+        "bytes": 6007048,
+        "sha256": "9dac1ba8db32512ba3752687c77389760c33ae7652c9aa9c99fe50f6c7716f7c",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_frozen_rerun_v2_top1_10_replay.csv",
+        "bytes": 6057177,
+        "sha256": "695dacc309edb35cad8eceb32c9b5cb4cb99027effb4af7589309f448e1adaa9",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_frozen_rerun_v2_top20_items.csv",
+        "bytes": 12063685,
+        "sha256": "eb6806910d3cb300fd8cd21b7cfeb6851502746ec7c467b6ee765824f5e6dfe6",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_metric_dictionary.json",
+        "bytes": 4458,
+        "sha256": "8f36f213ee3fff1726684f6d85bdc113e8211ba0a4f28bad8aa0e1217322761b",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_next_step_specs_check.json",
+        "bytes": 513,
+        "sha256": "154f081f43141791a9ec275d72f22da70fc5485760118de40258926c4f6034c9",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_p0_clean_vaks_only_query_metrics.csv",
+        "bytes": 19377,
+        "sha256": "e7f1beb99639fe346e864dec21c86e54a42d8cc77fd85973502c2961ecefadf8",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_p0_clean_vaks_only_summary.csv",
+        "bytes": 771,
+        "sha256": "0678f3532598eb8ec27f89c3b0ee3d4ca84037dcf7eb582499d44fd858eab8a6",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_p0_query_level_metrics.csv",
+        "bytes": 163827,
+        "sha256": "4de422594cec3f1efa2f71e4d368265402b5d71b022871b7a904956d8208a780",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_p0_query_level_replay.csv",
+        "bytes": 6613724,
+        "sha256": "2f27bc24de20b799a9fe710613be7e675ebac9074eb478cd5ddbc2a80c679118",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_p0_query_level_replay_check.json",
+        "bytes": 1484,
+        "sha256": "5d253d3f28dc139757dfe82a1ab32b14bd09a37561449c39fedaa716390d8ad0",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_p0_summary.csv",
+        "bytes": 4259,
+        "sha256": "97eefb486530215c711cedf4797814f62f973c91de0a761f53d119e4cb996e6f",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_p1_adversarial_audit.json",
+        "bytes": 1670,
+        "sha256": "7c1ee1c0ea817349fff76f021b849db3d9b37773dc2cb5827ebad89c5dc54dac",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_p1_adversarial_audit_check.json",
+        "bytes": 1909,
+        "sha256": "586ca7bf69229378240b48c6d95ad1ee5669526bd0eaa5a1cf30109b5b481c87",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_p1_adversarial_clean_vaks_only_query_metrics.csv",
+        "bytes": 12744,
+        "sha256": "4df5ed01b1884ee56d2583e4b920a43c1b4c2049190993f8d581afee159735a5",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_p1_adversarial_clean_vaks_only_summary.csv",
+        "bytes": 530,
+        "sha256": "cf26e23e1eecfb8b56ae4b3f92c87e62f253af61f094db1969ae6d24d2cf61fa",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_p1_adversarial_combined_summary.csv",
+        "bytes": 2403,
+        "sha256": "b44ce35f6799fa77d256d4be61094ba0274974dd0ea17880f8ae028284c6476e",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_p1_promotion_gate_calibration_cases.jsonl",
+        "bytes": 13179,
+        "sha256": "11f12c91b7d376bba80a6dc66fff6a6c92df4409b4fcd01ae0121f8f29166d0d",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_p1_promotion_gate_calibration_check.json",
+        "bytes": 910,
+        "sha256": "5dd7d73cd3c910e34f99f872b8fc9fa218f23524f49dfb18eb960243a29b818e",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_p1_promotion_gate_calibration_evaluations.jsonl",
+        "bytes": 17365,
+        "sha256": "65f819f6d38b2cea4225eb41dd7b3fa022e73e16cf600e973e527b2bcb193a3c",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_p1_promotion_gate_calibration_summary.json",
+        "bytes": 726,
+        "sha256": "04556d4dab4276031c367d5c72a2cafc275f8a3911aee3f761b3e9481539a405",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_top11_20_item_receipts.csv",
+        "bytes": 7352159,
+        "sha256": "707f8ce7208b9dfdf00c7f696c912605ad2b079c866e0538c8f472daaa73c3a9",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_top11_20_item_receipts_check.json",
+        "bytes": 983,
+        "sha256": "9269096812b0cb28b93c78eb92c9b33ea1c0442241763426f7035b4a5be55e9a",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_top11_20_item_receipts_summary.csv",
+        "bytes": 1811,
+        "sha256": "250665a1fc511b9161c4e92effe1cee7422ed24f29dcd1aa3018dca9f0221c4c",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/results/phase_b_top11_20_item_receipts_summary.json",
+        "bytes": 9594,
+        "sha256": "3a05a74f46cc0d219cc9fdf1ae05449fe8e8cdec7ed9d0e87caaad09261ea749",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/task_plan.md",
+        "bytes": 14740,
+        "sha256": "5f1f1e90eda166f3a1f30b4d6c35e6aef01dd7fe49effa1bd9d23839552d4b12",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/build_phase_b_agent_blind_audit.py",
+        "bytes": 8379,
+        "sha256": "ac4e36c93f7fc1660ce43821138248b0eb3625f1cb3f84da370f8c11eb2ff54d",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/build_phase_b_blind_relevance_pilot.py",
+        "bytes": 10847,
+        "sha256": "6568776caae780a76e9456acf040e3a2b61a7d9a175780f07f6b41316b96f8a7",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/build_phase_b_external_blind_query_set_kit.py",
+        "bytes": 6685,
+        "sha256": "a6dd91a20eb0553fbe60b05e1403f0282d4980fcd4b5606f72604024ac90e61d",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/build_phase_b_external_relevance_judgment_kit.py",
+        "bytes": 7641,
+        "sha256": "31bd9b3f35821c014559c49723e738583d71f03dcb1333a74da8e3d08429a826",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/build_phase_b_frozen_corpus_manifest.py",
+        "bytes": 5532,
+        "sha256": "866b9c9b6fe0543bf695fdf9fb174759b849f32649e17307eb3468de0f4aa21a",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/build_phase_b_frozen_rerun_v2.py",
+        "bytes": 14153,
+        "sha256": "a60bedf965a5d3b75f8d90fe2525268a69487e3058f86e04e91fcb467fdd6266",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/build_phase_b_internal_relevance_judgments.py",
+        "bytes": 9037,
+        "sha256": "88bc9df887f4cd3993c03291659aa7b8f64788d81a4d93352877bc990278e2b7",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/build_phase_b_p0_query_replay.py",
+        "bytes": 29288,
+        "sha256": "8cc7b3e5b231f95b030222caf531517ee10c22f4458d890a1ce64ad84af99478",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/build_phase_b_p1_adversarial_audit.py",
+        "bytes": 8247,
+        "sha256": "d8a99651a2a145e95c89547480bfbeb39b8f28248651eed8efd0e663906fee32",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/build_phase_b_p1_promotion_gate_calibration.py",
+        "bytes": 11382,
+        "sha256": "350f425a81766115760e732bd1f656fc92d3072f4b139e659e347e446afd357e",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/build_phase_b_supplemental_pro_package.py",
+        "bytes": 8171,
+        "sha256": "6230093efd77817a00ee51b36c64d181c0c37e8cfc95c2d6b8c6d1b73c06e873",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/build_phase_b_top11_20_receipts.py",
+        "bytes": 11032,
+        "sha256": "50a35c68d4f99b848c0b162d86b67a178a4386200b2958c6bb9c5aeffcca587a",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/run_phase_b_pressure.py",
+        "bytes": 67194,
+        "sha256": "29eff8c0fb5cce8b326a2c2ee87577ca979d2fc6fb81f727d095288f61c398f8",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/validate_phase_b_agent_blind_audit.py",
+        "bytes": 4066,
+        "sha256": "efd3aa1485c29e03a8b11038cb91179cf3f93143224879c7449cf3def2622d14",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/validate_phase_b_blind_relevance_pilot.py",
+        "bytes": 11284,
+        "sha256": "906ab47f1f0be2ac2c1c164d5bb6756671df81f88d69952bf3f9160a2d893d88",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/validate_phase_b_external_blind_query_set_kit.py",
+        "bytes": 12360,
+        "sha256": "98f44a51d3f7b37820ad47ebfd653b084af711adb37bac06831a5d376f96371d",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/validate_phase_b_external_relevance_judgment_kit.py",
+        "bytes": 17612,
+        "sha256": "04375b43d116dc6ed90d4388851f7cec240feb8b268b5e661f66c9e4c6da8507",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/validate_phase_b_frozen_corpus_manifest.py",
+        "bytes": 6345,
+        "sha256": "67eb7b63064cb1c36ee2153ee9052d79fe2a4fa895eea6b1487cfa759f9450fa",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/validate_phase_b_frozen_rerun_v2.py",
+        "bytes": 20489,
+        "sha256": "9e485f50ca20292a91fae5d4d9770b583d2d4e3734cbf37a2f1ab4b812263c78",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/validate_phase_b_next_step_specs.py",
+        "bytes": 3746,
+        "sha256": "13102418188b936bc24aec18b8f9966d11bf18887b655f5f2a097907aeb23535",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/validate_phase_b_p0_query_replay.py",
+        "bytes": 15486,
+        "sha256": "2297fcc2fda97a4bbf3547998e434f2d853395cdfd439bd8f1fb0578b1e75006",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/validate_phase_b_p1_adversarial_audit.py",
+        "bytes": 4110,
+        "sha256": "86fc278fcbe33e8a14c1bfaebfed93a1b51c35ab48943ed3eeb4fd29334597e6",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/validate_phase_b_p1_promotion_gate_calibration.py",
+        "bytes": 5615,
+        "sha256": "8bbf2c62750754ab51a253d38f2eaede5128699f6786aab275e46b178e32df04",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/validate_phase_b_supplemental_pro_package.py",
+        "bytes": 11070,
+        "sha256": "57f0e12c9e06bd79db12395cf0820af9453315014e2474f2120084f9d2330e6a",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/pro-review-supplemental-package/tools/validate_phase_b_top11_20_receipts.py",
+        "bytes": 8491,
+        "sha256": "cd77630b0758b0b36ba62ab27e92f9ff141c480efe50be44755201c7671a7376",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/progress.md",
+        "bytes": 42731,
+        "sha256": "1ec79e1a226b11c1cd6164ae71526b5b7d06a63d5aba6ab1a042f1dd84db4756",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/queries_phase_b.jsonl",
+        "bytes": 8740,
+        "sha256": "dd18af0c0e03b77626c095116fde79c6e8c4b4ca6e14d01dbece2b51f3014d8c",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/queries_phase_b_adversarial.jsonl",
+        "bytes": 8682,
+        "sha256": "aecfe8faf626842121c23f0a8a6bdf9e035a86add2679bee87d18f5377a72e2b",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/queries_phase_b_agent_blind.jsonl",
+        "bytes": 9847,
+        "sha256": "b72ae271b46bd173d92e6c9ac5fdc35a903c918decc1b7665563f30a8269090c",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/queries_phase_b_blind_relevance.jsonl",
+        "bytes": 21578,
+        "sha256": "43520d99020c88b97aa682cddddd2175a7d607e022c6cda085f59230d48ae8d0",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/queries_phase_b_external_blind_template.jsonl",
+        "bytes": 2280,
+        "sha256": "023a6b5d72c377930615202853af249f9e7743e862b8123341a20732c5881d70",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/queries_phase_b_holdout.jsonl",
+        "bytes": 4448,
+        "sha256": "2c55a45a524e833e500d110b4741d7a0f5ebf413fcc352ce0227f9dae293b0bf",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_adapter_contract_test.json",
+        "bytes": 2276,
+        "sha256": "4003939362d32f3a4428a8783e0bbac9b68938fc64c523f243847ca583798986",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_adversarial_corpus_stats.json",
+        "bytes": 282,
+        "sha256": "a4f1323c076f3ce0413d622fb5b6c540d1f45e06682cfa1fb3d4854bb615a813",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_adversarial_iteration_delta.csv",
+        "bytes": 1262,
+        "sha256": "7cc6f2b16db58ca81a3350703f326fc123046046135cdfe39827a1c8387b22ba",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_adversarial_query_metrics.csv",
+        "bytes": 90735,
+        "sha256": "b7afc3a8f168ae395c5ebb4961f02e8ff2b1bc959ab00ed4596d6d4254fae202",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_adversarial_skeleton_iteration_delta.csv",
+        "bytes": 1246,
+        "sha256": "d7818a165b4351b4fcddec56bf5b60479d7d09e546c14418562b5e1bfbf5e5ef",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_adversarial_summary.csv",
+        "bytes": 1865,
+        "sha256": "6937a970fcefe5c8a30473f6bbc768c80b51e60c690731f1acca3f07b5cea57d",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_adversarial_top_results.csv",
+        "bytes": 2894829,
+        "sha256": "9dc5110c37ef15ddbb24bd2728c959bb0b48029cbb05a16f13567ad3a1401c01",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_adversarial_top_results.json",
+        "bytes": 5635855,
+        "sha256": "a0012424aeceb9934b21b8d14e0df43162c742a9e3ee8d3e997588cf075800cb",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_adversarial_v11_iteration_delta.csv",
+        "bytes": 1240,
+        "sha256": "7701cbf38e940015707768b2bb062987c7f6e4ee480ed3367819d73ca5f7ca78",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_agent_blind_audit.json",
+        "bytes": 1665,
+        "sha256": "59d9d7583f6dddfb3a30da7148630fd485b02d5425f287f41422d1e28b2d8cc9",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_agent_blind_audit_check.json",
+        "bytes": 1901,
+        "sha256": "a8fba238fd177eaa81e9af224a28817feb3e36d6808077076d323ecdb94dfc0b",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_agent_blind_clean_vaks_only_query_metrics.csv",
+        "bytes": 12997,
+        "sha256": "824477b8384decaf95d18bc124b1d56f23a9afcd57a83830cde99755005c1d71",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_agent_blind_clean_vaks_only_summary.csv",
+        "bytes": 518,
+        "sha256": "ffff07cd45ef6a07a28e293604d4d67837c404461d27085b6b8dc8303e8dd8d4",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_agent_blind_clean_vaks_only_top_results.csv",
+        "bytes": 471344,
+        "sha256": "a491f31ed04d2717ac5c078051c7064bc73084f4b595c3504f38448c7f1dfdad",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_agent_blind_combined_summary.csv",
+        "bytes": 2307,
+        "sha256": "d18402dcb1f7c2f2c99ddc24bdad94f239a11defafae9bbbf7ad8613924fe2fe",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_agent_blind_corpus_stats.json",
+        "bytes": 282,
+        "sha256": "a4f1323c076f3ce0413d622fb5b6c540d1f45e06682cfa1fb3d4854bb615a813",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_agent_blind_iteration_delta.csv",
+        "bytes": 1254,
+        "sha256": "b12b14b4d3caf3aaace2c618c93aed5d7302209fe5d58c96a88cd3b508acea83",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_agent_blind_query_metrics.csv",
+        "bytes": 84910,
+        "sha256": "6e52e2e91cbe6da4a7195bae8bbcf598d415aef199d6acdc063aebe17872185e",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_agent_blind_skeleton_iteration_delta.csv",
+        "bytes": 1246,
+        "sha256": "60835b1621cac349a025924865bcfe75683fccccd844f77a86066cabc2bf83f8",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_agent_blind_summary.csv",
+        "bytes": 1865,
+        "sha256": "6c1922f2306027d3c412a29a1f62695d3a5a3aabc84f894abc92fc9f51ed297d",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_agent_blind_top_results.csv",
+        "bytes": 2837907,
+        "sha256": "ffdf8111af215e75058112542e08f6a4b230d7d58ecaba5696b5eb680e9b7196",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_agent_blind_top_results.json",
+        "bytes": 5571915,
+        "sha256": "1fb932517aabea56a7ca165afbbce71e5d3583bcdb491693b37ca0d5cafd1007",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_agent_blind_v11_iteration_delta.csv",
+        "bytes": 1240,
+        "sha256": "9978e3408f7b7fa2dc38190466b4cdbe4f36fce50e8d8f09e8a0574dc9be2bac",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_blind_relevance_check.json",
+        "bytes": 1245,
+        "sha256": "e51f1d77133072640b4403e4f15dd0c867cb21e64b92ba7f8f9c0c972445a73e",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_blind_relevance_external_judgment_mapping.csv",
+        "bytes": 158117,
+        "sha256": "600d3fe0e0fee6aff42d4bc4f2e8749e5e9260875cd48a84afae0894c41ebece",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_blind_relevance_external_judgment_template.csv",
+        "bytes": 1013271,
+        "sha256": "8fed41521838d77210386879d3ab75a7c8721c7991f44ef3eb9535df20ec1384",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_blind_relevance_judged_summary.csv",
+        "bytes": 642,
+        "sha256": "8f0d6983ac04c7561faa7dea8516cef5911bc9fc9ae1609e7503480e249a1a3d",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_blind_relevance_judgment_packet.csv",
+        "bytes": 1125540,
+        "sha256": "6fc36fc5052ca8fcf3f18a825fc5c0e6402f40212400898af79bc5604ca4ed11",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_blind_relevance_judgments.csv",
+        "bytes": 1285397,
+        "sha256": "888b470b5c20c625c49d8f86405c46bdf42091b413e7b348851a0e0b46ae59e2",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_blind_relevance_manifest.json",
+        "bytes": 1820,
+        "sha256": "4e0623c3d339254ffe2d81c45453ee43665fe83b22e38d8c2f12e77eae011ef8",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_blind_relevance_query_manifest.csv",
+        "bytes": 23184,
+        "sha256": "8e09260c378b448b7e5efd7ce82d26f0386c00c17118e972dc1cc7cf315fca9c",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_blind_relevance_top20_items.csv",
+        "bytes": 2286300,
+        "sha256": "22419bcb0ac856a88aca071dcc9d3fbe4a63221b24480e6e5a206d6433f1c1a8",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_branch_decision_brief.json",
+        "bytes": 2553,
+        "sha256": "fd1b0654ab533e6060fdb835cc746ca5d9be50b92541f9e60011db2fc7b6c5bf",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_branch_decision_brief_check.json",
+        "bytes": 3873,
+        "sha256": "41adf9e412eb1e08661b057976ad7ec3fc8ab2b715993d8f46387e7a001d9a2d",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_commit_readiness.json",
+        "bytes": 2955,
+        "sha256": "294e7dd0d29d333a2e85fb4a8a3a976219486383f159e1b1d30853040c075762",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_commit_readiness_check.json",
+        "bytes": 5213,
+        "sha256": "59a99efa89853669e1aa95b572ba969647d3b0ff3fc592ea373ac63c04b2111b",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_context_pack_candidate_check.json",
+        "bytes": 2004,
+        "sha256": "875638238a3bf40fb3a6cb2db7c7f9f0918cc0addb4158ad4a4c55a953ad914c",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_context_pack_candidate_summary.json",
+        "bytes": 495,
+        "sha256": "cdec921af758fab2662d8480d89f6fa9dbb2043465ba10d31a565f9fd67b64f9",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_context_pack_candidates.jsonl",
+        "bytes": 1072391,
+        "sha256": "598255a8e110d9153c79eb3c540d2f2e856309b5f9303faae658d11c1cadde96",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_corpus_stats.json",
+        "bytes": 282,
+        "sha256": "93baada16aec5a1e4a16a18fd6f087247972f4fe8ff3a8b1a326def3a2ab23ae",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_evidence_envelope_candidate_check.json",
+        "bytes": 2012,
+        "sha256": "cdeb37365526cfac04e2e7bb37029a12ff9d4d7ba85bc8b6e76d76d95003fcca",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_evidence_envelope_candidate_summary.json",
+        "bytes": 519,
+        "sha256": "f8bc402c34100027376ec374374353286d8cc4168b8aa2a93ad039b510f7286a",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_evidence_envelope_candidates.jsonl",
+        "bytes": 1035491,
+        "sha256": "27ef6760cf48ec8b09a54d188c186721e469a0d2ad517894d04926a87f2e9a82",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_evidence_support_check_candidate_check.json",
+        "bytes": 2479,
+        "sha256": "501582cd445b8d2f579f30c5b13ba48b50494a53c715d79ec007603b45b6adc9",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_evidence_support_check_candidate_summary.json",
+        "bytes": 746,
+        "sha256": "2872471b78aa196344c053a3e7f1503360ca205d2b07b65df45032c019f2de32",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_evidence_support_check_candidates.jsonl",
+        "bytes": 1075904,
+        "sha256": "c3d48b024732590464d4d3a27f4e8e1bab7903adf2acfa64b997a37382ef3cbc",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_external_blind_query_author_manifest_template.json",
+        "bytes": 407,
+        "sha256": "2c4ed32eb20f7fdd2d5aa464aa36467fa50f7f9f818ccee46f79c085b61a1591",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_external_blind_query_set_kit.json",
+        "bytes": 1120,
+        "sha256": "0448163b4367ab8bed917d32f578e0c184a842f02558d60f06b60c6de360e639",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_external_blind_query_set_kit_check.json",
+        "bytes": 1064,
+        "sha256": "3f6d3d7d9e798035eb4de6cfc51d649c5e38f62930b079c69c0734edb0ce1a11",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_external_relevance_judgment_kit.json",
+        "bytes": 1007,
+        "sha256": "9b90c1803751ec0c7c5f85cea819e4ae7d750590fa18fbb32fe307353edcd5db",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_external_relevance_judgment_kit_check.json",
+        "bytes": 1551,
+        "sha256": "6ac062ddb859e7ee684d138e0592e0d4881564d1521493475d629672b78cc9ef",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_external_review_result_check.json",
+        "bytes": 1687,
+        "sha256": "16b651ed1dbc3cb479ba9e16e16ed92e8c0207c293f308b9f79cf59cd7b1a011",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_frozen_corpus_manifest.csv",
+        "bytes": 1552890,
+        "sha256": "9735117f56c1a3d10e61982e5936b56cae1fb81122a2ace436522f6ed70595e8",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_frozen_corpus_manifest.json",
+        "bytes": 2517782,
+        "sha256": "c6cbbd70bf973630262cf8ecf28d3f1345a4a57054a1d044b39336d921a9ae68",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_frozen_corpus_manifest_check.json",
+        "bytes": 693,
+        "sha256": "0a4e7a11faeb9456d3c60a7e4ba108a16c135880143fb6fa3375ff9030b35a3d",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_frozen_rerun_v2_check.json",
+        "bytes": 2579,
+        "sha256": "88df18cd518db4eb8cd94f8d8569da3891b3a32c3bd7466188e9600a0c3e0791",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_frozen_rerun_v2_corpus_manifest.csv",
+        "bytes": 1624782,
+        "sha256": "a7c0db84a298915d352a8d10c9e993e24dac908f35dcc35d3b156fbf746869c7",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_frozen_rerun_v2_manifest.json",
+        "bytes": 2194,
+        "sha256": "658b0168489afb0445ffcef71d9585d530e233248e7eb334cc3f80ca2095811c",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_frozen_rerun_v2_query_manifest.csv",
+        "bytes": 15689,
+        "sha256": "46c2f7083ae9b312744fd287afc293f7ae097ea734147f79ba69ab9f6c511049",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_frozen_rerun_v2_query_metrics.csv",
+        "bytes": 238930,
+        "sha256": "3c28ff2f34beb16cb0d208d21dbe037a0661a061dcce567e7af64dc8326f0bee",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_frozen_rerun_v2_summary.csv",
+        "bytes": 5582,
+        "sha256": "de58b419f25377e470676885fa14822968eea8336db2189fb140cf323ed9d38e",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_frozen_rerun_v2_top11_20_receipts.csv",
+        "bytes": 6007048,
+        "sha256": "9dac1ba8db32512ba3752687c77389760c33ae7652c9aa9c99fe50f6c7716f7c",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_frozen_rerun_v2_top1_10_replay.csv",
+        "bytes": 6057177,
+        "sha256": "695dacc309edb35cad8eceb32c9b5cb4cb99027effb4af7589309f448e1adaa9",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_frozen_rerun_v2_top20_items.csv",
+        "bytes": 12063685,
+        "sha256": "eb6806910d3cb300fd8cd21b7cfeb6851502746ec7c467b6ee765824f5e6dfe6",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_holdout_corpus_stats.json",
+        "bytes": 282,
+        "sha256": "5415c3a1e5bb41c3033e84497798c4600b97785912ab287a45afa5c970951799",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_holdout_iteration_delta.csv",
+        "bytes": 1257,
+        "sha256": "0a9c0fd1cbb169b19d83fc8f1ac81f261bc8e918b29980f62480335e6c8cbbf6",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_holdout_query_metrics.csv",
+        "bytes": 45633,
+        "sha256": "b435ce805dd4b9aad34b9705be9d02c8dca271cff2bd52edcc64f3a6a01067fa",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_holdout_skeleton_iteration_delta.csv",
+        "bytes": 1246,
+        "sha256": "eb38877aaa5cb4b586316cafb98cc83063ca06e21dbf2db0cc5d66a089011647",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_holdout_summary.csv",
+        "bytes": 1859,
+        "sha256": "4415524567c9ab9b11cb402e11e4ffa6392eca3ec1e0bc55b37279ce6a580e03",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_holdout_top_results.csv",
+        "bytes": 1516933,
+        "sha256": "c6b6531d2d61baf56831827229cfdbdbd09d63d5a30e489a80946c3ec53a39a4",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_holdout_top_results.json",
+        "bytes": 2889503,
+        "sha256": "c4f2876c9765861b1fc10bedd7de3a3fd765061fa5dea3c51cc61bd98c7a3b17",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_holdout_v11_iteration_delta.csv",
+        "bytes": 1264,
+        "sha256": "badf061171716fd6bb70a6b4892dc03e8e408bd3e7f5f85f0dd6c10ff12a8df9",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_integration_readiness_check.json",
+        "bytes": 4510,
+        "sha256": "ca1015c88399c649e1c8c2c6acc92c1ee51b23569b04fb30dfb1d7726510d688",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_iteration_delta.csv",
+        "bytes": 1246,
+        "sha256": "ac4d0c7f92609d5ad0985f2d19c58b557a7167cbbf76c830dbc45174d87d730a",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_keep_stop_synthesis.json",
+        "bytes": 13359,
+        "sha256": "0d275497bcfdfbf3bac4813171d8f77e64a52809c1e1096c3d9472383f6a68b6",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_keep_stop_synthesis_check.json",
+        "bytes": 17651,
+        "sha256": "9c2525db2af256cb3932e7c9ea70572b6fa1d442317cabcfe662a9541a42f7a9",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_mainline_readiness_check.json",
+        "bytes": 1352,
+        "sha256": "1c17f15c35ca55ba5fda16c7dab26138c4339ec6bccb2df3b8395a8ad4fef35f",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_metric_dictionary.json",
+        "bytes": 4458,
+        "sha256": "8f36f213ee3fff1726684f6d85bdc113e8211ba0a4f28bad8aa0e1217322761b",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_minimal_doc_patch_check.json",
+        "bytes": 1583,
+        "sha256": "5aad2821c0d7a6cb4e95ed79410a5bd994bc5b1e1cdb9b476a79fe7953e67e43",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_next_action_gate.json",
+        "bytes": 2995,
+        "sha256": "5041bab66a45678aa80bc6163078a4556afd55e51075f53642137c34f03326e3",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_next_action_gate_check.json",
+        "bytes": 4762,
+        "sha256": "772666fe16f36de213d3629c3568c17294e4034e4c3b5508e01b5e20091d1191",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_next_step_specs_check.json",
+        "bytes": 513,
+        "sha256": "154f081f43141791a9ec275d72f22da70fc5485760118de40258926c4f6034c9",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_p0_clean_vaks_only_query_metrics.csv",
+        "bytes": 19377,
+        "sha256": "e7f1beb99639fe346e864dec21c86e54a42d8cc77fd85973502c2961ecefadf8",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_p0_clean_vaks_only_summary.csv",
+        "bytes": 771,
+        "sha256": "0678f3532598eb8ec27f89c3b0ee3d4ca84037dcf7eb582499d44fd858eab8a6",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_p0_clean_vaks_only_top_results.csv",
+        "bytes": 698581,
+        "sha256": "752a68e38c96f69896c5e3dc7a8bbb30ae1f2a949e9c3bb04c6fae8acbfa5988",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_p0_query_level_metrics.csv",
+        "bytes": 163827,
+        "sha256": "4de422594cec3f1efa2f71e4d368265402b5d71b022871b7a904956d8208a780",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_p0_query_level_replay.csv",
+        "bytes": 6613724,
+        "sha256": "2f27bc24de20b799a9fe710613be7e675ebac9074eb478cd5ddbc2a80c679118",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_p0_query_level_replay_check.json",
+        "bytes": 1484,
+        "sha256": "5d253d3f28dc139757dfe82a1ab32b14bd09a37561449c39fedaa716390d8ad0",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_p0_summary.csv",
+        "bytes": 4259,
+        "sha256": "97eefb486530215c711cedf4797814f62f973c91de0a761f53d119e4cb996e6f",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_p1_adversarial_audit.json",
+        "bytes": 1670,
+        "sha256": "7c1ee1c0ea817349fff76f021b849db3d9b37773dc2cb5827ebad89c5dc54dac",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_p1_adversarial_audit_check.json",
+        "bytes": 1909,
+        "sha256": "586ca7bf69229378240b48c6d95ad1ee5669526bd0eaa5a1cf30109b5b481c87",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_p1_adversarial_clean_vaks_only_query_metrics.csv",
+        "bytes": 12744,
+        "sha256": "4df5ed01b1884ee56d2583e4b920a43c1b4c2049190993f8d581afee159735a5",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_p1_adversarial_clean_vaks_only_summary.csv",
+        "bytes": 530,
+        "sha256": "cf26e23e1eecfb8b56ae4b3f92c87e62f253af61f094db1969ae6d24d2cf61fa",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_p1_adversarial_clean_vaks_only_top_results.csv",
+        "bytes": 483686,
+        "sha256": "979fec35219212e113b03368dddcbb549e3b74dfd49de6928065ef4c4550a4ad",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_p1_adversarial_combined_summary.csv",
+        "bytes": 2403,
+        "sha256": "b44ce35f6799fa77d256d4be61094ba0274974dd0ea17880f8ae028284c6476e",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_p1_promotion_gate_calibration_cases.jsonl",
+        "bytes": 13179,
+        "sha256": "11f12c91b7d376bba80a6dc66fff6a6c92df4409b4fcd01ae0121f8f29166d0d",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_p1_promotion_gate_calibration_check.json",
+        "bytes": 910,
+        "sha256": "5dd7d73cd3c910e34f99f872b8fc9fa218f23524f49dfb18eb960243a29b818e",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_p1_promotion_gate_calibration_evaluations.jsonl",
+        "bytes": 17365,
+        "sha256": "65f819f6d38b2cea4225eb41dd7b3fa022e73e16cf600e973e527b2bcb193a3c",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_p1_promotion_gate_calibration_summary.json",
+        "bytes": 726,
+        "sha256": "04556d4dab4276031c367d5c72a2cafc275f8a3911aee3f761b3e9481539a405",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_pro_review_prompt_check.json",
+        "bytes": 1555,
+        "sha256": "1d378ec9d4667dc67c4bf5812b011294b776a062115093e904d43286322d4ccb",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_promotion_gate_check.json",
+        "bytes": 4404,
+        "sha256": "3293e98dd992c32fbce3bf649d95f098b77db4687a1347c435915e05e58e47eb",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_promotion_gate_evaluation_summary.json",
+        "bytes": 1202,
+        "sha256": "9ea365b635878931d9f35b8b264ebdc45d3d2e703e444b005dfb72a4392843e0",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_promotion_gate_evaluations.jsonl",
+        "bytes": 212255,
+        "sha256": "47f811d0b64537890053fb1864d42f4b26584ba643db2888feedd279fb516124",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_query_metrics.csv",
+        "bytes": 94631,
+        "sha256": "b059d0b64470f1e5dfa9db1df6df82cb46af701985f7e4af3be9478f6000771f",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_refreshed_support_check_candidate_check.json",
+        "bytes": 4432,
+        "sha256": "b5cde3c4ebf6e63220b7e316980b67115fd3cd45953240aea4889d745f04e6f1",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_refreshed_support_check_candidate_summary.json",
+        "bytes": 825,
+        "sha256": "ce6eec4a2930b12bf047de017d9dada009984660325f4d11f96cb9ac5da9e824",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_refreshed_support_check_candidates.jsonl",
+        "bytes": 1015938,
+        "sha256": "1ec823e43016cc3666f88f45895dc0a5a6148b22c3759a42a55d5f9529d1aa3a",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_review_queue_packet_check.json",
+        "bytes": 3725,
+        "sha256": "2df7494fe1c7dfadb20cfe9c2aaa1fad4f2abd77c3444c8785d9ed4fb832360b",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_review_queue_packet_summary.json",
+        "bytes": 856,
+        "sha256": "1cbb3e10a4b5c64168874361393e1eaa8c0037608fa6608e07f4667283e1f384",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_review_queue_packets.jsonl",
+        "bytes": 1098583,
+        "sha256": "632f3659c63595282261b8dc588b8e0a8e70f748f1d130a1934db3ce27f912b7",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_runtime_feasibility_check.json",
+        "bytes": 1158,
+        "sha256": "97a59d44dbf5d2ad6fe786de48c612cda0579e3bf5451d84435940b5b4b63c5b",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_simulated_reviewer_outcome_check.json",
+        "bytes": 4120,
+        "sha256": "a4edd30ae2b81336c8a318568fb4711a0ace997b3c540d3e57e21cc5e6c60abb",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_simulated_reviewer_outcome_summary.json",
+        "bytes": 1030,
+        "sha256": "cbbe998b4cbe9619f8c7bf3a19cb272f2f6bfc90158071a1894ef250b6021633",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_simulated_reviewer_outcomes.jsonl",
+        "bytes": 202579,
+        "sha256": "6f740892c8ab216f3539ca9bc518b1798099b92ac32f2ae505ad6807b19699ff",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_skeleton_holdout_full_retrieval_receipts.jsonl",
+        "bytes": 316355,
+        "sha256": "184d04f150bc4b8583e665123ef3518a8af2bf3b70a0b4b4c2370d0d29d5f58a",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_skeleton_holdout_primary_retrieval_receipts.jsonl",
+        "bytes": 320990,
+        "sha256": "041595c598c4f0d13f7a291d9b195c225d54c7704d9f4f729798a5020f187f6d",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_skeleton_holdout_receipt_summary.json",
+        "bytes": 647,
+        "sha256": "03b0afe5e738c7cd1a44d706ef261c46fda9f65cb488b7e68274a3d961e8bbf5",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_skeleton_iteration_delta.csv",
+        "bytes": 1246,
+        "sha256": "7b6d6cd0cf78b5ac6bdf6aa3ac2d2abada294326ec9510a305f836ee51ef44a1",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_skeleton_main_full_chunk_manifest.jsonl",
+        "bytes": 27012918,
+        "sha256": "268dd4c6ebf7c256579d063ebebe779e189e834e914761fd40c0f5da452629ad",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_skeleton_main_full_retrieval_receipts.jsonl",
+        "bytes": 627668,
+        "sha256": "8afe86ebfa4be8be7a9b6f653076def2a89ae91061a12a9b2986b2c434cd0e40",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_skeleton_main_manifest_summary.json",
+        "bytes": 596,
+        "sha256": "f64b9ea02d6c592aa9cd42eae1e645365a16ad9a542ba5927a47e4dbb48a7afe",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_skeleton_main_primary_chunk_manifest.jsonl",
+        "bytes": 5174653,
+        "sha256": "6e970288cddd0a28a2a2ab591436c74902d4ef3d74b1fec70b2d4211d6a6ab13",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_skeleton_main_primary_retrieval_receipts.jsonl",
+        "bytes": 630956,
+        "sha256": "25108279293e41e43af44e2c389e2918f93c24c0c161893f2e5e0f20870875d2",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_skeleton_main_receipt_summary.json",
+        "bytes": 641,
+        "sha256": "e464c470e1fb72ca327ea48edd7f89f7af6aa97c1088fe8baadecac1745f96e7",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_source_refresh_candidate_check.json",
+        "bytes": 2640,
+        "sha256": "2009e23d8870cbba5f282c5be98a275962a3e45b1d8ad6b0e6ee05fea31b3fe0",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_source_refresh_candidate_summary.json",
+        "bytes": 797,
+        "sha256": "c2631a3b200d356727979cf6957bc132550cf357af4f8e59dc51548dbd9afe1d",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_source_refresh_candidates.jsonl",
+        "bytes": 1125318,
+        "sha256": "3809e582986634cf3c0fa923ce51f93df566c02653ad09ab6bde2568e71623fa",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_summary.csv",
+        "bytes": 1865,
+        "sha256": "1d2db81f3832d1a21ba31e65bca8973aac0e03ec2b258ee0151eef3bbd469d43",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_supplemental_pro_package_check.json",
+        "bytes": 1261,
+        "sha256": "f1b006fbac3ad3002bc87f3583ed6499f552287b446af0c376355ca2bb8000b1",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_top11_20_item_receipts.csv",
+        "bytes": 7352159,
+        "sha256": "707f8ce7208b9dfdf00c7f696c912605ad2b079c866e0538c8f472daaa73c3a9",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_top11_20_item_receipts_check.json",
+        "bytes": 983,
+        "sha256": "9269096812b0cb28b93c78eb92c9b33ea1c0442241763426f7035b4a5be55e9a",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_top11_20_item_receipts_summary.csv",
+        "bytes": 1811,
+        "sha256": "250665a1fc511b9161c4e92effe1cee7422ed24f29dcd1aa3018dca9f0221c4c",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_top11_20_item_receipts_summary.json",
+        "bytes": 9594,
+        "sha256": "3a05a74f46cc0d219cc9fdf1ae05449fe8e8cdec7ed9d0e87caaad09261ea749",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_top_results.csv",
+        "bytes": 2894405,
+        "sha256": "f3a367dc848170c4a0dbe8aab60c80d886ecbce27c22b99a78180072dda1f8fd",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_top_results.json",
+        "bytes": 5634219,
+        "sha256": "dddb9f9d544129c4cbd75b1f069c7df88e7619c94faf8d6369d24b1ab946c85a",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_v0_locked_query_metrics.csv",
+        "bytes": 55840,
+        "sha256": "c65409f6077a36aea99cb2e38799e017fafe74572694b438125deafbe0775749",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_v0_locked_summary.csv",
+        "bytes": 1168,
+        "sha256": "a476ba90459ec6afce7bfcf2a5df96ac1c5656a6cc62c738097401f1fb88b6fa",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/results/phase_b_v11_iteration_delta.csv",
+        "bytes": 1240,
+        "sha256": "bc1ea30a446db7602e13f32b207250cb651b3bac98f2951d613f367b4091348c",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/task_plan.md",
+        "bytes": 14740,
+        "sha256": "5f1f1e90eda166f3a1f30b4d6c35e6aef01dd7fe49effa1bd9d23839552d4b12",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_agent_blind_audit.py",
+        "bytes": 8379,
+        "sha256": "ac4e36c93f7fc1660ce43821138248b0eb3625f1cb3f84da370f8c11eb2ff54d",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_blind_relevance_pilot.py",
+        "bytes": 10847,
+        "sha256": "6568776caae780a76e9456acf040e3a2b61a7d9a175780f07f6b41316b96f8a7",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_branch_decision_brief.py",
+        "bytes": 9177,
+        "sha256": "441ed20577cfb98a2be0dab374c7d869d72058833a957f871bbd9453bf745eb1",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_commit_readiness.py",
+        "bytes": 11393,
+        "sha256": "6e0af68fdd707aff3474d859231ea8d5916cff29099c060d02573da8f7e6d9d6",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_context_packs.py",
+        "bytes": 8292,
+        "sha256": "1ca0d5f8328771307c5947d1e834fb52d6c4e71c13198dd00fcbe67708987f34",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_evidence_envelopes.py",
+        "bytes": 9466,
+        "sha256": "474000eb15d620201726a3ea94304d0d0835f521e6f575648686515e85e70f6b",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_evidence_support_checks.py",
+        "bytes": 11386,
+        "sha256": "d142be0b50e321427c5326e852b3d461485f0009184b67c0b869b0dab81c7347",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_external_blind_query_set_kit.py",
+        "bytes": 6685,
+        "sha256": "a6dd91a20eb0553fbe60b05e1403f0282d4980fcd4b5606f72604024ac90e61d",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_external_relevance_judgment_kit.py",
+        "bytes": 7641,
+        "sha256": "31bd9b3f35821c014559c49723e738583d71f03dcb1333a74da8e3d08429a826",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_frozen_corpus_manifest.py",
+        "bytes": 5532,
+        "sha256": "866b9c9b6fe0543bf695fdf9fb174759b849f32649e17307eb3468de0f4aa21a",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_frozen_rerun_v2.py",
+        "bytes": 14153,
+        "sha256": "a60bedf965a5d3b75f8d90fe2525268a69487e3058f86e04e91fcb467fdd6266",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_internal_relevance_judgments.py",
+        "bytes": 9037,
+        "sha256": "88bc9df887f4cd3993c03291659aa7b8f64788d81a4d93352877bc990278e2b7",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_keep_stop_synthesis.py",
+        "bytes": 24325,
+        "sha256": "d22f49f80e7f68df0b484898cb7ca457f185ff6d183149e4896c26961dc897e8",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_next_action_gate.py",
+        "bytes": 10953,
+        "sha256": "5cd4bc2bc18e09c59b7d2799fda9fc4d79ef3be3e8a6a5bc6d4f42b277fbc430",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_p0_query_replay.py",
+        "bytes": 29288,
+        "sha256": "8cc7b3e5b231f95b030222caf531517ee10c22f4458d890a1ce64ad84af99478",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_p1_adversarial_audit.py",
+        "bytes": 8247,
+        "sha256": "d8a99651a2a145e95c89547480bfbeb39b8f28248651eed8efd0e663906fee32",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_p1_promotion_gate_calibration.py",
+        "bytes": 11382,
+        "sha256": "350f425a81766115760e732bd1f656fc92d3072f4b139e659e347e446afd357e",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_pre_commit_manifest.py",
+        "bytes": 10750,
+        "sha256": "b894734ddbf9cf7ff595a5ca1f883f846426e9b4390084a9d5b13131b87b4218",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_promotion_gate.py",
+        "bytes": 8850,
+        "sha256": "ad69dce602e4b37d6143d8107c06eeb7dac4fe3fd24bd34d9de6cecdad1b6265",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_refreshed_support_checks.py",
+        "bytes": 8568,
+        "sha256": "bf4ff9d875574c4246be0b71951d8ab7bec3f7d437b7d4d2b291ccb3885b7c8c",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_review_queue_packets.py",
+        "bytes": 9734,
+        "sha256": "e7edcc550b409d032fb640095fa550dc965f5c303aa32cd13ae84bee729574a8",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_simulated_reviewer_outcomes.py",
+        "bytes": 9293,
+        "sha256": "18d728480d647df7d7457c0ed4946c73fe2ad0c45182327ad06ccf97d794f662",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_source_refresh.py",
+        "bytes": 10563,
+        "sha256": "5679484da765b0752bf67b579367bdad778abbbde4f0d10de115c3da570dd4e2",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_supplemental_pro_package.py",
+        "bytes": 8171,
+        "sha256": "6230093efd77817a00ee51b36c64d181c0c37e8cfc95c2d6b8c6d1b73c06e873",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/build_phase_b_top11_20_receipts.py",
+        "bytes": 11032,
+        "sha256": "50a35c68d4f99b848c0b162d86b67a178a4386200b2958c6bb9c5aeffcca587a",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/run_phase_b_pressure.py",
+        "bytes": 67194,
+        "sha256": "29eff8c0fb5cce8b326a2c2ee87577ca979d2fc6fb81f727d095288f61c398f8",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/vaks_phase_b_adapter.py",
+        "bytes": 10448,
+        "sha256": "606b8e76f0b2da0a643fc7f0f525b2e47f8372a6ca61f6ef4066e85c5309e4b2",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_adapter_contract.py",
+        "bytes": 13090,
+        "sha256": "0d42e3a5f0275c3a5f4b9493a482ca8bb7999393f9c3d021045eb162e1e80764",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_agent_blind_audit.py",
+        "bytes": 4066,
+        "sha256": "efd3aa1485c29e03a8b11038cb91179cf3f93143224879c7449cf3def2622d14",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_blind_relevance_pilot.py",
+        "bytes": 11284,
+        "sha256": "906ab47f1f0be2ac2c1c164d5bb6756671df81f88d69952bf3f9160a2d893d88",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_branch_decision_brief.py",
+        "bytes": 9065,
+        "sha256": "ccd91f232e46a02e68f0658fe17285dddd8c9bcbc344172f0e15719993ac6672",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_commit_readiness.py",
+        "bytes": 11729,
+        "sha256": "e659a2c8e12e1c0d7e36821fa72f9d87982e16f52f1fd050b730bf44a4ac1280",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_context_packs.py",
+        "bytes": 10403,
+        "sha256": "92874f24d97eb6db36e709092d9448ba59bcc337f6c35704e196d128361ff7c5",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_evidence_envelopes.py",
+        "bytes": 12738,
+        "sha256": "3f2d96099df4fab59c998dad4d2713d3a89834d36b10034b871f6c3e9f37cc53",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_evidence_support_checks.py",
+        "bytes": 15696,
+        "sha256": "88471149b947f2e4e8a54080a087f382d28c5df2cef7aed40814b58cbb490ff7",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_external_blind_query_set_kit.py",
+        "bytes": 12360,
+        "sha256": "98f44a51d3f7b37820ad47ebfd653b084af711adb37bac06831a5d376f96371d",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_external_relevance_judgment_kit.py",
+        "bytes": 17612,
+        "sha256": "04375b43d116dc6ed90d4388851f7cec240feb8b268b5e661f66c9e4c6da8507",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_external_review_result.py",
+        "bytes": 9551,
+        "sha256": "582df60e8b53e75f29a2fa0645efae3d799ec391124f8362e9189806337c32a4",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_frozen_corpus_manifest.py",
+        "bytes": 6345,
+        "sha256": "67eb7b63064cb1c36ee2153ee9052d79fe2a4fa895eea6b1487cfa759f9450fa",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_frozen_rerun_v2.py",
+        "bytes": 20489,
+        "sha256": "9e485f50ca20292a91fae5d4d9770b583d2d4e3734cbf37a2f1ab4b812263c78",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_integration_readiness.py",
+        "bytes": 9559,
+        "sha256": "052af8306b8998c4d98eba1d411655e2bd37f89b3d3ec622a2e73633cb9f6b4e",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_keep_stop_synthesis.py",
+        "bytes": 15946,
+        "sha256": "93efafb6ed57f5f2be5e6e66e4faaa56925d0c7bfcf4d7ec19308443c569d26d",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_mainline_readiness.py",
+        "bytes": 9144,
+        "sha256": "47f2429fede81eaa3a3c10322ace9f8347b129d27f11f7a8bdf14b1d61b65708",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_minimal_doc_patch.py",
+        "bytes": 9034,
+        "sha256": "ceeb29643797b1ba1b3b7dadb5f854840aecd99d429eef5f1a0f4715920b5ad1",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_next_action_gate.py",
+        "bytes": 11860,
+        "sha256": "65cd75947eff15838e7d1aa01cacfb8e3cb6bdd1efd36233324aecae03ca2dcc",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_next_step_specs.py",
+        "bytes": 3746,
+        "sha256": "13102418188b936bc24aec18b8f9966d11bf18887b655f5f2a097907aeb23535",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_p0_query_replay.py",
+        "bytes": 15486,
+        "sha256": "2297fcc2fda97a4bbf3547998e434f2d853395cdfd439bd8f1fb0578b1e75006",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_p1_adversarial_audit.py",
+        "bytes": 4110,
+        "sha256": "86fc278fcbe33e8a14c1bfaebfed93a1b51c35ab48943ed3eeb4fd29334597e6",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_p1_promotion_gate_calibration.py",
+        "bytes": 5615,
+        "sha256": "8bbf2c62750754ab51a253d38f2eaede5128699f6786aab275e46b178e32df04",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_pre_commit_manifest.py",
+        "bytes": 13014,
+        "sha256": "9a3652a19d93594f88e2ddbe6e28ade0923d6d2a1beb4470c614fc7ea34c9de4",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_pro_prompt.py",
+        "bytes": 8567,
+        "sha256": "1aba99b66153c3bcb4f1e9c803a4688aa7da0e064290df590d1075495c311d27",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_promotion_gate.py",
+        "bytes": 14731,
+        "sha256": "c0a3612a4fc58b55e8b725751f682f937b450088dc218c5c5d14f1eaf4dbf800",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_refreshed_support_checks.py",
+        "bytes": 17162,
+        "sha256": "e05b7ea54b9472c2924073e9e5cbb3911b6a571c8fbe385d9bef4f8f025d94d2",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_review_queue_packets.py",
+        "bytes": 16353,
+        "sha256": "2a84c9421fb53a666f8244df02062a4d16249fc166aa07bf04d6df25d38a3e59",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_runtime_feasibility.py",
+        "bytes": 7507,
+        "sha256": "718bc8f873d60ce92bcae0741bca52ad89d6fc47c0e196ebdada8003bb0e79db",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_simulated_reviewer_outcomes.py",
+        "bytes": 16585,
+        "sha256": "c4633ca843cb7c9573113b1039df27aa86d5708faefdfeabf2e6ce49de319705",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_source_refresh.py",
+        "bytes": 14902,
+        "sha256": "97cd2cfd743d227308425ef1cb6622b357311943718f20e665679d4df89372c2",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_supplemental_pro_package.py",
+        "bytes": 11070,
+        "sha256": "57f0e12c9e06bd79db12395cf0820af9453315014e2474f2120084f9d2330e6a",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/tools/validate_phase_b_top11_20_receipts.py",
+        "bytes": 8491,
+        "sha256": "cd77630b0758b0b36ba62ab27e92f9ff141c480efe50be44755201c7671a7376",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/vaks-yuxi-phase-b-p0-p1-supplemental-pro-review-package.zip",
+        "bytes": 8547694,
+        "sha256": "c8b52414e51ecd7d6b22e4d0eb9a762ea8584341a04ffa6ab68858b0ccd6d93a",
+        "git_status": "??"
+      },
+      {
+        "path": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/vaks-yuxi-phase-b-pro-review-package.zip",
+        "bytes": 20441,
+        "sha256": "a74f6724edff661b59495922e7f94d0301ab37e603e1f249dd14a8b7565ea2dc",
+        "git_status": "??"
+      }
+    ],
+    "prior_gates": {
+      "next_action_gate": {
+        "status": "pass",
+        "errors": 0
+      },
+      "commit_readiness": {
+        "status": "pass",
+        "errors": 0
+      },
+      "keep_stop": {
+        "status": "pass",
+        "errors": 0
+      }
+    },
+    "branch_state": {
+      "recommended_next_action": "await_user_approved_commit_or_runner_choice",
+      "runtime_adoption_allowed": false,
+      "c_lite_allowed": false,
+      "original_yuxi_runtime_validated": false
+    },
+    "staged_paths": [],
+    "hard_stops": [
+      "manifest_is_not_commit_approval",
+      "do_not_stage_or_commit_without_user_approval",
+      "do_not_add_deferred_files_to_scope",
+      "do_not_claim_runtime_or_c_lite_readiness",
+      "do_not_treat_sandbox_manifest_as_reviewed_truth"
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "results/phase_b_pre_commit_manifest.json",
+      "exists": true,
+      "bytes": 127743
+    },
+    {
+      "path": "PHASE_B_PRE_COMMIT_MANIFEST_PACKET.md",
+      "exists": true,
+      "bytes": 2676
+    },
+    {
+      "path": "PHASE_B_PRE_COMMIT_MANIFEST_DECISION.md",
+      "exists": true,
+      "bytes": 800
+    },
+    {
+      "path": "results/phase_b_next_action_gate_check.json",
+      "exists": true,
+      "bytes": 4762
+    },
+    {
+      "path": "PHASE_B_NEXT_ACTION_GATE_DECISION.md",
+      "exists": true,
+      "bytes": 1013
+    }
+  ],
+  "prior_gates": {
+    "next_action_gate": {
+      "status": "pass",
+      "errors": 0
+    },
+    "commit_readiness": {
+      "status": "pass",
+      "errors": 0
+    },
+    "keep_stop": {
+      "status": "pass",
+      "errors": 0
+    }
+  },
+  "worktree": {
+    "status_lines": [
+      " M DEV_CONTEXT.md",
+      " M IMPLEMENTATION_BLUEPRINT.md",
+      " M MEMORY_TIER.md",
+      " M SOURCE_INTAKE.md",
+      "?? outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/"
+    ],
+    "staged_paths": [],
+    "diff_check_returncode": 0,
+    "diff_check_stdout": "",
+    "diff_check_stderr": "warning: in the working copy of 'DEV_CONTEXT.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'IMPLEMENTATION_BLUEPRINT.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'MEMORY_TIER.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'SOURCE_INTAKE.md', LF will be replaced by CRLF the next time Git touches it\n"
+  },
+  "file_records": {
+    "record_count": 453,
+    "total_bytes": 189724373,
+    "sandbox_record_count": 449
+  },
+  "text": {
+    "packet_bytes": 2592,
+    "decision_bytes": 765
+  }
+}

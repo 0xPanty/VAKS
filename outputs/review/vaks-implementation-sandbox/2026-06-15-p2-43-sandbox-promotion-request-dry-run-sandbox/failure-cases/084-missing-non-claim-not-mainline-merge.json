@@ -1,0 +1,163 @@
+{
+  "record_kind": "sandbox_promotion_request_dry_run_packet",
+  "slice_id": "2026-06-15-p2-43-sandbox-promotion-request-dry-run-sandbox",
+  "version": "sandbox-promotion-request-dry-run-v1",
+  "truth_boundary": "sandbox_promotion_request_dry_run_not_approval",
+  "purpose": "sandbox-only dry-run packet for future promotion requests and approval requirements",
+  "write_scope": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-43-sandbox-promotion-request-dry-run-sandbox/",
+  "view": "promotion-request-dry-run",
+  "source_snapshot": {
+    "source_slice_id": "2026-06-15-p2-42-sandbox-executive-readiness-brief-sandbox",
+    "readiness_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-42-sandbox-executive-readiness-brief-sandbox/artifact/executive-readiness-brief.json",
+    "readiness_sha256": "39ed4511be57390bac838eb074471c6ac6d80b9db256ecafc5ff5e0638e9fdc3",
+    "product_report_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-42-sandbox-executive-readiness-brief-sandbox/product-acceptance-report.md",
+    "product_report_sha256": "deb017fa692b6340625fe92bb1bfa2c12653b9eb4258b8689242fd42f0519ddf",
+    "source_product_status": "pass_product_grade",
+    "source_product_pass_text": true,
+    "executive_verdict": "SANDBOX_PRODUCT_GRADE_OPERATOR_READY_NOT_ENTERPRISE_PRODUCTION",
+    "completed_sandbox_slices": 39,
+    "product_grade_sandbox_slices": 39,
+    "verified_sandbox_slices": 39,
+    "enterprise_production_ready": false,
+    "mainline_ready": false,
+    "formal_vault_ready": false,
+    "action_basis_ready": false
+  },
+  "request_status": "draft_request_only_not_submitted",
+  "promotion_permitted_now": false,
+  "approval_collected_now": false,
+  "user_instruction_collected_now": false,
+  "target_paths_selected": false,
+  "request_items": [
+    {
+      "id": "mainline_merge_request",
+      "label": "Mainline merge request",
+      "request_intent": "Ask whether sandbox artifacts may be considered for mainline integration.",
+      "requires_explicit_user_approval": true,
+      "authorized_now": false,
+      "performed_now": false
+    },
+    {
+      "id": "formal_vault_write_or_sync_request",
+      "label": "Formal vault write or sync request",
+      "request_intent": "Ask whether any artifact may be written or synced to the formal Obsidian vault.",
+      "requires_explicit_user_approval": true,
+      "authorized_now": false,
+      "performed_now": false
+    },
+    {
+      "id": "template_or_tool_movement_request",
+      "label": "Template or tool movement request",
+      "request_intent": "Ask whether sandbox patterns may move into templates or tools.",
+      "requires_explicit_user_approval": true,
+      "authorized_now": false,
+      "performed_now": false
+    },
+    {
+      "id": "commit_push_request",
+      "label": "Commit and push request",
+      "request_intent": "Ask whether a reviewed change set may be committed or pushed.",
+      "requires_explicit_user_approval": true,
+      "authorized_now": false,
+      "performed_now": false
+    },
+    {
+      "id": "action_basis_request",
+      "label": "Action-basis use request",
+      "request_intent": "Ask whether any output may become action basis after separate evidence/review gates.",
+      "requires_explicit_user_approval": true,
+      "authorized_now": false,
+      "performed_now": false
+    }
+  ],
+  "preconditions": [
+    {
+      "id": "explicit_user_approval_captured_separately",
+      "label": "Separate explicit user approval",
+      "satisfied_now": false,
+      "reason": "This dry-run does not collect approval or user wording."
+    },
+    {
+      "id": "target_paths_named_and_scoped",
+      "label": "Target paths named and scoped",
+      "satisfied_now": false,
+      "reason": "No actual mainline, formal-vault, template, or tool target path is selected."
+    },
+    {
+      "id": "promotion_diff_reviewed",
+      "label": "Promotion diff reviewed",
+      "satisfied_now": false,
+      "reason": "No promotion diff exists in this dry-run."
+    },
+    {
+      "id": "formal_vault_write_plan_approved",
+      "label": "Formal vault write plan approved",
+      "satisfied_now": false,
+      "reason": "Formal vault work remains forbidden without separate approval."
+    },
+    {
+      "id": "mainline_owner_review_passed",
+      "label": "Mainline owner review passed",
+      "satisfied_now": false,
+      "reason": "Sandbox Product PASS is not mainline owner review."
+    },
+    {
+      "id": "post_approval_final_gate_defined",
+      "label": "Post-approval final gate defined",
+      "satisfied_now": false,
+      "reason": "This dry-run only lists required gates; it does not run a promotion gate."
+    }
+  ],
+  "operation_performed_flags": {
+    "formal_vault_read": false,
+    "formal_vault_scan": false,
+    "formal_vault_write": false,
+    "formal_vault_hash": false,
+    "formal_vault_snapshot": false,
+    "formal_vault_state_check": false,
+    "obsidian_sync": false,
+    "commit": false,
+    "push": false,
+    "promotion": false,
+    "dependency_install": false,
+    "background_service": false,
+    "mcp_write_tool": false,
+    "hooks": false,
+    "approval_collection": false,
+    "user_instruction_collection": false,
+    "user_wording_storage": false,
+    "command_emitted": false,
+    "execution_permission_granted": false,
+    "execution_performed": false,
+    "action_basis_creation": false,
+    "reviewed_knowledge_creation": false,
+    "evidence_support_creation": false,
+    "mainline_merge": false,
+    "dirty_tree_repair": false,
+    "auto_advance": false
+  },
+  "required_non_claims": [
+    "not approval",
+    "not promotion",
+    "not formal vault approval",
+    "not formal vault access",
+    "not Obsidian sync",
+    "not commit",
+    "not push",
+    "not user instruction",
+    "not user wording capture",
+    "not action basis",
+    "not reviewed knowledge",
+    "not evidence support",
+    "not enterprise production ready",
+    "not auto advance"
+  ],
+  "operator_summary": {
+    "can_submit_request_now": false,
+    "can_promote_now": false,
+    "can_write_formal_vault_now": false,
+    "can_commit_or_push_now": false,
+    "can_move_templates_or_tools_now": false,
+    "safe_next_action": "ask user for separate explicit approval before any boundary-crossing path"
+  }
+}

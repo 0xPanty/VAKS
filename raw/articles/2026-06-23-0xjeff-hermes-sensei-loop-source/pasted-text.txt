@@ -1,0 +1,73 @@
+文章
+
+查看新帖子
+对话
+Teknium 🪽 已转帖
+0xJeff
+@0xJeff
+The Hermes Sensei Loop
+You give your AI a prompt, the AI spits out an output. This is Generative AI.
+You give your AI a prompt, the AI spits out an output. It learns from it, proactively propose next steps. It sets up recurring cron jobs that deliver outputs for you everyday (if it senses that you need it everyday). This is Agentic AI and it’s what Hermes is really good at.
+There’s one problem though — the quality of the outputs/cron jobs depends on the model + the tools + the prompt + the format of that cron job. You need to be actively talking to your agent for it to improve the crons quality.
+And if you’re using Hermes primarily for research like me, you’ll run into a problem of AI sycophancy or AI being too agreeable. Not the kind where it thinks your idea is the best, but the kind that’s like a 23 y/o Japanese business man who bow the hardest and laugh at your jokes when you weren’t joking because he want to climb the corporate ladder.
+No adversarial review, no thesis stress test, and the crons rely on you to prove feedback to improve them.
+This is where an AI agent “loop” comes in.
+Instead of a single prompt that produces a single answer, the model enters a loop where it Thinks, Acts, Observes, and Repeats itself. Moving the agent one step closer to being an autonomous problem solver.
+Hermes has something similar to a loop already. The agent takes users prompts/feedback, learns from it, and do better next time. This is a loop that relies on human feedback. That said, we want to get to a stage where human feedback is replaced by agent feedback, saving us time, and making things a little bit more efficient.
+Most people run loops on coding agents. I run loops on research agents.
+Why?
+3 key goals (for now)
+Improves the quality of major research cron jobs
+Validate/Invalidate/Stress-test theses so I can choose to double down or pivot accordingly
+Gets the agent to be more autonomous and think for himself
+The best place I started with was
+Matthew Berman
+
+@MatthewBerman
+·
+6月19日
+翻译自 英语
+刚刚发布了 Loop Library - 一个精选的代理循环列表，您可以立即使用。
+
+查找循环，提交您自己的，tokenmaxx!!
+来自 signals.forwardfuture.ai
+It’s a loop library with 31+ loops you can copy or adapted from. Most lean towards coding + ops so my Hermes agent only adapted a few and applied it to our research crons.
+The most useful loops for us are
+1. Self-Improving Champion Loop
+Champion Loop solves the problem of stale output quality. It pushes Hermes ability to self-learn one step further by creating a loop that incrementally improves “why it matters for you” every day.
+I used to give feedback to Hermes from time to time, saying “this is too consensus-heavy” or “the format is too clunky”. Sometimes he fix improves the quality, sometimes it doesn’t.
+The champion loop turns prompt improvement from vibes into verified improvement. Every change must prove itself on data the prompt has never seen.
+How it works
+You have a champion (current prompt) and a holdout set (6 untouched days of output with ground-truth labels). Every challenger must beat the champion on those holdout days by a defined margin — without breaking any must-pass rules.
+If it can’t, it’s rejected and the champion stays. This prevents the two failure modes of ad-hoc prompt tweaking: overfitting (getting good at the examples you’re staring at) and silent regression (fixing one thing, breaking another you didn’t notice).
+Step 1: Freeze the baseline
+Take your current prompt (the “champion”). Score it on 20 past examples. Split them: 14 for editing, 6 you never touch — the holdout set. Record both scores.
+Step 2: Fix ONE thing
+Pick a single recorded failure. Change the prompt to fix that specific problem — nothing else. This is your “challenger.”
+Step 3: Prove it on unseen data.
+Test the challenger on the working set first. If it looks better, freeze it and test on the holdout set — the 6 examples you’ve never edited against. The challenger only gets promoted if it beats the champion on holdouts by a defined margin AND doesn’t break any must-pass rules.
+Step 4: Stop when it stops improving.
+Target score reached → ship. Budget exhausted → ship best champion. Two rounds with no holdout improvement → you’re at a local maximum, stop tweaking.
+The One Rule That Makes It Work
+Never promote on the working set. If you do, you overfit — the prompt gets great at the examples you’re staring at and worse on new ones. Holdout promotion is the immune system. It catches regression before it ships
+Think of this like training a junior analyst. You give them 14 deal memos to practice on. They learn the patterns — what you flag, what you ignore, how you structure the recommendation. After 14 memos, they’re nailing every single one.
+You promote the guy and let him tackle live deals.
+Then on deal #15 which they’ve never seen — they confidently recommend an LBO with 4x leverage on a cyclical mining company because “that’s how we structured memo #4.” But memo #4 was a SaaS company with 90% recurring revenue. The pattern they learned doesn’t generalize. They memorized the examples instead of understanding the principles. They overfit.
+This is the same reason why you don’t backtest a trading strategy on the same data you built it on.
+The benefits of running this champion loop
+Every round of change gets logged, verified, scored, and tested
+The outputs get drastically better over time
+2. Feedback Sweep Loop
+This is the auto-collector that feeds into the Champion Loop
+It listens to what you complain about, organizes it by workflow, and hands the champion loop a clean list of “here’s what to fix next, ranked by how many times you’ve complained about it.
+My Workflows Now
+I’m applying these 2 loops into 3 of my key workflows
+Equities Daily — reports on the latest of my equities portfolio, what to watch for, tailwinds/headwinds, new segments to look into
+Top 7 Synthesis — Top 7 headlines of the day, change from past context, why they matter for us, action items (buy/hold/sell)
+Alpha Triage — here’s what matters to our book right now ranked by Tiers
+Before Champion Loop can run, it needs to gather working sets & holdout sets on each workflows so I’m giving my feedback, scores, and preferences now. Hopefully it can start running after a week and we can see the result.
+Why go through all these troubles
+Getting the agent to move a bit closer to an autonomous being requires delegating the reasoning, execution, and feedback loop to the agent.
+Creating and kickstarting the loops is the first step to that.
+Doing this also taught me to be more vocal and structured when giving feedback. Provide structured feedback instead of a vague one. Think before speaking (or typing). In a way, I become a better manager thanks to the agent lol.
+As always, thanks for checking this out. Let me know your favorite loops!

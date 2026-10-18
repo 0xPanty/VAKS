@@ -1,0 +1,7 @@
+{
+  "case_id": "all-75-current-strict-statuses-present",
+  "status_operation_count": 75,
+  "current_strict_status_operation_count": 75,
+  "expected": 75,
+  "passed": true
+}

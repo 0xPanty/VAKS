@@ -1,0 +1,21 @@
+{
+  "record_kind": "runtime_artifact_exclusion_manifest",
+  "scenario_id": "ra-fail-runtime-filter-disabled",
+  "expected_valid": false,
+  "expected_codes": ["RA_RUNTIME_FILTER_DISABLED"],
+  "exclude_runtime_artifacts": false,
+  "items": [
+    {
+      "id": "pycache_001",
+      "path": "outputs/review/example/__pycache__/runner.cpython-310.pyc",
+      "artifact_kind": "python_cache",
+      "runtime_artifact": true,
+      "seen_by_retrieval": true,
+      "selected": false,
+      "excluded": true,
+      "excluded_reason": "runtime_artifact_excluded",
+      "pack_role": "none",
+      "authority_bucket": "runtime_artifact"
+    }
+  ]
+}

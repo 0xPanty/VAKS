@@ -1,0 +1,131 @@
+{
+  "record_kind": "external_review_chain_readiness_failure_cases",
+  "slice_id": "2026-06-19-p2-105-external-review-chain-readiness-preflight-sandbox",
+  "failure_cases": [
+    {
+      "id": "missing_chain_slice",
+      "mutation": "remove_chain_record",
+      "expected_failure": "chain_slice_count_mismatch"
+    },
+    {
+      "id": "wrong_slice_id",
+      "mutation": "set_wrong_slice_id",
+      "expected_failure": "chain_slice_id_mismatch"
+    },
+    {
+      "id": "wrong_role",
+      "mutation": "set_wrong_role",
+      "expected_failure": "chain_role_mismatch"
+    },
+    {
+      "id": "cross_slice_key_artifact_path",
+      "mutation": "set_cross_slice_key_artifact_path",
+      "expected_failure": "key_artifact_path_mismatch"
+    },
+    {
+      "id": "cross_slice_report_path",
+      "mutation": "set_cross_slice_report_path",
+      "expected_failure": "report_snapshot_path_mismatch"
+    },
+    {
+      "id": "final_gate_false",
+      "mutation": "set_final_gate_false",
+      "expected_failure": "chain_final_gate_not_true"
+    },
+    {
+      "id": "product_not_passed",
+      "mutation": "set_product_status_pending",
+      "expected_failure": "product_status_not_pass"
+    },
+    {
+      "id": "boundary_not_passed",
+      "mutation": "set_boundary_status_pending",
+      "expected_failure": "boundary_status_not_pass"
+    },
+    {
+      "id": "reviewer_not_passed",
+      "mutation": "set_reviewer_status_pending",
+      "expected_failure": "reviewer_status_not_pass"
+    },
+    {
+      "id": "upstream_report_stale",
+      "mutation": "set_report_snapshot_mtime_stale",
+      "expected_failure": "report_snapshot_stale"
+    },
+    {
+      "id": "upstream_report_status_drift",
+      "mutation": "set_report_snapshot_product_pending",
+      "expected_failure": "report_snapshot_status_mismatch"
+    },
+    {
+      "id": "key_summary_stale",
+      "mutation": "set_key_summary_stale",
+      "expected_failure": "key_summary_mismatch"
+    },
+    {
+      "id": "nested_claims_actual_opus_result",
+      "mutation": "set_key_summary_actual_opus_true",
+      "expected_failure": "key_summary_overclaim:actual_opus_result_present"
+    },
+    {
+      "id": "nested_allows_action_basis",
+      "mutation": "set_key_summary_action_basis_true",
+      "expected_failure": "key_summary_overclaim:action_basis_ready"
+    },
+    {
+      "id": "claims_actual_opus_result",
+      "mutation": "actual_opus_result_present_true",
+      "expected_failure": "summary_overclaim:actual_opus_result_present"
+    },
+    {
+      "id": "claims_validated_opus_pass",
+      "mutation": "validated_opus_pass_present_true",
+      "expected_failure": "summary_overclaim:validated_opus_pass_present"
+    },
+    {
+      "id": "claims_user_approval",
+      "mutation": "user_approval_present_true",
+      "expected_failure": "summary_overclaim:user_approval_present"
+    },
+    {
+      "id": "claims_mainline_ready",
+      "mutation": "mainline_ready_true",
+      "expected_failure": "summary_overclaim:mainline_ready"
+    },
+    {
+      "id": "allows_merge",
+      "mutation": "mainline_merge_allowed_true",
+      "expected_failure": "summary_overclaim:mainline_merge_allowed"
+    },
+    {
+      "id": "allows_promotion",
+      "mutation": "promotion_allowed_true",
+      "expected_failure": "summary_overclaim:promotion_allowed"
+    },
+    {
+      "id": "allows_truth_action",
+      "mutation": "reviewed_knowledge_ready_true",
+      "expected_failure": "summary_overclaim:reviewed_knowledge_ready"
+    },
+    {
+      "id": "allows_evidence_support",
+      "mutation": "evidence_support_ready_true",
+      "expected_failure": "summary_overclaim:evidence_support_ready"
+    },
+    {
+      "id": "allows_action_basis",
+      "mutation": "action_basis_ready_true",
+      "expected_failure": "summary_overclaim:action_basis_ready"
+    },
+    {
+      "id": "allows_commit_push_sync",
+      "mutation": "commit_push_sync_ready_true",
+      "expected_failure": "summary_overclaim:commit_push_sync_ready"
+    },
+    {
+      "id": "claims_goal_complete",
+      "mutation": "goal_complete_now_true",
+      "expected_failure": "summary_overclaim:goal_complete_now"
+    }
+  ]
+}

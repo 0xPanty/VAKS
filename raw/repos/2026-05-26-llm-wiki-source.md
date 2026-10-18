@@ -1,5 +1,6 @@
 ---
 type: source_record
+record_kind: source_card
 status: processed
 source_kind: github_repo
 repo: nashsu/llm_wiki
@@ -8,15 +9,28 @@ captured_at: 2026-05-26
 reviewed_at: 2026-05-26
 verification_status: code-inspected
 evidence_level: primary
-confidence: high
+source_integrity:
+  capture_confidence: high
 tags:
   - llm-wiki
   - knowledge-graph
   - agent-api
   - verified-vault
   - karpathy-pattern
+knowledge_status: raw
+processing_tier: light
+source_id: nashsu/llm_wiki
+title: nashsu/llm_wiki
+why_saved: see_body_or_legacy_record
+retrieval_policy:
+  policy_kind: source_identity_only
+  pack_allowed: drilldown_required
+  action_basis_allowed: false
+  warning_code: raw_is_provenance_only
+promotion_gate: none
+action_basis_allowed: false
+truth_mutation_allowed: false
 ---
-
 # Source: nashsu/llm_wiki
 
 ## What It Is

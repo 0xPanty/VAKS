@@ -1,0 +1,57 @@
+{
+  "record_kind": "external_opus_dispatch_packet",
+  "slice_id": "2026-06-19-p2-106-external-opus-dispatch-packet-sandbox",
+  "source_inputs": {
+    "transfer_manifest": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-100-opus-review-transfer-package-sandbox/artifact/opus-review-transfer-package-manifest.json",
+    "transfer_zip": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-100-opus-review-transfer-package-sandbox/artifact/opus-review-transfer-package.zip",
+    "transfer_sha_file": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-100-opus-review-transfer-package-sandbox/artifact/opus-review-transfer-package-sha256.txt",
+    "operator_control_card": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-101-opus-external-review-operator-kit-sandbox/artifact/opus-external-review-operator-control-card.json",
+    "operator_submission_message": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-101-opus-external-review-operator-kit-sandbox/artifact/opus-external-review-submission-message.md",
+    "readiness_cockpit": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-105-external-review-chain-readiness-preflight-sandbox/artifact/external-review-chain-readiness-cockpit.json"
+  },
+  "dispatch": {
+    "dispatch_ready": true,
+    "external_submission_performed": false,
+    "zip_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-100-opus-review-transfer-package-sandbox/artifact/opus-review-transfer-package.zip",
+    "zip_exists": true,
+    "zip_sha256": "2fa20d453406757c0e53abc2c2ad9842264c35359d1e12b203ea5113273b2640",
+    "actual_zip_sha256": "2fa20d453406757c0e53abc2c2ad9842264c35359d1e12b203ea5113273b2640",
+    "zip_hash_verified": true,
+    "zip_size_bytes": 70104,
+    "source_message_sha256": "e484bd6ad51d8fdf79b58b266efe3a56f78b28f12ca60d902287db83c78fae16",
+    "source_message_hash_verified": true,
+    "dispatch_message_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-106-external-opus-dispatch-packet-sandbox/artifact/external-opus-dispatch-message.md",
+    "dispatch_message_sha256": "467133c2924a4504c341ffe8aa3b227722bfd1f3f0c227058e21e8d855df1a5a",
+    "dispatch_checklist_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-106-external-opus-dispatch-packet-sandbox/artifact/external-opus-dispatch-checklist.md",
+    "dispatch_checklist_sha256": "218a475b5b0b49737ff0d17b78f420daf97409b4b9f2f2bb8e3755f82d92b280",
+    "required_conclusion_tokens": [
+      "OPUS_PASS_SANDBOX_CLOSEOUT",
+      "OPUS_REVISE_SANDBOX_CLOSEOUT",
+      "OPUS_BLOCKED_NEEDS_USER"
+    ],
+    "post_response_validator_slice": "2026-06-19-p2-102-opus-result-intake-dry-run-validator-sandbox",
+    "required_next_action": "Submit the ZIP and dispatch message to external Opus, then retain the raw response in a later sandbox-only intake slice."
+  },
+  "readiness_inputs": {
+    "transfer_ready": true,
+    "operator_ready_to_submit": true,
+    "chain_ready_to_submit_external_opus": true,
+    "chain_final_gates_true": true,
+    "chain_product_grade": true
+  },
+  "authority_flags": {
+    "dispatch_packet_only": true,
+    "external_submission_performed": false,
+    "actual_opus_result_present": false,
+    "validated_opus_pass_present": false,
+    "user_approval_present": false,
+    "mainline_ready": false,
+    "mainline_merge_allowed": false,
+    "promotion_allowed": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "commit_push_sync_ready": false,
+    "goal_complete_now": false
+  }
+}

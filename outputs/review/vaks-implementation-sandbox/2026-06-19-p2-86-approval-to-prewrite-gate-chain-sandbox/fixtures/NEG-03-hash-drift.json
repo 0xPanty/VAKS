@@ -1,0 +1,30 @@
+{
+  "scenario_id": "NEG-03-hash-drift",
+  "description": "Exact phrase cannot override fresh hash drift.",
+  "user_text": "I explicitly approve p2-75 old-file status-only normalization: apply the 75 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only. Do not edit body content, artifacts, tools, templates, wiki truth layers, main architecture docs, README, Obsidian vault, commit, push, or sync.",
+  "forced_hash_mismatch_count": 1,
+  "expected_gate_state": "blocked_prewrite_hash_or_missing_target",
+  "result": {
+    "scenario_id": "NEG-03-hash-drift",
+    "description": "Exact phrase cannot override fresh hash drift.",
+    "approval": {
+      "matched_exact_phrase": true,
+      "approval_class": "exact_p2_75_approval",
+      "fixture_match_is_user_approval": false
+    },
+    "hash_match_count": 74,
+    "hash_target_count": 75,
+    "hash_clean": false,
+    "rehearsal_ok": true,
+    "boundary_ok": true,
+    "blockers": [
+      "blocked_prewrite_hash_or_missing_target"
+    ],
+    "gate_state": "blocked_prewrite_hash_or_missing_target",
+    "ready_for_prewrite_confirmation": false,
+    "executor_write_allowed_now": false,
+    "old_slice_writes_applied": 0,
+    "requires_stop_before_write": true,
+    "fixture_match_is_user_approval": false
+  }
+}

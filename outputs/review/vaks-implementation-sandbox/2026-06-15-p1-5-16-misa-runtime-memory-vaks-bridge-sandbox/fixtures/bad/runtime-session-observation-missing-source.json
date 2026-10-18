@@ -1,0 +1,7 @@
+{
+  "record_kind": "misa_session_observation_fixture",
+  "observation_id": "obs-bad-missing-source",
+  "memory_type": "session_observation",
+  "summary": "Bad fixture missing sourceObservationIds.",
+  "truth_boundary": "bad-fixture-for-negative-test"
+}

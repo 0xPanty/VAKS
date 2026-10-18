@@ -1,0 +1,25 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "record_kind": "vaks_use_surface_blueprint",
+  "scenario_id": "prototype-operator-use-surface-blueprint",
+  "expected_valid": true,
+  "expected_codes": [],
+  "prototype_kind": "operator_use_surface_blueprint",
+  "surface_id": "operator-use-surface-p2-17",
+  "source_fixture": "fixtures/valid-operator-use-surface.json",
+  "prototype_boundary": "copied_json_blueprint_only_not_real_ui",
+  "primary_panels": [
+    "entry_matrix",
+    "operator_status",
+    "receipt_backed_search",
+    "layer_badges",
+    "dirty_state_guardrail"
+  ],
+  "non_claims": [
+    "not_reviewed_knowledge",
+    "not_evidence_support",
+    "not_action_basis",
+    "not_mainline_readiness",
+    "not_production_ui"
+  ]
+}

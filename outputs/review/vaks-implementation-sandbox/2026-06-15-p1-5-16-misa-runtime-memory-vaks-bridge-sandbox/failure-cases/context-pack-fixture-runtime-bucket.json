@@ -1,0 +1,12 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "context-pack-fixture-runtime-bucket",
+  "expected_valid": false,
+  "expected_codes": ["MB_CONTEXT_FIXTURE_BUCKET_MISMATCH"],
+  "allowed_extra_codes": ["MB_CONTEXT_ITEM_NOT_IN_PACK"],
+  "patch": {
+    "context_adapter": {
+      "context_pack_refs": ["fixtures/bad/context-pack-runtime-bucket.json"]
+    }
+  }
+}

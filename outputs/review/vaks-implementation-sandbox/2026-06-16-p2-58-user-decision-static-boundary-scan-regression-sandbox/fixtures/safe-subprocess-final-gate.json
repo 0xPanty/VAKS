@@ -1,0 +1,7 @@
+{
+  "fixture_id": "safe_subprocess_final_gate",
+  "description": "A subprocess call to a known verifier with --final-gate is allowed when it does not contain dangerous command tokens.",
+  "source": "import subprocess, sys\n\nsubprocess.run([sys.executable, '-B', 'artifact/verify.py', '--final-gate'], check=False)\n",
+  "allowed_write_lines": [],
+  "expected_issues": []
+}

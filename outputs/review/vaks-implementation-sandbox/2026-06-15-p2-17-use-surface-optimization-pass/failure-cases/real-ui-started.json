@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "real-ui-started",
+  "expected_valid": false,
+  "expected_codes": ["US_RUNTIME_OR_SYNC_FORBIDDEN"],
+  "patch": {"scope": {"real_ui_started": true}}
+}

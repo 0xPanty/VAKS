@@ -1,0 +1,43 @@
+{
+  "record_kind": "sandbox_read_only_product_workflow_prototype_receipt",
+  "slice_id": "2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox",
+  "source_slices": [
+    "2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox",
+    "2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox",
+    "2026-06-15-p2-35-formal-vault-status-surface-handoff-packet-sandbox"
+  ],
+  "step_count": 3,
+  "check_count": 10,
+  "formal_vault_accessed": false,
+  "approval_collected_now": false,
+  "user_instruction_collected": false,
+  "user_wording_stored": false,
+  "execution_permission_granted": false,
+  "execution_performed": false,
+  "write_performed": false,
+  "sync_performed": false,
+  "commit_performed": false,
+  "push_performed": false,
+  "promotion_performed": false,
+  "mainline_ready": false,
+  "workflow_used_as_action_basis": false,
+  "dirty_tree_fixed": false,
+  "auto_advanced": false,
+  "non_claims": [
+    "not action basis",
+    "not actual approval",
+    "not auto advance",
+    "not command surface",
+    "not dirty tree repair",
+    "not evidence support",
+    "not execution permission",
+    "not formal vault access",
+    "not formal vault approval",
+    "not formal vault state",
+    "not mainline readiness",
+    "not merge approval",
+    "not reviewed knowledge",
+    "not user instruction",
+    "not user wording storage"
+  ]
+}

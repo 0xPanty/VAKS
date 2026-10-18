@@ -1,0 +1,22 @@
+{
+  "record_kind": "opus_result_intake_schema",
+  "slice_id": "2026-06-19-p2-96-opus-result-intake-skeleton-sandbox",
+  "allowed_conclusion_tokens": [
+    "OPUS_PASS_SANDBOX_CLOSEOUT",
+    "OPUS_REVISE_SANDBOX_CLOSEOUT",
+    "OPUS_BLOCKED_NEEDS_USER"
+  ],
+  "required_fields_when_result_exists": [
+    "raw_conclusion_token",
+    "reviewed_evidence",
+    "boundary_verdict",
+    "raw_response_path"
+  ],
+  "boundary_requirements": {
+    "mainline_approval": false,
+    "reviewed_knowledge": false,
+    "evidence_support": false,
+    "action_basis": false,
+    "commit_push_sync": false
+  }
+}

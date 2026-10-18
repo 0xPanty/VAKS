@@ -1,0 +1,133 @@
+{
+  "created_at": "2026-06-14T01:42:43+00:00",
+  "frozen_scope": "minimal_topk_membership_case_corpus_not_full_workspace",
+  "truth_boundary": "Replayer reproduces top-k membership over this package's frozen minimal corpus, not exact ranking order and not the original full workspace corpus.",
+  "queries": [
+    {
+      "case_id": "V2-01-candidate-safe-downgrade",
+      "query": "mnemosyne vector memory candidate final support action basis",
+      "expected_top_paths": [
+        "outputs/review/2026-06-11-AxDSan-mnemosyne-candidate-distillation.md",
+        "outputs/review/2026-06-14-kanna12580-kk-knowledge-agent-candidate-distillation.md",
+        "outputs/review/2026-06-12-breferrari-obsidian-mind-candidate-distillation.md",
+        "outputs/review/2026-06-14-agents365-ai-drawio-skill-candidate-distillation.md",
+        "outputs/review/2026-06-11-RyanCodrai-turbovec-candidate-distillation.md",
+        "outputs/review/2026-06-14-edochi-mdvs-candidate-distillation.md",
+        "outputs/review/2026-06-14-google-open-knowledge-format-candidate-distillation.md",
+        "outputs/review/2026-06-14-rohitg00-agentmemory-candidate-distillation.md",
+        "outputs/review/2026-06-12-bilibili-apex-knowledge-schema-rag-candidate-distillation.md",
+        "raw/repos/2026-06-11-AxDSan-mnemosyne-source.md",
+        "outputs/review/2026-06-11-zhizhuodemao-ai-reverse-toolkit-candidate-distillation.md",
+        "outputs/review/2026-06-07-aal-ruller-pkm-second-brain-ai-companian-candidate-distillation.md"
+      ]
+    },
+    {
+      "case_id": "V2-02-real-raw-anchor-natural-allow",
+      "query": "FlexNote Extracted Source Facts local-first card tag database inspected pages",
+      "expected_top_paths": [
+        "raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md",
+        "outputs/review/2026-06-13-flexnote-docs-candidate-distillation.md",
+        "raw/repos/2026-05-27-knowledge-base-server-source.md",
+        "raw/articles/2026-06-13-flexnote-docs-source.md",
+        "raw/repos/2026-05-27-kagantic-vault-structure-source.md",
+        "raw/repos/2026-05-27-dusk-obsidian-vault-source.md",
+        "outputs/review/2026-06-11-AxDSan-mnemosyne-candidate-distillation.md",
+        "outputs/review/project_lens_overlays/2026-06-13-flexnote-vaks-visual-knowledge-workbench-overlay.md",
+        "raw/repos/2026-06-11-awesome-obsidian-vault/alexiachen-my-notes-source.md",
+        "raw/repos/2026-06-11-safishamsi-graphify-source.md",
+        "raw/repos/2026-05-26-llm-wiki-source.md",
+        "raw/repos/2026-05-27-kepano-obsidian-source.md"
+      ]
+    },
+    {
+      "case_id": "V2-03-mixed-pack-no-fallback-allow",
+      "query": "FlexNote Extracted Source Facts visual workbench candidate overlay source anchor tag database context pack inspected pages",
+      "expected_top_paths": [
+        "outputs/review/2026-06-13-flexnote-docs-candidate-distillation.md",
+        "raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md",
+        "outputs/review/project_lens_overlays/2026-06-13-flexnote-vaks-visual-knowledge-workbench-overlay.md",
+        "outputs/review/2026-06-13-bilibili-book-note-workflow-candidate-distillation.md",
+        "outputs/review/2026-06-11-AxDSan-mnemosyne-candidate-distillation.md",
+        "outputs/review/2026-06-13-bilibili-edge-recall-contextual-active-recall-candidate-distillation.md",
+        "outputs/review/2026-06-11-zhizhuodemao-ai-reverse-toolkit-candidate-distillation.md",
+        "outputs/review/2026-06-13-bilibili-obsidian-homepage-plugin-workbench-candidate-distillation.md",
+        "outputs/review/2026-06-14-agents365-ai-drawio-skill-candidate-distillation.md",
+        "outputs/review/2026-06-14-kanna12580-kk-knowledge-agent-candidate-distillation.md",
+        "raw/repos/2026-05-27-dusk-obsidian-vault-source.md",
+        "outputs/review/2026-06-11-cyrilxbt-n8n-obsidian-business-brain-candidate-distillation.md"
+      ]
+    },
+    {
+      "case_id": "V2-04-adversarial-candidate-mislabeled-support",
+      "query": "mnemosyne vector memory candidate final support action basis",
+      "expected_top_paths": [
+        "outputs/review/2026-06-11-AxDSan-mnemosyne-candidate-distillation.md",
+        "outputs/review/2026-06-14-kanna12580-kk-knowledge-agent-candidate-distillation.md",
+        "outputs/review/2026-06-12-breferrari-obsidian-mind-candidate-distillation.md",
+        "outputs/review/2026-06-14-agents365-ai-drawio-skill-candidate-distillation.md",
+        "outputs/review/2026-06-11-RyanCodrai-turbovec-candidate-distillation.md",
+        "outputs/review/2026-06-14-edochi-mdvs-candidate-distillation.md",
+        "outputs/review/2026-06-14-google-open-knowledge-format-candidate-distillation.md",
+        "outputs/review/2026-06-14-rohitg00-agentmemory-candidate-distillation.md",
+        "outputs/review/2026-06-12-bilibili-apex-knowledge-schema-rag-candidate-distillation.md",
+        "raw/repos/2026-06-11-AxDSan-mnemosyne-source.md",
+        "outputs/review/2026-06-11-zhizhuodemao-ai-reverse-toolkit-candidate-distillation.md",
+        "outputs/review/2026-06-07-aal-ruller-pkm-second-brain-ai-companian-candidate-distillation.md"
+      ]
+    },
+    {
+      "case_id": "V2-05-adversarial-overlay-mislabeled-support",
+      "query": "FlexNote visual workbench overlay project borrow support source anchor",
+      "expected_top_paths": [
+        "outputs/review/project_lens_overlays/2026-06-13-flexnote-vaks-visual-knowledge-workbench-overlay.md",
+        "outputs/review/project_lens_overlays/2026-06-14-agents365-ai-drawio-skill-vaks-visualization-overlay.md",
+        "outputs/review/2026-06-13-flexnote-docs-candidate-distillation.md",
+        "outputs/review/project_lens_overlays/2026-06-14-benmaster82-Kwipu-vaks-local-graph-rag-overlay.md",
+        "outputs/review/project_lens_overlays/2026-06-14-kanna12580-kk-knowledge-agent-misa-kb-memory-overlay.md",
+        "outputs/review/project_lens_overlays/2026-06-14-adithya-s-k-omniparse-vaks-raw-intake-overlay.md",
+        "outputs/review/project_lens_overlays/2026-06-14-rohitg00-agentmemory-misa-vaks-bridge-overlay.md",
+        "outputs/review/project_lens_overlays/2026-06-14-edochi-mdvs-vaks-validation-search-overlay.md",
+        "raw/articles/2026-06-13-flexnote-docs-source.md",
+        "outputs/review/project_overlays/_runtime_test_fixtures/2026-06-14-flexnote-canonical-overlay-runtime-fixture.md",
+        "raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md",
+        "outputs/review/2026-06-12-breferrari-obsidian-mind-candidate-distillation.md"
+      ]
+    },
+    {
+      "case_id": "V2-06-adversarial-rank-diagnostic-mislabeled-support",
+      "query": "FlexNote visual workbench source anchor candidate overlay tag database context pack",
+      "expected_top_paths": [
+        "outputs/review/2026-06-13-flexnote-docs-candidate-distillation.md",
+        "outputs/review/project_lens_overlays/2026-06-13-flexnote-vaks-visual-knowledge-workbench-overlay.md",
+        "outputs/review/2026-06-13-bilibili-book-note-workflow-candidate-distillation.md",
+        "outputs/review/2026-06-13-bilibili-edge-recall-contextual-active-recall-candidate-distillation.md",
+        "outputs/review/2026-06-11-AxDSan-mnemosyne-candidate-distillation.md",
+        "outputs/review/2026-06-11-zhizhuodemao-ai-reverse-toolkit-candidate-distillation.md",
+        "outputs/review/2026-06-13-bilibili-obsidian-homepage-plugin-workbench-candidate-distillation.md",
+        "outputs/review/2026-06-14-agents365-ai-drawio-skill-candidate-distillation.md",
+        "outputs/review/2026-06-14-kanna12580-kk-knowledge-agent-candidate-distillation.md",
+        "outputs/review/2026-06-11-cyrilxbt-n8n-obsidian-business-brain-candidate-distillation.md",
+        "outputs/review/2026-06-12-breferrari-obsidian-mind-candidate-distillation.md",
+        "outputs/review/2026-06-14-google-open-knowledge-format-candidate-distillation.md"
+      ]
+    },
+    {
+      "case_id": "V2-07-adversarial-canonical-overlay-mislabeled-support",
+      "query": "canonical overlay runtime fixture FlexNote visual workbench project overlay support",
+      "expected_top_paths": [
+        "outputs/review/project_overlays/_runtime_test_fixtures/2026-06-14-flexnote-canonical-overlay-runtime-fixture.md",
+        "outputs/review/project_lens_overlays/2026-06-13-flexnote-vaks-visual-knowledge-workbench-overlay.md",
+        "outputs/review/project_lens_overlays/2026-06-14-rohitg00-agentmemory-misa-vaks-bridge-overlay.md",
+        "outputs/review/project_lens_overlays/2026-06-14-agents365-ai-drawio-skill-vaks-visualization-overlay.md",
+        "outputs/review/2026-06-13-flexnote-docs-candidate-distillation.md",
+        "outputs/review/project_lens_overlays/2026-06-14-kanna12580-kk-knowledge-agent-misa-kb-memory-overlay.md",
+        "outputs/review/project_lens_overlays/2026-06-14-benmaster82-Kwipu-vaks-local-graph-rag-overlay.md",
+        "outputs/review/project_lens_overlays/2026-06-14-adithya-s-k-omniparse-vaks-raw-intake-overlay.md",
+        "outputs/review/project_lens_overlays/2026-06-14-edochi-mdvs-vaks-validation-search-overlay.md",
+        "outputs/review/2026-06-12-breferrari-obsidian-mind-candidate-distillation.md",
+        "raw/articles/2026-06-13-flexnote-docs-source.md",
+        "outputs/review/2026-06-13-bilibili-obsidian-homepage-plugin-workbench-candidate-distillation.md"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "fixture_id": "current-state-not-complete",
+  "expected": {
+    "goal_complete_now": false,
+    "completion_state": "not_complete_current_strict",
+    "original_items": 20,
+    "legacy_product_acceptance_evidence_count": 20,
+    "sidecar_closeout_passed_count": 20,
+    "old_slice_current_strict_final_gate_count": 0,
+    "pending_status_change_count": 75,
+    "old_slice_writes_applied": 0
+  }
+}

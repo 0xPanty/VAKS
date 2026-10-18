@@ -1,0 +1,1 @@
+{"case_id":"hash-boundary-negated-then-claims-support","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/steps/8/boundary_copy","value":"Hash match is not evidence support. Hash is evidence support for this claim."}]}

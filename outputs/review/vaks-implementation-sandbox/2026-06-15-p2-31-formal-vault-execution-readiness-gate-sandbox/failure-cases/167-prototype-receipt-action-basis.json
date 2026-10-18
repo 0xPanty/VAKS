@@ -1,0 +1,13 @@
+{
+  "case_id": "prototype-receipt-action-basis",
+  "description": "Prototype receipt says action basis.",
+  "expected_errors": [
+    "prototype_receipt_flag_not_false:gate_used_as_action_basis"
+  ],
+  "prototype_tamper": {
+    "kind": "receipt_update",
+    "updates": {
+      "gate_used_as_action_basis": true
+    }
+  }
+}

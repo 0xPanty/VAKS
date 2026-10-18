@@ -1,0 +1,855 @@
+{
+  "created_at": "2026-06-11T17:39:36",
+  "project_root": "C:\\Users\\Administrator\\Documents\\资料库",
+  "vault_root": "H:\\Obsidian\\资料库",
+  "source_list": "https://github.com/obsidian-pkm-vault/awesome-obsidian-vault",
+  "entries_total": 48,
+  "exact_skips": 2,
+  "individual_source_cards": 46,
+  "individual_candidate_distillations": 46,
+  "synced_files": 105,
+  "hash_failures": 0,
+  "boundary": "candidate-only; raw/source cards are provenance; candidate distillations are orientation only; not reviewed knowledge; action_basis_allowed=false",
+  "records": [
+    {
+      "relative_path": "outputs\\review\\2026-06-11-awesome-obsidian-vault-candidate-triage.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\2026-06-11-awesome-obsidian-vault-candidate-triage.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\2026-06-11-awesome-obsidian-vault-candidate-triage.md",
+      "sha256": "B976CF15EF3DB4B592FA2561B7C9E676BDDAC2F5721E2EE5454D94872396846A",
+      "destination_sha256": "B976CF15EF3DB4B592FA2561B7C9E676BDDAC2F5721E2EE5454D94872396846A",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\2026-06-11-awesome-obsidian-vault-p1-batch-scout.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\2026-06-11-awesome-obsidian-vault-p1-batch-scout.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\2026-06-11-awesome-obsidian-vault-p1-batch-scout.md",
+      "sha256": "627D0081461078C075E56E00FA044C710EB8B9E100C579AD253A92979CFC4F7D",
+      "destination_sha256": "627D0081461078C075E56E00FA044C710EB8B9E100C579AD253A92979CFC4F7D",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\batch-source-ledger.csv",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\batch-source-ledger.csv",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\batch-source-ledger.csv",
+      "sha256": "8B5C1E8050F859AD3EA2AECE7EC973FFFB7C7538601C4CC1F71EBAA8D1E3F32C",
+      "destination_sha256": "8B5C1E8050F859AD3EA2AECE7EC973FFFB7C7538601C4CC1F71EBAA8D1E3F32C",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\batch-source-ledger.json",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\batch-source-ledger.json",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\batch-source-ledger.json",
+      "sha256": "C1D797A117983FB5BA023105435C820F1C7349C1FBB8A5AE407BA01C700EB2C2",
+      "destination_sha256": "C1D797A117983FB5BA023105435C820F1C7349C1FBB8A5AE407BA01C700EB2C2",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\findings.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\findings.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\findings.md",
+      "sha256": "3D9CD017482FB7CB3701FCB0801C16E6AC8B2B9F7CB922B3D337E0E97C8863D3",
+      "destination_sha256": "3D9CD017482FB7CB3701FCB0801C16E6AC8B2B9F7CB922B3D337E0E97C8863D3",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\full-batch-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\full-batch-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\full-batch-candidate-distillation.md",
+      "sha256": "6C3B5F903F2ECD0913A626B0B0FC58DA2854A57846C59870F0B4A050A1C0329B",
+      "destination_sha256": "6C3B5F903F2ECD0913A626B0B0FC58DA2854A57846C59870F0B4A050A1C0329B",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source-index.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source-index.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source-index.md",
+      "sha256": "5A1F6E1F61E6A5A62167533D8632DCFD5A434D7A33AFEC55D1C019DB4D5CFB65",
+      "destination_sha256": "5A1F6E1F61E6A5A62167533D8632DCFD5A434D7A33AFEC55D1C019DB4D5CFB65",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\alexiachen-my-notes-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\alexiachen-my-notes-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\alexiachen-my-notes-candidate-distillation.md",
+      "sha256": "BD14F46D2D0C48BC371D3D3E3EEAC611E6F1C06DF0D3DEEA4D603BDA93D92878",
+      "destination_sha256": "BD14F46D2D0C48BC371D3D3E3EEAC611E6F1C06DF0D3DEEA4D603BDA93D92878",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\anduin2017-howtocook-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\anduin2017-howtocook-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\anduin2017-howtocook-candidate-distillation.md",
+      "sha256": "641113E682C80612F3420973DF1E3F806AFDAF82842155621E17ECFD5A90D251",
+      "destination_sha256": "641113E682C80612F3420973DF1E3F806AFDAF82842155621E17ECFD5A90D251",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\bytebytegohq-system-design-101-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\bytebytegohq-system-design-101-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\bytebytegohq-system-design-101-candidate-distillation.md",
+      "sha256": "E29B630492CC177852CB1DC75E2000EA813AB77A5BFC230793D658C8DE796985",
+      "destination_sha256": "E29B630492CC177852CB1DC75E2000EA813AB77A5BFC230793D658C8DE796985",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\clarklab-chowdown-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\clarklab-chowdown-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\clarklab-chowdown-candidate-distillation.md",
+      "sha256": "3CAF073CF4E08AB3CE4E716F425F48833A2F624C7B6064FD53FC3128B53EFF6A",
+      "destination_sha256": "3CAF073CF4E08AB3CE4E716F425F48833A2F624C7B6064FD53FC3128B53EFF6A",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\cyanvoxel-obsidian-vault-template-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\cyanvoxel-obsidian-vault-template-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\cyanvoxel-obsidian-vault-template-candidate-distillation.md",
+      "sha256": "6EBCE84BCB2C0EF8F4C76527EE89B2A6635BC9C144FAB82D8D2AAA28B310975C",
+      "destination_sha256": "6EBCE84BCB2C0EF8F4C76527EE89B2A6635BC9C144FAB82D8D2AAA28B310975C",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\data-engineering-community-data-engineering-wiki-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\data-engineering-community-data-engineering-wiki-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\data-engineering-community-data-engineering-wiki-candidate-distillation.md",
+      "sha256": "E01D0E058638DA482E8EF0D81EB809AC5D4BB3D74FC141B6911DD11EBB532098",
+      "destination_sha256": "E01D0E058638DA482E8EF0D81EB809AC5D4BB3D74FC141B6911DD11EBB532098",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\dotnet-dotnet-api-docs-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\dotnet-dotnet-api-docs-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\dotnet-dotnet-api-docs-candidate-distillation.md",
+      "sha256": "D92F2AF09AF581F3C61D9957C2D4377861392FE8B10CFE1959C0D6D231960DEE",
+      "destination_sha256": "D92F2AF09AF581F3C61D9957C2D4377861392FE8B10CFE1959C0D6D231960DEE",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\douglaslassance-cookbook-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\douglaslassance-cookbook-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\douglaslassance-cookbook-candidate-distillation.md",
+      "sha256": "7829FE9BB5C4DAE2842D8FBEFDA968A1C948D302116F1433E28ED098413834D9",
+      "destination_sha256": "7829FE9BB5C4DAE2842D8FBEFDA968A1C948D302116F1433E28ED098413834D9",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\dpapathanasiou-recipes-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\dpapathanasiou-recipes-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\dpapathanasiou-recipes-candidate-distillation.md",
+      "sha256": "C3409FA7713B3C896F89509CD34E260F607B4FBF79CB62418149A9210BF5802E",
+      "destination_sha256": "C3409FA7713B3C896F89509CD34E260F607B4FBF79CB62418149A9210BF5802E",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\fmhy-edit-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\fmhy-edit-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\fmhy-edit-candidate-distillation.md",
+      "sha256": "D00DA9D76ABCD9C5C47FC2A48FFBA5BB5B0994C35730CF280BCE7DC6534B00AC",
+      "destination_sha256": "D00DA9D76ABCD9C5C47FC2A48FFBA5BB5B0994C35730CF280BCE7DC6534B00AC",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\frorozcol-recetas-cocina-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\frorozcol-recetas-cocina-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\frorozcol-recetas-cocina-candidate-distillation.md",
+      "sha256": "748BF88F8FE4BAFB48515EEA823C0CEC22ACCF44EC475DB462424202B17DB1A5",
+      "destination_sha256": "748BF88F8FE4BAFB48515EEA823C0CEC22ACCF44EC475DB462424202B17DB1A5",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\giallozafferano-recipe-site-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\giallozafferano-recipe-site-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\giallozafferano-recipe-site-candidate-distillation.md",
+      "sha256": "8ED93891898ACEFF0D08C09C5733276F4B3D66EE9048A0789FE540AE355CE8A5",
+      "destination_sha256": "8ED93891898ACEFF0D08C09C5733276F4B3D66EE9048A0789FE540AE355CE8A5",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\groepl-obsidian-templates-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\groepl-obsidian-templates-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\groepl-obsidian-templates-candidate-distillation.md",
+      "sha256": "7B4966A46272EE7239593348A32B4C319CEFFDD240D73874344406053E4382B4",
+      "destination_sha256": "7B4966A46272EE7239593348A32B4C319CEFFDD240D73874344406053E4382B4",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\hundredrabbits-100r-co-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\hundredrabbits-100r-co-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\hundredrabbits-100r-co-candidate-distillation.md",
+      "sha256": "67A62F8AC602FC7DA9BC8E40D9E0AE4233AD9E0AF83476B9337D8501672190B0",
+      "destination_sha256": "67A62F8AC602FC7DA9BC8E40D9E0AE4233AD9E0AF83476B9337D8501672190B0",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\hundredrabbits-grimgrains-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\hundredrabbits-grimgrains-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\hundredrabbits-grimgrains-candidate-distillation.md",
+      "sha256": "E81EE5281150F336DE73EA5A170343CFD5F5C3FDF0D72A1519C0CDED4248E7E4",
+      "destination_sha256": "E81EE5281150F336DE73EA5A170343CFD5F5C3FDF0D72A1519C0CDED4248E7E4",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\ideaverse-lyt-nick-milo-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\ideaverse-lyt-nick-milo-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\ideaverse-lyt-nick-milo-candidate-distillation.md",
+      "sha256": "4C7B61E5846F28B6D2E12A9F90AF8AE0A61A4D1E6586C2CDF8EDB5219E8C1A5F",
+      "destination_sha256": "4C7B61E5846F28B6D2E12A9F90AF8AE0A61A4D1E6586C2CDF8EDB5219E8C1A5F",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\interneto-interneto-github-io-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\interneto-interneto-github-io-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\interneto-interneto-github-io-candidate-distillation.md",
+      "sha256": "4D3F65A008AC7127D0F7698553E1424C33A2903404E50DF6CCD3BEAC5BA8FE91",
+      "destination_sha256": "4D3F65A008AC7127D0F7698553E1424C33A2903404E50DF6CCD3BEAC5BA8FE91",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\javascript-tutorial-en-javascript-info-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\javascript-tutorial-en-javascript-info-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\javascript-tutorial-en-javascript-info-candidate-distillation.md",
+      "sha256": "05EEF5CE347374D0D6EF4C9C5698B730E0D1666FB2290A615301F6613A68F029",
+      "destination_sha256": "05EEF5CE347374D0D6EF4C9C5698B730E0D1666FB2290A615301F6613A68F029",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\jimbrig-kaas-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\jimbrig-kaas-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\jimbrig-kaas-candidate-distillation.md",
+      "sha256": "0F060D8BCBC1ED1028BB13C15D5E8AD4723E0FA12A1E45621533B6073E44D557",
+      "destination_sha256": "0F060D8BCBC1ED1028BB13C15D5E8AD4723E0FA12A1E45621533B6073E44D557",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\keyvanakbary-learning-notes-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\keyvanakbary-learning-notes-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\keyvanakbary-learning-notes-candidate-distillation.md",
+      "sha256": "EE184DF03AF051B0C88447235B44DA14EC657B27FFBF0C16714F157B4D28B5D7",
+      "destination_sha256": "EE184DF03AF051B0C88447235B44DA14EC657B27FFBF0C16714F157B4D28B5D7",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\lukesmithxyz-based-cooking-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\lukesmithxyz-based-cooking-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\lukesmithxyz-based-cooking-candidate-distillation.md",
+      "sha256": "D51995DE2D94DF86E8C558C5A569AA22FB7C611EC1BDE60D22551C13D2BC85BB",
+      "destination_sha256": "D51995DE2D94DF86E8C558C5A569AA22FB7C611EC1BDE60D22551C13D2BC85BB",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\lyz-code-blue-book-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\lyz-code-blue-book-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\lyz-code-blue-book-candidate-distillation.md",
+      "sha256": "F5C243C03285C9EF059AC0F059B5A9B8870A138FD7900F5441F0ACEF45DA186A",
+      "destination_sha256": "F5C243C03285C9EF059AC0F059B5A9B8870A138FD7900F5441F0ACEF45DA186A",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\maggieappleton-digital-gardeners-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\maggieappleton-digital-gardeners-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\maggieappleton-digital-gardeners-candidate-distillation.md",
+      "sha256": "B46EA1FDFEDEF08BFCE152769D1293770681F7DA9CCDDB75854A8146939E9FE3",
+      "destination_sha256": "B46EA1FDFEDEF08BFCE152769D1293770681F7DA9CCDDB75854A8146939E9FE3",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\mayfrost-guides-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\mayfrost-guides-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\mayfrost-guides-candidate-distillation.md",
+      "sha256": "3D5E7CD3C62CC98FAB3BBC29B4557108FE2AE4187F4E14DA7FDBDCBBED6A404B",
+      "destination_sha256": "3D5E7CD3C62CC98FAB3BBC29B4557108FE2AE4187F4E14DA7FDBDCBBED6A404B",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\microsoft-devcookbook-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\microsoft-devcookbook-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\microsoft-devcookbook-candidate-distillation.md",
+      "sha256": "0011C1BDF894E1DA1EB1031F8CB2F5ACDA31A78EABB070CEE5ACA90A75A80F37",
+      "destination_sha256": "0011C1BDF894E1DA1EB1031F8CB2F5ACDA31A78EABB070CEE5ACA90A75A80F37",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\microsoftdocs-sql-docs-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\microsoftdocs-sql-docs-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\microsoftdocs-sql-docs-candidate-distillation.md",
+      "sha256": "89DE58CDD3547AC55A700F5287080C1CEBC9FCE4F6A30A35FDFE724231A45F32",
+      "destination_sha256": "89DE58CDD3547AC55A700F5287080C1CEBC9FCE4F6A30A35FDFE724231A45F32",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\nikitavoloboev-knowledge-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\nikitavoloboev-knowledge-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\nikitavoloboev-knowledge-candidate-distillation.md",
+      "sha256": "4763F3F217CD831444E0779440ED95AF93C235F9E4347B7710D0E0C7A732AF95",
+      "destination_sha256": "4763F3F217CD831444E0779440ED95AF93C235F9E4347B7710D0E0C7A732AF95",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\noodleslove-notes-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\noodleslove-notes-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\noodleslove-notes-candidate-distillation.md",
+      "sha256": "2D5E38B9828F263E54069CA67FA69F3E70442A0E3DC6EC451BA09032D8219864",
+      "destination_sha256": "2D5E38B9828F263E54069CA67FA69F3E70442A0E3DC6EC451BA09032D8219864",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\obsidian-community-obsidian-hub-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\obsidian-community-obsidian-hub-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\obsidian-community-obsidian-hub-candidate-distillation.md",
+      "sha256": "D03970CA819107DC736D5E9F8423A538C37CEDA9823923597BCE062D605C4B4F",
+      "destination_sha256": "D03970CA819107DC736D5E9F8423A538C37CEDA9823923597BCE062D605C4B4F",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\obsidian-pkm-vault-gatekeeperwiki-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\obsidian-pkm-vault-gatekeeperwiki-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\obsidian-pkm-vault-gatekeeperwiki-candidate-distillation.md",
+      "sha256": "0DDD575EB508FF86DBDDB8C912DE77A408B62BF6D792FCE8536F9256F2C765C4",
+      "destination_sha256": "0DDD575EB508FF86DBDDB8C912DE77A408B62BF6D792FCE8536F9256F2C765C4",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\obsidian-pkm-vault-recetas-cocina-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\obsidian-pkm-vault-recetas-cocina-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\obsidian-pkm-vault-recetas-cocina-candidate-distillation.md",
+      "sha256": "030FC6C0A6BF5A627797BEBEC071322CA88B6A440C676856EAF7095832888DBA",
+      "destination_sha256": "030FC6C0A6BF5A627797BEBEC071322CA88B6A440C676856EAF7095832888DBA",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\oleeskild-digitalgardendocs-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\oleeskild-digitalgardendocs-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\oleeskild-digitalgardendocs-candidate-distillation.md",
+      "sha256": "4A4F4D3596353F7E213F94B22920BC5FCC4896108507E6B7F379B3149C76FBA7",
+      "destination_sha256": "4A4F4D3596353F7E213F94B22920BC5FCC4896108507E6B7F379B3149C76FBA7",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\ossu-computer-science-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\ossu-computer-science-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\ossu-computer-science-candidate-distillation.md",
+      "sha256": "A50BECF6E79CA7447230168AAFEBE69D4C345C0D5D745DCABF48FC656FC6E978",
+      "destination_sha256": "A50BECF6E79CA7447230168AAFEBE69D4C345C0D5D745DCABF48FC656FC6E978",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\rekkabell-kokorobot-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\rekkabell-kokorobot-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\rekkabell-kokorobot-candidate-distillation.md",
+      "sha256": "5E491A0224DE5F84B86271A42813C6695CB5CD1219D64B9E0E2EC7FD4D772731",
+      "destination_sha256": "5E491A0224DE5F84B86271A42813C6695CB5CD1219D64B9E0E2EC7FD4D772731",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\rknightuk-intersect-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\rknightuk-intersect-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\rknightuk-intersect-candidate-distillation.md",
+      "sha256": "58EE4AC0491A196DAC7169D087BA0509418D1F8B0C7D71F3A57EDF17BB034B8D",
+      "destination_sha256": "58EE4AC0491A196DAC7169D087BA0509418D1F8B0C7D71F3A57EDF17BB034B8D",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\rstacruz-cheatsheets-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\rstacruz-cheatsheets-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\rstacruz-cheatsheets-candidate-distillation.md",
+      "sha256": "6988C24737283D7155A38C0149644840B520AF6814F73F439DB8D30BBEF5D500",
+      "destination_sha256": "6988C24737283D7155A38C0149644840B520AF6814F73F439DB8D30BBEF5D500",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\shervinsahba-obsidian-icewind-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\shervinsahba-obsidian-icewind-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\shervinsahba-obsidian-icewind-candidate-distillation.md",
+      "sha256": "AFE54047C450187DD28F1B66F6068D463217FE481776EA033FC3C4142011A5E0",
+      "destination_sha256": "AFE54047C450187DD28F1B66F6068D463217FE481776EA033FC3C4142011A5E0",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\tfthacker-dashboardplusplus-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\tfthacker-dashboardplusplus-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\tfthacker-dashboardplusplus-candidate-distillation.md",
+      "sha256": "40377522ADB7CF0B334869D813AA9FCE6E81FB25633E310D9E205317E57FD19A",
+      "destination_sha256": "40377522ADB7CF0B334869D813AA9FCE6E81FB25633E310D9E205317E57FD19A",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\thatotherandrew-obsidian-digital-garden-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\thatotherandrew-obsidian-digital-garden-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\thatotherandrew-obsidian-digital-garden-candidate-distillation.md",
+      "sha256": "66CEF9F084BB8C0B28BC862A833463F8E363556E02D1641069D543D643151CE0",
+      "destination_sha256": "66CEF9F084BB8C0B28BC862A833463F8E363556E02D1641069D543D643151CE0",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\uroybd-topobon-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\uroybd-topobon-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\uroybd-topobon-candidate-distillation.md",
+      "sha256": "39000F7320121BC8A4DCC247EE4F9CD76A34FF15DD719BADA1E07E216D87C1A3",
+      "destination_sha256": "39000F7320121BC8A4DCC247EE4F9CD76A34FF15DD719BADA1E07E216D87C1A3",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\vercel-labs-skills-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\vercel-labs-skills-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\vercel-labs-skills-candidate-distillation.md",
+      "sha256": "2C1D329D5A6612654833B2BF39609962FA3D20642D1F3EDEAFB2A97ADE67553B",
+      "destination_sha256": "2C1D329D5A6612654833B2BF39609962FA3D20642D1F3EDEAFB2A97ADE67553B",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\voltagent-awesome-agent-skills-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\voltagent-awesome-agent-skills-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\voltagent-awesome-agent-skills-candidate-distillation.md",
+      "sha256": "31CDD9A5758E64FEFF194BEC65AADD2FA6FF299A1860D3DC1C6DBDC4B76BBA2E",
+      "destination_sha256": "31CDD9A5758E64FEFF194BEC65AADD2FA6FF299A1860D3DC1C6DBDC4B76BBA2E",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\wikiterra-wikiterra-vault-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\wikiterra-wikiterra-vault-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\wikiterra-wikiterra-vault-candidate-distillation.md",
+      "sha256": "A7A62DAED47CA3C210734AD027369D028E4794D5E3772C67E61A120BC6CE0F38",
+      "destination_sha256": "A7A62DAED47CA3C210734AD027369D028E4794D5E3772C67E61A120BC6CE0F38",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\xxiivv-oscean-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\xxiivv-oscean-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\xxiivv-oscean-candidate-distillation.md",
+      "sha256": "B77BE8C19C1D9527ADA5354A99BF4AC92C663C58F3308362B4BE3B4BB1C20420",
+      "destination_sha256": "B77BE8C19C1D9527ADA5354A99BF4AC92C663C58F3308362B4BE3B4BB1C20420",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\xy-241-cs-notes-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\xy-241-cs-notes-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\xy-241-cs-notes-candidate-distillation.md",
+      "sha256": "1EEA3A94D16DBECB12CA9FE8F077D8A5F918F5B389C624E42BF8D3AB05611341",
+      "destination_sha256": "1EEA3A94D16DBECB12CA9FE8F077D8A5F918F5B389C624E42BF8D3AB05611341",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\ykerus-obsidian-templates-candidate-distillation.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\ykerus-obsidian-templates-candidate-distillation.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\per-source\\ykerus-obsidian-templates-candidate-distillation.md",
+      "sha256": "6DF90CCDC45785970EF538958C0DCB906F55D9FC88B7AD2C83780BC3B8E7B9B5",
+      "destination_sha256": "6DF90CCDC45785970EF538958C0DCB906F55D9FC88B7AD2C83780BC3B8E7B9B5",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\progress.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\progress.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\progress.md",
+      "sha256": "AA0150E676306B00B82EAA07914E733F2546F516AF561A60562A423EEA677BAD",
+      "destination_sha256": "AA0150E676306B00B82EAA07914E733F2546F516AF561A60562A423EEA677BAD",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\skip-ledger.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\skip-ledger.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\skip-ledger.md",
+      "sha256": "F5E2E595D8667D3E8E57D3057D45EA934A0DE5E792292CA852557C34A7DB727E",
+      "destination_sha256": "F5E2E595D8667D3E8E57D3057D45EA934A0DE5E792292CA852557C34A7DB727E",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\sync-report.json",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\sync-report.json",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\sync-report.json",
+      "sha256": "8BE398243F2E71CFA93029A8573C732958017D0676492B9A0F923CDB5FEAA6BF",
+      "destination_sha256": "8BE398243F2E71CFA93029A8573C732958017D0676492B9A0F923CDB5FEAA6BF",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\sync-report.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\sync-report.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\sync-report.md",
+      "sha256": "8F2D829A1B07E1933CC647F3901423BB869D05C19D15C4538065FDA9E3E81165",
+      "destination_sha256": "8F2D829A1B07E1933CC647F3901423BB869D05C19D15C4538065FDA9E3E81165",
+      "hash_match": true
+    },
+    {
+      "relative_path": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\task_plan.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\task_plan.md",
+      "destination": "H:\\Obsidian\\资料库\\outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\task_plan.md",
+      "sha256": "8C4DD8E5742C3AED68AFAC60F1AAE923FE5C0D79569C1D3F7D130EC4E5E412CE",
+      "destination_sha256": "8C4DD8E5742C3AED68AFAC60F1AAE923FE5C0D79569C1D3F7D130EC4E5E412CE",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\alexiachen-my-notes-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\alexiachen-my-notes-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\alexiachen-my-notes-source.md",
+      "sha256": "D015E5558A87A796ED31E34A94DE2A6570FDA129478AC6923F798C8CD20A6E4A",
+      "destination_sha256": "D015E5558A87A796ED31E34A94DE2A6570FDA129478AC6923F798C8CD20A6E4A",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\anduin2017-howtocook-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\anduin2017-howtocook-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\anduin2017-howtocook-source.md",
+      "sha256": "6E8ACA4790F714E51FCF883BF725247DBE8BA9E17CE6EC58E82A155CC31512F5",
+      "destination_sha256": "6E8ACA4790F714E51FCF883BF725247DBE8BA9E17CE6EC58E82A155CC31512F5",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\bytebytegohq-system-design-101-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\bytebytegohq-system-design-101-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\bytebytegohq-system-design-101-source.md",
+      "sha256": "50F47ADEDC68D2C2C92DFA8380F890E81AA70C01709641C4272082579DA2F681",
+      "destination_sha256": "50F47ADEDC68D2C2C92DFA8380F890E81AA70C01709641C4272082579DA2F681",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\clarklab-chowdown-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\clarklab-chowdown-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\clarklab-chowdown-source.md",
+      "sha256": "C597FB16687522EE44376C2654DB049160011EB31D3FA1C294E2A9C015C56733",
+      "destination_sha256": "C597FB16687522EE44376C2654DB049160011EB31D3FA1C294E2A9C015C56733",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\cyanvoxel-obsidian-vault-template-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\cyanvoxel-obsidian-vault-template-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\cyanvoxel-obsidian-vault-template-source.md",
+      "sha256": "149C2E72C9F4A02541BB8BDF2BB5CFEC00CF9015FC9E9FBF79022161C3BEDEFA",
+      "destination_sha256": "149C2E72C9F4A02541BB8BDF2BB5CFEC00CF9015FC9E9FBF79022161C3BEDEFA",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\data-engineering-community-data-engineering-wiki-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\data-engineering-community-data-engineering-wiki-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\data-engineering-community-data-engineering-wiki-source.md",
+      "sha256": "00040A13D3D43ACE85962C866E8BB46C5DE9FEE3C6B84817F9BF40A2AF2D5E58",
+      "destination_sha256": "00040A13D3D43ACE85962C866E8BB46C5DE9FEE3C6B84817F9BF40A2AF2D5E58",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\dotnet-dotnet-api-docs-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\dotnet-dotnet-api-docs-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\dotnet-dotnet-api-docs-source.md",
+      "sha256": "944AD1CA9174139812BE529D59188A0B54484BE03F4CAAF9DD4C3129462BA4CE",
+      "destination_sha256": "944AD1CA9174139812BE529D59188A0B54484BE03F4CAAF9DD4C3129462BA4CE",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\douglaslassance-cookbook-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\douglaslassance-cookbook-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\douglaslassance-cookbook-source.md",
+      "sha256": "F1F66F41BD5F83D19828020273E4CB1546B8243D605B4132577F2AA574809CC5",
+      "destination_sha256": "F1F66F41BD5F83D19828020273E4CB1546B8243D605B4132577F2AA574809CC5",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\dpapathanasiou-recipes-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\dpapathanasiou-recipes-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\dpapathanasiou-recipes-source.md",
+      "sha256": "70A798A890946FD77C53E768D31DFFEB8C11A2C143F46CBD662832A029606FDF",
+      "destination_sha256": "70A798A890946FD77C53E768D31DFFEB8C11A2C143F46CBD662832A029606FDF",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\fmhy-edit-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\fmhy-edit-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\fmhy-edit-source.md",
+      "sha256": "82092AD0C70FA8C0243F242663E4394E43A9A319477806A4F60402D6C7F150D9",
+      "destination_sha256": "82092AD0C70FA8C0243F242663E4394E43A9A319477806A4F60402D6C7F150D9",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\frorozcol-recetas-cocina-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\frorozcol-recetas-cocina-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\frorozcol-recetas-cocina-source.md",
+      "sha256": "C72AE4127B160795A5230DE47748480C6D9B2244FB24D2A443890DB00FA8DF90",
+      "destination_sha256": "C72AE4127B160795A5230DE47748480C6D9B2244FB24D2A443890DB00FA8DF90",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\giallozafferano-recipe-site-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\giallozafferano-recipe-site-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\giallozafferano-recipe-site-source.md",
+      "sha256": "B5BFBF83187964330BE020244DFB2CFC83332255C9CB8CE3BFEB04EA48A3841E",
+      "destination_sha256": "B5BFBF83187964330BE020244DFB2CFC83332255C9CB8CE3BFEB04EA48A3841E",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\groepl-obsidian-templates-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\groepl-obsidian-templates-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\groepl-obsidian-templates-source.md",
+      "sha256": "538074F11304EAFF07873C699C1C6C422854A63B3032C40BCB0C7566EAD35FEB",
+      "destination_sha256": "538074F11304EAFF07873C699C1C6C422854A63B3032C40BCB0C7566EAD35FEB",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\hundredrabbits-100r-co-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\hundredrabbits-100r-co-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\hundredrabbits-100r-co-source.md",
+      "sha256": "78158133AEAC7F1F51C9EB4B4AD5BD80494CA3804001E3D66029A3932DB137C2",
+      "destination_sha256": "78158133AEAC7F1F51C9EB4B4AD5BD80494CA3804001E3D66029A3932DB137C2",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\hundredrabbits-grimgrains-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\hundredrabbits-grimgrains-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\hundredrabbits-grimgrains-source.md",
+      "sha256": "166C0F504D5BD8D23A48D7AF2CBB18F246E5813A059970AAA3DCEA125D9A09EB",
+      "destination_sha256": "166C0F504D5BD8D23A48D7AF2CBB18F246E5813A059970AAA3DCEA125D9A09EB",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\ideaverse-lyt-nick-milo-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\ideaverse-lyt-nick-milo-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\ideaverse-lyt-nick-milo-source.md",
+      "sha256": "82B29D0F9BC34500AD052456A8266BEC42DF0BB25EFBE27F8761B5FF85BE74BE",
+      "destination_sha256": "82B29D0F9BC34500AD052456A8266BEC42DF0BB25EFBE27F8761B5FF85BE74BE",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\interneto-interneto-github-io-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\interneto-interneto-github-io-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\interneto-interneto-github-io-source.md",
+      "sha256": "7CEE0B7602E5E6BB9ED0CF3327E04E4857D8D7D700B8A0F3405260284A3BCD10",
+      "destination_sha256": "7CEE0B7602E5E6BB9ED0CF3327E04E4857D8D7D700B8A0F3405260284A3BCD10",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\javascript-tutorial-en-javascript-info-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\javascript-tutorial-en-javascript-info-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\javascript-tutorial-en-javascript-info-source.md",
+      "sha256": "7296042BD4EC64BB2C89317A8F412036EA8B8FB293F2D854721CD1BCF8ADF38A",
+      "destination_sha256": "7296042BD4EC64BB2C89317A8F412036EA8B8FB293F2D854721CD1BCF8ADF38A",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\jimbrig-kaas-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\jimbrig-kaas-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\jimbrig-kaas-source.md",
+      "sha256": "89D7DFD37C6D7E7D6D6CAAC2CDA023E0F5715F3441585E22AE1FFB629C7D8D34",
+      "destination_sha256": "89D7DFD37C6D7E7D6D6CAAC2CDA023E0F5715F3441585E22AE1FFB629C7D8D34",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\keyvanakbary-learning-notes-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\keyvanakbary-learning-notes-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\keyvanakbary-learning-notes-source.md",
+      "sha256": "7F3B08DB101C71FDB1F34265578CEB9F0DEDE33D921CA0D1F416A31FB33050DB",
+      "destination_sha256": "7F3B08DB101C71FDB1F34265578CEB9F0DEDE33D921CA0D1F416A31FB33050DB",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\lukesmithxyz-based-cooking-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\lukesmithxyz-based-cooking-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\lukesmithxyz-based-cooking-source.md",
+      "sha256": "914308D4F5F2371BE7F9C249B883DC5B3A99B16B9F3ED125F8A295EE62CBD292",
+      "destination_sha256": "914308D4F5F2371BE7F9C249B883DC5B3A99B16B9F3ED125F8A295EE62CBD292",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\lyz-code-blue-book-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\lyz-code-blue-book-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\lyz-code-blue-book-source.md",
+      "sha256": "1A9C851A0D9B3AAE1757812C3BABADE60F32677CB94E59E83D110A582C7F0671",
+      "destination_sha256": "1A9C851A0D9B3AAE1757812C3BABADE60F32677CB94E59E83D110A582C7F0671",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\maggieappleton-digital-gardeners-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\maggieappleton-digital-gardeners-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\maggieappleton-digital-gardeners-source.md",
+      "sha256": "4593E757F7225D680F975D40B301107F998D4DF66FABC42B8D047395D171476F",
+      "destination_sha256": "4593E757F7225D680F975D40B301107F998D4DF66FABC42B8D047395D171476F",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\mayfrost-guides-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\mayfrost-guides-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\mayfrost-guides-source.md",
+      "sha256": "F4B2DEC30F8952FE073A30E67314D73B9A4BE81B8059D0540A7C2F0992BBCD01",
+      "destination_sha256": "F4B2DEC30F8952FE073A30E67314D73B9A4BE81B8059D0540A7C2F0992BBCD01",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\microsoft-devcookbook-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\microsoft-devcookbook-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\microsoft-devcookbook-source.md",
+      "sha256": "2667123D57985B1BBC2E604203A40798E9E86D5AC9354DFFCB270747F09F0058",
+      "destination_sha256": "2667123D57985B1BBC2E604203A40798E9E86D5AC9354DFFCB270747F09F0058",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\microsoftdocs-sql-docs-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\microsoftdocs-sql-docs-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\microsoftdocs-sql-docs-source.md",
+      "sha256": "7B6894DF6CD5C5EC9B66A98A79C183FCAF249A1599B0EC46824B160E4AB07977",
+      "destination_sha256": "7B6894DF6CD5C5EC9B66A98A79C183FCAF249A1599B0EC46824B160E4AB07977",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\nikitavoloboev-knowledge-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\nikitavoloboev-knowledge-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\nikitavoloboev-knowledge-source.md",
+      "sha256": "78A62F1097E6F59A515EDA1288D79B892F1D7DEF7E99DBDAA3DEFAD96F344CA6",
+      "destination_sha256": "78A62F1097E6F59A515EDA1288D79B892F1D7DEF7E99DBDAA3DEFAD96F344CA6",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\noodleslove-notes-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\noodleslove-notes-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\noodleslove-notes-source.md",
+      "sha256": "91E01D1F4E1D0314A5B9DFC5BEEFBFE65C18490D1A191037B34E7D2F12947A91",
+      "destination_sha256": "91E01D1F4E1D0314A5B9DFC5BEEFBFE65C18490D1A191037B34E7D2F12947A91",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\obsidian-community-obsidian-hub-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\obsidian-community-obsidian-hub-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\obsidian-community-obsidian-hub-source.md",
+      "sha256": "4381FDB036DFDB8374662172B2B4A932AF1808AF594782BBEE47905DC859CCFB",
+      "destination_sha256": "4381FDB036DFDB8374662172B2B4A932AF1808AF594782BBEE47905DC859CCFB",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\obsidian-pkm-vault-gatekeeperwiki-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\obsidian-pkm-vault-gatekeeperwiki-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\obsidian-pkm-vault-gatekeeperwiki-source.md",
+      "sha256": "D9708CEA3CD61B17803379D39B3785ABA9D7D044078FAA50CF5F099AC42E11D9",
+      "destination_sha256": "D9708CEA3CD61B17803379D39B3785ABA9D7D044078FAA50CF5F099AC42E11D9",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\obsidian-pkm-vault-recetas-cocina-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\obsidian-pkm-vault-recetas-cocina-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\obsidian-pkm-vault-recetas-cocina-source.md",
+      "sha256": "531F946FB07FC3D0A7E4FCDF8591F21468AD3F6B8A0FBF41380AB6AC817493A3",
+      "destination_sha256": "531F946FB07FC3D0A7E4FCDF8591F21468AD3F6B8A0FBF41380AB6AC817493A3",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\oleeskild-digitalgardendocs-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\oleeskild-digitalgardendocs-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\oleeskild-digitalgardendocs-source.md",
+      "sha256": "6098BB327A2D75A241B0E66EC2CED2E16D255959BE899D6A99A2FC1CD416DFAE",
+      "destination_sha256": "6098BB327A2D75A241B0E66EC2CED2E16D255959BE899D6A99A2FC1CD416DFAE",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\ossu-computer-science-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\ossu-computer-science-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\ossu-computer-science-source.md",
+      "sha256": "D28EE00CC4F83939BE39404D341AEA0F480E668C9ABD65A4D4FA5DFA3521FFB8",
+      "destination_sha256": "D28EE00CC4F83939BE39404D341AEA0F480E668C9ABD65A4D4FA5DFA3521FFB8",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\rekkabell-kokorobot-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\rekkabell-kokorobot-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\rekkabell-kokorobot-source.md",
+      "sha256": "940D4D13E51E885E764D099F61AEE7944F2AF2B7212432C259872CE07352EB91",
+      "destination_sha256": "940D4D13E51E885E764D099F61AEE7944F2AF2B7212432C259872CE07352EB91",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\rknightuk-intersect-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\rknightuk-intersect-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\rknightuk-intersect-source.md",
+      "sha256": "07C96C8E07A34819240C420EEE1ABCC54C9DD386CE6E921B8FCAAAB4761FA205",
+      "destination_sha256": "07C96C8E07A34819240C420EEE1ABCC54C9DD386CE6E921B8FCAAAB4761FA205",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\rstacruz-cheatsheets-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\rstacruz-cheatsheets-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\rstacruz-cheatsheets-source.md",
+      "sha256": "D548A2A3530DB98264E9B27847CC8BD6D3467B1B6AFB87B3E49F2FE3737CC4AC",
+      "destination_sha256": "D548A2A3530DB98264E9B27847CC8BD6D3467B1B6AFB87B3E49F2FE3737CC4AC",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\shervinsahba-obsidian-icewind-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\shervinsahba-obsidian-icewind-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\shervinsahba-obsidian-icewind-source.md",
+      "sha256": "A0A8D8031FE66A843AEBD5212D67AC7312A894D6E259E29C256918CCE4B40E93",
+      "destination_sha256": "A0A8D8031FE66A843AEBD5212D67AC7312A894D6E259E29C256918CCE4B40E93",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\tfthacker-dashboardplusplus-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\tfthacker-dashboardplusplus-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\tfthacker-dashboardplusplus-source.md",
+      "sha256": "55E2576F3C6783DE812655E4F029C9A4ED616F3DBDD939D100D4E4D560F85D25",
+      "destination_sha256": "55E2576F3C6783DE812655E4F029C9A4ED616F3DBDD939D100D4E4D560F85D25",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\thatotherandrew-obsidian-digital-garden-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\thatotherandrew-obsidian-digital-garden-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\thatotherandrew-obsidian-digital-garden-source.md",
+      "sha256": "8A6E70790C453800E139F12032719D46E302B17A18032C138F42D4B8FD5BF37A",
+      "destination_sha256": "8A6E70790C453800E139F12032719D46E302B17A18032C138F42D4B8FD5BF37A",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\uroybd-topobon-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\uroybd-topobon-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\uroybd-topobon-source.md",
+      "sha256": "2D9BD7C199626385D83C9E19CA3E4380ABD4A729638D7AF4EC0B326C3D6AB99A",
+      "destination_sha256": "2D9BD7C199626385D83C9E19CA3E4380ABD4A729638D7AF4EC0B326C3D6AB99A",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\vercel-labs-skills-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\vercel-labs-skills-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\vercel-labs-skills-source.md",
+      "sha256": "37A4DE98D525BC9A74AC0ECD569915D982F8317FF1559EB638753A206F0DB2D9",
+      "destination_sha256": "37A4DE98D525BC9A74AC0ECD569915D982F8317FF1559EB638753A206F0DB2D9",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\voltagent-awesome-agent-skills-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\voltagent-awesome-agent-skills-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\voltagent-awesome-agent-skills-source.md",
+      "sha256": "858D8D4A1F27660F4DB8246E9EB990999A9B9BC7E11155005D0D496510560C0E",
+      "destination_sha256": "858D8D4A1F27660F4DB8246E9EB990999A9B9BC7E11155005D0D496510560C0E",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\wikiterra-wikiterra-vault-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\wikiterra-wikiterra-vault-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\wikiterra-wikiterra-vault-source.md",
+      "sha256": "90F091F8D67A77707009F9AAA53BCA685009FB72E77E268F66A01CB61699E978",
+      "destination_sha256": "90F091F8D67A77707009F9AAA53BCA685009FB72E77E268F66A01CB61699E978",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\xxiivv-oscean-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\xxiivv-oscean-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\xxiivv-oscean-source.md",
+      "sha256": "EC0C00633FD11C3349790C6C2D36B6345892042014099E43A25B466DB0B1978B",
+      "destination_sha256": "EC0C00633FD11C3349790C6C2D36B6345892042014099E43A25B466DB0B1978B",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\xy-241-cs-notes-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\xy-241-cs-notes-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\xy-241-cs-notes-source.md",
+      "sha256": "A054A138668E277E7258BE9A98D5ACB0D6E529C37210F0BE311A5B742F62B4BB",
+      "destination_sha256": "A054A138668E277E7258BE9A98D5ACB0D6E529C37210F0BE311A5B742F62B4BB",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-awesome-obsidian-vault\\ykerus-obsidian-templates-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\ykerus-obsidian-templates-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-awesome-obsidian-vault\\ykerus-obsidian-templates-source.md",
+      "sha256": "60BFD97CB65D88FE15D220126E4B5F5C3521B3D948EFAFEFD0EF287E2EB13803",
+      "destination_sha256": "60BFD97CB65D88FE15D220126E4B5F5C3521B3D948EFAFEFD0EF287E2EB13803",
+      "hash_match": true
+    },
+    {
+      "relative_path": "raw\\repos\\2026-06-11-obsidian-pkm-vault-awesome-obsidian-vault-source.md",
+      "source": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\repos\\2026-06-11-obsidian-pkm-vault-awesome-obsidian-vault-source.md",
+      "destination": "H:\\Obsidian\\资料库\\raw\\repos\\2026-06-11-obsidian-pkm-vault-awesome-obsidian-vault-source.md",
+      "sha256": "A9BA0700DCA2D665941CFF46814D6CBC431EC40C800175FFFBCBD22446187E76",
+      "destination_sha256": "A9BA0700DCA2D665941CFF46814D6CBC431EC40C800175FFFBCBD22446187E76",
+      "hash_match": true
+    }
+  ]
+}

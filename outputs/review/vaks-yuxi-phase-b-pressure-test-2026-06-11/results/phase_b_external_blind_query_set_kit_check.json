@@ -1,0 +1,42 @@
+{
+  "external_blind_query_set_kit_check_status": "pending_external_queries",
+  "error_count": 0,
+  "errors": [],
+  "artifacts": {
+    "artifacts": [
+      {
+        "path": "queries_phase_b_external_blind_template.jsonl",
+        "exists": true,
+        "bytes": 2280
+      },
+      {
+        "path": "results\\phase_b_external_blind_query_author_manifest_template.json",
+        "exists": true,
+        "bytes": 407
+      },
+      {
+        "path": "results\\phase_b_external_blind_query_set_kit.json",
+        "exists": true,
+        "bytes": 1120
+      },
+      {
+        "path": "PHASE_B_EXTERNAL_BLIND_QUERY_SET_KIT.md",
+        "exists": true,
+        "bytes": 2434
+      }
+    ]
+  },
+  "template": {
+    "template_rows": 20
+  },
+  "filled_queries": {
+    "external_blind_query_status": "pending_external_queries",
+    "filled_query_rows": 0,
+    "unique_query_rows": 0
+  },
+  "author_manifest": {
+    "author_manifest_status": "pending_external_queries",
+    "author_type": "",
+    "allowed_docs_seen_count": 0
+  }
+}

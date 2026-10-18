@@ -1,0 +1,11 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "question-missing",
+  "expected_valid": false,
+  "expected_codes": ["US_QUESTION_MISSING"],
+  "patch": {
+    "user_questions": {
+      "source_hash_receipt_integrity": {"__delete__": true}
+    }
+  }
+}

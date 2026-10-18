@@ -1,0 +1,11 @@
+{
+  "case_id": "positive-user-answer-classification",
+  "inputs": [
+    "continue",
+    "all done",
+    "go ahead",
+    "make it product grade"
+  ],
+  "expected_old_file_write_allowed": false,
+  "expected_route": "continue sandbox-only or report blocked old-file normalization"
+}

@@ -1,0 +1,511 @@
+CyrilXBT
+@cyrilXBT
+Obsidian Masterclass: The Complete Guide From Empty Vault to a Second Brain That Runs Your Life
+Most people download Obsidian and spend the first week excited.
+The second week confused.
+The third week using Notion again.
+Not because Obsidian is difficult. Because nobody gave them the complete picture before they started building. They set up a folder structure that made sense on day one and broke down by week four. They took notes that went nowhere. They installed fifteen plugins and used three of them.
+This masterclass is the complete picture.
+From the philosophy that makes Obsidian worth using to the architecture that makes it compound, to the Claude integration that makes it intelligent, to the daily practice that makes it stick.
+By the end you will have everything you need to build a second brain that gets more valuable every week you use it.
+Part 1: Why Obsidian and Why Now
+Before you build anything understand what makes Obsidian fundamentally different from every other note-taking tool.
+Your notes are files.
+Not database entries. Not cloud objects. Not content locked inside a proprietary format.
+Plain text Markdown files that live on your computer. Files that will be readable by any device, any operating system, any software in existence fifty years from now.
+This matters more than it sounds.
+Notion can shut down. Evernote already degraded. Roam changed their pricing model. Every cloud-based note-taking tool is a bet that the company stays solvent, keeps your data accessible, and doesn't change the pricing in ways that make it unaffordable.
+Obsidian is not that bet.
+Your notes are yours permanently. The vault you build today will exist in exactly the same form in twenty years regardless of what happens to any company.
+Your notes can connect.
+The linking system in Obsidian mirrors how ideas actually relate to each other rather than how a filing cabinet organizes paper.
+A note about attention connects to a note about deep work connects to a note about energy management. Not because they share a folder. Because you drew an explicit link between them. The connection exists independently of any folder structure.
+Over time your vault becomes a network of connected ideas that surface relevant information when you need it rather than requiring you to remember exactly where you filed something.
+Your notes can be intelligent.
+This is the part that changed everything in 2025 and 2026.
+Connect Claude to your vault via the Filesystem MCP and Claude can read every note you have ever written, reason across the entire collection simultaneously, find connections you missed, surface relevant history when you are making a decision, and generate outputs that require reading across thousands of notes to produce.
+The vault that used to be passive storage becomes an active thinking partner.
+That combination of permanent files, connected ideas, and AI intelligence is what makes Obsidian worth the investment in learning it properly.
+Part 2: The Philosophy Before the Architecture
+Most Obsidian tutorials skip this section entirely.
+They jump straight to folder structures and plugin recommendations.
+The philosophy is what determines whether your vault compounds or just accumulates.
+The retrieval-first principle.
+Every organizational decision should be made by asking: when I need this in the future, what will I know about it that I can use to find it?
+Not: what category does this belong in right now?
+The filing cabinet question optimizes for the moment of capture. The retrieval question optimizes for every future moment when you need the information.
+These produce different answers.
+A note about Jensen Huang's comments on AI infrastructure filed under People/Jensen-Huang is retrieval-friendly only if you remember it was about Jensen Huang. Filed under Topics/AI-Infrastructure it's retrieval-friendly if you remember it was about AI infrastructure. Connected to both via wikilinks it's findable either way.
+The retrieval-first principle pushes you toward naming conventions that describe content, consistent tagging that describes type and status, and linking that creates multiple paths to the same note.
+The atomic note principle.
+One idea per note.
+Not one topic per note. One idea.
+An atomic note about the concept of compounding interest in knowledge systems is a reusable asset. You can link to it from a note about Obsidian, a note about investing, a note about habit formation, and a note about why expertise takes years to develop. All four links point to the same idea expressed once.
+A note that contains everything you know about compounding is a filing cabinet entry. It sits in one place. It connects to nothing. It's useful exactly once.
+Atomic notes are small. They're designed to be connected. They're written in your own words because they represent your understanding not your collection of what others said.
+The shift from collecting information to processing it into atomic notes is the most important habit change in building a second brain.
+The connection principle.
+The value of a note is not in what it contains. It is in what it connects to.
+A perfectly written note with no connections is worth less than a rough note connected to ten other notes. The connections are what create the network effect that makes a vault valuable.
+Every permanent note should have at least two connections to existing notes before it's considered done. The discipline of finding the second connection is what forces genuine thinking about how the idea fits into your existing knowledge.
+The output principle.
+A vault that never produces output is a hobby.
+The measure of a second brain is not how many notes it contains. It is how many decisions it improves, how many pieces of writing it fuels, how many insights it surfaces before you need them.
+Every structural decision should be made by asking: does this make outputs easier or harder to produce?
+Part 3: The Vault Architecture
+The architecture is the foundation. Get this right and the vault scales indefinitely. Get it wrong and you rebuild it every six months.
+Five principles govern the architecture:
+One: Every note belongs in exactly one folder. No note is in multiple folders. No note sits at the root level.
+Two: Folders represent types of content not topics. Topics are handled by tags and links.
+Three: The naming convention is consistent enough that you can navigate without opening folders.
+Four: The architecture is designed for a vault with ten thousand notes not a vault with one hundred.
+Five: Claude can navigate it without a map.
+The folder structure:
+VAULT/
+    00-INBOX/
+    01-PERMANENT/
+    02-LITERATURE/
+    03-MAPS/
+    04-PROJECTS/
+    05-DAILY/
+    06-RESOURCES/
+    07-OUTPUTS/
+    08-COMPOUND/
+    09-ARCHIVE/
+    10-SYSTEM/
+00-INBOX is your capture buffer. Everything unprocessed lands here. Nothing lives here permanently. The inbox empties itself every evening through processing.
+01-PERMANENT is the heart of the vault. Atomic notes in your own words. Every idea you have processed and understood lives here. This folder compounds over time because every new permanent note has the potential to connect to every existing one.
+02-LITERATURE holds notes from specific sources. The book you read. The article you processed. The podcast episode you transcribed. Literature notes feed into permanent notes. They are not the final destination of information. They are the processing station.
+03-MAPS holds Maps of Content. These are notes whose primary purpose is to link to other notes on a topic and add commentary on how they relate. Not a folder. A navigational layer inside the vault.
+04-PROJECTS holds one subfolder per active project. Every note specific to a project lives here. When a project completes the folder moves to 09-ARCHIVE.
+05-DAILY holds your daily notes. One file per day. The timestamped record of what happened, what you captured, what you decided.
+06-RESOURCES holds reference material. Things you might need someday. Not things you are actively using.
+07-OUTPUTS holds finished work produced from the vault. Articles, reports, frameworks. The evidence that the vault is producing rather than just accumulating.
+08-COMPOUND holds Claude-generated outputs. Connections discovered between notes. Patterns identified across captures. Syntheses generated from accumulated permanent notes. This folder did not exist in traditional Obsidian setups. It is the intelligence layer made visible.
+09-ARCHIVE holds everything that is no longer active. Never delete. Archive.
+10-SYSTEM holds CLAUDE.md, templates, and skill files. The infrastructure that makes everything else run.
+Part 4: The File Naming Convention
+Consistent naming eliminates the search problem before it starts.
+Every file follows one convention:
+YYYY-MM-DD-[TYPE]-[TOPIC].md
+The date prefix sorts files chronologically automatically. The type identifier tells you what kind of note it is before you open it. The topic identifier makes keyword search reliable.
+Type identifiers:
+daily    → daily notes
+perm     → permanent notes
+lit      → literature notes
+map      → maps of content
+proj     → project overview notes
+meet     → meeting notes
+dec      → decision notes
+ref      → reference notes
+Examples:
+2026-06-09-daily-monday.md
+2026-06-08-perm-compounding-knowledge.md
+2026-06-07-lit-thinking-fast-and-slow.md
+2026-06-05-map-productivity.md
+2026-06-04-proj-obsidian-masterclass.md
+2026-06-01-dec-switch-to-obsidian.md
+The naming convention means you can find any note by searching for a partial match. You know the type. You know roughly when you created it. You know the topic. Three pieces of information make every note findable without navigating folders.
+Part 5: The Properties System
+Properties are the structured data layer inside every note. They're what make filtering and database-style queries possible.
+Every note in the vault has a properties block at the top:
+---
+type: permanent
+status: active
+created: 2026-06-09
+tags: [productivity, compounding, knowledge-systems]
+---
+Additional properties by note type:
+For permanent notes:
+---
+type: permanent
+status: active
+created: 2026-06-09
+tags: [relevant-topics]
+connections: [number-of-explicit-links]
+---
+For project notes:
+---
+type: project
+status: active
+started: 2026-06-01
+deadline: 2026-07-01
+completion: 35
+next_action: Write section 4
+---
+For decision notes:
+---
+type: decision
+date: 2026-06-09
+chosen: [what you decided]
+assumption: [key belief this rests on]
+review_date: 2026-09-09
+outcome: [fill in when known]
+---
+The properties system is what makes Dataview queries and Claude filtering work. When Claude needs to find all active projects it reads the type and status properties. When you want to see all notes created this month it queries the created property.
+Part 6: The CLAUDE.md
+The CLAUDE.md is the most important file in the vault. It's what makes Claude's outputs specific to your life and work rather than generically helpful.
+Every Claude interaction in this vault starts by reading this file. The quality of everything Claude produces is determined by the specificity of what's in it.
+# Vault Intelligence System — CLAUDE.md
+
+## Identity
+Name: [YOUR NAME]
+Primary domain: [YOUR WORK AND FOCUS]
+Stage: [WHERE YOU ARE IN YOUR WORK]
+
+## Vault Purpose
+[One paragraph describing what this vault 
+is for specifically. Not "general knowledge 
+management" but the specific domains, 
+questions, and projects it serves.]
+
+## Primary Intellectual Interests
+[List 8-12 specific topics you think about 
+regularly. Specific enough that Claude 
+can identify when a new note is relevant.]
+
+1. [INTEREST 1]
+2. [INTEREST 2]
+...
+
+## Active Projects
+[PROJECT NAME]: [One sentence status]
+Current phase: [PHASE]
+Next action: [SPECIFIC NEXT STEP]
+Priority: [HIGH/MEDIUM/LOW]
+
+## Current Active Theses
+[The positions you currently hold that 
+new information might support or contradict]
+
+Thesis 1: [STATEMENT]
+Supporting evidence: [BRIEF SUMMARY]
+Counter-evidence: [WHAT CHALLENGES IT]
+Last updated: [DATE]
+
+## Decision Log Context
+[How I make decisions and what I care about 
+when evaluating options]
+
+## Content Standards
+[If you create content: voice, format, 
+topics, what you never publish]
+
+## Vault Navigation
+00-INBOX: Raw captures
+01-PERMANENT: Atomic notes
+02-LITERATURE: Source notes
+03-MAPS: Topic maps
+04-PROJECTS: Active projects
+05-DAILY: Daily notes
+06-RESOURCES: Reference material
+07-OUTPUTS: Finished work
+08-COMPOUND: Claude-generated outputs
+09-ARCHIVE: Completed material
+10-SYSTEM: CLAUDE.md and infrastructure
+
+## Intelligence Layer Instructions
+
+When finding connections:
+Strong connection = reading one note changes 
+how you read the other. Not same topic. 
+Actually illuminating.
+
+When monitoring theses:
+Flag when new notes contradict active theses. 
+Don't flag things that merely add complexity.
+
+When generating syntheses:
+The synthesis must say something no individual 
+note says. If it doesn't it's a summary.
+
+When detecting patterns:
+A pattern requires at least 4 notes from 
+different sources demonstrating the same 
+structural similarity.
+
+## Update Schedule
+Active projects: weekly
+Active theses: monthly
+Primary interests: quarterly
+The Active Theses section is the most underused part of every CLAUDE.md. Most people skip it. The thesis monitor that checks new notes against your positions is what makes the intelligence layer genuinely useful rather than just interesting.
+Part 7: The Linking System
+Linking is the skill that separates a vault that compounds from a vault that accumulates.
+Three types of links and when to use each:
+Direct links connect one note to another:
+[[Note Name]]
+Use when one note directly references the content of another. The most common link type. Creates explicit navigation paths through the vault.
+Block links connect to a specific paragraph:
+[[Note Name#^block-id]]
+Use when the connection is to a specific claim or observation rather than the whole note. More precise than a direct link.
+Aliases let you link using different text:
+[[Note Name|the concept I'm referencing]]
+Use when you want the link text to flow naturally in the sentence rather than using the exact note name.
+The three linking habits that compound over time:
+The two-link rule: No permanent note gets filed without at least two explicit links to existing notes. The first connection is usually obvious. The second requires genuine thought about how the idea fits the existing network. The harder thinking produces better connections.
+The backlink review: Every time you open a permanent note spend thirty seconds looking at its backlink panel. The panel shows every note that links to it. If any backlink represents a connection worth making explicit in the other direction add the link before closing. This habit keeps the network bidirectional.
+The map update: Every time you create a permanent note on a topic that has a Map of Content add the note to the map with a one-sentence description of what it contributes. The maps stay current without maintenance sessions.
+Part 8: The Daily Note System
+The daily note is where everything enters the vault. It's the front door.
+The template:
+---
+type: daily
+date: {{date:YYYY-MM-DD}}
+day: {{date:dddd}}
+---
+
+# {{date:MMMM D, YYYY}}
+
+## Morning Context
+[[{{date:YYYY-MM-DD}}-morning-brief]]
+
+## The One Thing
+> [Single most important outcome for today]
+
+## Schedule
+| Time | Event |
+|------|-------|
+
+## Captures
+*Everything that comes in lands here. 
+No filing decisions during the day.*
+
+## Decisions Made
+DECISION: 
+CONTEXT: 
+REASONING: 
+
+## Open Loops
+*Unfinished items to carry forward*
+
+## End of Day
+What happened:
+
+Carrying forward:
+
+Tomorrow's One Thing:
+The morning brief link points to a Claude-generated file that appears automatically at 6AM. You open your daily note and the context is already there. Your project status. Your open loops from yesterday. External developments relevant to your work.
+You spend five minutes reading. You write The One Thing. You start working.
+The rest of the day the daily note is a capture buffer. Everything lands in Captures. No decisions about where to file anything. Just capture and keep moving.
+At 8PM the capture processor runs automatically and files everything that accumulated during the day into the correct vault locations.
+Part 9: The Permanent Note Writing Process
+The permanent note is the most important skill to develop in Obsidian.
+Most people skip this step. They take literature notes from sources and call them done. They have a vault full of what other people said rather than what they understand.
+A permanent note is not a summary. It is your understanding expressed in your words.
+The process from raw capture to permanent note:
+Step 1: Read the capture actively
+Don't just read your literature note or capture. Engage with it. What do you actually think about this? Where does it fit with what you already know? What does it contradict?
+Step 2: Write in your own words without looking
+Close the source. Write the idea from memory in your own words. If you can't write it from memory you don't understand it yet. Go back. Read again. Try again.
+Step 3: Find the connections
+Search your vault for at least two existing notes this idea connects to. Not same-topic connections. Genuinely illuminating connections. What does reading this note and an existing note together tell you that reading either alone doesn't?
+Step 4: Write the note
+---
+type: permanent
+status: active
+created: [DATE]
+tags: [relevant-topics]
+---
+
+# [CONCEPT NAME]
+
+[Your understanding in 2-4 sentences. 
+Not what the source said. 
+What you understand.]
+
+## Why This Matters
+[Why this concept matters for questions 
+you're currently working on]
+
+## The Tension
+[What this concept is in tension with. 
+The opposing view or complicating factor.]
+
+## Connections
+- [[CONNECTION 1]] — [how they relate]
+- [[CONNECTION 2]] — [how they relate]
+
+## Source
+[[LITERATURE NOTE]] — [what the source 
+contributed to this understanding]
+Step 5: File it
+Move to 01-PERMANENT. The naming convention handles discoverability.
+The permanent note is done when it says something in your words that required reading and thinking to produce. Not when it contains the information.
+Part 10: Maps of Content
+Maps of Content are the navigation layer of the vault.
+A Map of Content for a topic with many notes looks like this:
+---
+type: map
+topic: [TOPIC]
+updated: [DATE]
+---
+
+# [TOPIC] — Map of Content
+
+## The Core Question
+[What is this topic fundamentally about. 
+The question all these notes are trying to answer.]
+
+## Foundation Notes
+[Notes that establish the basic framework]
+- [[Note 1]] — [what it contributes]
+- [[Note 2]] — [what it contributes]
+
+## Complications and Tensions
+[Notes that challenge or complicate the foundation]
+- [[Note 3]] — [the tension it introduces]
+
+## Applications
+[Notes applying this topic to specific domains]
+- [[Note 4]] — [the application]
+
+## Synthesis
+[[Synthesis Note If Generated]] — [what it adds]
+
+## Open Questions
+[Questions accumulated from all notes 
+in this topic that aren't yet answered]
+
+## Connected Maps
+- [[RELATED MAP 1]]
+Create a Map of Content when a topic accumulates more than fifteen permanent notes. Before that the backlink panel on any note in the topic is sufficient navigation.
+The Open Questions section is the most generative part. It's a standing research agenda that updates as notes accumulate. Every time you add a note that partially answers a question update the question. Every time you encounter something new that raises a question add it.
+Part 11: The Intelligence Layer
+This is where Obsidian in 2026 becomes something different from Obsidian in 2022.
+Connect Claude via the Filesystem MCP and five automated workflows transform the vault from passive storage into an active thinking system.
+Setup:
+Install Claude Desktop. Edit the config file:
+{
+  "mcpServers": {
+    "obsidian": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/path/to/your/vault"
+      ]
+    }
+  }
+}
+Restart Claude Desktop. Test with:
+List the folders in my vault and describe 
+the structure you see.
+The Five Intelligence Workflows:
+Workflow 1: Morning Brief (6AM daily)
+Claude reads your CLAUDE.md, your active project notes, yesterday's daily note open loops, and searches for relevant external developments. Produces a structured brief that appears linked in your daily note before you open your laptop.
+Workflow 2: Evening Capture Processor (8PM daily)
+Claude reads everything in your daily note's Captures section. Files tasks to project notes, creates permanent notes from ideas, stores decisions in memory, carries open loops to tomorrow's daily note. The inbox clears itself.
+Workflow 3: Nightly Connection Finder (11PM daily)
+Claude reads notes created or modified in the last 48 hours and searches the entire vault for strong connections not yet made explicit. Produces connection notes in 08-COMPOUND describing what each connection reveals.
+Workflow 4: Weekly Pattern Detector (Sunday 6PM)
+Claude reads all notes from the week and identifies structural patterns appearing across multiple notes from different sources. Named patterns deposited in 08-COMPOUND with the notes demonstrating them cited.
+Workflow 5: Monthly Synthesis Generator (1st of month)
+For any topic with 10 or more permanent notes Claude synthesizes across them producing an output that requires all the notes to produce. Saved to 08-COMPOUND with links from all contributing notes.
+Part 12: The Six Core Claude Prompts
+Beyond automated workflows six manual prompts handle the most common intelligence requests.
+The Connection Finder:
+Read [[NOTE NAME]] and search my entire vault 
+for strong connections to this note that 
+aren't already explicit.
+
+Strong connection = reading both notes together 
+reveals something that reading either alone doesn't.
+
+Only surface non-obvious connections. Skip anything 
+already linked or obviously same-topic.
+The Question Answerer:
+I'm working on this question: [YOUR QUESTION]
+
+Search my vault for notes that directly or 
+indirectly address it. Tell me what my own 
+accumulated notes say about this question 
+before you add anything from outside.
+
+Then tell me what my vault can't answer.
+The Decision Support:
+I'm making this decision: [DECISION]
+
+Read my CLAUDE.md for active theses and context.
+Search my vault for any historical decisions 
+similar to this one.
+
+Tell me:
+- What relevant history exists in my notes
+- What assumption this decision rests on
+- What would have to be true for this to go wrong
+- Your honest recommendation with reasoning
+The Writing Activator:
+I'm writing about: [TOPIC]
+
+Search 01-PERMANENT for every note relevant 
+to this topic.
+
+Tell me:
+- The strongest claim my notes support
+- The specific evidence available in the vault
+- The counterarguments my notes raise
+- What's missing that I should research
+
+Don't tell me what to write. Show me what 
+my notes already know.
+The Thinking Partner:
+Read my recent notes from the last 14 days 
+across 05-DAILY and 01-PERMANENT.
+
+Find:
+- Where I appear to hold contradictory positions
+- Arguments I'm making without developing evidence
+- Questions I've referenced multiple times 
+  without addressing directly
+
+Push on each one. Don't validate. Challenge.
+The Vault Audit:
+Read the structure of my vault and tell me:
+- Which permanent notes have fewer than 2 connections
+- Which topics have notes accumulating without 
+  a Map of Content
+- Which active theses in CLAUDE.md haven't 
+  been updated in more than 90 days
+- What the vault's most connected notes are 
+  and what that reveals about my actual interests
+Part 13: The Plugins Worth Installing
+Obsidian has over a thousand community plugins. Most of them you will never use. These seven are the ones that matter.
+Templater: Creates templates with dynamic variables. The daily note template that auto-fills today's date. The permanent note template that reminds you to add connections. Essential.
+Dataview: Queries your vault like a database. Show all active projects. Show all notes created this week. Show all permanent notes with fewer than two connections. Essential once your vault exceeds two hundred notes.
+Calendar: Adds a visual calendar to the sidebar. Click any date to open that day's note. Creates daily notes automatically when you click a future date.
+Periodic Notes: Manages daily, weekly, monthly, and quarterly notes with templates for each.
+Outliner: Makes working with bullet points significantly better. Fold, unfold, move items up and down. Minor but worth it.
+Excalidraw: Draws diagrams inside Obsidian. Useful for systems maps, architecture diagrams, and visual thinking.
+Style Settings: Customizes the appearance of themes. Not essential but useful once you've settled on a theme.
+Install these seven. Ignore everything else until you've built the habit with these.
+Part 14: The Three-Month Build Plan
+The vault doesn't come together at once. Build it in sequence.
+Month 1: Foundation
+Week 1: Set up the folder structure. Write your CLAUDE.md. Install the seven plugins. Build your templates.
+Week 2: Establish the daily note habit. Every day open your daily note. Write The One Thing. Capture throughout the day. Fill in End of Day.
+Week 3: Start processing captures into permanent notes. Aim for three permanent notes per week. Focus on the two-link rule.
+Week 4: Connect Claude via MCP. Run the morning brief manually. Verify it produces accurate output from your CLAUDE.md. Start the evening processor.
+Goal at month end: 12+ permanent notes. Daily note habit established. Claude connected.
+Month 2: Intelligence
+Week 5-6: Configure all five automated workflows. Let them run for two weeks. Review the compound outputs folder and assess quality. Refine your CLAUDE.md based on what the outputs reveal about missing context.
+Week 7: Build your first Map of Content for whichever topic has accumulated the most permanent notes.
+Week 8: Use the six manual Claude prompts on real work. Decision you're currently making. Article you're writing. Question you're trying to answer.
+Goal at month end: Automated workflows running reliably. First Map of Content built. Manual prompts integrated into actual work.
+Month 3: Compounding
+Week 9-10: Focus on connection density. Review the vault audit output. Add connections to any permanent note with fewer than two. Create Maps of Content for any topic with fifteen or more notes.
+Week 11: Review the compound outputs folder. The pattern reports should be surfacing genuinely non-obvious patterns. The connection notes should be making non-obvious links. If not refine the relevant skills.
+Week 12: Write a synthesis manually on the topic you know best. Compare it to the Claude-generated synthesis on the same topic. The gap between them tells you something about both your thinking and the system's calibration.
+Goal at month end: Vault producing genuine insights you wouldn't produce manually. Compound outputs folder generating real value. The vault feels like a thinking partner not a filing cabinet.
+Part 15: What Month 6 Looks Like
+At month six the vault is a different category of tool than it was at month one.
+The permanent notes number in the hundreds. The connection density means almost every new note surfaces multiple existing notes when added. The pattern reports are identifying recurring themes across your thinking that you couldn't see from inside any individual week.
+The morning brief knows your operation well enough to surface the specific open loop from three days ago that's relevant to what you're doing today. The synthesis outputs are producing frameworks you find yourself referencing in real conversations and real decisions.
+The most important change is not the quantity of outputs.
+It's the quality of thinking the vault enables.
+When facing a decision you have a record of every similar decision you've made. When writing about a topic you have a network of connected ideas rather than a blank page. When your thinking evolves and contradicts a previous position the vault flags it so you can update consciously rather than hold contradictions you're not aware of.
+The vault at month six knows more about your intellectual history than you can hold consciously.
+That's what a second brain is actually for.
+Not to store more.
+To think better.
+Build the foundation this weekend. Write the CLAUDE.md this evening. Take the first three permanent notes today.
+The compounding starts from the first connection.

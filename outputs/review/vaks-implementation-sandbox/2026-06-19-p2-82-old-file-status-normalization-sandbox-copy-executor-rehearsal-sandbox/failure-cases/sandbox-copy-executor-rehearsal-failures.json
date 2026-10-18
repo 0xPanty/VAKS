@@ -1,0 +1,46 @@
+{
+  "record_kind": "sandbox_failure_case_matrix",
+  "slice_id": "2026-06-19-p2-82-old-file-status-normalization-sandbox-copy-executor-rehearsal-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "SC-FAIL-01-fixture-copy-missing",
+      "must_fail_when": "a transaction operation has no sandbox fixture copy"
+    },
+    {
+      "case_id": "SC-FAIL-02-apply-status-not-proposed",
+      "must_fail_when": "fixture apply does not set proposed status"
+    },
+    {
+      "case_id": "SC-FAIL-03-body-changed-after-apply",
+      "must_fail_when": "fixture apply changes body content"
+    },
+    {
+      "case_id": "SC-FAIL-04-non-status-frontmatter-changed",
+      "must_fail_when": "fixture apply changes frontmatter fields other than status"
+    },
+    {
+      "case_id": "SC-FAIL-05-rollback-final-sha-mismatch",
+      "must_fail_when": "fixture rollback does not restore original copy SHA"
+    },
+    {
+      "case_id": "SC-FAIL-06-old-slice-write-applied",
+      "must_fail_when": "rehearsal writes any old slice target file"
+    },
+    {
+      "case_id": "SC-FAIL-07-rehearsal-treated-as-approval",
+      "must_fail_when": "rehearsal success is treated as user approval"
+    },
+    {
+      "case_id": "SC-FAIL-08-rehearsal-treated-as-write-authority",
+      "must_fail_when": "rehearsal success allows real executor writes"
+    },
+    {
+      "case_id": "SC-FAIL-09-sandbox-write-outside-current-slice",
+      "must_fail_when": "rehearsal writes outside the p2-82 sandbox path"
+    },
+    {
+      "case_id": "SC-FAIL-10-mainline-or-action-authority-created",
+      "must_fail_when": "rehearsal creates mainline readiness, promotion, reviewed knowledge, evidence support, action basis, or goal completion"
+    }
+  ]
+}

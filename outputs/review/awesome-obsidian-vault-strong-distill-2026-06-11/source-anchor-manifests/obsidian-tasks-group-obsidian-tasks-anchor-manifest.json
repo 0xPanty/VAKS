@@ -1,0 +1,91 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "obsidian-tasks-group/obsidian-tasks",
+  "source_url": "https://github.com/obsidian-tasks-group/obsidian-tasks",
+  "checked_commit": "141feb186d5ad4d260d86ff5afd950fc73185546",
+  "checked_at": "2026-06-11",
+  "inspection_method": "local shallow git clone plus git show; checkout reported Windows filename-length failures for some test fixtures, so source anchors were read through git objects where needed",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "project-identity-and-query-example",
+      "why": "Identifies the plugin, shows source-file update behavior from query results, global filter guidance, query example, and limit warning."
+    },
+    {
+      "path": "manifest.json",
+      "kind": "obsidian-plugin-metadata",
+      "why": "Confirms plugin id, version, min Obsidian app version, help URL, and desktop/mobile support."
+    },
+    {
+      "path": "package.json",
+      "kind": "build-and-test-surface",
+      "why": "Shows build, lint, markdown lint, test, integration test, local deploy, i18n, circular dependency, and code-docs scripts."
+    },
+    {
+      "path": "docs/Queries/About Queries.md",
+      "kind": "query-dsl-docs",
+      "why": "Documents tasks code blocks, filters, global query, query file defaults, presets, grouping, sorting, limits, and query assembly order."
+    },
+    {
+      "path": "docs/Queries/Explaining Queries.md",
+      "kind": "explainability-docs",
+      "why": "Documents the explain instruction for interpreted dates, booleans, global query, file defaults, grouping, sorting, and limits."
+    },
+    {
+      "path": "docs/Getting Started/Global Filter.md",
+      "kind": "capture-scope-filter",
+      "why": "Documents optional global filter behavior and the need to restart after changes."
+    },
+    {
+      "path": "docs/Getting Started/Statuses.md",
+      "kind": "status-model-docs",
+      "why": "Documents status symbol, name, next symbol, type, unknown status handling, and custom status behavior."
+    },
+    {
+      "path": "docs/Advanced/Urgency.md",
+      "kind": "ranking-formula-and-limits",
+      "why": "Documents urgency score formula and limitations such as ignored status/dependencies."
+    },
+    {
+      "path": "docs/Scripting/About Scripting.md",
+      "kind": "executable-query-risk-docs",
+      "why": "Documents that JavaScript expressions in query blocks require enabling and trust in vault contents."
+    },
+    {
+      "path": "src/Config/EnableJsInTasksQueries.ts",
+      "kind": "default-deny-executable-query-setting",
+      "why": "Shows JavaScript in Tasks queries disabled by default and stored in vault-local app storage."
+    },
+    {
+      "path": "src/Query/Explain/Explainer.ts",
+      "kind": "query-explainer-implementation",
+      "why": "Generates human-readable descriptions of parsed queries, filters, groups, sorters, layout, and limits."
+    },
+    {
+      "path": "src/Obsidian/FileParser.ts",
+      "kind": "source-file-parser",
+      "why": "Parses Obsidian cached list items and file lines while handling stale cache line-number mismatch."
+    },
+    {
+      "path": "tests/DocumentationSamples/",
+      "kind": "approved-docs-fixtures",
+      "why": "Contains approved samples for documentation-driven behavior checks; some paths exceed default Windows checkout limits."
+    }
+  ],
+  "observed_counts": {
+    "tracked_files_reported_by_checkout": 1750,
+    "top_level_docs_sampled": 8,
+    "source_files_sampled": 4,
+    "test_tree_sampled": 80,
+    "checkout_filename_too_long_errors_observed": 24
+  },
+  "known_limits": [
+    "Task query results, statuses, and urgency are activation/workbench signals, not reviewed knowledge or truth confidence.",
+    "JavaScript query expressions require explicit trust and should remain disabled by default in VAKS-like flows.",
+    "Local Windows checkout produced filename-length errors, so path-length lint matters for source snapshots."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

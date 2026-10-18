@@ -1,0 +1,27 @@
+{
+  "record_kind": "sandbox_original_slice_normalization_decision_contract",
+  "slice_id": "2026-06-19-p2-72-original-slice-normalization-decision-packet-sandbox",
+  "purpose": "prepare a decision packet and dry-run manifest for possible old-slice status normalization",
+  "input_contract": {
+    "source_audit_slice_id": "2026-06-16-p2-71-original-slice-closeout-normalization-audit-sandbox",
+    "source_audit_path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-71-original-slice-closeout-normalization-audit-sandbox/artifact/original_slice_closeout_normalization_audit.json",
+    "required_original_item_count": 20,
+    "required_candidate_count": 20
+  },
+  "output_contract": {
+    "decision_packet_only": true,
+    "dry_run_only": true,
+    "normalization_applied": false,
+    "old_slice_write_allowed": false,
+    "user_approval_collected": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "dependency_install_required": false,
+    "network_required": false,
+    "mcp_required": false,
+    "background_service_required": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "record_kind": "portable_opus_evidence_bundle_failure_cases",
+  "slice_id": "2026-06-19-p2-99-portable-opus-evidence-bundle-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "P2-99-FAIL-01-missing-snapshot",
+      "must_fail_when": "Any required evidence snapshot is missing."
+    },
+    {
+      "case_id": "P2-99-FAIL-02-hash-mismatch",
+      "must_fail_when": "Any snapshot hash differs from the current source artifact hash."
+    },
+    {
+      "case_id": "P2-99-FAIL-03-missing-dossier",
+      "must_fail_when": "The p2-98 single-file dossier snapshot is missing."
+    },
+    {
+      "case_id": "P2-99-FAIL-04-opus-approval-claimed",
+      "must_fail_when": "The bundle claims Opus approval."
+    },
+    {
+      "case_id": "P2-99-FAIL-05-mainline-or-truth-authority-claimed",
+      "must_fail_when": "The bundle claims mainline readiness, reviewed knowledge, evidence support, or action basis."
+    },
+    {
+      "case_id": "P2-99-FAIL-06-goal-complete-claimed",
+      "must_fail_when": "The bundle claims the overall goal is complete."
+    },
+    {
+      "case_id": "P2-99-FAIL-07-source-path-lost",
+      "must_fail_when": "The manifest omits original source paths."
+    },
+    {
+      "case_id": "P2-99-FAIL-08-protected-path-write",
+      "must_fail_when": "This slice writes outside its own sandbox path."
+    }
+  ]
+}

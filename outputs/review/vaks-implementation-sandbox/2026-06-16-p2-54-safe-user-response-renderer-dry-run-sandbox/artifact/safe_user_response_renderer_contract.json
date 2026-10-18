@@ -1,0 +1,124 @@
+{
+  "record_kind": "sandbox_safe_user_response_renderer_contract",
+  "slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+  "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+  "truth_boundary": "dry_run_renderer_not_user_decision_or_execution_authority",
+  "status": "built_pending_review",
+  "purpose": "render safe user-facing replies from p2-53 classifier output without executing any option",
+  "source_final_gate_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-16-p2-53-user-response-classifier-dry-run-sandbox\\artifact\\verify_user_response_classifier_dry_run.py --final-gate",
+  "render_policy": [
+    {
+      "case_id": "no_reply",
+      "reply_id": "keep_reference_no_action",
+      "reply": "当前没有收到新的选择。我会保持 sandbox 作为参考，不执行任何选项，也不会合并、同步、提交、推送或写入正式层。",
+      "next_step": "wait_or_report_reference_only"
+    },
+    {
+      "case_id": "explicit_A",
+      "reply_id": "acknowledge_reference_only",
+      "reply": "收到，按 A 处理：只保留 sandbox 作为参考。我不会合并、promotion、sync、commit、push，也不会写入 reviewed knowledge、evidence support 或 action basis。",
+      "next_step": "no_action_reference_only"
+    },
+    {
+      "case_id": "explicit_B",
+      "reply_id": "ask_readonly_planning_scope",
+      "reply": "收到 B 的方向。下一步只能先确认单独的只读规划范围；在你明确范围前，我不会启动新 slice，也不会合并、同步、提交、推送或 promotion。",
+      "next_step": "ask_for_separate_read_only_scope"
+    },
+    {
+      "case_id": "explicit_C",
+      "reply_id": "ask_mainline_review_scope",
+      "reply": "收到 C 的方向。需要你单独批准主线评审范围和允许路径；在此之前我不会改主线、合并、同步、提交、推送或写入正式层。",
+      "next_step": "ask_for_allowed_paths_and_scope"
+    },
+    {
+      "case_id": "explicit_D",
+      "reply_id": "acknowledge_park_or_reject",
+      "reply": "收到 D。我会把 sandbox 链按搁置或拒绝理解，但不会改主线、不会删除既有产物，也不会同步、提交或推送。",
+      "next_step": "acknowledge_no_mutation"
+    },
+    {
+      "case_id": "ambiguous_reply",
+      "reply_id": "ask_one_clarification",
+      "reply": "这句话还不能确定是 A、B、C 还是 D。我先停下，不执行任何选项。请只回复一个选项：A、B、C 或 D。",
+      "next_step": "ask_one_short_clarification"
+    },
+    {
+      "case_id": "multiple_options",
+      "reply_id": "ask_choose_one",
+      "reply": "你同时提到了多个选项。我先停下，不执行任何选项。请只选择一个：A、B、C 或 D。",
+      "next_step": "ask_user_to_choose_one_option"
+    },
+    {
+      "case_id": "approval_with_execution_words",
+      "reply_id": "stop_for_separate_scope",
+      "reply": "这条回复包含执行、合并、同步、提交、推送或写入正式层的语义。我现在停止，不执行。若要越过 sandbox 边界，需要你单独给出明确范围和允许路径。",
+      "next_step": "stop_and_ask_for_separate_explicit_scope"
+    },
+    {
+      "case_id": "unknown_case_fallback",
+      "reply_id": "stop_for_unknown_classifier_case",
+      "reply": "分类结果不在已知安全集合内。我现在停止，不执行任何选项。请重新明确选择 A、B、C 或 D，或单独给出明确范围。",
+      "next_step": "stop_and_ask_for_clarification"
+    }
+  ],
+  "output_contract": {
+    "input_text": "original user text",
+    "classifier_case_id": "case from p2-53 classifier",
+    "reply_id": "stable renderer reply id",
+    "reply": "Chinese safe response text",
+    "automatic_execution": false,
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  "reply_safety_rules": {
+    "required_boundary_terms": [
+      "不会",
+      "不执行"
+    ],
+    "dangerous_positive_phrases": [
+      "我会开始",
+      "我将开始",
+      "开始执行",
+      "正在执行",
+      "我会合并",
+      "正在合并",
+      "已合并",
+      "我会提交",
+      "已提交",
+      "我会推送",
+      "已推送",
+      "我会同步",
+      "已同步",
+      "我会写入",
+      "已写入",
+      "我会 promotion",
+      "我会 promote"
+    ]
+  },
+  "ordinary_agent_usage": {
+    "render_example": "python -B artifact/render_safe_user_response.py --text \"B\"",
+    "default_verifier": "python -B artifact/verify_safe_user_response_renderer.py",
+    "upstream_verifier": "python -B artifact/verify_safe_user_response_renderer.py --run-upstream",
+    "final_gate": "python -B artifact/verify_safe_user_response_renderer.py --final-gate",
+    "rebuild": "Builder-only: python -B artifact/build_safe_user_response_renderer.py"
+  },
+  "required_non_claims": [
+    "The renderer is not a user decision.",
+    "The renderer is not execution authority.",
+    "The renderer cannot approve merge, promotion, sync, commit, push, reviewed knowledge, evidence support, or action basis.",
+    "Replies may explain forbidden operations only in negative, non-executing language.",
+    "B and C replies ask for separate scope; they do not start work.",
+    "Unknown classifier cases must stop safely instead of raising errors."
+  ]
+}

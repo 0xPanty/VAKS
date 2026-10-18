@@ -1,0 +1,92 @@
+Khairallah AL-Awady
+@eng_khairallah1
+30 Obsidian Workflows, Plugins, and Setups That Most Users Don't Know
+Obsidian has 2,700+ community plugins. Over 100 of them are AI-related.
+Save this :)
+And the CEO of Obsidian personally published official Claude Skills for the platform - 12,900+ GitHub stars in under three months.
+The Obsidian + Claude ecosystem is exploding right now. But most people are still using Obsidian as a basic note app and Claude as a basic chatbot, completely missing the integration layer that connects them into something significantly more powerful.
+Here are 30 workflows, plugins, and setups that turn Obsidian + Claude into the most powerful personal knowledge system available in 2026.
+Part 1: The 10 Essential Plugins
+01. Smart Connections
+The most popular Obsidian AI plugin and the best starting point. Uses RAG (Retrieval Augmented Generation) to let you chat with your entire vault. Ask "What do I know about customer retention?" and it searches every note in your vault, finds the relevant ones, and answers using your own knowledge. Free for local models. Cloud API costs vary by provider.
+02. Copilot
+RAG-based Q&A for your vault with a clean chat interface inside Obsidian. Supports Claude, GPT, Gemini, and local models. Good for people who want the AI conversation to happen inside Obsidian rather than in a separate app.
+03. Templater
+Automated note templates that fire when you create specific types of notes. Set up a meeting note template that automatically adds the date, attendee field, action items section, and frontmatter tags. Every note starts structured and AI-ready. Pairs perfectly with Claude because consistent formatting makes AI retrieval dramatically better.
+04. Dataview
+Turn your vault into a queryable database. "Show me all notes tagged #project-alpha created in the last 30 days" returns a live table. When Claude can access Dataview queries, it can answer questions about your vault using structured data, not just full-text search.
+05. Tasks
+Full task management inside your notes. Create tasks anywhere in any note with due dates, priorities, and recurrence. Query all tasks across your vault in one view. When Claude reads your vault, it can see every task in every note and help you prioritize, reschedule, and track progress.
+06. Obsidian Git
+Version control for your vault. Auto-commits changes at set intervals. Your notes have full history - you can see what changed, when, and revert if needed. Essential for anyone whose vault is critical to their work.
+07. Calendar
+Visual calendar view of your daily notes. Click any date to see or create that day's note. When you maintain daily notes consistently, Claude has a chronological record of your work, ideas, and decisions over time.
+08. Kanban
+Turn any note into a Kanban board. Track project stages, content pipelines, or task workflows visually. Pairs with Claude for automated status updates and board reviews.
+09. Periodic Notes
+Automates daily, weekly, monthly, and quarterly note creation with templates. Your vault builds a structured time-based record that Claude can analyze for patterns, trends, and progress over any time period.
+10. Obsidian CLI
+Released in 2026. Command-line interface for Obsidian. Create notes, search, and manage your vault from the terminal. This is what makes Claude Code + Obsidian integration seamless - Claude Code can call CLI commands to interact with your vault programmatically.
+Part 2: The 10 Must-Know Workflows
+11. The Morning Synthesis
+Every morning, Claude reads your daily notes from the past three days plus your active project notes. It creates a "Start of Day" note in your daily folder with: where you left off, what is due today, what is overdue, and a suggested focus priority. You read it over coffee and know exactly where to start.
+12. The Meeting Processor
+After every meeting, you paste raw notes into a new note. Claude reads them, extracts action items with assignees and deadlines, identifies key decisions, links to relevant project notes, and adds appropriate tags. A five-minute brain dump becomes a structured, linked, searchable record.
+13. The Research Ingestion Pipeline
+Save an article URL or paste a PDF transcript into your Inbox folder. Claude reads it, creates a summary note with key insights, links it to existing notes on the same topic, adds source metadata, and flags any contradictions with your existing knowledge. One command turns raw input into connected knowledge.
+14. The Weekly Review Automation
+Every Friday, Claude scans all notes created or modified that week. It creates a weekly review note with: accomplishments, decisions made, tasks completed versus planned, patterns noticed, and suggested priorities for next week. Your weekly review takes two minutes to read instead of an hour to create.
+15. The Idea Cross-Pollinator
+You have an idea in a note. You ask Claude: "Find all notes in my vault that could connect to this idea in a non-obvious way." Claude searches your entire knowledge base and surfaces connections between notes you would never have found on your own. The unexpected links between unrelated topics are where the best insights live.
+16. The Project Kickoff Generator
+When you start a new project, tell Claude the goals, constraints, and timeline. Claude creates a complete project folder with: a project overview note, a tasks note with milestones, links to all existing vault notes that are relevant to this project, a list of knowledge gaps you need to fill, and a template for weekly project updates.
+17. The Vault Health Check
+Monthly, Claude audits your vault. It finds: orphan notes with no incoming links, notes with outdated information, projects that have stalled with no updates in two weeks, tags that are used inconsistently, and frontmatter fields that are missing. It creates a maintenance checklist so your vault stays organized without manual effort.
+18. The Book Notes System
+When you finish reading a book, create a note with your highlights and thoughts. Claude reads it alongside all your existing notes and creates: a summary of the key ideas, connections to your existing knowledge, actionable takeaways specific to your current projects, and a list of other books or topics to explore based on the intersections.
+19. The Argument Builder
+Working on a presentation, article, or proposal? Give Claude your thesis. It searches your vault for all supporting evidence - data points, past research, quotes from book notes, relevant project outcomes. It then organizes them into a structured argument with the strongest evidence first.
+20. The Decision Journal
+Before making an important decision, create a decision note with the options and your current thinking. After the decision plays out, go back and record the outcome. Over time, Claude can analyze your decision journal and identify patterns: what types of decisions you tend to get right, where your biases show up, and what you should weigh more heavily in future decisions.
+Part 3: The 10 Advanced Setups
+21. Claude Code + Vault as Persistent Memory
+In your CLAUDE.md file, define your Obsidian vault as Claude's long-term memory. Claude reads relevant notes before starting any task, writes findings to new notes, and builds on accumulated knowledge across sessions. Your vault becomes Claude's brain between sessions.
+22. mcpvault MCP Server
+Zero-dependency MCP server that reads your vault without Obsidian running. BM25 search with relevance ranking. Handles frontmatter safely. 14 MCP methods. Works with Claude Desktop, Claude Code, Cursor, and Windsurf. The cleanest MCP option for most users.
+23. Steph Ango's Official Obsidian Skills
+The CEO of Obsidian built these. Five skills covering markdown notes, canvas files, and the Obsidian CLI. 12,900+ GitHub stars. They follow the open Agent Skills spec so any compatible agent can use them. This is the officially endorsed way to let AI agents work with Obsidian.
+24. obsidian-second-brain Skill
+31 commands for operating an Obsidian vault as an AI-first second brain. Includes vault management, thinking tools that argue with you using your own notes, scheduled agents, and a research toolkit that pulls live X posts via Grok, web research via Perplexity, and YouTube transcripts directly into structured vault notes. Every note follows AI-first design rules.
+25. Multi-Vault Strategy
+Separate vaults for separate contexts. A personal vault for life, a work vault for professional projects, a learning vault for courses and study. Claude connects to whichever vault is relevant. No bleed between personal journal entries and work project notes.
+26. Obsidian + Claude Code Routines
+Set up a Claude Code Routine that runs nightly against your vault. Every night at 2am, Claude scans for new notes in Inbox, files them, adds links, and creates a "processed overnight" summary. You wake up to an organized vault every morning.
+27. Graph View Analysis
+Obsidian's Graph View shows visual connections between notes. But with hundreds of notes, it becomes noisy. Ask Claude to analyze your graph and identify: which notes are hubs (most connected), which clusters exist (groups of related notes), and where bridges between clusters could be built.
+28. Zettelkasten + AI
+The Zettelkasten method - atomic notes with unique IDs and explicit links - was designed for human brains. It works even better with AI brains. Claude can follow Zettelkasten link chains to reason through complex topics using your own accumulated knowledge, building on each connected thought.
+29. Vault-Powered Claude Projects
+Export key sections of your vault as knowledge files for Claude.ai Projects. Your "Marketing" area becomes the knowledge base for your "Content Production" project. Your "Finance" area becomes the knowledge base for your "Budgeting" project. Each Claude Project draws from the relevant slice of your vault.
+30. The Feedback Loop System
+When Claude produces something using your vault - a summary, an analysis, a recommendation - save the output back into your vault as a new note. Tag it with #ai-generated. Over time, your vault contains both your original thinking and Claude's synthesis of it. Each builds on the other. The knowledge compounds exponentially.
+The Setup I Actually Run
+My daily driver stack:
+Obsidian with Smart Connections, Templater, Dataview, Periodic Notes, and Tasks
+mcpvault MCP server connected to Claude Code
+CLAUDE.md configured with vault location and note conventions
+Nightly Routine that processes Inbox and creates a morning summary
+Weekly Review automation every Friday at 4pm Six plugins. One MCP server. Two automations. That is the entire system.
+It took an afternoon to set up. It saves me hours every week. And the vault gets more valuable every single day because every note I add connects to everything that came before.
+How to Get Started Today
+If this list feels overwhelming, here is the exact order I would follow if I were starting from scratch:
+Hour 1: Download Obsidian. Create your vault with the PARA folder structure. Install Templater and create templates for daily notes and meeting notes.
+Hour 2: Install Smart Connections. Have your first conversation with your vault. Even with just 5-10 notes, you will immediately see the potential.
+Hour 3: Set up one MCP server (mcpvault is the simplest). Connect it to Claude Desktop or Claude Code. Run your first cross-vault query from Claude.
+Day 2: Create 10 more notes about your current projects and areas of focus. Make sure every note has frontmatter tags and at least two wikilinks to other notes.
+Day 3: Build your first automated workflow - the Morning Synthesis. Set it to run daily.
+Week 1: Install Periodic Notes and Dataview. Start building the habit of daily notes and weekly reviews.
+Week 2: You are now running an AI-powered second brain. Everything after this is refinement and expansion.
+The hardest part is not the technology. The hardest part is the first three hours of setup. After that, the system creates its own momentum.
+If you are using Obsidian without AI, you are doing manual labor that a machine can do better. If you are using Claude without Obsidian, you are starting from zero every session when you could be starting from everything you have ever learned.
+Connect them. The combination is where the real power lives.
+Start today. Install one plugin. Connect one MCP server. Run one workflow. Within a week, you will never go back to using either tool alone.

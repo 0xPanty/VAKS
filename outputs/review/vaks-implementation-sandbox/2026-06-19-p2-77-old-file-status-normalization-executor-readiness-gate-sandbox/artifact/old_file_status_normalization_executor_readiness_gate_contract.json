@@ -1,0 +1,66 @@
+{
+  "record_kind": "sandbox_old_file_status_normalization_executor_readiness_gate_contract",
+  "slice_id": "2026-06-19-p2-77-old-file-status-normalization-executor-readiness-gate-sandbox",
+  "contract_version": "1.0",
+  "current_user_text": "Continue working toward the active thread goal. objective: 全部落地啊",
+  "expected_current_decision": {
+    "readiness": "blocked_no_exact_approval",
+    "approval_phrase_matched": false,
+    "preflight_clean": true,
+    "executor_write_allowed": false,
+    "old_slice_writes_applied": 0
+  },
+  "expected_numbers": {
+    "target_change_count": 75,
+    "target_file_count": 75,
+    "target_old_slice_count": 20,
+    "preflight_missing_target_count": 0,
+    "preflight_status_mismatch_count": 0,
+    "rollback_entry_count": 75
+  },
+  "authority_flags": {
+    "executor_readiness_gate_only": true,
+    "approval_collected": false,
+    "executor_write_allowed": false,
+    "old_slice_write_allowed_now": false,
+    "old_slice_writes_applied": 0,
+    "normalization_applied": false,
+    "rollback_applied": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false
+  },
+  "future_if_exact_approval_present": {
+    "readiness": "ready_for_executor_prewrite_confirmation",
+    "still_requires_fresh_preflight": true,
+    "still_requires_boundary_audit": true,
+    "still_requires_stop_before_write": true
+  },
+  "future_if_exact_approval_but_preflight_drift": {
+    "approval_phrase_matched": true,
+    "preflight_clean": false,
+    "readiness": "blocked_preflight_drift",
+    "executor_write_allowed": false,
+    "old_slice_writes_applied": 0,
+    "blocked_reason": "Exact approval cannot override preflight drift."
+  },
+  "required_fixture_ids": [
+    "current-continuation-blocked",
+    "exact-approval-future-scenario",
+    "generic-language-rejected",
+    "clean-preflight-still-not-approval",
+    "exact-approval-preflight-drift-blocked"
+  ],
+  "required_failure_case_ids": [
+    "RG-FAIL-01-current-continuation-counts-as-approval",
+    "RG-FAIL-02-write-allowed-without-approval",
+    "RG-FAIL-03-preflight-drift-ignored",
+    "RG-FAIL-04-p2-75-packet-treated-as-approval",
+    "RG-FAIL-05-generic-language-accepted",
+    "RG-FAIL-06-old-slice-write-applied",
+    "RG-FAIL-07-boundary-authority-created",
+    "RG-FAIL-08-future-approval-skips-fresh-preflight"
+  ]
+}

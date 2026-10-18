@@ -1,0 +1,21 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "writeback-type-not-allowed-by-manifest",
+  "expected_valid": false,
+  "expected_codes": ["MB_WRITEBACK_TYPE_NOT_ALLOWED_BY_MANIFEST"],
+  "patch": {
+    "writeback": {
+      "allowed_record_types": ["feedback_event"],
+      "records": [
+        {
+          "id": "candidate-not-allowed-by-manifest",
+          "ref": "fixtures/writeback/candidate-signal.json",
+          "record_type": "candidate_signal",
+          "receipt_id": "mb-receipt-001",
+          "candidate_signal_promotes": false,
+          "writeback_direct_to_reviewed": false
+        }
+      ]
+    }
+  }
+}

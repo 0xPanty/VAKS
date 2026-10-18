@@ -1,0 +1,209 @@
+{
+  "files": [
+    {
+      "path": "outputs/review/2026-06-07-aal-ruller-pkm-second-brain-ai-companian-candidate-distillation.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-07-aal-ruller-pkm-second-brain-ai-companian-candidate-distillation.md",
+      "sha256": "4dfe92c9f8069dc17df11abc9275e7de592853c692aaa3f415e6ba974319a214",
+      "bytes": 11218
+    },
+    {
+      "path": "outputs/review/2026-06-11-AxDSan-mnemosyne-candidate-distillation.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-11-AxDSan-mnemosyne-candidate-distillation.md",
+      "sha256": "95939bb236c67d7dba28e880c3cc280d0bb79d01f47706f1914f3aef5183496e",
+      "bytes": 11875
+    },
+    {
+      "path": "outputs/review/2026-06-11-cyrilxbt-n8n-obsidian-business-brain-candidate-distillation.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-11-cyrilxbt-n8n-obsidian-business-brain-candidate-distillation.md",
+      "sha256": "55cbc6ef060c0891c4704fefd91e985185554c25abda29af42814f0e99bd1eaa",
+      "bytes": 10674
+    },
+    {
+      "path": "outputs/review/2026-06-11-RyanCodrai-turbovec-candidate-distillation.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-11-RyanCodrai-turbovec-candidate-distillation.md",
+      "sha256": "245c07226c481552e6ad7130f63ef1cfee8dcf0c1997096d737ba6a64913e719",
+      "bytes": 8562
+    },
+    {
+      "path": "outputs/review/2026-06-11-zhizhuodemao-ai-reverse-toolkit-candidate-distillation.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-11-zhizhuodemao-ai-reverse-toolkit-candidate-distillation.md",
+      "sha256": "49ee05517f0a837826db5e5c58fb00621ca1d9df805699788a61df47c613ac50",
+      "bytes": 9414
+    },
+    {
+      "path": "outputs/review/2026-06-12-bilibili-apex-knowledge-schema-rag-candidate-distillation.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-12-bilibili-apex-knowledge-schema-rag-candidate-distillation.md",
+      "sha256": "540154444469d9087008dc25db570e7fc72afc40043226fad4801eabb22d1798",
+      "bytes": 10833
+    },
+    {
+      "path": "outputs/review/2026-06-12-breferrari-obsidian-mind-candidate-distillation.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-12-breferrari-obsidian-mind-candidate-distillation.md",
+      "sha256": "a8fe634cba55b59c4348f056d0ba1052d7f0b3815cd1092429e1a944f3359b19",
+      "bytes": 10497
+    },
+    {
+      "path": "outputs/review/2026-06-13-bilibili-book-note-workflow-candidate-distillation.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-13-bilibili-book-note-workflow-candidate-distillation.md",
+      "sha256": "b4f0812941e2939688fb04ac05ff5078f3b47307f77a151238bb8e60300c7151",
+      "bytes": 13876
+    },
+    {
+      "path": "outputs/review/2026-06-13-bilibili-edge-recall-contextual-active-recall-candidate-distillation.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-13-bilibili-edge-recall-contextual-active-recall-candidate-distillation.md",
+      "sha256": "8242851f349003dcde33540994edbd9a0018f57092e747634485f264091d5913",
+      "bytes": 9535
+    },
+    {
+      "path": "outputs/review/2026-06-13-bilibili-obsidian-homepage-plugin-workbench-candidate-distillation.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-13-bilibili-obsidian-homepage-plugin-workbench-candidate-distillation.md",
+      "sha256": "42c844a6c02cd25e7c3c4f87d4ab0d39490569bfccffc75b1b7292966ff3da85",
+      "bytes": 10251
+    },
+    {
+      "path": "outputs/review/2026-06-13-flexnote-docs-candidate-distillation.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-13-flexnote-docs-candidate-distillation.md",
+      "sha256": "875108c0ae9d3a00c2e666d3cd4f04eb9475e1a6143fc19c3ec27c3d37928aaf",
+      "bytes": 10202
+    },
+    {
+      "path": "outputs/review/2026-06-14-agents365-ai-drawio-skill-candidate-distillation.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-14-agents365-ai-drawio-skill-candidate-distillation.md",
+      "sha256": "7784ff211228cdcbc6c0b96081f8371fc83a27d71bb355843854d7eb0b2f6eda",
+      "bytes": 8451
+    },
+    {
+      "path": "outputs/review/2026-06-14-edochi-mdvs-candidate-distillation.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-14-edochi-mdvs-candidate-distillation.md",
+      "sha256": "210bef25145cba4013a716374083098fa438568e19ad99a3e40324f2e854efe7",
+      "bytes": 10983
+    },
+    {
+      "path": "outputs/review/2026-06-14-google-open-knowledge-format-candidate-distillation.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-14-google-open-knowledge-format-candidate-distillation.md",
+      "sha256": "a8ffe7a813e3d107dcb9b0c0bceb82f6f2b9bb0751fd77ccfaccde837a5f4f30",
+      "bytes": 13577
+    },
+    {
+      "path": "outputs/review/2026-06-14-kanna12580-kk-knowledge-agent-candidate-distillation.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-14-kanna12580-kk-knowledge-agent-candidate-distillation.md",
+      "sha256": "19a685b5f8d9ae7d2e8c3ba0bb5fef04150d2cf8f2811174861397ebf3ae7dc8",
+      "bytes": 8791
+    },
+    {
+      "path": "outputs/review/2026-06-14-rohitg00-agentmemory-candidate-distillation.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-14-rohitg00-agentmemory-candidate-distillation.md",
+      "sha256": "fe8a82b3ff9a733c053cf38fa49e6ce3759cf051f04355ff994e164a269d1084",
+      "bytes": 15040
+    },
+    {
+      "path": "outputs/review/project_lens_overlays/2026-06-13-flexnote-vaks-visual-knowledge-workbench-overlay.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/project_lens_overlays/2026-06-13-flexnote-vaks-visual-knowledge-workbench-overlay.md",
+      "sha256": "fcf83b091b5531a203dd1f236c0907abca47e29b9617a335cb5d7b1576676d54",
+      "bytes": 4748
+    },
+    {
+      "path": "outputs/review/project_lens_overlays/2026-06-14-adithya-s-k-omniparse-vaks-raw-intake-overlay.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/project_lens_overlays/2026-06-14-adithya-s-k-omniparse-vaks-raw-intake-overlay.md",
+      "sha256": "905b00fe0774cd7462b60709a27ccafa8d64f60b6fefbfafd5276b1aa1f05e7c",
+      "bytes": 7042
+    },
+    {
+      "path": "outputs/review/project_lens_overlays/2026-06-14-agents365-ai-drawio-skill-vaks-visualization-overlay.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/project_lens_overlays/2026-06-14-agents365-ai-drawio-skill-vaks-visualization-overlay.md",
+      "sha256": "61fa61be313c54388fd9ff11283b4eb92d28018713c1067125a1d39efd59e6a3",
+      "bytes": 4066
+    },
+    {
+      "path": "outputs/review/project_lens_overlays/2026-06-14-benmaster82-Kwipu-vaks-local-graph-rag-overlay.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/project_lens_overlays/2026-06-14-benmaster82-Kwipu-vaks-local-graph-rag-overlay.md",
+      "sha256": "062b96779d75bc7e4dc572e309a16e9e023bc37e86f838ecc99d0039ebd710cb",
+      "bytes": 7082
+    },
+    {
+      "path": "outputs/review/project_lens_overlays/2026-06-14-edochi-mdvs-vaks-validation-search-overlay.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/project_lens_overlays/2026-06-14-edochi-mdvs-vaks-validation-search-overlay.md",
+      "sha256": "7d7f81930b0b1456aed7884921abb1e26656f52908651b67cceac47a7b9ad257",
+      "bytes": 6221
+    },
+    {
+      "path": "outputs/review/project_lens_overlays/2026-06-14-kanna12580-kk-knowledge-agent-misa-kb-memory-overlay.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/project_lens_overlays/2026-06-14-kanna12580-kk-knowledge-agent-misa-kb-memory-overlay.md",
+      "sha256": "24cebf26e26cfd69186c5ee4a976c8bdd12bf60feaf6233c582f6ac7cdc13636",
+      "bytes": 4712
+    },
+    {
+      "path": "outputs/review/project_lens_overlays/2026-06-14-rohitg00-agentmemory-misa-vaks-bridge-overlay.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/project_lens_overlays/2026-06-14-rohitg00-agentmemory-misa-vaks-bridge-overlay.md",
+      "sha256": "a3e9c37feba9649bbf312c9fd73fa0a0f1d65d27bea528294234f60ca1902cad",
+      "bytes": 7229
+    },
+    {
+      "path": "outputs/review/project_overlays/_runtime_test_fixtures/2026-06-14-flexnote-canonical-overlay-runtime-fixture.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/project_overlays/_runtime_test_fixtures/2026-06-14-flexnote-canonical-overlay-runtime-fixture.md",
+      "sha256": "23425d17667de32b0e300a8489293d67c9cfec7371782189652e8bf5d1a4c98c",
+      "bytes": 1572
+    },
+    {
+      "path": "raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md",
+      "sha256": "888f6eac02467a688a294446106759e17a33f79640a8f00633f86211df7dc67d",
+      "bytes": 5124
+    },
+    {
+      "path": "raw/articles/2026-06-13-flexnote-docs-source.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/raw/articles/2026-06-13-flexnote-docs-source.md",
+      "sha256": "b60e969515a9f112f85797ac62a52c3536515147a64149353c824eeeb5127800",
+      "bytes": 6886
+    },
+    {
+      "path": "raw/repos/2026-05-26-llm-wiki-source.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/raw/repos/2026-05-26-llm-wiki-source.md",
+      "sha256": "a76dbbbab1a449258cc78ba64ad0e5ade497c6465262e3756356df056490f81c",
+      "bytes": 3655
+    },
+    {
+      "path": "raw/repos/2026-05-27-dusk-obsidian-vault-source.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/raw/repos/2026-05-27-dusk-obsidian-vault-source.md",
+      "sha256": "fda2831fec735c8e20c8c2cf28875629d3ae8256d73b527be2fa3c75ad5b50a1",
+      "bytes": 10683
+    },
+    {
+      "path": "raw/repos/2026-05-27-kagantic-vault-structure-source.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/raw/repos/2026-05-27-kagantic-vault-structure-source.md",
+      "sha256": "be1fc4bd29ef877afa5c5a1e289f1eff1b1efc5afc26c9eb549bacf13d647833",
+      "bytes": 8780
+    },
+    {
+      "path": "raw/repos/2026-05-27-kepano-obsidian-source.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/raw/repos/2026-05-27-kepano-obsidian-source.md",
+      "sha256": "927127052d181b160c23ee65e8704191efd53bc3473467a3e8fdc098cfdc2527",
+      "bytes": 8004
+    },
+    {
+      "path": "raw/repos/2026-05-27-knowledge-base-server-source.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/raw/repos/2026-05-27-knowledge-base-server-source.md",
+      "sha256": "be138c5b99e6351f444f8aee37e9000b7821b89e8f357e8a11911ba9e245853c",
+      "bytes": 14229
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/alexiachen-my-notes-source.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/raw/repos/2026-06-11-awesome-obsidian-vault/alexiachen-my-notes-source.md",
+      "sha256": "7d1bfe66fc378b0db674259426656b2bb0c2ab46be78fa0d7d941d03794f66d6",
+      "bytes": 3142
+    },
+    {
+      "path": "raw/repos/2026-06-11-AxDSan-mnemosyne-source.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/raw/repos/2026-06-11-AxDSan-mnemosyne-source.md",
+      "sha256": "22ee07b6c37dfbe8c0c905d1ef46eb464e5635207bc4e0c6b2702f8520565a9d",
+      "bytes": 10066
+    },
+    {
+      "path": "raw/repos/2026-06-11-safishamsi-graphify-source.md",
+      "frozen_path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/raw/repos/2026-06-11-safishamsi-graphify-source.md",
+      "sha256": "d8b2b00bf782010353fcdeef45d51338bc503af9c81fb5194125e7d6f23785dc",
+      "bytes": 7613
+    }
+  ],
+  "file_count": 34
+}

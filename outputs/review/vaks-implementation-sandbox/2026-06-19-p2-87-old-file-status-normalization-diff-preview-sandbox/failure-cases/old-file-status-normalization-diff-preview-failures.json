@@ -1,0 +1,38 @@
+{
+  "record_kind": "old_file_status_normalization_diff_preview_failure_cases",
+  "slice_id": "2026-06-19-p2-87-old-file-status-normalization-diff-preview-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "P2-87-FAIL-01-incomplete-preview",
+      "must_fail_when": "The preview does not include all 75 operations."
+    },
+    {
+      "case_id": "P2-87-FAIL-02-body-drift",
+      "must_fail_when": "Any operation changes body content."
+    },
+    {
+      "case_id": "P2-87-FAIL-03-non-status-frontmatter-drift",
+      "must_fail_when": "Any operation changes non-status frontmatter."
+    },
+    {
+      "case_id": "P2-87-FAIL-04-prewrite-hash-mismatch",
+      "must_fail_when": "Any target hash differs from p2-80 prewrite hash."
+    },
+    {
+      "case_id": "P2-87-FAIL-05-status-not-applied-in-preview",
+      "must_fail_when": "A proposed preview does not set the proposed status."
+    },
+    {
+      "case_id": "P2-87-FAIL-06-old-slice-write",
+      "must_fail_when": "The preview writes old slice files."
+    },
+    {
+      "case_id": "P2-87-FAIL-07-preview-as-approval",
+      "must_fail_when": "The preview is treated as user approval or write authority."
+    },
+    {
+      "case_id": "P2-87-FAIL-08-mainline-authority",
+      "must_fail_when": "The preview implies mainline, promotion, reviewed knowledge, evidence support, or action basis."
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "record_kind": "local_obsidian_graph_readonly_mcp_manifest",
+  "scenario_id": "valid-cache-mismatch-blocked-for-rebuild",
+  "expected_valid": true,
+  "expected_codes": [],
+  "vault_access": {
+    "sandbox_fixture_only": true,
+    "uses_real_vault": false,
+    "vault_path": "fixtures/obsidian-sample-vault",
+    "read_only": true,
+    "write_attempted": false,
+    "sync_attempted": false
+  },
+  "mcp_contract": {
+    "server_started": false,
+    "background_service": false,
+    "hooks_enabled": false,
+    "tools": [
+      {"name": "query_graph", "mode": "read_only", "operations": ["query", "read"], "write_enabled": false}
+    ]
+  },
+  "structural_triples": [
+    {
+      "id": "triple-cache-rebuild",
+      "from": "Local Graph Cache",
+      "relation": "frontmatter_tag",
+      "to": "Rebuild Boundary",
+      "source_ref": "fixtures/obsidian-sample-vault/cache-note.md",
+      "source_hash": "sha256:4444444444444444444444444444444444444444444444444444444444444444",
+      "graph_status": "candidate_graph_fragment",
+      "auto_promote": false
+    }
+  ],
+  "derived_cache_manifest": {
+    "cache_id": "local-graph-cache-stale",
+    "source_state_hash": "sha256:5555555555555555555555555555555555555555555555555555555555555555",
+    "indexer_id": "sandbox-graph-indexer",
+    "indexer_version": "0.1-sandbox",
+    "model_id": "local-embedding-fixture",
+    "model_fingerprint": "sha256:6666666666666666666666666666666666666666666666666666666666666666",
+    "model_locality": "local",
+    "locality_reviewed": true,
+    "rebuild_boundary": "blocked until cache rebuild completes",
+    "source_of_record": false,
+    "stale": true,
+    "model_mismatch": true,
+    "source_hash_mismatch": false,
+    "used_for_query": false,
+    "rebuild_required": true,
+    "hash_algorithm": "sha256"
+  },
+  "retrieval_receipt": {
+    "query_id": "q-valid-cache-rebuild",
+    "route": "hybrid_graph",
+    "included_buckets": ["review_input"],
+    "excluded_buckets": ["feedback", "runtime_artifact", "project_overlay"],
+    "bucket_filter_first": true,
+    "selected_by_channels": ["vector", "bm25", "temporal", "synonym"],
+    "cross_bucket_fusion": false
+  },
+  "retrieved_context": [],
+  "generated_answer": {
+    "has_file_citations": false,
+    "citations_claim_support": false,
+    "support_sufficiency_checked": false,
+    "claims_action_basis": false
+  }
+}

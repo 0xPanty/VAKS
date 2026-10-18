@@ -1,0 +1,59 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "vercel-labs/skills",
+  "source_url": "https://github.com/vercel-labs/skills",
+  "checked_commit": "be0dd25b4a8665894a56f45ef582cc02ca802c39",
+  "checked_at": "2026-06-11",
+  "inspection_method": "shallow git clone plus README, package metadata, CLI source, parser, installer, lockfile, and safety tests",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "usage",
+      "why": "CLI commands, source formats, installation modes, and supported-agent surface."
+    },
+    {
+      "path": "package.json",
+      "kind": "runtime",
+      "why": "Package identity, CLI entrypoint, scripts, tests, and TypeScript build surface."
+    },
+    {
+      "path": "src/source-parser.ts",
+      "kind": "parser",
+      "why": "Source normalization across local paths, GitHub/GitLab URLs, SSH, shorthand, fragments, refs, and subpath traversal checks."
+    },
+    {
+      "path": "src/frontmatter.ts",
+      "kind": "parser-security",
+      "why": "Minimal YAML-only frontmatter parser avoiding JS frontmatter evaluation."
+    },
+    {
+      "path": "src/installer.ts",
+      "kind": "installation-boundary",
+      "why": "Canonical skill directory, agent-specific paths, symlink/copy install modes, and path-safety helpers."
+    },
+    {
+      "path": "src/skill-lock.ts",
+      "kind": "provenance-lock",
+      "why": "Lock schema for source, source type, URL, ref, skill path, folder hash, and timestamps."
+    },
+    {
+      "path": "tests/subpath-traversal.test.ts",
+      "kind": "safety-test",
+      "why": "Tests rejecting traversal in URL/tree/shorthand subpaths."
+    },
+    {
+      "path": "tests/sanitize-terminal.test.ts",
+      "kind": "safety-test",
+      "why": "Tests stripping terminal escape/control sequences from untrusted metadata."
+    }
+  ],
+  "known_limits": [
+    "Runtime was inspected at source level only; tests were not executed in this run.",
+    "This source is a skill runtime/CLI, not a VAKS knowledge-review system.",
+    "Install/update mechanics should not be copied into VAKS core without a separate execution sandbox and approval gate."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

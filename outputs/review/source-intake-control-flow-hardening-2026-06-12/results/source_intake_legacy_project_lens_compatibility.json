@@ -1,0 +1,14 @@
+{
+  "status": "compatibility_report",
+  "legacy_file_count": 17,
+  "moved_this_run": [],
+  "legacy_dir": "outputs/review/_legacy_project_lens",
+  "canonical_current_lint_scope": false,
+  "canonical_p0_included": false,
+  "default_retrieval": false,
+  "recommended_action": "migrate selected active-value files manually as gold examples, or keep excluded as audit/sandbox reference",
+  "csv": "outputs/review/source-intake-control-flow-hardening-2026-06-12/results/source_intake_legacy_project_lens_compatibility.csv",
+  "tombstone": "outputs/review/source-intake-control-flow-hardening-2026-06-12/results/source_intake_legacy_project_lens_tombstone.md",
+  "downstream_consumption_allowed": false,
+  "truth_boundary": "legacy compatibility report only; not canonical overlay validation"
+}

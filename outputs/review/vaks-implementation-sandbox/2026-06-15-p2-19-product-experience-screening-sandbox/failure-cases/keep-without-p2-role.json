@@ -1,0 +1,1 @@
+{"case_id":"keep-without-p2-role","base_fixture":"fixtures/valid-product-experience-screening.json","mutations":[{"op":"set_candidate","id":"P2-PX-01","path":"/p2_20_role","value":""}]}

@@ -1,0 +1,56 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "clarklab/chowdown",
+  "source_url": "https://github.com/clarklab/chowdown",
+  "checked_commit": "48d56ea7a0115f722653dac6466b861f7eed4ca3",
+  "checked_at": "2026-06-11",
+  "inspection_method": "local git checkout; inspected README, Jekyll config, recipe and component samples, recipe layout, search JSON template, and file counts",
+  "anchors": [
+    {
+      "path": "readme.md",
+      "kind": "source-identity-and-authoring-guide",
+      "why": "Defines Chowdown as a plaintext recipe database, explains Jekyll setup, recipe collection, frontmatter fields, and component recipes."
+    },
+    {
+      "path": "_config.yml",
+      "kind": "jekyll-collection-config",
+      "why": "Declares recipes and components as output collections and defines translation labels for rendered sections."
+    },
+    {
+      "path": "_recipes/red-berry-tart.md",
+      "kind": "component-recipe-sample",
+      "why": "Shows frontmatter with layout, title, image, tags, directions, and component references instead of ingredients."
+    },
+    {
+      "path": "_components/graham-cracker-crust.md",
+      "kind": "component-record-sample",
+      "why": "Shows reusable sub-recipe component with ingredients, directions, image, and credit."
+    },
+    {
+      "path": "_layouts/recipe.html",
+      "kind": "rendering-contract",
+      "why": "Renders schema.org Recipe microdata, ingredients, directions, component expansion, tags, images, and credits."
+    },
+    {
+      "path": "search.json",
+      "kind": "generated-search-index",
+      "why": "Generates title, ingredients, tags, image, URL, and description records for client-side search."
+    }
+  ],
+  "observed_counts": {
+    "recipe_files": 34,
+    "component_files": 3,
+    "layout_files": 4,
+    "include_files": 4,
+    "data_files": 1
+  },
+  "known_limits": [
+    "Recipe content and tags are not VAKS evidence.",
+    "Component inclusion is useful composition but does not equal reviewed relation.",
+    "Client-side search JSON is an activation surface, not a truth layer."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

@@ -2,3 +2,36 @@
 .trash/
 .DS_Store
 Thumbs.db
+
+# Machine-local state and rebuildable scratch (keep reports and test fixtures).
+/.codex/
+/.agents/
+/.venv/
+/temp/
+**/__pycache__/
+*.py[cod]
+**/_disposable_vault_workspace/
+**/.vaks_dir_lock
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Unrelated personal files in this checkout.
+/個人陳述-胡安.txt
+/胡安-证件照自然修复版*.png
+
+# Large reference downloads are preserved as private GitHub Release assets.
+# See docs/migration/2026-10-19-release-assets.json for paths and SHA256.
+/raw/repos/_snapshots/2026-06-11-PaddlePaddle-PaddleOCR-71c7fef-source.zip
+/raw/repos/_snapshots/2026-06-23-linxiv-dev-linXiv-8085eeb-source.zip
+/raw/repos/_snapshots/jc2255-log-collect-ai-analytics-3a960f4e7aa23a2558df0b7eea813b656ecb3166.zip
+/raw/repos/_snapshots/Bowen-0x00-obsidian-excalidraw-plugin-ymjr-3fa4ace442c3d455c05172e1b1894033572e6b47.zip
+/raw/repos/_snapshots/Bowen-0x00-obsidian-excalidraw-scripts-1d0edb6beac48efe92b5a19c22cef701bc3a54e5.zip
+/outputs/review/2026-06-14-reminds-app-sandbox-study/downloads/reminds-release-1.5.0-132.apk
+
+# Downloaded public-source captures containing credential-shaped values.
+# Originals stay local; sanitized reference copies are recorded in docs/migration/.
+/outputs/review/2026-06-14-reminds-app-sandbox-study/assets/article-store.df342ff2.js
+/raw/articles/2026-06-08-cbrain-knowledge-system-mindmap-source/cbrain-map-type3.json
+/raw/repos/_snapshots/infiniflow-ragflow-5a04ac0864808bb3309e0b5735b56ad5a03d2efd.zip

@@ -1,0 +1,61 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "javascript-tutorial/en.javascript.info",
+  "source_url": "https://github.com/javascript-tutorial/en.javascript.info",
+  "checked_commit": "52c1e61915bc8970a950a3f59bd845827e49b4bf",
+  "checked_at": "2026-06-11",
+  "inspection_method": "local git checkout; inspected README, AUTHORING.md, ordered chapter tree, article/task/solution files, .view examples, and tests",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "project-identity",
+      "why": "Identifies the repo as English tutorial source, describes enhanced Markdown and translation routing."
+    },
+    {
+      "path": "AUTHORING.md",
+      "kind": "authoring-contract",
+      "why": "Defines root-relative link rules and an info scheme that auto-inserts referenced article titles."
+    },
+    {
+      "path": "1-js/01-getting-started/1-intro/article.md",
+      "kind": "ordered-article",
+      "why": "Shows article source under numbered curriculum path."
+    },
+    {
+      "path": "1-js/02-first-steps/01-hello-world/1-hello-alert/task.md",
+      "kind": "task",
+      "why": "Shows an atomic exercise with importance metadata and demo reference."
+    },
+    {
+      "path": "1-js/02-first-steps/01-hello-world/1-hello-alert/solution.md",
+      "kind": "solution",
+      "why": "Pairs the task with a separate solution file."
+    },
+    {
+      "path": "1-js/02-first-steps/01-hello-world/1-hello-alert/solution.view/index.html",
+      "kind": "executable-demo-sidecar",
+      "why": "Stores runnable example output beside source material."
+    },
+    {
+      "path": "1-js/03-code-quality/05-testing-mocha/pow-full.view/test.js",
+      "kind": "test-sidecar",
+      "why": "Shows test code stored as a lesson/demo sidecar."
+    }
+  ],
+  "observed_counts": {
+    "top_level_content_groups": 8,
+    "task_files_sampled": 20,
+    "solution_files_sampled": 20,
+    "view_index_files_sampled": 20,
+    "test_files_sampled": 20
+  },
+  "known_limits": [
+    "Enhanced Markdown requires a custom renderer.",
+    "Executable examples prove lesson behavior, not evidence support for VAKS claims.",
+    "Tutorial content should not be imported wholesale."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

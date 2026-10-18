@@ -1,0 +1,11 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "context-pack-fixture-not-readonly",
+  "expected_valid": false,
+  "expected_codes": ["MB_CONTEXT_FIXTURE_NOT_READ_ONLY"],
+  "patch": {
+    "context_adapter": {
+      "context_pack_refs": ["fixtures/bad/context-pack-not-readonly.json"]
+    }
+  }
+}

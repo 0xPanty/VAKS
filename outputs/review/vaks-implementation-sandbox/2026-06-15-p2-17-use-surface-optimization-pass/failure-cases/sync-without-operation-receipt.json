@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "sync-without-operation-receipt",
+  "expected_valid": false,
+  "expected_codes": ["US_SYNC_WITHOUT_OPERATION_RECEIPT"],
+  "patch": {"guardrails": {"sync_enabled": true, "sync_requires_operation_receipt": false}}
+}

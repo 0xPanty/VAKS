@@ -1,0 +1,4330 @@
+{
+  "record_kind": "sandbox_product_grade_coverage_index",
+  "slice_id": "2026-06-16-p2-70-product-grade-coverage-index-sandbox",
+  "strict_status_package": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-67-user-decision-strict-status-package-sandbox/artifact/strict_status_package.py",
+  "parser_contract": {
+    "status_source": "strict_yaml_frontmatter_only",
+    "ignore_body_literals": true,
+    "ignore_code_literals": true
+  },
+  "rules": {
+    "pending_product_counts_as_pass": false,
+    "legacy_variants_count_as_canonical": false,
+    "next_step_required_for_canonical": true,
+    "reviewer_required_for_canonical": true,
+    "boundary_required_for_canonical": true
+  },
+  "authority_flags": {
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "user_approval_collected": false
+  },
+  "summary": {
+    "slices_scanned": 69,
+    "planned_items_total": 20,
+    "planned_items_found": 20,
+    "all_planned_items_found": true,
+    "all_planned_items_current_strict_pass": false,
+    "plan_current_strict_pass_count": 0,
+    "current_strict_pass_count": 10,
+    "product_status_counts": {
+      "pass_product_grade": 67,
+      "pass_product_grade_after_revision": 1,
+      "pass_product_grade_round_2": 1
+    },
+    "literal_hit_files_sampled": 200,
+    "literal_pass_token_count_not_counted": 33944,
+    "literal_scan_scope": "artifact/fixtures/failure-cases files with .py/.json/.md/.html extensions; sample retained at 25 rows in JSON output"
+  },
+  "planned_items": [
+    {
+      "plan_key": "P0-01",
+      "label": "retrieval receipt template sandbox",
+      "slice_id": "2026-06-15-p0-01-retrieval-receipt-template-sandbox",
+      "found": true,
+      "canonical_strict_pass": false,
+      "product_frontmatter_pass": false,
+      "legacy_pass_variant": true,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P0-02",
+      "label": "operation receipt template sandbox",
+      "slice_id": "2026-06-15-p0-02-operation-receipt-template-sandbox",
+      "found": true,
+      "canonical_strict_pass": false,
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P0-03",
+      "label": "body hash validator sandbox",
+      "slice_id": "2026-06-15-p0-03-body-hash-validator-sandbox",
+      "found": true,
+      "canonical_strict_pass": false,
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P0-04",
+      "label": "support boundary validator sandbox",
+      "slice_id": "2026-06-15-p0-04-support-boundary-validator-sandbox",
+      "found": true,
+      "canonical_strict_pass": false,
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P0-05",
+      "label": "action readiness validator sandbox",
+      "slice_id": "2026-06-15-p0-05-action-readiness-validator-sandbox",
+      "found": true,
+      "canonical_strict_pass": false,
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P0-06",
+      "label": "feedback validator sandbox",
+      "slice_id": "2026-06-15-p0-06-feedback-validator-sandbox",
+      "found": true,
+      "canonical_strict_pass": false,
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P0-07",
+      "label": "action-boundary failure matrix",
+      "slice_id": "2026-06-15-p0-07-action-boundary-failure-matrix-sandbox",
+      "found": true,
+      "canonical_strict_pass": false,
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P1-08",
+      "label": "retrieval/operation receipt validator pilot",
+      "slice_id": "2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox",
+      "found": true,
+      "canonical_strict_pass": false,
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P1-09",
+      "label": "read-only query loop pilot",
+      "slice_id": "2026-06-15-p1-09-read-only-query-loop-pilot-sandbox",
+      "found": true,
+      "canonical_strict_pass": false,
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P1-10",
+      "label": "runtime artifact exclusion test",
+      "slice_id": "2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox",
+      "found": true,
+      "canonical_strict_pass": false,
+      "product_frontmatter_pass": false,
+      "legacy_pass_variant": true,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P1-11",
+      "label": "semantic anchor support check",
+      "slice_id": "2026-06-15-p1-11-semantic-anchor-support-check-sandbox",
+      "found": true,
+      "canonical_strict_pass": false,
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P1.5-12",
+      "label": "robust RAG retrieval sandbox",
+      "slice_id": "2026-06-15-p1-5-12-robust-rag-retrieval-sandbox",
+      "found": true,
+      "canonical_strict_pass": false,
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P1.5-13",
+      "label": "local Obsidian graph retrieval read-only MCP sandbox",
+      "slice_id": "2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox",
+      "found": true,
+      "canonical_strict_pass": false,
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P1.5-14",
+      "label": "raw intake parser router sandbox",
+      "slice_id": "2026-06-15-p1-5-14-raw-intake-parser-router-sandbox",
+      "found": true,
+      "canonical_strict_pass": false,
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P1.5-15",
+      "label": "markdown validation/search sidecar sandbox",
+      "slice_id": "2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox",
+      "found": true,
+      "canonical_strict_pass": false,
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P1.5-16",
+      "label": "MISA runtime memory / VAKS bridge sandbox",
+      "slice_id": "2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox",
+      "found": true,
+      "canonical_strict_pass": false,
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P2-17",
+      "label": "use-surface optimization pass",
+      "slice_id": "2026-06-15-p2-17-use-surface-optimization-pass",
+      "found": true,
+      "canonical_strict_pass": false,
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P2-18",
+      "label": "Bases cockpit prototype",
+      "slice_id": "2026-06-15-p2-18-bases-cockpit-prototype",
+      "found": true,
+      "canonical_strict_pass": false,
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P2-19",
+      "label": "product experience screening sandbox",
+      "slice_id": "2026-06-15-p2-19-product-experience-screening-sandbox",
+      "found": true,
+      "canonical_strict_pass": false,
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P2-20",
+      "label": "product workflow prototype",
+      "slice_id": "2026-06-15-p2-20-product-workflow-prototype",
+      "found": true,
+      "canonical_strict_pass": false,
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    }
+  ],
+  "followup_items": [
+    {
+      "plan_key": "P0-01",
+      "slice_id": "2026-06-15-p0-01-retrieval-receipt-template-sandbox",
+      "reason": "not current strict canonical pass",
+      "product_frontmatter_pass": false,
+      "legacy_pass_variant": true,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P0-02",
+      "slice_id": "2026-06-15-p0-02-operation-receipt-template-sandbox",
+      "reason": "not current strict canonical pass",
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P0-03",
+      "slice_id": "2026-06-15-p0-03-body-hash-validator-sandbox",
+      "reason": "not current strict canonical pass",
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P0-04",
+      "slice_id": "2026-06-15-p0-04-support-boundary-validator-sandbox",
+      "reason": "not current strict canonical pass",
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P0-05",
+      "slice_id": "2026-06-15-p0-05-action-readiness-validator-sandbox",
+      "reason": "not current strict canonical pass",
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P0-06",
+      "slice_id": "2026-06-15-p0-06-feedback-validator-sandbox",
+      "reason": "not current strict canonical pass",
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P0-07",
+      "slice_id": "2026-06-15-p0-07-action-boundary-failure-matrix-sandbox",
+      "reason": "not current strict canonical pass",
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P1-08",
+      "slice_id": "2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox",
+      "reason": "not current strict canonical pass",
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P1-09",
+      "slice_id": "2026-06-15-p1-09-read-only-query-loop-pilot-sandbox",
+      "reason": "not current strict canonical pass",
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P1-10",
+      "slice_id": "2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox",
+      "reason": "not current strict canonical pass",
+      "product_frontmatter_pass": false,
+      "legacy_pass_variant": true,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P1-11",
+      "slice_id": "2026-06-15-p1-11-semantic-anchor-support-check-sandbox",
+      "reason": "not current strict canonical pass",
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P1.5-12",
+      "slice_id": "2026-06-15-p1-5-12-robust-rag-retrieval-sandbox",
+      "reason": "not current strict canonical pass",
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P1.5-13",
+      "slice_id": "2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox",
+      "reason": "not current strict canonical pass",
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P1.5-14",
+      "slice_id": "2026-06-15-p1-5-14-raw-intake-parser-router-sandbox",
+      "reason": "not current strict canonical pass",
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P1.5-15",
+      "slice_id": "2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox",
+      "reason": "not current strict canonical pass",
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P1.5-16",
+      "slice_id": "2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox",
+      "reason": "not current strict canonical pass",
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P2-17",
+      "slice_id": "2026-06-15-p2-17-use-surface-optimization-pass",
+      "reason": "not current strict canonical pass",
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P2-18",
+      "slice_id": "2026-06-15-p2-18-bases-cockpit-prototype",
+      "reason": "not current strict canonical pass",
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P2-19",
+      "slice_id": "2026-06-15-p2-19-product-experience-screening-sandbox",
+      "reason": "not current strict canonical pass",
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    },
+    {
+      "plan_key": "P2-20",
+      "slice_id": "2026-06-15-p2-20-product-workflow-prototype",
+      "reason": "not current strict canonical pass",
+      "product_frontmatter_pass": true,
+      "legacy_pass_variant": false,
+      "pending_next_step_closeout": true
+    }
+  ],
+  "literal_hits_sample": [
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/artifact/failure-case-oracle.md",
+      "count": 1,
+      "counted_as_report_status": false
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/artifact/markdown-validation-search-sidecar-contract.md",
+      "count": 1,
+      "counted_as_report_status": false
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/artifact/silky_workbench_builder.py",
+      "count": 3,
+      "counted_as_report_status": false
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/artifact/silky_workbench_validator.py",
+      "count": 2,
+      "counted_as_report_status": false
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/artifact/verify_silky_workbench.py",
+      "count": 1,
+      "counted_as_report_status": false
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/fixtures/valid-silky-workbench-config-variant.json",
+      "count": 21,
+      "counted_as_report_status": false
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/fixtures/valid-silky-workbench-config.json",
+      "count": 21,
+      "counted_as_report_status": false
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/failure-cases/commit-push-enabled.json",
+      "count": 21,
+      "counted_as_report_status": false
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/failure-cases/copy-claims-action-basis.json",
+      "count": 21,
+      "counted_as_report_status": false
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/failure-cases/copy-claims-evidence-support.json",
+      "count": 21,
+      "counted_as_report_status": false
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/failure-cases/formal-vault-delta-allowed.json",
+      "count": 21,
+      "counted_as_report_status": false
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/failure-cases/formal-vault-target-path.json",
+      "count": 21,
+      "counted_as_report_status": false
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/failure-cases/formal-vault-write-enabled.json",
+      "count": 21,
+      "counted_as_report_status": false
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/failure-cases/installs-dependencies.json",
+      "count": 21,
+      "counted_as_report_status": false
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/failure-cases/journey-boundary-missing.json",
+      "count": 21,
+      "counted_as_report_status": false
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/failure-cases/journey-too-long.json",
+      "count": 21,
+      "counted_as_report_status": false
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/failure-cases/mcp-write-enabled.json",
+      "count": 21,
+      "counted_as_report_status": false
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/failure-cases/missing-boundary-copy.json",
+      "count": 21,
+      "counted_as_report_status": false
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/failure-cases/missing-frontier-pattern.json",
+      "count": 21,
+      "counted_as_report_status": false
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/failure-cases/missing-lane.json",
+      "count": 21,
+      "counted_as_report_status": false
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/failure-cases/missing-required-slice.json",
+      "count": 20,
+      "counted_as_report_status": false
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/failure-cases/missing-search-target.json",
+      "count": 21,
+      "counted_as_report_status": false
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/failure-cases/protected-write-target.json",
+      "count": 21,
+      "counted_as_report_status": false
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/failure-cases/real-base-file-enabled.json",
+      "count": 21,
+      "counted_as_report_status": false
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/failure-cases/slice-not-pass.json",
+      "count": 20,
+      "counted_as_report_status": false
+    }
+  ],
+  "scanned_slices": [
+    {
+      "slice_id": "2026-06-15-p0-01-retrieval-receipt-template-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox",
+      "plan_key": "P0-01",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_round_2",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": false
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pending_acceptance",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": false,
+        "legacy_pass_variant": true,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p0-02-operation-receipt-template-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-02-operation-receipt-template-sandbox",
+      "plan_key": "P0-02",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-02-operation-receipt-template-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_pass",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-02-operation-receipt-template-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "review_pass_no_blocker_round_2",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-02-operation-receipt-template-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass_no_blocker_round_2",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-02-operation-receipt-template-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-02-operation-receipt-template-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pending_product_acceptance",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p0-03-body-hash-validator-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-03-body-hash-validator-sandbox",
+      "plan_key": "P0-03",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-03-body-hash-validator-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_pass",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-03-body-hash-validator-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "review_pass_no_blocker_round_2",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-03-body-hash-validator-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass_no_blocker_round_2",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-03-body-hash-validator-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-03-body-hash-validator-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pending_product_acceptance",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p0-04-support-boundary-validator-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-04-support-boundary-validator-sandbox",
+      "plan_key": "P0-04",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-04-support-boundary-validator-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_pass",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-04-support-boundary-validator-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "review_pass_no_blocker_round_2",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-04-support-boundary-validator-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass_no_blocker_round_2",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-04-support-boundary-validator-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-04-support-boundary-validator-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pending_product_acceptance",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p0-05-action-readiness-validator-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-05-action-readiness-validator-sandbox",
+      "plan_key": "P0-05",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-05-action-readiness-validator-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-05-action-readiness-validator-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "review_pass_no_blocker",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": true
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-05-action-readiness-validator-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass_no_blocker",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-05-action-readiness-validator-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-05-action-readiness-validator-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pending_acceptance",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p0-06-feedback-validator-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-06-feedback-validator-sandbox",
+      "plan_key": "P0-06",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-06-feedback-validator-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-06-feedback-validator-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "review_pass_no_blocker",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": true
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-06-feedback-validator-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass_no_blocker",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-06-feedback-validator-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-06-feedback-validator-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pending_acceptance",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p0-07-action-boundary-failure-matrix-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-07-action-boundary-failure-matrix-sandbox",
+      "plan_key": "P0-07",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-07-action-boundary-failure-matrix-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-07-action-boundary-failure-matrix-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "review_pass_no_blocker",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": true
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-07-action-boundary-failure-matrix-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass_no_blocker",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-07-action-boundary-failure-matrix-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-07-action-boundary-failure-matrix-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pending_acceptance",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox",
+      "plan_key": "P1-08",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": true
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "review_pass_no_blocker_after_revision",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass_no_blocker_after_revision",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pending_product_acceptance",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p1-09-read-only-query-loop-pilot-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-09-read-only-query-loop-pilot-sandbox",
+      "plan_key": "P1-09",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-09-read-only-query-loop-pilot-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": true
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-09-read-only-query-loop-pilot-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "review_pass_no_blocker_after_refinement",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-09-read-only-query-loop-pilot-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass_no_blocker_after_refinement",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-09-read-only-query-loop-pilot-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-09-read-only-query-loop-pilot-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pending_product_acceptance",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox",
+      "plan_key": "P1-10",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": true
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "review_pass_no_blocker_after_revision",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass_no_blocker_after_revision",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_after_revision",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": false
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pending_product_acceptance",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": false,
+        "legacy_pass_variant": true,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p1-11-semantic-anchor-support-check-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-11-semantic-anchor-support-check-sandbox",
+      "plan_key": "P1-11",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-11-semantic-anchor-support-check-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-11-semantic-anchor-support-check-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "review_pass_no_blocker",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": true
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-11-semantic-anchor-support-check-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass_no_blocker",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-11-semantic-anchor-support-check-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-11-semantic-anchor-support-check-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pending_product_acceptance",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-12-robust-rag-retrieval-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-12-robust-rag-retrieval-sandbox",
+      "plan_key": "P1.5-12",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-12-robust-rag-retrieval-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-12-robust-rag-retrieval-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "review_pass_no_blocker_after_repair",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-12-robust-rag-retrieval-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass_no_blocker_after_repair",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-12-robust-rag-retrieval-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-12-robust-rag-retrieval-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pending_product_acceptance",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox",
+      "plan_key": "P1.5-13",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_reacceptance",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass_no_blocker_after_product_revision",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass_no_blocker_after_product_revision",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pending_product_reacceptance",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-14-raw-intake-parser-router-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox",
+      "plan_key": "P1.5-14",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_recheck_after_boundary_repair",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass_no_blocker",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass_no_blocker",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pending_product_acceptance",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox",
+      "plan_key": "P1.5-15",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "review_pass_after_product_revision",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass_after_product_revision",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_next_slice_allowed",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox",
+      "plan_key": "P1.5-16",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "review_pass_after_third_revision",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass_after_third_revision",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_enter_p2_17",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-17-use-surface-optimization-pass",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-17-use-surface-optimization-pass",
+      "plan_key": "P2-17",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-17-use-surface-optimization-pass/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-17-use-surface-optimization-pass/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "review_pass_after_first_revision",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-17-use-surface-optimization-pass/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass_after_first_revision",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-17-use-surface-optimization-pass/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-17-use-surface-optimization-pass/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_enter_p2_18",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-18-bases-cockpit-prototype",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-18-bases-cockpit-prototype",
+      "plan_key": "P2-18",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-18-bases-cockpit-prototype/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_reviewer_boundary_product_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-18-bases-cockpit-prototype/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-18-bases-cockpit-prototype/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-18-bases-cockpit-prototype/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-18-bases-cockpit-prototype/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_next_p2_19",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-19-product-experience-screening-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-19-product-experience-screening-sandbox",
+      "plan_key": "P2-19",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-19-product-experience-screening-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_reviewer_boundary_product_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-19-product-experience-screening-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-19-product-experience-screening-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-19-product-experience-screening-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-19-product-experience-screening-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_next_p2_20",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-20-product-workflow-prototype",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-20-product-workflow-prototype",
+      "plan_key": "P2-20",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-20-product-workflow-prototype/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_reviewer_boundary_product_acceptance_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-20-product-workflow-prototype/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-20-product-workflow-prototype/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-20-product-workflow-prototype/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-20-product-workflow-prototype/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "sandbox_series_complete_pending_user_mainline_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-21-silky-obsidian-workbench-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox",
+      "plan_key": "P2-21",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_after_second_reviewer_revision_pending_revalidation",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_mainline_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-22-formalization-readiness-polish-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-22-formalization-readiness-polish-sandbox",
+      "plan_key": "P2-22",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-22-formalization-readiness-polish-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_browser_file_url_smoke_blocked_by_policy",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-22-formalization-readiness-polish-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-22-formalization-readiness-polish-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-22-formalization-readiness-polish-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-22-formalization-readiness-polish-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox",
+      "plan_key": "P2-23",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_and_final_gate_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox",
+      "plan_key": "P2-24",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox",
+      "plan_key": "P2-25",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-26-formal-vault-write-decision-rehearsal-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-26-formal-vault-write-decision-rehearsal-sandbox",
+      "plan_key": "P2-26",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-26-formal-vault-write-decision-rehearsal-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-26-formal-vault-write-decision-rehearsal-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-26-formal-vault-write-decision-rehearsal-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-26-formal-vault-write-decision-rehearsal-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-26-formal-vault-write-decision-rehearsal-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-27-formal-vault-user-decision-intake-gate-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-27-formal-vault-user-decision-intake-gate-sandbox",
+      "plan_key": "P2-27",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-27-formal-vault-user-decision-intake-gate-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-27-formal-vault-user-decision-intake-gate-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-27-formal-vault-user-decision-intake-gate-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-27-formal-vault-user-decision-intake-gate-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-27-formal-vault-user-decision-intake-gate-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-28-formal-vault-execution-preflight-dry-run-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-28-formal-vault-execution-preflight-dry-run-sandbox",
+      "plan_key": "P2-28",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-28-formal-vault-execution-preflight-dry-run-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-28-formal-vault-execution-preflight-dry-run-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-28-formal-vault-execution-preflight-dry-run-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-28-formal-vault-execution-preflight-dry-run-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-28-formal-vault-execution-preflight-dry-run-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-29-formal-vault-execution-plan-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-29-formal-vault-execution-plan-sandbox",
+      "plan_key": "P2-29",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-29-formal-vault-execution-plan-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-29-formal-vault-execution-plan-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-29-formal-vault-execution-plan-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-29-formal-vault-execution-plan-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-29-formal-vault-execution-plan-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox",
+      "plan_key": "P2-30",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox",
+      "plan_key": "P2-31",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox",
+      "plan_key": "P2-32",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox",
+      "plan_key": "P2-33",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox",
+      "plan_key": "P2-34",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-35-formal-vault-status-surface-handoff-packet-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-35-formal-vault-status-surface-handoff-packet-sandbox",
+      "plan_key": "P2-35",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-35-formal-vault-status-surface-handoff-packet-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-35-formal-vault-status-surface-handoff-packet-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-35-formal-vault-status-surface-handoff-packet-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-35-formal-vault-status-surface-handoff-packet-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-35-formal-vault-status-surface-handoff-packet-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox",
+      "plan_key": "P2-36",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-37-formal-vault-operator-workflow-usability-screening-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-37-formal-vault-operator-workflow-usability-screening-sandbox",
+      "plan_key": "P2-37",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-37-formal-vault-operator-workflow-usability-screening-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-37-formal-vault-operator-workflow-usability-screening-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-37-formal-vault-operator-workflow-usability-screening-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-37-formal-vault-operator-workflow-usability-screening-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-37-formal-vault-operator-workflow-usability-screening-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-38-formal-vault-follow-up-agent-blind-run-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-38-formal-vault-follow-up-agent-blind-run-sandbox",
+      "plan_key": "P2-38",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-38-formal-vault-follow-up-agent-blind-run-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-38-formal-vault-follow-up-agent-blind-run-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-38-formal-vault-follow-up-agent-blind-run-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-38-formal-vault-follow-up-agent-blind-run-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-38-formal-vault-follow-up-agent-blind-run-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-39-blind-run-regression-maintenance-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-39-blind-run-regression-maintenance-sandbox",
+      "plan_key": "P2-39",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-39-blind-run-regression-maintenance-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-39-blind-run-regression-maintenance-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-39-blind-run-regression-maintenance-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-39-blind-run-regression-maintenance-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-39-blind-run-regression-maintenance-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-40-sandbox-product-grade-rollup-dashboard-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-40-sandbox-product-grade-rollup-dashboard-sandbox",
+      "plan_key": "P2-40",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-40-sandbox-product-grade-rollup-dashboard-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-40-sandbox-product-grade-rollup-dashboard-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-40-sandbox-product-grade-rollup-dashboard-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-40-sandbox-product-grade-rollup-dashboard-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-40-sandbox-product-grade-rollup-dashboard-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-41-sandbox-operator-decision-brief-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-41-sandbox-operator-decision-brief-sandbox",
+      "plan_key": "P2-41",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-41-sandbox-operator-decision-brief-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-41-sandbox-operator-decision-brief-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-41-sandbox-operator-decision-brief-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-41-sandbox-operator-decision-brief-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-41-sandbox-operator-decision-brief-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-42-sandbox-executive-readiness-brief-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-42-sandbox-executive-readiness-brief-sandbox",
+      "plan_key": "P2-42",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-42-sandbox-executive-readiness-brief-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-42-sandbox-executive-readiness-brief-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-42-sandbox-executive-readiness-brief-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-42-sandbox-executive-readiness-brief-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-42-sandbox-executive-readiness-brief-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-43-sandbox-promotion-request-dry-run-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-43-sandbox-promotion-request-dry-run-sandbox",
+      "plan_key": "P2-43",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-43-sandbox-promotion-request-dry-run-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-43-sandbox-promotion-request-dry-run-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-43-sandbox-promotion-request-dry-run-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-43-sandbox-promotion-request-dry-run-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-43-sandbox-promotion-request-dry-run-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-44-sandbox-evidence-ledger-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-44-sandbox-evidence-ledger-sandbox",
+      "plan_key": "P2-44",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-44-sandbox-evidence-ledger-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-44-sandbox-evidence-ledger-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-44-sandbox-evidence-ledger-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-44-sandbox-evidence-ledger-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-44-sandbox-evidence-ledger-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox",
+      "plan_key": "P2-45",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox",
+      "plan_key": "P2-46",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-47-sandbox-verifier-portability-dependency-audit-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-47-sandbox-verifier-portability-dependency-audit-sandbox",
+      "plan_key": "P2-47",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-47-sandbox-verifier-portability-dependency-audit-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-47-sandbox-verifier-portability-dependency-audit-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-47-sandbox-verifier-portability-dependency-audit-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-47-sandbox-verifier-portability-dependency-audit-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-47-sandbox-verifier-portability-dependency-audit-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-48-sandbox-evidence-chain-freeze-checksum-bundle-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-48-sandbox-evidence-chain-freeze-checksum-bundle-sandbox",
+      "plan_key": "P2-48",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-48-sandbox-evidence-chain-freeze-checksum-bundle-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-48-sandbox-evidence-chain-freeze-checksum-bundle-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-48-sandbox-evidence-chain-freeze-checksum-bundle-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-48-sandbox-evidence-chain-freeze-checksum-bundle-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-48-sandbox-evidence-chain-freeze-checksum-bundle-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-15-p2-49-sandbox-operator-launch-checklist-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-49-sandbox-operator-launch-checklist-sandbox",
+      "plan_key": "P2-49",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-49-sandbox-operator-launch-checklist-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-49-sandbox-operator-launch-checklist-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-49-sandbox-operator-launch-checklist-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-49-sandbox-operator-launch-checklist-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-49-sandbox-operator-launch-checklist-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_next_slice_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-16-p2-50-final-sandbox-closeout-readiness-dossier-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-50-final-sandbox-closeout-readiness-dossier-sandbox",
+      "plan_key": "P2-50",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-50-final-sandbox-closeout-readiness-dossier-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-50-final-sandbox-closeout-readiness-dossier-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-50-final-sandbox-closeout-readiness-dossier-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-50-final-sandbox-closeout-readiness-dossier-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-50-final-sandbox-closeout-readiness-dossier-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_decision",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "plan_key": "P2-51",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed_pending_review",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": false
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_question",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+      "plan_key": "P2-52",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": true
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_response",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "plan_key": "P2-53",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": true
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_response",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "plan_key": "P2-54",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": true
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_response",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "plan_key": "P2-55",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": true
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_response",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "plan_key": "P2-56",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": true
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_user_response",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": false
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": true,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "plan_key": "P2-57",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": true
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_next_slice",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": true
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": false,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox",
+      "plan_key": "P2-58",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": true
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_next_slice",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": true
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": false,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "plan_key": "P2-59",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": true
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "reviewer_pass",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": false
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "boundary_pass",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": false
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_next_slice",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": true
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": false,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": false,
+        "needs_followup_before_current_strict_claim": true
+      }
+    },
+    {
+      "slice_id": "2026-06-16-p2-60-user-decision-index-freeze-checksum-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-60-user-decision-index-freeze-checksum-sandbox",
+      "plan_key": "P2-60",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-60-user-decision-index-freeze-checksum-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": true
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-60-user-decision-index-freeze-checksum-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "review_pass_no_blocker",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": true
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-60-user-decision-index-freeze-checksum-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_boundary",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": true
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-60-user-decision-index-freeze-checksum-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-60-user-decision-index-freeze-checksum-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_next_slice",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": true
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": true,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": false,
+        "needs_followup_before_current_strict_claim": false
+      }
+    },
+    {
+      "slice_id": "2026-06-16-p2-61-user-decision-freeze-operator-readiness-brief-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-61-user-decision-freeze-operator-readiness-brief-sandbox",
+      "plan_key": "P2-61",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-61-user-decision-freeze-operator-readiness-brief-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": true
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-61-user-decision-freeze-operator-readiness-brief-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "review_pass_no_blocker",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": true
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-61-user-decision-freeze-operator-readiness-brief-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_boundary",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": true
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-61-user-decision-freeze-operator-readiness-brief-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-61-user-decision-freeze-operator-readiness-brief-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_next_slice",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": true
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": true,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": false,
+        "needs_followup_before_current_strict_claim": false
+      }
+    },
+    {
+      "slice_id": "2026-06-16-p2-62-user-decision-operator-runbook-dry-run-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-62-user-decision-operator-runbook-dry-run-sandbox",
+      "plan_key": "P2-62",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-62-user-decision-operator-runbook-dry-run-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": true
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-62-user-decision-operator-runbook-dry-run-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "review_pass_no_blocker",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": true
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-62-user-decision-operator-runbook-dry-run-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_boundary",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": true
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-62-user-decision-operator-runbook-dry-run-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-62-user-decision-operator-runbook-dry-run-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_next_slice",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": true
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": true,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": false,
+        "needs_followup_before_current_strict_claim": false
+      }
+    },
+    {
+      "slice_id": "2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox",
+      "plan_key": "P2-63",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": true
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "review_pass_no_blocker",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": true
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_boundary",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": true
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_next_slice",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": true
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": true,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": false,
+        "needs_followup_before_current_strict_claim": false
+      }
+    },
+    {
+      "slice_id": "2026-06-16-p2-64-user-decision-replay-portability-audit-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-64-user-decision-replay-portability-audit-sandbox",
+      "plan_key": "P2-64",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-64-user-decision-replay-portability-audit-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": true
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-64-user-decision-replay-portability-audit-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "review_pass_no_blocker",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": true
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-64-user-decision-replay-portability-audit-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_boundary",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": true
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-64-user-decision-replay-portability-audit-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-64-user-decision-replay-portability-audit-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_next_slice",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": true
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": true,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": false,
+        "needs_followup_before_current_strict_claim": false
+      }
+    },
+    {
+      "slice_id": "2026-06-16-p2-65-user-decision-frontmatter-status-hardening-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-65-user-decision-frontmatter-status-hardening-sandbox",
+      "plan_key": "P2-65",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-65-user-decision-frontmatter-status-hardening-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": true
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-65-user-decision-frontmatter-status-hardening-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "review_pass_no_blocker",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": true
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-65-user-decision-frontmatter-status-hardening-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_boundary",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": true
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-65-user-decision-frontmatter-status-hardening-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-65-user-decision-frontmatter-status-hardening-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_next_slice",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": true
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": true,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": false,
+        "needs_followup_before_current_strict_claim": false
+      }
+    },
+    {
+      "slice_id": "2026-06-16-p2-66-user-decision-chain-hardening-readiness-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-66-user-decision-chain-hardening-readiness-sandbox",
+      "plan_key": "P2-66",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-66-user-decision-chain-hardening-readiness-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": true
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-66-user-decision-chain-hardening-readiness-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "review_pass_no_blocker",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": true
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-66-user-decision-chain-hardening-readiness-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_boundary",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": true
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-66-user-decision-chain-hardening-readiness-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-66-user-decision-chain-hardening-readiness-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_next_slice",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": true
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": true,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": false,
+        "needs_followup_before_current_strict_claim": false
+      }
+    },
+    {
+      "slice_id": "2026-06-16-p2-67-user-decision-strict-status-package-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-67-user-decision-strict-status-package-sandbox",
+      "plan_key": "P2-67",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-67-user-decision-strict-status-package-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": true
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-67-user-decision-strict-status-package-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "review_pass_no_blocker",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": true
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-67-user-decision-strict-status-package-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_boundary",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": true
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-67-user-decision-strict-status-package-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-67-user-decision-strict-status-package-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_next_slice",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": true
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": true,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": false,
+        "needs_followup_before_current_strict_claim": false
+      }
+    },
+    {
+      "slice_id": "2026-06-16-p2-68-user-decision-strict-status-adoption-screen-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-68-user-decision-strict-status-adoption-screen-sandbox",
+      "plan_key": "P2-68",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-68-user-decision-strict-status-adoption-screen-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": true
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-68-user-decision-strict-status-adoption-screen-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "review_pass_no_blocker",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": true
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-68-user-decision-strict-status-adoption-screen-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_boundary",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": true
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-68-user-decision-strict-status-adoption-screen-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-68-user-decision-strict-status-adoption-screen-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_next_slice",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": true
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": true,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": false,
+        "needs_followup_before_current_strict_claim": false
+      }
+    },
+    {
+      "slice_id": "2026-06-16-p2-69-user-decision-future-verifier-adoption-prototype-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-69-user-decision-future-verifier-adoption-prototype-sandbox",
+      "plan_key": "P2-69",
+      "statuses": {
+        "verification": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-69-user-decision-future-verifier-adoption-prototype-sandbox/verification.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "local_verification_passed",
+          "canonical_expected": "local_verification_passed",
+          "matches_canonical": true
+        },
+        "reviewer": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-69-user-decision-future-verifier-adoption-prototype-sandbox/reviewer-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "review_pass_no_blocker",
+          "canonical_expected": "review_pass_no_blocker",
+          "matches_canonical": true
+        },
+        "boundary": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-69-user-decision-future-verifier-adoption-prototype-sandbox/boundary-audit.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_boundary",
+          "canonical_expected": "pass_boundary",
+          "matches_canonical": true
+        },
+        "product": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-69-user-decision-future-verifier-adoption-prototype-sandbox/product-acceptance-report.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade",
+          "canonical_expected": "pass_product_grade",
+          "matches_canonical": true
+        },
+        "next_step": {
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-69-user-decision-future-verifier-adoption-prototype-sandbox/next-step.md",
+          "exists": true,
+          "valid_frontmatter": true,
+          "status": "pass_product_grade_pending_next_slice",
+          "canonical_expected": "pass_product_grade_pending_next_slice",
+          "matches_canonical": true
+        }
+      },
+      "classification": {
+        "canonical_strict_pass": true,
+        "product_frontmatter_pass": true,
+        "legacy_pass_variant": false,
+        "pending_product": false,
+        "pending_next_step_closeout": false,
+        "needs_followup_before_current_strict_claim": false
+      }
+    }
+  ]
+}

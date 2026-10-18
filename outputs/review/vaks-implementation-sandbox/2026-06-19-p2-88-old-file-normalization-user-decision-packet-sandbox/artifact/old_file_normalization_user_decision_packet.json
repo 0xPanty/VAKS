@@ -1,0 +1,249 @@
+{
+  "record_kind": "sandbox_old_file_normalization_user_decision_packet",
+  "slice_id": "2026-06-19-p2-88-old-file-normalization-user-decision-packet-sandbox",
+  "created_at": "2026-06-18T23:31:48.270426+00:00",
+  "source_inputs": {
+    "p2_75_contract": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-75-old-file-status-normalization-approval-request-sandbox/artifact/old_file_status_normalization_approval_request_contract.json",
+    "p2_86_gate_chain": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-86-approval-to-prewrite-gate-chain-sandbox/artifact/approval_to_prewrite_gate_chain.json",
+    "p2_87_diff_preview": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-87-old-file-status-normalization-diff-preview-sandbox/artifact/old_file_status_normalization_diff_preview.json"
+  },
+  "source_digest": {
+    "p2_75_contract": "335f4522075762909b40de26703a85805a0194c2cfa0ea6dd73dfd5318bba6c3",
+    "p2_86_gate_chain": "66f856d3b857d5e745c9b2e11a9e18e197be1f627f75d159b914cf3997710519",
+    "p2_87_diff_preview": "5b88ee7ca0a2b4719cf24e175c2d8fca06ceccb5898aa3fd377519a97be33b92"
+  },
+  "summary": {
+    "original_items": 20,
+    "status_changes": 75,
+    "preview_operation_count": 75,
+    "prewrite_hash_match_count": 75,
+    "body_unchanged_count": 75,
+    "non_status_frontmatter_unchanged_count": 75,
+    "old_slice_writes_applied": 0,
+    "p2_86_executor_write_allowed_now": false,
+    "p2_86_positive_ready_count": 1,
+    "p2_75_exact_approval_collected": false,
+    "decision_option_count": 4
+  },
+  "approval_contract": {
+    "exact_approval_phrase": "I explicitly approve p2-75 old-file status-only normalization: apply the 75 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only. Do not edit body content, artifacts, tools, templates, wiki truth layers, main architecture docs, README, Obsidian vault, commit, push, or sync.",
+    "generic_language_is_not_approval": true,
+    "non_approval_examples": [
+      "继续",
+      "全部落地",
+      "都做完",
+      "可以",
+      "go ahead",
+      "make it product grade"
+    ],
+    "phrase_in_this_packet_is_instructional_only": true,
+    "packet_collects_approval": false
+  },
+  "decision_options": [
+    {
+      "option_id": "approve_with_exact_phrase",
+      "label": "Approve status-only normalization with the exact phrase",
+      "required_text": "I explicitly approve p2-75 old-file status-only normalization: apply the 75 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only. Do not edit body content, artifacts, tools, templates, wiki truth layers, main architecture docs, README, Obsidian vault, commit, push, or sync.",
+      "effect": "Allows a later executor slice to perform a final prewrite confirmation flow. This packet itself still does not write old files.",
+      "old_file_write_allowed_by_this_packet": false
+    },
+    {
+      "option_id": "withhold_approval",
+      "label": "Do not approve now",
+      "required_text": "",
+      "effect": "Keep original old-file statuses unchanged. The original 20 remain normalization candidates rather than current strict closeout.",
+      "old_file_write_allowed_by_this_packet": false
+    },
+    {
+      "option_id": "request_revision",
+      "label": "Ask for a revised packet or more evidence",
+      "required_text": "",
+      "effect": "Stay in sandbox and revise a future decision packet or preview artifact before any old-file write.",
+      "old_file_write_allowed_by_this_packet": false
+    },
+    {
+      "option_id": "reject_or_park",
+      "label": "Reject or park status normalization",
+      "required_text": "",
+      "effect": "Record that the old-file status-only normalization is not being applied without a later separate approval.",
+      "old_file_write_allowed_by_this_packet": false
+    }
+  ],
+  "change_summary": {
+    "target_file_counts": {
+      "boundary-audit.md": 20,
+      "next-step.md": 20,
+      "product-acceptance-report.md": 2,
+      "reviewer-report.md": 16,
+      "verification.md": 17
+    },
+    "proposed_status_counts": {
+      "local_verification_passed": 17,
+      "pass_boundary": 20,
+      "pass_product_grade": 2,
+      "pass_product_grade_pending_next_slice": 20,
+      "review_pass_no_blocker": 16
+    },
+    "sample_operations": [
+      {
+        "operation_index": 1,
+        "old_slice_id": "2026-06-15-p0-01-retrieval-receipt-template-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/verification.md",
+        "field": "frontmatter.status",
+        "before_status": "pass",
+        "manifest_current_status": "pass",
+        "proposed_status": "local_verification_passed",
+        "rollback_status": "pass",
+        "status_line_delta": {
+          "before": "status: pass",
+          "after": "status: local_verification_passed"
+        },
+        "before_sha256": "cdb7c5a9090be324157df5fe977e82ebd7c97d6dd0277584a4249a05b5eb3728",
+        "prewrite_required_hash": "cdb7c5a9090be324157df5fe977e82ebd7c97d6dd0277584a4249a05b5eb3728",
+        "before_hash_matches_prewrite_required": true,
+        "proposed_sha256": "ab60b2eedb901e001bd8169fb248acae44bb5de80a9e5f8f7fde6ed1c5950a11",
+        "body_sha256_before": "527e63dd5895e9ee3d8e81c9c4492493a96e19dbe40e7626b189f67035a69780",
+        "body_sha256_after": "527e63dd5895e9ee3d8e81c9c4492493a96e19dbe40e7626b189f67035a69780",
+        "body_unchanged": true,
+        "non_status_frontmatter_sha256_before": "f2456938f0fccbc00c2f5c4c3db63148edb93c4492ae74f130f5511268407e27",
+        "non_status_frontmatter_sha256_after": "f2456938f0fccbc00c2f5c4c3db63148edb93c4492ae74f130f5511268407e27",
+        "non_status_frontmatter_unchanged": true,
+        "proposed_status_applied_in_preview": true,
+        "old_slice_write_applied": false,
+        "preview_only": true
+      },
+      {
+        "operation_index": 2,
+        "old_slice_id": "2026-06-15-p0-01-retrieval-receipt-template-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/reviewer-report.md",
+        "field": "frontmatter.status",
+        "before_status": "pass",
+        "manifest_current_status": "pass",
+        "proposed_status": "review_pass_no_blocker",
+        "rollback_status": "pass",
+        "status_line_delta": {
+          "before": "status: pass",
+          "after": "status: review_pass_no_blocker"
+        },
+        "before_sha256": "c4db23afb8a80559c95fc00a866cde610e04aca81217a6f3ecb16ba515ced7b1",
+        "prewrite_required_hash": "c4db23afb8a80559c95fc00a866cde610e04aca81217a6f3ecb16ba515ced7b1",
+        "before_hash_matches_prewrite_required": true,
+        "proposed_sha256": "559c0ee33808a67c41069cc31a731520b88d39e1edf3f622bc86a42bfea71d0a",
+        "body_sha256_before": "29e47f904732117fb55be8212227ea17b12708f07de8e73f2e63712cc489fd38",
+        "body_sha256_after": "29e47f904732117fb55be8212227ea17b12708f07de8e73f2e63712cc489fd38",
+        "body_unchanged": true,
+        "non_status_frontmatter_sha256_before": "361c3057e4e9cf66dbaa44c73c1b687da5f0d6b236931c28e7280b5a3fc0e06a",
+        "non_status_frontmatter_sha256_after": "361c3057e4e9cf66dbaa44c73c1b687da5f0d6b236931c28e7280b5a3fc0e06a",
+        "non_status_frontmatter_unchanged": true,
+        "proposed_status_applied_in_preview": true,
+        "old_slice_write_applied": false,
+        "preview_only": true
+      },
+      {
+        "operation_index": 3,
+        "old_slice_id": "2026-06-15-p0-01-retrieval-receipt-template-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/boundary-audit.md",
+        "field": "frontmatter.status",
+        "before_status": "pass",
+        "manifest_current_status": "pass",
+        "proposed_status": "pass_boundary",
+        "rollback_status": "pass",
+        "status_line_delta": {
+          "before": "status: pass",
+          "after": "status: pass_boundary"
+        },
+        "before_sha256": "bfdbedbf0a2420747e65e7f833c7eb2dacf4302e19aad853b71599e39e7a455f",
+        "prewrite_required_hash": "bfdbedbf0a2420747e65e7f833c7eb2dacf4302e19aad853b71599e39e7a455f",
+        "before_hash_matches_prewrite_required": true,
+        "proposed_sha256": "909ead0d82ed2ebbdb19aaffbc20538463b62e5711176bc8ffe71f7e0755af16",
+        "body_sha256_before": "0ead9a88d885af2c40da8c603cea35fd1086ef3a1bef21e5796a70a78505f0ca",
+        "body_sha256_after": "0ead9a88d885af2c40da8c603cea35fd1086ef3a1bef21e5796a70a78505f0ca",
+        "body_unchanged": true,
+        "non_status_frontmatter_sha256_before": "a4dd6618fc6d28c0c7d1e5c151e4c6714803d17733869ecc5d2655605cfe7794",
+        "non_status_frontmatter_sha256_after": "a4dd6618fc6d28c0c7d1e5c151e4c6714803d17733869ecc5d2655605cfe7794",
+        "non_status_frontmatter_unchanged": true,
+        "proposed_status_applied_in_preview": true,
+        "old_slice_write_applied": false,
+        "preview_only": true
+      },
+      {
+        "operation_index": 4,
+        "old_slice_id": "2026-06-15-p0-01-retrieval-receipt-template-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/product-acceptance-report.md",
+        "field": "frontmatter.status",
+        "before_status": "pass_product_grade_round_2",
+        "manifest_current_status": "pass_product_grade_round_2",
+        "proposed_status": "pass_product_grade",
+        "rollback_status": "pass_product_grade_round_2",
+        "status_line_delta": {
+          "before": "status: pass_product_grade_round_2",
+          "after": "status: pass_product_grade"
+        },
+        "before_sha256": "152ed34803fc5caf163b003c8b60980523a977e46e354a1de7b80cf45d607070",
+        "prewrite_required_hash": "152ed34803fc5caf163b003c8b60980523a977e46e354a1de7b80cf45d607070",
+        "before_hash_matches_prewrite_required": true,
+        "proposed_sha256": "45e864493efb5bf0e4dece78756b7e35f1e5895a7268944cc5250ec902b6c18e",
+        "body_sha256_before": "6fc6d1825e222d235090ef26d9e29ab078f73f4fd23da65dd9ac5d1efe8dd622",
+        "body_sha256_after": "6fc6d1825e222d235090ef26d9e29ab078f73f4fd23da65dd9ac5d1efe8dd622",
+        "body_unchanged": true,
+        "non_status_frontmatter_sha256_before": "7c0c3c28eabab454054b409b0394195847856bd34462bffc6c45a2e8305d952b",
+        "non_status_frontmatter_sha256_after": "7c0c3c28eabab454054b409b0394195847856bd34462bffc6c45a2e8305d952b",
+        "non_status_frontmatter_unchanged": true,
+        "proposed_status_applied_in_preview": true,
+        "old_slice_write_applied": false,
+        "preview_only": true
+      },
+      {
+        "operation_index": 5,
+        "old_slice_id": "2026-06-15-p0-01-retrieval-receipt-template-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/next-step.md",
+        "field": "frontmatter.status",
+        "before_status": "pending_acceptance",
+        "manifest_current_status": "pending_acceptance",
+        "proposed_status": "pass_product_grade_pending_next_slice",
+        "rollback_status": "pending_acceptance",
+        "status_line_delta": {
+          "before": "status: pending_acceptance",
+          "after": "status: pass_product_grade_pending_next_slice"
+        },
+        "before_sha256": "ff573fdd021bbc1be23cff9c57d4a0e3761b74bc2be9303712928a7a0cf2ca2d",
+        "prewrite_required_hash": "ff573fdd021bbc1be23cff9c57d4a0e3761b74bc2be9303712928a7a0cf2ca2d",
+        "before_hash_matches_prewrite_required": true,
+        "proposed_sha256": "4fcf6d33169aa60af65a4ea36fae71002bda07342a3e2763e277c38af41f0844",
+        "body_sha256_before": "e7d9bc7e82cdf394cd0196f1d9cc737728bf3a2140f687e9cb2e071ca33a2456",
+        "body_sha256_after": "e7d9bc7e82cdf394cd0196f1d9cc737728bf3a2140f687e9cb2e071ca33a2456",
+        "body_unchanged": true,
+        "non_status_frontmatter_sha256_before": "c1638fadb78030c94d6d6ac9494ffecb577382e618c5be4a4de5d059dc201f02",
+        "non_status_frontmatter_sha256_after": "c1638fadb78030c94d6d6ac9494ffecb577382e618c5be4a4de5d059dc201f02",
+        "non_status_frontmatter_unchanged": true,
+        "proposed_status_applied_in_preview": true,
+        "old_slice_write_applied": false,
+        "preview_only": true
+      }
+    ],
+    "full_preview_artifact": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-87-old-file-status-normalization-diff-preview-sandbox/artifact/old_file_status_normalization_diff_preview.json"
+  },
+  "readiness_chain": {
+    "positive_ready_count": 1,
+    "negative_blocked_count": 7,
+    "executor_write_allowed_now": false,
+    "ready_state_name": "ready_for_prewrite_confirmation",
+    "still_requires_stop_before_write": true
+  },
+  "authority_flags": {
+    "decision_packet_only": true,
+    "phrase_display_is_user_approval": false,
+    "user_approval_collected": false,
+    "packet_authorizes_write": false,
+    "executor_write_allowed": false,
+    "old_slice_write_allowed": false,
+    "old_slice_writes_applied": 0,
+    "normalization_applied": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "goal_complete_now": false
+  }
+}

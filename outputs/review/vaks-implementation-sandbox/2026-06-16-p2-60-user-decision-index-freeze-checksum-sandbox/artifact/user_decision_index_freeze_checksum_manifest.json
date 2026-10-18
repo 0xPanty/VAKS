@@ -1,0 +1,1686 @@
+{
+  "record_kind": "sandbox_user_decision_index_freeze_checksum_manifest",
+  "slice_id": "2026-06-16-p2-60-user-decision-index-freeze-checksum-sandbox",
+  "source_slice_ids": [
+    "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+    "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+    "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+    "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+    "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+    "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+    "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+    "2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox",
+    "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox"
+  ],
+  "truth_boundary": "checksum_freeze_not_user_decision_or_execution_authority",
+  "hash_algorithm": "sha256_bytes",
+  "entry_count": 268,
+  "missing_count": 0,
+  "missing_paths": [],
+  "entries": [
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/artifact/build_user_decision_request_packet.py",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "79145e3f4964369869ec434f1fd16650bfae59c1116a63a35e8e4c9dfa726546",
+      "bytes": 28254
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/artifact/failure-case-oracle.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "93b030b62509f9937cce8645a7b6ed7c2964c631cebfac3bb10bab88a4617bfc",
+      "bytes": 7533
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/artifact/failure-case-oracle.md",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "29d218b4d847a57551a111184cd27e29a3f18c43106ac7bb6e6c2c0fed8fb441",
+      "bytes": 6589
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/artifact/user-decision-request-contract.md",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "cbd31e5e417a506203c1b8ff0902a5b600d537af6060acfbac2bc62aec7144c6",
+      "bytes": 993
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/artifact/user-decision-request-packet.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "9f4b11b523aa9924ad9c1f9f8561f1dafbf96b070bc5f9860f65850d40912abd",
+      "bytes": 6560
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/artifact/verify_user_decision_request_packet.py",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "1c2aba7c85f5efed80950826c9a7e9ad1903b93a9af132662314a7b0327e9afd",
+      "bytes": 7931
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/boundary-audit.md",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "a5c93f8107b6ba7af3922aa74181da06c813feb1644a378676a4e20b098487b6",
+      "bytes": 1159
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/001-top-level-record-kind.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "8f97193fdac884b042cfe7866024df862d50b5622f6c632ef115c287c4fa1e4f",
+      "bytes": 6539
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/002-top-level-slice-id.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "77a2e2fab93749a2ad1b2098884afc36e7f4cfaa0d8122d2d1e973090f16859d",
+      "bytes": 6512
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/003-top-level-version.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "abdc541c01b606231272b5c28ccee91e6b97eadcff0a1488f48dd57fd748dc9f",
+      "bytes": 6558
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/004-top-level-truth-boundary.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "203ba2cbf082964eabf1b5f2dd524275ef03e8afcc719d241677882d6d06b1d6",
+      "bytes": 6519
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/005-top-level-write-scope.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "4e2f4f47f73b553f228e0830850d8c92890836b29831db902a192bc9892c311c",
+      "bytes": 6478
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/006-source-slice-id.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "437ede1bead9e017fd0ab40600e69f86b5c9af12b6e2515f39c9b59ff84da041",
+      "bytes": 6500
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/007-source-final-gate-command.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "7ad167984e8312419659aa0cac175779ff0b7096abcf1ea5629b269fb918a9af",
+      "bytes": 6393
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/008-source-product-status.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "1e244cf488f3df6543c4d32280b185bacb8c42254396c5758c976910607c178a",
+      "bytes": 6549
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/009-source-next-step-status.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "2a936e5ce9424245ffa22d010f727bd4dfc3d63fbf054d886a3af3cbd62d1c30",
+      "bytes": 6538
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/010-prompt-no-explicit-reply.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "9a7881f33d0d81dfcbf19d712a990b3c91905b93c660a8be45fc6f5c7d260876",
+      "bytes": 6561
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/011-prompt-default-execution.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "0b43f5614c5233b5d2163903d331da3a1f1f4c57ea9e4892ce77de8e6b9e3af2",
+      "bytes": 6561
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/012-prompt-unsafe-default.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "c37febf35fdefc9307d05868efd4f9d5b3a3e90b59211639d77bb68d688c2bd7",
+      "bytes": 6566
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/013-prompt-missing-no-auto-language.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "bcb2853421c8a94e8770d8b505237524e987d6815eafc99a642106a459a8e58f",
+      "bytes": 6426
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/014-option-count.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "9d1ead2bda7f19293b873e14bcbce214c4a22c524be75a2e0854d68242d9c051",
+      "bytes": 6150
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/015-option-order.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "a87e6fa4b3707061c08a8c988f4629c874634eefe56e224a996ba7baa0ba6128",
+      "bytes": 6560
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/016-option-default.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "9496fc61c7f37c6d273efa6c71315c5d467278075fd65f098afe21d8ceb0de9e",
+      "bytes": 6560
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/017-option-auto-execution.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "5b4eae728bb351a61f8cbc9badf93aafc4956cf8df4ed4a50b75930ede6d8cbc",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/018-option-forbidden-action.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "122a80fbb888433fccfdae6f7d3b4e826be0d0daab1f897a100fe57a23f09bad",
+      "bytes": 6536
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/019-option-missing-new-scope.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "5cdea5c2911b354e9eb91c0f3940685115ffba5947ab6517ea5189a6b1d68d70",
+      "bytes": 6561
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/020-option-missing-separate-approval.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "2596d1a5873678ba2b080fe1b4d28c711458776aae85c22d5a627c7c0709e8cc",
+      "bytes": 6561
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/021-option-unsafe-label.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "38c35a09a0a2ac42cd5ebfe86a3b48ba78a615adad1e9beae5daea2017e22147",
+      "bytes": 6542
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/022-decision-packet-not-ready.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "3812635f6f01e699e5ee3c44c2bf04db6a0ee67aa12b4f24c2ea8c4e61c26c38",
+      "bytes": 6561
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/023-not-ready-to-ask.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "bdb5ef48d9adf694d4b506017123745ee70be3892cc21d7c76b973b8a7787c57",
+      "bytes": 6561
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/024-extra-non-claim.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "a261c488f380a883fe1c97ae5ecb7c5ac0b28dc2fbd9c5cce32f112cb8f52d5b",
+      "bytes": 6577
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/025-forbidden-action-promotion.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "fdf58a9c6ab631a2e65826b4bd49bf4ab7041434bf3e24ee6b54da9dc27c3c09",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/026-forbidden-action-mainline_merge.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "083f59baf425870e600b292494c0abd31d41fd1a61e6ce84292f51f4fad9cd32",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/027-forbidden-action-formal_vault_write.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "14d9ebe1623e6c8ccb40b4dca5afc2f80b3fe63801fd2695f47ebbc826c2185c",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/028-forbidden-action-obsidian_sync.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "420ddb4678015004122393e42409a5f9f8690efff3735fcd6ebbde89fe153a64",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/029-forbidden-action-commit.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "f1a23c9439d0bd68099e6f6146c9d5afc42bfd318d441d0ea310082883609e2c",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/030-forbidden-action-push.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "8ac4c602b926896c26e281018a9d392885388ccf7f7ae75dfa8a80e4e1fe384d",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/031-forbidden-action-release.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "a343535514d69c5e0a9a4973a17665c810146f2ebd2fc750b4908ea8c31188d5",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/032-forbidden-action-reviewed_knowledge_creation.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "6e2fb886a05e1114b3e135d87344f6f00f084eb952c6359551a57e4c7161c577",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/033-forbidden-action-evidence_support_creation.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "fb3b40d6b593f4a66b1c66c9d85c1284bc55c8e3b7363e84f0852e16de3b6911",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/034-forbidden-action-action_basis_creation.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "edabf2f201dbdb6cb825d430d6e5061ef029648d1c68df933994c288d86244df",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/035-forbidden-action-template_write.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "f7ea9cc1afe6b5fd5153307110f979148c37ef7d55230a67aa64f9fd2a71f324",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/036-forbidden-action-tool_write.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "0cefaba7589724893dc9f10311587b823a941964f87b9cc41831d84cb0a06537",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/037-forbidden-action-dependency_install.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "d8f5c3f0d3dd9c1fa17c9c7c9784765cabfe2411949493e3950edcfb386ef867",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/038-forbidden-action-background_service.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "9b6d4a17b291dfaf03d514e1cf8bf2fd9fdbc24adb5431a8f4c5753200d18569",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/039-forbidden-action-hooks.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "0bb36d13ab7a0ed56470afa3709cde100771bdb84ec5789a0afb37175cd5ed0a",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/040-forbidden-action-mcp_write_tool.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "be4124d67f8b0b2cd3d4ff93c250949d84f184d4a0d19cf14d17b6c78fcff07c",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/041-readiness-ready_to_execute_user_choice.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "82a847291a0f00931c07c2b2f92aaf6afcfe09bbf280a23fa3fc0a22e0c7843f",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/042-readiness-user_choice_collected.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "c9e7557ac0a6372651aca84faf8f31a21bb6458f14417bcf3540aada1d09cc42",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/043-readiness-promotion_ready.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "a754913b2f0351fa2a4244e685ae0668466eacc3610c1190fe2e61097dcd65a7",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/044-readiness-mainline_merge_ready.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "c78201c0863e1d0bdd21e8ae9b3a193ee1de523d79135a1b37668b74b2180acc",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/045-readiness-formal_vault_write_ready.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "bbea613540b64c203079311d87b66b2541b876a86383e70472cb8a4af551917e",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/046-readiness-action_basis_ready.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "fb59199147e76fa87b2d9978e8f1da322a75a9e9209209581db8882fdca905ca",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/047-readiness-commit_ready.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "6310105a8cb88a3404ddc167f086772a04bd512ad32cdca59ab0b8dbc4f94cca",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/048-readiness-push_ready.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "826e6114a84f1d1e6fd2bc212e43737cc99d6fba8c65a8d3b2fd79b14ea248d5",
+      "bytes": 6559
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/049-missing-stop-p2_50_final_gate_failed.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "6a118799e0f7b36a5ebcb00f05097b6119f924c477966e394dc9a99f92e67c45",
+      "bytes": 6528
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/050-missing-stop-user_decision_option_missing.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "50cdf4a863115c38a86d562e7f1ed12e4fea86f90c77b2da00a3d80618a58ea9",
+      "bytes": 6523
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/051-missing-stop-option_grants_automatic_execution.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "b91b2a60efcbc678570978a570aed848c6c6b7d464d9b44d7b28e9c82c323820",
+      "bytes": 6518
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/052-missing-stop-option_skips_separate_approval_for_execution_path.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "b8f9643063c848ebb0e15efd244184d7d03ddb6e871c94882fed88116ed2e44e",
+      "bytes": 6502
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/053-missing-stop-forbidden_next_action_enabled.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "614062c80a466fa0191a1b640b7ba058e901ed2b2e3cc94838b269944140bad7",
+      "bytes": 6522
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/054-missing-stop-protected_path_write_required.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "4b51677251afd1682989cf72246084a93c3f723e72f68a3306811e45127d39e9",
+      "bytes": 6522
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/055-missing-stop-authority_confusion_detected.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "fa9d515f1a050fcd67c5b1d98ebac287aad6e97cc594a9cf109a329cf10bb933",
+      "bytes": 6523
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/056-missing-non-claim-not_approval.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "a1dd6cb2609f1445f98ae05346203af60761e925d8dac2861e50ac89af8bc9df",
+      "bytes": 6539
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/057-missing-non-claim-not_execution_permission.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "e647b51695c39284c681901e2f9ca296c379106f3ccd33a80575cc937383df55",
+      "bytes": 6527
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/058-missing-non-claim-not_promotion.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "a83a8792b9e6e7e7fd4ff10190af7369e675f36f3a84fd4f8d57c33d14a1c52e",
+      "bytes": 6538
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/059-missing-non-claim-not_mainline_merge.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "254d3a4c5132dc3c1bafb36c262a72ff2c2af0cfafd7e62f1eb9af6f9d453f11",
+      "bytes": 6533
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/060-missing-non-claim-not_release.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "645de1f306872ecadb5198a6fcfbc0d7d3e9f87360ffdea921fb5db4be76ce7a",
+      "bytes": 6540
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/061-missing-non-claim-not_formal_vault_write.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "3463d52e48e151855e323b048607581b3b65ee1745f0c87b0911523b23f3bc49",
+      "bytes": 6529
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/062-missing-non-claim-not_Obsidian_sync.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "1583d080ce5e8b8d43095e1967478fc17f9cf98d8dd498e1700053c6d912d4f2",
+      "bytes": 6534
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/063-missing-non-claim-not_commit.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "df34da1391f7bc0256ceb70300f4b8de9ef4f939506516b3c9ac5d3019def882",
+      "bytes": 6541
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/064-missing-non-claim-not_push.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "db611a96df30c8cbfac03161de03baed59c5e1970139ad8113bcaf7ec33aa88f",
+      "bytes": 6543
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/065-missing-non-claim-not_reviewed_knowledge.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "6b56ea399ab395092549b8bc5adb6d0f73441c39b9f4b0c34c88f44b35aafaa9",
+      "bytes": 6529
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/066-missing-non-claim-not_evidence_support.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "793eb324cee1d117ecc42e45138d5f83362aad43e7c63b37c0a896e9fd3d9dff",
+      "bytes": 6531
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/067-missing-non-claim-not_action_basis.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "20cd7967fa2379ad4f1ec3b74191fefb5f5546b63963159a16b518ca1c03012c",
+      "bytes": 6535
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/068-missing-non-claim-not_auto_advance.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "5e7168dae8faf70fd31fcbab5f7f1545b6361623605e1d4a07a4d74af8580851",
+      "bytes": 6535
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/069-acceptance-contract-requires_reviewer_pass.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "ddf0a58a4d5a0ce736bf51d042a0bcae85512a41f14a5e739278334dee6adf31",
+      "bytes": 6561
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/070-acceptance-contract-requires_boundary_pass.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "f414ff85cc2e587e416aa1a7bfed8bdbe69181be3c4eba0ac11730e173837f3d",
+      "bytes": 6561
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/071-acceptance-contract-requires_gpt_5_5_extra_high_product_acceptance.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "1fa5efb0a1e11b5db626fa8c9bad79df5f269eb5ce7b6fb8415e5aac372d7175",
+      "bytes": 6561
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/072-acceptance-contract-p2_50_final_gate_must_pass.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "c3783738922794581b2ae416834e99e29cb94f6748843c43f5bcedec6f5681af",
+      "bytes": 6561
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/failure-cases/073-acceptance-contract-product_acceptance_does_not_collect_user_choice.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "687bce338e2c00e6885afdbdeff74431198e9df12d05a643bf6196ef7c2d943e",
+      "bytes": 6561
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/fixtures/valid-decision-options.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "8ee48eef82498a6d687b562b34b8a91219fec13e1205b534e65633e91a2b56a7",
+      "bytes": 6600
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/fixtures/valid-non-execution-boundary.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "d49f0e3a08dd9f3991294c80a9c4daed650b623831f56613569975dc6f43798d",
+      "bytes": 6606
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/fixtures/valid-user-decision-request-packet.json",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "9f4b11b523aa9924ad9c1f9f8561f1dafbf96b070bc5f9860f65850d40912abd",
+      "bytes": 6560
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/next-step.md",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "53625c643d1fd42caed1402607e2a2a7f488c60ed7186315a33178b27a8bed07",
+      "bytes": 699
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/product-acceptance-report.md",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "5fb6faf7e17a2254c3e33dc0c559f74738c5ebbdc18a997a49db9d4cc5214147",
+      "bytes": 1455
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/reviewer-report.md",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "bad877bcda0d21aadf0345208361bb2133f4b6aac22ef4491c2c345f6389d800",
+      "bytes": 1419
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/slice-plan.md",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "870e9184a7ed891056cc8cb0025e8bee76317b087a4b45284e7d82cb79ad6284",
+      "bytes": 278
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/source-map.md",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "53214f592ca0f4046a0848b54f5bd848e9a1ecdd52afb9ea5d403b8f94bd09e0",
+      "bytes": 291
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/verification.md",
+      "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "sha256": "27ee0086728a0bb64f31be61135cbda76dd21b1d34bd7cdfae018b20a0f32bd4",
+      "bytes": 1884
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox/artifact/build_user_decision_no_auto_advance_guard.py",
+      "source_slice_id": "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+      "sha256": "471e43e1b0cbee429171984f69640e252075d02e2233d59ad90f840ad3ac75c2",
+      "bytes": 23744
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox/artifact/no_auto_advance_guard_prototype.html",
+      "source_slice_id": "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+      "sha256": "948fd05bf66290e594dd0a6435b9c32d389bc85343fd0e9e4c227456c2c8321e",
+      "bytes": 5061
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox/artifact/no_auto_advance_guard_readout.md",
+      "source_slice_id": "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+      "sha256": "64f591f7326637e03ab8e3f8c51372998036fad33b4e7a382cb6b0065020bfc0",
+      "bytes": 2352
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox/artifact/user_decision_no_auto_advance_guard.json",
+      "source_slice_id": "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+      "sha256": "89cd46f67d15003894de5328842d0940d844df1f06781cbeaaf714a2ec20af54",
+      "bytes": 6940
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox/artifact/verify_user_decision_no_auto_advance_guard.py",
+      "source_slice_id": "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+      "sha256": "5a68fddda9282831d0d92b48188f17fed3de94062c2e2c2e7dada3460f50da04",
+      "bytes": 18351
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox/boundary-audit.md",
+      "source_slice_id": "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+      "sha256": "8fe20e84ea50ca36937656a42c7afb1c31e157748d00976352daaa560ade493d",
+      "bytes": 1192
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox/failure-cases/no_auto_advance_failure_cases.json",
+      "source_slice_id": "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+      "sha256": "c874a0e714b637375538ed332420bf8a456bb16a4d7ae60d78ed5debdb30e959",
+      "bytes": 19099
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox/fixtures/explicit_a_keep_reference.json",
+      "source_slice_id": "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+      "sha256": "9060d9feb3907dcaac2906b6c16d39bb41ac974cd3b2a7ba12ceccd3c334ac93",
+      "bytes": 378
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox/fixtures/explicit_b_future_readonly_planning.json",
+      "source_slice_id": "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+      "sha256": "103bada31ec0405cee8fd2e55aa1d4a5a68702d4ce28fdb61dcf5f2744e3b8e5",
+      "bytes": 450
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox/fixtures/explicit_c_future_scope_question.json",
+      "source_slice_id": "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+      "sha256": "badca4060a995c2a538a5cb4f4b420dc8cb723ec0c12d4cd22442d3a757b7007",
+      "bytes": 409
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox/fixtures/no_reply_default.json",
+      "source_slice_id": "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+      "sha256": "af1c8203d490f124cbac93de54ee3e0a3dfbb753f7d0665b4c68b3c380013175",
+      "bytes": 392
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox/next-step.md",
+      "source_slice_id": "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+      "sha256": "ee68be865dd1a5210f92b120dbbff1addb0a6bf4e9a6c4e657802852c077730b",
+      "bytes": 994
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox/product-acceptance-report.md",
+      "source_slice_id": "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+      "sha256": "d3b118b2465f7b3d5ec5972ce50be143361f4149c596215c339cba0c7025f9a8",
+      "bytes": 1482
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox/reviewer-report.md",
+      "source_slice_id": "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+      "sha256": "be9b0998c387f17ded2e62c51151644a26c3a59ad68859e09ef95d4513d05977",
+      "bytes": 1186
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox/slice-plan.md",
+      "source_slice_id": "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+      "sha256": "129961b6b47b55556f9bffbdf4ea0b5a7a50d43a3803ade715501a38f8b5c542",
+      "bytes": 1649
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox/source-map.md",
+      "source_slice_id": "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+      "sha256": "5fae0ab1420ab3b35d805abb4e71b8a355338cf80f0ebb4c41bfc9fb7eb5d20d",
+      "bytes": 1074
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox/verification.md",
+      "source_slice_id": "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+      "sha256": "bc904ce1587877d33821b631dc635805584aad1ef8062e5318151949af2a80f5",
+      "bytes": 1548
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/artifact/build_user_response_classifier_dry_run.py",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "1d5fa7d7f929572753a6375d3df7bb0dd97b84ed43aa5b27f49d9d2633bcda04",
+      "bytes": 23379
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/artifact/classify_user_response_dry_run.py",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "5ea18c684f9b8248e6b7eb3f9597d9cf99120a99270dc44085143e241b1a74a2",
+      "bytes": 3861
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/artifact/user_response_classifier_contract.json",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "c0c36b496b915fb47578735dd7f5b0d770695d33a41615c04611ef32af6e7219",
+      "bytes": 6711
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/artifact/user_response_classifier_prototype.html",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "50a2d9c6403dce60102d28b3115dc6fa0d0e35117bee00887fdfae50616f7a33",
+      "bytes": 4369
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/artifact/user_response_classifier_readout.md",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "11d7f78e6a33e89a6fc777f71c3c0f251e6816937dbf0dd0c8d232d95a810145",
+      "bytes": 1868
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/artifact/verify_user_response_classifier_dry_run.py",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "84f9e62a1ebe1a5ca796ad11bc47c8b369e58edfda63b3545e9e41a2f4d7787b",
+      "bytes": 16019
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/boundary-audit.md",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "480b21c42f458f846909913dcd3b2e378da32c5d700cc1aa420b2934eb484097",
+      "bytes": 1065
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/failure-cases/user_response_classifier_failure_cases.json",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "fea6a57835471ab591d8f4226b1472eef60be804c1ec4349e727af22a2dbff6b",
+      "bytes": 32645
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/fixtures/ambiguous_continue.json",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "640e7a0dbec5b9b9e12c6169d0734699d325569d047619589c4c2fedf61d2204",
+      "bytes": 358
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/fixtures/ambiguous_freeform.json",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "639345c0df700d2f999e9912db48686d9c8891e933c64d1f264908948cfe811d",
+      "bytes": 364
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/fixtures/execution_word_with_b.json",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "3a5bf661d6dfcbe3c8ceb8c79e51e73ab78d78df8d155e5a13c1f5aaac1a83c1",
+      "bytes": 402
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/fixtures/execution_word_with_c.json",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "01d200770aec50690530b1e522acea558649a8baf7130577299598fd62ea19bc",
+      "bytes": 402
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/fixtures/execution_word_without_option.json",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "00e7424b6524cc52b3c9c5e7a3bc69bcd925e02edc51c9e01aae6c2d4e0a49ff",
+      "bytes": 401
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/fixtures/explicit_a_chinese.json",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "20add99e47402dd4bbf5fbd550f36f58199939812b8638851d38d55a21991c2b",
+      "bytes": 388
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/fixtures/explicit_a_letter.json",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "6f97026bebf604ced025605b842bf93dac0d61a48fdb1c30416a6e5289ab1870",
+      "bytes": 364
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/fixtures/explicit_b_chinese.json",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "0444e59ad95dd3a2a08313ad0eb83defe24e089ac05c7aea655809286dec91b4",
+      "bytes": 435
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/fixtures/explicit_b_letter.json",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "64bfe1a75d8c7eb2565b7110d36806c7cefee9428a8f0d808241664d118edd85",
+      "bytes": 411
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/fixtures/explicit_c_chinese.json",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "e3cc960d4dd5a57175311f74b83ae96465dd4744ff57480ff2a42cce18eade47",
+      "bytes": 422
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/fixtures/explicit_c_letter.json",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "8c4faeb6a9351eb144c4bdaea25cfce000781d89c546e72ccbf775dcc90f6216",
+      "bytes": 389
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/fixtures/explicit_d_letter.json",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "14f89160f1e16bb9e572f1e0297daca4d9b2fe982f51c995ea1684ec27585a91",
+      "bytes": 367
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/fixtures/multiple_b_c.json",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "8aa8f3b9400487722ea6737c8d3eabfcefd0a6662d1cebcbe1095ba5e94dc814",
+      "bytes": 369
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/fixtures/no_reply_empty.json",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "8d3a35fedb8ff6bb386cb8dc8a99e7179b12870dc4639905bf6ba1f87c35c8f2",
+      "bytes": 336
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/next-step.md",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "0a3ff9c9a6fec58915de52dd5959cf957c8ecdfd665b031cf8b37391a6fb3c51",
+      "bytes": 1150
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/product-acceptance-report.md",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "7321624b4dcd36a146213e282cea39a8aeb2f6e9c47fed86855c84cd82048cca",
+      "bytes": 1359
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/reviewer-report.md",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "50b4b7a499649f5c8a9f8bea5b57af297725e9147557ce9eaa86364425d464c3",
+      "bytes": 1043
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/slice-plan.md",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "1871c2496c4dc964c528f13756addd102d67b70669e022e6ec286550e52947d8",
+      "bytes": 859
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/source-map.md",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "ee2d920e42d9dfcfa088534a3826036081568e4338b887e767268aea9aaa1fff",
+      "bytes": 1047
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-53-user-response-classifier-dry-run-sandbox/verification.md",
+      "source_slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "sha256": "dd99f3a5646793a56cd443cd1a58161cdf4197599cdc6d318953e8866cc81ddf",
+      "bytes": 1782
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/artifact/build_safe_user_response_renderer.py",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "af52f2adf2b1c73a462b1f77d2c597578a8b8fe992d2e8d6e509103b998430c4",
+      "bytes": 18131
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/artifact/render_safe_user_response.py",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "686d49ce25bdf97bc6316e9e019e8f3f8c5098234c152cfd01267abea1c1d15b",
+      "bytes": 2490
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/artifact/safe_user_response_renderer_contract.json",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "79fe81401a4d1aedf4bef661968c64b61e8e19e0aee22b99f76c087ecccc1789",
+      "bytes": 5736
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/artifact/safe_user_response_renderer_prototype.html",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "897dd57aab4c9482cb704791ff0e89c0456a10be9238c59b7848aadb408ec96c",
+      "bytes": 4583
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/artifact/safe_user_response_renderer_readout.md",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "2684f73abb4494bb130c187efd5596e36247bfb8cd46650b47aa1bd2129df515",
+      "bytes": 2580
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/artifact/verify_safe_user_response_renderer.py",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "1c98d345f7dbbd0a8a3ca6859c3bc0b2960c03c6fabd895039dab1fbaea6f747",
+      "bytes": 14946
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/boundary-audit.md",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "6ce9f8b71800637496d593e22e86d2c992ff7ca452ff445c78863636073145b7",
+      "bytes": 1010
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/failure-cases/safe_user_response_renderer_failure_cases.json",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "b96496b62ae4864a14d278dd8361ce15dc989506434ad06a18265a3d19d6de18",
+      "bytes": 10961
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/fixtures/ambiguous_continue.json",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "76668cb523f3d32d4992c0ac7405cddb98ba5f77a236507339ff8ce3900d3f82",
+      "bytes": 323
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/fixtures/english_merge_review.json",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "ab74d19f85785921f305e83234117b6f474d84aff7f01fabfcc0e6b48c524ebe",
+      "bytes": 358
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/fixtures/execution_c_merge.json",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "b06f63e85fdf2b98add6655cdeb709fd2952f42e5ea6d832d939d969a192ccb0",
+      "bytes": 362
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/fixtures/multiple_b_c.json",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "6e4cf2999c8aad4818a355413481a1774c79aed54ba1c16c28d6bed3403d360d",
+      "bytes": 327
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/fixtures/no_reply.json",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "594a97380c13cfe502d7505aab9247f43c30531e4be81dcf62b8281cfb4975f6",
+      "bytes": 315
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/fixtures/option_a.json",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "4c2146c2eadc1134806461bafa3d59156bdc5a35f709b2abed6736cd31cfd5e5",
+      "bytes": 315
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/fixtures/option_b.json",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "78906565e874f75bd4b1e4d14aa04682a876e15f5a907fabe1b145669213306b",
+      "bytes": 324
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/fixtures/option_c.json",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "d32103d3563ab5ecbfd644f522fdfdb4b46b09bade16f5079f265781036a8463",
+      "bytes": 321
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/fixtures/option_d.json",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "d70ec571258fb2b399a19aa5fb101ab768e1b35e57dddbca157b95b78ae6b399",
+      "bytes": 314
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/fixtures/safe_c_scope.json",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "8f301004157a85995789aeec685caa6210361c0f116c0c54cfced993599b4239",
+      "bytes": 354
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/fixtures/unknown_case_fallback_contract.json",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "9cebc6ab6b276a9caafe63ec9994d5268395a447f8d07d75bc87b0e20b2488ff",
+      "bytes": 363
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/next-step.md",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "2a6fe9250cdeaa6cdd0747055905e4543d82ed71f24bf398363e574434345fef",
+      "bytes": 1003
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/product-acceptance-report.md",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "f4fad4f640f06cb72cb551346b3e071e460a00df05bcdfe6a02ee3ba1b14e9d9",
+      "bytes": 1245
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/reviewer-report.md",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "519726b0bcf085d0dcdd012cb2d686df814cae7cdb948828010112f794b800a1",
+      "bytes": 954
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/slice-plan.md",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "56e408d69d5f4a17284eb66bcb2ad3b66e0c4fef3c928f360739fcb72e2ddb4d",
+      "bytes": 771
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/source-map.md",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "ea5570125fc2972e461188c5707cd8f882be7a2db8cde238752520221939ece1",
+      "bytes": 1050
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox/verification.md",
+      "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "sha256": "0fe87fdcd1be9ad613d178031e72c3ee5d001f18d2d525384de4d60a8851bf25",
+      "bytes": 1002
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/artifact/build_user_decision_e2e_simulator.py",
+      "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "sha256": "2ab3a2177ed7f1d88b0060e67e2d00815904abccac889753bb50b06c6c682565",
+      "bytes": 12244
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/artifact/simulate_user_decision_dry_run.py",
+      "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "sha256": "63c05bca73055882e2bbc7faf5230f8ad28f57cf1a4a6e36a03acc7ec708a828",
+      "bytes": 3879
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/artifact/user_decision_e2e_simulator_contract.json",
+      "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "sha256": "fbc82382debf3ede1a9964c55ec7c7c41f732b881c9d7b68d82301d90de36c69",
+      "bytes": 2272
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/artifact/user_decision_e2e_simulator_prototype.html",
+      "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "sha256": "0060ff45a9aff6ac02584487a9a7cea3343f275e7a0387d2c2ebd534a12f9894",
+      "bytes": 3454
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/artifact/user_decision_e2e_simulator_readout.md",
+      "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "sha256": "b04fa625f2bf42c991691f949ee77cc4ce8d4883300e0aa96cc8fdf3b7a0510b",
+      "bytes": 1196
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/artifact/verify_user_decision_e2e_simulator.py",
+      "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "sha256": "4c19d206c72a630ef604fa2f8df90d3309f9262d1259cf75cbb03df8c898277f",
+      "bytes": 15441
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/boundary-audit.md",
+      "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "sha256": "956cbe1dd0cbf27ad284285acea42366c010bb8da88b50b0dc0292b237ec3816",
+      "bytes": 937
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/failure-cases/user_decision_e2e_failure_cases.json",
+      "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "sha256": "a515c1f7f13205335bddf1ad83d094d4632548291408adbd57fbd1d6a313b8f3",
+      "bytes": 10318
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/fixtures/ambiguous_continue.json",
+      "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "sha256": "0958acfb31cbe9468934cb427799b6ca4cff0935d31b9d1f4a3c8048fb708b29",
+      "bytes": 485
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/fixtures/execution_c_merge.json",
+      "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "sha256": "9cfcf223d50744b28ee7c3bf7638a56c45d69059bca64ffb731514bf0829d2b4",
+      "bytes": 511
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/fixtures/explicit_a.json",
+      "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "sha256": "abfed3c304199e667359d3150edd16fb5de4d7981ed4101c6da27534946f3c76",
+      "bytes": 480
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/fixtures/explicit_b.json",
+      "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "sha256": "c2622db9df5a581d6c87dfec08b85d43b4037486e551beaef0080ecc3c2a6e18",
+      "bytes": 481
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/fixtures/explicit_c.json",
+      "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "sha256": "989efa527b4adf4033cfa5291c98d098eb31d87d66331028aba5dbfcf908ed04",
+      "bytes": 479
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/fixtures/explicit_d.json",
+      "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "sha256": "0c32cb8227f98c9826ea8152cfda6e7aee770262b3b5c6dff4664b7e03c5b401",
+      "bytes": 480
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/fixtures/multiple_b_c.json",
+      "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "sha256": "5b9c12fa29c4964e04ddb7a656913e840efea1e55a3b1838447b3525c44589db",
+      "bytes": 487
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/fixtures/no_reply.json",
+      "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "sha256": "db2643c97ffa163e99876562a93341b88908d0a0e1d8d17f84c03ad946dd3c42",
+      "bytes": 475
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/fixtures/safe_c_scope.json",
+      "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "sha256": "4f4f8b5aa2160066df1490905065c1ed7fdcd6e11e7191ddee318f7049f15071",
+      "bytes": 512
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/fixtures/unknown_case.json",
+      "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "sha256": "a544f10a642e1f3e6895c104f798bc366778bd92577568a9500855a6e8351a2f",
+      "bytes": 522
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/next-step.md",
+      "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "sha256": "77379efede074c2f4eeb7f6717cb3106789ea12d9a25ff5b326bfe545c283fca",
+      "bytes": 750
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/product-acceptance-report.md",
+      "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "sha256": "deee51f48a66e34982d798c3e9d2c8909507e6d4fd820a0383a468cb92e71803",
+      "bytes": 1284
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/reviewer-report.md",
+      "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "sha256": "d092e4b05040bbd1b28717ae32c1e9ff3ac1cb6aeeaa0c3763c80a85ca2f4175",
+      "bytes": 930
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/slice-plan.md",
+      "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "sha256": "2a434faf5708f73b2640d409a0ba3e35c01399fb18248a2e2e6b34783feb11b5",
+      "bytes": 745
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/source-map.md",
+      "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "sha256": "e9c9b0d85ae7ddabdcf2d0860fd840cbc228f005d22c5f175cba332b25889641",
+      "bytes": 1047
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox/verification.md",
+      "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "sha256": "d24332bcde4e22969ad7c640efbeb680cac5cf8158c23a20f4e47af14c6f9d59",
+      "bytes": 1380
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/artifact/build_user_decision_demo_transcript_smoke_runner.py",
+      "source_slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "sha256": "a249688a6b986bcb9635e49b91ca3f01743d2b7d940623b383f704c01336c701",
+      "bytes": 13413
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/artifact/run_user_decision_demo_transcript.py",
+      "source_slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "sha256": "fee2d124ed720c24d78fd93a37da94450d71b8d2ab39ce015876aedcc1e3e10c",
+      "bytes": 4197
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/artifact/user_decision_demo_transcript_contract.json",
+      "source_slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "sha256": "5cda960f1f15ed10ae1b51bc807e1801ebb0a01acb8eb496b5e2bd42fa8ad4ba",
+      "bytes": 4368
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/artifact/user_decision_demo_transcript_prototype.html",
+      "source_slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "sha256": "8f63ea993dce284b2f9f91581cf09fe0690549e27873207c8f0d61c655f572d7",
+      "bytes": 1557
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/artifact/user_decision_demo_transcript_readout.md",
+      "source_slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "sha256": "da2a534723282c28e9f80c0ef3f68d58bf5c5f57ee5a6fbad0832cde1b82d93f",
+      "bytes": 1087
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/artifact/verify_user_decision_demo_transcript_smoke_runner.py",
+      "source_slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "sha256": "5145717b03d9032b7b7cadc15a43a99b804740609e3d940a99c4e8345ef1c8bf",
+      "bytes": 15000
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/boundary-audit.md",
+      "source_slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "sha256": "4469bd308d42c8d1e5251d8cb84ba9a1ad1fc8fc6748d4d6fbd5b01a40f1dc82",
+      "bytes": 985
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/failure-cases/user_decision_demo_transcript_failure_cases.json",
+      "source_slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "sha256": "a060014a790ec58a7e773615540438be638c3967f1f9debca7a1d50f604b2339",
+      "bytes": 2276
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/fixtures/ambiguous.json",
+      "source_slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "sha256": "10475b4f8e5f559e9573e77860b90b4b0a99fa20f10581bd671082d5546dd903",
+      "bytes": 516
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/fixtures/execution_words.json",
+      "source_slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "sha256": "40d7365defebd35fb91f52c76a4334a52ef541547a0d34870560fb87a7d15e7b",
+      "bytes": 548
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/fixtures/multiple.json",
+      "source_slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "sha256": "3e5dd01c44290cf4ac468f5d13f6611083bb0e17c03a4398e0949c19609c764d",
+      "bytes": 517
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/fixtures/no_reply.json",
+      "source_slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "sha256": "e523e9af116ef22f7df60f1de9f7d00c3a61c878b6af3e4f9945cee597a56db2",
+      "bytes": 505
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/fixtures/option_a.json",
+      "source_slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "sha256": "d24d14828118b407152646025cda4c6b562359db5ef76baa7921d4d3ea7d5c9f",
+      "bytes": 510
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/fixtures/option_b.json",
+      "source_slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "sha256": "3b122f64938548dbe71b7dc5023e0fc216909217213ef5538a037459d82b872e",
+      "bytes": 511
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/fixtures/option_c.json",
+      "source_slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "sha256": "ebceffa33f72adce6e4c2c01e0e0a8f297c21acc1509078bef464d23988d268d",
+      "bytes": 509
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/fixtures/option_d.json",
+      "source_slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "sha256": "2adcc9dcec705eb447f3e4f292d431723bf6951e8daaa03beb4332e62e7500e6",
+      "bytes": 510
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/fixtures/unknown_fallback.json",
+      "source_slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "sha256": "58834e54162fdb0914aa97faffcc6e2b900e01557409d068a175a301a3d149ad",
+      "bytes": 561
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/next-step.md",
+      "source_slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "sha256": "982cb471aa1ccd8142df68a70f4bcdd13796baace428b862d6463ff3687eef8f",
+      "bytes": 835
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/product-acceptance-report.md",
+      "source_slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "sha256": "11275cb53a5317c59a17b718b4ca9e3ae1b4cbd7fe74f4b135eb586083be3d3e",
+      "bytes": 1219
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/reviewer-report.md",
+      "source_slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "sha256": "43fa2ebb0b0beb8d251f07ebb8bca5cd7bd4b0e96a86838081225f38d7d88c90",
+      "bytes": 1065
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/slice-plan.md",
+      "source_slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "sha256": "5d5ee5127d9228ffeda418741596532897936058800cdabbcf6e7c14aa87cc21",
+      "bytes": 785
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/source-map.md",
+      "source_slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "sha256": "12301d1bdd0498fcd7f805e5801e3d55ec7b048c890d0bc8034a6ae421b3950e",
+      "bytes": 1046
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox/verification.md",
+      "source_slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "sha256": "689269666bae811a447b1f0fa8192247a80ae788a67b3d76adb6ab9f26c2721a",
+      "bytes": 1281
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/artifact/build_user_decision_chain_regression_bundle.py",
+      "source_slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "sha256": "eaacb5f11b77370a963a4c6be4e8ee63abb0149f50372226d8a2bd9e281e50f8",
+      "bytes": 4045
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/artifact/run_user_decision_chain_regression_bundle.py",
+      "source_slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "sha256": "90e2ecaaa791f440facd1a1e353f6d575d2b9873a8b802b5c5cfb25c188fbaa1",
+      "bytes": 9420
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/artifact/user_decision_chain_regression_contract.json",
+      "source_slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "sha256": "f7d727c6f23aaa71f39fa9dc15140a52a808edf4aff68757296c0cbda2066d26",
+      "bytes": 2722
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/artifact/user_decision_chain_regression_prototype.html",
+      "source_slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "sha256": "094f2c03c10648d99c1f15912b6510c93b9af5f90f77226eee3bbaaebacfc40d",
+      "bytes": 3197
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/artifact/user_decision_chain_regression_readout.md",
+      "source_slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "sha256": "59e1ffb19bc842648bc20ac10ccf9e747645c036d0d61772473c2b9818bb76f8",
+      "bytes": 1452
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/artifact/verify_user_decision_chain_regression_bundle.py",
+      "source_slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "sha256": "143ffcff740782f0332e655bb80d6562ba4553613836995b69738e8b23970536",
+      "bytes": 21093
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/boundary-audit.md",
+      "source_slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "sha256": "cd274e8e66654532b257ac38a907e444f36efa83bc32af2f50784ab7c1fa8c32",
+      "bytes": 1865
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/failure-cases/user-decision-chain-regression-failures.json",
+      "source_slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "sha256": "f1e3a815bc2373b9548ebfe6af892576a18f3b5916a0a2bfe2cf1454070d47ca",
+      "bytes": 9188
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/fixtures/chain-summary.json",
+      "source_slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "sha256": "65f884c8260d497c1f0d70d13f53115bbb9df348c415a1e4a271d2892f79bdad",
+      "bytes": 92
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/fixtures/demo-guard.json",
+      "source_slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "sha256": "302a146697b465dfaf75a189cad52cfd9ae9109563cbfed2c1c520a6c7f9405c",
+      "bytes": 343
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/fixtures/source-p2-51.json",
+      "source_slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "sha256": "099d82068bbff05fec75df77054afdfe018811e1fe2a011026a235ed10b2bc18",
+      "bytes": 252
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/fixtures/source-p2-52.json",
+      "source_slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "sha256": "05c1179b7709a272180c989670d3296cd2817b166bd4e7c7512e36a863d0e90a",
+      "bytes": 259
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/fixtures/source-p2-53.json",
+      "source_slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "sha256": "23619822a9d0840c411f00aeaf3dba312c92f3410a53ae41bbf8d2ae6ce2eeca",
+      "bytes": 256
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/fixtures/source-p2-54.json",
+      "source_slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "sha256": "6e292129821450ac37c9b77480870f5f15193b938d750983d3b8d0198a5e52b9",
+      "bytes": 259
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/fixtures/source-p2-55.json",
+      "source_slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "sha256": "2b7d39a881450e2f6cf06e8e403d10decf998c3bea9346f2d32e509632a178ca",
+      "bytes": 259
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/fixtures/source-p2-56.json",
+      "source_slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "sha256": "05526eda12d03a7386d87127e2cbcf3a7f5c0e64846346bc014f66f61139f644",
+      "bytes": 266
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/next-step.md",
+      "source_slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "sha256": "69e928c612476efad4ae5378e7cedc889531acebaf8c11f73571e023c6b69194",
+      "bytes": 705
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/product-acceptance-report.md",
+      "source_slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "sha256": "dd0d0c0f809d9c63bfad6ff73bab392530972018f50f6cd14228b2b0544861f1",
+      "bytes": 2282
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/reviewer-report.md",
+      "source_slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "sha256": "56badcdbc5e2f3cd5379635d54ac06bb04274448c9b8b1355910de1ffc5f0bbf",
+      "bytes": 1653
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/slice-plan.md",
+      "source_slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "sha256": "c6e2993959b9843a53d111f4f127800fa7e9eead4df421575d234c6692a4f1f8",
+      "bytes": 2213
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/source-map.md",
+      "source_slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "sha256": "829a5da5688c6a9ff128175373df50fde771f6cb1e98affa0638b0cd78439771",
+      "bytes": 1352
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox/verification.md",
+      "source_slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "sha256": "59ab558a21349c7a03a4a1ac509d55fcc272e9871b3d50a9520040a197aa82f2",
+      "bytes": 2506
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox/artifact/build_static_boundary_scan_regression_readout.py",
+      "source_slice_id": "2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox",
+      "sha256": "f370f71f2149f80908daf29daaf47cc0382110bc1be65b5219f46d17c34acf96",
+      "bytes": 3558
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox/artifact/static_boundary_scan_regression.py",
+      "source_slice_id": "2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox",
+      "sha256": "0fd0dac298b83ad4b883115620b03b429b29443e3585b62ab06d0ca048a22979",
+      "bytes": 9549
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox/artifact/static_boundary_scan_regression_contract.json",
+      "source_slice_id": "2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox",
+      "sha256": "b6528f23413988823179f1d4dbbe2b1a29f269ffe7a18c9aaa13fdf9ef2ceef5",
+      "bytes": 2701
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox/artifact/static_boundary_scan_regression_prototype.html",
+      "source_slice_id": "2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox",
+      "sha256": "bd8624a4b35125ace19570fbc5e9d55994323a3ee1e485d1ca1bc4e7e6dafefc",
+      "bytes": 2162
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox/artifact/static_boundary_scan_regression_readout.md",
+      "source_slice_id": "2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox",
+      "sha256": "c512cb6dd680a91929dd4911df7d989ac76e20e7bc91cc3a31d3b05544176706",
+      "bytes": 1325
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox/artifact/verify_static_boundary_scan_regression.py",
+      "source_slice_id": "2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox",
+      "sha256": "bef54f4cb8d2142ca945170900dd35d3f3e81d26a95068481bafa93df2f510a0",
+      "bytes": 11357
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox/boundary-audit.md",
+      "source_slice_id": "2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox",
+      "sha256": "ad228ca3428b13272d875998ec495cfad480a5902b22320674010cda6edc8c62",
+      "bytes": 1388
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox/failure-cases/static-boundary-scan-failures.json",
+      "source_slice_id": "2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox",
+      "sha256": "1b0ea0270af464a48511631bc202f22387fa7fd753be84eff9de2f0f6cde313e",
+      "bytes": 8553
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox/fixtures/safe-allowed-builder.json",
+      "source_slice_id": "2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox",
+      "sha256": "7afca30aa5f695fd49251255d547af445a991ffe3c07427617fe0107114efeb8",
+      "bytes": 499
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox/fixtures/safe-reader.json",
+      "source_slice_id": "2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox",
+      "sha256": "239392f71065742aac9f9634d178ce0433ebb066d697790f2ef8acd6f775b234",
+      "bytes": 263
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox/fixtures/safe-subprocess-final-gate.json",
+      "source_slice_id": "2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox",
+      "sha256": "ed54e8ff63f5407fb4e379a79fdc2933534531512f7b32a1ce44ea8e64afb867",
+      "bytes": 374
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox/next-step.md",
+      "source_slice_id": "2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox",
+      "sha256": "7942d0060a1e5777256ca4681e18f9f16e2208400aea98d86d62ffcf52c8e26f",
+      "bytes": 793
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox/product-acceptance-report.md",
+      "source_slice_id": "2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox",
+      "sha256": "97f28614985fd1f4447f7d1aa9707d428d064e66960f2dde038fe8b5482c77be",
+      "bytes": 1938
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox/reviewer-report.md",
+      "source_slice_id": "2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox",
+      "sha256": "9c3d9252dd9fc51c9b4d8b3efafd073ade6d7ac22dda824c066c44360e0c7c7e",
+      "bytes": 1853
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox/slice-plan.md",
+      "source_slice_id": "2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox",
+      "sha256": "51ae5ffb010cfab2394ef6838d937df1431cd0ea7c8bc56b34383dae145a45eb",
+      "bytes": 1307
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox/source-map.md",
+      "source_slice_id": "2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox",
+      "sha256": "fe009acc3330ba18bdea51e5b95fabc8bcc07fbc00dcf1b5f7826f7e3c36ff8c",
+      "bytes": 733
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox/verification.md",
+      "source_slice_id": "2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox",
+      "sha256": "4c8b1a6f8e685b5f2bd938823b0e4f13670b7617f585bf8ba3fff3f07b230479",
+      "bytes": 2992
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/artifact/build_user_decision_operator_handoff_index.py",
+      "source_slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "sha256": "feff1a7a04f5d041dee5df2fd648f9edce77c49965d26acf4b4c2cfa16f68289",
+      "bytes": 3826
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/artifact/run_user_decision_operator_handoff_index.py",
+      "source_slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "sha256": "c143e1bee7def56573f4022ac849c331845c2cb581a49112785e16c51a963579",
+      "bytes": 9458
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/artifact/user_decision_operator_handoff_index_contract.json",
+      "source_slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "sha256": "6512c93cc9d799fd75e3b6cccffac17528048a78bbacb6f15beab815375ba6e2",
+      "bytes": 8075
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/artifact/user_decision_operator_handoff_index_prototype.html",
+      "source_slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "sha256": "1cd6e8a3fca6b05089f7870778c69120914470f16e6fc2a360944d9b8e2898a4",
+      "bytes": 5099
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/artifact/user_decision_operator_handoff_index_readout.md",
+      "source_slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "sha256": "2be331fbefb1af0c0171a6dca9d95e82549843a62122e052238ca381c4ffe524",
+      "bytes": 4240
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/artifact/verify_user_decision_operator_handoff_index.py",
+      "source_slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "sha256": "8bd0be687b5f0d6dd73e4874d6f76a65fb793c74995af57f82ba4f36eb9a391d",
+      "bytes": 15452
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/boundary-audit.md",
+      "source_slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "sha256": "221d8f132a60e06a7d7cc42cee90c4097a49678f4dda9be7b05ea39d68c63ffb",
+      "bytes": 1617
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/failure-cases/user-decision-operator-handoff-index-failures.json",
+      "source_slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "sha256": "d5795518feb70bcafc67ed5a71b6faf3fbad20e81eaf5a9d7bdf8ac364a8e7f6",
+      "bytes": 7328
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/fixtures/handoff-summary.json",
+      "source_slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "sha256": "53d162d1b2c193596f96bb8aac4f08e8ac5ba4debfe24805f3f0af7622bd2209",
+      "bytes": 86
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/fixtures/source-p2-51.json",
+      "source_slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "sha256": "29a622a5aba686b7758b07925db7f5b144679e61ae5800ee1ecf3d8b2d97566c",
+      "bytes": 251
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/fixtures/source-p2-52.json",
+      "source_slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "sha256": "fcb765706afdc72c88cc4a0be8e14e82eaee4594389e27f8fd5d5947b6a6b632",
+      "bytes": 277
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/fixtures/source-p2-53.json",
+      "source_slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "sha256": "11950da56ba57dbabe3dafcf84eaed31314c5f2985870e477b20a84766cbffd6",
+      "bytes": 283
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/fixtures/source-p2-54.json",
+      "source_slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "sha256": "c9b4531b6b3a40edfd920967c45b5d85dd1969e695b1364fcb9611044878aaa2",
+      "bytes": 267
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/fixtures/source-p2-55.json",
+      "source_slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "sha256": "dd9e964ef71d90cf7139ec3de26dad959800c42907ada3658ae704737e6adc38",
+      "bytes": 277
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/fixtures/source-p2-56.json",
+      "source_slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "sha256": "f243f74e72887f6193ae9ad21cdef00e1334c38c49b3f72a0f15e72cda481ab1",
+      "bytes": 273
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/fixtures/source-p2-57.json",
+      "source_slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "sha256": "adc597dafeac50096daa3df743311bcd7ac906d638739750209c4df1ce445426",
+      "bytes": 274
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/fixtures/source-p2-58.json",
+      "source_slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "sha256": "30fb5a9a85e55750d6b7a88d7432e2749bea9da19cbe9dfbf4bb4976192911ba",
+      "bytes": 288
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/next-step.md",
+      "source_slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "sha256": "fe5701b85b91f23255154cce04d0a4153373ebe33bbac212923d54a864d89e73",
+      "bytes": 759
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/product-acceptance-report.md",
+      "source_slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "sha256": "acc495d0671590d27b029c1cd66ffab500e77c35cb22aa53db3b21461f229402",
+      "bytes": 1938
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/reviewer-report.md",
+      "source_slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "sha256": "0b1bf32d5acfc45175016025c07724d6aca9b568dcaae04d7f9c77dc256d18a8",
+      "bytes": 1881
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/slice-plan.md",
+      "source_slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "sha256": "0c1a5f509443c0f9ef7de86a3a39c7d1f97ef4faf14d8eb2b09542f02b304dec",
+      "bytes": 1405
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/source-map.md",
+      "source_slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "sha256": "b18e01b02dba1b95f1e492c6bca5727b936643dcf2ad5b0d6c96c46aeff19f56",
+      "bytes": 919
+    },
+    {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/verification.md",
+      "source_slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+      "sha256": "b4cbead1b90a8fb56e944252ef527d1b0d49590ef133636fee8621b21ec3ea8e",
+      "bytes": 1943
+    }
+  ],
+  "latest_source_status_method": "read_existing_reports_no_script_execution",
+  "latest_source_status_paths": [
+    "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/verification.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/reviewer-report.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/boundary-audit.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/product-acceptance-report.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/next-step.md"
+  ],
+  "latest_source_final_gate_passed": true,
+  "latest_source_recorded_status": {
+    "status_method": "read_existing_reports_no_script_execution",
+    "status_paths": [
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/verification.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/reviewer-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/boundary-audit.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/product-acceptance-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox/next-step.md"
+    ],
+    "verification_status": "local_verification_passed",
+    "reviewer_passed": true,
+    "boundary_passed": true,
+    "product_acceptance_passed": true,
+    "next_step_status": "pass_product_grade_pending_next_slice",
+    "passed": true
+  },
+  "freeze_ready": true,
+  "automatic_execution": false,
+  "mainline_ready": false,
+  "promotion_ready": false,
+  "action_basis_ready": false,
+  "must_not": [
+    "execute_option",
+    "merge_mainline",
+    "promote",
+    "sync_obsidian",
+    "commit",
+    "push",
+    "install_dependencies",
+    "start_background_service",
+    "install_hooks",
+    "use_mcp_write_tool",
+    "write_reviewed_knowledge",
+    "create_evidence_support",
+    "create_action_basis",
+    "start_future_slice_by_inference"
+  ],
+  "required_non_claims": [
+    "This checksum manifest is not a user decision.",
+    "This checksum manifest is not execution authority.",
+    "This checksum manifest is not mainline approval.",
+    "This checksum manifest is not promotion approval.",
+    "This checksum manifest is not Obsidian sync approval.",
+    "This checksum manifest is not reviewed knowledge.",
+    "This checksum manifest is not evidence support.",
+    "This checksum manifest is not action basis."
+  ]
+}

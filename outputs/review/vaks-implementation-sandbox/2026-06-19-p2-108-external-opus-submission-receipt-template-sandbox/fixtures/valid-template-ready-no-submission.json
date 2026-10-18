@@ -1,0 +1,9 @@
+{
+  "fixture": "valid-template-ready-no-submission",
+  "checks": {
+    "receipt_template.template_ready": true,
+    "receipt_template.submission_performed": false,
+    "receipt_template.raw_response_received": false
+  },
+  "expected": true
+}

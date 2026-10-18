@@ -1,0 +1,19 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "runtime-memory-missing-fixture",
+  "expected_valid": false,
+  "expected_codes": ["MB_FIXTURE_PATH_MISSING"],
+  "patch": {
+    "runtime_memory": {
+      "entries": [
+        {
+          "id": "missing-runtime-ref",
+          "ref": "fixtures/runtime/missing.json",
+          "memory_type": "session_observation",
+          "source_observation_ids": ["obs-2026-06-15-001"],
+          "action_basis_allowed": false
+        }
+      ]
+    }
+  }
+}

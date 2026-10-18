@@ -1,0 +1,33 @@
+{
+  "record_kind": "robust_rag_retrieval_manifest",
+  "scenario_id": "action-query-missing-verbatim",
+  "expected_valid": false,
+  "expected_codes": ["RR_VERBATIM_INPUT_REQUIRED"],
+  "query": {
+    "query_mode": "action",
+    "verbatim_input": "",
+    "question_summary": "Action query without verbatim input.",
+    "action_sensitive": true,
+    "verbatim_preserved": false
+  },
+  "route_selection": {
+    "selected": "hybrid_bucketed",
+    "authority_buckets_included": ["reviewed_support"],
+    "authority_buckets_excluded": ["candidate", "feedback", "runtime_artifact"],
+    "selected_context_types": ["reviewed_support_ref"],
+    "forbidden_support_types": ["retrieval_score", "graph_rank", "community_report_summary", "llm_extracted_relation"]
+  },
+  "retrieval_config": {"bucket_filter_first": true, "rrf_within_bucket_only": true, "exclude_runtime_artifacts": true},
+  "retrieved_items": [
+    {
+      "id": "reviewed-support-a",
+      "ref": "outputs/review/reviewed-support/example.md#e-1",
+      "record_kind": "reviewed_support_ref",
+      "authority_bucket": "reviewed_support",
+      "pack_role": "support",
+      "selected": true,
+      "excluded": false,
+      "selected_by": {"lexical": true}
+    }
+  ]
+}

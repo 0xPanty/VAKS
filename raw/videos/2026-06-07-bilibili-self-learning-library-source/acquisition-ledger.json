@@ -1,0 +1,91 @@
+[
+  {
+    "time": "2026-06-06T19:34:55.968929+00:00",
+    "method": "public_view_api",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "code": 0,
+    "elapsed_seconds": 0.1
+  },
+  {
+    "time": "2026-06-06T19:34:56.062813+00:00",
+    "method": "public_subtitle_api_1",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "code": 0,
+    "elapsed_seconds": 0.09
+  },
+  {
+    "time": "2026-06-06T19:34:56.159974+00:00",
+    "method": "public_subtitle_api_2",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "code": 0,
+    "elapsed_seconds": 0.1
+  },
+  {
+    "time": "2026-06-06T19:34:56.161039+00:00",
+    "method": "public_subtitle_check",
+    "status": "empty",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "subtitle_api_count": 2
+  },
+  {
+    "time": "2026-06-06T19:34:56.284680+00:00",
+    "method": "public_playurl_api",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "code": 0,
+    "elapsed_seconds": 0.12
+  },
+  {
+    "time": "2026-06-06T19:34:57.270140+00:00",
+    "method": "download_public_audio",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "audio_id": 30280,
+    "mirror_index": 0,
+    "bytes": 29642047,
+    "sha256": "d43322d6ab8958008049df50f086ba52de2ad2905c03dbf3b68ab64b27482bfc",
+    "elapsed_seconds": 0.98,
+    "media_path": "C:\\Users\\Administrator\\.codex\\video-research\\BV1cM7C6BEsM-self-learning-library\\asr-vaks\\audio-30280-0.m4s"
+  },
+  {
+    "time": "2026-06-06T19:38:34.278493+00:00",
+    "method": "local_gpu_asr",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "source_url": "https://www.bilibili.com/video/BV1cM7C6BEsM/",
+    "bvid": "BV1cM7C6BEsM",
+    "aid": 116696929011775,
+    "cid": 38880545447,
+    "transcript_method": "local_asr",
+    "asr_engine": "faster-whisper",
+    "model": "small",
+    "device": "cuda",
+    "compute_type": "float16",
+    "language": "zh",
+    "language_probability": 1,
+    "duration": 1642.8373125,
+    "segment_count": 709,
+    "text_chars": 7158,
+    "elapsed_seconds": 212.41,
+    "captured_at": "2026-06-06T19:38:34.277492+00:00",
+    "quality_notes": "local ASR from public Bilibili audio; raw source text, not reviewed knowledge; proper nouns need confidence checks"
+  },
+  {
+    "time": "2026-06-06T19:38:34.333812+00:00",
+    "method": "delete_scratch_media",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "media_path": "C:\\Users\\Administrator\\.codex\\video-research\\BV1cM7C6BEsM-self-learning-library\\asr-vaks\\audio-30280-0.m4s"
+  }
+]

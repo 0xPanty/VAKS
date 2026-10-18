@@ -1,0 +1,327 @@
+How Obsidian Works
+Obsidian runs on three core mechanics. Understand these, and everything else clicks.
+Vaults: A vault is just a folder on your computer. Every note you create inside it is a .md (Markdown) file. You own it. It never disappears because a company shuts down. You can open it in any text editor. It works offline, always.
+Internal Links: Type [[note name]] Inside any note, Obsidian creates a live link to that note. This is where the magic starts. One link is nothing. A thousand links become a map of your mind.
+The Graph View: Every time you link two notes, Obsidian draws a line between them in the Graph View - a live visual of your entire knowledge base. Notes that connect to many others become hubs. Clusters of related ideas reveal themselves. You start to see patterns you didn’t know existed.
+These three mechanics - vault, links, graph - are the engine. Everything else is customization.
+Step-by-Step: Install and Use Obsidian
+Step 1: Download and Install
+Obsidian is free. No account required.
+Quick setup:
+Go to obsidian.md and click Download
+Install for your OS
+0:16 / 0:19
+This is the only setup step that requires the internet. Everything after this works offline.
+Step 2: Create Your Vault
+Your vault is your second brain’s home. Name it something personal - “My Mind”, “Knowledge Base”, your name. Keep it somewhere you’ll remember.
+Quick setup:
+Open the app
+Click “Create new vault.”
+Name your vault
+Choose a folder location on your computer
+Click Create
+0:00 / 0:18
+One vault is enough to start. Don’t create multiple vaults thinking it will keep things “organized” - it fragments your thinking.
+Step 3: Create Your First Notes
+The blank canvas intimidates people. Start simple. Create three notes on Day 1.
+Quick setup:
+Click on the New Note icon in the top left corner or press Cmd+N (Mac) or Ctrl+N (Windows) to create a new note
+Title it with a clear name
+Write freely
+Repeat for two more notes
+0:01 / 0:13
+The point of Day 1 is not to build a perfect system. It’s good to have something to link.
+Step 4: Link Your Notes Together
+This is where Obsidian separates from every other app.
+Quick setup:
+Inside any note, type [[
+Start typing the name of another note
+Select it from the dropdown and press Enter
+That note is now linked
+0:00 / 0:10
+This one habit - linking as you write - is what turns random notes into a thinking system. Most people skip it and wonder why Obsidian feels like any other app.
+Step 5: Set Up Basic Folder Structure
+Don’t over-engineer this. A simple structure beats a complex one that you never maintain.
+Quick setup: Create these four folders in your vault:
+📁 Inbox:         everything new goes here first
+📁 Notes:         processed, permanent notes live here
+📁 Projects:    active project workspaces
+📁 Archive:      old or completed work, out of sight
+Right-click in the left sidebar → New Folder
+Name it “Inbox.”
+Repeat for Notes, Projects, Archive
+Right-click on the Folder to add Notes, Canvas, bases, etc
+0:00 / 0:45
+Every new note starts in the Inbox. You review it weekly and move it to its permanent home. This is called the PARA method, and it works in Obsidian perfectly.
+Step 6: Install Core Plugins
+Obsidian ships with powerful features turned off by default. Turn these on immediately.
+Quick setup:
+Go to Settings
+Click “Core Plugins”
+Enable these:
+✓ Backlinks:       see every note that links to the current one
+✓ Daily Notes:   one note per day, auto-created
+✓ Outline:            jump to headers inside long notes
+✓ Tag Views:       visual list of all your tags
+✓ Templates:      reusable note structures
+0:01 / 0:29
+Don’t install community plugins yet. Master the core tools first.
+Step 7: Use Templates for Every Note Type
+Templates are the single highest-leverage habit in Obsidian. They remove friction and make every note consistent.
+Quick setup:
+Create a folder called “Templates” in your vault
+Create a new note inside it called “Meeting Note Template.”
+Add this structure:
+# Meeting: {{title}}
+Date: {{date}}
+Attendees: 
+
+## Agenda
+
+
+## Decisions Made
+
+
+## Action Items
+- [ ] 
+
+## Links
+In Settings → Core Plugins → Templates → set your Templates folder
+Now press Cmd+T Inside any note, insert a template
+0:01 / 0:32
+A template you use every time is worth 100 complex systems you set up once and forget.
+Stop here for a second
+You now have something most Obsidian users don’t have after six months.
+But here’s the trap nobody tells you about: The system will feel empty for two weeks.
+You’ll open it, see 8 notes, and think “this isn’t working.”
+That’s not a sign the system is broken.
+That’s the exact moment most people quit. Don’t.
+Quick Pro Tips
+Use hashtags (#)  for status, not topics: Tags like # todo, # review, # waiting Let you filter notes by their position in your workflow. Topics belong in note titles and links, not tags.
+Write note titles as full sentences: “Why sleep affects memory consolidation” is 10x more useful than “Sleep notes.” Full sentences force clarity and make the graph view readable.
+Link before you search: If you reference something, link to it. Every [[link]] You make five minutes of future searching.
+The 2-minute note rule: If a note takes less than 2 minutes to create, do it now. Don’t bookmark. Don’t screenshot. Write the note, drop it in the inbox, and link it later.
+Review your Inbox every Friday: The Inbox is not permanent storage. Process it weekly - move, link, or delete. A full Inbox is a cluttered mind.
+Obsidian Note Formats
+Different notes need different structures. Here are the five formats I use for everything:
+Evergreen Note: A permanent idea, written in your own words. The title is a full claim. Links to 3+ other notes.
+# Consistent systems beat motivation every time
+The science behind habit formation shows...
+[[Why habits beat willpower]] | [[James Clear's framework]]
+2.    Meeting Note: Use the template from Step 7. Fill in before and during. Link action items to project notes.
+3.   Daily Note: Date as title. Loose capture. Link freely. Process weekly.
+# 2025-06-02
+Working on: [[Obsidian Newsletter Issue]]
+Idea: Daily notes are underrated because...
+Follow up: [[Content Pipeline Project]]
+4.   Project Note: One note per active project. Top section = goal. Middle = running notes. Bottom = linked resources.
+# Project: Q3 Content Calendar
+Goal: 12 newsletter issues planned by July 1
+
+## Status
+In progress
+
+## Notes + Decisions
+
+## Resources
+[[Newsletter Format Guide]] | [[Topic Ideas]]
+5.   Book/Article Note Source → Key ideas → Your reaction → Links to your existing notes.
+# Book: How to Take Smart Notes — Ahrens
+Core idea: Writing is thinking, not recording thinking.
+My reaction: This changes how I treat drafts.
+Links: [[Why first drafts should be ugly]] | [[Zettelkasten method]]
+0:01 / 0:33
+Most Common Mistakes to Avoid
+The worst mistake I made wasn't installing 30 plugins. It was copying. For the first month, I highlighted articles and pasted them into Obsidian. I had 200 "notes." I understood nothing. One day, I tried to explain an idea I had "noted" to a friend. Blank. I couldn't do it. Notes aren't knowledge. Copying isn't thinking. Writing the idea in your own words is when understanding happens. I deleted 150 notes that week. Kept 50. The 50 I actually understood. Here is the list of the most common mistakes you should avoid:
+Building the system before using it: The perfect folder structure means nothing if you have no notes. Write first. Organize later.
+Treating it like a filing cabinet: Obsidian is not Evernote. If you’re putting notes in folders and never linking them, you’re using a Ferrari as a parking spot.
+Installing 30 community plugins in Week 1: Every plugin adds friction and potential conflicts. Use core plugins for 30 days. Add community plugins only when you feel a specific gap.
+Orphan notes: A note that links to nothing is a note you’ll never find again. Every note should link to at least one other note before you close it.
+Copying instead of writing: Highlighting an article and pasting it into Obsidian is not note-taking. It’s digital hoarding. Write the idea in your own words. That’s when understanding happens.
+Quitting after one week: Obsidian compounds. At 100 notes, it feels useful. At 500 notes, it feels magical. The readers who quit after 20 notes never find out.
+Your gift - as promised:
+The AI Second Brain Prompt Pack, 6 Claude Prompts to Build Your Obsidian Vault
+How to use this pack:
+Copy any prompt below
+Paste into Claude
+Replace the text inside [ ] brackets with your own content
+Hit send.
+Every prompt is designed to output Obsidian-ready Markdown. Paste the result directly into a new note.
+Prompt 1: Evergreen Note Generator
+What it does: Turns any rough idea, article paragraph, or voice note transcript into a fully structured Evergreen Note, ready to paste into Notes/Evergreen/.
+You are an expert at building a personal knowledge management system in Obsidian.
+
+I want to create an Evergreen Note from the following idea or source material:
+
+[PASTE YOUR ROUGH IDEA, ARTICLE PARAGRAPH, OR VOICE NOTE HERE]
+
+Write a complete Obsidian Evergreen Note using this exact structure:
+
+1. Title: A single full sentence that makes a clear claim. Not a topic label.
+   Example of bad title: "Focus"
+   Example of good title: "Deep focus requires removing decisions, not just distractions"
+
+2. The idea: 2–4 sentences explaining the idea entirely in my own words. No copying.
+
+3. Why it matters: 2–3 sentences on why this idea is personally significant.
+
+4. Evidence / Examples: One real example, data point, or experience that proves the idea.
+
+5. Connections: 3 suggested links to related ideas I might already have notes on.
+   Format each as: [[Suggested Note Title Here]]
+
+6. Source: Where this idea came from.
+
+7. Status checkboxes:
+   - [ ] Draft
+   - [ ] Developed
+   - [ ] Connected (linked to 3+ notes)
+
+Format the entire output as clean Obsidian Markdown with the title as an H1 heading.
+Add the tag #evergreen at the top.
+End with: *Created: {{date:YYYY-MM-DD}} | [[🏠 Home|🏠 Home]]*
+Prompt 2: Literature Note Generator
+What it does: Paste any article, book chapter, or podcast transcript and get a fully structured Literature Note, ready to drop into Notes/Literature/.
+You are helping me build a personal knowledge base in Obsidian.
+
+I just finished reading/watching/listening to this:
+
+Title: [TITLE OF BOOK / ARTICLE / PODCAST]
+Author: [AUTHOR NAME]
+Type: [Book / Article / Podcast / Video]
+
+Here is the content or my raw notes from it:
+
+[PASTE ARTICLE TEXT, BOOK EXCERPT, OR YOUR RAW NOTES HERE]
+
+Create a complete Obsidian Literature Note using this structure:
+
+1. H1 title: "📚 [Title] — [Author]"
+
+2. A source details table with: Type, Author, Date (today), Rating (ask me to fill in)
+
+3. The core argument: The single most important thing this source says. One sentence.
+
+4. 3 ideas worth keeping: Each written entirely in my own words. Full sentences.
+   No direct quotes unless the exact wording is legally or factually critical.
+
+5. The one thing I'm changing: One specific action I will take because of this.
+
+6. My reaction: Did I agree? What surprised me? What felt wrong?
+
+7. Links to existing notes: 3 suggested Obsidian note titles this connects to.
+   Format as: [[Suggested Connection Here]]
+
+8. One raw quote worth keeping (under 15 words, inside a blockquote).
+
+Format as clean Obsidian Markdown. Add tag #literature at the top.
+End with: *Created: {{date:YYYY-MM-DD}} | [[🏠 Home|🏠 Home]]*
+Prompt 3: Meeting Note Processor
+What it does: Paste your messy meeting notes or transcript and get a clean, structured Meeting Note, decisions, action items, and links all extracted automatically.
+You are helping me organise my notes in Obsidian.
+
+Here are my raw notes or transcript from a meeting:
+
+Meeting name: [MEETING NAME]
+Date: [DATE]
+Attendees: [LIST OF NAMES]
+
+Raw notes / transcript:
+[PASTE YOUR MESSY NOTES OR TRANSCRIPT HERE]
+
+Extract and structure this into a clean Obsidian Meeting Note:
+
+1. H1 title: "🤝 Meeting: [Meeting Name]"
+
+2. A details table: Date, Attendees, Type (1:1 / Team / Client), Project (if mentioned)
+
+3. Agenda: What the meeting was actually about (3 bullet points max)
+
+4. Key decisions made: Only confirmed decisions — not discussions or maybes.
+
+5. Action items table with 3 columns: Action | Owner | By when
+   Extract every commitment or task mentioned. If no deadline was stated, write "TBD".
+
+6. Follow-up: What needs to happen before the next meeting.
+
+7. Links: 2–3 suggested Obsidian note titles this meeting connects to.
+   Format as: [[Suggested Note Title]]
+
+Be ruthless about extracting action items. If it sounds like a commitment, it goes in 
+the table.
+Format as clean Obsidian Markdown. Add tag #meeting at the top.
+End with: *Created: {{date:YYYY-MM-DD}} | [[🏠 Home|🏠 Home]]*
+Prompt 4: Daily Note Reflection Starter
+What it does: Answers 3 quick questions and Claude fills your entire Daily Note, working on your idea, tasks, and reflection in under 60 seconds.
+You are helping me write today's Daily Note in Obsidian.
+
+Answer these 3 questions for me based on what I tell you:
+
+1. What I'm working on today: [WRITE 2–3 THINGS YOU ARE WORKING ON]
+2. One idea I want to keep: [WRITE ONE ROUGH IDEA FROM TODAY]
+3. How today went: [ONE LINE — good, bad, or neutral]
+
+Using my answers, write a complete Obsidian Daily Note:
+
+1. H1 title: "🗓 [TODAY'S DATE] — [DAY OF WEEK]"
+2. Tag: #daily
+3. Section: What I'm working on today — 3 bullet points from my answer
+4. Section: One idea worth keeping — expand my rough idea into 3–4 clear sentences,
+   then suggest one Evergreen Note to link it to: [[Suggested Link Here]]
+5. Section: Tasks — create 3–5 tasks from what I said I'm working on,
+   formatted as: - [ ] task
+6. Section: Links from today — suggest 3 Obsidian notes this day connects to
+7. Section: End-of-day reflection
+   - One thing that went well (based on my answer)
+   - One thing to do differently tomorrow
+
+Format as clean Obsidian Markdown.
+End with: *[[📥 Inbox|← Back to Inbox]] | [[🏠 Home|🏠 Home]]*
+Prompt 5: Idea Connection Finder
+What it does: Paste two note titles, and Claude finds the connection, explains why they are linked, and writes the link text to add to both notes.
+I have two notes in my Obsidian vault and I want to understand how they connect.
+
+Note 1 title: [PASTE YOUR FIRST NOTE TITLE]
+Note 1 content (optional): [PASTE NOTE CONTENT OR LEAVE BLANK]
+
+Note 2 title: [PASTE YOUR SECOND NOTE TITLE]
+Note 2 content (optional): [PASTE NOTE CONTENT OR LEAVE BLANK]
+
+Do the following:
+
+1. Explain the connection between these two notes in 2–3 sentences.
+   Be specific — not "they are both about productivity" but WHY the ideas relate.
+
+2. Write the exact link text to add to Note 1 pointing to Note 2:
+   [[Note 2 Title]] — [one sentence explaining why this link exists]
+
+3. Write the exact link text to add to Note 2 pointing to Note 1:
+   [[Note 1 Title]] — [one sentence explaining why this link exists]
+
+4. Suggest one third note I should create that sits between these two ideas.
+   Give it a full-sentence title that makes a claim.
+
+5. Give me one question these two connected notes raise that I haven't answered yet.
+   This question should become my next Evergreen Note.
+Prompt 6: Article to Obsidian Note
+What it does: Paste any article URL content or full text, and Claude strips it down to only what matters, structured as a Literature Note, zero fluff.
+I want to capture the key ideas from this article into my Obsidian vault.
+
+Article title: [ARTICLE TITLE]
+Article URL: [URL IF YOU HAVE IT]
+Article text: [PASTE THE FULL ARTICLE TEXT HERE]
+
+Do NOT summarise the whole article. I only want what is worth keeping.
+
+Extract:
+1. The single most important argument (one sentence — my words, not the author's)
+2. The 3 most surprising or useful ideas — each in my own words, 2–3 sentences each
+3. The one thing I should actually do differently because of this article
+4. Two ideas from this article that conflict with things I might already believe
+5. 3 Obsidian note titles this article connects to — format as [[Suggested Title Here]]
+6. One quote worth keeping (under 15 words, in a blockquote)
+
+Then write the complete Literature Note in Obsidian Markdown format.
+Title format: "📚 [Article Title] — [Author]"
+Add tag #literature at the top.
+End with: *Created: {{date:YYYY-MM-DD}} | [[🏠 Home|🏠 Home]]*

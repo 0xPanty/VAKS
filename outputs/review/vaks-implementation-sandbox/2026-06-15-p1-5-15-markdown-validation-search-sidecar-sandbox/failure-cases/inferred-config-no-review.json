@@ -1,0 +1,1 @@
+{"extends":"fixtures/valid-frontmatter-validation-check.json","scenario_id":"inferred-config-no-review","expected_valid":false,"expected_codes":["MS_INFERRED_CONFIG_REVIEW_REQUIRED"],"patch":{"config_contract":{"inferred_from_vault":true,"manual_review_required":false}}}

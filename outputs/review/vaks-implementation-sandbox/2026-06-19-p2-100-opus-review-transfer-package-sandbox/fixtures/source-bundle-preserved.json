@@ -1,0 +1,6 @@
+{
+  "fixture": "source-bundle-preserved",
+  "source_slice_id": "2026-06-19-p2-99-portable-opus-evidence-bundle-sandbox",
+  "p2_99_file_count": 26,
+  "expected": true
+}

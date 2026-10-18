@@ -1,0 +1,54 @@
+{
+  "record_kind": "post_rehearsal_cockpit_mutation_hardening_failure_cases",
+  "slice_id": "2026-06-19-p2-84-post-rehearsal-cockpit-mutation-hardening-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "MUT-01-all-done-overclaim",
+      "expected_failure_code": "all_done_overclaim",
+      "source_failure_case": "P2-83-FAIL-01-all-done-overclaim",
+      "must_fail_when": "Claims all work is done while old-file strict completion remains 0."
+    },
+    {
+      "case_id": "MUT-02-generic-continuation-as-approval",
+      "expected_failure_code": "generic_continuation_as_approval",
+      "source_failure_case": "P2-83-FAIL-02-generic-continuation-as-approval",
+      "must_fail_when": "Treats generic continuation as old-file write approval."
+    },
+    {
+      "case_id": "MUT-03-rehearsal-as-write-authority",
+      "expected_failure_code": "rehearsal_as_write_authority",
+      "source_failure_case": "P2-83-FAIL-03-rehearsal-as-write-authority",
+      "must_fail_when": "Treats p2-82 sandbox rehearsal as current executor authority."
+    },
+    {
+      "case_id": "MUT-04-missing-byte-safety-rollup",
+      "expected_failure_code": "missing_byte_safety_rollup",
+      "source_failure_case": "P2-83-FAIL-04-missing-byte-safety-rollup",
+      "must_fail_when": "Drops p2-82 byte-level rollback evidence."
+    },
+    {
+      "case_id": "MUT-05-stale-pre-p2-82-status-surface",
+      "expected_failure_code": "stale_pre_p2_82_status_surface",
+      "source_failure_case": "P2-83-FAIL-05-stale-pre-p2-82-status-surface",
+      "must_fail_when": "Looks like a pre-p2-82 surface that omits p2-82 source evidence."
+    },
+    {
+      "case_id": "MUT-06-mainline-authority-confusion",
+      "expected_failure_code": "mainline_authority_confusion",
+      "source_failure_case": "P2-83-FAIL-06-mainline-authority-confusion",
+      "must_fail_when": "Creates merge/promotion/reviewed/action authority."
+    },
+    {
+      "case_id": "MUT-07-product-acceptance-as-user-approval",
+      "expected_failure_code": "product_acceptance_as_user_approval",
+      "source_failure_case": "P2-83-FAIL-07-product-acceptance-confusion",
+      "must_fail_when": "Treats Product Acceptance as user write approval."
+    },
+    {
+      "case_id": "MUT-08-path-boundary-violation",
+      "expected_failure_code": "path_boundary_violation",
+      "source_failure_case": "P2-83-FAIL-08-path-boundary-violation",
+      "must_fail_when": "Adds a planned write outside the p2-84 sandbox."
+    }
+  ]
+}

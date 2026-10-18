@@ -1,0 +1,13 @@
+{
+  "case_id": "prototype-receipt-target-count-drift",
+  "description": "Prototype receipt target count drifts.",
+  "expected_errors": [
+    "prototype_receipt_target_count_mismatch"
+  ],
+  "prototype_tamper": {
+    "kind": "receipt_update",
+    "updates": {
+      "target_count": 99
+    }
+  }
+}

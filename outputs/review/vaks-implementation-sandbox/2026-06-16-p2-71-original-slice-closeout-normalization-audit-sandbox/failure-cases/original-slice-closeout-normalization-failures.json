@@ -1,0 +1,42 @@
+[
+  {
+    "failure_id": "reject_audit_claims_all_strict_pass",
+    "risk": "audit must not claim original 20 are current strict final-gate complete",
+    "mutation": {"set_path": {"path": ["summary", "all_original_items_current_strict_pass"], "value": true}}
+  },
+  {
+    "failure_id": "reject_product_evidence_as_final_gate",
+    "risk": "Product Acceptance evidence is not the same as current strict final-gate closeout",
+    "mutation": {"set_path": {"path": ["rules", "product_evidence_counts_as_current_strict_gate"], "value": true}}
+  },
+  {
+    "failure_id": "reject_old_slice_edit_allowed",
+    "risk": "audit cannot grant old-slice edit authority",
+    "mutation": {"set_path": {"path": ["authority_flags", "old_slice_edit_allowed"], "value": true}}
+  },
+  {
+    "failure_id": "reject_normalization_applied",
+    "risk": "this slice audits normalization but must not apply it",
+    "mutation": {"set_path": {"path": ["authority_flags", "normalization_applied"], "value": true}}
+  },
+  {
+    "failure_id": "reject_mainline_ready",
+    "risk": "normalization audit cannot approve mainline readiness",
+    "mutation": {"set_path": {"path": ["authority_flags", "mainline_ready"], "value": true}}
+  },
+  {
+    "failure_id": "reject_user_approval_inferred",
+    "risk": "audit cannot infer user approval for old-slice normalization",
+    "mutation": {"set_path": {"path": ["authority_flags", "user_approval_collected"], "value": true}}
+  },
+  {
+    "failure_id": "reject_missing_source_index",
+    "risk": "audit must be traceable to p2-70 source index",
+    "mutation": {"set_path": {"path": ["source_index", "source_index_slice_id"], "value": "missing"}}
+  },
+  {
+    "failure_id": "reject_item_recommendation_no_action_when_not_strict",
+    "risk": "non-strict original item cannot be marked no-action-needed",
+    "mutation": {"set_path": {"path": ["items", 0, "recommendation"], "value": "no_normalization_needed"}}
+  }
+]

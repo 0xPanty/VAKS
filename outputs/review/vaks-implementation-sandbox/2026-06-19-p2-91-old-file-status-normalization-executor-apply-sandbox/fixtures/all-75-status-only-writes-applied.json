@@ -1,0 +1,5 @@
+{
+  "case_id": "all-75-status-only-writes-applied",
+  "old_slice_writes_applied": 75,
+  "post_apply_status_match_count": 75
+}

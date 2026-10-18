@@ -1,0 +1,5 @@
+{
+  "fixture": "contains-required-review-dossier",
+  "required_archive_path": "p2-99-portable-opus-evidence-bundle/artifact/evidence-snapshots/p2-98-single-file-opus-review-dossier.md",
+  "expected": true
+}

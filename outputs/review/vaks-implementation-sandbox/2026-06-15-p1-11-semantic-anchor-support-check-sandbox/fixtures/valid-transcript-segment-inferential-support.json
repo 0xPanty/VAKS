@@ -1,0 +1,21 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "valid-transcript-segment-inferential-support",
+  "expected_valid": true,
+  "expected_codes": [],
+  "anchors": [
+    {
+      "id": "transcript-segment-anchor",
+      "anchor_kind": "transcript_segment",
+      "support_claimed": true,
+      "support_role": "inferential_support",
+      "reviewer_note": "The segment supports the narrower interpretation after comparing the timestamped transcript context.",
+      "source_ref": "raw/videos/example-talk/segments.json",
+      "segment_id": "seg-0007",
+      "timestamp_range": "00:04:20-00:05:05",
+      "snapshot_hash": "sha256:6c595f8e6a000000000000000000000000000000000000000000000000000000",
+      "authority_bucket": "stable_anchor",
+      "selected_by_semantic": true
+    }
+  ]
+}

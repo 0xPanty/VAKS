@@ -1,0 +1,16 @@
+{
+  "selected_items": [
+    {
+      "ref": "enterprise_stress/annotations/ent-ann-000001.md",
+      "record_kind": "source_annotation",
+      "pack_role": "support",
+      "warning_code": "annotation_not_support",
+      "action_basis_allowed": false
+    }
+  ],
+  "coverage_map": [],
+  "resolved_source_spans": [],
+  "warnings": [
+    "annotation_not_support"
+  ]
+}

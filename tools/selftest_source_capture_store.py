@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import os
 import re
 import shutil
@@ -19,7 +20,9 @@ ROOT = Path(__file__).resolve().parent.parent
 INSPECTOR = ROOT / "tools" / "inspect_source_snapshot.py"
 STORE_TOOL = ROOT / "tools" / "store_source_capture.py"
 VERIFY_STORE_TOOL = ROOT / "tools" / "verify_source_capture_store.py"
+REBUILD_INDEX_TOOL = ROOT / "tools" / "rebuild_source_snapshot_index.py"
 sys.path.insert(0, str(ROOT / "tools"))
+import rebuild_source_snapshot_index  # noqa: E402
 import store_source_capture  # noqa: E402
 import validate_source_capture_bundle  # noqa: E402
 import verify_source_capture_store  # noqa: E402
@@ -132,6 +135,14 @@ def try_symlink_dir(target: Path, link: Path) -> bool:
         return False
 
 
+def try_symlink_file(target: Path, link: Path) -> bool:
+    try:
+        os.symlink(target, link, target_is_directory=False)
+        return True
+    except (OSError, NotImplementedError):
+        return False
+
+
 def make_bundle(tmp: Path, name: str, entries: list[tuple[str, bytes]], *extra: str) -> tuple[Path, Path, dict[str, Any]]:
     source = tmp / f"{name}.zip"
     out_dir = tmp / f"{name}-bundle"
@@ -200,6 +211,26 @@ def store_verify_all(store: Path, *, expect: int = 0) -> dict[str, Any]:
     if payload.get("schema") == verify_source_capture_store.REPORT_SCHEMA:
         assert_report_schema(payload)
     return payload
+
+
+def store_rebuild_index(store: Path, *, check: bool = False, expect: int = 0) -> dict[str, Any]:
+    cmd = [
+        sys.executable,
+        str(REBUILD_INDEX_TOOL),
+        "--store-root",
+        str(store),
+    ]
+    if check:
+        cmd.append("--check")
+    return run_json(cmd, expect=expect)
+
+
+def source_snapshot_index_path(store: Path) -> Path:
+    return store / "indexes" / "source-snapshot-index.jsonl"
+
+
+def read_index_records(store: Path) -> list[dict[str, Any]]:
+    return [json.loads(line) for line in source_snapshot_index_path(store).read_text(encoding="utf-8").splitlines()]
 
 
 def capture_dir(store: Path, capture_id: str) -> Path:
@@ -797,6 +828,159 @@ def test_verify_store_detects_capture_added_during_scan(tmp: Path) -> None:
     assert "STORE_CHANGED_DURING_SCAN" in finding_codes(report)
 
 
+def test_rebuild_index_empty_store_passes(tmp: Path) -> None:
+    store = tmp / "store"
+    store_init(store)
+    result = store_rebuild_index(store)
+    assert result["status"] == "pass"
+    assert result["action"] == "rebuilt"
+    records = read_index_records(store)
+    assert records == [
+        {
+            "schema": rebuild_source_snapshot_index.INDEX_SCHEMA,
+            "record_type": "header",
+            "profile": rebuild_source_snapshot_index.INDEX_PROFILE,
+            "store_layout": store_source_capture.STORE_LAYOUT,
+            "layout_version": store_source_capture.STORE_LAYOUT_VERSION,
+            "entry_count": 0,
+        }
+    ]
+    check = store_rebuild_index(store, check=True)
+    assert check["status"] == "pass"
+    assert check["action"] == "check_passed"
+
+
+def test_rebuild_index_projects_verified_captures_deterministically(tmp: Path) -> None:
+    store_a = tmp / "store-a"
+    store_b = tmp / "store-b"
+    store_init(store_a)
+    store_init(store_b)
+    source1, bundle1, envelope1 = make_bundle(tmp, "det-a", [("repo/a.txt", b"a")])
+    source2, bundle2, envelope2 = make_bundle(tmp, "det-b", [("repo/b.txt", b"b")])
+    assert store_put(store_a, bundle1, source1)["status"] == "pass"
+    assert store_put(store_a, bundle2, source2)["status"] == "pass"
+    assert store_put(store_b, bundle2, source2)["status"] == "pass"
+    assert store_put(store_b, bundle1, source1)["status"] == "pass"
+    assert store_rebuild_index(store_a)["status"] == "pass"
+    assert store_rebuild_index(store_b)["status"] == "pass"
+    assert source_snapshot_index_path(store_a).read_bytes() == source_snapshot_index_path(store_b).read_bytes()
+    records = read_index_records(store_a)
+    assert records[0]["entry_count"] == 2
+    entries = records[1:]
+    assert {item["capture_id"] for item in entries} == {envelope1["capture_id"], envelope2["capture_id"]}
+    keys = [(item["source_id"].encode("utf-8"), item["snapshot_id"].encode("utf-8"), item["capture_id"].encode("utf-8")) for item in entries]
+    assert keys == sorted(keys)
+
+
+def test_rebuild_index_records_not_retained_raw(tmp: Path) -> None:
+    store = tmp / "store"
+    store_init(store)
+    _source, bundle, _envelope = make_bundle(tmp, "not-retained-index", [("repo/a.txt", b"a")])
+    assert store_put(store, bundle)["status"] == "pass"
+    assert store_rebuild_index(store)["status"] == "pass"
+    entry = read_index_records(store)[1]
+    assert entry["raw_blob"]["retention_state"] == "not_retained"
+    assert "store_path" not in entry["raw_blob"]
+
+
+def test_rebuild_index_ignores_orphan_cas_warning(tmp: Path) -> None:
+    store = tmp / "store"
+    store_init(store)
+    source, bundle, _envelope = make_bundle(tmp, "orphan-index", [("repo/a.txt", b"a")])
+    assert store_put(store, bundle, source)["status"] == "pass"
+    data = b"valid orphan"
+    digest = "sha256:" + hashlib.sha256(data).hexdigest()
+    orphan, _rel = store_source_capture.cas_path(store, digest)
+    orphan.parent.mkdir(parents=True, exist_ok=True)
+    orphan.write_bytes(data)
+    verify = store_verify_all(store)
+    assert verify["summary"]["status"] == "pass_with_warnings"
+    assert "STORE_ORPHAN_CAS_BLOB" in finding_codes(verify)
+    result = store_rebuild_index(store)
+    assert result["status"] == "pass"
+    records = read_index_records(store)
+    assert records[0]["entry_count"] == 1
+    assert all(item.get("raw_blob", {}).get("digest") != digest for item in records[1:])
+
+
+def test_rebuild_index_invalid_capture_preserves_existing_index(tmp: Path) -> None:
+    store = tmp / "store"
+    store_init(store)
+    source, bundle, envelope = make_bundle(tmp, "bad-capture-index", [("repo/a.txt", b"a")])
+    assert store_put(store, bundle, source)["status"] == "pass"
+    assert store_rebuild_index(store)["status"] == "pass"
+    before = source_snapshot_index_path(store).read_bytes()
+    receipt = capture_dir(store, envelope["capture_id"]) / "capture-storage-receipt.json"
+    receipt.write_text("{bad", encoding="utf-8")
+    result = store_rebuild_index(store, expect=1)
+    assert result["status"] == "fail"
+    assert result["code"] == "STORE_VERIFICATION_FAILED"
+    assert source_snapshot_index_path(store).read_bytes() == before
+
+
+def test_rebuild_index_check_detects_byte_drift(tmp: Path) -> None:
+    store = tmp / "store"
+    store_init(store)
+    source, bundle, _envelope = make_bundle(tmp, "check-drift-index", [("repo/a.txt", b"a")])
+    assert store_put(store, bundle, source)["status"] == "pass"
+    assert store_rebuild_index(store)["status"] == "pass"
+    source_snapshot_index_path(store).write_bytes(source_snapshot_index_path(store).read_bytes() + b"\n")
+    result = store_rebuild_index(store, check=True, expect=1)
+    assert result["status"] == "fail"
+    assert result["code"] == "INDEX_CHECK_FAILED"
+
+
+def test_rebuild_index_rejects_index_symlink(tmp: Path) -> None:
+    store = tmp / "store"
+    store_init(store)
+    indexes = store / "indexes"
+    indexes.mkdir()
+    target = tmp / "outside-index.jsonl"
+    target.write_text("", encoding="utf-8")
+    if not try_symlink_file(target, indexes / "source-snapshot-index.jsonl"):
+        return
+    result = store_rebuild_index(store, expect=1)
+    assert result["status"] == "fail"
+    assert result["code"] == "INDEX_PATH_UNSAFE"
+
+
+def test_rebuild_index_detects_concurrent_put_before_replace(tmp: Path) -> None:
+    store = tmp / "store"
+    store_init(store)
+    source1, bundle1, _envelope1 = make_bundle(tmp, "initial-index", [("repo/a.txt", b"a")])
+    source2, bundle2, _envelope2 = make_bundle(tmp, "later-index", [("repo/b.txt", b"b")])
+    assert store_put(store, bundle1, source1)["status"] == "pass"
+    assert store_rebuild_index(store)["status"] == "pass"
+    before = source_snapshot_index_path(store).read_bytes()
+
+    def mutate_store() -> None:
+        assert store_put(store, bundle2, source2)["status"] == "pass"
+
+    report = rebuild_source_snapshot_index.rebuild_index(store, after_build_hook=mutate_store)
+    assert report["status"] == "indeterminate"
+    assert report["code"] == "STORE_CHANGED_DURING_INDEX_REBUILD"
+    assert source_snapshot_index_path(store).read_bytes() == before
+
+
+def test_rebuild_index_detects_store_change_after_final_inventory_before_replace(tmp: Path) -> None:
+    store = tmp / "store"
+    store_init(store)
+    source1, bundle1, _envelope1 = make_bundle(tmp, "initial-final-window-index", [("repo/a.txt", b"a")])
+    source2, bundle2, _envelope2 = make_bundle(tmp, "later-final-window-index", [("repo/b.txt", b"b")])
+    assert store_put(store, bundle1, source1)["status"] == "pass"
+    assert store_rebuild_index(store)["status"] == "pass"
+    before = source_snapshot_index_path(store).read_bytes()
+
+    def mutate_store() -> None:
+        assert store_put(store, bundle2, source2)["status"] == "pass"
+
+    report = rebuild_source_snapshot_index.rebuild_index(store, before_replace_hook=mutate_store)
+    assert report["status"] == "indeterminate"
+    assert report["code"] == "STORE_CHANGED_DURING_INDEX_REBUILD"
+    assert source_snapshot_index_path(store).read_bytes() == before
+    assert store_verify_all(store)["summary"]["captures_total"] == 2
+
+
 def test_raw_blob_mismatch_does_not_create_capture(tmp: Path) -> None:
     store = tmp / "store"
     assert store_init(store)["status"] == "pass"
@@ -1111,6 +1295,15 @@ def main() -> int:
         test_verify_store_continues_after_one_invalid_capture,
         test_verify_store_nonempty_staging_is_indeterminate,
         test_verify_store_detects_capture_added_during_scan,
+        test_rebuild_index_empty_store_passes,
+        test_rebuild_index_projects_verified_captures_deterministically,
+        test_rebuild_index_records_not_retained_raw,
+        test_rebuild_index_ignores_orphan_cas_warning,
+        test_rebuild_index_invalid_capture_preserves_existing_index,
+        test_rebuild_index_check_detects_byte_drift,
+        test_rebuild_index_rejects_index_symlink,
+        test_rebuild_index_detects_concurrent_put_before_replace,
+        test_rebuild_index_detects_store_change_after_final_inventory_before_replace,
         test_raw_blob_mismatch_does_not_create_capture,
         test_capture_id_conflict_is_not_overwritten,
         test_existing_corrupt_cas_blob_is_rejected,

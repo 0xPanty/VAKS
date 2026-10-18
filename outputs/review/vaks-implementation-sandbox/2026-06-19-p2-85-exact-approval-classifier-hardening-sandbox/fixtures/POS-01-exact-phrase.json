@@ -1,0 +1,16 @@
+{
+  "case_id": "POS-01-exact-phrase",
+  "kind": "positive",
+  "input_text": "I explicitly approve p2-75 old-file status-only normalization: apply the 75 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only. Do not edit body content, artifacts, tools, templates, wiki truth layers, main architecture docs, README, Obsidian vault, commit, push, or sync.",
+  "expected_match": true,
+  "expected_class": "exact_p2_75_approval",
+  "result": {
+    "input_sha256": "3aa60d89b13671c099ca35db166b00b329600e91164d8ebabdb03b8da0190775",
+    "matched_exact_phrase": true,
+    "approval_class": "exact_p2_75_approval",
+    "old_file_write_allowed_by_this_slice": false,
+    "requires_future_executor_slice": true,
+    "reason": "exact byte-for-byte phrase match"
+  },
+  "passed": true
+}

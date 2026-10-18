@@ -1,0 +1,64 @@
+{
+  "record_kind": "robust_rag_retrieval_manifest",
+  "scenario_id": "valid-global-theme-community-orientation",
+  "expected_valid": true,
+  "expected_codes": [],
+  "query": {
+    "query_mode": "orientation",
+    "verbatim_input": "What broad retrieval themes show up in the robust RAG references?",
+    "question_summary": "Find broad robust RAG retrieval themes.",
+    "action_sensitive": false,
+    "verbatim_preserved": true
+  },
+  "route_selection": {
+    "selected": "global_theme",
+    "why_selected": "Broad question can use community report as orientation.",
+    "authority_buckets_included": ["review_input", "raw_anchor"],
+    "authority_buckets_excluded": ["feedback", "runtime_artifact", "project_overlay"],
+    "selected_context_types": ["theme_briefing", "raw_source_anchor"],
+    "forbidden_support_types": ["retrieval_score", "graph_rank", "community_report_summary", "llm_extracted_relation"]
+  },
+  "retrieval_config": {
+    "bucket_filter_first": true,
+    "rrf_within_bucket_only": true,
+    "exclude_runtime_artifacts": true
+  },
+  "fusion_groups": [
+    {
+      "id": "theme-briefing-group",
+      "authority_buckets": ["review_input"],
+      "item_ids": ["community-theme-a"]
+    }
+  ],
+  "retrieved_items": [
+    {
+      "id": "community-theme-a",
+      "ref": "outputs/review/theme-briefings/robust-rag-theme.md",
+      "path": "outputs/review/theme-briefings/robust-rag-theme.md",
+      "record_kind": "community_report",
+      "authority_bucket": "review_input",
+      "pack_role": "orientation",
+      "selected": true,
+      "excluded": false,
+      "selected_by": {"lexical": false, "semantic": true, "graph": true, "metadata": false},
+      "satisfies_evidence_sufficiency": false
+    },
+    {
+      "id": "raw-drilldown-a",
+      "ref": "raw/repos/graphrag-docs/snapshot.md#L40-L58",
+      "path": "raw/repos/graphrag-docs/snapshot.md",
+      "record_kind": "raw_excerpt",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "anchor",
+      "selected": true,
+      "excluded": false,
+      "selected_by": {"lexical": true, "semantic": false, "graph": false, "metadata": true}
+    }
+  ],
+  "generated_answer": {
+    "has_citations": true,
+    "support_checks_passed": false,
+    "sufficiency_checked": false,
+    "claims_action_basis": false
+  }
+}

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Decision Freeze Operator Readiness Brief</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 32px; color: #1f2937; background: #f8fafc; }
+    main { max-width: 1080px; margin: 0 auto; }
+    code, pre { background: #eef2f7; padding: 2px 4px; }
+    table { width: 100%; border-collapse: collapse; background: #fff; }
+    th, td { border: 1px solid #d1d5db; padding: 8px; text-align: left; }
+    th { background: #e5e7eb; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>User Decision Freeze Operator Readiness Brief</h1>
+  <p>Sandbox-only brief for the p2-60 checksum freeze. It is not user approval, execution authority, mainline approval, promotion approval, reviewed knowledge, evidence support, or action basis.</p>
+  <p><strong>Brief ready:</strong> True<br><strong>Frozen entries:</strong> 268<br><strong>Source slices:</strong> 9</p>
+  <h2>Manual drift verification</h2>
+  <pre>python -B .\outputs\review\vaks-implementation-sandbox\2026-06-16-p2-60-user-decision-index-freeze-checksum-sandbox\artifact\verify_user_decision_index_freeze_checksum.py --final-gate</pre>
+  <p>The p2-61 builder records this manual read-only check and does not run it.</p>
+  <h2>Operator steps</h2>
+  <ol><li>Read this brief and confirm the source slice is p2-60.</li><li>If drift must be checked, run the manual read-only verification command.</li><li>If the command fails, stop and inspect p2-60 before using the handoff index.</li><li>If the command passes, use the freeze only as sandbox handoff integrity input.</li><li>Ask the user separately before any execution, merge, promotion, sync, commit, or push.</li></ol>
+  <h2>Readiness flags</h2>
+  <table><thead><tr><th>Flag</th><th>Value</th></tr></thead><tbody><tr><td>automatic_execution</td><td>False</td></tr><tr><td>mainline_ready</td><td>False</td></tr><tr><td>promotion_ready</td><td>False</td></tr><tr><td>formal_vault_ready</td><td>False</td></tr><tr><td>obsidian_sync_ready</td><td>False</td></tr><tr><td>reviewed_knowledge_ready</td><td>False</td></tr><tr><td>evidence_support_ready</td><td>False</td></tr><tr><td>action_basis_ready</td><td>False</td></tr><tr><td>user_approval_collected</td><td>False</td></tr></tbody></table>
+  <h2>Hard no</h2>
+  <ul><li>do_not_execute_user_decision_option</li><li>do_not_merge_mainline</li><li>do_not_promote</li><li>do_not_sync_obsidian</li><li>do_not_commit</li><li>do_not_push</li><li>do_not_install_dependencies</li><li>do_not_start_background_service</li><li>do_not_install_hooks</li><li>do_not_use_mcp_write_tool</li><li>do_not_create_reviewed_knowledge</li><li>do_not_create_evidence_support</li><li>do_not_create_action_basis</li><li>do_not_treat_checksum_as_user_approval</li></ul>
+</main>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "record_kind": "read_only_bridge_use_loop_trace_fixture",
+  "trace_id": "use-loop-p1-5-16-readonly",
+  "query_id": "query-p1-5-16-001",
+  "read_only": true,
+  "tool_writes": false,
+  "context_pack_ref": "fixtures/context-packs/vaks-context-pack-readonly.json",
+  "authority_labels_visible": true,
+  "warnings_visible": true,
+  "action_basis_allowed": false,
+  "answer_boundary": "orientation_only_not_action_basis",
+  "truth_boundary": "use-loop-fixture-not-runtime-approval"
+}

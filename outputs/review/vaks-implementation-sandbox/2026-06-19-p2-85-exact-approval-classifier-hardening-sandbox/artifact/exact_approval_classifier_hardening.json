@@ -1,0 +1,213 @@
+{
+  "record_kind": "sandbox_exact_approval_classifier_hardening",
+  "slice_id": "2026-06-19-p2-85-exact-approval-classifier-hardening-sandbox",
+  "created_at": "2026-06-18T22:57:27.267774+00:00",
+  "source_inputs": {
+    "p2_75_approval_request": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-75-old-file-status-normalization-approval-request-sandbox/artifact/old_file_status_normalization_approval_request.json",
+    "p2_77_readiness_gate": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-77-old-file-status-normalization-executor-readiness-gate-sandbox/artifact/old_file_status_normalization_executor_readiness_gate.json",
+    "p2_83_cockpit": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-83-post-rehearsal-goal-state-cockpit-sandbox/artifact/post_rehearsal_goal_state_cockpit.json",
+    "p2_84_mutation_hardening": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-84-post-rehearsal-cockpit-mutation-hardening-sandbox/artifact/post_rehearsal_cockpit_mutation_hardening.json"
+  },
+  "source_digest": {
+    "p2_75_approval_request": "c54763318392a3935e4b621ce393ea53fea72bce5bd0f879fbf2b6d9623f911e",
+    "p2_77_readiness_gate": "dcf696ae643c67fcdfd0c164345f6e6f053a9910b76a7cefa106b7d9d53ef05a",
+    "p2_83_cockpit": "b0b27f02f6fe471b4fd753e30952738ca6a576bb34c0265ae9a217f72ef795e7",
+    "p2_84_mutation_hardening": "1a687cb9c8c6128243058b4a272b6e5d6d56d8c0353d3a3c524e457e41dd7e93"
+  },
+  "approval_contract": {
+    "exact_phrase": "I explicitly approve p2-75 old-file status-only normalization: apply the 75 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only. Do not edit body content, artifacts, tools, templates, wiki truth layers, main architecture docs, README, Obsidian vault, commit, push, or sync.",
+    "exact_phrase_sha256": "3aa60d89b13671c099ca35db166b00b329600e91164d8ebabdb03b8da0190775",
+    "match_rule": "input_text == exact_phrase",
+    "normalization_allowed": false,
+    "generic_language_is_not_approval": true,
+    "p2_77_current_readiness": "blocked_no_exact_approval"
+  },
+  "summary": {
+    "positive_case_count": 1,
+    "negative_case_count": 9,
+    "classification_case_count": 10,
+    "classification_pass_count": 10,
+    "classification_failure_count": 0,
+    "user_approval_collected_by_this_slice": false,
+    "old_slice_writes_applied": 0,
+    "executor_write_allowed_now": false
+  },
+  "classification_failures": [],
+  "classification_cases": [
+    {
+      "case_id": "POS-01-exact-phrase",
+      "kind": "positive",
+      "input_text": "I explicitly approve p2-75 old-file status-only normalization: apply the 75 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only. Do not edit body content, artifacts, tools, templates, wiki truth layers, main architecture docs, README, Obsidian vault, commit, push, or sync.",
+      "expected_match": true,
+      "expected_class": "exact_p2_75_approval",
+      "result": {
+        "input_sha256": "3aa60d89b13671c099ca35db166b00b329600e91164d8ebabdb03b8da0190775",
+        "matched_exact_phrase": true,
+        "approval_class": "exact_p2_75_approval",
+        "old_file_write_allowed_by_this_slice": false,
+        "requires_future_executor_slice": true,
+        "reason": "exact byte-for-byte phrase match"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "NEG-01-chinese-generic-continue",
+      "kind": "negative",
+      "input_text": "继续，全部落地",
+      "expected_match": false,
+      "expected_class": "not_approval",
+      "result": {
+        "input_sha256": "d1ebdfbd011374eaf3cc47ae3a84d8f29655adc70c0379d5f417ea19d13e45f0",
+        "matched_exact_phrase": false,
+        "approval_class": "not_approval",
+        "old_file_write_allowed_by_this_slice": false,
+        "requires_future_executor_slice": false,
+        "reason": "not an exact p2-75 approval phrase"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "NEG-02-english-generic-go-ahead",
+      "kind": "negative",
+      "input_text": "go ahead and make it product grade",
+      "expected_match": false,
+      "expected_class": "not_approval",
+      "result": {
+        "input_sha256": "715cf4a9d7a43df4b9fe3d51d15d41a1d685910c1a573c1d04f67805fba9ed41",
+        "matched_exact_phrase": false,
+        "approval_class": "not_approval",
+        "old_file_write_allowed_by_this_slice": false,
+        "requires_future_executor_slice": false,
+        "reason": "not an exact p2-75 approval phrase"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "NEG-03-paraphrase",
+      "kind": "negative",
+      "input_text": "I approve the old-file status normalization for the 20 sandbox slices. Do not change anything else.",
+      "expected_match": false,
+      "expected_class": "not_approval",
+      "result": {
+        "input_sha256": "d8ccd417d30165df338db17c78dbfd2a45b8eb8573309e69d1872bb05100e686",
+        "matched_exact_phrase": false,
+        "approval_class": "not_approval",
+        "old_file_write_allowed_by_this_slice": false,
+        "requires_future_executor_slice": false,
+        "reason": "not an exact p2-75 approval phrase"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "NEG-04-partial-phrase",
+      "kind": "negative",
+      "input_text": "I explicitly approve p2-75 old-file status-only normalization: apply the 75 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only..",
+      "expected_match": false,
+      "expected_class": "not_approval",
+      "result": {
+        "input_sha256": "3f030e493000c95c56a2ac5ee199802f99c74bc88e79ac4a26cdec248883a544",
+        "matched_exact_phrase": false,
+        "approval_class": "not_approval",
+        "old_file_write_allowed_by_this_slice": false,
+        "requires_future_executor_slice": false,
+        "reason": "not an exact p2-75 approval phrase"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "NEG-05-wrong-count",
+      "kind": "negative",
+      "input_text": "I explicitly approve p2-75 old-file status-only normalization: apply the 74 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only. Do not edit body content, artifacts, tools, templates, wiki truth layers, main architecture docs, README, Obsidian vault, commit, push, or sync.",
+      "expected_match": false,
+      "expected_class": "not_approval",
+      "result": {
+        "input_sha256": "d1ab2ebfcf8408744aa539bf9be7aefdf771dee4849409d02646b7a0d0b5bbd9",
+        "matched_exact_phrase": false,
+        "approval_class": "not_approval",
+        "old_file_write_allowed_by_this_slice": false,
+        "requires_future_executor_slice": false,
+        "reason": "not an exact p2-75 approval phrase"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "NEG-06-missing-prohibitions",
+      "kind": "negative",
+      "input_text": "I explicitly approve p2-75 old-file status-only normalization: apply the 75 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only. Do not edit body content, artifacts, tools, templates, wiki truth layers, main architecture docs, README, Obsidian vault.",
+      "expected_match": false,
+      "expected_class": "not_approval",
+      "result": {
+        "input_sha256": "831ed6759fa2fe2945908501233e1ab7b7cb9832adfda3ed4c8d0ad51831e553",
+        "matched_exact_phrase": false,
+        "approval_class": "not_approval",
+        "old_file_write_allowed_by_this_slice": false,
+        "requires_future_executor_slice": false,
+        "reason": "not an exact p2-75 approval phrase"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "NEG-07-extra-authority",
+      "kind": "negative",
+      "input_text": "I explicitly approve p2-75 old-file status-only normalization: apply the 75 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only. Do not edit body content, artifacts, tools, templates, wiki truth layers, main architecture docs, README, Obsidian vault, commit, push, or sync. Also merge mainline if tests pass.",
+      "expected_match": false,
+      "expected_class": "not_approval",
+      "result": {
+        "input_sha256": "ae8eeeeb561a0f4c87b75e21a47ddb3f4cd185556311823acdac773a2749d715",
+        "matched_exact_phrase": false,
+        "approval_class": "not_approval",
+        "old_file_write_allowed_by_this_slice": false,
+        "requires_future_executor_slice": false,
+        "reason": "not an exact p2-75 approval phrase"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "NEG-08-whitespace-variation",
+      "kind": "negative",
+      "input_text": " I explicitly approve p2-75 old-file status-only normalization: apply the 75 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only. Do not edit body content, artifacts, tools, templates, wiki truth layers, main architecture docs, README, Obsidian vault, commit, push, or sync. ",
+      "expected_match": false,
+      "expected_class": "not_approval",
+      "result": {
+        "input_sha256": "a14ce160f640bcceee50c0eb84ababa74d14851861e55aa087b8f7b2168d6bd8",
+        "matched_exact_phrase": false,
+        "approval_class": "not_approval",
+        "old_file_write_allowed_by_this_slice": false,
+        "requires_future_executor_slice": false,
+        "reason": "not an exact p2-75 approval phrase"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "NEG-09-case-variation",
+      "kind": "negative",
+      "input_text": "i explicitly approve p2-75 old-file status-only normalization: apply the 75 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only. Do not edit body content, artifacts, tools, templates, wiki truth layers, main architecture docs, README, Obsidian vault, commit, push, or sync.",
+      "expected_match": false,
+      "expected_class": "not_approval",
+      "result": {
+        "input_sha256": "aa80d16b0495a246433329b11ed41b467cf2a46584215372e26e5ffff06ff7c3",
+        "matched_exact_phrase": false,
+        "approval_class": "not_approval",
+        "old_file_write_allowed_by_this_slice": false,
+        "requires_future_executor_slice": false,
+        "reason": "not an exact p2-75 approval phrase"
+      },
+      "passed": true
+    }
+  ],
+  "authority_flags": {
+    "classifier_hardening_only": true,
+    "approval_collected": false,
+    "fixture_match_is_user_approval": false,
+    "executor_write_allowed": false,
+    "old_slice_write_allowed": false,
+    "old_slice_writes_applied": 0,
+    "normalization_applied": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "goal_complete_now": false
+  }
+}

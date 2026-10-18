@@ -1,0 +1,8 @@
+{
+  "fixture_id": "rollback-restores-original",
+  "expected": {
+    "rollback_status_match_count": 75,
+    "rollback_sha_match_count": 75,
+    "rollback_applied": false
+  }
+}

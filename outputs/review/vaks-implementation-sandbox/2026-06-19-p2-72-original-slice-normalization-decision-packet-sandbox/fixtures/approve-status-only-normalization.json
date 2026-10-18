@@ -1,0 +1,10 @@
+{
+  "fixture_id": "approve-status-only-normalization",
+  "decision_option": "approve_status_only_normalization",
+  "expected": {
+    "requires_separate_user_approval": true,
+    "would_edit_old_slices": true,
+    "allowed_now": false,
+    "normalization_applied": false
+  }
+}

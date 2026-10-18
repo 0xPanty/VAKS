@@ -1,0 +1,1 @@
+{"case_id":"sqlite-as-truth-source","base_fixture":"fixtures/valid-product-experience-screening.json","mutations":[{"op":"set","path":"/forbidden_import_controls/sqlite_as_reviewed_truth_source","value":true}]}

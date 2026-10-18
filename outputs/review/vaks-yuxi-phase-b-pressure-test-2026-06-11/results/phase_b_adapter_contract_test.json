@@ -1,0 +1,94 @@
+{
+  "contract_status": "pass",
+  "error_count": 0,
+  "sections": [
+    {
+      "section": "manifest:primary",
+      "rows": 3991,
+      "errors": 0,
+      "counts": {
+        "bucket:core_framework": 471,
+        "bucket:qa": 231,
+        "bucket:overlay": 75,
+        "bucket:diagnostic": 995,
+        "bucket:raw": 650,
+        "bucket:reviewed": 604,
+        "bucket:candidate": 678,
+        "bucket:summary": 287
+      }
+    },
+    {
+      "section": "manifest:full",
+      "rows": 18785,
+      "errors": 0,
+      "counts": {
+        "bucket:core_framework": 835,
+        "bucket:feedback": 1,
+        "bucket:qa": 231,
+        "bucket:diagnostic": 15424,
+        "bucket:overlay": 75,
+        "bucket:raw": 650,
+        "bucket:reviewed": 604,
+        "bucket:candidate": 678,
+        "bucket:summary": 287
+      }
+    },
+    {
+      "section": "main_receipts:primary",
+      "rows": 300,
+      "errors": 0,
+      "counts": {
+        "bucket:core_framework": 220,
+        "bucket:diagnostic": 23,
+        "bucket:summary": 13,
+        "bucket:overlay": 14,
+        "bucket:candidate": 11,
+        "bucket:reviewed": 10,
+        "bucket:qa": 9
+      }
+    },
+    {
+      "section": "main_receipts:full",
+      "rows": 300,
+      "errors": 0,
+      "counts": {
+        "bucket:core_framework": 206,
+        "bucket:diagnostic": 27,
+        "bucket:summary": 13,
+        "bucket:overlay": 11,
+        "bucket:candidate": 14,
+        "bucket:reviewed": 20,
+        "bucket:qa": 9
+      }
+    },
+    {
+      "section": "holdout_receipts:primary",
+      "rows": 150,
+      "errors": 0,
+      "counts": {
+        "bucket:core_framework": 117,
+        "bucket:reviewed": 9,
+        "bucket:summary": 2,
+        "bucket:candidate": 4,
+        "bucket:diagnostic": 14,
+        "bucket:qa": 3,
+        "bucket:overlay": 1
+      }
+    },
+    {
+      "section": "holdout_receipts:full",
+      "rows": 150,
+      "errors": 0,
+      "counts": {
+        "bucket:core_framework": 97,
+        "bucket:reviewed": 30,
+        "bucket:diagnostic": 14,
+        "bucket:candidate": 3,
+        "bucket:summary": 2,
+        "bucket:qa": 3,
+        "bucket:overlay": 1
+      }
+    }
+  ],
+  "errors": []
+}

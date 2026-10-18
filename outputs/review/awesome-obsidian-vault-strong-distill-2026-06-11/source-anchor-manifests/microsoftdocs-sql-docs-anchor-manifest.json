@@ -1,0 +1,44 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "MicrosoftDocs/sql-docs",
+  "source_url": "https://github.com/MicrosoftDocs/sql-docs",
+  "checked_commit": "1baa2aac5834779c08b6b3ae191e2211a976211e",
+  "checked_at": "2026-06-11",
+  "inspection_method": "partial clone/object inspection; inspected ReadMe.md, open publishing config, docs index, TOC files, and tree. Normal checkout hit Windows long-path failures.",
+  "anchors": [
+    {
+      "path": "ReadMe.md",
+      "kind": "repo-identity",
+      "why": "Defines the repository as the SQL Server technical documentation source and describes contribution/CLA path."
+    },
+    {
+      "path": ".openpublishing.publish.config.json",
+      "kind": "multi-docset-publishing",
+      "why": "Defines multiple docsets, build source/output folders, dependent repositories, preview PR requirement, and publishing configuration."
+    },
+    {
+      "path": "docs/index.yml",
+      "kind": "hub-page",
+      "why": "Structured hub page with metadata, product directory, highlighted content, conceptual content, item types, and dated metadata."
+    },
+    {
+      "path": "docs/**/toc.yml",
+      "kind": "navigation",
+      "why": "Multiple product/area-specific TOCs split across Azure SQL, migration, analytics, integration, reporting, and SQL docs."
+    },
+    {
+      "path": ".openpublishing.redirection*.json",
+      "kind": "redirect-ledger",
+      "why": "Redirection files preserve moved-content paths and publishing compatibility."
+    }
+  ],
+  "known_limits": [
+    "Normal Windows checkout encountered many filename-too-long errors; Git object inspection was used for key anchors.",
+    "This is a Microsoft product documentation corpus, not a VAKS architecture source.",
+    "Product hub links and item types are navigation/publishing metadata, not evidence support."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

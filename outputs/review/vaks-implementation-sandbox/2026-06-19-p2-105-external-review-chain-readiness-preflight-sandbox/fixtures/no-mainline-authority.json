@@ -1,0 +1,19 @@
+{
+  "fixture": "no-mainline-authority",
+  "mainline_merge_allowed": false,
+  "promotion_allowed": false,
+  "reviewed_knowledge_ready": false,
+  "evidence_support_ready": false,
+  "action_basis_ready": false,
+  "checks": {
+    "summary.mainline_ready": false,
+    "summary.mainline_merge_allowed": false,
+    "summary.promotion_allowed": false,
+    "summary.reviewed_knowledge_ready": false,
+    "summary.evidence_support_ready": false,
+    "summary.action_basis_ready": false,
+    "summary.commit_push_sync_ready": false,
+    "summary.goal_complete_now": false
+  },
+  "expected": true
+}

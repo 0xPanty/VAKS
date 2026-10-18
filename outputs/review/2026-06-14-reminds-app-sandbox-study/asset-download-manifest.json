@@ -1,0 +1,122 @@
+[
+  {
+    "url": "https://reminds-app.com/assets/ActionButton.a2d8c137.js",
+    "file": "assets/ActionButton.a2d8c137.js",
+    "bytes": 665,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/FeatureCard.d839b5c2.js",
+    "file": "assets/FeatureCard.d839b5c2.js",
+    "bytes": 1068,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/flUhRq6tzZclQEJ-Vdg-IuiaDsNa.fd84f88b.woff",
+    "file": "assets/flUhRq6tzZclQEJ-Vdg-IuiaDsNa.fd84f88b.woff",
+    "bytes": 164912,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.4a4dbc62.woff2",
+    "file": "assets/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.4a4dbc62.woff2",
+    "bytes": 128616,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/IndexPage.2d9b0692.js",
+    "file": "assets/IndexPage.2d9b0692.js",
+    "bytes": 27882,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/IndexPage.c9e94b9e.css",
+    "file": "assets/IndexPage.c9e94b9e.css",
+    "bytes": 2488,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/KFOkCnqEu92Fr1MmgVxIIzQ.34e9582c.woff",
+    "file": "assets/KFOkCnqEu92Fr1MmgVxIIzQ.34e9582c.woff",
+    "bytes": 20436,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/KFOlCnqEu92Fr1MmEU9fBBc-.9ce7f3ac.woff",
+    "file": "assets/KFOlCnqEu92Fr1MmEU9fBBc-.9ce7f3ac.woff",
+    "bytes": 20544,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/KFOlCnqEu92Fr1MmSU5fBBc-.bf14c7d7.woff",
+    "file": "assets/KFOlCnqEu92Fr1MmSU5fBBc-.bf14c7d7.woff",
+    "bytes": 20416,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/KFOlCnqEu92Fr1MmWUlfBBc-.e0fd57c0.woff",
+    "file": "assets/KFOlCnqEu92Fr1MmWUlfBBc-.e0fd57c0.woff",
+    "bytes": 20408,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/KFOlCnqEu92Fr1MmYUtfBBc-.f6537e32.woff",
+    "file": "assets/KFOlCnqEu92Fr1MmYUtfBBc-.f6537e32.woff",
+    "bytes": 20424,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/KFOmCnqEu92Fr1Mu4mxM.f2abf7fb.woff",
+    "file": "assets/KFOmCnqEu92Fr1Mu4mxM.f2abf7fb.woff",
+    "bytes": 20344,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/MainBanner.553c9f9e.js",
+    "file": "assets/MainBanner.553c9f9e.js",
+    "bytes": 1227,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/MainLayout.67b18041.js",
+    "file": "assets/MainLayout.67b18041.js",
+    "bytes": 29601,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/MainLayout.9f255efb.css",
+    "file": "assets/MainLayout.9f255efb.css",
+    "bytes": 4123,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/PrimaryTitle.4b30f7ff.js",
+    "file": "assets/PrimaryTitle.4b30f7ff.js",
+    "bytes": 531,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/PrimaryTitle.ad5ed2b7.css",
+    "file": "assets/PrimaryTitle.ad5ed2b7.css",
+    "bytes": 378,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/SecondaryTitle.ccb693e1.js",
+    "file": "assets/SecondaryTitle.ccb693e1.js",
+    "bytes": 509,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/TextCard.1a76ca9e.js",
+    "file": "assets/TextCard.1a76ca9e.js",
+    "bytes": 1249,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/TextCard.d29c15c5.css",
+    "file": "assets/TextCard.d29c15c5.css",
+    "bytes": 98,
+    "status": "ok"
+  }
+]

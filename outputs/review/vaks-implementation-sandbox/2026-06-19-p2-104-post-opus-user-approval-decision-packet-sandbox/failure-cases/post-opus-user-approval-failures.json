@@ -1,0 +1,306 @@
+{
+  "record_kind": "post_opus_user_approval_failure_cases",
+  "slice_id": "2026-06-19-p2-104-post-opus-user-approval-decision-packet-sandbox",
+  "failure_cases": [
+    {
+      "id": "user_approval_without_opus_pass",
+      "record": {
+        "record_kind": "post_opus_user_approval_decision_dry_run",
+        "dry_run_only": true,
+        "actual_opus_result_present": false,
+        "validated_opus_pass_present": false,
+        "user_approval_present": true,
+        "exact_approval_phrase": "I explicitly approve post-Opus mainline consideration for VAKS sandbox closeout: prepare a separate merge proposal only; do not merge, promote, commit, push, sync, or write reviewed knowledge/action basis without my next explicit approval.",
+        "user_message": "I explicitly approve post-Opus mainline consideration for VAKS sandbox closeout: prepare a separate merge proposal only; do not merge, promote, commit, push, sync, or write reviewed knowledge/action basis without my next explicit approval.",
+        "allowed_next_state": "not_ready_for_mainline_consideration",
+        "authority_flags": {
+          "mainline_merge_allowed": false,
+          "promotion_allowed": false,
+          "reviewed_knowledge_write_allowed": false,
+          "evidence_support_write_allowed": false,
+          "action_basis_allowed": false,
+          "commit_allowed": false,
+          "push_allowed": false,
+          "sync_allowed": false,
+          "goal_complete_now": false
+        }
+      },
+      "expected_failure": "user_approval_before_validated_opus_pass"
+    },
+    {
+      "id": "opus_pass_without_exact_user_phrase",
+      "record": {
+        "record_kind": "post_opus_user_approval_decision_dry_run",
+        "dry_run_only": true,
+        "actual_opus_result_present": true,
+        "validated_opus_pass_present": true,
+        "user_approval_present": true,
+        "exact_approval_phrase": "I explicitly approve post-Opus mainline consideration for VAKS sandbox closeout: prepare a separate merge proposal only; do not merge, promote, commit, push, sync, or write reviewed knowledge/action basis without my next explicit approval.",
+        "user_message": "approved",
+        "allowed_next_state": "not_ready_for_mainline_consideration",
+        "authority_flags": {
+          "mainline_merge_allowed": false,
+          "promotion_allowed": false,
+          "reviewed_knowledge_write_allowed": false,
+          "evidence_support_write_allowed": false,
+          "action_basis_allowed": false,
+          "commit_allowed": false,
+          "push_allowed": false,
+          "sync_allowed": false,
+          "goal_complete_now": false
+        }
+      },
+      "expected_failure": "exact_approval_phrase_mismatch"
+    },
+    {
+      "id": "opus_pass_claims_merge_allowed",
+      "record": {
+        "record_kind": "post_opus_user_approval_decision_dry_run",
+        "dry_run_only": true,
+        "actual_opus_result_present": true,
+        "validated_opus_pass_present": true,
+        "user_approval_present": false,
+        "exact_approval_phrase": "I explicitly approve post-Opus mainline consideration for VAKS sandbox closeout: prepare a separate merge proposal only; do not merge, promote, commit, push, sync, or write reviewed knowledge/action basis without my next explicit approval.",
+        "user_message": "",
+        "allowed_next_state": "not_ready_for_mainline_consideration",
+        "authority_flags": {
+          "mainline_merge_allowed": true,
+          "promotion_allowed": false,
+          "reviewed_knowledge_write_allowed": false,
+          "evidence_support_write_allowed": false,
+          "action_basis_allowed": false,
+          "commit_allowed": false,
+          "push_allowed": false,
+          "sync_allowed": false,
+          "goal_complete_now": false
+        }
+      },
+      "expected_failure": "authority_flag_overclaim:mainline_merge_allowed"
+    },
+    {
+      "id": "exact_user_approval_claims_mainline_merge_allowed",
+      "record": {
+        "record_kind": "post_opus_user_approval_decision_dry_run",
+        "dry_run_only": true,
+        "actual_opus_result_present": true,
+        "validated_opus_pass_present": true,
+        "user_approval_present": true,
+        "exact_approval_phrase": "I explicitly approve post-Opus mainline consideration for VAKS sandbox closeout: prepare a separate merge proposal only; do not merge, promote, commit, push, sync, or write reviewed knowledge/action basis without my next explicit approval.",
+        "user_message": "I explicitly approve post-Opus mainline consideration for VAKS sandbox closeout: prepare a separate merge proposal only; do not merge, promote, commit, push, sync, or write reviewed knowledge/action basis without my next explicit approval.",
+        "allowed_next_state": "not_ready_for_mainline_consideration",
+        "authority_flags": {
+          "mainline_merge_allowed": true,
+          "promotion_allowed": false,
+          "reviewed_knowledge_write_allowed": false,
+          "evidence_support_write_allowed": false,
+          "action_basis_allowed": false,
+          "commit_allowed": false,
+          "push_allowed": false,
+          "sync_allowed": false,
+          "goal_complete_now": false
+        }
+      },
+      "expected_failure": "authority_flag_overclaim:mainline_merge_allowed"
+    },
+    {
+      "id": "exact_user_approval_claims_promotion_allowed",
+      "record": {
+        "record_kind": "post_opus_user_approval_decision_dry_run",
+        "dry_run_only": true,
+        "actual_opus_result_present": true,
+        "validated_opus_pass_present": true,
+        "user_approval_present": true,
+        "exact_approval_phrase": "I explicitly approve post-Opus mainline consideration for VAKS sandbox closeout: prepare a separate merge proposal only; do not merge, promote, commit, push, sync, or write reviewed knowledge/action basis without my next explicit approval.",
+        "user_message": "I explicitly approve post-Opus mainline consideration for VAKS sandbox closeout: prepare a separate merge proposal only; do not merge, promote, commit, push, sync, or write reviewed knowledge/action basis without my next explicit approval.",
+        "allowed_next_state": "not_ready_for_mainline_consideration",
+        "authority_flags": {
+          "mainline_merge_allowed": false,
+          "promotion_allowed": true,
+          "reviewed_knowledge_write_allowed": false,
+          "evidence_support_write_allowed": false,
+          "action_basis_allowed": false,
+          "commit_allowed": false,
+          "push_allowed": false,
+          "sync_allowed": false,
+          "goal_complete_now": false
+        }
+      },
+      "expected_failure": "authority_flag_overclaim:promotion_allowed"
+    },
+    {
+      "id": "exact_user_approval_claims_reviewed_knowledge_write_allowed",
+      "record": {
+        "record_kind": "post_opus_user_approval_decision_dry_run",
+        "dry_run_only": true,
+        "actual_opus_result_present": true,
+        "validated_opus_pass_present": true,
+        "user_approval_present": true,
+        "exact_approval_phrase": "I explicitly approve post-Opus mainline consideration for VAKS sandbox closeout: prepare a separate merge proposal only; do not merge, promote, commit, push, sync, or write reviewed knowledge/action basis without my next explicit approval.",
+        "user_message": "I explicitly approve post-Opus mainline consideration for VAKS sandbox closeout: prepare a separate merge proposal only; do not merge, promote, commit, push, sync, or write reviewed knowledge/action basis without my next explicit approval.",
+        "allowed_next_state": "not_ready_for_mainline_consideration",
+        "authority_flags": {
+          "mainline_merge_allowed": false,
+          "promotion_allowed": false,
+          "reviewed_knowledge_write_allowed": true,
+          "evidence_support_write_allowed": false,
+          "action_basis_allowed": false,
+          "commit_allowed": false,
+          "push_allowed": false,
+          "sync_allowed": false,
+          "goal_complete_now": false
+        }
+      },
+      "expected_failure": "authority_flag_overclaim:reviewed_knowledge_write_allowed"
+    },
+    {
+      "id": "exact_user_approval_claims_evidence_support_write_allowed",
+      "record": {
+        "record_kind": "post_opus_user_approval_decision_dry_run",
+        "dry_run_only": true,
+        "actual_opus_result_present": true,
+        "validated_opus_pass_present": true,
+        "user_approval_present": true,
+        "exact_approval_phrase": "I explicitly approve post-Opus mainline consideration for VAKS sandbox closeout: prepare a separate merge proposal only; do not merge, promote, commit, push, sync, or write reviewed knowledge/action basis without my next explicit approval.",
+        "user_message": "I explicitly approve post-Opus mainline consideration for VAKS sandbox closeout: prepare a separate merge proposal only; do not merge, promote, commit, push, sync, or write reviewed knowledge/action basis without my next explicit approval.",
+        "allowed_next_state": "not_ready_for_mainline_consideration",
+        "authority_flags": {
+          "mainline_merge_allowed": false,
+          "promotion_allowed": false,
+          "reviewed_knowledge_write_allowed": false,
+          "evidence_support_write_allowed": true,
+          "action_basis_allowed": false,
+          "commit_allowed": false,
+          "push_allowed": false,
+          "sync_allowed": false,
+          "goal_complete_now": false
+        }
+      },
+      "expected_failure": "authority_flag_overclaim:evidence_support_write_allowed"
+    },
+    {
+      "id": "exact_user_approval_claims_action_basis_allowed",
+      "record": {
+        "record_kind": "post_opus_user_approval_decision_dry_run",
+        "dry_run_only": true,
+        "actual_opus_result_present": true,
+        "validated_opus_pass_present": true,
+        "user_approval_present": true,
+        "exact_approval_phrase": "I explicitly approve post-Opus mainline consideration for VAKS sandbox closeout: prepare a separate merge proposal only; do not merge, promote, commit, push, sync, or write reviewed knowledge/action basis without my next explicit approval.",
+        "user_message": "I explicitly approve post-Opus mainline consideration for VAKS sandbox closeout: prepare a separate merge proposal only; do not merge, promote, commit, push, sync, or write reviewed knowledge/action basis without my next explicit approval.",
+        "allowed_next_state": "not_ready_for_mainline_consideration",
+        "authority_flags": {
+          "mainline_merge_allowed": false,
+          "promotion_allowed": false,
+          "reviewed_knowledge_write_allowed": false,
+          "evidence_support_write_allowed": false,
+          "action_basis_allowed": true,
+          "commit_allowed": false,
+          "push_allowed": false,
+          "sync_allowed": false,
+          "goal_complete_now": false
+        }
+      },
+      "expected_failure": "authority_flag_overclaim:action_basis_allowed"
+    },
+    {
+      "id": "exact_user_approval_claims_commit_allowed",
+      "record": {
+        "record_kind": "post_opus_user_approval_decision_dry_run",
+        "dry_run_only": true,
+        "actual_opus_result_present": true,
+        "validated_opus_pass_present": true,
+        "user_approval_present": true,
+        "exact_approval_phrase": "I explicitly approve post-Opus mainline consideration for VAKS sandbox closeout: prepare a separate merge proposal only; do not merge, promote, commit, push, sync, or write reviewed knowledge/action basis without my next explicit approval.",
+        "user_message": "I explicitly approve post-Opus mainline consideration for VAKS sandbox closeout: prepare a separate merge proposal only; do not merge, promote, commit, push, sync, or write reviewed knowledge/action basis without my next explicit approval.",
+        "allowed_next_state": "not_ready_for_mainline_consideration",
+        "authority_flags": {
+          "mainline_merge_allowed": false,
+          "promotion_allowed": false,
+          "reviewed_knowledge_write_allowed": false,
+          "evidence_support_write_allowed": false,
+          "action_basis_allowed": false,
+          "commit_allowed": true,
+          "push_allowed": false,
+          "sync_allowed": false,
+          "goal_complete_now": false
+        }
+      },
+      "expected_failure": "authority_flag_overclaim:commit_allowed"
+    },
+    {
+      "id": "exact_user_approval_claims_push_allowed",
+      "record": {
+        "record_kind": "post_opus_user_approval_decision_dry_run",
+        "dry_run_only": true,
+        "actual_opus_result_present": true,
+        "validated_opus_pass_present": true,
+        "user_approval_present": true,
+        "exact_approval_phrase": "I explicitly approve post-Opus mainline consideration for VAKS sandbox closeout: prepare a separate merge proposal only; do not merge, promote, commit, push, sync, or write reviewed knowledge/action basis without my next explicit approval.",
+        "user_message": "I explicitly approve post-Opus mainline consideration for VAKS sandbox closeout: prepare a separate merge proposal only; do not merge, promote, commit, push, sync, or write reviewed knowledge/action basis without my next explicit approval.",
+        "allowed_next_state": "not_ready_for_mainline_consideration",
+        "authority_flags": {
+          "mainline_merge_allowed": false,
+          "promotion_allowed": false,
+          "reviewed_knowledge_write_allowed": false,
+          "evidence_support_write_allowed": false,
+          "action_basis_allowed": false,
+          "commit_allowed": false,
+          "push_allowed": true,
+          "sync_allowed": false,
+          "goal_complete_now": false
+        }
+      },
+      "expected_failure": "authority_flag_overclaim:push_allowed"
+    },
+    {
+      "id": "exact_user_approval_claims_sync_allowed",
+      "record": {
+        "record_kind": "post_opus_user_approval_decision_dry_run",
+        "dry_run_only": true,
+        "actual_opus_result_present": true,
+        "validated_opus_pass_present": true,
+        "user_approval_present": true,
+        "exact_approval_phrase": "I explicitly approve post-Opus mainline consideration for VAKS sandbox closeout: prepare a separate merge proposal only; do not merge, promote, commit, push, sync, or write reviewed knowledge/action basis without my next explicit approval.",
+        "user_message": "I explicitly approve post-Opus mainline consideration for VAKS sandbox closeout: prepare a separate merge proposal only; do not merge, promote, commit, push, sync, or write reviewed knowledge/action basis without my next explicit approval.",
+        "allowed_next_state": "not_ready_for_mainline_consideration",
+        "authority_flags": {
+          "mainline_merge_allowed": false,
+          "promotion_allowed": false,
+          "reviewed_knowledge_write_allowed": false,
+          "evidence_support_write_allowed": false,
+          "action_basis_allowed": false,
+          "commit_allowed": false,
+          "push_allowed": false,
+          "sync_allowed": true,
+          "goal_complete_now": false
+        }
+      },
+      "expected_failure": "authority_flag_overclaim:sync_allowed"
+    },
+    {
+      "id": "exact_user_approval_claims_goal_complete_now",
+      "record": {
+        "record_kind": "post_opus_user_approval_decision_dry_run",
+        "dry_run_only": true,
+        "actual_opus_result_present": true,
+        "validated_opus_pass_present": true,
+        "user_approval_present": true,
+        "exact_approval_phrase": "I explicitly approve post-Opus mainline consideration for VAKS sandbox closeout: prepare a separate merge proposal only; do not merge, promote, commit, push, sync, or write reviewed knowledge/action basis without my next explicit approval.",
+        "user_message": "I explicitly approve post-Opus mainline consideration for VAKS sandbox closeout: prepare a separate merge proposal only; do not merge, promote, commit, push, sync, or write reviewed knowledge/action basis without my next explicit approval.",
+        "allowed_next_state": "not_ready_for_mainline_consideration",
+        "authority_flags": {
+          "mainline_merge_allowed": false,
+          "promotion_allowed": false,
+          "reviewed_knowledge_write_allowed": false,
+          "evidence_support_write_allowed": false,
+          "action_basis_allowed": false,
+          "commit_allowed": false,
+          "push_allowed": false,
+          "sync_allowed": false,
+          "goal_complete_now": true
+        }
+      },
+      "expected_failure": "authority_flag_overclaim:goal_complete_now"
+    }
+  ]
+}

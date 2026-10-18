@@ -1,0 +1,20 @@
+{
+  "case_id": "prototype-markdown-mainline-ready",
+  "note": "Prototype claims mainline readiness.",
+  "prototype_tamper": {
+    "kind": "markdown_replace",
+    "file": "00 Operator Status Home.md",
+    "content": "mainline ready: yes"
+  },
+  "expected_errors": [
+    "prototype_text_dangerous:00 Operator Status Home.md:mainline_ready_marker",
+    "prototype_markdown_missing_stage_slice:p2_30_dry_run_ledger",
+    "prototype_markdown_missing_stage_label:p2_30_dry_run_ledger",
+    "prototype_markdown_missing_stage_slice:p2_31_readiness_gate",
+    "prototype_markdown_missing_stage_label:p2_31_readiness_gate",
+    "prototype_markdown_missing_stage_slice:p2_32_request_packet",
+    "prototype_markdown_missing_stage_label:p2_32_request_packet",
+    "prototype_markdown_missing_stage_slice:p2_33_request_screening",
+    "prototype_markdown_missing_stage_label:p2_33_request_screening"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "record_kind": "sandbox_evidence_ledger_prototype_receipt",
+  "slice_id": "2026-06-15-p2-44-sandbox-evidence-ledger-sandbox",
+  "source_slice_count": 43,
+  "enterprise_production_ready": false,
+  "mainline_ready": false,
+  "formal_vault_accessed": false,
+  "sync_performed": false,
+  "commit_performed": false,
+  "push_performed": false,
+  "promotion_performed": false,
+  "action_basis_created": false,
+  "reviewed_knowledge_created": false,
+  "evidence_support_created": false,
+  "auto_advanced": false,
+  "required_non_claims": [
+    "not enterprise production ready",
+    "not mainline ready",
+    "not formal vault approval",
+    "not formal vault state",
+    "not formal vault access",
+    "not Obsidian sync",
+    "not commit",
+    "not push",
+    "not promotion approval",
+    "not reviewed knowledge",
+    "not evidence support",
+    "not action basis",
+    "not user approval",
+    "not execution permission",
+    "not auto advance"
+  ]
+}

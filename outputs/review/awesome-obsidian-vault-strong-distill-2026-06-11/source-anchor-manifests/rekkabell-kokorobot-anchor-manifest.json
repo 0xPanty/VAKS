@@ -1,0 +1,51 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "rekkabell/kokorobot",
+  "source_url": "https://github.com/rekkabell/kokorobot",
+  "checked_commit": "8ac603595f0b936d1a34055912ccaca7ed5c7482",
+  "checked_at": "2026-06-11",
+  "inspection_method": "local git checkout; inspected README, makefile, src/main.c, image feed, source/generated folders, and checkout warnings",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "project-identity",
+      "why": "Identifies the site source, website URL, and license split."
+    },
+    {
+      "path": "makefile",
+      "kind": "build-recipe",
+      "why": "Builds the site, image page, and media directory listing."
+    },
+    {
+      "path": "src/main.c",
+      "kind": "static-generator",
+      "why": "Implements template injection, edit links, generated footer, index, and inspection behavior."
+    },
+    {
+      "path": "links/img.xml",
+      "kind": "media-feed",
+      "why": "Shows dated image/feed entries that can inspire source episode capture."
+    },
+    {
+      "path": "clone-checkout-warning",
+      "kind": "path-risk",
+      "why": "Local Windows checkout reported case-insensitive path collisions for Boushimon/boushimon media files."
+    }
+  ],
+  "observed_counts": {
+    "media_files": 2752,
+    "other_files": 14,
+    "public_files": 2935,
+    "site_files": 184,
+    "src_files": 188
+  },
+  "known_limits": [
+    "Media and personal content are outside the borrow scope.",
+    "Generated public/site files should not be treated as source.",
+    "Case-collision risks are environment-specific but relevant for Windows intake."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

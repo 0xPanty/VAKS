@@ -1,0 +1,4 @@
+{"allowed":true,"case_id":"lock_missing_recreated","created":true,"expected_allowed":true,"lock_is_file_after":true,"lock_is_link_after":false,"shape":"missing","target_exists":true,"violation":false,"write_error_class":""}
+{"allowed":false,"case_id":"lock_as_directory_rejected","created":false,"expected_allowed":false,"lock_is_file_after":false,"lock_is_link_after":false,"shape":"directory","target_exists":false,"violation":false,"write_error_class":"RuntimeError"}
+{"allowed":false,"case_id":"lock_as_symlink_rejected","created":false,"expected_allowed":false,"lock_is_file_after":false,"lock_is_link_after":false,"shape":"symlink","target_exists":false,"violation":false,"write_error_class":"RuntimeError"}
+{"allowed":false,"case_id":"lock_as_junction_rejected","created":false,"expected_allowed":false,"lock_is_file_after":false,"lock_is_link_after":true,"shape":"junction","target_exists":false,"violation":false,"write_error_class":"RuntimeError"}

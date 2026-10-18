@@ -1,0 +1,14 @@
+{
+  "case_id": "prototype-html-command",
+  "description": "Prototype HTML contains command.",
+  "expected_errors": [
+    "prototype_text_dangerous:request-packet-inspector.html:copy_item",
+    "prototype_text_dangerous:request-packet-inspector.html:absolute_formal_vault_path",
+    "html_forbidden_token:copy-item"
+  ],
+  "prototype_tamper": {
+    "kind": "html_replace",
+    "file": "request-packet-inspector.html",
+    "content": "<html lang=\"en\" data-sandbox-only=\"true\" data-request-packet-only=\"true\" data-non-executable=\"true\" data-no-formal-vault-access=\"true\" data-no-write=\"true\" data-no-sync=\"true\" data-no-authority=\"true\" data-no-permission=\"true\" data-no-real-user-text=\"true\"><body>Copy-Item source H:/Obsidian/资料库/target.md</body></html>"
+  }
+}

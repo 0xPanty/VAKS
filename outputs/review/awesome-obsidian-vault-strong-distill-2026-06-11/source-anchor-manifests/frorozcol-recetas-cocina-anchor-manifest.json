@@ -1,0 +1,52 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "Frorozcol/recetas-cocina",
+  "source_url": "https://huggingface.co/datasets/Frorozcol/recetas-cocina",
+  "checked_commit": "3b640b0d91c6aad648168a3cae9293328e4a285a",
+  "checked_at": "2026-06-11",
+  "inspection_method": "local Hugging Face git checkout; inspected README dataset card, CSV splits, field header, row counts, and sample rows",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "dataset-card",
+      "why": "Declares license, task categories, language, size range, scrape origin, task framing, and field descriptions."
+    },
+    {
+      "path": "data/train.csv",
+      "kind": "training-split",
+      "why": "Contains the main CSV split with header title,url,ingredients,steps,uuid and 20526 data rows."
+    },
+    {
+      "path": "data/test.csv",
+      "kind": "test-split",
+      "why": "Contains 3904 data rows for dataset split separation."
+    },
+    {
+      "path": "data/valid.csv",
+      "kind": "validation-split",
+      "why": "Contains 2781 data rows for validation split separation."
+    }
+  ],
+  "observed_counts": {
+    "train_rows": 20526,
+    "test_rows": 3904,
+    "valid_rows": 2781,
+    "declared_total_approx": 30000,
+    "fields": [
+      "title",
+      "url",
+      "ingredients",
+      "steps",
+      "uuid"
+    ]
+  },
+  "known_limits": [
+    "The dataset is scraped from multiple recipe sites; source licensing and provenance quality require separate review before reuse.",
+    "CSV fields are useful structure but not evidence support.",
+    "Train/test/valid splits are ML dataset workflow, not VAKS truth tiers or review queues."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

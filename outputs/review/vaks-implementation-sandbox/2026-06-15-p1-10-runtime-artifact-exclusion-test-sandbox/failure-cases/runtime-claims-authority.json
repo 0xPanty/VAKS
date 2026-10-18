@@ -1,0 +1,22 @@
+{
+  "record_kind": "runtime_artifact_exclusion_manifest",
+  "scenario_id": "ra-fail-runtime-claims-authority",
+  "expected_valid": false,
+  "expected_codes": ["RA_RUNTIME_ARTIFACT_CLAIMS_AUTHORITY"],
+  "exclude_runtime_artifacts": true,
+  "items": [
+    {
+      "id": "runtime_claims_authority",
+      "path": "outputs/review/example/suite-output.json",
+      "artifact_kind": "suite_output",
+      "runtime_artifact": true,
+      "seen_by_retrieval": true,
+      "selected": false,
+      "excluded": true,
+      "excluded_reason": "runtime_artifact_excluded",
+      "pack_role": "none",
+      "authority_bucket": "runtime_artifact",
+      "artifact_claims": ["reviewer_approval", "action_basis"]
+    }
+  ]
+}

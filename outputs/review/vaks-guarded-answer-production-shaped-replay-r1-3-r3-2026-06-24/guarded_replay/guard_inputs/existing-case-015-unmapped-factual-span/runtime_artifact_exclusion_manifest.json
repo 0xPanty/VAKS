@@ -1,0 +1,27 @@
+{
+  "exclude_runtime_artifacts": true,
+  "items": [
+    {
+      "artifact_kind": "sandbox_verification_doc",
+      "authority_bucket": "candidate",
+      "excluded": false,
+      "id": "existing-case-015-unmapped-factual-span-final-answer",
+      "path": "outputs/review/vaks-guarded-answer-wiring-r1-1-2026-06-23/final_answers.jsonl",
+      "runtime_artifact": false,
+      "selected": true
+    },
+    {
+      "artifact_kind": "execution_log",
+      "authority_bucket": "diagnostic",
+      "excluded": true,
+      "excluded_reason": "runtime_artifact_excluded",
+      "id": "existing-case-015-unmapped-factual-span-trace",
+      "path": "outputs/review/vaks-guarded-answer-wiring-r1-1-2026-06-23/temp/existing-case-015-unmapped-factual-span.log",
+      "runtime_artifact": true,
+      "seen_by_retrieval": false,
+      "selected": false
+    }
+  ],
+  "record_kind": "runtime_artifact_exclusion_manifest",
+  "scenario_id": "r1-1-existing-case-015-unmapped-factual-span"
+}

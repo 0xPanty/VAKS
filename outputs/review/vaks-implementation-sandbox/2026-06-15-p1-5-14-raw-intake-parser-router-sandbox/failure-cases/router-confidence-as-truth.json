@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "router-confidence-as-truth",
+  "expected_valid": false,
+  "expected_codes": ["RP_ROUTER_CONFIDENCE_AS_TRUTH"],
+  "patch": {"router": {"classifier_confidence_claims_truth": true}}
+}

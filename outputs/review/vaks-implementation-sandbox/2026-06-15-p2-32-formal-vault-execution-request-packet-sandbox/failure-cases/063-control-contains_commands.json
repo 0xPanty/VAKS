@@ -1,0 +1,364 @@
+{
+  "case_id": "control-contains_commands",
+  "description": "Packet control contains_commands drifted.",
+  "expected_errors": [
+    "packet_control_mismatch:contains_commands",
+    "receipt_request_packet_hash_mismatch",
+    "request_packet_hash_mismatch"
+  ],
+  "config": {
+    "slice_id": "2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox",
+    "source_slice": "2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox",
+    "request_packet_version": "p2-32-formal-vault-execution-request-packet-v1",
+    "truth_boundary": "sandbox_only_request_packet_not_execution_permission",
+    "purpose": "Define a synthetic future formal-vault execution request packet that can be screened by the P2-31 readiness gate without collecting real approval, storing real user text, resolving formal-vault paths, or emitting commands.",
+    "packet_mode": "synthetic_reviewable_request_packet",
+    "write_scope": [
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/"
+    ],
+    "read_only_sources": [
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/next-step.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/product-acceptance-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/verification.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/reviewer-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/boundary-audit.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/source-map.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/fixtures/valid-reviewable-readiness-gate-config.json",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/prototype/formal-vault-execution-readiness-gate/Receipts/formal-vault-execution-readiness-gate-receipt.json",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/artifact/formal-vault-execution-readiness-gate-contract.md"
+    ],
+    "operations": {
+      "formal_vault_read": false,
+      "formal_vault_scan": false,
+      "formal_vault_write": false,
+      "formal_vault_hash": false,
+      "formal_vault_snapshot": false,
+      "formal_vault_state_check": false,
+      "obsidian_sync": false,
+      "commit": false,
+      "push": false,
+      "promotion": false,
+      "dependency_install": false,
+      "background_service": false,
+      "mcp_write_tool": false,
+      "hooks": false,
+      "real_base_files": false,
+      "production_ui": false,
+      "local_storage_write": false,
+      "network_post": false,
+      "actual_approval_collection": false,
+      "actual_user_approval": false,
+      "actual_user_decision_collection": false,
+      "user_approval_inference": false,
+      "real_user_text_storage": false,
+      "real_user_text_capture": false,
+      "write_gate_opening": false,
+      "execution_performed": false,
+      "snapshot_taken": false,
+      "rollback_executed": false,
+      "hash_before_collected": false,
+      "hash_after_collected": false,
+      "action_basis_creation": false,
+      "reviewed_knowledge_creation": false,
+      "external_notification": false,
+      "shell_command_emitted": false,
+      "copy_command_emitted": false,
+      "absolute_vault_path_resolved": false,
+      "request_packet_promoted_to_execution_permission": false,
+      "request_packet_used_as_action_basis": false
+    },
+    "packet_controls": {
+      "sandbox_only": true,
+      "synthetic_packet_only": true,
+      "readiness_gate_screenable": true,
+      "non_executable": true,
+      "no_real_user_text": true,
+      "no_actual_approval": true,
+      "no_formal_vault_paths": true,
+      "no_commands": true,
+      "operator_must_stop_before_execution": true,
+      "separate_future_user_confirmation_required": true,
+      "separate_future_execution_slice_required": true,
+      "separate_future_formal_vault_state_check_required": true,
+      "product_acceptance_is_not_formal_vault_approval": true,
+      "request_packet_is_not_execution_permission": true,
+      "request_packet_is_not_action_basis": true,
+      "request_packet_is_not_reviewed_knowledge": true,
+      "request_packet_is_not_evidence_support": true,
+      "execution_allowed_now": false,
+      "formal_vault_access_allowed_now": false,
+      "formal_vault_write_allowed_now": false,
+      "formal_vault_hash_allowed_now": false,
+      "formal_vault_snapshot_allowed_now": false,
+      "user_confirmation_collected_now": false,
+      "actual_user_text_stored": false,
+      "contains_commands": true,
+      "absolute_vault_paths_present": false,
+      "sync_commit_push_promotion_allowed": false,
+      "packet_can_be_replayed": false,
+      "packet_result_can_be_used_as_action_basis": false
+    },
+    "source_inputs": [
+      {
+        "id": "p2_31_next_step",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/next-step.md",
+        "source_sha256": "842a9908cdef291e838acb5caa7f94afb5bd5ebafdd3733f6db7288c846a7f04",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "p2_31_product_acceptance",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/product-acceptance-report.md",
+        "source_sha256": "63d8564b9375ebbfd094f9a89b68aeb2bf4ad4de07942a9e5cd2a3b10f3ec8b6",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "p2_31_verification",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/verification.md",
+        "source_sha256": "916fdbd8e7670d4be0a9fce9de8c9a4914df6425ec0ff2ad3045fc650b9c4b93",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "p2_31_reviewer_report",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/reviewer-report.md",
+        "source_sha256": "a082422484d329c7f3843c65e21c2246d7458bc50bc1d8ce3d2004c709f19258",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "p2_31_boundary_audit",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/boundary-audit.md",
+        "source_sha256": "d4a15af46e5b3a41611d80f7edba10afd4bd31e3be564a5d99b3e2c321d8c917",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "p2_31_source_map",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/source-map.md",
+        "source_sha256": "0b93bd5312576fd9e11f5e13c2eca8d201cad82f81b21531fa2b62454a1e5e38",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "p2_31_valid_readiness_gate_config",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/fixtures/valid-reviewable-readiness-gate-config.json",
+        "source_sha256": "4e19d56322a3aa86115430e85ddea1cf17fda1174f243d169ac20e82fdb551c3",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "p2_31_readiness_gate_receipt",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/prototype/formal-vault-execution-readiness-gate/Receipts/formal-vault-execution-readiness-gate-receipt.json",
+        "source_sha256": "fa25b354087df8eade15fab36cc562a2bdb03f3267d4a063e2ede924dc85abc3",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "p2_31_readiness_gate_contract",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/artifact/formal-vault-execution-readiness-gate-contract.md",
+        "source_sha256": "40879f50dac805b0f988c52a2b02e960e5e18709d6fb4453f547934510d82d7b",
+        "content_binding": "exact_source_sha256"
+      }
+    ],
+    "source_statuses": [
+      {
+        "file": "next-step.md",
+        "expected_status": "pass_product_grade_pending_user_next_slice_decision",
+        "actual_status": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      {
+        "file": "product-acceptance-report.md",
+        "expected_status": "pass_product_grade",
+        "actual_status": "pass_product_grade"
+      },
+      {
+        "file": "verification.md",
+        "expected_status": "local_verification_passed_pending_review",
+        "actual_status": "local_verification_passed_pending_review"
+      },
+      {
+        "file": "reviewer-report.md",
+        "expected_status": "reviewer_pass",
+        "actual_status": "reviewer_pass"
+      },
+      {
+        "file": "boundary-audit.md",
+        "expected_status": "boundary_pass",
+        "actual_status": "boundary_pass"
+      },
+      {
+        "file": "source-map.md",
+        "expected_status": "built_pending_review",
+        "actual_status": "built_pending_review"
+      }
+    ],
+    "p2_31_binding": {
+      "source_slice": "2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox",
+      "product_acceptance_status": "pass_product_grade",
+      "reviewer_status": "reviewer_pass",
+      "boundary_status": "boundary_pass",
+      "readiness_gate_version": "p2-31-formal-vault-execution-readiness-gate-v1",
+      "readiness_gate_hash": "974ab9762341fe2ae95c3c33d4d38c13a98b69b9a465745484e1cd0684e0a6e4",
+      "readiness_receipt_kind": "sandbox_formal_vault_execution_readiness_gate_receipt",
+      "readiness_receipt_hash": "974ab9762341fe2ae95c3c33d4d38c13a98b69b9a465745484e1cd0684e0a6e4",
+      "readiness_check_count": 10,
+      "readiness_source_count": 9,
+      "gate_result": "READINESS_PACKET_REVIEWABLE_NOT_EXECUTABLE",
+      "execution_permission_granted": false,
+      "gate_used_as_action_basis": false,
+      "formal_vault_accessed": false,
+      "write_performed": false,
+      "sync_performed": false,
+      "promotion_performed": false
+    },
+    "packet_schema": [
+      {
+        "field_id": "packet_id",
+        "required": true,
+        "synthetic_only": true,
+        "forbidden_real_content": true,
+        "non_claim": "schema_field_is_contract_not_user_input"
+      },
+      {
+        "field_id": "packet_mode",
+        "required": true,
+        "synthetic_only": true,
+        "forbidden_real_content": true,
+        "non_claim": "schema_field_is_contract_not_user_input"
+      },
+      {
+        "field_id": "synthetic_confirmation_reference",
+        "required": true,
+        "synthetic_only": true,
+        "forbidden_real_content": true,
+        "non_claim": "schema_field_is_contract_not_user_input"
+      },
+      {
+        "field_id": "operator_decision_reference",
+        "required": true,
+        "synthetic_only": true,
+        "forbidden_real_content": true,
+        "non_claim": "schema_field_is_contract_not_user_input"
+      },
+      {
+        "field_id": "scope_reference",
+        "required": true,
+        "synthetic_only": true,
+        "forbidden_real_content": true,
+        "non_claim": "schema_field_is_contract_not_user_input"
+      },
+      {
+        "field_id": "target_manifest_reference",
+        "required": true,
+        "synthetic_only": true,
+        "forbidden_real_content": true,
+        "non_claim": "schema_field_is_contract_not_user_input"
+      },
+      {
+        "field_id": "readiness_gate_projection",
+        "required": true,
+        "synthetic_only": true,
+        "forbidden_real_content": true,
+        "non_claim": "schema_field_is_contract_not_user_input"
+      },
+      {
+        "field_id": "non_claims",
+        "required": true,
+        "synthetic_only": true,
+        "forbidden_real_content": true,
+        "non_claim": "schema_field_is_contract_not_user_input"
+      }
+    ],
+    "request_packet": {
+      "packet_id": "2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox:synthetic_reviewable_request_packet",
+      "packet_kind": "synthetic_future_formal_vault_execution_request_packet",
+      "packet_mode": "synthetic_reviewable_request_packet",
+      "packet_result": "REQUEST_PACKET_REVIEWABLE_NOT_APPROVAL",
+      "synthetic_only": true,
+      "actual_user_confirmation_collected": false,
+      "actual_user_text_stored": false,
+      "actual_user_text": "",
+      "actual_formal_vault_state_checked": false,
+      "actual_commands_supplied": false,
+      "requested_execution_now": false,
+      "requested_action_basis": false,
+      "operator_decision_reference": "review_packet_only",
+      "synthetic_confirmation_reference": "synthetic_confirmation_reference:synthetic_reviewable_request_packet",
+      "scope_reference": "p2_30_target_manifest_reference_only",
+      "target_manifest_reference": "p2_30_target_manifest_reference_only",
+      "command": "",
+      "absolute_target_path": "",
+      "approval_text": "",
+      "non_claims": [
+        "not action basis",
+        "not actual approval",
+        "not an execution log",
+        "not evidence support",
+        "not execution permission",
+        "not execution readiness",
+        "not formal vault approval",
+        "not formal vault state",
+        "not real user text",
+        "not replayable",
+        "not reviewed knowledge",
+        "not user instruction"
+      ]
+    },
+    "readiness_gate_projection": {
+      "target_gate_slice": "2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox",
+      "target_gate_version": "p2-31-formal-vault-execution-readiness-gate-v1",
+      "target_request_mode": "synthetic_reviewable_packet",
+      "projected_request_id": "2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox:synthetic_reviewable_packet",
+      "projected_gate_result": "READINESS_PACKET_REVIEWABLE_NOT_EXECUTABLE",
+      "screenable_by_p2_31": true,
+      "projection_is_not_submission": true,
+      "projection_collects_no_approval": true,
+      "projection_contains_no_commands": true,
+      "projection_contains_no_formal_vault_paths": true
+    },
+    "packet_receipt": {
+      "record_kind": "sandbox_formal_vault_execution_request_packet_receipt",
+      "slice_id": "2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox",
+      "source_slice": "2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox",
+      "packet_result": "REQUEST_PACKET_REVIEWABLE_NOT_APPROVAL",
+      "formal_vault_accessed": false,
+      "formal_vault_state_inspected": false,
+      "approval_collected_now": false,
+      "actual_user_input_used": false,
+      "real_user_text_stored": false,
+      "execution_permission_granted": false,
+      "execution_performed": false,
+      "write_performed": false,
+      "snapshot_taken": false,
+      "hash_before_collected": false,
+      "hash_after_collected": false,
+      "sync_performed": false,
+      "commit_performed": false,
+      "push_performed": false,
+      "promotion_performed": false,
+      "packet_submitted_to_gate": false,
+      "packet_replayed": false,
+      "packet_used_as_action_basis": false,
+      "field_count": 8,
+      "source_count": 9,
+      "request_packet_hash": "7f77d6bb293730e7c87a280f9dadb0f342cbf714a50a31a47986e84c74e6e4a0",
+      "non_claims": [
+        "not action basis",
+        "not actual approval",
+        "not an execution log",
+        "not evidence support",
+        "not execution permission",
+        "not execution readiness",
+        "not formal vault approval",
+        "not formal vault state",
+        "not real user text",
+        "not replayable",
+        "not reviewed knowledge",
+        "not user instruction"
+      ]
+    },
+    "product_metrics": {
+      "required_positive_fixtures": 3,
+      "minimum_failure_cases": 100,
+      "required_packet_fields": 8,
+      "required_source_inputs": 9,
+      "manual_negative_probes": 12,
+      "max_journey_steps": 3
+    },
+    "request_packet_hash": "7f77d6bb293730e7c87a280f9dadb0f342cbf714a50a31a47986e84c74e6e4a0"
+  }
+}

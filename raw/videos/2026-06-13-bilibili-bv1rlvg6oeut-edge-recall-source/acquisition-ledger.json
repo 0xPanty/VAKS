@@ -1,0 +1,103 @@
+[
+  {
+    "time": "2026-06-13T11:11:20.790669+00:00",
+    "method": "public_view_api",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "code": 0,
+    "elapsed_seconds": 0.17
+  },
+  {
+    "time": "2026-06-13T11:11:20.895769+00:00",
+    "method": "public_subtitle_api_1",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "code": 0,
+    "elapsed_seconds": 0.1
+  },
+  {
+    "time": "2026-06-13T11:11:20.984696+00:00",
+    "method": "public_subtitle_api_2",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "code": 0,
+    "elapsed_seconds": 0.09
+  },
+  {
+    "time": "2026-06-13T11:11:20.985695+00:00",
+    "method": "public_subtitle_check",
+    "status": "empty",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "subtitle_api_count": 2
+  },
+  {
+    "time": "2026-06-13T11:11:21.137790+00:00",
+    "method": "public_playurl_api",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "code": 0,
+    "elapsed_seconds": 0.15
+  },
+  {
+    "time": "2026-06-13T11:15:51.943596+00:00",
+    "method": "faster_whisper_small_attempt",
+    "status": "failed_model_fetch",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "error": "huggingface.co TLS SSLEOFError while resolving Systran/faster-whisper-small; switched to cached openai-whisper small.pt"
+  },
+  {
+    "time": "2026-06-13T11:15:52.064543+00:00",
+    "method": "public_view_api_for_openai_whisper",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "code": 0,
+    "elapsed_seconds": 0.12
+  },
+  {
+    "time": "2026-06-13T11:15:52.160868+00:00",
+    "method": "public_playurl_api_for_openai_whisper",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "code": 0,
+    "elapsed_seconds": 0.09
+  },
+  {
+    "time": "2026-06-13T11:15:52.434023+00:00",
+    "method": "download_public_audio",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "bytes": 2556341,
+    "sha256": "fb04deda6f55072c6d36344539de0e6de88a63bf39d5eb6772d14b75ebcfcf76",
+    "elapsed_seconds": 0.27,
+    "media_path": "C:\\Users\\Administrator\\.codex\\video-research\\2026-06-13-bilibili-bv1rlvg6oeut-vaks\\asr-vaks\\audio-30216-0.m4s"
+  },
+  {
+    "time": "2026-06-13T11:17:08.358660+00:00",
+    "method": "local_asr_openai_whisper",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "model": "small",
+    "device": "cuda",
+    "segment_count": 68,
+    "text_chars": 1495,
+    "elapsed_seconds": 75.92
+  },
+  {
+    "time": "2026-06-13T11:17:08.358660+00:00",
+    "method": "delete_scratch_media",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "media_path": "C:\\Users\\Administrator\\.codex\\video-research\\2026-06-13-bilibili-bv1rlvg6oeut-vaks\\asr-vaks\\audio-30216-0.m4s"
+  }
+]

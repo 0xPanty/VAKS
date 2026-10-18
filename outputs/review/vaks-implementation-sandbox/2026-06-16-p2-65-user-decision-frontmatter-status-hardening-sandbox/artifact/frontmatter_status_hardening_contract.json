@@ -1,0 +1,40 @@
+{
+  "record_kind": "sandbox_frontmatter_status_hardening_contract",
+  "slice_id": "2026-06-16-p2-65-user-decision-frontmatter-status-hardening-sandbox",
+  "source_slice_id": "2026-06-16-p2-64-user-decision-replay-portability-audit-sandbox",
+  "purpose": "strict YAML-frontmatter status parsing for user-decision closeout gates",
+  "parser_contract": {
+    "requires_opening_frontmatter_delimiter": true,
+    "requires_closing_frontmatter_delimiter": true,
+    "requires_exactly_one_status_in_frontmatter": true,
+    "requires_non_empty_status": true,
+    "ignores_body_status_mentions": true,
+    "does_not_substring_match_pass_tokens": true
+  },
+  "input_contract": {
+    "source_reports": [
+      "verification.md",
+      "reviewer-report.md",
+      "boundary-audit.md",
+      "product-acceptance-report.md",
+      "next-step.md"
+    ],
+    "source_execution_by_builder": false
+  },
+  "output_contract": {
+    "dry_run_only": true,
+    "dependency_install_required": false,
+    "network_required": false,
+    "mcp_required": false,
+    "background_service_required": false,
+    "automatic_execution": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "formal_vault_ready": false,
+    "obsidian_sync_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "user_approval_collected": false
+  }
+}

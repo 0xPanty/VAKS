@@ -1,0 +1,4139 @@
+{
+  "record_kind": "sandbox_status_normalization_compatibility_audit",
+  "slice_id": "2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox",
+  "version": "sandbox-status-normalization-compatibility-audit-v1",
+  "truth_boundary": "status_normalization_is_display_compatibility_not_re_acceptance_or_authority",
+  "purpose": "normalize legacy sandbox report statuses for human and follow-up-agent interpretation without editing old slices",
+  "write_scope": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox/",
+  "view": "status-normalization-audit",
+  "source_snapshot": {
+    "ledger_slice_id": "2026-06-15-p2-44-sandbox-evidence-ledger-sandbox",
+    "ledger_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-44-sandbox-evidence-ledger-sandbox/artifact/evidence-ledger.json",
+    "ledger_sha256": "eef7f76e8a6b30503c3ef51c91bb271d2b22fef2d87fe4f31a5c4d83d5f9f954",
+    "ledger_source_slice_count": 43,
+    "ledger_product_pass_count": 43,
+    "ledger_verification_present_count": 43,
+    "handoff_slice_id": "2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox",
+    "handoff_packet_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox/handoff-packets/release-candidate-handoff.md",
+    "handoff_packet_sha256": "0ba313896dc7eeff4658d2eff189e2240f759b8bd5742c125cf9cc6ccab64bd2",
+    "handoff_product_status": "pass_product_grade"
+  },
+  "normalization_policy": {
+    "principle": "raw report statuses are display compatibility inputs; Product Acceptance remains the gate",
+    "legacy_pending_or_draft": "nonblocking_metadata_when_gate_booleans_pass",
+    "missing_source_map_status": "legacy_missing_frontmatter_status_not_product_failure",
+    "next_step_pending": "means stop before auto-advance, not failed acceptance",
+    "unknown_status": "blocking_until_mapped_or_explained"
+  },
+  "report_inventory": [
+    {
+      "slice_id": "2026-06-15-p0-01-retrieval-receipt-template-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "draft_for_review",
+        "source-map.md": "draft_for_review",
+        "verification.md": "pass",
+        "reviewer-report.md": "pass",
+        "boundary-audit.md": "pass",
+        "product-acceptance-report.md": "pass_product_grade_round_2",
+        "next-step.md": "pending_acceptance"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p0-02-operation-receipt-template-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-02-operation-receipt-template-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "in_progress",
+        "source-map.md": "draft",
+        "verification.md": "local_verification_pass",
+        "reviewer-report.md": "review_pass_no_blocker_round_2",
+        "boundary-audit.md": "boundary_pass_no_blocker_round_2",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pending_product_acceptance"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p0-03-body-hash-validator-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-03-body-hash-validator-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "in_progress",
+        "source-map.md": "draft",
+        "verification.md": "local_verification_pass",
+        "reviewer-report.md": "review_pass_no_blocker_round_2",
+        "boundary-audit.md": "boundary_pass_no_blocker_round_2",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pending_product_acceptance"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p0-04-support-boundary-validator-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-04-support-boundary-validator-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "ready_for_recheck",
+        "source-map.md": "ready_for_recheck",
+        "verification.md": "local_verification_pass",
+        "reviewer-report.md": "review_pass_no_blocker_round_2",
+        "boundary-audit.md": "boundary_pass_no_blocker_round_2",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pending_product_acceptance"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p0-05-action-readiness-validator-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-05-action-readiness-validator-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "in_progress",
+        "source-map.md": null,
+        "verification.md": "pass",
+        "reviewer-report.md": "review_pass_no_blocker",
+        "boundary-audit.md": "boundary_pass_no_blocker",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pending_acceptance"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_missing_frontmatter_status",
+          "gate_role": "non_gate_report_metadata",
+          "blocking": false,
+          "reason": "missing legacy frontmatter status is interpreted through gate booleans, not as failure"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p0-06-feedback-validator-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-06-feedback-validator-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "in_progress",
+        "source-map.md": null,
+        "verification.md": "pass",
+        "reviewer-report.md": "review_pass_no_blocker",
+        "boundary-audit.md": "boundary_pass_no_blocker",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pending_acceptance"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_missing_frontmatter_status",
+          "gate_role": "non_gate_report_metadata",
+          "blocking": false,
+          "reason": "missing legacy frontmatter status is interpreted through gate booleans, not as failure"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p0-07-action-boundary-failure-matrix-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-07-action-boundary-failure-matrix-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "in_progress",
+        "source-map.md": null,
+        "verification.md": "pass",
+        "reviewer-report.md": "review_pass_no_blocker",
+        "boundary-audit.md": "boundary_pass_no_blocker",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pending_acceptance"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_missing_frontmatter_status",
+          "gate_role": "non_gate_report_metadata",
+          "blocking": false,
+          "reason": "missing legacy frontmatter status is interpreted through gate booleans, not as failure"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "implemented_pending_review",
+        "source-map.md": "implemented_pending_review",
+        "verification.md": "local_verification_passed",
+        "reviewer-report.md": "review_pass_no_blocker_after_revision",
+        "boundary-audit.md": "boundary_pass_no_blocker_after_revision",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pending_product_acceptance"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p1-09-read-only-query-loop-pilot-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-09-read-only-query-loop-pilot-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "implemented_pending_review",
+        "source-map.md": "implemented_pending_review",
+        "verification.md": "local_verification_passed",
+        "reviewer-report.md": "review_pass_no_blocker_after_refinement",
+        "boundary-audit.md": "boundary_pass_no_blocker_after_refinement",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pending_product_acceptance"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "implemented_pending_review",
+        "source-map.md": "implemented_pending_review",
+        "verification.md": "local_verification_passed",
+        "reviewer-report.md": "review_pass_no_blocker_after_revision",
+        "boundary-audit.md": "boundary_pass_no_blocker_after_revision",
+        "product-acceptance-report.md": "pass_product_grade_after_revision",
+        "next-step.md": "pending_product_acceptance"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p1-11-semantic-anchor-support-check-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-11-semantic-anchor-support-check-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "implemented_pending_review",
+        "source-map.md": "implemented_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "review_pass_no_blocker",
+        "boundary-audit.md": "boundary_pass_no_blocker",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pending_product_acceptance"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-12-robust-rag-retrieval-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-12-robust-rag-retrieval-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "implemented_pending_review",
+        "source-map.md": "implemented_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "review_pass_no_blocker_after_repair",
+        "boundary-audit.md": "boundary_pass_no_blocker_after_repair",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pending_product_acceptance"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "implemented_pending_review",
+        "source-map.md": "implemented_pending_review",
+        "verification.md": "local_verification_passed_pending_reacceptance",
+        "reviewer-report.md": "reviewer_pass_no_blocker_after_product_revision",
+        "boundary-audit.md": "boundary_pass_no_blocker_after_product_revision",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pending_product_reacceptance"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-14-raw-intake-parser-router-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "implemented_pending_review",
+        "source-map.md": "implemented_pending_review",
+        "verification.md": "local_verification_passed_pending_recheck_after_boundary_repair",
+        "reviewer-report.md": "reviewer_pass_no_blocker",
+        "boundary-audit.md": "boundary_pass_no_blocker",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pending_product_acceptance"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "pass_product_grade",
+        "source-map.md": "pass_product_grade",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "review_pass_after_product_revision",
+        "boundary-audit.md": "boundary_pass_after_product_revision",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_next_slice_allowed"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_gate_label_in_non_gate_report",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "legacy planning/source-map status reused a gate label; actual gate is still Product Acceptance report"
+        },
+        "source-map.md": {
+          "canonical": "legacy_gate_label_in_non_gate_report",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "legacy planning/source-map status reused a gate label; actual gate is still Product Acceptance report"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "implemented_pending_review",
+        "source-map.md": "implemented_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "review_pass_after_third_revision",
+        "boundary-audit.md": "boundary_pass_after_third_revision",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_enter_p2_17"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-17-use-surface-optimization-pass",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-17-use-surface-optimization-pass",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "implemented_pending_review",
+        "source-map.md": "implemented_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "review_pass_after_first_revision",
+        "boundary-audit.md": "boundary_pass_after_first_revision",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_enter_p2_18"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-18-bases-cockpit-prototype",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-18-bases-cockpit-prototype",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "implemented_pending_review",
+        "source-map.md": "implemented_pending_review",
+        "verification.md": "local_verification_passed_reviewer_boundary_product_passed",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_next_p2_19"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-19-product-experience-screening-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-19-product-experience-screening-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "in_progress",
+        "source-map.md": "drafted",
+        "verification.md": "local_verification_passed_reviewer_boundary_product_passed",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_next_p2_20"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-20-product-workflow-prototype",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-20-product-workflow-prototype",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "in_progress",
+        "source-map.md": "drafted",
+        "verification.md": "local_verification_reviewer_boundary_product_acceptance_passed",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "sandbox_series_complete_pending_user_mainline_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-21-silky-obsidian-workbench-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "built_pending_verification",
+        "source-map.md": null,
+        "verification.md": "local_verification_passed_after_second_reviewer_revision_pending_revalidation",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_pending_user_mainline_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_missing_frontmatter_status",
+          "gate_role": "non_gate_report_metadata",
+          "blocking": false,
+          "reason": "missing legacy frontmatter status is interpreted through gate booleans, not as failure"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-22-formalization-readiness-polish-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-22-formalization-readiness-polish-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "built_pending_review",
+        "source-map.md": "built_pending_review",
+        "verification.md": "local_verification_passed_browser_file_url_smoke_blocked_by_policy",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "built_pending_review",
+        "source-map.md": "built_pending_review",
+        "verification.md": "local_verification_and_final_gate_passed",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "built_pending_review",
+        "source-map.md": "built_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "built_pending_review",
+        "source-map.md": "built_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-26-formal-vault-write-decision-rehearsal-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-26-formal-vault-write-decision-rehearsal-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "built_pending_review",
+        "source-map.md": "built_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-27-formal-vault-user-decision-intake-gate-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-27-formal-vault-user-decision-intake-gate-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "built_pending_review",
+        "source-map.md": "built_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-28-formal-vault-execution-preflight-dry-run-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-28-formal-vault-execution-preflight-dry-run-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "built_pending_review",
+        "source-map.md": "built_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-29-formal-vault-execution-plan-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-29-formal-vault-execution-plan-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "built_pending_review",
+        "source-map.md": "built_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "built_pending_review",
+        "source-map.md": "built_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "built_pending_review",
+        "source-map.md": "built_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "built_pending_review",
+        "source-map.md": "built_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "built_pending_review",
+        "source-map.md": "built_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "built_pending_review",
+        "source-map.md": "built_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-35-formal-vault-status-surface-handoff-packet-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-35-formal-vault-status-surface-handoff-packet-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "built_pending_review",
+        "source-map.md": "built_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "built_pending_review",
+        "source-map.md": "built_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-37-formal-vault-operator-workflow-usability-screening-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-37-formal-vault-operator-workflow-usability-screening-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "built_pending_review",
+        "source-map.md": "built_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-38-formal-vault-follow-up-agent-blind-run-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-38-formal-vault-follow-up-agent-blind-run-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "built_pending_review",
+        "source-map.md": "built_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-39-blind-run-regression-maintenance-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-39-blind-run-regression-maintenance-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "built_pending_review",
+        "source-map.md": "built_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-40-sandbox-product-grade-rollup-dashboard-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-40-sandbox-product-grade-rollup-dashboard-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "built_pending_review",
+        "source-map.md": "built_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-41-sandbox-operator-decision-brief-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-41-sandbox-operator-decision-brief-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "built_pending_review",
+        "source-map.md": "built_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-42-sandbox-executive-readiness-brief-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-42-sandbox-executive-readiness-brief-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "built_pending_review",
+        "source-map.md": "built_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-43-sandbox-promotion-request-dry-run-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-43-sandbox-promotion-request-dry-run-sandbox",
+      "source": "p2-44-ledger",
+      "report_statuses": {
+        "slice-plan.md": "built_pending_review",
+        "source-map.md": "built_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_legacy_statuses_are_display_metadata"
+    },
+    {
+      "slice_id": "2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox",
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox",
+      "source": "p2-45-live-files",
+      "report_statuses": {
+        "slice-plan.md": "built_pending_review",
+        "source-map.md": "built_pending_review",
+        "verification.md": "local_verification_passed_pending_review",
+        "reviewer-report.md": "reviewer_pass",
+        "boundary-audit.md": "boundary_pass",
+        "product-acceptance-report.md": "pass_product_grade",
+        "next-step.md": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      "normalized_report_statuses": {
+        "slice-plan.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "source-map.md": {
+          "canonical": "legacy_work_state_not_gate",
+          "gate_role": "planning_metadata_not_acceptance_gate",
+          "blocking": false,
+          "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+        },
+        "verification.md": {
+          "canonical": "verification_pass",
+          "gate_role": "local_verification_gate",
+          "blocking": false,
+          "reason": "Verification PASS is explicit"
+        },
+        "reviewer-report.md": {
+          "canonical": "reviewer_pass",
+          "gate_role": "reviewer_gate",
+          "blocking": false,
+          "reason": "Reviewer PASS is explicit"
+        },
+        "boundary-audit.md": {
+          "canonical": "boundary_pass",
+          "gate_role": "boundary_gate",
+          "blocking": false,
+          "reason": "Boundary PASS is explicit"
+        },
+        "product-acceptance-report.md": {
+          "canonical": "product_pass",
+          "gate_role": "product_acceptance_gate",
+          "blocking": false,
+          "reason": "Product Acceptance PASS is explicit"
+        },
+        "next-step.md": {
+          "canonical": "continuation_instruction_not_acceptance_gate",
+          "gate_role": "next_step_instruction_not_acceptance_gate",
+          "blocking": false,
+          "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+        }
+      },
+      "gates": {
+        "product_pass": true,
+        "reviewer_pass": true,
+        "boundary_pass": true,
+        "verification_present": true
+      },
+      "gate_pass": true,
+      "interpretation": "product_passed_release_candidate_handoff"
+    }
+  ],
+  "canonical_summary": {
+    "examined_slice_count": 44,
+    "all_examined_gate_pass": true,
+    "gate_pass_count": 44,
+    "legacy_ambiguous_status_count": 132,
+    "unknown_status_count": 0,
+    "canonical_status_counts": {
+      "boundary_pass": 44,
+      "continuation_instruction_not_acceptance_gate": 44,
+      "legacy_gate_label_in_non_gate_report": 2,
+      "legacy_missing_frontmatter_status": 4,
+      "legacy_work_state_not_gate": 82,
+      "product_pass": 44,
+      "reviewer_pass": 44,
+      "verification_pass": 44
+    },
+    "raw_status_counts_by_report": {
+      "boundary-audit.md": {
+        "pass": 1,
+        "boundary_pass_no_blocker_round_2": 3,
+        "boundary_pass_no_blocker": 5,
+        "boundary_pass_no_blocker_after_revision": 2,
+        "boundary_pass_no_blocker_after_refinement": 1,
+        "boundary_pass_no_blocker_after_repair": 1,
+        "boundary_pass_no_blocker_after_product_revision": 1,
+        "boundary_pass_after_product_revision": 1,
+        "boundary_pass_after_third_revision": 1,
+        "boundary_pass_after_first_revision": 1,
+        "boundary_pass": 27
+      },
+      "next-step.md": {
+        "pending_acceptance": 4,
+        "pending_product_acceptance": 9,
+        "pending_product_reacceptance": 1,
+        "pass_product_grade_next_slice_allowed": 1,
+        "pass_product_grade_enter_p2_17": 1,
+        "pass_product_grade_enter_p2_18": 1,
+        "pass_product_grade_next_p2_19": 1,
+        "pass_product_grade_next_p2_20": 1,
+        "sandbox_series_complete_pending_user_mainline_decision": 1,
+        "pass_product_grade_pending_user_mainline_decision": 1,
+        "pass_product_grade_pending_user_next_slice_decision": 23
+      },
+      "product-acceptance-report.md": {
+        "pass_product_grade_round_2": 1,
+        "pass_product_grade": 42,
+        "pass_product_grade_after_revision": 1
+      },
+      "reviewer-report.md": {
+        "pass": 1,
+        "review_pass_no_blocker_round_2": 3,
+        "review_pass_no_blocker": 4,
+        "review_pass_no_blocker_after_revision": 2,
+        "review_pass_no_blocker_after_refinement": 1,
+        "review_pass_no_blocker_after_repair": 1,
+        "reviewer_pass_no_blocker_after_product_revision": 1,
+        "reviewer_pass_no_blocker": 1,
+        "review_pass_after_product_revision": 1,
+        "review_pass_after_third_revision": 1,
+        "review_pass_after_first_revision": 1,
+        "reviewer_pass": 27
+      },
+      "slice-plan.md": {
+        "draft_for_review": 1,
+        "in_progress": 7,
+        "ready_for_recheck": 1,
+        "implemented_pending_review": 10,
+        "pass_product_grade": 1,
+        "built_pending_verification": 1,
+        "built_pending_review": 23
+      },
+      "source-map.md": {
+        "draft_for_review": 1,
+        "draft": 2,
+        "ready_for_recheck": 1,
+        "None": 4,
+        "implemented_pending_review": 10,
+        "pass_product_grade": 1,
+        "drafted": 2,
+        "built_pending_review": 23
+      },
+      "verification.md": {
+        "pass": 4,
+        "local_verification_pass": 3,
+        "local_verification_passed": 3,
+        "local_verification_passed_pending_review": 26,
+        "local_verification_passed_pending_reacceptance": 1,
+        "local_verification_passed_pending_recheck_after_boundary_repair": 1,
+        "local_verification_passed_reviewer_boundary_product_passed": 2,
+        "local_verification_reviewer_boundary_product_acceptance_passed": 1,
+        "local_verification_passed_after_second_reviewer_revision_pending_revalidation": 1,
+        "local_verification_passed_browser_file_url_smoke_blocked_by_policy": 1,
+        "local_verification_and_final_gate_passed": 1
+      }
+    }
+  },
+  "ambiguous_status_inventory": [
+    {
+      "slice_id": "2026-06-15-p0-01-retrieval-receipt-template-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "draft_for_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p0-01-retrieval-receipt-template-sandbox",
+      "report": "source-map.md",
+      "raw_status": "draft_for_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p0-01-retrieval-receipt-template-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pending_acceptance",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p0-02-operation-receipt-template-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "in_progress",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p0-02-operation-receipt-template-sandbox",
+      "report": "source-map.md",
+      "raw_status": "draft",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p0-02-operation-receipt-template-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pending_product_acceptance",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p0-03-body-hash-validator-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "in_progress",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p0-03-body-hash-validator-sandbox",
+      "report": "source-map.md",
+      "raw_status": "draft",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p0-03-body-hash-validator-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pending_product_acceptance",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p0-04-support-boundary-validator-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "ready_for_recheck",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p0-04-support-boundary-validator-sandbox",
+      "report": "source-map.md",
+      "raw_status": "ready_for_recheck",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p0-04-support-boundary-validator-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pending_product_acceptance",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p0-05-action-readiness-validator-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "in_progress",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p0-05-action-readiness-validator-sandbox",
+      "report": "source-map.md",
+      "raw_status": null,
+      "canonical": "legacy_missing_frontmatter_status",
+      "blocking": false,
+      "reason": "missing legacy frontmatter status is interpreted through gate booleans, not as failure"
+    },
+    {
+      "slice_id": "2026-06-15-p0-05-action-readiness-validator-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pending_acceptance",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p0-06-feedback-validator-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "in_progress",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p0-06-feedback-validator-sandbox",
+      "report": "source-map.md",
+      "raw_status": null,
+      "canonical": "legacy_missing_frontmatter_status",
+      "blocking": false,
+      "reason": "missing legacy frontmatter status is interpreted through gate booleans, not as failure"
+    },
+    {
+      "slice_id": "2026-06-15-p0-06-feedback-validator-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pending_acceptance",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p0-07-action-boundary-failure-matrix-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "in_progress",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p0-07-action-boundary-failure-matrix-sandbox",
+      "report": "source-map.md",
+      "raw_status": null,
+      "canonical": "legacy_missing_frontmatter_status",
+      "blocking": false,
+      "reason": "missing legacy frontmatter status is interpreted through gate booleans, not as failure"
+    },
+    {
+      "slice_id": "2026-06-15-p0-07-action-boundary-failure-matrix-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pending_acceptance",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "implemented_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox",
+      "report": "source-map.md",
+      "raw_status": "implemented_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pending_product_acceptance",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p1-09-read-only-query-loop-pilot-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "implemented_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p1-09-read-only-query-loop-pilot-sandbox",
+      "report": "source-map.md",
+      "raw_status": "implemented_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p1-09-read-only-query-loop-pilot-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pending_product_acceptance",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "implemented_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox",
+      "report": "source-map.md",
+      "raw_status": "implemented_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pending_product_acceptance",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p1-11-semantic-anchor-support-check-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "implemented_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p1-11-semantic-anchor-support-check-sandbox",
+      "report": "source-map.md",
+      "raw_status": "implemented_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p1-11-semantic-anchor-support-check-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pending_product_acceptance",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-12-robust-rag-retrieval-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "implemented_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-12-robust-rag-retrieval-sandbox",
+      "report": "source-map.md",
+      "raw_status": "implemented_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-12-robust-rag-retrieval-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pending_product_acceptance",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "implemented_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox",
+      "report": "source-map.md",
+      "raw_status": "implemented_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pending_product_reacceptance",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-14-raw-intake-parser-router-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "implemented_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-14-raw-intake-parser-router-sandbox",
+      "report": "source-map.md",
+      "raw_status": "implemented_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-14-raw-intake-parser-router-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pending_product_acceptance",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "pass_product_grade",
+      "canonical": "legacy_gate_label_in_non_gate_report",
+      "blocking": false,
+      "reason": "legacy planning/source-map status reused a gate label; actual gate is still Product Acceptance report"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox",
+      "report": "source-map.md",
+      "raw_status": "pass_product_grade",
+      "canonical": "legacy_gate_label_in_non_gate_report",
+      "blocking": false,
+      "reason": "legacy planning/source-map status reused a gate label; actual gate is still Product Acceptance report"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_next_slice_allowed",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "implemented_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox",
+      "report": "source-map.md",
+      "raw_status": "implemented_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_enter_p2_17",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-17-use-surface-optimization-pass",
+      "report": "slice-plan.md",
+      "raw_status": "implemented_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-17-use-surface-optimization-pass",
+      "report": "source-map.md",
+      "raw_status": "implemented_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-17-use-surface-optimization-pass",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_enter_p2_18",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-18-bases-cockpit-prototype",
+      "report": "slice-plan.md",
+      "raw_status": "implemented_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-18-bases-cockpit-prototype",
+      "report": "source-map.md",
+      "raw_status": "implemented_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-18-bases-cockpit-prototype",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_next_p2_19",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-19-product-experience-screening-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "in_progress",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-19-product-experience-screening-sandbox",
+      "report": "source-map.md",
+      "raw_status": "drafted",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-19-product-experience-screening-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_next_p2_20",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-20-product-workflow-prototype",
+      "report": "slice-plan.md",
+      "raw_status": "in_progress",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-20-product-workflow-prototype",
+      "report": "source-map.md",
+      "raw_status": "drafted",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-20-product-workflow-prototype",
+      "report": "next-step.md",
+      "raw_status": "sandbox_series_complete_pending_user_mainline_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-21-silky-obsidian-workbench-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "built_pending_verification",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-21-silky-obsidian-workbench-sandbox",
+      "report": "source-map.md",
+      "raw_status": null,
+      "canonical": "legacy_missing_frontmatter_status",
+      "blocking": false,
+      "reason": "missing legacy frontmatter status is interpreted through gate booleans, not as failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-21-silky-obsidian-workbench-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_pending_user_mainline_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-22-formalization-readiness-polish-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-22-formalization-readiness-polish-sandbox",
+      "report": "source-map.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-22-formalization-readiness-polish-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_pending_user_next_slice_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox",
+      "report": "source-map.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_pending_user_next_slice_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox",
+      "report": "source-map.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_pending_user_next_slice_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox",
+      "report": "source-map.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-25-formal-vault-write-approval-packet-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_pending_user_next_slice_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-26-formal-vault-write-decision-rehearsal-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-26-formal-vault-write-decision-rehearsal-sandbox",
+      "report": "source-map.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-26-formal-vault-write-decision-rehearsal-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_pending_user_next_slice_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-27-formal-vault-user-decision-intake-gate-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-27-formal-vault-user-decision-intake-gate-sandbox",
+      "report": "source-map.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-27-formal-vault-user-decision-intake-gate-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_pending_user_next_slice_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-28-formal-vault-execution-preflight-dry-run-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-28-formal-vault-execution-preflight-dry-run-sandbox",
+      "report": "source-map.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-28-formal-vault-execution-preflight-dry-run-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_pending_user_next_slice_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-29-formal-vault-execution-plan-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-29-formal-vault-execution-plan-sandbox",
+      "report": "source-map.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-29-formal-vault-execution-plan-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_pending_user_next_slice_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox",
+      "report": "source-map.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_pending_user_next_slice_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox",
+      "report": "source-map.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_pending_user_next_slice_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox",
+      "report": "source-map.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_pending_user_next_slice_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox",
+      "report": "source-map.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_pending_user_next_slice_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox",
+      "report": "source-map.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_pending_user_next_slice_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-35-formal-vault-status-surface-handoff-packet-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-35-formal-vault-status-surface-handoff-packet-sandbox",
+      "report": "source-map.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-35-formal-vault-status-surface-handoff-packet-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_pending_user_next_slice_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox",
+      "report": "source-map.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_pending_user_next_slice_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-37-formal-vault-operator-workflow-usability-screening-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-37-formal-vault-operator-workflow-usability-screening-sandbox",
+      "report": "source-map.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-37-formal-vault-operator-workflow-usability-screening-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_pending_user_next_slice_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-38-formal-vault-follow-up-agent-blind-run-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-38-formal-vault-follow-up-agent-blind-run-sandbox",
+      "report": "source-map.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-38-formal-vault-follow-up-agent-blind-run-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_pending_user_next_slice_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-39-blind-run-regression-maintenance-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-39-blind-run-regression-maintenance-sandbox",
+      "report": "source-map.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-39-blind-run-regression-maintenance-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_pending_user_next_slice_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-40-sandbox-product-grade-rollup-dashboard-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-40-sandbox-product-grade-rollup-dashboard-sandbox",
+      "report": "source-map.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-40-sandbox-product-grade-rollup-dashboard-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_pending_user_next_slice_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-41-sandbox-operator-decision-brief-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-41-sandbox-operator-decision-brief-sandbox",
+      "report": "source-map.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-41-sandbox-operator-decision-brief-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_pending_user_next_slice_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-42-sandbox-executive-readiness-brief-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-42-sandbox-executive-readiness-brief-sandbox",
+      "report": "source-map.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-42-sandbox-executive-readiness-brief-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_pending_user_next_slice_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-43-sandbox-promotion-request-dry-run-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-43-sandbox-promotion-request-dry-run-sandbox",
+      "report": "source-map.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-43-sandbox-promotion-request-dry-run-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_pending_user_next_slice_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    },
+    {
+      "slice_id": "2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox",
+      "report": "slice-plan.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox",
+      "report": "source-map.md",
+      "raw_status": "built_pending_review",
+      "canonical": "legacy_work_state_not_gate",
+      "blocking": false,
+      "reason": "planning/source-map status is legacy work-state metadata; gate booleans carry pass/fail"
+    },
+    {
+      "slice_id": "2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox",
+      "report": "next-step.md",
+      "raw_status": "pass_product_grade_pending_user_next_slice_decision",
+      "canonical": "continuation_instruction_not_acceptance_gate",
+      "blocking": false,
+      "reason": "next-step pending means do not auto-advance, not Product Acceptance failure"
+    }
+  ],
+  "agent_rules": [
+    "run the slice verifier before interpreting the audit",
+    "do not infer failure from legacy draft, pending, or missing planning statuses when gate booleans pass",
+    "do not infer approval or authority from status normalization",
+    "unknown statuses are blocking until a later sandbox maps them",
+    "do not edit old slices to make statuses look cleaner"
+  ],
+  "readiness_flags": {
+    "status_normalization_ready": true,
+    "re_acceptance_performed": false,
+    "enterprise_production_ready": false,
+    "mainline_ready": false,
+    "formal_vault_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "release_approved": false,
+    "promotion_approved": false
+  },
+  "operation_performed_flags": {
+    "legacy_slice_modified": false,
+    "mainline_merge": false,
+    "formal_vault_read": false,
+    "formal_vault_write": false,
+    "obsidian_sync": false,
+    "commit": false,
+    "push": false,
+    "promotion": false,
+    "dependency_install": false,
+    "background_service": false,
+    "mcp_write_tool": false,
+    "hooks": false,
+    "re_acceptance_run": false,
+    "product_status_overwritten": false,
+    "auto_advance": false
+  },
+  "required_non_claims": [
+    "not release approval",
+    "not promotion approval",
+    "not mainline ready",
+    "not enterprise production ready",
+    "not formal vault approval",
+    "not Obsidian sync",
+    "not commit",
+    "not push",
+    "not reviewed knowledge",
+    "not evidence support",
+    "not action basis",
+    "not old-slice edit",
+    "not auto advance"
+  ]
+}

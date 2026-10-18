@@ -1,0 +1,134 @@
+[
+  {
+    "failure_id": "F01-git-push-argv",
+    "source": "import subprocess\nsubprocess.run(['git', 'push'], check=False)\n",
+    "expected_issue_id": "git_push",
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F02-git-commit-argv",
+    "source": "import subprocess\nsubprocess.run(['git', 'commit', '-m', 'x'], check=False)\n",
+    "expected_issue_id": "git_commit",
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F03-pip-install-argv",
+    "source": "import subprocess\nsubprocess.run(['pip', 'install', 'pkg'], check=False)\n",
+    "expected_issue_id": "pip_install",
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F04-python-pip-install-argv",
+    "source": "import subprocess\nsubprocess.run(['python', '-m', 'pip', 'install', 'pkg'], check=False)\n",
+    "expected_issue_id": "python_pip_install",
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F05-npm-install-argv",
+    "source": "import subprocess\nsubprocess.run(['npm', 'install'], check=False)\n",
+    "expected_issue_id": "npm_install",
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F06-pnpm-add-argv",
+    "source": "import subprocess\nsubprocess.run(['pnpm', 'add', 'pkg'], check=False)\n",
+    "expected_issue_id": "pnpm_add",
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F07-yarn-add-argv",
+    "source": "import subprocess\nsubprocess.run(['yarn', 'add', 'pkg'], check=False)\n",
+    "expected_issue_id": "yarn_add",
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F08-shell-true",
+    "source": "import subprocess\nsubprocess.run('git push', shell=True)\n",
+    "expected_issue_id": "shell_true",
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F09-start-process",
+    "source": "command = 'Start-Process powershell'\n",
+    "expected_issue_id": "start_process",
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F10-register-scheduled-task",
+    "source": "command = 'Register-ScheduledTask -TaskName x'\n",
+    "expected_issue_id": "register_scheduled_task",
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F11-new-service",
+    "source": "command = 'New-Service -Name x'\n",
+    "expected_issue_id": "new_service",
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F12-schtasks",
+    "source": "command = 'schtasks /Create /TN x'\n",
+    "expected_issue_id": "schtasks",
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F13-mcp-write",
+    "source": "note = 'MCP write completed'\n",
+    "expected_issue_id": "mcp_write",
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F14-hook-installed",
+    "source": "note = 'hook installed successfully'\n",
+    "expected_issue_id": "hook_installed",
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F15-unauthorized-write-text",
+    "source": "from pathlib import Path\nPath('outside.md').write_text('x', encoding='utf-8')\n",
+    "expected_issue_id": "unauthorized_write_text",
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F16-open-write-mode",
+    "source": "with open('outside.md', 'w', encoding='utf-8') as handle:\n    handle.write('x')\n",
+    "expected_issue_id": "write_mode_open",
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F17-remove-item",
+    "source": "command = 'Remove-Item -Recurse C:\\\\tmp\\\\x'\n",
+    "expected_issue_id": "remove_item",
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F18-dynamic-variable-git-push",
+    "source": "import subprocess\ncmd = ['git', 'push']\nsubprocess.run(cmd, check=False)\n",
+    "expected_issue_id": "git_push",
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F19-path-open-write-mode",
+    "source": "from pathlib import Path\nwith Path('outside.md').open('w', encoding='utf-8') as handle:\n    handle.write('x')\n",
+    "expected_issue_id": "write_mode_open",
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F20-write-bytes",
+    "source": "from pathlib import Path\nPath('outside.bin').write_bytes(b'x')\n",
+    "expected_issue_id": "unauthorized_write_bytes",
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F21-annassign-dynamic-variable-git-commit",
+    "source": "import subprocess\ncmd: list[str] = ['git', 'commit']\nsubprocess.run(cmd, check=False)\n",
+    "expected_issue_id": "git_commit",
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "F22-read-write-mode-open",
+    "source": "with open('outside.md', 'r+', encoding='utf-8') as handle:\n    handle.write('x')\n",
+    "expected_issue_id": "write_mode_open",
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  }
+]

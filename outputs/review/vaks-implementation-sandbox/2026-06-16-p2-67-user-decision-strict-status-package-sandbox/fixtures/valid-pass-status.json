@@ -1,0 +1,9 @@
+{
+  "fixture_id": "valid-pass-status",
+  "document": "---\nslice_id: sample\nstatus: pass_product_grade\n---\n\n# Report\n",
+  "expected": {
+    "valid": true,
+    "status": "pass_product_grade",
+    "status_matches": true
+  }
+}

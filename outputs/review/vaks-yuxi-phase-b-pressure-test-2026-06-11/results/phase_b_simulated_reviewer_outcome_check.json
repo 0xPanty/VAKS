@@ -1,0 +1,137 @@
+{
+  "simulated_reviewer_outcome_status": "pass",
+  "error_count": 0,
+  "errors": [],
+  "counts": {
+    "outcome_records": 90,
+    "source_set:main": 60,
+    "corpus:primary": 45,
+    "not_reviewed_packets": 76,
+    "corpus:full": 45,
+    "source_set:holdout": 30,
+    "blocked_no_source_anchor": 2,
+    "simulated_packets": 12,
+    "simulated_item_outcomes": 57,
+    "simulated_direct_support": 12,
+    "simulated_inferential_support": 12,
+    "simulated_background": 23,
+    "simulated_counterexample": 10
+  },
+  "summary": {
+    "artifact_kind": "vaks_phase_b_simulated_reviewer_outcome_summary",
+    "outcome_record_count": 90,
+    "source_review_packet_count": 90,
+    "simulated_packet_count": 12,
+    "not_reviewed_packet_count": 76,
+    "blocked_no_source_anchor_count": 2,
+    "simulated_item_outcome_count": 57,
+    "simulated_direct_support_count": 12,
+    "simulated_inferential_support_count": 12,
+    "simulated_background_count": 23,
+    "simulated_counterexample_count": 10,
+    "source_refresh_needed_count": 0,
+    "human_reviewed_support_count": 0,
+    "support_passed_count": 0,
+    "support_counts_for_promotion_count": 0,
+    "action_basis_allowed_count": 0,
+    "evidence_packet_allowed_count": 0,
+    "evidence_sufficiency_passed_count": 0,
+    "automatic_promotion_allowed_count": 0,
+    "formal_writeback_allowed_count": 0,
+    "output_path": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-yuxi-phase-b-pressure-test-2026-06-11\\results\\phase_b_simulated_reviewer_outcomes.jsonl",
+    "built_at": "2026-06-10T21:55:30+00:00"
+  },
+  "previous_review_queue_summary": {
+    "artifact_kind": "vaks_phase_b_review_queue_packet_summary",
+    "review_packet_count": 90,
+    "source_refreshed_support_check_count": 90,
+    "open_packet_count": 88,
+    "blocked_no_source_anchor_count": 2,
+    "review_item_count": 389,
+    "source_span_available_count": 389,
+    "current_source_hash_match_count": 389,
+    "source_refresh_needed_count": 0,
+    "review_result_not_reviewed_count": 90,
+    "support_passed_count": 0,
+    "support_counts_for_promotion_count": 0,
+    "action_basis_allowed_count": 0,
+    "evidence_packet_allowed_count": 0,
+    "evidence_sufficiency_passed_count": 0,
+    "automatic_promotion_allowed_count": 0,
+    "output_path": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-yuxi-phase-b-pressure-test-2026-06-11\\results\\phase_b_review_queue_packets.jsonl",
+    "built_at": "2026-06-10T21:49:50+00:00"
+  },
+  "artifacts": [
+    {
+      "path": "results/phase_b_simulated_reviewer_outcomes.jsonl",
+      "exists": true,
+      "bytes": 202579
+    },
+    {
+      "path": "results/phase_b_simulated_reviewer_outcome_summary.json",
+      "exists": true,
+      "bytes": 1030
+    },
+    {
+      "path": "results/phase_b_review_queue_packets.jsonl",
+      "exists": true,
+      "bytes": 1098583
+    },
+    {
+      "path": "results/phase_b_review_queue_packet_check.json",
+      "exists": true,
+      "bytes": 3725
+    },
+    {
+      "path": "PHASE_B_REVIEW_QUEUE_PACKET_DECISION.md",
+      "exists": true,
+      "bytes": 3849
+    }
+  ],
+  "prior_gates": {
+    "review_queue_packet": {
+      "status": "pass",
+      "errors": 0
+    },
+    "refreshed_support_check": {
+      "status": "pass",
+      "errors": 0
+    },
+    "source_refresh": {
+      "status": "pass",
+      "errors": 0
+    },
+    "evidence_support_check": {
+      "status": "pass",
+      "errors": 0
+    },
+    "evidence_envelope": {
+      "status": "pass",
+      "errors": 0
+    },
+    "context_pack": {
+      "status": "pass",
+      "errors": 0
+    },
+    "runtime_feasibility": {
+      "status": "pass",
+      "errors": 0
+    },
+    "minimal_doc_patch": {
+      "status": "pass",
+      "errors": 0
+    },
+    "contract": {
+      "status": "pass",
+      "errors": 0
+    }
+  },
+  "core_docs": {
+    "dirty": [
+      " M DEV_CONTEXT.md",
+      " M IMPLEMENTATION_BLUEPRINT.md",
+      " M MEMORY_TIER.md",
+      " M SOURCE_INTAKE.md"
+    ]
+  }
+}

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en" data-sandbox-only="true" data-screening-only="true" data-non-executable="true" data-no-formal-vault-access="true" data-no-write="true" data-no-sync="true" data-no-authority="true" data-no-permission="true" data-no-actual-user-wording="true" data-no-submission="true">
+<head>
+  <meta charset="utf-8">
+  <title>Formal Vault Request Screening</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #586170;
+      --line: #ccd4df;
+      --panel: #f8fafc;
+      --pass: #0f766e;
+      --block: #b45309;
+      --stop: #b91c1c;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #ffffff;
+    }
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    h1 {
+      font-size: 26px;
+      margin: 0 0 8px;
+      letter-spacing: 0;
+    }
+    .muted {
+      color: var(--muted);
+      margin: 0 0 20px;
+      line-height: 1.5;
+    }
+    .toolbar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 0 0 16px;
+    }
+    button {
+      border: 1px solid var(--line);
+      background: #ffffff;
+      border-radius: 6px;
+      padding: 8px 10px;
+      font-size: 14px;
+      cursor: default;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 14px;
+    }
+    .status {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 3px 8px;
+      font-size: 12px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+    }
+    .pass { color: var(--pass); }
+    .block { color: var(--block); }
+    .stop { color: var(--stop); }
+    ul {
+      padding-left: 18px;
+      line-height: 1.5;
+    }
+    code {
+      overflow-wrap: anywhere;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Formal Vault Request Screening</h1>
+    <p class="muted">Sandbox-only screen for P2-32 synthetic packets. It shows the projected result and the stop boundaries without sending anything or collecting user text.</p>
+    <div class="toolbar" aria-label="local display filters only">
+      <button type="button" data-filter="all">All</button>
+      <button type="button" data-filter="reviewable">Reviewable</button>
+      <button type="button" data-filter="blocked">Blocked</button>
+    </div>
+    <section class="grid">
+      <article class="card" data-row="reviewable">
+        <span class="status pass">Screened</span>
+        <h2>Reviewable packet</h2>
+        <p><code>SCREENED_REVIEWABLE_NOT_SUBMITTED</code></p>
+        <ul>
+          <li>Packet hash bound</li>
+          <li>P2-32 Product pass bound</li>
+          <li>No packet transfer</li>
+        </ul>
+      </article>
+      <article class="card" data-row="blocked">
+        <span class="status block">Blocked</span>
+        <h2>Missing confirmation packet</h2>
+        <p><code>SCREENED_BLOCKED_MISSING_CONFIRMATION_NOT_SUBMITTED</code></p>
+        <ul>
+          <li>Future confirmation missing</li>
+          <li>No user wording stored</li>
+          <li>No run permission produced</li>
+        </ul>
+      </article>
+      <article class="card" data-row="blocked">
+        <span class="status stop">Denied</span>
+        <h2>Denied packet</h2>
+        <p><code>SCREENED_BLOCKED_BY_DENIAL_NOT_SUBMITTED</code></p>
+        <ul>
+          <li>Denial preserved</li>
+          <li>No retry loop</li>
+          <li>Operator stops here</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  <script>
+    const buttons = Array.from(document.querySelectorAll("button[data-filter]"));
+    const rows = Array.from(document.querySelectorAll("[data-row]"));
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+        rows.forEach((row) => {
+          row.hidden = filter !== "all" && row.dataset.row !== filter;
+        });
+      });
+    });
+  </script>
+</body>
+</html>

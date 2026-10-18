@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "real-runtime-started",
+  "expected_valid": false,
+  "expected_codes": ["MB_REAL_RUNTIME_FORBIDDEN"],
+  "patch": {"scope": {"real_misa_runtime_started": true}}
+}

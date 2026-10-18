@@ -1,0 +1,1 @@
+{"case_id":"onboarding-boundary-hidden","base_fixture":"fixtures/valid-product-experience-screening.json","mutations":[{"op":"set_candidate","id":"P2-PX-09","path":"/exposes_boundaries","value":false}]}

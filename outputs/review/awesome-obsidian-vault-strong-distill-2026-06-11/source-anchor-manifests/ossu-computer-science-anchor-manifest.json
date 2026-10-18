@@ -1,0 +1,59 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "ossu/computer-science",
+  "source_url": "https://github.com/ossu/computer-science",
+  "checked_commit": "78b1ef4953105761535af668e02cad505bcc6a79",
+  "checked_at": "2026-06-11",
+  "inspection_method": "local git checkout; inspected README, curricular guidelines, FAQ, HELP, CONTRIBUTING, OSTEP course page, and extras",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "curriculum-route-map",
+      "why": "Defines summary, course selection criteria, curriculum organization, duration, cost, process, and stale-resource warnings."
+    },
+    {
+      "path": "CURRICULAR_GUIDELINES.md",
+      "kind": "external-standard-anchor",
+      "why": "Anchors curriculum design to ACM/IEEE CS2013 and notes CS2023 development."
+    },
+    {
+      "path": "FAQ.md",
+      "kind": "temporal-risk",
+      "why": "Documents deprecated ecosystem materials and time-sensitive platform access changes."
+    },
+    {
+      "path": "HELP.md",
+      "kind": "support-routing",
+      "why": "Separates course-specific problems from general program problems and asks users to report prior attempts."
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "kind": "change-governance",
+      "why": "Separates non-substantive fixes from substantive curriculum proposals."
+    },
+    {
+      "path": "coursepages/ostep/README.md",
+      "kind": "course-specific-gate",
+      "why": "Adds base/extended route, prerequisites, environment warnings, and project guidance."
+    },
+    {
+      "path": "extras/courses.md",
+      "kind": "extras-boundary",
+      "why": "Keeps high-quality but non-fitting courses outside the main route."
+    }
+  ],
+  "observed_counts": {
+    "coursepages": 13,
+    "extras_files": 4,
+    "root_markdown_files_sampled": 7
+  },
+  "known_limits": [
+    "Course availability, pricing, and audit access are time-sensitive.",
+    "Curriculum tables are route guidance, not evidence for technical claims.",
+    "Community channels can help learners but do not establish truth confidence."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

@@ -1,0 +1,8 @@
+{
+  "fixture_id": "old-slice-normalization-remains-unapplied",
+  "expected": {
+    "normalization_applied": false,
+    "user_approval_collected": false,
+    "old_slice_write_allowed": false
+  }
+}

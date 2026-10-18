@@ -1,0 +1,157 @@
+A student with a $20 subscription is selling websites for $5,000. Here's how it works with Fable 5 
+For the first time in history a student with a phone and a $20 subscription can build a product that sells for $10,000. Not through years of learning. Not through a team of developers. Just by describing what needs to be done and getting a finished result.
+Claude 5 Fable is available right now - free on Pro, Max, Team and Enterprise plans until June 22. After that it moves to token-based pricing. People who already have access are selling websites to clients for $3,000-5,000 per project, launching browser games with subscriptions and delivering automations to businesses that previously needed an entire development team.
+>Bookmark This and follow I'm Noisy, a developer with 4 years of experience. I build AI systems, automation pipelines and find ways to turn technology into real income.
+The difference between the people making money and the people reading about it isn't knowledge or experience. It's who started this week.
+Claude
+
+@claudeai
+·
+6月10日
+翻译自 英语
+介绍 Claude Fable 5：一款神话级模型，我们已将其安全化以供一般使用。
+
+其能力超越了我们以往任何公开可用模型。
+0:12 / 0:20
+Here's what changed and how to use it right now.
+Claude 5 Fable - key facts:
+Free access window:       right now until June 22
+After June 22:            token-based pricing only
+Parallel subagents:       launches them automatically
+Memory between sessions:  saves lessons to Markdown file
+Stripe reported:          months of engineering into days
+50M line codebase:        full migration in 1 day vs 2 months for a team
+Fallback to Opus 4.8:     less than 5% of sessions
+What people are already building and selling
+Freelancers are taking client orders for websites at $3,000-5,000 per project by describing what the client needs in plain text and delivering working code the same day. Before this required weeks of work and knowledge of a dozen frameworks. Fable 5 writes everything - you describe, it builds, you deliver.
+Indie developers are launching browser games with $9.99 monthly subscriptions built over a single weekend. 1,000 subscribers is $9,990 a month and the game keeps running while you sleep.
+Business automation freelancers are charging $500-2,000 for scripts that Fable 5 writes, tests and fixes automatically. The client doesn't care who wrote the code - they care that their problem is solved.
+One developer described it this way: "I stopped writing code. I describe what needs to happen and review the result. Fable 5 handles everything in between."
+Three prompts that produce real results
+For a client website:
+You are a senior full-stack developer.
+
+Client brief: [describe the business]
+
+Build a complete landing page:
+- hero section with clear value proposition
+- services section
+- social proof with testimonials
+- contact form with validation
+- mobile-first responsive design
+- SEO meta tags
+
+Stack: Next.js 14, TypeScript, Tailwind, shadcn/ui
+Deploy: Vercel
+
+After each component - test it and fix errors.
+Do not move forward until current step works.
+Write production-ready code.
+For a browser game with subscription:
+You are my game studio.
+
+Build a browser game that becomes a paid product.
+
+Game: 60-second survival - player collects coins,
+avoids enemies, upgrades between runs.
+
+Stack: Phaser + React + TypeScript
+Monetization: $9.99/month subscription via Stripe
+Free tier: 5 runs per day
+
+Build in this order:
+1. Core game loop
+2. Upgrade system between runs
+3. Score and leaderboard
+4. Stripe subscription
+5. Daily limit for free users
+
+Keep every build playable. Test after each step.
+For business automation to sell to clients:
+You are a business automation specialist.
+
+Client problem: [describe the problem]
+
+Build automation that:
+- reads data from [source]
+- processes it according to [rules]
+- outputs result to [destination]
+- runs on schedule
+
+Use Python. Include error handling.
+Write setup instructions a non-technical person can follow.
+Test every step before moving forward.
+What actually changed in Fable 5
+Anthropic kept Fable 5 internal for a long time and the teams testing it said the same thing - it thinks differently from every previous version. The official guide makes one thing very clear: give it your hardest unsolved problems, not simple tests. Simple tests underestimate its actual range.
+Stripe reported that Fable 5 compressed months of engineering into days. In a 50-million-line Ruby codebase it performed a full migration in a single day that would have taken a whole team over two months by hand. IMC noted that Fable 5 aced their trading analysis evaluations nearly across the board. These aren't benchmarks - these are real companies reporting real results from early access.
+Three things that make this possible.
+Parallel subagents - Fable 5 decides on its own when a task requires multiple parallel processes and launches them without you asking. While one agent writes code another tests it and a third looks for better solutions. All simultaneously.
+Memory between sessions - a simple Markdown file lets Fable 5 record what worked and what didn't and start the next session already knowing this. Context doesn't disappear when you close the tab. When tested on the deck-building game Slay the Spire, giving Fable 5 access to persistent file-based memory improved its performance three times more than it did for Opus 4.8.
+Vision - Fable 5 can rebuild a web app's source code from screenshots alone. It beat Pokémon FireRed using only raw game screenshots with no maps, navigation aids or extra information. Previous models needed a complex helper system to play it at all.
+
+
+One important note for anyone migrating from older versions: check your prompts for instructions like "show your thinking" or "repeat your reasoning" - these can trigger a fallback to Opus 4.8 in Fable 5. The new model thinks differently and some old approaches need updating.
+The stack that gets the most out of Fable 5
+Fable 5 alone is already powerful. With the right repositories around it it becomes a complete development team.
+Core stack:
+Claude 5 Fable          - the model
+Claude Code             - execution in real environment
+anthropics/skills       - official Anthropic skill files
+awesome-claude-code     - skills, hooks, subagents, commands
+
+Extended stack:
+GitHub MCP              - reads codebase, opens PRs
+VoltAgent subagents     - 100+ specialized agents
+claude-code-action      - @claude directly in GitHub PRs
+awesome-mcp-servers     - integrations with any service
+Install official skills in one command:
+bash
+git clone https://github.com/anthropics/skills \
+  ~/.claude/skills/anthropic-official
+After this Fable 5 has access to official skill files from Anthropic - each one is a set of instructions for a specific task. You can write your own for your workflow - a skill "build websites for e-commerce clients" or a skill "write posts in my style."
+The CLAUDE.md file that gives Fable 5 context
+The simplest thing that immediately improves results is a CLAUDE.md file in the root of your project. Fable 5 reads it automatically and understands what you're building, how you're building it and what never to do - without you explaining context from scratch at the start of every session.
+markdown
+# CLAUDE.md
+
+## Project
+Browser game with subscription monetization.
+
+## Stack
+Phaser + React + TypeScript + Supabase + Stripe + Vercel
+
+## Rules
+- Always keep game playable after each change
+- Test every component before moving forward
+- Never skip error handling
+- Run build before calling any task complete
+
+## Memory
+After each session save lessons to /memory/notes.md:
+- what worked
+- what failed
+- what to try next time
+
+## Never do
+- Add features before core loop works
+- Push to main without testing
+The math that makes this a real business
+Client website:
+Your time:        2-3 days of describing and reviewing
+Fable 5 does:     all code, tests, fixes
+Client price:     $3,000-5,000
+Your cost:        $20 subscription
+
+Browser game with subscription:
+Time to build:    one weekend
+Subscription:     $9.99/month
+1,000 players:    $9,990/month
+Monthly costs:    $50 hosting + $20 subscription
+
+Business automation:
+Time to build:    a few hours
+Client price:     $500-2,000
+Repeat orders:    every 2-3 months
+5,838 developers switched to Claude Code and researchers found the same pattern across all of them - more commits, more products, more programming languages, faster adoption of new technologies. Not because they became better developers. Because the tool removed the barrier between an idea and a finished product.
+Fable 5 removes that barrier completely. It's free right now until June 22. After that it moves to token-based pricing and the window closes.
+Most people will read this and keep waiting for a better moment. A few will open Claude this week and have their first client or first product generating revenue before the free window closes. 

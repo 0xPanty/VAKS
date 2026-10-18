@@ -1,0 +1,22 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "hit-in-excluded-bucket",
+  "expected_valid": false,
+  "expected_codes": ["MS_HIT_BUCKET_OUT_OF_SCOPE"],
+  "patch": {
+    "search": {
+      "included_buckets": ["raw_anchor"],
+      "excluded_buckets": ["candidate"],
+      "hits": [
+        {
+          "id": "candidate-hit-in-excluded-bucket",
+          "ref": "fixtures/copied-subset/candidate-distillation.md",
+          "authority_bucket": "candidate",
+          "pack_role": "orientation",
+          "selected_by": ["semantic"],
+          "action_basis_allowed": false
+        }
+      ]
+    }
+  }
+}

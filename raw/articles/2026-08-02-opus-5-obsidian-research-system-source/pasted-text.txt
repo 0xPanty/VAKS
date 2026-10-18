@@ -1,0 +1,132 @@
+How to Build an Opus 5 + Obsidian Research System That Replaces Hours of Manual Reading Every Week
+Most research work is not thinking. It is reading, extracting, and cross-referencing, done manually, one source at a time, and it eats the hours that should go to the actual thinking.
+Opus 5 changes the math on this specifically because of what it is built for. Anthropic launched it priced identically to Opus 4.8, $5 input and $25 output per million tokens, while more than doubling Opus 4.8's score on Frontier-Bench v0.1. It is explicitly not positioned as Anthropic's smartest model, that is still Fable 5, it is positioned as the model built for daily use, where efficiency compounds across thousands of calls in a way a single benchmark headline never captures. Harvey, the legal AI company, independently reported matching Opus 4.8's max-reasoning output quality while using 26% fewer tokens on average.
+That efficiency profile is exactly what a research pipeline needs. You are not running one deep, expensive query. You are running dozens of extraction and synthesis passes across a growing body of sources, every single week, and the cost per pass compounds fast if you are not using a model built for volume.
+This is the complete system. Obsidian as the permanent store, Opus 5 as the processing engine, and a specific pipeline that turns raw reading material into linked, queryable knowledge automatically, so the hours you used to spend manually extracting and cross-referencing get returned to you.
+Why Opus 5 Specifically Fits This Job
+Before the build, it is worth being precise about why this system uses Opus 5 rather than Fable 5, since picking the wrong model for this specific job is the most common way people overspend on a system like this.
+A research pipeline that ingests sources weekly runs a large number of individual model calls, extraction on each new source, cross-referencing against your existing notes, periodic synthesis passes, digest generation. This is volume work, not single-shot depth work. Opus 5's entire positioning is built around exactly this profile, more than double Opus 4.8's Frontier-Bench score at the same price, and independently verified token efficiency gains from Harvey specifically on repeated, similar tasks.
+Fable 5 remains the better choice for the genuinely hardest single research questions, a subtle, high-stakes synthesis where getting a nuanced point wrong has real consequences, and where its higher SWE-Bench-adjacent reasoning depth is worth the roughly 2x higher price per token. For the routine, repeated work of building and maintaining a research system, weekly ingestion, ongoing extraction, digest generation, Opus 5's efficiency-first design is the correct default, with Fable 5 reserved for the occasional deep-dive question the system surfaces as worth extra scrutiny.
+The Foundation: Obsidian As Permanent Storage
+The system needs a place to store knowledge that survives forever, is fully yours, and never depends on any single model or provider. Plain markdown files in an Obsidian vault do exactly this. If a better model exists next year, you point it at the same folder and nothing else changes.
+The structure that works for a research system specifically, building on the general raw and wiki pattern:
+A raw folder, for source material exactly as ingested, PDFs, article text, video transcripts, unprocessed.
+A wiki folder, for the processed, linked, permanent version of your knowledge, organized by topic rather than by source.
+A questions folder, specific to research systems, holding open questions your reading has surfaced that you have not yet resolved, so nothing genuinely important gets lost in the processing.
+A digests folder, holding the weekly summary Opus 5 generates, timestamped, so you can look back at what mattered in any given week without re-reading everything.
+A single CLAUDE.md file at the root defining exactly how this system should behave, which the next section covers in detail.
+The CLAUDE.md That Runs The System
+This is the single highest-leverage file in the entire setup, since it is what Opus 5 reads automatically at the start of every session, meaning you write your instructions once instead of re-explaining the system every time you use it.
+RESEARCH SYSTEM PROTOCOL
+
+This vault is a research system. Structure:
+/raw - source material exactly as ingested, never edited
+/wiki - processed, linked knowledge organized by topic
+/questions - open questions not yet resolved
+/digests - weekly summaries, timestamped
+
+When a new source is dropped into /raw:
+1. Extract the specific, genuinely new claims and findings, not a
+   summary of the whole document.
+2. Check /wiki for existing notes on the same topic. Extend an
+   existing note rather than creating a duplicate if the topic
+   already has one.
+3. Link every new claim to related existing notes using [[wikilinks]].
+4. If a claim contradicts something already in /wiki, do not silently
+   overwrite it. Flag the contradiction explicitly in both notes.
+5. If a source raises a genuine open question you cannot resolve
+   from other material already in the vault, add it to /questions
+   rather than guessing at an answer.
+
+When asked to synthesize or generate a digest:
+Pull from /wiki, not directly from /raw. The wiki is the processed,
+trustworthy layer. Raw sources may contain claims that were later
+found to be wrong or superseded, which is why step 4 above exists.
+
+Before reporting any extraction as complete, confirm you actually
+checked /wiki for existing related notes rather than assuming this
+is entirely new material.
+This single file is what makes the difference between a folder of disconnected notes and an actual system. Every instruction in it exists to prevent a specific, real failure mode, duplicate notes, silently overwritten contradictions, unresolved questions quietly dropped, that would otherwise accumulate invisibly over months of use.
+The Ingestion Pipeline
+With the vault structured and the protocol written, here is the actual weekly workflow.
+Drop any source into /raw as you encounter it during the week, an article you read, a research paper, a podcast transcript, a video transcript, a competitor's blog post. This should take seconds, not minutes, the entire point is removing friction from capture so you actually do it consistently.
+Ingest the new files in /raw that have not been processed yet.
+For each one, extract genuinely new claims, check /wiki for related
+existing notes, extend or create notes as appropriate, and flag any
+contradictions with what is already recorded. Add unresolved
+questions to /questions rather than guessing.
+Run this on whatever cadence fits your actual reading pattern, daily if you read constantly, every few days if your input is more sporadic. The point is that processing happens close to when you actually captured the source, while decomposing a batch of ten sources at once into individual extraction and cross-reference passes is exactly the kind of repeated, similar-shaped work Opus 5's efficiency profile is built for.
+The Weekly Digest, Automated
+This is where the actual time savings show up most visibly, and it is worth setting up as a scheduled task rather than something you remember to run manually, since the entire point of the system is removing yourself from the loop for the mechanical parts.
+Generate this week's research digest. Pull from /wiki, focused
+specifically on what was added or updated in the last 7 days, not
+the entire vault's history.
+
+Structure:
+1. The 3 to 5 most significant new findings this week, with links
+   to the full notes in /wiki.
+2. Any contradictions flagged this week between new material and
+   existing notes, since these deserve your direct attention.
+3. Open questions added to /questions this week that remain
+   unresolved.
+4. One line noting any topic that received unusually heavy activity
+   this week, since a topic accumulating many related notes quickly
+   is often worth deeper, deliberate attention rather than passive
+   accumulation.
+
+Save the result to /digests with this week's date. Keep the whole
+digest under 500 words. This is a pointer to the full notes, not a
+replacement for reading them.
+Schedule this to run automatically at the start of each week, so a short, structured summary of everything that mattered is waiting for you before you have opened a single note yourself. This is the direct mechanism by which the system replaces hours of manual reading, you are no longer re-reading a week's worth of raw material to remember what you learned, you are reading a 500-word pointer that took you two minutes instead of the two hours the equivalent manual review would have cost.
+Querying Across Everything, Not Just What You Remember
+The other major time savings, separate from the digest, is the ability to ask a genuine question across your entire accumulated knowledge base rather than trying to remember which specific note has the answer.
+Based on everything in /wiki, what have I learned about [specific
+topic]? Cite the specific notes each claim comes from. If sources
+in the vault disagree with each other on this topic, say so
+explicitly rather than picking one and presenting it as consensus.
+This is the payoff that compounds the longest the system runs. Month one, your wiki is thin, and this kind of query returns a handful of notes. Month six, with dozens of sources processed and cross-linked, the same query surfaces genuine connections you would never have made manually, an idea from a paper you read in week two connecting directly to something from a completely different source in week twenty, because both got filed under the same underlying topic and linked accordingly.
+Handling Contradictions Honestly
+A specific, underappreciated value of this system over simply re-reading your own notes from memory is that it actively surfaces when your own understanding of something has changed over time, rather than letting an outdated belief sit unchallenged simply because you forgot you ever held it.
+When the ingestion protocol flags a contradiction, between what a new source says and what an existing note claims, resist the instinct to have the system just pick whichever seems more recent or more authoritative and quietly resolve it for you. The value of surfacing a contradiction is that it forces an actual decision from you, was the earlier source wrong, has the underlying reality genuinely changed, or is this a case where both are true depending on context that needs to be added to the note. Automating that judgment away defeats the purpose of building a system that makes your own thinking more rigorous over time.
+A Worked Example Across One Month
+To make the compounding effect concrete, here is roughly how this plays out over a real month of use.
+Week one, you drop in six articles related to a project you are researching. The ingestion pass creates eight new notes in /wiki, since some articles touch multiple distinct topics, all linked to each other where a genuine relationship exists. The digest is short, since there is not much prior material to cross-reference against yet.
+Week two, you add four more sources. Two of them extend existing notes from week one rather than creating new ones, since the ingestion protocol correctly identified the topic overlap. One flags a contradiction, a claim from a week two source directly disputes something a week one source stated confidently. The digest surfaces this contradiction prominently, and reviewing it, you realize the week one source was working from outdated data. You update that note directly, noting the correction and why.
+Week three and four continue this pattern, and by the end of the month, a query across the full topic returns a synthesis that traces the actual evolution of your understanding, including the correction, not just a static snapshot as if you had known the right answer from day one.
+This is the actual value proposition stated concretely. Not that the system does your thinking for you, but that it removes the mechanical overhead, extraction, cross-referencing, remembering what you already knew, that used to compete with your actual thinking time every single week.
+Common Mistakes That Undermine This System
+A few specific mistakes show up repeatedly for people setting this up, worth knowing in advance.
+Skipping the CLAUDE.md protocol and just dropping files in raw hoping Opus 5 figures out the right behavior. Without the explicit instructions, particularly the check-before-creating-duplicate rule and the flag-don't-silently-overwrite rule for contradictions, the system degrades into exactly the unstructured pile of AI-generated notes it was built to avoid.
+Running the digest against the entire vault instead of the specific week's activity. This produces a digest that grows longer and less useful every single week, since it is re-summarizing material you have already read and processed many times over, rather than surfacing only what is genuinely new.
+Treating Opus 5's synthesis as automatically correct rather than as a starting point. The model is doing real cognitive work here, extraction and cross-referencing across a growing knowledge base, and like any cognitive work, it benefits from your own review, particularly on the contradictions it flags, which are exactly the moments where your own judgment adds the most value.
+Using Fable 5 for the routine weekly processing out of habit, assuming the more expensive model is always the safer choice. For the volume of repeated, similar-shaped extraction and synthesis work this system generates weekly, Opus 5's efficiency profile is the better fit, and the cost difference compounds meaningfully over months of continuous use. Reserve Fable 5 specifically for the rare, genuinely hard synthesis question the system itself surfaces as worth extra scrutiny, not for the routine ingestion pipeline.
+Connecting The Vault Directly Instead Of Copy-Pasting
+Everything above works if you manually open Claude and paste in file contents, but the actual friction-free version of this system connects Opus 5 directly to your Obsidian vault, so ingestion and querying happen without any copy-pasting at all.
+The practical path here uses Obsidian's Local REST API plugin, enabled in Obsidian's community plugin settings, which exposes your vault over a local API endpoint with an authentication key. Claude Code or a Claude Desktop MCP connection can then read and write files in your vault directly, meaning the ingestion prompts from earlier in this article run against your actual vault, creating and editing real notes, rather than you manually copying content back and forth between a chat window and your notes.
+Set this up once. In Obsidian, install and enable the Local REST API plugin, copy the API key it generates. In Claude Code, configure an MCP connection pointing at your vault using that key. Test it by asking Claude to list the files in your /raw folder, if it returns an accurate list, the connection is live.
+Once this is working, the entire ingestion and digest pipeline from earlier becomes something you trigger with a single message rather than a manual copy-paste process, and it is also what makes scheduling genuinely automatic, since a scheduled task can call the same MCP connection without you present at all.
+Scaling To Multiple Research Topics
+Everything above assumes one research topic in one vault. Most people running this seriously end up tracking several distinct areas at once, a specific project, an industry you follow generally, a longer-term interest unrelated to either. Mixing these into one undifferentiated wiki creates exactly the kind of noise the system was built to prevent.
+The fix mirrors the same scoping discipline that applies to Claude Projects generally. Give each genuinely distinct research topic its own subfolder structure, or its own separate vault entirely if the topics are large and unrelated enough that cross-contamination would actively confuse synthesis, a claim about one industry getting incorrectly cross-referenced against an unrelated project simply because both live in the same undifferentiated /wiki folder.
+MULTI-TOPIC SCOPE
+This vault covers multiple research areas, each in its own top-level
+folder under /wiki: /wiki/topic-a, /wiki/topic-b, etc.
+When ingesting a new source, first determine which topic it belongs
+to. If it genuinely spans two topics, note the cross-topic connection
+explicitly rather than filing it ambiguously in one folder without
+explanation.
+Digests should be generated per topic, not as one combined summary,
+unless explicitly asked to synthesize across topics.
+This structure lets each topic compound independently, its own wiki, its own coherent set of cross-references, while still allowing you to explicitly ask for cross-topic synthesis when a genuine connection between two areas is actually worth surfacing, rather than having every note implicitly competing with unrelated material for relevance in a single, undifferentiated pile.
+The practical rule for when to split into separate vaults entirely versus subfolders within one vault: if you would genuinely never want a query on one topic to accidentally surface unrelated material from the other, separate vaults are worth the minor overhead of switching between them. If some cross-pollination between topics is actually valuable, a general industry trend informing a specific project, subfolders within one vault preserve that connective tissue while the explicit topic-scoping instruction above prevents actual confusion during routine ingestion.
+Measuring Whether This Is Actually Saving You Time
+A system like this can feel productive without actually being measured against the thing it was built to replace, and it is worth running an honest check periodically rather than assuming the time savings are real just because the system exists and runs on schedule.
+For two or three weeks after setup, track roughly how long your Monday review used to take under your old manual process, re-reading everything you saved, trying to remember what connected to what, searching for a specific fact you knew you had read somewhere. Compare that honestly against how long it now takes to read the generated digest and follow up on anything it flagged as needing your attention.
+The comparison that actually matters is not raw time saved on the digest itself, since a 500-word summary obviously reads faster than a week of raw sources. It is whether the digest is actually surfacing what mattered, meaning you are not separately discovering, days later, that something significant got buried in the raw material and never made it into a note or a digest at all. If that is happening regularly, the ingestion protocol's extraction step needs tightening, not necessarily more of your manual reading time added back in as a workaround.
+The other honest metric worth tracking is whether the querying capability from earlier is actually getting used. A system that generates a clean weekly digest but that you never actually query for cross-referenced answers is only delivering half its intended value, the passive summarization half, without the active, "what have I actually learned about this across every source I have ever fed it" half that is where the real compounding value shows up over months of use. If you notice you are not querying it, that is often a sign the wiki has not yet accumulated enough cross-linked material to make querying feel worthwhile yet, which is normal in the first month or two, or it is a sign you have simply fallen out of the habit of asking, which is worth deliberately correcting since it is where a meaningful share of the system's actual value lives.
+Setting This Up This Week
+Do not try to build the full pipeline in one sitting. Build it in the order that lets each piece prove itself before you add the next.
+Week one, just build the vault structure and the CLAUDE.md file, then manually run the ingestion prompt on whatever you are already reading. Get comfortable with the extraction quality before automating anything.
+Week two, add the weekly digest generation, run it manually at first rather than on a schedule, so you can verify it is actually pulling from the right week's activity and staying appropriately concise.
+Week three, once both pieces are working reliably, schedule the ingestion and the digest to run automatically, so the system genuinely runs without you remembering to trigger it.
+By week four or five, you should notice the actual shift this system is built to produce. Monday mornings that used to start with trying to remember what you read and learned the previous week now start with a two-minute digest that already did that remembering for you, and the hours that used to go to manually re-reading and cross-referencing your own research are available for the part of research that actually needs a human, deciding what matters and why.

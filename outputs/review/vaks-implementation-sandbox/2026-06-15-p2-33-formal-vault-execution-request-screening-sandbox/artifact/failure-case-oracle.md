@@ -1,0 +1,216 @@
+# Failure Case Oracle
+
+Case count: 212
+
+- `001-operation-formal_vault_read.json` -> operation_not_false:formal_vault_read
+- `002-operation-formal_vault_scan.json` -> operation_not_false:formal_vault_scan
+- `003-operation-formal_vault_write.json` -> operation_not_false:formal_vault_write
+- `004-operation-formal_vault_hash.json` -> operation_not_false:formal_vault_hash
+- `005-operation-formal_vault_snapshot.json` -> operation_not_false:formal_vault_snapshot
+- `006-operation-formal_vault_state_check.json` -> operation_not_false:formal_vault_state_check
+- `007-operation-obsidian_sync.json` -> operation_not_false:obsidian_sync
+- `008-operation-commit.json` -> operation_not_false:commit
+- `009-operation-push.json` -> operation_not_false:push
+- `010-operation-promotion.json` -> operation_not_false:promotion
+- `011-operation-dependency_install.json` -> operation_not_false:dependency_install
+- `012-operation-background_service.json` -> operation_not_false:background_service
+- `013-operation-mcp_write_tool.json` -> operation_not_false:mcp_write_tool
+- `014-operation-hooks.json` -> operation_not_false:hooks
+- `015-operation-actual_approval_collection.json` -> operation_not_false:actual_approval_collection
+- `016-operation-actual_user_approval.json` -> operation_not_false:actual_user_approval
+- `017-operation-actual_user_decision_collection.json` -> operation_not_false:actual_user_decision_collection
+- `018-operation-user_approval_inference.json` -> operation_not_false:user_approval_inference
+- `019-operation-actual_user_wording_storage.json` -> operation_not_false:actual_user_wording_storage
+- `020-operation-actual_user_wording_capture.json` -> operation_not_false:actual_user_wording_capture
+- `021-operation-packet_submission.json` -> operation_not_false:packet_submission
+- `022-operation-screening_submission.json` -> operation_not_false:screening_submission
+- `023-operation-gate_submission.json` -> operation_not_false:gate_submission
+- `024-operation-execution_performed.json` -> operation_not_false:execution_performed
+- `025-operation-snapshot_taken.json` -> operation_not_false:snapshot_taken
+- `026-operation-rollback_executed.json` -> operation_not_false:rollback_executed
+- `027-operation-hash_before_collected.json` -> operation_not_false:hash_before_collected
+- `028-operation-hash_after_collected.json` -> operation_not_false:hash_after_collected
+- `029-operation-action_basis_creation.json` -> operation_not_false:action_basis_creation
+- `030-operation-reviewed_knowledge_creation.json` -> operation_not_false:reviewed_knowledge_creation
+- `031-operation-external_notification.json` -> operation_not_false:external_notification
+- `032-operation-shell_command_emitted.json` -> operation_not_false:shell_command_emitted
+- `033-operation-copy_command_emitted.json` -> operation_not_false:copy_command_emitted
+- `034-operation-absolute_vault_path_resolved.json` -> operation_not_false:absolute_vault_path_resolved
+- `035-operation-screening_promoted_to_execution_permission.json` -> operation_not_false:screening_promoted_to_execution_permission
+- `036-operation-screening_used_as_action_basis.json` -> operation_not_false:screening_used_as_action_basis
+- `037-control-sandbox_only.json` -> screening_control_mismatch:sandbox_only
+- `038-control-screening_only.json` -> screening_control_mismatch:screening_only
+- `039-control-read_only_projection.json` -> screening_control_mismatch:read_only_projection
+- `040-control-synthetic_packet_only.json` -> screening_control_mismatch:synthetic_packet_only
+- `041-control-non_executable.json` -> screening_control_mismatch:non_executable
+- `042-control-no_submission.json` -> screening_control_mismatch:no_submission
+- `043-control-no_actual_approval.json` -> screening_control_mismatch:no_actual_approval
+- `044-control-no_actual_user_wording.json` -> screening_control_mismatch:no_actual_user_wording
+- `045-control-no_formal_vault_paths.json` -> screening_control_mismatch:no_formal_vault_paths
+- `046-control-no_commands.json` -> screening_control_mismatch:no_commands
+- `047-control-operator_must_stop_before_execution.json` -> screening_control_mismatch:operator_must_stop_before_execution
+- `048-control-separate_future_user_confirmation_required.json` -> screening_control_mismatch:separate_future_user_confirmation_required
+- `049-control-separate_future_execution_slice_required.json` -> screening_control_mismatch:separate_future_execution_slice_required
+- `050-control-separate_future_formal_vault_state_check_required.json` -> screening_control_mismatch:separate_future_formal_vault_state_check_required
+- `051-control-product_acceptance_is_not_formal_vault_approval.json` -> screening_control_mismatch:product_acceptance_is_not_formal_vault_approval
+- `052-control-screening_is_not_execution_permission.json` -> screening_control_mismatch:screening_is_not_execution_permission
+- `053-control-screening_is_not_action_basis.json` -> screening_control_mismatch:screening_is_not_action_basis
+- `054-control-screening_is_not_user_instruction.json` -> screening_control_mismatch:screening_is_not_user_instruction
+- `055-control-screening_is_not_reviewed_knowledge.json` -> screening_control_mismatch:screening_is_not_reviewed_knowledge
+- `056-control-screening_is_not_evidence_support.json` -> screening_control_mismatch:screening_is_not_evidence_support
+- `057-control-execution_allowed_now.json` -> screening_control_mismatch:execution_allowed_now
+- `058-control-formal_vault_access_allowed_now.json` -> screening_control_mismatch:formal_vault_access_allowed_now
+- `059-control-formal_vault_write_allowed_now.json` -> screening_control_mismatch:formal_vault_write_allowed_now
+- `060-control-formal_vault_hash_allowed_now.json` -> screening_control_mismatch:formal_vault_hash_allowed_now
+- `061-control-formal_vault_snapshot_allowed_now.json` -> screening_control_mismatch:formal_vault_snapshot_allowed_now
+- `062-control-user_confirmation_collected_now.json` -> screening_control_mismatch:user_confirmation_collected_now
+- `063-control-actual_user_wording_stored.json` -> screening_control_mismatch:actual_user_wording_stored
+- `064-control-contains_commands.json` -> screening_control_mismatch:contains_commands
+- `065-control-absolute_vault_paths_present.json` -> screening_control_mismatch:absolute_vault_paths_present
+- `066-control-sync_commit_push_promotion_allowed.json` -> screening_control_mismatch:sync_commit_push_promotion_allowed
+- `067-control-screening_can_be_replayed.json` -> screening_control_mismatch:screening_can_be_replayed
+- `068-control-screening_result_can_be_used_as_action_basis.json` -> screening_control_mismatch:screening_result_can_be_used_as_action_basis
+- `069-source-input-0-sha-drift.json` -> source_inputs_mismatch
+- `070-source-input-1-sha-drift.json` -> source_inputs_mismatch
+- `071-source-input-2-sha-drift.json` -> source_inputs_mismatch
+- `072-source-input-3-sha-drift.json` -> source_inputs_mismatch
+- `073-source-input-4-sha-drift.json` -> source_inputs_mismatch
+- `074-source-input-5-sha-drift.json` -> source_inputs_mismatch
+- `075-source-input-6-sha-drift.json` -> source_inputs_mismatch
+- `076-source-input-7-sha-drift.json` -> source_inputs_mismatch
+- `077-source-input-8-sha-drift.json` -> source_inputs_mismatch
+- `078-source-input-9-sha-drift.json` -> source_inputs_mismatch
+- `079-source-input-10-sha-drift.json` -> source_inputs_mismatch
+- `080-source-status-product-acceptance-report-md-drift.json` -> source_status_not_met:product-acceptance-report.md, source_statuses_mismatch
+- `081-source-status-reviewer-report-md-drift.json` -> source_status_not_met:reviewer-report.md, source_statuses_mismatch
+- `082-source-status-boundary-audit-md-drift.json` -> source_status_not_met:boundary-audit.md, source_statuses_mismatch
+- `083-source-status-next-step-md-drift.json` -> source_status_not_met:next-step.md, source_statuses_mismatch
+- `084-source-status-verification-md-drift.json` -> source_status_not_met:verification.md, source_statuses_mismatch
+- `085-source-status-source-map-md-drift.json` -> source_status_not_met:source-map.md, source_statuses_mismatch
+- `086-p2-32-binding-product_acceptance_status-drift.json` -> p2_32_binding_mismatch, p2_32_product_acceptance_not_pass
+- `087-p2-32-binding-reviewer_status-drift.json` -> p2_32_binding_mismatch, p2_32_reviewer_not_pass
+- `088-p2-32-binding-boundary_status-drift.json` -> p2_32_binding_mismatch, p2_32_boundary_not_pass
+- `089-p2-32-binding-request_packet_hash-drift.json` -> p2_32_binding_mismatch, p2_32_packet_hash_receipt_mismatch
+- `090-p2-32-binding-packet_receipt_hash-drift.json` -> p2_32_binding_mismatch, p2_32_packet_hash_receipt_mismatch
+- `091-p2-32-binding-packet_field_count-drift.json` -> p2_32_binding_mismatch
+- `092-p2-32-binding-packet_source_count-drift.json` -> p2_32_binding_mismatch
+- `093-p2-32-binding-packet_result-drift.json` -> p2_32_binding_mismatch
+- `094-p2-32-binding-packet_submitted_to_gate-drift.json` -> p2_32_binding_flag_not_false:packet_submitted_to_gate, p2_32_binding_mismatch
+- `095-p2-32-binding-execution_permission_granted-drift.json` -> p2_32_binding_flag_not_false:execution_permission_granted, p2_32_binding_mismatch
+- `096-p2-32-binding-packet_used_as_action_basis-drift.json` -> p2_32_binding_flag_not_false:packet_used_as_action_basis, p2_32_binding_mismatch
+- `097-p2-32-binding-formal_vault_accessed-drift.json` -> p2_32_binding_flag_not_false:formal_vault_accessed, p2_32_binding_mismatch
+- `098-p2-32-binding-approval_collected_now-drift.json` -> p2_32_binding_flag_not_false:approval_collected_now, p2_32_binding_mismatch
+- `099-p2-32-binding-real_user_text_stored-drift.json` -> p2_32_binding_flag_not_false:real_user_text_stored, p2_32_binding_mismatch
+- `100-p2-32-binding-write_performed-drift.json` -> p2_32_binding_flag_not_false:write_performed, p2_32_binding_mismatch
+- `101-p2-32-binding-sync_performed-drift.json` -> p2_32_binding_flag_not_false:sync_performed, p2_32_binding_mismatch
+- `102-p2-32-binding-promotion_performed-drift.json` -> p2_32_binding_flag_not_false:promotion_performed, p2_32_binding_mismatch
+- `103-screening-input-source_fixture-unknown.json.json` -> screening_input_packet_mismatch
+- `104-screening-input-source_packet_hash-33333333333333333333333333333333.json` -> screening_input_packet_mismatch
+- `105-screening-input-packet_id-synthetic-but-wrong.json` -> screening_input_packet_mismatch
+- `106-screening-input-packet_id-python-tools-promote.py---sync.json` -> dangerous_value:$.screening_input_packet.packet_id:promote_py, dangerous_value:$.screening_input_packet.packet_id:python_command, dangerous_value:$.screening_input_packet.packet_id:sync_flag, screening_input_packet_mismatch
+- `107-screening-input-packet_mode-wrong_mode.json` -> screening_input_packet_mismatch, screening_input_packet_mode_mismatch
+- `108-screening-input-packet_result-READY.json` -> screening_input_packet_mismatch, screening_input_packet_result_mismatch
+- `109-screening-input-synthetic_only-False.json` -> screening_input_not_synthetic, screening_input_packet_mismatch
+- `110-screening-input-actual_approval_collected-True.json` -> screening_input_flag_not_false:actual_approval_collected, screening_input_packet_mismatch
+- `111-screening-input-actual_user_wording_stored-True.json` -> screening_input_flag_not_false:actual_user_wording_stored, screening_input_packet_mismatch
+- `112-screening-input-commands_supplied-True.json` -> screening_input_flag_not_false:commands_supplied, screening_input_packet_mismatch
+- `113-screening-input-absolute_paths_present-True.json` -> screening_input_flag_not_false:absolute_paths_present, screening_input_packet_mismatch
+- `114-screening-input-requested_execution_now-True.json` -> screening_input_flag_not_false:requested_execution_now, screening_input_packet_mismatch
+- `115-screening-input-requested_action_basis-True.json` -> screening_input_flag_not_false:requested_action_basis, screening_input_packet_mismatch
+- `116-screening-input-packet_submitted-True.json` -> screening_input_flag_not_false:packet_submitted, screening_input_packet_mismatch
+- `117-screening-input-non_claims-[].json` -> screening_input_non_claims_missing, screening_input_packet_mismatch
+- `118-projection-target_gate_slice-wrong-slice.json` -> screening_projection_mismatch
+- `119-projection-target_request_mode-wrong-mode.json` -> screening_projection_mismatch
+- `120-projection-projected_request_id-wrong-id.json` -> screening_projection_mismatch
+- `121-projection-projected_request_id-python-tools-promote.py---sync.json` -> dangerous_value:$.screening_projection.projected_request_id:promote_py, dangerous_value:$.screening_projection.projected_request_id:python_command, dangerous_value:$.screening_projection.projected_request_id:sync_flag, screening_projection_mismatch
+- `122-projection-projected_gate_result-READY_TO_RUN.json` -> projection_gate_result_mismatch, screening_projection_mismatch
+- `123-projection-screening_result-SCREENED_READY.json` -> projection_screening_result_mismatch, screening_projection_mismatch
+- `124-projection-projection_matches_packet-False.json` -> projection_flag_not_true:projection_matches_packet, screening_projection_mismatch
+- `125-projection-projection_is_not_submission-False.json` -> projection_flag_not_true:projection_is_not_submission, screening_projection_mismatch
+- `126-projection-projection_collects_no_approval-False.json` -> projection_flag_not_true:projection_collects_no_approval, screening_projection_mismatch
+- `127-projection-projection_contains_no_commands-False.json` -> projection_flag_not_true:projection_contains_no_commands, screening_projection_mismatch
+- `128-projection-projection_contains_no_formal_vault_paths-False.json` -> projection_flag_not_true:projection_contains_no_formal_vault_paths, screening_projection_mismatch
+- `129-check-p2_32_product_pass_present-status-drift.json` -> screening_check_status_mismatch:p2_32_product_pass_present
+- `130-check-p2_32_product_pass_present-collected-now.json` -> screening_check_collected_now_not_false:p2_32_product_pass_present
+- `131-check-p2_32_packet_hash_bound-status-drift.json` -> screening_check_status_mismatch:p2_32_packet_hash_bound
+- `132-check-p2_32_packet_hash_bound-collected-now.json` -> screening_check_collected_now_not_false:p2_32_packet_hash_bound
+- `133-check-source_hashes_current-status-drift.json` -> screening_check_status_mismatch:source_hashes_current
+- `134-check-source_hashes_current-collected-now.json` -> screening_check_collected_now_not_false:source_hashes_current
+- `135-check-packet_identity_synthetic-status-drift.json` -> screening_check_status_mismatch:packet_identity_synthetic
+- `136-check-packet_identity_synthetic-collected-now.json` -> screening_check_collected_now_not_false:packet_identity_synthetic
+- `137-check-projection_matches_p2_31-status-drift.json` -> screening_check_status_mismatch:projection_matches_p2_31
+- `138-check-projection_matches_p2_31-collected-now.json` -> screening_check_collected_now_not_false:projection_matches_p2_31
+- `139-check-packet_not_submitted-status-drift.json` -> screening_check_status_mismatch:packet_not_submitted
+- `140-check-packet_not_submitted-collected-now.json` -> screening_check_collected_now_not_false:packet_not_submitted
+- `141-check-no_actual_approval-status-drift.json` -> screening_check_status_mismatch:no_actual_approval
+- `142-check-no_actual_approval-collected-now.json` -> screening_check_collected_now_not_false:no_actual_approval
+- `143-check-no_actual_user_wording-status-drift.json` -> screening_check_status_mismatch:no_actual_user_wording
+- `144-check-no_actual_user_wording-collected-now.json` -> screening_check_collected_now_not_false:no_actual_user_wording
+- `145-check-no_commands_or_paths-status-drift.json` -> screening_check_status_mismatch:no_commands_or_paths
+- `146-check-no_commands_or_paths-collected-now.json` -> screening_check_collected_now_not_false:no_commands_or_paths
+- `147-check-no_current_execution_permission-status-drift.json` -> screening_check_status_mismatch:no_current_execution_permission
+- `148-check-no_current_execution_permission-collected-now.json` -> screening_check_collected_now_not_false:no_current_execution_permission
+- `149-receipt-record_kind.json` -> receipt_record_kind_mismatch
+- `150-receipt-slice_id.json` -> receipt_slice_id_mismatch
+- `151-receipt-source_slice.json` -> receipt_source_slice_mismatch
+- `152-receipt-screening_result.json` -> receipt_screening_result_mismatch
+- `153-receipt-packet_submitted.json` -> receipt_flag_not_false:packet_submitted
+- `154-receipt-formal_vault_accessed.json` -> receipt_flag_not_false:formal_vault_accessed
+- `155-receipt-formal_vault_state_inspected.json` -> receipt_flag_not_false:formal_vault_state_inspected
+- `156-receipt-approval_collected_now.json` -> receipt_flag_not_false:approval_collected_now
+- `157-receipt-actual_user_input_used.json` -> receipt_flag_not_false:actual_user_input_used
+- `158-receipt-actual_user_wording_stored.json` -> receipt_flag_not_false:actual_user_wording_stored
+- `159-receipt-execution_permission_granted.json` -> receipt_flag_not_false:execution_permission_granted
+- `160-receipt-execution_performed.json` -> receipt_flag_not_false:execution_performed
+- `161-receipt-write_performed.json` -> receipt_flag_not_false:write_performed
+- `162-receipt-snapshot_taken.json` -> receipt_flag_not_false:snapshot_taken
+- `163-receipt-hash_before_collected.json` -> receipt_flag_not_false:hash_before_collected
+- `164-receipt-hash_after_collected.json` -> receipt_flag_not_false:hash_after_collected
+- `165-receipt-sync_performed.json` -> receipt_flag_not_false:sync_performed
+- `166-receipt-commit_performed.json` -> receipt_flag_not_false:commit_performed
+- `167-receipt-push_performed.json` -> receipt_flag_not_false:push_performed
+- `168-receipt-promotion_performed.json` -> receipt_flag_not_false:promotion_performed
+- `169-receipt-screening_replayed.json` -> receipt_flag_not_false:screening_replayed
+- `170-receipt-screening_used_as_action_basis.json` -> receipt_flag_not_false:screening_used_as_action_basis
+- `171-receipt-check_count.json` -> receipt_check_count_mismatch
+- `172-receipt-source_count.json` -> receipt_source_count_mismatch
+- `173-receipt-request_screening_hash.json` -> receipt_request_screening_hash_mismatch
+- `174-receipt-non_claims.json` -> receipt_non_claims_missing
+- `175-metric-required_positive_fixtures-drift.json` -> metric_positive_fixtures_mismatch
+- `176-metric-minimum_failure_cases-drift.json` -> metric_failure_case_floor_too_low
+- `177-metric-required_screening_checks-drift.json` -> metric_screening_checks_mismatch
+- `178-metric-required_source_inputs-drift.json` -> metric_source_inputs_mismatch
+- `179-metric-manual_negative_probes-drift.json` -> metric_manual_negative_probes_mismatch
+- `180-metric-max_journey_steps-drift.json` -> metric_max_journey_steps_mismatch
+- `181-top-level-slice-id.json` -> slice_id_mismatch
+- `182-top-level-source-slice.json` -> source_slice_mismatch
+- `183-top-level-version.json` -> request_screening_version_mismatch
+- `184-top-level-truth-boundary.json` -> truth_boundary_mismatch
+- `185-top-level-purpose.json` -> purpose_mismatch
+- `186-top-level-mode.json` -> projection_gate_result_mismatch, projection_screening_result_mismatch, receipt_screening_result_mismatch, screening_check_status_mismatch:no_actual_approval, screening_check_status_mismatch:no_actual_user_wording, screening_check_status_mismatch:no_commands_or_paths, screening_check_status_mismatch:no_current_execution_permission, screening_check_status_mismatch:p2_32_packet_hash_bound, screening_check_status_mismatch:p2_32_product_pass_present, screening_check_status_mismatch:packet_identity_synthetic, screening_check_status_mismatch:packet_not_submitted, screening_check_status_mismatch:projection_matches_p2_31, screening_check_status_mismatch:source_hashes_current, screening_input_packet_mismatch, screening_input_packet_mode_mismatch, screening_input_packet_result_mismatch, screening_mode_not_allowed, screening_projection_mismatch
+- `187-top-level-write-scope.json` -> write_scope_mismatch
+- `188-top-level-read-sources.json` -> read_only_sources_mismatch
+- `189-top-level-extra-key.json` -> unknown_key:config:unexpected
+- `190-top-level-command-string.json` -> dangerous_value:$.unexpected:promote_py, dangerous_value:$.unexpected:python_command, dangerous_value:$.unexpected:sync_flag, unknown_key:config:unexpected
+- `191-hash-drift.json` -> request_screening_hash_mismatch
+- `192-prototype-markdown-command.json` -> prototype_text_dangerous:05 Reviewer Packet.md:python_command, prototype_text_dangerous:05 Reviewer Packet.md:promote_py, prototype_text_dangerous:05 Reviewer Packet.md:sync_flag
+- `193-prototype-markdown-screening-submitted.json` -> prototype_text_authority_confusion:03 Non Submission Receipt.md:screening_submitted_yes
+- `194-prototype-markdown-packet-submitted.json` -> prototype_text_authority_confusion:03 Non Submission Receipt.md:packet_submitted_yes
+- `195-prototype-markdown-approval-collected.json` -> prototype_text_authority_confusion:03 Non Submission Receipt.md:approval_collected_yes
+- `196-prototype-markdown-actual-user-wording.json` -> prototype_text_dangerous:02 Screening Checks.md:approve_execution_now, prototype_text_dangerous:02 Screening Checks.md:actual_user_wording_marker
+- `197-prototype-markdown-action-basis.json` -> prototype_text_authority_confusion:04 Stop Conditions.md:action_basis_yes
+- `198-prototype-markdown-execution-permission.json` -> prototype_text_authority_confusion:04 Stop Conditions.md:execution_permission_yes
+- `199-prototype-markdown-authorizes.json` -> prototype_text_authority_confusion:01 Screening Contract.md:authorizes_execution
+- `200-prototype-markdown-may-execute.json` -> prototype_text_authority_confusion:04 Stop Conditions.md:may_execute
+- `201-prototype-markdown-approval-obtained.json` -> prototype_text_authority_confusion:03 Non Submission Receipt.md:approval_obtained
+- `202-prototype-html-command.json` -> prototype_text_dangerous:request-screening-inspector.html:python_command, prototype_text_dangerous:request-screening-inspector.html:promote_py, prototype_text_dangerous:request-screening-inspector.html:sync_flag, html_missing_attr:data-sandbox-only="true", html_missing_attr:data-screening-only="true", html_missing_attr:data-non-executable="true", html_missing_attr:data-no-formal-vault-access="true", html_missing_attr:data-no-write="true", html_missing_attr:data-no-sync="true", html_missing_attr:data-no-authority="true", html_missing_attr:data-no-permission="true", html_missing_attr:data-no-actual-user-wording="true", html_missing_attr:data-no-submission="true"
+- `203-prototype-html-missing-attrs.json` -> html_missing_attr:data-sandbox-only="true", html_missing_attr:data-screening-only="true", html_missing_attr:data-non-executable="true", html_missing_attr:data-no-formal-vault-access="true", html_missing_attr:data-no-write="true", html_missing_attr:data-no-sync="true", html_missing_attr:data-no-authority="true", html_missing_attr:data-no-permission="true", html_missing_attr:data-no-actual-user-wording="true", html_missing_attr:data-no-submission="true"
+- `204-prototype-html-submit-screening.json` -> prototype_text_authority_confusion:request-screening-inspector.html:submit_screening, html_missing_attr:data-sandbox-only="true", html_missing_attr:data-screening-only="true", html_missing_attr:data-non-executable="true", html_missing_attr:data-no-formal-vault-access="true", html_missing_attr:data-no-write="true", html_missing_attr:data-no-sync="true", html_missing_attr:data-no-authority="true", html_missing_attr:data-no-permission="true", html_missing_attr:data-no-actual-user-wording="true", html_missing_attr:data-no-submission="true"
+- `205-prototype-html-authorizes.json` -> prototype_text_authority_confusion:request-screening-inspector.html:authorizes_execution
+- `206-prototype-receipt-command.json` -> dangerous_value:$.prototype_receipt.screening_result:promote_py, dangerous_value:$.prototype_receipt.screening_result:python_command, dangerous_value:$.prototype_receipt.screening_result:sync_flag, prototype_receipt_screening_result_mismatch
+- `207-prototype-receipt-slice.json` -> prototype_receipt_slice_id_mismatch
+- `208-prototype-receipt-source.json` -> prototype_receipt_source_slice_mismatch
+- `209-prototype-receipt-permission.json` -> prototype_receipt_flag_not_false:execution_permission_granted
+- `210-prototype-receipt-submitted.json` -> prototype_receipt_flag_not_false:packet_submitted
+- `211-prototype-receipt-action-basis.json` -> prototype_receipt_flag_not_false:screening_used_as_action_basis
+- `212-prototype-receipt-non-claims.json` -> prototype_receipt_non_claims_missing

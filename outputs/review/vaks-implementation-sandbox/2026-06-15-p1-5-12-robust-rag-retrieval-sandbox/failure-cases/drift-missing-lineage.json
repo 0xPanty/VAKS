@@ -1,0 +1,34 @@
+{
+  "record_kind": "robust_rag_retrieval_manifest",
+  "scenario_id": "drift-missing-lineage",
+  "expected_valid": false,
+  "expected_codes": ["RR_DRIFT_LINEAGE_MISSING"],
+  "query": {
+    "query_mode": "source_inspection",
+    "verbatim_input": "Explore with DRIFT.",
+    "question_summary": "Missing DRIFT lineage.",
+    "action_sensitive": false,
+    "verbatim_preserved": true
+  },
+  "route_selection": {
+    "selected": "drift_explore",
+    "query_lineage": [],
+    "authority_buckets_included": ["review_input", "raw_anchor"],
+    "authority_buckets_excluded": ["feedback", "runtime_artifact"],
+    "selected_context_types": ["theme_briefing"],
+    "forbidden_support_types": ["retrieval_score", "graph_rank", "community_report_summary", "llm_extracted_relation"]
+  },
+  "retrieval_config": {"bucket_filter_first": true, "rrf_within_bucket_only": true, "exclude_runtime_artifacts": true},
+  "retrieved_items": [
+    {
+      "id": "drift-theme",
+      "ref": "outputs/review/theme.md",
+      "record_kind": "theme_briefing",
+      "authority_bucket": "review_input",
+      "pack_role": "orientation",
+      "selected": true,
+      "excluded": false,
+      "selected_by": {"semantic": true}
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 ---
 type: source
+record_kind: source_card
 status: source-captured
 title: "How to Build an Obsidian Knowledge Vault That Gets Smarter Every Day Without You Doing Anything"
 source_url:
@@ -19,12 +20,9 @@ topics:
 projects:
   - verified-knowledge-system
 evidence_level: anecdotal
+source_integrity:
+  capture_confidence: 3
 source_status: source-captured
-source_quality: 3
-freshness: 4
-relevance: 4
-confidence: 3
-cross_source_count: 1
 verified_by: Codex review of pasted text
 last_verified: 2026-05-27
 next_review: 2026-06-03
@@ -34,7 +32,7 @@ related_concepts:
   - "[[frictionless-capture-to-review-inbox]]"
   - "[[daily-brief-as-knowledge-return-loop]]"
   - "[[weekly-synthesis-thesis-and-gap-review]]"
-relations:
+candidate_relation_suggestions:
   - target: "[[daily-brief-as-knowledge-return-loop]]"
     type: supports
     strength: 4
@@ -49,8 +47,25 @@ tags:
   - obsidian
   - automated-capture
   - feedback-loop
+knowledge_status: raw
+processing_tier: light
+source_id: legacy:2026-05-27-automated-obsidian-daily-brief-source
+why_saved: see_body_or_legacy_record
+retrieval_policy:
+  policy_kind: source_identity_only
+  pack_allowed: drilldown_required
+  action_basis_allowed: false
+  warning_code: raw_is_provenance_only
+promotion_gate: none
+action_basis_allowed: false
+truth_mutation_allowed: false
+raw_location: C:/Users/Administrator/Documents/资料库/raw/articles/2026-05-27-automated-obsidian-daily-brief-source.md
+legacy_raw_metadata:
+  source_quality: 3
+  freshness: 4
+  relevance: 4
+  cross_source_count: 1
 ---
-
 # 来源记录：Automated Obsidian Daily Brief System
 
 ## 为什么收录

@@ -1,0 +1,24 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "receipt-writes-reviewed-layer",
+  "expected_valid": false,
+  "expected_codes": ["MB_RECEIPT_WRITES_REVIEWED"],
+  "patch": {
+    "writeback": {
+      "operation_receipt_ref": "fixtures/bad/receipt-writes-reviewed.json",
+      "records": [
+        {
+          "id": "feedback-event",
+          "ref": "fixtures/writeback/feedback-event.json",
+          "record_type": "feedback_event",
+          "receipt_id": "mb-receipt-bad-reviewed",
+          "feedback_mutates_truth": false,
+          "writeback_direct_to_reviewed": false
+        }
+      ]
+    },
+    "action_readiness": {
+      "operation_receipt_ref": "fixtures/bad/receipt-writes-reviewed.json"
+    }
+  }
+}

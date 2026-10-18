@@ -1,0 +1,9 @@
+{
+  "fixture_id": "recommend-future-sandbox-adoption",
+  "option_id": "future_new_sandbox_verifier_adoption",
+  "expected": {
+    "decision": "RECOMMENDED_NEXT",
+    "allowed_without_separate_user_approval": true,
+    "write_scope": "new sandbox path only"
+  }
+}

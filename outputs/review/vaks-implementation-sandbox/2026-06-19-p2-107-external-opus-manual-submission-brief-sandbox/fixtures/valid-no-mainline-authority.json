@@ -1,0 +1,11 @@
+{
+  "fixture": "valid-no-mainline-authority",
+  "checks": {
+    "authority_flags.user_approval_present": false,
+    "authority_flags.mainline_merge_allowed": false,
+    "authority_flags.promotion_allowed": false,
+    "authority_flags.action_basis_ready": false,
+    "authority_flags.goal_complete_now": false
+  },
+  "expected": true
+}

@@ -1,0 +1,16 @@
+{
+  "case_id": "prototype-receipt-command",
+  "note": "Prototype receipt contains command text.",
+  "prototype_tamper": {
+    "kind": "receipt_update",
+    "updates": {
+      "screening_result": "python tools/promote.py --sync"
+    }
+  },
+  "expected_errors": [
+    "dangerous_value:$.prototype_receipt.screening_result:promote_py",
+    "dangerous_value:$.prototype_receipt.screening_result:python_command",
+    "dangerous_value:$.prototype_receipt.screening_result:sync_flag",
+    "prototype_receipt_screening_result_mismatch"
+  ]
+}

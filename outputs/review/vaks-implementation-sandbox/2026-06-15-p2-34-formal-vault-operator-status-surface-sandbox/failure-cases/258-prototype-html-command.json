@@ -1,0 +1,33 @@
+{
+  "case_id": "prototype-html-command",
+  "note": "HTML contains command.",
+  "prototype_tamper": {
+    "kind": "html_replace",
+    "file": "operator-status-surface.html",
+    "content": "<html><body>python tools/promote.py --sync</body></html>"
+  },
+  "expected_errors": [
+    "prototype_text_dangerous:operator-status-surface.html:python_command",
+    "prototype_text_dangerous:operator-status-surface.html:promote_py",
+    "prototype_text_dangerous:operator-status-surface.html:sync_flag",
+    "html_missing_attr:data-sandbox-only=\"true\"",
+    "html_missing_attr:data-status-only=\"true\"",
+    "html_missing_attr:data-non-executable=\"true\"",
+    "html_missing_attr:data-no-formal-vault-access=\"true\"",
+    "html_missing_attr:data-no-write=\"true\"",
+    "html_missing_attr:data-no-sync=\"true\"",
+    "html_missing_attr:data-no-authority=\"true\"",
+    "html_missing_attr:data-no-approval=\"true\"",
+    "html_missing_attr:data-no-user-wording=\"true\"",
+    "html_missing_attr:data-no-command=\"true\"",
+    "html_stage_card_count_mismatch:0:expected:4",
+    "html_missing_stage_slice:p2_30_dry_run_ledger",
+    "html_missing_stage_label:p2_30_dry_run_ledger",
+    "html_missing_stage_slice:p2_31_readiness_gate",
+    "html_missing_stage_label:p2_31_readiness_gate",
+    "html_missing_stage_slice:p2_32_request_packet",
+    "html_missing_stage_label:p2_32_request_packet",
+    "html_missing_stage_slice:p2_33_request_screening",
+    "html_missing_stage_label:p2_33_request_screening"
+  ]
+}

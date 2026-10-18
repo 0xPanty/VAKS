@@ -1,0 +1,385 @@
+[
+  {
+    "failure_id": "classifier_renderer_mismatch",
+    "input_text": "B",
+    "mutation": {
+      "renderer.classifier_case_id": "explicit_C"
+    },
+    "must_fail_reason": "simulator verifier must reject this executable mutated state",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "renderer_reply_mismatch",
+    "input_text": "C",
+    "mutation": {
+      "renderer.reply_id": "ask_readonly_planning_scope"
+    },
+    "must_fail_reason": "simulator verifier must reject this executable mutated state",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "known_case_bad_unknown_fallback",
+    "input_text": "B",
+    "mutation": {
+      "renderer.reply_id": "stop_for_unknown_classifier_case"
+    },
+    "must_fail_reason": "simulator verifier must reject this executable mutated state",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "automatic_execution_true",
+    "input_text": "A",
+    "mutation": {
+      "automatic_execution": true
+    },
+    "must_fail_reason": "simulator verifier must reject this executable mutated state",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "decision_collected_true",
+    "input_text": "B",
+    "mutation": {
+      "decision_collected": true
+    },
+    "must_fail_reason": "simulator verifier must reject this executable mutated state",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "ready_to_execute_true",
+    "input_text": "C",
+    "mutation": {
+      "ready_to_execute": true
+    },
+    "must_fail_reason": "simulator verifier must reject this executable mutated state",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "mainline_ready_true",
+    "input_text": "C，合并主线",
+    "mutation": {
+      "mainline_ready": true
+    },
+    "must_fail_reason": "simulator verifier must reject this executable mutated state",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "promotion_ready_true",
+    "input_text": "B",
+    "mutation": {
+      "promotion_ready": true
+    },
+    "must_fail_reason": "simulator verifier must reject this executable mutated state",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "action_basis_ready_true",
+    "input_text": "A",
+    "mutation": {
+      "action_basis_ready": true
+    },
+    "must_fail_reason": "simulator verifier must reject this executable mutated state",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "classifier_executes",
+    "input_text": "B",
+    "mutation": {
+      "classifier.automatic_execution": true
+    },
+    "must_fail_reason": "simulator verifier must reject this executable mutated state",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "renderer_executes",
+    "input_text": "C",
+    "mutation": {
+      "renderer.automatic_execution": true
+    },
+    "must_fail_reason": "simulator verifier must reject this executable mutated state",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "case_consistency_false",
+    "input_text": "B",
+    "mutation": {
+      "consistency.case_consistent": false
+    },
+    "must_fail_reason": "simulator verifier must reject this executable mutated state",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reply_missing",
+    "input_text": "A",
+    "mutation": {
+      "consistency.reply_present": false
+    },
+    "must_fail_reason": "simulator verifier must reject this executable mutated state",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "must_not_missing_commit",
+    "input_text": "D",
+    "mutation": {
+      "must_not_remove": "commit"
+    },
+    "must_fail_reason": "simulator verifier must reject this executable mutated state",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "must_not_missing_action_basis",
+    "input_text": "继续",
+    "mutation": {
+      "must_not_remove": "create_action_basis"
+    },
+    "must_fail_reason": "simulator verifier must reject this executable mutated state",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "unknown_case_not_fallback",
+    "input_text": "__synthetic_unknown_case__",
+    "mutation": {
+      "renderer.reply_id": "ask_one_clarification"
+    },
+    "must_fail_reason": "simulator verifier must reject this executable mutated state",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "execution_word_not_stopped",
+    "input_text": "C，合并主线",
+    "mutation": {
+      "classifier.case_id": "explicit_C",
+      "renderer.reply_id": "ask_mainline_review_scope"
+    },
+    "must_fail_reason": "simulator verifier must reject this executable mutated state",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "multiple_options_not_clarified",
+    "input_text": "B 和 C 都行",
+    "mutation": {
+      "classifier.case_id": "explicit_B",
+      "renderer.reply_id": "ask_readonly_planning_scope"
+    },
+    "must_fail_reason": "simulator verifier must reject this executable mutated state",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  {
+    "failure_id": "ambiguous_not_clarified",
+    "input_text": "继续",
+    "mutation": {
+      "classifier.case_id": "explicit_B",
+      "renderer.reply_id": "ask_readonly_planning_scope"
+    },
+    "must_fail_reason": "simulator verifier must reject this executable mutated state",
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  }
+]

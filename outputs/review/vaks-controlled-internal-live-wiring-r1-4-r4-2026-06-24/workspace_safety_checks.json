@@ -1,0 +1,29 @@
+{
+  "allowed_non_sandbox_write_count": 0,
+  "blocked_non_sandbox_write_count": 4,
+  "checks": [
+    {
+      "allowed": true,
+      "path": "C:/Users/Administrator/Documents/资料库/outputs/review/vaks-controlled-internal-live-wiring-r1-4-r4-2026-06-24/allowed-sandbox-write-probe.txt"
+    },
+    {
+      "allowed": false,
+      "path": "C:/Users/Administrator/Documents/资料库/outputs/review/vaks-controlled-internal-live-wiring-r1-4-r4-2026-06-24_evil/prefix-trick.md"
+    },
+    {
+      "allowed": false,
+      "path": "H:/Obsidian/资料库/vaks-r1-4-should-not-write.md"
+    },
+    {
+      "allowed": false,
+      "path": "C:/Users/Administrator/Documents/资料库/wiki/vaks-r1-4-should-not-write.md"
+    },
+    {
+      "allowed": false,
+      "path": "C:/Users/Administrator/Documents/资料库/raw/vaks-r1-4-should-not-write.md"
+    }
+  ],
+  "formal_obsidian_path": "H:/Obsidian/资料库",
+  "note": "No write is attempted for blocked paths; this is a path-policy probe only.",
+  "status": "pass"
+}

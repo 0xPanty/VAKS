@@ -1,0 +1,52 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "douglaslassance/cookbook",
+  "source_url": "https://github.com/douglaslassance/cookbook",
+  "checked_commit": "765614a129a0bc12b63354389f0a6126b2632efc",
+  "checked_at": "2026-06-11",
+  "inspection_method": "local git checkout; inspected Obsidian config/plugins, folder taxonomy, sample recipe, ratio note, technique note, and source/reference patterns",
+  "anchors": [
+    {
+      "path": ".obsidian/community-plugins.json",
+      "kind": "vault-tooling",
+      "why": "Shows active plugins: Obsidian Linter, LanguageTool, and Obsidian Git."
+    },
+    {
+      "path": ".obsidian/plugins/obsidian-linter/data.json",
+      "kind": "style-lint-config",
+      "why": "Large linter config controls heading style, list markers, bare URLs, footnotes, and many formatting rules."
+    },
+    {
+      "path": "Savory/Sourdough.md",
+      "kind": "ratio-recipe-sample",
+      "why": "Shows formula-like ingredient ratios relative to starter, ordered steps, mods, and resource links."
+    },
+    {
+      "path": "Misc/Grain Cooking Ratios.md",
+      "kind": "reference-table",
+      "why": "Shows reusable technique ratio table with one method and a water-ratio matrix."
+    },
+    {
+      "path": "Techniques/Folding.md",
+      "kind": "concept-note",
+      "why": "Shows a small technique concept note with aliases."
+    }
+  ],
+  "observed_counts": {
+    "savory_files": 45,
+    "sweet_files": 33,
+    "misc_files": 5,
+    "technique_files": 2,
+    "ingredient_files": 1,
+    "obsidian_config_files": 20
+  },
+  "known_limits": [
+    "This is a personal Obsidian vault with minimal README context.",
+    "Recipe/resource links are not verified evidence packets.",
+    "Obsidian plugin settings are useful local practice, not a portable VAKS default."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

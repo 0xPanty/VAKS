@@ -1,0 +1,9 @@
+{
+  "checked_path_count": 3,
+  "injected_error_class": "RuntimeError",
+  "injected_error_message_hmac": "6dc72995d571a2a963c46ad133c7c6db3b5506426d9aa31bc1155b53151dcdcf",
+  "output_dir_exists_after_failure": false,
+  "sidecar_exists_after_failure": false,
+  "status": "pass",
+  "zip_exists_after_failure": false
+}

@@ -1,0 +1,1518 @@
+[
+  {
+    "case_id": "V2-01-candidate-safe-downgrade",
+    "rank": 1,
+    "score": 85.0,
+    "path": "outputs/review/2026-06-11-AxDSan-mnemosyne-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "action",
+      "basis",
+      "candidate",
+      "memory",
+      "mnemosyne",
+      "support",
+      "vector"
+    ],
+    "snippet": "# AxDSan/mnemosyne Candidate Distillation ## Short Answer Mnemosyne's vector technology is advanced as a compact local agent-memory retrieval layer, not advanced as a general-purpose vector database. The strongest part is not one single algorithm. The valuable"
+  },
+  {
+    "case_id": "V2-01-candidate-safe-downgrade",
+    "rank": 2,
+    "score": 68.0,
+    "path": "outputs/review/2026-06-14-kanna12580-kk-knowledge-agent-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "action",
+      "basis",
+      "candidate",
+      "final",
+      "memory",
+      "support",
+      "vector"
+    ],
+    "snippet": "ect overlays. It is not reviewed knowledge, not a decision, not a formal pattern, and not action basis. ## 一句话结论 `kk-knowledge-agent` 对 MISA 有帮助，但帮助点要说准： ```text 它帮 MISA 接一个外部知识库。 它不负责让 MISA 真正“会记忆”。 ``` 更准确的定位： ```text kk-knowledge-agent = MISA external knowl"
+  },
+  {
+    "case_id": "V2-01-candidate-safe-downgrade",
+    "rank": 3,
+    "score": 56.5,
+    "path": "outputs/review/2026-06-12-breferrari-obsidian-mind-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "action",
+      "basis",
+      "candidate",
+      "memory",
+      "support"
+    ],
+    "snippet": "# Candidate Distillation: breferrari/obsidian-mind ## Boundary This note is provisional orientation. It can help route attention, compare ideas, or suggest project overlays. It is not reviewed knowledge, not a decision, not a formal pattern, and not action bas"
+  },
+  {
+    "case_id": "V2-01-candidate-safe-downgrade",
+    "rank": 4,
+    "score": 54.0,
+    "path": "outputs/review/2026-06-14-agents365-ai-drawio-skill-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "action",
+      "basis",
+      "candidate",
+      "final",
+      "memory",
+      "support"
+    ],
+    "snippet": "ect overlays. It is not reviewed knowledge, not a decision, not a formal pattern, and not action basis. ## 一句话结论 这个库值得留，但定位要收窄： ```text drawio-skill = 架构图 / 工作流图 / 代码结构图的生产工具 不是 VAKS 知识逻辑 不是 evidence/review/truth/action 机制 ``` 对我们最有用的是： ```text 把复杂 VAKS/MISA 逻"
+  },
+  {
+    "case_id": "V2-01-candidate-safe-downgrade",
+    "rank": 5,
+    "score": 51.0,
+    "path": "outputs/review/2026-06-11-RyanCodrai-turbovec-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "action",
+      "basis",
+      "candidate",
+      "memory",
+      "support",
+      "vector"
+    ],
+    "snippet": "ID、还能先用 BM25/SQL/权限/时间窗口筛一批候选，再只在这些 ID 里做 dense rerank。 ## 对 VAKS 的主要价值 ### 1. 本地 derived vector cache，而不是新的 truth store VAKS 已经有明确边界： ```text Markdown/YAML = 权威文本与结构 retrieval/cache = 可重建的派生层 vector score = activation signal, not truth ``` `turbovec` 正好适合放在第二"
+  },
+  {
+    "case_id": "V2-01-candidate-safe-downgrade",
+    "rank": 6,
+    "score": 48.5,
+    "path": "outputs/review/2026-06-14-edochi-mdvs-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "action",
+      "basis",
+      "candidate",
+      "support",
+      "vector"
+    ],
+    "snippet": "新，需 sandbox；Windows 预构建未见。 | | 设计借鉴价值 | 9/10 | `mdvs.toml` vs `.mdvs/` 的边界特别适合 VAKS。 | ## Candidate Point 1: mdvs is a lint sidecar for Markdown records VAKS 有大量 Markdown 记录： ```text raw/repos raw/articles raw/videos outputs/review outputs/feedback wiki/claims"
+  },
+  {
+    "case_id": "V2-01-candidate-safe-downgrade",
+    "rank": 7,
+    "score": 48.0,
+    "path": "outputs/review/2026-06-14-google-open-knowledge-format-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "action",
+      "basis",
+      "candidate",
+      "support",
+      "vector"
+    ],
+    "snippet": "# Candidate Distillation: Google Open Knowledge Format ## Boundary This note is provisional orientation. It can help route attention, compare ideas, or suggest project overlays. It is not reviewed knowledge, not a decision, not a formal pattern, and not action"
+  },
+  {
+    "case_id": "V2-01-candidate-safe-downgrade",
+    "rank": 8,
+    "score": 47.0,
+    "path": "outputs/review/2026-06-14-rohitg00-agentmemory-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "action",
+      "basis",
+      "candidate",
+      "memory",
+      "support",
+      "vector"
+    ],
+    "snippet": "# 候选蒸馏：agentmemory ## 说人话 这个对 MISA 有帮助，而且帮助不小。 但它帮的是： ```text 让 MISA 记住自己做过什么、用户偏好是什么、上次为什么这么决策、 下一次怎么更快拿到 VAKS context pack。 ``` 不是帮： ```text 让 MISA 直接拥有资料库、直接改 reviewed knowledge、直接判断什么是真的。 ``` 一句话： ```text agentmemory 适合做 MISA 的运行时记忆参考； VAKS 仍然是权威资料库； MISA "
+  },
+  {
+    "case_id": "V2-01-candidate-safe-downgrade",
+    "rank": 9,
+    "score": 46.5,
+    "path": "outputs/review/2026-06-12-bilibili-apex-knowledge-schema-rag-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "action",
+      "basis",
+      "candidate",
+      "support",
+      "vector"
+    ],
+    "snippet": " 对象查询 + 语义召回 ``` VAKS 可以借这个“结构化候选理解”路径，但必须加边界：抽出来的字段不是 reviewed truth，brief 不是证据，对象检索结果不是 action basis。 ## 借鉴等级 ```yaml borrow_value: strong borrow_order: P1: - schema-first document intake - structured object + semantic brief dual representation - natural-lan"
+  },
+  {
+    "case_id": "V2-01-candidate-safe-downgrade",
+    "rank": 10,
+    "score": 46.0,
+    "path": "raw/repos/2026-06-11-AxDSan-mnemosyne-source.md",
+    "record_kind": "source_card",
+    "knowledge_status": "raw",
+    "warning_code": "raw_is_provenance_only",
+    "matched_terms": [
+      "action",
+      "basis",
+      "candidate",
+      "memory",
+      "mnemosyne",
+      "support",
+      "vector"
+    ],
+    "snippet": "# AxDSan/mnemosyne Source Record ## Capture Reason The user explicitly requested strong VAKS distillation and asked whether the repository's vector technology is advanced. This source is therefore captured as a heavy candidate reference for VAKS retrieval/cach"
+  },
+  {
+    "case_id": "V2-01-candidate-safe-downgrade",
+    "rank": 11,
+    "score": 42.5,
+    "path": "outputs/review/2026-06-11-zhizhuodemao-ai-reverse-toolkit-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "action",
+      "basis",
+      "candidate"
+    ],
+    "snippet": "# ai-reverse-toolkit Candidate Distillation ## 一句话 `ai-reverse-toolkit` 对 VAKS 最有价值的不是“逆向技术”，而是： ```text 把复杂专家流程做成 AI 可执行 skill。 ``` 说人话：它教 AI 不要瞎猜，而是按阶段查、按错误分流、按证据收口。这个思路和 VAKS 非常像。 ## 它主要讲什么 这个库把逆向分析拆成几类 skill： ```text find-crypto-entry: 找关键参数从哪里生成，只定位入口，不继续"
+  },
+  {
+    "case_id": "V2-01-candidate-safe-downgrade",
+    "rank": 12,
+    "score": 42.0,
+    "path": "outputs/review/2026-06-07-aal-ruller-pkm-second-brain-ai-companian-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "action",
+      "basis",
+      "candidate",
+      "memory",
+      "support"
+    ],
+    "snippet": "# Candidate Distillation: PKM to Second Brain to Personal AI Companian ## Boundary This note is provisional orientation. It distills accessible metadata and public abstract material for VAKS. It is not reviewed knowledge, not a decision, not a formal pattern, "
+  },
+  {
+    "case_id": "V2-02-real-raw-anchor-natural-allow",
+    "rank": 1,
+    "score": 104.0,
+    "path": "raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md",
+    "record_kind": "source_card",
+    "knowledge_status": "raw",
+    "warning_code": "raw_is_provenance_only",
+    "matched_terms": [
+      "card",
+      "database",
+      "extracted",
+      "facts",
+      "first",
+      "flexnote",
+      "inspected",
+      "local",
+      "pages",
+      "source",
+      "tag"
+    ],
+    "snippet": "# FlexNote Docs: Inspected Pages This file preserves the inspected source anchors and extraction notes for the FlexNote documentation distillation. It is raw provenance support only, not reviewed knowledge. ## Pages Inspected | Page | URL | Key anchors inspect"
+  },
+  {
+    "case_id": "V2-02-real-raw-anchor-natural-allow",
+    "rank": 2,
+    "score": 56.0,
+    "path": "outputs/review/2026-06-13-flexnote-docs-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "card",
+      "database",
+      "extracted",
+      "first",
+      "flexnote",
+      "inspected",
+      "local",
+      "pages",
+      "source",
+      "tag"
+    ],
+    "snippet": "# Candidate Distillation: FlexNote Docs ## Boundary This note is provisional orientation. It can help route attention, compare ideas, or suggest project overlays. It is not reviewed knowledge, not a decision, not a formal pattern, and not action basis. ## 说人话结"
+  },
+  {
+    "case_id": "V2-02-real-raw-anchor-natural-allow",
+    "rank": 3,
+    "score": 41.5,
+    "path": "raw/repos/2026-05-27-knowledge-base-server-source.md",
+    "record_kind": "source_card",
+    "knowledge_status": "raw",
+    "warning_code": "raw_is_provenance_only",
+    "matched_terms": [
+      "database",
+      "extracted",
+      "first",
+      "local",
+      "source",
+      "tag"
+    ],
+    "snippet": "# Source Record: willynikes2/knowledge-base-server ## Why captured User asked to inspect `willynikes2/knowledge-base-server` with the same source-level rigor as the PARA and Kepano reviews: understand its design logic, preserve source/code anchors, extract wha"
+  },
+  {
+    "case_id": "V2-02-real-raw-anchor-natural-allow",
+    "rank": 4,
+    "score": 39.0,
+    "path": "raw/articles/2026-06-13-flexnote-docs-source.md",
+    "record_kind": "source_card",
+    "knowledge_status": "raw",
+    "warning_code": "raw_is_provenance_only",
+    "matched_terms": [
+      "card",
+      "database",
+      "first",
+      "flexnote",
+      "inspected",
+      "local",
+      "pages",
+      "source",
+      "tag"
+    ],
+    "snippet": "# 来源记录：FlexNote documentation ## 为什么收录 用户要求蒸馏 `https://wiki.myflexnote.com/docs/intro`，并判断它的思路能不能提炼出来给 VAKS 借鉴。 本记录只保存来源身份、检查范围和候选关系建议。它不是 reviewed knowledge，不是架构决策，也不能作为 action basis。 ## 来源信息 - 原始链接：https://wiki.myflexnote.com/docs/intro - 中文链接：https://wiki.m"
+  },
+  {
+    "case_id": "V2-02-real-raw-anchor-natural-allow",
+    "rank": 5,
+    "score": 37.5,
+    "path": "raw/repos/2026-05-27-kagantic-vault-structure-source.md",
+    "record_kind": "source_card",
+    "knowledge_status": "raw",
+    "warning_code": "raw_is_provenance_only",
+    "matched_terms": [
+      "first",
+      "inspected",
+      "local",
+      "pages",
+      "source",
+      "tag"
+    ],
+    "snippet": "# Source Record: Asim00740/Kagantic-vault-structure ## Why captured User asked to inspect `Asim00740/Kagantic-vault-structure` with the same requirements as the previous library reviews: understand the design logic, preserve source/template anchors, extract re"
+  },
+  {
+    "case_id": "V2-02-real-raw-anchor-natural-allow",
+    "rank": 6,
+    "score": 35.5,
+    "path": "raw/repos/2026-05-27-dusk-obsidian-vault-source.md",
+    "record_kind": "source_card",
+    "knowledge_status": "raw",
+    "warning_code": "raw_is_provenance_only",
+    "matched_terms": [
+      "inspected",
+      "local",
+      "source",
+      "tag"
+    ],
+    "snippet": "# Source Record: DuskWasHere/dusk-obsidian-vault ## Why captured User asked to inspect `DuskWasHere/dusk-obsidian-vault` with the same requirements as prior library reviews: understand the design logic, preserve source/template anchors, extract reusable ideas "
+  },
+  {
+    "case_id": "V2-02-real-raw-anchor-natural-allow",
+    "rank": 7,
+    "score": 34.5,
+    "path": "outputs/review/2026-06-11-AxDSan-mnemosyne-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "card",
+      "database",
+      "first",
+      "inspected",
+      "local",
+      "source",
+      "tag"
+    ],
+    "snippet": "idate Distillation ## Short Answer Mnemosyne's vector technology is advanced as a compact local agent-memory retrieval layer, not advanced as a general-purpose vector database. The strongest part is not one single algorithm. The valuable part is the system com"
+  },
+  {
+    "case_id": "V2-02-real-raw-anchor-natural-allow",
+    "rank": 8,
+    "score": 32.5,
+    "path": "outputs/review/project_lens_overlays/2026-06-13-flexnote-vaks-visual-knowledge-workbench-overlay.md",
+    "record_kind": "project_overlay",
+    "knowledge_status": "candidate",
+    "warning_code": "overlay_not_authority",
+    "matched_terms": [
+      "card",
+      "database",
+      "flexnote",
+      "source",
+      "tag"
+    ],
+    "snippet": "# Project Overlay: FlexNote for VAKS ## Boundary This is a project-scoped sidecar. It does not rewrite the source card, candidate distillation, reviewed note, decision, or pattern. It can guide the active project, but it cannot act as reviewed knowledge or act"
+  },
+  {
+    "case_id": "V2-02-real-raw-anchor-natural-allow",
+    "rank": 9,
+    "score": 31.5,
+    "path": "raw/repos/2026-06-11-awesome-obsidian-vault/alexiachen-my-notes-source.md",
+    "record_kind": "source_card",
+    "knowledge_status": "raw",
+    "warning_code": "raw_is_provenance_only",
+    "matched_terms": [
+      "card",
+      "local",
+      "source"
+    ],
+    "snippet": "# Source Card: Alexia Chen notes — AlexiaChen ## Why Captured This entry was listed in `obsidian-pkm-vault/awesome-obsidian-vault` and was processed as an individual original-source candidate for VAKS. ## Source Identity - Category: Digital Garden - Name: Alex"
+  },
+  {
+    "case_id": "V2-02-real-raw-anchor-natural-allow",
+    "rank": 10,
+    "score": 31.5,
+    "path": "raw/repos/2026-06-11-safishamsi-graphify-source.md",
+    "record_kind": "source_card",
+    "knowledge_status": "raw",
+    "warning_code": "raw_is_provenance_only",
+    "matched_terms": [
+      "database",
+      "extracted",
+      "first",
+      "inspected",
+      "local",
+      "source"
+    ],
+    "snippet": "# Graphify Source Record ## Why Captured The user requested a strong distillation of `safishamsi/graphify` for the VAKS retrieval-layer design workspace. This source matters because it is not a normal vector-search library. It builds a queryable knowledge grap"
+  },
+  {
+    "case_id": "V2-02-real-raw-anchor-natural-allow",
+    "rank": 11,
+    "score": 31.0,
+    "path": "raw/repos/2026-05-26-llm-wiki-source.md",
+    "record_kind": "source_card",
+    "knowledge_status": "raw",
+    "warning_code": "raw_is_provenance_only",
+    "matched_terms": [
+      "facts",
+      "first",
+      "inspected",
+      "local",
+      "source"
+    ],
+    "snippet": "# Source: nashsu/llm_wiki ## What It Is `nashsu/llm_wiki` is a concrete desktop implementation of the Karpathy LLM Wiki pattern. It is not just an Obsidian template or article. The inspected source shows a Tauri + React + Rust app that imports sources, compile"
+  },
+  {
+    "case_id": "V2-02-real-raw-anchor-natural-allow",
+    "rank": 12,
+    "score": 31.0,
+    "path": "raw/repos/2026-05-27-kepano-obsidian-source.md",
+    "record_kind": "source_card",
+    "knowledge_status": "raw",
+    "warning_code": "raw_is_provenance_only",
+    "matched_terms": [
+      "database",
+      "first",
+      "pages",
+      "source",
+      "tag"
+    ],
+    "snippet": "# Source Record: kepano/kepano-obsidian ## Why captured User asked to inspect `kepano/kepano-obsidian` with the same source-level rigor as the PARA review: understand its design logic, preserve source/code anchors, extract what can strengthen the whole archite"
+  },
+  {
+    "case_id": "V2-03-mixed-pack-no-fallback-allow",
+    "rank": 1,
+    "score": 92.5,
+    "path": "outputs/review/2026-06-13-flexnote-docs-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "anchor",
+      "candidate",
+      "context",
+      "database",
+      "extracted",
+      "flexnote",
+      "inspected",
+      "overlay",
+      "pack",
+      "pages",
+      "source",
+      "tag",
+      "visual",
+      "workbench"
+    ],
+    "snippet": "# Candidate Distillation: FlexNote Docs ## Boundary This note is provisional orientation. It can help route attention, compare ideas, or suggest project overlays. It is not reviewed knowledge, not a decision, not a formal pattern, and not action basis. ## 说人话结"
+  },
+  {
+    "case_id": "V2-03-mixed-pack-no-fallback-allow",
+    "rank": 2,
+    "score": 91.0,
+    "path": "raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md",
+    "record_kind": "source_card",
+    "knowledge_status": "raw",
+    "warning_code": "raw_is_provenance_only",
+    "matched_terms": [
+      "database",
+      "extracted",
+      "facts",
+      "flexnote",
+      "inspected",
+      "pages",
+      "source",
+      "tag",
+      "visual"
+    ],
+    "snippet": "# FlexNote Docs: Inspected Pages This file preserves the inspected source anchors and extraction notes for the FlexNote documentation distillation. It is raw provenance support only, not reviewed knowledge. ## Pages Inspected | Page | URL | Key anchors inspect"
+  },
+  {
+    "case_id": "V2-03-mixed-pack-no-fallback-allow",
+    "rank": 3,
+    "score": 87.0,
+    "path": "outputs/review/project_lens_overlays/2026-06-13-flexnote-vaks-visual-knowledge-workbench-overlay.md",
+    "record_kind": "project_overlay",
+    "knowledge_status": "candidate",
+    "warning_code": "overlay_not_authority",
+    "matched_terms": [
+      "anchor",
+      "candidate",
+      "context",
+      "database",
+      "flexnote",
+      "overlay",
+      "pack",
+      "source",
+      "tag",
+      "visual",
+      "workbench"
+    ],
+    "snippet": "# Project Overlay: FlexNote for VAKS ## Boundary This is a project-scoped sidecar. It does not rewrite the source card, candidate distillation, reviewed note, decision, or pattern. It can guide the active project, but it cannot act as reviewed knowledge or act"
+  },
+  {
+    "case_id": "V2-03-mixed-pack-no-fallback-allow",
+    "rank": 4,
+    "score": 74.0,
+    "path": "outputs/review/2026-06-13-bilibili-book-note-workflow-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "anchor",
+      "candidate",
+      "context",
+      "pack",
+      "source",
+      "tag",
+      "workbench"
+    ],
+    "snippet": "板和索引卡把全书串起来；之后每天主动回忆和迭代。 对 VAKS 来说，它最值得借的不是 reminds 这个工具，而是这条顺序： ```text raw highlight -> candidate comprehension card -> source/quote/paraphrase split -> index/synthesis card -> active recall and rewrite -> cross-source association candidate -> review_due whe"
+  },
+  {
+    "case_id": "V2-03-mixed-pack-no-fallback-allow",
+    "rank": 5,
+    "score": 66.5,
+    "path": "outputs/review/2026-06-11-AxDSan-mnemosyne-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "candidate",
+      "context",
+      "database",
+      "inspected",
+      "overlay",
+      "pack",
+      "source",
+      "tag"
+    ],
+    "snippet": "# AxDSan/mnemosyne Candidate Distillation ## Short Answer Mnemosyne's vector technology is advanced as a compact local agent-memory retrieval layer, not advanced as a general-purpose vector database. The strongest part is not one single algorithm. The valuable"
+  },
+  {
+    "case_id": "V2-03-mixed-pack-no-fallback-allow",
+    "rank": 6,
+    "score": 65.5,
+    "path": "outputs/review/2026-06-13-bilibili-edge-recall-contextual-active-recall-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "anchor",
+      "candidate",
+      "context",
+      "overlay",
+      "pack",
+      "source",
+      "workbench"
+    ],
+    "snippet": "# Edge Recall - Contextual Active Recall 强蒸馏 ## 说人话结论 这条视频解决的不是“资料怎么入库”，而是“资料进库以后，人到底有没有记住”。它的核心判断很朴素：收藏不等于学会，看过不等于记住，AI 能回答也不等于你会用。 Edge Recall 的产品思路是：复习卡不脱离原笔记，不用特殊符号污染原文；在原文位置显示/隐藏答案；用状态栏、侧栏、卡组和移动端把复习变成随手动作；用间隔重复和难度反馈安排下一次复习；用图表给用户复习反馈。 VAKS 有类似思路，但层级不同：我们已"
+  },
+  {
+    "case_id": "V2-03-mixed-pack-no-fallback-allow",
+    "rank": 7,
+    "score": 64.0,
+    "path": "outputs/review/2026-06-11-zhizhuodemao-ai-reverse-toolkit-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "candidate",
+      "context",
+      "overlay",
+      "pack",
+      "source"
+    ],
+    "snippet": "# ai-reverse-toolkit Candidate Distillation ## 一句话 `ai-reverse-toolkit` 对 VAKS 最有价值的不是“逆向技术”，而是： ```text 把复杂专家流程做成 AI 可执行 skill。 ``` 说人话：它教 AI 不要瞎猜，而是按阶段查、按错误分流、按证据收口。这个思路和 VAKS 非常像。 ## 它主要讲什么 这个库把逆向分析拆成几类 skill： ```text find-crypto-entry: 找关键参数从哪里生成，只定位入口，不继续"
+  },
+  {
+    "case_id": "V2-03-mixed-pack-no-fallback-allow",
+    "rank": 8,
+    "score": 61.0,
+    "path": "outputs/review/2026-06-13-bilibili-obsidian-homepage-plugin-workbench-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "candidate",
+      "context",
+      "pack",
+      "source",
+      "workbench"
+    ],
+    "snippet": "的模板放到首页。 - 热力图：文件数量热力图 + 字数热力图，看持续输出。 对 VAKS 来说，这不是核心架构，不是 reviewed knowledge；它更像一个 `VAKS Workbench Homepage` 的候选 UI 参考。我们可以借“入口聚合、低摩擦 capture、动态队列、模板入口、活动指标”，但不能借“dashboard 等于知识质量”。 ## VAKS 有没有类似思路？ 有一部分，但偏后端/文档，不像这个视频这么工作台化。 VAKS 现有类似逻辑： - `DEV_CONTEXT`：当前任务"
+  },
+  {
+    "case_id": "V2-03-mixed-pack-no-fallback-allow",
+    "rank": 9,
+    "score": 58.0,
+    "path": "outputs/review/2026-06-14-agents365-ai-drawio-skill-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "anchor",
+      "candidate",
+      "source",
+      "visual"
+    ],
+    "snippet": "s provisional orientation. It can help route attention, compare ideas, or suggest project overlays. It is not reviewed knowledge, not a decision, not a formal pattern, and not action basis. ## 一句话结论 这个库值得留，但定位要收窄： ```text drawio-skill = 架构图 / 工作流图 / 代码结构图的生产工具"
+  },
+  {
+    "case_id": "V2-03-mixed-pack-no-fallback-allow",
+    "rank": 10,
+    "score": 57.0,
+    "path": "outputs/review/2026-06-14-kanna12580-kk-knowledge-agent-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "anchor",
+      "candidate",
+      "context",
+      "pack",
+      "source",
+      "tag"
+    ],
+    "snippet": "s provisional orientation. It can help route attention, compare ideas, or suggest project overlays. It is not reviewed knowledge, not a decision, not a formal pattern, and not action basis. ## 一句话结论 `kk-knowledge-agent` 对 MISA 有帮助，但帮助点要说准： ```text 它帮 MISA 接一个外"
+  },
+  {
+    "case_id": "V2-03-mixed-pack-no-fallback-allow",
+    "rank": 11,
+    "score": 56.0,
+    "path": "raw/repos/2026-05-27-dusk-obsidian-vault-source.md",
+    "record_kind": "source_card",
+    "knowledge_status": "raw",
+    "warning_code": "raw_is_provenance_only",
+    "matched_terms": [
+      "anchor",
+      "candidate",
+      "context",
+      "inspected",
+      "pack",
+      "source",
+      "tag",
+      "workbench"
+    ],
+    "snippet": "# Source Record: DuskWasHere/dusk-obsidian-vault ## Why captured User asked to inspect `DuskWasHere/dusk-obsidian-vault` with the same requirements as prior library reviews: understand the design logic, preserve source/template anchors, extract reusable ideas "
+  },
+  {
+    "case_id": "V2-03-mixed-pack-no-fallback-allow",
+    "rank": 12,
+    "score": 54.5,
+    "path": "outputs/review/2026-06-11-cyrilxbt-n8n-obsidian-business-brain-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "anchor",
+      "candidate",
+      "context",
+      "overlay",
+      "pack",
+      "source",
+      "workbench"
+    ],
+    "snippet": "月回看、提醒、提炼模式 ``` 对 VAKS 有用，但不能照搬。 最该借的是“工作流节奏”和“共享上下文文件”；最该避开的是“让自动化直接把 AI 输出写成永久可信知识”。 ## Candidate Point 1: 三层业务脑可以映射到 VAKS，但权威边界不同 原文三层： ```text Obsidian = permanent memory N8N = automation nervous system Claude API = intelligence layer ``` VAKS 可以吸收成： ```te"
+  },
+  {
+    "case_id": "V2-04-adversarial-candidate-mislabeled-support",
+    "rank": 1,
+    "score": 85.0,
+    "path": "outputs/review/2026-06-11-AxDSan-mnemosyne-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "action",
+      "basis",
+      "candidate",
+      "memory",
+      "mnemosyne",
+      "support",
+      "vector"
+    ],
+    "snippet": "# AxDSan/mnemosyne Candidate Distillation ## Short Answer Mnemosyne's vector technology is advanced as a compact local agent-memory retrieval layer, not advanced as a general-purpose vector database. The strongest part is not one single algorithm. The valuable"
+  },
+  {
+    "case_id": "V2-04-adversarial-candidate-mislabeled-support",
+    "rank": 2,
+    "score": 68.0,
+    "path": "outputs/review/2026-06-14-kanna12580-kk-knowledge-agent-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "action",
+      "basis",
+      "candidate",
+      "final",
+      "memory",
+      "support",
+      "vector"
+    ],
+    "snippet": "ect overlays. It is not reviewed knowledge, not a decision, not a formal pattern, and not action basis. ## 一句话结论 `kk-knowledge-agent` 对 MISA 有帮助，但帮助点要说准： ```text 它帮 MISA 接一个外部知识库。 它不负责让 MISA 真正“会记忆”。 ``` 更准确的定位： ```text kk-knowledge-agent = MISA external knowl"
+  },
+  {
+    "case_id": "V2-04-adversarial-candidate-mislabeled-support",
+    "rank": 3,
+    "score": 56.5,
+    "path": "outputs/review/2026-06-12-breferrari-obsidian-mind-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "action",
+      "basis",
+      "candidate",
+      "memory",
+      "support"
+    ],
+    "snippet": "# Candidate Distillation: breferrari/obsidian-mind ## Boundary This note is provisional orientation. It can help route attention, compare ideas, or suggest project overlays. It is not reviewed knowledge, not a decision, not a formal pattern, and not action bas"
+  },
+  {
+    "case_id": "V2-04-adversarial-candidate-mislabeled-support",
+    "rank": 4,
+    "score": 54.0,
+    "path": "outputs/review/2026-06-14-agents365-ai-drawio-skill-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "action",
+      "basis",
+      "candidate",
+      "final",
+      "memory",
+      "support"
+    ],
+    "snippet": "ect overlays. It is not reviewed knowledge, not a decision, not a formal pattern, and not action basis. ## 一句话结论 这个库值得留，但定位要收窄： ```text drawio-skill = 架构图 / 工作流图 / 代码结构图的生产工具 不是 VAKS 知识逻辑 不是 evidence/review/truth/action 机制 ``` 对我们最有用的是： ```text 把复杂 VAKS/MISA 逻"
+  },
+  {
+    "case_id": "V2-04-adversarial-candidate-mislabeled-support",
+    "rank": 5,
+    "score": 51.0,
+    "path": "outputs/review/2026-06-11-RyanCodrai-turbovec-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "action",
+      "basis",
+      "candidate",
+      "memory",
+      "support",
+      "vector"
+    ],
+    "snippet": "ID、还能先用 BM25/SQL/权限/时间窗口筛一批候选，再只在这些 ID 里做 dense rerank。 ## 对 VAKS 的主要价值 ### 1. 本地 derived vector cache，而不是新的 truth store VAKS 已经有明确边界： ```text Markdown/YAML = 权威文本与结构 retrieval/cache = 可重建的派生层 vector score = activation signal, not truth ``` `turbovec` 正好适合放在第二"
+  },
+  {
+    "case_id": "V2-04-adversarial-candidate-mislabeled-support",
+    "rank": 6,
+    "score": 48.5,
+    "path": "outputs/review/2026-06-14-edochi-mdvs-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "action",
+      "basis",
+      "candidate",
+      "support",
+      "vector"
+    ],
+    "snippet": "新，需 sandbox；Windows 预构建未见。 | | 设计借鉴价值 | 9/10 | `mdvs.toml` vs `.mdvs/` 的边界特别适合 VAKS。 | ## Candidate Point 1: mdvs is a lint sidecar for Markdown records VAKS 有大量 Markdown 记录： ```text raw/repos raw/articles raw/videos outputs/review outputs/feedback wiki/claims"
+  },
+  {
+    "case_id": "V2-04-adversarial-candidate-mislabeled-support",
+    "rank": 7,
+    "score": 48.0,
+    "path": "outputs/review/2026-06-14-google-open-knowledge-format-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "action",
+      "basis",
+      "candidate",
+      "support",
+      "vector"
+    ],
+    "snippet": "# Candidate Distillation: Google Open Knowledge Format ## Boundary This note is provisional orientation. It can help route attention, compare ideas, or suggest project overlays. It is not reviewed knowledge, not a decision, not a formal pattern, and not action"
+  },
+  {
+    "case_id": "V2-04-adversarial-candidate-mislabeled-support",
+    "rank": 8,
+    "score": 47.0,
+    "path": "outputs/review/2026-06-14-rohitg00-agentmemory-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "action",
+      "basis",
+      "candidate",
+      "memory",
+      "support",
+      "vector"
+    ],
+    "snippet": "# 候选蒸馏：agentmemory ## 说人话 这个对 MISA 有帮助，而且帮助不小。 但它帮的是： ```text 让 MISA 记住自己做过什么、用户偏好是什么、上次为什么这么决策、 下一次怎么更快拿到 VAKS context pack。 ``` 不是帮： ```text 让 MISA 直接拥有资料库、直接改 reviewed knowledge、直接判断什么是真的。 ``` 一句话： ```text agentmemory 适合做 MISA 的运行时记忆参考； VAKS 仍然是权威资料库； MISA "
+  },
+  {
+    "case_id": "V2-04-adversarial-candidate-mislabeled-support",
+    "rank": 9,
+    "score": 46.5,
+    "path": "outputs/review/2026-06-12-bilibili-apex-knowledge-schema-rag-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "action",
+      "basis",
+      "candidate",
+      "support",
+      "vector"
+    ],
+    "snippet": " 对象查询 + 语义召回 ``` VAKS 可以借这个“结构化候选理解”路径，但必须加边界：抽出来的字段不是 reviewed truth，brief 不是证据，对象检索结果不是 action basis。 ## 借鉴等级 ```yaml borrow_value: strong borrow_order: P1: - schema-first document intake - structured object + semantic brief dual representation - natural-lan"
+  },
+  {
+    "case_id": "V2-04-adversarial-candidate-mislabeled-support",
+    "rank": 10,
+    "score": 46.0,
+    "path": "raw/repos/2026-06-11-AxDSan-mnemosyne-source.md",
+    "record_kind": "source_card",
+    "knowledge_status": "raw",
+    "warning_code": "raw_is_provenance_only",
+    "matched_terms": [
+      "action",
+      "basis",
+      "candidate",
+      "memory",
+      "mnemosyne",
+      "support",
+      "vector"
+    ],
+    "snippet": "# AxDSan/mnemosyne Source Record ## Capture Reason The user explicitly requested strong VAKS distillation and asked whether the repository's vector technology is advanced. This source is therefore captured as a heavy candidate reference for VAKS retrieval/cach"
+  },
+  {
+    "case_id": "V2-04-adversarial-candidate-mislabeled-support",
+    "rank": 11,
+    "score": 42.5,
+    "path": "outputs/review/2026-06-11-zhizhuodemao-ai-reverse-toolkit-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "action",
+      "basis",
+      "candidate"
+    ],
+    "snippet": "# ai-reverse-toolkit Candidate Distillation ## 一句话 `ai-reverse-toolkit` 对 VAKS 最有价值的不是“逆向技术”，而是： ```text 把复杂专家流程做成 AI 可执行 skill。 ``` 说人话：它教 AI 不要瞎猜，而是按阶段查、按错误分流、按证据收口。这个思路和 VAKS 非常像。 ## 它主要讲什么 这个库把逆向分析拆成几类 skill： ```text find-crypto-entry: 找关键参数从哪里生成，只定位入口，不继续"
+  },
+  {
+    "case_id": "V2-04-adversarial-candidate-mislabeled-support",
+    "rank": 12,
+    "score": 42.0,
+    "path": "outputs/review/2026-06-07-aal-ruller-pkm-second-brain-ai-companian-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "action",
+      "basis",
+      "candidate",
+      "memory",
+      "support"
+    ],
+    "snippet": "# Candidate Distillation: PKM to Second Brain to Personal AI Companian ## Boundary This note is provisional orientation. It distills accessible metadata and public abstract material for VAKS. It is not reviewed knowledge, not a decision, not a formal pattern, "
+  },
+  {
+    "case_id": "V2-05-adversarial-overlay-mislabeled-support",
+    "rank": 1,
+    "score": 105.5,
+    "path": "outputs/review/project_lens_overlays/2026-06-13-flexnote-vaks-visual-knowledge-workbench-overlay.md",
+    "record_kind": "project_overlay",
+    "knowledge_status": "candidate",
+    "warning_code": "overlay_not_authority",
+    "matched_terms": [
+      "anchor",
+      "borrow",
+      "flexnote",
+      "overlay",
+      "project",
+      "source",
+      "support",
+      "visual",
+      "workbench"
+    ],
+    "snippet": "# Project Overlay: FlexNote for VAKS ## Boundary This is a project-scoped sidecar. It does not rewrite the source card, candidate distillation, reviewed note, decision, or pattern. It can guide the active project, but it cannot act as reviewed knowledge or act"
+  },
+  {
+    "case_id": "V2-05-adversarial-overlay-mislabeled-support",
+    "rank": 2,
+    "score": 57.0,
+    "path": "outputs/review/project_lens_overlays/2026-06-14-agents365-ai-drawio-skill-vaks-visualization-overlay.md",
+    "record_kind": "project_overlay",
+    "knowledge_status": "candidate",
+    "warning_code": "overlay_not_authority",
+    "matched_terms": [
+      "borrow",
+      "overlay",
+      "project",
+      "source",
+      "support",
+      "visual"
+    ],
+    "snippet": "# Project Overlay: drawio-skill for VAKS Visualization ## Boundary This is a project-scoped sidecar. It does not rewrite the source card, candidate distillation, reviewed note, decision, or pattern. It can guide diagram/product documentation work, but it canno"
+  },
+  {
+    "case_id": "V2-05-adversarial-overlay-mislabeled-support",
+    "rank": 3,
+    "score": 55.0,
+    "path": "outputs/review/2026-06-13-flexnote-docs-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "anchor",
+      "borrow",
+      "flexnote",
+      "overlay",
+      "project",
+      "source",
+      "support",
+      "visual",
+      "workbench"
+    ],
+    "snippet": "# Candidate Distillation: FlexNote Docs ## Boundary This note is provisional orientation. It can help route attention, compare ideas, or suggest project overlays. It is not reviewed knowledge, not a decision, not a formal pattern, and not action basis. ## 说人话结"
+  },
+  {
+    "case_id": "V2-05-adversarial-overlay-mislabeled-support",
+    "rank": 4,
+    "score": 54.5,
+    "path": "outputs/review/project_lens_overlays/2026-06-14-benmaster82-Kwipu-vaks-local-graph-rag-overlay.md",
+    "record_kind": "project_overlay",
+    "knowledge_status": "candidate",
+    "warning_code": "overlay_not_authority",
+    "matched_terms": [
+      "borrow",
+      "overlay",
+      "project",
+      "source",
+      "support"
+    ],
+    "snippet": "# Project Lens: Kwipu as VAKS Local Graph RAG Sidecar ## Boundary This is a project-scoped sidecar. It does not rewrite the source card, candidate distillation, reviewed note, decision, or pattern. It can guide future VAKS retrieval/MCP design, but it cannot a"
+  },
+  {
+    "case_id": "V2-05-adversarial-overlay-mislabeled-support",
+    "rank": 5,
+    "score": 52.0,
+    "path": "outputs/review/project_lens_overlays/2026-06-14-kanna12580-kk-knowledge-agent-misa-kb-memory-overlay.md",
+    "record_kind": "project_overlay",
+    "knowledge_status": "candidate",
+    "warning_code": "overlay_not_authority",
+    "matched_terms": [
+      "anchor",
+      "borrow",
+      "overlay",
+      "project",
+      "source",
+      "support"
+    ],
+    "snippet": "# Project Overlay: kk-knowledge-agent for MISA ## Boundary This is a project-scoped sidecar for MISA. It does not rewrite the source card, candidate distillation, reviewed note, decision, or pattern. It can guide active MISA design, but it cannot act as review"
+  },
+  {
+    "case_id": "V2-05-adversarial-overlay-mislabeled-support",
+    "rank": 6,
+    "score": 50.5,
+    "path": "outputs/review/project_lens_overlays/2026-06-14-adithya-s-k-omniparse-vaks-raw-intake-overlay.md",
+    "record_kind": "project_overlay",
+    "knowledge_status": "candidate",
+    "warning_code": "overlay_not_authority",
+    "matched_terms": [
+      "borrow",
+      "overlay",
+      "project",
+      "source",
+      "support"
+    ],
+    "snippet": "# Project Lens: OmniParse as VAKS Raw Intake Parser Router ## Boundary This is a project-scoped sidecar. It does not rewrite the source card, candidate distillation, reviewed note, decision, or pattern. It can guide future VAKS raw-intake design, but it cannot"
+  },
+  {
+    "case_id": "V2-05-adversarial-overlay-mislabeled-support",
+    "rank": 7,
+    "score": 50.5,
+    "path": "outputs/review/project_lens_overlays/2026-06-14-rohitg00-agentmemory-misa-vaks-bridge-overlay.md",
+    "record_kind": "project_overlay",
+    "knowledge_status": "candidate",
+    "warning_code": "overlay_not_authority",
+    "matched_terms": [
+      "borrow",
+      "overlay",
+      "project",
+      "source"
+    ],
+    "snippet": "# Project Lens: agentmemory as MISA Runtime Memory / VAKS Bridge Reference ## Boundary This is a project-scoped sidecar. It does not rewrite the source card, candidate distillation, reviewed note, decision, or pattern. It can guide a future MISA/VAKS bridge sa"
+  },
+  {
+    "case_id": "V2-05-adversarial-overlay-mislabeled-support",
+    "rank": 8,
+    "score": 49.5,
+    "path": "outputs/review/project_lens_overlays/2026-06-14-edochi-mdvs-vaks-validation-search-overlay.md",
+    "record_kind": "project_overlay",
+    "knowledge_status": "candidate",
+    "warning_code": "overlay_not_authority",
+    "matched_terms": [
+      "borrow",
+      "overlay",
+      "project",
+      "source",
+      "support"
+    ],
+    "snippet": "# Project Lens: mdvs as VAKS Validation/Search Sidecar ## Boundary This is a project-scoped sidecar. It does not rewrite the source card, candidate distillation, reviewed note, decision, or pattern. It can guide a future VAKS validation/search sandbox, but it "
+  },
+  {
+    "case_id": "V2-05-adversarial-overlay-mislabeled-support",
+    "rank": 9,
+    "score": 44.0,
+    "path": "raw/articles/2026-06-13-flexnote-docs-source.md",
+    "record_kind": "source_card",
+    "knowledge_status": "raw",
+    "warning_code": "raw_is_provenance_only",
+    "matched_terms": [
+      "anchor",
+      "flexnote",
+      "overlay",
+      "project",
+      "source",
+      "visual",
+      "workbench"
+    ],
+    "snippet": "# 来源记录：FlexNote documentation ## 为什么收录 用户要求蒸馏 `https://wiki.myflexnote.com/docs/intro`，并判断它的思路能不能提炼出来给 VAKS 借鉴。 本记录只保存来源身份、检查范围和候选关系建议。它不是 reviewed knowledge，不是架构决策，也不能作为 action basis。 ## 来源信息 - 原始链接：https://wiki.myflexnote.com/docs/intro - 中文链接：https://wiki.m"
+  },
+  {
+    "case_id": "V2-05-adversarial-overlay-mislabeled-support",
+    "rank": 10,
+    "score": 42.0,
+    "path": "outputs/review/project_overlays/_runtime_test_fixtures/2026-06-14-flexnote-canonical-overlay-runtime-fixture.md",
+    "record_kind": "project_overlay",
+    "knowledge_status": "candidate",
+    "warning_code": "overlay_not_authority",
+    "matched_terms": [
+      "flexnote",
+      "overlay",
+      "project",
+      "source",
+      "support"
+    ],
+    "snippet": "# Canonical Project Overlay Runtime Fixture This is a sandbox test fixture for Source Intake runtime validation. It exists only to test that a canonical `outputs/review/project_overlays/` overlay cannot become final support even if an errant pack assembler lab"
+  },
+  {
+    "case_id": "V2-05-adversarial-overlay-mislabeled-support",
+    "rank": 11,
+    "score": 42.0,
+    "path": "raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md",
+    "record_kind": "source_card",
+    "knowledge_status": "raw",
+    "warning_code": "raw_is_provenance_only",
+    "matched_terms": [
+      "flexnote",
+      "source",
+      "support",
+      "visual"
+    ],
+    "snippet": "# FlexNote Docs: Inspected Pages This file preserves the inspected source anchors and extraction notes for the FlexNote documentation distillation. It is raw provenance support only, not reviewed knowledge. ## Pages Inspected | Page | URL | Key anchors inspect"
+  },
+  {
+    "case_id": "V2-05-adversarial-overlay-mislabeled-support",
+    "rank": 12,
+    "score": 40.0,
+    "path": "outputs/review/2026-06-12-breferrari-obsidian-mind-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "anchor",
+      "borrow",
+      "project",
+      "source",
+      "support",
+      "workbench"
+    ],
+    "snippet": "s note is provisional orientation. It can help route attention, compare ideas, or suggest project overlays. It is not reviewed knowledge, not a decision, not a formal pattern, and not action basis. ## 说人话 这个仓库最值得我们看的不是“它也是 Obsidian vault”，而是它把 agent 工作流拆得比较干净："
+  },
+  {
+    "case_id": "V2-06-adversarial-rank-diagnostic-mislabeled-support",
+    "rank": 1,
+    "score": 89.5,
+    "path": "outputs/review/2026-06-13-flexnote-docs-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "anchor",
+      "candidate",
+      "context",
+      "database",
+      "flexnote",
+      "overlay",
+      "pack",
+      "source",
+      "tag",
+      "visual",
+      "workbench"
+    ],
+    "snippet": "# Candidate Distillation: FlexNote Docs ## Boundary This note is provisional orientation. It can help route attention, compare ideas, or suggest project overlays. It is not reviewed knowledge, not a decision, not a formal pattern, and not action basis. ## 说人话结"
+  },
+  {
+    "case_id": "V2-06-adversarial-rank-diagnostic-mislabeled-support",
+    "rank": 2,
+    "score": 87.0,
+    "path": "outputs/review/project_lens_overlays/2026-06-13-flexnote-vaks-visual-knowledge-workbench-overlay.md",
+    "record_kind": "project_overlay",
+    "knowledge_status": "candidate",
+    "warning_code": "overlay_not_authority",
+    "matched_terms": [
+      "anchor",
+      "candidate",
+      "context",
+      "database",
+      "flexnote",
+      "overlay",
+      "pack",
+      "source",
+      "tag",
+      "visual",
+      "workbench"
+    ],
+    "snippet": "# Project Overlay: FlexNote for VAKS ## Boundary This is a project-scoped sidecar. It does not rewrite the source card, candidate distillation, reviewed note, decision, or pattern. It can guide the active project, but it cannot act as reviewed knowledge or act"
+  },
+  {
+    "case_id": "V2-06-adversarial-rank-diagnostic-mislabeled-support",
+    "rank": 3,
+    "score": 74.0,
+    "path": "outputs/review/2026-06-13-bilibili-book-note-workflow-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "anchor",
+      "candidate",
+      "context",
+      "pack",
+      "source",
+      "tag",
+      "workbench"
+    ],
+    "snippet": "板和索引卡把全书串起来；之后每天主动回忆和迭代。 对 VAKS 来说，它最值得借的不是 reminds 这个工具，而是这条顺序： ```text raw highlight -> candidate comprehension card -> source/quote/paraphrase split -> index/synthesis card -> active recall and rewrite -> cross-source association candidate -> review_due whe"
+  },
+  {
+    "case_id": "V2-06-adversarial-rank-diagnostic-mislabeled-support",
+    "rank": 4,
+    "score": 65.5,
+    "path": "outputs/review/2026-06-13-bilibili-edge-recall-contextual-active-recall-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "anchor",
+      "candidate",
+      "context",
+      "overlay",
+      "pack",
+      "source",
+      "workbench"
+    ],
+    "snippet": "# Edge Recall - Contextual Active Recall 强蒸馏 ## 说人话结论 这条视频解决的不是“资料怎么入库”，而是“资料进库以后，人到底有没有记住”。它的核心判断很朴素：收藏不等于学会，看过不等于记住，AI 能回答也不等于你会用。 Edge Recall 的产品思路是：复习卡不脱离原笔记，不用特殊符号污染原文；在原文位置显示/隐藏答案；用状态栏、侧栏、卡组和移动端把复习变成随手动作；用间隔重复和难度反馈安排下一次复习；用图表给用户复习反馈。 VAKS 有类似思路，但层级不同：我们已"
+  },
+  {
+    "case_id": "V2-06-adversarial-rank-diagnostic-mislabeled-support",
+    "rank": 5,
+    "score": 64.5,
+    "path": "outputs/review/2026-06-11-AxDSan-mnemosyne-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "candidate",
+      "context",
+      "database",
+      "overlay",
+      "pack",
+      "source",
+      "tag"
+    ],
+    "snippet": "# AxDSan/mnemosyne Candidate Distillation ## Short Answer Mnemosyne's vector technology is advanced as a compact local agent-memory retrieval layer, not advanced as a general-purpose vector database. The strongest part is not one single algorithm. The valuable"
+  },
+  {
+    "case_id": "V2-06-adversarial-rank-diagnostic-mislabeled-support",
+    "rank": 6,
+    "score": 64.0,
+    "path": "outputs/review/2026-06-11-zhizhuodemao-ai-reverse-toolkit-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "candidate",
+      "context",
+      "overlay",
+      "pack",
+      "source"
+    ],
+    "snippet": "# ai-reverse-toolkit Candidate Distillation ## 一句话 `ai-reverse-toolkit` 对 VAKS 最有价值的不是“逆向技术”，而是： ```text 把复杂专家流程做成 AI 可执行 skill。 ``` 说人话：它教 AI 不要瞎猜，而是按阶段查、按错误分流、按证据收口。这个思路和 VAKS 非常像。 ## 它主要讲什么 这个库把逆向分析拆成几类 skill： ```text find-crypto-entry: 找关键参数从哪里生成，只定位入口，不继续"
+  },
+  {
+    "case_id": "V2-06-adversarial-rank-diagnostic-mislabeled-support",
+    "rank": 7,
+    "score": 61.0,
+    "path": "outputs/review/2026-06-13-bilibili-obsidian-homepage-plugin-workbench-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "candidate",
+      "context",
+      "pack",
+      "source",
+      "workbench"
+    ],
+    "snippet": "的模板放到首页。 - 热力图：文件数量热力图 + 字数热力图，看持续输出。 对 VAKS 来说，这不是核心架构，不是 reviewed knowledge；它更像一个 `VAKS Workbench Homepage` 的候选 UI 参考。我们可以借“入口聚合、低摩擦 capture、动态队列、模板入口、活动指标”，但不能借“dashboard 等于知识质量”。 ## VAKS 有没有类似思路？ 有一部分，但偏后端/文档，不像这个视频这么工作台化。 VAKS 现有类似逻辑： - `DEV_CONTEXT`：当前任务"
+  },
+  {
+    "case_id": "V2-06-adversarial-rank-diagnostic-mislabeled-support",
+    "rank": 8,
+    "score": 58.0,
+    "path": "outputs/review/2026-06-14-agents365-ai-drawio-skill-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "anchor",
+      "candidate",
+      "source",
+      "visual"
+    ],
+    "snippet": "s provisional orientation. It can help route attention, compare ideas, or suggest project overlays. It is not reviewed knowledge, not a decision, not a formal pattern, and not action basis. ## 一句话结论 这个库值得留，但定位要收窄： ```text drawio-skill = 架构图 / 工作流图 / 代码结构图的生产工具"
+  },
+  {
+    "case_id": "V2-06-adversarial-rank-diagnostic-mislabeled-support",
+    "rank": 9,
+    "score": 57.0,
+    "path": "outputs/review/2026-06-14-kanna12580-kk-knowledge-agent-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "anchor",
+      "candidate",
+      "context",
+      "pack",
+      "source",
+      "tag"
+    ],
+    "snippet": "s provisional orientation. It can help route attention, compare ideas, or suggest project overlays. It is not reviewed knowledge, not a decision, not a formal pattern, and not action basis. ## 一句话结论 `kk-knowledge-agent` 对 MISA 有帮助，但帮助点要说准： ```text 它帮 MISA 接一个外"
+  },
+  {
+    "case_id": "V2-06-adversarial-rank-diagnostic-mislabeled-support",
+    "rank": 10,
+    "score": 54.5,
+    "path": "outputs/review/2026-06-11-cyrilxbt-n8n-obsidian-business-brain-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "anchor",
+      "candidate",
+      "context",
+      "overlay",
+      "pack",
+      "source",
+      "workbench"
+    ],
+    "snippet": "月回看、提醒、提炼模式 ``` 对 VAKS 有用，但不能照搬。 最该借的是“工作流节奏”和“共享上下文文件”；最该避开的是“让自动化直接把 AI 输出写成永久可信知识”。 ## Candidate Point 1: 三层业务脑可以映射到 VAKS，但权威边界不同 原文三层： ```text Obsidian = permanent memory N8N = automation nervous system Claude API = intelligence layer ``` VAKS 可以吸收成： ```te"
+  },
+  {
+    "case_id": "V2-06-adversarial-rank-diagnostic-mislabeled-support",
+    "rank": 11,
+    "score": 54.5,
+    "path": "outputs/review/2026-06-12-breferrari-obsidian-mind-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "anchor",
+      "candidate",
+      "context",
+      "pack",
+      "source",
+      "workbench"
+    ],
+    "snippet": "# Candidate Distillation: breferrari/obsidian-mind ## Boundary This note is provisional orientation. It can help route attention, compare ideas, or suggest project overlays. It is not reviewed knowledge, not a decision, not a formal pattern, and not action bas"
+  },
+  {
+    "case_id": "V2-06-adversarial-rank-diagnostic-mislabeled-support",
+    "rank": 12,
+    "score": 54.5,
+    "path": "outputs/review/2026-06-14-google-open-knowledge-format-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "candidate",
+      "context",
+      "pack",
+      "source",
+      "workbench"
+    ],
+    "snippet": "# Candidate Distillation: Google Open Knowledge Format ## Boundary This note is provisional orientation. It can help route attention, compare ideas, or suggest project overlays. It is not reviewed knowledge, not a decision, not a formal pattern, and not action"
+  },
+  {
+    "case_id": "V2-07-adversarial-canonical-overlay-mislabeled-support",
+    "rank": 1,
+    "score": 90.5,
+    "path": "outputs/review/project_overlays/_runtime_test_fixtures/2026-06-14-flexnote-canonical-overlay-runtime-fixture.md",
+    "record_kind": "project_overlay",
+    "knowledge_status": "candidate",
+    "warning_code": "overlay_not_authority",
+    "matched_terms": [
+      "canonical",
+      "fixture",
+      "flexnote",
+      "overlay",
+      "project",
+      "runtime",
+      "support"
+    ],
+    "snippet": "# Canonical Project Overlay Runtime Fixture This is a sandbox test fixture for Source Intake runtime validation. It exists only to test that a canonical `outputs/review/project_overlays/` overlay cannot become final support even if an errant pack assembler lab"
+  },
+  {
+    "case_id": "V2-07-adversarial-canonical-overlay-mislabeled-support",
+    "rank": 2,
+    "score": 88.5,
+    "path": "outputs/review/project_lens_overlays/2026-06-13-flexnote-vaks-visual-knowledge-workbench-overlay.md",
+    "record_kind": "project_overlay",
+    "knowledge_status": "candidate",
+    "warning_code": "overlay_not_authority",
+    "matched_terms": [
+      "flexnote",
+      "overlay",
+      "project",
+      "support",
+      "visual",
+      "workbench"
+    ],
+    "snippet": "# Project Overlay: FlexNote for VAKS ## Boundary This is a project-scoped sidecar. It does not rewrite the source card, candidate distillation, reviewed note, decision, or pattern. It can guide the active project, but it cannot act as reviewed knowledge or act"
+  },
+  {
+    "case_id": "V2-07-adversarial-canonical-overlay-mislabeled-support",
+    "rank": 3,
+    "score": 46.0,
+    "path": "outputs/review/project_lens_overlays/2026-06-14-rohitg00-agentmemory-misa-vaks-bridge-overlay.md",
+    "record_kind": "project_overlay",
+    "knowledge_status": "candidate",
+    "warning_code": "overlay_not_authority",
+    "matched_terms": [
+      "fixture",
+      "overlay",
+      "project",
+      "runtime"
+    ],
+    "snippet": "# Project Lens: agentmemory as MISA Runtime Memory / VAKS Bridge Reference ## Boundary This is a project-scoped sidecar. It does not rewrite the source card, candidate distillation, reviewed note, decision, or pattern. It can guide a future MISA/VAKS bridge sa"
+  },
+  {
+    "case_id": "V2-07-adversarial-canonical-overlay-mislabeled-support",
+    "rank": 4,
+    "score": 41.0,
+    "path": "outputs/review/project_lens_overlays/2026-06-14-agents365-ai-drawio-skill-vaks-visualization-overlay.md",
+    "record_kind": "project_overlay",
+    "knowledge_status": "candidate",
+    "warning_code": "overlay_not_authority",
+    "matched_terms": [
+      "overlay",
+      "project",
+      "support",
+      "visual"
+    ],
+    "snippet": "# Project Overlay: drawio-skill for VAKS Visualization ## Boundary This is a project-scoped sidecar. It does not rewrite the source card, candidate distillation, reviewed note, decision, or pattern. It can guide diagram/product documentation work, but it canno"
+  },
+  {
+    "case_id": "V2-07-adversarial-canonical-overlay-mislabeled-support",
+    "rank": 5,
+    "score": 40.5,
+    "path": "outputs/review/2026-06-13-flexnote-docs-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "flexnote",
+      "overlay",
+      "project",
+      "support",
+      "visual",
+      "workbench"
+    ],
+    "snippet": "# Candidate Distillation: FlexNote Docs ## Boundary This note is provisional orientation. It can help route attention, compare ideas, or suggest project overlays. It is not reviewed knowledge, not a decision, not a formal pattern, and not action basis. ## 说人话结"
+  },
+  {
+    "case_id": "V2-07-adversarial-canonical-overlay-mislabeled-support",
+    "rank": 6,
+    "score": 40.0,
+    "path": "outputs/review/project_lens_overlays/2026-06-14-kanna12580-kk-knowledge-agent-misa-kb-memory-overlay.md",
+    "record_kind": "project_overlay",
+    "knowledge_status": "candidate",
+    "warning_code": "overlay_not_authority",
+    "matched_terms": [
+      "overlay",
+      "project",
+      "runtime",
+      "support"
+    ],
+    "snippet": "# Project Overlay: kk-knowledge-agent for MISA ## Boundary This is a project-scoped sidecar for MISA. It does not rewrite the source card, candidate distillation, reviewed note, decision, or pattern. It can guide active MISA design, but it cannot act as review"
+  },
+  {
+    "case_id": "V2-07-adversarial-canonical-overlay-mislabeled-support",
+    "rank": 7,
+    "score": 39.5,
+    "path": "outputs/review/project_lens_overlays/2026-06-14-benmaster82-Kwipu-vaks-local-graph-rag-overlay.md",
+    "record_kind": "project_overlay",
+    "knowledge_status": "candidate",
+    "warning_code": "overlay_not_authority",
+    "matched_terms": [
+      "fixture",
+      "overlay",
+      "project",
+      "support"
+    ],
+    "snippet": "# Project Lens: Kwipu as VAKS Local Graph RAG Sidecar ## Boundary This is a project-scoped sidecar. It does not rewrite the source card, candidate distillation, reviewed note, decision, or pattern. It can guide future VAKS retrieval/MCP design, but it cannot a"
+  },
+  {
+    "case_id": "V2-07-adversarial-canonical-overlay-mislabeled-support",
+    "rank": 8,
+    "score": 36.5,
+    "path": "outputs/review/project_lens_overlays/2026-06-14-adithya-s-k-omniparse-vaks-raw-intake-overlay.md",
+    "record_kind": "project_overlay",
+    "knowledge_status": "candidate",
+    "warning_code": "overlay_not_authority",
+    "matched_terms": [
+      "overlay",
+      "project",
+      "runtime",
+      "support"
+    ],
+    "snippet": "# Project Lens: OmniParse as VAKS Raw Intake Parser Router ## Boundary This is a project-scoped sidecar. It does not rewrite the source card, candidate distillation, reviewed note, decision, or pattern. It can guide future VAKS raw-intake design, but it cannot"
+  },
+  {
+    "case_id": "V2-07-adversarial-canonical-overlay-mislabeled-support",
+    "rank": 9,
+    "score": 33.5,
+    "path": "outputs/review/project_lens_overlays/2026-06-14-edochi-mdvs-vaks-validation-search-overlay.md",
+    "record_kind": "project_overlay",
+    "knowledge_status": "candidate",
+    "warning_code": "overlay_not_authority",
+    "matched_terms": [
+      "overlay",
+      "project",
+      "support"
+    ],
+    "snippet": "# Project Lens: mdvs as VAKS Validation/Search Sidecar ## Boundary This is a project-scoped sidecar. It does not rewrite the source card, candidate distillation, reviewed note, decision, or pattern. It can guide a future VAKS validation/search sandbox, but it "
+  },
+  {
+    "case_id": "V2-07-adversarial-canonical-overlay-mislabeled-support",
+    "rank": 10,
+    "score": 29.5,
+    "path": "outputs/review/2026-06-12-breferrari-obsidian-mind-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "project",
+      "runtime",
+      "support",
+      "workbench"
+    ],
+    "snippet": "s note is provisional orientation. It can help route attention, compare ideas, or suggest project overlays. It is not reviewed knowledge, not a decision, not a formal pattern, and not action basis. ## 说人话 这个仓库最值得我们看的不是“它也是 Obsidian vault”，而是它把 agent 工作流拆得比较干净："
+  },
+  {
+    "case_id": "V2-07-adversarial-canonical-overlay-mislabeled-support",
+    "rank": 11,
+    "score": 29.5,
+    "path": "raw/articles/2026-06-13-flexnote-docs-source.md",
+    "record_kind": "source_card",
+    "knowledge_status": "raw",
+    "warning_code": "raw_is_provenance_only",
+    "matched_terms": [
+      "flexnote",
+      "overlay",
+      "project",
+      "visual",
+      "workbench"
+    ],
+    "snippet": "# 来源记录：FlexNote documentation ## 为什么收录 用户要求蒸馏 `https://wiki.myflexnote.com/docs/intro`，并判断它的思路能不能提炼出来给 VAKS 借鉴。 本记录只保存来源身份、检查范围和候选关系建议。它不是 reviewed knowledge，不是架构决策，也不能作为 action basis。 ## 来源信息 - 原始链接：https://wiki.myflexnote.com/docs/intro - 中文链接：https://wiki.m"
+  },
+  {
+    "case_id": "V2-07-adversarial-canonical-overlay-mislabeled-support",
+    "rank": 12,
+    "score": 28.0,
+    "path": "outputs/review/2026-06-13-bilibili-obsidian-homepage-plugin-workbench-candidate-distillation.md",
+    "record_kind": "candidate_distillation",
+    "knowledge_status": "candidate",
+    "warning_code": "candidate_not_action_basis",
+    "matched_terms": [
+      "project",
+      "support",
+      "workbench"
+    ],
+    "snippet": "是怎么把一堆零散功能收成一个低摩擦首页。 作者的首页是一个普通 Markdown 文件，加 5 个插件和一段 CSS，做成 5 个模块： - 快捷操作：今日笔记、周总结、task、project、导入书籍/电影、快速记录。 - 分场景导航：阅读、项目、常用页面。 - 动态任务和笔记：最近新建、近期任务、项目总览、任务总览。 - 常用模板：把需要经常优化的模板放到首页。 - 热力图：文件数量热力图 + 字数热力图，看持续输出。 对 VAKS 来说，这不是核心架构，不是 reviewed knowledge；它更像一个"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "boundary-support-created",
+  "expected_valid": false,
+  "expected_codes": ["MB_SUPPORT_CREATION_FORBIDDEN"],
+  "allowed_extra_codes": ["MB_AUTHORITY_CONFUSION"],
+  "patch": {"boundary": {"evidence_support_created": true}}
+}

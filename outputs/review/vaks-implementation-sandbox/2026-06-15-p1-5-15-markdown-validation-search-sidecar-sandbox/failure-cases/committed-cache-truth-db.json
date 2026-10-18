@@ -1,0 +1,1 @@
+{"extends":"fixtures/valid-frontmatter-validation-check.json","scenario_id":"committed-cache-truth-db","expected_valid":false,"expected_codes":["MS_CACHE_COMMITTED_AS_TRUTH"],"patch":{"search_cache":{"committed":true,"cache_is_truth_database":true}}}

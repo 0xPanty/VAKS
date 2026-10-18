@@ -1,0 +1,12 @@
+{
+  "fixture_id": "dependency-portable",
+  "expected": {
+    "standard_library_only": true,
+    "dependency_install_required": false,
+    "network_required": false,
+    "mcp_required": false,
+    "background_service_required": false
+  },
+  "source_slice_id": "2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox",
+  "notes": "A follow-up agent can run the p2-63 replay checks with the Python standard library only."
+}

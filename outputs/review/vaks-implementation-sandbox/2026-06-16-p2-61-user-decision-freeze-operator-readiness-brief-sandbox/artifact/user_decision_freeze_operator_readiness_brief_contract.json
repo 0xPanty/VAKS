@@ -1,0 +1,45 @@
+{
+  "record_kind": "sandbox_user_decision_freeze_operator_readiness_brief_contract",
+  "slice_id": "2026-06-16-p2-61-user-decision-freeze-operator-readiness-brief-sandbox",
+  "source_slice_id": "2026-06-16-p2-60-user-decision-index-freeze-checksum-sandbox",
+  "purpose": "operator-facing readiness brief for p2-60 checksum freeze",
+  "generation_contract": {
+    "source_execution_by_builder": false,
+    "source_reads": [
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-60-user-decision-index-freeze-checksum-sandbox/artifact/user_decision_index_freeze_checksum_manifest.json",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-60-user-decision-index-freeze-checksum-sandbox/verification.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-60-user-decision-index-freeze-checksum-sandbox/reviewer-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-60-user-decision-index-freeze-checksum-sandbox/boundary-audit.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-60-user-decision-index-freeze-checksum-sandbox/product-acceptance-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-60-user-decision-index-freeze-checksum-sandbox/next-step.md"
+    ]
+  },
+  "manual_readonly_verification_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-16-p2-60-user-decision-index-freeze-checksum-sandbox\\artifact\\verify_user_decision_index_freeze_checksum.py --final-gate",
+  "output_contract": {
+    "automatic_execution": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "formal_vault_ready": false,
+    "obsidian_sync_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "user_approval_collected": false,
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_install_hooks",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_treat_checksum_as_user_approval"
+    ]
+  }
+}

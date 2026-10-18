@@ -1,0 +1,24 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "duplicate-anchor-id",
+  "expected_valid": false,
+  "expected_codes": ["SA_DUPLICATE_ANCHOR_ID"],
+  "anchors": [
+    {
+      "id": "duplicate-anchor",
+      "anchor_kind": "semantic_vector_hit",
+      "support_claimed": false,
+      "support_role": "orientation",
+      "source_ref": "outputs/review/example-1.md",
+      "authority_bucket": "review_input"
+    },
+    {
+      "id": "duplicate-anchor",
+      "anchor_kind": "semantic_vector_hit",
+      "support_claimed": false,
+      "support_role": "orientation",
+      "source_ref": "outputs/review/example-2.md",
+      "authority_bucket": "review_input"
+    }
+  ]
+}

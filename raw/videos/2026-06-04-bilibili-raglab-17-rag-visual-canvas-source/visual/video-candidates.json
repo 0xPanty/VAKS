@@ -1,0 +1,24 @@
+{
+  "source_url": "https://www.bilibili.com/video/BV1iSVG6eEsj/",
+  "aid": "116662284062479",
+  "cid": "38717557909",
+  "video_candidates": [
+    {
+      "id": 32,
+      "codecs": "avc1.64001F",
+      "width": 852,
+      "height": 480,
+      "bandwidth": 135976,
+      "host": "upos-sz-mirrorcosov.bilivideo.com"
+    },
+    {
+      "id": 16,
+      "codecs": "avc1.64001E",
+      "width": 640,
+      "height": 360,
+      "bandwidth": 90028,
+      "host": "upos-hz-mirrorakam.akamaized.net"
+    }
+  ],
+  "note": "CDN URLs intentionally not retained as stable source identity."
+}

@@ -1,0 +1,1 @@
+{"case_id":"invalid-decision","base_fixture":"fixtures/valid-product-experience-screening.json","mutations":[{"op":"set_candidate","id":"P2-PX-04","path":"/decision","value":"maybe"},{"op":"set","path":"/p2_20_handoff/parked_candidate_ids","value":["P2-PX-12","P2-PX-10","P2-PX-07","P2-PX-08"]}]}

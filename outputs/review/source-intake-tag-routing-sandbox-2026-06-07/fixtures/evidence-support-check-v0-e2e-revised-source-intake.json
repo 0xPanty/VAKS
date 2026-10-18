@@ -1,0 +1,74 @@
+{
+  "record_kind": "evidence_support_check_e2e_revised_fixture_candidate",
+  "status": "candidate_only",
+  "topic_id": "source-intake-routing",
+  "query": "end-to-end pressure test revised answer after removing unsupported mixed claims",
+  "truth_boundary": "e2e_revised_sandbox_fixture_only_not_truth",
+  "action_basis_allowed": false,
+  "answer_candidate": [
+    "The natural-question action pack prepares an anchor_queue only; evidence support check has not run at pack-builder stage.",
+    "Selector and snippet fields help navigation only; they are not evidence support.",
+    "The v0 evidence-support result records citation_faithfulness_checked=false.",
+    "The source-intake-routing sandbox records action_basis_allowed=false."
+  ],
+  "claims": [
+    {
+      "claim_id": "er1",
+      "claim_text": "The natural-question action pack prepares an anchor_queue only; evidence support check has not run at pack-builder stage.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/checks/source-intake-routing-workbench-pack-query-e2e-action-generated.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/19_SOURCE_INTAKE_ROUTING_WORKBENCH_HARDENING.md"
+      ],
+      "must_match_any": [
+        "Builder only prepares an anchor_queue; evidence support check has not run",
+        "required_next_step: evidence support check",
+        "required_next_step: open raw/reviewed anchors and run evidence support check before action-facing use"
+      ],
+      "warrant": "The e2e natural-question pack records that pack building only prepares anchor_queue and evidence support has not run."
+    },
+    {
+      "claim_id": "er2",
+      "claim_text": "Selector and snippet fields help navigation only; they are not evidence support.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/checks/source-intake-routing-workbench-hardening-v0-1-test.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/19_SOURCE_INTAKE_ROUTING_WORKBENCH_HARDENING.md"
+      ],
+      "must_match_any": [
+        "selector/snippet is not evidence support",
+        "snippet_status: navigation_snippet_not_evidence",
+        "A snippet is not evidence support"
+      ],
+      "warrant": "The selector/snippet boundary is explicitly recorded as navigation-only."
+    },
+    {
+      "claim_id": "er3",
+      "claim_text": "The v0 evidence-support result records citation_faithfulness_checked=false.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/21_EVIDENCE_SUPPORT_CHECK_V0_LANDING.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/checks/evidence-support-check-v0-source-intake-generated.md"
+      ],
+      "must_match_any": [
+        "citation_faithfulness_checked=false",
+        "citation_faithfulness_checked: false"
+      ],
+      "warrant": "The v0 landing and generated evidence-support output both record that citation faithfulness is not checked."
+    },
+    {
+      "claim_id": "er4",
+      "claim_text": "The source-intake-routing sandbox records action_basis_allowed=false.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/21_EVIDENCE_SUPPORT_CHECK_V0_LANDING.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/README.md"
+      ],
+      "must_match_any": [
+        "action_basis_allowed=false",
+        "action_basis_allowed: false"
+      ],
+      "warrant": "The sandbox package and v0 landing both record action_basis_allowed as false."
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "record_kind": "runtime_artifact_exclusion_manifest",
+  "scenario_id": "run-001-direct-support-runtime-artifact-exclusion",
+  "exclude_runtime_artifacts": true,
+  "items": [
+    {
+      "id": "item-001",
+      "path": "raw/repos/2026-05-27-knowledge-base-server-source.md",
+      "artifact_kind": "raw_anchor",
+      "selected": true,
+      "seen_by_retrieval": true,
+      "runtime_artifact": false,
+      "is_runtime_artifact": false,
+      "excluded": false
+    },
+    {
+      "id": "item-002",
+      "path": "raw/repos/2026-05-27-dusk-obsidian-vault-source.md",
+      "artifact_kind": "raw_anchor",
+      "selected": true,
+      "seen_by_retrieval": true,
+      "runtime_artifact": false,
+      "is_runtime_artifact": false,
+      "excluded": false
+    },
+    {
+      "id": "item-003",
+      "path": "raw/articles/2026-05-30-w3c-web-annotation-source.md",
+      "artifact_kind": "raw_anchor",
+      "selected": true,
+      "seen_by_retrieval": true,
+      "runtime_artifact": false,
+      "is_runtime_artifact": false,
+      "excluded": false
+    },
+    {
+      "id": "item-004",
+      "path": "raw/repos/2026-05-27-kagantic-vault-structure-source.md",
+      "artifact_kind": "raw_anchor",
+      "selected": true,
+      "seen_by_retrieval": true,
+      "runtime_artifact": false,
+      "is_runtime_artifact": false,
+      "excluded": false
+    },
+    {
+      "id": "item-005",
+      "path": "raw/videos/2026-06-04-youtube-hermes-obsidian-source.md",
+      "artifact_kind": "raw_anchor",
+      "selected": true,
+      "seen_by_retrieval": true,
+      "runtime_artifact": false,
+      "is_runtime_artifact": false,
+      "excluded": false
+    },
+    {
+      "id": "item-006",
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/maggieappleton-digital-gardeners-source.md",
+      "artifact_kind": "raw_anchor",
+      "selected": true,
+      "seen_by_retrieval": true,
+      "runtime_artifact": false,
+      "is_runtime_artifact": false,
+      "excluded": false
+    },
+    {
+      "id": "item-007",
+      "path": "raw/articles/2026-06-11-cyrilxbt-n8n-obsidian-business-brain-source.md",
+      "artifact_kind": "raw_anchor",
+      "selected": true,
+      "seen_by_retrieval": true,
+      "runtime_artifact": false,
+      "is_runtime_artifact": false,
+      "excluded": false
+    },
+    {
+      "id": "item-008",
+      "path": "raw/repos/2026-05-27-kepano-obsidian-source.md",
+      "artifact_kind": "raw_anchor",
+      "selected": true,
+      "seen_by_retrieval": true,
+      "runtime_artifact": false,
+      "is_runtime_artifact": false,
+      "excluded": false
+    }
+  ]
+}

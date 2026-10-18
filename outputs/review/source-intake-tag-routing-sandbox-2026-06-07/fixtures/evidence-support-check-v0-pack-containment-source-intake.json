@@ -1,0 +1,67 @@
+{
+  "record_kind": "evidence_support_check_pack_containment_fixture_candidate",
+  "status": "candidate_only",
+  "topic_id": "source-intake-routing",
+  "query": "pressure test pack-contained support versus external fixture support",
+  "truth_boundary": "pack_containment_sandbox_fixture_only_not_truth",
+  "action_basis_allowed": false,
+  "answer_candidate": [
+    "The current e2e action pack records that pack building only prepares an anchor_queue and evidence support has not run.",
+    "The selector/snippet navigation boundary is documented, but not contained in the current e2e action pack.",
+    "The current e2e action pack includes SOURCE_INTAKE.md as an anchor_queue source with action_basis_allowed=false."
+  ],
+  "claims": [
+    {
+      "claim_id": "pc1",
+      "claim_text": "The current e2e action pack records that pack building only prepares an anchor_queue and evidence support has not run.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/checks/source-intake-routing-workbench-pack-query-e2e-action-generated.md"
+      ],
+      "must_match_any": [
+        "Builder only prepares an anchor_queue; evidence support check has not run",
+        "required_next_step: open raw/reviewed anchors and run evidence support check before action-facing use"
+      ],
+      "required_support_channels": [
+        "context_pack_metadata"
+      ],
+      "warrant": "This should pass because the support span is inside the current e2e action pack metadata."
+    },
+    {
+      "claim_id": "pc2",
+      "claim_text": "The selector/snippet navigation boundary is documented, but not contained in the current e2e action pack.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/19_SOURCE_INTAKE_ROUTING_WORKBENCH_HARDENING.md"
+      ],
+      "must_match_any": [
+        "selector/snippet is not evidence support",
+        "snippet_status: navigation_snippet_not_evidence",
+        "A snippet is not evidence support"
+      ],
+      "required_support_channels": [
+        "context_pack_metadata",
+        "anchor_queue"
+      ],
+      "warrant": "This should be weakly supported because the support exists only as an explicit fixture ref outside the current pack."
+    },
+    {
+      "claim_id": "pc3",
+      "claim_text": "The current e2e action pack includes SOURCE_INTAKE.md as an anchor_queue source with action_basis_allowed=false.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "SOURCE_INTAKE.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/checks/source-intake-routing-workbench-pack-query-e2e-action-generated.md"
+      ],
+      "must_match_any": [
+        "action_basis_allowed: false",
+        "action_basis_allowed=false"
+      ],
+      "required_support_channels": [
+        "anchor_queue",
+        "context_pack_metadata"
+      ],
+      "warrant": "This should pass because SOURCE_INTAKE.md is in the current pack anchor_queue and contains action_basis_allowed false."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "case_id": "positive-post-rehearsal-state",
+  "expected": {
+    "original_items": 20,
+    "sidecar_closeout_passed_count": 20,
+    "old_slice_current_strict_final_gate_count": 0,
+    "goal_complete_now": false
+  }
+}

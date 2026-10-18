@@ -1,0 +1,10 @@
+{
+  "fixture_id": "applied-or-drifted-targets-would-block",
+  "expected_block_when_any_positive": [
+    "missing_target_count",
+    "frontmatter_invalid_count",
+    "current_status_mismatch_count",
+    "proposed_status_already_applied_count"
+  ],
+  "expected_clean_now": true
+}

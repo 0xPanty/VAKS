@@ -1,0 +1,8 @@
+{
+  "fixture_id": "exact-approval-phrase",
+  "input_text": "I explicitly approve p2-75 old-file status-only normalization: apply the 75 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only. Do not edit body content, artifacts, tools, templates, wiki truth layers, main architecture docs, README, Obsidian vault, commit, push, or sync.",
+  "expected": {
+    "would_count_as_explicit_approval_in_future": true,
+    "current_packet_collects_approval": false
+  }
+}

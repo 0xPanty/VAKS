@@ -1,0 +1,44 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "AlexiaChen/my-notes",
+  "source_url": "https://github.com/AlexiaChen/my-notes",
+  "checked_commit": "6b6bd62462c8542f8c3e26b6e8b6f4fd67ee7ac6",
+  "checked_at": "2026-06-11",
+  "inspection_method": "shallow git clone plus README, tree, Obsidian config, directory taxonomy, file/attachment counts",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "repo-identity",
+      "why": "Identifies this as a collection of personal notes and includes rsync backup reminder."
+    },
+    {
+      "path": ".obsidian/core-plugins.json",
+      "kind": "vault-config",
+      "why": "Core plugin choices, including graph, canvas, daily notes, templates, bookmarks, file recovery, and Bases enabled."
+    },
+    {
+      "path": ".obsidian/appearance.json",
+      "kind": "presentation-config",
+      "why": "Theme configuration records visual dependency."
+    },
+    {
+      "path": "top-level directories",
+      "kind": "domain-taxonomy",
+      "why": "Large domain-oriented directory structure across AI, backend, blockchain, PL, security, software engineering, MOOCs, and attachments."
+    },
+    {
+      "path": "git file counts",
+      "kind": "vault-scale",
+      "why": "Observed about 804 Markdown files and 1642 attachment entries in the checked tree."
+    }
+  ],
+  "known_limits": [
+    "This is a personal knowledge vault; content was not reviewed for factual correctness.",
+    "Large attachment volume and multilingual filenames are operational facts, not VAKS architecture recommendations.",
+    "Domain taxonomy is user-specific and should not be copied into VAKS."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

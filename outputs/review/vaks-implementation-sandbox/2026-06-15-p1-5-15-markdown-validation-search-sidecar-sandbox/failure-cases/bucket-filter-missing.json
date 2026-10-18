@@ -1,0 +1,1 @@
+{"extends":"fixtures/valid-frontmatter-validation-check.json","scenario_id":"bucket-filter-missing","expected_valid":false,"expected_codes":["MS_BUCKET_FILTER_NOT_FIRST"],"patch":{"search":{"bucket_filter_first":false}}}

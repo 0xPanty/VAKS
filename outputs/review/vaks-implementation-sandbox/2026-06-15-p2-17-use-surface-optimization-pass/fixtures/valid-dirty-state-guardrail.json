@@ -1,0 +1,18 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "valid-dirty-state-guardrail",
+  "expected_valid": true,
+  "expected_codes": [],
+  "patch": {
+    "guardrails": {
+      "dirty_state_visible": true,
+      "dirty_state_blocks_risky_actions": true,
+      "dirty_state_judges_knowledge": false,
+      "hash_match_is_evidence_support": false,
+      "sync_enabled": false,
+      "sync_requires_operation_receipt": true,
+      "sync_mutates_truth": false,
+      "mainline_ready": false
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "obsidian-sync-requested",
+  "expected_valid": false,
+  "expected_codes": ["MB_OBSIDIAN_SYNC_FORBIDDEN"],
+  "patch": {"scope": {"obsidian_sync_requested": true}}
+}

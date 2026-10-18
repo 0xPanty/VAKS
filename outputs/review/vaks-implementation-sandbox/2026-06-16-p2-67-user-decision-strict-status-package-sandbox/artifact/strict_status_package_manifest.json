@@ -1,0 +1,105 @@
+{
+  "record_kind": "sandbox_strict_status_package_manifest",
+  "slice_id": "2026-06-16-p2-67-user-decision-strict-status-package-sandbox",
+  "source_slice_id": "2026-06-16-p2-66-user-decision-chain-hardening-readiness-sandbox",
+  "purpose": "package strict frontmatter status parsing for sandbox reuse",
+  "package_ready": true,
+  "package_files": [
+    "artifact/strict_status_package.py",
+    "artifact/build_strict_status_package.py",
+    "artifact/verify_strict_status_package.py",
+    "artifact/strict_status_package_contract.json"
+  ],
+  "package_api": {
+    "parse_strict_frontmatter_status": {
+      "input": "markdown text",
+      "output": "dict(valid, status, errors, body_status_mentions)",
+      "authority": "parser result only; not reviewer or Product Acceptance"
+    },
+    "status_matches": {
+      "input": "markdown text and expected status",
+      "output": "bool",
+      "authority": "status comparison only; not action approval"
+    }
+  },
+  "behavior_contract": {
+    "builder_writes_manifest_outputs": true,
+    "builder_write_scope": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-67-user-decision-strict-status-package-sandbox/artifact",
+    "verifier_read_only": true
+  },
+  "source_statuses": {
+    "verification": {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-66-user-decision-chain-hardening-readiness-sandbox/verification.md",
+      "valid": true,
+      "status": "local_verification_passed",
+      "expected_status": "local_verification_passed",
+      "matches_expected": true
+    },
+    "reviewer": {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-66-user-decision-chain-hardening-readiness-sandbox/reviewer-report.md",
+      "valid": true,
+      "status": "review_pass_no_blocker",
+      "expected_status": "review_pass_no_blocker",
+      "matches_expected": true
+    },
+    "boundary": {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-66-user-decision-chain-hardening-readiness-sandbox/boundary-audit.md",
+      "valid": true,
+      "status": "pass_boundary",
+      "expected_status": "pass_boundary",
+      "matches_expected": true
+    },
+    "product": {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-66-user-decision-chain-hardening-readiness-sandbox/product-acceptance-report.md",
+      "valid": true,
+      "status": "pass_product_grade",
+      "expected_status": "pass_product_grade",
+      "matches_expected": true
+    },
+    "next_step": {
+      "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-66-user-decision-chain-hardening-readiness-sandbox/next-step.md",
+      "valid": true,
+      "status": "pass_product_grade_pending_next_slice",
+      "expected_status": "pass_product_grade_pending_next_slice",
+      "matches_expected": true
+    }
+  },
+  "self_tests": {
+    "valid_status_matches": true,
+    "body_override_does_not_match": true,
+    "body_override_preserves_frontmatter": true,
+    "duplicate_rejected": true,
+    "missing_opening_rejected": true
+  },
+  "readiness_flags": {
+    "dependency_install_required": false,
+    "network_required": false,
+    "mcp_required": false,
+    "background_service_required": false,
+    "automatic_execution": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "formal_vault_ready": false,
+    "obsidian_sync_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "user_approval_collected": false
+  },
+  "hard_no": [
+    "do_not_modify_old_slices",
+    "do_not_create_shared_helper",
+    "do_not_merge_mainline",
+    "do_not_promote",
+    "do_not_sync_obsidian",
+    "do_not_commit",
+    "do_not_push",
+    "do_not_install_dependencies",
+    "do_not_start_background_service",
+    "do_not_use_mcp_write_tool",
+    "do_not_create_reviewed_knowledge",
+    "do_not_create_evidence_support",
+    "do_not_create_action_basis",
+    "do_not_collect_user_approval_by_inference"
+  ]
+}

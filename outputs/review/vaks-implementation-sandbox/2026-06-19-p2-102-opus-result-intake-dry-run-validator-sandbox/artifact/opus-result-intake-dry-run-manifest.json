@@ -1,0 +1,41 @@
+{
+  "record_kind": "opus_result_intake_dry_run_manifest",
+  "slice_id": "2026-06-19-p2-102-opus-result-intake-dry-run-validator-sandbox",
+  "schema_source": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-96-opus-result-intake-skeleton-sandbox/artifact/opus-result-intake-schema.json",
+  "operator_control_card_source": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-101-opus-external-review-operator-kit-sandbox/artifact/opus-external-review-operator-control-card.json",
+  "allowed_conclusion_tokens": [
+    "OPUS_PASS_SANDBOX_CLOSEOUT",
+    "OPUS_REVISE_SANDBOX_CLOSEOUT",
+    "OPUS_BLOCKED_NEEDS_USER"
+  ],
+  "required_fields_when_result_exists": [
+    "raw_conclusion_token",
+    "reviewed_evidence",
+    "boundary_verdict",
+    "raw_response_path"
+  ],
+  "operator_transfer_zip_sha256": "2fa20d453406757c0e53abc2c2ad9842264c35359d1e12b203ea5113273b2640",
+  "summary": {
+    "dry_run_validator_ready": true,
+    "valid_fixture_count": 3,
+    "failure_case_count": 21,
+    "actual_opus_result_present": false,
+    "opus_approval_claimed": false,
+    "mainline_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "goal_complete_now": false
+  },
+  "authority_flags": {
+    "dry_run_only": true,
+    "actual_opus_result_present": false,
+    "opus_approval_claimed": false,
+    "mainline_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "commit_push_sync_ready": false,
+    "goal_complete_now": false
+  }
+}

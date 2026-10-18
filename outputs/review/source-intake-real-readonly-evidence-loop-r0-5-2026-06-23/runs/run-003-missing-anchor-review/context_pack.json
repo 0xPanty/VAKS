@@ -1,0 +1,219 @@
+{
+  "run_id": "run-003-missing-anchor-review",
+  "pack_contract": "support_candidate_not_support",
+  "items": [
+    {
+      "item_id": "item-001",
+      "source_ref": "raw/repos/2026-06-11-awesome-obsidian-vault/xxiivv-oscean-source.md",
+      "source_snapshot_hash": "1f74fd8af7db3a04159e3a3676eafc90123eb483e10d3c0cfb99aa6a9f92119d",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "orientation",
+      "scope_fit": "unknown",
+      "temporal_fit": "unknown",
+      "anchor": {
+        "exact": "",
+        "prefix": "",
+        "suffix": "",
+        "location_hint": "",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 1,
+      "diagnostic_score": 27.0,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    },
+    {
+      "item_id": "item-002",
+      "source_ref": "raw/repos/2026-06-11-awesome-obsidian-vault/mayfrost-guides-source.md",
+      "source_snapshot_hash": "50b6396a4380a6931eda8c39283b31c2bb94b2bbe1dcb954a542aae7ae83eff4",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "orientation",
+      "scope_fit": "unknown",
+      "temporal_fit": "unknown",
+      "anchor": {
+        "exact": "",
+        "prefix": "",
+        "suffix": "",
+        "location_hint": "",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 2,
+      "diagnostic_score": 24.5,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    },
+    {
+      "item_id": "item-003",
+      "source_ref": "raw/repos/2026-06-11-awesome-obsidian-vault/dotnet-dotnet-api-docs-source.md",
+      "source_snapshot_hash": "bcad764c012d956a4b083e8d55bc74d1e9c7058d31da44e5538446fe24d1cd26",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "orientation",
+      "scope_fit": "unknown",
+      "temporal_fit": "unknown",
+      "anchor": {
+        "exact": "",
+        "prefix": "",
+        "suffix": "",
+        "location_hint": "",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 3,
+      "diagnostic_score": 23.5,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    },
+    {
+      "item_id": "item-004",
+      "source_ref": "raw/repos/2026-06-11-trimstray-the-book-of-secret-knowledge-source.md",
+      "source_snapshot_hash": "d6b103a922b2759806c92b69986cdffb710883e0065bd5963d48f524fb438751",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "orientation",
+      "scope_fit": "unknown",
+      "temporal_fit": "unknown",
+      "anchor": {
+        "exact": "",
+        "prefix": "",
+        "suffix": "",
+        "location_hint": "",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 4,
+      "diagnostic_score": 20.5,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    },
+    {
+      "item_id": "item-005",
+      "source_ref": "raw/papers/2026-06-07-aal-ruller-pkm-second-brain-ai-companian-source.md",
+      "source_snapshot_hash": "34c134ce7bde93e4b18666d6e52ef27cf86733f2d78c1745fb6db30a56e4e431",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "orientation",
+      "scope_fit": "unknown",
+      "temporal_fit": "unknown",
+      "anchor": {
+        "exact": "",
+        "prefix": "",
+        "suffix": "",
+        "location_hint": "",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 5,
+      "diagnostic_score": 19.5,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    },
+    {
+      "item_id": "item-006",
+      "source_ref": "raw/repos/2026-05-27-dusk-obsidian-vault-source.md",
+      "source_snapshot_hash": "fda2831fec735c8e20c8c2cf28875629d3ae8256d73b527be2fa3c75ad5b50a1",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "orientation",
+      "scope_fit": "unknown",
+      "temporal_fit": "unknown",
+      "anchor": {
+        "exact": "",
+        "prefix": "",
+        "suffix": "",
+        "location_hint": "",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 6,
+      "diagnostic_score": 18.0,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    },
+    {
+      "item_id": "item-007",
+      "source_ref": "raw/repos/2026-06-11-awesome-obsidian-vault/hundredrabbits-100r-co-source.md",
+      "source_snapshot_hash": "87ff62baf3f0df4b8d33addee6aab007181982248a46b1cb14f3fd9f4e6413fc",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "orientation",
+      "scope_fit": "unknown",
+      "temporal_fit": "unknown",
+      "anchor": {
+        "exact": "",
+        "prefix": "",
+        "suffix": "",
+        "location_hint": "",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 7,
+      "diagnostic_score": 17.5,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    },
+    {
+      "item_id": "item-008",
+      "source_ref": "raw/repos/2026-06-11-awesome-obsidian-vault/hundredrabbits-grimgrains-source.md",
+      "source_snapshot_hash": "0955dac0dc7804c3a82bc28a10a4925f425e05429b5085f423195e5cdbbd94b6",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "orientation",
+      "scope_fit": "unknown",
+      "temporal_fit": "unknown",
+      "anchor": {
+        "exact": "",
+        "prefix": "",
+        "suffix": "",
+        "location_hint": "",
+        "normalization_version": "r0.5-textquote-selector-v1"
+      },
+      "selected_by": [
+        "lexical"
+      ],
+      "retrieval_rank": 8,
+      "diagnostic_score": 17.5,
+      "not_yet": [
+        "reviewed_support",
+        "reviewed_truth",
+        "action_basis"
+      ]
+    }
+  ],
+  "not_proven": [
+    "reviewed_support",
+    "reviewed_truth",
+    "action_basis"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "missing-selector-support",
+  "expected_valid": false,
+  "expected_codes": ["SA_MISSING_SELECTOR"],
+  "anchors": [
+    {
+      "id": "missing-selector-anchor",
+      "anchor_kind": "raw_excerpt",
+      "support_claimed": true,
+      "support_role": "direct_support",
+      "source_ref": "raw/articles/example-source.md",
+      "authority_bucket": "raw_anchor"
+    }
+  ]
+}

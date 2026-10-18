@@ -398,6 +398,50 @@ of selecting it directly.
 
 ## 2. Processing Levels
 
+### Requested Intake Depth And Scope Lock
+
+Processing level describes effort. It does not authorize the system to expand
+the user's requested work.
+
+For explicit persistence requests in this vault:
+
+```text
+入库 / 蒸馏 / ordinary persistence wording
+-> requested_depth: standard
+-> max_processing_tier: medium
+
+强蒸馏 / explicit heavy or complete review wording
+-> requested_depth: strong
+-> max_processing_tier: heavy
+```
+
+Before retrieval, cloning or snapshotting, subagent delegation, conversion,
+writeback, or sync, keep a task-local scope receipt:
+
+```yaml
+requested_depth: standard | strong
+max_processing_tier: medium | heavy
+tests_allowed: false
+runtime_execution_allowed: false
+auto_upgrade_allowed: false
+planned_sync_batches: 1
+```
+
+This receipt controls execution only; it is not a Source field, reviewed
+knowledge, evidence support, or action basis. Pass the same ceiling to
+subagents.
+
+Source quality, project relevance, architecture impact, risk, or reuse value may
+set `heavy_recommended: true`. They do not authorize crossing the requested
+ceiling. A standard intake must finish its medium result and stop; heavy-only
+artifacts require a later explicit strong-intake continuation. A request for one
+specific heavy artifact authorizes only that artifact.
+
+Tests, benchmarks, dependency installation, package execution, and live runtime
+verification require separate explicit authorization. Neither standard nor
+strong intake grants it automatically. Plan one batch sync after all authorized
+artifacts are ready; after a hash failure, retry only corrected failed items.
+
 ### Light Processing
 
 Use for:
@@ -956,7 +1000,8 @@ basis.
 
 ### Heavy Processing
 
-Use only for strong sources:
+Use only for strong sources when the current scope receipt authorizes heavy
+processing or the user explicitly confirms the upgrade:
 
 ```text
 papers
@@ -1412,7 +1457,7 @@ Use this mode when the source may affect future action.
 
 ## 5. When To Upgrade Processing
 
-Upgrade light to medium when:
+Within the current authorized ceiling, upgrade light to medium when:
 
 ```text
 the source is reused
@@ -1421,7 +1466,7 @@ it becomes relevant to a project
 it appears in search/context briefing repeatedly
 ```
 
-Upgrade medium to heavy when:
+Mark `heavy_recommended: true` when:
 
 ```text
 it changes architecture
@@ -1430,6 +1475,13 @@ it becomes a development constraint
 it exposes a risk or failure mode
 it should be cited as action basis
 ```
+
+Execute the medium-to-heavy upgrade only when `max_processing_tier: heavy` or
+the user explicitly extends the scope. With a standard intake, finish the
+medium artifacts, report the recommendation, and stop. Do not create a snapshot,
+architecture review, Project Overlay, pattern, anti-pattern, decision, index
+update, handoff update, or other heavy-only artifact merely because an upgrade
+is recommended.
 
 Downgrade or cool after use when:
 
@@ -1596,13 +1648,13 @@ Graph traversal, PPR, similarity, and association score can suggest what to insp
 Graph retrieval strata can organize context-pack preparation: low-level source/text-unit/claim/entity recall, high-level pattern/theme/community recall, and relation-neighborhood recall. TextUnit anchors are provenance, community reports are briefings, and graph rank is not trust.
 Temporal applicability is checked when a point is promoted, used in a decision/action basis, or appears stale/superseded/out-of-scope; ordinary capture can leave validity windows blank rather than inventing dates.
 Confidence caps are checked when a candidate is promoted or used for action: abstract/snippet/URL-only material cannot become high-confidence support without a direct source span or full-text anchor.
-Intent confirmation is checked only before significant action, high-impact decision, implementation, deployment, or hard-to-rollback work.
+Intent confirmation is checked before significant action, high-impact decision, implementation, deployment, hard-to-rollback work, or crossing the requested intake-depth ceiling. It is not required again for work that remains inside the locked scope.
 Medium candidates are provisional by default: they require machine-filterable status and retrieval-policy markers and cannot be used as action basis without promotion.
 Project overlays can be suggested automatically, but confirmed project mounting requires user confirmation or an explicitly active project-intake task.
 Source annotations can be created as low-friction pins, but they cannot create Project Overlay scope, reviewed relations, confidence, or action readiness.
 Confirmed overlays are active-project-only by default; archived overlays are excluded from default retrieval.
 Negative feedback creates review pressure first; it does not directly mutate reviewed truth.
-Processing tier is not authority: `light`, `medium`, and `heavy` describe effort, while `knowledge_status` describes boundary status.
+Processing tier is neither knowledge authority nor execution authorization: `light`, `medium`, and `heavy` describe effort, `knowledge_status` describes boundary status, and the task-local scope receipt sets the maximum work authorized by the user.
 Lineage is traceability, not authority.
 Feedback is scoped and append-only: it can affect activation and review pressure, but not truth confidence or reviewed notes without review.
 Action-facing support must anchor to raw source material or a stable representation, not to distillation, overlay, retrieval score, evaluator output, or feedback.

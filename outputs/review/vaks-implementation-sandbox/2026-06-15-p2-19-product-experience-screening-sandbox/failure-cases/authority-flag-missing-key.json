@@ -1,0 +1,1 @@
+{"case_id":"authority-flag-missing-key","base_fixture":"fixtures/valid-product-experience-screening.json","mutations":[{"op":"delete_candidate","id":"P2-PX-01","path":"/authority_flags/writes_reviewed_truth"}]}

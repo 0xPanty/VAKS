@@ -1,0 +1,5 @@
+﻿test_set,corpus,mode,queries,resolvable_queries,hit_at_5,hit_at_10,mrr,action_leakage_rate,forbidden_top1_rate,cross_bucket_violation_rate,warning_coverage_risk,clickback_coverage,hash_coverage,adapter_coverage,receipt_coverage,stale_detection_rate
+holdout_used,full,vaks_only_lexical_bucket,15,15,11/15,11/15,0.5504,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,1.0000,1.0000,0.0000
+holdout_used,primary,vaks_only_lexical_bucket,15,15,10/15,12/15,0.5577,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,1.0000,1.0000,0.0000
+main,full,vaks_only_lexical_bucket,30,30,25/30,26/30,0.7894,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,1.0000,1.0000,0.0000
+main,primary,vaks_only_lexical_bucket,30,30,26/30,28/30,0.8187,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,1.0000,1.0000,0.0000

@@ -1,0 +1,17 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "llm-summary-support",
+  "expected_valid": false,
+  "expected_codes": ["SA_SUMMARY_AS_SUPPORT"],
+  "anchors": [
+    {
+      "id": "llm-summary-anchor",
+      "anchor_kind": "llm_summary",
+      "support_claimed": true,
+      "support_role": "direct_support",
+      "source_ref": "wiki/summaries/example-summary.md",
+      "selector": "section:conclusion",
+      "authority_bucket": "reviewed"
+    }
+  ]
+}

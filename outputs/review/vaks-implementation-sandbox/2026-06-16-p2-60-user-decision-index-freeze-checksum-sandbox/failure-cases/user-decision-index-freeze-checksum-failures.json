@@ -1,0 +1,80 @@
+[
+  {
+    "failure_id": "reject_hash_drift",
+    "description": "Reject a manifest whose first entry has a changed hash.",
+    "mutation": {"set_first_entry": {"sha256": "bad-hash"}},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "install_dependencies", "start_background_service", "install_hooks", "use_mcp_write_tool", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "reject_bytes_drift",
+    "description": "Reject a manifest whose first entry has a changed bytes value.",
+    "mutation": {"set_first_entry": {"bytes": -1}},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "install_dependencies", "start_background_service", "install_hooks", "use_mcp_write_tool", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "reject_missing_entry",
+    "description": "Reject a manifest with a dropped entry.",
+    "mutation": {"drop_first_entry": true},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "install_dependencies", "start_background_service", "install_hooks", "use_mcp_write_tool", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "reject_duplicate_entry",
+    "description": "Reject a manifest with a duplicate entry path.",
+    "mutation": {"duplicate_first_entry": true},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "install_dependencies", "start_background_service", "install_hooks", "use_mcp_write_tool", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "reject_source_list_drift",
+    "description": "Reject source list drift.",
+    "mutation": {"remove_source_slice": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox"},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "install_dependencies", "start_background_service", "install_hooks", "use_mcp_write_tool", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "reject_gate_false",
+    "description": "Reject latest p2-59 gate failure.",
+    "mutation": {"set_top": {"latest_source_final_gate_passed": false}},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "install_dependencies", "start_background_service", "install_hooks", "use_mcp_write_tool", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "reject_freeze_false",
+    "description": "Reject freeze_ready false.",
+    "mutation": {"set_top": {"freeze_ready": false}},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "install_dependencies", "start_background_service", "install_hooks", "use_mcp_write_tool", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "reject_must_not_removed",
+    "description": "Reject missing must_not boundary.",
+    "mutation": {"remove_must_not": "commit"},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "install_dependencies", "start_background_service", "install_hooks", "use_mcp_write_tool", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "reject_mainline_ready_true",
+    "description": "Reject mainline readiness authority confusion.",
+    "mutation": {"set_top": {"mainline_ready": true}},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "install_dependencies", "start_background_service", "install_hooks", "use_mcp_write_tool", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "reject_promotion_ready_true",
+    "description": "Reject promotion readiness authority confusion.",
+    "mutation": {"set_top": {"promotion_ready": true}},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "install_dependencies", "start_background_service", "install_hooks", "use_mcp_write_tool", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "reject_action_basis_ready_true",
+    "description": "Reject action_basis readiness authority confusion.",
+    "mutation": {"set_top": {"action_basis_ready": true}},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "install_dependencies", "start_background_service", "install_hooks", "use_mcp_write_tool", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "reject_outside_path",
+    "description": "Reject an outside path pretending to be part of the freeze.",
+    "mutation": {"set_first_entry": {"path": "outside/sandbox/file.md"}},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "install_dependencies", "start_background_service", "install_hooks", "use_mcp_write_tool", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  {
+    "failure_id": "reject_missing_count_drift",
+    "description": "Reject a nonzero missing_count drift.",
+    "mutation": {"set_top": {"missing_count": 1}},
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "install_dependencies", "start_background_service", "install_hooks", "use_mcp_write_tool", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  }
+]

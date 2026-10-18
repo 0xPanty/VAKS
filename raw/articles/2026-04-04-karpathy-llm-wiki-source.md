@@ -1,5 +1,6 @@
 ---
 type: source
+record_kind: source_card
 status: source-captured
 title: "LLM Wiki"
 source_url: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
@@ -20,15 +21,12 @@ sources:
   - https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 verification_status: primary-source
 evidence_level: primary
-source_quality: 5
-freshness: 5
-relevance: 5
-confidence: high
-cross_source_count: 1
+source_integrity:
+  capture_confidence: high
 verified_by: Codex
 last_verified: 2026-05-26
 next_review: 2026-06-26
-relations:
+candidate_relation_suggestions:
   - target: "[[2026-04-04-karpathy-llm-wiki-pattern]]"
     type: derived_from
     strength: 5
@@ -61,8 +59,24 @@ tags:
   - llm-wiki
   - karpathy
   - obsidian
+knowledge_status: raw
+processing_tier: light
+source_id: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+why_saved: see_body_or_legacy_record
+retrieval_policy:
+  policy_kind: source_identity_only
+  pack_allowed: drilldown_required
+  action_basis_allowed: false
+  warning_code: raw_is_provenance_only
+promotion_gate: none
+action_basis_allowed: false
+truth_mutation_allowed: false
+legacy_raw_metadata:
+  source_quality: 5
+  freshness: 5
+  relevance: 5
+  cross_source_count: 1
 ---
-
 # 来源记录：Karpathy LLM Wiki
 
 ## 为什么收录

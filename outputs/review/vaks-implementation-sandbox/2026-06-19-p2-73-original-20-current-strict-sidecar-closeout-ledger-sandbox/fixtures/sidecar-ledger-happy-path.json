@@ -1,0 +1,8 @@
+{
+  "fixture_id": "sidecar-ledger-happy-path",
+  "expected": {
+    "original_items_covered": 20,
+    "sidecar_closeout_passed_count": 20,
+    "old_slice_writes_applied": 0
+  }
+}

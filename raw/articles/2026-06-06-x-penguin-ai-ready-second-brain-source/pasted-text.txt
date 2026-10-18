@@ -1,0 +1,242 @@
+文章
+
+查看新帖子
+对话
+Penguin
+@PenguinWeb3
+Your second brain is useless until AI can read the patterns inside it
+How To Build An AI Ready Second Brain In Obsidian
+most people use Obsidian like a prettier notes app, they save:
+random ideas
+useful threads
+articles
+videos
+prompts
+project notes
+half-finished thoughts
+then forget 80% of it exists, and the problem isn't Obsidian
+the problem is that their second brain is only storage
+a real second brain should help you:
+remember, connect, decide, and reuse your own thinking
+and AI makes this way more important
+because Codex become much better when they can see your actual context
+not just one prompt, but your patterns
+1. Why most second brains fail
+most second brains fail because people treat them like libraries
+they focus on:
+perfect folders
+tags
+dashboards
+templates
+graph view
+aesthetic systems
+but none of that matters if the notes do not help you think better
+a second brain isn't useful because it stores more information
+it becomes useful when it can answer questions like:
+what do I keep thinking about?
+what mistakes do I repeat?
+what ideas are connected?
+what do I already know about this topic?
+what should I do next?
+what did I try before?
+that's the difference between a notes app and a thinking system
+2. What your second brain should actually store
+do not only save information, save FULL context
+your vault should include:
+ideas
+observations
+decisions
+mistakes
+projects
+prompts
+workflows
+articles you like
+posts you like
+personal rules
+things that feel fake
+useful examples
+repeated patterns
+
+the goal is not to collect everything, your goal is to build a system that understands how you think
+because AI is not only improved by more information, it's improved by better context
+3. Simple folder structure
+you don't need a complicated folder tree, start simple
+example:
+00 Inbox
+01 Ideas
+02 Projects
+03 Research
+04 Workflows
+05 Prompts
+06 Mistakes
+07 Decisions
+08 People / Companies
+09 Writing / Voice
+10 Archive
+what each folder does:
+00 Inbox
+quick dump for anything you do not want to lose
+
+01 Ideas
+raw thoughts, article ideas, business ideas, random observations
+
+02 Projects
+things you are building, testing, writing, or planning
+
+03 Research
+articles, videos, tools, examples, market research
+
+04 Workflows
+repeatable systems you use more than once
+
+05 Prompts
+useful prompts for Claude, Codex, ChatGPT, NotebookLM, etc.
+
+06 Mistakes
+things that went wrong and what to avoid next time
+
+07 Decisions
+why you chose something, what tradeoff you accepted
+
+08 People / Companies
+people, creators, startups, companies, clients, competitors
+
+09 Writing / Voice
+your style, hooks, phrases, posts you like, things that feel fake
+
+10 Archive
+old notes that are not active but may still be useful later
+you don't need to build a museum, just build a memory system
+4. Every note needs a reason
+this is the part most people skip
+a note should not only say what happened
+it should say why it matters
+use this simple format:
+What is this?
+Why does it matter?
+Where can I use it?
+What does it connect to?
+What question does it create?
+example:
+Topic: AI agents
+
+What is this?
+AI systems that can move tasks forward, not just answer questions.
+
+Why does it matter?
+Because boring repeated workflows are where agents become useful first.
+
+Where can I use it?
+Content research, lead research, code review, file organization, weekly reports.
+
+What does it connect to?
+[[AI workflows]]
+[[Boring work]]
+[[Automation]]
+[[Claude]]
+[[Codex]]
+
+Question:
+What tasks do I repeat every week that an agent could handle?
+this makes the note useful later, not just saved
+5. Why AI changes the second brain
+before AI your second brain was mostly for you
+now it can become context for AI
+that changes everything
+because AI is usually weak when it has:
+no memory
+no examples
+no taste
+no constraints
+no history
+no idea what you care about
+that is why generic AI output feels empty, it doesn't know your patterns, it doesn't know your taste, it doesn't know what you tried before, it doesn't know what sounds fake to you
+but when AI can read your vault, it can help with:
+finding repeated patterns
+summarizing what you already think
+connecting old ideas
+turning notes into plans
+finding contradictions
+improving decisions
+creating better prompts
+continuing projects without starting from zero
+this is where Obsidian becomes way more powerful, not because it stores notes, but because it gives AI memory
+6. What to ask Claude
+once your vault has enough useful notes, you can start asking better questions
+not random prompts, context prompts
+use prompts like this:
+Read my vault and find the 10 ideas I keep repeating.
+
+Explain what they reveal about my thinking.
+
+---
+
+Find contradictions in my notes.
+
+Where do I say one thing but act like another thing?
+
+---
+
+Look at my project notes.
+
+Tell me what I should do next based on what I already wrote.
+
+---
+
+Take this messy note and turn it into:
+
+- clear idea
+- action steps
+- related notes
+- questions to answer next
+
+---
+
+Find everything in my vault related to [topic].
+
+Summarize what I already know.
+
+Then tell me what is missing.
+this is the real value
+AI becomes better when it can see the system behind your thinking
+7. The weekly workflow
+you do not need to live inside Obsidian all day
+just run a simple loop
+once a week:
+1. dump new ideas into Inbox
+2. move useful notes into folders
+3. link notes that are obviously related
+4. ask AI to find repeated patterns
+5. turn the best patterns into projects / decisions / prompts
+6. delete or archive useless noise
+that's enough, the point isn't to organize perfectly, the point is to reduce friction, if your vault makes it easier to think, it is working
+if it only makes you feel organized, it is probably just decoration
+8. What makes this better than random AI chats
+random AI chats reset too much
+every new chat usually needs the same context again:
+who you are
+what you are building
+what style you like
+what you hate
+what you already tried
+what your goals are
+what constraints matter
+that's context waste, a second brain fixes this
+instead of explaining yourself every time, you build a memory layer
+AI stops being only a chatbot, it becomes something closer to an assistant that can understand your history
+not perfectly, but enough to make the work feel less random
+9. What this can become over time
+after a while, your Obsidian vault can show you things you would normally miss
+like:
+topics you keep returning to
+ideas you almost built but forgot
+mistakes that repeat
+workflows that should be automated
+questions you still have not answered
+projects that connect to each other
+content ideas hidden inside old notes
+business ideas hidden inside research
+personal rules you keep learning the hard way
+this is why the second brain idea actually matters
+not because notes are cool, but because memory is leverage
+the more useful context you store, the easier it becomes to think, build, write, decide, and use AI properly

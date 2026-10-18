@@ -1,0 +1,6 @@
+{
+  "case_id": "sandbox-product-grade-but-not-complete",
+  "sandbox_closeout_evidence_product_grade": true,
+  "goal_complete_now": false,
+  "passed": true
+}

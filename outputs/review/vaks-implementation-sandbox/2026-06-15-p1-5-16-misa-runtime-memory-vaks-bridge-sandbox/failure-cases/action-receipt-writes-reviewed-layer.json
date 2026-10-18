@@ -1,0 +1,12 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "action-receipt-writes-reviewed-layer",
+  "expected_valid": false,
+  "expected_codes": ["MB_RECEIPT_WRITES_REVIEWED"],
+  "allowed_extra_codes": ["MB_ACTION_RECEIPT_MISMATCH"],
+  "patch": {
+    "action_readiness": {
+      "operation_receipt_ref": "fixtures/bad/receipt-writes-reviewed.json"
+    }
+  }
+}

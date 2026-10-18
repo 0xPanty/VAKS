@@ -1,0 +1,9 @@
+{
+  "fixture_id": "request-is-not-approval",
+  "expected": {
+    "approval_request_only": true,
+    "user_approval_collected": false,
+    "old_slice_write_allowed_now": false,
+    "normalization_applied": false
+  }
+}

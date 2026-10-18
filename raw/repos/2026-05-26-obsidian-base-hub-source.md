@@ -1,5 +1,6 @@
 ---
 type: source
+record_kind: source_card
 status: source-captured
 title: rafafields/Obsidian-Base-Hub
 source_url: https://github.com/rafafields/Obsidian-Base-Hub
@@ -17,12 +18,9 @@ topics:
 projects:
   - verified-knowledge-system
 evidence_level: primary
+source_integrity:
+  capture_confidence: 4
 source_status: source-captured
-source_quality: 3
-freshness: 4
-relevance: 3
-confidence: 4
-cross_source_count: 1
 verified_by:
   - local-source-read
 last_verified: 2026-05-26
@@ -34,8 +32,24 @@ tags:
   - repo
   - obsidian-bases
   - view-template
+knowledge_status: raw
+processing_tier: light
+source_id: https://github.com/rafafields/Obsidian-Base-Hub
+why_saved: see_body_or_legacy_record
+retrieval_policy:
+  policy_kind: source_identity_only
+  pack_allowed: drilldown_required
+  action_basis_allowed: false
+  warning_code: raw_is_provenance_only
+promotion_gate: none
+action_basis_allowed: false
+truth_mutation_allowed: false
+legacy_raw_metadata:
+  source_quality: 3
+  freshness: 4
+  relevance: 3
+  cross_source_count: 1
 ---
-
 # 来源记录：rafafields/Obsidian-Base-Hub
 
 ## 为什么收录

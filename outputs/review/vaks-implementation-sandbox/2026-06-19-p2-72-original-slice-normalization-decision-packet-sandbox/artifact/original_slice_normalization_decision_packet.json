@@ -1,0 +1,841 @@
+{
+  "record_kind": "sandbox_original_slice_normalization_decision_packet",
+  "slice_id": "2026-06-19-p2-72-original-slice-normalization-decision-packet-sandbox",
+  "source_audit": {
+    "source_audit_slice_id": "2026-06-16-p2-71-original-slice-closeout-normalization-audit-sandbox",
+    "path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-71-original-slice-closeout-normalization-audit-sandbox/artifact/original_slice_closeout_normalization_audit.json",
+    "summary": {
+      "total_original_items": 20,
+      "product_acceptance_evidence_count": 20,
+      "current_strict_final_gate_count": 0,
+      "status_normalization_candidate_count": 20,
+      "requires_re_review_or_reacceptance_count": 0,
+      "legacy_product_status_count": 2,
+      "next_step_normalization_needed_count": 20,
+      "core_reports_have_pass_evidence_count": 20,
+      "core_reports_current_canonical_count": 0,
+      "all_original_items_found": true,
+      "all_original_items_have_product_acceptance_evidence": true,
+      "all_original_items_current_strict_pass": false,
+      "audit_only_no_old_slice_writes": true
+    }
+  },
+  "summary": {
+    "original_items_covered": 20,
+    "product_acceptance_evidence_count": 20,
+    "core_pass_evidence_count": 20,
+    "current_strict_final_gate_count": 0,
+    "status_normalization_candidate_count": 20,
+    "dry_run_status_change_count": 75,
+    "dry_run_only": true,
+    "old_slice_writes_applied": 0
+  },
+  "decision_options": [
+    {
+      "option_id": "approve_status_only_normalization",
+      "label": "Approve old-slice status-only normalization",
+      "allowed_now": false,
+      "requires_separate_user_approval": true,
+      "would_edit_old_slices": true,
+      "normalization_applied": false,
+      "meaning": "Allow a future explicitly approved slice to update only frontmatter status fields in the original 20 sandbox reports."
+    },
+    {
+      "option_id": "leave_audit_only",
+      "label": "Leave as audit-only",
+      "allowed_now": true,
+      "requires_separate_user_approval": false,
+      "would_edit_old_slices": false,
+      "normalization_applied": false,
+      "meaning": "Keep old slices unchanged and rely on p2-70/p2-71/p2-72 to explain the status vocabulary split."
+    },
+    {
+      "option_id": "rerun_recloseout_without_old_slice_edits",
+      "label": "Rerun closeout in new sandbox evidence",
+      "allowed_now": true,
+      "requires_separate_user_approval": false,
+      "would_edit_old_slices": false,
+      "normalization_applied": false,
+      "meaning": "Create additional new sandbox evidence instead of editing old slice reports."
+    }
+  ],
+  "dry_run_manifest": {
+    "manifest_kind": "old_slice_status_normalization_dry_run",
+    "applied": false,
+    "requires_explicit_user_approval": true,
+    "status_changes": [
+      {
+        "slice_id": "2026-06-15-p0-01-retrieval-receipt-template-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/verification.md",
+        "field": "frontmatter.status",
+        "current_status": "pass",
+        "proposed_status": "local_verification_passed",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-01-retrieval-receipt-template-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/reviewer-report.md",
+        "field": "frontmatter.status",
+        "current_status": "pass",
+        "proposed_status": "review_pass_no_blocker",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-01-retrieval-receipt-template-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/boundary-audit.md",
+        "field": "frontmatter.status",
+        "current_status": "pass",
+        "proposed_status": "pass_boundary",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-01-retrieval-receipt-template-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/product-acceptance-report.md",
+        "field": "frontmatter.status",
+        "current_status": "pass_product_grade_round_2",
+        "proposed_status": "pass_product_grade",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-01-retrieval-receipt-template-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/next-step.md",
+        "field": "frontmatter.status",
+        "current_status": "pending_acceptance",
+        "proposed_status": "pass_product_grade_pending_next_slice",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-02-operation-receipt-template-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-02-operation-receipt-template-sandbox/verification.md",
+        "field": "frontmatter.status",
+        "current_status": "local_verification_pass",
+        "proposed_status": "local_verification_passed",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-02-operation-receipt-template-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-02-operation-receipt-template-sandbox/reviewer-report.md",
+        "field": "frontmatter.status",
+        "current_status": "review_pass_no_blocker_round_2",
+        "proposed_status": "review_pass_no_blocker",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-02-operation-receipt-template-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-02-operation-receipt-template-sandbox/boundary-audit.md",
+        "field": "frontmatter.status",
+        "current_status": "boundary_pass_no_blocker_round_2",
+        "proposed_status": "pass_boundary",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-02-operation-receipt-template-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-02-operation-receipt-template-sandbox/next-step.md",
+        "field": "frontmatter.status",
+        "current_status": "pending_product_acceptance",
+        "proposed_status": "pass_product_grade_pending_next_slice",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-03-body-hash-validator-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-03-body-hash-validator-sandbox/verification.md",
+        "field": "frontmatter.status",
+        "current_status": "local_verification_pass",
+        "proposed_status": "local_verification_passed",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-03-body-hash-validator-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-03-body-hash-validator-sandbox/reviewer-report.md",
+        "field": "frontmatter.status",
+        "current_status": "review_pass_no_blocker_round_2",
+        "proposed_status": "review_pass_no_blocker",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-03-body-hash-validator-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-03-body-hash-validator-sandbox/boundary-audit.md",
+        "field": "frontmatter.status",
+        "current_status": "boundary_pass_no_blocker_round_2",
+        "proposed_status": "pass_boundary",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-03-body-hash-validator-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-03-body-hash-validator-sandbox/next-step.md",
+        "field": "frontmatter.status",
+        "current_status": "pending_product_acceptance",
+        "proposed_status": "pass_product_grade_pending_next_slice",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-04-support-boundary-validator-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-04-support-boundary-validator-sandbox/verification.md",
+        "field": "frontmatter.status",
+        "current_status": "local_verification_pass",
+        "proposed_status": "local_verification_passed",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-04-support-boundary-validator-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-04-support-boundary-validator-sandbox/reviewer-report.md",
+        "field": "frontmatter.status",
+        "current_status": "review_pass_no_blocker_round_2",
+        "proposed_status": "review_pass_no_blocker",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-04-support-boundary-validator-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-04-support-boundary-validator-sandbox/boundary-audit.md",
+        "field": "frontmatter.status",
+        "current_status": "boundary_pass_no_blocker_round_2",
+        "proposed_status": "pass_boundary",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-04-support-boundary-validator-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-04-support-boundary-validator-sandbox/next-step.md",
+        "field": "frontmatter.status",
+        "current_status": "pending_product_acceptance",
+        "proposed_status": "pass_product_grade_pending_next_slice",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-05-action-readiness-validator-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-05-action-readiness-validator-sandbox/verification.md",
+        "field": "frontmatter.status",
+        "current_status": "pass",
+        "proposed_status": "local_verification_passed",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-05-action-readiness-validator-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-05-action-readiness-validator-sandbox/boundary-audit.md",
+        "field": "frontmatter.status",
+        "current_status": "boundary_pass_no_blocker",
+        "proposed_status": "pass_boundary",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-05-action-readiness-validator-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-05-action-readiness-validator-sandbox/next-step.md",
+        "field": "frontmatter.status",
+        "current_status": "pending_acceptance",
+        "proposed_status": "pass_product_grade_pending_next_slice",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-06-feedback-validator-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-06-feedback-validator-sandbox/verification.md",
+        "field": "frontmatter.status",
+        "current_status": "pass",
+        "proposed_status": "local_verification_passed",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-06-feedback-validator-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-06-feedback-validator-sandbox/boundary-audit.md",
+        "field": "frontmatter.status",
+        "current_status": "boundary_pass_no_blocker",
+        "proposed_status": "pass_boundary",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-06-feedback-validator-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-06-feedback-validator-sandbox/next-step.md",
+        "field": "frontmatter.status",
+        "current_status": "pending_acceptance",
+        "proposed_status": "pass_product_grade_pending_next_slice",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-07-action-boundary-failure-matrix-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-07-action-boundary-failure-matrix-sandbox/verification.md",
+        "field": "frontmatter.status",
+        "current_status": "pass",
+        "proposed_status": "local_verification_passed",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-07-action-boundary-failure-matrix-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-07-action-boundary-failure-matrix-sandbox/boundary-audit.md",
+        "field": "frontmatter.status",
+        "current_status": "boundary_pass_no_blocker",
+        "proposed_status": "pass_boundary",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p0-07-action-boundary-failure-matrix-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-07-action-boundary-failure-matrix-sandbox/next-step.md",
+        "field": "frontmatter.status",
+        "current_status": "pending_acceptance",
+        "proposed_status": "pass_product_grade_pending_next_slice",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox/reviewer-report.md",
+        "field": "frontmatter.status",
+        "current_status": "review_pass_no_blocker_after_revision",
+        "proposed_status": "review_pass_no_blocker",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox/boundary-audit.md",
+        "field": "frontmatter.status",
+        "current_status": "boundary_pass_no_blocker_after_revision",
+        "proposed_status": "pass_boundary",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox/next-step.md",
+        "field": "frontmatter.status",
+        "current_status": "pending_product_acceptance",
+        "proposed_status": "pass_product_grade_pending_next_slice",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-09-read-only-query-loop-pilot-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-09-read-only-query-loop-pilot-sandbox/reviewer-report.md",
+        "field": "frontmatter.status",
+        "current_status": "review_pass_no_blocker_after_refinement",
+        "proposed_status": "review_pass_no_blocker",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-09-read-only-query-loop-pilot-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-09-read-only-query-loop-pilot-sandbox/boundary-audit.md",
+        "field": "frontmatter.status",
+        "current_status": "boundary_pass_no_blocker_after_refinement",
+        "proposed_status": "pass_boundary",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-09-read-only-query-loop-pilot-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-09-read-only-query-loop-pilot-sandbox/next-step.md",
+        "field": "frontmatter.status",
+        "current_status": "pending_product_acceptance",
+        "proposed_status": "pass_product_grade_pending_next_slice",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox/reviewer-report.md",
+        "field": "frontmatter.status",
+        "current_status": "review_pass_no_blocker_after_revision",
+        "proposed_status": "review_pass_no_blocker",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox/boundary-audit.md",
+        "field": "frontmatter.status",
+        "current_status": "boundary_pass_no_blocker_after_revision",
+        "proposed_status": "pass_boundary",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox/product-acceptance-report.md",
+        "field": "frontmatter.status",
+        "current_status": "pass_product_grade_after_revision",
+        "proposed_status": "pass_product_grade",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox/next-step.md",
+        "field": "frontmatter.status",
+        "current_status": "pending_product_acceptance",
+        "proposed_status": "pass_product_grade_pending_next_slice",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-11-semantic-anchor-support-check-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-11-semantic-anchor-support-check-sandbox/verification.md",
+        "field": "frontmatter.status",
+        "current_status": "local_verification_passed_pending_review",
+        "proposed_status": "local_verification_passed",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-11-semantic-anchor-support-check-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-11-semantic-anchor-support-check-sandbox/boundary-audit.md",
+        "field": "frontmatter.status",
+        "current_status": "boundary_pass_no_blocker",
+        "proposed_status": "pass_boundary",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-11-semantic-anchor-support-check-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-11-semantic-anchor-support-check-sandbox/next-step.md",
+        "field": "frontmatter.status",
+        "current_status": "pending_product_acceptance",
+        "proposed_status": "pass_product_grade_pending_next_slice",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-5-12-robust-rag-retrieval-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-12-robust-rag-retrieval-sandbox/verification.md",
+        "field": "frontmatter.status",
+        "current_status": "local_verification_passed_pending_review",
+        "proposed_status": "local_verification_passed",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-5-12-robust-rag-retrieval-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-12-robust-rag-retrieval-sandbox/reviewer-report.md",
+        "field": "frontmatter.status",
+        "current_status": "review_pass_no_blocker_after_repair",
+        "proposed_status": "review_pass_no_blocker",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-5-12-robust-rag-retrieval-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-12-robust-rag-retrieval-sandbox/boundary-audit.md",
+        "field": "frontmatter.status",
+        "current_status": "boundary_pass_no_blocker_after_repair",
+        "proposed_status": "pass_boundary",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-5-12-robust-rag-retrieval-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-12-robust-rag-retrieval-sandbox/next-step.md",
+        "field": "frontmatter.status",
+        "current_status": "pending_product_acceptance",
+        "proposed_status": "pass_product_grade_pending_next_slice",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox/verification.md",
+        "field": "frontmatter.status",
+        "current_status": "local_verification_passed_pending_reacceptance",
+        "proposed_status": "local_verification_passed",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox/reviewer-report.md",
+        "field": "frontmatter.status",
+        "current_status": "reviewer_pass_no_blocker_after_product_revision",
+        "proposed_status": "review_pass_no_blocker",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox/boundary-audit.md",
+        "field": "frontmatter.status",
+        "current_status": "boundary_pass_no_blocker_after_product_revision",
+        "proposed_status": "pass_boundary",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox/next-step.md",
+        "field": "frontmatter.status",
+        "current_status": "pending_product_reacceptance",
+        "proposed_status": "pass_product_grade_pending_next_slice",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-5-14-raw-intake-parser-router-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/verification.md",
+        "field": "frontmatter.status",
+        "current_status": "local_verification_passed_pending_recheck_after_boundary_repair",
+        "proposed_status": "local_verification_passed",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-5-14-raw-intake-parser-router-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/reviewer-report.md",
+        "field": "frontmatter.status",
+        "current_status": "reviewer_pass_no_blocker",
+        "proposed_status": "review_pass_no_blocker",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-5-14-raw-intake-parser-router-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/boundary-audit.md",
+        "field": "frontmatter.status",
+        "current_status": "boundary_pass_no_blocker",
+        "proposed_status": "pass_boundary",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-5-14-raw-intake-parser-router-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/next-step.md",
+        "field": "frontmatter.status",
+        "current_status": "pending_product_acceptance",
+        "proposed_status": "pass_product_grade_pending_next_slice",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/verification.md",
+        "field": "frontmatter.status",
+        "current_status": "local_verification_passed_pending_review",
+        "proposed_status": "local_verification_passed",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/reviewer-report.md",
+        "field": "frontmatter.status",
+        "current_status": "review_pass_after_product_revision",
+        "proposed_status": "review_pass_no_blocker",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/boundary-audit.md",
+        "field": "frontmatter.status",
+        "current_status": "boundary_pass_after_product_revision",
+        "proposed_status": "pass_boundary",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/next-step.md",
+        "field": "frontmatter.status",
+        "current_status": "pass_product_grade_next_slice_allowed",
+        "proposed_status": "pass_product_grade_pending_next_slice",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox/verification.md",
+        "field": "frontmatter.status",
+        "current_status": "local_verification_passed_pending_review",
+        "proposed_status": "local_verification_passed",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox/reviewer-report.md",
+        "field": "frontmatter.status",
+        "current_status": "review_pass_after_third_revision",
+        "proposed_status": "review_pass_no_blocker",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox/boundary-audit.md",
+        "field": "frontmatter.status",
+        "current_status": "boundary_pass_after_third_revision",
+        "proposed_status": "pass_boundary",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox/next-step.md",
+        "field": "frontmatter.status",
+        "current_status": "pass_product_grade_enter_p2_17",
+        "proposed_status": "pass_product_grade_pending_next_slice",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p2-17-use-surface-optimization-pass",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-17-use-surface-optimization-pass/verification.md",
+        "field": "frontmatter.status",
+        "current_status": "local_verification_passed_pending_review",
+        "proposed_status": "local_verification_passed",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p2-17-use-surface-optimization-pass",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-17-use-surface-optimization-pass/reviewer-report.md",
+        "field": "frontmatter.status",
+        "current_status": "review_pass_after_first_revision",
+        "proposed_status": "review_pass_no_blocker",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p2-17-use-surface-optimization-pass",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-17-use-surface-optimization-pass/boundary-audit.md",
+        "field": "frontmatter.status",
+        "current_status": "boundary_pass_after_first_revision",
+        "proposed_status": "pass_boundary",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p2-17-use-surface-optimization-pass",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-17-use-surface-optimization-pass/next-step.md",
+        "field": "frontmatter.status",
+        "current_status": "pass_product_grade_enter_p2_18",
+        "proposed_status": "pass_product_grade_pending_next_slice",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p2-18-bases-cockpit-prototype",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-18-bases-cockpit-prototype/verification.md",
+        "field": "frontmatter.status",
+        "current_status": "local_verification_passed_reviewer_boundary_product_passed",
+        "proposed_status": "local_verification_passed",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p2-18-bases-cockpit-prototype",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-18-bases-cockpit-prototype/reviewer-report.md",
+        "field": "frontmatter.status",
+        "current_status": "reviewer_pass",
+        "proposed_status": "review_pass_no_blocker",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p2-18-bases-cockpit-prototype",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-18-bases-cockpit-prototype/boundary-audit.md",
+        "field": "frontmatter.status",
+        "current_status": "boundary_pass",
+        "proposed_status": "pass_boundary",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p2-18-bases-cockpit-prototype",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-18-bases-cockpit-prototype/next-step.md",
+        "field": "frontmatter.status",
+        "current_status": "pass_product_grade_next_p2_19",
+        "proposed_status": "pass_product_grade_pending_next_slice",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p2-19-product-experience-screening-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-19-product-experience-screening-sandbox/verification.md",
+        "field": "frontmatter.status",
+        "current_status": "local_verification_passed_reviewer_boundary_product_passed",
+        "proposed_status": "local_verification_passed",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p2-19-product-experience-screening-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-19-product-experience-screening-sandbox/reviewer-report.md",
+        "field": "frontmatter.status",
+        "current_status": "reviewer_pass",
+        "proposed_status": "review_pass_no_blocker",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p2-19-product-experience-screening-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-19-product-experience-screening-sandbox/boundary-audit.md",
+        "field": "frontmatter.status",
+        "current_status": "boundary_pass",
+        "proposed_status": "pass_boundary",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p2-19-product-experience-screening-sandbox",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-19-product-experience-screening-sandbox/next-step.md",
+        "field": "frontmatter.status",
+        "current_status": "pass_product_grade_next_p2_20",
+        "proposed_status": "pass_product_grade_pending_next_slice",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p2-20-product-workflow-prototype",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-20-product-workflow-prototype/verification.md",
+        "field": "frontmatter.status",
+        "current_status": "local_verification_reviewer_boundary_product_acceptance_passed",
+        "proposed_status": "local_verification_passed",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p2-20-product-workflow-prototype",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-20-product-workflow-prototype/reviewer-report.md",
+        "field": "frontmatter.status",
+        "current_status": "reviewer_pass",
+        "proposed_status": "review_pass_no_blocker",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p2-20-product-workflow-prototype",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-20-product-workflow-prototype/boundary-audit.md",
+        "field": "frontmatter.status",
+        "current_status": "boundary_pass",
+        "proposed_status": "pass_boundary",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      },
+      {
+        "slice_id": "2026-06-15-p2-20-product-workflow-prototype",
+        "target_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-20-product-workflow-prototype/next-step.md",
+        "field": "frontmatter.status",
+        "current_status": "sandbox_series_complete_pending_user_mainline_decision",
+        "proposed_status": "pass_product_grade_pending_next_slice",
+        "change_kind": "status_only_frontmatter_normalization",
+        "applied": false,
+        "requires_explicit_user_approval": true
+      }
+    ]
+  },
+  "authority_flags": {
+    "decision_packet_only": true,
+    "dry_run_only": true,
+    "old_slice_write_allowed": false,
+    "normalization_applied": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "user_approval_collected": false
+  },
+  "forbidden_claims": [
+    "this_packet_is_user_approval",
+    "old_slices_were_normalized",
+    "original_20_current_strict_final_gate_complete",
+    "mainline_ready",
+    "promotion_ready",
+    "reviewed_knowledge_ready",
+    "evidence_support_ready",
+    "action_basis_ready"
+  ]
+}

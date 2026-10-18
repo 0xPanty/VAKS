@@ -1,0 +1,1 @@
+{"case_id":"navigation-authority","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/steps/0/authority_flags/treats_navigation_as_authority","value":true}]}

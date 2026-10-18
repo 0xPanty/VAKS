@@ -1,0 +1,52 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "obsidian-pkm-vault/recetas-cocina",
+  "source_url": "https://github.com/obsidian-pkm-vault/recetas-cocina",
+  "checked_commit": "e5c37700bb25e21891e12c5d9a19d6ee2d9a906b",
+  "checked_at": "2026-06-11",
+  "inspection_method": "local git checkout; inspected README, Obsidian config, recipe template, manual index, exported docs, image/PDF folders, and sample notes",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "vault-to-web-identity",
+      "why": "Describes the repository as an Obsidian recipe vault exported to a web format through an Obsidian webpage export plugin."
+    },
+    {
+      "path": "receta-template.md",
+      "kind": "note-template",
+      "why": "Defines recipe frontmatter and body sections: name, source, difficulty, time, tags, type, image, ingredients, preparation, notes, nutrition, sources, and references."
+    },
+    {
+      "path": "index.md",
+      "kind": "manual-navigation",
+      "why": "Shows hand-maintained category navigation using Obsidian wikilinks across food categories."
+    },
+    {
+      "path": ".obsidian/community-plugins.json",
+      "kind": "publish-tooling",
+      "why": "Shows the active export plugin boundary for converting the vault to a public site."
+    },
+    {
+      "path": "docs/",
+      "kind": "generated-export",
+      "why": "Contains exported HTML pages, demonstrating source vault versus generated web output separation."
+    }
+  ],
+  "observed_counts": {
+    "food_markdown_files": 84,
+    "drink_markdown_files": 6,
+    "exported_docs_files": 292,
+    "image_files": 92,
+    "obsidian_plugin_files": 20,
+    "recipe_book_files": 4
+  },
+  "known_limits": [
+    "The recipe notes include source labels of mixed rigor; they are not evidence packets.",
+    "Manual indexes can drift from actual files.",
+    "Exported docs duplicate source content and should not be treated as separate authority."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

@@ -1,0 +1,9 @@
+{
+  "extends": "fixtures/valid-bases-cockpit.json",
+  "record_kind": "vaks_bases_cockpit_prototype",
+  "scenario_id": "prototype-bases-cockpit",
+  "expected_valid": true,
+  "expected_codes": [],
+  "prototype_kind": "copied_json_bases_cockpit_only",
+  "prototype_boundary": "not_real_obsidian_bases"
+}

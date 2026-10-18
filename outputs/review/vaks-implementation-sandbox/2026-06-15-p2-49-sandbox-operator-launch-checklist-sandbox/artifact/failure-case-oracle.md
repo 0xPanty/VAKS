@@ -1,0 +1,91 @@
+---
+record_kind: failure_case_oracle_doc
+slice_id: 2026-06-15-p2-49-sandbox-operator-launch-checklist-sandbox
+status: built_pending_review
+---
+
+# Failure Case Oracle
+
+Each failure case must fail with the listed verifier errors.
+
+- `001-top-level-record-kind.json`: top_level_record_kind
+- `002-top-level-slice-id.json`: top_level_slice_id
+- `003-top-level-version.json`: top_level_version
+- `004-top-level-truth-boundary.json`: top_level_truth_boundary
+- `005-top-level-write-scope.json`: top_level_write_scope
+- `006-source-chain-count.json`: source_chain_count
+- `007-source-chain-order.json`: source_chain_order
+- `008-source-product-status.json`: source_product_status_2026-06-15-p2-44-sandbox-evidence-ledger-sandbox
+- `009-source-missing-verifier.json`: source_missing_2026-06-15-p2-44-sandbox-evidence-ledger-sandbox_verifier
+- `010-source-bad-command.json`: source_bad_verifier_command_2026-06-15-p2-44-sandbox-evidence-ledger-sandbox
+- `011-source-bad-manual-run-policy.json`: source_bad_manual_run_policy_2026-06-15-p2-44-sandbox-evidence-ledger-sandbox
+- `012-p2-47-wrong-gate-role.json`: p2_47_gate_role_not_drift_sensitive
+- `013-p2-47-known-note-missing.json`: p2_47_known_current_note_missing
+- `014-p2-48-wrong-gate-role.json`: p2_48_gate_role_not_required_freeze
+- `015-launch-sequence-order.json`: launch_sequence_order
+- `016-step-writes-allowed.json`: step_writes_allowed_01-scope-card
+- `017-freeze-final-gate-command.json`: freeze_final_gate_command, step_command_missing_02-freeze-final-gate_--final-gate, step_command_missing_02-freeze-final-gate_verify_freeze_bundle.py
+- `018-freeze-step-stop-if-missing.json`: step_missing_stop_if_02-freeze-final-gate_checksum_or_status_drift_detected, step_missing_stop_if_02-freeze-final-gate_freeze_verifier_failed
+- `019-p2-47-step-current-green-gate-text.json`: step_action_missing_06-portability-read_Do_not_treat_p2-47_as_a_current_launch_green_gate, step_action_missing_06-portability-read_dynamic_scope_scan_drift
+- `020-p2-47-step-note-missing.json`: step_note_missing_06-portability-read_drift-sensitive_diagnostic_context, step_note_missing_06-portability-read_dynamic_verifier_can_fail, step_note_missing_06-portability-read_not_a_launch_green_gate
+- `021-p2-47-step-stop-if-missing.json`: step_missing_stop_if_06-portability-read_portability_verifier_claimed_green_despite_known_scope_drift
+- `022-stop-step-stop-if-missing.json`: step_missing_stop_if_08-stop-or-escalate_authority_confusion_detected, step_missing_stop_if_08-stop-or-escalate_checksum_or_status_drift_detected, step_missing_stop_if_08-stop-or-escalate_freeze_verifier_failed, step_missing_stop_if_08-stop-or-escalate_operator_scope_would_write_outside_current_sandbox, step_missing_stop_if_08-stop-or-escalate_portability_verifier_claimed_green_despite_known_scope_drift, step_missing_stop_if_08-stop-or-escalate_protected_path_touched_by_current_slice, step_missing_stop_if_08-stop-or-escalate_source_product_status_not_pass_product_grade, step_missing_stop_if_08-stop-or-escalate_user_approval_required_for_mainline_or_formal_vault
+- `023-operator-checklist-not-ready.json`: operator_launch_checklist_not_ready
+- `024-extra-non-claim.json`: extra_non_claim
+- `025-acceptance-missing-gpt55.json`: acceptance_missing_gpt_5_5_extra_high
+- `026-acceptance-product-not-only-gate.json`: acceptance_product_not_only_gate
+- `027-missing-stop-freeze_verifier_failed.json`: missing_stop_condition_freeze_verifier_failed
+- `028-missing-stop-checksum_or_status_drift_detected.json`: missing_stop_condition_checksum_or_status_drift_detected
+- `029-missing-stop-source_product_status_not_pass_product_grade.json`: missing_stop_condition_source_product_status_not_pass_product_grade
+- `030-missing-stop-protected_path_touched_by_current_slice.json`: missing_stop_condition_protected_path_touched_by_current_slice
+- `031-missing-stop-operator_scope_would_write_outside_current_sandbox.json`: missing_stop_condition_operator_scope_would_write_outside_current_sandbox
+- `032-missing-stop-authority_confusion_detected.json`: missing_stop_condition_authority_confusion_detected
+- `033-missing-stop-portability_verifier_claimed_green_despite_known_scope_drift.json`: missing_stop_condition_portability_verifier_claimed_green_despite_known_scope_drift
+- `034-missing-stop-user_approval_required_for_mainline_or_formal_vault.json`: missing_stop_condition_user_approval_required_for_mainline_or_formal_vault
+- `035-readiness-re_acceptance_performed.json`: readiness_re_acceptance_performed_not_false
+- `036-readiness-runtime_certified.json`: readiness_runtime_certified_not_false
+- `037-readiness-release_approved.json`: readiness_release_approved_not_false
+- `038-readiness-promotion_approved.json`: readiness_promotion_approved_not_false
+- `039-readiness-mainline_ready.json`: readiness_mainline_ready_not_false
+- `040-readiness-enterprise_production_ready.json`: readiness_enterprise_production_ready_not_false
+- `041-readiness-formal_vault_ready.json`: readiness_formal_vault_ready_not_false
+- `042-readiness-reviewed_knowledge_ready.json`: readiness_reviewed_knowledge_ready_not_false
+- `043-readiness-evidence_support_ready.json`: readiness_evidence_support_ready_not_false
+- `044-readiness-action_basis_ready.json`: readiness_action_basis_ready_not_false
+- `045-readiness-user_approval_collected.json`: readiness_user_approval_collected_not_false
+- `046-operation-old_slice_modified.json`: operation_old_slice_modified_not_false
+- `047-operation-old_verifier_executed.json`: operation_old_verifier_executed_not_false
+- `048-operation-automated_old_verifier_batch.json`: operation_automated_old_verifier_batch_not_false
+- `049-operation-commit.json`: operation_commit_not_false
+- `050-operation-push.json`: operation_push_not_false
+- `051-operation-obsidian_sync.json`: operation_obsidian_sync_not_false
+- `052-operation-formal_vault_write.json`: operation_formal_vault_write_not_false
+- `053-operation-mainline_merge.json`: operation_mainline_merge_not_false
+- `054-operation-promotion.json`: operation_promotion_not_false
+- `055-operation-dependency_install.json`: operation_dependency_install_not_false
+- `056-operation-background_service.json`: operation_background_service_not_false
+- `057-operation-hooks.json`: operation_hooks_not_false
+- `058-operation-mcp_write_tool.json`: operation_mcp_write_tool_not_false
+- `059-operation-network_access.json`: operation_network_access_not_false
+- `060-operation-auto_advance.json`: operation_auto_advance_not_false
+- `061-missing-non-claim-not_re-acceptance.json`: missing_non_claim_not_re-acceptance
+- `062-missing-non-claim-not_runtime_certification.json`: missing_non_claim_not_runtime_certification
+- `063-missing-non-claim-not_old_verifier_execution.json`: missing_non_claim_not_old_verifier_execution
+- `064-missing-non-claim-not_release_approval.json`: missing_non_claim_not_release_approval
+- `065-missing-non-claim-not_promotion_approval.json`: missing_non_claim_not_promotion_approval
+- `066-missing-non-claim-not_mainline_ready.json`: missing_non_claim_not_mainline_ready
+- `067-missing-non-claim-not_enterprise_production_ready.json`: missing_non_claim_not_enterprise_production_ready
+- `068-missing-non-claim-not_formal_vault_approval.json`: missing_non_claim_not_formal_vault_approval
+- `069-missing-non-claim-not_Obsidian_sync.json`: missing_non_claim_not_Obsidian_sync
+- `070-missing-non-claim-not_commit.json`: missing_non_claim_not_commit
+- `071-missing-non-claim-not_push.json`: missing_non_claim_not_push
+- `072-missing-non-claim-not_reviewed_knowledge.json`: missing_non_claim_not_reviewed_knowledge
+- `073-missing-non-claim-not_evidence_support.json`: missing_non_claim_not_evidence_support
+- `074-missing-non-claim-not_action_basis.json`: missing_non_claim_not_action_basis
+- `075-missing-non-claim-not_auto_advance.json`: missing_non_claim_not_auto_advance
+- `076-missing-non-claim-not_user_approval.json`: missing_non_claim_not_user_approval
+- `077-manual-policy-default_command_is_this_slice_verifier.json`: manual_command_policy_default_command_is_this_slice_verifier
+- `078-manual-policy-old_verifier_commands_are_documented_not_auto_executed.json`: manual_command_policy_old_verifier_commands_are_documented_not_auto_executed
+- `079-manual-policy-old_verifier_batch_execution_forbidden.json`: manual_command_policy_old_verifier_batch_execution_forbidden
+- `080-manual-policy-rebuild_flags_are_builder_only.json`: manual_command_policy_rebuild_flags_are_builder_only
+- `081-manual-policy-no_dependency_installation.json`: manual_command_policy_no_dependency_installation

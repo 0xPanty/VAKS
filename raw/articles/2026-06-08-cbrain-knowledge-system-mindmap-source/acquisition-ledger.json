@@ -1,0 +1,23 @@
+{
+  "captured_at": "2026-06-08T16:21:53+08:00",
+  "captured_by": "Codex",
+  "access_boundary": "public",
+  "source_url": "https://cbrain.site/cbrain/share/mindmap?nodeid=2c5da0409d489407",
+  "api_url": "https://cbrain.site/prod-api/cbrain/map/2c5da0409d489407/3",
+  "auth_used": false,
+  "cookies_used": false,
+  "retained_artifacts": [
+    {
+      "path": "raw/articles/2026-06-08-cbrain-knowledge-system-mindmap-source/share-page.html",
+      "sha256": "9edbc386f9fa354dbe93cd77103f89dd6e2b5f9eabd5f56aff21dd77e9165fb5",
+      "bytes": 21287,
+      "role": "public_share_entry_html"
+    },
+    {
+      "path": "raw/articles/2026-06-08-cbrain-knowledge-system-mindmap-source/cbrain-map-type3.json",
+      "sha256": "e2b453bece44f9ff54cb7d873df2556f898bdccd43701d2b9d8ea2130423d41b",
+      "bytes": 873824,
+      "role": "public_api_mindmap_snapshot_type3"
+    }
+  ]
+}

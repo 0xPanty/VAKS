@@ -1,0 +1,16 @@
+{
+  "case_id": "NEG-01-chinese-generic-continue",
+  "kind": "negative",
+  "input_text": "继续，全部落地",
+  "expected_match": false,
+  "expected_class": "not_approval",
+  "result": {
+    "input_sha256": "d1ebdfbd011374eaf3cc47ae3a84d8f29655adc70c0379d5f417ea19d13e45f0",
+    "matched_exact_phrase": false,
+    "approval_class": "not_approval",
+    "old_file_write_allowed_by_this_slice": false,
+    "requires_future_executor_slice": false,
+    "reason": "not an exact p2-75 approval phrase"
+  },
+  "passed": true
+}

@@ -1,0 +1,20 @@
+{
+  "input_text": "C，合并主线",
+  "expected_case_id": "approval_with_execution_words",
+  "expected_reply_id": "stop_for_separate_scope",
+  "automatic_execution": false,
+  "decision_collected": false,
+  "ready_to_execute": false,
+  "must_not": [
+    "execute_option",
+    "merge_mainline",
+    "promote",
+    "sync_obsidian",
+    "commit",
+    "push",
+    "write_reviewed_knowledge",
+    "create_evidence_support",
+    "create_action_basis",
+    "start_future_slice_by_inference"
+  ]
+}

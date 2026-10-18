@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sandbox Release-Candidate Handoff</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f7f8fb; color: #17202a; }
+    main { max-width: 1040px; margin: 0 auto; padding: 28px 18px 44px; }
+    h1 { margin: 0 0 8px; font-size: 30px; }
+    .summary { color: #465667; max-width: 820px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 20px 0; }
+    .card, .panel { background: #ffffff; border: 1px solid #d9e1ec; border-radius: 8px; padding: 14px; }
+    .card span { display: block; margin-top: 8px; color: #526273; }
+    li { margin: 8px 0; }
+    .notice { margin-top: 16px; border-left: 4px solid #2f6fed; background: #edf4ff; padding: 12px 14px; color: #1f3150; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Sandbox Release-Candidate Handoff</h1>
+    <p class="summary">sandbox release candidate only. Source slices 43; original plan items 20; not enterprise production; not mainline ready; not action basis.</p>
+    <section class="cards"><article class="card" data-user-question="what_landed"><strong>What landed?</strong><span>The original P0/P1/P1.5/P2 plan items landed as sandbox artifacts, with additional hardening slices.</span></article>
+<article class="card" data-user-question="was_it_tested"><strong>Was it tested?</strong><span>The evidence ledger reports 43 prior sandbox slices with verification evidence and Product PASS.</span></article>
+<article class="card" data-user-question="is_it_positive"><strong>Is it a positive improvement?</strong><span>Yes, as sandbox-only improvements supported by sandbox file evidence.</span></article>
+<article class="card" data-user-question="is_it_enterprise"><strong>Is it enterprise production?</strong><span>No. It is sandbox product-grade operator experience, not enterprise production readiness.</span></article></section>
+    <section class="panel"><h2>Stop conditions</h2><ul><li data-stop-condition="mainline_merge">mainline_merge</li>
+<li data-stop-condition="formal_vault_write_or_sync">formal_vault_write_or_sync</li>
+<li data-stop-condition="template_or_tool_movement">template_or_tool_movement</li>
+<li data-stop-condition="commit_or_push">commit_or_push</li>
+<li data-stop-condition="action_basis_use">action_basis_use</li>
+<li data-stop-condition="reviewed_knowledge_or_evidence_support_claim">reviewed_knowledge_or_evidence_support_claim</li>
+<li data-stop-condition="enterprise_production_claim">enterprise_production_claim</li></ul></section>
+    <section class="notice">No release is approved. No promotion, sync, commit, push, or action-basis use is authorized.</section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

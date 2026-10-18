@@ -1,0 +1,76 @@
+{
+  "record_kind": "evidence_support_check_negative_fixture_candidate",
+  "status": "candidate_only",
+  "topic_id": "source-intake-routing",
+  "query": "pressure test unsupported and scope-mismatched answer claims",
+  "truth_boundary": "negative_sandbox_fixture_only_not_truth",
+  "action_basis_allowed": false,
+  "answer_candidate": [
+    "The current source-intake-routing sandbox can be used as action basis.",
+    "Selector and snippet fields are evidence support.",
+    "The evidence-support-check v0 is a production RAG grounding evaluator.",
+    "The source-intake-routing sandbox has been promoted into the main truth layer."
+  ],
+  "claims": [
+    {
+      "claim_id": "n1",
+      "claim_text": "The current source-intake-routing sandbox can be used as action basis.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/README.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/21_EVIDENCE_SUPPORT_CHECK_V0_LANDING.md"
+      ],
+      "must_match_any": [
+        "can be used as action basis",
+        "action_basis_allowed: true",
+        "not_action_basis: false"
+      ],
+      "warrant": "This should fail because the sandbox repeatedly says it is not action basis."
+    },
+    {
+      "claim_id": "n2",
+      "claim_text": "Selector and snippet fields are evidence support.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/19_SOURCE_INTAKE_ROUTING_WORKBENCH_HARDENING.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/checks/source-intake-routing-workbench-hardening-v0-1-test.md"
+      ],
+      "must_match_any": [
+        "selector/snippet is evidence support",
+        "snippet_status: evidence_support",
+        "A snippet is evidence support"
+      ],
+      "warrant": "This should fail because selector/snippet are navigation-only."
+    },
+    {
+      "claim_id": "n3",
+      "claim_text": "The evidence-support-check v0 is a production RAG grounding evaluator.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/21_EVIDENCE_SUPPORT_CHECK_V0_LANDING.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/20_EVIDENCE_SUPPORT_CHECK_REFERENCE_DISTILLATION.md"
+      ],
+      "must_match_any": [
+        "production RAG grounding evaluator",
+        "production RAG",
+        "automatic evaluator"
+      ],
+      "warrant": "This should fail as a positive claim because these phrases appear only as non-goals or negations."
+    },
+    {
+      "claim_id": "n4",
+      "claim_text": "The source-intake-routing sandbox has been promoted into the main truth layer.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/README.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/MANIFEST.md"
+      ],
+      "must_match_any": [
+        "promoted into the main truth layer",
+        "truth_boundary: truth",
+        "status: reviewed"
+      ],
+      "warrant": "This should fail because the package remains candidate-only and sandbox-only."
+    }
+  ]
+}

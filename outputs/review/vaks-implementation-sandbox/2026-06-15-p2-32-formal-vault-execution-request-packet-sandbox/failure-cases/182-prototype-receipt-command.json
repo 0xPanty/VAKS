@@ -1,0 +1,15 @@
+{
+  "case_id": "prototype-receipt-command",
+  "description": "Prototype receipt command injection.",
+  "expected_errors": [
+    "dangerous_value:$.prototype_receipt.shell_command:absolute_formal_vault_path",
+    "dangerous_value:$.prototype_receipt.shell_command:copy_item",
+    "unknown_key:prototype_receipt:shell_command"
+  ],
+  "prototype_tamper": {
+    "kind": "receipt_update",
+    "updates": {
+      "shell_command": "Copy-Item source H:/Obsidian/资料库/target.md"
+    }
+  }
+}

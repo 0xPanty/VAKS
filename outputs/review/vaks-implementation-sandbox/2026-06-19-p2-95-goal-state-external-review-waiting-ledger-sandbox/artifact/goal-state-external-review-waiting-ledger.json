@@ -1,0 +1,119 @@
+{
+  "record_kind": "goal_state_external_review_waiting_ledger",
+  "slice_id": "2026-06-19-p2-95-goal-state-external-review-waiting-ledger-sandbox",
+  "created_at": "2026-06-19T10:01:08.750522+00:00",
+  "source_inputs": {
+    "p2_91_executor": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-91-old-file-status-normalization-executor-apply-sandbox/artifact/old_file_status_normalization_executor_apply.json",
+    "p2_92_current_strict_audit": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-92-post-apply-current-strict-closeout-audit-sandbox/artifact/post_apply_current_strict_closeout_audit.json",
+    "p2_93_opus_reviewable_packet": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-93-opus-reviewable-closeout-packet-sandbox/artifact/opus_reviewable_closeout_packet.json",
+    "p2_94_opus_submission_packet": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-94-opus-review-submission-packet-sandbox/artifact/opus-review-submission-packet.json"
+  },
+  "summary": {
+    "tracked_closeout_slice_count": 4,
+    "tracked_closeout_final_gate_complete_count": 4,
+    "tracked_closeout_product_grade_count": 4,
+    "p2_91_old_slice_writes_applied": 75,
+    "p2_91_protected_path_writes": 0,
+    "p2_92_original_item_count": 20,
+    "p2_92_current_strict_complete_original_item_count": 20,
+    "p2_93_external_review_packet_ready": true,
+    "p2_94_submission_packet_ready": true,
+    "p2_94_opus_review_performed": false,
+    "external_opus_review_pending": true,
+    "opus_approval_claimed": false,
+    "sandbox_closeout_evidence_product_grade": true,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "commit_push_sync_ready": false,
+    "goal_complete_now": false
+  },
+  "slice_states": [
+    {
+      "slice_id": "2026-06-19-p2-91-old-file-status-normalization-executor-apply-sandbox",
+      "role": "approved old-file status-only normalization executor",
+      "final_gate_complete": true,
+      "product_grade": true,
+      "key_counts": {
+        "old_slice_writes_applied": 75,
+        "protected_path_writes": 0,
+        "body_unchanged_count": 75,
+        "non_status_frontmatter_unchanged_count": 75
+      }
+    },
+    {
+      "slice_id": "2026-06-19-p2-92-post-apply-current-strict-closeout-audit-sandbox",
+      "role": "post-apply current-strict closeout audit",
+      "final_gate_complete": true,
+      "product_grade": true,
+      "key_counts": {
+        "original_item_count": 20,
+        "status_operation_count": 75,
+        "current_strict_complete_original_item_count": 20,
+        "p2_92_old_slice_writes_applied": 0,
+        "p2_92_protected_path_writes": 0
+      }
+    },
+    {
+      "slice_id": "2026-06-19-p2-93-opus-reviewable-closeout-packet-sandbox",
+      "role": "Opus-reviewable closeout packet",
+      "final_gate_complete": true,
+      "product_grade": true,
+      "key_counts": {
+        "external_review_packet_ready": true,
+        "opus_approval_claimed": false,
+        "original_item_count": 20,
+        "status_operation_count": 75
+      }
+    },
+    {
+      "slice_id": "2026-06-19-p2-94-opus-review-submission-packet-sandbox",
+      "role": "Opus review submission packet",
+      "final_gate_complete": true,
+      "product_grade": true,
+      "key_counts": {
+        "submission_packet_ready": true,
+        "evidence_item_count": 7,
+        "review_question_count": 6,
+        "opus_review_performed": false,
+        "opus_approval_claimed": false
+      }
+    }
+  ],
+  "remaining_gates": [
+    {
+      "gate_id": "external_opus_review",
+      "status": "pending_external_result",
+      "required_before": "claiming Opus approval or external sandbox acceptance",
+      "source_to_use": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-94-opus-review-submission-packet-sandbox/artifact/opus-review-submission-prompt.md"
+    },
+    {
+      "gate_id": "opus_result_intake",
+      "status": "pending_external_result",
+      "required_before": "turning any Opus response into a sandbox record",
+      "source_to_use": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-94-opus-review-submission-packet-sandbox/artifact/opus-result-intake-gate.md"
+    },
+    {
+      "gate_id": "user_mainline_approval",
+      "status": "not_requested_not_granted",
+      "required_before": "any main architecture merge, commit, push, sync, promotion, or truth-layer write",
+      "source_to_use": "future explicit user approval only"
+    }
+  ],
+  "authority_flags": {
+    "status_ledger_only": true,
+    "external_opus_review_pending": true,
+    "opus_review_performed": false,
+    "opus_approval_claimed": false,
+    "mainline_merge": false,
+    "promotion": false,
+    "reviewed_knowledge": false,
+    "evidence_support": false,
+    "action_basis": false,
+    "user_mainline_approval": false,
+    "commit_push_sync": false,
+    "goal_complete_now": false
+  }
+}

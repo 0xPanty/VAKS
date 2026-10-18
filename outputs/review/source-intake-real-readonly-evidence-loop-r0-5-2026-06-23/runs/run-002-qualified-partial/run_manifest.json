@@ -1,0 +1,33 @@
+{
+  "run_id": "run-002-qualified-partial",
+  "created_at": "2026-06-22T18:59:23+00:00",
+  "tool_versions": {
+    "runner": "source-intake-real-readonly-evidence-loop-r0.5-2026-06-23",
+    "query_policy": "r0.5-authority-first-local-lexical-v1",
+    "anchor_normalization": "r0.5-textquote-selector-v1",
+    "assessor": "r0.5-scripted-non-authoritative-claim-map-v1",
+    "vaks_guard": "0.1.0"
+  },
+  "corpus_snapshot_hash": "801881da6dd650a2a77d332f4509b17c2ce613c304d376ff43760fa38accf924",
+  "artifact_hashes": {
+    "query_policy.json": "49c49ee1c19ed7f37f1028d4d76655038b9b4a9eabe578231fa49047805ed1f9",
+    "retrieval_receipt.jsonl": "7a93095b3dd80211f91e848b9565b88445343ad461febfeb0622074a74052bd1",
+    "context_pack.json": "eda94100d7f79adf390a68d276c5ae8174aee51cfa4e9f2b7cd48e9806bd51fe",
+    "claim_support_map.jsonl": "8bdb7884e4d8db2b0bf7b9feac9660f2926ed3b93bbee008ec26db51a7e05b7f",
+    "sufficiency_summary.json": "52d0837a5382513157bf9fd3df02cca89429e657725dcd2b403eb818e5622190",
+    "answer_use.md": "294bf3809fada8ef885006b1a1c7406ab694a0791ac8e5d5f85e6078a032de09",
+    "guard_report.json": "b00eb98784bd8261d4f6f8bd4d3c9ab1aae59e119849104114933e1e381f873f"
+  },
+  "read_only": true,
+  "parent_run_id": null,
+  "scenario": "partial_or_scope_limited",
+  "answer_policy": "qualified",
+  "sufficiency_result": "weak",
+  "not_proven": [
+    "Source Intake P0",
+    "production runtime",
+    "vector_graph_retrieval",
+    "reviewed_truth",
+    "action_readiness"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "fixture_id": "body-status-ignored",
+  "document": "---\nslice_id: sample\nstatus: product_acceptance_pending\n---\n\nstatus: pass_product_grade\n\nPASS_PRODUCT_GRADE appears in body only.",
+  "expected": {
+    "valid": true,
+    "status": "product_acceptance_pending",
+    "status_matches": true
+  }
+}

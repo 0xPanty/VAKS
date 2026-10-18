@@ -1,0 +1,17 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "stable-url-missing-capture",
+  "expected_valid": false,
+  "expected_codes": ["SA_URL_ONLY_SUPPORT"],
+  "anchors": [
+    {
+      "id": "stable-url-missing-capture-anchor",
+      "anchor_kind": "stable_url_with_capture_date",
+      "support_claimed": true,
+      "support_role": "direct_support",
+      "source_ref": "https://example.com/source",
+      "fragment": "#section-3",
+      "authority_bucket": "source_anchor"
+    }
+  ]
+}

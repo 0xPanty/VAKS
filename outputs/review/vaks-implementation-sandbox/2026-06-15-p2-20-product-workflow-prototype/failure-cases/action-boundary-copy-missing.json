@@ -1,0 +1,1 @@
+{"case_id":"action-boundary-copy-missing","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/steps/7/boundary_copy","value":"Export creates a packet."}]}

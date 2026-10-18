@@ -1,0 +1,1 @@
+{"case_id":"admin-dashboard-before-validators","base_fixture":"fixtures/valid-product-experience-screening.json","mutations":[{"op":"set","path":"/forbidden_import_controls/admin_dashboard_before_validators","value":true}]}

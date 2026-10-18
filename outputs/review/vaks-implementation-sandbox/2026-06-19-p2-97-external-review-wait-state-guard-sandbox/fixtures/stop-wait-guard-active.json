@@ -1,0 +1,7 @@
+{
+  "case_id": "stop-wait-guard-active",
+  "guard_state": "STOP_WAIT_EXTERNAL_OPUS_REVIEW",
+  "external_opus_review_pending": true,
+  "actual_opus_result_present": false,
+  "passed": true
+}

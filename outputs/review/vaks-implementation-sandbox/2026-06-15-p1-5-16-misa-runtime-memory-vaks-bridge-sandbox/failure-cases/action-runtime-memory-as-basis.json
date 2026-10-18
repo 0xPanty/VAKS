@@ -1,0 +1,8 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "action-runtime-memory-as-basis",
+  "expected_valid": false,
+  "expected_codes": ["MB_RUNTIME_MEMORY_AS_ACTION_BASIS"],
+  "allowed_extra_codes": ["MB_AUTHORITY_CONFUSION"],
+  "patch": {"action_readiness": {"uses_runtime_memory_as_action_basis": true}}
+}

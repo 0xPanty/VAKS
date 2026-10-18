@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "source-card-protected-target",
+  "expected_valid": false,
+  "expected_codes": ["RP_PROTECTED_PATH_TARGET"],
+  "patch": {"source_card": {"target_path": "wiki/claims"}}
+}

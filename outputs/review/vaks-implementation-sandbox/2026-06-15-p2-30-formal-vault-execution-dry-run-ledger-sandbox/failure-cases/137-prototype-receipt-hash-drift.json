@@ -1,0 +1,13 @@
+{
+  "case_id": "prototype-receipt-hash-drift",
+  "description": "Prototype receipt ledger hash drifts.",
+  "expected_errors": [
+    "prototype_receipt_ledger_hash_mismatch"
+  ],
+  "prototype_tamper": {
+    "kind": "receipt_update",
+    "updates": {
+      "ledger_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+---
+record_kind: sandbox_reviewer_report
+slice_id: 2026-06-15-p0-03-body-hash-validator-sandbox
+reviewer_role: read_only
+status: review_pass_no_blocker
+truth_boundary: reviewer_report_is_not_product_acceptance
+---
+
+# Reviewer Report
+
+## Round 1
+
+Conclusion:
+
+```text
+REVIEW_REVISE_REQUIRED
+```
+
+Findings:
+
+1. Validator input contract did not yet support canonical
+   `templates/review-candidate.md` shape:
+   `review_object_state: fixed_for_review` and after-state hash requirement.
+2. `candidate_body_location` only resolved file paths; it did not support the
+   canonical same-file section locator `# Candidate Body`.
+3. Fixture coverage lacked template-shaped record, section locator, and explicit
+   CRLF normalization check.
+
+## Builder Repair
+
+Repairs made inside the approved sandbox path only:
+
+- added support for `review_object_state` values that require a body hash:
+  `fixed_for_review`, `revised_after_review`, `approved`, and
+  `writeback_ready`;
+- added same-file Markdown section locator and file-plus-section locator
+  support;
+- added template-shaped section fixture;
+- added CRLF normalization fixture and literal verification;
+- added template-shaped missing-hash failure case;
+- updated `source-map.md`, `artifact/validator-contract.md`,
+  `artifact/failure-case-oracle.md`, and `verification.md`.
+
+## Recheck
+
+Conclusion:
+
+```text
+REVIEW_PASS_NO_BLOCKER
+```
+
+Findings:
+
+- Round 1 blockers are repaired. The validator now supports
+  `review_object_state: fixed_for_review`, `revised_after_review`, `approved`,
+  and `writeback_ready` as states requiring `body_hash`.
+- `candidate_body_location: "# Candidate Body"` same-file section locator is
+  implemented and covered by a template-shaped fixture.
+- File-plus-section locator is supported by code and contract.
+- 5 positive fixtures pass; 5 failure cases block on their
+  `expected_failure_reason`.
+- CRLF normalization has an explicit literal hash verification.
+- Path guard did not break existing fixtures and is acceptable as a sandbox
+  anti-escape policy.
+- No evidence that validator pass is confused with reviewer approval, reviewed
+  knowledge, mainline readiness, or action basis.
+
+Residual risks:
+
+- File-plus-section locator has no separate persistent fixture.
+- Outside-path guard has no separate negative fixture.
+- These are acceptable for the current sandbox but should be revisited before
+  any mainline promotion.

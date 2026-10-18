@@ -1,0 +1,46 @@
+{
+  "record_kind": "sandbox_failure_case_matrix",
+  "slice_id": "2026-06-19-p2-81-old-file-status-normalization-transaction-simulator-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "SIM-FAIL-01-after-status-not-proposed",
+      "must_fail_when": "simulated after status differs from proposed status"
+    },
+    {
+      "case_id": "SIM-FAIL-02-body-content-changed",
+      "must_fail_when": "simulation changes body content after frontmatter"
+    },
+    {
+      "case_id": "SIM-FAIL-03-rollback-does-not-restore-original",
+      "must_fail_when": "simulated rollback does not restore original content SHA256"
+    },
+    {
+      "case_id": "SIM-FAIL-04-simulation-writes-old-slice",
+      "must_fail_when": "simulation writes any old slice target file"
+    },
+    {
+      "case_id": "SIM-FAIL-05-simulation-treated-as-approval",
+      "must_fail_when": "simulation success is treated as user approval"
+    },
+    {
+      "case_id": "SIM-FAIL-06-simulation-treated-as-write-authority",
+      "must_fail_when": "simulation success allows real executor writes"
+    },
+    {
+      "case_id": "SIM-FAIL-07-fresh-hash-check-skipped",
+      "must_fail_when": "future real write does not require fresh hash check"
+    },
+    {
+      "case_id": "SIM-FAIL-08-frontmatter-status-duplicate-created",
+      "must_fail_when": "simulation creates duplicate frontmatter status fields"
+    },
+    {
+      "case_id": "SIM-FAIL-09-non-status-frontmatter-changed",
+      "must_fail_when": "simulation changes frontmatter fields other than status"
+    },
+    {
+      "case_id": "SIM-FAIL-10-mainline-or-action-authority-created",
+      "must_fail_when": "simulation creates mainline readiness, promotion, reviewed knowledge, evidence support, action basis, or goal completion"
+    }
+  ]
+}

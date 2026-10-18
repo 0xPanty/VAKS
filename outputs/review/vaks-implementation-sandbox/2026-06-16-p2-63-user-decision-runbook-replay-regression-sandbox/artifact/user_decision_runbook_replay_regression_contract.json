@@ -1,0 +1,33 @@
+{
+  "record_kind": "sandbox_user_decision_runbook_replay_regression_contract",
+  "slice_id": "2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox",
+  "source_slice_id": "2026-06-16-p2-62-user-decision-operator-runbook-dry-run-sandbox",
+  "purpose": "natural-language replay regression for p2-62 operator runbook",
+  "generation_contract": {
+    "source_execution_by_builder": false,
+    "source_reads": [
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-62-user-decision-operator-runbook-dry-run-sandbox/artifact/user_decision_operator_runbook_dry_run.json",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-62-user-decision-operator-runbook-dry-run-sandbox/verification.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-62-user-decision-operator-runbook-dry-run-sandbox/reviewer-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-62-user-decision-operator-runbook-dry-run-sandbox/boundary-audit.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-62-user-decision-operator-runbook-dry-run-sandbox/product-acceptance-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-62-user-decision-operator-runbook-dry-run-sandbox/next-step.md"
+    ]
+  },
+  "output_contract": {
+    "dry_run_only": true,
+    "automatic_execution": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "obsidian_sync_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "user_approval_collected": false,
+    "allowed_decisions": [
+      "ALLOW_READ_ONLY_INSPECTION",
+      "ALLOW_MANUAL_READONLY_VERIFICATION"
+    ],
+    "stop_decision": "STOP_REQUIRE_SEPARATE_USER_APPROVAL"
+  }
+}

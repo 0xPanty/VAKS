@@ -1,0 +1,59 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "fmhy/edit",
+  "source_url": "https://github.com/fmhy/edit",
+  "checked_commit": "bff3e076091b2632e5bc8afee86d1d624c71f6a7",
+  "checked_at": "2026-06-11",
+  "inspection_method": "shallow git clone plus .github README/contribution guide, issue template, VitePress config, package scripts, feedback API route, feedback schema, markdown lint, single-page generation, and recently-removed generation scripts",
+  "anchors": [
+    {
+      "path": ".github/README.md",
+      "kind": "project-overview-and-contribution-entry",
+      "why": "Describes the site, backups, contribution paths, duplicate search expectation, and approved-change propagation."
+    },
+    {
+      "path": ".github/CONTRIBUTING.md",
+      "kind": "community-review-rules",
+      "why": "Documents submission bans, duplicate checks, larger-change discussion, site testing, reporting, and editing workflows."
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/wiki.yml",
+      "kind": "structured-issue-intake",
+      "why": "Requires issue type and context and repeats contribution/deduplication reminders."
+    },
+    {
+      "path": "api/routes/feedback.post.ts and docs/.vitepress/types/Feedback.ts",
+      "kind": "feedback-intake-and-rate-limit",
+      "why": "Validates feedback, captures page/heading/type, applies rate limiting, and sends structured feedback to a webhook."
+    },
+    {
+      "path": "scripts/generate-single-page.js",
+      "kind": "single-page-search-surface",
+      "why": "Generates a combined Markdown page used for whole-site duplicate/search workflows."
+    },
+    {
+      "path": "scripts/generate-removed.js",
+      "kind": "removal-ledger-generation",
+      "why": "Uses git history to generate recently removed entries and deduplicate removals."
+    },
+    {
+      "path": "scripts/lint-markdown.js",
+      "kind": "domain-specific-markdown-lint",
+      "why": "Checks link formatting, starred-entry formatting, invisible characters, slash spacing, broken syntax, and other directory conventions."
+    },
+    {
+      "path": "docs/.vitepress/config.mts",
+      "kind": "vitepress-publication-runtime",
+      "why": "Configures VitePress, search, RSS, PWA, meta generation, markdown transforms, and build hooks."
+    }
+  ],
+  "known_limits": [
+    "This is a high-risk public link directory; its content should not be imported into VAKS.",
+    "Community approval, stars, backups, or link presence are not evidence support.",
+    "Feedback routed to external chat/webhook systems is process input, not truth mutation."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

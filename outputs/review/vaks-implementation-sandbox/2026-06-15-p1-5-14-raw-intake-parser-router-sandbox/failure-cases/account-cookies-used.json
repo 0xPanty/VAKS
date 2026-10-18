@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-public-web-extraction-bundle.json",
+  "scenario_id": "account-cookies-used",
+  "expected_valid": false,
+  "expected_codes": ["RP_PRIVATE_ACCESS_UNAUTHORIZED"],
+  "patch": {"original": {"uses_cookies": true, "explicit_user_authorization": false}}
+}

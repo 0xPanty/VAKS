@@ -1,0 +1,13 @@
+{
+  "first_run_status": "pass",
+  "first_run_zip_sha256": "68cea8a10fe12dd936b8dc6cd79a61be0699e83f02895c7306ed9ac0dbf00da7",
+  "second_run_error_class": "FileExistsError",
+  "sidecar_only_collision_error_class": "FileExistsError",
+  "sidecar_only_directory_created": false,
+  "status": "pass",
+  "tree_hash_after_second_run": "bec86afeeb8fa84f3ebdc579cd7c96b4b0be6c49f6086c2dbbd4380490048462",
+  "tree_hash_before_second_run": "bec86afeeb8fa84f3ebdc579cd7c96b4b0be6c49f6086c2dbbd4380490048462",
+  "tree_hash_unchanged": true,
+  "zip_only_collision_error_class": "FileExistsError",
+  "zip_only_directory_created": false
+}

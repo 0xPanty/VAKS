@@ -1,0 +1,764 @@
+{
+  "case_id": "metric-max_visible_stages",
+  "note": "Metric max_visible_stages changed.",
+  "config": {
+    "slice_id": "2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox",
+    "status_surface_version": "p2-34-formal-vault-operator-status-surface-v1",
+    "truth_boundary": "sandbox_only_operator_status_not_authority",
+    "purpose": "Create a sandbox-only operator status surface for the P2-30 through P2-33 formal-vault safety chain without collecting approval, storing user wording, emitting commands, touching the formal vault, granting execution permission, or declaring mainline readiness.",
+    "surface_mode": "chain_overview_surface",
+    "write_scope": [
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/"
+    ],
+    "read_only_sources": [
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/slice-plan.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/source-map.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/verification.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/reviewer-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/boundary-audit.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/product-acceptance-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/next-step.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/artifact/formal-vault-execution-dry-run-ledger-contract.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/prototype/formal-vault-execution-dry-run-ledger/Receipts/formal-vault-execution-dry-run-ledger-receipt.json",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/slice-plan.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/source-map.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/verification.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/reviewer-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/boundary-audit.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/product-acceptance-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/next-step.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/artifact/formal-vault-execution-readiness-gate-contract.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/prototype/formal-vault-execution-readiness-gate/Receipts/formal-vault-execution-readiness-gate-receipt.json",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/slice-plan.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/source-map.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/verification.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/reviewer-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/boundary-audit.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/product-acceptance-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/next-step.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/artifact/formal-vault-execution-request-packet-contract.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/prototype/formal-vault-execution-request-packet/Receipts/formal-vault-execution-request-packet-receipt.json",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/slice-plan.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/source-map.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/verification.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/reviewer-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/boundary-audit.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/product-acceptance-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/next-step.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/artifact/formal-vault-execution-request-screening-contract.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/prototype/formal-vault-execution-request-screening/Receipts/formal-vault-execution-request-screening-receipt.json"
+    ],
+    "operations": {
+      "formal_vault_read": false,
+      "formal_vault_scan": false,
+      "formal_vault_write": false,
+      "formal_vault_hash": false,
+      "formal_vault_snapshot": false,
+      "formal_vault_state_check": false,
+      "obsidian_sync": false,
+      "commit": false,
+      "push": false,
+      "promotion": false,
+      "dependency_install": false,
+      "background_service": false,
+      "mcp_write_tool": false,
+      "hooks": false,
+      "approval_collection": false,
+      "user_instruction_collection": false,
+      "user_wording_storage": false,
+      "execution_performed": false,
+      "packet_submission": false,
+      "screening_submission": false,
+      "action_basis_creation": false,
+      "reviewed_knowledge_creation": false,
+      "evidence_support_creation": false,
+      "mainline_merge": false,
+      "template_write": false,
+      "tools_write": false,
+      "wiki_truth_write": false,
+      "command_emitted": false,
+      "absolute_vault_path_resolved": false,
+      "dirty_state_resolution": false
+    },
+    "status_controls": {
+      "sandbox_only": true,
+      "read_only_status_surface": true,
+      "source_hash_bound": true,
+      "existing_sandbox_only": true,
+      "non_executable": true,
+      "no_formal_vault_access": true,
+      "no_approval_collection": true,
+      "no_user_instruction": true,
+      "no_user_wording": true,
+      "no_commands": true,
+      "no_absolute_vault_paths": true,
+      "no_truth_mutation": true,
+      "no_mainline_claim": true,
+      "no_merge_claim": true,
+      "no_replay_claim": true,
+      "status_is_not_authority": true,
+      "badges_are_not_approval": true,
+      "dirty_state_is_process_risk_not_truth": true,
+      "product_acceptance_is_not_formal_vault_approval": true,
+      "operator_must_stop_before_execution": true,
+      "execution_allowed_now": false,
+      "formal_vault_write_allowed_now": false,
+      "action_basis_ready": false,
+      "reviewed_knowledge_created": false,
+      "evidence_support_created": false,
+      "mainline_ready": false,
+      "user_approval_collected": false,
+      "dirty_tree_fixed": false
+    },
+    "source_inputs": [
+      {
+        "id": "source_00",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/slice-plan.md",
+        "source_sha256": "09fa214ba28ff79f199a922937f3d2a216041139a5d40e896922b145e49c531c",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_01",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/source-map.md",
+        "source_sha256": "ce5faa2943bdfb23d25aaef3af056ff9450916059340a9c8f6438bbc9fa86bbb",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_02",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/verification.md",
+        "source_sha256": "16249becc95fd5d3be8ed852fd6e335bd460838598bf8970895a3c144eab720b",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_03",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/reviewer-report.md",
+        "source_sha256": "c832e417adadc7a22f24a288cdea6bd696d122a424b420d67cc0f38793a6b361",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_04",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/boundary-audit.md",
+        "source_sha256": "b1490fbde2fc8049732e2b092b126e7d4794516537da51b5568b9d2dc9010df4",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_05",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/product-acceptance-report.md",
+        "source_sha256": "f1b86f2d7941bb910560009e11c8b7a910bc3743080b6a3c9cf47158301a80e8",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_06",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/next-step.md",
+        "source_sha256": "a81765b40b0572f4a5a755b4df074e4643d17b227b67512266f974013bf98fb1",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_07",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/artifact/formal-vault-execution-dry-run-ledger-contract.md",
+        "source_sha256": "05375ad488ef57f8efad02fe7bac19610abaa3e64e06f904cf15e42222958ec7",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_08",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox/prototype/formal-vault-execution-dry-run-ledger/Receipts/formal-vault-execution-dry-run-ledger-receipt.json",
+        "source_sha256": "1fc57ac2accb15fb4bacea4e835ce3c0079132c38223fc4d6f7956a4761e45c3",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_09",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/slice-plan.md",
+        "source_sha256": "6dc90273e755d4d6d1942c958d4136faf8f43c911b0bf7a0e7994d9329f3e600",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_10",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/source-map.md",
+        "source_sha256": "0b93bd5312576fd9e11f5e13c2eca8d201cad82f81b21531fa2b62454a1e5e38",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_11",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/verification.md",
+        "source_sha256": "916fdbd8e7670d4be0a9fce9de8c9a4914df6425ec0ff2ad3045fc650b9c4b93",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_12",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/reviewer-report.md",
+        "source_sha256": "a082422484d329c7f3843c65e21c2246d7458bc50bc1d8ce3d2004c709f19258",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_13",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/boundary-audit.md",
+        "source_sha256": "d4a15af46e5b3a41611d80f7edba10afd4bd31e3be564a5d99b3e2c321d8c917",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_14",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/product-acceptance-report.md",
+        "source_sha256": "63d8564b9375ebbfd094f9a89b68aeb2bf4ad4de07942a9e5cd2a3b10f3ec8b6",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_15",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/next-step.md",
+        "source_sha256": "842a9908cdef291e838acb5caa7f94afb5bd5ebafdd3733f6db7288c846a7f04",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_16",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/artifact/formal-vault-execution-readiness-gate-contract.md",
+        "source_sha256": "40879f50dac805b0f988c52a2b02e960e5e18709d6fb4453f547934510d82d7b",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_17",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox/prototype/formal-vault-execution-readiness-gate/Receipts/formal-vault-execution-readiness-gate-receipt.json",
+        "source_sha256": "fa25b354087df8eade15fab36cc562a2bdb03f3267d4a063e2ede924dc85abc3",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_18",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/slice-plan.md",
+        "source_sha256": "c9b4087fef6d73a3cc0c9bdc942930fe40d452e2019e40e9e4ce5fd82e211fc7",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_19",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/source-map.md",
+        "source_sha256": "3f9aa5755e7048ffdf54a6c33d4e2fa9f6a512b7cc96bc832728bf712411b066",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_20",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/verification.md",
+        "source_sha256": "1bd9cfe8b084c85d063555b58e17a71af084f4a34fd36e7c051b736627a25fe6",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_21",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/reviewer-report.md",
+        "source_sha256": "5198857b08c020adba5cdf88f53d55473ccc574a606f6f299ee927544d015106",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_22",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/boundary-audit.md",
+        "source_sha256": "f74d164a06b811375169b3639172fa62716d50cea88d822133e5f8536f927620",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_23",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/product-acceptance-report.md",
+        "source_sha256": "f1462459cdee3c1ba11e3082a02edfe74d8eb7667f28056b3c606434a8a0652c",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_24",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/next-step.md",
+        "source_sha256": "5470c7f11a67bcad88fbf347c9b6f0206f0e0f0d0f4ec930d17560daf21074e3",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_25",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/artifact/formal-vault-execution-request-packet-contract.md",
+        "source_sha256": "cabd87f0a9ddc38c635a43f68a64ad74f77ea63af03e42164eea4aa6834a3999",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_26",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox/prototype/formal-vault-execution-request-packet/Receipts/formal-vault-execution-request-packet-receipt.json",
+        "source_sha256": "6b583015678256e42b8c444490a475c3b412741d26cf92b882521eb31eb51cc1",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_27",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/slice-plan.md",
+        "source_sha256": "3476b733fdf70e564240ad76d60c38d8651170058e29976d58cb25dfb2992799",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_28",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/source-map.md",
+        "source_sha256": "9b0182923e5fe528c48503d844692d9221046eb13006f2793af70f9b4dc473ae",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_29",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/verification.md",
+        "source_sha256": "7436cd31720ea166ca4ffd13f5a015d49d606ab56673df561c66cd9dae7fe59d",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_30",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/reviewer-report.md",
+        "source_sha256": "552802781289c0b9b6d5f9c7688b93d83a76ada2986290bcab7df755a866fe6e",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_31",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/boundary-audit.md",
+        "source_sha256": "0dded8ccbd1753251320c967d456eea3a764692685a6b59a0e12975bece2a1e4",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_32",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/product-acceptance-report.md",
+        "source_sha256": "cd03b9f9af513dc0573ce686cc0714bcc4efc9fa8730ca5dde1e37d632fc4554",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_33",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/next-step.md",
+        "source_sha256": "039dce6eb32f0135d606718c5647ae9b2c0c9e56f30f7de18a24e0c43daddca2",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_34",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/artifact/formal-vault-execution-request-screening-contract.md",
+        "source_sha256": "f6e398e0ee0271cad9a59fa1712c4bb60b41c1a064f3c675217f6c6d9f7c035b",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_35",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox/prototype/formal-vault-execution-request-screening/Receipts/formal-vault-execution-request-screening-receipt.json",
+        "source_sha256": "4e1e97fb78ca3cf9ca21a50763b8feac801a6107dad7fc52719437f16481f862",
+        "content_binding": "exact_source_sha256"
+      }
+    ],
+    "source_statuses": [
+      {
+        "slice_id": "2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox",
+        "file": "slice-plan.md",
+        "expected_status": "built_pending_review",
+        "actual_status": "built_pending_review"
+      },
+      {
+        "slice_id": "2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox",
+        "file": "source-map.md",
+        "expected_status": "built_pending_review",
+        "actual_status": "built_pending_review"
+      },
+      {
+        "slice_id": "2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox",
+        "file": "verification.md",
+        "expected_status": "local_verification_passed_pending_review",
+        "actual_status": "local_verification_passed_pending_review"
+      },
+      {
+        "slice_id": "2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox",
+        "file": "reviewer-report.md",
+        "expected_status": "reviewer_pass",
+        "actual_status": "reviewer_pass"
+      },
+      {
+        "slice_id": "2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox",
+        "file": "boundary-audit.md",
+        "expected_status": "boundary_pass",
+        "actual_status": "boundary_pass"
+      },
+      {
+        "slice_id": "2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox",
+        "file": "product-acceptance-report.md",
+        "expected_status": "pass_product_grade",
+        "actual_status": "pass_product_grade"
+      },
+      {
+        "slice_id": "2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox",
+        "file": "next-step.md",
+        "expected_status": "pass_product_grade_pending_user_next_slice_decision",
+        "actual_status": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      {
+        "slice_id": "2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox",
+        "file": "slice-plan.md",
+        "expected_status": "built_pending_review",
+        "actual_status": "built_pending_review"
+      },
+      {
+        "slice_id": "2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox",
+        "file": "source-map.md",
+        "expected_status": "built_pending_review",
+        "actual_status": "built_pending_review"
+      },
+      {
+        "slice_id": "2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox",
+        "file": "verification.md",
+        "expected_status": "local_verification_passed_pending_review",
+        "actual_status": "local_verification_passed_pending_review"
+      },
+      {
+        "slice_id": "2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox",
+        "file": "reviewer-report.md",
+        "expected_status": "reviewer_pass",
+        "actual_status": "reviewer_pass"
+      },
+      {
+        "slice_id": "2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox",
+        "file": "boundary-audit.md",
+        "expected_status": "boundary_pass",
+        "actual_status": "boundary_pass"
+      },
+      {
+        "slice_id": "2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox",
+        "file": "product-acceptance-report.md",
+        "expected_status": "pass_product_grade",
+        "actual_status": "pass_product_grade"
+      },
+      {
+        "slice_id": "2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox",
+        "file": "next-step.md",
+        "expected_status": "pass_product_grade_pending_user_next_slice_decision",
+        "actual_status": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      {
+        "slice_id": "2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox",
+        "file": "slice-plan.md",
+        "expected_status": "built_pending_review",
+        "actual_status": "built_pending_review"
+      },
+      {
+        "slice_id": "2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox",
+        "file": "source-map.md",
+        "expected_status": "built_pending_review",
+        "actual_status": "built_pending_review"
+      },
+      {
+        "slice_id": "2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox",
+        "file": "verification.md",
+        "expected_status": "local_verification_passed_pending_review",
+        "actual_status": "local_verification_passed_pending_review"
+      },
+      {
+        "slice_id": "2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox",
+        "file": "reviewer-report.md",
+        "expected_status": "reviewer_pass",
+        "actual_status": "reviewer_pass"
+      },
+      {
+        "slice_id": "2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox",
+        "file": "boundary-audit.md",
+        "expected_status": "boundary_pass",
+        "actual_status": "boundary_pass"
+      },
+      {
+        "slice_id": "2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox",
+        "file": "product-acceptance-report.md",
+        "expected_status": "pass_product_grade",
+        "actual_status": "pass_product_grade"
+      },
+      {
+        "slice_id": "2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox",
+        "file": "next-step.md",
+        "expected_status": "pass_product_grade_pending_user_next_slice_decision",
+        "actual_status": "pass_product_grade_pending_user_next_slice_decision"
+      },
+      {
+        "slice_id": "2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox",
+        "file": "slice-plan.md",
+        "expected_status": "built_pending_review",
+        "actual_status": "built_pending_review"
+      },
+      {
+        "slice_id": "2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox",
+        "file": "source-map.md",
+        "expected_status": "built_pending_review",
+        "actual_status": "built_pending_review"
+      },
+      {
+        "slice_id": "2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox",
+        "file": "verification.md",
+        "expected_status": "local_verification_passed_pending_review",
+        "actual_status": "local_verification_passed_pending_review"
+      },
+      {
+        "slice_id": "2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox",
+        "file": "reviewer-report.md",
+        "expected_status": "reviewer_pass",
+        "actual_status": "reviewer_pass"
+      },
+      {
+        "slice_id": "2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox",
+        "file": "boundary-audit.md",
+        "expected_status": "boundary_pass",
+        "actual_status": "boundary_pass"
+      },
+      {
+        "slice_id": "2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox",
+        "file": "product-acceptance-report.md",
+        "expected_status": "pass_product_grade",
+        "actual_status": "pass_product_grade"
+      },
+      {
+        "slice_id": "2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox",
+        "file": "next-step.md",
+        "expected_status": "pass_product_grade_pending_user_next_slice_decision",
+        "actual_status": "pass_product_grade_pending_user_next_slice_decision"
+      }
+    ],
+    "operator_chain": [
+      {
+        "stage_id": "p2_30_dry_run_ledger",
+        "slice_id": "2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox",
+        "label": "Dry-run ledger",
+        "product_status": "pass_product_grade",
+        "reviewer_status": "reviewer_pass",
+        "boundary_status": "boundary_pass",
+        "verification_status": "local_verification_passed_pending_review",
+        "next_status": "pass_product_grade_pending_user_next_slice_decision",
+        "receipt_kind": "sandbox_formal_vault_execution_dry_run_ledger_receipt",
+        "result_label": "8da9406d05e62871bdfad353dde4136b47c84b7e4f920286533a6b188f25bb0f",
+        "result_hash": "8da9406d05e62871bdfad353dde4136b47c84b7e4f920286533a6b188f25bb0f",
+        "receipt_sha256": "1fc57ac2accb15fb4bacea4e835ce3c0079132c38223fc4d6f7956a4761e45c3",
+        "formal_vault_accessed": false,
+        "approval_collected_now": false,
+        "user_wording_stored": false,
+        "execution_permission_granted": false,
+        "execution_performed": false,
+        "write_performed": false,
+        "sync_performed": false,
+        "promotion_performed": false,
+        "used_as_action_basis": false,
+        "submitted": false,
+        "non_claims": [
+          "not action basis",
+          "not actual approval",
+          "not an execution log",
+          "not evidence support",
+          "not execution readiness",
+          "not formal vault approval",
+          "not replayable",
+          "not reviewed knowledge"
+        ]
+      },
+      {
+        "stage_id": "p2_31_readiness_gate",
+        "slice_id": "2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox",
+        "label": "Readiness gate",
+        "product_status": "pass_product_grade",
+        "reviewer_status": "reviewer_pass",
+        "boundary_status": "boundary_pass",
+        "verification_status": "local_verification_passed_pending_review",
+        "next_status": "pass_product_grade_pending_user_next_slice_decision",
+        "receipt_kind": "sandbox_formal_vault_execution_readiness_gate_receipt",
+        "result_label": "READINESS_PACKET_REVIEWABLE_NOT_EXECUTABLE",
+        "result_hash": "974ab9762341fe2ae95c3c33d4d38c13a98b69b9a465745484e1cd0684e0a6e4",
+        "receipt_sha256": "fa25b354087df8eade15fab36cc562a2bdb03f3267d4a063e2ede924dc85abc3",
+        "formal_vault_accessed": false,
+        "approval_collected_now": false,
+        "user_wording_stored": false,
+        "execution_permission_granted": false,
+        "execution_performed": false,
+        "write_performed": false,
+        "sync_performed": false,
+        "promotion_performed": false,
+        "used_as_action_basis": false,
+        "submitted": false,
+        "non_claims": [
+          "not action basis",
+          "not actual approval",
+          "not an execution log",
+          "not evidence support",
+          "not execution permission",
+          "not execution readiness",
+          "not formal vault approval",
+          "not formal vault state",
+          "not replayable",
+          "not reviewed knowledge"
+        ]
+      },
+      {
+        "stage_id": "p2_32_request_packet",
+        "slice_id": "2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox",
+        "label": "Request packet",
+        "product_status": "pass_product_grade",
+        "reviewer_status": "reviewer_pass",
+        "boundary_status": "boundary_pass",
+        "verification_status": "local_verification_passed_pending_review",
+        "next_status": "pass_product_grade_pending_user_next_slice_decision",
+        "receipt_kind": "sandbox_formal_vault_execution_request_packet_receipt",
+        "result_label": "REQUEST_PACKET_REVIEWABLE_NOT_APPROVAL",
+        "result_hash": "7f77d6bb293730e7c87a280f9dadb0f342cbf714a50a31a47986e84c74e6e4a0",
+        "receipt_sha256": "6b583015678256e42b8c444490a475c3b412741d26cf92b882521eb31eb51cc1",
+        "formal_vault_accessed": false,
+        "approval_collected_now": false,
+        "user_wording_stored": false,
+        "execution_permission_granted": false,
+        "execution_performed": false,
+        "write_performed": false,
+        "sync_performed": false,
+        "promotion_performed": false,
+        "used_as_action_basis": false,
+        "submitted": false,
+        "non_claims": [
+          "not action basis",
+          "not actual approval",
+          "not an execution log",
+          "not evidence support",
+          "not execution permission",
+          "not execution readiness",
+          "not formal vault approval",
+          "not formal vault state",
+          "not real user text",
+          "not replayable",
+          "not reviewed knowledge",
+          "not user instruction"
+        ]
+      },
+      {
+        "stage_id": "p2_33_request_screening",
+        "slice_id": "2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox",
+        "label": "Request screening",
+        "product_status": "pass_product_grade",
+        "reviewer_status": "reviewer_pass",
+        "boundary_status": "boundary_pass",
+        "verification_status": "local_verification_passed_pending_review",
+        "next_status": "pass_product_grade_pending_user_next_slice_decision",
+        "receipt_kind": "sandbox_formal_vault_execution_request_screening_receipt",
+        "result_label": "SCREENED_REVIEWABLE_NOT_SUBMITTED",
+        "result_hash": "119841ac6e06e098d17c30d1c85885679e846f5bca3f699d1e1038dc12d6432b",
+        "receipt_sha256": "4e1e97fb78ca3cf9ca21a50763b8feac801a6107dad7fc52719437f16481f862",
+        "formal_vault_accessed": false,
+        "approval_collected_now": false,
+        "user_wording_stored": false,
+        "execution_permission_granted": false,
+        "execution_performed": false,
+        "write_performed": false,
+        "sync_performed": false,
+        "promotion_performed": false,
+        "used_as_action_basis": false,
+        "submitted": false,
+        "non_claims": [
+          "not action basis",
+          "not actual approval",
+          "not actual user wording",
+          "not an execution log",
+          "not evidence support",
+          "not execution permission",
+          "not execution readiness",
+          "not formal vault approval",
+          "not formal vault state",
+          "not packet submission",
+          "not replayable",
+          "not reviewed knowledge",
+          "not user instruction"
+        ]
+      }
+    ],
+    "status_badges": [
+      {
+        "badge_id": "sandbox_product_grade",
+        "label": "Sandbox product-grade chain",
+        "status": "STATUS_SURFACE_CHAIN_OVERVIEW_NOT_EXECUTABLE",
+        "meaning": "All displayed stages passed sandbox Product Acceptance.",
+        "non_authority": true
+      },
+      {
+        "badge_id": "formal_vault_stop",
+        "label": "Formal vault untouched",
+        "status": "STOP_BEFORE_FORMAL_VAULT",
+        "meaning": "No displayed receipt records formal-vault access or write.",
+        "non_authority": true
+      },
+      {
+        "badge_id": "approval_stop",
+        "label": "No approval collected",
+        "status": "NO_ACTUAL_APPROVAL",
+        "meaning": "The surface does not collect approval or user wording.",
+        "non_authority": true
+      },
+      {
+        "badge_id": "mainline_stop",
+        "label": "Not mainline-ready",
+        "status": "SANDBOX_ONLY_NOT_MAINLINE",
+        "meaning": "The surface is navigation/status only.",
+        "non_authority": true
+      }
+    ],
+    "stop_lines": [
+      {
+        "stop_id": "stop_before_execution",
+        "label": "Stop before execution",
+        "must_stop": true,
+        "reason": "No slice grants current execution permission.",
+        "non_claim": "status_surface_is_not_execution_permission"
+      },
+      {
+        "stop_id": "stop_before_approval_collection",
+        "label": "Stop before approval collection",
+        "must_stop": true,
+        "reason": "This surface displays status and cannot collect user intent.",
+        "non_claim": "status_surface_is_not_user_instruction"
+      },
+      {
+        "stop_id": "stop_before_formal_vault",
+        "label": "Stop before formal vault",
+        "must_stop": true,
+        "reason": "This surface never reads, writes, hashes, snapshots, or syncs the formal vault.",
+        "non_claim": "status_surface_is_not_formal_vault_state"
+      },
+      {
+        "stop_id": "stop_before_mainline",
+        "label": "Stop before mainline",
+        "must_stop": true,
+        "reason": "Sandbox Product Acceptance is not merge approval.",
+        "non_claim": "status_surface_is_not_mainline_readiness"
+      }
+    ],
+    "surface_receipt": {
+      "record_kind": "sandbox_formal_vault_operator_status_surface_receipt",
+      "slice_id": "2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox",
+      "surface_result": "STATUS_SURFACE_CHAIN_OVERVIEW_NOT_EXECUTABLE",
+      "source_slice_count": 4,
+      "source_input_count": 36,
+      "badge_count": 4,
+      "stop_line_count": 4,
+      "formal_vault_accessed": false,
+      "approval_collected_now": false,
+      "user_instruction_collected": false,
+      "user_wording_stored": false,
+      "execution_permission_granted": false,
+      "execution_performed": false,
+      "write_performed": false,
+      "sync_performed": false,
+      "commit_performed": false,
+      "push_performed": false,
+      "promotion_performed": false,
+      "mainline_ready": false,
+      "status_used_as_action_basis": false,
+      "dirty_tree_fixed": false,
+      "status_surface_hash": "03dc9b424ce35e4f4df693db494aa7da12298e56f75fab1c0bc51a4725f1ca45",
+      "non_claims": [
+        "not a command surface",
+        "not a replay surface",
+        "not action basis",
+        "not approval collection",
+        "not dirty tree repair",
+        "not evidence support",
+        "not execution permission",
+        "not execution readiness",
+        "not formal vault approval",
+        "not formal vault state",
+        "not mainline readiness",
+        "not merge approval",
+        "not reviewed knowledge",
+        "not user instruction",
+        "not user wording storage"
+      ]
+    },
+    "product_metrics": {
+      "required_positive_fixtures": 3,
+      "minimum_failure_cases": 100,
+      "source_slice_count": 4,
+      "source_input_count": 36,
+      "manual_negative_probes": 12,
+      "max_visible_stages": 5
+    },
+    "status_surface_hash": "03dc9b424ce35e4f4df693db494aa7da12298e56f75fab1c0bc51a4725f1ca45"
+  },
+  "expected_errors": [
+    "metric_max_visible_stages_mismatch"
+  ]
+}

@@ -1,0 +1,1 @@
+{"extends":"fixtures/valid-frontmatter-validation-check.json","scenario_id":"cache-not-derived","expected_valid":false,"expected_codes":["MS_CACHE_NOT_DERIVED"],"patch":{"search_cache":{"status":"source_of_record","rebuildable":false}}}

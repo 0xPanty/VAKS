@@ -1,0 +1,332 @@
+[
+  {
+    "url": "https://reminds-app.com/assets/,",
+    "file": "assets/,",
+    "bytes": 0,
+    "status": "error: Response status code does not indicate success: 404 (Not Found)."
+  },
+  {
+    "url": "https://reminds-app.com/assets/ActionButton.a2d8c137.js",
+    "file": "assets/ActionButton.a2d8c137.js",
+    "bytes": 665,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/article-store.df342ff2.js",
+    "file": "assets/article-store.df342ff2.js",
+    "bytes": 4834,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/axios.1c08944e.js",
+    "file": "assets/axios.1c08944e.js",
+    "bytes": 36130,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/Be",
+    "file": "assets/Be",
+    "bytes": 0,
+    "status": "error: Response status code does not indicate success: 404 (Not Found)."
+  },
+  {
+    "url": "https://reminds-app.com/assets/DocContentPage.cda23246.js",
+    "file": "assets/DocContentPage.cda23246.js",
+    "bytes": 1744,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/DocIndexPage.41525796.js",
+    "file": "assets/DocIndexPage.41525796.js",
+    "bytes": 3460,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/DocPage.68fda283.js",
+    "file": "assets/DocPage.68fda283.js",
+    "bytes": 14479,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/e.params.url",
+    "file": "assets/e.params.url",
+    "bytes": 0,
+    "status": "error: Response status code does not indicate success: 404 (Not Found)."
+  },
+  {
+    "url": "https://reminds-app.com/assets/error-handler.e5eafaef.js",
+    "file": "assets/error-handler.e5eafaef.js",
+    "bytes": 43,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/ErrorNotFound.f7920ae6.js",
+    "file": "assets/ErrorNotFound.f7920ae6.js",
+    "bytes": 222,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/FeatureCard.d839b5c2.js",
+    "file": "assets/FeatureCard.d839b5c2.js",
+    "bytes": 1068,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/flUhRq6tzZclQEJ-Vdg-IuiaDsNa.fd84f88b.woff",
+    "file": "assets/flUhRq6tzZclQEJ-Vdg-IuiaDsNa.fd84f88b.woff",
+    "bytes": 164912,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.4a4dbc62.woff2",
+    "file": "assets/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.4a4dbc62.woff2",
+    "bytes": 128616,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/format.2cae61da.js",
+    "file": "assets/format.2cae61da.js",
+    "bytes": 176,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/ForumRedirectPage.d19e47c7.js",
+    "file": "assets/ForumRedirectPage.d19e47c7.js",
+    "bytes": 731,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/i18n.a57173bd.js",
+    "file": "assets/i18n.a57173bd.js",
+    "bytes": 42753,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/index.67f4c1b0.js",
+    "file": "assets/index.67f4c1b0.js",
+    "bytes": 239322,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/index.c7fe5226.css",
+    "file": "assets/index.c7fe5226.css",
+    "bytes": 277787,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/IndexPage.2d9b0692.js",
+    "file": "assets/IndexPage.2d9b0692.js",
+    "bytes": 27882,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/IndexPage.c9e94b9e.css",
+    "file": "assets/IndexPage.c9e94b9e.css",
+    "bytes": 2488,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/je",
+    "file": "assets/je",
+    "bytes": 0,
+    "status": "error: Response status code does not indicate success: 404 (Not Found)."
+  },
+  {
+    "url": "https://reminds-app.com/assets/KFOkCnqEu92Fr1MmgVxIIzQ.34e9582c.woff",
+    "file": "assets/KFOkCnqEu92Fr1MmgVxIIzQ.34e9582c.woff",
+    "bytes": 20436,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/KFOlCnqEu92Fr1MmEU9fBBc-.9ce7f3ac.woff",
+    "file": "assets/KFOlCnqEu92Fr1MmEU9fBBc-.9ce7f3ac.woff",
+    "bytes": 20544,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/KFOlCnqEu92Fr1MmSU5fBBc-.bf14c7d7.woff",
+    "file": "assets/KFOlCnqEu92Fr1MmSU5fBBc-.bf14c7d7.woff",
+    "bytes": 20416,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/KFOlCnqEu92Fr1MmWUlfBBc-.e0fd57c0.woff",
+    "file": "assets/KFOlCnqEu92Fr1MmWUlfBBc-.e0fd57c0.woff",
+    "bytes": 20408,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/KFOlCnqEu92Fr1MmYUtfBBc-.f6537e32.woff",
+    "file": "assets/KFOlCnqEu92Fr1MmYUtfBBc-.f6537e32.woff",
+    "bytes": 20424,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/KFOmCnqEu92Fr1Mu4mxM.f2abf7fb.woff",
+    "file": "assets/KFOmCnqEu92Fr1Mu4mxM.f2abf7fb.woff",
+    "bytes": 20344,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/m",
+    "file": "assets/m",
+    "bytes": 0,
+    "status": "error: Response status code does not indicate success: 404 (Not Found)."
+  },
+  {
+    "url": "https://reminds-app.com/assets/MainBanner.553c9f9e.js",
+    "file": "assets/MainBanner.553c9f9e.js",
+    "bytes": 1227,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/MainLayout.67b18041.js",
+    "file": "assets/MainLayout.67b18041.js",
+    "bytes": 29601,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/MainLayout.9f255efb.css",
+    "file": "assets/MainLayout.9f255efb.css",
+    "bytes": 4123,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/MembershipPage.647168aa.js",
+    "file": "assets/MembershipPage.647168aa.js",
+    "bytes": 111140,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/menu.da7eb33b.js",
+    "file": "assets/menu.da7eb33b.js",
+    "bytes": 12761,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/MindPilotPage.d0642948.js",
+    "file": "assets/MindPilotPage.d0642948.js",
+    "bytes": 5761,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/notify-defaults.37d9b53a.js",
+    "file": "assets/notify-defaults.37d9b53a.js",
+    "bytes": 408,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/plugin-vue_export-helper.21dcd24c.js",
+    "file": "assets/plugin-vue_export-helper.21dcd24c.js",
+    "bytes": 89,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/position-engine.128fe640.js",
+    "file": "assets/position-engine.128fe640.js",
+    "bytes": 10511,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/PrimaryTitle.4b30f7ff.js",
+    "file": "assets/PrimaryTitle.4b30f7ff.js",
+    "bytes": 531,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/PrimaryTitle.ad5ed2b7.css",
+    "file": "assets/PrimaryTitle.ad5ed2b7.css",
+    "bytes": 378,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/QDialog.ca31a769.js",
+    "file": "assets/QDialog.ca31a769.js",
+    "bytes": 9952,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/QSlideTransition.faa23a75.js",
+    "file": "assets/QSlideTransition.faa23a75.js",
+    "bytes": 5617,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/QSpace.8106aa12.js",
+    "file": "assets/QSpace.8106aa12.js",
+    "bytes": 144,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/QTabs.0455f5f6.js",
+    "file": "assets/QTabs.0455f5f6.js",
+    "bytes": 11998,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/ReismPage.790a00b5.js",
+    "file": "assets/ReismPage.790a00b5.js",
+    "bytes": 10209,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/SecondaryTitle.ccb693e1.js",
+    "file": "assets/SecondaryTitle.ccb693e1.js",
+    "bytes": 509,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/swiper-element-bundle.1093852d.js",
+    "file": "assets/swiper-element-bundle.1093852d.js",
+    "bytes": 181602,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/TextCard.1a76ca9e.js",
+    "file": "assets/TextCard.1a76ca9e.js",
+    "bytes": 1249,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/TextCard.d29c15c5.css",
+    "file": "assets/TextCard.d29c15c5.css",
+    "bytes": 98,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/TouchPan.3a06a20a.js",
+    "file": "assets/TouchPan.3a06a20a.js",
+    "bytes": 7325,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/use-prevent-scroll.88d359bf.js",
+    "file": "assets/use-prevent-scroll.88d359bf.js",
+    "bytes": 2078,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/use-quasar.ecdbe0be.js",
+    "file": "assets/use-quasar.ecdbe0be.js",
+    "bytes": 3709,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/util.5181f17e.js",
+    "file": "assets/util.5181f17e.js",
+    "bytes": 1629,
+    "status": "ok"
+  },
+  {
+    "url": "https://reminds-app.com/assets/window.location.href",
+    "file": "assets/window.location.href",
+    "bytes": 0,
+    "status": "error: Response status code does not indicate success: 404 (Not Found)."
+  },
+  {
+    "url": "https://reminds-app.com/assets/ZettelkastenPage.0b1c6ccf.js",
+    "file": "assets/ZettelkastenPage.0b1c6ccf.js",
+    "bytes": 8942,
+    "status": "ok"
+  }
+]

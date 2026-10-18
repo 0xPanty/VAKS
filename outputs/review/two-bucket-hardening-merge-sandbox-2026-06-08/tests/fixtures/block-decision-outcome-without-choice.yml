@@ -1,0 +1,5 @@
+decision_outcome:
+  recommendation: "Use first-bucket source hygiene only."
+  confidence_at_decision: medium
+  outcome: succeeded
+  outcome_note: "Missing selection record."

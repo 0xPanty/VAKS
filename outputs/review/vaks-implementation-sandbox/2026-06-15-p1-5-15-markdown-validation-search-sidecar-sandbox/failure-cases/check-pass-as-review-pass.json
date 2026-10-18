@@ -1,0 +1,1 @@
+{"extends":"fixtures/valid-frontmatter-validation-check.json","scenario_id":"check-pass-as-review-pass","expected_valid":false,"expected_codes":["MS_CHECK_PASS_AS_REVIEW_PASS"],"patch":{"validation":{"check_pass_claims_review_pass":true}}}

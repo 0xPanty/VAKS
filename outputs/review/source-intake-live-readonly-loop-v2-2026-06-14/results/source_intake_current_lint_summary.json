@@ -1,0 +1,29 @@
+{
+  "scope": "current",
+  "files_scanned": 239,
+  "files_validated": 185,
+  "files_skipped": 54,
+  "canonical_validated_surfaces_excluding_legacy_lens": 185,
+  "legacy_project_lens_excluded_from_canonical_scope": true,
+  "legacy_project_lens_excluded_count": 17,
+  "issue_count": 122,
+  "warning_count": 122,
+  "error_count": 0,
+  "status": "structural_pass_semantic_debt",
+  "structural_status": "pass",
+  "semantic_status": "debt_pending",
+  "warning_breakdown_by_check": {
+    "migration_placeholder_value": 118,
+    "source_why_saved_placeholder_without_body_reason": 4
+  },
+  "warning_breakdown_by_semantic_class": {
+    "migration_debt_defer_ok": 118,
+    "high_risk_manual_review": 4
+  },
+  "issue_breakdown_by_semantic_class": {
+    "migration_debt_defer_ok": 118,
+    "high_risk_manual_review": 4
+  },
+  "canonical_p0_status": "not_passed",
+  "truth_boundary": "Structural lint can pass while semantic migration debt remains; this is not Source Intake P0 approval."
+}

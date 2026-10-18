@@ -1,0 +1,34 @@
+{
+  "record_kind": "robust_rag_retrieval_manifest",
+  "scenario_id": "tree-summary-action-support",
+  "expected_valid": false,
+  "expected_codes": ["RR_SUMMARY_AS_ACTION_SUPPORT"],
+  "query": {
+    "query_mode": "action",
+    "verbatim_input": "Can I act on the tree summary?",
+    "question_summary": "Tree summary action support misuse.",
+    "action_sensitive": true,
+    "verbatim_preserved": true
+  },
+  "route_selection": {
+    "selected": "global_theme",
+    "authority_buckets_included": ["review_input"],
+    "authority_buckets_excluded": ["feedback", "runtime_artifact"],
+    "selected_context_types": ["theme_briefing"],
+    "forbidden_support_types": ["retrieval_score", "graph_rank", "community_report_summary", "llm_extracted_relation"]
+  },
+  "retrieval_config": {"bucket_filter_first": true, "rrf_within_bucket_only": true, "exclude_runtime_artifacts": true},
+  "retrieved_items": [
+    {
+      "id": "tree-summary",
+      "ref": "outputs/review/summaries/tree-summary.md",
+      "record_kind": "tree_summary",
+      "authority_bucket": "review_input",
+      "pack_role": "support",
+      "support_claimed": true,
+      "selected": true,
+      "excluded": false,
+      "selected_by": {"semantic": true, "graph": true}
+    }
+  ]
+}

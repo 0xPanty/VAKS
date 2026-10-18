@@ -1,0 +1,1 @@
+{"case_id":"product-build-scope","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/scope/product_build","value":true}]}

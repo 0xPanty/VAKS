@@ -1,0 +1,38 @@
+{
+  "record_kind": "post_apply_current_strict_closeout_failure_cases",
+  "slice_id": "2026-06-19-p2-92-post-apply-current-strict-closeout-audit-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "P2-92-FAIL-01-missing-p2-91-pass-evidence",
+      "must_fail_when": "p2-91 executor report is missing or does not show 75 old-slice writes applied."
+    },
+    {
+      "case_id": "P2-92-FAIL-02-status-not-applied",
+      "must_fail_when": "Any current old report status differs from the p2-80 proposed status."
+    },
+    {
+      "case_id": "P2-92-FAIL-03-status-operation-count-not-75",
+      "must_fail_when": "The audit cannot account for exactly 75 p2-80 status operations."
+    },
+    {
+      "case_id": "P2-92-FAIL-04-original-item-count-not-20",
+      "must_fail_when": "The audit cannot account for exactly 20 original old slice groups."
+    },
+    {
+      "case_id": "P2-92-FAIL-05-body-drift",
+      "must_fail_when": "Any audited report body hash differs from the p2-91 body hash."
+    },
+    {
+      "case_id": "P2-92-FAIL-06-non-status-frontmatter-drift",
+      "must_fail_when": "Any audited non-status frontmatter hash differs from the p2-91 non-status frontmatter hash."
+    },
+    {
+      "case_id": "P2-92-FAIL-07-protected-path-write",
+      "must_fail_when": "This slice writes outside its sandbox or reports any protected path write."
+    },
+    {
+      "case_id": "P2-92-FAIL-08-authority-confusion",
+      "must_fail_when": "The audit is described as mainline merge, promotion, reviewed knowledge, evidence support, action basis, or Opus approval."
+    }
+  ]
+}

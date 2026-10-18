@@ -1,0 +1,17 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "invalid-authority-bucket-support",
+  "expected_valid": false,
+  "expected_codes": ["SA_AUTHORITY_BUCKET_INVALID_FOR_SUPPORT"],
+  "anchors": [
+    {
+      "id": "invalid-authority-bucket-anchor",
+      "anchor_kind": "raw_excerpt",
+      "support_claimed": true,
+      "support_role": "direct_support",
+      "source_ref": "raw/articles/example-source.md",
+      "selector": "L50-L62",
+      "authority_bucket": "reviewed"
+    }
+  ]
+}

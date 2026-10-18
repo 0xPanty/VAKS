@@ -1,0 +1,44 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "obsidian-community/obsidian-hub",
+  "source_url": "https://github.com/obsidian-community/obsidian-hub",
+  "checked_commit": "b11036f9a4db77917a4f07804541cceffc96cc66",
+  "checked_at": "2026-06-11",
+  "inspection_method": "git object inspection because Windows checkout hit invalid-path filenames; inspected README, tree, scripts, templates, and workflows via git show/ls-tree",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "vault-identity",
+      "why": "Explains the Hub as an experimental community-maintained Obsidian vault and points to local download and publish site."
+    },
+    {
+      "path": ".github/scripts/make_mocs.py",
+      "kind": "navigation-generation",
+      "why": "Generates or updates directory MOC notes, uses delimiters, filters hidden/generated files, and preserves manual content outside generated blocks."
+    },
+    {
+      "path": ".github/scripts/plugins.py",
+      "kind": "catalog-validation",
+      "why": "Collects plugin manifest data, validates plugin IDs, sanitizes descriptions, and groups errors."
+    },
+    {
+      "path": "00 - Contribute to the Obsidian Hub/01 Templates/T - Plugin Category.md",
+      "kind": "template",
+      "why": "Shows lightweight category-note template with aliases, tags, publish flag, placeholders, and related categories."
+    },
+    {
+      "path": ".github/workflows/update_hub.yml",
+      "kind": "automation-boundary",
+      "why": "Scheduled update workflow runs scripts, commits generated changes, and opens a pull request rather than silently rewriting mainline."
+    }
+  ],
+  "known_limits": [
+    "Windows checkout failed because at least one repo path contains a colon; inspected via Git object database instead.",
+    "The Hub is a community catalog/workbench, not a reviewed truth system.",
+    "Generated MOCs, plugin pages, and catalog metadata are navigation aids, not evidence support."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

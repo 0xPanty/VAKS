@@ -1,0 +1,12 @@
+{
+  "input_text": "B",
+  "expected_case_id": "explicit_B",
+  "expected_reply_id": "ask_readonly_planning_scope",
+  "expected_next_step": "ask_for_separate_read_only_scope",
+  "automatic_execution": false,
+  "must_contain_any": [
+    "不会",
+    "不执行"
+  ],
+  "must_not_contain_positive_execution": true
+}

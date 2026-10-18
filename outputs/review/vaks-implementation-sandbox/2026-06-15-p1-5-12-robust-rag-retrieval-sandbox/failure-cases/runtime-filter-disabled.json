@@ -1,0 +1,33 @@
+{
+  "record_kind": "robust_rag_retrieval_manifest",
+  "scenario_id": "runtime-filter-disabled",
+  "expected_valid": false,
+  "expected_codes": ["RR_RUNTIME_FILTER_DISABLED"],
+  "query": {
+    "query_mode": "orientation",
+    "verbatim_input": "Retrieve with no runtime filter.",
+    "question_summary": "Runtime filter disabled.",
+    "action_sensitive": false,
+    "verbatim_preserved": true
+  },
+  "route_selection": {
+    "selected": "hybrid_bucketed",
+    "authority_buckets_included": ["reviewed"],
+    "authority_buckets_excluded": ["candidate", "feedback"],
+    "selected_context_types": ["reviewed_node"],
+    "forbidden_support_types": ["retrieval_score", "graph_rank", "community_report_summary", "llm_extracted_relation"]
+  },
+  "retrieval_config": {"bucket_filter_first": true, "rrf_within_bucket_only": true, "exclude_runtime_artifacts": false},
+  "retrieved_items": [
+    {
+      "id": "reviewed-note",
+      "ref": "wiki/concepts/example.md",
+      "record_kind": "reviewed_note",
+      "authority_bucket": "reviewed",
+      "pack_role": "orientation",
+      "selected": true,
+      "excluded": false,
+      "selected_by": {"lexical": true}
+    }
+  ]
+}

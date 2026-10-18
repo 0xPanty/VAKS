@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en" data-sandbox-only="true" data-status-only="true" data-non-executable="true" data-no-formal-vault-access="true" data-no-write="true" data-no-sync="true" data-no-authority="true" data-no-approval="true" data-no-user-wording="true" data-no-command="true">
+<head>
+  <meta charset="utf-8">
+  <title>Formal Vault Operator Status Surface</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #18212f;
+      --muted: #5b6472;
+      --line: #cbd5e1;
+      --panel: #f8fafc;
+      --ok: #047857;
+      --stop: #b91c1c;
+      --warn: #92400e;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: var(--ink);
+    }
+    main {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 26px;
+      letter-spacing: 0;
+    }
+    .sub {
+      margin: 0 0 20px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    button {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      padding: 8px 10px;
+      font-size: 14px;
+      cursor: default;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: var(--panel);
+    }
+    .badge {
+      display: inline-block;
+      border: 1px solid #a7f3d0;
+      color: var(--ok);
+      background: #ecfdf5;
+      border-radius: 999px;
+      padding: 3px 8px;
+      font-size: 12px;
+    }
+    .stop {
+      border-color: #fecaca;
+      color: var(--stop);
+      background: #fef2f2;
+    }
+    h2 {
+      font-size: 18px;
+      margin: 10px 0 8px;
+    }
+    code {
+      overflow-wrap: anywhere;
+    }
+    dl {
+      margin: 10px 0 0;
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 6px;
+    }
+    dt {
+      color: var(--muted);
+    }
+    dd {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Formal Vault Operator Status Surface</h1>
+    <p class="sub">Read-only sandbox surface for P2-30 through P2-33. It displays status and stop lines only; it does not collect approval, send packets, touch the formal vault, or create run authority.</p>
+    <div class="toolbar" aria-label="local display filters only">
+      <button type="button" data-filter="all">All</button>
+      <button type="button" data-filter="stage">Stages</button>
+      <button type="button" data-filter="stop">Stops</button>
+    </div>
+    <section class="grid">
+      <article class="card" data-kind="stage">
+        <span class="badge">pass_product_grade</span>
+        <h2>Dry-run ledger</h2>
+        <p><code>2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox</code></p>
+        <dl>
+          <dt>Result</dt><dd>8da9406d05e62871bdfad353dde4136b47c84b7e4f920286533a6b188f25bb0f</dd>
+          <dt>Reviewer</dt><dd>reviewer_pass</dd>
+          <dt>Boundary</dt><dd>boundary_pass</dd>
+        </dl>
+      </article>
+<article class="card" data-kind="stage">
+        <span class="badge">pass_product_grade</span>
+        <h2>Readiness gate</h2>
+        <p><code>2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox</code></p>
+        <dl>
+          <dt>Result</dt><dd>READINESS_PACKET_REVIEWABLE_NOT_EXECUTABLE</dd>
+          <dt>Reviewer</dt><dd>reviewer_pass</dd>
+          <dt>Boundary</dt><dd>boundary_pass</dd>
+        </dl>
+      </article>
+<article class="card" data-kind="stage">
+        <span class="badge">pass_product_grade</span>
+        <h2>Request packet</h2>
+        <p><code>2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox</code></p>
+        <dl>
+          <dt>Result</dt><dd>REQUEST_PACKET_REVIEWABLE_NOT_APPROVAL</dd>
+          <dt>Reviewer</dt><dd>reviewer_pass</dd>
+          <dt>Boundary</dt><dd>boundary_pass</dd>
+        </dl>
+      </article>
+<article class="card" data-kind="stage">
+        <span class="badge">pass_product_grade</span>
+        <h2>Request screening</h2>
+        <p><code>2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox</code></p>
+        <dl>
+          <dt>Result</dt><dd>SCREENED_REVIEWABLE_NOT_SUBMITTED</dd>
+          <dt>Reviewer</dt><dd>reviewer_pass</dd>
+          <dt>Boundary</dt><dd>boundary_pass</dd>
+        </dl>
+      </article>
+      <article class="card" data-kind="stop">
+        <span class="badge stop">Stop</span>
+        <h2>Execution remains closed</h2>
+        <p>No displayed artifact grants run authority, formal-vault access, action basis, or mainline readiness.</p>
+      </article>
+    </section>
+  </main>
+  <script>
+    const buttons = Array.from(document.querySelectorAll("button[data-filter]"));
+    const cards = Array.from(document.querySelectorAll("[data-kind]"));
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+        cards.forEach((card) => {
+          card.hidden = filter !== "all" && card.dataset.kind !== filter;
+        });
+      });
+    });
+  </script>
+</body>
+</html>

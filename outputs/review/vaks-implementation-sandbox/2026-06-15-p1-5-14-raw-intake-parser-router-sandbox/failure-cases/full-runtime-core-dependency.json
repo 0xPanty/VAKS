@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "full-runtime-core-dependency",
+  "expected_valid": false,
+  "expected_codes": ["RP_RUNTIME_CORE_DEPENDENCY_FORBIDDEN"],
+  "patch": {"parser": {"full_runtime_core_dependency": true}}
+}

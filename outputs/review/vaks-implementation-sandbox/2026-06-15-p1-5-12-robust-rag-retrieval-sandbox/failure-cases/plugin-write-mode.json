@@ -1,0 +1,38 @@
+{
+  "record_kind": "robust_rag_retrieval_manifest",
+  "scenario_id": "plugin-write-mode",
+  "expected_valid": false,
+  "expected_codes": ["RR_PLUGIN_NOT_READ_ONLY"],
+  "query": {
+    "query_mode": "orientation",
+    "verbatim_input": "Query through plugin.",
+    "question_summary": "Plugin write-mode misuse.",
+    "action_sensitive": false,
+    "verbatim_preserved": true
+  },
+  "route_selection": {
+    "selected": "local_entity",
+    "authority_buckets_included": ["reviewed"],
+    "authority_buckets_excluded": ["candidate", "feedback", "runtime_artifact"],
+    "selected_context_types": ["reviewed_node"],
+    "forbidden_support_types": ["retrieval_score", "graph_rank", "community_report_summary", "llm_extracted_relation"]
+  },
+  "retrieval_config": {"bucket_filter_first": true, "rrf_within_bucket_only": true, "exclude_runtime_artifacts": true},
+  "optional_plugin": {
+    "mode": "read_write",
+    "write_tools_enabled": true,
+    "auto_update_enabled": true
+  },
+  "retrieved_items": [
+    {
+      "id": "reviewed-note",
+      "ref": "wiki/concepts/example.md",
+      "record_kind": "reviewed_note",
+      "authority_bucket": "reviewed",
+      "pack_role": "orientation",
+      "selected": true,
+      "excluded": false,
+      "selected_by": {"graph": true}
+    }
+  ]
+}

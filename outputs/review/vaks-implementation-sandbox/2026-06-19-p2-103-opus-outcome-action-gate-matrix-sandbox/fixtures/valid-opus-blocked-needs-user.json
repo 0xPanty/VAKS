@@ -1,0 +1,33 @@
+{
+  "token": "OPUS_BLOCKED_NEEDS_USER",
+  "allowed_next_actions": [
+    "retain_raw_opus_result_in_sandbox",
+    "stop_and_ask_user"
+  ],
+  "required_user_state": "user_input_required_before_next_action",
+  "stop_state": "blocked_needs_user",
+  "authority_flags": {
+    "mainline_merge_allowed": false,
+    "promotion_allowed": false,
+    "reviewed_knowledge_write_allowed": false,
+    "evidence_support_write_allowed": false,
+    "action_basis_allowed": false,
+    "commit_allowed": false,
+    "push_allowed": false,
+    "sync_allowed": false,
+    "goal_complete_now": false,
+    "external_opus_result_required": true,
+    "mainline_actions_require_separate_user_approval": true,
+    "sandbox_only": true
+  },
+  "prohibited_actions": [
+    "automatic_mainline_merge",
+    "automatic_promotion",
+    "write_reviewed_knowledge",
+    "write_evidence_support",
+    "create_action_basis",
+    "commit",
+    "push",
+    "obsidian_sync"
+  ]
+}

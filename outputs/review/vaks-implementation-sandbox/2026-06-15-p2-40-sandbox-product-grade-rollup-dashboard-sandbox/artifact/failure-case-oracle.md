@@ -1,0 +1,76 @@
+# Failure Case Oracle
+
+Slice: `2026-06-15-p2-40-sandbox-product-grade-rollup-dashboard-sandbox`
+
+Total cases: 70
+
+- `001-top-level-record_kind.json` -> `record_kind_mismatch`
+- `002-top-level-slice_id.json` -> `slice_id_mismatch`
+- `003-top-level-version.json` -> `version_mismatch`
+- `004-top-level-truth_boundary.json` -> `truth_boundary_mismatch`
+- `005-top-level-purpose.json` -> `purpose_mismatch`
+- `006-top-level-write_scope.json` -> `write_scope_mismatch`
+- `007-top-level-source_root.json` -> `source_root_mismatch`
+- `008-summary-source_slice_count.json` -> `source_slice_count_mismatch, source_slice_count_too_low, not_all_sources_product_pass, not_all_sources_have_verification`
+- `009-summary-product_pass_count.json` -> `product_pass_count_mismatch, not_all_sources_product_pass`
+- `010-summary-verification_present_count.json` -> `verification_present_count_mismatch, not_all_sources_have_verification`
+- `011-non-pass-slice-present.json` -> `non_pass_slices_mismatch, non_pass_slices_present`
+- `012-missing-verification-present.json` -> `missing_verification_slices_mismatch, missing_verification_slices_present`
+- `013-operation-formal_vault_read.json` -> `operation_not_false:formal_vault_read`
+- `014-operation-formal_vault_scan.json` -> `operation_not_false:formal_vault_scan`
+- `015-operation-formal_vault_write.json` -> `operation_not_false:formal_vault_write`
+- `016-operation-formal_vault_hash.json` -> `operation_not_false:formal_vault_hash`
+- `017-operation-formal_vault_snapshot.json` -> `operation_not_false:formal_vault_snapshot`
+- `018-operation-formal_vault_state_check.json` -> `operation_not_false:formal_vault_state_check`
+- `019-operation-obsidian_sync.json` -> `operation_not_false:obsidian_sync`
+- `020-operation-commit.json` -> `operation_not_false:commit`
+- `021-operation-push.json` -> `operation_not_false:push`
+- `022-operation-promotion.json` -> `operation_not_false:promotion`
+- `023-operation-dependency_install.json` -> `operation_not_false:dependency_install`
+- `024-operation-background_service.json` -> `operation_not_false:background_service`
+- `025-operation-mcp_write_tool.json` -> `operation_not_false:mcp_write_tool`
+- `026-operation-hooks.json` -> `operation_not_false:hooks`
+- `027-operation-approval_collection.json` -> `operation_not_false:approval_collection`
+- `028-operation-user_instruction_collection.json` -> `operation_not_false:user_instruction_collection`
+- `029-operation-user_wording_storage.json` -> `operation_not_false:user_wording_storage`
+- `030-operation-command_emitted.json` -> `operation_not_false:command_emitted`
+- `031-operation-execution_permission_granted.json` -> `operation_not_false:execution_permission_granted`
+- `032-operation-execution_performed.json` -> `operation_not_false:execution_performed`
+- `033-operation-action_basis_creation.json` -> `operation_not_false:action_basis_creation`
+- `034-operation-reviewed_knowledge_creation.json` -> `operation_not_false:reviewed_knowledge_creation`
+- `035-operation-evidence_support_creation.json` -> `operation_not_false:evidence_support_creation`
+- `036-operation-mainline_merge.json` -> `operation_not_false:mainline_merge`
+- `037-operation-dirty_tree_repair.json` -> `operation_not_false:dirty_tree_repair`
+- `038-operation-auto_advance.json` -> `operation_not_false:auto_advance`
+- `039-control-read_only_scan.json` -> `rollup_control_not_true:read_only_scan`
+- `040-control-sandbox_only_output.json` -> `rollup_control_not_true:sandbox_only_output`
+- `041-control-product_pass_is_sandbox_only.json` -> `rollup_control_not_true:product_pass_is_sandbox_only`
+- `042-control-verification_status_is_file_evidence.json` -> `rollup_control_not_true:verification_status_is_file_evidence`
+- `043-control-no_formal_vault_claim.json` -> `rollup_control_not_true:no_formal_vault_claim`
+- `044-control-no_mainline_claim.json` -> `rollup_control_not_true:no_mainline_claim`
+- `045-control-no_action_basis.json` -> `rollup_control_not_true:no_action_basis`
+- `046-control-no_evidence_support.json` -> `rollup_control_not_true:no_evidence_support`
+- `047-control-no_reviewed_knowledge.json` -> `rollup_control_not_true:no_reviewed_knowledge`
+- `048-control-no_auto_advance.json` -> `rollup_control_not_true:no_auto_advance`
+- `049-missing-non-claim-not-formal-vault-approval.json` -> `required_non_claims_missing`
+- `050-missing-non-claim-not-formal-vault-state.json` -> `required_non_claims_missing`
+- `051-missing-non-claim-not-formal-vault-access.json` -> `required_non_claims_missing`
+- `052-missing-non-claim-not-Obsidian-sync.json` -> `required_non_claims_missing`
+- `053-missing-non-claim-not-user-approval.json` -> `required_non_claims_missing`
+- `054-missing-non-claim-not-user-instruction.json` -> `required_non_claims_missing`
+- `055-missing-non-claim-not-execution-permission.json` -> `required_non_claims_missing`
+- `056-missing-non-claim-not-command-surface.json` -> `required_non_claims_missing`
+- `057-missing-non-claim-not-reviewed-knowledge.json` -> `required_non_claims_missing`
+- `058-missing-non-claim-not-evidence-support.json` -> `required_non_claims_missing`
+- `059-missing-non-claim-not-action-basis.json` -> `required_non_claims_missing`
+- `060-missing-non-claim-not-mainline-readiness.json` -> `required_non_claims_missing`
+- `061-missing-non-claim-not-promotion-approval.json` -> `required_non_claims_missing`
+- `062-missing-non-claim-not-dirty-tree-repair.json` -> `required_non_claims_missing`
+- `063-missing-non-claim-not-auto-advance.json` -> `required_non_claims_missing`
+- `064-summary-authority-rollup_is_mainline_authority.json` -> `summary_flag_not_false:rollup_is_mainline_authority`
+- `065-summary-authority-rollup_is_formal_vault_authority.json` -> `summary_flag_not_false:rollup_is_formal_vault_authority`
+- `066-summary-authority-rollup_is_action_basis.json` -> `summary_flag_not_false:rollup_is_action_basis`
+- `067-source-product-pass-false.json` -> `source_slices_mismatch, source_product_not_pass:2026-06-15-p0-01-retrieval-receipt-template-sandbox`
+- `068-source-verification-missing.json` -> `source_slices_mismatch, source_verification_missing:2026-06-15-p0-01-retrieval-receipt-template-sandbox`
+- `069-source-authority-mainline.json` -> `source_slices_mismatch, source_authority_not_false:2026-06-15-p0-01-retrieval-receipt-template-sandbox:mainline_ready`
+- `070-source-report-hash-drift.json` -> `source_slices_mismatch`

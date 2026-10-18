@@ -1,0 +1,13 @@
+{
+  "case_id": "prototype-receipt-hash",
+  "description": "Prototype receipt hash drift.",
+  "expected_errors": [
+    "prototype_receipt_packet_hash_mismatch"
+  ],
+  "prototype_tamper": {
+    "kind": "receipt_update",
+    "updates": {
+      "request_packet_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  }
+}

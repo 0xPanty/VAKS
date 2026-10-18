@@ -1,5 +1,6 @@
 ---
 type: source
+record_kind: source_card
 status: source-captured
 title: "alchaincyf/obsidian-ai-orange-book"
 source_url: "https://github.com/alchaincyf/obsidian-ai-orange-book"
@@ -20,12 +21,9 @@ projects:
   - 资料库
   - AI短剧
 evidence_level: secondary
+source_integrity:
+  capture_confidence: 4
 source_status: cross-checked
-source_quality: 4
-freshness: 5
-relevance: 5
-confidence: 4
-cross_source_count: 3
 verified_by:
   - "GitHub repo README"
   - "PDF text extraction"
@@ -41,8 +39,24 @@ tags:
   - source/repo
   - obsidian-ai
   - structure-sample
+knowledge_status: raw
+processing_tier: light
+source_id: "https://github.com/alchaincyf/obsidian-ai-orange-book"
+why_saved: see_body_or_legacy_record
+retrieval_policy:
+  policy_kind: source_identity_only
+  pack_allowed: drilldown_required
+  action_basis_allowed: false
+  warning_code: raw_is_provenance_only
+promotion_gate: none
+action_basis_allowed: false
+truth_mutation_allowed: false
+legacy_raw_metadata:
+  source_quality: 4
+  freshness: 5
+  relevance: 5
+  cross_source_count: 3
 ---
-
 # 来源记录：alchaincyf/obsidian-ai-orange-book
 
 ## 为什么收录

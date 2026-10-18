@@ -1,0 +1,124 @@
+{
+  "record_kind": "sandbox_user_decision_demo_transcript_smoke_runner_contract",
+  "slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+  "source_slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+  "truth_boundary": "demo_transcript_not_user_decision_or_execution_authority",
+  "status": "built_pending_review",
+  "purpose": "produce a human-readable transcript from p2-55 e2e dry-run scenarios without executing options",
+  "source_final_gate_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox\\artifact\\verify_user_decision_e2e_simulator.py --final-gate",
+  "demo_scenarios": [
+    {
+      "scenario_id": "no_reply",
+      "input_text": "",
+      "expected_case_id": "no_reply",
+      "expected_reply_id": "keep_reference_no_action"
+    },
+    {
+      "scenario_id": "option_a",
+      "input_text": "A",
+      "expected_case_id": "explicit_A",
+      "expected_reply_id": "acknowledge_reference_only"
+    },
+    {
+      "scenario_id": "option_b",
+      "input_text": "B",
+      "expected_case_id": "explicit_B",
+      "expected_reply_id": "ask_readonly_planning_scope"
+    },
+    {
+      "scenario_id": "option_c",
+      "input_text": "C",
+      "expected_case_id": "explicit_C",
+      "expected_reply_id": "ask_mainline_review_scope"
+    },
+    {
+      "scenario_id": "option_d",
+      "input_text": "D",
+      "expected_case_id": "explicit_D",
+      "expected_reply_id": "acknowledge_park_or_reject"
+    },
+    {
+      "scenario_id": "ambiguous",
+      "input_text": "继续",
+      "expected_case_id": "ambiguous_reply",
+      "expected_reply_id": "ask_one_clarification"
+    },
+    {
+      "scenario_id": "multiple",
+      "input_text": "B 和 C 都行",
+      "expected_case_id": "multiple_options",
+      "expected_reply_id": "ask_choose_one"
+    },
+    {
+      "scenario_id": "execution_words",
+      "input_text": "C，合并主线",
+      "expected_case_id": "approval_with_execution_words",
+      "expected_reply_id": "stop_for_separate_scope"
+    },
+    {
+      "scenario_id": "unknown_fallback",
+      "input_text": "__synthetic_unknown_case__",
+      "expected_case_id": "synthetic_unknown_case",
+      "expected_reply_id": "stop_for_unknown_classifier_case"
+    }
+  ],
+  "output_contract": {
+    "automatic_execution": false,
+    "decision_collected": false,
+    "ready_to_execute": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "action_basis_ready": false,
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  "transcript_safety_rules": {
+    "must_include_phrases": [
+      "不执行",
+      "sandbox",
+      "must_not"
+    ],
+    "dangerous_positive_phrases": [
+      "我会开始",
+      "我将开始",
+      "开始执行",
+      "正在执行",
+      "我会合并",
+      "已合并",
+      "我会同步",
+      "已同步",
+      "我会提交",
+      "已提交",
+      "我会推送",
+      "已推送",
+      "我会写入",
+      "已写入",
+      "执行授权",
+      "可以合并"
+    ]
+  },
+  "ordinary_agent_usage": {
+    "run_demo": "python -B artifact/run_user_decision_demo_transcript.py",
+    "default_verifier": "python -B artifact/verify_user_decision_demo_transcript_smoke_runner.py",
+    "upstream_verifier": "python -B artifact/verify_user_decision_demo_transcript_smoke_runner.py --run-upstream",
+    "final_gate": "python -B artifact/verify_user_decision_demo_transcript_smoke_runner.py --final-gate",
+    "rebuild": "Builder-only: python -B artifact/build_user_decision_demo_transcript_smoke_runner.py"
+  },
+  "required_non_claims": [
+    "The transcript is not a user decision.",
+    "The transcript is not execution authority.",
+    "The transcript cannot approve merge, promotion, sync, commit, push, reviewed knowledge, evidence support, or action basis.",
+    "The transcript is a demo of safe next replies only.",
+    "The transcript must preserve must_not boundaries for every scenario."
+  ]
+}

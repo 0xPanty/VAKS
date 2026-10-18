@@ -1,0 +1,8 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "boundary-promotion-ready",
+  "expected_valid": false,
+  "expected_codes": ["MB_AUTHORITY_CONFUSION"],
+  "allowed_extra_codes": ["MB_AUTHORITY_CLAIM_FORBIDDEN"],
+  "patch": {"boundary": {"promotion_ready": true}}
+}

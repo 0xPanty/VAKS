@@ -1,0 +1,13 @@
+{
+  "case_id": "prototype-receipt-badge-count",
+  "note": "Receipt badge count drifts.",
+  "prototype_tamper": {
+    "kind": "receipt_update",
+    "updates": {
+      "badge_count": 99
+    }
+  },
+  "expected_errors": [
+    "prototype_receipt_badge_count_mismatch"
+  ]
+}

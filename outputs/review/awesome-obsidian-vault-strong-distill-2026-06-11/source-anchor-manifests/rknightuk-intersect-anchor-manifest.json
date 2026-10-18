@@ -1,0 +1,49 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "rknightuk/intersect",
+  "source_url": "https://github.com/rknightuk/intersect",
+  "checked_commit": "1d521377d7170362c20fe88569a4277ed6e8c537",
+  "checked_at": "2026-06-11",
+  "inspection_method": "shallow git clone plus README, expanded meta/readme page, Eleventy content tree, package scripts, collection filters, computed data, search and navigation components",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "personal-wiki-boundary",
+      "why": "States this is a personal Eleventy wiki shared for adaptation, not a maintained open-source product."
+    },
+    {
+      "path": "src/pages/meta/readme.md",
+      "kind": "expanded-architecture-notes",
+      "why": "Documents installation, content directory structure, features, search modes, computed data, TOC, navigation, and tradeoffs."
+    },
+    {
+      "path": "src/pages/**/*.md",
+      "kind": "plain-markdown-content-tree",
+      "why": "Stores wiki content in nested Markdown folders under a single content root."
+    },
+    {
+      "path": "src/_eleventy/_filters/collections/links.js",
+      "kind": "external-link-index",
+      "why": "Extracts outbound links, deduplicates them, counts domains, and records source page information."
+    },
+    {
+      "path": "src/_eleventy/_filters/collections/pages.js",
+      "kind": "page-index-and-navigation-order",
+      "why": "Builds ordered page collections with featured pages and page index metadata."
+    },
+    {
+      "path": "src/pages/pages.11tydata.js",
+      "kind": "computed-page-metadata",
+      "why": "Computes navigation, breadcrumbs, source/history links, link counts, content indexes, and file paths."
+    }
+  ],
+  "known_limits": [
+    "The author explicitly limits maintenance/open-source expectations.",
+    "Link extraction and domain counts are useful diagnostics but not source quality or evidence support.",
+    "External analytics/API integration should remain optional and scoped."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

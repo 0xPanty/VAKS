@@ -1,0 +1,235 @@
+{
+  "record_kind": "query_intent_router_candidate",
+  "status": "candidate",
+  "created_at": "2026-06-07",
+  "topic_id": "source-intake-routing",
+  "truth_boundary": "navigation_only_not_truth",
+  "allowed_use": [
+    "workbench_mode_selection",
+    "context_pack_seed",
+    "query_start"
+  ],
+  "forbidden_use": [
+    "truth",
+    "reviewed_relation",
+    "action_basis",
+    "authority"
+  ],
+  "default_mode": "research",
+  "fallback_warning": "intent_router_low_confidence_use_research_mode",
+  "modes": [
+    {
+      "mode": "source-inspection",
+      "plain_rule": "The user wants to inspect source cards, repo/article/paper/video intake, raw anchors, or candidate distillations.",
+      "route_bias": [
+        "raw_drilldown",
+        "candidate_orientation"
+      ],
+      "keywords": [
+        "source card",
+        "source-card",
+        "raw source",
+        "repo source",
+        "paper source",
+        "article source",
+        "video source",
+        "intake",
+        "ingestion",
+        "parser",
+        "metadata prefill",
+        "prefill",
+        "distillation",
+        "candidate distillation",
+        "source-intake",
+        "source"
+      ],
+      "examples": [
+        "show me the source cards for source-intake-routing",
+        "which repo source cards did the scout create",
+        "does this source have prefilled metadata"
+      ],
+      "pattern_fragments": [
+        "source-intake-routing",
+        "source card",
+        "raw source",
+        "candidate distillation",
+        "metadata prefill",
+        "repo source",
+        "paper source",
+        "article source",
+        "video source"
+      ],
+      "warnings": [
+        "source_card_is_provenance_not_truth",
+        "candidate_distillation_is_orientation_not_action_basis"
+      ]
+    },
+    {
+      "mode": "research",
+      "plain_rule": "The user wants broad orientation, comparison, design borrowing, references, or a sandbox research pack.",
+      "route_bias": [
+        "mainline_current",
+        "raw_drilldown",
+        "candidate_orientation",
+        "active_project_overlay",
+        "support_review_output"
+      ],
+      "keywords": [
+        "research",
+        "survey",
+        "reference",
+        "github",
+        "paper",
+        "repo",
+        "compare",
+        "borrow",
+        "design",
+        "landing",
+        "workbench",
+        "routing",
+        "metadata",
+        "topic",
+        "context pack",
+        "sandbox"
+      ],
+      "examples": [
+        "research source-intake-routing references",
+        "compare the workbench design with high-star repos",
+        "what should we borrow from Dify and Haystack"
+      ],
+      "pattern_fragments": [
+        "source-intake-routing",
+        "Dify",
+        "RAGFlow",
+        "AnythingLLM",
+        "LlamaIndex",
+        "Haystack",
+        "metadata",
+        "router",
+        "context pack",
+        "workbench"
+      ],
+      "warnings": [
+        "research_pack_is_orientation_not_truth"
+      ]
+    },
+    {
+      "mode": "action",
+      "plain_rule": "The user is asking whether material can support an action, decision, recommendation, production change, or final answer.",
+      "route_bias": [
+        "mainline_current",
+        "reviewed_support",
+        "raw_drilldown"
+      ],
+      "keywords": [
+        "action",
+        "decision",
+        "basis",
+        "support",
+        "recommend",
+        "should we",
+        "can we use",
+        "safe to",
+        "production",
+        "final answer",
+        "approval",
+        "evidence"
+      ],
+      "examples": [
+        "can this candidate be used as action basis",
+        "is this enough to make a decision",
+        "build an action pack for source-intake-routing"
+      ],
+      "pattern_fragments": [
+        "source-intake-routing",
+        "action basis",
+        "decision support",
+        "evidence support",
+        "raw anchor",
+        "reviewed support"
+      ],
+      "warnings": [
+        "action_mode_requires_evidence_support_check",
+        "candidate_overlay_audit_not_action_basis"
+      ]
+    },
+    {
+      "mode": "audit",
+      "plain_rule": "The user wants to understand why a sandbox decision was made, what changed, what tests passed, or what regressions were caught.",
+      "route_bias": [
+        "mainline_current",
+        "audit_evidence",
+        "support_review_output"
+      ],
+      "keywords": [
+        "audit",
+        "check",
+        "test",
+        "lint",
+        "why",
+        "regression",
+        "diff",
+        "what changed",
+        "guardrail",
+        "boundary",
+        "hash",
+        "sync"
+      ],
+      "examples": [
+        "why did the workbench exclude candidate items in action mode",
+        "show the high-pressure test for source-intake-routing",
+        "what regression did the lint catch"
+      ],
+      "pattern_fragments": [
+        "source-intake-routing",
+        "high-pressure test",
+        "lint",
+        "audit",
+        "guardrail",
+        "action_readiness",
+        "evidence_support_check_not_run"
+      ],
+      "warnings": [
+        "audit_evidence_not_current_rule",
+        "test_output_not_truth"
+      ]
+    },
+    {
+      "mode": "project-exploration",
+      "plain_rule": "The user wants to inspect project overlays, active VAKS borrowing, or sandbox fit without promoting general truth.",
+      "route_bias": [
+        "active_project_overlay",
+        "candidate_orientation",
+        "support_review_output"
+      ],
+      "keywords": [
+        "overlay",
+        "project overlay",
+        "project-specific",
+        "borrowing",
+        "active project",
+        "VAKS",
+        "fit",
+        "project lens",
+        "project scope"
+      ],
+      "examples": [
+        "what does the source-intake-routing overlay borrow for VAKS",
+        "show project-specific borrowing without promoting it",
+        "does this sandbox fit the active project"
+      ],
+      "pattern_fragments": [
+        "source-intake-routing",
+        "project overlay",
+        "VAKS",
+        "borrowing",
+        "active project",
+        "project scope"
+      ],
+      "warnings": [
+        "project_overlay_not_universal_rule",
+        "project_borrowing_not_truth_mutation"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "groepl/Obsidian-Templates",
+  "source_url": "https://github.com/groepl/Obsidian-Templates",
+  "checked_commit": "d815ef9275ce7d0c5ea2e4dc2fdabb1d71182a83",
+  "checked_at": "2026-06-11",
+  "inspection_method": "shallow git clone plus README, template folder, structure-note maintenance views, examples, visuals, and plugin dependency notes",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "template-set-overview",
+      "why": "Describes an Obsidian template collection for Zettelkasten-style workflows and lists mandatory/optional plugins."
+    },
+    {
+      "path": "Templates/*.md",
+      "kind": "typed-template-library",
+      "why": "Contains note, prompt, question, book, person, quote, recipe, term, tool, meeting, OKR, structure, post, and snippet templates."
+    },
+    {
+      "path": "5_Structure Notes/*.md",
+      "kind": "vault-maintenance-views",
+      "why": "Contains Dataview-style maintenance notes for missing tags, missing timestamps, unresolved links, orphans, tasks, and stale permanent notes."
+    },
+    {
+      "path": "EXAMPLES.md",
+      "kind": "template-examples",
+      "why": "Shows how the template set is expected to be used."
+    },
+    {
+      "path": "README.md plugin sections",
+      "kind": "dependency-disclosure",
+      "why": "Separates mandatory and optional plugin requirements and warns that one Projects plugin is no longer active."
+    }
+  ],
+  "known_limits": [
+    "The Zettelkasten ontology and folder expectations should not be copied into VAKS.",
+    "Dataview maintenance output is diagnostic only, not reviewed knowledge.",
+    "Plugin dependency sprawl and stale plugin references require separate review before any adoption."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

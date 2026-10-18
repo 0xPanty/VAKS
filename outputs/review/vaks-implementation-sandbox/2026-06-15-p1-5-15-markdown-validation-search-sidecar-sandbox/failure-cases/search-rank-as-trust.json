@@ -1,0 +1,1 @@
+{"extends":"fixtures/valid-frontmatter-validation-check.json","scenario_id":"search-rank-as-trust","expected_valid":false,"expected_codes":["MS_SEARCH_RANK_AS_TRUST"],"patch":{"search":{"rank_claims_trust":true,"score_sets_confidence":true}}}

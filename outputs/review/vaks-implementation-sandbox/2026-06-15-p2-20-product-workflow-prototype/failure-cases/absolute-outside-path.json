@@ -1,0 +1,1 @@
+{"case_id":"absolute-outside-path","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/scope/write_targets/0","value":"C:/Users/Administrator/Documents/资料库/outputs/review/outside-product-workflow.json"}]}

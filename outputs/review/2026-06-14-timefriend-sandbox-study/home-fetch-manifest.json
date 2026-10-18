@@ -1,0 +1,14 @@
+[
+  {
+    "Name": "timefriend.xin_home.html",
+    "Url": "https://timefriend.xin/",
+    "Curl": "200 text/html 1738 https://timefriend.xin/",
+    "Bytes": 1738
+  },
+  {
+    "Name": "timefriend.xin_llms.txt",
+    "Url": "https://timefriend.xin/llms.txt",
+    "Curl": "200 text/html 1738 https://timefriend.xin/llms.txt",
+    "Bytes": 1738
+  }
+]

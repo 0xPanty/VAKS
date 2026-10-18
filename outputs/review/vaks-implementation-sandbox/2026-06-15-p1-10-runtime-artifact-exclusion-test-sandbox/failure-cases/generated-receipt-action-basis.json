@@ -1,0 +1,22 @@
+{
+  "record_kind": "runtime_artifact_exclusion_manifest",
+  "scenario_id": "ra-fail-generated-receipt-action-basis",
+  "expected_valid": false,
+  "expected_codes": ["RA_RUNTIME_ARTIFACT_ACTION_BASIS"],
+  "exclude_runtime_artifacts": true,
+  "items": [
+    {
+      "id": "generated_receipt_basis",
+      "path": "outputs/review/example/generated-receipts/op-001.md",
+      "artifact_kind": "generated_receipt",
+      "runtime_artifact": true,
+      "seen_by_retrieval": true,
+      "selected": false,
+      "excluded": true,
+      "excluded_reason": "runtime_artifact_excluded",
+      "pack_role": "none",
+      "authority_bucket": "runtime_artifact",
+      "action_basis_allowed": true
+    }
+  ]
+}

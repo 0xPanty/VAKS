@@ -1,0 +1,9 @@
+{
+  "case_id": "positive-byte-safety-evidence-rollup",
+  "expected": {
+    "fixture_copy_count": 75,
+    "fixture_apply_write_count": 75,
+    "fixture_rollback_write_count": 75,
+    "final_copy_byte_hash_restored_count": 75
+  }
+}

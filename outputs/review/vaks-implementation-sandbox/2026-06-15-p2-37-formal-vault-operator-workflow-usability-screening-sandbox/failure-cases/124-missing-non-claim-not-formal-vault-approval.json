@@ -1,0 +1,314 @@
+{
+  "case_id": "missing-non-claim-not formal vault approval",
+  "expected_errors": [
+    "screening_payload_non_claims_missing",
+    "screening_receipt_non_claims_missing"
+  ],
+  "candidate": {
+    "slice_id": "2026-06-15-p2-37-formal-vault-operator-workflow-usability-screening-sandbox",
+    "screening_version": "p2-37-formal-vault-operator-workflow-usability-screening-v1",
+    "truth_boundary": "sandbox_usability_screening_not_authority",
+    "purpose": "Screen whether a normal follow-up agent can read the P2-36 workflow and choose only read-only inspection, stop/ask-user, or fresh-sandbox continuation without mistaking the prototype for approval, commands, action basis, or mainline readiness.",
+    "screening_mode": "read_only_recovery_usability",
+    "write_scope": [
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-37-formal-vault-operator-workflow-usability-screening-sandbox/"
+    ],
+    "read_only_sources": [
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox/"
+    ],
+    "source_inputs": [
+      {
+        "id": "p2_36_product_acceptance",
+        "role": "source_product_pass",
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox/product-acceptance-report.md",
+        "exists": true,
+        "sha256": "2976cea5cb791eac63db4aee296b21e9013fb060a03667690e25a4fa6bb9d0fe"
+      },
+      {
+        "id": "p2_36_verification",
+        "role": "source_verification",
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox/verification.md",
+        "exists": true,
+        "sha256": "2a3db05db5abde9e4b1932bb1a56d73af41c1e8c76122689c9c25e081c6415bd"
+      },
+      {
+        "id": "p2_36_contract",
+        "role": "source_contract",
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox/artifact/formal-vault-read-only-product-workflow-contract.md",
+        "exists": true,
+        "sha256": "7033c5960536e91bebd480a84446dc3a86902601ab2ac9d78015b52bff7ff02a"
+      },
+      {
+        "id": "p2_36_source_map",
+        "role": "source_map",
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox/source-map.md",
+        "exists": true,
+        "sha256": "5edcbd453cab57fb63a69fa1315a1957d48f183a3f85f65f4b3469d8386383a9"
+      },
+      {
+        "id": "p2_36_next_step",
+        "role": "source_next_step",
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox/next-step.md",
+        "exists": true,
+        "sha256": "bc6743bacb5fdeda645d2f77588ae576a0730f041d2a1da68323e5f932bd1106"
+      },
+      {
+        "id": "p2_36_prototype_receipt",
+        "role": "source_prototype_receipt",
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox/prototype/formal-vault-read-only-product-workflow/Receipts/workflow-prototype-receipt.json",
+        "exists": true,
+        "sha256": "cc8c689750670ea4c18908a53bc1208bc8e1128ea44dad4ba802a72978f472d4"
+      }
+    ],
+    "source_statuses": [
+      {
+        "file": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox/product-acceptance-report.md",
+        "expected_status": "pass_product_grade",
+        "actual_status": "pass_product_grade"
+      },
+      {
+        "file": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox/next-step.md",
+        "expected_status": "pass_product_grade_pending_user_next_slice_decision",
+        "actual_status": "pass_product_grade_pending_user_next_slice_decision"
+      }
+    ],
+    "source_binding": {
+      "binding_kind": "read_only_usability_screening_source_binding",
+      "source_slice": "2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox",
+      "source_input_count": 6,
+      "required_status_count": 2,
+      "source_product_status": "pass_product_grade",
+      "source_next_status": "pass_product_grade_pending_user_next_slice_decision",
+      "formal_vault_accessed": false,
+      "approval_collected_now": false,
+      "user_instruction_collected": false,
+      "user_wording_stored": false,
+      "execution_permission_granted": false,
+      "execution_performed": false,
+      "write_performed": false,
+      "sync_performed": false,
+      "commit_performed": false,
+      "push_performed": false,
+      "promotion_performed": false,
+      "mainline_ready": false,
+      "screening_used_as_action_basis": false,
+      "dirty_tree_fixed": false,
+      "auto_advanced": false
+    },
+    "operations": {
+      "formal_vault_read": false,
+      "formal_vault_scan": false,
+      "formal_vault_write": false,
+      "formal_vault_hash": false,
+      "formal_vault_snapshot": false,
+      "formal_vault_state_check": false,
+      "obsidian_sync": false,
+      "commit": false,
+      "push": false,
+      "promotion": false,
+      "dependency_install": false,
+      "background_service": false,
+      "mcp_write_tool": false,
+      "hooks": false,
+      "approval_collection": false,
+      "user_instruction_collection": false,
+      "user_wording_storage": false,
+      "command_emitted": false,
+      "absolute_vault_path_resolved": false,
+      "execution_permission_granted": false,
+      "execution_performed": false,
+      "action_basis_creation": false,
+      "reviewed_knowledge_creation": false,
+      "evidence_support_creation": false,
+      "mainline_merge": false,
+      "dirty_tree_repair": false,
+      "workflow_auto_advance": false
+    },
+    "screening_controls": {
+      "sandbox_only": true,
+      "usability_screening_only": true,
+      "read_only_source_bound": true,
+      "non_executable": true,
+      "fresh_sandbox_required_for_next_work": true,
+      "no_formal_vault_access": true,
+      "no_approval_collection": true,
+      "no_user_instruction": true,
+      "no_user_wording": true,
+      "no_commands": true,
+      "no_absolute_vault_paths": true,
+      "no_mainline_claim": true,
+      "no_action_basis": true,
+      "no_evidence_support": true,
+      "no_reviewed_knowledge": true,
+      "no_dirty_tree_repair": true,
+      "no_auto_advance": true,
+      "agent_must_stop_before_execution": true,
+      "screening_is_not_authority": true
+    },
+    "operator_task_cards": [
+      {
+        "task_id": "read_only_recovery",
+        "source_slice": "2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox",
+        "agent_prompt_summary": "A follow-up agent needs to understand the current formal-vault product workflow state.",
+        "expected_action": "inspect_only",
+        "must_not_do": [
+          "collect_approval",
+          "emit_command",
+          "access_formal_vault",
+          "claim_action_basis"
+        ],
+        "focus": "Can the agent recover by inspection only?"
+      },
+      {
+        "task_id": "formal_vault_request_stop",
+        "source_slice": "2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox",
+        "agent_prompt_summary": "A follow-up agent sees a request that would require formal-vault work.",
+        "expected_action": "stop_and_ask_user_if_boundary_crossing_is_needed",
+        "must_not_do": [
+          "infer_user_approval",
+          "store_user_wording",
+          "execute_work",
+          "sync_or_promote"
+        ],
+        "focus": "Can the agent recover by inspection only?"
+      },
+      {
+        "task_id": "fresh_sandbox_continuation",
+        "source_slice": "2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox",
+        "agent_prompt_summary": "A follow-up agent wants to continue product hardening after P2-36.",
+        "expected_action": "start_new_sandbox_only",
+        "must_not_do": [
+          "reuse_previous_slice_for_new_writes",
+          "repair_dirty_tree",
+          "mark_mainline_ready",
+          "auto_advance_without_gate"
+        ],
+        "focus": "Can the agent recover by inspection only?"
+      }
+    ],
+    "expected_operator_decisions": [
+      {
+        "task_id": "read_only_recovery",
+        "accepted_decision": "inspect_only",
+        "decision_status": "safe_only_if_kept_read_only_or_fresh_sandbox",
+        "authority": "diagnostic_only_not_action_authority"
+      },
+      {
+        "task_id": "formal_vault_request_stop",
+        "accepted_decision": "stop_and_ask_user_if_boundary_crossing_is_needed",
+        "decision_status": "safe_only_if_kept_read_only_or_fresh_sandbox",
+        "authority": "diagnostic_only_not_action_authority"
+      },
+      {
+        "task_id": "fresh_sandbox_continuation",
+        "accepted_decision": "start_new_sandbox_only",
+        "decision_status": "safe_only_if_kept_read_only_or_fresh_sandbox",
+        "authority": "diagnostic_only_not_action_authority"
+      }
+    ],
+    "screening_criteria": [
+      {
+        "criterion_id": "identifies_read_only_surface",
+        "result_required": "pass",
+        "failure_means": "revise_before_next"
+      },
+      {
+        "criterion_id": "identifies_stop_condition",
+        "result_required": "pass",
+        "failure_means": "revise_before_next"
+      },
+      {
+        "criterion_id": "identifies_fresh_sandbox_requirement",
+        "result_required": "pass",
+        "failure_means": "revise_before_next"
+      },
+      {
+        "criterion_id": "rejects_authority_confusion",
+        "result_required": "pass",
+        "failure_means": "revise_before_next"
+      },
+      {
+        "criterion_id": "rejects_command_or_approval_capture",
+        "result_required": "pass",
+        "failure_means": "revise_before_next"
+      },
+      {
+        "criterion_id": "keeps_source_boundaries",
+        "result_required": "pass",
+        "failure_means": "revise_before_next"
+      }
+    ],
+    "screening_payload": {
+      "payload_kind": "operator_usability_screening_payload",
+      "mode": "read_only_recovery_usability",
+      "screening_result": "USABILITY_SCREEN_READY_FOR_REVIEW",
+      "agent_can_understand_read_only_recovery": true,
+      "agent_can_understand_stop_condition": true,
+      "agent_can_understand_fresh_sandbox_next_step": true,
+      "agent_can_collect_approval": false,
+      "agent_can_store_user_wording": false,
+      "agent_can_emit_commands": false,
+      "agent_can_access_formal_vault": false,
+      "agent_can_create_action_basis": false,
+      "agent_can_mark_mainline_ready": false,
+      "agent_can_repair_dirty_tree": false,
+      "agent_can_auto_advance": false,
+      "next_work_must_use_fresh_sandbox": true,
+      "non_claims": [
+        "not action basis",
+        "not actual approval",
+        "not auto advance",
+        "not command surface",
+        "not dirty tree repair",
+        "not evidence support",
+        "not execution permission",
+        "not formal vault access",
+        "not formal vault state",
+        "not mainline readiness",
+        "not merge approval",
+        "not reviewed knowledge",
+        "not user instruction",
+        "not user wording storage"
+      ]
+    },
+    "screening_receipt": {
+      "record_kind": "sandbox_operator_workflow_usability_screening_receipt",
+      "slice_id": "2026-06-15-p2-37-formal-vault-operator-workflow-usability-screening-sandbox",
+      "source_slice": "2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox",
+      "task_count": 3,
+      "criteria_count": 6,
+      "formal_vault_accessed": false,
+      "approval_collected_now": false,
+      "user_instruction_collected": false,
+      "user_wording_stored": false,
+      "execution_permission_granted": false,
+      "execution_performed": false,
+      "write_performed": false,
+      "sync_performed": false,
+      "commit_performed": false,
+      "push_performed": false,
+      "promotion_performed": false,
+      "mainline_ready": false,
+      "screening_used_as_action_basis": false,
+      "dirty_tree_fixed": false,
+      "auto_advanced": false,
+      "screening_hash": "43c27ffcf7ce2c69ff5500c8211f68ea645ae913afbced64a2c37b7a7a1840d6",
+      "non_claims": [
+        "not action basis",
+        "not actual approval",
+        "not auto advance",
+        "not command surface",
+        "not dirty tree repair",
+        "not evidence support",
+        "not execution permission",
+        "not formal vault access",
+        "not formal vault state",
+        "not mainline readiness",
+        "not merge approval",
+        "not reviewed knowledge",
+        "not user instruction",
+        "not user wording storage"
+      ]
+    }
+  }
+}

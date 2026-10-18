@@ -1,0 +1,19 @@
+{
+  "source_url": "https://www.bilibili.com/video/BV1c5G26YEf7/?spm_id_from=333.1387.favlist.content.click&vd_source=db18be3c563dfea2398744bc3cacb799",
+  "bvid": "BV1c5G26YEf7",
+  "aid": 116646597367108,
+  "cid": 38653986535,
+  "transcript_method": "local_asr",
+  "asr_engine": "faster-whisper",
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16",
+  "language": "zh",
+  "language_probability": 1,
+  "duration": 485.0133125,
+  "segment_count": 264,
+  "text_chars": 2608,
+  "elapsed_seconds": 44.96,
+  "captured_at": "2026-06-04T11:18:49.886754+00:00",
+  "quality_notes": "local ASR from public Bilibili audio; raw source text, not reviewed knowledge; proper nouns need confidence checks"
+}

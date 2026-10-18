@@ -1,0 +1,55 @@
+{
+  "record_kind": "sandbox_original_20_operator_status_surface_contract",
+  "slice_id": "2026-06-19-p2-74-original-20-operator-status-surface-sandbox",
+  "contract_version": "1.0",
+  "expected_numbers": {
+    "original_items": 20,
+    "legacy_product_acceptance_evidence": 20,
+    "legacy_core_pass_evidence": 20,
+    "old_file_current_strict_final_gate": 0,
+    "sidecar_closeout_passed": 20,
+    "dry_run_status_changes": 75,
+    "old_slice_writes_applied": 0
+  },
+  "required_status_cards": [
+    "product_grade_sidecar_ready",
+    "old_files_not_current_strict_complete",
+    "old_file_normalization_requires_user_approval",
+    "mainline_not_authorized"
+  ],
+  "required_decision_options": [
+    "continue_with_sidecar_recloseout",
+    "request_explicit_old_file_status_normalization_approval",
+    "do_not_claim_all_old_files_strict_complete",
+    "do_not_merge_mainline"
+  ],
+  "authority_flags": {
+    "status_surface_only": true,
+    "old_slice_write_allowed": false,
+    "old_slice_writes_applied": 0,
+    "normalization_applied": false,
+    "user_approval_collected": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "claims_all_old_files_strict_complete": false
+  },
+  "required_fixture_ids": [
+    "plain-language-status-buckets",
+    "blocked-old-file-normalization",
+    "allowed-sidecar-continuation",
+    "machine-human-output-parity"
+  ],
+  "required_failure_case_ids": [
+    "OS-FAIL-01-old-files-claimed-strict-complete",
+    "OS-FAIL-02-sidecar-pass-treated-as-mainline",
+    "OS-FAIL-03-user-approval-inferred",
+    "OS-FAIL-04-old-slice-write-applied",
+    "OS-FAIL-05-normalization-applied",
+    "OS-FAIL-06-action-basis-created",
+    "OS-FAIL-07-missing-plain-language-card",
+    "OS-FAIL-08-decision-option-drift"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "fixture_id": "rollback-manifest-complete",
+  "expected": {
+    "rollback_entry_count": 75,
+    "all_rollback_entries_restore_manifest_current_status": true,
+    "rollback_applied": false
+  }
+}

@@ -1,0 +1,1 @@
+{"case_id":"action-purpose-claims-ready","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/steps/10/purpose","value":"Makes the workflow action ready for use."}]}

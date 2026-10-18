@@ -1,0 +1,259 @@
+{
+  "passed": true,
+  "good_annotation_count": 35,
+  "errors": [],
+  "warnings": [
+    "samples/sources/web-annotation-model.md: 17 active annotations; source digest route present",
+    "selector duplicate pressure 7x: samples/sources/obsidian-workbench.md|TextQuoteSelector|A Base view is a surface for work.|159|193|None|None|None|None",
+    "selector duplicate pressure 5x: samples/sources/rag-attribution-notes.md|TextQuoteSelector|Citation correctness is not the same as faithfulness.|102|155",
+    "selector duplicate pressure 11x: samples/sources/web-annotation-model.md|TextQuoteSelector|A source annotation points to a source segment.|33|80|None|Non"
+  ],
+  "views": {
+    "ai_export_blocked": [
+      "ann-web-004",
+      "ann-web-005",
+      "ann-web-006"
+    ],
+    "ai_export_ready": [
+      "ann-obsidian-001",
+      "ann-obsidian-002",
+      "ann-obsidian-003",
+      "ann-obsidian-004",
+      "ann-obsidian-005",
+      "ann-obsidian-006",
+      "ann-obsidian-007",
+      "ann-obsidian-008",
+      "ann-rag-001",
+      "ann-rag-002",
+      "ann-rag-003",
+      "ann-rag-004",
+      "ann-rag-005",
+      "ann-video-001",
+      "ann-video-002",
+      "ann-video-003",
+      "ann-video-004",
+      "ann-web-001",
+      "ann-web-002",
+      "ann-web-003",
+      "ann-web-007",
+      "ann-web-008",
+      "ann-web-009",
+      "ann-web-010",
+      "ann-web-011",
+      "ann-web-012",
+      "ann-web-013",
+      "ann-web-014",
+      "ann-web-015",
+      "ann-web-018"
+    ],
+    "annotation_inbox": [
+      "ann-obsidian-001",
+      "ann-obsidian-002",
+      "ann-obsidian-003",
+      "ann-obsidian-004",
+      "ann-obsidian-005",
+      "ann-obsidian-006",
+      "ann-obsidian-007",
+      "ann-obsidian-008",
+      "ann-rag-001",
+      "ann-rag-002",
+      "ann-rag-003",
+      "ann-rag-004",
+      "ann-rag-005",
+      "ann-video-001",
+      "ann-video-002",
+      "ann-video-003",
+      "ann-video-004",
+      "ann-web-001",
+      "ann-web-002",
+      "ann-web-003",
+      "ann-web-007",
+      "ann-web-008",
+      "ann-web-009",
+      "ann-web-010",
+      "ann-web-011",
+      "ann-web-012",
+      "ann-web-013",
+      "ann-web-014",
+      "ann-web-015",
+      "ann-web-018"
+    ],
+    "cold_archive": [
+      "ann-web-017"
+    ],
+    "needs_anchor_repair": [
+      "ann-web-004",
+      "ann-web-005",
+      "ann-web-006"
+    ],
+    "project_lens": [
+      "ann-obsidian-002",
+      "ann-obsidian-004",
+      "ann-obsidian-006",
+      "ann-rag-001",
+      "ann-rag-002",
+      "ann-rag-003",
+      "ann-video-001",
+      "ann-video-002",
+      "ann-web-001",
+      "ann-web-002",
+      "ann-web-003",
+      "ann-web-008",
+      "ann-web-009",
+      "ann-web-010"
+    ],
+    "routing_queue": [
+      "ann-obsidian-002",
+      "ann-obsidian-004",
+      "ann-rag-001",
+      "ann-rag-002",
+      "ann-rag-004",
+      "ann-rag-005",
+      "ann-video-003",
+      "ann-web-004",
+      "ann-web-005",
+      "ann-web-006",
+      "ann-web-007",
+      "ann-web-016"
+    ],
+    "scale_debt": [
+      "ann-obsidian-001",
+      "ann-obsidian-002",
+      "ann-obsidian-003",
+      "ann-obsidian-004",
+      "ann-obsidian-006",
+      "ann-obsidian-007",
+      "ann-obsidian-008",
+      "ann-rag-001",
+      "ann-rag-002",
+      "ann-rag-003",
+      "ann-rag-004",
+      "ann-rag-005",
+      "ann-web-001",
+      "ann-web-002",
+      "ann-web-003",
+      "ann-web-004",
+      "ann-web-005",
+      "ann-web-006",
+      "ann-web-007",
+      "ann-web-008",
+      "ann-web-009",
+      "ann-web-010",
+      "ann-web-011",
+      "ann-web-012",
+      "ann-web-013",
+      "ann-web-014",
+      "ann-web-015",
+      "ann-web-016",
+      "ann-web-018"
+    ],
+    "source_drilldown": [
+      "ann-obsidian-001",
+      "ann-obsidian-002",
+      "ann-obsidian-003",
+      "ann-obsidian-004",
+      "ann-obsidian-005",
+      "ann-obsidian-006",
+      "ann-obsidian-007",
+      "ann-obsidian-008",
+      "ann-rag-001",
+      "ann-rag-002",
+      "ann-rag-003",
+      "ann-rag-004",
+      "ann-rag-005",
+      "ann-video-001",
+      "ann-video-002",
+      "ann-video-003",
+      "ann-video-004",
+      "ann-web-001",
+      "ann-web-002",
+      "ann-web-003",
+      "ann-web-004",
+      "ann-web-005",
+      "ann-web-006",
+      "ann-web-007",
+      "ann-web-008",
+      "ann-web-009",
+      "ann-web-010",
+      "ann-web-011",
+      "ann-web-012",
+      "ann-web-013",
+      "ann-web-014",
+      "ann-web-015",
+      "ann-web-016",
+      "ann-web-018"
+    ],
+    "stale_anchor_queue": [
+      "ann-web-016"
+    ],
+    "support_checked_audit": [
+      "ann-rag-003"
+    ]
+  },
+  "mutation_annotation_count": 7,
+  "mutation_annotations_caught": 7,
+  "mutation_results": [
+    {
+      "file": "samples/mutations/ann-web-007.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "samples/mutations/ann-web-007.md: duplicate annotation_id collides with good corpus"
+      ]
+    },
+    {
+      "file": "samples/mutations/mut-action-basis.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "samples/mutations/mut-action-basis.md: action_basis_allowed must be false"
+      ]
+    },
+    {
+      "file": "samples/mutations/mut-broken-ready.md",
+      "caught": true,
+      "error_count": 2,
+      "errors": [
+        "samples/mutations/mut-broken-ready.md: broken must be in repair lifecycle or archived",
+        "samples/mutations/mut-broken-ready.md: broken must have high/blocked/repair review pressure"
+      ]
+    },
+    {
+      "file": "samples/mutations/mut-missing-warning.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "samples/mutations/mut-missing-warning.md: warning_code must be annotation_not_support"
+      ]
+    },
+    {
+      "file": "samples/mutations/mut-project-borrow-scope.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "samples/mutations/mut-project-borrow-scope.md: forbidden field present: project_borrow_scope"
+      ]
+    },
+    {
+      "file": "samples/mutations/mut-support-no-packet.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "samples/mutations/mut-support-no-packet.md: support_checked true requires evidence_packet_ref"
+      ]
+    },
+    {
+      "file": "samples/mutations/mut-truth-mutation.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "samples/mutations/mut-truth-mutation.md: truth_mutation_allowed must be false"
+      ]
+    }
+  ],
+  "bad_context_pack_caught": true,
+  "bad_context_pack_errors": [
+    "source_annotation cannot be selected as support",
+    "coverage_map support_refs cannot point to source_annotation"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "xy-241/CS-Notes",
+  "source_url": "https://github.com/xy-241/CS-Notes",
+  "checked_commit": "2a4f9dbf7aee76bca161b38616dbe1b8b8a877f9",
+  "checked_at": "2026-06-11",
+  "inspection_method": "local clone with Windows checkout failures; used git object inspection for README, Quartz config, workflow, and tracked paths",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "public-navigator",
+      "why": "Describes second-brain structure and exposes a generated Notes Navigator grouped by domain and tag counts."
+    },
+    {
+      "path": "quartz.config.ts",
+      "kind": "publish-config",
+      "why": "Defines Quartz publication settings, ignored private/workbench folders, sitemap/RSS, and content index behavior."
+    },
+    {
+      "path": ".github/workflows/ci.yaml",
+      "kind": "inherited-workflow-risk",
+      "why": "Build/test workflow is still gated to the upstream jackyzha0/quartz repository."
+    },
+    {
+      "path": ".gitignore",
+      "kind": "tool-state-boundary",
+      "why": "Excludes Quartz cache, Make.md space files, and local vault artifacts."
+    },
+    {
+      "path": "content/Bash/assets/[invalid Windows exec example].png; content/cp/number_theory/(CodeForces) A Balanced Problem set?.md",
+      "kind": "path-portability-risk",
+      "why": "Tracked filenames triggered Windows checkout failures and required object-mode inspection."
+    }
+  ],
+  "observed_counts": {
+    "top_level_domains_in_readme_navigator": 12,
+    "representative_system_design_notes_count": 24,
+    "representative_aws_notes_count": 22,
+    "representative_docker_notes_count": 12
+  },
+  "known_limits": [
+    "Generated navigator and graph view are activation aids, not reviewed relations.",
+    "Some tracked paths are not portable to Windows.",
+    "Inherited Quartz workflows may not apply to this downstream repository."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

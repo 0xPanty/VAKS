@@ -1,0 +1,6 @@
+{
+  "case_id": "protected-paths-excluded",
+  "tools_templates_edits_allowed": false,
+  "wiki_truth_layer_edits_allowed": false,
+  "mainline_edits_allowed": false
+}

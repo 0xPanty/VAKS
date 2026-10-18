@@ -1,0 +1,203 @@
+{
+  "record_kind": "sandbox_user_response_classifier_dry_run_contract",
+  "slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+  "source_slice_id": "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+  "truth_boundary": "dry_run_classifier_not_user_decision_or_execution_authority",
+  "status": "built_pending_review",
+  "purpose": "classify a future user reply to the p2-51 decision packet without executing any option",
+  "source_final_gate_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox\\artifact\\verify_user_decision_no_auto_advance_guard.py --final-gate",
+  "classification_cases": [
+    "no_reply",
+    "explicit_A",
+    "explicit_B",
+    "explicit_C",
+    "explicit_D",
+    "ambiguous_reply",
+    "multiple_options",
+    "approval_with_execution_words"
+  ],
+  "response_policy": [
+    {
+      "case_id": "no_reply",
+      "result": "A_keep_sandbox_reference",
+      "safe_next_step": "no_action",
+      "automatic_execution": false,
+      "requires_clarification": false,
+      "requires_new_scope": false,
+      "requires_separate_user_approval": false,
+      "requires_explicit_allowed_paths": false
+    },
+    {
+      "case_id": "explicit_A",
+      "result": "A_keep_sandbox_reference",
+      "safe_next_step": "acknowledge_sandbox_reference_only",
+      "automatic_execution": false,
+      "requires_clarification": false,
+      "requires_new_scope": false,
+      "requires_separate_user_approval": false,
+      "requires_explicit_allowed_paths": false
+    },
+    {
+      "case_id": "explicit_B",
+      "result": "future_readonly_promotion_review_planning_request_only",
+      "safe_next_step": "ask_user_for_separate_read_only_review_planning_scope",
+      "automatic_execution": false,
+      "requires_clarification": false,
+      "requires_new_scope": true,
+      "requires_separate_user_approval": true,
+      "requires_explicit_allowed_paths": false
+    },
+    {
+      "case_id": "explicit_C",
+      "result": "future_mainline_merge_scope_question_only",
+      "safe_next_step": "ask_user_for_separate_allowed_paths_and_scope",
+      "automatic_execution": false,
+      "requires_clarification": false,
+      "requires_new_scope": true,
+      "requires_separate_user_approval": true,
+      "requires_explicit_allowed_paths": true
+    },
+    {
+      "case_id": "explicit_D",
+      "result": "park_or_reject_sandbox_chain",
+      "safe_next_step": "acknowledge_park_or_reject_status",
+      "automatic_execution": false,
+      "requires_clarification": false,
+      "requires_new_scope": false,
+      "requires_separate_user_approval": false,
+      "requires_explicit_allowed_paths": false
+    },
+    {
+      "case_id": "ambiguous_reply",
+      "result": "clarify_required",
+      "safe_next_step": "ask_one_short_clarification",
+      "automatic_execution": false,
+      "requires_clarification": true,
+      "requires_new_scope": false,
+      "requires_separate_user_approval": false,
+      "requires_explicit_allowed_paths": false
+    },
+    {
+      "case_id": "multiple_options",
+      "result": "clarify_required",
+      "safe_next_step": "ask_user_to_choose_one_option",
+      "automatic_execution": false,
+      "requires_clarification": true,
+      "requires_new_scope": false,
+      "requires_separate_user_approval": false,
+      "requires_explicit_allowed_paths": false
+    },
+    {
+      "case_id": "approval_with_execution_words",
+      "result": "stop_and_require_new_scope",
+      "safe_next_step": "stop_and_ask_for_separate_explicit_scope",
+      "automatic_execution": false,
+      "requires_clarification": true,
+      "requires_new_scope": true,
+      "requires_separate_user_approval": true,
+      "requires_explicit_allowed_paths": true
+    }
+  ],
+  "token_policy": {
+    "option_tokens": {
+      "A": [
+        "a",
+        "option a",
+        "choose a",
+        "选a",
+        "选择a",
+        "保留参考",
+        "只保留",
+        "reference only"
+      ],
+      "B": [
+        "b",
+        "option b",
+        "choose b",
+        "选b",
+        "选择b",
+        "只读规划"
+      ],
+      "C": [
+        "c",
+        "option c",
+        "choose c",
+        "选c",
+        "选择c",
+        "主线评审"
+      ],
+      "D": [
+        "d",
+        "option d",
+        "choose d",
+        "选d",
+        "选择d",
+        "park",
+        "reject",
+        "搁置",
+        "拒绝"
+      ]
+    },
+    "execution_boundary_tokens": [
+      "commit",
+      "push",
+      "sync",
+      "merge",
+      "promote",
+      "promotion",
+      "release",
+      "write",
+      "execute",
+      "run",
+      "start",
+      "open",
+      "合并",
+      "入主线",
+      "合并主线",
+      "同步",
+      "提交",
+      "推送",
+      "执行",
+      "开工",
+      "开始",
+      "落地",
+      "写入",
+      "发布"
+    ]
+  },
+  "dry_run_output_contract": {
+    "input_text": "original user text or empty string",
+    "normalized_text": "lowercase normalized text",
+    "detected_options": "array of A/B/C/D",
+    "detected_execution_tokens": "array of execution boundary tokens",
+    "case_id": "one classification case",
+    "result": "policy result",
+    "safe_next_step": "safe next message category",
+    "automatic_execution": false,
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis"
+    ]
+  },
+  "ordinary_agent_usage": {
+    "classify_example": "python -B artifact/classify_user_response_dry_run.py --text \"B\"",
+    "default_verifier": "python -B artifact/verify_user_response_classifier_dry_run.py",
+    "upstream_verifier": "python -B artifact/verify_user_response_classifier_dry_run.py --run-upstream",
+    "final_gate": "python -B artifact/verify_user_response_classifier_dry_run.py --final-gate",
+    "rebuild": "Builder-only: python -B artifact/build_user_response_classifier_dry_run.py"
+  },
+  "required_non_claims": [
+    "The classifier is not a user decision.",
+    "The classifier is not execution authority.",
+    "The classifier cannot approve merge, promotion, sync, commit, push, reviewed knowledge, evidence support, or action basis.",
+    "Ambiguous, multiple-option, and execution-word replies require stop or clarification.",
+    "B and C remain future scoped conversations, not work started by classification."
+  ]
+}

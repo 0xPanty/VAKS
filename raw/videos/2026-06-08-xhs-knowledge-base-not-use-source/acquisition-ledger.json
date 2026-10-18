@@ -1,0 +1,45 @@
+{
+  "source_url": "http://xhslink.com/o/6PgPVcxjWYw",
+  "resolved_url": "https://www.xiaohongshu.com/discovery/item/6a25a051000000001700a0df",
+  "attempts": [
+    {
+      "step": "resolve_short_link",
+      "status": "success",
+      "method": "public HTTP redirect",
+      "cookies_used": false
+    },
+    {
+      "step": "fetch_public_ssr_metadata",
+      "status": "success",
+      "method": "public webpage SSR state",
+      "cookies_used": false
+    },
+    {
+      "step": "public_subtitle_lookup",
+      "status": "not_found",
+      "method": "SSR state inspection",
+      "cookies_used": false
+    },
+    {
+      "step": "download_public_video",
+      "status": "success",
+      "method": "public h264 masterUrl",
+      "cookies_used": false
+    },
+    {
+      "step": "local_asr",
+      "status": "success",
+      "method": "faster-whisper small cuda float16",
+      "cookies_used": false,
+      "cloud_api_used": false
+    }
+  ],
+  "scratch_path": "C:\\Users\\Administrator\\.codex\\video-research\\2026-06-08-xhs-knowledge-base-not-use-source",
+  "retained_project_artifacts": [
+    "raw/videos/2026-06-08-xhs-knowledge-base-not-use-source/transcript.txt",
+    "raw/videos/2026-06-08-xhs-knowledge-base-not-use-source/segments.md",
+    "raw/videos/2026-06-08-xhs-knowledge-base-not-use-source/transcript-meta.json",
+    "raw/videos/2026-06-08-xhs-knowledge-base-not-use-source/acquisition-ledger.json"
+  ],
+  "boundary": "ASR/subtitle text is raw source text, not reviewed evidence or action basis"
+}

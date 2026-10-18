@@ -1,0 +1,48 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "mayfrost/guides",
+  "source_url": "https://github.com/mayfrost/guides/tree/master",
+  "checked_commit": "bd8efbcdc4315f659953766249990d761fefc223",
+  "checked_at": "2026-06-11",
+  "inspection_method": "local git checkout; inspected README, CHECKLIST.md, CROSS-COMPILING.md, SECURITY.md, and root guide inventory",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "source-boundary",
+      "why": "Declares FDL license and rewrite-in-progress warning."
+    },
+    {
+      "path": "CHECKLIST.md",
+      "kind": "risk-ladder",
+      "why": "Organizes security measures by increasing difficulty and risk."
+    },
+    {
+      "path": "SECURITY.md",
+      "kind": "router",
+      "why": "Routes security guidance to the checklist."
+    },
+    {
+      "path": "CROSS-COMPILING.md",
+      "kind": "operational-runbook",
+      "why": "Uses TOC, target assumptions, placeholders, command sequences, and options for ARM cross-compilation."
+    },
+    {
+      "path": "ALTERNATIVES.md; DISTROS.md; NETWORKING.md; INSTALLATION.md; X.md",
+      "kind": "domain-guide-set",
+      "why": "Shows small root-level domain guides for system operations."
+    }
+  ],
+  "observed_counts": {
+    "root_markdown_guides": 17,
+    "security_levels_in_checklist": 55
+  },
+  "known_limits": [
+    "README says rewrite is in progress.",
+    "Some advice is old, ideological, or operationally risky.",
+    "Commands can be destructive and need current environment verification."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

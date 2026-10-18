@@ -1,0 +1,8 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "hash-as-support",
+  "expected_valid": false,
+  "expected_codes": ["US_HASH_AS_SUPPORT"],
+  "allowed_extra_codes": ["US_AUTHORITY_CONFUSION"],
+  "patch": {"guardrails": {"hash_match_is_evidence_support": true}}
+}

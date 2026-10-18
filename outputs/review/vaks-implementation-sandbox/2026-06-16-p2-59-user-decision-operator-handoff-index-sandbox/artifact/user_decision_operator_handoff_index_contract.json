@@ -1,0 +1,93 @@
+{
+  "record_kind": "sandbox_user_decision_operator_handoff_index_contract",
+  "slice_id": "2026-06-16-p2-59-user-decision-operator-handoff-index-sandbox",
+  "truth_boundary": "operator_handoff_index_not_user_decision_or_execution_authority",
+  "status": "built_pending_review",
+  "purpose": "provide a compact sandbox-only operator handoff index for p2-51 through p2-58",
+  "expected_entry_count": 8,
+  "latest_source_final_gate_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox\\artifact\\verify_static_boundary_scan_regression.py --final-gate",
+  "source_slices": [
+    {
+      "slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+      "label": "user decision request packet",
+      "operator_use": "read available decision options only",
+      "final_gate_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-16-p2-51-user-decision-request-packet-sandbox\\artifact\\verify_user_decision_request_packet.py --final-gate",
+      "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "install_dependencies", "start_background_service", "install_hooks", "use_mcp_write_tool", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+    },
+    {
+      "slice_id": "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+      "label": "no auto advance guard",
+      "operator_use": "confirm selected option still requires scoped follow-up",
+      "final_gate_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox\\artifact\\verify_user_decision_no_auto_advance_guard.py --final-gate",
+      "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "install_dependencies", "start_background_service", "install_hooks", "use_mcp_write_tool", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+    },
+    {
+      "slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+      "label": "user response classifier dry-run",
+      "operator_use": "classify A/B/C/D/ambiguous/execution-word replies without action",
+      "final_gate_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-16-p2-53-user-response-classifier-dry-run-sandbox\\artifact\\verify_user_response_classifier_dry_run.py --final-gate",
+      "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "install_dependencies", "start_background_service", "install_hooks", "use_mcp_write_tool", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+    },
+    {
+      "slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+      "label": "safe response renderer dry-run",
+      "operator_use": "render safe Chinese next reply without action",
+      "final_gate_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox\\artifact\\verify_safe_user_response_renderer.py --final-gate",
+      "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "install_dependencies", "start_background_service", "install_hooks", "use_mcp_write_tool", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+    },
+    {
+      "slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+      "label": "e2e dry-run simulator",
+      "operator_use": "simulate classifier to renderer chain without execution",
+      "final_gate_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox\\artifact\\verify_user_decision_e2e_simulator.py --final-gate",
+      "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "install_dependencies", "start_background_service", "install_hooks", "use_mcp_write_tool", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+    },
+    {
+      "slice_id": "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox",
+      "label": "demo transcript smoke runner",
+      "operator_use": "show human-readable non-executing transcript",
+      "final_gate_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox\\artifact\\verify_user_decision_demo_transcript_smoke_runner.py --final-gate",
+      "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "install_dependencies", "start_background_service", "install_hooks", "use_mcp_write_tool", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+    },
+    {
+      "slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+      "label": "user decision chain regression bundle",
+      "operator_use": "prove p2-51 through p2-56 guard chain still passes",
+      "final_gate_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox\\artifact\\verify_user_decision_chain_regression_bundle.py --final-gate",
+      "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "install_dependencies", "start_background_service", "install_hooks", "use_mcp_write_tool", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+    },
+    {
+      "slice_id": "2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox",
+      "label": "static boundary scan regression",
+      "operator_use": "prove p2-57 static boundary scan regression still passes",
+      "final_gate_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-16-p2-58-user-decision-static-boundary-scan-regression-sandbox\\artifact\\verify_static_boundary_scan_regression.py --final-gate",
+      "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "install_dependencies", "start_background_service", "install_hooks", "use_mcp_write_tool", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+    }
+  ],
+  "output_contract": {
+    "automatic_execution": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "action_basis_ready": false,
+    "source_chain_ready_before_self_acceptance": true,
+    "handoff_ready_requires_p2_59_self_reports": true,
+    "must_not": ["execute_option", "merge_mainline", "promote", "sync_obsidian", "commit", "push", "install_dependencies", "start_background_service", "install_hooks", "use_mcp_write_tool", "write_reviewed_knowledge", "create_evidence_support", "create_action_basis", "start_future_slice_by_inference"]
+  },
+  "required_non_claims": [
+    "This index is not a user decision.",
+    "This index is not execution authority.",
+    "This index is not mainline approval.",
+    "This index is not promotion approval.",
+    "This index is not Obsidian sync approval.",
+    "This index is not reviewed knowledge.",
+    "This index is not evidence support.",
+    "This index is not action basis."
+  ],
+  "ordinary_agent_usage": {
+    "run_index": "python -B artifact/run_user_decision_operator_handoff_index.py",
+    "run_markdown": "python -B artifact/run_user_decision_operator_handoff_index.py --markdown",
+    "default_verifier": "python -B artifact/verify_user_decision_operator_handoff_index.py",
+    "final_gate": "python -B artifact/verify_user_decision_operator_handoff_index.py --final-gate",
+    "rebuild": "Builder-only: python -B artifact/build_user_decision_operator_handoff_index.py"
+  }
+}

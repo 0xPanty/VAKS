@@ -1,0 +1,36 @@
+{
+  "record_kind": "sandbox_strict_status_package_contract",
+  "slice_id": "2026-06-16-p2-67-user-decision-strict-status-package-sandbox",
+  "source_slice_id": "2026-06-16-p2-66-user-decision-chain-hardening-readiness-sandbox",
+  "purpose": "package strict frontmatter status parsing for sandbox reuse",
+  "package_api": {
+    "parse_strict_frontmatter_status": {
+      "input": "markdown text",
+      "output": "dict(valid, status, errors, body_status_mentions)"
+    },
+    "status_matches": {
+      "input": "markdown text and expected status",
+      "output": "bool"
+    }
+  },
+  "behavior_contract": {
+    "builder_writes_manifest_outputs": true,
+    "builder_write_scope": "this sandbox artifact directory only",
+    "verifier_read_only": true
+  },
+  "output_contract": {
+    "dependency_install_required": false,
+    "network_required": false,
+    "mcp_required": false,
+    "background_service_required": false,
+    "automatic_execution": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "formal_vault_ready": false,
+    "obsidian_sync_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "user_approval_collected": false
+  }
+}

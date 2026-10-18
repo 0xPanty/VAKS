@@ -1,0 +1,32 @@
+{
+  "run_id": "run-003-missing-anchor-review",
+  "claim_counts": {
+    "total": 1,
+    "supported_full": 0,
+    "supported_partial": 0,
+    "missing_anchor": 1,
+    "scope_limited": 0,
+    "unresolved_conflict": 0
+  },
+  "sufficiency_result": "insufficient",
+  "answer_policy": "review",
+  "expected_answer_policy": "review",
+  "expected_answer_policy_met": true,
+  "blocking_gaps": [
+    "current company expense policy source",
+    "China region scope",
+    "sales employee scope",
+    "client dinner reimbursement conditions"
+  ],
+  "unresolved_conflicts": [],
+  "review_required": true,
+  "action_use_allowed": false,
+  "action_readiness": "not_assessed",
+  "assessment_authority": "non_authoritative",
+  "not_proven": [
+    "truth",
+    "reviewer_approval",
+    "promotion",
+    "action_basis"
+  ]
+}

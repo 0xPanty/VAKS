@@ -1,0 +1,15 @@
+{
+  "transcript_quality": "medium",
+  "transcript_method": "local_asr_faster_whisper",
+  "media_retention": "temporary_mp4_and_wav_deleted_before_writeback",
+  "language": "zh",
+  "source_scratch": "C:\\Users\\Administrator\\.codex\\video-research\\xhs-6a23-feasibility",
+  "notes": [
+    "ASR contains visible errors; key entities require metadata/repo confirmation.",
+    "No cookies, no private account access, no cloud ASR."
+  ],
+  "engine": "faster_whisper",
+  "device": "cuda",
+  "created_at": "2026-06-08T05:29:58.4983529+08:00",
+  "model": "base"
+}

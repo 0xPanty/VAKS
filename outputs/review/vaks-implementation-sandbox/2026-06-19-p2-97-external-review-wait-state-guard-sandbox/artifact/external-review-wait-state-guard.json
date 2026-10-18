@@ -1,0 +1,53 @@
+{
+  "record_kind": "external_review_wait_state_guard",
+  "slice_id": "2026-06-19-p2-97-external-review-wait-state-guard-sandbox",
+  "created_at": "2026-06-19T10:21:23.119492+00:00",
+  "source_inputs": {
+    "p2_95_goal_state_ledger": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-95-goal-state-external-review-waiting-ledger-sandbox/artifact/goal-state-external-review-waiting-ledger.json",
+    "p2_96_opus_result_intake_status": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-96-opus-result-intake-skeleton-sandbox/artifact/opus-result-intake-status.json",
+    "p2_94_opus_submission_prompt": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-94-opus-review-submission-packet-sandbox/artifact/opus-review-submission-prompt.md"
+  },
+  "summary": {
+    "guard_state": "STOP_WAIT_EXTERNAL_OPUS_REVIEW",
+    "sandbox_closeout_evidence_product_grade": true,
+    "result_intake_ready": true,
+    "actual_opus_result_present": false,
+    "external_opus_review_pending": true,
+    "opus_approval_claimed": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "commit_push_sync_ready": false,
+    "goal_complete_now": false,
+    "may_continue_sandbox_preparation": true,
+    "may_merge_mainline": false,
+    "may_claim_complete": false
+  },
+  "no_go_conditions": [
+    "No valid external Opus result has been received.",
+    "Opus approval is not claimed.",
+    "User mainline approval has not been granted.",
+    "Sandbox closeout evidence is not reviewed knowledge, evidence support, or action basis."
+  ],
+  "required_next_actions": [
+    "Run external Opus review using outputs/review/vaks-implementation-sandbox/2026-06-19-p2-94-opus-review-submission-packet-sandbox/artifact/opus-review-submission-prompt.md.",
+    "When a real response exists, create a new sandbox-only result intake slice.",
+    "Validate the raw response against the p2-96 intake schema and validator.",
+    "Run Reviewer, Boundary Auditor, and GPT-5.5 Product Acceptance before any further claim."
+  ],
+  "authority_flags": {
+    "stop_wait_guard": true,
+    "actual_opus_result_present": false,
+    "opus_approval_claimed": false,
+    "mainline_merge": false,
+    "promotion": false,
+    "reviewed_knowledge": false,
+    "evidence_support": false,
+    "action_basis": false,
+    "user_mainline_approval": false,
+    "commit_push_sync": false,
+    "goal_complete_now": false
+  }
+}

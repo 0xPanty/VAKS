@@ -1,0 +1,21 @@
+{
+  "case_id": "prototype-html-missing-attrs",
+  "note": "HTML lacks boundary attributes.",
+  "prototype_tamper": {
+    "kind": "html_replace",
+    "file": "request-screening-inspector.html",
+    "content": "<html><body>Screening inspector</body></html>"
+  },
+  "expected_errors": [
+    "html_missing_attr:data-sandbox-only=\"true\"",
+    "html_missing_attr:data-screening-only=\"true\"",
+    "html_missing_attr:data-non-executable=\"true\"",
+    "html_missing_attr:data-no-formal-vault-access=\"true\"",
+    "html_missing_attr:data-no-write=\"true\"",
+    "html_missing_attr:data-no-sync=\"true\"",
+    "html_missing_attr:data-no-authority=\"true\"",
+    "html_missing_attr:data-no-permission=\"true\"",
+    "html_missing_attr:data-no-actual-user-wording=\"true\"",
+    "html_missing_attr:data-no-submission=\"true\""
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "ByteByteGoHq/system-design-101",
+  "source_url": "https://github.com/ByteByteGoHq/system-design-101",
+  "checked_commit": "b28380a4710c5ec9638ec037d4168e288f334cba",
+  "checked_at": "2026-06-11",
+  "inspection_method": "shallow git clone plus README, category frontmatter, guide frontmatter/content, CONTRIBUTING, and tree inspection",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "index",
+      "why": "Large generated-looking table of contents organized by category and guide links."
+    },
+    {
+      "path": "data/categories/software-architecture.md",
+      "kind": "category-frontmatter",
+      "why": "Category metadata with title, description, image, icon, and sort order."
+    },
+    {
+      "path": "data/guides/a-cheat-sheet-for-system-designs.md",
+      "kind": "guide-frontmatter",
+      "why": "Guide metadata with title, description, image, createdAt, draft, categories, tags, and visual-first content."
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "kind": "governance",
+      "why": "Contribution rules require single-topic PRs, separate image issues, and no AI-generated content."
+    }
+  ],
+  "known_limits": [
+    "This source teaches system-design content, not knowledge-system review.",
+    "Visual explanations are useful for comprehension but are not evidence support for VAKS architecture.",
+    "The source's technical claims were not independently verified in this intake."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

@@ -1,0 +1,55 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "microsoft/DevCookbook",
+  "source_url": "https://github.com/microsoft/DevCookbook",
+  "checked_commit": "ed8130e14ae4e2a19d50a5f648b3cfdf21e5920a",
+  "checked_at": "2026-06-11",
+  "inspection_method": "local git checkout; inspected README, template, parser, recipe model, compile workflow, generated docs, and parser tests",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "project-identity",
+      "why": "Describes DevCookbook as an open source cookbook for developers and routes contributors to Template.md and the contribution guide."
+    },
+    {
+      "path": "Template.md",
+      "kind": "markdown-template",
+      "why": "Defines frontmatter fields and required sections for a contributed recipe."
+    },
+    {
+      "path": "recipe_compiler/parse.py",
+      "kind": "markdown-parser",
+      "why": "Parses Markdown/frontmatter into a typed Recipe object by extracting H1, quote, Ingredients, and Directions."
+    },
+    {
+      "path": "recipe_compiler/recipe.py",
+      "kind": "typed-model",
+      "why": "Defines the Recipe dataclass and deterministic slug property."
+    },
+    {
+      "path": "tests/test_parse.py",
+      "kind": "parser-tests",
+      "why": "Tests extraction of recipe name, quote, ingredients, and instructions from sample Markdown."
+    },
+    {
+      "path": ".github/workflows/compile.yml",
+      "kind": "compile-automation",
+      "why": "Builds generated docs from Markdown through Python compiler and auto-commits outputs."
+    }
+  ],
+  "observed_counts": {
+    "recipe_markdown_files": 11,
+    "compiler_files": 8,
+    "test_files": 5,
+    "generated_doc_files": 27
+  },
+  "known_limits": [
+    "Auto-committing generated docs is risky for VAKS mainline and should not be copied directly.",
+    "Parser success proves format extraction, not evidence support.",
+    "The site is a playful cookbook, not a reviewed knowledge base."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

@@ -1,0 +1,116 @@
+{
+  "record_kind": "external_opus_dispatch_failure_cases",
+  "slice_id": "2026-06-19-p2-106-external-opus-dispatch-packet-sandbox",
+  "failure_cases": [
+    {
+      "id": "zip_hash_mismatch",
+      "mutation": "zip_hash_mismatch",
+      "expected_failure": "zip_hash_not_verified"
+    },
+    {
+      "id": "source_message_hash_mismatch",
+      "mutation": "source_message_hash_mismatch",
+      "expected_failure": "source_message_hash_not_verified"
+    },
+    {
+      "id": "source_message_sha_field_mismatch",
+      "mutation": "source_message_sha_field_mismatch",
+      "expected_failure": "source_message_sha_mismatch"
+    },
+    {
+      "id": "wrong_operator_message_path",
+      "mutation": "wrong_operator_message_path",
+      "expected_failure": "source_input_path_mismatch:operator_submission_message"
+    },
+    {
+      "id": "wrong_readiness_cockpit_path",
+      "mutation": "wrong_readiness_cockpit_path",
+      "expected_failure": "source_input_path_mismatch:readiness_cockpit"
+    },
+    {
+      "id": "wrong_post_response_validator",
+      "mutation": "wrong_post_response_validator",
+      "expected_failure": "post_response_validator_mismatch"
+    },
+    {
+      "id": "dispatch_not_ready",
+      "mutation": "dispatch_not_ready",
+      "expected_failure": "dispatch_not_ready"
+    },
+    {
+      "id": "chain_not_ready",
+      "mutation": "chain_not_ready",
+      "expected_failure": "readiness_input_not_true:chain_ready_to_submit_external_opus"
+    },
+    {
+      "id": "missing_required_token",
+      "mutation": "remove_required_token",
+      "expected_failure": "required_tokens_mismatch"
+    },
+    {
+      "id": "prompt_missing_boundary",
+      "mutation": "prompt_missing_boundary",
+      "expected_failure": "message_missing_phrase:not an Opus response"
+    },
+    {
+      "id": "claims_external_submission",
+      "mutation": "external_submission_performed_true",
+      "expected_failure": "authority_overclaim:external_submission_performed"
+    },
+    {
+      "id": "claims_actual_opus_result",
+      "mutation": "actual_opus_result_present_true",
+      "expected_failure": "authority_overclaim:actual_opus_result_present"
+    },
+    {
+      "id": "claims_validated_opus_pass",
+      "mutation": "validated_opus_pass_present_true",
+      "expected_failure": "authority_overclaim:validated_opus_pass_present"
+    },
+    {
+      "id": "claims_user_approval",
+      "mutation": "user_approval_present_true",
+      "expected_failure": "authority_overclaim:user_approval_present"
+    },
+    {
+      "id": "claims_mainline_ready",
+      "mutation": "mainline_ready_true",
+      "expected_failure": "authority_overclaim:mainline_ready"
+    },
+    {
+      "id": "allows_merge",
+      "mutation": "mainline_merge_allowed_true",
+      "expected_failure": "authority_overclaim:mainline_merge_allowed"
+    },
+    {
+      "id": "allows_promotion",
+      "mutation": "promotion_allowed_true",
+      "expected_failure": "authority_overclaim:promotion_allowed"
+    },
+    {
+      "id": "claims_reviewed_knowledge",
+      "mutation": "reviewed_knowledge_ready_true",
+      "expected_failure": "authority_overclaim:reviewed_knowledge_ready"
+    },
+    {
+      "id": "claims_evidence_support",
+      "mutation": "evidence_support_ready_true",
+      "expected_failure": "authority_overclaim:evidence_support_ready"
+    },
+    {
+      "id": "claims_action_basis",
+      "mutation": "action_basis_ready_true",
+      "expected_failure": "authority_overclaim:action_basis_ready"
+    },
+    {
+      "id": "allows_commit_push_sync",
+      "mutation": "commit_push_sync_ready_true",
+      "expected_failure": "authority_overclaim:commit_push_sync_ready"
+    },
+    {
+      "id": "claims_goal_complete",
+      "mutation": "goal_complete_now_true",
+      "expected_failure": "authority_overclaim:goal_complete_now"
+    }
+  ]
+}

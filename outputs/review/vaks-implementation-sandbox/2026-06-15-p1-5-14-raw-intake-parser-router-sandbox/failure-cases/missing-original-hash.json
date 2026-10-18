@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "missing-original-hash",
+  "expected_valid": false,
+  "expected_codes": ["RP_ORIGINAL_HASH_MISSING"],
+  "patch": {"original": {"sha256": ""}}
+}

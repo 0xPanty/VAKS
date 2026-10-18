@@ -1,0 +1,54 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "valid-public-web-extraction-bundle",
+  "expected_valid": true,
+  "expected_codes": [],
+  "patch": {
+    "original": {
+      "path": "https://example.test/public-note",
+      "sha256": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "source_type": "web_page",
+      "access_mode": "public",
+      "private_or_account_content": false,
+      "uses_cookies": false
+    },
+    "router": {
+      "modality": "web",
+      "route": "public_web_capture",
+      "selected_adapter": "public_web_fixture_adapter",
+      "selected_by": ["url_scheme", "public_access_mode"],
+      "route_reason": "Public web page route"
+    },
+    "parser": {
+      "adapter_name": "public_web_fixture_adapter",
+      "parser_config_hash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "known_limits": ["dynamic page content may be incomplete"]
+    },
+    "outputs": {
+      "markdown_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/fixtures/extracted/public-note.md",
+      "json_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/fixtures/extracted/public-note.json",
+      "metadata_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/fixtures/extracted/public-note.metadata.json",
+      "retained_outputs": [
+        {
+          "kind": "captured_markdown",
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/fixtures/extracted/public-note.md",
+          "output_hash": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "knowledge_status": "raw"
+        }
+      ]
+    },
+    "anchors": {
+      "page_refs": [],
+      "url_refs": [
+        {
+          "id": "url-public-note",
+          "selector": "https://example.test/public-note#section",
+          "source_hash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        }
+      ]
+    },
+    "source_card": {
+      "target_path": "raw/articles/public-note-source.md"
+    }
+  }
+}

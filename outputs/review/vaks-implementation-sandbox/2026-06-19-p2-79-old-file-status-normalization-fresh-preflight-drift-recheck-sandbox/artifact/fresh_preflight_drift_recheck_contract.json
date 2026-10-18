@@ -1,0 +1,59 @@
+{
+  "record_kind": "sandbox_fresh_preflight_drift_recheck_contract",
+  "slice_id": "2026-06-19-p2-79-old-file-status-normalization-fresh-preflight-drift-recheck-sandbox",
+  "contract_version": "1.0",
+  "expected_summary": {
+    "target_change_count": 75,
+    "target_file_count": 75,
+    "target_old_slice_count": 20,
+    "missing_target_count": 0,
+    "frontmatter_invalid_count": 0,
+    "current_status_mismatch_count": 0,
+    "proposed_status_already_applied_count": 0,
+    "body_edit_planned_count": 0,
+    "artifact_edit_planned_count": 0,
+    "old_slice_writes_applied": 0
+  },
+  "expected_gate": {
+    "approval_collected": false,
+    "current_text_matches_exact_approval": false,
+    "executor_write_allowed": false,
+    "generic_language_is_not_approval": true,
+    "fresh_drift_recheck_passed": true,
+    "fresh_drift_recheck_is_not_write_authority": true
+  },
+  "authority_flags": {
+    "fresh_preflight_drift_recheck_only": true,
+    "approval_collected": false,
+    "executor_write_allowed": false,
+    "old_slice_write_allowed_now": false,
+    "old_slice_writes_applied": 0,
+    "normalization_applied": false,
+    "rollback_applied": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "goal_complete_now": false
+  },
+  "required_fixture_ids": [
+    "all-targets-current-status-match-manifest",
+    "approval-still-not-collected",
+    "fresh-check-is-not-write-authority",
+    "applied-or-drifted-targets-would-block",
+    "generic-continuation-still-rejected"
+  ],
+  "required_failure_case_ids": [
+    "FP-FAIL-01-missing-target-ignored",
+    "FP-FAIL-02-frontmatter-invalid-ignored",
+    "FP-FAIL-03-current-status-mismatch-ignored",
+    "FP-FAIL-04-proposed-status-already-applied-treated-as-clean",
+    "FP-FAIL-05-clean-drift-check-treated-as-approval",
+    "FP-FAIL-06-p2-75-request-treated-as-approval",
+    "FP-FAIL-07-p2-77-blocked-readiness-ignored",
+    "FP-FAIL-08-old-slice-write-applied",
+    "FP-FAIL-09-fresh-check-claims-goal-complete",
+    "FP-FAIL-10-gap-ledger-or-preflight-creates-mainline-authority"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "config-path-outside-sandbox",
+  "expected_valid": false,
+  "expected_codes": ["MS_PATH_OUTSIDE_SANDBOX"],
+  "patch": {
+    "config_contract": {
+      "contract_path": "raw/repos/mdvs.toml"
+    }
+  }
+}

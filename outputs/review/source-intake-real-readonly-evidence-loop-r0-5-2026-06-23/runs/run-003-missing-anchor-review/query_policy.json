@@ -1,0 +1,61 @@
+{
+  "run_id": "run-003-missing-anchor-review",
+  "created_at": "2026-06-22T18:59:23+00:00",
+  "query": "Can a China sales employee expense a client dinner under the current company policy?",
+  "intended_use": "internal_orientation_answer",
+  "action_use_allowed": false,
+  "as_of": "2026-06-23",
+  "scope": {
+    "project": "verified-action-knowledge-system",
+    "topic": "enterprise_policy_gap"
+  },
+  "allowed_authority_buckets": [
+    "raw_anchor"
+  ],
+  "support_candidate_authority_buckets": [
+    "raw_anchor"
+  ],
+  "retrieval_channels": [
+    "lexical"
+  ],
+  "rerank_applied": false,
+  "vector_applied": false,
+  "graph_applied": false,
+  "acl_applied": false,
+  "acl_status": "not_evaluated",
+  "query_policy_version": "r0.5-authority-first-local-lexical-v1",
+  "read_only": true,
+  "writeback_allowed": false,
+  "promotion_allowed": false,
+  "truth_mutation_allowed": false,
+  "production_runtime_validated": false,
+  "authority_filter_summary": {
+    "filter_order": "before_ranking",
+    "allowed_authority_buckets": [
+      "raw_anchor"
+    ],
+    "corpus_doc_count": 218,
+    "eligible_doc_count": 157,
+    "excluded_doc_count": 61,
+    "included_bucket_counts": {
+      "raw_anchor": 157
+    },
+    "excluded_bucket_counts": {
+      "candidate": 41,
+      "project_overlay": 9,
+      "source_annotation": 10,
+      "reviewed": 1
+    }
+  },
+  "corpus_snapshot_hash": "801881da6dd650a2a77d332f4509b17c2ce613c304d376ff43760fa38accf924",
+  "artifact_generation_order": [
+    "query_policy",
+    "retrieval_receipt",
+    "context_pack",
+    "claim_support_map",
+    "sufficiency_summary",
+    "answer_use",
+    "guard_report",
+    "run_manifest"
+  ]
+}

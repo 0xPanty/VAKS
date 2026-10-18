@@ -1,0 +1,9 @@
+{
+  "fixture": "valid-one-page-brief-ready",
+  "checks": {
+    "manual_submission.brief_ready": true,
+    "manual_submission.raw_response_present": false,
+    "manual_submission.new_sandbox_intake_required": true
+  },
+  "expected": true
+}

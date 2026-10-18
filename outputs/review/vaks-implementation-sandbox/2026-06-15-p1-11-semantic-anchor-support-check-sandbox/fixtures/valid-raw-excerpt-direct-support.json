@@ -1,0 +1,20 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "valid-raw-excerpt-direct-support",
+  "expected_valid": true,
+  "expected_codes": [],
+  "anchors": [
+    {
+      "id": "raw-excerpt-anchor",
+      "anchor_kind": "raw_excerpt",
+      "support_claimed": true,
+      "support_role": "direct_support",
+      "source_ref": "raw/articles/example-source.md",
+      "selector": "L10-L18",
+      "authority_bucket": "raw_anchor",
+      "selected_by_semantic": true,
+      "semantic_score_claims_support": false,
+      "graph_rank_claims_support": false
+    }
+  ]
+}

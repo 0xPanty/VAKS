@@ -1,0 +1,13 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "cache-path-outside-sandbox",
+  "expected_valid": false,
+  "expected_codes": ["MS_PATH_OUTSIDE_SANDBOX"],
+  "patch": {
+    "search_cache": {
+      "cache_path": "raw/repos/.mdvs",
+      "cache_path_kind": "physical_cache_fixture",
+      "cache_path_symbolic": false
+    }
+  }
+}

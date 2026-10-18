@@ -1,0 +1,12 @@
+{
+  "case_id": "prototype-markdown-may-execute",
+  "note": "Prototype permits execution.",
+  "prototype_tamper": {
+    "kind": "markdown_replace",
+    "file": "03 Stop Lines.md",
+    "content": "The operator may execute."
+  },
+  "expected_errors": [
+    "prototype_text_authority_confusion:03 Stop Lines.md:may_execute"
+  ]
+}

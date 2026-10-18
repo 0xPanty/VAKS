@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "source-card-reviewed",
+  "expected_valid": false,
+  "expected_codes": ["RP_SOURCE_CARD_NOT_RAW"],
+  "patch": {"source_card": {"knowledge_status": "reviewed"}}
+}

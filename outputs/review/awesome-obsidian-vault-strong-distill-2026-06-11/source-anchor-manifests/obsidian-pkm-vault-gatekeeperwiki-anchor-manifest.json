@@ -1,0 +1,56 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "obsidian-pkm-vault/gatekeeperwiki",
+  "source_url": "https://github.com/obsidian-pkm-vault/gatekeeperwiki",
+  "resolved_source_url": "https://github.com/Mondrethos/gatekeeperwiki",
+  "site_url": "https://www.gatekeeper.wiki/",
+  "checked_commit": "a333fb66f7fbdc67cc6b00971da0635416dae7be",
+  "checked_at": "2026-06-11",
+  "inspection_method": "original awesome-list GitHub URL failed with authentication/not-found behavior; public site and Edit-on-GitHub links resolved the active repository to Mondrethos/gatekeeperwiki; inspected resolved repo, site contribution page, Quartz config, deploy workflow, RSS-to-Markdown script, and content tree",
+  "anchors": [
+    {
+      "path": "https://www.gatekeeper.wiki/",
+      "kind": "published-site",
+      "why": "Shows a Quartz-style public wiki with explorer, search, graph, table of contents, backlinks, and edit links."
+    },
+    {
+      "path": "https://www.gatekeeper.wiki/contribute",
+      "kind": "public-contribution-process",
+      "why": "Explains that pages are Markdown files on GitHub, edits should be made through branches, and approved changes update the live site through automation."
+    },
+    {
+      "path": "README.md",
+      "kind": "resolved-repo-purpose",
+      "why": "Identifies the active repository as an Obsidian/Quartz fan wiki and points to the contribution document."
+    },
+    {
+      "path": "content/**/*.md",
+      "kind": "content-tree",
+      "why": "Stores wiki pages as Markdown under a content folder."
+    },
+    {
+      "path": "quartz.config.ts",
+      "kind": "publish-configuration",
+      "why": "Configures Quartz plugins, crawl links, content index, RSS/sitemap, remove drafts, and ignores private/templates/.obsidian paths."
+    },
+    {
+      "path": ".github/workflows/deploy.yml",
+      "kind": "publish-automation",
+      "why": "Builds Quartz and deploys GitHub Pages from main."
+    },
+    {
+      "path": "process_steam_rss.py",
+      "kind": "feed-to-markdown-ingest",
+      "why": "Sanitizes filenames, parses RSS, downloads images, hashes content, and generates Markdown entries."
+    }
+  ],
+  "known_limits": [
+    "The awesome-list repository URL was stale or inaccessible; active provenance was recovered through the public site's edit links.",
+    "Game wiki content itself is domain material and should not be imported into VAKS.",
+    "Feed-to-Markdown and publish automation must remain candidate/projection workflows, not reviewed knowledge or action basis."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

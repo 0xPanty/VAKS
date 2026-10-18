@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "context-selected-by-as-authority",
+  "expected_valid": false,
+  "expected_codes": ["MB_AUTHORITY_CONFUSION"],
+  "patch": {"context_adapter": {"items": [{"id": "reviewed-orientation", "ref": "fixtures/context-packs/reviewed-orientation-note.md", "authority_bucket": "reviewed", "pack_role": "orientation", "warning_code": "orientation_not_action_basis", "selected_by": ["context_pack"], "selected_by_claims_authority": true, "action_basis_allowed": false}]}}
+}

@@ -1,0 +1,7 @@
+{
+  "record_kind": "misa_pending_work_fixture",
+  "work_id": "pending-p1-5-16",
+  "memory_type": "pending_work",
+  "status": "sandbox_validation_only",
+  "truth_boundary": "runtime-continuity-not-action-basis"
+}

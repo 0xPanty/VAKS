@@ -1,0 +1,14 @@
+{
+  "selected_items": [],
+  "coverage_map": [
+    {
+      "support_refs": [
+        "enterprise_stress/annotations/ent-ann-000001.md"
+      ]
+    }
+  ],
+  "resolved_source_spans": [],
+  "warnings": [
+    "annotation_not_support"
+  ]
+}

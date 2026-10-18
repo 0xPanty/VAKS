@@ -1,0 +1,294 @@
+# Knowledge Graph Index
+
+## 当前核心契约
+
+- [[SCHEMA]]
+- [[AGENTS]]
+- [[purpose]]
+- [[ARCHITECTURE_PRINCIPLES]]
+- [[IMPLEMENTATION_BLUEPRINT]]
+- [[SOURCE_INTAKE]]
+- [[REFERENCE_REVIEW_PROTOCOL]]
+- [[MEMORY_TIER]]
+- [[DEV_CONTEXT]]
+- [[FUSION_ARCHITECTURE_V0_2_DRAFT]]
+- [[SECOND_BRAIN_MODEL]]
+- [[memory-tier-reference-index]]
+- [[REVIEW_QUEUE]]
+- [[FEEDBACK]]
+- [[2026-05-26-architecture-layering-v0-1]]
+- [[2026-05-27-implementation-includes-llm-wiki-stack]]
+- [[2026-05-27-quality-bar-extensible-verified-action-knowledge-system]]
+- [[2026-05-27-codex-mediated-ingest-and-review-gate]]
+- [[2026-05-27-karpathy-simple-verified-strict-ux-principle]]
+- [[2026-05-27-karpathy-spine-modular-extensions]]
+- [[2026-05-27-traceability-first-graduated-verification]]
+
+## 当前核心概念
+
+- [[2026-04-04-karpathy-llm-wiki-pattern]]
+- [[2026-05-26-llm-wiki-compiler-architecture-review]]
+- [[second-brain-knowledge-graph]]
+- [[library-design-extraction]]
+- [[positive-design-fusion]]
+- [[staged-design-harvest-and-synthesis]]
+- [[evidence-backed-design-validation]]
+- [[negative-evidence-and-avoidance]]
+- [[evolvable-design-system]]
+- [[obsidian-ai-integrated-production-system]]
+- [[source-verification-and-trust-model]]
+- [[agentic-vault-orientation-index]]
+- [[purpose-specific-vault-philosophy]]
+- [[composable-claim-notes]]
+- [[source-to-publish-content-pipeline]]
+- [[skills-as-action-modules]]
+- [[container-intelligence-hands-architecture]]
+- [[verified-vault-api-for-agent-brain]]
+- [[claude-md-index-md-navigation-layer]]
+- [[schema-md-as-ai-wiki-contract]]
+- [[lifecycle-folders-topic-tags-relationship-links]]
+- [[purpose-md-as-wiki-mission-layer]]
+- [[four-signal-graph-relevance]]
+- [[graph-insights-health-check]]
+- [[local-verified-vault-api]]
+- [[async-review-queue-for-ai-ingest]]
+- [[provenance-safe-source-lifecycle]]
+- [[reference-implementation-extraction-notes]]
+- [[current-note-operation-workbench]]
+- [[qmd-local-hybrid-search-layer]]
+- [[2026-05-26-obsidian-bases-properties-primary-view-layer]]
+- [[hybrid-vector-bm25-rrf-with-graph-neighborhood]]
+- [[generated-graph-human-edit-overlay]]
+- [[embedding-preset-namespaced-index-cache]]
+- [[markdown-system-of-record-derived-indexes]]
+- [[compiled-truth-plus-append-only-timeline]]
+- [[epistemology-takes-facts-layer]]
+- [[schema-packs-as-living-contract]]
+- [[think-gather-synthesize-gap-analysis]]
+- [[copying-full-second-brain-runtime-before-schema-stabilizes]]
+- [[obsidian-bases-linked-workbench-views]]
+- [[ai-first-vault-operating-contract]]
+- [[never-create-in-isolation-propagation-rule]]
+- [[bi-temporal-facts-for-knowledge-history]]
+- [[progressive-vault-context-loader]]
+- [[vault-health-check-as-maintenance-contract]]
+- [[two-output-rule-answer-plus-knowledge-writeback]]
+- [[semantic-relation-edge-schema]]
+- [[semantic-relation-strength-should-be-core-schema-field]]
+- [[obsidian-second-brain-is-vault-runtime-not-truth-layer]]
+- [[automatic-agentic-vault-rewrite-before-schema-stability]]
+- [[review-gated-compile-queue]]
+- [[claim-level-provenance-source-ranges]]
+- [[context-pack-evidence-envelope]]
+- [[static-wiki-health-lint-before-auto-rewrite]]
+- [[direct-compile-to-truth-layer-without-review]]
+- [[2026-05-27-quality-bar-extensible-verified-action-knowledge-system]]
+- [[2026-05-27-llm-wiki-compiler-implementation-extraction]]
+- [[incremental-source-state-compiler]]
+- [[self-contained-review-candidate-record]]
+- [[agent-context-pack-budget-guardrails]]
+- [[agent-tool-access-tiering]]
+- [[source-adapter-ingest-contract]]
+- [[project-state-next-action-contract]]
+- [[exportable-knowledge-artifact-surface]]
+- [[generic-concept-schema-as-truth-layer]]
+- [[2026-05-27-openkb-architecture-review]]
+- [[2026-05-27-openkb-as-module-reference]]
+- [[wiki-foundation-generator-surface-separation]]
+- [[long-document-tree-index-source-adapter]]
+- [[knowledge-to-agent-skill-factory]]
+- [[path-scoped-agent-output-writes]]
+- [[ghost-wikilink-whitelist-before-write]]
+- [[source-hash-registry-and-idempotent-ingest]]
+- [[url-source-ingest-normalization]]
+- [[removal-cleanup-with-registry-commit-point]]
+- [[artifact-trigger-and-body-alignment-eval]]
+- [[skill-artifact-iteration-workspace-rollback]]
+- [[auto-compiled-concept-wiki-as-verified-truth-layer]]
+- [[2026-05-27-automated-vault-feedback-loop-review]]
+- [[frictionless-capture-to-review-inbox]]
+- [[daily-brief-as-knowledge-return-loop]]
+- [[weekly-synthesis-thesis-and-gap-review]]
+- [[automated-brief-as-truth-without-review]]
+- [[2026-05-27-jarvis-content-vault-review]]
+- [[published-performance-feedback-loop]]
+- [[project-crosslink-graph-view]]
+- [[accumulated-source-cross-validation]]
+- [[2026-05-27-alpha-point-collision-validation-v0-1]]
+- [[2026-05-27-alpha-point-collision-research]]
+- [[2026-05-27-obsidian-para-source]]
+- [[2026-05-27-obsidian-para-architecture-review]]
+- [[actionability-based-memory-routing]]
+- [[archive-first-lazy-reactivation]]
+- [[para-folder-taxonomy-as-truth-layer]]
+- [[2026-05-27-kepano-obsidian-source]]
+- [[2026-05-27-kepano-obsidian-architecture-review]]
+- [[property-driven-context-workbench]]
+- [[link-overlap-related-context-surface]]
+- [[random-revisit-cold-memory-maintenance]]
+- [[derived-relatedness-as-truth-signal]]
+- [[2026-05-27-knowledge-base-server-source]]
+- [[2026-05-27-knowledge-base-server-architecture-review]]
+- [[token-efficient-context-briefing]]
+- [[shared-agent-memory-retrieval-layer]]
+- [[operational-session-capture-loop]]
+- [[incremental-vault-index-retrieval-cache]]
+- [[auto-promotion-without-review-gate]]
+- [[2026-05-27-kagantic-vault-structure-source]]
+- [[2026-05-27-kagantic-vault-structure-architecture-review]]
+- [[hierarchical-index-context-routing]]
+- [[binary-vault-template-download-as-trusted-source]]
+- [[2026-05-27-dusk-obsidian-vault-source]]
+- [[2026-05-27-dusk-obsidian-vault-architecture-review]]
+- [[scope-dashboard-live-context-surface]]
+- [[all-in-one-vault-runtime-before-modular-contracts]]
+
+## 当前节点类型
+
+- Source
+- Library
+- Concept
+- Pattern
+- Project
+- Decision
+- Problem
+- Workflow
+- Output
+
+## 当前关系重点
+
+- 开发阶段的新理解要落成节点。
+- 优秀库的设计要提炼成模式。
+- 当前阶段先采集优秀设计点，不急着立刻采用。
+- 积累足够样本后，再从全貌角度综合、取舍、落地。
+- 每个重要设计点要量化打标签，并寻找相似思路或历史影子做交叉验证。
+- 借鉴点进入落地前，必须有来源、适配判断、风险、验证方式。
+- 不可行路线、踩坑、反模式也要记录、打标签、交叉验证，并在统一设计前主动查询。
+- 最终目标是科学、合理地应用采纳，而不是堆叠优秀点。
+- 整个体系必须保持可拓展、可演化：新思路可以持续进入采集、验证、比较、迁移和落地流程。
+- Yanhua 的 Obsidian + AI 系列和 Karpathy 工作流先按分层系统理解：摄取、编译、上下文、执行、输出、复盘。
+- 资料库本身需要可信度治理：每条资料和重要主张都要有来源、验证状态、证据等级、置信度和复查时间。
+- 2026-05-28 v0.2 收缩：对外主叙事改为 `Capture / Understand / Review / Connect / Act and Learn`；内部主循环是 `Capture -> Candidate Comprehension -> Review -> Association -> Activation -> Context Pack -> Decision/Action -> Use Ledger -> Cooling/Reactivation`。
+- 2026-05-28 v0.2 边界：`SECOND_BRAIN_MODEL.md` 是解释模型和设计校验表，不是工程模块目录；不要把大脑隐喻拆成十几个实现子系统。
+- 2026-05-28 v0.2 关系类型：MVP 只保留 `supports / contradicts / refines / risk_of / derived_from`。`replaces / implements / applies_to / inspired_by / alternative_to / blocked_by` 先 parked。
+- 2026-05-28 v0.2 feedback：`FEEDBACK.md` 作为 Use Ledger，只校准 activation、usefulness、scope fit 和 review_due，不直接改 truth confidence。
+- 2026-05-28 v0.2 proactive synthesis：先 on-demand，输出 Connections / Patterns / Contradictions / Open Questions，全部是 candidate；daily / weekly / monthly 自动化先 parked。
+- Pro review 15 点落地判断：不是新增 15 条核心规则，而是归并为五个口径收束：五层主架构、内部 verified loop、大脑模型降权、Risk / Inhibition 横切、Proactive Synthesis / Expression / Agent Safety 移出 truth core。
+- 当前总原则：Strict checks are lazy gates。普通 capture 保持轻，ordinary query 保持简单；promotion 变严格，action basis 可审计；完整 evidence_support、support/challenge review、coverage_map、action_readiness 和 optional point_graph_fragment 只在晋级、行动、强关系、高影响、stale、contested 或 explicit challenge 时打开。
+- 当前大脑模型分组：Input / Comprehension / Reviewed Memory / Association / Activation / Action / Learning / Cross-cutting Inhibition / Optional Output。它用于解释和检查，不用于生成实现目录。
+- 新增 Knowledge Calibration / Point Collision 口径：外部资料先蒸馏成 candidate points，再和本地 reviewed knowledge 做双向校准；Point Collision 由 candidate / review / promotion / action 需求触发，不由原始 capture 自动触发；校准输出是 candidate_relation、contradiction_candidate、scope_mismatch、stale_assumption_candidate、missing_evidence、review_question、review_due 等 review input，不是 truth。
+- Point Collision 的理论借鉴点来自 Truth Maintenance System / Reason Maintenance：保留判断理由、新证据触发旧判断复查、行动依据要可解释；本资料库只吸收这个控制思想，不照搬自动判真系统。source record: [[2026-05-29-truth-maintenance-system-source]]
+- 新增 Evidence-Aware Review / 支持-反对式 Review 口径：review 不只是 source check，而是 standing check；一个判断要在支持、反对、范围限制和风险都摆出来后仍能说明为什么站得住。完整面板只在 promotion、decision、context pack / action basis、strong reviewed relation、explicit contradiction、stale / contested claim 或 reviewer request 时展开；普通 candidate 只需 uncertainty / risk 短注。provenance 不是 support，支持变多不自动提高 confidence，action_readiness 独立于 knowledge_state。source record: [[2026-05-29-dung-argumentation-framework-source]]
+- 新增轻量 Source Provenance 口径：借 W3C PROV 的 entity / activity / agent 思路，但落地为轻 source identity + capture/extraction trace；review、promotion、context-pack 使用不塞进 Source 主字段，只做 traceability，不做 truth、confidence 或 action_readiness 判断。source record: [[2026-05-29-w3c-prov-source]]
+- 新增 VERISCORE-inspired Verifiability Routing 口径：candidate point 是 atomic review unit，不默认等于 atomic claim；进入 review 前先判断 point_type、verifiability、review_route。不可验证不等于没用，但不能获得 truth confidence。source record: [[2026-05-29-veriscore-source]]
+- 新增 PaperTrail-inspired Claim / Point Coverage Map 口径：context pack 不只是 citation list，而要 coverage-aware；完整 `coverage_map` 只要求覆盖回答或行动依据中实际使用的关键判断，普通 query 不默认生成完整审计表。默认显示 `coverage_overview`、高风险项、被挑战项和缺证据项；decision、action basis、agent context pack、高影响回答、显式 audit 或回答被挑战时，再展开 key point detail。覆盖状态包括 supported、weakly_supported、challenged、missing_evidence、out_of_scope、not_verifiable；风险用 `risk_flags` 做 overview 提示，具体放在 `risk_refs` / `action_readiness`。coverage 是审计面，不是 truth layer，不自动改 confidence；critical_omissions 只记录已知重大遗漏。source record: [[2026-05-29-papertrail-source]]
+- 新增 GraphFC-inspired Optional Point Graph Fragment 口径：复杂、高影响、多跳、跨文档或有歧义的 candidate point 可选拆成 `point_graph_fragment`，用于辅助 calibration、collision、review 和 coverage 展开；triplet extraction 不是 truth，triplet similarity 不是 support，只有 reviewed relation 才能进入 formal knowledge graph。source record: [[2026-05-29-graphfc-source]]
+- 新增 Evidence Support Check 口径：source provenance 不等于 support；background citation 不等于 support；evidence item 必须检查 source span 是否真的支持目标 point / reviewed node / reviewed relation；强 relation 的 evidence 必须支持 relation edge 本身；evidence_support 结果供 coverage_map 使用。source records: [[2026-05-29-prove-provenance-verification-source]], [[2026-05-29-rag-attribution-faithfulness-source]]
+- 新增 v0.3 Evidence and Review Discipline 口径：把 `outputs/review/2026-05-29-framework-reference-research.md` 和 Pro 复核压缩为轻量证据纪律，不新增 Truth Core，不改 public story。核心吸收 10 个 alpha：Evidence Packet、warrant separation、challenge taxonomy、minimal_revision_needed、source_anchor mini-profile、evidence_granularity、omission_check、context_pack_trace、agent_memory_quarantine、review_due_when triggers。Evidence Packet 只是重要 promotion / action use 的 review input，不是 truth layer、formal logic engine 或 automatic truth engine。
+- 2026-05-31 最小 alpha 写回：`REVIEW_QUEUE.md` 吸收 approval integrity 和 known omission check；`templates/maintenance-manifest.md` 吸收 test / benchmark / fixture / LLM-judge report discipline。三者都只收紧边界：approval / agreement 不是 evidence review，known counterevidence / gaps / conflicts 检查不是 action readiness，测试或 benchmark 不是 truth、runtime readiness 或 mainline readiness。不改 `SCHEMA.md`、README 主脊椎、runtime、eval platform 或 agent toolchain。commit: `1eed9e2`。
+- 2026-06-01 反向审计 2+1 收口：`REVIEW_QUEUE.md` 只补两条窄检查：current source span 与 prior chat / agent memory / model background 不得混作 support；动态数据用于 promotion / action basis 时需保留 query/filter/subset/as-of/result-set 身份。新增 anti-pattern [[transformed-evidence-as-original-source]]，约束 OCR / translation / bbox / layout / table-derived evidence 不能在无原始锚点时冒充 source support。oracle 类型候选已砍掉，因为 `AGENTS.md` 和 `templates/maintenance-manifest.md` 已覆盖 test / fixture / LLM-judge 只能作 diagnostic / lint。未改 `SCHEMA.md`。
+- 2026-06-03 视频资料入口落地：`SOURCE_INTAKE.md` 新增 video source intake 轻 / 中 / 重规则，`templates/video-source.md` 新增 Obsidian 视频资料卡，`REVIEW_QUEUE.md` 的 source trace 枚举补 `video`，`raw/videos/2026-06-03-bilibili-omniget-source.md` 作为首个 medium 测试卡。视频、字幕、ASR 和摘要只能先进入 `raw/videos/` / candidate comprehension；工具名、URL、命令、版本号、star 数等关键实体要做置信度或用户看画面确认；视频里的做法要变成正式设计时才进入 REVIEW_QUEUE / outputs/review。
+- 2026-06-04 Audit Shell v1 / Queue-First Operator Cockpit 已从 main-vault candidate convention 正式毕业为 `formal operator-only operation convention`：当前恢复入口为 `00_handoff/2026-06-04-audit-shell-v1-formal-graduation-handoff.md`；formal verdict 为 `outputs/review/2026-06-04-audit-shell-v1-formal-graduation-verdict.md`，高强度补测为 `outputs/review/2026-06-04-audit-shell-v1-high-intensity-graduation-report.md`。完整 alpha lineage 仍未删减保留在 `outputs/review/audit-shell-v1-full-alpha-lineage-2026-06-04/`。范围只限后台 operator 分流约定，不是 schema guidance、truth layer、user-facing UI 或自动真值系统；recurrence / grouping 仍 default-off。
+- 2026-06-04 视频资料反漏提取补丁：`SOURCE_INTAKE.md`、`templates/video-source.md` 和 OmniGet 测试卡新增 anti-omission extraction pass，强制检查 pain point、workflow、tools/plugins、information structure、judgment mechanism、UX、automation boundary、risk、fit for us、challenge to us；只有摘要、不含这些维度的 digest 视为提取不完整。
+- 2026-06-06 Source Intake Control Flow 两轮测试逻辑已并入主线运行规则和模板：恢复入口为 `00_handoff/2026-06-06-source-intake-control-flow-mainline-merge-handoff.md`，审计文件为 `outputs/review/source-intake-control-flow-sandbox-2026-06-06/checks/mainline-merge-audit.md`。Round1 主线审计 `11/11`，Round2 主线审计 `16/16`。并入的是设计逻辑：机器可过滤 `retrieval_policy` block、candidate 不可 action basis、suggested overlay 只做 trace、confirmed overlay active-project-only、archived overlay 默认排除、feedback append-only 且不泄漏 truth mutation 字段、RRF 只在同 authority bucket 内融合、action-facing support 必须回 raw/stable anchor。测试产物仍留在 sandbox；truth layer 未变。
+- 2026-06-08 CI-02 / Review-Gated Compile Queue 已正式收口为 `wiki/patterns/review-gated-compile-queue.md` 的 active adopted pattern，并在 `REVIEW_QUEUE.md` 新增 `Review-Gated Compile / Writeback Queue`。范围很窄：AI / compile / agent 生成的正式 `wiki/` 写入必须先进 review candidate，固定正文、来源锚点、lint / evidence review 和 approval 后才能 writeback。它不是新架构层，不替代 Evidence Packet / Evidence Sufficiency Gate / self-contained candidate，不引入 source hash registry、context pack runtime、MCP write、Obsidian sync 或自动晋升。
+- 2026-06-08 sandbox candidate / Candidate Lint Before Approval：本 sandbox 在 `REVIEW_QUEUE.md` 与 `templates/review-candidate.md` 试补 candidate_lint。范围只限 approval 前暴露 schema / provenance / evidence support / approval integrity / body integrity / action boundary 问题；lint 不是 evidence support、不是 approval、不是 truth confidence、不是 reviewed relation、不是 action readiness。测试通过后才考虑并入主线。
+- 2026-06-08 sandbox candidate / CI-04 [[decision-outcome-precondition-before-calibration]]：本 sandbox 只测试一个 Use Ledger 小门槛：记录 final decision outcome 用于 calibration 前，必须已有 recommendation、confidence_at_decision、outcome_note，以及 user_choice 或 explicit_user_override。Outcome calibration 只能改进 future recommendation / risk calibration / scope fit / option framing；不能改变 truth_confidence、verification_status、source_reliability、review verdict、reviewed relation 或 action-basis readiness；不吸收 RKA runtime、MCP、API server、dashboard、SQLite 或 metrics-as-truth。
+- 2026-06-08 sandbox candidate / CI-05 [[scope-dashboard-live-context-surface]]：本 sandbox 补开 Dusk `template_area.md:13-66` 与 `Vault Onboarding Part 3:72-83` 锚点，并跑一个本地 VAKS `scope dashboard -> compact briefing -> dev context pack selection` trial。结论只限 workbench / dev-context candidate surface：dashboard 可帮助选 Core / Support / Risk / Cold 候选，但不是 truth、evidence support、reviewed relation、action basis readiness、permanent activation tier 或 Obsidian plugin authority。
+- 2026-06-08 sandbox candidate / CI-06 [[context-pack-evidence-envelope]]：本 sandbox 补开 llm-wiki-compiler `src/context/types.ts` 与 `src/context/build.ts` 锚点，测试 v1 read-only evidence envelope：`prompt / budget / project / primary / neighbors / warnings / gaps / suggested_actions / source_windows`。Context pack 只准备上下文并暴露 warnings/gaps；source windows 默认空且必须显式 include；suggested actions 不是自动执行；primary/neighbors/retrieval 不是 truth、evidence support、reviewed relation、action basis readiness、wiki writeback 或 candidate promotion。
+- 2026-06-08 sandbox candidate / CI-08 [[claim-level-provenance-source-ranges]]：本 sandbox 补开 llm-wiki-compiler citation parser / lint / viewer-context anchors，测试 claim-level source range 作为 provenance 和 review handle。结论只限证据定位纪律：`file.md:42-58` / `file.md#L42-L58` 能帮助复核，但 source range 本身不是 evidence support、truth confidence、verification status、reviewed relation、promotion approval 或 action readiness；必须另有 target-specific `span_supports_target`、`evidence_role`、warrant / scope。
+- 2026-06-08 sandbox candidate / CI-09 [[source-adapter-ingest-contract]]：本 sandbox 补开 llm-wiki-compiler ingest adapter、source writer、session adapter anchors，测试 lightweight source adapter contract。结论只限 source hygiene / provenance：adapter 可以生成 source record、raw artifact、candidate extraction input、lint warning 或 review pressure；不能生成 reviewed claim、truth confidence、verification upgrade、reviewed relation、promotion approval、project adoption verdict 或 action basis。字段保持轻量，不冻结每类 source 的 heavy schema。
+- v0.3 Evidence Packet micro-trials：`outputs/review/2026-05-30-evidence-packet-micro-trial.md` 验证本地契约可用；`outputs/review/2026-05-30-rka-evidence-packet-source-record-trial.md` 用 RKA source record 做压力测试，结论是 source record 足够支持 conceptual adoption，但没有 exact code spans 时不能作为 high-confidence code-level proof。
+- 2026-05-30 RKA exact-commit 源码锚点复核：`outputs/review/2026-05-30-rka-source-code-anchor-review.md` 确认 review queue、decision superseding、staleness-vs-validity、decision outcome calibration、maintenance hygiene 在 `infinitywings/rka@7bc2d76` 中有源码支持；额外吸收一个小硬化：record final decision_outcome 前必须已有 recommendation 和 user_choice / explicit override。
+- 2026-05-30 v0.3 十点验收：`outputs/review/2026-05-30-v0-3-ten-alpha-validation.md` 和 `outputs/review/2026-05-30-v0-3-integrated-ten-alpha-trial.md` 已把 Evidence Packet、Warrant、Challenge taxonomy、Minimal revision、Source anchor、Evidence granularity、Omission check、Context pack trace、Agent memory quarantine、Review due triggers 逐项验收并综合试跑；结论是十点可作为轻量证据纪律给 Pro 复核，不应扩成新 runtime 或 Truth Core。
+- 2026-05-30 v0.3 参考源深度审计：`outputs/review/2026-05-30-v0-3-reference-source-depth-audit.md` 已明确哪些参考需要源码级检查、哪些只需论文/官方文档、哪些保持 watch / parked。源码级已查 RKA exact commit `7bc2d76` 和 Graphiti targeted commit `34f56e65`；新增 `raw/articles/2026-05-30-w3c-web-annotation-source.md` 支撑 source_anchor，新增 `raw/papers/2026-05-30-wicer-source.md` 支撑 omission_check。结论：没有把 loose library name 当 proof；未采纳为 schema / review / action / truth boundary 的库不做当前源码审计，未来进入实现依赖前再查。
+- 2026-05-30 v0.3 Pro blocking patch：修正 `templates/review-candidate.md` 默认 frontmatter 过重问题，把 Evidence Packet / evidence_support / temporal_applicability / action_readiness 移回正文 optional lazy-gate blocks；`SCHEMA.md` Source node 去掉 truth-like `confidence` / `cross_source_count`，改成 source hygiene hints；`outputs/review/2026-05-30-v0-3-integrated-ten-alpha-trial.md` 修正非法 `point_type` / `verifiability`，并补 `evidence_support` 正反例；handoff / manifest / FUSION 已把 Evidence Packet 从固定 internal loop 降级为 lazy gate；source-depth audit 改为 package-visible 自洽声明。
+- 2026-05-30 v0.3 remaining blocking patch：包内 package-visible source records 已清掉顶层 `evidence_level` / `confidence` 和 source relation `strength` / `confidence`，统一为 `candidate_relation_suggestions: []`；`templates/source-record.md` 也改为 candidate relation suggestion，不再示范 reviewed relation、relation strength 或 truth confidence。
+- 2026-05-30 v0.3 final schema cleanup：`SCHEMA.md` 的 Source node 最小 frontmatter 已从 `relations: []` 改为 `candidate_relation_suggestions: []`；关系 schema 拆为 candidate relation suggestions 与 reviewed relations。Candidate relation suggestion 只能记录 why_suggested / source_anchor / evidence_support，不能携带 relation strength 或 truth confidence；reviewed relation 才能在 review 后携带 evidence / rationale / confidence / last_verified。
+- 2026-05-30 v0.3 final schema-consistency patch：`outputs/review/2026-05-30-rka-evidence-packet-source-record-trial.md` 中残留的未注册 decision-input 类型已改为合法 `risk` point + `risk_check` route，并用 `intended_use` 保留“作为决策输入”的含义，不再扩展 `point_type` enum。
+- 新增 Evidence Sufficiency Gate 口径：单条证据支持不等于整组证据足够行动；在 draft evidence/context envelope 组好后、final context pack / action basis 被标成 action-ready 前运行；只在 promotion、decision、strong reviewed relation、context pack / action basis、risk_sensitive_answer 或用户明确问“证据够不够”时检查 sufficient / weak / insufficient / out_of_scope / risky；普通 capture 和 ordinary query 保持轻。source records: [[2026-05-29-self-rag-source]], [[2026-05-29-crag-source]], [[2026-05-29-a2rag-source]]
+- 新增 HippoRAG-inspired Association Neighborhood Activation 口径：查询不是只拿几个相似 chunk，而是点亮一片 evidence-aware association neighborhood，包括 support、challenge、risk、decision、scope、source anchors、gaps / review_due；它属于 retrieval / activation / context pack preparation，不属于 truth core。Graph traversal、PPR、similarity、association score 只能召回和解释激活路径，不能决定 truth、support、confidence、evidence_level、action_readiness 或 reviewed relation creation。source record: [[2026-05-29-hipporag-source]]
+- 新增 GraphRAG / LightRAG-inspired Graph Retrieval Stratification 口径：context pack preparation 可以分 low-level retrieval（source / text unit / claim / entity）、high-level retrieval（pattern / theme / community / community report）和 relation-neighborhood retrieval（reviewed relation 周边上下文）。TextUnit anchor 是 provenance，不是 support；community report 是 briefing，不是 truth；graph rank 是 retrieval priority，不是 trust；auto-extracted relation 只能作为 candidate_relation，不能直接成为 reviewed relation。source records: [[2026-05-29-graphrag-source]], [[2026-05-29-lightrag-source]]
+- 新增 Graphiti / Zep-inspired Temporal Applicability Check 口径：Truth is source-backed; Applicability is time-, version-, and scope-bound。scope_fit 从抽象评分升级为 validity window / supersession / applies_to check：valid_from、valid_until、supersedes、superseded_by、invalidated_by、project、version、environment、timeframe、conditions。它不自动改 truth；standing claim 也可能对当前 action stale / superseded / out_of_scope。source record: [[2026-05-29-graphiti-zep-temporal-validity-source]]
+- 新增 Reflexion / RMM-inspired Feedback Ledger 口径：feedback 是 reflection / use memory，不是 truth mutation。feedback_event 分为 explicit_correction、missing_evidence、scope_mismatch、answer_helpful、contradiction_missed、action_outcome；只影响 usefulness、scope_fit、activation_ranking、review_due，永不直接影响 truth_confidence、verification_status、source_reliability。强规则：Positive feedback is weak; Negative feedback creates review pressure; Explicit correction creates review_due。source records: [[2026-05-29-reflexion-source]], [[2026-05-29-rmm-reflective-memory-management-source]]
+- 新增 RKA-inspired operational guardrails 口径：RKA 已确认来源为 `infinitywings/rka`。只吸收 review queue taxonomy、decision superseding、intent confirmation / backbrief、verbatim input vs model interpretation、maintenance manifest、staleness-vs-validity split、confidence cap without full text、decision outcome calibration；不吸收完整 runtime、MCP、dashboard、SQLite truth source 或 workflow action as truth。Outcome calibration 改进 future recommendation / risk calibration / option framing，不直接改 truth_confidence / verification_status / source_reliability。source record: [[2026-05-29-rka-source]]
+- 2026-05-28 新增 `AGENTS.md` 作为项目级入口地图：它记录启动读法、目录职责、已吸收资料集合和操作边界；它不是 schema、不是 handoff、不是 reviewed knowledge layer，只负责让新 Codex 窗口不漏读关键资料。
+- 新增高信号设计候选：vault index 作为上下文路由器、purpose-specific vault philosophy、claim-style composable notes。
+- 新增内容工厂高信号候选：source-to-publish pipeline、skills as action modules、container/intelligence/hands 分层。
+- 新增中期架构候选：把已验证资料库做成 API / resolver / context pack，供 agent 调用后结合 gbrain 推理。
+- Orange Book 作为结构样本：指南很全，但不是 turnkey vault template；吸收 CLAUDE.md+index.md、SCHEMA.md、文件夹/标签/双链分工。
+- llm_wiki 作为实现级参考架构：不是普通 Obsidian 模板，而是 Karpathy LLM Wiki 的桌面实现；核心增量是 purpose.md、四信号关系评分、图谱健康检查、本地 Agent API、异步 review 队列、来源生命周期。
+- 当前高信号指标雏形：direct link + source overlap + common neighbor + type affinity。后续库分析要尽量把相似模式连接到同一 pattern，并记录 sources[] 和 evidence 字段。
+- 当前反模式警告：不要在 Markdown 契约稳定前复刻完整 App；不要在来源质量不足时相信图谱算法分数。
+- llm_wiki 融合兼容性结论：设计点不冲突，但必须分层采用；使命层和 review 可立即采用，图谱评分/健康检查轻量适配，本地 API 中期观察，完整 App/vector search/Louvain UI 暂缓。
+- llm_wiki 和本资料库的关系：llm_wiki 是自动知识编译机和工程发动机，本资料库是 verified knowledge graph 和可信采纳规则；两者互补，不直接替代。
+- Obsidian Properties + Bases 采用为第一阶段主力视图层/轻数据库层，用来管理 source、claim、pattern、anti-pattern、decision 的 metadata；它不是 reviewed knowledge layer，不替代证据验证。
+- 已新增问答记录：[[2026-05-26-llm-wiki-vs-verified-knowledge-system]]，用于解释“同样用 AI 提炼时，普通 LLM Wiki 和 verified knowledge system 的区别”。
+- 新增实现级提取要求：看过参考库源码后，要记录模块级不变量和防错点；`llm_wiki` 的实现级记录见 `outputs/qa/2026-05-26-llm-wiki-implementation-extraction.md`。
+- cc-note-ops 的价值在操作层：当前笔记锁定、输出/修改分离、表达/结构分离，可作为未来 AI 操作 Obsidian 的安全工作台规则，不进入知识图谱核心层。
+- QMD 的价值在搜索扩展层：当 index 膨胀、raw 细节找不回、跨分类检索变多时，用本地 BM25 + vector + rerank 找候选片段；QMD 不做 reviewed knowledge layer，不能替代 claim 验证。
+- nano-NotebookLM 的价值在搜索扩展层和关系操作层：BM25+FAISS+RRF、concept embedding+BFS GraphRAG、generated graph+human edit overlay、embedding preset namespace；它不做 reviewed knowledge layer。
+- gbrain 的价值在核心架构层：Markdown system-of-record、compiled truth + timeline、facts/takes epistemology、schema packs、think answer+citation+gaps、dream cycle；它强力验证我们要做的是 verified knowledge engine，不是普通 RAG。
+- gbrain 融合边界：只吸收 schema、epistemology、timeline、context-pack、health-cycle 不变量；不 fork 完整 runtime，不现在做 MCP/OAuth/minions/scheduler/HNSW/reranker 体系。
+- 当前新增反模式：schema 未稳定前复制完整第二大脑 runtime，会把设计任务带偏成产品栈维护。
+- Obsidian-Base-Hub 的价值在视图/工作台层：用 `.base` 文件把结构化 Markdown 节点筛选、分组、嵌入到根页面；可用于未来 source review、claim verification、pattern adoption、decision review。
+- Obsidian-Base-Hub 的风险提醒：Base 视图必须服从 `SCHEMA.md`，不能反过来定义 schema；字段命名混乱会让视图失效。
+- obsidian-second-brain 的价值在 agentic vault runtime：AI-first note contract、never-create-in-isolation、bi-temporal timeline、index/log、two-output rule、progressive context loader、health check、write-time validator。
+- obsidian-second-brain 对本资料库是操作层/维护层补强，不是 reviewed knowledge layer；它不能替代 source/claim/pattern/anti-pattern/decision 的验证和采纳流程。
+- 当前可吸收：AI-first metadata、传播规则、timeline、index/log、health report、context recovery；当前不吸收：background agent、scheduled rewrite、自动冲突裁决、完整命令运行时。
+- 新增反模式：schema 未稳定前启用自动 vault rewrite，会造成隐藏漂移、过度自信的自动裁决和证据历史污染。
+- Misa 建议已采纳为核心 schema 候选：在 `relations` 中记录语义关系边，每条边包含 target、type、strength、confidence、evidence、rationale；向量检索只作为候选筛选器，关系图谱和证据层负责可信排序。
+- 当前架构全貌 v0.1：核心是 Verified Knowledge Graph；工具层、操作层、搜索层、API 层都只能作为外围增强，先记录、再验证、后采用。
+- Karpathy LLM Wiki 原文已作为源头材料入库：它验证 `raw / wiki / schema`、ingest/query/lint、index/log、Obsidian as IDE、LLM as maintainer 的运行模式；本资料库在此基础上增加 verified schema、review queue 和 Misa/gbrain read-only 边界。
+- atomicstrata/llm-wiki-compiler 已作为实现级参考入库：它把 Karpathy 模式工程化为 CLI、候选 review queue、claim-level provenance、context pack、static lint、MCP 和只读 viewer；本资料库优先吸收 review-gated compile、source-range provenance、context-pack evidence envelope、static lint，不照搬 generic page kinds、watch auto-recompile、完整 viewer/MCP 栈。
+- 2026-05-27 纠偏：最终实现不是只做底层契约，也不是排除这些库；要完整包含 Karpathy LLM Wiki / llm-wiki-compiler 的 ingest、compile、index/log、query、lint、review queue、provenance、context pack、API/MCP、viewer 能力。`SCHEMA.md` 只负责规定这些能力不能绕过 reviewed knowledge layer。
+- 2026-05-27 质量目标升级：最终目标不是普通 LLM Wiki，也不是只做可信笔记，而是可拓展的可信知识与行动依据系统；质量标准要覆盖参考库能力，并进一步支持 actionability、decision readiness、feedback timeline、extension contracts。
+- 2026-05-27 源码级提取：`llm-wiki-compiler` 可用实现契约已保存为 [[2026-05-27-llm-wiki-compiler-implementation-extraction]]；当前可用模块包括 incremental source state、self-contained review candidate、context pack budget guardrails、agent tool access tiering、source adapter contract、project next-action state、export surface。
+- 当前新增实现级模式：[[incremental-source-state-compiler]]、[[self-contained-review-candidate-record]]、[[agent-context-pack-budget-guardrails]]、[[agent-tool-access-tiering]]、[[source-adapter-ingest-contract]]、[[project-state-next-action-contract]]、[[exportable-knowledge-artifact-surface]]。
+- 当前新增反模式：[[generic-concept-schema-as-truth-layer]]，避免把普通 concept/entity/comparison/overview 当成 reviewed knowledge schema。
+- OpenKB 已作为模块级实现参考入库：它验证了 Karpathy LLM Wiki + PageIndex long-doc adapter + query/chat + Skill Factory 的组合路线；本资料库吸收长文档树索引、wiki foundation/generator surface 分离、skill output adapter、path-scoped agent writes、ghost wikilink whitelist，但不采用 auto-compiled generic concept wiki 作为 reviewed knowledge layer。
+- 当前新增 OpenKB 模式：[[wiki-foundation-generator-surface-separation]]、[[long-document-tree-index-source-adapter]]、[[knowledge-to-agent-skill-factory]]、[[path-scoped-agent-output-writes]]、[[ghost-wikilink-whitelist-before-write]]。
+- 当前新增 OpenKB 实现级细模式：[[source-hash-registry-and-idempotent-ingest]]、[[url-source-ingest-normalization]]、[[removal-cleanup-with-registry-commit-point]]、[[artifact-trigger-and-body-alignment-eval]]、[[skill-artifact-iteration-workspace-rollback]]。
+- 2026-06-08 沙盒补测：CI-03 [[source-hash-registry-and-idempotent-ingest]] 只作为 source 生命周期卫生规则测试；Markdown source record 保持主记录，derived hash registry 只用于幂等、替换、孤儿/review_due 路由，不提供 truth confidence、evidence support、reviewed relation、action readiness 或自动 wiki 写回。
+- 当前新增 OpenKB 决策：[[2026-05-27-openkb-as-module-reference]]，结论是模块级纳入，不作为主架构替代。
+- 当前新增 OpenKB 反模式：[[auto-compiled-concept-wiki-as-verified-truth-layer]]，避免把 OpenKB 的 direct concept rewrite 套到 formal reviewed knowledge layer。
+- 自动化 Obsidian daily brief 文章已作为操作层参考入库：其顶级价值是“知识必须主动返回给用户”，可吸收为 low-friction capture、daily brief、weekly synthesis，但输出只能进 review/feedback，不能自动成为 reviewed knowledge。
+- 当前新增 feedback/capture 模式：[[frictionless-capture-to-review-inbox]]、[[daily-brief-as-knowledge-return-loop]]、[[weekly-synthesis-thesis-and-gap-review]]。
+- 当前新增自动化反模式：[[automated-brief-as-truth-without-review]]，避免 scheduled brief 或 weekly synthesis 绕过 review gate。
+- 当前新增入库决策：[[2026-05-27-codex-mediated-ingest-and-review-gate]]。默认所有自动捕获只进入 raw/inbox 或 source raw 目录；用户点名“提炼这篇/分析这个链接/马上入库”时走 immediate 模式，由 Codex 保留 raw 后生成候选并 review 晋级。
+- 当前新增 UX/实现原则决策：[[2026-05-27-karpathy-simple-verified-strict-ux-principle]]。独立 gpt-5.5 xhigh subagent 评审结论是“有条件强”：能力上限可超过单个参考库，但默认体验必须 Karpathy-simple，严格 verified/action 层必须藏在后台。
+- 当前新增主骨架决策：[[2026-05-27-karpathy-spine-modular-extensions]]。正式确认 Karpathy-style LLM Wiki 是默认操作骨架和开源入口；verified-action 是内部严格内核；llm-wiki-compiler、OpenKB、obsidian-second-brain、gbrain、retrieval/viewer/API 都是模块枝叶。
+- 当前新增实现蓝图：[[IMPLEMENTATION_BLUEPRINT]]。第一版实现顺序是先证明一条 source -> candidate -> lint/review -> verified node -> context pack -> feedback 的窄闭环，再扩展 review queue、lint、context pack、compiler、query、API/MCP/viewer 和 feedback automation。
+- 当前新增验证纠偏决策：[[2026-05-27-traceability-first-graduated-verification]]。raw/source 以来源可追溯为底线，不要求一开始填满 evidence/confidence/relations；严格验证只在 claim、pattern、decision、implementation-note、context pack 晋级或行动使用时触发。
+- 当前新增积累式验证模式：[[accumulated-source-cross-validation]]。资料进入时先保留 provenance，后续相似内容通过 supports / contradicts / refines / risk_of / derived_from 形成交叉验证信号，降低每条 source 单独重验的成本；重复出现只是晋级信号，不自动等于 truth。
+- 当前新增 alpha 落地规格：[[REVIEW_QUEUE]] 和 [[2026-05-27-alpha-point-collision-validation-v0-1]]。核心对象是 source trace、candidate point、collision signal、point cluster；v0.1 只生成 reviewed promotion signals，不自动涨 confidence 或自动晋级 truth。
+- 当前新增反馈校准规格：[[FEEDBACK]]。反馈只调整 usefulness、scope fit 和 activation ranking；truth confidence、verification_status、source reliability 仍必须通过 review/promotion 修改。
+- 当前新增隐式反馈路由模式：[[conversation-derived-feedback-routing]]。连续追问、问题变窄、纠偏、说漏了、换题等对话行为可以反推 route / keyword / scope 信号；v0.1 采用 JSONL append-only 记录 query-run/feedback-event，SQLite 只作为可重建缓存，隐式正反馈默认只在 session 内生效。
+- 当前新增下一阶段方向草案：[[2026-05-27-memory-tier-and-publishing-pipeline-draft]]。判断是“冷热分层”和“从捕获到发布的 5 步工作流”要一起考虑但分开落地：memory_tier 只管激活优先级，workflow_stage 只管输出流程进度。
+- 新增 MemGPT-inspired Activation Tier 命名收口：hot / warm / cold 对外称 Activation Tier，不称 truth tier；`memory_tier` 只是兼容字段。The vault has activation tiers, not truth tiers. Hot means read early, not believe more。source record: [[2026-05-29-memgpt-activation-tier-source]]
+- 当前新增冷热分层初稿：[[MEMORY_TIER]]。结论是基础冷热分层只做长期轻量 activation metadata，不做 reviewed knowledge layer，不建议先用 01-Hot/02-Warm/03-Cold 文件夹制造搬运成本。
+- 当前新增开发模式上下文初稿：[[DEV_CONTEXT]]。开发项目时先全局发现，再生成临时 Core / Support / Risk / Cold References 工作记忆包；Risk 层必须作为决策 checkpoint，而不是和正向资料混成噪音。
+- 当前新增 byarbrough/obsidian-para 源码/模板级取样：[[2026-05-27-obsidian-para-source]] 和 [[2026-05-27-obsidian-para-architecture-review]]。结论是吸收 actionability routing、archive-first lazy reactivation、project goal gate、project closeout scan；拒绝把 PARA 四文件夹作为 reviewed knowledge layer。
+- 当前新增冷热记忆相关模式：[[actionability-based-memory-routing]]、[[archive-first-lazy-reactivation]]。核心是“下一次最可能在哪里用到”决定 activation_reason；旧资料默认 cold，用到时按 scope 升温，复用后才进入 warm。
+- 当前新增反模式：[[para-folder-taxonomy-as-truth-layer]]。PARA 可以做 actionability/lifecycle 参考，但不能替代 raw/wiki/outputs/products、review gate、provenance、verification_status 和 relations。
+- 当前新增冷热支线参考库索引：[[memory-tier-reference-index]]。后续所有与冷热记忆 / dev context / activation 相关的库，都先进入这个融合工作台做 supports / contradicts / refines / risk_of / derived_from 对照，再决定是否晋级为更强 pattern 或 alpha 设计。
+- 当前新增 kepano/kepano-obsidian 源码/模板级取样：[[2026-05-27-kepano-obsidian-source]] 和 [[2026-05-27-kepano-obsidian-architecture-review]]。结论是吸收 property-driven context workbench、link-overlap related context、random revisit cold-memory maintenance；拒绝把 organic links / ratings / recency 当成 truth。
+- 当前新增 Kepano 相关模式：[[property-driven-context-workbench]]、[[link-overlap-related-context-surface]]、[[random-revisit-cold-memory-maintenance]]。它们强化“不要靠搬文件升温”，而是用 metadata / Bases / links / backlinks / tags 生成 activation 和 dev-context 支持候选。
+- 当前新增反模式：[[derived-relatedness-as-truth-signal]]。链接重叠、反链、tag、rating、last seen 都只能做召回和激活线索，不能替代 reviewed relations、evidence_level 或 confidence。
+- 当前新增 willynikes2/knowledge-base-server 源码级取样：[[2026-05-27-knowledge-base-server-source]] 和 [[2026-05-27-knowledge-base-server-architecture-review]]。结论是吸收 token-efficient context briefing、shared agent retrieval layer、operational session capture、incremental vault index retrieval cache；拒绝自动 classify/promote/writeback 绕过 review gate。
+- 当前新增 knowledge-base-server 相关模式：[[token-efficient-context-briefing]]、[[shared-agent-memory-retrieval-layer]]、[[operational-session-capture-loop]]、[[incremental-vault-index-retrieval-cache]]。它们强化“搜索后先给低 token briefing，再决定打开哪些全文”，并把 SQLite/FTS/vector 明确放在 derived cache 层。
+- 当前新增反模式：[[auto-promotion-without-review-gate]]。自动分类、总结、合成、晋级只能生成 candidate 或 briefing metadata，不能直接写成 reviewed knowledge、decision 或 confidence。
+- 当前新增 Asim00740/Kagantic-vault-structure 源码/模板级取样：[[2026-05-27-kagantic-vault-structure-source]] 和 [[2026-05-27-kagantic-vault-structure-architecture-review]]。结论是吸收 hierarchical index context routing：先读 Main/Domain Index，再按 summary/tags 选择全文；同时记录 zip artifact 异常。
+- 当前新增 Kagantic 相关模式：[[hierarchical-index-context-routing]]。它把 knowledge-base-server 的 context briefing 降到 Markdown-only 形态，适合 v0.1 在没有 SQL/MCP 前先用。
+- 当前新增反模式：[[binary-vault-template-download-as-trusted-source]]。vault template 下载包必须先检查；含 `Application.cmd` / `unit.exe` 的 archive 不应作为可信资料源或被执行。
+- 当前新增 DuskWasHere/dusk-obsidian-vault 源码/模板级取样：[[2026-05-27-dusk-obsidian-vault-source]] 和 [[2026-05-27-dusk-obsidian-vault-architecture-review]]。结论是 GitHub 版是 legacy all-in-one vault，不适合 fork；可吸收 scope dashboard、page-task mailbox、monthly closeout/cooling surface。
+- 当前新增 Dusk 相关模式：[[scope-dashboard-live-context-surface]]。一个 project/area/scope 页面可以把相关 notes、projects、meetings、tasks、references 汇总成 dev context 候选工作台，但不决定 truth。
+- 当前新增反模式：[[all-in-one-vault-runtime-before-modular-contracts]]。不要在 schema/review/dev-context 合同稳定前复制插件重载的全套 Obsidian vault runtime；只拆模块化设计点。
+- 当前新增资料处理分级规则：[[SOURCE_INTAKE]]。普通资料走 Karpathy 轻处理，项目资料走 Dusk-style scope dashboard / DEV_CONTEXT，论文、高价值仓库、官方文档、关键架构资料等强资料才走 verified-action 重流程。
+- 当前新增参考库审查协议：[[REFERENCE_REVIEW_PROTOCOL]]。以后看仓库必须同时过“当前支线价值”和“全貌架构价值”两道 lens；当前支线顺手推进，但每个库都必须从 ingest/review/schema/feedback/retrieval/API/viewer/agent access/publishing/risk 等全貌环节过一遍。
+- JARVIS inside Obsidian 文章已作为内容创作者工作流参考入库：它比较基础，不是 verified knowledge architecture；可用点主要是 type-based capture、Claude Code skills 示例、published performance feedback loop。当前只新增 [[published-performance-feedback-loop]]，其余归并到已有 [[skills-as-action-modules]] 和 [[source-to-publish-content-pipeline]]。
+- 项目关系图需求已收束为 [[project-crosslink-graph-view]]：多个项目之间共享的 pattern、anti-pattern、decision、implementation-note 可以在 viewer/Obsidian workbench 中展示，但图必须从 reviewed `relations` 生成，不能让视觉连接替代可信关系边。
+- 当前新增正向模式：[[review-gated-compile-queue]]、[[claim-level-provenance-source-ranges]]、[[context-pack-evidence-envelope]]、[[static-wiki-health-lint-before-auto-rewrite]]。
+- 当前新增反模式：[[direct-compile-to-truth-layer-without-review]]，避免 LLM 编译结果未经 review 直接污染 reviewed knowledge layer。
+- 模式是否进入项目，最终要经过正向融合判断。
+- 重要问答和阶段复盘要进入 outputs，并反向连接到概念、项目和决策。

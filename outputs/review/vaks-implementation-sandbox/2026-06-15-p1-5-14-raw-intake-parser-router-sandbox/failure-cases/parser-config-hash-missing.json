@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "parser-config-hash-missing",
+  "expected_valid": false,
+  "expected_codes": ["RP_PARSER_CONFIG_MISSING"],
+  "patch": {"parser": {"parser_config_hash": ""}}
+}

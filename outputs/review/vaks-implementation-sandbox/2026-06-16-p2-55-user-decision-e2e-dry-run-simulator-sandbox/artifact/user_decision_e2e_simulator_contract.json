@@ -1,0 +1,50 @@
+{
+  "record_kind": "sandbox_user_decision_e2e_dry_run_simulator_contract",
+  "slice_id": "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+  "source_slice_id": "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+  "truth_boundary": "e2e_dry_run_not_user_decision_or_execution_authority",
+  "status": "built_pending_review",
+  "purpose": "simulate user input through p2-53 classifier and p2-54 renderer without executing any option",
+  "source_final_gate_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox\\artifact\\verify_safe_user_response_renderer.py --final-gate",
+  "expected_flow": [
+    "input_text",
+    "p2_53_classifier_result",
+    "p2_54_renderer_result",
+    "consistency_checks",
+    "forbidden_action_boundaries"
+  ],
+  "simulation_output_contract": {
+    "automatic_execution": false,
+    "decision_collected": false,
+    "ready_to_execute": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "action_basis_ready": false,
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  "required_non_claims": [
+    "The simulator is not a user decision.",
+    "The simulator is not execution authority.",
+    "The simulator cannot approve merge, promotion, sync, commit, push, reviewed knowledge, evidence support, or action basis.",
+    "The simulator only shows what a later agent should say next.",
+    "Unknown or inconsistent upstream output must fail closed."
+  ],
+  "ordinary_agent_usage": {
+    "simulate_example": "python -B artifact/simulate_user_decision_dry_run.py --text \"B\"",
+    "default_verifier": "python -B artifact/verify_user_decision_e2e_simulator.py",
+    "upstream_verifier": "python -B artifact/verify_user_decision_e2e_simulator.py --run-upstream",
+    "final_gate": "python -B artifact/verify_user_decision_e2e_simulator.py --final-gate",
+    "rebuild": "Builder-only: python -B artifact/build_user_decision_e2e_simulator.py"
+  }
+}

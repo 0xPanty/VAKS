@@ -1,5 +1,6 @@
 ---
 type: source
+record_kind: source_card
 status: source-captured
 title: "VERISCORE: Evaluating the factuality of verifiable claims in long-form text generation"
 source_id: 2026-05-29-veriscore-source
@@ -22,8 +23,6 @@ extraction_model: Codex
 version_or_commit: ACL Anthology 2024.findings-emnlp.552
 source_status: active
 raw_location:
-processing_mode: immediate
-processing_level: medium
 review_priority: normal
 review_owner: Codex
 formalization_status: source-only
@@ -38,6 +37,17 @@ upstream_sources: []
 verification_status: primary-source-captured
 candidate_relation_suggestions: []
 
+knowledge_status: raw
+processing_tier: light
+why_saved: see_body_or_legacy_record
+retrieval_policy:
+  policy_kind: source_identity_only
+  pack_allowed: drilldown_required
+  action_basis_allowed: false
+  warning_code: raw_is_provenance_only
+promotion_gate: none
+action_basis_allowed: false
+truth_mutation_allowed: false
 ---
 
 # 来源记录：VERISCORE

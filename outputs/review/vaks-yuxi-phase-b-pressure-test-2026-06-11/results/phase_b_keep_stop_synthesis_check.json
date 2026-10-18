@@ -1,0 +1,523 @@
+{
+  "keep_stop_synthesis_status": "pass",
+  "error_count": 0,
+  "errors": [],
+  "synthesis": {
+    "artifact_kind": "vaks_phase_b_keep_stop_synthesis",
+    "built_at": "2026-06-10T22:11:48+00:00",
+    "compared_against_previous_version": "phase_b_promotion_gate_sufficiency_block",
+    "keep_stop_decision": "keep_phase_b_as_sandbox_candidate",
+    "positive_value_confirmed": true,
+    "no_boundary_leak_confirmed": true,
+    "plain_language_decision": "Keep the VAKS-wrapped Yuxi-like retrieval adapter as a sandbox and documentation candidate; do not promote original Yuxi runtime, C-lite, writeback, or action use yet.",
+    "documentation_patch_scope": [
+      "SOURCE_INTAKE.md",
+      "IMPLEMENTATION_BLUEPRINT.md",
+      "DEV_CONTEXT.md",
+      "MEMORY_TIER.md"
+    ],
+    "changed_core_docs_observed": [
+      "DEV_CONTEXT.md",
+      "IMPLEMENTATION_BLUEPRINT.md",
+      "MEMORY_TIER.md",
+      "SOURCE_INTAKE.md"
+    ],
+    "mainline_status": "documentation_only_patch_validated_not_committed",
+    "runtime_status": "original_yuxi_full_stack_unvalidated_docker_unavailable",
+    "original_yuxi_runtime_validated": false,
+    "reject_full_runtime_adoption": true,
+    "runtime_adoption_allowed": false,
+    "c_lite_allowed": false,
+    "skills_mcp_subagents_allowed": false,
+    "formal_writeback_allowed": false,
+    "promotion_allowed_count": 0,
+    "action_basis_allowed_count": 0,
+    "action_ready_count": 0,
+    "evidence_packet_created_count": 0,
+    "evidence_packet_allowed_count": 0,
+    "evidence_sufficiency_passed_count": 0,
+    "automatic_promotion_allowed_count": 0,
+    "truth_confidence_change_allowed_count": 0,
+    "reviewed_relation_creation_allowed_count": 0,
+    "retrieval_evidence": {
+      "main_pressure": {
+        "primary": {
+          "baseline_file_lexical": {
+            "hit_at_5": "27/30",
+            "hit_at_10": "29/30",
+            "mrr": "0.7766",
+            "action_leakage_rate": "1.0000",
+            "forbidden_top1_rate": "0.9500",
+            "cross_bucket_violation_rate": "0.9500",
+            "warning_coverage_risk": "0.0000",
+            "clickback_coverage": "0.0000",
+            "hash_coverage": "0.0000",
+            "adapter_coverage": "0.0000",
+            "receipt_coverage": "0.0000"
+          },
+          "vaks_b_adapter_skeleton": {
+            "hit_at_5": "30/30",
+            "hit_at_10": "30/30",
+            "mrr": "1.0000",
+            "action_leakage_rate": "0.0000",
+            "forbidden_top1_rate": "0.0000",
+            "cross_bucket_violation_rate": "0.0000",
+            "warning_coverage_risk": "1.0000",
+            "clickback_coverage": "1.0000",
+            "hash_coverage": "1.0000",
+            "adapter_coverage": "1.0000",
+            "receipt_coverage": "1.0000"
+          },
+          "yuxi_native_profile": {
+            "hit_at_5": "30/30",
+            "hit_at_10": "30/30",
+            "mrr": "0.9511",
+            "action_leakage_rate": "1.0000",
+            "forbidden_top1_rate": "0.5000",
+            "cross_bucket_violation_rate": "0.5000",
+            "warning_coverage_risk": "0.0000",
+            "clickback_coverage": "1.0000",
+            "hash_coverage": "0.0000",
+            "adapter_coverage": "0.0000",
+            "receipt_coverage": "0.0000"
+          },
+          "skeleton_vs_baseline": {
+            "hit_at_5_delta": 0.09999999999999998,
+            "hit_at_10_delta": 0.033333333333333326,
+            "mrr_delta": 0.22340000000000004,
+            "action_leakage_delta": -1.0,
+            "forbidden_top1_delta": -0.95,
+            "cross_bucket_delta": -0.95
+          },
+          "skeleton_vs_yuxi_native": {
+            "hit_at_5_delta": 0.0,
+            "hit_at_10_delta": 0.0,
+            "mrr_delta": 0.048900000000000055,
+            "action_leakage_delta": -1.0,
+            "forbidden_top1_delta": -0.5,
+            "cross_bucket_delta": -0.5
+          }
+        },
+        "full": {
+          "baseline_file_lexical": {
+            "hit_at_5": "27/30",
+            "hit_at_10": "29/30",
+            "mrr": "0.7272",
+            "action_leakage_rate": "1.0000",
+            "forbidden_top1_rate": "0.9500",
+            "cross_bucket_violation_rate": "0.9500",
+            "warning_coverage_risk": "0.0000",
+            "clickback_coverage": "0.0000",
+            "hash_coverage": "0.0000",
+            "adapter_coverage": "0.0000",
+            "receipt_coverage": "0.0000"
+          },
+          "vaks_b_adapter_skeleton": {
+            "hit_at_5": "30/30",
+            "hit_at_10": "30/30",
+            "mrr": "1.0000",
+            "action_leakage_rate": "0.0000",
+            "forbidden_top1_rate": "0.0000",
+            "cross_bucket_violation_rate": "0.0000",
+            "warning_coverage_risk": "1.0000",
+            "clickback_coverage": "1.0000",
+            "hash_coverage": "1.0000",
+            "adapter_coverage": "1.0000",
+            "receipt_coverage": "1.0000"
+          },
+          "yuxi_native_profile": {
+            "hit_at_5": "29/30",
+            "hit_at_10": "29/30",
+            "mrr": "0.9041",
+            "action_leakage_rate": "1.0000",
+            "forbidden_top1_rate": "0.7500",
+            "cross_bucket_violation_rate": "0.7500",
+            "warning_coverage_risk": "0.0000",
+            "clickback_coverage": "1.0000",
+            "hash_coverage": "0.0000",
+            "adapter_coverage": "0.0000",
+            "receipt_coverage": "0.0000"
+          },
+          "skeleton_vs_baseline": {
+            "hit_at_5_delta": 0.09999999999999998,
+            "hit_at_10_delta": 0.033333333333333326,
+            "mrr_delta": 0.27280000000000004,
+            "action_leakage_delta": -1.0,
+            "forbidden_top1_delta": -0.95,
+            "cross_bucket_delta": -0.95
+          },
+          "skeleton_vs_yuxi_native": {
+            "hit_at_5_delta": 0.033333333333333326,
+            "hit_at_10_delta": 0.033333333333333326,
+            "mrr_delta": 0.09589999999999999,
+            "action_leakage_delta": -1.0,
+            "forbidden_top1_delta": -0.75,
+            "cross_bucket_delta": -0.75
+          }
+        }
+      },
+      "holdout_pressure": {
+        "primary": {
+          "baseline_file_lexical": {
+            "hit_at_5": "9/15",
+            "hit_at_10": "12/15",
+            "mrr": "0.4633",
+            "action_leakage_rate": "1.0000",
+            "forbidden_top1_rate": "0.8333",
+            "cross_bucket_violation_rate": "0.8333",
+            "warning_coverage_risk": "0.0000",
+            "clickback_coverage": "0.0000",
+            "hash_coverage": "0.0000",
+            "adapter_coverage": "0.0000",
+            "receipt_coverage": "0.0000"
+          },
+          "vaks_b_adapter_skeleton": {
+            "hit_at_5": "12/15",
+            "hit_at_10": "13/15",
+            "mrr": "0.7811",
+            "action_leakage_rate": "0.0000",
+            "forbidden_top1_rate": "0.0000",
+            "cross_bucket_violation_rate": "0.0000",
+            "warning_coverage_risk": "1.0000",
+            "clickback_coverage": "1.0000",
+            "hash_coverage": "1.0000",
+            "adapter_coverage": "1.0000",
+            "receipt_coverage": "1.0000"
+          },
+          "yuxi_native_profile": {
+            "hit_at_5": "10/15",
+            "hit_at_10": "11/15",
+            "mrr": "0.5808",
+            "action_leakage_rate": "1.0000",
+            "forbidden_top1_rate": "0.6667",
+            "cross_bucket_violation_rate": "0.6667",
+            "warning_coverage_risk": "0.0000",
+            "clickback_coverage": "1.0000",
+            "hash_coverage": "0.0000",
+            "adapter_coverage": "0.0000",
+            "receipt_coverage": "0.0000"
+          },
+          "skeleton_vs_baseline": {
+            "hit_at_5_delta": 0.20000000000000007,
+            "hit_at_10_delta": 0.06666666666666665,
+            "mrr_delta": 0.3178,
+            "action_leakage_delta": -1.0,
+            "forbidden_top1_delta": -0.8333,
+            "cross_bucket_delta": -0.8333
+          },
+          "skeleton_vs_yuxi_native": {
+            "hit_at_5_delta": 0.13333333333333341,
+            "hit_at_10_delta": 0.13333333333333341,
+            "mrr_delta": 0.20030000000000003,
+            "action_leakage_delta": -1.0,
+            "forbidden_top1_delta": -0.6667,
+            "cross_bucket_delta": -0.6667
+          }
+        },
+        "full": {
+          "baseline_file_lexical": {
+            "hit_at_5": "13/15",
+            "hit_at_10": "13/15",
+            "mrr": "0.4944",
+            "action_leakage_rate": "1.0000",
+            "forbidden_top1_rate": "0.8333",
+            "cross_bucket_violation_rate": "0.8333",
+            "warning_coverage_risk": "0.0000",
+            "clickback_coverage": "0.0000",
+            "hash_coverage": "0.0000",
+            "adapter_coverage": "0.0000",
+            "receipt_coverage": "0.0000"
+          },
+          "vaks_b_adapter_skeleton": {
+            "hit_at_5": "13/15",
+            "hit_at_10": "13/15",
+            "mrr": "0.7591",
+            "action_leakage_rate": "0.0000",
+            "forbidden_top1_rate": "0.0000",
+            "cross_bucket_violation_rate": "0.0000",
+            "warning_coverage_risk": "1.0000",
+            "clickback_coverage": "1.0000",
+            "hash_coverage": "1.0000",
+            "adapter_coverage": "1.0000",
+            "receipt_coverage": "1.0000"
+          },
+          "yuxi_native_profile": {
+            "hit_at_5": "8/15",
+            "hit_at_10": "8/15",
+            "mrr": "0.5137",
+            "action_leakage_rate": "1.0000",
+            "forbidden_top1_rate": "0.8333",
+            "cross_bucket_violation_rate": "0.8333",
+            "warning_coverage_risk": "0.0000",
+            "clickback_coverage": "1.0000",
+            "hash_coverage": "0.0000",
+            "adapter_coverage": "0.0000",
+            "receipt_coverage": "0.0000"
+          },
+          "skeleton_vs_baseline": {
+            "hit_at_5_delta": 0.0,
+            "hit_at_10_delta": 0.0,
+            "mrr_delta": 0.2647,
+            "action_leakage_delta": -1.0,
+            "forbidden_top1_delta": -0.8333,
+            "cross_bucket_delta": -0.8333
+          },
+          "skeleton_vs_yuxi_native": {
+            "hit_at_5_delta": 0.33333333333333337,
+            "hit_at_10_delta": 0.33333333333333337,
+            "mrr_delta": 0.24539999999999995,
+            "action_leakage_delta": -1.0,
+            "forbidden_top1_delta": -0.8333,
+            "cross_bucket_delta": -0.8333
+          }
+        }
+      },
+      "positive_checks": {
+        "main_primary_hit_mrr_improved_over_baseline": true,
+        "main_full_hit_mrr_improved_over_baseline": true,
+        "main_action_leakage_improved_over_baseline": true,
+        "holdout_primary_hit_mrr_improved_over_baseline": true,
+        "holdout_full_mrr_improved_and_hit_not_regressed_over_baseline": true,
+        "holdout_action_leakage_improved_over_baseline": true,
+        "governance_beats_yuxi_native_main": true,
+        "governance_beats_yuxi_native_holdout": true,
+        "holdout_retrieval_beats_or_ties_yuxi_native": true
+      }
+    },
+    "pipeline_counts": {
+      "context_pack_count": 90,
+      "context_pack_action_basis_allowed_count": 0,
+      "evidence_envelope_count": 90,
+      "support_check_count": 90,
+      "evidence_item_count": 389,
+      "source_span_available_count": 389,
+      "pre_refresh_needed_count": 68,
+      "post_refresh_needed_count": 0,
+      "pre_refresh_mismatch_count": 68,
+      "post_refresh_mismatch_count": 0,
+      "refreshed_item_count": 68,
+      "current_source_hash_match_count": 389,
+      "review_packet_count": 90,
+      "open_packet_count": 88,
+      "blocked_no_source_anchor_count": 2,
+      "simulated_packet_count": 12,
+      "simulated_support_like_count": 24,
+      "blocked_gate_count": 90,
+      "gate_record_count": 90
+    },
+    "runtime_environment": {
+      "docker_path": null,
+      "runtime_feasibility_status": "pass"
+    },
+    "prior_gates": {
+      "promotion_gate": {
+        "status": "pass",
+        "errors": 0
+      },
+      "simulated_reviewer_outcome": {
+        "status": "pass",
+        "errors": 0
+      },
+      "review_queue_packet": {
+        "status": "pass",
+        "errors": 0
+      },
+      "refreshed_support_check": {
+        "status": "pass",
+        "errors": 0
+      },
+      "source_refresh": {
+        "status": "pass",
+        "errors": 0
+      },
+      "evidence_support_check": {
+        "status": "pass",
+        "errors": 0
+      },
+      "evidence_envelope": {
+        "status": "pass",
+        "errors": 0
+      },
+      "context_pack": {
+        "status": "pass",
+        "errors": 0
+      },
+      "runtime_feasibility": {
+        "status": "pass",
+        "errors": 0
+      },
+      "minimal_doc_patch": {
+        "status": "pass",
+        "errors": 0
+      },
+      "adapter_contract": {
+        "status": "pass",
+        "errors": 0
+      },
+      "integration_readiness": {
+        "status": "pass",
+        "errors": 0
+      },
+      "mainline_readiness": {
+        "status": "pass",
+        "errors": 0
+      },
+      "external_review_result": {
+        "status": "pass",
+        "errors": 0
+      },
+      "pro_review_prompt": {
+        "status": "pass",
+        "errors": 0
+      }
+    },
+    "allowed_next_steps": [
+      "commit_validated_four_file_documentation_patch_after_user_approval",
+      "run_original_yuxi_full_stack_only_after_docker_or_remote_runner_exists",
+      "design_next_sandbox_gate_before_any_c_lite_or_runtime_default"
+    ],
+    "hard_stops": [
+      "do_not_claim_original_yuxi_runtime_validated",
+      "do_not_promote_to_c_lite",
+      "do_not_attach_skills_mcp_subagents_or_writeback",
+      "do_not_create_evidence_packet_or_action_basis_from_simulation",
+      "do_not_treat_graph_or_vector_rank_as_evidence_support",
+      "do_not_change_truth_confidence_or_reviewed_relations"
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "results/phase_b_keep_stop_synthesis.json",
+      "exists": true,
+      "bytes": 13359
+    },
+    {
+      "path": "PHASE_B_KEEP_STOP_SYNTHESIS_PACKET.md",
+      "exists": true,
+      "bytes": 3403
+    },
+    {
+      "path": "PHASE_B_KEEP_STOP_SYNTHESIS_DECISION.md",
+      "exists": true,
+      "bytes": 1290
+    },
+    {
+      "path": "PHASE_B_PROMOTION_GATE_DECISION.md",
+      "exists": true,
+      "bytes": 3931
+    },
+    {
+      "path": "results/phase_b_promotion_gate_check.json",
+      "exists": true,
+      "bytes": 4404
+    }
+  ],
+  "prior_gates": {
+    "promotion_gate": {
+      "status": "pass",
+      "errors": 0
+    },
+    "simulated_reviewer_outcome": {
+      "status": "pass",
+      "errors": 0
+    },
+    "review_queue_packet": {
+      "status": "pass",
+      "errors": 0
+    },
+    "refreshed_support_check": {
+      "status": "pass",
+      "errors": 0
+    },
+    "source_refresh": {
+      "status": "pass",
+      "errors": 0
+    },
+    "evidence_support_check": {
+      "status": "pass",
+      "errors": 0
+    },
+    "evidence_envelope": {
+      "status": "pass",
+      "errors": 0
+    },
+    "context_pack": {
+      "status": "pass",
+      "errors": 0
+    },
+    "runtime_feasibility": {
+      "status": "pass",
+      "errors": 0
+    },
+    "minimal_doc_patch": {
+      "status": "pass",
+      "errors": 0
+    },
+    "adapter_contract": {
+      "status": "pass",
+      "errors": 0
+    },
+    "integration_readiness": {
+      "status": "pass",
+      "errors": 0
+    },
+    "mainline_readiness": {
+      "status": "pass",
+      "errors": 0
+    },
+    "external_review_result": {
+      "status": "pass",
+      "errors": 0
+    },
+    "pro_review_prompt": {
+      "status": "pass",
+      "errors": 0
+    }
+  },
+  "core_docs": {
+    "dirty": [
+      " M DEV_CONTEXT.md",
+      " M IMPLEMENTATION_BLUEPRINT.md",
+      " M MEMORY_TIER.md",
+      " M SOURCE_INTAKE.md"
+    ]
+  },
+  "retrieval": {
+    "positive_checks": {
+      "main_primary_hit_mrr_improved_over_baseline": true,
+      "main_full_hit_mrr_improved_over_baseline": true,
+      "main_action_leakage_improved_over_baseline": true,
+      "holdout_primary_hit_mrr_improved_over_baseline": true,
+      "holdout_full_mrr_improved_and_hit_not_regressed_over_baseline": true,
+      "holdout_action_leakage_improved_over_baseline": true,
+      "governance_beats_yuxi_native_main": true,
+      "governance_beats_yuxi_native_holdout": true,
+      "holdout_retrieval_beats_or_ties_yuxi_native": true
+    }
+  },
+  "pipeline_counts": {
+    "context_pack_count": 90,
+    "context_pack_action_basis_allowed_count": 0,
+    "evidence_envelope_count": 90,
+    "support_check_count": 90,
+    "evidence_item_count": 389,
+    "source_span_available_count": 389,
+    "pre_refresh_needed_count": 68,
+    "post_refresh_needed_count": 0,
+    "pre_refresh_mismatch_count": 68,
+    "post_refresh_mismatch_count": 0,
+    "refreshed_item_count": 68,
+    "current_source_hash_match_count": 389,
+    "review_packet_count": 90,
+    "open_packet_count": 88,
+    "blocked_no_source_anchor_count": 2,
+    "simulated_packet_count": 12,
+    "simulated_support_like_count": 24,
+    "blocked_gate_count": 90,
+    "gate_record_count": 90
+  },
+  "packet_text": {
+    "packet_bytes": 3270,
+    "decision_bytes": 1244
+  }
+}

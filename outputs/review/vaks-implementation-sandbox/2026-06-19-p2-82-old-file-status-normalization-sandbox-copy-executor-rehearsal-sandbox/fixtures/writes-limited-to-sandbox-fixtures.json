@@ -1,0 +1,8 @@
+{
+  "fixture_id": "writes-limited-to-sandbox-fixtures",
+  "expected": {
+    "writes_limited_to_sandbox_fixtures": true,
+    "old_slice_writes_applied": 0,
+    "executor_write_allowed_now": false
+  }
+}

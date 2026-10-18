@@ -1,0 +1,1 @@
+{"case_id":"dependency-install","base_fixture":"fixtures/valid-product-experience-screening.json","mutations":[{"op":"set","path":"/scope/installs_dependencies","value":true}]}

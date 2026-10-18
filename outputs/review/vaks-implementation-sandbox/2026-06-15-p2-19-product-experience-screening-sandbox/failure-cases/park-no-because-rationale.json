@@ -1,0 +1,1 @@
+{"case_id":"park-no-because-rationale","base_fixture":"fixtures/valid-product-experience-screening.json","mutations":[{"op":"set_candidate","id":"P2-PX-04","path":"/rationale","value":"Park for later screening."}]}

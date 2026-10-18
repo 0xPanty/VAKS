@@ -1,0 +1,7 @@
+{
+  "case_id": "body-and-non-status-frontmatter-preserved",
+  "body_unchanged_count": 75,
+  "non_status_frontmatter_unchanged_count": 75,
+  "expected": 75,
+  "passed": true
+}

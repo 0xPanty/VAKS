@@ -1,0 +1,18 @@
+{
+  "expected_failure_reason": "MATRIX_DUPLICATE_CASE_ID",
+  "record_kind": "action_boundary_failure_matrix",
+  "slice_id": "2026-06-15-p0-07-action-boundary-failure-matrix-sandbox",
+  "authority_non_claims": {
+    "mainline_ready": false,
+    "reviewer_approval_created": false,
+    "reviewed_knowledge_created": false,
+    "evidence_support_created": false,
+    "action_basis_created": false,
+    "promotion_authorized": false
+  },
+  "cases": [
+    {"case_id": "AB-01", "title": "one", "failure_mode": "x", "boundary_class": "x", "source_refs": ["plan"], "blocked_by": [{"slice_id": "p0-03", "guard": "x"}], "detection": "x", "expected_outcome": {"status": "blocked", "reason": "x"}, "fixture_refs": ["x"], "validator_or_check_refs": ["x"], "authority_non_claims": {"mainline_ready": false, "reviewer_approval_created": false, "reviewed_knowledge_created": false, "evidence_support_created": false, "action_basis_created": false, "promotion_authorized": false}},
+    {"case_id": "AB-01", "title": "two", "failure_mode": "x", "boundary_class": "x", "source_refs": ["plan"], "blocked_by": [{"slice_id": "p0-03", "guard": "x"}], "detection": "x", "expected_outcome": {"status": "blocked", "reason": "x"}, "fixture_refs": ["x"], "validator_or_check_refs": ["x"], "authority_non_claims": {"mainline_ready": false, "reviewer_approval_created": false, "reviewed_knowledge_created": false, "evidence_support_created": false, "action_basis_created": false, "promotion_authorized": false}}
+  ]
+}
+

@@ -1,0 +1,9 @@
+{
+  "fixture_id": "approval-still-not-collected",
+  "expected": {
+    "approval_collected": false,
+    "current_text_matches_exact_approval": false,
+    "executor_write_allowed": false,
+    "generic_language_is_not_approval": true
+  }
+}

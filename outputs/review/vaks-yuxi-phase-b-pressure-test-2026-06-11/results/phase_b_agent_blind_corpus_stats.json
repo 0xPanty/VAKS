@@ -1,0 +1,14 @@
+[
+  {
+    "corpus": "primary",
+    "files": 407,
+    "chunks": 4516,
+    "stale_paths": "FEEDBACK.md, SCHEMA.md, SOURCE_INTAKE.md"
+  },
+  {
+    "corpus": "full",
+    "files": 4381,
+    "chunks": 20312,
+    "stale_paths": "FEEDBACK.md, SCHEMA.md, SOURCE_INTAKE.md"
+  }
+]

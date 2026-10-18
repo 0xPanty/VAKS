@@ -1,0 +1,112 @@
+---
+type: source
+status: source-captured
+title: "Ian Xiaohei Illustrations"
+source_id: 2026-06-06-helloianneo-ian-xiaohei-illustrations-source
+source_uri: https://github.com/helloianneo/ian-xiaohei-illustrations
+source_url: https://github.com/helloianneo/ian-xiaohei-illustrations/tree/main
+source_type: repository
+author: Ian / helloianneo
+publisher: GitHub
+published_at:
+updated_at: 2026-06-03
+captured_at: 2026-06-06
+captured_by: Codex
+version_or_commit: 91b560849e8f883922cc2fa8a358a668caa94105
+commit_time: "2026-06-03 11:35:41 +0000"
+commit_subject: "Commit"
+source_status: active
+license: MIT
+stars_at_capture: 2721
+forks_at_capture: 247
+open_issues_at_capture: 4
+snapshot_location: raw/repos/_snapshots/helloianneo-ian-xiaohei-illustrations-91b560849e8f883922cc2fa8a358a668caa94105.zip
+snapshot_sha256: C22C228A7DC4992C49C31089CB203FDD8DFA7D965090E2A21AA807D31C8E6F85
+processing_mode: immediate
+processing_level: medium
+review_priority: low
+review_owner: Codex
+formalization_status: candidate-generated
+verification_status: primary-source-captured
+confidence: high for captured repository contents at checked commit; medium for future upstream state after capture
+projects:
+  - verified-action-knowledge-system
+source_family:
+  - visual-explanation
+  - codex-skill
+  - chinese-handdrawn-illustration
+topics:
+  - ian-xiaohei-illustrations
+  - codex-skill
+  - chinese-article-illustration
+  - handdrawn
+  - visual-metaphor
+  - xiaohei
+truth_boundary: source provenance and candidate comprehension only; visual reference, not VAKS reviewed knowledge or action basis
+candidate_relation_suggestions:
+  - candidate:visual_metaphor_for_vaks_architecture_explanation
+  - candidate:single_cognitive_anchor_per_illustration
+  - candidate:attribution_required_for_xiaohei_visual_language
+related_artifacts:
+  - products/visuals/vaks-xiaohei-architecture-logic/vaks-architecture-gate.svg
+  - products/visuals/vaks-xiaohei-architecture-logic/vaks-architecture-gate.png
+  - products/visuals/vaks-xiaohei-architecture-logic/vaks-architecture-gate-imagegen-draft.png
+  - products/visuals/vaks-xiaohei-feedback-mechanism/vaks-feedback-use-ledger.png
+  - products/visuals/vaks-xiaohei-feedback-mechanism/README.md
+  - outputs/review/2026-06-06-helloianneo-ian-xiaohei-illustrations-candidate-distillation.md
+tags:
+  - source
+  - repository
+  - visual-reference
+  - codex-skill
+  - candidate-only
+---
+
+# Ian Xiaohei Illustrations Source Record
+
+## 为什么收录
+
+用户要求查看 `helloianneo/ian-xiaohei-illustrations`，并尝试用它来画 VAKS 架构逻辑。
+
+本记录只把该 repo 作为视觉表达参考收录。它不是 VAKS 架构来源，不提供 truth、review、evidence 或 action-basis 规则。
+
+## 来源信息
+
+- Repository: `helloianneo/ian-xiaohei-illustrations`
+- URL: https://github.com/helloianneo/ian-xiaohei-illustrations/tree/main
+- Checked commit: `91b560849e8f883922cc2fa8a358a668caa94105`
+- Commit time: `2026-06-03 11:35:41 +0000`
+- GitHub description at capture: `中文小黑怪诞正文配图生成 Skill | 16:9 白底手绘 | 少量红橙蓝批注 | Codex Skill`
+- GitHub metadata at capture: 2721 stars, 247 forks, 4 open issues.
+- License: MIT
+- Notice: example images are style calibration examples; recurring character `小黑` is part of Ian's visual language, and derived documentation should keep the Ian Xiaohei Illustrations name or provide attribution to Ian.
+- Snapshot: `raw/repos/_snapshots/helloianneo-ian-xiaohei-illustrations-91b560849e8f883922cc2fa8a358a668caa94105.zip`
+- Snapshot SHA256: `C22C228A7DC4992C49C31089CB203FDD8DFA7D965090E2A21AA807D31C8E6F85`
+- Inspected mode: source/docs/examples read; no skill installed.
+
+## 文件锚点
+
+| Anchor | What exists | VAKS extraction | Boundary |
+|---|---|---|---|
+| `README.md:9-15` | Defines the repo as a Codex Skill for turning Chinese article judgments, processes, structures, states, or metaphors into 16:9 hand-drawn article illustrations with the `小黑` visual IP. | Good fit for explanatory visuals. | Not a diagramming or architecture specification tool. |
+| `README.md:45-53` | Outputs include 16:9 illustration, shot list, theme/core meaning/structure type/action/label suggestions, and PNG output. | Useful workflow for VAKS public/explainer visuals. | Not suitable for formal editable architecture diagrams. |
+| `README.md:61-69` | Style: pure white background, black hand-drawn line art, whitespace, small red/orange/blue Chinese annotations, one idea per image, 小黑 participates in core action. | Direct style guide for the VAKS pilot visual. | Style guide does not decide architecture content. |
+| `README.md:173-185` | Workflow: read content, extract cognitive anchor, output shot list, choose structure type, invent metaphor, generate image, QA check. | Good process for converting VAKS logic into explanatory images. | Output remains explanatory product material. |
+| `README.md:232-233` | Examples are only style calibration; do not copy composition. | Important reuse boundary. | Do not treat examples as templates. |
+| `NOTICE.md:5-7` | Example images are generated by Ian for style calibration; `小黑` is Ian's visual language; derived documentation should keep name or attribution. | Attribution requirement for derivative VAKS visual docs. | This is a usage/credit note, not VAKS source evidence. |
+| `ian-xiaohei-illustrations/SKILL.md:10-12` | The skill positions itself as article illustration, not commercial illustration/PPT/可爱卡通; 小黑 must perform the core action. | Fit for one-anchor conceptual picture. | Not for dense VAKS module tree. |
+| `references/style-dna.md` | Requires white background, hand-drawn line, whitespace, sparse annotations, no PPT/complex diagram. | Guides the produced visual. | Conflicts with a full architecture map, so the visual must stay simplified. |
+| `references/qa-checklist.md` | QA flags overfull, PPT-like, title-heavy, copied composition, bad text. | Useful visual QA. | Visual QA is not architecture review. |
+
+## 当前处理结果
+
+- Source card written: `raw/repos/2026-06-06-helloianneo-ian-xiaohei-illustrations-source.md`
+- Source snapshot retained: `raw/repos/_snapshots/helloianneo-ian-xiaohei-illustrations-91b560849e8f883922cc2fa8a358a668caa94105.zip`
+- Candidate distillation: `outputs/review/2026-06-06-helloianneo-ian-xiaohei-illustrations-candidate-distillation.md`
+- Visual pilot: `products/visuals/vaks-xiaohei-architecture-logic/vaks-architecture-gate.svg`
+- PNG preview: `products/visuals/vaks-xiaohei-architecture-logic/vaks-architecture-gate.png`
+- Image generation draft: `products/visuals/vaks-xiaohei-architecture-logic/vaks-architecture-gate-imagegen-draft.png`
+- Feedback mechanism visual: `products/visuals/vaks-xiaohei-feedback-mechanism/vaks-feedback-use-ledger.png`
+- Feedback mechanism visual note: `products/visuals/vaks-xiaohei-feedback-mechanism/README.md`
+
+No VAKS main architecture file was changed by this source.

@@ -1,0 +1,222 @@
+[
+  {
+    "failure_id": "reject_local_parser_not_package_api",
+    "risk": "package_api must be used by the prototype verifier",
+    "mutation": {"set_path": {"path": ["adoption_contract", "verifier_uses_package_api"], "value": false}},
+    "hard_no": [
+      "do_not_modify_old_slices",
+      "do_not_create_shared_helper",
+      "do_not_edit_tools",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_old_slice_backfill_true",
+    "risk": "old_slice backfill is outside prototype scope",
+    "mutation": {"set_path": {"path": ["adoption_contract", "old_slice_backfill"], "value": true}},
+    "hard_no": [
+      "do_not_modify_old_slices",
+      "do_not_create_shared_helper",
+      "do_not_edit_tools",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_shared_helper_created_true",
+    "risk": "shared_helper creation is outside prototype scope",
+    "mutation": {"set_path": {"path": ["adoption_contract", "shared_helper_created"], "value": true}},
+    "hard_no": [
+      "do_not_modify_old_slices",
+      "do_not_create_shared_helper",
+      "do_not_edit_tools",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_tools_edited_true",
+    "risk": "tools edit is outside prototype scope",
+    "mutation": {"set_path": {"path": ["adoption_contract", "tools_edited"], "value": true}},
+    "hard_no": [
+      "do_not_modify_old_slices",
+      "do_not_create_shared_helper",
+      "do_not_edit_tools",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_mainline_edited_true",
+    "risk": "mainline edit is outside prototype scope",
+    "mutation": {"set_path": {"path": ["adoption_contract", "mainline_edited"], "value": true}},
+    "hard_no": [
+      "do_not_modify_old_slices",
+      "do_not_create_shared_helper",
+      "do_not_edit_tools",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_action_basis_ready_true",
+    "risk": "action_basis readiness cannot come from prototype",
+    "mutation": {"set_path": {"path": ["readiness_flags", "action_basis_ready"], "value": true}},
+    "hard_no": [
+      "do_not_modify_old_slices",
+      "do_not_create_shared_helper",
+      "do_not_edit_tools",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_user_approval_collected_true",
+    "risk": "user_approval cannot be inferred from prototype",
+    "mutation": {"set_path": {"path": ["readiness_flags", "user_approval_collected"], "value": true}},
+    "hard_no": [
+      "do_not_modify_old_slices",
+      "do_not_create_shared_helper",
+      "do_not_edit_tools",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_dependency_install_required",
+    "risk": "dependency install is not required",
+    "mutation": {"set_path": {"path": ["readiness_flags", "dependency_install_required"], "value": true}},
+    "hard_no": [
+      "do_not_modify_old_slices",
+      "do_not_create_shared_helper",
+      "do_not_edit_tools",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_network_required",
+    "risk": "network is not required",
+    "mutation": {"set_path": {"path": ["readiness_flags", "network_required"], "value": true}},
+    "hard_no": [
+      "do_not_modify_old_slices",
+      "do_not_create_shared_helper",
+      "do_not_edit_tools",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_mcp_required",
+    "risk": "mcp is not required",
+    "mutation": {"set_path": {"path": ["readiness_flags", "mcp_required"], "value": true}},
+    "hard_no": [
+      "do_not_modify_old_slices",
+      "do_not_create_shared_helper",
+      "do_not_edit_tools",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  }
+]

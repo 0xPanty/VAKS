@@ -1,0 +1,55 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "keyvanakbary/learning-notes",
+  "source_url": "https://github.com/keyvanakbary/learning-notes",
+  "checked_commit": "ce15cdc2f51607e71912da6856b04b23e540df01",
+  "checked_at": "2026-06-11",
+  "inspection_method": "local git checkout; inspected README, taking-notes.md, sample paper note, backlog, website config, and GitHub Pages workflow",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "source-type-index",
+      "why": "Lists books, talks, articles, and papers with author/year metadata and note links."
+    },
+    {
+      "path": "taking-notes.md",
+      "kind": "note-method",
+      "why": "Explains medium-specific note-taking and recall process."
+    },
+    {
+      "path": "papers/map-reduce.md",
+      "kind": "sample-paper-summary",
+      "why": "Shows short paper summary with source link and structured sections."
+    },
+    {
+      "path": "backlog.md",
+      "kind": "candidate-queue",
+      "why": "Lists future articles and papers without treating them as processed knowledge."
+    },
+    {
+      "path": "website/_config.yml",
+      "kind": "public-projection-config",
+      "why": "Configures Jekyll/Just-the-Docs projection and folder defaults."
+    },
+    {
+      "path": ".github/workflows/main.yml",
+      "kind": "publish-workflow",
+      "why": "Builds and deploys the website from the website folder to GitHub Pages."
+    }
+  ],
+  "observed_counts": {
+    "book_notes": 24,
+    "talk_notes": 18,
+    "paper_notes": 6,
+    "article_notes": 1
+  },
+  "known_limits": [
+    "Summaries are recall artifacts and not retained source text.",
+    "Point-level evidence spans are absent.",
+    "Copyright and quotation boundaries matter for external source notes."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

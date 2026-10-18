@@ -1,0 +1,8 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "runtime-memory-entry-action-basis",
+  "expected_valid": false,
+  "expected_codes": ["MB_ACTION_BASIS_FORBIDDEN"],
+  "allowed_extra_codes": ["MB_AUTHORITY_CONFUSION"],
+  "patch": {"runtime_memory": {"entries": [{"id": "action-memory", "ref": "fixtures/runtime/session-observation.json", "memory_type": "session_observation", "source_observation_ids": ["obs-2026-06-15-001"], "action_basis_allowed": true}]}}
+}

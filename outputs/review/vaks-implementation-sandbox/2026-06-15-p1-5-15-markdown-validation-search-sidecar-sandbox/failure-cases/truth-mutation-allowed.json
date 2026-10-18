@@ -1,0 +1,1 @@
+{"extends":"fixtures/valid-frontmatter-validation-check.json","scenario_id":"truth-mutation-allowed","expected_valid":false,"expected_codes":["MS_TRUTH_MUTATION_FORBIDDEN"],"patch":{"boundary":{"truth_mutation_allowed":true}}}

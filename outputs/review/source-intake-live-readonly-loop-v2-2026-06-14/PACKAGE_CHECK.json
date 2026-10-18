@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "case_count": 7,
+  "passed_expected_decision_count": 7,
+  "frozen_replay_status": "fail",
+  "truth_boundary": "Package check covers generated sandbox evidence, expected deterministic decisions, and minimal frozen replay only."
+}

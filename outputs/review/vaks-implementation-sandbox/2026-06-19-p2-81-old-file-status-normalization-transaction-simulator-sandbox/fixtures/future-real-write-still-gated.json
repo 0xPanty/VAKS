@@ -1,0 +1,9 @@
+{
+  "fixture_id": "future-real-write-still-gated",
+  "expected": {
+    "requires_exact_p2_75_approval_before_real_write": true,
+    "requires_fresh_hash_check_before_real_write": true,
+    "requires_stop_before_write": true,
+    "future_exact_approval_is_not_immediate_write": true
+  }
+}

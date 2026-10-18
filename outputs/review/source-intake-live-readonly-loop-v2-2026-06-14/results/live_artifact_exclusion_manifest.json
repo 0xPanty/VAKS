@@ -1,0 +1,212 @@
+[
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/query_runs/V2-01-candidate-safe-downgrade-query-run.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "query_run",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:42:43+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/context_packs/V2-01-candidate-safe-downgrade-context-pack.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "context_pack",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:42:43+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/answer_use/V2-01-candidate-safe-downgrade-answer-use.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "answer_use",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:42:43+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/query_runs/V2-02-real-raw-anchor-natural-allow-query-run.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "query_run",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:42:43+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/context_packs/V2-02-real-raw-anchor-natural-allow-context-pack.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "context_pack",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:42:43+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/answer_use/V2-02-real-raw-anchor-natural-allow-answer-use.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "answer_use",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:42:43+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/query_runs/V2-03-mixed-pack-no-fallback-allow-query-run.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "query_run",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:42:43+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/context_packs/V2-03-mixed-pack-no-fallback-allow-context-pack.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "context_pack",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:42:43+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/answer_use/V2-03-mixed-pack-no-fallback-allow-answer-use.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "answer_use",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:42:43+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/query_runs/V2-04-adversarial-candidate-mislabeled-support-query-run.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "query_run",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:42:43+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/context_packs/V2-04-adversarial-candidate-mislabeled-support-context-pack.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "context_pack",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:42:43+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/answer_use/V2-04-adversarial-candidate-mislabeled-support-answer-use.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "answer_use",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:42:43+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/query_runs/V2-05-adversarial-overlay-mislabeled-support-query-run.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "query_run",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:42:43+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/context_packs/V2-05-adversarial-overlay-mislabeled-support-context-pack.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "context_pack",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:42:43+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/answer_use/V2-05-adversarial-overlay-mislabeled-support-answer-use.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "answer_use",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:42:43+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/query_runs/V2-06-adversarial-rank-diagnostic-mislabeled-support-query-run.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "query_run",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:42:43+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/context_packs/V2-06-adversarial-rank-diagnostic-mislabeled-support-context-pack.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "context_pack",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:42:43+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/answer_use/V2-06-adversarial-rank-diagnostic-mislabeled-support-answer-use.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "answer_use",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:42:43+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/query_runs/V2-07-adversarial-canonical-overlay-mislabeled-support-query-run.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "query_run",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:42:43+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/context_packs/V2-07-adversarial-canonical-overlay-mislabeled-support-context-pack.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "context_pack",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:42:43+00:00",
+    "eligible_for_default_index": false
+  },
+  {
+    "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/answer_use/V2-07-adversarial-canonical-overlay-mislabeled-support-answer-use.md",
+    "artifact_kind": "live_readonly_test_artifact",
+    "artifact_group": "answer_use",
+    "retrieval_exclusion": true,
+    "default_retrieval": false,
+    "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+    "checked_at": "2026-06-14T01:42:43+00:00",
+    "eligible_for_default_index": false
+  }
+]

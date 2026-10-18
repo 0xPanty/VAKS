@@ -1,0 +1,11 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "use-loop-trace-missing",
+  "expected_valid": false,
+  "expected_codes": ["MB_MISSING_USE_LOOP_TRACE"],
+  "patch": {
+    "use_loop_trace": {
+      "__delete__": true
+    }
+  }
+}

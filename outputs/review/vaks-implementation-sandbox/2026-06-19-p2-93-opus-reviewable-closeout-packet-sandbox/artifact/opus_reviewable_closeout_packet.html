@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>2026-06-19-p2-93-opus-reviewable-closeout-packet-sandbox</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; line-height: 1.45; color: #202124; }
+    table { border-collapse: collapse; width: 100%; max-width: 1100px; }
+    td, th { border: 1px solid #c8cdd3; padding: 6px 8px; text-align: left; }
+    code { background: #f1f3f4; padding: 1px 3px; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>Opus-Reviewable Closeout Packet</h1>
+  <p>Ready for external review input. This page does not claim Opus approval or mainline integration; it is not mainline.</p>
+  <table>
+    <thead><tr><th>Field</th><th>Value</th></tr></thead>
+    <tbody>
+<tr><td>prior_sandbox_slice_count</td><td><code>92</code></td></tr>
+<tr><td>original_item_count</td><td><code>20</code></td></tr>
+<tr><td>status_operation_count</td><td><code>75</code></td></tr>
+<tr><td>p2_80_transaction_operation_count</td><td><code>75</code></td></tr>
+<tr><td>p2_91_old_slice_writes_applied</td><td><code>75</code></td></tr>
+<tr><td>p2_91_protected_path_writes</td><td><code>0</code></td></tr>
+<tr><td>p2_92_current_strict_status_operation_count</td><td><code>75</code></td></tr>
+<tr><td>p2_92_current_file_hash_match_count</td><td><code>75</code></td></tr>
+<tr><td>p2_92_body_unchanged_count</td><td><code>75</code></td></tr>
+<tr><td>p2_92_non_status_frontmatter_unchanged_count</td><td><code>75</code></td></tr>
+<tr><td>p2_92_current_strict_complete_original_item_count</td><td><code>20</code></td></tr>
+<tr><td>p2_92_old_slice_writes_applied</td><td><code>0</code></td></tr>
+<tr><td>p2_92_protected_path_writes</td><td><code>0</code></td></tr>
+<tr><td>p2_92_final_gate_statuses_complete</td><td><code>True</code></td></tr>
+<tr><td>external_review_packet_ready</td><td><code>True</code></td></tr>
+<tr><td>opus_approval_claimed</td><td><code>False</code></td></tr>
+<tr><td>mainline_ready</td><td><code>False</code></td></tr>
+<tr><td>promotion_ready</td><td><code>False</code></td></tr>
+<tr><td>reviewed_knowledge_ready</td><td><code>False</code></td></tr>
+<tr><td>evidence_support_ready</td><td><code>False</code></td></tr>
+<tr><td>action_basis_ready</td><td><code>False</code></td></tr>
+<tr><td>goal_complete_now</td><td><code>False</code></td></tr>
+    </tbody>
+  </table>
+  <h2>Review Checklist</h2>
+  <ul>
+<li>Verify p2-91 exact approval scope: old-file frontmatter status-only normalization, 75 targets.</li>
+<li>Inspect p2-91 executor report for prewrite hash match, status match, and post-apply status match.</li>
+<li>Inspect p2-92 audit report for 75/75 current strict statuses and 20/20 original groups complete.</li>
+<li>Confirm body and non-status frontmatter hashes remain unchanged for 75/75 files.</li>
+<li>Confirm p2-92 wrote zero old slice files and zero protected paths.</li>
+<li>Confirm the packet does not claim mainline merge, reviewed knowledge, evidence support, action basis, or Opus approval.</li>
+<li>Decide separately whether the user wants any future mainline integration; no integration is implied here.</li>
+  </ul>
+</body>
+</html>

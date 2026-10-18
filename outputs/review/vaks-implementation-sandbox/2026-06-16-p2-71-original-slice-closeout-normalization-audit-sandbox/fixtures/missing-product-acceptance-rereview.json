@@ -1,0 +1,14 @@
+{
+  "fixture_id": "missing-product-acceptance-rereview",
+  "statuses": {
+    "verification": "local_verification_passed",
+    "reviewer": "review_pass_no_blocker",
+    "boundary": "pass_boundary",
+    "product": "product_acceptance_pending",
+    "next_step": "pending_product_acceptance"
+  },
+  "expected": {
+    "product_acceptance_evidence": false,
+    "recommendation": "requires_re_review_or_reacceptance"
+  }
+}

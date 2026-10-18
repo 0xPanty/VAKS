@@ -1,0 +1,10 @@
+{
+  "record_kind": "vaks_silky_workbench_build_receipt",
+  "slice_id": "2026-06-15-p2-21-silky-obsidian-workbench-sandbox",
+  "generated_vault": "prototype\\vaks-silky-workbench-vault",
+  "slice_cards": 20,
+  "formal_vault_write": false,
+  "obsidian_sync": false,
+  "commit": false,
+  "push": false
+}

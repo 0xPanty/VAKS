@@ -1,0 +1,6 @@
+{
+  "case_id": "p2-93-evidence-ready-not-opus-approved",
+  "p2_93_external_review_packet_ready": true,
+  "p2_93_opus_approval_claimed": false,
+  "passed": true
+}

@@ -1,0 +1,44 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "CyanVoxel/Obsidian-Vault-Template",
+  "source_url": "https://github.com/CyanVoxel/Obsidian-Vault-Template",
+  "checked_commit": "9277193c6b5bc53f5e020fa2e947eda0be767dcf",
+  "checked_at": "2026-06-11",
+  "inspection_method": "shallow git clone plus README, Vault tree, Obsidian core/community plugin configs, template folder inspection",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "template-identity",
+      "why": "Describes the repo as a scrubbed Obsidian vault template and warns it is not frequently updated."
+    },
+    {
+      "path": "Vault/.obsidian/community-plugins.json",
+      "kind": "plugin-bundle",
+      "why": "Lists plugin dependencies such as spaced repetition, importer, icon folder, Excalidraw, templater, calendar, homepage, and advanced slides."
+    },
+    {
+      "path": "Vault/.obsidian/core-plugins.json",
+      "kind": "core-plugin-config",
+      "why": "Records core plugin choices including properties, daily notes, templates, bookmarks, file recovery, etc."
+    },
+    {
+      "path": "Vault top-level folders",
+      "kind": "template-taxonomy",
+      "why": "Template includes 00 MOCs, 01 Projects, 02 Areas, 03 Resources, 04 Permanent, 05 Fleeting, 06 Daily, 07 Archives, 99 Meta."
+    },
+    {
+      "path": "Vault/99 - Meta/00 - Templates/*.md",
+      "kind": "note-templates",
+      "why": "Template area contains Daily and Unique note templates."
+    }
+  ],
+  "known_limits": [
+    "Template is explicitly not kept frequently updated.",
+    "Bundled plugins are runtime dependencies and should not be adopted without plugin review.",
+    "Folder taxonomy is a template suggestion, not VAKS architecture."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

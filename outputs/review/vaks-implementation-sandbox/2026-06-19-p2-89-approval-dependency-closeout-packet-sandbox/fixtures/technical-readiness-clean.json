@@ -1,0 +1,8 @@
+{
+  "case_id": "technical-readiness-clean",
+  "preview_operation_count": 75,
+  "prewrite_hash_match_count": 75,
+  "body_unchanged_count": 75,
+  "non_status_frontmatter_unchanged_count": 75,
+  "old_slice_writes_applied": 0
+}

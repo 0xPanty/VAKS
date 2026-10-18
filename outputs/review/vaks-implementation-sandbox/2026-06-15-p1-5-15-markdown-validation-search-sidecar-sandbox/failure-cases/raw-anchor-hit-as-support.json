@@ -1,0 +1,22 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "raw-anchor-hit-as-support",
+  "expected_valid": false,
+  "expected_codes": ["MS_SEARCH_HIT_AS_SUPPORT"],
+  "patch": {
+    "search": {
+      "included_buckets": ["raw_anchor"],
+      "excluded_buckets": ["feedback", "runtime_artifact"],
+      "hits": [
+        {
+          "id": "raw-anchor-support-hit",
+          "ref": "fixtures/copied-subset/raw-repo-source.md",
+          "authority_bucket": "raw_anchor",
+          "pack_role": "support",
+          "selected_by": ["bm25"],
+          "action_basis_allowed": false
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "artifact_kind": "vaks_phase_b_next_action_gate",
+  "built_at": "2026-06-11T09:29:58+00:00",
+  "compared_against_previous_version": "phase_b_commit_readiness",
+  "next_action_gate_status": "pass",
+  "recommended_next_action": "await_user_approved_commit_or_runner_choice",
+  "commit_path": {
+    "status": "ready_pending_user_approval",
+    "commit_without_user_approval_allowed": false,
+    "recommended_scope": {
+      "mainline_docs": [
+        "SOURCE_INTAKE.md",
+        "IMPLEMENTATION_BLUEPRINT.md",
+        "DEV_CONTEXT.md",
+        "MEMORY_TIER.md"
+      ],
+      "sandbox_evidence_bundle": "outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/"
+    },
+    "excluded_scope": [
+      "SCHEMA.md",
+      "REVIEW_QUEUE.md",
+      "templates/architecture-review-window-prompt.md"
+    ],
+    "suggested_commit_message": "docs(vaks): record phase b yuxi retrieval adapter guardrails"
+  },
+  "original_yuxi_runtime_path": {
+    "status": "blocked_until_docker_or_remote_runner",
+    "docker_path": null,
+    "original_yuxi_runtime_validated": false,
+    "can_continue_if": "Docker/Compose or a remote runner is provided and a new runtime gate passes."
+  },
+  "c_lite_path": {
+    "status": "not_allowed_from_current_evidence",
+    "c_lite_allowed": false,
+    "required_before_open": [
+      "user approves next sandbox explicitly",
+      "Phase B documentation/evidence commit is either completed or deliberately deferred",
+      "original runtime/full-stack assumptions are not claimed without runtime evidence",
+      "new C-lite validator preserves no writeback/action/truth promotion"
+    ]
+  },
+  "runtime_adoption_path": {
+    "status": "not_allowed",
+    "runtime_adoption_allowed": false,
+    "reason": "Original Yuxi full-stack is unvalidated locally and Phase B is only a sandbox/documentation candidate."
+  },
+  "prior_gates": {
+    "commit_readiness": {
+      "status": "pass",
+      "errors": 0
+    },
+    "keep_stop": {
+      "status": "pass",
+      "errors": 0
+    },
+    "minimal_doc_patch": {
+      "status": "pass",
+      "errors": 0
+    },
+    "promotion_gate": {
+      "status": "pass",
+      "errors": 0
+    },
+    "adapter_contract": {
+      "status": "pass",
+      "errors": 0
+    },
+    "runtime_feasibility": {
+      "status": "pass",
+      "errors": 0
+    }
+  },
+  "worktree": {
+    "core_status_lines": [
+      " M DEV_CONTEXT.md",
+      " M IMPLEMENTATION_BLUEPRINT.md",
+      " M MEMORY_TIER.md",
+      " M SOURCE_INTAKE.md"
+    ],
+    "sandbox_status_lines": [
+      "?? outputs/review/vaks-yuxi-phase-b-pressure-test-2026-06-11/"
+    ],
+    "staged_paths": []
+  },
+  "hard_stops": [
+    "do_not_commit_without_user_approval",
+    "do_not_start_c_lite_without_new_user_gate",
+    "do_not_claim_original_yuxi_runtime_validated",
+    "do_not_claim_runtime_adoption",
+    "do_not_treat_sandbox_or_commit_as_reviewed_truth",
+    "do_not_stage_deferred_files"
+  ]
+}

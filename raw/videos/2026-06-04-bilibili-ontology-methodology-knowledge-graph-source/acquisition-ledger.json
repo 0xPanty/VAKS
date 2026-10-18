@@ -1,0 +1,116 @@
+{
+  "bvid": "BV1e2V66gE63",
+  "url": "https://www.bilibili.com/video/BV1e2V66gE63/",
+  "captured_at": "2026-06-04T17:24:05.421640+08:00",
+  "access_boundary": "public",
+  "steps": [
+    {
+      "method": "Bilibili public view API",
+      "status": "succeeded",
+      "result": "metadata, aid, cid, owner, stats, description, season info, and view subtitle list captured",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "Bilibili public subtitle list from view API",
+      "status": "succeeded_empty",
+      "result": "0 subtitle entries in view metadata",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "Bilibili player/v2 bvid+cid",
+      "status": "succeeded_empty",
+      "result": "0 subtitle entries",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "Bilibili player/v2 aid+cid",
+      "status": "succeeded_empty",
+      "result": "0 subtitle entries",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "Bilibili player/wbi/v2 bvid+cid",
+      "status": "succeeded_empty",
+      "result": "0 subtitle entries",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "Bilibili player/wbi/v2 aid+cid",
+      "status": "succeeded_empty",
+      "result": "0 subtitle entries",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "Bilibili public playurl API",
+      "status": "succeeded",
+      "result": "public dash audio streams captured without cookies",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "direct public audio download first mirror",
+      "status": "failed",
+      "error": "HTTP 514 Frequency Capped on selected CDN mirror",
+      "fallback": "retry with yt-dlp public headers, then direct small-range public audio download",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "yt-dlp with public browser headers",
+      "status": "failed_after_partial",
+      "error": "CDN timeout / SSL EOF after partial download; no cookies used",
+      "fallback": "direct playurl byte-range download across public mirrors",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "direct public audio byte-range download",
+      "status": "succeeded",
+      "result": "downloaded format 30216 to scratch file; bytes=14070302",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "ffmpeg audio extraction",
+      "status": "succeeded",
+      "result": "scratch WAV created from public audio file",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "faster-whisper local ASR",
+      "status": "succeeded",
+      "result": "local CUDA transcription with model small; segments=753; chars=8351",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "scratch cleanup",
+      "status": "completed_after_project_copy",
+      "result": "temporary m4s, m4a.part, and wav scratch media deleted by finalize-video-intake.ps1 after project-visible artifacts were copied and synced",
+      "cookies_used": false,
+      "cloud_api_used": false
+    }
+  ],
+  "media_retention": "deleted",
+  "retained_project_artifacts": [
+    "raw/videos/2026-06-04-bilibili-ontology-methodology-knowledge-graph-source/transcript.txt",
+    "raw/videos/2026-06-04-bilibili-ontology-methodology-knowledge-graph-source/segments.md",
+    "raw/videos/2026-06-04-bilibili-ontology-methodology-knowledge-graph-source/segments.json",
+    "raw/videos/2026-06-04-bilibili-ontology-methodology-knowledge-graph-source/transcript-meta.json",
+    "raw/videos/2026-06-04-bilibili-ontology-methodology-knowledge-graph-source/acquisition-ledger.json",
+    "raw/videos/2026-06-04-bilibili-ontology-methodology-knowledge-graph-source/source-metadata.json"
+  ],
+  "scratch_boundary": ".codex video-research directory is a temporary working area, not formal archive",
+  "source_limitation": "No separate summary article was found/provided. Current retained source text is Bilibili public metadata/description plus oral ASR transcript only.",
+  "notes": [
+    "Video description says 个人观点，仅供参考 via argue_info; source remains raw-only/candidate-only.",
+    "Bilibili stats are retained as metadata only and do not indicate source quality, source independence, or truth confidence."
+  ]
+}

@@ -1,0 +1,84 @@
+# Failure Case Oracle
+
+Slice: `2026-06-15-p2-44-sandbox-evidence-ledger-sandbox`
+
+Total cases: 78
+
+- `001-top-level-record_kind.json` -> `record_kind_mismatch`
+- `002-top-level-slice_id.json` -> `slice_id_mismatch`
+- `003-top-level-version.json` -> `version_mismatch`
+- `004-top-level-truth_boundary.json` -> `truth_boundary_mismatch`
+- `005-top-level-purpose.json` -> `purpose_mismatch`
+- `006-top-level-write_scope.json` -> `write_scope_mismatch`
+- `007-top-level-source_root.json` -> `source_root_mismatch`
+- `008-count-source_slice_count.json` -> `source_slice_count_mismatch, source_slice_count_too_low, not_all_sources_product_pass, not_all_sources_have_verification, not_all_sources_have_reviewer_pass, not_all_sources_have_boundary_pass`
+- `009-count-product_pass_count.json` -> `product_pass_count_mismatch, not_all_sources_product_pass`
+- `010-count-verification_present_count.json` -> `verification_present_count_mismatch, not_all_sources_have_verification`
+- `011-count-reviewer_pass_count.json` -> `reviewer_pass_count_mismatch, not_all_sources_have_reviewer_pass`
+- `012-count-boundary_pass_count.json` -> `boundary_pass_count_mismatch, not_all_sources_have_boundary_pass`
+- `013-count-original_plan_product_pass_count.json` -> `original_plan_product_pass_count_mismatch, not_all_original_plan_items_product_pass`
+- `014-count-original_plan_verification_count.json` -> `original_plan_verification_count_mismatch, not_all_original_plan_items_have_verification`
+- `015-source-slices-drift.json` -> `source_slices_mismatch`
+- `016-plan-coverage-drift.json` -> `original_plan_coverage_mismatch`
+- `017-positive-improvements-drift.json` -> `positive_improvements_mismatch`
+- `018-plan-item-product-pass-false.json` -> `original_plan_coverage_mismatch, plan_item_product_pass_not_true:P0-01`
+- `019-plan-item-missing-fixtures.json` -> `original_plan_coverage_mismatch, plan_item_has_fixtures_not_true:P0-01`
+- `020-source-product-pass-false.json` -> `source_slices_mismatch, source_product_pass_not_true:2026-06-15-p0-01-retrieval-receipt-template-sandbox`
+- `021-source-boundary-pass-false.json` -> `source_slices_mismatch, source_boundary_pass_not_true:2026-06-15-p0-01-retrieval-receipt-template-sandbox`
+- `022-source-mainline-authority-true.json` -> `source_slices_mismatch, source_authority_not_false:2026-06-15-p0-01-retrieval-receipt-template-sandbox:mainline_ready`
+- `023-improvement-not-positive.json` -> `positive_improvements_mismatch, improvement_direction_mismatch:receipt_boundaries_are_visible`
+- `024-improvement-evidence-not-pass.json` -> `positive_improvements_mismatch, improvement_evidence_not_product_pass:receipt_boundaries_are_visible`
+- `025-plain-answer-all_original_plan_items_landed_in_sandbox-false.json` -> `plain_answer_not_true:all_original_plan_items_landed_in_sandbox`
+- `026-plain-answer-all_current_sandbox_slices_product_pass-false.json` -> `plain_answer_not_true:all_current_sandbox_slices_product_pass`
+- `027-plain-answer-all_current_sandbox_slices_have_verification-false.json` -> `plain_answer_not_true:all_current_sandbox_slices_have_verification`
+- `028-plain-answer-all_current_sandbox_slices_have_reviewer_and_boundary-false.json` -> `plain_answer_not_true:all_current_sandbox_slices_have_reviewer_and_boundary`
+- `029-plain-answer-positive_improvement_supported-false.json` -> `plain_answer_not_true:positive_improvement_supported`
+- `030-plain-answer-enterprise-claim.json` -> `enterprise_product_experience_mismatch`
+- `031-readiness-enterprise_production_ready-true.json` -> `readiness_flag_not_false:enterprise_production_ready`
+- `032-readiness-mainline_ready-true.json` -> `readiness_flag_not_false:mainline_ready`
+- `033-readiness-formal_vault_ready-true.json` -> `readiness_flag_not_false:formal_vault_ready`
+- `034-readiness-reviewed_knowledge_ready-true.json` -> `readiness_flag_not_false:reviewed_knowledge_ready`
+- `035-readiness-evidence_support_ready-true.json` -> `readiness_flag_not_false:evidence_support_ready`
+- `036-readiness-action_basis_ready-true.json` -> `readiness_flag_not_false:action_basis_ready`
+- `037-operation-formal_vault_read-performed.json` -> `operation_performed_not_false:formal_vault_read`
+- `038-operation-formal_vault_scan-performed.json` -> `operation_performed_not_false:formal_vault_scan`
+- `039-operation-formal_vault_write-performed.json` -> `operation_performed_not_false:formal_vault_write`
+- `040-operation-formal_vault_hash-performed.json` -> `operation_performed_not_false:formal_vault_hash`
+- `041-operation-formal_vault_snapshot-performed.json` -> `operation_performed_not_false:formal_vault_snapshot`
+- `042-operation-formal_vault_state_check-performed.json` -> `operation_performed_not_false:formal_vault_state_check`
+- `043-operation-obsidian_sync-performed.json` -> `operation_performed_not_false:obsidian_sync`
+- `044-operation-commit-performed.json` -> `operation_performed_not_false:commit`
+- `045-operation-push-performed.json` -> `operation_performed_not_false:push`
+- `046-operation-promotion-performed.json` -> `operation_performed_not_false:promotion`
+- `047-operation-dependency_install-performed.json` -> `operation_performed_not_false:dependency_install`
+- `048-operation-background_service-performed.json` -> `operation_performed_not_false:background_service`
+- `049-operation-mcp_write_tool-performed.json` -> `operation_performed_not_false:mcp_write_tool`
+- `050-operation-hooks-performed.json` -> `operation_performed_not_false:hooks`
+- `051-operation-approval_collection-performed.json` -> `operation_performed_not_false:approval_collection`
+- `052-operation-user_instruction_collection-performed.json` -> `operation_performed_not_false:user_instruction_collection`
+- `053-operation-user_wording_storage-performed.json` -> `operation_performed_not_false:user_wording_storage`
+- `054-operation-command_emitted-performed.json` -> `operation_performed_not_false:command_emitted`
+- `055-operation-execution_permission_granted-performed.json` -> `operation_performed_not_false:execution_permission_granted`
+- `056-operation-execution_performed-performed.json` -> `operation_performed_not_false:execution_performed`
+- `057-operation-action_basis_creation-performed.json` -> `operation_performed_not_false:action_basis_creation`
+- `058-operation-reviewed_knowledge_creation-performed.json` -> `operation_performed_not_false:reviewed_knowledge_creation`
+- `059-operation-evidence_support_creation-performed.json` -> `operation_performed_not_false:evidence_support_creation`
+- `060-operation-mainline_merge-performed.json` -> `operation_performed_not_false:mainline_merge`
+- `061-operation-dirty_tree_repair-performed.json` -> `operation_performed_not_false:dirty_tree_repair`
+- `062-operation-auto_advance-performed.json` -> `operation_performed_not_false:auto_advance`
+- `063-missing-non-claim-not-enterprise-production-ready.json` -> `required_non_claims_mismatch`
+- `064-missing-non-claim-not-mainline-ready.json` -> `required_non_claims_mismatch`
+- `065-missing-non-claim-not-formal-vault-approval.json` -> `required_non_claims_mismatch`
+- `066-missing-non-claim-not-formal-vault-state.json` -> `required_non_claims_mismatch`
+- `067-missing-non-claim-not-formal-vault-access.json` -> `required_non_claims_mismatch`
+- `068-missing-non-claim-not-Obsidian-sync.json` -> `required_non_claims_mismatch`
+- `069-missing-non-claim-not-commit.json` -> `required_non_claims_mismatch`
+- `070-missing-non-claim-not-push.json` -> `required_non_claims_mismatch`
+- `071-missing-non-claim-not-promotion-approval.json` -> `required_non_claims_mismatch`
+- `072-missing-non-claim-not-reviewed-knowledge.json` -> `required_non_claims_mismatch`
+- `073-missing-non-claim-not-evidence-support.json` -> `required_non_claims_mismatch`
+- `074-missing-non-claim-not-action-basis.json` -> `required_non_claims_mismatch`
+- `075-missing-non-claim-not-user-approval.json` -> `required_non_claims_mismatch`
+- `076-missing-non-claim-not-execution-permission.json` -> `required_non_claims_mismatch`
+- `077-missing-non-claim-not-auto-advance.json` -> `required_non_claims_mismatch`
+- `078-extra-non-claim.json` -> `required_non_claims_mismatch`

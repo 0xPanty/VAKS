@@ -1,0 +1,51 @@
+{
+  "blind_relevance_check_status": "pass",
+  "error_count": 0,
+  "errors": [],
+  "artifacts": {
+    "artifacts": [
+      {
+        "path": "queries_phase_b_blind_relevance.jsonl",
+        "exists": true,
+        "bytes": 21578
+      },
+      {
+        "path": "results\\phase_b_blind_relevance_manifest.json",
+        "exists": true,
+        "bytes": 1820
+      },
+      {
+        "path": "results\\phase_b_blind_relevance_query_manifest.csv",
+        "exists": true,
+        "bytes": 23184
+      },
+      {
+        "path": "results\\phase_b_blind_relevance_top20_items.csv",
+        "exists": true,
+        "bytes": 2286300
+      },
+      {
+        "path": "results\\phase_b_blind_relevance_judgment_packet.csv",
+        "exists": true,
+        "bytes": 1125540
+      },
+      {
+        "path": "PHASE_B_BLIND_RELEVANCE_PILOT_REPORT.md",
+        "exists": true,
+        "bytes": 827
+      }
+    ]
+  },
+  "packet": {
+    "query_count": 18,
+    "top20_rows": 2880,
+    "judgment_packet_rows": 720,
+    "expected_judgment_packet_rows": 720
+  },
+  "judgments": {
+    "judgment_status": "complete_internal_only",
+    "judgment_rows": 720,
+    "missing_judgment_rows": 0,
+    "summary_rows": 8
+  }
+}

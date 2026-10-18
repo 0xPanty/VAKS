@@ -1,0 +1,10 @@
+{
+  "first_run_status": "pass",
+  "second_run_error_class": "FileExistsError",
+  "second_run_exit_code": 3,
+  "second_run_same_directory_rejected": true,
+  "status": "pass",
+  "tree_hash_after_second_run": "a697bfb4ffdf450d5462ff789417365d9b6dacb5456461f21b516caeab07fbd3",
+  "tree_hash_before_second_run": "a697bfb4ffdf450d5462ff789417365d9b6dacb5456461f21b516caeab07fbd3",
+  "tree_hash_unchanged_after_rejected_second_run": true
+}

@@ -1,0 +1,27 @@
+{
+  "run_id": "run-002-qualified-partial",
+  "claim_counts": {
+    "total": 2,
+    "supported_full": 1,
+    "supported_partial": 0,
+    "missing_anchor": 0,
+    "scope_limited": 1,
+    "unresolved_conflict": 0
+  },
+  "sufficiency_result": "weak",
+  "answer_policy": "qualified",
+  "expected_answer_policy": "qualified",
+  "expected_answer_policy_met": true,
+  "blocking_gaps": [],
+  "unresolved_conflicts": [],
+  "review_required": false,
+  "action_use_allowed": false,
+  "action_readiness": "not_assessed",
+  "assessment_authority": "non_authoritative",
+  "not_proven": [
+    "truth",
+    "reviewer_approval",
+    "promotion",
+    "action_basis"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "record_kind": "sandbox_copy_executor_rehearsal_contract",
+  "slice_id": "2026-06-19-p2-82-old-file-status-normalization-sandbox-copy-executor-rehearsal-sandbox",
+  "contract_version": "1.0",
+  "expected_summary": {
+    "fixture_copy_count": 75,
+    "fixture_apply_write_count": 75,
+    "fixture_rollback_write_count": 75,
+    "copy_before_byte_sha_match_count": 75,
+    "after_status_match_count": 75,
+    "body_unchanged_after_apply_count": 75,
+    "body_bytes_unchanged_after_apply_count": 75,
+    "final_copy_sha_match_count": 75,
+    "final_copy_byte_sha_match_count": 75,
+    "final_copy_status_match_count": 75,
+    "non_status_frontmatter_unchanged_count": 75,
+    "rehearsal_failure_count": 0,
+    "old_slice_writes_applied": 0
+  },
+  "expected_gate": {
+    "approval_collected_now": false,
+    "p2_77_readiness": "blocked_no_exact_approval",
+    "executor_write_allowed_now": false,
+    "rehearsal_is_not_approval": true,
+    "rehearsal_is_not_write_authority": true,
+    "writes_limited_to_sandbox_fixtures": true,
+    "requires_exact_p2_75_approval_before_real_write": true,
+    "requires_fresh_hash_check_before_real_write": true,
+    "requires_stop_before_write": true
+  },
+  "authority_flags": {
+    "sandbox_copy_rehearsal_only": true,
+    "approval_collected": false,
+    "executor_write_allowed": false,
+    "old_slice_write_allowed_now": false,
+    "old_slice_writes_applied": 0,
+    "normalization_applied": false,
+    "rollback_applied_to_old_slices": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "goal_complete_now": false
+  },
+  "required_fixture_ids": [
+    "all-fixture-copies-rehearsed",
+    "apply-changes-status-only",
+    "rollback-restores-fixture-copy",
+    "writes-limited-to-sandbox-fixtures",
+    "future-real-write-still-gated"
+  ],
+  "required_failure_case_ids": [
+    "SC-FAIL-01-fixture-copy-missing",
+    "SC-FAIL-02-apply-status-not-proposed",
+    "SC-FAIL-03-body-changed-after-apply",
+    "SC-FAIL-04-non-status-frontmatter-changed",
+    "SC-FAIL-05-rollback-final-sha-mismatch",
+    "SC-FAIL-06-old-slice-write-applied",
+    "SC-FAIL-07-rehearsal-treated-as-approval",
+    "SC-FAIL-08-rehearsal-treated-as-write-authority",
+    "SC-FAIL-09-sandbox-write-outside-current-slice",
+    "SC-FAIL-10-mainline-or-action-authority-created"
+  ]
+}

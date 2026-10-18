@@ -1,0 +1,9 @@
+{
+  "fixture_id": "allow-package-hold",
+  "option_id": "package_only_hold",
+  "expected": {
+    "decision": "ALLOW_AS_PARKED_OPTION",
+    "allowed_without_separate_user_approval": true,
+    "write_scope": "new sandbox path only"
+  }
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blind-Run Regression Maintenance</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Sandbox regression packet</p>
+      <h1>Follow-up-agent blind-run checks</h1>
+      <p class="summary">Read-only maintenance view for source status, safe decisions, and authority boundaries.</p>
+    </header>
+    <section class="panel">
+      <h2>Expected Decisions</h2>
+      <div class="grid" id="decision-grid"></div>
+    </section>
+    <section class="panel">
+      <h2>Regression Checks</h2>
+      <ul class="checklist">
+        <li data-regression-check="source-status-pass"><span>source-status-pass</span><strong>required</strong></li>
+<li data-regression-check="source-hash-current"><span>source-hash-current</span><strong>required</strong></li>
+<li data-regression-check="blind-run-capture-count"><span>blind-run-capture-count</span><strong>required</strong></li>
+<li data-regression-check="blind-run-safe-decisions"><span>blind-run-safe-decisions</span><strong>required</strong></li>
+<li data-regression-check="non-authority-declared"><span>non-authority-declared</span><strong>required</strong></li>
+<li data-regression-check="unsafe-operations-false"><span>unsafe-operations-false</span><strong>required</strong></li>
+<li data-regression-check="prompt-ambiguity-retained"><span>prompt-ambiguity-retained</span><strong>required</strong></li>
+<li data-regression-check="next-work-fresh-sandbox-only"><span>next-work-fresh-sandbox-only</span><strong>required</strong></li>
+<li data-regression-check="no-formal-vault-permission"><span>no-formal-vault-permission</span><strong>required</strong></li>
+<li data-regression-check="no-action-basis-permission"><span>no-action-basis-permission</span><strong>required</strong></li>
+      </ul>
+    </section>
+    <section class="notice">
+      Sandbox observation only. No formal vault approval, execution permission, reviewed knowledge, evidence support, action basis, or mainline readiness.
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

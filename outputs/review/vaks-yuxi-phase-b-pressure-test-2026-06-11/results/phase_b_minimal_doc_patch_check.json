@@ -1,0 +1,78 @@
+{
+  "minimal_doc_patch_status": "pass",
+  "error_count": 0,
+  "errors": [],
+  "changed_core_docs": [
+    "DEV_CONTEXT.md",
+    "IMPLEMENTATION_BLUEPRINT.md",
+    "MEMORY_TIER.md",
+    "SOURCE_INTAKE.md"
+  ],
+  "snippet_coverage": {
+    "SOURCE_INTAKE.md": {
+      "required": 8,
+      "missing": []
+    },
+    "IMPLEMENTATION_BLUEPRINT.md": {
+      "required": 6,
+      "missing": []
+    },
+    "DEV_CONTEXT.md": {
+      "required": 7,
+      "missing": []
+    },
+    "MEMORY_TIER.md": {
+      "required": 8,
+      "missing": []
+    }
+  },
+  "sandbox_artifacts": [
+    {
+      "path": "PHASE_B_EXTERNAL_REVIEW_RESULT.md",
+      "exists": true,
+      "bytes": 3647
+    },
+    {
+      "path": "PHASE_B_EXTERNAL_REVIEW_DECISION.md",
+      "exists": true,
+      "bytes": 1977
+    },
+    {
+      "path": "PHASE_B_MINIMAL_DOC_PATCH_DECISION.md",
+      "exists": true,
+      "bytes": 2283
+    },
+    {
+      "path": "PHASE_B_MINIMAL_DOC_PATCH_CHECK.md",
+      "exists": true,
+      "bytes": 821
+    },
+    {
+      "path": "results/phase_b_external_review_result_check.json",
+      "exists": true,
+      "bytes": 1687
+    }
+  ],
+  "prior_gates": {
+    "external_review": {
+      "status": "pass",
+      "errors": 0
+    },
+    "prompt": {
+      "status": "pass",
+      "errors": 0
+    },
+    "mainline_readiness": {
+      "status": "pass",
+      "errors": 0
+    },
+    "integration_readiness": {
+      "status": "pass",
+      "errors": 0
+    },
+    "contract": {
+      "status": "pass",
+      "errors": 0
+    }
+  }
+}

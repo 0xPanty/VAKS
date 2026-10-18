@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "runtime-memory-direct-vaks-write",
+  "expected_valid": false,
+  "expected_codes": ["MB_RUNTIME_DIRECT_VAKS_WRITE_FORBIDDEN"],
+  "patch": {"runtime_memory": {"direct_vaks_writeback": true}}
+}

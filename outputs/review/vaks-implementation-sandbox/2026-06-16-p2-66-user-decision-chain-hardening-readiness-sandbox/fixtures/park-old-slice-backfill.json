@@ -1,0 +1,9 @@
+{
+  "fixture_id": "park-old-slice-backfill",
+  "option_id": "old_slice_backfill",
+  "expected": {
+    "decision": "PARK_REQUIRES_SEPARATE_USER_APPROVAL",
+    "requires_user_separate_approval": true,
+    "write_scope": "older sandbox paths"
+  }
+}

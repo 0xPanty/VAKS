@@ -1,0 +1,21 @@
+{
+  "file": "feishu-doc-public-probe.html",
+  "title": "",
+  "meta": [
+    "suite-passport-compile-at: 2026-06-10 19:23:55.873",
+    "suite-passport-commit-id: 80f8a599ef4b582a073948e56ff03c1abf65fb12",
+    "suite-passport-branch: release_train_2026-06-08_1163736408322",
+    "suite-passport-build-version: 1.0.0.6996",
+    "ROBOTS: NOINDEX,NOFOLLOW",
+    "renderer: webkit",
+    "format-detection: telephone=no",
+    "apple-mobile-web-app-capable: yes",
+    "format-detection: email=no",
+    "msapplication-tap-highlight: no",
+    "google: notranslate",
+    "viewport: width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no",
+    "referrer: origin",
+    "AppPublic: https://sf3-scmcdn-cn.feishucdn.com/goofy/ee/suite/passport/"
+  ],
+  "text": ""
+}

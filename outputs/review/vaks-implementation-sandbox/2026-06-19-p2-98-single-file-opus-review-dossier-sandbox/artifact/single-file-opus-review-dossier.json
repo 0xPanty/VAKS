@@ -1,0 +1,105 @@
+{
+  "record_kind": "single_file_opus_review_dossier",
+  "slice_id": "2026-06-19-p2-98-single-file-opus-review-dossier-sandbox",
+  "created_at": "2026-06-19T10:31:08.755124+00:00",
+  "source_inputs": {
+    "p2_91": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-91-old-file-status-normalization-executor-apply-sandbox/artifact/old_file_status_normalization_executor_apply.json",
+    "p2_92": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-92-post-apply-current-strict-closeout-audit-sandbox/artifact/post_apply_current_strict_closeout_audit.json",
+    "p2_94": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-94-opus-review-submission-packet-sandbox/artifact/opus-review-submission-packet.json",
+    "p2_96": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-96-opus-result-intake-skeleton-sandbox/artifact/opus-result-intake-status.json",
+    "p2_97": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-97-external-review-wait-state-guard-sandbox/artifact/external-review-wait-state-guard.json"
+  },
+  "summary": {
+    "dossier_ready": true,
+    "evidence_digest_count": 5,
+    "allowed_conclusion_token_count": 3,
+    "p2_91_old_slice_writes_applied": 75,
+    "p2_91_protected_path_writes": 0,
+    "p2_92_original_item_count": 20,
+    "p2_92_current_strict_complete_original_item_count": 20,
+    "p2_94_submission_packet_ready": true,
+    "p2_96_result_intake_ready": true,
+    "p2_97_guard_state": "STOP_WAIT_EXTERNAL_OPUS_REVIEW",
+    "actual_opus_result_present": false,
+    "opus_approval_claimed": false,
+    "mainline_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "goal_complete_now": false
+  },
+  "allowed_conclusion_tokens": [
+    "OPUS_PASS_SANDBOX_CLOSEOUT",
+    "OPUS_REVISE_SANDBOX_CLOSEOUT",
+    "OPUS_BLOCKED_NEEDS_USER"
+  ],
+  "review_questions": [
+    "Does the packet prove p2-91 applied only the approved 75 old-file frontmatter status changes?",
+    "Does p2-92 prove the original 20 sandbox slices now satisfy current strict closeout labels?",
+    "Is body content preserved for all 75 old report files?",
+    "Is non-status frontmatter preserved for all 75 old report files?",
+    "Does any artifact confuse sandbox closeout with mainline merge, reviewed knowledge, evidence support, action basis, or Opus approval?",
+    "Is the evidence sufficient for external acceptance of sandbox closeout, while still requiring separate user approval for any mainline integration?"
+  ],
+  "evidence_digest": [
+    {
+      "id": "p2-91",
+      "verdict": "approved old-file status-only normalization applied",
+      "key_counts": {
+        "old_slice_writes_applied": 75,
+        "protected_path_writes": 0,
+        "body_unchanged_count": 75,
+        "non_status_frontmatter_unchanged_count": 75
+      }
+    },
+    {
+      "id": "p2-92",
+      "verdict": "original 20 slices current-strict complete",
+      "key_counts": {
+        "original_item_count": 20,
+        "status_operation_count": 75,
+        "current_strict_complete_original_item_count": 20,
+        "body_unchanged_count": 75,
+        "non_status_frontmatter_unchanged_count": 75
+      }
+    },
+    {
+      "id": "p2-94",
+      "verdict": "external review submission packet ready",
+      "key_counts": {
+        "evidence_item_count": 7,
+        "review_question_count": 6,
+        "submission_packet_ready": true
+      }
+    },
+    {
+      "id": "p2-96",
+      "verdict": "future Opus result intake skeleton ready",
+      "key_counts": {
+        "result_intake_ready": true,
+        "actual_opus_result_present": false,
+        "opus_approval_claimed": false
+      }
+    },
+    {
+      "id": "p2-97",
+      "verdict": "STOP/WAIT guard active",
+      "key_counts": {
+        "guard_state": "STOP_WAIT_EXTERNAL_OPUS_REVIEW",
+        "external_opus_review_pending": true,
+        "may_merge_mainline": false,
+        "may_claim_complete": false
+      }
+    }
+  ],
+  "authority_flags": {
+    "dossier_only": true,
+    "actual_opus_result_present": false,
+    "opus_approval_claimed": false,
+    "mainline_merge": false,
+    "reviewed_knowledge": false,
+    "evidence_support": false,
+    "action_basis": false,
+    "goal_complete_now": false
+  }
+}

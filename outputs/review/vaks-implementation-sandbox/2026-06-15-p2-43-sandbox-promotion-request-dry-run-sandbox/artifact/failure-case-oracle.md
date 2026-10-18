@@ -1,0 +1,107 @@
+# Failure Case Oracle
+
+Slice: `2026-06-15-p2-43-sandbox-promotion-request-dry-run-sandbox`
+
+Total cases: 101
+
+- `001-top-level-record_kind.json` -> `record_kind_mismatch`
+- `002-top-level-slice_id.json` -> `slice_id_mismatch`
+- `003-top-level-version.json` -> `version_mismatch`
+- `004-top-level-truth_boundary.json` -> `truth_boundary_mismatch`
+- `005-top-level-purpose.json` -> `purpose_mismatch`
+- `006-top-level-write_scope.json` -> `write_scope_mismatch`
+- `007-top-level-view.json` -> `view_mismatch`
+- `008-request_items-drift.json` -> `request_items_mismatch, request_items_bad_type`
+- `009-preconditions-drift.json` -> `preconditions_mismatch, preconditions_bad_type`
+- `010-source_snapshot-drift.json` -> `source_snapshot_mismatch, source_product_status_not_pass, source_product_pass_text_missing, source_readiness_flag_not_false:enterprise_production_ready, source_readiness_flag_not_false:mainline_ready, source_readiness_flag_not_false:formal_vault_ready, source_readiness_flag_not_false:action_basis_ready`
+- `011-operator_summary-drift.json` -> `operator_summary_mismatch, operator_summary_flag_not_false:can_submit_request_now, operator_summary_flag_not_false:can_promote_now, operator_summary_flag_not_false:can_write_formal_vault_now, operator_summary_flag_not_false:can_commit_or_push_now, operator_summary_flag_not_false:can_move_templates_or_tools_now`
+- `012-source_snapshot-bad-type.json` -> `source_snapshot_mismatch, source_snapshot_bad_type, source_product_status_not_pass, source_product_pass_text_missing, source_readiness_flag_not_false:enterprise_production_ready, source_readiness_flag_not_false:mainline_ready, source_readiness_flag_not_false:formal_vault_ready, source_readiness_flag_not_false:action_basis_ready`
+- `013-request_items-bad-type.json` -> `request_items_mismatch, request_items_bad_type`
+- `014-request_item-bad-type.json` -> `request_items_mismatch, request_item_bad_type`
+- `015-preconditions-bad-type.json` -> `preconditions_mismatch, preconditions_bad_type`
+- `016-precondition-bad-type.json` -> `preconditions_mismatch, precondition_bad_type`
+- `017-operation-performed-flags-bad-type.json` -> `operation_performed_flags_bad_type, operation_performed_flags_mismatch`
+- `018-required-non-claims-bad-type.json` -> `required_non_claims_bad_type, required_non_claims_mismatch`
+- `019-required-non-claims-extra.json` -> `required_non_claims_mismatch`
+- `020-operator-summary-bad-type.json` -> `operator_summary_mismatch, operator_summary_bad_type, operator_summary_flag_not_false:can_submit_request_now, operator_summary_flag_not_false:can_promote_now, operator_summary_flag_not_false:can_write_formal_vault_now, operator_summary_flag_not_false:can_commit_or_push_now, operator_summary_flag_not_false:can_move_templates_or_tools_now`
+- `021-promotion_permitted_now-true.json` -> `promotion_permitted_now_not_false`
+- `022-approval_collected_now-true.json` -> `approval_collected_now_not_false`
+- `023-user_instruction_collected_now-true.json` -> `user_instruction_collected_now_not_false`
+- `024-target_paths_selected-true.json` -> `target_paths_selected_not_false`
+- `025-request-status-submitted.json` -> `request_status_mismatch`
+- `026-source-enterprise_production_ready-true.json` -> `source_snapshot_mismatch, source_readiness_flag_not_false:enterprise_production_ready`
+- `027-source-mainline_ready-true.json` -> `source_snapshot_mismatch, source_readiness_flag_not_false:mainline_ready`
+- `028-source-formal_vault_ready-true.json` -> `source_snapshot_mismatch, source_readiness_flag_not_false:formal_vault_ready`
+- `029-source-action_basis_ready-true.json` -> `source_snapshot_mismatch, source_readiness_flag_not_false:action_basis_ready`
+- `030-request-mainline_merge_request-approval-false.json` -> `request_items_mismatch, request_missing_approval:mainline_merge_request`
+- `031-request-mainline_merge_request-authorized.json` -> `request_items_mismatch, request_authorized_now:mainline_merge_request`
+- `032-request-mainline_merge_request-performed.json` -> `request_items_mismatch, request_performed_now:mainline_merge_request`
+- `033-request-mainline_merge_request-missing-human-text.json` -> `request_items_mismatch, request_human_text_missing:mainline_merge_request`
+- `034-request-formal_vault_write_or_sync_request-approval-false.json` -> `request_items_mismatch, request_missing_approval:formal_vault_write_or_sync_request`
+- `035-request-formal_vault_write_or_sync_request-authorized.json` -> `request_items_mismatch, request_authorized_now:formal_vault_write_or_sync_request`
+- `036-request-formal_vault_write_or_sync_request-performed.json` -> `request_items_mismatch, request_performed_now:formal_vault_write_or_sync_request`
+- `037-request-formal_vault_write_or_sync_request-missing-human-text.json` -> `request_items_mismatch, request_human_text_missing:formal_vault_write_or_sync_request`
+- `038-request-template_or_tool_movement_request-approval-false.json` -> `request_items_mismatch, request_missing_approval:template_or_tool_movement_request`
+- `039-request-template_or_tool_movement_request-authorized.json` -> `request_items_mismatch, request_authorized_now:template_or_tool_movement_request`
+- `040-request-template_or_tool_movement_request-performed.json` -> `request_items_mismatch, request_performed_now:template_or_tool_movement_request`
+- `041-request-template_or_tool_movement_request-missing-human-text.json` -> `request_items_mismatch, request_human_text_missing:template_or_tool_movement_request`
+- `042-request-commit_push_request-approval-false.json` -> `request_items_mismatch, request_missing_approval:commit_push_request`
+- `043-request-commit_push_request-authorized.json` -> `request_items_mismatch, request_authorized_now:commit_push_request`
+- `044-request-commit_push_request-performed.json` -> `request_items_mismatch, request_performed_now:commit_push_request`
+- `045-request-commit_push_request-missing-human-text.json` -> `request_items_mismatch, request_human_text_missing:commit_push_request`
+- `046-request-action_basis_request-approval-false.json` -> `request_items_mismatch, request_missing_approval:action_basis_request`
+- `047-request-action_basis_request-authorized.json` -> `request_items_mismatch, request_authorized_now:action_basis_request`
+- `048-request-action_basis_request-performed.json` -> `request_items_mismatch, request_performed_now:action_basis_request`
+- `049-request-action_basis_request-missing-human-text.json` -> `request_items_mismatch, request_human_text_missing:action_basis_request`
+- `050-precondition-explicit_user_approval_captured_separately-satisfied.json` -> `preconditions_mismatch, precondition_satisfied_now:explicit_user_approval_captured_separately`
+- `051-precondition-target_paths_named_and_scoped-satisfied.json` -> `preconditions_mismatch, precondition_satisfied_now:target_paths_named_and_scoped`
+- `052-precondition-promotion_diff_reviewed-satisfied.json` -> `preconditions_mismatch, precondition_satisfied_now:promotion_diff_reviewed`
+- `053-precondition-formal_vault_write_plan_approved-satisfied.json` -> `preconditions_mismatch, precondition_satisfied_now:formal_vault_write_plan_approved`
+- `054-precondition-mainline_owner_review_passed-satisfied.json` -> `preconditions_mismatch, precondition_satisfied_now:mainline_owner_review_passed`
+- `055-precondition-post_approval_final_gate_defined-satisfied.json` -> `preconditions_mismatch, precondition_satisfied_now:post_approval_final_gate_defined`
+- `056-operation-performed-formal_vault_read.json` -> `operation_performed_not_false:formal_vault_read`
+- `057-operation-performed-formal_vault_scan.json` -> `operation_performed_not_false:formal_vault_scan`
+- `058-operation-performed-formal_vault_write.json` -> `operation_performed_not_false:formal_vault_write`
+- `059-operation-performed-formal_vault_hash.json` -> `operation_performed_not_false:formal_vault_hash`
+- `060-operation-performed-formal_vault_snapshot.json` -> `operation_performed_not_false:formal_vault_snapshot`
+- `061-operation-performed-formal_vault_state_check.json` -> `operation_performed_not_false:formal_vault_state_check`
+- `062-operation-performed-obsidian_sync.json` -> `operation_performed_not_false:obsidian_sync`
+- `063-operation-performed-commit.json` -> `operation_performed_not_false:commit`
+- `064-operation-performed-push.json` -> `operation_performed_not_false:push`
+- `065-operation-performed-promotion.json` -> `operation_performed_not_false:promotion`
+- `066-operation-performed-dependency_install.json` -> `operation_performed_not_false:dependency_install`
+- `067-operation-performed-background_service.json` -> `operation_performed_not_false:background_service`
+- `068-operation-performed-mcp_write_tool.json` -> `operation_performed_not_false:mcp_write_tool`
+- `069-operation-performed-hooks.json` -> `operation_performed_not_false:hooks`
+- `070-operation-performed-approval_collection.json` -> `operation_performed_not_false:approval_collection`
+- `071-operation-performed-user_instruction_collection.json` -> `operation_performed_not_false:user_instruction_collection`
+- `072-operation-performed-user_wording_storage.json` -> `operation_performed_not_false:user_wording_storage`
+- `073-operation-performed-command_emitted.json` -> `operation_performed_not_false:command_emitted`
+- `074-operation-performed-execution_permission_granted.json` -> `operation_performed_not_false:execution_permission_granted`
+- `075-operation-performed-execution_performed.json` -> `operation_performed_not_false:execution_performed`
+- `076-operation-performed-action_basis_creation.json` -> `operation_performed_not_false:action_basis_creation`
+- `077-operation-performed-reviewed_knowledge_creation.json` -> `operation_performed_not_false:reviewed_knowledge_creation`
+- `078-operation-performed-evidence_support_creation.json` -> `operation_performed_not_false:evidence_support_creation`
+- `079-operation-performed-mainline_merge.json` -> `operation_performed_not_false:mainline_merge`
+- `080-operation-performed-dirty_tree_repair.json` -> `operation_performed_not_false:dirty_tree_repair`
+- `081-operation-performed-auto_advance.json` -> `operation_performed_not_false:auto_advance`
+- `082-missing-non-claim-not-approval.json` -> `required_non_claims_mismatch`
+- `083-missing-non-claim-not-promotion.json` -> `required_non_claims_mismatch`
+- `084-missing-non-claim-not-mainline-merge.json` -> `required_non_claims_mismatch`
+- `085-missing-non-claim-not-formal-vault-approval.json` -> `required_non_claims_mismatch`
+- `086-missing-non-claim-not-formal-vault-access.json` -> `required_non_claims_mismatch`
+- `087-missing-non-claim-not-Obsidian-sync.json` -> `required_non_claims_mismatch`
+- `088-missing-non-claim-not-commit.json` -> `required_non_claims_mismatch`
+- `089-missing-non-claim-not-push.json` -> `required_non_claims_mismatch`
+- `090-missing-non-claim-not-user-instruction.json` -> `required_non_claims_mismatch`
+- `091-missing-non-claim-not-user-wording-capture.json` -> `required_non_claims_mismatch`
+- `092-missing-non-claim-not-action-basis.json` -> `required_non_claims_mismatch`
+- `093-missing-non-claim-not-reviewed-knowledge.json` -> `required_non_claims_mismatch`
+- `094-missing-non-claim-not-evidence-support.json` -> `required_non_claims_mismatch`
+- `095-missing-non-claim-not-enterprise-production-ready.json` -> `required_non_claims_mismatch`
+- `096-missing-non-claim-not-auto-advance.json` -> `required_non_claims_mismatch`
+- `097-summary-can_submit_request_now-true.json` -> `operator_summary_mismatch, operator_summary_flag_not_false:can_submit_request_now`
+- `098-summary-can_promote_now-true.json` -> `operator_summary_mismatch, operator_summary_flag_not_false:can_promote_now`
+- `099-summary-can_write_formal_vault_now-true.json` -> `operator_summary_mismatch, operator_summary_flag_not_false:can_write_formal_vault_now`
+- `100-summary-can_commit_or_push_now-true.json` -> `operator_summary_mismatch, operator_summary_flag_not_false:can_commit_or_push_now`
+- `101-summary-can_move_templates_or_tools_now-true.json` -> `operator_summary_mismatch, operator_summary_flag_not_false:can_move_templates_or_tools_now`

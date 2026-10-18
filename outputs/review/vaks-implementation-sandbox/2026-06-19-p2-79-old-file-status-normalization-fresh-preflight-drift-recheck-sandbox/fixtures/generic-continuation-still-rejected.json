@@ -1,0 +1,12 @@
+{
+  "fixture_id": "generic-continuation-still-rejected",
+  "inputs": [
+    "继续",
+    "全部落地",
+    "go ahead",
+    "complete the goal"
+  ],
+  "expected": {
+    "all_rejected_as_approval": true
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "status": "pass",
+  "run_count": 3,
+  "expected_answer_policy_met_count": 3,
+  "runs": [
+    {
+      "run_id": "run-001-direct-support",
+      "scenario": "direct_support",
+      "answer_policy": "direct",
+      "sufficiency_result": "sufficient",
+      "expected_answer_policy": "direct",
+      "expected_answer_policy_met": true,
+      "artifact_hashes": {
+        "query_policy.json": "1e5f74c8053873278059b5bd9157a9ea5a5960337f13a5dce02e353d02dd1fa4",
+        "retrieval_receipt.jsonl": "6ae8c7376aa6d4187694c8a01ddb037d5113f7853040a7881fa0f3f6fe951836",
+        "context_pack.json": "b760f08ab0a0cd523deb53b8b09ea40fac7bf5a2dcc1b83c8a37ca761a5f19c5",
+        "claim_support_map.jsonl": "460fad067c017c64327a16fa442dee028c4963767230c1bba34904540c8c4b0d",
+        "sufficiency_summary.json": "9f4cfaf98ee07ff8aaf306205fcd82cc6743201b11f3641c621019dec47c51da",
+        "answer_use.md": "7feead6d642ed594e86a3990ef450c5422a07167eec165688d10c4ba298d4d92",
+        "guard_report.json": "77214a8778c02c5bc228b9151d3dc47108295d158912a954147394950d4ba070"
+      },
+      "guard_statuses": {
+        "retrieval_receipt": "pass",
+        "runtime_artifact_selection": "pass",
+        "support_boundary": [
+          "pass"
+        ]
+      }
+    },
+    {
+      "run_id": "run-002-qualified-partial",
+      "scenario": "partial_or_scope_limited",
+      "answer_policy": "qualified",
+      "sufficiency_result": "weak",
+      "expected_answer_policy": "qualified",
+      "expected_answer_policy_met": true,
+      "artifact_hashes": {
+        "query_policy.json": "49c49ee1c19ed7f37f1028d4d76655038b9b4a9eabe578231fa49047805ed1f9",
+        "retrieval_receipt.jsonl": "7a93095b3dd80211f91e848b9565b88445343ad461febfeb0622074a74052bd1",
+        "context_pack.json": "eda94100d7f79adf390a68d276c5ae8174aee51cfa4e9f2b7cd48e9806bd51fe",
+        "claim_support_map.jsonl": "8bdb7884e4d8db2b0bf7b9feac9660f2926ed3b93bbee008ec26db51a7e05b7f",
+        "sufficiency_summary.json": "52d0837a5382513157bf9fd3df02cca89429e657725dcd2b403eb818e5622190",
+        "answer_use.md": "294bf3809fada8ef885006b1a1c7406ab694a0791ac8e5d5f85e6078a032de09",
+        "guard_report.json": "b00eb98784bd8261d4f6f8bd4d3c9ab1aae59e119849104114933e1e381f873f"
+      },
+      "guard_statuses": {
+        "retrieval_receipt": "pass",
+        "runtime_artifact_selection": "pass",
+        "support_boundary": [
+          "pass",
+          "pass"
+        ]
+      }
+    },
+    {
+      "run_id": "run-003-missing-anchor-review",
+      "scenario": "missing_anchor_or_out_of_scope",
+      "answer_policy": "review",
+      "sufficiency_result": "insufficient",
+      "expected_answer_policy": "review",
+      "expected_answer_policy_met": true,
+      "artifact_hashes": {
+        "query_policy.json": "5f2089d87632b5b58008fee81869362beefd9bc8214736724a1ea23c01c1cd90",
+        "retrieval_receipt.jsonl": "d658c53b8a3594c6b9044f0f4cc60f963cd23c98f7173415eb6cc0f07b149b43",
+        "context_pack.json": "e9bc4b5a5c1c67151c3c5fb1395d434095c127fdc619d6270573d17560afdd61",
+        "claim_support_map.jsonl": "b3b46c3b2a2c729253342f550745794244649d8ea75c1a76d173d4b072769f1d",
+        "sufficiency_summary.json": "f3c88c13af58b4c9ebf724967e314bba4823e190deae946875458435728375ff",
+        "answer_use.md": "16c2e42a40bf04241b41ca2f55c9c7e2096761d814377426c56832064f171987",
+        "guard_report.json": "08ac7dfdb1ae41d0b0ea81b44cd4b1a90819ed2ff6c93c70319ab4f30ddc24ea"
+      },
+      "guard_statuses": {
+        "retrieval_receipt": "pass",
+        "runtime_artifact_selection": "pass",
+        "support_boundary": [
+          "pass"
+        ]
+      }
+    }
+  ],
+  "completion_boundary": "R0.5 completion means three bounded read-only evidence-loop runs have complete artifacts. It does not mean P0, production runtime, vector/graph retrieval, reviewed truth, or action readiness."
+}

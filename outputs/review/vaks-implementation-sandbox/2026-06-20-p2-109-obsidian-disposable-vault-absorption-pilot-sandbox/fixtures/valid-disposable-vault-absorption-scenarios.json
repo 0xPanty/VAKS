@@ -1,0 +1,42 @@
+{
+  "record_kind": "p2_109_positive_fixture_manifest",
+  "oracle_role": "positive_cases_must_pass",
+  "positive_case_count": 7,
+  "positive_cases": [
+    {
+      "id": "body_hash_valid",
+      "guard": "p0-03",
+      "expected_result": "valid_true"
+    },
+    {
+      "id": "support_boundary_valid",
+      "guard": "p0-04",
+      "expected_result": "valid_true"
+    },
+    {
+      "id": "action_readiness_valid",
+      "guard": "p0-05",
+      "expected_result": "status_pass"
+    },
+    {
+      "id": "feedback_valid",
+      "guard": "p0-06",
+      "expected_result": "status_pass"
+    },
+    {
+      "id": "failure_matrix_valid",
+      "guard": "p0-07",
+      "expected_result": "status_pass"
+    },
+    {
+      "id": "receipt_valid",
+      "guard": "p1-08",
+      "expected_result": "valid_true"
+    },
+    {
+      "id": "runtime_artifact_exclusion_valid",
+      "guard": "p1-10",
+      "expected_result": "valid_true"
+    }
+  ]
+}

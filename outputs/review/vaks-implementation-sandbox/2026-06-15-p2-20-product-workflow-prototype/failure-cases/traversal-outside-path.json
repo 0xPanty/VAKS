@@ -1,0 +1,1 @@
+{"case_id":"traversal-outside-path","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/scope/write_targets/0","value":"outputs/review/vaks-implementation-sandbox/2026-06-15-p2-20-product-workflow-prototype/../other-slice/escaped.json"}]}

@@ -1,0 +1,113 @@
+{
+  "bvid": "BV1adLw6qE1x",
+  "url": "https://www.bilibili.com/video/BV1adLw6qE1x/",
+  "captured_at": "2026-06-04T16:18:26+08:00",
+  "access_boundary": "public",
+  "steps": [
+    {
+      "method": "Bilibili public view API",
+      "status": "succeeded",
+      "result": "metadata, aid, cid, owner, stats, description, and view subtitle list captured",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "Bilibili public subtitle list from view API",
+      "status": "succeeded_empty",
+      "result": "0 subtitle entries in view metadata",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "Bilibili player/v2 bvid+cid",
+      "status": "succeeded_empty",
+      "result": "0 subtitle entries",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "Bilibili player/v2 aid+cid",
+      "status": "succeeded_empty",
+      "result": "0 subtitle entries",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "Bilibili player/wbi/v2 bvid+cid",
+      "status": "succeeded_empty",
+      "result": "0 subtitle entries",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "Bilibili player/wbi/v2 aid+cid",
+      "status": "succeeded_empty",
+      "result": "0 subtitle entries",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "yt-dlp subtitle probe without explicit Bilibili headers",
+      "status": "failed",
+      "error": "ERROR: [BiliBili] 1adLw6qE1x: Unable to download webpage: HTTP Error 412: Precondition Failed (caused by <HTTPError 412: Precondition Failed>)",
+      "fallback": "retry with normal browser User-Agent, Referer, and Origin headers",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "yt-dlp subtitle probe with public browser headers",
+      "status": "succeeded_empty",
+      "result": "0 subtitles/automatic captions in yt-dlp metadata",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "yt-dlp without explicit Bilibili headers",
+      "status": "failed",
+      "error": "ERROR: [BiliBili] 1adLw6qE1x: Unable to download webpage: HTTP Error 412: Precondition Failed (caused by <HTTPError 412: Precondition Failed>)",
+      "fallback": "retry with normal browser User-Agent, Referer, and Origin headers",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "yt-dlp with public browser headers",
+      "status": "succeeded",
+      "result": "public audio/video media downloaded as scratch file BV1adLw6qE1x.m4a",
+      "format_id": "30280",
+      "ext": "m4a",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "ffmpeg audio extraction",
+      "status": "succeeded",
+      "result": "scratch WAV created from BV1adLw6qE1x.m4a",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "openai-whisper local ASR",
+      "status": "succeeded",
+      "result": "local CUDA transcription with model small",
+      "cookies_used": false,
+      "cloud_api_used": false
+    },
+    {
+      "method": "scratch cleanup",
+      "status": "completed_after_project_copy",
+      "result": "temporary m4a/wav media deleted by finalize-video-intake.ps1 after project-visible artifacts were copied",
+      "cookies_used": false,
+      "cloud_api_used": false
+    }
+  ],
+  "media_retention": "deleted",
+  "retained_project_artifacts": [
+    "raw/videos/2026-06-04-bilibili-notion-vs-obsidian-system-source/transcript.txt",
+    "raw/videos/2026-06-04-bilibili-notion-vs-obsidian-system-source/segments.md",
+    "raw/videos/2026-06-04-bilibili-notion-vs-obsidian-system-source/segments.json",
+    "raw/videos/2026-06-04-bilibili-notion-vs-obsidian-system-source/transcript-meta.json",
+    "raw/videos/2026-06-04-bilibili-notion-vs-obsidian-system-source/acquisition-ledger.json",
+    "raw/videos/2026-06-04-bilibili-notion-vs-obsidian-system-source/source-metadata.json"
+  ],
+  "scratch_boundary": ".codex video-research directory is a temporary working area, not formal archive"
+}

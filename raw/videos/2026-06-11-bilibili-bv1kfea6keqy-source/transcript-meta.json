@@ -1,0 +1,19 @@
+{
+  "source_url": "https://www.bilibili.com/video/BV1KfEA6KEQY/?spm_id_from=333.1007.tianma.1-2-2.click&vd_source=db18be3c563dfea2398744bc3cacb799",
+  "bvid": "BV1KfEA6KEQY",
+  "aid": 116692231524471,
+  "cid": 38859115892,
+  "transcript_method": "local_asr",
+  "asr_engine": "faster-whisper",
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16",
+  "language": "zh",
+  "language_probability": 1,
+  "duration": 457.2705625,
+  "segment_count": 235,
+  "text_chars": 2575,
+  "elapsed_seconds": 64.08,
+  "captured_at": "2026-06-10T20:55:53.514227+00:00",
+  "quality_notes": "local ASR from public Bilibili audio; raw source text, not reviewed knowledge; proper nouns need confidence checks"
+}

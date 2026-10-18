@@ -1,0 +1,7 @@
+{
+  "case_id": "external-review-and-intake-ready",
+  "p2_94_submission_packet_ready": true,
+  "p2_96_result_intake_ready": true,
+  "p2_97_guard_state": "STOP_WAIT_EXTERNAL_OPUS_REVIEW",
+  "passed": true
+}

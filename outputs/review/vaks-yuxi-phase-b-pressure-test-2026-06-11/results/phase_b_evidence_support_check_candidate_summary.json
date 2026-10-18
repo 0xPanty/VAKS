@@ -1,0 +1,17 @@
+{
+  "artifact_kind": "vaks_phase_b_evidence_support_check_summary",
+  "support_check_count": 90,
+  "source_envelope_count": 90,
+  "evidence_item_count": 389,
+  "source_span_available_count": 389,
+  "current_source_hash_match_count": 321,
+  "source_refresh_needed_count": 68,
+  "blocked_no_source_anchor_count": 2,
+  "support_passed_count": 0,
+  "support_counts_for_promotion_count": 0,
+  "action_basis_allowed_count": 0,
+  "evidence_packet_allowed_count": 0,
+  "evidence_sufficiency_passed_count": 0,
+  "output_path": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-yuxi-phase-b-pressure-test-2026-06-11\\results\\phase_b_evidence_support_check_candidates.jsonl",
+  "built_at": "2026-06-10T21:31:30+00:00"
+}

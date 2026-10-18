@@ -1,0 +1,1 @@
+{"case_id":"wrong-source-screening-ref","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/source_screening_ref","value":"outputs/review/vaks-implementation-sandbox/2026-06-15-p2-19-product-experience-screening-sandbox/prototype/not-the-screening.json"}]}

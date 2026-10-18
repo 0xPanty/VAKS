@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sandbox Operator Decision Brief</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f7f8fb; color: #17202a; }
+    main { max-width: 1040px; margin: 0 auto; padding: 28px 18px 44px; }
+    h1 { margin: 0 0 8px; font-size: 30px; }
+    .summary { color: #465667; max-width: 780px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 20px 0; }
+    .card, .option { background: #ffffff; border: 1px solid #d9e1ec; border-radius: 8px; padding: 14px; }
+    .card span { color: #526273; font-size: 13px; }
+    .card strong { display: block; margin-top: 8px; font-size: 24px; }
+    .options { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+    .option span { display: block; color: #226348; margin: 8px 0; }
+    .notice { margin-top: 16px; border-left: 4px solid #2f6fed; background: #edf4ff; padding: 12px 14px; color: #1f3150; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Sandbox Operator Decision Brief</h1>
+    <p class="summary">sandbox_product_grade_operator_ready_not_enterprise_production</p>
+    <section class="cards">
+      <article class="card"><span>Completed sandbox slices</span><strong>39</strong></article>
+      <article class="card"><span>Product-grade sandbox slices</span><strong>39</strong></article>
+      <article class="card"><span>Verified sandbox slices</span><strong>39</strong></article>
+      <article class="card"><span>Revision-history slices</span><strong>8</strong></article>
+    </section>
+    <section class="options">
+      <article class="option" data-decision-option="continue_sandbox_hardening"><strong>continue_sandbox_hardening</strong><span>allowed_only_in_fresh_sandbox</span><p>Existing Product PASS artifacts may inform another sandbox slice, but do not authorize mainline or formal vault work.</p></article>
+<article class="option" data-decision-option="prepare_promotion_request_packet"><strong>prepare_promotion_request_packet</strong><span>allowed_as_sandbox_draft_only</span><p>A request packet can be drafted in sandbox, but promotion itself needs separate explicit user approval.</p></article>
+<article class="option" data-decision-option="formal_vault_work"><strong>formal_vault_work</strong><span>blocked_needs_separate_user_approval</span><p>Sandbox PASS is not formal vault approval or Obsidian sync permission.</p></article>
+<article class="option" data-decision-option="mainline_merge_commit_push"><strong>mainline_merge_commit_push</strong><span>blocked_needs_separate_user_approval</span><p>Sandbox PASS is not mainline readiness, commit approval, push approval, or promotion approval.</p></article>
+<article class="option" data-decision-option="use_as_action_basis"><strong>use_as_action_basis</strong><span>blocked</span><p>Sandbox status is not reviewed knowledge, evidence support, or action basis.</p></article>
+    </section>
+    <section class="notice">not formal vault approval; not action basis; not mainline readiness; not reviewed knowledge; not evidence support.</section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

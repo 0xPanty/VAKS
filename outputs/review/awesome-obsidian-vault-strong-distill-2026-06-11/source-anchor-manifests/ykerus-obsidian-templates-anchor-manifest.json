@@ -1,0 +1,44 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "ykerus/obsidian-templates",
+  "source_url": "https://github.com/ykerus/obsidian-templates",
+  "checked_commit": "21950d27c40804e2bfe4a6da0f81b816f9473478",
+  "checked_at": "2026-06-11",
+  "inspection_method": "shallow git clone plus README workflow sections, Obsidian plugin config, template files, collection notes, cleanup workflows, and automation/plugin references",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "workflow-manual",
+      "why": "Documents daily notes, scheduled/forgotten todos, meeting notes, scratch/info/archive lifecycle, attachment cleanup, tag cleanup, and plugin setup."
+    },
+    {
+      "path": ".obsidian/community-plugins.json",
+      "kind": "plugin-surface",
+      "why": "Shows broad community plugin dependencies including Dataview, QuickAdd, Shell Commands, Templater, Calendar, Omnisearch, Excalidraw, and Kanban."
+    },
+    {
+      "path": "emoji-prefixed Templates/*.md",
+      "kind": "workflow-templates",
+      "why": "Contains Daily, Meeting, Scratch, Note, Person, and Board templates."
+    },
+    {
+      "path": "Collections and todo notes",
+      "kind": "activation-collections",
+      "why": "Separates work/personal, soon/later, scheduled, forgotten, and daily task surfaces."
+    },
+    {
+      "path": "README.md cleanup sections",
+      "kind": "vault-health-workflows",
+      "why": "Documents cleanup flows for unused attachments, untagged notes, unused notes, and lifecycle movement."
+    }
+  ],
+  "known_limits": [
+    "The repository depends on powerful plugins and shell automation that should not become a VAKS default.",
+    "Personal workflow folders and emoji path conventions should not be copied into VAKS architecture.",
+    "Optional AI/Copilot/vector index settings must remain outside VAKS truth and review layers unless separately authorized."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

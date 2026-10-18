@@ -1,0 +1,38 @@
+{
+  "record_kind": "approval_to_prewrite_gate_chain_failure_cases",
+  "slice_id": "2026-06-19-p2-86-approval-to-prewrite-gate-chain-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "P2-86-FAIL-01-generic-approval",
+      "must_fail_when": "Generic continuation reaches prewrite confirmation."
+    },
+    {
+      "case_id": "P2-86-FAIL-02-product-acceptance-approval",
+      "must_fail_when": "Product Acceptance is treated as user approval."
+    },
+    {
+      "case_id": "P2-86-FAIL-03-hash-drift-override",
+      "must_fail_when": "Exact phrase overrides fresh hash drift."
+    },
+    {
+      "case_id": "P2-86-FAIL-04-missing-rehearsal-override",
+      "must_fail_when": "Exact phrase skips byte-safe rehearsal evidence."
+    },
+    {
+      "case_id": "P2-86-FAIL-05-boundary-override",
+      "must_fail_when": "Exact phrase overrides failed boundary audit."
+    },
+    {
+      "case_id": "P2-86-FAIL-06-mainline-authority-confusion",
+      "must_fail_when": "Old-file normalization approval grants mainline authority."
+    },
+    {
+      "case_id": "P2-86-FAIL-07-immediate-write-confusion",
+      "must_fail_when": "Ready-for-prewrite is treated as immediate write authority."
+    },
+    {
+      "case_id": "P2-86-FAIL-08-fixture-approval-confusion",
+      "must_fail_when": "Fixture exact phrase is treated as current user approval collected by this slice."
+    }
+  ]
+}

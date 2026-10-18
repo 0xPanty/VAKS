@@ -1,0 +1,13 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "valid-layer-badges",
+  "expected_valid": true,
+  "expected_codes": [],
+  "patch": {
+    "layer_badges": {
+      "display_only": true,
+      "badge_can_promote": false,
+      "layers": ["raw", "candidate", "review_input", "reviewed", "context_pack", "action_readiness", "feedback"]
+    }
+  }
+}

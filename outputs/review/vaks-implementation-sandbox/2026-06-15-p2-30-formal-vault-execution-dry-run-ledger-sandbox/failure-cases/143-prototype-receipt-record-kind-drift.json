@@ -1,0 +1,13 @@
+{
+  "case_id": "prototype-receipt-record-kind-drift",
+  "description": "Prototype receipt record kind drifts.",
+  "expected_errors": [
+    "prototype_receipt_record_kind_mismatch"
+  ],
+  "prototype_tamper": {
+    "kind": "receipt_update",
+    "updates": {
+      "record_kind": "execution_log"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "fixture_id": "rerun-recloseout-option",
+  "decision_option": "rerun_recloseout_without_old_slice_edits",
+  "expected": {
+    "requires_separate_user_approval": false,
+    "would_edit_old_slices": false,
+    "allowed_now": true,
+    "normalization_applied": false
+  }
+}

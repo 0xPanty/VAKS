@@ -1,0 +1,38 @@
+{
+  "record_kind": "post_rehearsal_goal_state_cockpit_failure_cases",
+  "slice_id": "2026-06-19-p2-83-post-rehearsal-goal-state-cockpit-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "P2-83-FAIL-01-all-done-overclaim",
+      "must_fail_when": "The cockpit claims all original 20 are current strict final-gate complete while old_slice_current_strict_final_gate_count is 0."
+    },
+    {
+      "case_id": "P2-83-FAIL-02-generic-continuation-as-approval",
+      "must_fail_when": "Generic continuation language is treated as exact p2-75 approval."
+    },
+    {
+      "case_id": "P2-83-FAIL-03-rehearsal-as-write-authority",
+      "must_fail_when": "p2-82 sandbox-copy rehearsal is treated as old-file write authority."
+    },
+    {
+      "case_id": "P2-83-FAIL-04-missing-byte-safety-rollup",
+      "must_fail_when": "The cockpit omits p2-82 byte-level final hash restoration evidence."
+    },
+    {
+      "case_id": "P2-83-FAIL-05-stale-pre-p2-82-status-surface",
+      "must_fail_when": "The cockpit only repeats p2-74 and does not incorporate p2-82 rehearsal evidence."
+    },
+    {
+      "case_id": "P2-83-FAIL-06-mainline-authority-confusion",
+      "must_fail_when": "The cockpit creates or implies merge, promotion, reviewed knowledge, evidence support, or action basis authority."
+    },
+    {
+      "case_id": "P2-83-FAIL-07-product-acceptance-confusion",
+      "must_fail_when": "Product Acceptance is treated as user approval for old-file writes."
+    },
+    {
+      "case_id": "P2-83-FAIL-08-path-boundary-violation",
+      "must_fail_when": "The slice writes outside its own sandbox root."
+    }
+  ]
+}

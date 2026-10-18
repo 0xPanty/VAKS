@@ -1,0 +1,12 @@
+{
+  "case_id": "prototype-markdown-mainline",
+  "note": "Prototype claims mainline.",
+  "prototype_tamper": {
+    "kind": "markdown_replace",
+    "file": "02 Allowed Continuations.md",
+    "content": "mainline ready: yes"
+  },
+  "expected_errors": [
+    "prototype_text_dangerous:02 Allowed Continuations.md:mainline_ready_marker"
+  ]
+}

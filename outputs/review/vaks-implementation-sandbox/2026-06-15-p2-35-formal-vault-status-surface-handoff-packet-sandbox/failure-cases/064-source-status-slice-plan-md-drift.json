@@ -1,0 +1,425 @@
+{
+  "case_id": "source-status-slice-plan-md-drift",
+  "note": "Source status changed.",
+  "config": {
+    "slice_id": "2026-06-15-p2-35-formal-vault-status-surface-handoff-packet-sandbox",
+    "source_slice": "2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox",
+    "handoff_packet_version": "p2-35-formal-vault-status-surface-handoff-packet-v1",
+    "truth_boundary": "sandbox_only_handoff_packet_not_authority",
+    "purpose": "Create a sandbox-only handoff packet for later agents to reuse the P2-34 operator status surface without treating status as approval, execution permission, action basis, reviewed knowledge, evidence support, mainline readiness, formal-vault authority, or dirty-tree repair.",
+    "handoff_mode": "next_agent_read_only_handoff",
+    "write_scope": [
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-35-formal-vault-status-surface-handoff-packet-sandbox/"
+    ],
+    "read_only_sources": [
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/slice-plan.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/source-map.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/verification.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/reviewer-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/boundary-audit.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/product-acceptance-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/next-step.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/artifact/formal-vault-operator-status-surface-contract.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/prototype/formal-vault-operator-status-surface/Receipts/operator-status-surface-receipt.json",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/fixtures/valid-chain-overview-status-surface-config.json"
+    ],
+    "operations": {
+      "formal_vault_read": false,
+      "formal_vault_scan": false,
+      "formal_vault_write": false,
+      "formal_vault_hash": false,
+      "formal_vault_snapshot": false,
+      "formal_vault_state_check": false,
+      "obsidian_sync": false,
+      "commit": false,
+      "push": false,
+      "promotion": false,
+      "dependency_install": false,
+      "background_service": false,
+      "mcp_write_tool": false,
+      "hooks": false,
+      "approval_collection": false,
+      "user_instruction_collection": false,
+      "user_wording_storage": false,
+      "command_emitted": false,
+      "absolute_vault_path_resolved": false,
+      "execution_permission_granted": false,
+      "execution_performed": false,
+      "action_basis_creation": false,
+      "reviewed_knowledge_creation": false,
+      "evidence_support_creation": false,
+      "mainline_merge": false,
+      "dirty_tree_repair": false,
+      "handoff_auto_advance": false
+    },
+    "handoff_controls": {
+      "sandbox_only": true,
+      "handoff_only": true,
+      "read_only_source_bound": true,
+      "fresh_sandbox_required_for_next_work": true,
+      "non_executable": true,
+      "no_formal_vault_access": true,
+      "no_approval_collection": true,
+      "no_user_instruction": true,
+      "no_user_wording": true,
+      "no_commands": true,
+      "no_absolute_vault_paths": true,
+      "no_truth_mutation": true,
+      "no_mainline_claim": true,
+      "status_surface_is_not_authority": true,
+      "handoff_packet_is_not_authority": true,
+      "product_acceptance_is_not_formal_vault_approval": true,
+      "operator_must_stop_before_execution": true,
+      "execution_allowed_now": false,
+      "formal_vault_access_allowed_now": false,
+      "approval_collected_now": false,
+      "action_basis_ready": false,
+      "reviewed_knowledge_created": false,
+      "evidence_support_created": false,
+      "mainline_ready": false,
+      "dirty_tree_fixed": false,
+      "auto_advance_allowed": false
+    },
+    "source_inputs": [
+      {
+        "id": "source_00",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/slice-plan.md",
+        "source_sha256": "867eee3f7db1e8233e3b9a7b488649f022adbfff4341b66a8f5582617f1c1533",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_01",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/source-map.md",
+        "source_sha256": "b69331fa49ac100cf8629860c57beb09828b819b17246a9bc0cbc36c3a0ac8ff",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_02",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/verification.md",
+        "source_sha256": "1acdc132e18279154cdf60e84ba3feb0da3359e370c7913991391cc1a4a72ce0",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_03",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/reviewer-report.md",
+        "source_sha256": "fb8e751c1345107b9b473bae3ca027adc4f47958284f6c90839fbc0cc0333d26",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_04",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/boundary-audit.md",
+        "source_sha256": "6d1cf2a09d1c17a2da77429ca9d2f3076a59ffc93d5241bfdc62f37c3ac46af9",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_05",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/product-acceptance-report.md",
+        "source_sha256": "09773bed2f6b20621f5034bf1cc94bd9ed584b5bbc5036e34dcda4a42f0ead76",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_06",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/next-step.md",
+        "source_sha256": "f1022711a995cbfdf03cbe0197828d121fa83177e59bcc800e69f73a9a016c69",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_07",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/artifact/formal-vault-operator-status-surface-contract.md",
+        "source_sha256": "7bfbb01e772c0f9d7b303db35fb58b943514dc0a3dec2a85e920e73a8f4d26d4",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_08",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/prototype/formal-vault-operator-status-surface/Receipts/operator-status-surface-receipt.json",
+        "source_sha256": "32d4d00e90c19d7a6b53b9c7483560233d194f6d89ed828656f03a3b3fa7fe5e",
+        "content_binding": "exact_source_sha256"
+      },
+      {
+        "id": "source_09",
+        "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox/fixtures/valid-chain-overview-status-surface-config.json",
+        "source_sha256": "e74c07a202d947d8bbb29633cd2aeec55365353221a2b9b340f5bc4212c60806",
+        "content_binding": "exact_source_sha256"
+      }
+    ],
+    "source_statuses": [
+      {
+        "file": "slice-plan.md",
+        "expected_status": "built_pending_review",
+        "actual_status": "pending"
+      },
+      {
+        "file": "source-map.md",
+        "expected_status": "built_pending_review",
+        "actual_status": "built_pending_review"
+      },
+      {
+        "file": "verification.md",
+        "expected_status": "local_verification_passed_pending_review",
+        "actual_status": "local_verification_passed_pending_review"
+      },
+      {
+        "file": "reviewer-report.md",
+        "expected_status": "reviewer_pass",
+        "actual_status": "reviewer_pass"
+      },
+      {
+        "file": "boundary-audit.md",
+        "expected_status": "boundary_pass",
+        "actual_status": "boundary_pass"
+      },
+      {
+        "file": "product-acceptance-report.md",
+        "expected_status": "pass_product_grade",
+        "actual_status": "pass_product_grade"
+      },
+      {
+        "file": "next-step.md",
+        "expected_status": "pass_product_grade_pending_user_next_slice_decision",
+        "actual_status": "pass_product_grade_pending_user_next_slice_decision"
+      }
+    ],
+    "source_surface_binding": {
+      "source_slice": "2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox",
+      "product_status": "pass_product_grade",
+      "reviewer_status": "reviewer_pass",
+      "boundary_status": "boundary_pass",
+      "verification_status": "local_verification_passed_pending_review",
+      "next_status": "pass_product_grade_pending_user_next_slice_decision",
+      "surface_result": "STATUS_SURFACE_CHAIN_OVERVIEW_NOT_EXECUTABLE",
+      "source_slice_count": 4,
+      "source_input_count": 36,
+      "badge_count": 4,
+      "stop_line_count": 4,
+      "status_surface_hash": "210751eb53b559dea863aa62cb364376f5dfa412a8b3b178a8648e5c47f47cb0",
+      "formal_vault_accessed": false,
+      "approval_collected_now": false,
+      "user_instruction_collected": false,
+      "user_wording_stored": false,
+      "execution_permission_granted": false,
+      "execution_performed": false,
+      "write_performed": false,
+      "sync_performed": false,
+      "commit_performed": false,
+      "push_performed": false,
+      "promotion_performed": false,
+      "mainline_ready": false,
+      "status_used_as_action_basis": false,
+      "dirty_tree_fixed": false
+    },
+    "handoff_payload": {
+      "packet_id": "2026-06-15-p2-35-formal-vault-status-surface-handoff-packet-sandbox:next_agent_read_only_handoff",
+      "handoff_mode": "next_agent_read_only_handoff",
+      "handoff_result": "HANDOFF_PACKET_READY_FOR_READ_ONLY_NEXT_AGENT",
+      "source_surface_hash": "210751eb53b559dea863aa62cb364376f5dfa412a8b3b178a8648e5c47f47cb0",
+      "source_surface_result": "STATUS_SURFACE_CHAIN_OVERVIEW_NOT_EXECUTABLE",
+      "source_surface_stage_count": 4,
+      "next_work_type": "read_only_recovery_or_inspection",
+      "next_work_must_use_fresh_sandbox": true,
+      "allowed_next_write_scope_pattern": "outputs/review/vaks-implementation-sandbox/<date>-<slice-id>/",
+      "forbidden_next_actions": [
+        "absolute_vault_path_resolved",
+        "action_basis_creation",
+        "approval_collection",
+        "background_service",
+        "command_emitted",
+        "commit",
+        "dependency_install",
+        "dirty_tree_repair",
+        "evidence_support_creation",
+        "execution_performed",
+        "execution_permission_granted",
+        "formal_vault_hash",
+        "formal_vault_read",
+        "formal_vault_scan",
+        "formal_vault_snapshot",
+        "formal_vault_state_check",
+        "formal_vault_write",
+        "handoff_auto_advance",
+        "hooks",
+        "mainline_merge",
+        "mcp_write_tool",
+        "obsidian_sync",
+        "promotion",
+        "push",
+        "reviewed_knowledge_creation",
+        "user_instruction_collection",
+        "user_wording_storage"
+      ],
+      "required_next_checks": [
+        "p2_34_product_pass_present",
+        "p2_34_surface_hash_bound",
+        "p2_34_status_chain_visible",
+        "handoff_requires_fresh_sandbox",
+        "handoff_no_formal_vault",
+        "handoff_no_approval_collection",
+        "handoff_no_user_wording",
+        "handoff_no_commands_or_paths",
+        "handoff_not_action_basis",
+        "handoff_not_mainline_ready"
+      ],
+      "operator_stop_summary": "Stop before approval, commands, action basis, mainline, or formal vault access.",
+      "actual_approval_collected": false,
+      "actual_user_wording_stored": false,
+      "commands_supplied": false,
+      "formal_vault_paths_present": false,
+      "execution_permission_granted": false,
+      "handoff_used_as_action_basis": false,
+      "mainline_ready": false,
+      "dirty_tree_fixed": false,
+      "non_claims": [
+        "not a command surface",
+        "not action basis",
+        "not approval collection",
+        "not auto advance",
+        "not dirty tree repair",
+        "not evidence support",
+        "not execution permission",
+        "not execution readiness",
+        "not formal vault approval",
+        "not formal vault state",
+        "not mainline readiness",
+        "not merge approval",
+        "not reviewed knowledge",
+        "not user instruction",
+        "not user wording storage"
+      ]
+    },
+    "handoff_checks": [
+      {
+        "check_id": "p2_34_product_pass_present",
+        "sequence": 1,
+        "status": "PASS",
+        "checked_now": true,
+        "collected_now": false,
+        "non_claim": "handoff_check_is_not_authority"
+      },
+      {
+        "check_id": "p2_34_surface_hash_bound",
+        "sequence": 2,
+        "status": "PASS",
+        "checked_now": true,
+        "collected_now": false,
+        "non_claim": "handoff_check_is_not_authority"
+      },
+      {
+        "check_id": "p2_34_status_chain_visible",
+        "sequence": 3,
+        "status": "PASS",
+        "checked_now": true,
+        "collected_now": false,
+        "non_claim": "handoff_check_is_not_authority"
+      },
+      {
+        "check_id": "handoff_requires_fresh_sandbox",
+        "sequence": 4,
+        "status": "PASS",
+        "checked_now": true,
+        "collected_now": false,
+        "non_claim": "handoff_check_is_not_authority"
+      },
+      {
+        "check_id": "handoff_no_formal_vault",
+        "sequence": 5,
+        "status": "PASS",
+        "checked_now": true,
+        "collected_now": false,
+        "non_claim": "handoff_check_is_not_authority"
+      },
+      {
+        "check_id": "handoff_no_approval_collection",
+        "sequence": 6,
+        "status": "PASS",
+        "checked_now": true,
+        "collected_now": false,
+        "non_claim": "handoff_check_is_not_authority"
+      },
+      {
+        "check_id": "handoff_no_user_wording",
+        "sequence": 7,
+        "status": "PASS",
+        "checked_now": true,
+        "collected_now": false,
+        "non_claim": "handoff_check_is_not_authority"
+      },
+      {
+        "check_id": "handoff_no_commands_or_paths",
+        "sequence": 8,
+        "status": "PASS",
+        "checked_now": true,
+        "collected_now": false,
+        "non_claim": "handoff_check_is_not_authority"
+      },
+      {
+        "check_id": "handoff_not_action_basis",
+        "sequence": 9,
+        "status": "PASS",
+        "checked_now": true,
+        "collected_now": false,
+        "non_claim": "handoff_check_is_not_authority"
+      },
+      {
+        "check_id": "handoff_not_mainline_ready",
+        "sequence": 10,
+        "status": "PASS",
+        "checked_now": true,
+        "collected_now": false,
+        "non_claim": "handoff_check_is_not_authority"
+      }
+    ],
+    "handoff_receipt": {
+      "record_kind": "sandbox_formal_vault_status_surface_handoff_packet_receipt",
+      "slice_id": "2026-06-15-p2-35-formal-vault-status-surface-handoff-packet-sandbox",
+      "source_slice": "2026-06-15-p2-34-formal-vault-operator-status-surface-sandbox",
+      "handoff_result": "HANDOFF_PACKET_READY_FOR_READ_ONLY_NEXT_AGENT",
+      "source_input_count": 10,
+      "check_count": 10,
+      "formal_vault_accessed": false,
+      "approval_collected_now": false,
+      "user_instruction_collected": false,
+      "user_wording_stored": false,
+      "execution_permission_granted": false,
+      "execution_performed": false,
+      "write_performed": false,
+      "sync_performed": false,
+      "commit_performed": false,
+      "push_performed": false,
+      "promotion_performed": false,
+      "mainline_ready": false,
+      "handoff_used_as_action_basis": false,
+      "dirty_tree_fixed": false,
+      "auto_advanced": false,
+      "handoff_packet_hash": "04a80a1acba0741f74fe8f31aaafa6af80eb24fda74ef33034a3f0746a759cf8",
+      "non_claims": [
+        "not a command surface",
+        "not action basis",
+        "not approval collection",
+        "not auto advance",
+        "not dirty tree repair",
+        "not evidence support",
+        "not execution permission",
+        "not execution readiness",
+        "not formal vault approval",
+        "not formal vault state",
+        "not mainline readiness",
+        "not merge approval",
+        "not reviewed knowledge",
+        "not user instruction",
+        "not user wording storage"
+      ]
+    },
+    "product_metrics": {
+      "required_positive_fixtures": 3,
+      "minimum_failure_cases": 100,
+      "required_source_inputs": 10,
+      "required_handoff_checks": 10,
+      "manual_negative_probes": 12,
+      "max_handoff_steps": 3
+    },
+    "handoff_packet_hash": "04a80a1acba0741f74fe8f31aaafa6af80eb24fda74ef33034a3f0746a759cf8"
+  },
+  "expected_errors": [
+    "source_status_not_met:slice-plan.md",
+    "source_statuses_mismatch"
+  ]
+}

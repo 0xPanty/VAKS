@@ -1,0 +1,6 @@
+{
+  "case_id": "p2-91-status-normalization-applied",
+  "p2_91_old_slice_writes_applied": 75,
+  "p2_91_protected_path_writes": 0,
+  "passed": true
+}

@@ -1,0 +1,9 @@
+{
+  "case_id": "allowed-opus-conclusions",
+  "allowed_external_conclusions": [
+    "OPUS_PASS_SANDBOX_CLOSEOUT",
+    "OPUS_REVISE_SANDBOX_CLOSEOUT",
+    "OPUS_BLOCKED_NEEDS_USER"
+  ],
+  "passed": true
+}

@@ -1,0 +1,60 @@
+{
+  "record_kind": "sandbox_user_decision_chain_regression_contract",
+  "slice_id": "2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox",
+  "source_slice_ids": [
+    "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+    "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+    "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+    "2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox",
+    "2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox",
+    "2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox"
+  ],
+  "truth_boundary": "chain_regression_bundle_not_user_decision_or_execution_authority",
+  "status": "built_pending_review",
+  "purpose": "prove the p2-51 through p2-56 user-decision guard chain still passes as a sandbox-only regression bundle",
+  "source_final_gate_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox\\artifact\\verify_user_decision_demo_transcript_smoke_runner.py --final-gate",
+  "source_gate_contract": {
+    "each_source_must_have_product_pass": true,
+    "each_source_must_have_reviewer_pass": true,
+    "each_source_must_have_boundary_pass": true,
+    "p2_56_final_gate_must_pass": true,
+    "p2_56_demo_must_remain_non_executing": true
+  },
+  "output_contract": {
+    "automatic_execution": false,
+    "decision_collected": false,
+    "ready_to_execute": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "action_basis_ready": false,
+    "must_not": [
+      "execute_option",
+      "merge_mainline",
+      "promote",
+      "sync_obsidian",
+      "commit",
+      "push",
+      "write_reviewed_knowledge",
+      "create_evidence_support",
+      "create_action_basis",
+      "start_future_slice_by_inference"
+    ]
+  },
+  "ordinary_agent_usage": {
+    "run_bundle": "python -B artifact/run_user_decision_chain_regression_bundle.py",
+    "run_readout": "python -B artifact/run_user_decision_chain_regression_bundle.py --markdown",
+    "default_verifier": "python -B artifact/verify_user_decision_chain_regression_bundle.py",
+    "final_gate": "python -B artifact/verify_user_decision_chain_regression_bundle.py --final-gate",
+    "rebuild": "Builder-only: python -B artifact/build_user_decision_chain_regression_bundle.py"
+  },
+  "required_non_claims": [
+    "The bundle is not a user decision.",
+    "The bundle is not execution authority.",
+    "The bundle is not mainline approval.",
+    "The bundle is not promotion approval.",
+    "The bundle is not Obsidian sync approval.",
+    "The bundle is not reviewed knowledge.",
+    "The bundle is not evidence support.",
+    "The bundle is not action basis."
+  ]
+}

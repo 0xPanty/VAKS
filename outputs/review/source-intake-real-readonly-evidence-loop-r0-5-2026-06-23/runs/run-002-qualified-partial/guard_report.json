@@ -1,0 +1,239 @@
+{
+  "guard_boundary": "VAKS Guard pass/warn/block is a machine-detectable contract check only; it is not reviewed truth, evidence support, action approval, or P0.",
+  "checked_exits": [
+    "retrieval_receipt_validator",
+    "runtime_artifact_selection",
+    "support_boundary"
+  ],
+  "not_run": [
+    "action_readiness",
+    "operation_preflight",
+    "feedback_boundary"
+  ],
+  "not_run_reason": "R0.5 is read-only and has no action, operation, feedback truth update, promotion, or writeback.",
+  "compatibility_note": "Guard inputs are compatibility shims for current vaks_guard.py; canonical R0.5 artifacts remain JSON/JSONL.",
+  "results": {
+    "retrieval_receipt": {
+      "cmd": [
+        "python",
+        "tools/vaks_guard.py",
+        "check",
+        "outputs/review/source-intake-real-readonly-evidence-loop-r0-5-2026-06-23/runs/run-002-qualified-partial/guard_inputs/retrieval_receipt_guard.md",
+        "--guard",
+        "retrieval_receipt",
+        "--json"
+      ],
+      "returncode": 0,
+      "stdout": {
+        "authority_boundary": "VAKS Guard is a read-only lazy gate. It identifies machine-detectable contract violations only. It does not create reviewed knowledge, evidence support, action approval, reviewer approval, promotion, mainline readiness, or write authorization.",
+        "checked_scope": [
+          "retrieval receipt process contract"
+        ],
+        "code": "",
+        "findings": [
+          {
+            "code": "ok",
+            "guard": "retrieval_receipt",
+            "location": "outputs\\review\\source-intake-real-readonly-evidence-loop-r0-5-2026-06-23\\runs\\run-002-qualified-partial\\guard_inputs\\retrieval_receipt_guard.md",
+            "message": "Receipt boundary passed.",
+            "next_step": "No guard action needed.",
+            "rule_ref": "retrieval_receipt",
+            "status": "pass"
+          }
+        ],
+        "message": "",
+        "mode": "guard:retrieval_receipt",
+        "not_checked": [
+          "semantic truth of any claim",
+          "whether an evidence span actually supports a claim beyond contract checks",
+          "reviewer approval",
+          "owner risk acceptance",
+          "permission to execute an operation",
+          "mainline promotion or merge readiness"
+        ],
+        "run_state": "executed",
+        "status": "pass",
+        "summary": {
+          "block": 0,
+          "pass": 1,
+          "warn": 0
+        },
+        "target": "outputs\\review\\source-intake-real-readonly-evidence-loop-r0-5-2026-06-23\\runs\\run-002-qualified-partial\\guard_inputs\\retrieval_receipt_guard.md",
+        "tool": "vaks_guard",
+        "version": "0.1.0"
+      },
+      "stderr": ""
+    },
+    "runtime_artifact_selection": {
+      "cmd": [
+        "python",
+        "tools/vaks_guard.py",
+        "check",
+        "outputs/review/source-intake-real-readonly-evidence-loop-r0-5-2026-06-23/runs/run-002-qualified-partial/guard_inputs/runtime_artifact_exclusion_manifest.json",
+        "--guard",
+        "runtime_artifacts",
+        "--json"
+      ],
+      "returncode": 0,
+      "stdout": {
+        "authority_boundary": "VAKS Guard is a read-only lazy gate. It identifies machine-detectable contract violations only. It does not create reviewed knowledge, evidence support, action approval, reviewer approval, promotion, mainline readiness, or write authorization.",
+        "checked_scope": [
+          "runtime artifact exclusion contract"
+        ],
+        "code": "",
+        "findings": [
+          {
+            "code": "ok",
+            "details": {
+              "issue_codes": [],
+              "runtime_artifact_ids": [],
+              "scenario_id": "run-002-qualified-partial-runtime-artifact-exclusion",
+              "selected_item_ids": [
+                "item-001",
+                "item-002",
+                "item-003",
+                "item-004",
+                "item-005",
+                "item-006",
+                "item-007",
+                "item-008",
+                "item-009"
+              ]
+            },
+            "guard": "runtime_artifacts",
+            "location": "outputs\\review\\source-intake-real-readonly-evidence-loop-r0-5-2026-06-23\\runs\\run-002-qualified-partial\\guard_inputs\\runtime_artifact_exclusion_manifest.json",
+            "message": "Runtime artifact exclusion boundary passed.",
+            "next_step": "No guard action needed.",
+            "rule_ref": "runtime_artifacts",
+            "status": "pass"
+          }
+        ],
+        "message": "",
+        "mode": "guard:runtime_artifacts",
+        "not_checked": [
+          "semantic truth of any claim",
+          "whether an evidence span actually supports a claim beyond contract checks",
+          "reviewer approval",
+          "owner risk acceptance",
+          "permission to execute an operation",
+          "mainline promotion or merge readiness"
+        ],
+        "run_state": "executed",
+        "status": "pass",
+        "summary": {
+          "block": 0,
+          "pass": 1,
+          "warn": 0
+        },
+        "target": "outputs\\review\\source-intake-real-readonly-evidence-loop-r0-5-2026-06-23\\runs\\run-002-qualified-partial\\guard_inputs\\runtime_artifact_exclusion_manifest.json",
+        "tool": "vaks_guard",
+        "version": "0.1.0"
+      },
+      "stderr": ""
+    },
+    "support_boundary": [
+      {
+        "cmd": [
+          "python",
+          "tools/vaks_guard.py",
+          "check",
+          "outputs/review/source-intake-real-readonly-evidence-loop-r0-5-2026-06-23/runs/run-002-qualified-partial/guard_inputs/claim-001_support_boundary.md",
+          "--guard",
+          "support_boundary",
+          "--json"
+        ],
+        "returncode": 0,
+        "stdout": {
+          "authority_boundary": "VAKS Guard is a read-only lazy gate. It identifies machine-detectable contract violations only. It does not create reviewed knowledge, evidence support, action approval, reviewer approval, promotion, mainline readiness, or write authorization.",
+          "checked_scope": [
+            "support authority bucket contract"
+          ],
+          "code": "",
+          "findings": [
+            {
+              "code": "ok",
+              "guard": "support_boundary",
+              "location": "outputs\\review\\source-intake-real-readonly-evidence-loop-r0-5-2026-06-23\\runs\\run-002-qualified-partial\\guard_inputs\\claim-001_support_boundary.md",
+              "message": "Support boundary passed.",
+              "next_step": "No guard action needed.",
+              "rule_ref": "support_boundary",
+              "status": "pass"
+            }
+          ],
+          "message": "",
+          "mode": "guard:support_boundary",
+          "not_checked": [
+            "semantic truth of any claim",
+            "whether an evidence span actually supports a claim beyond contract checks",
+            "reviewer approval",
+            "owner risk acceptance",
+            "permission to execute an operation",
+            "mainline promotion or merge readiness"
+          ],
+          "run_state": "executed",
+          "status": "pass",
+          "summary": {
+            "block": 0,
+            "pass": 1,
+            "warn": 0
+          },
+          "target": "outputs\\review\\source-intake-real-readonly-evidence-loop-r0-5-2026-06-23\\runs\\run-002-qualified-partial\\guard_inputs\\claim-001_support_boundary.md",
+          "tool": "vaks_guard",
+          "version": "0.1.0"
+        },
+        "stderr": ""
+      },
+      {
+        "cmd": [
+          "python",
+          "tools/vaks_guard.py",
+          "check",
+          "outputs/review/source-intake-real-readonly-evidence-loop-r0-5-2026-06-23/runs/run-002-qualified-partial/guard_inputs/claim-002_support_boundary.md",
+          "--guard",
+          "support_boundary",
+          "--json"
+        ],
+        "returncode": 0,
+        "stdout": {
+          "authority_boundary": "VAKS Guard is a read-only lazy gate. It identifies machine-detectable contract violations only. It does not create reviewed knowledge, evidence support, action approval, reviewer approval, promotion, mainline readiness, or write authorization.",
+          "checked_scope": [
+            "support authority bucket contract"
+          ],
+          "code": "",
+          "findings": [
+            {
+              "code": "ok",
+              "guard": "support_boundary",
+              "location": "outputs\\review\\source-intake-real-readonly-evidence-loop-r0-5-2026-06-23\\runs\\run-002-qualified-partial\\guard_inputs\\claim-002_support_boundary.md",
+              "message": "Support boundary passed.",
+              "next_step": "No guard action needed.",
+              "rule_ref": "support_boundary",
+              "status": "pass"
+            }
+          ],
+          "message": "",
+          "mode": "guard:support_boundary",
+          "not_checked": [
+            "semantic truth of any claim",
+            "whether an evidence span actually supports a claim beyond contract checks",
+            "reviewer approval",
+            "owner risk acceptance",
+            "permission to execute an operation",
+            "mainline promotion or merge readiness"
+          ],
+          "run_state": "executed",
+          "status": "pass",
+          "summary": {
+            "block": 0,
+            "pass": 1,
+            "warn": 0
+          },
+          "target": "outputs\\review\\source-intake-real-readonly-evidence-loop-r0-5-2026-06-23\\runs\\run-002-qualified-partial\\guard_inputs\\claim-002_support_boundary.md",
+          "tool": "vaks_guard",
+          "version": "0.1.0"
+        },
+        "stderr": ""
+      }
+    ]
+  }
+}

@@ -1,5 +1,6 @@
 ---
 type: source
+record_kind: source_card
 status: source-captured
 title: "Graphiti / Zep Temporal Validity Windows"
 source_id: 2026-05-29-graphiti-zep-temporal-validity-source
@@ -9,8 +10,6 @@ source_type: docs
 version_or_commit: Zep / Graphiti docs captured 2026-05-29
 captured_at: 2026-05-29
 captured_by: Codex
-processing_mode: immediate
-processing_level: heavy
 review_priority: normal
 review_owner: Codex
 formalization_status: candidate-generated
@@ -28,6 +27,17 @@ tags:
   - zep
   - temporal-validity
   - scope-fit
+knowledge_status: raw
+processing_tier: light
+why_saved: see_body_or_legacy_record
+retrieval_policy:
+  policy_kind: source_identity_only
+  pack_allowed: drilldown_required
+  action_basis_allowed: false
+  warning_code: raw_is_provenance_only
+promotion_gate: none
+action_basis_allowed: false
+truth_mutation_allowed: false
 ---
 
 # Graphiti / Zep Temporal Validity Source Record

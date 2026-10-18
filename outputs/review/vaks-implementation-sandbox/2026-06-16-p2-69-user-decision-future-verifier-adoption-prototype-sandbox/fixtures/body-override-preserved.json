@@ -1,0 +1,6 @@
+{
+  "fixture_id": "body-override-preserved",
+  "expected": {
+    "body_override_preserved": true
+  }
+}

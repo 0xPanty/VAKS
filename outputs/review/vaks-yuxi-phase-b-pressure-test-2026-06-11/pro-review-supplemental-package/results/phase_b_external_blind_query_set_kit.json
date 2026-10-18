@@ -1,0 +1,31 @@
+{
+  "artifact_kind": "phase_b_external_blind_query_set_kit",
+  "created_at": "2026-06-12",
+  "truth_boundary": "query_set_kit_not_completed_external_blind",
+  "action_basis_allowed": false,
+  "template_rows": 20,
+  "target_filled_query_min": 15,
+  "target_filled_query_max": 20,
+  "filled_query_file": "queries_phase_b_external_blind.jsonl",
+  "author_manifest_template": "results/phase_b_external_blind_query_author_manifest_template.json",
+  "filled_author_manifest_file": "results/phase_b_external_blind_query_author_manifest.json",
+  "external_author_must_not_write_expected_terms": true,
+  "expected_terms_added_later_by_internal_scorer_only": true,
+  "allowed_intents": [
+    "action",
+    "evidence",
+    "review",
+    "retrieval_design",
+    "source_intake",
+    "context_pack",
+    "graph_retrieval",
+    "agent_access"
+  ],
+  "status": "pending_external_queries",
+  "hard_stops": [
+    "template_is_not_completed_external_blind",
+    "do_not_use_internal_queries_as_external_blind",
+    "do_not_claim_original_yuxi_runtime_validated",
+    "do_not_enter_c_lite_from_this_kit"
+  ]
+}

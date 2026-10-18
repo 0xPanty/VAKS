@@ -1,0 +1,5 @@
+{
+  "case_id": "executor-not-authorized",
+  "executor_write_allowed_now": false,
+  "old_slice_write_allowed": false
+}

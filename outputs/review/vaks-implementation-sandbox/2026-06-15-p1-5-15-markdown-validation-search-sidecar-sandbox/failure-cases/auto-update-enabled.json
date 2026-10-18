@@ -1,0 +1,1 @@
+{"extends":"fixtures/valid-frontmatter-validation-check.json","scenario_id":"auto-update-enabled","expected_valid":false,"expected_codes":["MS_NO_UPDATE_REQUIRED"],"patch":{"validation":{"no_update":false,"auto_update":true}}}

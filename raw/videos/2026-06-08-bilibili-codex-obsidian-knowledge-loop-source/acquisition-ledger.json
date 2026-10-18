@@ -1,0 +1,50 @@
+[
+  {
+    "step": "fetch_public_view_metadata",
+    "status": "ok",
+    "method": "bilibili x/web-interface/view",
+    "cookies_used": false,
+    "time": "2026-06-08T15:56:13.9324696+08:00"
+  },
+  {
+    "step": "check_public_subtitles",
+    "status": "empty",
+    "method": "bilibili x/player/v2 subtitle list",
+    "cookies_used": false,
+    "note": "subtitles: []",
+    "time": "2026-06-08T15:56:13.9326585+08:00"
+  },
+  {
+    "step": "fetch_public_playurl",
+    "status": "ok",
+    "method": "bilibili x/player/playurl dash audio",
+    "cookies_used": false,
+    "time": "2026-06-08T15:56:13.9327701+08:00"
+  },
+  {
+    "step": "download_public_audio",
+    "status": "ok",
+    "method": "Invoke-WebRequest with browser UA/referer/origin",
+    "cookies_used": false,
+    "time": "2026-06-08T15:56:13.9328754+08:00"
+  },
+  {
+    "step": "convert_audio_to_wav",
+    "status": "ok",
+    "method": "ffmpeg 16k mono wav",
+    "time": "2026-06-08T15:56:13.9329796+08:00"
+  },
+  {
+    "step": "local_asr",
+    "status": "ok",
+    "method": "faster_whisper small cuda float16",
+    "cloud_api_used": false,
+    "time": "2026-06-08T15:56:13.9330837+08:00"
+  },
+  {
+    "step": "copy_retained_text_artifacts_to_project",
+    "status": "ok",
+    "target": "C:\\Users\\Administrator\\Documents\\资料库\\raw\\videos\\2026-06-08-bilibili-codex-obsidian-knowledge-loop-source",
+    "time": "2026-06-08T15:56:13.9332087+08:00"
+  }
+]

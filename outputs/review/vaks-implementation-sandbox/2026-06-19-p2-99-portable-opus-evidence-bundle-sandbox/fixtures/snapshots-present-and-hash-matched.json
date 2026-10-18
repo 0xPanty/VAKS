@@ -1,0 +1,6 @@
+{
+  "case_id": "snapshots-present-and-hash-matched",
+  "snapshot_count": 9,
+  "hash_match_count": 9,
+  "passed": true
+}

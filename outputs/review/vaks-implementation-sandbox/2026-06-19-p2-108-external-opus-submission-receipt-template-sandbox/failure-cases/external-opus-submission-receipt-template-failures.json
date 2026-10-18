@@ -1,0 +1,96 @@
+{
+  "record_kind": "external_opus_submission_receipt_template_failure_cases",
+  "slice_id": "2026-06-19-p2-108-external-opus-submission-receipt-template-sandbox",
+  "failure_cases": [
+    {
+      "id": "brief_hash_drift",
+      "mutation": "brief_hash_drift",
+      "expected_failure": "source_hash_mismatch:manual_submission_brief"
+    },
+    {
+      "id": "capture_hash_drift",
+      "mutation": "capture_hash_drift",
+      "expected_failure": "source_hash_mismatch:response_capture_card"
+    },
+    {
+      "id": "missing_required_field",
+      "mutation": "missing_required_field",
+      "expected_failure": "required_field_missing:submitted_at"
+    },
+    {
+      "id": "wrong_validator",
+      "mutation": "wrong_validator",
+      "expected_failure": "expected_validator_mismatch"
+    },
+    {
+      "id": "claims_submission",
+      "mutation": "external_submission_performed_true",
+      "expected_failure": "authority_overclaim:external_submission_performed"
+    },
+    {
+      "id": "claims_raw_response",
+      "mutation": "raw_opus_response_present_true",
+      "expected_failure": "authority_overclaim:raw_opus_response_present"
+    },
+    {
+      "id": "claims_opus_result",
+      "mutation": "actual_opus_result_present_true",
+      "expected_failure": "authority_overclaim:actual_opus_result_present"
+    },
+    {
+      "id": "claims_validated_pass",
+      "mutation": "validated_opus_pass_present_true",
+      "expected_failure": "authority_overclaim:validated_opus_pass_present"
+    },
+    {
+      "id": "claims_user_approval",
+      "mutation": "user_approval_present_true",
+      "expected_failure": "authority_overclaim:user_approval_present"
+    },
+    {
+      "id": "allows_mainline_merge",
+      "mutation": "mainline_merge_allowed_true",
+      "expected_failure": "authority_overclaim:mainline_merge_allowed"
+    },
+    {
+      "id": "allows_promotion",
+      "mutation": "promotion_allowed_true",
+      "expected_failure": "authority_overclaim:promotion_allowed"
+    },
+    {
+      "id": "claims_reviewed_knowledge",
+      "mutation": "reviewed_knowledge_ready_true",
+      "expected_failure": "authority_overclaim:reviewed_knowledge_ready"
+    },
+    {
+      "id": "claims_evidence_support",
+      "mutation": "evidence_support_ready_true",
+      "expected_failure": "authority_overclaim:evidence_support_ready"
+    },
+    {
+      "id": "claims_action_basis",
+      "mutation": "action_basis_ready_true",
+      "expected_failure": "authority_overclaim:action_basis_ready"
+    },
+    {
+      "id": "allows_commit_push_sync",
+      "mutation": "commit_push_sync_ready_true",
+      "expected_failure": "authority_overclaim:commit_push_sync_ready"
+    },
+    {
+      "id": "claims_goal_complete",
+      "mutation": "goal_complete_now_true",
+      "expected_failure": "authority_overclaim:goal_complete_now"
+    },
+    {
+      "id": "template_claims_result",
+      "mutation": "template_claims_result",
+      "expected_failure": "template_missing_phrase:not an Opus result"
+    },
+    {
+      "id": "template_missing_intake_route",
+      "mutation": "template_missing_intake_route",
+      "expected_failure": "template_missing_phrase:new sandbox-only intake slice"
+    }
+  ]
+}

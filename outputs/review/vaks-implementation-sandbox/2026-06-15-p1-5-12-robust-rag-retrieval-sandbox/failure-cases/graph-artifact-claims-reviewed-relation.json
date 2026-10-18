@@ -1,0 +1,35 @@
+{
+  "record_kind": "robust_rag_retrieval_manifest",
+  "scenario_id": "graph-artifact-claims-reviewed-relation",
+  "expected_valid": false,
+  "expected_codes": ["RR_GRAPH_PATH_REVIEWED_RELATION"],
+  "query": {
+    "query_mode": "review",
+    "verbatim_input": "Can this graph artifact create a reviewed relation?",
+    "question_summary": "Graph artifact reviewed relation misuse.",
+    "action_sensitive": false,
+    "verbatim_preserved": true
+  },
+  "route_selection": {
+    "selected": "local_entity",
+    "authority_buckets_included": ["review_input"],
+    "authority_buckets_excluded": ["feedback", "runtime_artifact"],
+    "selected_context_types": ["candidate_relation"],
+    "forbidden_support_types": ["retrieval_score", "graph_rank", "community_report_summary", "llm_extracted_relation"]
+  },
+  "retrieval_config": {"bucket_filter_first": true, "rrf_within_bucket_only": true, "exclude_runtime_artifacts": true},
+  "retrieved_items": [
+    {
+      "id": "graph-artifact-relation-claim",
+      "ref": "outputs/review/graph/auto-relation.yml",
+      "record_kind": "llm_extracted_relation",
+      "authority_bucket": "review_input",
+      "pack_role": "review_input",
+      "selected": true,
+      "excluded": false,
+      "selected_by": {"graph": true},
+      "artifact_claims": ["reviewed_relation"],
+      "reviewed_relation_created": true
+    }
+  ]
+}

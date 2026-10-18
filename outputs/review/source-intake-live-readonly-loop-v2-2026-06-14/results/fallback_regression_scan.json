@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "forbidden_tokens": [
+    "forced_anchor_if_retrieval_missed",
+    "retrieval_score: 999.0",
+    "retrieval_score: 999",
+    "\"score\": 999"
+  ],
+  "findings": [],
+  "truth_boundary": "Regression scan covers generated v2 artifacts only; older base script source may still contain fallback code but is not on the v2 execution path."
+}

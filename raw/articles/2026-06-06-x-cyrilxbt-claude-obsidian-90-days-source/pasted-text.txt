@@ -1,0 +1,133 @@
+文章
+
+查看新帖子
+对话
+CyrilXBT
+@cyrilXBT
+I Connected Claude to Obsidian 90 Days Ago. Here Is What Happened to How I Work.
+I did not expect it to change everything.
+I expected it to change how I take notes.
+That is the honest framing going into this. I connected Claude to my Obsidian vault via the Filesystem MCP on a Sunday afternoon because I had been hearing people talk about it and wanted to see what the fuss was about. I had a decent Obsidian setup already. A few hundred notes. Some folder structure. The usual.
+I did not expect to look back 90 days later and genuinely struggle to remember how I worked before.
+This is the honest account of what changed, what did not change, what surprised me, and what I would do differently if I were starting again today.
+Day 1: What the Setup Actually Looked Like
+The setup took about two hours from zero to working.
+Install Claude Desktop. Configure the Filesystem MCP by editing a JSON file and pointing it at the Obsidian vault path. Restart Claude Desktop. Test the connection by asking Claude to list the files in the vault.
+When Claude accurately described my folder structure I felt something I did not expect to feel.
+Slightly unsettled.
+Not because anything was wrong. Because something was right in a way that felt bigger than a two-hour Sunday project should feel.
+Claude could read every note I had ever written. Every daily note. Every permanent note. Every project file. Every half-finished idea I had captured and never returned to.
+Three years of accumulated thinking sitting in plain text files, suddenly accessible to an intelligence that could read all of it simultaneously and reason across it in ways I could not.
+I closed my laptop and went for a walk to think about what I had just built.
+Week 1: The First Thing That Changed
+The first week was mostly experimentation. I was trying to understand what the combination could actually do rather than building systematic workflows.
+The first thing I noticed was not productivity. It was memory.
+I would ask Claude a question and instead of getting a generic answer I would get an answer that referenced specific notes I had written months earlier. I would ask about a concept I was thinking about and Claude would say something like: "You wrote something related to this in your note on second-order thinking from six weeks ago. You connected it to your project on content strategy. Here is what you said then and here is how it relates to what you are asking now."
+I would have never found that note on my own. Not because it was hard to search for. Because I had forgotten I wrote it.
+The experience of having my own past thinking surfaced in real time was disorienting in the best possible way.
+By the end of week one I had one clear insight: the value of Obsidian is not the notes you remember to look up. It is the notes you forget exist that come back at the exact moment they are relevant.
+Claude made that possible in a way that manual search never could.
+Week 2: Building the First Workflow
+In week two I built my first automated workflow. The morning briefing.
+The idea was simple. Every morning before I opened my email Claude would read my vault and generate a brief that told me what mattered today based on my actual projects and notes rather than based on whatever notifications had come in overnight.
+The prompt I used:
+Read my CLAUDE.md for full context.
+Read all active project files.
+Read yesterday's daily note for open loops.
+Generate a morning brief covering:
+- Most important thing today
+- Project status for each active project
+- Any open loops from yesterday
+- One connection between something in my notes 
+  and something I should be thinking about today.
+Save to BRIEFINGS/[DATE]-morning-brief.md
+The first morning brief took four minutes to generate and was immediately more useful than the 45 minutes of email, news, and project status checking I had been doing manually.
+Not because the brief itself was perfect. It was not. The first version had some irrelevant items and missed some important ones.
+But the direction was so clearly right that I knew immediately this was going to become the core of how I started every day.
+By the end of week two the morning brief was running every morning. I had updated my CLAUDE.md twice based on what the first briefs revealed about missing context. The quality of the brief improved noticeably with each CLAUDE.md update.
+Week 3: The CLAUDE.md Revelation
+The third week was when I understood what the CLAUDE.md actually was.
+I had been treating it as a configuration file. A place to store settings that improved Claude's outputs.
+That framing was wrong.
+The CLAUDE.md is a living document about who you are and what matters to you. Every time you update it you are giving Claude a more accurate picture of your life and work. Every subsequent interaction with Claude benefits from that more accurate picture.
+The compound effect of this became clear in week three when I spent a full evening rewriting my CLAUDE.md from scratch with much more specificity.
+Old CLAUDE.md: "I am a content creator who writes about AI and crypto."
+New CLAUDE.md: Detailed description of my content pillars, my audience, my voice, my current projects with specific status and next actions, my top three priorities for the week, my writing standards, what I never publish, what I am trying to figure out right now.
+The morning brief generated the day after the rewrite was qualitatively different from every previous brief. Not slightly better. A different category of output. The specificity of the context produced specificity of output that felt like the difference between talking to someone who vaguely knows what you do and talking to someone who has been working alongside you for months.
+Week three lesson: the CLAUDE.md is not a configuration file. It is the most important document in your vault. Treat it like one.
+Month 1: What I Stopped Doing
+By the end of month one I had stopped doing six things I had been doing manually for years.
+Manual project status tracking. I used to spend twenty minutes every Monday morning reviewing all active projects and updating a tracker. Claude reads the project files and generates a health report automatically. I now spend five minutes reading that report instead of twenty minutes creating it.
+Manually searching for related notes. Every time I was working on something I used to search for related notes using keywords. Now I ask Claude what exists in my vault related to the current topic and get results that include semantically related notes I would never have found with keyword search.
+Starting articles from scratch. Every piece of writing used to start from a blank page. Now I ask Claude to find all relevant notes in my vault and produce a writing brief before I start. The blank page problem essentially disappeared. I am always starting from accumulated knowledge rather than from nothing.
+Taking the same kinds of meeting notes. I created a meeting note template that Claude fills in automatically when I give it a brief description of the meeting. Attendees, decisions, actions. All formatted consistently every time.
+Re-explaining context at the start of conversations. Before the setup every Claude session started with me explaining who I am and what I am working on. Now every session starts from my CLAUDE.md which Claude reads automatically. I never explain myself anymore.
+Compiling weekly reviews manually. The weekly review used to take an hour of reading through the week's notes and trying to synthesize what happened. Now Claude reads all of it and generates the review. I spend fifteen minutes reading and adding anything it missed.
+Six things. All of them were real time expenditure. The aggregate was approximately three hours per week of work that no longer exists.
+Month 1: What Surprised Me
+Two things surprised me in month one that I did not anticipate.
+The quality of the connections was better than I expected.
+I expected Claude to find obvious connections between related notes. What I did not expect was the non-obvious connections. Notes I had written in completely different contexts that shared an underlying principle. Ideas I had captured months apart that, read together, suggested something neither note contained alone.
+The synthesis that Claude produced across multiple related notes produced insights I would describe as genuinely new. Not new to the world. New to me. The connection between things I already knew that I had not consciously made.
+That experience happened multiple times in month one and every time it felt significant in a way that was hard to articulate. The second brain was producing first-order thinking I had not done.
+The vault quality problem surfaced immediately.
+The second surprise was less pleasant. Within the first two weeks of using the combination seriously I realized my vault had a significant quality problem.
+Years of inconsistent capture conventions meant Claude was reading notes of wildly different quality and structure. Some notes were rich, well-connected, written in my own words. Others were brief, disconnected, copied directly from sources without processing.
+The combination revealed this immediately because Claude's outputs were only as good as the notes it was reasoning from. When it drew on high-quality permanent notes the synthesis was excellent. When it drew on low-quality captures the synthesis was mediocre.
+Month one ended with a two-day vault cleanup project that I had been postponing for years. The combination forced the issue in a way that no previous motivation had.
+Month 2: The System Became Invisible
+Month two was when I stopped thinking about the system.
+The morning briefing ran every day. The inbox processed itself every evening. The weekly review generated every Sunday. The project health report appeared every Monday.
+I was using the outputs without thinking about the infrastructure producing them. The way you use electricity without thinking about the power grid.
+That invisibility is the signal that a system has actually been adopted rather than experimented with.
+Three things happened in month two that I attribute to the compounding effect of accumulated context.
+Decision quality improved. When facing any significant decision I started running a decision support prompt that reads across my entire vault for relevant history. In month two the history was two months deep. The results were noticeably better than decisions I had made before the system existed.
+Writing output increased. I published more in month two than in any previous month. Not because I was working more hours. Because the blank page problem was fully eliminated and the research synthesis function meant I was never starting without material.
+The morning brief became my most important daily document. By mid-month two I had stopped reading news sites before the brief. The brief covered what I needed to know with enough depth to be actionable and filtered specifically to my priorities. General news consumption dropped by approximately 80%. Time spent on it dropped from 45 minutes daily to five minutes.
+Month 2: The Failure That Taught Me the Most
+Month two also contained my biggest failure with the system.
+I tried to automate too much at once.
+I had been adding skills and automations aggressively since week one. By mid-month two the system was running twelve separate scheduled workflows. The volume of automated outputs was exceeding my ability to read and act on them.
+I was generating more intelligence than I could process.
+The lesson this taught was one I should have known but needed to experience: an automated output you do not read is not a productivity gain. It is automated noise that you eventually learn to ignore.
+I cut the scheduled workflows from twelve back to five. Morning brief. Inbox processor. Project health. Connection finder. Weekly review.
+Everything else became manual on demand. I run skills when I need them rather than scheduling them to run whether I need them or not.
+The system became more useful the day it became smaller.
+Month 3: What the Data Showed
+By month three the system had accumulated enough history to surface patterns I could not have seen from inside any individual week.
+The weekly review in week twelve drew on twelve previous reviews. The morning brief had three months of daily note context. The decision support function had ninety days of decision logs to reference.
+Three patterns emerged that changed how I work.
+Pattern 1: My best work happens in the first 90 minutes of the day.
+The morning brief data showed consistently that the tasks I completed by 10AM had a higher completion rate and higher output quality than tasks worked on after 10AM. I restructured my schedule to protect the first 90 minutes of every day for the single most important project. Everything else waits.
+Pattern 2: My content that includes specific numbers and data outperforms everything else.
+The connection finder surfaced this across my content notes. Notes tagged with good performance consistently referenced specific statistics, case studies, or concrete examples. Notes without specifics performed poorly regardless of how good the general idea was. I added a specific data requirement to my CLAUDE.md content standards.
+Pattern 3: Decisions I made quickly without checking my notes had a higher failure rate.
+The decision log analysis over 90 days showed a clear pattern. Fast decisions made without running the decision support prompt had a 40% higher rate of requiring revision or reversal than decisions made using the historical context in my vault. I added a rule to my CLAUDE.md: any decision with more than moderate consequences gets a decision support prompt before being made.
+These three patterns required 90 days of data to surface. They were invisible in any individual week.
+What I Would Do Differently Starting Today
+If I were starting the Obsidian plus Claude combination from scratch today I would do five things differently.
+Start with a clean vault structure before connecting anything.
+The vault cleanup that month one forced would have been better done before the connection rather than after. The combination is only as good as the vault quality. Spend a weekend cleaning and structuring your vault before you connect Claude to it.
+Write a genuinely specific CLAUDE.md on day one.
+The CLAUDE.md I wrote in week three should have been the CLAUDE.md I wrote on day one. Do not start with a placeholder. Take two hours and write the most specific and honest document about your work and priorities that you can. Every interaction from that point forward will be better for it.
+Build five workflows and stop.
+The temptation to automate everything is real and consistently counterproductive. Morning brief, inbox processor, project health, connection finder, weekly review. Build those five and run them for thirty days before adding anything. The five core workflows cover 90% of the value. Additional workflows should earn their place by solving a specific pain point.
+Review and update CLAUDE.md every Monday.
+The five minutes spent updating current priorities and project status every Monday morning has more leverage than any other weekly habit in the system. Everything that runs in the following week is calibrated to the updated context. Skip this and the system slowly becomes a less accurate version of your life.
+Trust the connection finder.
+The connections Claude surfaces between notes are worth following even when they are not immediately obvious. The best insights I had in 90 days came from following a non-obvious connection and discovering something I had been thinking about in fragments for months but had never consciously assembled. The connection finder is the highest-leverage skill in the entire system.
+The Honest Assessment at Day 90
+Three hours per week reclaimed from workflows that now run automatically.
+One blank page problem eliminated completely.
+Three significant patterns identified from accumulated data that changed how I work.
+A vault that has gone from a storage system to a thinking partner.
+The combination changed how I work in ways I did not anticipate when I started. Not dramatically and all at once. Gradually and then significantly.
+The most accurate way I can describe the experience at day 90 is this.
+Before the connection my Obsidian vault knew more than I did because it stored information I had captured and forgotten.
+After the connection Claude knows what my vault knows and can reason across all of it simultaneously.
+The effect of that combination over 90 days is not that I have a better productivity system.
+It is that I have a thinking partner who has read everything I have ever written and can connect it to whatever I am working on right now.
+That is not a tool upgrade.
+That is a different way of working.
+Build it this weekend.
+The 90 days starts from the first morning brief that generates while you sleep.

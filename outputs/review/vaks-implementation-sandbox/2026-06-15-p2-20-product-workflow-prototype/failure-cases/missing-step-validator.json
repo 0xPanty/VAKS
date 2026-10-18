@@ -1,0 +1,1 @@
+{"case_id":"missing-step-validator","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/steps/4/required_validators","value":["retrieval-receipt-validator"]}]}

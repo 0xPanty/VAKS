@@ -1,0 +1,7 @@
+{
+  "record_kind": "misa_preference_slot_fixture",
+  "slot_id": "slot-operator-boundary",
+  "memory_type": "preference_slot",
+  "value": "keep runtime memory local-only and sandbox-first",
+  "truth_boundary": "runtime-preference-not-vaks-truth"
+}

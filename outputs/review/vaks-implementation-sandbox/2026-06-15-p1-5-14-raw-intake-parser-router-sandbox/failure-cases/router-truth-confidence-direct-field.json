@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "router-truth-confidence-direct-field",
+  "expected_valid": false,
+  "expected_codes": ["RP_AUTHORITY_CLAIM_FORBIDDEN"],
+  "patch": {"router": {"truth_confidence": 0.91}}
+}

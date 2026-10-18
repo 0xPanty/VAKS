@@ -1,0 +1,314 @@
+{
+  "created_at": "2026-09-27T00:32:51.1393930+08:00",
+  "candidate_only": true,
+  "branch": "master",
+  "repository_head": "10e7be9ac4630730473f3c6c30622b31dabab998",
+  "snapshot": "working_tree_not_clean_commit",
+  "architecture_file_count": 30,
+  "files": [
+    {
+      "path": "architecture/AGENTS.md",
+      "origin_kind": "repository_working_tree",
+      "source": "AGENTS.md",
+      "bytes": 21731,
+      "sha256": "9C74528A1581DA371B3B03E6A9753A0265DA5E595F88A6D7578D3290E0041FBA"
+    },
+    {
+      "path": "architecture/README.md",
+      "origin_kind": "repository_working_tree",
+      "source": "README.md",
+      "bytes": 11367,
+      "sha256": "975BF273AC8DFB14E992230A31313AF05CCEE070659FD13FA75C6E9DB9B1D51E"
+    },
+    {
+      "path": "architecture/purpose.md",
+      "origin_kind": "repository_working_tree",
+      "source": "purpose.md",
+      "bytes": 3521,
+      "sha256": "222C252337735018CB14152C85DA44F3C121D346C1679F90903038C199008501"
+    },
+    {
+      "path": "architecture/FUSION_ARCHITECTURE_V0_2_DRAFT.md",
+      "origin_kind": "repository_working_tree",
+      "source": "FUSION_ARCHITECTURE_V0_2_DRAFT.md",
+      "bytes": 77077,
+      "sha256": "742948176608CE7F6786B49FBE18A732DB7A409A557D6EF7A9133CF59FC3ECE4"
+    },
+    {
+      "path": "architecture/SECOND_BRAIN_MODEL.md",
+      "origin_kind": "repository_working_tree",
+      "source": "SECOND_BRAIN_MODEL.md",
+      "bytes": 34023,
+      "sha256": "26D0A08C6EF9197C9F06DF9C57931E27E59E21EA83DF2CED15D996F7BF4FCE65"
+    },
+    {
+      "path": "architecture/ARCHITECTURE_PRINCIPLES.md",
+      "origin_kind": "repository_working_tree",
+      "source": "ARCHITECTURE_PRINCIPLES.md",
+      "bytes": 27208,
+      "sha256": "D6CA1ECD358197C22259FA91FC9E5A9C48BB2B5B0FDBECCCABFE52F2EF5779BB"
+    },
+    {
+      "path": "architecture/SCHEMA.md",
+      "origin_kind": "repository_working_tree",
+      "source": "SCHEMA.md",
+      "bytes": 73203,
+      "sha256": "18AFE3C9CA20F7BC6154C6996D6823DDF79E6141C78EFA9CA94050E01142483E"
+    },
+    {
+      "path": "architecture/IMPLEMENTATION_BLUEPRINT.md",
+      "origin_kind": "repository_working_tree",
+      "source": "IMPLEMENTATION_BLUEPRINT.md",
+      "bytes": 17653,
+      "sha256": "829E157DCBB0EF72CD6F8B9AAB383B3B3E34728908796DF208700EB3D75AF1E1"
+    },
+    {
+      "path": "architecture/SOURCE_INTAKE.md",
+      "origin_kind": "repository_working_tree",
+      "source": "SOURCE_INTAKE.md",
+      "bytes": 60279,
+      "sha256": "1911AF31BAC33D304E32C349F023CBF41A51A5EA392FFCFDC178BA96184DA353"
+    },
+    {
+      "path": "architecture/REFERENCE_REVIEW_PROTOCOL.md",
+      "origin_kind": "repository_working_tree",
+      "source": "REFERENCE_REVIEW_PROTOCOL.md",
+      "bytes": 7590,
+      "sha256": "31B2B3BCAC5ABA97873284E580A80C79D90BD92BC92E875F1E423DDE890D7455"
+    },
+    {
+      "path": "architecture/MEMORY_TIER.md",
+      "origin_kind": "repository_working_tree",
+      "source": "MEMORY_TIER.md",
+      "bytes": 9827,
+      "sha256": "A408D7CFEE3738BFA0FCEA9604DA2D033FFF5F99880BA04D359B4AF4587ECA7F"
+    },
+    {
+      "path": "architecture/DEV_CONTEXT.md",
+      "origin_kind": "repository_working_tree",
+      "source": "DEV_CONTEXT.md",
+      "bytes": 11698,
+      "sha256": "5691D823222AFC0B78B4A056E8C6B75024DA28EECEA6508DA31858B977BBA126"
+    },
+    {
+      "path": "architecture/REVIEW_QUEUE.md",
+      "origin_kind": "repository_working_tree",
+      "source": "REVIEW_QUEUE.md",
+      "bytes": 32804,
+      "sha256": "E31981B8525CAF64BA0568FA13A9FF914378D2569C783B68A3FC83EE13146818"
+    },
+    {
+      "path": "architecture/FEEDBACK.md",
+      "origin_kind": "repository_working_tree",
+      "source": "FEEDBACK.md",
+      "bytes": 15489,
+      "sha256": "39256D623A33B8D66EF444D768B5A538B50F200668270D8F21F0352E7809D959"
+    },
+    {
+      "path": "architecture/00_handoff/2026-06-22-vaks-guard-closeout-and-bases-park-handoff.md",
+      "origin_kind": "repository_working_tree",
+      "source": "00_handoff/2026-06-22-vaks-guard-closeout-and-bases-park-handoff.md",
+      "bytes": 2751,
+      "sha256": "9BF2E39262B602D0A2AD99940EA3813FC9AE24D7741094F1C6DF941E9BB6DA2F"
+    },
+    {
+      "path": "architecture/00_handoff/2026-06-08-answer-boundary-and-three-window-execution-handoff.md",
+      "origin_kind": "repository_working_tree",
+      "source": "00_handoff/2026-06-08-answer-boundary-and-three-window-execution-handoff.md",
+      "bytes": 9502,
+      "sha256": "6C6BE11546521AF4DFBA75AB1381D09BBE9493B1018A1BBB78B7C3D27ACEDCC0"
+    },
+    {
+      "path": "architecture/templates/architecture-review-window-prompt.md",
+      "origin_kind": "repository_working_tree",
+      "source": "templates/architecture-review-window-prompt.md",
+      "bytes": 5458,
+      "sha256": "08F0E529108EEF9228671904B0BFE8F1E417934639FDED598F5638C2B30C2B82"
+    },
+    {
+      "path": "architecture/templates/context-pack-manifest.md",
+      "origin_kind": "repository_working_tree",
+      "source": "templates/context-pack-manifest.md",
+      "bytes": 1342,
+      "sha256": "B74ABE4AADDB47FED82A00BF7D27AAF85A863201B8EE7A9303D74E6DC3BF1468"
+    },
+    {
+      "path": "architecture/templates/review-candidate.md",
+      "origin_kind": "repository_working_tree",
+      "source": "templates/review-candidate.md",
+      "bytes": 12919,
+      "sha256": "1190A5AEEA583F82DC954859407B9E7B78CC9232513A680791B3779C7A3A2FAC"
+    },
+    {
+      "path": "architecture/templates/claim-record.md",
+      "origin_kind": "repository_working_tree",
+      "source": "templates/claim-record.md",
+      "bytes": 5631,
+      "sha256": "DE292CEF2A85EA2A087F72FC87BAB0CD491E689DB0750E023BBD5B526E18FBB1"
+    },
+    {
+      "path": "architecture/templates/design-pattern.md",
+      "origin_kind": "repository_working_tree",
+      "source": "templates/design-pattern.md",
+      "bytes": 2661,
+      "sha256": "2B16924FE5FEFADBDDC29CB51929ADCBD5F6B9618798E6659D71985DE5DCEF81"
+    },
+    {
+      "path": "architecture/templates/decision-record.md",
+      "origin_kind": "repository_working_tree",
+      "source": "templates/decision-record.md",
+      "bytes": 4332,
+      "sha256": "6CC2D74B2A942659F13E06FB389799B52AF676CD2F639ADF59F0BC08083816D0"
+    },
+    {
+      "path": "architecture/templates/source-record.md",
+      "origin_kind": "repository_working_tree",
+      "source": "templates/source-record.md",
+      "bytes": 5320,
+      "sha256": "8FFB73881126A3E24B46CB653AA7E3A0589195B31FCC1109B21F91CF4F7473F8"
+    },
+    {
+      "path": "architecture/templates/candidate-distillation.md",
+      "origin_kind": "repository_working_tree",
+      "source": "templates/candidate-distillation.md",
+      "bytes": 1288,
+      "sha256": "1A10AEA1E87198525585B2A1536E236992A09D533CC7D8E752ADB88A642B8D91"
+    },
+    {
+      "path": "architecture/templates/project-overlay.md",
+      "origin_kind": "repository_working_tree",
+      "source": "templates/project-overlay.md",
+      "bytes": 1861,
+      "sha256": "8953561B8E89D4C4743B35A4CD203C1B10B0F7D83A9706A6B8E2B21829B1D3E2"
+    },
+    {
+      "path": "architecture/templates/query-run.md",
+      "origin_kind": "repository_working_tree",
+      "source": "templates/query-run.md",
+      "bytes": 3795,
+      "sha256": "2831B595B260FCD609A8CF76EAE2A8D48B72049D658A4B29B0A8C743939E7B82"
+    },
+    {
+      "path": "architecture/templates/feedback-event.md",
+      "origin_kind": "repository_working_tree",
+      "source": "templates/feedback-event.md",
+      "bytes": 1512,
+      "sha256": "2B4485207AEE7F0CAE0B4D4FF76688E580999C305F99DB898BC133E198E2B350"
+    },
+    {
+      "path": "architecture/wiki/indexes/knowledge-graph-index.md",
+      "origin_kind": "repository_working_tree",
+      "source": "wiki/indexes/knowledge-graph-index.md",
+      "bytes": 45701,
+      "sha256": "C750D5B105B55E869F941BCCAEC073B6B886EC80F1A209E9333E2B68CF802EF2"
+    },
+    {
+      "path": "architecture/wiki/indexes/memory-tier-reference-index.md",
+      "origin_kind": "repository_working_tree",
+      "source": "wiki/indexes/memory-tier-reference-index.md",
+      "bytes": 17410,
+      "sha256": "745997141FE3D292F21636385F4D33787A171A921C53566CECFBCCBE70D91187"
+    },
+    {
+      "path": "architecture/docs/source-capture-store-v1.md",
+      "origin_kind": "repository_working_tree",
+      "source": "docs/source-capture-store-v1.md",
+      "bytes": 10102,
+      "sha256": "A71947D9B7B336B9B480041E93CE1C4B6BA9C821F944D385E3B929303639FDD8"
+    },
+    {
+      "path": "product/PRODUCT_PLAN.md",
+      "origin_kind": "formal_vault_candidate",
+      "source": "outputs/review/2026-09-26-vaks-insurance-team-plan-candidate.md",
+      "bytes": 17847,
+      "sha256": "9054B4BCCBE6E4AB03514234B9C5322417BF20B54E0A41FB80856D879F3ABC03"
+    },
+    {
+      "path": "product/2026-09-26-direction-source.md",
+      "origin_kind": "formal_vault_conversation_source",
+      "source": "raw/articles/2026-09-26-vaks-insurance-team-direction-source.md",
+      "bytes": 5016,
+      "sha256": "49B7A0FFF8D39F3CFBE542AECD5FA145ADA457C87983960937D9ED50795B7772"
+    },
+    {
+      "path": "product/2026-09-27-update-source.md",
+      "origin_kind": "formal_vault_conversation_source",
+      "source": "raw/articles/2026-09-27-vaks-insurance-team-plan-update-source.md",
+      "bytes": 4128,
+      "sha256": "D75B91F4FD72D4E514635C0B774CD09C16278953FD474ECF5924F3EE35C85A0F"
+    },
+    {
+      "path": "00_README.md",
+      "origin_kind": "review_package_generated",
+      "source": null,
+      "bytes": 2723,
+      "sha256": "8DF12A193778508B5A27B446F5611C0CC90582CDDC6F73C9442826D4AEFE2F0B"
+    },
+    {
+      "path": "01_PRO_REVIEW_REQUEST.md",
+      "origin_kind": "review_package_generated",
+      "source": null,
+      "bytes": 9250,
+      "sha256": "445C2742BA0034DD50F7870F316A0E907F9BC59C63C38106B0F3E90C770954F5"
+    },
+    {
+      "path": "02_IMPLEMENTATION_STATUS.md",
+      "origin_kind": "review_package_generated",
+      "source": null,
+      "bytes": 3117,
+      "sha256": "207703A7C03CBF79DF724EA5BAA8ED4DEF08AC7B1A4394CF77DA14B499E2B6A6"
+    },
+    {
+      "path": "evidence/CODE_EXCERPTS.md",
+      "origin_kind": "review_package_generated",
+      "source": null,
+      "bytes": 36410,
+      "sha256": "1AF91611EF488B56B6AB022F1A4C3B0DD5B5F2CE877C70BA434BF7FD922F54CB"
+    },
+    {
+      "path": "REVIEW_PACKET.txt",
+      "origin_kind": "concatenated_review_copy",
+      "source": [
+        "00_README.md",
+        "01_PRO_REVIEW_REQUEST.md",
+        "product/PRODUCT_PLAN.md",
+        "02_IMPLEMENTATION_STATUS.md",
+        "evidence/CODE_EXCERPTS.md",
+        "product/2026-09-26-direction-source.md",
+        "product/2026-09-27-update-source.md",
+        "architecture/AGENTS.md",
+        "architecture/README.md",
+        "architecture/purpose.md",
+        "architecture/FUSION_ARCHITECTURE_V0_2_DRAFT.md",
+        "architecture/SECOND_BRAIN_MODEL.md",
+        "architecture/ARCHITECTURE_PRINCIPLES.md",
+        "architecture/SCHEMA.md",
+        "architecture/IMPLEMENTATION_BLUEPRINT.md",
+        "architecture/SOURCE_INTAKE.md",
+        "architecture/REFERENCE_REVIEW_PROTOCOL.md",
+        "architecture/MEMORY_TIER.md",
+        "architecture/DEV_CONTEXT.md",
+        "architecture/REVIEW_QUEUE.md",
+        "architecture/FEEDBACK.md",
+        "architecture/00_handoff/2026-06-22-vaks-guard-closeout-and-bases-park-handoff.md",
+        "architecture/00_handoff/2026-06-08-answer-boundary-and-three-window-execution-handoff.md",
+        "architecture/templates/architecture-review-window-prompt.md",
+        "architecture/templates/context-pack-manifest.md",
+        "architecture/templates/review-candidate.md",
+        "architecture/templates/claim-record.md",
+        "architecture/templates/design-pattern.md",
+        "architecture/templates/decision-record.md",
+        "architecture/templates/source-record.md",
+        "architecture/templates/candidate-distillation.md",
+        "architecture/templates/project-overlay.md",
+        "architecture/templates/query-run.md",
+        "architecture/templates/feedback-event.md",
+        "architecture/wiki/indexes/knowledge-graph-index.md",
+        "architecture/wiki/indexes/memory-tier-reference-index.md",
+        "architecture/docs/source-capture-store-v1.md"
+      ],
+      "bytes": 618860,
+      "sha256": "016946DF643199B1283F5E8FF9D85798749498A183A6CA680688723A06F23182"
+    }
+  ]
+}

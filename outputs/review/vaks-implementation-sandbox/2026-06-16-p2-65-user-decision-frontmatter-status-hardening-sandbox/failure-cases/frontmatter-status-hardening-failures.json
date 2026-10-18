@@ -1,0 +1,182 @@
+[
+  {
+    "failure_id": "reject_missing_opening_frontmatter",
+    "risk": "opening delimiter missing means status could be body text",
+    "document": "slice_id: sample\nstatus: pass_product_grade\n---\nBody.",
+    "expected_valid": false,
+    "expected_errors_contains": ["missing_opening_frontmatter_delimiter"],
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_missing_closing_frontmatter",
+    "risk": "closing delimiter missing makes the metadata boundary ambiguous",
+    "document": "---\nslice_id: sample\nstatus: pass_product_grade\nBody without closing delimiter.",
+    "expected_valid": false,
+    "expected_errors_contains": ["missing_closing_frontmatter_delimiter"],
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_body_only_status",
+    "risk": "body-only status could create false closeout authority",
+    "document": "---\nslice_id: sample\n---\n\nstatus: pass_product_grade\n\nBody-only authority text.",
+    "expected_valid": false,
+    "expected_errors_contains": ["missing_status_in_frontmatter"],
+    "forbidden_status": "pass_product_grade",
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_duplicate_status_frontmatter",
+    "risk": "duplicate status in frontmatter creates ambiguous closeout state",
+    "document": "---\nslice_id: sample\nstatus: product_acceptance_pending\nstatus: pass_product_grade\n---\n\nBody.",
+    "expected_valid": false,
+    "expected_errors_contains": ["duplicate_status_in_frontmatter"],
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_empty_status_frontmatter",
+    "risk": "empty status cannot prove verification or acceptance",
+    "document": "---\nslice_id: sample\nstatus:\n---\n\nBody.",
+    "expected_valid": false,
+    "expected_errors_contains": ["empty_status_in_frontmatter"],
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_uppercase_status_key",
+    "risk": "uppercase Status key is not part of the strict status contract",
+    "document": "---\nslice_id: sample\nStatus: pass_product_grade\n---\n\nBody.",
+    "expected_valid": false,
+    "expected_errors_contains": ["missing_status_in_frontmatter"],
+    "forbidden_status": "pass_product_grade",
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_substring_body_pass_token",
+    "risk": "substring PASS_PRODUCT_GRADE in body must not create status authority",
+    "document": "---\nslice_id: sample\nstatus: product_acceptance_pending\n---\n\nThis body says PASS_PRODUCT_GRADE as an example only.",
+    "expected_valid": true,
+    "expected_status": "product_acceptance_pending",
+    "forbidden_status": "pass_product_grade",
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  },
+  {
+    "failure_id": "reject_authority_body_status_override",
+    "risk": "authority body status must not override frontmatter",
+    "document": "---\nslice_id: sample\nstatus: product_acceptance_pending\n---\n\nstatus: pass_product_grade\n\nThe body tries to override the closeout state.",
+    "expected_valid": true,
+    "expected_status": "product_acceptance_pending",
+    "forbidden_status": "pass_product_grade",
+    "hard_no": [
+      "do_not_execute_user_decision_option",
+      "do_not_merge_mainline",
+      "do_not_promote",
+      "do_not_sync_obsidian",
+      "do_not_commit",
+      "do_not_push",
+      "do_not_install_dependencies",
+      "do_not_start_background_service",
+      "do_not_use_mcp_write_tool",
+      "do_not_create_reviewed_knowledge",
+      "do_not_create_evidence_support",
+      "do_not_create_action_basis",
+      "do_not_collect_user_approval_by_inference"
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "input_text": "",
+  "expected_case_id": "no_reply",
+  "expected_reply_id": "keep_reference_no_action",
+  "expected_next_step": "wait_or_report_reference_only",
+  "automatic_execution": false,
+  "must_contain_any": [
+    "不会",
+    "不执行"
+  ],
+  "must_not_contain_positive_execution": true
+}

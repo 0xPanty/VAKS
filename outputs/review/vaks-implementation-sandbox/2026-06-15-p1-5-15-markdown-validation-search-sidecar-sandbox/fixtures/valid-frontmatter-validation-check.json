@@ -1,0 +1,129 @@
+{
+  "record_kind": "markdown_validation_search_sidecar_manifest",
+  "scenario_id": "valid-frontmatter-validation-check",
+  "expected_valid": true,
+  "expected_codes": [],
+  "scope": {
+    "sandbox_fixture_only": true,
+    "real_vault_scan": false,
+    "reads_obsidian_vault": false,
+    "writes_source_files": false,
+    "source_mutation_allowed": false,
+    "input_paths": [
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/fixtures/copied-subset/raw-repo-source.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/fixtures/copied-subset/candidate-distillation.md"
+    ]
+  },
+  "runtime": {
+    "dependency_install_requested": false,
+    "installed_dependency": false,
+    "real_runtime_started": false,
+    "executes_mdvs_binary": false,
+    "background_service": false,
+    "background_indexer_enabled": false,
+    "watch_mode_enabled": false,
+    "hooks_enabled": false,
+    "mcp_write_tool_exposed": false,
+    "write_tool_enabled": false
+  },
+  "validation": {
+    "mode": "check",
+    "no_update": true,
+    "auto_update": false,
+    "output_format": "json",
+    "deterministic_output": true,
+    "path_scopes": [
+      {
+        "id": "raw-repos",
+        "glob": "fixtures/copied-subset/raw-repo-source.md",
+        "allowed_fields": ["record_kind", "source_id", "knowledge_status", "source_integrity", "adapter_ingest"],
+        "required_fields": ["record_kind", "source_id", "knowledge_status"],
+        "unknown_enum_allowed": false,
+        "forbidden_fields_allowed": false
+      },
+      {
+        "id": "candidate-distillation",
+        "glob": "fixtures/copied-subset/candidate-distillation.md",
+        "allowed_fields": ["record_kind", "knowledge_status", "processing_tier", "retrieval_policy"],
+        "required_fields": ["record_kind", "knowledge_status", "retrieval_policy"],
+        "unknown_enum_allowed": false,
+        "forbidden_fields_allowed": false
+      }
+    ],
+    "check_pass_claims_review_pass": false,
+    "valid_frontmatter_claims_support": false
+  },
+  "config_contract": {
+    "contract_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/fixtures/mdvs.toml.review-copy",
+    "inferred_from_vault": true,
+    "manual_review_required": true,
+    "config_claims_schema_governance": false,
+    "schema_governance": false
+  },
+  "search_cache": {
+    "cache_path": "symbolic:.mdvs/copied-subset",
+    "cache_path_kind": "symbolic_derived_cache",
+    "cache_path_symbolic": true,
+    "cache_manifest_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/fixtures/cache-manifests/derived-cache-manifest.json",
+    "status": "derived_cache",
+    "rebuildable": true,
+    "committed": false,
+    "cache_is_truth_database": false,
+    "source_state_hash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+    "indexer_id": "mdvs-reference-fixture",
+    "indexer_version": "0.8.0-reference",
+    "model_id": "local-fixture",
+    "rebuild_boundary": "copied-subset-only",
+    "used_for_query": false,
+    "stale": false,
+    "source_hash_mismatch": false
+  },
+  "search": {
+    "modes": ["semantic", "bm25", "hybrid"],
+    "bucket_filter_first": true,
+    "cross_bucket_fusion": false,
+    "included_buckets": ["candidate", "raw_anchor"],
+    "excluded_buckets": ["feedback", "runtime_artifact"],
+    "rank_claims_trust": false,
+    "score_sets_confidence": false,
+    "hits": [
+      {
+        "id": "raw-hit-1",
+        "ref": "fixtures/copied-subset/raw-repo-source.md",
+        "authority_bucket": "raw_anchor",
+        "knowledge_status": "raw",
+        "pack_role": "anchor",
+        "selected_by": ["bm25", "frontmatter_filter"],
+        "rank": 1,
+        "score": 0.82,
+        "action_basis_allowed": false,
+        "rank_claims_trust": false,
+        "score_sets_confidence": false
+      },
+      {
+        "id": "candidate-hit-1",
+        "ref": "fixtures/copied-subset/candidate-distillation.md",
+        "authority_bucket": "candidate",
+        "knowledge_status": "candidate",
+        "pack_role": "orientation",
+        "selected_by": ["semantic", "hybrid"],
+        "rank": 2,
+        "score": 0.76,
+        "action_basis_allowed": false,
+        "rank_claims_trust": false,
+        "score_sets_confidence": false
+      }
+    ]
+  },
+  "vaks_validators": {
+    "run_separately": true,
+    "replaced_by_sidecar": false
+  },
+  "boundary": {
+    "source_mutation_allowed": false,
+    "truth_mutation_allowed": false,
+    "action_basis_allowed": false,
+    "promotion_ready": false,
+    "mainline_ready": false
+  }
+}

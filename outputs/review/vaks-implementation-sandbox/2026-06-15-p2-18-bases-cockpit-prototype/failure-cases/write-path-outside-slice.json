@@ -1,0 +1,1 @@
+{"extends": "fixtures/valid-bases-cockpit.json", "scenario_id": "write-path-outside-slice", "expected_valid": false, "expected_codes": ["BC_WRITE_PATH_OUTSIDE_SLICE"], "patch": {"scope": {"allowed_write_paths": ["C:/outside/outputs/review/vaks-implementation-sandbox/2026-06-15-p2-18-bases-cockpit-prototype/"]}}}

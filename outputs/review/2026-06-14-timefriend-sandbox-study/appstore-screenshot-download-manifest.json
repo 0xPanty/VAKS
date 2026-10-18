@@ -1,0 +1,56 @@
+[
+  {
+    "index": 1,
+    "url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/9d/64/a9/9d64a996-25e7-f8de-c406-b0b2c7309d73/Simulator_Screenshot_-_iPhone_17_-_2026-02-22_at_10.50.05.png/600x1334bb.webp",
+    "file": "appstore-screenshots/screenshot-01.webp",
+    "status": "ok",
+    "bytes": 30924,
+    "sha256": "3AB3550C8EF49B4297EFE17C2CE05AE3893CBC7678FBF003C0A4E54074AE088E",
+    "error": null
+  },
+  {
+    "index": 2,
+    "url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/48/84/a0/4884a03e-c2ff-d5b9-e59b-db20e5d6bb7f/Simulator_Screenshot_-_iPhone_17_-_2026-02-22_at_10.50.37.png/600x1334bb.webp",
+    "file": "appstore-screenshots/screenshot-02.webp",
+    "status": "ok",
+    "bytes": 26908,
+    "sha256": "99B15C76C2B6984B50D8436901D7C71E2E125331C263FAC30F39A9AD9AB0199D",
+    "error": null
+  },
+  {
+    "index": 3,
+    "url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/46/c4/e9/46c4e9d8-cbb7-a17c-f625-7c6044946003/Simulator_Screenshot_-_iPhone_17_-_2026-02-22_at_10.51.20.png/600x1334bb.webp",
+    "file": "appstore-screenshots/screenshot-03.webp",
+    "status": "ok",
+    "bytes": 33286,
+    "sha256": "12E6013F87F064781EC36781BD50E026B394789D7F289F57392B3917C3AB24FB",
+    "error": null
+  },
+  {
+    "index": 4,
+    "url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ba/73/0b/ba730b68-0baf-884e-40b8-388d20c334b1/Simulator_Screenshot_-_iPhone_17_-_2026-02-22_at_10.51.59.png/600x1334bb.webp",
+    "file": "appstore-screenshots/screenshot-04.webp",
+    "status": "ok",
+    "bytes": 34830,
+    "sha256": "098DE7168E2F893B69C555E74578F7AB1388844211D105C9466E04B4EA43B580",
+    "error": null
+  },
+  {
+    "index": 5,
+    "url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/1f/8d/26/1f8d26a8-83bd-16a4-6f7d-58c451ee1aeb/Simulator_Screenshot_-_iPhone_17_-_2026-02-22_at_10.53.09.png/600x1334bb.webp",
+    "file": "appstore-screenshots/screenshot-05.webp",
+    "status": "ok",
+    "bytes": 28632,
+    "sha256": "8EB66885DCEB187B83B1889737F44614B38728ED5106AF50C94AE6C73D620D55",
+    "error": null
+  },
+  {
+    "index": 6,
+    "url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/51/25/c8/5125c894-5fd7-68f8-d22e-7e6c89e05293/Simulator_Screenshot_-_iPhone_17_-_2026-02-22_at_10.52.38.png/600x1334bb.webp",
+    "file": "appstore-screenshots/screenshot-06.webp",
+    "status": "ok",
+    "bytes": 28514,
+    "sha256": "29AF8A92AAD63F7B7A9D13DE37C4AE197C98C3407CDAAA904ACB9B3EBAEA86AC",
+    "error": null
+  }
+]

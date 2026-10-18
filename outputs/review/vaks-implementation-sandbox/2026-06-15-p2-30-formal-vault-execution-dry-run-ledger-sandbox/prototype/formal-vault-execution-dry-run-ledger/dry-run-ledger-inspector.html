@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en"
+  data-sandbox-only="true"
+  data-ledger-only="true"
+  data-dry-run-only="true"
+  data-non-executable="true"
+  data-no-formal-vault-access="true"
+  data-no-write="true"
+  data-no-sync="true"
+  data-no-authority="true">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formal Vault Execution Dry-Run Ledger</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; color: #172026; background: #f7fafb; }
+    header { padding: 20px 24px; background: #28465d; color: #fff; }
+    main { padding: 18px 24px; display: grid; gap: 14px; }
+    .rail { border-left: 4px solid #a35d2f; padding: 10px 14px; background: #fff; }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 8px; }
+    button { border: 1px solid #8aa096; background: #fff; padding: 7px 10px; border-radius: 6px; }
+    .card { border: 1px solid #d5ded8; background: #fff; border-radius: 8px; padding: 14px; }
+    .tag { font-size: 12px; color: #52645b; text-transform: uppercase; }
+    input { padding: 8px 10px; border: 1px solid #8aa096; border-radius: 6px; max-width: 360px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Formal Vault Execution Dry-Run Ledger</h1>
+    <p>Ledger review only. No replay, no command, no formal vault operation.</p>
+  </header>
+  <main>
+    <section class="rail" role="note">This surface is a review aid, not authority.</section>
+    <div class="toolbar" role="toolbar" aria-label="Ledger filters">
+      <button type="button" data-filter="all">All</button>
+      <button type="button" data-filter="contract">Contract</button>
+      <button type="button" data-filter="entries">Entries</button>
+      <button type="button" data-filter="receipt">Receipt</button>
+      <button type="button" data-filter="stops">Stops</button>
+    </div>
+    <input id="q" type="search" placeholder="Filter ledger cards">
+    <section class="card" data-kind="contract"><div class="tag">contract</div><h2>Non-replayable ledger</h2><p>Current slice cannot perform or replay the ledger.</p></section>
+    <section class="card" data-kind="entries"><div class="tag">entries</div><h2>Dry-run entries</h2><p>Every entry is recorded as not performed.</p></section>
+    <section class="card" data-kind="receipt"><div class="tag">receipt</div><h2>Non-execution receipt</h2><p>The receipt records no access, no write, no sync, and no promotion.</p></section>
+    <section class="card" data-kind="stops"><div class="tag">stops</div><h2>Stop conditions</h2><p>Any real execution request stops this sandbox.</p></section>
+  </main>
+  <script>
+    const cards = Array.from(document.querySelectorAll('.card'));
+    const query = document.getElementById('q');
+    document.querySelectorAll('button[data-filter]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        cards.forEach((card) => {
+          card.hidden = filter !== 'all' && card.dataset.kind !== filter;
+        });
+      });
+    });
+    query.addEventListener('input', () => {
+      const needle = query.value.toLowerCase();
+      cards.forEach((card) => {
+        card.hidden = !card.textContent.toLowerCase().includes(needle);
+      });
+    });
+  </script>
+</body>
+</html>

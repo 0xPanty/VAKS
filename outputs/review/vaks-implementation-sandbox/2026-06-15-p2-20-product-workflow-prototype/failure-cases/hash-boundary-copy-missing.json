@@ -1,0 +1,1 @@
+{"case_id":"hash-boundary-copy-missing","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/steps/8/boundary_copy","value":"Hash match proves the receipt is present."}]}

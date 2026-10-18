@@ -1,0 +1,18 @@
+{
+  "fixture": "all-chain-final-gates-pass",
+  "slice_ids": [
+    "2026-06-19-p2-100-opus-review-transfer-package-sandbox",
+    "2026-06-19-p2-101-opus-external-review-operator-kit-sandbox",
+    "2026-06-19-p2-102-opus-result-intake-dry-run-validator-sandbox",
+    "2026-06-19-p2-103-opus-outcome-action-gate-matrix-sandbox",
+    "2026-06-19-p2-104-post-opus-user-approval-decision-packet-sandbox"
+  ],
+  "checks": {
+    "summary.chain_slice_count": 5,
+    "summary.all_final_gates_true": true,
+    "summary.all_product_grade": true,
+    "summary.all_boundaries_passed": true,
+    "summary.all_reviewers_passed": true
+  },
+  "expected": true
+}

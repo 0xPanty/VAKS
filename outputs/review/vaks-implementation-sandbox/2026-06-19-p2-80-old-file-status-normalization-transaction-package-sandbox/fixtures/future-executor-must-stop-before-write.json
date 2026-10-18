@@ -1,0 +1,9 @@
+{
+  "fixture_id": "future-executor-must-stop-before-write",
+  "expected": {
+    "requires_exact_p2_75_approval": true,
+    "requires_boundary_audit_before_write": true,
+    "requires_stop_before_write": true,
+    "future_exact_approval_is_not_immediate_write": true
+  }
+}

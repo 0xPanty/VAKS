@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "mcp-write-tool-exposed",
+  "expected_valid": false,
+  "expected_codes": ["MB_MCP_WRITE_TOOL_FORBIDDEN"],
+  "patch": {"scope": {"mcp_write_tool_exposed": true}}
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Promotion Request Dry-Run</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f7f8fb; color: #17202a; }
+    main { max-width: 1040px; margin: 0 auto; padding: 28px 18px 44px; }
+    h1 { margin: 0 0 8px; font-size: 30px; }
+    .summary { color: #465667; max-width: 800px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin: 20px 0; }
+    .card, .panel { background: #ffffff; border: 1px solid #d9e1ec; border-radius: 8px; padding: 14px; }
+    .card span, li span { display: block; margin-top: 8px; color: #445566; }
+    li { margin: 10px 0; }
+    .notice { margin-top: 16px; border-left: 4px solid #2f6fed; background: #edf4ff; padding: 12px 14px; color: #1f3150; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Promotion Request Dry-Run</h1>
+    <p class="summary">Draft request only. not approval; not promotion; not mainline merge; not formal vault approval; not action basis.</p>
+    <section class="grid">
+      <article class="card" data-request-item="mainline_merge_request"><strong>Mainline merge request</strong><span>Ask whether sandbox artifacts may be considered for mainline integration.</span><p>Required approval: yes. Authorized now: no.</p></article>
+<article class="card" data-request-item="formal_vault_write_or_sync_request"><strong>Formal vault write or sync request</strong><span>Ask whether any artifact may be written or synced to the formal Obsidian vault.</span><p>Required approval: yes. Authorized now: no.</p></article>
+<article class="card" data-request-item="template_or_tool_movement_request"><strong>Template or tool movement request</strong><span>Ask whether sandbox patterns may move into templates or tools.</span><p>Required approval: yes. Authorized now: no.</p></article>
+<article class="card" data-request-item="commit_push_request"><strong>Commit and push request</strong><span>Ask whether a reviewed change set may be committed or pushed.</span><p>Required approval: yes. Authorized now: no.</p></article>
+<article class="card" data-request-item="action_basis_request"><strong>Action-basis use request</strong><span>Ask whether any output may become action basis after separate evidence/review gates.</span><p>Required approval: yes. Authorized now: no.</p></article>
+    </section>
+    <section class="panel">
+      <h2>Preconditions not satisfied</h2>
+      <ul><li data-precondition="explicit_user_approval_captured_separately"><strong>Separate explicit user approval</strong><span>This dry-run does not collect approval or user wording.</span></li>
+<li data-precondition="target_paths_named_and_scoped"><strong>Target paths named and scoped</strong><span>No actual mainline, formal-vault, template, or tool target path is selected.</span></li>
+<li data-precondition="promotion_diff_reviewed"><strong>Promotion diff reviewed</strong><span>No promotion diff exists in this dry-run.</span></li>
+<li data-precondition="formal_vault_write_plan_approved"><strong>Formal vault write plan approved</strong><span>Formal vault work remains forbidden without separate approval.</span></li>
+<li data-precondition="mainline_owner_review_passed"><strong>Mainline owner review passed</strong><span>Sandbox Product PASS is not mainline owner review.</span></li>
+<li data-precondition="post_approval_final_gate_defined"><strong>Post-approval final gate defined</strong><span>This dry-run only lists required gates; it does not run a promotion gate.</span></li></ul>
+    </section>
+    <section class="notice">No request is submitted. No approval is collected. No operation is authorized now.</section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

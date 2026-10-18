@@ -1,0 +1,7 @@
+{
+  "case_id": "dossier-ready",
+  "dossier_ready": true,
+  "evidence_digest_count": 5,
+  "allowed_conclusion_token_count": 3,
+  "passed": true
+}

@@ -1,0 +1,38 @@
+{
+  "record_kind": "opus_review_submission_packet_failure_cases",
+  "slice_id": "2026-06-19-p2-94-opus-review-submission-packet-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "P2-94-FAIL-01-missing-submission-prompt",
+      "must_fail_when": "No copy-paste Opus prompt is produced."
+    },
+    {
+      "case_id": "P2-94-FAIL-02-missing-evidence-manifest",
+      "must_fail_when": "The packet lacks exact evidence paths or review questions."
+    },
+    {
+      "case_id": "P2-94-FAIL-03-missing-result-intake-gate",
+      "must_fail_when": "The packet does not define allowed Opus conclusions and next actions."
+    },
+    {
+      "case_id": "P2-94-FAIL-04-opus-approval-claimed",
+      "must_fail_when": "The packet claims Opus has already reviewed or approved the work."
+    },
+    {
+      "case_id": "P2-94-FAIL-05-mainline-or-truth-authority-claimed",
+      "must_fail_when": "The packet claims mainline readiness, reviewed knowledge, evidence support, or action basis."
+    },
+    {
+      "case_id": "P2-94-FAIL-06-p2-93-not-ready",
+      "must_fail_when": "p2-93 no longer proves external review packet readiness."
+    },
+    {
+      "case_id": "P2-94-FAIL-07-p2-91-p2-92-proof-not-carried",
+      "must_fail_when": "p2-91/p2-92 proof counts are missing or no longer match expected values."
+    },
+    {
+      "case_id": "P2-94-FAIL-08-protected-path-write",
+      "must_fail_when": "This slice writes outside its own sandbox path."
+    }
+  ]
+}

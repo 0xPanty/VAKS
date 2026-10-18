@@ -1,0 +1,8 @@
+{
+  "record_kind": "misa_session_observation_fixture",
+  "observation_id": "obs-2026-06-15-001",
+  "memory_type": "session_observation",
+  "summary": "Operator asked for sandbox-only VAKS bridge validation.",
+  "sourceObservationIds": ["turn-001", "tool-verify-001"],
+  "truth_boundary": "runtime-memory-fixture-not-reviewed-knowledge"
+}

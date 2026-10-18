@@ -1,0 +1,9 @@
+{
+  "fixture_id": "rollback-restores-fixture-copy",
+  "expected": {
+    "final_copy_sha_match_count": 75,
+    "final_copy_byte_sha_match_count": 75,
+    "final_copy_status_match_count": 75,
+    "rollback_applied_to_old_slices": false
+  }
+}

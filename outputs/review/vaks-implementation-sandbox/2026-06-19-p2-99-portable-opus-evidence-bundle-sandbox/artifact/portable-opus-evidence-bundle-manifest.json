@@ -1,0 +1,112 @@
+{
+  "record_kind": "portable_opus_evidence_bundle_manifest",
+  "slice_id": "2026-06-19-p2-99-portable-opus-evidence-bundle-sandbox",
+  "created_at": "2026-06-19T10:40:57.169755+00:00",
+  "summary": {
+    "bundle_ready": true,
+    "snapshot_count": 9,
+    "hash_match_count": 9,
+    "dossier_ready": true,
+    "guard_state": "STOP_WAIT_EXTERNAL_OPUS_REVIEW",
+    "actual_opus_result_present": false,
+    "opus_approval_claimed": false,
+    "mainline_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "goal_complete_now": false
+  },
+  "evidence_items": [
+    {
+      "snapshot_name": "p2-98-single-file-opus-review-dossier.md",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-98-single-file-opus-review-dossier-sandbox/artifact/single-file-opus-review-dossier.md",
+      "snapshot_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-99-portable-opus-evidence-bundle-sandbox/artifact/evidence-snapshots/p2-98-single-file-opus-review-dossier.md",
+      "source_sha256": "48b3922501702a907384375a6c1e258a15d986ff833559ff44b981cd5574c3f3",
+      "snapshot_sha256": "48b3922501702a907384375a6c1e258a15d986ff833559ff44b981cd5574c3f3",
+      "hash_match": true,
+      "size_bytes": 3493
+    },
+    {
+      "snapshot_name": "p2-98-single-file-opus-review-dossier.json",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-98-single-file-opus-review-dossier-sandbox/artifact/single-file-opus-review-dossier.json",
+      "snapshot_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-99-portable-opus-evidence-bundle-sandbox/artifact/evidence-snapshots/p2-98-single-file-opus-review-dossier.json",
+      "source_sha256": "ad2e78f7915a5f7ba7d9d9715d33c4c50656117246ff16324518dfb31d6fb841",
+      "snapshot_sha256": "ad2e78f7915a5f7ba7d9d9715d33c4c50656117246ff16324518dfb31d6fb841",
+      "hash_match": true,
+      "size_bytes": 4354
+    },
+    {
+      "snapshot_name": "p2-91-executor-apply.json",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-91-old-file-status-normalization-executor-apply-sandbox/artifact/old_file_status_normalization_executor_apply.json",
+      "snapshot_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-99-portable-opus-evidence-bundle-sandbox/artifact/evidence-snapshots/p2-91-executor-apply.json",
+      "source_sha256": "b84af7f5be6ab36af63e13deba1c744f3614c0d3dc77ff390114ee6d3d00331b",
+      "snapshot_sha256": "b84af7f5be6ab36af63e13deba1c744f3614c0d3dc77ff390114ee6d3d00331b",
+      "hash_match": true,
+      "size_bytes": 191573
+    },
+    {
+      "snapshot_name": "p2-92-current-strict-audit.json",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-92-post-apply-current-strict-closeout-audit-sandbox/artifact/post_apply_current_strict_closeout_audit.json",
+      "snapshot_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-99-portable-opus-evidence-bundle-sandbox/artifact/evidence-snapshots/p2-92-current-strict-audit.json",
+      "source_sha256": "40ae29c225809ae342dfe4300fa2d6f72acb9aea36b803f03943b316919685f8",
+      "snapshot_sha256": "40ae29c225809ae342dfe4300fa2d6f72acb9aea36b803f03943b316919685f8",
+      "hash_match": true,
+      "size_bytes": 139548
+    },
+    {
+      "snapshot_name": "p2-94-submission-packet.json",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-94-opus-review-submission-packet-sandbox/artifact/opus-review-submission-packet.json",
+      "snapshot_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-99-portable-opus-evidence-bundle-sandbox/artifact/evidence-snapshots/p2-94-submission-packet.json",
+      "source_sha256": "a6e7a4aa6106582cbc8b9c3d8a1b9abe348a5582d59e0377047000fc26bc1ed6",
+      "snapshot_sha256": "a6e7a4aa6106582cbc8b9c3d8a1b9abe348a5582d59e0377047000fc26bc1ed6",
+      "hash_match": true,
+      "size_bytes": 4988
+    },
+    {
+      "snapshot_name": "p2-94-submission-prompt.md",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-94-opus-review-submission-packet-sandbox/artifact/opus-review-submission-prompt.md",
+      "snapshot_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-99-portable-opus-evidence-bundle-sandbox/artifact/evidence-snapshots/p2-94-submission-prompt.md",
+      "source_sha256": "ba01dc2f353e3f5efd6a1be351fae9cb7c7d173c53a556ad478eaf32bf0fe8d4",
+      "snapshot_sha256": "ba01dc2f353e3f5efd6a1be351fae9cb7c7d173c53a556ad478eaf32bf0fe8d4",
+      "hash_match": true,
+      "size_bytes": 3817
+    },
+    {
+      "snapshot_name": "p2-96-result-intake-status.json",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-96-opus-result-intake-skeleton-sandbox/artifact/opus-result-intake-status.json",
+      "snapshot_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-99-portable-opus-evidence-bundle-sandbox/artifact/evidence-snapshots/p2-96-result-intake-status.json",
+      "source_sha256": "ea1e669d1ea168016661c4c59811e2cef11ac7b297848225ce11ac5861d1767c",
+      "snapshot_sha256": "ea1e669d1ea168016661c4c59811e2cef11ac7b297848225ce11ac5861d1767c",
+      "hash_match": true,
+      "size_bytes": 2208
+    },
+    {
+      "snapshot_name": "p2-96-result-intake-schema.json",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-96-opus-result-intake-skeleton-sandbox/artifact/opus-result-intake-schema.json",
+      "snapshot_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-99-portable-opus-evidence-bundle-sandbox/artifact/evidence-snapshots/p2-96-result-intake-schema.json",
+      "source_sha256": "81ffd8045f5583a9e6025604806124cb84049d503c3fe4b218183d078a7519dd",
+      "snapshot_sha256": "81ffd8045f5583a9e6025604806124cb84049d503c3fe4b218183d078a7519dd",
+      "hash_match": true,
+      "size_bytes": 614
+    },
+    {
+      "snapshot_name": "p2-97-wait-state-guard.json",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-97-external-review-wait-state-guard-sandbox/artifact/external-review-wait-state-guard.json",
+      "snapshot_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-99-portable-opus-evidence-bundle-sandbox/artifact/evidence-snapshots/p2-97-wait-state-guard.json",
+      "source_sha256": "cacbd420ab6fff74473d0d1965f04236819996f3e3d87130c358df203ab08d33",
+      "snapshot_sha256": "cacbd420ab6fff74473d0d1965f04236819996f3e3d87130c358df203ab08d33",
+      "hash_match": true,
+      "size_bytes": 2560
+    }
+  ],
+  "authority_flags": {
+    "portable_evidence_bundle_only": true,
+    "actual_opus_result_present": false,
+    "opus_approval_claimed": false,
+    "mainline_merge": false,
+    "reviewed_knowledge": false,
+    "evidence_support": false,
+    "action_basis": false,
+    "goal_complete_now": false
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "fixture_id": "fresh-hash-precondition-required",
+  "expected": {
+    "requires_fresh_hash_check_before_write": true,
+    "hash_precondition_source": "current_target_file_sha256",
+    "prewrite_hash_mismatch_blocks_execution": true
+  }
+}

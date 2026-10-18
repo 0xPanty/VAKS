@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "lazy-routing-missing",
+  "expected_valid": false,
+  "expected_codes": ["RP_LAZY_ROUTING_REQUIRED"],
+  "patch": {"router": {"lazy_routing": false}}
+}

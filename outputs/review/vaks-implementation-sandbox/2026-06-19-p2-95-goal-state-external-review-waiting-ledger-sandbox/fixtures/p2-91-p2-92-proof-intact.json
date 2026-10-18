@@ -1,0 +1,8 @@
+{
+  "case_id": "p2-91-p2-92-proof-intact",
+  "p2_91_old_slice_writes_applied": 75,
+  "p2_91_protected_path_writes": 0,
+  "p2_92_original_item_count": 20,
+  "p2_92_current_strict_complete_original_item_count": 20,
+  "passed": true
+}

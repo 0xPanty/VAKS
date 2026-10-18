@@ -1,0 +1,417 @@
+{
+  "slice_id": "2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox",
+  "source_slice": "2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox",
+  "plan_version": "p2-24-dry-run-v1",
+  "plan_hash_algorithm": "sha256",
+  "purpose": "Dry-run a future formal vault write plan without reading or writing the formal vault.",
+  "formal_vault_path_label": "formal Obsidian vault path is a label only; it is not accessed in this slice",
+  "write_scope": [
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/"
+  ],
+  "read_only_sources": [
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/next-step.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/verification.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/product-acceptance-report.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/artifact/native-entry-readonly-inspector-contract.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/00 Native Home.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/02 Status Board.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/03 Receipt Index.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/04 Boundary Stop.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/readonly-inspector.html"
+  ],
+  "operations": {
+    "formal_vault_read": false,
+    "formal_vault_scan": false,
+    "formal_vault_write": false,
+    "obsidian_sync": false,
+    "commit": false,
+    "push": false,
+    "promotion": false,
+    "dependency_install": false,
+    "background_service": false,
+    "mcp_write_tool": false,
+    "hooks": false,
+    "real_base_files": false,
+    "production_ui": false,
+    "local_storage_write": false,
+    "network_post": false,
+    "default_read_only": true,
+    "rebuild_requires_explicit_flag": true
+  },
+  "boundary_phrases": [
+    "sandbox only",
+    "formal vault not accessed",
+    "dry-run only",
+    "not reviewed knowledge",
+    "not evidence support",
+    "not action basis",
+    "does not approve",
+    "no formal vault write",
+    "no formal vault read",
+    "no sync",
+    "no commit",
+    "no push",
+    "no promotion",
+    "requires separate user approval"
+  ],
+  "proposed_files": [
+    {
+      "id": "native_home",
+      "relative_target": "VAKS-Workbench-Draft/00 Native Home.md",
+      "source_artifact": "P2-23 prototype native home",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/00 Native Home.md",
+      "source_sha256": "8d69253089dc6d704bda107a291e5fd32e493d6c7f3cbc993549175ddbdac11b",
+      "content_binding": "exact_source_sha256",
+      "write_enabled": false,
+      "dry_run_only": true,
+      "requires_user_approval": true,
+      "rollback_required": true
+    },
+    {
+      "id": "status_board",
+      "relative_target": "VAKS-Workbench-Draft/02 Status Board.md",
+      "source_artifact": "P2-23 prototype status board",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/02 Status Board.md",
+      "source_sha256": "f882d70b1761f9cc57148f9d5134cf92b5c8a9d9713b2c17c4a8865ab6749324",
+      "content_binding": "exact_source_sha256",
+      "write_enabled": false,
+      "dry_run_only": true,
+      "requires_user_approval": true,
+      "rollback_required": true
+    },
+    {
+      "id": "receipt_index",
+      "relative_target": "VAKS-Workbench-Draft/03 Receipt Index.md",
+      "source_artifact": "P2-23 prototype receipt index",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/03 Receipt Index.md",
+      "source_sha256": "1729f2662ee8021526ff57fae565e9e3a7357596599d4fdca63e4171f0048cfc",
+      "content_binding": "exact_source_sha256",
+      "write_enabled": false,
+      "dry_run_only": true,
+      "requires_user_approval": true,
+      "rollback_required": true
+    },
+    {
+      "id": "boundary_stop",
+      "relative_target": "VAKS-Workbench-Draft/04 Boundary Stop.md",
+      "source_artifact": "P2-23 prototype boundary stop",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/04 Boundary Stop.md",
+      "source_sha256": "9e5560a2ee7eab313c6a31e7b42b05991883f2b98993073d0b20da6521953945",
+      "content_binding": "exact_source_sha256",
+      "write_enabled": false,
+      "dry_run_only": true,
+      "requires_user_approval": true,
+      "rollback_required": true
+    },
+    {
+      "id": "readonly_inspector",
+      "relative_target": "VAKS-Workbench-Draft/readonly-inspector.html",
+      "source_artifact": "P2-23 static read-only inspector",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/readonly-inspector.html",
+      "source_sha256": "b367c6225e55e77845d586c2f96832ea539de79033bcf5341d4a15921082e203",
+      "content_binding": "exact_source_sha256",
+      "write_enabled": false,
+      "dry_run_only": true,
+      "requires_user_approval": true,
+      "rollback_required": true
+    }
+  ],
+  "approval_prompts": [
+    {
+      "id": "approve_formal_vault_write_scope",
+      "prompt": "Do you explicitly approve writing only the listed relative files to the formal vault in a future slice?",
+      "applies_to_file_ids": [
+        "native_home",
+        "status_board",
+        "receipt_index",
+        "boundary_stop",
+        "readonly_inspector"
+      ],
+      "plan_version_required": "p2-24-dry-run-v1",
+      "plan_hash_required": true,
+      "confirmation_phrase": "APPROVE ONLY LISTED FILES FOR FUTURE FORMAL VAULT WRITE",
+      "required_response": "explicit_user_approval",
+      "default": "deny",
+      "blocks": [
+        "formal_vault_write",
+        "obsidian_sync",
+        "real_base_files"
+      ],
+      "excludes": [
+        "obsidian_sync",
+        "commit",
+        "push",
+        "promotion"
+      ]
+    },
+    {
+      "id": "approve_rollback_manifest",
+      "prompt": "Do you approve the rollback manifest and hash-before/hash-after checks before any future write?",
+      "applies_to_file_ids": [
+        "native_home",
+        "status_board",
+        "receipt_index",
+        "boundary_stop",
+        "readonly_inspector"
+      ],
+      "plan_version_required": "p2-24-dry-run-v1",
+      "plan_hash_required": true,
+      "confirmation_phrase": "APPROVE ROLLBACK AND HASH CHECKS BEFORE FUTURE WRITE",
+      "required_response": "explicit_user_approval",
+      "default": "deny",
+      "blocks": [
+        "formal_vault_write"
+      ],
+      "excludes": [
+        "obsidian_sync",
+        "commit",
+        "push",
+        "promotion"
+      ]
+    },
+    {
+      "id": "approve_no_sync_after_write",
+      "prompt": "Do you approve keeping Obsidian sync disabled unless separately requested after the future write?",
+      "applies_to_file_ids": [
+        "native_home",
+        "status_board",
+        "receipt_index",
+        "boundary_stop",
+        "readonly_inspector"
+      ],
+      "plan_version_required": "p2-24-dry-run-v1",
+      "plan_hash_required": true,
+      "confirmation_phrase": "APPROVE NO SYNC COMMIT PUSH OR PROMOTION IN FUTURE WRITE SLICE",
+      "required_response": "explicit_user_approval",
+      "default": "deny",
+      "blocks": [
+        "obsidian_sync"
+      ],
+      "excludes": [
+        "obsidian_sync",
+        "commit",
+        "push",
+        "promotion"
+      ]
+    }
+  ],
+  "rollback_manifest": {
+    "dry_run_only": true,
+    "snapshot_root_label": "future-approved-snapshot-root",
+    "retention_policy": "keep until user confirms future formal write succeeded and rollback window can close",
+    "snapshot_before_write_required": true,
+    "hash_before_required": true,
+    "hash_after_required": true,
+    "hash_algorithm": "sha256",
+    "record_format": "json-lines: target, operation, before_state, before_hash, after_hash, rollback_action, verification_result",
+    "unexpected_file_abort": true,
+    "unexpected_hash_drift_abort": true,
+    "dirty_state_abort": true,
+    "rollback_after_verification_required": true,
+    "rollback_requires_user_confirmation": true,
+    "file_entries": [
+      {
+        "file_id": "native_home",
+        "relative_target": "VAKS-Workbench-Draft/00 Native Home.md",
+        "planned_operation": "create_or_replace",
+        "before_state": "unknown_until_future_approved_snapshot",
+        "snapshot_location_label": "future-approved-snapshot-root/VAKS-Workbench-Draft/00 Native Home.md",
+        "rollback_action": "restore_previous_if_existed_else_delete_created_file",
+        "post_rollback_verification": "hash_matches_before_or_file_absent_if_new"
+      },
+      {
+        "file_id": "status_board",
+        "relative_target": "VAKS-Workbench-Draft/02 Status Board.md",
+        "planned_operation": "create_or_replace",
+        "before_state": "unknown_until_future_approved_snapshot",
+        "snapshot_location_label": "future-approved-snapshot-root/VAKS-Workbench-Draft/02 Status Board.md",
+        "rollback_action": "restore_previous_if_existed_else_delete_created_file",
+        "post_rollback_verification": "hash_matches_before_or_file_absent_if_new"
+      },
+      {
+        "file_id": "receipt_index",
+        "relative_target": "VAKS-Workbench-Draft/03 Receipt Index.md",
+        "planned_operation": "create_or_replace",
+        "before_state": "unknown_until_future_approved_snapshot",
+        "snapshot_location_label": "future-approved-snapshot-root/VAKS-Workbench-Draft/03 Receipt Index.md",
+        "rollback_action": "restore_previous_if_existed_else_delete_created_file",
+        "post_rollback_verification": "hash_matches_before_or_file_absent_if_new"
+      },
+      {
+        "file_id": "boundary_stop",
+        "relative_target": "VAKS-Workbench-Draft/04 Boundary Stop.md",
+        "planned_operation": "create_or_replace",
+        "before_state": "unknown_until_future_approved_snapshot",
+        "snapshot_location_label": "future-approved-snapshot-root/VAKS-Workbench-Draft/04 Boundary Stop.md",
+        "rollback_action": "restore_previous_if_existed_else_delete_created_file",
+        "post_rollback_verification": "hash_matches_before_or_file_absent_if_new"
+      },
+      {
+        "file_id": "readonly_inspector",
+        "relative_target": "VAKS-Workbench-Draft/readonly-inspector.html",
+        "planned_operation": "create_or_replace",
+        "before_state": "unknown_until_future_approved_snapshot",
+        "snapshot_location_label": "future-approved-snapshot-root/VAKS-Workbench-Draft/readonly-inspector.html",
+        "rollback_action": "restore_previous_if_existed_else_delete_created_file",
+        "post_rollback_verification": "hash_matches_before_or_file_absent_if_new"
+      }
+    ]
+  },
+  "hash_check_plan": {
+    "dry_run_only": true,
+    "algorithm": "sha256",
+    "record_format": "json-lines",
+    "phases": [
+      "before_snapshot",
+      "after_write",
+      "after_rollback_if_needed"
+    ],
+    "per_file_records_required": true,
+    "records": [
+      {
+        "file_id": "native_home",
+        "relative_target": "VAKS-Workbench-Draft/00 Native Home.md",
+        "before_hash_field": "before_hash_sha256",
+        "after_hash_field": "after_hash_sha256",
+        "rollback_hash_field": "rollback_hash_sha256"
+      },
+      {
+        "file_id": "status_board",
+        "relative_target": "VAKS-Workbench-Draft/02 Status Board.md",
+        "before_hash_field": "before_hash_sha256",
+        "after_hash_field": "after_hash_sha256",
+        "rollback_hash_field": "rollback_hash_sha256"
+      },
+      {
+        "file_id": "receipt_index",
+        "relative_target": "VAKS-Workbench-Draft/03 Receipt Index.md",
+        "before_hash_field": "before_hash_sha256",
+        "after_hash_field": "after_hash_sha256",
+        "rollback_hash_field": "rollback_hash_sha256"
+      },
+      {
+        "file_id": "boundary_stop",
+        "relative_target": "VAKS-Workbench-Draft/04 Boundary Stop.md",
+        "before_hash_field": "before_hash_sha256",
+        "after_hash_field": "after_hash_sha256",
+        "rollback_hash_field": "rollback_hash_sha256"
+      },
+      {
+        "file_id": "readonly_inspector",
+        "relative_target": "VAKS-Workbench-Draft/readonly-inspector.html",
+        "before_hash_field": "before_hash_sha256",
+        "after_hash_field": "after_hash_sha256",
+        "rollback_hash_field": "rollback_hash_sha256"
+      }
+    ],
+    "abort_on_missing_before_hash": true,
+    "abort_on_unexpected_after_hash": true,
+    "abort_on_dirty_state": true,
+    "abort_on_unexpected_file": true,
+    "verify_after_rollback": true,
+    "no_executable_commands": true,
+    "command_templates": []
+  },
+  "stop_conditions": [
+    "formal vault read requested",
+    "formal vault write requested",
+    "absolute vault path requested",
+    "Obsidian sync requested",
+    "real .base requested",
+    "commit or push requested",
+    "promotion requested",
+    "dependency install requested",
+    "background service requested",
+    "MCP write tool requested",
+    "approval prompt missing or default not deny",
+    "rollback manifest missing",
+    "hash-before or hash-after missing"
+  ],
+  "journeys": [
+    {
+      "id": "scope_review",
+      "steps": [
+        "00 Dry Run Home",
+        "01 Proposed File List",
+        "05 Stop Conditions"
+      ],
+      "expected_answer": "Only relative proposed targets are listed; no formal vault path is accessed.",
+      "max_steps": 3,
+      "stop_condition": "Stop on absolute formal vault path or write-enabled target."
+    },
+    {
+      "id": "approval_review",
+      "steps": [
+        "00 Dry Run Home",
+        "02 Approval Prompt Matrix",
+        "05 Stop Conditions"
+      ],
+      "expected_answer": "Every future write needs explicit user approval and defaults to deny.",
+      "max_steps": 3,
+      "stop_condition": "Stop if approval is implicit or automatic."
+    },
+    {
+      "id": "rollback_review",
+      "steps": [
+        "00 Dry Run Home",
+        "03 Rollback Manifest",
+        "04 Hash Check Plan"
+      ],
+      "expected_answer": "Rollback and hash checks are required before any future write.",
+      "max_steps": 3,
+      "stop_condition": "Stop if snapshot or hash-before/hash-after is missing."
+    },
+    {
+      "id": "inspector_review",
+      "steps": [
+        "00 Dry Run Home",
+        "plan-inspector.html",
+        "05 Stop Conditions"
+      ],
+      "expected_answer": "Inspector is read-only and plan-only.",
+      "max_steps": 3,
+      "stop_condition": "Stop if inspector has write, sync, save, or execute controls."
+    }
+  ],
+  "inspector_controls": {
+    "inputs": [
+      {
+        "id": "q",
+        "type": "search",
+        "purpose": "filter"
+      }
+    ],
+    "buttons": [
+      {
+        "label": "All",
+        "filter": "all"
+      },
+      {
+        "label": "Files",
+        "filter": "files"
+      },
+      {
+        "label": "Approvals",
+        "filter": "approvals"
+      },
+      {
+        "label": "Rollback",
+        "filter": "rollback"
+      },
+      {
+        "label": "Stops",
+        "filter": "stops"
+      }
+    ]
+  },
+  "product_metrics": {
+    "required_positive_fixtures": 2,
+    "minimum_failure_cases": 5,
+    "required_proposed_files": 5,
+    "required_approval_prompts": 3,
+    "max_journey_steps": 3
+  },
+  "expected_failures": [
+    "minimum_failure_cases_too_low"
+  ]
+}

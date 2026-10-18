@@ -1,0 +1,44 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "uroybd/topobon",
+  "source_url": "https://github.com/uroybd/topobon",
+  "checked_commit": "b1a9043f7c7dcdc69de329bbc0497feccc2a0570",
+  "checked_at": "2026-06-11",
+  "inspection_method": "git object inspection plus partial working-tree inspection because normal Windows checkout encountered an invalid path; inspected README, Eleventy config, package metadata, helpers, Bases engine files, components, patches, and deployment config",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "digital-garden-overview-and-theme-manual",
+      "why": "Identifies the project as a digital Obsidian garden and documents extensive CSS variables and customization surfaces."
+    },
+    {
+      "path": ".eleventy.js and package.json",
+      "kind": "static-site-runtime",
+      "why": "Defines the Eleventy-based publication pipeline and runtime dependencies."
+    },
+    {
+      "path": "src/helpers/bases-engine/*",
+      "kind": "bases-rendering-engine",
+      "why": "Adds a rendering/query layer for Obsidian Bases-like views in the published site."
+    },
+    {
+      "path": "src/site/_includes/components/basesScript.njk and canvasScript.njk",
+      "kind": "obsidian-feature-projections",
+      "why": "Adds publish-time components for Bases and Canvas-style features."
+    },
+    {
+      "path": "Personal/Musings/Understood?.md",
+      "kind": "path-portability-risk",
+      "why": "Normal Windows checkout encountered an invalid filename with a question mark, showing cross-platform source hygiene risk."
+    }
+  ],
+  "known_limits": [
+    "The repo contains personal published content and should not be copied as VAKS material.",
+    "Obsidian Bases and Canvas rendering are projections, not reviewed VAKS knowledge or relations.",
+    "Windows-invalid paths are a concrete source-retention and portability risk."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

@@ -1,0 +1,104 @@
+[
+  {
+    "failure_id": "reject_entry_count_drift",
+    "description": "Reject source entry drift.",
+    "mutation": {"set_path": {"path": ["source_summary", "entry_count"], "value": 267}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_dry_run_false",
+    "description": "Reject a runbook that is not dry_run only.",
+    "mutation": {"set_top": {"dry_run_only": false}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_source_execution_true",
+    "description": "Reject builder source execution.",
+    "mutation": {"set_top": {"source_execution_by_builder": true}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_manual_automation_true",
+    "description": "Reject manual verification automation.",
+    "mutation": {"set_path": {"path": ["source_summary", "manual_verification_automated_by_source"], "value": true}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_manual_command_missing_source",
+    "description": "Reject manual command that loses p2-61 source/final gate context.",
+    "mutation": {"set_path": {"path": ["source_summary", "manual_verification_command"], "value": "python verifier.py"}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_execute_allowed",
+    "description": "Reject execution request being allowed.",
+    "mutation": {"set_decision": {"request_kind": "execute_user_decision_option", "decision": "ALLOW_READ_ONLY_INSPECTION"}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_merge_allowed",
+    "description": "Reject merge request being allowed.",
+    "mutation": {"set_decision": {"request_kind": "merge_mainline", "decision": "ALLOW_READ_ONLY_INSPECTION"}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_promotion_allowed",
+    "description": "Reject promotion request being allowed.",
+    "mutation": {"set_decision": {"request_kind": "promote", "decision": "ALLOW_READ_ONLY_INSPECTION"}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_sync_allowed",
+    "description": "Reject sync request being allowed.",
+    "mutation": {"set_decision": {"request_kind": "sync_obsidian", "decision": "ALLOW_READ_ONLY_INSPECTION"}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_commit_allowed",
+    "description": "Reject commit request being allowed.",
+    "mutation": {"set_decision": {"request_kind": "commit", "decision": "ALLOW_READ_ONLY_INSPECTION"}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_push_allowed",
+    "description": "Reject push request being allowed.",
+    "mutation": {"set_decision": {"request_kind": "push", "decision": "ALLOW_READ_ONLY_INSPECTION"}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_reviewed_knowledge_allowed",
+    "description": "Reject reviewed knowledge creation being allowed.",
+    "mutation": {"set_decision": {"request_kind": "create_reviewed_knowledge", "decision": "ALLOW_READ_ONLY_INSPECTION"}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_evidence_support_allowed",
+    "description": "Reject evidence support creation being allowed.",
+    "mutation": {"set_decision": {"request_kind": "create_evidence_support", "decision": "ALLOW_READ_ONLY_INSPECTION"}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_action_basis_allowed",
+    "description": "Reject action_basis creation being allowed.",
+    "mutation": {"set_decision": {"request_kind": "create_action_basis", "decision": "ALLOW_READ_ONLY_INSPECTION"}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_user_approval_inferred_allowed",
+    "description": "Reject user_approval inference being allowed.",
+    "mutation": {"set_decision": {"request_kind": "infer_user_approval", "decision": "ALLOW_READ_ONLY_INSPECTION"}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_dangerous_claim_text",
+    "description": "Reject dangerous text such as execution approved.",
+    "mutation": {"set_path": {"path": ["purpose"], "value": "execution approved"}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  },
+  {
+    "failure_id": "reject_hard_no_removed",
+    "description": "Reject missing hard_no boundary.",
+    "mutation": {"remove_hard_no": "do_not_commit"},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_collect_user_approval_by_inference"]
+  }
+]

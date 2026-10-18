@@ -1,0 +1,50 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "rstacruz/cheatsheets",
+  "source_url": "https://github.com/rstacruz/cheatsheets/tree/master#documentation",
+  "normalized_repo_url": "https://github.com/rstacruz/cheatsheets",
+  "checked_commit": "6b3b35472a9b6dee90645ea0a833731855a1914d",
+  "checked_at": "2026-06-11",
+  "inspection_method": "normalized awesome-list URL to repository root, shallow git clone, then inspected README, CONTRIBUTING, root Markdown sheets, Astro config, package scripts, source libraries, tests, and public redirect/header files",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "site-purpose",
+      "why": "Frames Devhints as a large TLDR-style developer documentation cheatsheet collection."
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "kind": "frontmatter-and-contribution-rules",
+      "why": "Documents runtime requirements, local preview, frontmatter fields, redirects, localization, tests, and publishing notes."
+    },
+    {
+      "path": "*.md root cheatsheets",
+      "kind": "atomic-reference-pages",
+      "why": "Stores many short topic pages as individual Markdown files."
+    },
+    {
+      "path": "src/lib/page.ts and src/lib/page/queries.ts",
+      "kind": "page-indexing-model",
+      "why": "Provides page loading/query logic for turning many Markdown files into a searchable site."
+    },
+    {
+      "path": "src/lib/fuseSearch/* and src/pages/searchindex.json.ts",
+      "kind": "search-projection",
+      "why": "Builds a client-searchable projection over page content."
+    },
+    {
+      "path": "astro.config.mjs and package.json",
+      "kind": "publish-runtime",
+      "why": "Defines Astro build behavior, markdown/rendering choices, tests, formatting, and build scripts."
+    }
+  ],
+  "known_limits": [
+    "Cheatsheet brevity is useful for lookup but not sufficient for VAKS evidence review.",
+    "Search index and related-post ranking are activation aids, not authority.",
+    "The awesome-list URL included a tree/hash fragment and required normalization before cloning."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

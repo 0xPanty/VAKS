@@ -1,0 +1,64 @@
+{
+  "record_kind": "robust_rag_retrieval_manifest",
+  "scenario_id": "valid-local-entity-textunit-anchor",
+  "expected_valid": true,
+  "expected_codes": [],
+  "query": {
+    "query_mode": "review",
+    "verbatim_input": "Find local context around source annotation boundaries.",
+    "question_summary": "Review local entity neighborhood for source annotation boundaries.",
+    "action_sensitive": false,
+    "verbatim_preserved": true
+  },
+  "route_selection": {
+    "selected": "local_entity",
+    "why_selected": "Entity-centered source navigation is enough.",
+    "authority_buckets_included": ["raw_anchor", "review_input"],
+    "authority_buckets_excluded": ["project_overlay", "feedback", "runtime_artifact"],
+    "selected_context_types": ["text_unit_anchor", "candidate_relation"],
+    "forbidden_support_types": ["retrieval_score", "graph_rank", "community_report_summary", "llm_extracted_relation"]
+  },
+  "retrieval_config": {
+    "bucket_filter_first": true,
+    "rrf_within_bucket_only": true,
+    "exclude_runtime_artifacts": true
+  },
+  "fusion_groups": [
+    {
+      "id": "raw-anchor-local-entity",
+      "authority_buckets": ["raw_anchor"],
+      "item_ids": ["textunit-anchor-a"]
+    }
+  ],
+  "retrieved_items": [
+    {
+      "id": "textunit-anchor-a",
+      "ref": "raw/articles/example-source.md#textunit-12",
+      "path": "raw/articles/example-source.md",
+      "record_kind": "text_unit",
+      "authority_bucket": "raw_anchor",
+      "pack_role": "anchor",
+      "selected": true,
+      "excluded": false,
+      "selected_by": {"lexical": false, "semantic": true, "graph": true, "metadata": true}
+    },
+    {
+      "id": "candidate-relation-a",
+      "ref": "outputs/review/candidate-relations/example.yml#r-2",
+      "path": "outputs/review/candidate-relations/example.yml",
+      "record_kind": "llm_extracted_relation",
+      "authority_bucket": "review_input",
+      "pack_role": "review_input",
+      "selected": true,
+      "excluded": false,
+      "selected_by": {"lexical": false, "semantic": false, "graph": true, "metadata": false},
+      "claims_reviewed_relation": false
+    }
+  ],
+  "generated_answer": {
+    "has_citations": true,
+    "support_checks_passed": false,
+    "sufficiency_checked": false,
+    "claims_action_basis": false
+  }
+}

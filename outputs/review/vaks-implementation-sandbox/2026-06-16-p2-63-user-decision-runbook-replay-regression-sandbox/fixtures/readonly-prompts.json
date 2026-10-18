@@ -1,0 +1,8 @@
+{
+  "fixture_id": "readonly-prompts",
+  "description": "Read-only natural-language prompts should remain read-only inspection.",
+  "case_ids": [
+    "readiness_brief_readonly_cn",
+    "handoff_chain_readonly_cn"
+  ]
+}

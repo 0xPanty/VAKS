@@ -1,0 +1,8 @@
+{
+  "case_id": "no-opus-or-mainline-claim",
+  "actual_opus_result_present": false,
+  "opus_approval_claimed": false,
+  "mainline_ready": false,
+  "goal_complete_now": false,
+  "passed": true
+}

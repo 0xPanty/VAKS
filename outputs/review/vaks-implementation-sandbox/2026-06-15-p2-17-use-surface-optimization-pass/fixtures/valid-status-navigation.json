@@ -1,0 +1,15 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "valid-status-navigation",
+  "expected_valid": true,
+  "expected_codes": [],
+  "patch": {
+    "user_questions": {
+      "what_blocks_promotion_or_action": {
+        "surface_ref": "operator_status",
+        "answer_source": "blocked_stale_missing_anchor_hash_mismatch_action_not_ready_dirty_state",
+        "creates_authority": false
+      }
+    }
+  }
+}

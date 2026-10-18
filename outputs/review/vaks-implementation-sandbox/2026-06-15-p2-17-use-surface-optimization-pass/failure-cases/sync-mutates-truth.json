@@ -1,0 +1,8 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "sync-mutates-truth",
+  "expected_valid": false,
+  "expected_codes": ["US_SYNC_MUTATES_TRUTH"],
+  "allowed_extra_codes": ["US_AUTHORITY_CONFUSION"],
+  "patch": {"guardrails": {"sync_mutates_truth": true}}
+}

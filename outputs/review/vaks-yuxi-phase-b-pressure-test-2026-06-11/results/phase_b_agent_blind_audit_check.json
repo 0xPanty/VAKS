@@ -1,0 +1,67 @@
+{
+  "agent_blind_check_status": "pass",
+  "error_count": 0,
+  "errors": [],
+  "query_count": 30,
+  "audit": {
+    "artifact_kind": "phase_b_agent_blind_audit",
+    "truth_boundary": "agent_blind_not_original_yuxi_runtime",
+    "action_basis_allowed": false,
+    "query_count": 30,
+    "criteria": [
+      {
+        "criterion": "primary: skeleton_leakage_zero",
+        "passed": true,
+        "observed": "0.0000"
+      },
+      {
+        "criterion": "primary: skeleton_hit_not_below_baseline",
+        "passed": true,
+        "observed": "30/30 vs baseline 20/30"
+      },
+      {
+        "criterion": "primary: skeleton_mrr_directionally_above_yuxi_proxy",
+        "passed": true,
+        "observed": "0.9250 vs yuxi_proxy 0.8339"
+      },
+      {
+        "criterion": "primary: skeleton_hit_above_clean_vaks_only",
+        "passed": true,
+        "observed": "30/30 vs clean 23/30"
+      },
+      {
+        "criterion": "primary: yuxi_proxy_leakage_nonzero",
+        "passed": true,
+        "observed": "1.0000"
+      },
+      {
+        "criterion": "full: skeleton_leakage_zero",
+        "passed": true,
+        "observed": "0.0000"
+      },
+      {
+        "criterion": "full: skeleton_hit_not_below_baseline",
+        "passed": true,
+        "observed": "30/30 vs baseline 16/30"
+      },
+      {
+        "criterion": "full: skeleton_mrr_directionally_above_yuxi_proxy",
+        "passed": true,
+        "observed": "0.9278 vs yuxi_proxy 0.8229"
+      },
+      {
+        "criterion": "full: skeleton_hit_above_clean_vaks_only",
+        "passed": true,
+        "observed": "30/30 vs clean 21/30"
+      },
+      {
+        "criterion": "full: yuxi_proxy_leakage_nonzero",
+        "passed": true,
+        "observed": "1.0000"
+      }
+    ],
+    "passed_criteria": 10,
+    "failed_criteria": 0,
+    "agent_blind_status": "pass"
+  }
+}

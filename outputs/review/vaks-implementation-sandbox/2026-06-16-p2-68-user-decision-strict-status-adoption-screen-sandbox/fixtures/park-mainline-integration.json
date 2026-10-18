@@ -1,0 +1,9 @@
+{
+  "fixture_id": "park-mainline-integration",
+  "option_id": "mainline_integration",
+  "expected": {
+    "decision": "PARK_REQUIRES_SEPARATE_USER_APPROVAL",
+    "allowed_without_separate_user_approval": false,
+    "write_scope": "mainline architecture"
+  }
+}

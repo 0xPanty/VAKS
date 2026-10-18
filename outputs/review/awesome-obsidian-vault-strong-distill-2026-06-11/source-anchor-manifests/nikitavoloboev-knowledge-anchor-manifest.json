@@ -1,0 +1,55 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "nikitavoloboev/knowledge",
+  "source_url": "https://github.com/nikitavoloboev/knowledge",
+  "checked_commit": "a6b6210430c2668ed1a078a98e3b69f52be37bde",
+  "checked_at": "2026-06-11",
+  "inspection_method": "local git checkout; inspected readme, agent instructions, flow task manifest, spec CLI docs, and experimental docker layer docs",
+  "anchors": [
+    {
+      "path": "readme.md",
+      "kind": "current-project-identity",
+      "why": "Shows the current repository is a Go/tooling workspace rather than a public Markdown knowledge vault."
+    },
+    {
+      "path": ".codex/agents.md",
+      "kind": "agent-protocol",
+      "why": "Defines response endings with notify or runFlowTask markers for follow-up execution."
+    },
+    {
+      "path": ".claude/agents.md",
+      "kind": "agent-protocol",
+      "why": "Mirrors the same cross-agent workflow contract."
+    },
+    {
+      "path": "flow.toml",
+      "kind": "task-runner-manifest",
+      "why": "Declares setup, run, spec, deployment, and media conversion tasks, including credential and browser-cookie risks."
+    },
+    {
+      "path": "cli/spec/README.md",
+      "kind": "spec-to-agent-prompt",
+      "why": "Documents generating Codex execution prompts from Markdown specs and launching Codex with passthrough flags."
+    },
+    {
+      "path": "try/dockerlayers/readme.md",
+      "kind": "executable-documentation-example",
+      "why": "Shows test fixtures and reports used as documentation for a Docker layer explorer."
+    }
+  ],
+  "observed_counts": {
+    "other_files": 47,
+    "agent_instruction_files_sampled": 2,
+    "flow_task_manifest_files_sampled": 1,
+    "spec_docs_sampled": 1
+  },
+  "known_limits": [
+    "The repository appears semantically drifted from the awesome-list classification.",
+    "Workflow commands include full-permission and browser-cookie risks.",
+    "The repo is not evidence for current Obsidian vault structure."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

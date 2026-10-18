@@ -1,0 +1,16 @@
+{
+  "fixture_id": "stop-boundaries",
+  "description": "Authority-changing requests must stop for separate user approval.",
+  "request_kinds": [
+    "execute_user_decision_option",
+    "merge_mainline",
+    "promote",
+    "sync_obsidian",
+    "commit",
+    "push",
+    "create_reviewed_knowledge",
+    "create_evidence_support",
+    "create_action_basis",
+    "infer_user_approval"
+  ]
+}

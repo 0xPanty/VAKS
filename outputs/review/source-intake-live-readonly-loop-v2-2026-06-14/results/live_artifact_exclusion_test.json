@@ -1,0 +1,6 @@
+{
+  "status": "pass",
+  "checked_artifact_count": 21,
+  "eligible_for_default_index_count": 0,
+  "truth_boundary": "Deterministic marker check for generated live-readonly query/context/answer artifacts; live embedding/index exclusion is not proven."
+}

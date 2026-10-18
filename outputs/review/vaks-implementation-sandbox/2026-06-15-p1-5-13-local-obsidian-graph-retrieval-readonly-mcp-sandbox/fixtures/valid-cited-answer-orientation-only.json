@@ -1,0 +1,73 @@
+{
+  "record_kind": "local_obsidian_graph_readonly_mcp_manifest",
+  "scenario_id": "valid-cited-answer-orientation-only",
+  "expected_valid": true,
+  "expected_codes": [],
+  "vault_access": {
+    "sandbox_fixture_only": true,
+    "uses_real_vault": false,
+    "vault_path": "fixtures/obsidian-sample-vault",
+    "read_only": true,
+    "write_attempted": false,
+    "sync_attempted": false
+  },
+  "mcp_contract": {
+    "server_started": false,
+    "background_service": false,
+    "hooks_enabled": false,
+    "tools": [
+      {"name": "query_graph", "mode": "suggest_only", "operations": ["query", "read_context"], "write_enabled": false}
+    ]
+  },
+  "structural_triples": [
+    {
+      "id": "triple-citation-orientation",
+      "from": "File Citation",
+      "relation": "wikilink",
+      "to": "Orientation Answer",
+      "source_ref": "fixtures/obsidian-sample-vault/orientation.md",
+      "source_hash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "graph_status": "candidate_graph_fragment",
+      "claims": []
+    }
+  ],
+  "derived_cache_manifest": {
+    "cache_id": "local-graph-cache-citation",
+    "source_state_hash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "indexer_id": "sandbox-graph-indexer",
+    "indexer_version": "0.1-sandbox",
+    "model_id": "cloud-labelled-fixture",
+    "model_fingerprint": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "model_locality": "cloud_default",
+    "locality_reviewed": true,
+    "rebuild_boundary": "locality-reviewed fixture only",
+    "source_of_record": false,
+    "used_for_query": true,
+    "hash_algorithm": "sha256"
+  },
+  "retrieval_receipt": {
+    "query_id": "q-valid-citation",
+    "route": "hybrid_graph",
+    "included_buckets": ["review_input"],
+    "excluded_buckets": ["feedback", "runtime_artifact", "project_overlay"],
+    "bucket_filter_first": true,
+    "selected_by_channels": ["vector", "bm25", "temporal", "synonym"],
+    "cross_bucket_fusion": false
+  },
+  "retrieved_context": [
+    {
+      "id": "orientation-context",
+      "ref": "fixtures/obsidian-sample-vault/orientation.md",
+      "authority_bucket": "review_input",
+      "pack_role": "orientation",
+      "claims": []
+    }
+  ],
+  "generated_answer": {
+    "has_file_citations": true,
+    "citations_claim_support": false,
+    "support_sufficiency_checked": false,
+    "claims_action_basis": false,
+    "prompt_anti_hallucination_claims_review_approval": false
+  }
+}

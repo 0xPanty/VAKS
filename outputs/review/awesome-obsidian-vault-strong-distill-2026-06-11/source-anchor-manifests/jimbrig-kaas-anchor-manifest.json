@@ -1,0 +1,54 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "jimbrig/KaaS",
+  "source_url": "https://github.com/jimbrig/KaaS",
+  "checked_commit": "028fcf40521403c1b8a9fa6b28c3b9b2cd8cebbc",
+  "checked_at": "2026-06-11",
+  "inspection_method": "git object inspection and partial working-tree inspection because Windows checkout hit filename-too-long paths; inspected README, Meta publish workflow, Vault Setup, Obsidian plugin config, GitHub Actions, and long-path examples",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "vault-purpose-and-publishing-story",
+      "why": "Describes KaaS as a personal knowledge vault with Obsidian Publish, GitHub Pages, MOCs, code snippets, lists, tools, and meta docs."
+    },
+    {
+      "path": "2-Areas/Meta/Publish Workflow.md",
+      "kind": "branch-projection-model",
+      "why": "Documents develop as Obsidian working branch, main as converted GitHub representation, and gh-pages as MkDocs deployment."
+    },
+    {
+      "path": "2-Areas/Meta/Vault Setup.md",
+      "kind": "vault-taxonomy-and-tags",
+      "why": "Documents note types, source types, nested tags, utility notes, and workflow concepts."
+    },
+    {
+      "path": ".github/workflows/convert-links.yml",
+      "kind": "obsidian-link-conversion",
+      "why": "Runs obsidian-export from develop to main and force-pushes converted Markdown."
+    },
+    {
+      "path": ".github/workflows/mkdocs.yml",
+      "kind": "mkdocs-publishing",
+      "why": "Publishes the converted branch through MkDocs/GitHub Actions."
+    },
+    {
+      "path": ".obsidian/community-plugins.json",
+      "kind": "plugin-surface",
+      "why": "Shows a very large plugin dependency/runtime surface."
+    },
+    {
+      "path": "3-Resources/Highlights/Readwise/* long filenames",
+      "kind": "path-portability-risk",
+      "why": "Windows checkout failed on long Readwise-derived file paths, showing retention and sync risk."
+    }
+  ],
+  "known_limits": [
+    "This is a personal vault; content and taxonomy are not VAKS reviewed knowledge.",
+    "The convert-links workflow force-pushes generated output and must not be copied into VAKS default operations.",
+    "Large plugin surface and long paths create major portability and runtime risk."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

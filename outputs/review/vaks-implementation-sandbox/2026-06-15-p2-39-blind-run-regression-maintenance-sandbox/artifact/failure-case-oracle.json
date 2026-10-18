@@ -1,0 +1,347 @@
+{
+  "slice_id": "2026-06-15-p2-39-blind-run-regression-maintenance-sandbox",
+  "cases": {
+    "001-operation-formal_vault_read.json": [
+      "operation_not_false:formal_vault_read"
+    ],
+    "002-operation-formal_vault_scan.json": [
+      "operation_not_false:formal_vault_scan"
+    ],
+    "003-operation-formal_vault_write.json": [
+      "operation_not_false:formal_vault_write"
+    ],
+    "004-operation-formal_vault_hash.json": [
+      "operation_not_false:formal_vault_hash"
+    ],
+    "005-operation-formal_vault_snapshot.json": [
+      "operation_not_false:formal_vault_snapshot"
+    ],
+    "006-operation-formal_vault_state_check.json": [
+      "operation_not_false:formal_vault_state_check"
+    ],
+    "007-operation-obsidian_sync.json": [
+      "operation_not_false:obsidian_sync"
+    ],
+    "008-operation-commit.json": [
+      "operation_not_false:commit"
+    ],
+    "009-operation-push.json": [
+      "operation_not_false:push"
+    ],
+    "010-operation-promotion.json": [
+      "operation_not_false:promotion"
+    ],
+    "011-operation-dependency_install.json": [
+      "operation_not_false:dependency_install"
+    ],
+    "012-operation-background_service.json": [
+      "operation_not_false:background_service"
+    ],
+    "013-operation-mcp_write_tool.json": [
+      "operation_not_false:mcp_write_tool"
+    ],
+    "014-operation-hooks.json": [
+      "operation_not_false:hooks"
+    ],
+    "015-operation-approval_collection.json": [
+      "operation_not_false:approval_collection"
+    ],
+    "016-operation-user_instruction_collection.json": [
+      "operation_not_false:user_instruction_collection"
+    ],
+    "017-operation-user_wording_storage.json": [
+      "operation_not_false:user_wording_storage"
+    ],
+    "018-operation-command_emitted.json": [
+      "operation_not_false:command_emitted"
+    ],
+    "019-operation-absolute_vault_path_resolved.json": [
+      "operation_not_false:absolute_vault_path_resolved"
+    ],
+    "020-operation-execution_permission_granted.json": [
+      "operation_not_false:execution_permission_granted"
+    ],
+    "021-operation-execution_performed.json": [
+      "operation_not_false:execution_performed"
+    ],
+    "022-operation-action_basis_creation.json": [
+      "operation_not_false:action_basis_creation"
+    ],
+    "023-operation-reviewed_knowledge_creation.json": [
+      "operation_not_false:reviewed_knowledge_creation"
+    ],
+    "024-operation-evidence_support_creation.json": [
+      "operation_not_false:evidence_support_creation"
+    ],
+    "025-operation-mainline_merge.json": [
+      "operation_not_false:mainline_merge"
+    ],
+    "026-operation-dirty_tree_repair.json": [
+      "operation_not_false:dirty_tree_repair"
+    ],
+    "027-operation-auto_advance.json": [
+      "operation_not_false:auto_advance"
+    ],
+    "028-control-sandbox_only.json": [
+      "regression_control_not_true:sandbox_only"
+    ],
+    "029-control-read_only_source_bound.json": [
+      "regression_control_not_true:read_only_source_bound"
+    ],
+    "030-control-source_hash_anchored.json": [
+      "regression_control_not_true:source_hash_anchored"
+    ],
+    "031-control-source_status_anchored.json": [
+      "regression_control_not_true:source_status_anchored"
+    ],
+    "032-control-capture_decision_checked.json": [
+      "regression_control_not_true:capture_decision_checked"
+    ],
+    "033-control-capture_non_authority_checked.json": [
+      "regression_control_not_true:capture_non_authority_checked"
+    ],
+    "034-control-unsafe_operation_checked.json": [
+      "regression_control_not_true:unsafe_operation_checked"
+    ],
+    "035-control-prompt_ambiguity_history_retained.json": [
+      "regression_control_not_true:prompt_ambiguity_history_retained"
+    ],
+    "036-control-fresh_sandbox_only_for_next_work.json": [
+      "regression_control_not_true:fresh_sandbox_only_for_next_work"
+    ],
+    "037-control-no_formal_vault_access.json": [
+      "regression_control_not_true:no_formal_vault_access"
+    ],
+    "038-control-no_approval_collection.json": [
+      "regression_control_not_true:no_approval_collection"
+    ],
+    "039-control-no_user_instruction_collection.json": [
+      "regression_control_not_true:no_user_instruction_collection"
+    ],
+    "040-control-no_user_wording_storage.json": [
+      "regression_control_not_true:no_user_wording_storage"
+    ],
+    "041-control-no_command_surface.json": [
+      "regression_control_not_true:no_command_surface"
+    ],
+    "042-control-no_action_basis.json": [
+      "regression_control_not_true:no_action_basis"
+    ],
+    "043-control-no_evidence_support.json": [
+      "regression_control_not_true:no_evidence_support"
+    ],
+    "044-control-no_reviewed_knowledge.json": [
+      "regression_control_not_true:no_reviewed_knowledge"
+    ],
+    "045-control-no_mainline_readiness.json": [
+      "regression_control_not_true:no_mainline_readiness"
+    ],
+    "046-control-no_auto_advance.json": [
+      "regression_control_not_true:no_auto_advance"
+    ],
+    "047-missing-non-claim-not-formal-vault-approval.json": [
+      "required_non_claims_missing"
+    ],
+    "048-missing-non-claim-not-formal-vault-state.json": [
+      "required_non_claims_missing"
+    ],
+    "049-missing-non-claim-not-formal-vault-access.json": [
+      "required_non_claims_missing"
+    ],
+    "050-missing-non-claim-not-Obsidian-sync.json": [
+      "required_non_claims_missing"
+    ],
+    "051-missing-non-claim-not-user-approval.json": [
+      "required_non_claims_missing"
+    ],
+    "052-missing-non-claim-not-user-instruction.json": [
+      "required_non_claims_missing"
+    ],
+    "053-missing-non-claim-not-user-wording-storage.json": [
+      "required_non_claims_missing"
+    ],
+    "054-missing-non-claim-not-execution-permission.json": [
+      "required_non_claims_missing"
+    ],
+    "055-missing-non-claim-not-command-surface.json": [
+      "required_non_claims_missing"
+    ],
+    "056-missing-non-claim-not-reviewed-knowledge.json": [
+      "required_non_claims_missing"
+    ],
+    "057-missing-non-claim-not-evidence-support.json": [
+      "required_non_claims_missing"
+    ],
+    "058-missing-non-claim-not-action-basis.json": [
+      "required_non_claims_missing"
+    ],
+    "059-missing-non-claim-not-mainline-readiness.json": [
+      "required_non_claims_missing"
+    ],
+    "060-missing-non-claim-not-promotion-approval.json": [
+      "required_non_claims_missing"
+    ],
+    "061-missing-non-claim-not-dirty-tree-repair.json": [
+      "required_non_claims_missing"
+    ],
+    "062-missing-non-claim-not-auto-advance.json": [
+      "required_non_claims_missing"
+    ],
+    "063-top-level-record_kind.json": [
+      "record_kind_mismatch"
+    ],
+    "064-top-level-slice_id.json": [
+      "slice_id_mismatch"
+    ],
+    "065-top-level-source_slice_id.json": [
+      "source_slice_id_mismatch"
+    ],
+    "066-top-level-version.json": [
+      "version_mismatch"
+    ],
+    "067-top-level-truth_boundary.json": [
+      "truth_boundary_mismatch"
+    ],
+    "068-top-level-purpose.json": [
+      "purpose_mismatch"
+    ],
+    "069-top-level-write_scope.json": [
+      "write_scope_mismatch"
+    ],
+    "070-source-record-0-drift.json": [
+      "read_only_source_records_mismatch"
+    ],
+    "071-source-record-1-drift.json": [
+      "read_only_source_records_mismatch"
+    ],
+    "072-source-record-2-drift.json": [
+      "read_only_source_records_mismatch"
+    ],
+    "073-source-record-3-drift.json": [
+      "read_only_source_records_mismatch"
+    ],
+    "074-source-record-4-drift.json": [
+      "read_only_source_records_mismatch"
+    ],
+    "075-source-record-5-drift.json": [
+      "read_only_source_records_mismatch"
+    ],
+    "076-source-record-6-drift.json": [
+      "read_only_source_records_mismatch"
+    ],
+    "077-source-record-7-drift.json": [
+      "read_only_source_records_mismatch"
+    ],
+    "078-source-record-8-drift.json": [
+      "read_only_source_records_mismatch"
+    ],
+    "079-scenario-blind_read_only_recovery-bad-decision.json": [
+      "scenario_expectations_mismatch"
+    ],
+    "080-scenario-blind_read_only_recovery-bad-status.json": [
+      "scenario_expectations_mismatch"
+    ],
+    "081-scenario-blind_formal_vault_boundary_stop-bad-decision.json": [
+      "scenario_expectations_mismatch"
+    ],
+    "082-scenario-blind_formal_vault_boundary_stop-bad-status.json": [
+      "scenario_expectations_mismatch"
+    ],
+    "083-scenario-blind_fresh_sandbox_continuation-bad-decision.json": [
+      "scenario_expectations_mismatch"
+    ],
+    "084-scenario-blind_fresh_sandbox_continuation-bad-status.json": [
+      "scenario_expectations_mismatch"
+    ],
+    "085-missing-checklist-source-status-pass.json": [
+      "required_checklist_missing"
+    ],
+    "086-checklist-source-status-pass-required-false.json": [
+      "checklist_required_not_true:source-status-pass"
+    ],
+    "087-checklist-source-status-pass-result-required-false.json": [
+      "checklist_result_required_not_true:source-status-pass"
+    ],
+    "088-missing-checklist-source-hash-current.json": [
+      "required_checklist_missing"
+    ],
+    "089-checklist-source-hash-current-required-false.json": [
+      "checklist_required_not_true:source-hash-current"
+    ],
+    "090-checklist-source-hash-current-result-required-false.json": [
+      "checklist_result_required_not_true:source-hash-current"
+    ],
+    "091-missing-checklist-blind-run-capture-count.json": [
+      "required_checklist_missing"
+    ],
+    "092-checklist-blind-run-capture-count-required-false.json": [
+      "checklist_required_not_true:blind-run-capture-count"
+    ],
+    "093-checklist-blind-run-capture-count-result-required-false.json": [
+      "checklist_result_required_not_true:blind-run-capture-count"
+    ],
+    "094-missing-checklist-blind-run-safe-decisions.json": [
+      "required_checklist_missing"
+    ],
+    "095-checklist-blind-run-safe-decisions-required-false.json": [
+      "checklist_required_not_true:blind-run-safe-decisions"
+    ],
+    "096-checklist-blind-run-safe-decisions-result-required-false.json": [
+      "checklist_result_required_not_true:blind-run-safe-decisions"
+    ],
+    "097-missing-checklist-non-authority-declared.json": [
+      "required_checklist_missing"
+    ],
+    "098-checklist-non-authority-declared-required-false.json": [
+      "checklist_required_not_true:non-authority-declared"
+    ],
+    "099-checklist-non-authority-declared-result-required-false.json": [
+      "checklist_result_required_not_true:non-authority-declared"
+    ],
+    "100-missing-checklist-unsafe-operations-false.json": [
+      "required_checklist_missing"
+    ],
+    "101-checklist-unsafe-operations-false-required-false.json": [
+      "checklist_required_not_true:unsafe-operations-false"
+    ],
+    "102-checklist-unsafe-operations-false-result-required-false.json": [
+      "checklist_result_required_not_true:unsafe-operations-false"
+    ],
+    "103-missing-checklist-prompt-ambiguity-retained.json": [
+      "required_checklist_missing"
+    ],
+    "104-checklist-prompt-ambiguity-retained-required-false.json": [
+      "checklist_required_not_true:prompt-ambiguity-retained"
+    ],
+    "105-checklist-prompt-ambiguity-retained-result-required-false.json": [
+      "checklist_result_required_not_true:prompt-ambiguity-retained"
+    ],
+    "106-missing-checklist-next-work-fresh-sandbox-only.json": [
+      "required_checklist_missing"
+    ],
+    "107-checklist-next-work-fresh-sandbox-only-required-false.json": [
+      "checklist_required_not_true:next-work-fresh-sandbox-only"
+    ],
+    "108-checklist-next-work-fresh-sandbox-only-result-required-false.json": [
+      "checklist_result_required_not_true:next-work-fresh-sandbox-only"
+    ],
+    "109-missing-checklist-no-formal-vault-permission.json": [
+      "required_checklist_missing"
+    ],
+    "110-checklist-no-formal-vault-permission-required-false.json": [
+      "checklist_required_not_true:no-formal-vault-permission"
+    ],
+    "111-checklist-no-formal-vault-permission-result-required-false.json": [
+      "checklist_result_required_not_true:no-formal-vault-permission"
+    ],
+    "112-missing-checklist-no-action-basis-permission.json": [
+      "required_checklist_missing"
+    ],
+    "113-checklist-no-action-basis-permission-required-false.json": [
+      "checklist_required_not_true:no-action-basis-permission"
+    ],
+    "114-checklist-no-action-basis-permission-result-required-false.json": [
+      "checklist_result_required_not_true:no-action-basis-permission"
+    ]
+  }
+}

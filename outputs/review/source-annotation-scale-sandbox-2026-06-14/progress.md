@@ -1,0 +1,120 @@
+---
+record_kind: sandbox_progress
+status: active
+created_at: 2026-06-14
+scope: source-annotation-scale-product-sandbox
+truth_boundary: sandbox_log_not_main_architecture
+---
+
+# Progress
+
+## 2026-06-14
+
+- Recovered current Source Annotation contract from project files.
+- Confirmed sandbox-only boundary for this product-level exploration.
+- Created sandbox directories:
+  - `samples/`
+  - `scripts/`
+  - `results/`
+- Created task plan, findings log, and progress log inside sandbox.
+- Cleaned accidental non-sandbox tool/cache artifacts left by a prior read-only subflow.
+- Integrated four read-only subagent reviews:
+  - selector / anchor lifecycle
+  - Obsidian Bases and Dataview-style workbench UX
+  - retrieval and AI context export boundary
+  - red-team failure modes
+- Created `product-model-v0.md` with capture, triage, use, and repair loops.
+- Created `workbench-prototype.base` with inbox, project lens, source drilldown, repair, stale, scale-debt, AI export, audit, and archive views.
+- Created fixture generator and validation harness under `scripts/`.
+- Generated sandbox fixtures:
+  - 4 sample source artifacts
+  - 35 good source annotation sidecars
+  - 7 mutation annotation fixtures
+  - 1 bad context-pack fixture
+- First validation run failed correctly:
+  - two `exact_verified` fixtures matched duplicate text
+  - duplicate-ID mutation was not caught by isolated mutation validation
+- Fixed fixture exact selectors and added mutation-vs-good ID collision checking.
+- Second validation run passed:
+  - 35 good annotations
+  - 0 good-corpus errors
+  - 7 / 7 mutation annotations caught
+  - bad context pack caught
+- Added stale-anchor and scale-debt queues.
+- Third validation run passed:
+  - stale anchor excluded from AI export ready
+  - bad anchors excluded from AI export ready
+  - scale debt surfaced as a queue/report
+- Started enterprise stress extension after user requested high-pressure quantitative testing.
+- Added `enterprise-gates.md` with explicit enterprise pass/fail thresholds.
+- Added `scripts/enterprise_stress_suite.py`.
+- 500-record smoke run initially failed because archived + bad anchor lifecycle conflicted; fixed archived priority.
+- 500-record smoke rerun passed.
+- 5,000-record run initially failed runtime gate:
+  - runtime: 40.652 seconds
+  - target: under 30 seconds
+- Optimized parser/checker:
+  - use C YAML loader/dumper when available
+  - avoid full exact-text count unless selector/status needs it
+- 5,000-record rerun passed and was persisted:
+  - report: `results/enterprise-stress-report-5000.md`
+  - runtime: 5.143 seconds
+  - records/sec: 972.12
+  - errors: 0
+  - mutation caught: 27 / 27
+  - bad context packs caught: 5 / 5
+  - AI ready contamination: 0
+  - working inbox: 153
+  - locator pool: 4,538
+- Found enterprise UX issue:
+  - old inbox design put 4,691 rows in daily inbox
+  - optimized by splitting `Annotation inbox` from `Locator pool`
+- 10,000-record stretch run initially found support_checked overriding ambiguous anchor lifecycle.
+- Added enterprise priority rule:
+  - anchor repair beats support audit
+  - support_checked cannot be current on bad or stale anchors
+- 10,000-record stretch rerun passed and was persisted:
+  - report: `results/enterprise-stress-report-10000.md`
+  - runtime: 11.428 seconds
+  - records/sec: 875.02
+  - errors: 0
+  - mutation caught: 27 / 27
+  - bad context packs caught: 5 / 5
+  - AI ready contamination: 0
+  - working inbox: 303
+  - locator pool: 9,088
+  - repair queue: 329
+  - stale queue: 130
+  - scale debt: 7,478
+- Ran external-product / research comparison and a second red-team pass.
+- Added world-class lightweight criteria:
+  - fast capture
+  - bounded inbox
+  - visible anchor repair
+  - source-level health
+  - source-diverse AI context packs
+  - no annotation-as-support shortcut
+- Added workflow simulation:
+  - 180 simulated days
+  - final annotations: 16,820
+  - working inbox remained bounded
+  - flat-inbox baseline became unusable
+- Added source digest SLA fields and checks:
+  - `digest_ref`
+  - `last_digest_at`
+  - `next_digest_due`
+  - `debt_owner_or_queue`
+  - `next_action`
+  - `blocked_reason`
+- Added context-pack source diversity gate:
+  - default max 5 annotation items per source
+  - context pack must keep annotation role as review input only
+- Added mutation cases for missing `next_action` and missing `blocked_reason`.
+- Re-ran updated enterprise gates:
+  - 5,000 annotations: passed, 3.848 seconds, 29 / 29 mutations caught
+  - 10,000 annotations: passed, 8.364 seconds, 29 / 29 mutations caught
+  - bad context packs: 5 / 5 caught
+  - AI contamination: 0
+  - 10k context pack: 60 items, 24 sources, max 5 items per source
+  - source digest backlog: 9
+  - digest backlog p95 age: 14 days

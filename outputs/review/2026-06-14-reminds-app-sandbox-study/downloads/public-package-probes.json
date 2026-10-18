@@ -1,0 +1,34 @@
+[
+  {
+    "label": "windows_zip",
+    "url": "https://dl.reminds-app.com/release/win/x64/reminds-win-x64-2.4.0-beta.zip",
+    "status": 404,
+    "content_range": null,
+    "content_type": "application/xml",
+    "note": "official public link in llms/front-end config returned 404 on GET range probe"
+  },
+  {
+    "label": "android_apk",
+    "url": "https://dl.reminds-app.com/release/mobile/android/reminds-release-1.5.0(132).apk",
+    "status": 206,
+    "content_range": "bytes 0-0/60644303",
+    "content_type": "application/vnd.android.package-archive",
+    "note": "public package reachable"
+  },
+  {
+    "label": "mac_arm64_dmg",
+    "url": "https://dl.reminds-app.com/release/mac/arm64/reminds-mac-arm64-2.4.0-beta(579).dmg",
+    "status": 206,
+    "content_range": "bytes 0-0/258947068",
+    "content_type": "application/x-apple-diskimage",
+    "note": "public package reachable, not downloaded to avoid unnecessary 259MB"
+  },
+  {
+    "label": "mac_x64_dmg",
+    "url": "https://dl.reminds-app.com/release/mac/x64/reminds-mac-x64-2.4.0-beta(579).dmg",
+    "status": 206,
+    "content_range": "bytes 0-0/270091647",
+    "content_type": "application/x-apple-diskimage",
+    "note": "public package reachable, not downloaded to avoid unnecessary 270MB"
+  }
+]

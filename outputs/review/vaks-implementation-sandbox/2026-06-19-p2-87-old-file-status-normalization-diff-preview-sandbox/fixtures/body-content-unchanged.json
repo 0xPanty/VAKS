@@ -1,0 +1,5 @@
+{
+  "case_id": "body-content-unchanged",
+  "expected_body_unchanged_count": 75,
+  "observed_body_unchanged_count": 75
+}

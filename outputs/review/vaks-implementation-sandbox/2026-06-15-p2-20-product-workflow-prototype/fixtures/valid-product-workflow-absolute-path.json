@@ -1,0 +1,579 @@
+{
+  "record_kind": "vaks_product_workflow_prototype",
+  "slice_id": "2026-06-15-p2-20-product-workflow-prototype",
+  "prototype_note": "Sandbox JSON workflow storyboard only; not production UI and not an Obsidian Base.",
+  "scope": {
+    "sandbox_only": true,
+    "product_build": false,
+    "allowed_write_paths": [
+      "C:/Users/Administrator/Documents/资料库/outputs/review/vaks-implementation-sandbox/2026-06-15-p2-20-product-workflow-prototype/"
+    ],
+    "write_targets": [
+      "C:/Users/Administrator/Documents/资料库/outputs/review/vaks-implementation-sandbox/2026-06-15-p2-20-product-workflow-prototype/prototype/product-workflow-prototype.json"
+    ],
+    "creates_production_ui": false,
+    "creates_real_base_files": false,
+    "starts_runtime_or_service": false,
+    "installs_dependencies": false,
+    "uses_mcp_write_tools": false,
+    "runs_hooks": false,
+    "runs_long_automation": false,
+    "syncs_obsidian": false,
+    "commits": false,
+    "pushes": false,
+    "promotes_mainline": false
+  },
+  "source_screening_ref": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-19-product-experience-screening-sandbox/prototype/product-experience-screening-backlog.json",
+  "workflow_questions": {
+    "where_do_i_put_this": "Use capability boundary and quick capture to route raw/candidate/review/context/action intents.",
+    "what_state_is_it_in": "Use home status and layer badges.",
+    "orientation_review_or_action": "Use badge copy, candidate funnel, and action boundary exit.",
+    "what_blocks_promotion_or_action": "Use candidate funnel, review due, context export, and dirty guardrail blockers.",
+    "what_receipt_proves_no_authority_mutation": "Use hash and operation receipt view."
+  },
+  "steps": [
+    {
+      "id": "WF-01",
+      "surface": "Capability boundary",
+      "p2_px_ref": "P2-PX-01",
+      "purpose": "Choose the right VAKS lane before work starts.",
+      "input_contract": [
+        "user intent",
+        "material type",
+        "risk level"
+      ],
+      "output_contract": [
+        "lane recommendation",
+        "allowed use",
+        "forbidden use"
+      ],
+      "required_validators": [
+        "boundary-disclosure-check"
+      ],
+      "blocking_states": [
+        "unclear intent",
+        "protected path request"
+      ],
+      "boundary_copy": "This explains existing boundaries only and cannot approve, promote, or define schema.",
+      "allowed_user_value": "The user knows where to put material.",
+      "forbidden_implications": [
+        "schema change",
+        "review approval",
+        "promotion"
+      ],
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_status_as_authority": false,
+        "treats_badge_as_promotion": false,
+        "treats_hash_as_support": false,
+        "treats_export_as_action_basis": false,
+        "treats_navigation_as_authority": false,
+        "replaces_validators": false
+      },
+      "workflow_key": "capability_boundary"
+    },
+    {
+      "id": "WF-02",
+      "surface": "Product onboarding",
+      "p2_px_ref": "P2-PX-09",
+      "purpose": "Explain capture to action flow in ordinary product language.",
+      "input_contract": [
+        "new user or new agent"
+      ],
+      "output_contract": [
+        "capture/review/action mental model",
+        "boundary reminder"
+      ],
+      "required_validators": [
+        "boundary-disclosure-check",
+        "no-consumer-boundary-hiding-check"
+      ],
+      "blocking_states": [
+        "boundary hidden",
+        "action request too early"
+      ],
+      "boundary_copy": "Onboarding exposes candidate/review/action boundaries; it cannot hide them for smoothness.",
+      "allowed_user_value": "The user can start without reading every long manual first.",
+      "forbidden_implications": [
+        "consumer-style hidden authority",
+        "reviewed write"
+      ],
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_status_as_authority": false,
+        "treats_badge_as_promotion": false,
+        "treats_hash_as_support": false,
+        "treats_export_as_action_basis": false,
+        "treats_navigation_as_authority": false,
+        "replaces_validators": false
+      },
+      "workflow_key": "onboarding"
+    },
+    {
+      "id": "WF-03",
+      "surface": "Home operator status",
+      "p2_px_ref": "P2-PX-11",
+      "purpose": "Show blocked, stale, missing anchor, hash mismatch, and action-not-ready state.",
+      "input_contract": [
+        "sandbox status records",
+        "operator state"
+      ],
+      "output_contract": [
+        "status summary",
+        "links to artifacts"
+      ],
+      "required_validators": [
+        "status-display-only-check"
+      ],
+      "blocking_states": [
+        "hash mismatch",
+        "missing anchor",
+        "dirty tree",
+        "action not ready"
+      ],
+      "boundary_copy": "Status is display only and cannot replace validators or infer readiness.",
+      "allowed_user_value": "The user sees what needs attention.",
+      "forbidden_implications": [
+        "approval",
+        "truth mutation",
+        "action readiness"
+      ],
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_status_as_authority": false,
+        "treats_badge_as_promotion": false,
+        "treats_hash_as_support": false,
+        "treats_export_as_action_basis": false,
+        "treats_navigation_as_authority": false,
+        "replaces_validators": false
+      },
+      "workflow_key": "home_status"
+    },
+    {
+      "id": "WF-04",
+      "surface": "Layer badge",
+      "p2_px_ref": "P2-PX-14",
+      "purpose": "Mark raw, candidate, review input, reviewed, context, action, or feedback state.",
+      "input_contract": [
+        "artifact layer",
+        "allowed use"
+      ],
+      "output_contract": [
+        "badge label",
+        "badge tooltip",
+        "boundary warning"
+      ],
+      "required_validators": [
+        "badge-display-only-check",
+        "badge-not-promotion-check"
+      ],
+      "blocking_states": [
+        "unknown layer",
+        "badge conflicts with source state"
+      ],
+      "boundary_copy": "Badge displays boundary only; badge is not promotion, support, or approval.",
+      "allowed_user_value": "The user sees orientation versus review/action status quickly.",
+      "forbidden_implications": [
+        "promotion",
+        "evidence support",
+        "review approval"
+      ],
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_status_as_authority": false,
+        "treats_badge_as_promotion": false,
+        "treats_hash_as_support": false,
+        "treats_export_as_action_basis": false,
+        "treats_navigation_as_authority": false,
+        "replaces_validators": false
+      },
+      "workflow_key": "layer_badge"
+    },
+    {
+      "id": "WF-05",
+      "surface": "Quick capture",
+      "p2_px_ref": "P2-PX-02",
+      "purpose": "Capture material into raw or candidate quarantine.",
+      "input_contract": [
+        "source link",
+        "note",
+        "transcript",
+        "image text",
+        "voice transcript"
+      ],
+      "output_contract": [
+        "raw/candidate receipt",
+        "body hash",
+        "next queue target"
+      ],
+      "required_validators": [
+        "retrieval-receipt-validator",
+        "body-hash-validator",
+        "no-reviewed-write-check"
+      ],
+      "blocking_states": [
+        "missing source identity",
+        "body hash mismatch",
+        "reviewed write requested"
+      ],
+      "boundary_copy": "Capture creates raw/candidate records only and cannot write reviewed truth.",
+      "allowed_user_value": "The user can put material into the system with low friction.",
+      "forbidden_implications": [
+        "reviewed truth",
+        "reviewed relation",
+        "action basis"
+      ],
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_status_as_authority": false,
+        "treats_badge_as_promotion": false,
+        "treats_hash_as_support": false,
+        "treats_export_as_action_basis": false,
+        "treats_navigation_as_authority": false,
+        "replaces_validators": false
+      },
+      "workflow_key": "quick_capture"
+    },
+    {
+      "id": "WF-06",
+      "surface": "Candidate funnel",
+      "p2_px_ref": "P2-PX-03",
+      "purpose": "Move candidate material toward review input without implying approval.",
+      "input_contract": [
+        "candidate item",
+        "risk flags",
+        "missing evidence",
+        "body hash"
+      ],
+      "output_contract": [
+        "review packet draft",
+        "missing evidence list",
+        "support boundary warning"
+      ],
+      "required_validators": [
+        "review-queue-state-check",
+        "support-boundary-validator",
+        "no-approval-check"
+      ],
+      "blocking_states": [
+        "missing evidence",
+        "hash drift",
+        "risk flag",
+        "support boundary violation"
+      ],
+      "boundary_copy": "Candidate funnel is review input only; it cannot approve or promote.",
+      "allowed_user_value": "The user knows what blocks review and promotion.",
+      "forbidden_implications": [
+        "approval",
+        "promotion",
+        "candidate as support"
+      ],
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_status_as_authority": false,
+        "treats_badge_as_promotion": false,
+        "treats_hash_as_support": false,
+        "treats_export_as_action_basis": false,
+        "treats_navigation_as_authority": false,
+        "replaces_validators": false
+      },
+      "workflow_key": "candidate_funnel"
+    },
+    {
+      "id": "WF-07",
+      "surface": "Review due",
+      "p2_px_ref": "P2-PX-05",
+      "purpose": "Surface stale, contested, or feedback-pressured items.",
+      "input_contract": [
+        "review_due markers",
+        "feedback events",
+        "staleness signals"
+      ],
+      "output_contract": [
+        "review pressure list",
+        "route to review queue"
+      ],
+      "required_validators": [
+        "feedback-validator",
+        "review-due-not-truth-mutation-check"
+      ],
+      "blocking_states": [
+        "negative feedback",
+        "stale scope",
+        "superseded decision"
+      ],
+      "boundary_copy": "Review due is pressure only; it does not mutate truth confidence.",
+      "allowed_user_value": "The user can see what needs re-checking.",
+      "forbidden_implications": [
+        "truth mutation",
+        "confidence raise",
+        "automatic invalidation"
+      ],
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_status_as_authority": false,
+        "treats_badge_as_promotion": false,
+        "treats_hash_as_support": false,
+        "treats_export_as_action_basis": false,
+        "treats_navigation_as_authority": false,
+        "replaces_validators": false
+      },
+      "workflow_key": "review_due"
+    },
+    {
+      "id": "WF-08",
+      "surface": "Context and evidence export",
+      "p2_px_ref": "P2-PX-06",
+      "purpose": "Export a context/evidence packet with anchors, gaps, scope, and risks.",
+      "input_contract": [
+        "review candidate",
+        "source anchors",
+        "support/challenge/gap notes"
+      ],
+      "output_contract": [
+        "context packet",
+        "evidence packet",
+        "scope and risk list"
+      ],
+      "required_validators": [
+        "support-boundary-validator",
+        "action-readiness-validator",
+        "operation-receipt-validator"
+      ],
+      "blocking_states": [
+        "insufficient support",
+        "hidden gaps",
+        "out of scope",
+        "action not ready"
+      ],
+      "boundary_copy": "Export is not action basis by itself; action readiness requires a separate gate.",
+      "allowed_user_value": "The user can carry an auditable packet to later action review.",
+      "forbidden_implications": [
+        "pretty summary as support",
+        "export as action basis"
+      ],
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_status_as_authority": false,
+        "treats_badge_as_promotion": false,
+        "treats_hash_as_support": false,
+        "treats_export_as_action_basis": false,
+        "treats_navigation_as_authority": false,
+        "replaces_validators": false
+      },
+      "workflow_key": "context_export"
+    },
+    {
+      "id": "WF-09",
+      "surface": "Hash and receipt view",
+      "p2_px_ref": "P2-PX-13",
+      "purpose": "Show process integrity for source/body/operation receipts.",
+      "input_contract": [
+        "source hash",
+        "body hash",
+        "operation receipt",
+        "sync state"
+      ],
+      "output_contract": [
+        "receipt view",
+        "mismatch warning",
+        "safe/blocked operator state"
+      ],
+      "required_validators": [
+        "operation-receipt-validator",
+        "hash-not-support-check"
+      ],
+      "blocking_states": [
+        "hash mismatch",
+        "missing receipt",
+        "dirty state"
+      ],
+      "boundary_copy": "Hash match is process integrity, not evidence support.",
+      "allowed_user_value": "The user can verify material did not silently drift.",
+      "forbidden_implications": [
+        "hash as evidence support",
+        "sync as truth"
+      ],
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_status_as_authority": false,
+        "treats_badge_as_promotion": false,
+        "treats_hash_as_support": false,
+        "treats_export_as_action_basis": false,
+        "treats_navigation_as_authority": false,
+        "replaces_validators": false
+      },
+      "workflow_key": "hash_receipt"
+    },
+    {
+      "id": "WF-10",
+      "surface": "Dirty-state guardrail",
+      "p2_px_ref": "P2-PX-15",
+      "purpose": "Block risky actions when worktree or target state is unsafe.",
+      "input_contract": [
+        "git target status",
+        "outside dirty summary",
+        "operation type"
+      ],
+      "output_contract": [
+        "allowed/block state",
+        "human approval requirement",
+        "next safe step"
+      ],
+      "required_validators": [
+        "dirty-state-guardrail",
+        "dirty-not-knowledge-check"
+      ],
+      "blocking_states": [
+        "protected path dirty",
+        "outside dirty conflict",
+        "commit/push/sync request"
+      ],
+      "boundary_copy": "Dirty state is operator safety only; it does not judge knowledge.",
+      "allowed_user_value": "The user avoids accidental protected writes or unsafe action.",
+      "forbidden_implications": [
+        "dirty as truth",
+        "automatic commit",
+        "automatic sync"
+      ],
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_status_as_authority": false,
+        "treats_badge_as_promotion": false,
+        "treats_hash_as_support": false,
+        "treats_export_as_action_basis": false,
+        "treats_navigation_as_authority": false,
+        "replaces_validators": false
+      },
+      "workflow_key": "dirty_guardrail"
+    },
+    {
+      "id": "WF-11",
+      "surface": "Action boundary exit",
+      "p2_px_ref": "P2-PX-06",
+      "purpose": "Stop before action use unless separate gates pass.",
+      "input_contract": [
+        "context packet",
+        "evidence packet",
+        "action intent",
+        "risk level"
+      ],
+      "output_contract": [
+        "not-action-basis notice",
+        "required gates",
+        "blocked reasons"
+      ],
+      "required_validators": [
+        "action-readiness-validator",
+        "evidence-sufficiency-gate",
+        "non-action-basis-exit-check"
+      ],
+      "blocking_states": [
+        "insufficient evidence",
+        "action readiness false",
+        "scope/risk unresolved"
+      ],
+      "boundary_copy": "This workflow is not action basis; later action use requires separate readiness and evidence sufficiency approval.",
+      "allowed_user_value": "The user knows exactly why the workflow stops before action.",
+      "forbidden_implications": [
+        "workflow as action basis",
+        "export as approval"
+      ],
+      "authority_flags": {
+        "all_authority_changes_disabled": true,
+        "writes_reviewed_truth": false,
+        "approves_review": false,
+        "promotes": false,
+        "infers_action_ready": false,
+        "mutates_truth_confidence": false,
+        "creates_evidence_support": false,
+        "creates_reviewed_relation": false,
+        "treats_status_as_authority": false,
+        "treats_badge_as_promotion": false,
+        "treats_hash_as_support": false,
+        "treats_export_as_action_basis": false,
+        "treats_navigation_as_authority": false,
+        "replaces_validators": false
+      },
+      "workflow_key": "action_boundary_exit"
+    }
+  ],
+  "non_claims": {
+    "workflow_not_product_build": true,
+    "workflow_not_reviewed_knowledge": true,
+    "workflow_not_evidence_support": true,
+    "workflow_not_action_basis": true,
+    "workflow_not_reviewer_approval": true,
+    "workflow_not_mainline_readiness": true
+  }
+}

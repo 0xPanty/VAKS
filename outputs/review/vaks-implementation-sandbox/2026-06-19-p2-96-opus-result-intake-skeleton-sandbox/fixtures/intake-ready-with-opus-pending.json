@@ -1,0 +1,6 @@
+{
+  "case_id": "intake-ready-with-opus-pending",
+  "result_intake_ready": true,
+  "p2_95_external_opus_review_pending": true,
+  "passed": true
+}

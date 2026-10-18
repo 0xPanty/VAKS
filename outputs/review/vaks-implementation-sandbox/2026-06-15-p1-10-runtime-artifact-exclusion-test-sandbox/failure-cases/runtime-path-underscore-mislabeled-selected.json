@@ -1,0 +1,23 @@
+{
+  "record_kind": "runtime_artifact_exclusion_manifest",
+  "scenario_id": "ra-fail-runtime-path-underscore-mislabeled-selected",
+  "expected_valid": false,
+  "expected_codes": [
+    "RA_RUNTIME_ARTIFACT_MISLABELED",
+    "RA_RUNTIME_ARTIFACT_SELECTED"
+  ],
+  "exclude_runtime_artifacts": true,
+  "items": [
+    {
+      "id": "suite_output_underscore_mislabeled",
+      "path": "outputs/review/example/suite_output.json",
+      "artifact_kind": "sandbox_contract",
+      "runtime_artifact": false,
+      "seen_by_retrieval": true,
+      "selected": true,
+      "excluded": false,
+      "pack_role": "orientation",
+      "authority_bucket": "sandbox_documentation"
+    }
+  ]
+}

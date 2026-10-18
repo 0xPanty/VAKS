@@ -1,0 +1,44 @@
+{
+  "record_kind": "vaks_bases_cockpit_prototype",
+  "scenario_id": "valid-bases-cockpit",
+  "expected_valid": true,
+  "expected_codes": [],
+  "scope": {
+    "sandbox_only": true,
+    "allowed_write_paths": ["outputs/review/vaks-implementation-sandbox/2026-06-15-p2-18-bases-cockpit-prototype/"],
+    "real_base_file_created": false,
+    "obsidian_base_written": false,
+    "obsidian_sync": false,
+    "obsidian_export": false,
+    "server_started": false,
+    "real_ui_started": false,
+    "dependency_install": false,
+    "mcp_write_tool": false,
+    "background_service": false,
+    "watcher_started": false,
+    "automation_started": false,
+    "hook_enabled": false,
+    "hooks_enabled": false,
+    "commit_or_push": false
+  },
+  "bases": [
+    {"name": "review-candidates.base", "purpose": "review_queue_visibility", "boundary": "cannot_approve", "columns": ["review_status", "review_object_state", "body_hash", "promotion_target", "missing_evidence", "risk_flags"], "display_only": true, "can_approve": false, "can_write_reviewed": false, "can_promote": false, "creates_action_basis": false, "infers_action_ready": false, "mutates_truth": false, "replaces_validators": false},
+    {"name": "context-packs.base", "purpose": "context_action_visibility", "boundary": "cannot_infer_ready", "columns": ["query_mode", "evidence_sufficiency.state", "action_readiness.state", "warnings", "gaps"], "display_only": true, "can_approve": false, "can_write_reviewed": false, "can_promote": false, "creates_action_basis": false, "infers_action_ready": false, "mutates_truth": false, "replaces_validators": false},
+    {"name": "feedback-events.base", "purpose": "feedback_pressure_visibility", "boundary": "cannot_mutate_truth", "columns": ["event_kind", "target_ref", "project_ref", "review_pressure_effect", "query_run_ref"], "display_only": true, "can_approve": false, "can_write_reviewed": false, "can_promote": false, "creates_action_basis": false, "infers_action_ready": false, "mutates_truth": false, "replaces_validators": false},
+    {"name": "operator-cockpit.base", "purpose": "total_operator_cockpit", "boundary": "cannot_replace_validators", "columns": ["blocked", "stale", "missing_anchor", "hash_mismatch", "action_not_ready"], "display_only": true, "can_approve": false, "can_write_reviewed": false, "can_promote": false, "creates_action_basis": false, "infers_action_ready": false, "mutates_truth": false, "replaces_validators": false}
+  ],
+  "navigation": [
+    {"id": "home-to-review", "from": "operator-cockpit.base", "to": "review-candidates.base", "artifact_ref": "review_candidate", "navigation_creates_authority": false, "opens_reviewed_write": false},
+    {"id": "home-to-context", "from": "operator-cockpit.base", "to": "context-packs.base", "artifact_ref": "context_pack_manifest", "navigation_creates_authority": false, "opens_reviewed_write": false},
+    {"id": "home-to-feedback", "from": "operator-cockpit.base", "to": "feedback-events.base", "artifact_ref": "feedback_event", "navigation_creates_authority": false, "opens_reviewed_write": false},
+    {"id": "review-to-home", "from": "review-candidates.base", "to": "operator-cockpit.base", "artifact_ref": "maintenance_manifest", "navigation_creates_authority": false, "opens_reviewed_write": false}
+  ],
+  "operator_states": {
+    "shows": ["blocked", "stale", "missing_anchor", "hash_mismatch", "action_not_ready", "dirty_state"],
+    "dirty_state_judges_knowledge": false,
+    "hash_match_is_support": false,
+    "activity_count_changes_confidence": false,
+    "mainline_ready": false
+  },
+  "non_claims": ["not_reviewed_knowledge", "not_evidence_support", "not_action_basis", "not_reviewer_approval", "not_mainline_readiness", "not_real_bases"]
+}

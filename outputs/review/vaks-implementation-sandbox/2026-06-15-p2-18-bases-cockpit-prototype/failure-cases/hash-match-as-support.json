@@ -1,0 +1,1 @@
+{"extends": "fixtures/valid-bases-cockpit.json", "scenario_id": "hash-match-as-support", "expected_valid": false, "expected_codes": ["BC_HASH_AS_SUPPORT"], "allowed_extra_codes": ["BC_AUTHORITY_CONFUSION"], "patch": {"operator_states": {"hash_match_is_support": true}}}

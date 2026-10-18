@@ -1,0 +1,160 @@
+{
+  "record_kind": "sandbox_user_decision_no_auto_advance_guard",
+  "slice_id": "2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox",
+  "source_slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+  "truth_boundary": "response_handling_guard_not_user_choice_or_execution_authority",
+  "status": "built_pending_review",
+  "safe_default_if_no_reply": "A_keep_sandbox_reference",
+  "scope": {
+    "write_scope": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox/",
+    "source_packet": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-51-user-decision-request-packet-sandbox/",
+    "source_final_gate_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-16-p2-51-user-decision-request-packet-sandbox\\artifact\\verify_user_decision_request_packet.py --final-gate",
+    "does_not_modify_mainline": true,
+    "does_not_collect_user_decision": true,
+    "does_not_execute_any_option": true
+  },
+  "response_policy": [
+    {
+      "case_id": "no_reply",
+      "recognized_input": "no user response after decision packet",
+      "decision_state": "no_decision_collected",
+      "result": "A_keep_sandbox_reference",
+      "action": "no_action",
+      "automatic_execution": false,
+      "requires_clarification": false,
+      "requires_new_scope": false,
+      "requires_separate_user_approval": false,
+      "allowed_next_message": "wait_for_user_or_report_sandbox_status"
+    },
+    {
+      "case_id": "explicit_A",
+      "recognized_input": "user explicitly chooses A",
+      "decision_state": "user_selected_keep_reference",
+      "result": "A_keep_sandbox_reference",
+      "action": "no_action",
+      "automatic_execution": false,
+      "requires_clarification": false,
+      "requires_new_scope": false,
+      "requires_separate_user_approval": false,
+      "allowed_next_message": "acknowledge_sandbox_reference_only"
+    },
+    {
+      "case_id": "explicit_B",
+      "recognized_input": "user explicitly chooses B",
+      "decision_state": "future_read_only_planning_requested",
+      "result": "future_readonly_promotion_review_planning_request_only",
+      "action": "ask_for_separate_read_only_planning_scope_before_any_future_slice",
+      "automatic_execution": false,
+      "requires_clarification": false,
+      "requires_new_scope": true,
+      "requires_separate_user_approval": true,
+      "allowed_next_message": "ask_user_for_separate_read_only_review_planning_scope"
+    },
+    {
+      "case_id": "explicit_C",
+      "recognized_input": "user explicitly chooses C",
+      "decision_state": "future_mainline_merge_review_question_requested",
+      "result": "future_mainline_merge_scope_question_only",
+      "action": "ask_for_separate_mainline_review_scope",
+      "automatic_execution": false,
+      "requires_clarification": false,
+      "requires_new_scope": true,
+      "requires_separate_user_approval": true,
+      "requires_explicit_allowed_paths": true,
+      "allowed_next_message": "ask_user_for_separate_allowed_paths_and_scope"
+    },
+    {
+      "case_id": "explicit_D",
+      "recognized_input": "user explicitly chooses D",
+      "decision_state": "user_selected_park_or_reject",
+      "result": "park_or_reject_sandbox_chain",
+      "action": "no_action",
+      "automatic_execution": false,
+      "requires_clarification": false,
+      "requires_new_scope": false,
+      "requires_separate_user_approval": false,
+      "allowed_next_message": "acknowledge_park_or_reject_status"
+    },
+    {
+      "case_id": "ambiguous_reply",
+      "recognized_input": "freeform reply does not clearly select exactly one option",
+      "decision_state": "unclear_user_decision",
+      "result": "clarify_required",
+      "action": "ask_clarifying_question",
+      "automatic_execution": false,
+      "requires_clarification": true,
+      "requires_new_scope": false,
+      "requires_separate_user_approval": false,
+      "allowed_next_message": "ask_one_short_clarification"
+    },
+    {
+      "case_id": "multiple_options",
+      "recognized_input": "reply selects more than one option",
+      "decision_state": "conflicting_user_decision",
+      "result": "clarify_required",
+      "action": "ask_clarifying_question",
+      "automatic_execution": false,
+      "requires_clarification": true,
+      "requires_new_scope": false,
+      "requires_separate_user_approval": false,
+      "allowed_next_message": "ask_user_to_choose_one_option"
+    },
+    {
+      "case_id": "approval_with_execution_words",
+      "recognized_input": "reply mixes decision with commit, push, sync, merge, promote, or action-basis wording",
+      "decision_state": "scope_boundary_crossing_detected",
+      "result": "stop_and_require_new_scope",
+      "action": "no_action",
+      "automatic_execution": false,
+      "requires_clarification": true,
+      "requires_new_scope": true,
+      "requires_separate_user_approval": true,
+      "allowed_next_message": "stop_and_ask_for_separate_explicit_scope"
+    }
+  ],
+  "forbidden_operations": {
+    "commit": false,
+    "push": false,
+    "obsidian_sync": false,
+    "formal_vault_write": false,
+    "mainline_merge": false,
+    "promotion": false,
+    "release": false,
+    "reviewed_knowledge_write": false,
+    "evidence_support_creation": false,
+    "action_basis_creation": false,
+    "template_write": false,
+    "tool_write": false,
+    "dependency_install": false,
+    "background_service": false,
+    "hook_install": false,
+    "mcp_write_tool": false
+  },
+  "readiness_flags": {
+    "guard_ready": true,
+    "ready_to_wait_for_user": true,
+    "user_choice_collected": false,
+    "ready_to_execute": false,
+    "auto_advance_allowed": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "release_ready": false,
+    "formal_vault_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false
+  },
+  "required_non_claims": [
+    "This guard is not a user decision.",
+    "This guard is not approval to execute option B or option C.",
+    "This guard is not promotion, merge, release, commit, push, or sync authority.",
+    "This guard is not reviewed knowledge, evidence support, or action basis.",
+    "A future option B or C response must start a separately scoped conversation before any execution."
+  ],
+  "ordinary_agent_usage": {
+    "default_verifier": "python -B artifact/verify_user_decision_no_auto_advance_guard.py",
+    "upstream_verifier": "python -B artifact/verify_user_decision_no_auto_advance_guard.py --run-upstream",
+    "final_gate": "python -B artifact/verify_user_decision_no_auto_advance_guard.py --final-gate",
+    "rebuild": "Builder-only: python -B artifact/build_user_decision_no_auto_advance_guard.py"
+  }
+}

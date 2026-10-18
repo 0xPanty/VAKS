@@ -1,0 +1,13 @@
+{
+  "selected_items": [],
+  "coverage_map": [],
+  "resolved_source_spans": [
+    {
+      "may_count_as_support": true,
+      "support_check_required": false
+    }
+  ],
+  "warnings": [
+    "annotation_not_support"
+  ]
+}

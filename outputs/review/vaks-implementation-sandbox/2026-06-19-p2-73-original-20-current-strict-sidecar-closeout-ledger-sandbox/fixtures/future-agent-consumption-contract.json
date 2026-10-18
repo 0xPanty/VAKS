@@ -1,0 +1,10 @@
+{
+  "fixture_id": "future-agent-consumption-contract",
+  "expected": {
+    "has_machine_json": true,
+    "has_human_markdown": true,
+    "has_portable_html": true,
+    "has_rebuild_script": true,
+    "has_verifier": true
+  }
+}

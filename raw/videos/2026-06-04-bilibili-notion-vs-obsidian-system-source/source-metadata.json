@@ -1,0 +1,58 @@
+{
+  "platform": "bilibili",
+  "platform_id": "BV1adLw6qE1x",
+  "source_uri": "bilibili:BV1adLw6qE1x",
+  "url": "https://www.bilibili.com/video/BV1adLw6qE1x/",
+  "title": "Notion vs Obsidian：选工具不如先建系统 | 整理方法分享",
+  "author": "程序杨的清晰生活",
+  "publisher": "程序杨的清晰生活",
+  "owner_mid": 43087230,
+  "aid": "116594520950838",
+  "cid": "38419957676",
+  "season_id": 6737536,
+  "published_at": "2026-05-21T20:00:00+08:00",
+  "duration_seconds": 183,
+  "description": "很多人最大的问题不是不记录，而是所有东西都混在一起。\n灵感混在任务里，任务混在资料里，资料混在目标里。\n结果就是脑子一直很满，但人始终推不动。当你开始按系统去放这些东西，你会发现，大脑突然轻了一点。\n你知道什么是现在要推进的，什么是以后再看的，什么是长期要维护的。\n这个时候，工具才开始真正发挥作用。\n所以如果你现在还在 Notion 和 Obsidian 之间反复横跳，我的建议是：\n不要先问哪个更强，先问自己，你有没有一套能让你持续行动的结构。\n\n在这里，我会持续分享： \n🔥 让AI替你打工的隐藏技巧（Notion自动化/DeepSeek实战） \n📚 知识管理体系搭建全攻略 \n🚀 普通人快速成长的思维模型\n每一期内容都是我一个人查资料、测软件、录到凌晨的诚意之作～ 如果某个视频让你惊呼'还能这样？！'，记得一键三连助力创作！你的三连就是我爆肝更新的超强BUFF！💪 \n在评论区扣'思维升级'，随机揪3位宝子送我的Notion极简效率系统～\n欢迎转发，评论，收藏，点赞，关注，这能帮助频道更好的发展。也是我持续更新下去的动力。",
+  "pic": "http://i0.hdslb.com/bfs/archive/2d32949e85a3d8b4b954a62457c5423be5978d50.jpg",
+  "stat": {
+    "aid": 116594520950838,
+    "view": 2889,
+    "danmaku": 1,
+    "reply": 15,
+    "favorite": 231,
+    "coin": 17,
+    "share": 9,
+    "now_rank": 0,
+    "his_rank": 0,
+    "like": 73,
+    "dislike": 0,
+    "evaluation": "",
+    "vt": 0
+  },
+  "argue_info": {
+    "argue_msg": "",
+    "argue_type": 0,
+    "argue_link": ""
+  },
+  "captured_at": "2026-06-04T16:17:39+08:00",
+  "metadata_fetch_method": "bilibili_public_view_api",
+  "public_subtitle_entries": [],
+  "player_subtitle_counts": [
+    {
+      "api": "Bilibili player/v2 bvid+cid",
+      "count": 0
+    },
+    {
+      "api": "Bilibili player/v2 aid+cid",
+      "count": 0
+    },
+    {
+      "api": "Bilibili player/wbi/v2 bvid+cid",
+      "count": 0
+    },
+    {
+      "api": "Bilibili player/wbi/v2 aid+cid",
+      "count": 0
+    }
+  ]
+}

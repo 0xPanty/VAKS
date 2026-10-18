@@ -1,0 +1,42 @@
+[
+  {
+    "source_ref": "samples/sources/obsidian-workbench.md",
+    "total": 8,
+    "active": 8,
+    "ai_export_ready": 8,
+    "needs_anchor_repair": 0,
+    "stale_anchor": 0,
+    "scale_debt": 7,
+    "digest_required": false
+  },
+  {
+    "source_ref": "samples/sources/rag-attribution-notes.md",
+    "total": 5,
+    "active": 5,
+    "ai_export_ready": 5,
+    "needs_anchor_repair": 0,
+    "stale_anchor": 0,
+    "scale_debt": 5,
+    "digest_required": false
+  },
+  {
+    "source_ref": "samples/sources/transcript-segment.md",
+    "total": 4,
+    "active": 4,
+    "ai_export_ready": 4,
+    "needs_anchor_repair": 0,
+    "stale_anchor": 0,
+    "scale_debt": 0,
+    "digest_required": false
+  },
+  {
+    "source_ref": "samples/sources/web-annotation-model.md",
+    "total": 18,
+    "active": 17,
+    "ai_export_ready": 13,
+    "needs_anchor_repair": 3,
+    "stale_anchor": 1,
+    "scale_debt": 17,
+    "digest_required": true
+  }
+]

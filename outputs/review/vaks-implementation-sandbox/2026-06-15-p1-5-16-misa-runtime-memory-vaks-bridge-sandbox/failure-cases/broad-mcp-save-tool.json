@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "broad-mcp-save-tool",
+  "expected_valid": false,
+  "expected_codes": ["MB_BROAD_MCP_TOOL_FORBIDDEN"],
+  "patch": {"scope": {"broad_mcp_save_tool": true}}
+}

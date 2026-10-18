@@ -1,0 +1,10 @@
+{
+  "fixture_id": "simulation-not-approval",
+  "expected": {
+    "approval_collected_now": false,
+    "executor_write_allowed_now": false,
+    "simulation_is_not_approval": true,
+    "simulation_is_not_write_authority": true,
+    "old_slice_writes_applied": 0
+  }
+}

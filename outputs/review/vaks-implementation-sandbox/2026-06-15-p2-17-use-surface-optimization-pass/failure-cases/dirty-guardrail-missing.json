@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "dirty-guardrail-missing",
+  "expected_valid": false,
+  "expected_codes": ["US_DIRTY_GUARDRAIL_MISSING"],
+  "patch": {"guardrails": {"dirty_state_visible": false, "dirty_state_blocks_risky_actions": false}}
+}

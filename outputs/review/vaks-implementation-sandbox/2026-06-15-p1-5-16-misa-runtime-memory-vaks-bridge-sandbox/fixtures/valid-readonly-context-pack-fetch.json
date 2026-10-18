@@ -1,0 +1,12 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "valid-readonly-context-pack-fetch",
+  "expected_valid": true,
+  "expected_codes": [],
+  "patch": {
+    "context_adapter": {
+      "mode": "read_only_context_pack_fetch",
+      "read_only": true
+    }
+  }
+}

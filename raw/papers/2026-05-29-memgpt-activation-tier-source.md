@@ -1,5 +1,6 @@
 ---
 type: source
+record_kind: source_card
 status: source-captured
 title: "MemGPT: Towards LLMs as Operating Systems"
 source_id: 2026-05-29-memgpt-activation-tier-source
@@ -9,8 +10,6 @@ source_type: paper
 version_or_commit: arXiv:2310.08560
 captured_at: 2026-05-29
 captured_by: Codex
-processing_mode: immediate
-processing_level: heavy
 review_priority: normal
 review_owner: Codex
 formalization_status: candidate-generated
@@ -27,6 +26,17 @@ tags:
   - memgpt
   - activation-tier
   - context-management
+knowledge_status: raw
+processing_tier: light
+why_saved: see_body_or_legacy_record
+retrieval_policy:
+  policy_kind: source_identity_only
+  pack_allowed: drilldown_required
+  action_basis_allowed: false
+  warning_code: raw_is_provenance_only
+promotion_gate: none
+action_basis_allowed: false
+truth_mutation_allowed: false
 ---
 
 # MemGPT Activation Tier Source Record

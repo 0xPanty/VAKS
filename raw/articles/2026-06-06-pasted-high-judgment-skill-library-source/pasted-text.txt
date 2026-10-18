@@ -1,0 +1,139 @@
+Start with Repetitive, High-Judgment Work: Building Your First Skill Library
+The first step in building a skill library is the easiest to get wrong.
+Many people start with prompts. They organize common prompts into folders, name them, and write brief instructions. It looks neat at first, but ultimately becomes an abandoned warehouse nobody ever opens.
+The reason is simple: these tasks are too "light."
+"Rewrite this weekly report," "Summarize these meeting minutes," "Categorize these emails," "Polish this paragraph", sure, you can organize these. But today's agents can already produce a decent first pass out of the box. Building dedicated "skills" for them just leaves you with a glorified prompt collection.
+Your first skill library should start with "heavier" work.
+By "heavy," I mean judgment-heavy: risk, context, owner calls, and stop rules.
+Some tasks happen every week. The steps seem identical, but at critical junctures, they require an experienced pair of eyes to sign off.
+For example:
+PRD reviews
+Launch QA
+Support escalations
+Code reviews
+Brand voice reviews
+Sales call prep
+Content ideation
+Customer feedback handling
+On the surface, these tasks follow a process. What's truly valuable are the forks in the road within that process.
+Should we push forward with this issue, or stop and ask a human?
+Should this document trust the CRM, or the latest Slack message?
+Is this feedback just a minor tweak, or has the direction drifted entirely?
+Is this customer just using a harsh tone, or are they an actual churn risk?
+Can the agent directly revise this output, or must a human make the final call?
+If these judgments only live in someone's head, the company will keep paying the price.
+A senior goes on PTO, and review quality drops a tier. A project pauses for two weeks, and the agent starts referencing outdated statuses. A prompt is copy-pasted, and the old project's preferences pollute the new one. Feedback is taken too literally, resulting in three rounds of useless revisions.
+So, your first question shouldn't be: "What prompts can I organize?"
+Ask instead: "What task has recurred frequently lately, where I still feel the need to personally double-check it for peace of mind?"
+Start there.
+A Skill Library Captures the Sequence of Judgment
+The basic format for a single skill does not need to feel mysterious. Official docs already make the package clear: a directory, a SKILL.md, and optional instructions, references, scripts, and assets.
+OpenAI Codex Skills describe the same pattern from another angle: a skill packages instructions, resources, and optional scripts so an agent can follow a workflow reliably. This article is about the layer after that: how to choose and organize the skills that deserve to exist.
+The hard part is the library.
+A library isn't just dumping 20 skills into a folder. A library needs to solve: How do these skills collaborate? How do they avoid overlapping? How do they know when to step in? How do they share state? How do they continuously improve?
+Take "support escalation" as an example.
+If you just write a prompt, it will likely say: "Assess the severity of this customer issue and draft a reply."
+That's useless. A real escalation skill worthy of a library needs to know:
+Check the customer tier first.
+Review the most recent interaction.
+Scan for risk keywords: refund, renewal, legal, CEO, public complaints.
+Decide if this goes to billing, engineering, success, or the founder.
+If data conflicts, trust the latest CRM record and the most recent internal thread.
+If the amount, refund status, or delivery timeline is uncertain, stop and ask a human.
+These aren't just steps. They are the sequence of judgment.
+A prompt library saves "what we said last time."
+A skill library saves "what to check first next time, who to trust, where to stop, and how to fix errors."
+A Small Example: Why Failure Records Are Worth More Than Prompts
+Recently, much of the high-judgment work I've been doing involves AI visuals. I won't get into video production details, but I'll share three small examples.
+Example 1: Like drawing a children's book
+Suppose you want to show "a seed growing into a tree." In a picture book, you draw three frames: a seed, a sprout, a tree. Kids understand it instantly.
+But in animation, if you hard-cut between these three images, it looks bizarre. The audience feels the frames jumping.
+The rules for the same concept change depending on the phase. Storyboards require clear separation; final production requires smooth transitions.
+If this experience only stays in chat logs, you'll repeat the mistake. Baked into a skill, it becomes a strict rule: Before entering a new phase, verify if the correct practices from the previous phase still apply.
+Example 2: Like teaching a kid to color
+You say: "Paint the apple red." But you leave a reference picture of a blue apple on the table. The kid will probably still paint it blue.
+Models often behave the same way. You write text instructions, but it also looks at your reference images, old versions, and state logs. If these materials fight each other, the output drifts.
+So, the library needs a simple discipline: Input materials are also instructions. Old examples are only for structural reference, not factual copying. The current project state, brand guidelines, and client brief are the source of truth.
+Example 3: Like a parent saying, "That outfit looks bad"
+The kid might throw the whole outfit away. But the parent just meant the sleeves were too long, or the colors clashed.
+Client feedback is exactly the same.
+"I don't like blue" doesn't mean all blues are wrong. Maybe that specific light blue is just too childish.
+"It doesn't feel premium" doesn't mean start over. Maybe the font, white space, texture, or pacing is just off.
+"This version feels weird" doesn't mean the direction failed. One broken detail might be ruining the overall vibe.
+So, I codified feedback handling into a fixed workflow: Review the output yourself, ask the client for the specific pain point, judge if it's a minor tweak, a pivot, or a redo, draft a revision plan, then execute only after confirmation.
+This flow doesn't just save one generation cost; it saves three rounds of pointless rework.
+These examples are from AI visuals, but the structure is universal. Writing articles, shipping products, reviewing PRDs, handling clients, prepping for sales, you face the same pattern: phases change, materials conflict, feedback is ambiguous, and old experiences pollute new projects.
+This is exactly what a skill library is meant to preserve.
+From One Skill to a Library
+Once a skill works smoothly, don't rush to duplicate it 20 times. Abstract it into the library's standard structure first.
+I currently divide a skill library into five layers.
+Layer 1: The Skill Map
+List the skills you actually need. Don't organize by tool, like "Slack skill" or "Notion skill." Organize by workflow:
+Escalation triage
+Launch QA
+Content review
+Sales call prep
+Brand voice review
+Research synthesis
+When an agent receives a task, it's trying to match "what work am I doing," not "what tool should I open." A v0 library only needs 3 to 5 skills.
+Layer 2: Boundaries
+Every skill needs to know when to step in, and exactly when to exit.
+Content review owns quality, not fact-checking.
+Research synthesis owns data aggregation, not the final tone of voice.
+Launch QA owns deployment risks, not roadmap prioritization.
+Without clear boundaries, the library turns into a mess. Three skills will fight over one problem. Or worse, one skill will try to manage everything and devolve into just another generic CLAUDE.md.
+Layer 3: The State Source
+If a task spans multiple days, versions, or files, it needs a current state source, whether that's STATUS.md, a Notion page, a Linear issue, or a CRM record.
+It must answer:
+What version are we currently on?
+What is already locked in?
+What is still pending?
+Why did we change it last time?
+Where is the current source of truth?
+Which old directions have already been rejected?
+Many agents fail because they are looking at the wrong version. Every skill should know which state source to read before executing.
+Layer 4: Routing
+As the library grows, the worst thing you can do is dump all documents into the agent's context at once.
+A good library acts like a receptionist.
+User: "Client is angry and wants a refund." Route to Escalation.
+User: "One last look before this version goes live." Route to Launch QA.
+User: "Too many docs, synthesize the viewpoints." Route to Research Synthesis.
+Skills need internal micro-routers, too.
+If kicking off a project, load templates. If the output is wrong, load failure modes. If you're just asking a quick question, don't load the entire historical context.
+Knowledge can be vast, but the context window must stay clean.
+This is progressive disclosure: show the agent the entrance first, read the full skill after a match, and load deeper references only when the task needs them.
+Layer 5: Maintenance
+Skill libraries rot.
+Models upgrade, making old rules a burden. Team members rotate, and owners vanish. Projects pivot, and old sources of truth expire.
+So, the library needs maintenance protocols:
+Failed to trigger? Fix the description.
+Triggered by mistake? Narrow the boundaries.
+Referenced an old state? Fix the source of truth.
+Repeated an error? Add a failure mode.
+Model does it naturally now? Delete the rule.
+Unused for 3 months? Archive it.
+For stricter maintenance, give every skill a small trigger eval: should-trigger and should-not-trigger queries. Missed triggers change the entrance. False positives narrow the boundary.
+Outdated skills are dangerous. They package temporary hacks from old projects into today's "best practices."
+Your First Library Can Be Small
+Don't aim for a massive, all-encompassing system on day one.
+Pick 3 workflows that happen most frequently and rely most heavily on judgment.
+Content team: Ideation, long-form review, pre-publish check.
+SaaS team: Support escalation, launch QA, sales call prep.
+Product team: PRD review, feedback triage, release note generation.
+For V1, each skill only needs to clearly define six things:
+When to use it.
+What to read before starting.
+What the key judgment points are.
+What the output format is.
+What actions require stopping to ask a human.
+How to patch rules when it fails.
+V1 can be incredibly short. Build it out as it runs. In month one, adoption matters far more than perfection. Three skills used daily deliver more value than thirty skills rotting in a folder.
+The Bottom Line
+Two teams can use the same model, connect to the same API, and yield vastly different results. The difference is the operating memory around the model.
+The difference is who successfully extracted the sequence of judgment, evidence sources, quality standards, failure experiences, and update logs from their highest performers, and turned them into operating assets an agent can load.
+Don't start your first skill library with the easiest prompts.
+Start with the fires you keep putting out, the things you constantly explain, the workflows you must personally double-check to sleep at night.
+Build one skill. Run it on real tasks.
+Add a rule every time it fails. Narrow the scope every time boundaries get clearer. Delete hacks every time old experiences expire.
+Three months later, you won't be left with a pile of prompt files.
+You will have an operating manual that agents can execute and your team can inherit.

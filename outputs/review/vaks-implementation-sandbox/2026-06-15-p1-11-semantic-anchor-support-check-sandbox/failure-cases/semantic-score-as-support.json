@@ -1,0 +1,18 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "semantic-score-as-support",
+  "expected_valid": false,
+  "expected_codes": ["SA_SEMANTIC_SCORE_AS_SUPPORT"],
+  "anchors": [
+    {
+      "id": "semantic-score-anchor",
+      "anchor_kind": "semantic_vector_hit",
+      "support_claimed": false,
+      "support_role": "direct_support",
+      "source_ref": "raw/articles/example-source.md",
+      "selector": "L12-L20",
+      "authority_bucket": "raw_anchor",
+      "semantic_score_claims_support": true
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "top11_20_item_receipts_check_status": "pass",
+  "error_count": 0,
+  "errors": [],
+  "artifacts": {
+    "artifacts": [
+      {
+        "path": "results\\phase_b_top11_20_item_receipts.csv",
+        "exists": true,
+        "bytes": 7352159
+      },
+      {
+        "path": "results\\phase_b_top11_20_item_receipts_summary.json",
+        "exists": true,
+        "bytes": 9594
+      },
+      {
+        "path": "results\\phase_b_top11_20_item_receipts_summary.csv",
+        "exists": true,
+        "bytes": 1811
+      },
+      {
+        "path": "PHASE_B_TOP11_20_ITEM_RECEIPTS_REPORT.md",
+        "exists": true,
+        "bytes": 1154
+      }
+    ]
+  },
+  "row_check": {
+    "receipt_rows": 7200,
+    "query_mode_corpus_groups": 720,
+    "summary_rows": 32,
+    "incomplete_groups": 0,
+    "duplicate_rank_groups": 0,
+    "missing_first_hit_receipts": 0
+  },
+  "summary_json": {
+    "metric_result_limit": 20,
+    "governance_window": 10
+  }
+}

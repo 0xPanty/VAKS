@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "runtime-memory-not-quarantined",
+  "expected_valid": false,
+  "expected_codes": ["MB_RUNTIME_MEMORY_NOT_QUARANTINED"],
+  "patch": {"runtime_memory": {"status": "vaks_memory_layer"}}
+}

@@ -1,0 +1,20 @@
+{
+  "scope": "contract",
+  "files_scanned": 10,
+  "files_validated": 10,
+  "files_skipped": 0,
+  "canonical_validated_surfaces_excluding_legacy_lens": null,
+  "legacy_project_lens_excluded_from_canonical_scope": false,
+  "legacy_project_lens_excluded_count": null,
+  "issue_count": 0,
+  "warning_count": 0,
+  "error_count": 0,
+  "status": "pass",
+  "structural_status": "pass",
+  "semantic_status": "clear",
+  "warning_breakdown_by_check": {},
+  "warning_breakdown_by_semantic_class": {},
+  "issue_breakdown_by_semantic_class": {},
+  "canonical_p0_status": "candidate_structural_clear",
+  "truth_boundary": "Structural lint can pass while semantic migration debt remains; this is not Source Intake P0 approval."
+}

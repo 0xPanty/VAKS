@@ -1,0 +1,605 @@
+{
+  "files": [
+    {
+      "path": "outputs/review/2026-06-07-aal-ruller-pkm-second-brain-ai-companian-candidate-distillation.md",
+      "sha256": "4dfe92c9f8069dc17df11abc9275e7de592853c692aaa3f415e6ba974319a214",
+      "bytes": 11218
+    },
+    {
+      "path": "outputs/review/2026-06-11-AxDSan-mnemosyne-candidate-distillation.md",
+      "sha256": "95939bb236c67d7dba28e880c3cc280d0bb79d01f47706f1914f3aef5183496e",
+      "bytes": 11875
+    },
+    {
+      "path": "outputs/review/2026-06-11-cyrilxbt-n8n-obsidian-business-brain-candidate-distillation.md",
+      "sha256": "55cbc6ef060c0891c4704fefd91e985185554c25abda29af42814f0e99bd1eaa",
+      "bytes": 10674
+    },
+    {
+      "path": "outputs/review/2026-06-11-RyanCodrai-turbovec-candidate-distillation.md",
+      "sha256": "245c07226c481552e6ad7130f63ef1cfee8dcf0c1997096d737ba6a64913e719",
+      "bytes": 8562
+    },
+    {
+      "path": "outputs/review/2026-06-11-zhizhuodemao-ai-reverse-toolkit-candidate-distillation.md",
+      "sha256": "49ee05517f0a837826db5e5c58fb00621ca1d9df805699788a61df47c613ac50",
+      "bytes": 9414
+    },
+    {
+      "path": "outputs/review/2026-06-12-bilibili-apex-knowledge-schema-rag-candidate-distillation.md",
+      "sha256": "540154444469d9087008dc25db570e7fc72afc40043226fad4801eabb22d1798",
+      "bytes": 10833
+    },
+    {
+      "path": "outputs/review/2026-06-12-breferrari-obsidian-mind-candidate-distillation.md",
+      "sha256": "a8fe634cba55b59c4348f056d0ba1052d7f0b3815cd1092429e1a944f3359b19",
+      "bytes": 10497
+    },
+    {
+      "path": "outputs/review/2026-06-13-bilibili-book-note-workflow-candidate-distillation.md",
+      "sha256": "b4f0812941e2939688fb04ac05ff5078f3b47307f77a151238bb8e60300c7151",
+      "bytes": 13876
+    },
+    {
+      "path": "outputs/review/2026-06-13-bilibili-edge-recall-contextual-active-recall-candidate-distillation.md",
+      "sha256": "8242851f349003dcde33540994edbd9a0018f57092e747634485f264091d5913",
+      "bytes": 9535
+    },
+    {
+      "path": "outputs/review/2026-06-13-bilibili-obsidian-homepage-plugin-workbench-candidate-distillation.md",
+      "sha256": "42c844a6c02cd25e7c3c4f87d4ab0d39490569bfccffc75b1b7292966ff3da85",
+      "bytes": 10251
+    },
+    {
+      "path": "outputs/review/2026-06-13-flexnote-docs-candidate-distillation.md",
+      "sha256": "875108c0ae9d3a00c2e666d3cd4f04eb9475e1a6143fc19c3ec27c3d37928aaf",
+      "bytes": 10202
+    },
+    {
+      "path": "outputs/review/2026-06-14-agents365-ai-drawio-skill-candidate-distillation.md",
+      "sha256": "7784ff211228cdcbc6c0b96081f8371fc83a27d71bb355843854d7eb0b2f6eda",
+      "bytes": 8451
+    },
+    {
+      "path": "outputs/review/2026-06-14-edochi-mdvs-candidate-distillation.md",
+      "sha256": "210bef25145cba4013a716374083098fa438568e19ad99a3e40324f2e854efe7",
+      "bytes": 10983
+    },
+    {
+      "path": "outputs/review/2026-06-14-google-open-knowledge-format-candidate-distillation.md",
+      "sha256": "a8ffe7a813e3d107dcb9b0c0bceb82f6f2b9bb0751fd77ccfaccde837a5f4f30",
+      "bytes": 13577
+    },
+    {
+      "path": "outputs/review/2026-06-14-kanna12580-kk-knowledge-agent-candidate-distillation.md",
+      "sha256": "19a685b5f8d9ae7d2e8c3ba0bb5fef04150d2cf8f2811174861397ebf3ae7dc8",
+      "bytes": 8791
+    },
+    {
+      "path": "outputs/review/2026-06-14-rohitg00-agentmemory-candidate-distillation.md",
+      "sha256": "fe8a82b3ff9a733c053cf38fa49e6ce3759cf051f04355ff994e164a269d1084",
+      "bytes": 15040
+    },
+    {
+      "path": "outputs/review/project_lens_overlays/2026-06-13-flexnote-vaks-visual-knowledge-workbench-overlay.md",
+      "sha256": "fcf83b091b5531a203dd1f236c0907abca47e29b9617a335cb5d7b1576676d54",
+      "bytes": 4748
+    },
+    {
+      "path": "outputs/review/project_lens_overlays/2026-06-14-adithya-s-k-omniparse-vaks-raw-intake-overlay.md",
+      "sha256": "905b00fe0774cd7462b60709a27ccafa8d64f60b6fefbfafd5276b1aa1f05e7c",
+      "bytes": 7042
+    },
+    {
+      "path": "outputs/review/project_lens_overlays/2026-06-14-agents365-ai-drawio-skill-vaks-visualization-overlay.md",
+      "sha256": "61fa61be313c54388fd9ff11283b4eb92d28018713c1067125a1d39efd59e6a3",
+      "bytes": 4066
+    },
+    {
+      "path": "outputs/review/project_lens_overlays/2026-06-14-benmaster82-Kwipu-vaks-local-graph-rag-overlay.md",
+      "sha256": "062b96779d75bc7e4dc572e309a16e9e023bc37e86f838ecc99d0039ebd710cb",
+      "bytes": 7082
+    },
+    {
+      "path": "outputs/review/project_lens_overlays/2026-06-14-edochi-mdvs-vaks-validation-search-overlay.md",
+      "sha256": "7d7f81930b0b1456aed7884921abb1e26656f52908651b67cceac47a7b9ad257",
+      "bytes": 6221
+    },
+    {
+      "path": "outputs/review/project_lens_overlays/2026-06-14-kanna12580-kk-knowledge-agent-misa-kb-memory-overlay.md",
+      "sha256": "24cebf26e26cfd69186c5ee4a976c8bdd12bf60feaf6233c582f6ac7cdc13636",
+      "bytes": 4712
+    },
+    {
+      "path": "outputs/review/project_lens_overlays/2026-06-14-rohitg00-agentmemory-misa-vaks-bridge-overlay.md",
+      "sha256": "a3e9c37feba9649bbf312c9fd73fa0a0f1d65d27bea528294234f60ca1902cad",
+      "bytes": 7229
+    },
+    {
+      "path": "outputs/review/project_overlays/_runtime_test_fixtures/2026-06-14-flexnote-canonical-overlay-runtime-fixture.md",
+      "sha256": "23425d17667de32b0e300a8489293d67c9cfec7371782189652e8bf5d1a4c98c",
+      "bytes": 1572
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/answer_use/V2-01-candidate-safe-downgrade-answer-use.md",
+      "sha256": "729eaa7fba58151c5c5b5a5a0b6805c2b3750bb69a75fcafe81ca39d7dac4819",
+      "bytes": 1042
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/answer_use/V2-02-real-raw-anchor-natural-allow-answer-use.md",
+      "sha256": "6e5709b4604f7e03e6b0241a42dc8ab28d9f7d36cf2295298152f8c771b6e4c9",
+      "bytes": 1059
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/answer_use/V2-03-mixed-pack-no-fallback-allow-answer-use.md",
+      "sha256": "7f1f23b2afe98f24affdcd16d03ddda7eace266651f32a27bf729719251691b8",
+      "bytes": 1445
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/answer_use/V2-04-adversarial-candidate-mislabeled-support-answer-use.md",
+      "sha256": "10e4bad090dbb993993b676a794741d4711c95742277f0f48341206457876cec",
+      "bytes": 955
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/answer_use/V2-05-adversarial-overlay-mislabeled-support-answer-use.md",
+      "sha256": "27114cf7ad907be15a856b50b442b12f224676cdbc0014c48eaca3f1ef389367",
+      "bytes": 951
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/answer_use/V2-06-adversarial-rank-diagnostic-mislabeled-support-answer-use.md",
+      "sha256": "9503e2144f05d73cb00166676f5eae6eb5c003acef46241f28cddcbb5d6ccc01",
+      "bytes": 967
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/answer_use/V2-07-adversarial-canonical-overlay-mislabeled-support-answer-use.md",
+      "sha256": "7783a571c61ff9639a9da890dc42b6e95fcf344528c04ba8706e297ca247bf72",
+      "bytes": 971
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/context_packs/V2-01-candidate-safe-downgrade-context-pack.md",
+      "sha256": "6546adeb16e3de265041d13ab8094138b6d88071af1b192ae7fa0727d0041855",
+      "bytes": 2105
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/context_packs/V2-02-real-raw-anchor-natural-allow-context-pack.md",
+      "sha256": "55af98a4c64b03d945cadb95cc4886a42271ed0e323ad9670a1e0aea7bc9dbf0",
+      "bytes": 2787
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/context_packs/V2-03-mixed-pack-no-fallback-allow-context-pack.md",
+      "sha256": "b6fc56d9b7566ca6b12b01b476cf58225d56269976b3cb1365c12a254da2e1ec",
+      "bytes": 5199
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/context_packs/V2-04-adversarial-candidate-mislabeled-support-context-pack.md",
+      "sha256": "7d55e9a253103fa57f3d68f01cd2aec79b99b802da971e9fc1d53d7ffa181d50",
+      "bytes": 2267
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/context_packs/V2-05-adversarial-overlay-mislabeled-support-context-pack.md",
+      "sha256": "1026a35d21af84cc28f0be1056f84cb80e623deb2dd265ab471fa78e354dd085",
+      "bytes": 2952
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/context_packs/V2-06-adversarial-rank-diagnostic-mislabeled-support-context-pack.md",
+      "sha256": "6290f6403a910fc073490d526ed74d2e4947920f65a8d35b156f4a07b96b68b1",
+      "bytes": 2408
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/context_packs/V2-07-adversarial-canonical-overlay-mislabeled-support-context-pack.md",
+      "sha256": "eda05d344f5afe0e0970aec4cf71c21ec929bdfe4bf1306f477fa76dd97cb8dc",
+      "bytes": 3003
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-07-aal-ruller-pkm-second-brain-ai-companian-candidate-distillation.md",
+      "sha256": "4dfe92c9f8069dc17df11abc9275e7de592853c692aaa3f415e6ba974319a214",
+      "bytes": 11218
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-11-AxDSan-mnemosyne-candidate-distillation.md",
+      "sha256": "95939bb236c67d7dba28e880c3cc280d0bb79d01f47706f1914f3aef5183496e",
+      "bytes": 11875
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-11-cyrilxbt-n8n-obsidian-business-brain-candidate-distillation.md",
+      "sha256": "55cbc6ef060c0891c4704fefd91e985185554c25abda29af42814f0e99bd1eaa",
+      "bytes": 10674
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-11-RyanCodrai-turbovec-candidate-distillation.md",
+      "sha256": "245c07226c481552e6ad7130f63ef1cfee8dcf0c1997096d737ba6a64913e719",
+      "bytes": 8562
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-11-zhizhuodemao-ai-reverse-toolkit-candidate-distillation.md",
+      "sha256": "49ee05517f0a837826db5e5c58fb00621ca1d9df805699788a61df47c613ac50",
+      "bytes": 9414
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-12-bilibili-apex-knowledge-schema-rag-candidate-distillation.md",
+      "sha256": "540154444469d9087008dc25db570e7fc72afc40043226fad4801eabb22d1798",
+      "bytes": 10833
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-12-breferrari-obsidian-mind-candidate-distillation.md",
+      "sha256": "a8fe634cba55b59c4348f056d0ba1052d7f0b3815cd1092429e1a944f3359b19",
+      "bytes": 10497
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-13-bilibili-book-note-workflow-candidate-distillation.md",
+      "sha256": "b4f0812941e2939688fb04ac05ff5078f3b47307f77a151238bb8e60300c7151",
+      "bytes": 13876
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-13-bilibili-edge-recall-contextual-active-recall-candidate-distillation.md",
+      "sha256": "8242851f349003dcde33540994edbd9a0018f57092e747634485f264091d5913",
+      "bytes": 9535
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-13-bilibili-obsidian-homepage-plugin-workbench-candidate-distillation.md",
+      "sha256": "42c844a6c02cd25e7c3c4f87d4ab0d39490569bfccffc75b1b7292966ff3da85",
+      "bytes": 10251
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-13-flexnote-docs-candidate-distillation.md",
+      "sha256": "875108c0ae9d3a00c2e666d3cd4f04eb9475e1a6143fc19c3ec27c3d37928aaf",
+      "bytes": 10202
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-14-agents365-ai-drawio-skill-candidate-distillation.md",
+      "sha256": "7784ff211228cdcbc6c0b96081f8371fc83a27d71bb355843854d7eb0b2f6eda",
+      "bytes": 8451
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-14-edochi-mdvs-candidate-distillation.md",
+      "sha256": "210bef25145cba4013a716374083098fa438568e19ad99a3e40324f2e854efe7",
+      "bytes": 10983
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-14-google-open-knowledge-format-candidate-distillation.md",
+      "sha256": "a8ffe7a813e3d107dcb9b0c0bceb82f6f2b9bb0751fd77ccfaccde837a5f4f30",
+      "bytes": 13577
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-14-kanna12580-kk-knowledge-agent-candidate-distillation.md",
+      "sha256": "19a685b5f8d9ae7d2e8c3ba0bb5fef04150d2cf8f2811174861397ebf3ae7dc8",
+      "bytes": 8791
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/2026-06-14-rohitg00-agentmemory-candidate-distillation.md",
+      "sha256": "fe8a82b3ff9a733c053cf38fa49e6ce3759cf051f04355ff994e164a269d1084",
+      "bytes": 15040
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/project_lens_overlays/2026-06-13-flexnote-vaks-visual-knowledge-workbench-overlay.md",
+      "sha256": "fcf83b091b5531a203dd1f236c0907abca47e29b9617a335cb5d7b1576676d54",
+      "bytes": 4748
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/project_lens_overlays/2026-06-14-adithya-s-k-omniparse-vaks-raw-intake-overlay.md",
+      "sha256": "905b00fe0774cd7462b60709a27ccafa8d64f60b6fefbfafd5276b1aa1f05e7c",
+      "bytes": 7042
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/project_lens_overlays/2026-06-14-agents365-ai-drawio-skill-vaks-visualization-overlay.md",
+      "sha256": "61fa61be313c54388fd9ff11283b4eb92d28018713c1067125a1d39efd59e6a3",
+      "bytes": 4066
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/project_lens_overlays/2026-06-14-benmaster82-Kwipu-vaks-local-graph-rag-overlay.md",
+      "sha256": "062b96779d75bc7e4dc572e309a16e9e023bc37e86f838ecc99d0039ebd710cb",
+      "bytes": 7082
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/project_lens_overlays/2026-06-14-edochi-mdvs-vaks-validation-search-overlay.md",
+      "sha256": "7d7f81930b0b1456aed7884921abb1e26656f52908651b67cceac47a7b9ad257",
+      "bytes": 6221
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/project_lens_overlays/2026-06-14-kanna12580-kk-knowledge-agent-misa-kb-memory-overlay.md",
+      "sha256": "24cebf26e26cfd69186c5ee4a976c8bdd12bf60feaf6233c582f6ac7cdc13636",
+      "bytes": 4712
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/project_lens_overlays/2026-06-14-rohitg00-agentmemory-misa-vaks-bridge-overlay.md",
+      "sha256": "a3e9c37feba9649bbf312c9fd73fa0a0f1d65d27bea528294234f60ca1902cad",
+      "bytes": 7229
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/outputs/review/project_overlays/_runtime_test_fixtures/2026-06-14-flexnote-canonical-overlay-runtime-fixture.md",
+      "sha256": "23425d17667de32b0e300a8489293d67c9cfec7371782189652e8bf5d1a4c98c",
+      "bytes": 1572
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md",
+      "sha256": "888f6eac02467a688a294446106759e17a33f79640a8f00633f86211df7dc67d",
+      "bytes": 5124
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/raw/articles/2026-06-13-flexnote-docs-source.md",
+      "sha256": "b60e969515a9f112f85797ac62a52c3536515147a64149353c824eeeb5127800",
+      "bytes": 6886
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/raw/repos/2026-05-26-llm-wiki-source.md",
+      "sha256": "a76dbbbab1a449258cc78ba64ad0e5ade497c6465262e3756356df056490f81c",
+      "bytes": 3655
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/raw/repos/2026-05-27-dusk-obsidian-vault-source.md",
+      "sha256": "fda2831fec735c8e20c8c2cf28875629d3ae8256d73b527be2fa3c75ad5b50a1",
+      "bytes": 10683
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/raw/repos/2026-05-27-kagantic-vault-structure-source.md",
+      "sha256": "be1fc4bd29ef877afa5c5a1e289f1eff1b1efc5afc26c9eb549bacf13d647833",
+      "bytes": 8780
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/raw/repos/2026-05-27-kepano-obsidian-source.md",
+      "sha256": "927127052d181b160c23ee65e8704191efd53bc3473467a3e8fdc098cfdc2527",
+      "bytes": 8004
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/raw/repos/2026-05-27-knowledge-base-server-source.md",
+      "sha256": "be138c5b99e6351f444f8aee37e9000b7821b89e8f357e8a11911ba9e245853c",
+      "bytes": 14229
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/raw/repos/2026-06-11-awesome-obsidian-vault/alexiachen-my-notes-source.md",
+      "sha256": "7d1bfe66fc378b0db674259426656b2bb0c2ab46be78fa0d7d941d03794f66d6",
+      "bytes": 3142
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/raw/repos/2026-06-11-AxDSan-mnemosyne-source.md",
+      "sha256": "22ee07b6c37dfbe8c0c905d1ef46eb464e5635207bc4e0c6b2702f8520565a9d",
+      "bytes": 10066
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/frozen_corpus/raw/repos/2026-06-11-safishamsi-graphify-source.md",
+      "sha256": "d8b2b00bf782010353fcdeef45d51338bc503af9c81fb5194125e7d6f23785dc",
+      "bytes": 7613
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/LIVE_READONLY_LOOP_V2_REPORT.md",
+      "sha256": "de8b9565f89d7a6853962496bf154fe01ef770808d59803b87ec9f5e047c20e0",
+      "bytes": 2622
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/PRO_REVIEW_REQUEST.md",
+      "sha256": "f96165bad794ad7acc16ceafdc3759125e7642866a3abaccb814ba3e8db30e03",
+      "bytes": 615
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/query_runs/V2-01-candidate-safe-downgrade-query-run.md",
+      "sha256": "eab4a2726def9c611c654efe2e7fb436a45ba321e2632a87bfb3b7d8e0777b77",
+      "bytes": 4177
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/query_runs/V2-02-real-raw-anchor-natural-allow-query-run.md",
+      "sha256": "a38beb49ac6ec496ee1bc4b0b9497c8d3341634d5433d1478bb57de31259fdb8",
+      "bytes": 4396
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/query_runs/V2-03-mixed-pack-no-fallback-allow-query-run.md",
+      "sha256": "c8c37cc62919ce8f76074706594cff935fee465a813fa0177f7b04ef31aa5453",
+      "bytes": 7629
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/query_runs/V2-04-adversarial-candidate-mislabeled-support-query-run.md",
+      "sha256": "9104e3edc18538ee799e91bfc07047742a201383dace911a104746214a757ebd",
+      "bytes": 4286
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/query_runs/V2-05-adversarial-overlay-mislabeled-support-query-run.md",
+      "sha256": "f281350e5f0555a17527f22f199840950b1d30f8e6b16b22ce73e21075a6b316",
+      "bytes": 4977
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/query_runs/V2-06-adversarial-rank-diagnostic-mislabeled-support-query-run.md",
+      "sha256": "d03a85fe85c9552ec199afd505dac4adccd6d90bf007c6a04fbab14184a3fc01",
+      "bytes": 4522
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/query_runs/V2-07-adversarial-canonical-overlay-mislabeled-support-query-run.md",
+      "sha256": "b733f6da542a7c7f61b8d3e7b2581b1c263471ea116c711cd2c95a856133db75",
+      "bytes": 5095
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/README.md",
+      "sha256": "832b059670d47e9a3a0420b889232792a63942592ea71bea52976bda1cb8d996",
+      "bytes": 1131
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/replay_frozen_rerun.py",
+      "sha256": "de403f4e2cac285a0c8bfe89b871ae5ce69516de2ae0e8918606d7bfcfb98eeb",
+      "bytes": 3892
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/results/fallback_regression_scan.json",
+      "sha256": "cf3aaf0eeb8f75435eeaa8d61183454dddae86f702145938933c9830893861bf",
+      "bytes": 368
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/results/frozen_corpus_manifest.json",
+      "sha256": "1b0d3a6250a0cc7ba9262510857af3acd6137324ddf4ac2270b984e67cec3e85",
+      "bytes": 13471
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/results/frozen_query_manifest.json",
+      "sha256": "76512de092c49c009bccde6036d9be3ca65487f0e260a1636a50b3cd063fbc97",
+      "bytes": 9495
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/results/frozen_replay_check.json",
+      "sha256": "1f6ee63852c41752db3744a73725c808e600d31db6f0c0bfcd93dd47088d9b87",
+      "bytes": 16875
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/results/frozen_replay_command_result.json",
+      "sha256": "2ffc30cdb7eb5d7755a7fcd9d9b7dc2c675d9e76fc8e9825c7d049425d5cbe53",
+      "bytes": 15566
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/results/live_artifact_exclusion_manifest.csv",
+      "sha256": "f93d773ccab163c79dac1b93a0e502ff5f29fbdf368777b2ce1f578a58dfe1e4",
+      "bytes": 5688
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/results/live_artifact_exclusion_manifest.json",
+      "sha256": "c6f42748186bfca6f670d8ac5fc0500e9b511158b6004abf64be2d392303a17b",
+      "bytes": 10121
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/results/live_artifact_exclusion_test.json",
+      "sha256": "b23569777d432947bd555c69fc8baff13bcbbfd61b64c14ec5a871c572372aa4",
+      "bytes": 256
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/results/live_readonly_loop_v2_cases.csv",
+      "sha256": "eec661867b9e4699bbd9b83230094bef8b6a62299b12bb14f261a2181b90d90b",
+      "bytes": 9711
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/results/live_readonly_loop_v2_cases.json",
+      "sha256": "1cc125b6131a9784176f9214a6ce410fdbacbf026115f5692d448390ecbf6846",
+      "bytes": 12813
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/results/live_readonly_loop_v2_events.jsonl",
+      "sha256": "234a1c505906120dc58f42daf9100b1bc8589d2fca0bed104abeda3ea03339bc",
+      "bytes": 7426
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/results/live_readonly_loop_v2_summary.json",
+      "sha256": "ff21b084d5ff47d644c9fd518c785b499a9dccc2478518ae9a57eb0a110f5941",
+      "bytes": 18836
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/results/live_retrieval_results_v2.csv",
+      "sha256": "21c24950c3e21085f22c1b2c36f3f456b4f2311eb4916cf38d18d36d7e3813d7",
+      "bytes": 49908
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/results/live_retrieval_results_v2.json",
+      "sha256": "d42df6414746648dd9a10302741069103d6dc4970ec67555a26393ed72748f83",
+      "bytes": 68630
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/results/live_validation_commands_v2.json",
+      "sha256": "b225421c70c01bcb9e8d0cdd0272712cf3546556d2803bc36bbe6f1f087a7fc7",
+      "bytes": 1276
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/results/source_intake_contract_lint_issues.csv",
+      "sha256": "c1a5c7ea2e3863d91f6a8d2eaab0e49ab0679831d6fc349c473d3328d044b316",
+      "bytes": 80
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/results/source_intake_contract_lint_summary.json",
+      "sha256": "ca1809c9ce819b63fb15f24ea284ea1e6a531ab623b0dcbfdfee54605996c495",
+      "bytes": 732
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/results/source_intake_current_lint_issues.csv",
+      "sha256": "aeace579a75914d32e43ac683fa6843bb390ef9df5a9b34b50d48e5e127c4386",
+      "bytes": 47671
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/results/source_intake_current_lint_summary.json",
+      "sha256": "cb464e28a61d44ad4cc9048e5f7933f5c6c55935e09a7e80dd3db3eba842c58e",
+      "bytes": 1004
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/results/source_intake_failure_matrix_results.csv",
+      "sha256": "8279dd0897526dff5c17c18a0fc558886fde0d5bbc6f6c8caf8408831044256f",
+      "bytes": 4680
+    },
+    {
+      "path": "outputs/review/source-intake-live-readonly-loop-v2-2026-06-14/results/source_intake_failure_matrix_summary.json",
+      "sha256": "6b83e22bdbf145cdbf5c7d1cdf451d9168b229b3be1f9ca614f974d3f9fd071e",
+      "bytes": 69
+    },
+    {
+      "path": "raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md",
+      "sha256": "888f6eac02467a688a294446106759e17a33f79640a8f00633f86211df7dc67d",
+      "bytes": 5124
+    },
+    {
+      "path": "raw/articles/2026-06-13-flexnote-docs-source.md",
+      "sha256": "b60e969515a9f112f85797ac62a52c3536515147a64149353c824eeeb5127800",
+      "bytes": 6886
+    },
+    {
+      "path": "raw/repos/2026-05-26-llm-wiki-source.md",
+      "sha256": "a76dbbbab1a449258cc78ba64ad0e5ade497c6465262e3756356df056490f81c",
+      "bytes": 3655
+    },
+    {
+      "path": "raw/repos/2026-05-27-dusk-obsidian-vault-source.md",
+      "sha256": "fda2831fec735c8e20c8c2cf28875629d3ae8256d73b527be2fa3c75ad5b50a1",
+      "bytes": 10683
+    },
+    {
+      "path": "raw/repos/2026-05-27-kagantic-vault-structure-source.md",
+      "sha256": "be1fc4bd29ef877afa5c5a1e289f1eff1b1efc5afc26c9eb549bacf13d647833",
+      "bytes": 8780
+    },
+    {
+      "path": "raw/repos/2026-05-27-kepano-obsidian-source.md",
+      "sha256": "927127052d181b160c23ee65e8704191efd53bc3473467a3e8fdc098cfdc2527",
+      "bytes": 8004
+    },
+    {
+      "path": "raw/repos/2026-05-27-knowledge-base-server-source.md",
+      "sha256": "be138c5b99e6351f444f8aee37e9000b7821b89e8f357e8a11911ba9e245853c",
+      "bytes": 14229
+    },
+    {
+      "path": "raw/repos/2026-06-11-awesome-obsidian-vault/alexiachen-my-notes-source.md",
+      "sha256": "7d1bfe66fc378b0db674259426656b2bb0c2ab46be78fa0d7d941d03794f66d6",
+      "bytes": 3142
+    },
+    {
+      "path": "raw/repos/2026-06-11-AxDSan-mnemosyne-source.md",
+      "sha256": "22ee07b6c37dfbe8c0c905d1ef46eb464e5635207bc4e0c6b2702f8520565a9d",
+      "bytes": 10066
+    },
+    {
+      "path": "raw/repos/2026-06-11-safishamsi-graphify-source.md",
+      "sha256": "d8b2b00bf782010353fcdeef45d51338bc503af9c81fb5194125e7d6f23785dc",
+      "bytes": 7613
+    },
+    {
+      "path": "SOURCE_INTAKE.md",
+      "sha256": "73a54201a2c308a33f8e3869e78cc4f783981b3a11fcc225d844c664392cf0c3",
+      "bytes": 50279
+    },
+    {
+      "path": "tools/run_source_intake_live_readonly_loop.py",
+      "sha256": "7dd16f00c682d94f2f13ead4565bd407c33c8aefd0ced7bb062a00875a8ca4cf",
+      "bytes": 41257
+    },
+    {
+      "path": "tools/run_source_intake_live_readonly_loop_v2.py",
+      "sha256": "776d73afbf876d9ab8a0f4428d8ab05dc87c321d40afc10e4b635cb911c9111a",
+      "bytes": 37576
+    },
+    {
+      "path": "tools/source_intake_enum_registry.json",
+      "sha256": "ebe1f42817c72007233eb2620731cb300e723a3fae6181b9e2d2323038c92860",
+      "bytes": 2517
+    },
+    {
+      "path": "tools/validate_source_intake_contract.py",
+      "sha256": "e9b65b0342256759fdb36389dc2cb91e6cda78fd57f7ec53a3dda7ed75027f7b",
+      "bytes": 46791
+    },
+    {
+      "path": "tools/validate_source_intake_failure_matrix.py",
+      "sha256": "52ea369027eaaec5b46c19638427e44fbea8cee9110afaa08e7cfbd2e8b6a144",
+      "bytes": 33881
+    }
+  ],
+  "file_count": 120
+}

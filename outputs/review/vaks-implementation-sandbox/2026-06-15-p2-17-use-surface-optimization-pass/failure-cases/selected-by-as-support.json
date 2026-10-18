@@ -1,0 +1,8 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "selected-by-as-support",
+  "expected_valid": false,
+  "expected_codes": ["US_SELECTED_BY_AS_SUPPORT"],
+  "allowed_extra_codes": ["US_AUTHORITY_CONFUSION"],
+  "patch": {"search_surface": {"selected_by_is_support": true}}
+}

@@ -1,0 +1,20 @@
+{
+  "input_text": "继续",
+  "expected_case_id": "ambiguous_reply",
+  "expected_reply_id": "ask_one_clarification",
+  "automatic_execution": false,
+  "decision_collected": false,
+  "ready_to_execute": false,
+  "must_not": [
+    "execute_option",
+    "merge_mainline",
+    "promote",
+    "sync_obsidian",
+    "commit",
+    "push",
+    "write_reviewed_knowledge",
+    "create_evidence_support",
+    "create_action_basis",
+    "start_future_slice_by_inference"
+  ]
+}

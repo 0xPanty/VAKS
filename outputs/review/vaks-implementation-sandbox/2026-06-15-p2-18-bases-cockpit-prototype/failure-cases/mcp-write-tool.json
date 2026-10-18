@@ -1,0 +1,1 @@
+{"extends": "fixtures/valid-bases-cockpit.json", "scenario_id": "mcp-write-tool", "expected_valid": false, "expected_codes": ["BC_RUNTIME_OR_SYNC_FORBIDDEN"], "patch": {"scope": {"mcp_write_tool": true}}}

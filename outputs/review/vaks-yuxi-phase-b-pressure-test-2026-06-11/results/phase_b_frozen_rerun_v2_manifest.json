@@ -1,0 +1,67 @@
+{
+  "artifact_kind": "phase_b_frozen_rerun_v2_manifest",
+  "run_id": "phase_b_frozen_rerun_v2_20260611T142435Z",
+  "started_at": "2026-06-11T14:24:35+00:00",
+  "finished_at": "2026-06-11T14:32:00+00:00",
+  "truth_boundary": "single_run_replay_bundle_not_runtime_validation",
+  "action_basis_allowed": false,
+  "test_sets": [
+    "main",
+    "holdout_used"
+  ],
+  "corpora": [
+    "primary",
+    "full"
+  ],
+  "modes": [
+    "baseline_file_lexical",
+    "vaks_b_bucketless",
+    "vaks_b_bucket_local",
+    "vaks_b_adapter_v1",
+    "vaks_b_adapter_v1_1",
+    "vaks_b_adapter_skeleton",
+    "yuxi_native_profile",
+    "vaks_only_lexical_bucket"
+  ],
+  "metric_result_limit": 20,
+  "governance_window": 10,
+  "stale_paths": [
+    "FEEDBACK.md",
+    "SCHEMA.md",
+    "SOURCE_INTAKE.md"
+  ],
+  "corpus_file_records": 4793,
+  "query_records": 45,
+  "script_records": [
+    {
+      "path": "tools/run_phase_b_pressure.py",
+      "sha256": "29eff8c0fb5cce8b326a2c2ee87577ca979d2fc6fb81f727d095288f61c398f8",
+      "bytes": 67194
+    },
+    {
+      "path": "tools/build_phase_b_p0_query_replay.py",
+      "sha256": "8cc7b3e5b231f95b030222caf531517ee10c22f4458d890a1ce64ad84af99478",
+      "bytes": 29288
+    },
+    {
+      "path": "tools/build_phase_b_frozen_rerun_v2.py",
+      "sha256": "a60bedf965a5d3b75f8d90fe2525268a69487e3058f86e04e91fcb467fdd6266",
+      "bytes": 14153
+    }
+  ],
+  "artifacts": {
+    "corpus_manifest": "results/phase_b_frozen_rerun_v2_corpus_manifest.csv",
+    "query_manifest": "results/phase_b_frozen_rerun_v2_query_manifest.csv",
+    "top20_items": "results/phase_b_frozen_rerun_v2_top20_items.csv",
+    "top1_10_replay": "results/phase_b_frozen_rerun_v2_top1_10_replay.csv",
+    "top11_20_receipts": "results/phase_b_frozen_rerun_v2_top11_20_receipts.csv",
+    "query_metrics": "results/phase_b_frozen_rerun_v2_query_metrics.csv",
+    "summary": "results/phase_b_frozen_rerun_v2_summary.csv"
+  },
+  "hard_stops": [
+    "single_run_bundle_is_still_local_proxy_evidence",
+    "does_not_validate_original_yuxi_runtime",
+    "does_not_create_relevance_judgment",
+    "does_not_approve_c_lite_or_writeback"
+  ]
+}

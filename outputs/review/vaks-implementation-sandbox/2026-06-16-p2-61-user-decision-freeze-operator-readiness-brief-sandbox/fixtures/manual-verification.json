@@ -1,0 +1,5 @@
+{
+  "fixture_id": "manual-verification",
+  "description": "The brief may expose a manual read-only p2-60 final-gate check but must not automate it.",
+  "requires_final_gate": true
+}

@@ -1,0 +1,54 @@
+{
+  "generated_at": "2026-06-14T01:37:48+00:00",
+  "overall_verdict": "sandbox_live_readonly_evidence_partial",
+  "case_count": 3,
+  "passed_expected_decision_count": 3,
+  "decision_breakdown": {
+    "blocked_or_downgraded": 1,
+    "allowed_readonly": 2
+  },
+  "corpus_doc_count": 203,
+  "live_retrieval_used": true,
+  "live_retrieval_scope": "local_markdown_corpus_lexical_retrieval",
+  "live_llm_used": false,
+  "live_tool_runtime_used": false,
+  "writeback_attempted": false,
+  "promotion_attempted": false,
+  "truth_mutation_attempted": false,
+  "source_intake_p0_passed": false,
+  "external_blind_relevance_completed": false,
+  "semantic_anchor_support_status": "not_external_judged",
+  "anchor_resolution_method": "path_selector_heading_or_string_resolution",
+  "truth_boundary": "Actual local retrieval is connected to pack and answer/use generation; this is still a deterministic read-only sandbox harness, not live LLM/tool/runtime adoption.",
+  "live_artifact_exclusion": {
+    "status": "pass",
+    "checked_artifact_count": 9,
+    "eligible_for_default_index_count": 0,
+    "truth_boundary": "Deterministic marker check for generated live-readonly query/context/answer artifacts; live embedding/index exclusion is not proven."
+  },
+  "validation_commands": {
+    "status": "pass",
+    "checked_at": "2026-06-14T01:37:48+00:00",
+    "commands": [
+      {
+        "command": "python tools/validate_source_intake_contract.py --scope current --out-dir outputs/review/source-intake-live-readonly-loop-2026-06-14/results --no-fail",
+        "returncode": 0,
+        "stdout": "{\"scope\": \"current\", \"files_scanned\": 239, \"files_validated\": 185, \"warnings\": 122, \"errors\": 0}",
+        "stderr": ""
+      },
+      {
+        "command": "python tools/validate_source_intake_contract.py --scope contract --out-dir outputs/review/source-intake-live-readonly-loop-2026-06-14/results --no-fail",
+        "returncode": 0,
+        "stdout": "{\"scope\": \"contract\", \"files_scanned\": 10, \"files_validated\": 10, \"warnings\": 0, \"errors\": 0}",
+        "stderr": ""
+      },
+      {
+        "command": "python tools/validate_source_intake_failure_matrix.py --out-dir outputs/review/source-intake-live-readonly-loop-2026-06-14/results",
+        "returncode": 0,
+        "stdout": "{\"case_count\": 33, \"blocked_count\": 33, \"status\": \"pass\"}",
+        "stderr": ""
+      }
+    ],
+    "truth_boundary": "Validator outputs are included for audit continuity; they do not convert this live-readonly smoke into Source Intake P0 approval."
+  }
+}

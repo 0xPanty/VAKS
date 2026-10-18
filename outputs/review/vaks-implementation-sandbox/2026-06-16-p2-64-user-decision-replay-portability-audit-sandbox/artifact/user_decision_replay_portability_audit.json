@@ -1,0 +1,110 @@
+{
+  "record_kind": "sandbox_user_decision_replay_portability_audit",
+  "slice_id": "2026-06-16-p2-64-user-decision-replay-portability-audit-sandbox",
+  "source_slice_id": "2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox",
+  "purpose": "portability audit for p2-63 natural-language replay regression",
+  "portability_ready": true,
+  "source_summary": {
+    "replay_ready": true,
+    "replay_count": 15,
+    "passed_count": 15,
+    "failure_case_count": 16,
+    "source_status": {
+      "verification_status": "local_verification_passed",
+      "reviewer_status": "review_pass_no_blocker",
+      "reviewer_passed": true,
+      "boundary_status": "pass_boundary",
+      "boundary_passed": true,
+      "product_acceptance_status": "pass_product_grade",
+      "product_acceptance_passed": true,
+      "next_step_status": "pass_product_grade_pending_next_slice"
+    }
+  },
+  "dependency_audit": {
+    "standard_library_only": true,
+    "builder_imports": [
+      "__future__",
+      "json",
+      "pathlib",
+      "sys"
+    ],
+    "verifier_imports": [
+      "__future__",
+      "argparse",
+      "importlib.util",
+      "json",
+      "pathlib",
+      "sys"
+    ],
+    "dependency_install_required": false,
+    "network_required": false,
+    "mcp_required": false,
+    "background_service_required": false
+  },
+  "execution_audit": {
+    "source_execution_by_builder": false,
+    "builder_process_execution_tokens": [],
+    "verifier_diagnostic_execution_tokens": [
+      "Popen",
+      "Start-Process",
+      "os.system",
+      "subprocess"
+    ],
+    "verifier_tokens_are_diagnostic_only": true
+  },
+  "path_audit": {
+    "stable_paths": true,
+    "source_paths": [
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox/artifact/user_decision_runbook_replay_regression.json",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox/artifact/build_user_decision_runbook_replay_regression.py",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox/artifact/verify_user_decision_runbook_replay_regression.py",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox/verification.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox/reviewer-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox/boundary-audit.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox/product-acceptance-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox/next-step.md"
+    ],
+    "write_path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-64-user-decision-replay-portability-audit-sandbox"
+  },
+  "command_audit": {
+    "clear_commands": true,
+    "commands": {
+      "build_replay": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox\\artifact\\build_user_decision_runbook_replay_regression.py",
+      "verify_replay": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox\\artifact\\verify_user_decision_runbook_replay_regression.py",
+      "final_gate": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-16-p2-63-user-decision-runbook-replay-regression-sandbox\\artifact\\verify_user_decision_runbook_replay_regression.py --final-gate"
+    },
+    "operator_sequence": [
+      "Read the p2-64 audit first.",
+      "Run the p2-63 default verifier before using replay outputs.",
+      "Run the p2-63 final gate only when validating closeout state.",
+      "Stop if either command fails.",
+      "Do not treat a pass as execution, merge, promotion, sync, reviewed knowledge, evidence support, action basis, or user approval."
+    ]
+  },
+  "readiness_flags": {
+    "automatic_execution": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "formal_vault_ready": false,
+    "obsidian_sync_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "user_approval_collected": false
+  },
+  "hard_no": [
+    "do_not_execute_user_decision_option",
+    "do_not_merge_mainline",
+    "do_not_promote",
+    "do_not_sync_obsidian",
+    "do_not_commit",
+    "do_not_push",
+    "do_not_install_dependencies",
+    "do_not_start_background_service",
+    "do_not_use_mcp_write_tool",
+    "do_not_create_reviewed_knowledge",
+    "do_not_create_evidence_support",
+    "do_not_create_action_basis",
+    "do_not_collect_user_approval_by_inference"
+  ]
+}

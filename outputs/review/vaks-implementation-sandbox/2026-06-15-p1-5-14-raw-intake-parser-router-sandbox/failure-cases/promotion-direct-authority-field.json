@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "promotion-direct-authority-field",
+  "expected_valid": false,
+  "expected_codes": ["RP_AUTHORITY_CLAIM_FORBIDDEN"],
+  "patch": {"boundary": {"promotion": true}}
+}

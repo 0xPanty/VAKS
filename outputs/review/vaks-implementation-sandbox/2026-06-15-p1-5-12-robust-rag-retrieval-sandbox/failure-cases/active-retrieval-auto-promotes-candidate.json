@@ -1,0 +1,37 @@
+{
+  "record_kind": "robust_rag_retrieval_manifest",
+  "scenario_id": "active-retrieval-auto-promotes-candidate",
+  "expected_valid": false,
+  "expected_codes": ["RR_ACTIVE_RETRIEVAL_AUTO_PROMOTION"],
+  "query": {
+    "query_mode": "review",
+    "verbatim_input": "Retrieve more until it is promoted.",
+    "question_summary": "Active retrieval auto-promotion misuse.",
+    "action_sensitive": false,
+    "verbatim_preserved": true
+  },
+  "route_selection": {
+    "selected": "drift_explore",
+    "query_lineage": ["original: Retrieve more until it is promoted.", "follow_up: expand candidate context."],
+    "authority_buckets_included": ["candidate"],
+    "authority_buckets_excluded": ["feedback", "runtime_artifact"],
+    "selected_context_types": ["candidate_point"],
+    "forbidden_support_types": ["retrieval_score", "graph_rank", "community_report_summary", "llm_extracted_relation"]
+  },
+  "retrieval_config": {"bucket_filter_first": true, "rrf_within_bucket_only": true, "exclude_runtime_artifacts": true},
+  "retrieved_items": [
+    {
+      "id": "candidate-a",
+      "ref": "outputs/review/candidate.md",
+      "record_kind": "candidate_note",
+      "authority_bucket": "candidate",
+      "pack_role": "review_input",
+      "selected": true,
+      "excluded": false,
+      "selected_by": {"semantic": true}
+    }
+  ],
+  "generated_answer": {
+    "auto_promote_candidates": true
+  }
+}

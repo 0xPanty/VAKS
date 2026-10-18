@@ -1,0 +1,13 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "valid-action-readiness-block",
+  "expected_valid": true,
+  "expected_codes": [],
+  "patch": {
+    "action_readiness": {
+      "support_sufficiency": "insufficient",
+      "action_ready": false,
+      "action_basis_allowed": false
+    }
+  }
+}

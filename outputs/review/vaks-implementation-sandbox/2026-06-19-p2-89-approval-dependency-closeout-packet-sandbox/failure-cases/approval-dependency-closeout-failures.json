@@ -1,0 +1,38 @@
+{
+  "record_kind": "approval_dependency_closeout_failure_cases",
+  "slice_id": "2026-06-19-p2-89-approval-dependency-closeout-packet-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "P2-89-FAIL-01-claims-approval-collected",
+      "must_fail_when": "The packet says exact p2-75 approval has been collected."
+    },
+    {
+      "case_id": "P2-89-FAIL-02-executor-write-allowed",
+      "must_fail_when": "The packet allows executor writes now."
+    },
+    {
+      "case_id": "P2-89-FAIL-03-old-writes-applied",
+      "must_fail_when": "The packet reports any old-file write."
+    },
+    {
+      "case_id": "P2-89-FAIL-04-goal-complete",
+      "must_fail_when": "The packet claims the full goal is complete."
+    },
+    {
+      "case_id": "P2-89-FAIL-05-missing-technical-evidence",
+      "must_fail_when": "The packet omits 75 preview/hash/body/non-status/old-write evidence."
+    },
+    {
+      "case_id": "P2-89-FAIL-06-missing-next-stop-rule",
+      "must_fail_when": "The packet omits the exact-approval plus fresh-prewrite stop rule."
+    },
+    {
+      "case_id": "P2-89-FAIL-07-mainline-or-truth-authority",
+      "must_fail_when": "The packet implies merge, promotion, reviewed knowledge, evidence support, or action basis."
+    },
+    {
+      "case_id": "P2-89-FAIL-08-missing-user-decision-link",
+      "must_fail_when": "The packet omits the p2-88 decision packet as the user-facing decision surface."
+    }
+  ]
+}

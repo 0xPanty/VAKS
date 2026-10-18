@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "missing-runtime-memory-block",
+  "expected_valid": false,
+  "expected_codes": ["MB_MISSING_RUNTIME_MEMORY"],
+  "patch": {"runtime_memory": {"__delete__": true}}
+}

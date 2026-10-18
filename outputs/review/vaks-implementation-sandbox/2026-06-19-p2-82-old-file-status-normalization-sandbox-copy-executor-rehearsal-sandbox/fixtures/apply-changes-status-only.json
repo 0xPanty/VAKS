@@ -1,0 +1,9 @@
+{
+  "fixture_id": "apply-changes-status-only",
+  "expected": {
+    "after_status_match_count": 75,
+    "body_unchanged_after_apply_count": 75,
+    "body_bytes_unchanged_after_apply_count": 75,
+    "non_status_frontmatter_unchanged_count": 75
+  }
+}

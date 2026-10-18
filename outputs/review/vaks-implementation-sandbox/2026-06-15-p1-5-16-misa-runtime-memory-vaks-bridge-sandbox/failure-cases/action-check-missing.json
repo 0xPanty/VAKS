@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "action-check-missing",
+  "expected_valid": false,
+  "expected_codes": ["MB_ACTION_READINESS_CHECK_REQUIRED"],
+  "patch": {"action_readiness": {"vaks_action_readiness_check_required": false}}
+}

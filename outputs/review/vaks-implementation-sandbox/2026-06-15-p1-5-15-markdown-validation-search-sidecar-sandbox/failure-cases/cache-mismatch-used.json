@@ -1,0 +1,1 @@
+{"extends":"fixtures/valid-frontmatter-validation-check.json","scenario_id":"cache-mismatch-used","expected_valid":false,"expected_codes":["MS_CACHE_MISMATCH_USED"],"patch":{"search_cache":{"used_for_query":true,"stale":true,"rebuild_required":false}}}

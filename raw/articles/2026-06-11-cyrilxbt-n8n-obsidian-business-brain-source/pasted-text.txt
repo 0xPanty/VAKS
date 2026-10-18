@@ -1,0 +1,632 @@
+
+CyrilXBT
+@cyrilXBT
+How to Build an N8N and Obsidian Business Brain That Gets Smarter Every Single Day Without Any Extra
+Most business owners manage their knowledge the same way they manage their email.
+Reactively.
+Something comes in. They deal with it. They move on. The information that could have made tomorrow's decision better gets lost in the process of handling today's tasks.
+The N8N and Obsidian business brain solves this at the root level.
+Obsidian becomes the permanent memory of your business. Every decision, every insight, every pattern, every piece of intelligence your business generates gets stored in plain text files that never disappear and never require a subscription to access.
+N8N becomes the nervous system that connects your business to that memory. It watches for new information, processes it automatically, routes it to the right place in the vault, generates intelligence from it, and delivers that intelligence to you before you even know you need it.
+The result is a business brain that gets smarter every day you operate because every day of operation adds to its accumulated intelligence.
+And it does all of this without any extra effort from you beyond running your business normally.
+This is the complete build guide.
+The Architecture
+The system has three layers that work together.
+Layer 1: The Knowledge Layer — Obsidian
+Plain text Markdown files organized in a consistent structure. Every piece of business knowledge lives here permanently. Decisions, meeting notes, competitive intelligence, customer insights, project status, financial observations. All of it in files you own completely.
+Layer 2: The Automation Layer — N8N
+Visual workflows that run on a schedule or trigger on events. N8N watches your business tools for new information, processes it with Claude, and writes the outputs directly to your Obsidian vault. It also reads from the vault to generate intelligence reports and briefings.
+Layer 3: The Intelligence Layer — Claude API
+Every N8N workflow that needs to produce intelligent output calls Claude via the Anthropic API. Claude reads raw business data, synthesizes it into structured knowledge, identifies patterns, and generates outputs that require genuine reasoning rather than just data transformation.
+Setting Up the Foundation
+Install N8N:
+The most effective setup for Obsidian integration runs N8N locally on the same machine as your vault.
+npm install -g n8n
+n8n start
+N8N runs at localhost:5678. Your Obsidian vault is accessible at its normal path. Every File System node in N8N can read and write directly to vault files without any additional configuration.
+Configure the Claude API node:
+Create an HTTP Request node you will reuse across all workflows:
+URL: https://api.anthropic.com/v1/messages
+Method: POST
+Header: x-api-key: [YOUR API KEY]
+Header: anthropic-version: 2023-06-01
+Header: content-type: application/json
+Standard request body:
+{
+  "model": "claude-opus-4-8",
+  "max_tokens": 4096,
+  "messages": [
+    {
+      "role": "user",
+      "content": "{{ $json.prompt }}"
+    }
+  ]
+}
+Extract response with: {{ $json.content[0].text }}
+The vault structure for the business brain:
+BUSINESS-BRAIN/
+    00-INBOX/
+        [raw N8N captures land here]
+    
+    01-INTELLIGENCE/
+        customers/
+            [customer insight notes]
+        market/
+            [competitive and market intelligence]
+        decisions/
+            [every significant business decision]
+        patterns/
+            [recurring patterns identified]
+    
+    02-OPERATIONS/
+        projects/
+            [active project folders]
+        meetings/
+            [meeting notes by date]
+        reviews/
+            [weekly and monthly reviews]
+    
+    03-FINANCIAL/
+        [financial observations and patterns]
+    
+    04-PIPELINE/
+        [sales pipeline notes]
+    
+    05-OUTPUTS/
+        briefings/
+            [daily and weekly briefings]
+        syntheses/
+            [topic syntheses]
+        alerts/
+            [pattern alerts and flags]
+    
+    06-SYSTEM/
+        CLAUDE.md
+        skills/
+Write the Business CLAUDE.md:
+# Business Brain — CLAUDE.md
+
+## Business Identity
+Company: [YOUR COMPANY NAME]
+What we do: [ONE CLEAR PARAGRAPH]
+Stage: [EARLY/GROWTH/ESTABLISHED]
+Revenue model: [HOW YOU MAKE MONEY]
+Primary customer: [SPECIFIC ICP]
+
+## Current Strategic Priorities
+1. [MOST IMPORTANT THING THIS QUARTER]
+2. [SECOND MOST IMPORTANT]
+3. [THIRD MOST IMPORTANT]
+
+## Active Projects
+[PROJECT NAME]: [STATUS] — Next: [SPECIFIC ACTION]
+[Repeat for each active project]
+
+## Active Theses
+[BELIEF 1 ABOUT YOUR MARKET OR BUSINESS]
+Evidence for: [WHAT SUPPORTS IT]
+Counter-evidence: [WHAT CHALLENGES IT]
+
+## Competitive Landscape
+Primary competitors: [LIST WITH ONE-LINE DESCRIPTIONS]
+Our differentiation: [SPECIFIC AND HONEST]
+
+## Known Patterns
+[PATTERNS IDENTIFIED FROM VAULT ANALYSIS]
+[This section grows as the brain learns]
+
+## Known Risks
+[SPECIFIC RISKS WORTH MONITORING]
+
+## Decision Log Context
+When logging decisions always capture:
+- The decision made
+- The key assumption it rests on
+- The expected outcome
+- The review date
+
+## Intelligence Standards
+Strong signal: information that would change 
+a decision or challenge an active thesis.
+
+Weak signal: interesting but not immediately 
+actionable or thesis-relevant.
+
+Noise: everything else. Do not log.
+
+## Output Instructions
+All outputs save to 05-OUTPUTS with date prefix.
+All decisions save to 01-INTELLIGENCE/decisions.
+All customer insights to 01-INTELLIGENCE/customers.
+All market intelligence to 01-INTELLIGENCE/market.
+The Eight Core Workflows
+Workflow 1: The Morning Business Brief
+Every morning at 6AM this workflow reads your entire business brain and generates a structured brief that tells you what matters before anything else competes for your attention.
+N8N structure:
+Schedule Trigger (6AM daily)
+    ↓
+Read File Node → CLAUDE.md
+    ↓
+Read All Files → 02-OPERATIONS/projects/ (all .md files)
+    ↓
+Read File Node → Yesterday's meeting notes if exists
+    ↓
+HTTP Request → Brave Search (industry news relevant to business)
+    ↓
+Set Node (combine all content into prompt)
+    ↓
+HTTP Request → Claude API
+    ↓
+Write File Node → 05-OUTPUTS/briefings/[DATE]-morning-brief.md
+    ↓
+Telegram Node → notify brief is ready
+The Claude prompt:
+Read the attached business context and generate 
+a morning brief for the business owner.
+
+CLAUDE.md context: {{ $node["Read CLAUDE.md"].json.content }}
+
+Active project notes: {{ $node["Read Projects"].json.content }}
+
+Recent meeting notes: {{ $node["Read Meetings"].json.content }}
+
+External industry news: {{ $node["Search News"].json.results }}
+
+Generate the morning brief in this format:
+
+---
+# Morning Brief — [DATE]
+
+## THE ONE THING
+[Single most important thing for this business today.
+Specific. Actionable. Based on actual vault context.]
+
+## PROJECT PULSE
+[For each active project: one line on status 
+and the specific next action]
+
+## OVERNIGHT INTELLIGENCE
+[1-3 external developments relevant to the business.
+Only include if genuinely signal not noise.]
+
+## DECISION REQUIRED
+[Any decision that has been sitting open for more 
+than 7 days based on vault context]
+
+## PATTERN FLAG
+[Any pattern from recent notes worth flagging]
+---
+
+Be specific. Reference actual project names and 
+actual next actions. Generic business advice is 
+worthless. Vault-grounded specificity is everything.
+Workflow 2: The Meeting Intelligence Processor
+Every time you drop a meeting transcript or rough notes into the inbox this workflow processes them into structured intelligence.
+Trigger: New file created in 00-INBOX with name containing "meeting"
+N8N structure:
+File Trigger → Watch 00-INBOX for new files
+    ↓
+IF Node → filename contains "meeting"
+    ↓
+Read Binary File → get file content
+    ↓
+Read File → CLAUDE.md
+    ↓
+HTTP Request → Claude API
+    ↓
+Write Binary File → 02-OPERATIONS/meetings/[DATE]-[title].md
+    ↓
+Trigger → Inbox Cleaner (move processed file to archive)
+The Claude prompt:
+Process this meeting transcript or notes into 
+a structured intelligence note for the business brain.
+
+CLAUDE.md context: {{ $node["Read CLAUDE.md"].json.content }}
+
+Raw meeting content: {{ $node["Read Meeting"].json.content }}
+
+Produce the meeting intelligence note in this format:
+
+---
+type: meeting
+date: [EXTRACT FROM CONTENT OR USE TODAY]
+attendees: [EXTRACT FROM CONTENT]
+project: [WHICH PROJECT THIS RELATES TO]
+---
+
+# [MEETING TITLE]
+
+## Decisions Made
+[Specific decisions. Format each as:]
+DECISION: [what was decided]
+ASSUMPTION: [key belief this rests on]
+OWNER: [who is responsible]
+REVIEW: [when to check if correct]
+
+## Action Items
+[Specific actions with owners and deadlines]
+- [ ] [ACTION] — [OWNER] — [DEADLINE]
+
+## Intelligence Captured
+[Any competitive intelligence, customer insights, 
+or market information mentioned]
+
+## Open Questions
+[Unresolved questions that need follow-up]
+
+## Connection to Strategy
+[How this meeting connects to current strategic 
+priorities in CLAUDE.md]
+Workflow 3: The Customer Intelligence Aggregator
+This workflow monitors your CRM, support tickets, and customer communication channels for insights and deposits them into the customer intelligence layer of the vault.
+N8N structure:
+Schedule Trigger (daily at 9PM)
+    ↓
+HTTP Request → CRM API (new deals/contacts today)
+    ↓
+HTTP Request → Support Tool API (tickets resolved today)
+    ↓
+HTTP Request → Email API (customer emails received today)
+    ↓
+Merge Node (combine all customer data)
+    ↓
+IF Node → any items to process?
+    ↓
+HTTP Request → Claude API
+    ↓
+Write Binary File → 01-INTELLIGENCE/customers/[DATE]-customer-intel.md
+The Claude prompt:
+Extract and structure customer intelligence from 
+today's customer interactions.
+
+CLAUDE.md context: {{ $node["Read CLAUDE.md"].json.content }}
+
+CRM data: {{ $node["CRM"].json.data }}
+Support tickets: {{ $node["Support"].json.tickets }}
+Customer emails: {{ $node["Email"].json.messages }}
+
+For each meaningful customer interaction produce:
+
+INSIGHT TYPE: [Pain point / Feature request / 
+              Competitive mention / Churn signal / 
+              Expansion signal / Satisfaction signal]
+
+CUSTOMER SEGMENT: [Which customer segment this represents]
+
+CONTENT: [What was said or what happened in 2-3 sentences]
+
+IMPLICATION: [What this means for the business in one sentence]
+
+THESIS IMPACT: [Does this support or challenge any active 
+thesis in CLAUDE.md? If yes name the thesis.]
+
+Only extract genuine intelligence. Skip routine 
+interactions with no signal value.
+
+Group insights by type and produce a daily 
+customer intelligence summary.
+Workflow 4: The Competitive Intelligence Monitor
+This workflow runs every Monday and Thursday scanning for competitive developments and market movements.
+N8N structure:
+Schedule Trigger (Monday and Thursday 7AM)
+    ↓
+Read File → CLAUDE.md (extract competitor names)
+    ↓
+Loop Over Competitors
+    ↓
+HTTP Request → Brave Search ([competitor] news)
+    ↓
+HTTP Request → Brave Search ([competitor] product updates)
+    ↓
+Merge Node → all competitive findings
+    ↓
+HTTP Request → Claude API
+    ↓
+Write Binary File → 01-INTELLIGENCE/market/[DATE]-competitive.md
+    ↓
+IF Node → any significant finding?
+    ↓
+Telegram Node → alert if significant
+The Claude prompt:
+Analyze these competitive intelligence findings 
+and produce a structured update.
+
+CLAUDE.md context including competitors: 
+{{ $node["Read CLAUDE.md"].json.content }}
+
+Competitive search results: 
+{{ $node["Merge Competitive"].json.results }}
+
+For each competitor produce:
+
+STATUS: [Active development / Stagnant / 
+         Strategic shift / Significant news]
+
+FINDING: [What was discovered in 2-3 sentences]
+
+SIGNIFICANCE: [High / Medium / Low for our business]
+
+OUR RESPONSE: [Should we do anything about this?]
+
+THESIS IMPACT: [Does this support or challenge any 
+active thesis in CLAUDE.md?]
+
+Flag any finding rated HIGH significance for 
+immediate attention via the alert system.
+
+If nothing significant happened for a competitor 
+write "No significant developments" and move on.
+Don't pad the report with noise.
+Workflow 5: The Decision Logger and Reviewer
+This workflow handles two functions: logging decisions when you drop them in the inbox, and surfacing decisions that have passed their review date.
+Part A: Decision Logger
+File Trigger → Watch 00-INBOX for files containing "decision"
+    ↓
+Read Binary File → get raw decision content
+    ↓
+HTTP Request → Claude API (structure the decision)
+    ↓
+Write Binary File → 01-INTELLIGENCE/decisions/[DATE]-[topic].md
+    ↓
+Archive original file
+Part B: Decision Reviewer
+Schedule Trigger (every Monday 8AM)
+    ↓
+Read All Files → 01-INTELLIGENCE/decisions/
+    ↓
+Code Node → filter files where review_date < today
+    ↓
+IF Node → any decisions due for review?
+    ↓
+HTTP Request → Claude API (generate review prompts)
+    ↓
+Write Binary File → 05-OUTPUTS/alerts/[DATE]-decision-reviews.md
+    ↓
+Telegram Node → notify decisions need review
+The decision structuring prompt:
+Structure this decision for the business brain.
+
+Raw decision content: {{ $json.content }}
+
+Business context from CLAUDE.md: {{ $node["CLAUDE.md"].json.content }}
+
+Produce the decision note:
+
+---
+type: decision
+date: [TODAY]
+status: active
+review_date: [SUGGEST BASED ON DECISION TYPE]
+---
+
+# Decision: [DECISION TOPIC]
+
+## The Decision
+[Clear statement of what was decided]
+
+## Context
+[Why this decision needed to be made]
+
+## Alternatives Considered
+[What else was on the table]
+
+## Key Assumption
+[The single most important belief this decision rests on]
+
+## Expected Outcome
+[What success looks like]
+
+## Review Criteria
+[How you will know if this decision was right]
+
+## Risk
+[What could make this decision wrong]
+Workflow 6: The Weekly Business Review
+Every Sunday at 7PM this workflow reads the entire week's vault activity and produces a comprehensive business review.
+N8N structure:
+Schedule Trigger (Sunday 7PM)
+    ↓
+Read All Files → 02-OPERATIONS/meetings/ (this week)
+    ↓
+Read All Files → 01-INTELLIGENCE/customers/ (this week)
+    ↓
+Read All Files → 01-INTELLIGENCE/market/ (this week)
+    ↓
+Read All Files → 05-OUTPUTS/briefings/ (this week)
+    ↓
+Read File → CLAUDE.md
+    ↓
+HTTP Request → Claude API
+    ↓
+Write Binary File → 02-OPERATIONS/reviews/[DATE]-weekly.md
+    ↓
+HTTP Request → Claude API (update CLAUDE.md recommendations)
+    ↓
+Telegram Node → weekly review ready
+The Claude prompt:
+Generate a comprehensive weekly business review 
+from this week's vault activity.
+
+CLAUDE.md: {{ $node["CLAUDE.md"].json.content }}
+Meetings this week: {{ $node["Meetings"].json.content }}
+Customer intelligence: {{ $node["Customer Intel"].json.content }}
+Market intelligence: {{ $node["Market Intel"].json.content }}
+Daily briefs: {{ $node["Briefs"].json.content }}
+
+Produce the weekly review:
+
+---
+# Weekly Business Review — [WEEK OF DATE]
+
+## THE WEEK IN ONE LINE
+[Single honest sentence about what this week was]
+
+## WHAT MOVED
+[Specific progress on strategic priorities.
+Reference actual projects and outcomes.]
+
+## WHAT STALLED
+[Honest assessment of what didn't move.
+Name the specific reason for each.]
+
+## CUSTOMER INTELLIGENCE SUMMARY
+[What did customers tell us this week.
+Any patterns worth noting.]
+
+## COMPETITIVE DEVELOPMENTS
+[Any competitive intelligence from the week 
+worth carrying forward.]
+
+## DECISION QUALITY CHECK
+[Were any decisions made this week based on 
+assumptions that look shakier after the week's data?]
+
+## PATTERN OF THE WEEK
+[One theme that appeared across multiple 
+different inputs this week]
+
+## NEXT WEEK'S SINGLE PRIORITY
+[The one thing that matters most next week 
+based on this week's evidence. Specific.]
+
+## RECOMMENDED CLAUDE.MD UPDATES
+[Any changes to strategic priorities, active 
+theses, or known patterns that this week's 
+data supports]
+---
+Workflow 7: The Pattern Detector
+This workflow runs monthly and identifies recurring patterns across all business intelligence accumulated in the vault.
+N8N structure:
+Schedule Trigger (1st of month 8AM)
+    ↓
+Read All Files → 01-INTELLIGENCE/ (all subdirectories)
+    ↓
+Read All Files → 02-OPERATIONS/reviews/ (last 4 weeks)
+    ↓
+HTTP Request → Claude API
+    ↓
+Write Binary File → 05-OUTPUTS/syntheses/[DATE]-patterns.md
+    ↓
+HTTP Request → Claude API (CLAUDE.md update recommendations)
+    ↓
+Telegram Node → monthly pattern report ready
+The Claude prompt:
+Identify genuine business patterns from this 
+month's accumulated intelligence.
+
+All business intelligence from past 30 days:
+{{ $node["Intelligence"].json.content }}
+
+Weekly reviews from past 4 weeks:
+{{ $node["Reviews"].json.content }}
+
+Current CLAUDE.md: {{ $node["CLAUDE.md"].json.content }}
+
+A pattern requires evidence from at least 3 
+separate intelligence inputs. Not the same topic 
+mentioned multiple times. A structural similarity 
+across different types of data.
+
+Pattern types to look for:
+
+CUSTOMER PATTERN: Something appearing consistently 
+across multiple customer interactions.
+
+COMPETITIVE PATTERN: A trend in competitor behavior 
+across multiple monitoring cycles.
+
+OPERATIONAL PATTERN: Something about how the business 
+operates that consistently appears in meeting notes 
+or reviews.
+
+DECISION PATTERN: A type of decision that keeps 
+appearing suggesting a recurring unresolved issue.
+
+For each pattern:
+
+PATTERN NAME: [Short memorable name]
+EVIDENCE: [Specific sources that demonstrate it — minimum 3]
+IMPLICATION: [What this pattern means for the business]
+RECOMMENDED ACTION: [What to do about it]
+THESIS IMPACT: [Does this confirm, challenge, or 
+create an active thesis in CLAUDE.md?]
+
+At the end recommend specific updates to the 
+Known Patterns section of CLAUDE.md based on 
+confirmed patterns.
+Workflow 8: The Financial Intelligence Tracker
+This workflow monitors your financial data and deposits structured intelligence into the vault weekly.
+N8N structure:
+Schedule Trigger (Friday 6PM)
+    ↓
+HTTP Request → Stripe API (week's revenue data)
+    ↓
+HTTP Request → Accounting Software API (expense data)
+    ↓
+Read All Files → 03-FINANCIAL/ (recent entries)
+    ↓
+HTTP Request → Claude API
+    ↓
+Write Binary File → 03-FINANCIAL/[DATE]-financial-intel.md
+The Claude prompt:
+Analyze this week's financial data and produce 
+intelligence for the business brain.
+
+Current week revenue data: {{ $node["Stripe"].json.data }}
+Current week expenses: {{ $node["Accounting"].json.data }}
+Recent financial notes: {{ $node["Financial History"].json.content }}
+CLAUDE.md context: {{ $node["CLAUDE.md"].json.content }}
+
+Produce financial intelligence note:
+
+---
+type: financial-intel
+date: [TODAY]
+week: [WEEK NUMBER]
+---
+
+# Financial Intelligence — Week [N]
+
+## Revenue Summary
+[Week's revenue with context vs recent trend]
+
+## Expense Summary  
+[Week's expenses with any anomalies flagged]
+
+## The Number That Matters Most
+[The single most important financial signal 
+from this week and what it indicates]
+
+## Trend Analysis
+[Compare to previous weeks in vault history.
+Is the trend positive, negative, or flat?]
+
+## Pattern Signal
+[Any financial pattern emerging across 
+the last 3-4 weeks worth naming?]
+
+## Strategic Implication
+[What does this week's financial data mean 
+for the business's strategic priorities in CLAUDE.md?]
+Connecting the Workflows Into a System
+Eight workflows running independently produce useful outputs. Eight workflows sharing a common knowledge layer and building on each other's outputs produce compounding intelligence.
+Three design principles that make the system compound:
+Principle 1: Everything reads CLAUDE.md
+Every workflow starts by reading the business CLAUDE.md. This means every output is grounded in current business context rather than generic intelligence. The morning brief knows your actual projects. The customer intelligence knows your active theses. The pattern detector knows your current strategic priorities.
+Principle 2: Significant outputs update CLAUDE.md
+The weekly review and monthly pattern detector both generate CLAUDE.md update recommendations. Apply the recommendations manually at first. After you trust the outputs apply them automatically.
+Over time CLAUDE.md becomes a living document that reflects the accumulated intelligence of every workflow that has run. The business brain learns.
+Principle 3: Outputs reference each other
+The weekly review reads the daily briefs. The monthly pattern detector reads the weekly reviews. The morning brief references the competitive intelligence. Each layer of output is more intelligent than the previous because it has more context to draw on.
+What the Business Brain Knows at Month 6
+Month one: Eight workflows running. The daily brief is useful. Customer intelligence is structured consistently. Decisions are being logged. The weekly review produces better summaries than you would write manually.
+Month two: The pattern detector runs for the first time with meaningful data. It finds two patterns across customer intelligence and meeting notes that you hadn't consciously identified. The decision reviewer surfaces three decisions that passed their review date without being assessed.
+Month three: The competitive intelligence layer has accumulated twelve monitoring cycles. The vault knows which competitors are actively developing and which are stagnant. The morning brief references this automatically.
+Month four: The CLAUDE.md has been updated four times based on workflow recommendations. The Known Patterns section has six confirmed patterns. The Active Theses section reflects intelligence gathered from actual business data rather than initial assumptions.
+Month six: The business brain has processed hundreds of customer interactions, dozens of competitive monitoring cycles, weeks of meeting notes, and months of financial data. The patterns it surfaces are grounded in genuine accumulated evidence. The morning brief is more accurate than any manually compiled report because it draws on the full six months of context simultaneously.
+The system doesn't just automate information processing.
+It builds a memory of your business that compounds every week you operate.
+And unlike the information in your head, the inbox you can't find, and the meeting notes nobody reads again, this memory never degrades. It never forgets. It surfaces the right intelligence at the right moment because it has been accumulating the right intelligence every day you ran the business.
+Build the vault structure this weekend. Configure the Claude API node. Build the morning brief workflow first and run it for a week. Add the remaining workflows one per week over the following two months.
+The business brain compounds from the first workflow that runs.

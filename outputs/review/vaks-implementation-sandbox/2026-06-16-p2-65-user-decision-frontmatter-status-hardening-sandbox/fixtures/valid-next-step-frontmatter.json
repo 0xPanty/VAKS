@@ -1,0 +1,9 @@
+{
+  "fixture_id": "valid-next-step-frontmatter",
+  "document": "---\nslice_id: sample\nstatus: pass_product_grade_pending_next_slice\n---\n\n# Next Step\n\nReady to start the next sandbox slice only.",
+  "expected": {
+    "valid": true,
+    "status": "pass_product_grade_pending_next_slice",
+    "body_status_ignored": false
+  }
+}

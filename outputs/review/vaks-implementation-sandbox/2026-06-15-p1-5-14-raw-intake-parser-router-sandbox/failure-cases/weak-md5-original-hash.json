@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "weak-md5-original-hash",
+  "expected_valid": false,
+  "expected_codes": ["RP_WEAK_HASH"],
+  "patch": {"original": {"sha256": "md5:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "hash_algorithm": "md5"}}
+}

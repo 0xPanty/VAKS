@@ -1,0 +1,9 @@
+{
+  "fixture_id": "allowed-sidecar-continuation",
+  "expected_decision_allowed_now": {
+    "continue_with_sidecar_recloseout": true,
+    "request_explicit_old_file_status_normalization_approval": false,
+    "do_not_claim_all_old_files_strict_complete": true,
+    "do_not_merge_mainline": true
+  }
+}

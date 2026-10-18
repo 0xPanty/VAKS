@@ -1,0 +1,11 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "question-creates-authority",
+  "expected_valid": false,
+  "expected_codes": ["US_QUESTION_CREATES_AUTHORITY"],
+  "patch": {
+    "user_questions": {
+      "where_put_this": {"surface_ref": "entry_matrix", "answer_source": "entry.boundary_label", "creates_authority": true}
+    }
+  }
+}

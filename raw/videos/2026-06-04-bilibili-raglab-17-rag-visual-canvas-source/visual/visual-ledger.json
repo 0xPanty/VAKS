@@ -1,0 +1,23 @@
+[
+  {
+    "time": "2026-06-04T12:37:49Z",
+    "method": "public_playurl_video_api",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "code": 0
+  },
+  {
+    "time": "2026-06-04T12:38:53Z",
+    "method": "download_public_video",
+    "status": "ok",
+    "cookies_used": false,
+    "cloud_api_used": false,
+    "video_id": 16,
+    "mirror_index": 0,
+    "bytes": 11207627,
+    "sha256": "b6c8fd4f9e968bd015fc8cb57ba40aa842494f1ae0945a9bfd172af8c7704c98",
+    "elapsed_seconds": 64.03,
+    "media_path": "C:\\Users\\Administrator\\.codex\\video-research\\20260604-BV1iSVG6eEsj\\visual-vaks\\video-16-0.m4s"
+  }
+]

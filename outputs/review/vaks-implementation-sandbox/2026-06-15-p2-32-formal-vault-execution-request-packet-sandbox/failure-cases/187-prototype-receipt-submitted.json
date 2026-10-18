@@ -1,0 +1,13 @@
+{
+  "case_id": "prototype-receipt-submitted",
+  "description": "Prototype receipt says submitted.",
+  "expected_errors": [
+    "prototype_receipt_flag_not_false:packet_submitted_to_gate"
+  ],
+  "prototype_tamper": {
+    "kind": "receipt_update",
+    "updates": {
+      "packet_submitted_to_gate": true
+    }
+  }
+}

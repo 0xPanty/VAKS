@@ -1,0 +1,186 @@
+leopardracer
+@leopardracer
+Hermes Agent Just Changed Local AI Forever: Here's How to Run It Yourself
+Here’s what changed, why it matters, and the complete step-by-step guide to running Hermes Agent on your own computer in about 30 minutes.  
+
+In May NVIDIA published a blog post that should be making more noise than it is.
+The headline is about hardware Hermes Agent running on RTX PCs and the new DGX Spark workstation. The actual story underneath is something much bigger.
+
+Three things just converged that, taken together, change what’s possible:
+Hermes Agent (Nous Research) an open-source agent framework that creates and refines its own skills from experience. Crossed 140,000 GitHub stars in three months. Now the most-used agent in the world, according to OpenRouter.
+Qwen 3.6 (Alibaba) a new open-weight model where the 35B version outperforms last year’s 120B models, and the 27B matches what used to require 400B parameters. Runs on roughly 20GB of memory.
+DGX Spark (NVIDIA) a desk-sized workstation with 128GB unified memory and 1 petaflop of AI performance. Purpose-built to run agents continuously, 24/7, locally.
+Pair these three and you get a personal AI agent that lives on your desk (not in a data center), runs continuously (not session-by-session), learns from your workflows and accumulates capability, never sends your data anywhere, and costs roughly $0/month to operate after the hardware.
+The conversation about “where AI is going” usually assumes the answer is cloud. This is the first credible answer that says: actually, maybe not.
+This article covers two things: (1) why Hermes specifically matters what’s structurally different about it from every other agent framework you’ve heard of, and (2) the complete, current step-by-step guide to running it yourself on your own machine in about 30 minutes.
+If you only want the setup steps, jump to the “How to actually run it” section. If you want the why first the part that makes the setup worth doing read on.
+What Hermes actually does (the part that matters)
+Most “AI agents” you’ve heard about are wrappers around an LLM call. You give them a task, they do it, you give them another task, they start from scratch. They forget what worked yesterday. They don’t get better. They’re useful, but they’re not really agents in any meaningful sense they’re functions with personalities.
+Hermes is different in a specific, technical way: it writes its own skills.
+When Hermes completes a complex task say, “research five competitors and produce a comparison” it doesn’t just hand you the output. It saves the procedure as a skill file on disk. Next time you ask for something similar, it doesn’t start over. It opens its own skill, runs it, and improves it based on what worked and what didn’t.
+This isn’t a marketing claim. Nous Research ships infrastructure that uses DSPy + GEPA (Genetic-Pareto Prompt Evolution) to automatically optimize Hermes’s own skills, tool descriptions, and system prompts. Mutations get evaluated. The best ones get promoted. The improvements are measurable.
+Independent benchmarks back this up: agents running on Hermes with 20+ self-created skills complete similar future tasks roughly 40% faster than fresh instances. That’s not “40% better output.” That’s “40% less time and tokens to get the same result.”
+The key word in the architecture is persistent. Hermes runs continuously on your laptop, on a server, on DGX Spark and its memory and skills accumulate. After a month of use, your Hermes is genuinely different from anyone else’s. It knows your codebase. It knows your conventions. It knows how you like things explained.
+Visually, the difference looks like this:
+Top: a typical chatbot loses everything between sessions. Bottom: Hermes writes skills from experience and builds memory of your patterns. Capability compounds.
+There’s also a memory architecture worth mentioning: Hermes uses a three-layer system. Persistent notes (your preferences, project conventions, who’s who in your work life), searchable session history (everything that’s happened, indexed for retrieval), and procedural skills (the actual learned workflows). This three-layer model is what other frameworks have been trying to nail down for two years. Hermes shipped one that works.
+How Hermes is built
+Here’s the architecture in one picture:
+You talk to Hermes through the CLI or messaging gateways. Hermes orchestrates the work planning, calling tools, writing skills and calls a local model server for inference. Everything persists to ~/.hermes/ on your disk.
+The three things to notice in the diagram:
+One: the local model server is a separate piece from Hermes itself. Hermes is the orchestration layer the planner, tool runner, and skill writer. The model (Qwen 3.6 in the recommended setup) does the actual thinking. They’re connected via an OpenAI-compatible API on localhost.
+Two: the skills and memory live in ~/.hermes/. Plain markdown files on disk. You can read them. You can edit them. You can back them up. When Anthropic, OpenAI, or any other company changes their terms tomorrow, none of this changes it’s yours.
+Three: the gateways are optional but transformative. Once you connect Hermes to Telegram or Slack, you stop thinking of it as “a CLI thing on my laptop” and start thinking of it as “my personal AI that I can text from anywhere.”
+Why Qwen 3.6 makes this possible
+Here’s the part that gets lost in the announcement: Hermes is model-agnostic. You can point it at GPT, Claude, or any local model. But there’s a reason NVIDIA’s blog post pairs it with Qwen 3.6 specifically.
+Until very recently, running serious agentic workflows locally meant accepting one of two compromises:
+Use a small fast model and watch the agent fumble multi-step tasks
+Use a big smart model and accept that one inference cycle takes 90 seconds
+Qwen 3.6 changed the math. The 35B model outperforms previous-generation 120B parameter models at roughly one-third the memory footprint. The 27B dense model matches the accuracy of older 400B parameter models. We’re talking about a 16x improvement in efficiency per intelligence unit in less than a year.
+What that means in practice: a model smart enough to plan, decompose tasks, write its own skills, and self-correct now fits in 20GB of memory. That’s a high-end consumer GPU. It’s also exactly what a single DGX Spark holds comfortably with room left over for the agent itself.
+This is the gap that closed. Last year, “self-improving local agent” required data center hardware. This year, it doesn’t.
+What this means for normal people
+Most coverage of this announcement is treating it as enterprise news. It’s not. It’s consumer infrastructure news. Here’s what it means depending on who you are.
+If you’re a knowledge worker: Within 12 months, you’ll be choosing between subscribing to a cloud agent service ($30/month?) and running a comparable local agent on your own hardware ($0 ongoing after setup). For privacy-sensitive work consulting, healthcare, finance, legal it’s becoming the obvious choice.
+If you’re a developer: Hermes is open source under MIT license. You can install it today on your existing laptop and pair it with LM Studio or Ollama running Qwen 3.6. No DGX Spark required. The hardware question is about quality of life, not capability. Start with what you have.
+If you’re a founder or operator: This puts pressure on the entire SaaS agentic market. Tools selling “AI-powered X” at $20/month now compete with a local agent that does the same thing for free. The defensible SaaS plays are the ones with networks, data, or workflows that can’t be replicated locally. The vulnerable ones are the ones that are just “Claude with a coat of paint.”
+If you’re in security or regulated industries: The data-sovereignty story for AI just got vastly stronger. Telling someone “you can’t use AI for this work because it sends data to OpenAI” stops being a constraint when a comparable agent runs entirely on-premises.
+Now the part most coverage skips. How to actually run this yourself.
+How to actually run it (the complete setup)
+NVIDIA’s blog post says “Visit the GitHub repo, pair it with a local model, you’re good to go.” That sentence skips over about six real decisions and three potential pitfalls. Here’s the actual setup, in plain English, with the gotchas called out.
+What you’ll need
+Honest hardware reality before you start. Hermes can run with a remote API (Anthropic, OpenAI, OpenRouter, Nous Portal), but that defeats most of the point. For the local-only setup this guide focuses on:
+Your hardware - Realistic experience
+8GB RAM, integrated graphics - Will struggle. Use cloud API instead.
+16GB RAM, mid-range GPU (RTX 3060/4060) - Works with smaller models. Slower but usable.
+MacBook Pro M3/M4 with 32GB+ unified memory - Runs Qwen 3.6 27B smoothly. Genuinely productive.
+Desktop with RTX 3090/4090 - The sweet spot. Run Qwen 3.6 35B at near-cloud quality.
+NVIDIA DGX Spark or RTX PRO workstation - What the NVIDIA post is selling. Overkill for most.
+The honest line: if you can run Qwen 3.6 27B or larger locally, you’ll have a great Hermes experience. If you can’t, use the cloud API path (which is dramatically simpler). Skip to the Cloud API section at the end if that’s your path.
+You also need:
+macOS, Linux, or Windows 11 with WSL2 (Hermes requires a Unix environment; Windows users run it inside WSL2)
+At least 20 GB of free disk space for the model
+30 minutes of uninterrupted time
+Step 1. Install your local model server (15 minutes)
+The most non-technical path is LM Studio. The most technical path is Ollama. Both work. Pick one.
+Option A LM Studio (recommended for non-developers)
+and download the installer for your OSGo tolmstudio.ai
+Install it like any other app
+Open LM Studio and go to the Discover tab
+Search for Qwen 3.6 27B (or 35B if your hardware can handle it)
+Pick the Q4 quantization version it’s the sweet spot of size and quality
+Click Download. Wait 10-15 minutes
+Once downloaded, switch to the Developer tab (called “Local Server” on older versions)
+Click Load Model and pick the Qwen 3.6 model you just downloaded
+Important: in settings, enable “Serve on Network” (otherwise WSL2 users can’t reach it)
+Click Start Server by default it runs on
+http://localhost:1234
+Verify it’s working: open your browser, go to http://localhost:1234/v1/models. You should see a JSON response listing your loaded model.
+Option B Ollama (recommended for developers)
+and download the installerGo toollama.com
+Install
+Open a terminal and run:
+ollama pull qwen3.6
+ollama serve
+This starts Ollama on port 11434 and pulls down the Qwen 3.6 model
+Critical Ollama setting that trips up everyone: Ollama defaults to very low context window (often 4K tokens). Hermes needs at least 64K. Set this before running:
+export OLLAMA_HOST=0.0.0.0
+ollama run qwen3.6 -c 65536
+The -c 65536 sets the context to 64K. Without this, Hermes will reject the model at startup because the system prompt + tool schemas alone fill the smaller window.
+Step 2. Install Hermes Agent (5 minutes)
+Hermes ships a one-line install script. From your terminal:
+GitHub → NousResearch/hermes-agent → scripts/install.sh
+If you’re on Windows, run this from inside WSL2 (open Ubuntu/Debian from your Start menu first).
+The script:
+Downloads the Hermes CLI to your machine
+Sets up a local data directory (typically ~/.hermes/)
+Installs required dependencies (Node.js, etc.) if you don’t have them
+When it finishes, reload your shell:
+source ~/.bashrc   # or ~/.zshrc, depending on your shell
+Verify the install:
+hermes --version
+If you see a version number, you’re good.
+Step 3. Connect Hermes to your local model (5 minutes)
+This is where many setup guides hand-wave. Here’s the exact flow.
+Run:
+hermes model
+You’ll see a menu of providers. Scroll to the bottom and pick “Custom endpoint (self-hosted / vLLM / etc.)”.
+Then:
+URL: If you used LM Studio, enter http://localhost:1234/v1. If you used Ollama, enter http://localhost:11434/v1
+API Key: Press Enter to skip (local servers don’t need one)
+Model name:
+LM Studio: the exact filename of the model you loaded (look in LM Studio’s “My Models” tab)
+Ollama: qwen3.6 (or whatever you pulled)
+That’s it. Hermes is now configured to use your local model.
+Important: the 64K context window requirement
+Hermes requires at least 64K tokens of context. This catches everyone the first time. If you see an error at startup like “Model context too small”, the fix is on the model server side, not the Hermes side:
+LM Studio: When loading the model, expand the advanced settings and set context length to 65536+
+Ollama: Pass c 65536 when running the model
+llama.cpp: Use -ctx-size 65536
+Without this, nothing else will work. Don’t skip it.
+Step 4. Run your first Hermes session (5 minutes)
+In your terminal:
+hermes
+This starts the interactive Hermes session. The first time you run it, Hermes asks a few onboarding questions confirm your model selection, optionally connect a gateway (Telegram, Discord, Slack, etc.; you can skip for now), and you’re in.
+Try a first task that exercises Hermes’s actual capabilities:
+“Research the current state of agentic AI frameworks in 2026, focusing on the open-source ecosystem. Save what you learn as a skill so we can build on it next time.”
+Watch what happens. Hermes will:
+Decompose the question into sub-tasks
+Spawn sub-agents for parallel work where useful
+Search the web, read sources, synthesize
+Produce a structured response
+Save the underlying procedure as a skill on disk visible at ~/.hermes/skills/
+That last step is what makes Hermes different from a chatbot. Next time you ask Hermes to do a related research task, it will find and reuse the skill it just created.
+Type /exit when you’re done.
+Step 5. Verify the magic actually happened
+Hermes’s value proposition is the self-improving loop. Verify it’s working:
+ls ~/.hermes/skills/
+You should see one or more .md files these are Hermes’s learned procedures. Open one in any text editor. You’ll see a structured workflow with steps, tools used, and notes on what worked.
+This is the killer feature. After a month of use, this directory will have 20-50 skills, each one capturing how Hermes learned to do a specific kind of task for you. Those skills make every subsequent task faster and more accurate.
+The “deepening model of who you are” mentioned in NVIDIA’s post lives in ~/.hermes/memory/ your preferences, your projects, your recurring patterns. Open these files too. They’re plain markdown. You can read and edit them yourself if you want.
+Optional Connect a gateway
+The under-mentioned feature: Hermes can be reached from messaging apps. Run:
+hermes gateway
+You’ll see options for Telegram, Discord, Slack, WhatsApp, Signal, and email.
+The easiest to set up is Telegram:
+In Telegram, search for @BotFather and create a new bot. It gives you a token.
+Paste the token when Hermes asks for it.
+Done. You can now message your bot from Telegram and Hermes will respond running locally on your machine, using your local model.
+This is the moment the setup stops feeling like “a CLI thing on my computer” and starts feeling like “my personal AI.” You can text it from your phone while your laptop sits at home doing the work.
+What can go wrong (the 5 most common setup issues)
+Issue 1: “Model context too small” error at startup. Fix: Set context to at least 64K on your model server (see Step 3). This is the single most common failure.
+Issue 2: Hermes can’t connect to your local model. Fix: Confirm your model server is running and accessible. Test with curl <http://localhost:1234/v1/models> (LM Studio) or curl <http://localhost:11434/v1/models> (Ollama). If you get JSON back, the server is fine re-check your Hermes URL configuration.
+Issue 3: WSL2 can’t reach a Windows-host model server. Fix: On Windows 11 22H2+, enable WSL2 mirrored networking mode. Or run your model server inside WSL2 instead of on the Windows host.
+Issue 4: Hermes is slow. Fix: Almost certainly the model, not Hermes. Try a smaller model (Qwen 3.6 8B instead of 35B) or a more aggressive quantization (Q4 instead of Q6). If you’re CPU-only, expect slowness this is a workload that wants a GPU.
+Issue 5: Hermes “forgets” things between sessions. Fix: Check that ~/.hermes/ actually has files in it. If it’s empty, your install didn’t complete properly. Re-run the install script.
+The cloud API shortcut (if your hardware can’t handle local)
+If your machine genuinely can’t run a 27B+ model and you still want to try Hermes:
+Skip Steps 1, 3, and the “context” notes
+After installing Hermes (Step 2), run hermes model
+Choose a cloud provider OpenRouter, Nous Portal, or Anthropic are the smoothest
+Add your API key
+The rest of the setup is the same Hermes still runs locally on your machine, it just calls a cloud model for the thinking
+This costs per-token rather than $0, but it gets you the agent experience (memory, skills, self-improvement) on hardware that can’t run the models locally.
+The honest concerns
+Three things to think about before you assume this changes everything overnight.
+Self-improving has failure modes. The same loop that makes Hermes better can make it weirder. An agent that optimizes its own prompts can quietly drift away from your actual goals. Nous Research ships guardrails regression tests, evaluation gates, “block bad mutations” workflows but those guardrails require active maintenance. If you deploy Hermes and stop watching, you may not notice when it starts being subtly wrong.
+Security is a real question. Agents that write their own skills, install MCP servers, and execute code on your machine are a new attack surface. Skill poisoning, prompt injection through fetched content, malicious tools these are not theoretical concerns. Treat the agent like executable software, not a friendly assistant.
+The hardware story is still rough at the edges. DGX Spark is a real product, but it’s also expensive, supply-constrained, and most reviewers haven’t gotten their hands on one yet. The Hermes-on-laptop story is fine today; the Hermes-on-DGX-Spark story will take a quarter to mature.
+None of these undermine the bigger thesis. They’re just the asterisks every honest practitioner should know.
+What I’d actually do this weekend
+If you’re new to Hermes and have decent hardware, here’s the path I’d take:
+Install LM Studio + Qwen 3.6 27B 15 minutes
+Install Hermes 5 minutes
+Configure Hermes for LM Studio 5 minutes
+Set context window to 65536 (the gotcha) 1 minute
+Run your first task 5 minutes
+Then ignore everything else for a week. Use Hermes daily for actual work. Watch the skills directory fill up.
+Don’t try to optimize, customize, or add gateways yet. The whole point of Hermes is the self-improvement loop and that only kicks in if you actually use it for real tasks over time. Spend your first week using it, not tuning it.
+By week two, you’ll know whether this is the agent framework that changes how you work, or whether your hardware/use case is a poor fit. Both outcomes are useful data.
+The bigger picture
+For two years, the dominant narrative has been: AI gets better by getting bigger, and bigger means cloud. The implication is that serious AI lives somewhere else, and your job is to call out to it.
+Hermes + Qwen 3.6 + DGX Spark is the first credible counter-narrative. Serious AI can live on your desk. It can improve itself. It can run continuously. It can know things about you that you’d never put in a cloud system. The compromises that used to make local AI a hobbyist project slower, dumber, fiddlier are evaporating quarter by quarter.
+This doesn’t kill cloud AI. The frontier models will keep living in data centers. The hardest reasoning will still happen at scale. But for the 80% of agentic work that’s pattern-following, workflow execution, and context retention that’s moving onto your machine.
+Which means a lot of things change downstream. The competitive moat for “AI-powered SaaS” gets thinner. The data-sovereignty story for enterprises gets easier. The privacy floor for individuals gets higher. The cost of running an agent goes from “per request” to “amortized over hardware you already own.”
+This announcement is a single data point. But the trajectory it sits on is the most important one in agentic AI right now and almost nobody outside Hacker News is reading it that way.
+That’s the part nobody’s telling you.

@@ -1,0 +1,16 @@
+{
+  "fixture_id": "safe-next-work-without-old-writes",
+  "expected_allowed_next_work": [
+    "sandbox_only_gap_ledgers",
+    "sandbox_only_operator_surfaces",
+    "sandbox_only_product_screens",
+    "wait_for_exact_p2_75_approval_phrase"
+  ],
+  "expected_forbidden_next_work": [
+    "old_slice_status_normalization_from_generic_continuation",
+    "mainline_merge",
+    "promotion",
+    "templates_tools_edit",
+    "obsidian_sync"
+  ]
+}

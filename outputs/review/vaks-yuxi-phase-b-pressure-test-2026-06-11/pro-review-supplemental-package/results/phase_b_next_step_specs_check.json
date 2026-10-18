@@ -1,0 +1,24 @@
+{
+  "next_step_specs_check_status": "pass",
+  "error_count": 0,
+  "errors": [],
+  "files": {
+    "files": [
+      {
+        "path": "PHASE_B_EXTERNAL_VALIDATION_NEXT_STEPS.md",
+        "exists": true,
+        "bytes": 5044
+      },
+      {
+        "path": "PHASE_B_EXTERNAL_BLIND_QUERY_SET_KIT.md",
+        "exists": true,
+        "bytes": 2434
+      },
+      {
+        "path": "PHASE_B_READ_ONLY_ANSWER_LOOP_PILOT_SPEC.md",
+        "exists": true,
+        "bytes": 3134
+      }
+    ]
+  }
+}

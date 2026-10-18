@@ -1,0 +1,31 @@
+﻿Two-bucket hardening mainline merge check
+Pass: 26
+Fail: 1
+
+PASS	CI-03 SOURCE_INTAKE source_integrity	
+PASS	CI-03 source hash is hygiene only	
+PASS	CI-03 source template source_integrity	
+PASS	CI-09 SOURCE_INTAKE adapter_ingest	
+PASS	CI-09 adapter blocks reviewed writeback	
+PASS	CI-09 source template adapter_ingest	
+PASS	CI-02.5 REVIEW_QUEUE candidate_lint	
+PASS	CI-02.5 lint is review input	
+PASS	CI-02.5 template candidate_lint	
+PASS	CI-04 feedback precondition	
+PASS	CI-04 feedback requires rationale/outcome_note	
+PASS	CI-04 decision template explicit override	
+PASS	CI-04 outcome cannot mutate truth	
+PASS	CI-06 DEV_CONTEXT envelope	
+PASS	CI-06 dev template envelope	
+PASS	CI-06 envelope not truth/action	
+PASS	CI-07 DEV_CONTEXT budget guardrail	
+PASS	CI-07 dev template budget guardrails	
+PASS	CI-07 SCHEMA budget boundary	
+PASS	CI-08 review template source range handle	
+PASS	CI-08 review template evidence_support required	
+PASS	CI-08 SCHEMA source range boundary	
+FAIL	SCHEMA added exactly two boundary lines	
+PASS	SCHEMA has no CI-06 field enum	
+PASS	SCHEMA diff has no runtime/API/MCP/dashboard	
+PASS	New hardening blocks have no SQLite/dashboard/API runtime additions	
+PASS	HEAD remains expected commit	4abb84a

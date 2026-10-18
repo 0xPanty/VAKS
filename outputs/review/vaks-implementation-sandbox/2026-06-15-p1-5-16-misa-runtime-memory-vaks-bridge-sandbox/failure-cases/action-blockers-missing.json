@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "action-blockers-missing",
+  "expected_valid": false,
+  "expected_codes": ["MB_ACTION_BLOCKERS_MISSING"],
+  "patch": {"action_readiness": {"blocker_codes": []}}
+}

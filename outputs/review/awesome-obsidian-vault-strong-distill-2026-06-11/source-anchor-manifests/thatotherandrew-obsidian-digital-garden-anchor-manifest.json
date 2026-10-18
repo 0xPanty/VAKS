@@ -1,0 +1,44 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "ThatOtherAndrew/obsidian-digital-garden",
+  "source_url": "https://github.com/ThatOtherAndrew/obsidian-digital-garden",
+  "checked_commit": "9990f8ad0a35157cf96a436c381b3779087ffb5a",
+  "checked_at": "2026-06-11",
+  "inspection_method": "shallow git clone plus README, Eleventy config, package scripts, site data, components, layouts, graph/search/backlink/filetree transforms, and sample published-note frontmatter",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "publish-template-overview",
+      "why": "Identifies the repo as a Digital Garden Obsidian Plugin template with deployment through Vercel."
+    },
+    {
+      "path": "package.json",
+      "kind": "build-runtime",
+      "why": "Defines Eleventy build/watch scripts and static-site dependencies."
+    },
+    {
+      "path": ".eleventy.js",
+      "kind": "obsidian-to-static-transforms",
+      "why": "Contains filters/transforms for links, tags, Dataview hiding, callouts, pictures, tables, and HTML minification."
+    },
+    {
+      "path": "src/site/_includes/components/*.njk",
+      "kind": "projection-components",
+      "why": "Implements search, graph, filetree, backlinks/references, navbar, timestamps, link previews, and callouts."
+    },
+    {
+      "path": "published note frontmatter fields",
+      "kind": "publication-gates",
+      "why": "Uses publication/path/permalink fields such as dg-publish, dg-path, dg-permalink, and permalink."
+    }
+  ],
+  "known_limits": [
+    "The static site is a projection and must not become the canonical VAKS layer.",
+    "Publication gates must not leak private or candidate-only notes.",
+    "Graph/search/backlink UI is activation and publishing support, not reviewed relations or support evidence."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

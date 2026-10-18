@@ -1,0 +1,15 @@
+{
+  "fixture_id": "legacy-status-normalization-candidate",
+  "statuses": {
+    "verification": "local_verification_passed",
+    "reviewer": "review_pass_no_blocker",
+    "boundary": "pass_boundary",
+    "product": "pass_product_grade_round_2",
+    "next_step": "pending_product_acceptance"
+  },
+  "expected": {
+    "product_acceptance_evidence": true,
+    "current_strict_final_gate": false,
+    "recommendation": "user_approved_status_normalization_candidate"
+  }
+}

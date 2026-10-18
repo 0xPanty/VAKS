@@ -1,0 +1,11 @@
+{
+  "case_id": "future-result-record-contract",
+  "required_keys": [
+    "blockers",
+    "boundary_verdict",
+    "raw_conclusion_token",
+    "raw_response_path",
+    "reviewed_evidence"
+  ],
+  "passed": true
+}

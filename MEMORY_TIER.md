@@ -103,6 +103,13 @@ warm does not mean verified
 cold does not mean useless
 ```
 
+Retrieval activation is not truth.
+
+Vector similarity, graph-neighborhood hits, rerank score, repeated retrieval,
+and evaluation score may improve routing or create review_due pressure only.
+They must not automatically create a queue item, evidence support, truth
+confidence, reviewed relation, action readiness, or action basis.
+
 ## 3. Base Tiers
 
 ### hot

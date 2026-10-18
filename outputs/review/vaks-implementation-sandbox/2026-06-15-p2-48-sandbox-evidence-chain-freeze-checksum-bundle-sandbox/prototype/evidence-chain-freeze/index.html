@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evidence Chain Freeze</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f8fafc; color: #1f2933; }
+    main { max-width: 980px; margin: 0 auto; padding: 28px 18px 44px; }
+    h1 { margin: 0 0 8px; font-size: 28px; }
+    .summary { color: #526273; max-width: 820px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 18px; background: #fff; border: 1px solid #d9e1ec; }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #e6edf5; }
+    .notice { margin-top: 16px; border-left: 4px solid #2f6fed; background: #edf4ff; padding: 12px 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Evidence Chain Freeze</h1>
+    <p class="summary">sandbox checksum drift detector only. Source slices 4; tracked files 31; missing files 0; not re-acceptance; not action basis.</p>
+    <table>
+      <thead><tr><th>Signal</th><th>Value</th></tr></thead>
+      <tbody><tr><td>source_slice_count</td><td>4</td></tr>
+<tr><td>tracked_file_count</td><td>31</td></tr>
+<tr><td>missing_file_count</td><td>0</td></tr>
+<tr><td>report_status_mismatch_count</td><td>0</td></tr>
+<tr><td>all_sources_present</td><td>True</td></tr>
+<tr><td>all_expected_reports_pass</td><td>True</td></tr></tbody>
+    </table>
+    <section class="notice">If drift appears, stop and inspect the changed source slice. No old slice is edited by this bundle.</section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

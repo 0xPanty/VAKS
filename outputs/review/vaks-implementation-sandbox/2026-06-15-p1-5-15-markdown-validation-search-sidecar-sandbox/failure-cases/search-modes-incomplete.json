@@ -1,0 +1,1 @@
+{"extends":"fixtures/valid-frontmatter-validation-check.json","scenario_id":"search-modes-incomplete","expected_valid":false,"expected_codes":["MS_SEARCH_MODES_INCOMPLETE"],"patch":{"search":{"modes":["semantic"]}}}

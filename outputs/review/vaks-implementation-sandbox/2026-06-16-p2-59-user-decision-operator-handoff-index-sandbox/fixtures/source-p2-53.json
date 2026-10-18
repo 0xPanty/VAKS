@@ -1,0 +1,1 @@
+{"fixture_kind":"source_entry_expected","slice_id":"2026-06-16-p2-53-user-response-classifier-dry-run-sandbox","operator_use":"classify A/B/C/D/ambiguous/execution-word replies without action","product_pass":true,"reviewer_pass":true,"boundary_pass":true,"final_gate_declared":true}

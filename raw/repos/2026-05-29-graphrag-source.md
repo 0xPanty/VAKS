@@ -1,16 +1,16 @@
 ---
 type: source
+record_kind: source_card
 status: source-captured
 title: "Microsoft GraphRAG"
 source_id: 2026-05-29-graphrag-source
 source_uri: https://microsoft.github.io/graphrag/index/default_dataflow/
 source_url: https://microsoft.github.io/graphrag/index/default_dataflow/
 source_type: repository-documentation
-version_or_commit: GraphRAG docs and microsoft/graphrag repository checked 2026-05-29
+version_or_commit: GraphRAG docs and microsoft/graphrag repository checked 2026-05-29; strong distillation rechecked 2026-06-14 against upstream HEAD 6d02c2355c3fed4c49007572fbe951d73258a37f
 captured_at: 2026-05-29
 captured_by: Codex
-processing_mode: immediate
-processing_level: heavy
+last_verified: 2026-06-14
 review_priority: normal
 review_owner: Codex
 formalization_status: candidate-generated
@@ -28,6 +28,20 @@ tags:
   - graphrag
   - retrieval-stratification
   - context-activation
+knowledge_status: raw
+processing_tier: heavy
+why_saved: see_body_or_legacy_record
+retrieval_policy:
+  policy_kind: source_identity_only
+  pack_allowed: drilldown_required
+  action_basis_allowed: false
+  warning_code: raw_is_provenance_only
+promotion_gate: none
+action_basis_allowed: false
+truth_mutation_allowed: false
+strong_distillation_ref:
+  - outputs/review/2026-06-14-microsoft-graphrag-strong-distillation.md
+  - outputs/review/vaks-architecture-upgrade-plan-2026-06-13.md#62-microsoft-graphrag-strong-distillation-supplement
 ---
 
 # GraphRAG Source Record
@@ -140,4 +154,37 @@ The intended absorption is intentionally small:
 ```text
 Graph retrieval can organize what gets recalled.
 Review and evidence still decide what can be trusted or used for action.
+```
+
+## 2026-06-14 Strong Distillation Addendum
+
+User requested strong distillation and inclusion in the architecture upgrade
+plan.
+
+Updated strong candidate artifact:
+
+```text
+outputs/review/2026-06-14-microsoft-graphrag-strong-distillation.md
+```
+
+Plan supplement:
+
+```text
+outputs/review/vaks-architecture-upgrade-plan-2026-06-13.md#62-microsoft-graphrag-strong-distillation-supplement
+```
+
+Current upstream check:
+
+```text
+repo: https://github.com/microsoft/graphrag
+HEAD: 6d02c2355c3fed4c49007572fbe951d73258a37f
+package: graphrag 3.1.0
+checked_at: 2026-06-14
+```
+
+Boundary remains unchanged:
+
+```text
+GraphRAG is strong for retrieval and context preparation.
+It is not adopted as VAKS truth, review, relation, or action authority.
 ```

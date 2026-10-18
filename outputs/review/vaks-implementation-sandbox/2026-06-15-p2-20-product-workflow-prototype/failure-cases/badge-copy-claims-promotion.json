@@ -1,0 +1,1 @@
+{"case_id":"badge-copy-claims-promotion","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/steps/3/allowed_user_value","value":"Badge promotion authority is granted."}]}

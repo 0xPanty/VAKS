@@ -1,0 +1,14 @@
+{
+  "fixture_id": "current-strict-pass-no-action",
+  "statuses": {
+    "verification": "local_verification_passed",
+    "reviewer": "review_pass_no_blocker",
+    "boundary": "pass_boundary",
+    "product": "pass_product_grade",
+    "next_step": "pass_product_grade_pending_next_slice"
+  },
+  "expected": {
+    "current_strict_final_gate": true,
+    "recommendation": "no_normalization_needed"
+  }
+}

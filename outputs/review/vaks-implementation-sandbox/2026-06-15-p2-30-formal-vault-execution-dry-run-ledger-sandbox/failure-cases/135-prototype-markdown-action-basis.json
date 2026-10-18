@@ -1,0 +1,12 @@
+{
+  "case_id": "prototype-markdown-action-basis",
+  "description": "Prototype Markdown claims action basis.",
+  "expected_errors": [
+    "prototype_text_authority_confusion:02 Ledger Entries.md:is_action_basis"
+  ],
+  "prototype_tamper": {
+    "kind": "markdown_replace",
+    "file": "02 Ledger Entries.md",
+    "content": "This ledger is action basis."
+  }
+}

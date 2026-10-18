@@ -1,0 +1,42 @@
+[
+  {
+    "failure_id": "reject_body_literal_pass",
+    "risk": "body literal PASS_PRODUCT_GRADE cannot be counted as acceptance",
+    "mutation": {"set_path": {"path": ["parser_contract", "ignore_body_literals"], "value": false}}
+  },
+  {
+    "failure_id": "reject_code_literal_pass",
+    "risk": "builder code strings cannot be counted as report status",
+    "mutation": {"set_path": {"path": ["parser_contract", "ignore_code_literals"], "value": false}}
+  },
+  {
+    "failure_id": "reject_pending_product_as_pass",
+    "risk": "pending Product Acceptance cannot be counted as product grade",
+    "mutation": {"set_path": {"path": ["rules", "pending_product_counts_as_pass"], "value": true}}
+  },
+  {
+    "failure_id": "reject_legacy_variant_as_canonical",
+    "risk": "legacy pass variants must be visible and cannot silently satisfy current strict final gate",
+    "mutation": {"set_path": {"path": ["rules", "legacy_variants_count_as_canonical"], "value": true}}
+  },
+  {
+    "failure_id": "reject_missing_next_step_as_pass",
+    "risk": "Product Acceptance alone is not enough for current strict final-gate closeout",
+    "mutation": {"set_path": {"path": ["rules", "next_step_required_for_canonical"], "value": false}}
+  },
+  {
+    "failure_id": "reject_missing_reviewer_as_pass",
+    "risk": "Reviewer report is required for closeout",
+    "mutation": {"set_path": {"path": ["rules", "reviewer_required_for_canonical"], "value": false}}
+  },
+  {
+    "failure_id": "reject_missing_boundary_as_pass",
+    "risk": "Boundary audit is required for closeout",
+    "mutation": {"set_path": {"path": ["rules", "boundary_required_for_canonical"], "value": false}}
+  },
+  {
+    "failure_id": "reject_index_as_mainline_readiness",
+    "risk": "coverage index cannot approve promotion or mainline merge",
+    "mutation": {"set_path": {"path": ["authority_flags", "mainline_ready"], "value": true}}
+  }
+]

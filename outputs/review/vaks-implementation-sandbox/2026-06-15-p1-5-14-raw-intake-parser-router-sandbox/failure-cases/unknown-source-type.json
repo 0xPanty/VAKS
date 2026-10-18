@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "unknown-source-type",
+  "expected_valid": false,
+  "expected_codes": ["RP_UNKNOWN_SOURCE_TYPE"],
+  "patch": {"original": {"source_type": "spreadsheet"}}
+}

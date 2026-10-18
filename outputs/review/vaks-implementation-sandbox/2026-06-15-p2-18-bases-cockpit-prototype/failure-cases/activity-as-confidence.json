@@ -1,0 +1,1 @@
+{"extends": "fixtures/valid-bases-cockpit.json", "scenario_id": "activity-as-confidence", "expected_valid": false, "expected_codes": ["BC_ACTIVITY_AS_CONFIDENCE"], "allowed_extra_codes": ["BC_AUTHORITY_CONFUSION"], "patch": {"operator_states": {"activity_count_changes_confidence": true}}}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Decision Operator Runbook Dry Run</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 32px; color: #1f2937; background: #f8fafc; }
+    main { max-width: 1080px; margin: 0 auto; }
+    table { width: 100%; border-collapse: collapse; background: #fff; }
+    th, td { border: 1px solid #d1d5db; padding: 8px; text-align: left; }
+    th { background: #e5e7eb; }
+    pre { background: #eef2f7; padding: 12px; overflow-x: auto; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>User Decision Operator Runbook Dry Run</h1>
+  <p>Sandbox-only dry-run runbook. It allows read-only inspection only and requires separate explicit user approval for execution, merge, promotion, sync, commit, push, reviewed knowledge, evidence support, or action basis.</p>
+  <p><strong>Runbook ready:</strong> True<br><strong>Frozen entries:</strong> 268</p>
+  <table><thead><tr><th>Request kind</th><th>Decision</th><th>Manual only</th></tr></thead><tbody><tr><td>inspect_readiness_brief</td><td>ALLOW_READ_ONLY_INSPECTION</td><td>False</td></tr><tr><td>inspect_frozen_handoff_chain</td><td>ALLOW_READ_ONLY_INSPECTION</td><td>False</td></tr><tr><td>manual_drift_check</td><td>ALLOW_MANUAL_READONLY_VERIFICATION</td><td>True</td></tr><tr><td>execute_user_decision_option</td><td>STOP_REQUIRE_SEPARATE_USER_APPROVAL</td><td>False</td></tr><tr><td>merge_mainline</td><td>STOP_REQUIRE_SEPARATE_USER_APPROVAL</td><td>False</td></tr><tr><td>promote</td><td>STOP_REQUIRE_SEPARATE_USER_APPROVAL</td><td>False</td></tr><tr><td>sync_obsidian</td><td>STOP_REQUIRE_SEPARATE_USER_APPROVAL</td><td>False</td></tr><tr><td>commit</td><td>STOP_REQUIRE_SEPARATE_USER_APPROVAL</td><td>False</td></tr><tr><td>push</td><td>STOP_REQUIRE_SEPARATE_USER_APPROVAL</td><td>False</td></tr><tr><td>create_reviewed_knowledge</td><td>STOP_REQUIRE_SEPARATE_USER_APPROVAL</td><td>False</td></tr><tr><td>create_evidence_support</td><td>STOP_REQUIRE_SEPARATE_USER_APPROVAL</td><td>False</td></tr><tr><td>create_action_basis</td><td>STOP_REQUIRE_SEPARATE_USER_APPROVAL</td><td>False</td></tr><tr><td>infer_user_approval</td><td>STOP_REQUIRE_SEPARATE_USER_APPROVAL</td><td>False</td></tr></tbody></table>
+  <h2>Manual verification command</h2>
+  <pre>python -B .\outputs\review\vaks-implementation-sandbox\2026-06-16-p2-60-user-decision-index-freeze-checksum-sandbox\artifact\verify_user_decision_index_freeze_checksum.py --final-gate</pre>
+  <p>This runbook records the command only; it does not run it.</p>
+  <h2>Hard no</h2>
+  <ul><li>do_not_execute_user_decision_option</li><li>do_not_merge_mainline</li><li>do_not_promote</li><li>do_not_sync_obsidian</li><li>do_not_commit</li><li>do_not_push</li><li>do_not_install_dependencies</li><li>do_not_start_background_service</li><li>do_not_install_hooks</li><li>do_not_use_mcp_write_tool</li><li>do_not_create_reviewed_knowledge</li><li>do_not_create_evidence_support</li><li>do_not_create_action_basis</li><li>do_not_collect_user_approval_by_inference</li></ul>
+</main>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "scenario_id": "NEG-07-immediate-write-request",
+  "description": "Even a clean chain reaches prewrite confirmation, not immediate old-file write.",
+  "user_text": "I explicitly approve p2-75 old-file status-only normalization: apply the 75 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only. Do not edit body content, artifacts, tools, templates, wiki truth layers, main architecture docs, README, Obsidian vault, commit, push, or sync.",
+  "immediate_write_requested": true,
+  "expected_gate_state": "blocked_immediate_write_request",
+  "result": {
+    "scenario_id": "NEG-07-immediate-write-request",
+    "description": "Even a clean chain reaches prewrite confirmation, not immediate old-file write.",
+    "approval": {
+      "matched_exact_phrase": true,
+      "approval_class": "exact_p2_75_approval",
+      "fixture_match_is_user_approval": false
+    },
+    "hash_match_count": 75,
+    "hash_target_count": 75,
+    "hash_clean": true,
+    "rehearsal_ok": true,
+    "boundary_ok": true,
+    "blockers": [
+      "blocked_immediate_write_request"
+    ],
+    "gate_state": "blocked_immediate_write_request",
+    "ready_for_prewrite_confirmation": false,
+    "executor_write_allowed_now": false,
+    "old_slice_writes_applied": 0,
+    "requires_stop_before_write": true,
+    "fixture_match_is_user_approval": false
+  }
+}

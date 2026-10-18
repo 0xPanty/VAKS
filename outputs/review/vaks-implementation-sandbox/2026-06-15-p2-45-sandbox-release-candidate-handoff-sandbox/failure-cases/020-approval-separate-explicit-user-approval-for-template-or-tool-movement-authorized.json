@@ -1,0 +1,165 @@
+{
+  "record_kind": "sandbox_release_candidate_handoff",
+  "slice_id": "2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox",
+  "version": "sandbox-release-candidate-handoff-v1",
+  "truth_boundary": "sandbox_release_candidate_handoff_not_release_or_promotion",
+  "purpose": "user and follow-up-agent handoff package for sandbox product-grade evidence",
+  "write_scope": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox/",
+  "view": "release-candidate-handoff",
+  "source_snapshot": {
+    "source_slice_id": "2026-06-15-p2-44-sandbox-evidence-ledger-sandbox",
+    "ledger_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-44-sandbox-evidence-ledger-sandbox/artifact/evidence-ledger.json",
+    "ledger_sha256": "eef7f76e8a6b30503c3ef51c91bb271d2b22fef2d87fe4f31a5c4d83d5f9f954",
+    "product_report_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-44-sandbox-evidence-ledger-sandbox/product-acceptance-report.md",
+    "product_report_sha256": "523d7e0e8bb0cbaa1551bd34cf234db9f4835e73ef79c56f0a1dccbd449e4918",
+    "source_product_status": "pass_product_grade",
+    "source_product_pass_text": true,
+    "source_slice_count": 43,
+    "product_pass_count": 43,
+    "verification_present_count": 43,
+    "original_plan_item_count": 20,
+    "original_plan_product_pass_count": 20,
+    "hardening_slice_count": 23,
+    "plain_answer": {
+      "all_original_plan_items_landed_in_sandbox": true,
+      "all_current_sandbox_slices_product_pass": true,
+      "all_current_sandbox_slices_have_verification": true,
+      "all_current_sandbox_slices_have_reviewer_and_boundary": true,
+      "positive_improvement_supported": true,
+      "enterprise_product_experience": "sandbox_product_grade_operator_experience_not_enterprise_production"
+    },
+    "readiness_flags": {
+      "sandbox_product_grade_evidence_ready": true,
+      "enterprise_production_ready": false,
+      "mainline_ready": false,
+      "formal_vault_ready": false,
+      "reviewed_knowledge_ready": false,
+      "evidence_support_ready": false,
+      "action_basis_ready": false
+    }
+  },
+  "release_candidate_status": "sandbox_release_candidate_only_not_release",
+  "user_readable_answers": [
+    {
+      "id": "what_landed",
+      "label": "What landed?",
+      "answer": "The original P0/P1/P1.5/P2 plan items landed as sandbox artifacts, with additional hardening slices."
+    },
+    {
+      "id": "was_it_tested",
+      "label": "Was it tested?",
+      "answer": "The evidence ledger reports 43 prior sandbox slices with verification evidence and Product PASS."
+    },
+    {
+      "id": "is_it_positive",
+      "label": "Is it a positive improvement?",
+      "answer": "Yes, as sandbox-only improvements supported by sandbox file evidence."
+    },
+    {
+      "id": "is_it_enterprise",
+      "label": "Is it enterprise production?",
+      "answer": "No. It is sandbox product-grade operator experience, not enterprise production readiness."
+    }
+  ],
+  "follow_up_agent_runbook": {
+    "read_first": [
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-44-sandbox-evidence-ledger-sandbox/artifact/evidence-ledger.json",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-44-sandbox-evidence-ledger-sandbox/product-acceptance-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox/handoff-packets/release-candidate-handoff.md"
+    ],
+    "default_verification_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox\\artifact\\verify_release_candidate_handoff.py",
+    "allowed_next_mode": "sandbox_only_or_stop_for_user_approval",
+    "must_not_do": [
+      "mainline_merge",
+      "formal_vault_write_or_sync",
+      "template_or_tool_movement",
+      "commit_or_push",
+      "action_basis_use",
+      "reviewed_knowledge_or_evidence_support_claim",
+      "enterprise_production_claim"
+    ]
+  },
+  "approval_requirements": [
+    {
+      "id": "separate explicit user approval for mainline merge",
+      "required": true,
+      "authorized_now": false
+    },
+    {
+      "id": "separate explicit user approval for formal vault write or sync",
+      "required": true,
+      "authorized_now": false
+    },
+    {
+      "id": "separate explicit user approval for template or tool movement",
+      "required": true,
+      "authorized_now": true
+    },
+    {
+      "id": "separate explicit user approval for commit or push",
+      "required": true,
+      "authorized_now": false
+    },
+    {
+      "id": "separate explicit user approval before using sandbox output as action basis",
+      "required": true,
+      "authorized_now": false
+    }
+  ],
+  "readiness_flags": {
+    "sandbox_release_candidate_handoff_ready": true,
+    "release_approved": false,
+    "enterprise_production_ready": false,
+    "mainline_ready": false,
+    "formal_vault_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false
+  },
+  "operation_performed_flags": {
+    "formal_vault_read": false,
+    "formal_vault_scan": false,
+    "formal_vault_write": false,
+    "formal_vault_hash": false,
+    "formal_vault_snapshot": false,
+    "formal_vault_state_check": false,
+    "obsidian_sync": false,
+    "commit": false,
+    "push": false,
+    "promotion": false,
+    "dependency_install": false,
+    "background_service": false,
+    "mcp_write_tool": false,
+    "hooks": false,
+    "approval_collection": false,
+    "user_instruction_collection": false,
+    "user_wording_storage": false,
+    "command_emitted": false,
+    "execution_permission_granted": false,
+    "execution_performed": false,
+    "action_basis_creation": false,
+    "reviewed_knowledge_creation": false,
+    "evidence_support_creation": false,
+    "mainline_merge": false,
+    "dirty_tree_repair": false,
+    "auto_advance": false
+  },
+  "required_non_claims": [
+    "not release approval",
+    "not promotion approval",
+    "not mainline ready",
+    "not enterprise production ready",
+    "not formal vault approval",
+    "not formal vault state",
+    "not formal vault access",
+    "not Obsidian sync",
+    "not commit",
+    "not push",
+    "not reviewed knowledge",
+    "not evidence support",
+    "not action basis",
+    "not user approval",
+    "not execution permission",
+    "not auto advance"
+  ]
+}

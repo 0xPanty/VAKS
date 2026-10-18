@@ -1,0 +1,65 @@
+{
+  "record_kind": "sandbox_goal_completion_gap_ledger_contract",
+  "slice_id": "2026-06-19-p2-78-goal-completion-gap-ledger-sandbox",
+  "contract_version": "1.0",
+  "expected_summary": {
+    "original_items": 20,
+    "legacy_product_acceptance_evidence_count": 20,
+    "legacy_core_pass_evidence_count": 20,
+    "sidecar_closeout_passed_count": 20,
+    "old_slice_current_strict_final_gate_count": 0,
+    "pending_status_change_count": 75,
+    "preflight_missing_target_count": 0,
+    "preflight_status_mismatch_count": 0,
+    "preflight_rollback_entry_count": 75,
+    "old_slice_writes_applied": 0
+  },
+  "expected_goal_verdict": {
+    "goal_complete_now": false,
+    "completion_state": "not_complete_current_strict",
+    "claim_all_original_20_current_strict_complete_allowed": false,
+    "claim_all_original_20_product_grade_in_legacy_sense_allowed": true,
+    "claim_current_strict_ready_to_merge_allowed": false
+  },
+  "expected_blockers": {
+    "exact_p2_75_approval_required": true,
+    "current_text_matches_exact_approval": false,
+    "generic_language_is_not_approval": true,
+    "executor_write_allowed": false,
+    "future_exact_approval_requires_fresh_preflight": true,
+    "future_exact_approval_requires_boundary_audit": true,
+    "future_exact_approval_requires_stop_before_write": true
+  },
+  "authority_flags": {
+    "gap_ledger_only": true,
+    "old_slice_write_allowed": false,
+    "old_slice_writes_applied": 0,
+    "normalization_applied": false,
+    "approval_collected": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "goal_complete_now": false
+  },
+  "required_fixture_ids": [
+    "current-state-not-complete",
+    "exact-approval-required-before-old-normalization",
+    "strict-complete-claim-rejected",
+    "safe-next-work-without-old-writes",
+    "dirty-tree-baseline-is-not-completion-evidence"
+  ],
+  "required_failure_case_ids": [
+    "GC-FAIL-01-legacy-pass-claimed-current-strict-complete",
+    "GC-FAIL-02-sidecar-closeout-claimed-old-file-normalization",
+    "GC-FAIL-03-p2-75-request-packet-treated-as-approval",
+    "GC-FAIL-04-p2-76-clean-preflight-treated-as-approval",
+    "GC-FAIL-05-p2-77-blocked-gate-ignored",
+    "GC-FAIL-06-generic-continuation-accepted-as-approval",
+    "GC-FAIL-07-dirty-tree-used-as-completion-evidence",
+    "GC-FAIL-08-goal-marked-complete-with-zero-old-strict-final-gates",
+    "GC-FAIL-09-product-grade-claim-without-product-acceptance",
+    "GC-FAIL-10-gap-ledger-creates-mainline-or-action-authority"
+  ]
+}

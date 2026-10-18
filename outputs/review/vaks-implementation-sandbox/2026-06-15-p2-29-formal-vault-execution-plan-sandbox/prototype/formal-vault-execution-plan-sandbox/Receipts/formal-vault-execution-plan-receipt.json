@@ -1,0 +1,32 @@
+{
+  "record_kind": "sandbox_formal_vault_execution_plan_receipt",
+  "slice_id": "2026-06-15-p2-29-formal-vault-execution-plan-sandbox",
+  "source_slice": "2026-06-15-p2-28-formal-vault-execution-preflight-dry-run-sandbox",
+  "generated_at_utc": "2026-06-15T11:06:21+00:00",
+  "formal_vault_accessed": false,
+  "formal_vault_state_inspected": false,
+  "approval_collected_now": false,
+  "actual_user_input_used": false,
+  "real_user_text_stored": false,
+  "execution_performed": false,
+  "write_performed": false,
+  "snapshot_taken": false,
+  "hash_before_collected": false,
+  "hash_after_collected": false,
+  "sync_performed": false,
+  "commit_performed": false,
+  "push_performed": false,
+  "promotion_performed": false,
+  "target_count": 5,
+  "plan_step_count": 9,
+  "plan_hash": "7f1789a98c032b697176acb5bf8b64860cbfccccdf4ba3bbd62398dea4dda08c",
+  "non_claims": [
+    "not actual approval",
+    "not execution readiness",
+    "not formal vault approval",
+    "not action basis",
+    "not reviewed knowledge",
+    "not evidence support",
+    "not a write command"
+  ]
+}

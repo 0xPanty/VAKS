@@ -1,0 +1,38 @@
+{
+  "record_kind": "sandbox_failure_case_matrix",
+  "slice_id": "2026-06-19-p2-75-old-file-status-normalization-approval-request-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "AR-FAIL-01-generic-language-counts-as-approval",
+      "must_fail_when": "generic continuation language counts as explicit old-file edit approval"
+    },
+    {
+      "case_id": "AR-FAIL-02-request-packet-allows-old-writes-now",
+      "must_fail_when": "approval request marks old_slice_write_allowed_now true"
+    },
+    {
+      "case_id": "AR-FAIL-03-change-count-not-75",
+      "must_fail_when": "future allowed change count differs from the p2-72 dry-run manifest"
+    },
+    {
+      "case_id": "AR-FAIL-04-body-edits-allowed",
+      "must_fail_when": "future approval scope allows old file body/content edits"
+    },
+    {
+      "case_id": "AR-FAIL-05-mainline-or-tools-allowed",
+      "must_fail_when": "future approval scope allows mainline, tools, templates, or wiki truth-layer edits"
+    },
+    {
+      "case_id": "AR-FAIL-06-obsidian-sync-allowed",
+      "must_fail_when": "future approval scope allows Obsidian sync"
+    },
+    {
+      "case_id": "AR-FAIL-07-approval-collected-true",
+      "must_fail_when": "request packet claims user approval was already collected"
+    },
+    {
+      "case_id": "AR-FAIL-08-action-basis-created",
+      "must_fail_when": "request packet creates reviewed knowledge, evidence support, or action basis"
+    }
+  ]
+}

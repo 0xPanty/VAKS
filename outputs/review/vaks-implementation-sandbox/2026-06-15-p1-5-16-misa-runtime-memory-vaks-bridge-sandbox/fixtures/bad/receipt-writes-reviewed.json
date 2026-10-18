@@ -1,0 +1,8 @@
+{
+  "record_kind": "bridge_operation_receipt_fixture",
+  "receipt_id": "mb-receipt-bad-reviewed",
+  "operation": "sandbox_bridge_writeback",
+  "allowed_record_types": ["feedback_event", "candidate_signal", "review_due"],
+  "writes_reviewed_layer": true,
+  "truth_boundary": "bad-fixture-for-negative-test"
+}

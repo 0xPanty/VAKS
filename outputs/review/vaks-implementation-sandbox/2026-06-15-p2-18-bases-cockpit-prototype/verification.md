@@ -1,0 +1,108 @@
+---
+record_kind: sandbox_verification
+slice_id: 2026-06-15-p2-18-bases-cockpit-prototype
+status: local_verification_passed
+truth_boundary: sandbox_verification_only
+---
+
+# Verification
+
+## Baseline
+
+Start-of-slice baseline:
+
+```text
+git status --short count: 253
+target path existed before slice: False
+target path status before slice: empty
+```
+
+The dirty tree is treated as pre-existing baseline per user instruction. Final
+audit only checks whether this slice wrote outside the allowed sandbox path.
+
+Previous-slice prerequisite:
+
+```text
+P2-17 Product Acceptance conclusion: PASS_PRODUCT_GRADE
+```
+
+## Commands
+
+No-bytecode syntax check:
+
+```powershell
+python -B -c "import ast, pathlib; paths=['outputs/review/vaks-implementation-sandbox/2026-06-15-p2-18-bases-cockpit-prototype/artifact/bases_cockpit_validator.py','outputs/review/vaks-implementation-sandbox/2026-06-15-p2-18-bases-cockpit-prototype/artifact/verify_bases_cockpit_prototype.py']; [ast.parse(pathlib.Path(p).read_text(encoding='utf-8'), filename=p) for p in paths]; print('syntax_ok')"
+```
+
+Suite:
+
+```powershell
+python -B outputs/review/vaks-implementation-sandbox/2026-06-15-p2-18-bases-cockpit-prototype/artifact/verify_bases_cockpit_prototype.py
+```
+
+Observed summary:
+
+```text
+positive_fixtures: 6
+prototype_artifacts: 1
+failure_cases: 29
+passed: true
+failures: []
+```
+
+Target `__pycache__` check:
+
+```text
+no target __pycache__ found
+```
+
+## Positive Fixtures
+
+- `valid-bases-cockpit.json`
+- `valid-review-candidates-base.json`
+- `valid-context-packs-base.json`
+- `valid-feedback-events-base.json`
+- `valid-operator-cockpit-base.json`
+- `valid-cross-cockpit-navigation.json`
+- `prototype/bases-cockpit-prototype.json`
+
+## Failure Cases
+
+The 29 failure cases are enumerated in `artifact/failure-case-oracle.md`.
+
+## Targeted Regression Probes
+
+```text
+prototype/bases-cockpit-prototype.json -> valid: true, issues: []
+failure-cases/real-base-file-created.json -> BC_RUNTIME_OR_SYNC_FORBIDDEN
+failure-cases/obsidian-case-protected-path.json -> BC_PROTECTED_PATH_TARGET, BC_WRITE_PATH_OUTSIDE_SLICE
+failure-cases/context-packs-infer-ready.json -> BC_READY_INFERENCE_FORBIDDEN
+```
+
+## Reviewer And Boundary Repair Notes
+
+First Reviewer pass returned `REVIEW_BLOCKED`; Builder repaired inside this
+sandbox path only:
+
+- verifier now requires at least one `prototype/*.json` artifact;
+- verifier now reads expected validity and issue codes from independent
+  `artifact/failure-case-oracle.json` instead of trusting each case file;
+- validator now checks prototype metadata for copied JSON cockpit / not real
+  Obsidian Bases boundary;
+- navigation now must include links to required source artifacts, not only
+  base-to-base targets;
+- failure cases now cover missing source artifact links and invalid prototype
+  boundary metadata.
+
+Reviewer revalidation returned `REVIEW_PASS`.
+
+Boundary Auditor revalidation returned `BOUNDARY_PASS`.
+
+Product Acceptance returned `PASS_PRODUCT_GRADE` with GPT-5.5 reasoning=xhigh.
+
+## Non-Claims
+
+The suite passing does not approve real Bases files, production UI, Obsidian
+sync, reviewed knowledge, evidence support, reviewed relations, reviewer
+approval, action basis, schema governance, promotion, mainline readiness,
+commit, or push.

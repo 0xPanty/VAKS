@@ -1,0 +1,1 @@
+{"extends":"fixtures/valid-frontmatter-validation-check.json","scenario_id":"real-vault-scan-requested","expected_valid":false,"expected_codes":["MS_REAL_VAULT_SCAN_FORBIDDEN"],"patch":{"scope":{"sandbox_fixture_only":false,"real_vault_scan":true}}}

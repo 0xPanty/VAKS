@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 32px; color: #1f2937; background: #f8fafc; }
+    main { max-width: 980px; margin: 0 auto; }
+    h1 { font-size: 28px; margin-bottom: 8px; }
+    .summary { border-left: 4px solid #2563eb; padding: 12px 16px; background: #eff6ff; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 20px; }
+    .case { border: 1px solid #cbd5e1; border-radius: 8px; padding: 14px; background: white; }
+    h2 { font-size: 16px; margin: 0 0 8px; }
+    p { margin: 6px 0; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>User Decision No-Auto-Advance Guard</h1>
+    <div class="summary">
+      <p>This sandbox artifact prevents the p2-51 decision request packet from becoming execution authority.</p>
+      <p>Safe default: <strong>A_keep_sandbox_reference</strong>.</p>
+    </div>
+    <div class="grid">
+
+        <section class="case">
+          <h2>no_reply</h2>
+          <p><strong>Result:</strong> A_keep_sandbox_reference</p>
+          <p><strong>Action:</strong> no_action</p>
+          <p><strong>Auto execution:</strong> false</p>
+          <p><strong>New scope:</strong> false</p>
+          <p><strong>Separate approval:</strong> false</p>
+          <p><strong>Allowed next:</strong> wait_for_user_or_report_sandbox_status</p>
+        </section>
+        
+
+        <section class="case">
+          <h2>explicit_A</h2>
+          <p><strong>Result:</strong> A_keep_sandbox_reference</p>
+          <p><strong>Action:</strong> no_action</p>
+          <p><strong>Auto execution:</strong> false</p>
+          <p><strong>New scope:</strong> false</p>
+          <p><strong>Separate approval:</strong> false</p>
+          <p><strong>Allowed next:</strong> acknowledge_sandbox_reference_only</p>
+        </section>
+        
+
+        <section class="case">
+          <h2>explicit_B</h2>
+          <p><strong>Result:</strong> future_readonly_promotion_review_planning_request_only</p>
+          <p><strong>Action:</strong> ask_for_separate_read_only_planning_scope_before_any_future_slice</p>
+          <p><strong>Auto execution:</strong> false</p>
+          <p><strong>New scope:</strong> true</p>
+          <p><strong>Separate approval:</strong> true</p>
+          <p><strong>Allowed next:</strong> ask_user_for_separate_read_only_review_planning_scope</p>
+        </section>
+        
+
+        <section class="case">
+          <h2>explicit_C</h2>
+          <p><strong>Result:</strong> future_mainline_merge_scope_question_only</p>
+          <p><strong>Action:</strong> ask_for_separate_mainline_review_scope</p>
+          <p><strong>Auto execution:</strong> false</p>
+          <p><strong>New scope:</strong> true</p>
+          <p><strong>Separate approval:</strong> true</p>
+          <p><strong>Allowed next:</strong> ask_user_for_separate_allowed_paths_and_scope</p>
+        </section>
+        
+
+        <section class="case">
+          <h2>explicit_D</h2>
+          <p><strong>Result:</strong> park_or_reject_sandbox_chain</p>
+          <p><strong>Action:</strong> no_action</p>
+          <p><strong>Auto execution:</strong> false</p>
+          <p><strong>New scope:</strong> false</p>
+          <p><strong>Separate approval:</strong> false</p>
+          <p><strong>Allowed next:</strong> acknowledge_park_or_reject_status</p>
+        </section>
+        
+
+        <section class="case">
+          <h2>ambiguous_reply</h2>
+          <p><strong>Result:</strong> clarify_required</p>
+          <p><strong>Action:</strong> ask_clarifying_question</p>
+          <p><strong>Auto execution:</strong> false</p>
+          <p><strong>New scope:</strong> false</p>
+          <p><strong>Separate approval:</strong> false</p>
+          <p><strong>Allowed next:</strong> ask_one_short_clarification</p>
+        </section>
+        
+
+        <section class="case">
+          <h2>multiple_options</h2>
+          <p><strong>Result:</strong> clarify_required</p>
+          <p><strong>Action:</strong> ask_clarifying_question</p>
+          <p><strong>Auto execution:</strong> false</p>
+          <p><strong>New scope:</strong> false</p>
+          <p><strong>Separate approval:</strong> false</p>
+          <p><strong>Allowed next:</strong> ask_user_to_choose_one_option</p>
+        </section>
+        
+
+        <section class="case">
+          <h2>approval_with_execution_words</h2>
+          <p><strong>Result:</strong> stop_and_require_new_scope</p>
+          <p><strong>Action:</strong> no_action</p>
+          <p><strong>Auto execution:</strong> false</p>
+          <p><strong>New scope:</strong> true</p>
+          <p><strong>Separate approval:</strong> true</p>
+          <p><strong>Allowed next:</strong> stop_and_ask_for_separate_explicit_scope</p>
+        </section>
+        
+    </div>
+  </main>
+</body>
+</html>

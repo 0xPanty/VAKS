@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "scratch-only-output",
+  "expected_valid": false,
+  "expected_codes": ["RP_OUTPUT_SCRATCH_ONLY"],
+  "patch": {"outputs": {"scratch_only": true}}
+}

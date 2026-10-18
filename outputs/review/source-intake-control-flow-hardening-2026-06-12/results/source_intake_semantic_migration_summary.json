@@ -1,0 +1,10 @@
+{
+  "status": "updated",
+  "changed_tracked_markdown_files": 52,
+  "ledger_rows": 0,
+  "legacy_insertions": 0,
+  "ledger": "outputs/review/source-intake-control-flow-hardening-2026-06-12/results/source_intake_semantic_migration_ledger.csv",
+  "mapping_policy": "outputs/review/source-intake-control-flow-hardening-2026-06-12/results/source_intake_nonisomorphic_mapping_policy.csv",
+  "recoverability_note": "Per-file old values can only be recovered where a tracked HEAD version exists. For already-normalized untracked/generated files, this package records the mapping policy but does not pretend to reconstruct lost old values.",
+  "truth_boundary": "migration audit only; legacy fields preserve old machine semantics for review, not authority"
+}

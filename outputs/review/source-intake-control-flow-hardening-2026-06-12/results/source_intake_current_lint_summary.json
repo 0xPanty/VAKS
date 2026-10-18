@@ -1,0 +1,34 @@
+{
+  "scope": "current",
+  "files_scanned": 306,
+  "files_validated": 252,
+  "files_skipped": 54,
+  "canonical_validated_surfaces_excluding_legacy_lens": 239,
+  "legacy_project_lens_compatibility_included_in_current_scope": true,
+  "legacy_project_lens_compatibility_count": 13,
+  "legacy_project_lens_archive_excluded_count": 17,
+  "issue_count": 385,
+  "warning_count": 366,
+  "error_count": 19,
+  "status": "fail",
+  "structural_status": "fail",
+  "semantic_status": "blocked_by_structural_errors",
+  "warning_breakdown_by_check": {
+    "legacy_project_lens_overlay_compatibility": 13,
+    "migration_placeholder_value": 118,
+    "legacy_source_integrity_compatibility": 89,
+    "source_identity_missing": 142,
+    "source_why_saved_placeholder_without_body_reason": 4
+  },
+  "warning_breakdown_by_semantic_class": {
+    "high_risk_manual_review": 17,
+    "migration_debt_defer_ok": 349
+  },
+  "issue_breakdown_by_semantic_class": {
+    "hard_error_canonical_p0": 19,
+    "high_risk_manual_review": 17,
+    "migration_debt_defer_ok": 349
+  },
+  "canonical_p0_status": "not_passed",
+  "truth_boundary": "Structural lint can pass while semantic migration debt remains; retrieval-visible legacy project_lens overlays are included as compatibility surfaces but do not count as canonical P0 compliance."
+}

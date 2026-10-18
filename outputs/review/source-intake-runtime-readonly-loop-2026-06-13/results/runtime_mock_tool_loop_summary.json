@@ -1,0 +1,12 @@
+{
+  "status": "pass",
+  "created_at": "2026-06-14T01:37:48+00:00",
+  "tool_loop_kind": "deterministic_mock_tool_smoke",
+  "live_llm_used": false,
+  "live_tool_runtime_used": false,
+  "write_capable_mock_tool_available": true,
+  "write_capable_mock_tool_attempted_without_confirmation": true,
+  "write_capable_mock_tool_blocked_without_confirmation": true,
+  "truth_write_performed_count": 0,
+  "truth_boundary": "Mock tool-loop smoke only; proves a deterministic gate path, not live agent/tool behavior."
+}

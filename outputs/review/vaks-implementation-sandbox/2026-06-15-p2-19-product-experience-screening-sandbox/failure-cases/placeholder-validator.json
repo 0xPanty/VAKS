@@ -1,0 +1,1 @@
+{"case_id":"placeholder-validator","base_fixture":"fixtures/valid-product-experience-screening.json","mutations":[{"op":"set_candidate","id":"P2-PX-13","path":"/required_validators","value":["placeholder"]}]}

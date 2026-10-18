@@ -1,0 +1,11 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "use-loop-trace-not-readonly",
+  "expected_valid": false,
+  "expected_codes": ["MB_USE_LOOP_NOT_READ_ONLY"],
+  "patch": {
+    "use_loop_trace": {
+      "read_only": false
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"extends":"fixtures/valid-frontmatter-validation-check.json","scenario_id":"cache-manifest-incomplete","expected_valid":false,"expected_codes":["MS_CACHE_MANIFEST_INCOMPLETE"],"patch":{"search_cache":{"source_state_hash":"","indexer_id":"","model_id":""}}}

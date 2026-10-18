@@ -1,0 +1,11 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "missing-validation-block",
+  "expected_valid": false,
+  "expected_codes": ["MS_MISSING_VALIDATION"],
+  "patch": {
+    "validation": {
+      "__delete__": true
+    }
+  }
+}

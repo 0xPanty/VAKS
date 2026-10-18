@@ -1,5 +1,6 @@
 ---
 type: source
+record_kind: source_card
 status: source-captured
 title: "VectifyAI/OpenKB"
 source_url: "https://github.com/VectifyAI/OpenKB"
@@ -18,12 +19,9 @@ topics:
 projects:
   - verified-knowledge-system
 evidence_level: primary
+source_integrity:
+  capture_confidence: 4
 source_status: source-captured
-source_quality: 4
-freshness: 5
-relevance: 5
-confidence: 4
-cross_source_count: 1
 verified_by: Codex source review
 last_verified: 2026-05-27
 next_review: 2026-06-03
@@ -40,7 +38,7 @@ related_concepts:
   - "[[removal-cleanup-with-registry-commit-point]]"
   - "[[artifact-trigger-and-body-alignment-eval]]"
   - "[[skill-artifact-iteration-workspace-rollback]]"
-relations:
+candidate_relation_suggestions:
   - target: "[[2026-05-27-openkb-architecture-review]]"
     type: derived_from
     strength: 5
@@ -65,8 +63,24 @@ tags:
   - llm-wiki
   - pageindex
   - skill-factory
+knowledge_status: raw
+processing_tier: light
+source_id: "https://github.com/VectifyAI/OpenKB"
+why_saved: see_body_or_legacy_record
+retrieval_policy:
+  policy_kind: source_identity_only
+  pack_allowed: drilldown_required
+  action_basis_allowed: false
+  warning_code: raw_is_provenance_only
+promotion_gate: none
+action_basis_allowed: false
+truth_mutation_allowed: false
+legacy_raw_metadata:
+  source_quality: 4
+  freshness: 5
+  relevance: 5
+  cross_source_count: 1
 ---
-
 # 来源记录：VectifyAI/OpenKB
 
 ## 为什么收录

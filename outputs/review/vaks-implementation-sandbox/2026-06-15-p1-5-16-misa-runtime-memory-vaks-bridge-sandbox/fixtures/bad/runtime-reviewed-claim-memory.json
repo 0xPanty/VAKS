@@ -1,0 +1,7 @@
+{
+  "record_kind": "misa_reviewed_claim_memory_bad_fixture",
+  "observation_id": "obs-bad-reviewed-claim",
+  "memory_type": "reviewed_claim",
+  "summary": "Bad fixture matching a forbidden runtime memory type.",
+  "truth_boundary": "bad-fixture-for-negative-test"
+}

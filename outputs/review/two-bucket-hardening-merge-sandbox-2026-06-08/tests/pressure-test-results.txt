@@ -1,0 +1,48 @@
+﻿Two-bucket hardening sandbox pressure test
+Root: C:\Users\Administrator\Documents\资料库\outputs\review\two-bucket-hardening-merge-sandbox-2026-06-08
+Pass: 43
+Fail: 0
+
+PASS	SCHEMA locked architecture unchanged	architecture/SCHEMA.md equals baseline
+PASS	Schema-unlocked candidate exists	separate review candidate only
+PASS	Schema-unlocked candidate has source-range line	
+PASS	Schema-unlocked candidate has envelope line	
+PASS	Schema-unlocked candidate has budget line	
+PASS	CI-02.5 queue lint block present	
+PASS	CI-02.5 template lint block present	
+PASS	CI-02.5 lint not verdict	
+PASS	CI-02.5 lint does not auto-promote near block	
+PASS	CI-03 source hash fields present	
+PASS	CI-03 hash hygiene boundary present	
+PASS	CI-03 template source integrity present	
+PASS	CI-03 hash does not decide truth	
+PASS	CI-09 adapter fields present	
+PASS	CI-09 source template adapter fields present	
+PASS	CI-09 adapter no action readiness	
+PASS	CI-04 feedback precondition present	
+PASS	CI-04 confidence rationale note present	
+PASS	CI-04 decision template override present	
+PASS	CI-04 decision template rationale present	
+PASS	CI-04 outcome cannot mutate truth	
+PASS	CI-06 DEV_CONTEXT envelope present	
+PASS	CI-06 dev template envelope present	
+PASS	CI-06 envelope not truth	
+PASS	CI-07 budget guardrails present	
+PASS	CI-07 budget cannot hide risk	
+PASS	CI-07 trimmed support blocks action-ready	
+PASS	CI-08 source range handle in template	
+PASS	CI-08 evidence support still required	
+PASS	CI-08 source range not support by itself	
+PASS	Decision PASS fixture has required fields	
+PASS	Decision BLOCK fixture missing user choice	
+PASS	First-bucket file exists: REVIEW_QUEUE.md	
+PASS	First-bucket file exists: review-candidate.md	
+PASS	First-bucket file exists: SOURCE_INTAKE.md	
+PASS	First-bucket file exists: source-record.md	
+PASS	First-bucket file exists: FEEDBACK.md	
+PASS	First-bucket file exists: decision-record.md	
+PASS	No forbidden runtime near lint block	
+PASS	No forbidden runtime near ingest block	
+PASS	No forbidden runtime near outcome block	
+PASS	No forbidden runtime near envelope block	
+PASS	No forbidden runtime near dev template envelope	

@@ -1,0 +1,18 @@
+{
+  "transcript_method": "local_asr_faster_whisper",
+  "engine": "faster_whisper",
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16",
+  "language": "zh",
+  "language_probability": 1,
+  "duration": 121.1385,
+  "transcript_quality": "medium",
+  "media_retention": "temporary_audio_and_wav_deleted_after_project_visible_copy",
+  "created_at": "2026-06-08T16:10:59.828080+08:00",
+  "notes": [
+    "No public subtitles were available from x/player/v2 subtitles list.",
+    "No cookies, private account access, or cloud ASR used.",
+    "ASR is raw/source text and key entities require metadata or visual confirmation."
+  ]
+}

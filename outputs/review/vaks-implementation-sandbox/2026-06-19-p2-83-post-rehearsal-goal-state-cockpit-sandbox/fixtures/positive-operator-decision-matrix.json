@@ -1,0 +1,13 @@
+{
+  "case_id": "positive-operator-decision-matrix",
+  "expected": {
+    "can_continue_sandbox_only": true,
+    "can_claim_all_done": false,
+    "can_execute_old_file_normalization_now": false,
+    "can_merge_mainline_now": false,
+    "can_treat_retrieval_as_evidence_support": false,
+    "can_treat_product_acceptance_as_user_write_approval": false,
+    "requires_exact_p2_75_phrase_for_old_file_write": true,
+    "exact_phrase_sha256": "3aa60d89b13671c099ca35db166b00b329600e91164d8ebabdb03b8da0190775"
+  }
+}

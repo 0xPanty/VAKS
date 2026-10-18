@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "created_at": "2026-06-14T01:37:48+00:00",
+  "checked_artifact_count": 27,
+  "checked_artifact_scope": "generated_query_runs_context_packs_answer_drafts_only",
+  "checked_directories": [
+    "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/query_runs",
+    "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/context_packs",
+    "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/answer_drafts"
+  ],
+  "default_index_eligible_count": 0,
+  "eligible_paths": [],
+  "truth_boundary": "Deterministic marker-based exclusion test only; not a live embedding or retrieval-index proof."
+}

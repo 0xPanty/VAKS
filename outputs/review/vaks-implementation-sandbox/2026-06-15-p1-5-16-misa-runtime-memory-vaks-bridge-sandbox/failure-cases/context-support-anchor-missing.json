@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "context-support-anchor-missing",
+  "expected_valid": false,
+  "expected_codes": ["MB_SUPPORT_ANCHOR_MISSING"],
+  "patch": {"context_adapter": {"included_buckets": ["reviewed", "candidate", "raw_anchor"], "items": [{"id": "reviewed-orientation", "ref": "fixtures/context-packs/reviewed-orientation-note.md", "authority_bucket": "raw_anchor", "pack_role": "support", "warning_code": "support_needs_anchor", "selected_by": ["context_pack"], "action_basis_allowed": false}]}}
+}

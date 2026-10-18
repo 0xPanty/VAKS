@@ -1,0 +1,77 @@
+{
+  "record_kind": "vaks_use_surface_blueprint",
+  "scenario_id": "valid-operator-use-surface",
+  "expected_valid": true,
+  "expected_codes": [],
+    "scope": {
+    "sandbox_only": true,
+    "allowed_write_paths": [
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-17-use-surface-optimization-pass/"
+    ],
+    "server_started": false,
+    "real_ui_started": false,
+    "real_runtime_started": false,
+    "ui_deployed": false,
+    "background_service": false,
+    "background_service_started": false,
+    "watcher_started": false,
+    "automation_started": false,
+    "hook_enabled": false,
+    "hooks_enabled": false,
+    "dependency_install": false,
+    "mcp_write_tool": false,
+    "obsidian_sync": false,
+    "commit_or_push": false
+  },
+  "entries": [
+    {"id": "add_source", "backend_artifact": "source_card", "boundary_label": "provenance_only", "receipt_required": false, "can_approve": false, "can_write_reviewed": false, "can_promote": false, "creates_action_basis": false},
+    {"id": "process_this", "backend_artifact": "candidate_distillation", "boundary_label": "candidate_only", "receipt_required": false, "can_approve": false, "can_write_reviewed": false, "can_promote": false, "creates_action_basis": false},
+    {"id": "ask_vault", "backend_artifact": "query_run_trace", "boundary_label": "orientation_unless_action_mode", "receipt_required": true, "can_approve": false, "can_write_reviewed": false, "can_promote": false, "creates_action_basis": false},
+    {"id": "check_vault", "backend_artifact": "maintenance_manifest", "boundary_label": "diagnostic_only", "receipt_required": false, "can_approve": false, "can_write_reviewed": false, "can_promote": false, "creates_action_basis": false},
+    {"id": "make_context_pack", "backend_artifact": "context_pack_manifest", "boundary_label": "not_action_basis_by_itself", "receipt_required": true, "can_approve": false, "can_write_reviewed": false, "can_promote": false, "creates_action_basis": false},
+    {"id": "review_candidates", "backend_artifact": "evidence_packet_or_review_candidate", "boundary_label": "review_input_only", "receipt_required": false, "can_approve": false, "can_write_reviewed": false, "can_promote": false, "creates_action_basis": false},
+    {"id": "record_feedback", "backend_artifact": "feedback_event", "boundary_label": "activation_review_pressure_only", "receipt_required": false, "can_approve": false, "can_write_reviewed": false, "can_promote": false, "creates_action_basis": false},
+    {"id": "prepare_action", "backend_artifact": "context_support_readiness_bundle", "boundary_label": "blocked_until_action_readiness", "receipt_required": true, "can_approve": false, "can_write_reviewed": false, "can_promote": false, "creates_action_basis": false}
+  ],
+  "user_questions": {
+    "where_put_this": {"surface_ref": "entry_matrix", "answer_source": "entry.boundary_label", "creates_authority": false},
+    "what_state_is_it_in": {"surface_ref": "operator_status", "answer_source": "layer_badges", "creates_authority": false},
+    "orientation_review_or_action": {"surface_ref": "entry_matrix", "answer_source": "entry.boundary_label", "creates_authority": false},
+    "what_blocks_promotion_or_action": {"surface_ref": "operator_status", "answer_source": "blocked_states", "creates_authority": false},
+    "source_hash_receipt_integrity": {"surface_ref": "receipt_backed_search", "answer_source": "receipt_hash_panel", "creates_authority": false},
+    "authority_not_mutated": {"surface_ref": "boundary_labels", "answer_source": "non_claims", "creates_authority": false}
+  },
+  "status_surfaces": [
+    {
+      "id": "operator_status",
+      "shows": ["blocked", "stale", "missing_anchor", "hash_mismatch", "action_not_ready", "dirty_state"],
+      "short_status_before_manuals": true,
+      "can_approve": false,
+      "mutates_truth": false,
+      "can_promote": false
+    }
+  ],
+  "search_surface": {
+    "receipt_backed": true,
+    "selected_by_is_support": false,
+    "query_hit_is_support": false,
+    "raw_topk_is_trust": false,
+    "context_pack_is_action_basis": false,
+    "action_mode_requires": ["context_pack", "support_check", "action_readiness_check"]
+  },
+  "layer_badges": {
+    "display_only": true,
+    "badge_can_promote": false,
+    "layers": ["raw", "candidate", "review_input", "reviewed", "context_pack", "action_readiness", "feedback"]
+  },
+  "guardrails": {
+    "dirty_state_visible": true,
+    "dirty_state_blocks_risky_actions": true,
+    "dirty_state_judges_knowledge": false,
+    "hash_match_is_evidence_support": false,
+    "sync_enabled": false,
+    "sync_requires_operation_receipt": true,
+    "sync_mutates_truth": false,
+    "mainline_ready": false
+  }
+}

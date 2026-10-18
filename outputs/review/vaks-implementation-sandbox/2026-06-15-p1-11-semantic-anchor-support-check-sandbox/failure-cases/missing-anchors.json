@@ -1,0 +1,7 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "missing-anchors",
+  "expected_valid": false,
+  "expected_codes": ["SA_MISSING_ANCHORS"],
+  "anchors": []
+}

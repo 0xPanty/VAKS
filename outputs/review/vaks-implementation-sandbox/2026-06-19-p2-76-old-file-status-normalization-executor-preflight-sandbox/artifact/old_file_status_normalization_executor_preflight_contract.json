@@ -1,0 +1,63 @@
+{
+  "record_kind": "sandbox_old_file_status_normalization_executor_preflight_contract",
+  "slice_id": "2026-06-19-p2-76-old-file-status-normalization-executor-preflight-sandbox",
+  "contract_version": "1.0",
+  "expected_numbers": {
+    "target_change_count": 75,
+    "target_file_count": 75,
+    "target_old_slice_count": 20,
+    "missing_target_count": 0,
+    "current_status_mismatch_count": 0,
+    "rollback_entry_count": 75,
+    "old_slice_writes_applied": 0
+  },
+  "authority_flags": {
+    "executor_preflight_only": true,
+    "approval_present": false,
+    "executor_write_allowed": false,
+    "old_slice_write_allowed_now": false,
+    "old_slice_writes_applied": 0,
+    "normalization_applied": false,
+    "rollback_applied": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false
+  },
+  "write_gate": {
+    "requires_exact_p2_75_approval_phrase": true,
+    "approval_source": "future user message only",
+    "p2_75_packet_is_not_approval": true,
+    "generic_language_is_not_approval": true
+  },
+  "allowed_future_edit": {
+    "change_kind": "status_only_frontmatter_normalization",
+    "field": "frontmatter.status",
+    "source_manifest": "p2-72 dry_run_manifest.status_changes",
+    "body_edits_allowed": false,
+    "artifact_edits_allowed": false,
+    "file_create_delete_allowed": false,
+    "mainline_edits_allowed": false,
+    "templates_tools_edits_allowed": false,
+    "wiki_truth_layer_edits_allowed": false,
+    "obsidian_sync_allowed": false,
+    "commit_push_allowed": false
+  },
+  "required_fixture_ids": [
+    "preflight-happy-path-no-approval",
+    "all-target-current-statuses-match",
+    "rollback-manifest-complete",
+    "write-gate-blocks-without-exact-approval"
+  ],
+  "required_failure_case_ids": [
+    "EP-FAIL-01-approval-present-without-future-user-message",
+    "EP-FAIL-02-executor-write-allowed-without-approval",
+    "EP-FAIL-03-target-status-drift",
+    "EP-FAIL-04-missing-target-file",
+    "EP-FAIL-05-body-edit-in-plan",
+    "EP-FAIL-06-rollback-entry-missing",
+    "EP-FAIL-07-old-slice-write-applied",
+    "EP-FAIL-08-mainline-or-action-authority-created"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "case_id": "prototype-receipt-slice-id-drift",
+  "description": "Prototype receipt slice identity drifts.",
+  "expected_errors": [
+    "prototype_receipt_slice_id_mismatch"
+  ],
+  "prototype_tamper": {
+    "kind": "receipt_update",
+    "updates": {
+      "slice_id": "wrong-slice"
+    }
+  }
+}

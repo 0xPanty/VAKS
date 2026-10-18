@@ -1,0 +1,1 @@
+{"case_id":"hash-as-support","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/steps/8/authority_flags/treats_hash_as_support","value":true}]}

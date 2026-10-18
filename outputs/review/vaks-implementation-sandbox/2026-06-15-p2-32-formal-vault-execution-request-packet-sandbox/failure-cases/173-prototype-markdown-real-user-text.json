@@ -1,0 +1,13 @@
+{
+  "case_id": "prototype-markdown-real-user-text",
+  "description": "Prototype Markdown carries actual wording.",
+  "expected_errors": [
+    "prototype_text_dangerous:02 Packet Fields.md:approve_execution_now",
+    "prototype_text_dangerous:02 Packet Fields.md:real_user_text_marker"
+  ],
+  "prototype_tamper": {
+    "kind": "markdown_replace",
+    "file": "02 Packet Fields.md",
+    "content": "real user text: approve execution now"
+  }
+}

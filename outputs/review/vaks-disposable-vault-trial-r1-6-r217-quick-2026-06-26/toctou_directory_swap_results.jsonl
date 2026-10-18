@@ -1,0 +1,1 @@
+{"allowed":false,"case_id":"toctou_junction_swap_after_validation","created":false,"junction_ok":true,"junction_status":"available","outside_file_exists":false,"staging_dir_exists_after":false,"staging_temp_created":true,"staging_temp_exists_after":false,"validation_valid_before_swap":true,"violation":false,"write_error_class":"RuntimeError"}

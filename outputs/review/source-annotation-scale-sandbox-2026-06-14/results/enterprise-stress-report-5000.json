@@ -1,0 +1,684 @@
+{
+  "passed": true,
+  "requested_count": 5000,
+  "good_annotation_count": 5000,
+  "elapsed_seconds": 3.8481,
+  "records_per_second": 1299.33,
+  "runtime_gate_seconds": 30.0,
+  "context_pack_bytes": 72583,
+  "context_pack_selected_items": 60,
+  "context_pack_source_count": 24,
+  "context_pack_max_per_source_observed": 5,
+  "context_pack_max_per_source_gate": 5,
+  "context_size_gate_kb": 250,
+  "max_inbox_items": 250,
+  "errors": [],
+  "error_count": 0,
+  "view_counts": {
+    "ai_export_blocked": 309,
+    "ai_export_ready": 4691,
+    "annotation_inbox": 153,
+    "cold_archive": 75,
+    "locator_pool": 4538,
+    "needs_anchor_repair": 167,
+    "project_lens": 1642,
+    "routing_queue": 297,
+    "scale_debt": 3782,
+    "source_drilldown": 4925,
+    "stale_anchor_queue": 67,
+    "support_checked_audit": 44
+  },
+  "queue_accuracy": {
+    "active_bad_anchors": 167,
+    "repair_missing": 0,
+    "active_stale_anchors": 67,
+    "stale_missing": 0,
+    "ai_ready_contamination": 0
+  },
+  "operator_load": {
+    "working_inbox": 153,
+    "locator_pool": 4538,
+    "scale_debt": 3782,
+    "source_health_rows": 120,
+    "source_digest_backlog": 9,
+    "digest_backlog_p95_age_days": 14
+  },
+  "mutation_count": 29,
+  "mutation_caught": 29,
+  "mutation_catch_rate": 1.0,
+  "mutation_results": [
+    {
+      "file": "enterprise_stress/mutations/action-basis.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "enterprise_stress/mutations/action-basis.md: action_basis_allowed must be false"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/ambiguous-not-repair.md",
+      "caught": true,
+      "error_count": 4,
+      "errors": [
+        "enterprise_stress/mutations/ambiguous-not-repair.md: ambiguous must be in repair lifecycle or archived",
+        "enterprise_stress/mutations/ambiguous-not-repair.md: ambiguous must have high/blocked/repair review pressure",
+        "enterprise_stress/mutations/ambiguous-not-repair.md: blocked or stale annotation requires blocked_reason",
+        "enterprise_stress/mutations/ambiguous-not-repair.md: ambiguous anchor should have multiple current matches"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/archived-pack-allowed.md",
+      "caught": true,
+      "error_count": 2,
+      "errors": [
+        "enterprise_stress/mutations/archived-pack-allowed.md: archived annotation must use archive_only policy",
+        "enterprise_stress/mutations/archived-pack-allowed.md: archived annotation cannot be pack_allowed review_input_only"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/broken-not-repair.md",
+      "caught": true,
+      "error_count": 4,
+      "errors": [
+        "enterprise_stress/mutations/broken-not-repair.md: broken must be in repair lifecycle or archived",
+        "enterprise_stress/mutations/broken-not-repair.md: broken must have high/blocked/repair review pressure",
+        "enterprise_stress/mutations/broken-not-repair.md: blocked or stale annotation requires blocked_reason",
+        "enterprise_stress/mutations/broken-not-repair.md: broken anchor should not have a current exact match"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/duplicate-id.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "duplicate annotation_id collides with good corpus"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/empty-note.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "enterprise_stress/mutations/empty-note.md: body_note cannot be empty"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/evidence-status-without-check.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "enterprise_stress/mutations/evidence-status-without-check.md: evidence_support_status requires support_checked true"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/final-support-refs-field.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "enterprise_stress/mutations/final-support-refs-field.md: forbidden field present: final_support_refs"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/line-range-missing-end.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "enterprise_stress/mutations/line-range-missing-end.md: line_range selector requires start and end"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/missing-blocked-reason.md",
+      "caught": true,
+      "error_count": 2,
+      "errors": [
+        "enterprise_stress/mutations/missing-blocked-reason.md: blocked or stale annotation requires blocked_reason",
+        "enterprise_stress/mutations/missing-blocked-reason.md: broken anchor should not have a current exact match"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/missing-next-action.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "enterprise_stress/mutations/missing-next-action.md: active annotation requires next_action"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/missing-selector-exact.md",
+      "caught": true,
+      "error_count": 2,
+      "errors": [
+        "enterprise_stress/mutations/missing-selector-exact.md: TextQuoteSelector requires selector_exact",
+        "enterprise_stress/mutations/missing-selector-exact.md: exact_verified TextQuoteSelector requires one match, got None"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/missing-source.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "enterprise_stress/mutations/missing-source.md: source_ref cannot be resolved"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/missing-warning.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "enterprise_stress/mutations/missing-warning.md: warning_code must be annotation_not_support"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/pack-allowed-support.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "enterprise_stress/mutations/pack-allowed-support.md: active annotation pack_allowed must be review_input_only"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/page-rect-missing-rect.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "enterprise_stress/mutations/page-rect-missing-rect.md: page_rect selector requires page and rect"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/policy-action-true.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "enterprise_stress/mutations/policy-action-true.md: retrieval_policy.action_basis_allowed must be false"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/project-borrow-scope.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "enterprise_stress/mutations/project-borrow-scope.md: forbidden field present: project_borrow_scope"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/project-non-borrow-scope.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "enterprise_stress/mutations/project-non-borrow-scope.md: forbidden field present: project_non_borrow_scope"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/source-changed-no-drift.md",
+      "caught": true,
+      "error_count": 2,
+      "errors": [
+        "enterprise_stress/mutations/source-changed-no-drift.md: blocked or stale annotation requires blocked_reason",
+        "enterprise_stress/mutations/source-changed-no-drift.md: source_changed requires source_hash drift"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/stale-no-pressure.md",
+      "caught": true,
+      "error_count": 2,
+      "errors": [
+        "enterprise_stress/mutations/stale-no-pressure.md: stale active anchor must have review pressure",
+        "enterprise_stress/mutations/stale-no-pressure.md: blocked or stale annotation requires blocked_reason"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/support-no-packet.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "enterprise_stress/mutations/support-no-packet.md: support_checked true requires evidence_packet_ref"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/support-on-bad-anchor.md",
+      "caught": true,
+      "error_count": 3,
+      "errors": [
+        "enterprise_stress/mutations/support-on-bad-anchor.md: support_checked cannot be current on bad or stale anchor",
+        "enterprise_stress/mutations/support-on-bad-anchor.md: blocked or stale annotation requires blocked_reason",
+        "enterprise_stress/mutations/support-on-bad-anchor.md: ambiguous anchor should have multiple current matches"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/support-refs-field.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "enterprise_stress/mutations/support-refs-field.md: forbidden field present: support_refs"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/timestamp-missing-end.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "enterprise_stress/mutations/timestamp-missing-end.md: timestamp selector requires start and end"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/truth-mutation.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "enterprise_stress/mutations/truth-mutation.md: truth_mutation_allowed must be false"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/unknown-anchor.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "enterprise_stress/mutations/unknown-anchor.md: unknown anchor_status 'confirmed'"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/unknown-role.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "enterprise_stress/mutations/unknown-role.md: unknown annotation_role 'confirmed_support'"
+      ]
+    },
+    {
+      "file": "enterprise_stress/mutations/wrong-record-kind.md",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "enterprise_stress/mutations/wrong-record-kind.md: record_kind must be source_annotation"
+      ]
+    }
+  ],
+  "bad_context_pack_count": 5,
+  "bad_context_pack_caught": 5,
+  "bad_context_pack_catch_rate": 1.0,
+  "bad_context_pack_results": [
+    {
+      "file": "enterprise_stress/bad_context_packs/bad-action-allowed.json",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "source_annotation action_basis_allowed must be false"
+      ]
+    },
+    {
+      "file": "enterprise_stress/bad_context_packs/bad-missing-warning.json",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "source_annotation missing annotation_not_support warning"
+      ]
+    },
+    {
+      "file": "enterprise_stress/bad_context_packs/bad-pack-role-support.json",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "source_annotation cannot be packed as support"
+      ]
+    },
+    {
+      "file": "enterprise_stress/bad_context_packs/bad-span-counts-as-support.json",
+      "caught": true,
+      "error_count": 2,
+      "errors": [
+        "resolved span may_count_as_support must be false",
+        "resolved span support_check_required must be true"
+      ]
+    },
+    {
+      "file": "enterprise_stress/bad_context_packs/bad-support-ref.json",
+      "caught": true,
+      "error_count": 1,
+      "errors": [
+        "coverage_map support_refs cannot point to source_annotation"
+      ]
+    }
+  ],
+  "source_health_top_dense": [
+    {
+      "source_ref": "enterprise_stress/sources/source-005.md",
+      "total": 432,
+      "active": 426,
+      "ai_ready": 405,
+      "repair": 15,
+      "stale": 6,
+      "scale_debt": 426,
+      "digest_required": true,
+      "digest_ref": "enterprise_stress/digests/source-005-digest.md",
+      "last_digest_at": "2026-06-07",
+      "next_digest_due": "2026-06-21",
+      "debt_queue": "source_digest_backlog",
+      "debt_owner_or_queue": "source_digest_backlog",
+      "next_action": "create_or_refresh_source_digest",
+      "digest_backlog_age_days": 14
+    },
+    {
+      "source_ref": "enterprise_stress/sources/source-010.md",
+      "total": 431,
+      "active": 425,
+      "ai_ready": 405,
+      "repair": 15,
+      "stale": 5,
+      "scale_debt": 425,
+      "digest_required": true,
+      "digest_ref": "enterprise_stress/digests/source-010-digest.md",
+      "last_digest_at": "2026-06-07",
+      "next_digest_due": "2026-06-21",
+      "debt_queue": "source_digest_backlog",
+      "debt_owner_or_queue": "source_digest_backlog",
+      "next_action": "create_or_refresh_source_digest",
+      "digest_backlog_age_days": 14
+    },
+    {
+      "source_ref": "enterprise_stress/sources/source-002.md",
+      "total": 432,
+      "active": 424,
+      "ai_ready": 404,
+      "repair": 14,
+      "stale": 6,
+      "scale_debt": 424,
+      "digest_required": true,
+      "digest_ref": "enterprise_stress/digests/source-002-digest.md",
+      "last_digest_at": "2026-06-07",
+      "next_digest_due": "2026-06-21",
+      "debt_queue": "source_digest_backlog",
+      "debt_owner_or_queue": "source_digest_backlog",
+      "next_action": "create_or_refresh_source_digest",
+      "digest_backlog_age_days": 14
+    },
+    {
+      "source_ref": "enterprise_stress/sources/source-003.md",
+      "total": 425,
+      "active": 419,
+      "ai_ready": 397,
+      "repair": 16,
+      "stale": 6,
+      "scale_debt": 419,
+      "digest_required": true,
+      "digest_ref": "enterprise_stress/digests/source-003-digest.md",
+      "last_digest_at": "2026-06-07",
+      "next_digest_due": "2026-06-21",
+      "debt_queue": "source_digest_backlog",
+      "debt_owner_or_queue": "source_digest_backlog",
+      "next_action": "create_or_refresh_source_digest",
+      "digest_backlog_age_days": 14
+    },
+    {
+      "source_ref": "enterprise_stress/sources/source-001.md",
+      "total": 424,
+      "active": 418,
+      "ai_ready": 397,
+      "repair": 15,
+      "stale": 6,
+      "scale_debt": 418,
+      "digest_required": true,
+      "digest_ref": "enterprise_stress/digests/source-001-digest.md",
+      "last_digest_at": "2026-06-07",
+      "next_digest_due": "2026-06-21",
+      "debt_queue": "source_digest_backlog",
+      "debt_owner_or_queue": "source_digest_backlog",
+      "next_action": "create_or_refresh_source_digest",
+      "digest_backlog_age_days": 14
+    },
+    {
+      "source_ref": "enterprise_stress/sources/source-006.md",
+      "total": 425,
+      "active": 418,
+      "ai_ready": 397,
+      "repair": 14,
+      "stale": 7,
+      "scale_debt": 418,
+      "digest_required": true,
+      "digest_ref": "enterprise_stress/digests/source-006-digest.md",
+      "last_digest_at": "2026-06-07",
+      "next_digest_due": "2026-06-21",
+      "debt_queue": "source_digest_backlog",
+      "debt_owner_or_queue": "source_digest_backlog",
+      "next_action": "create_or_refresh_source_digest",
+      "digest_backlog_age_days": 14
+    },
+    {
+      "source_ref": "enterprise_stress/sources/source-009.md",
+      "total": 424,
+      "active": 418,
+      "ai_ready": 400,
+      "repair": 13,
+      "stale": 5,
+      "scale_debt": 418,
+      "digest_required": true,
+      "digest_ref": "enterprise_stress/digests/source-009-digest.md",
+      "last_digest_at": "2026-06-07",
+      "next_digest_due": "2026-06-21",
+      "debt_queue": "source_digest_backlog",
+      "debt_owner_or_queue": "source_digest_backlog",
+      "next_action": "create_or_refresh_source_digest",
+      "digest_backlog_age_days": 14
+    },
+    {
+      "source_ref": "enterprise_stress/sources/source-007.md",
+      "total": 424,
+      "active": 417,
+      "ai_ready": 399,
+      "repair": 13,
+      "stale": 5,
+      "scale_debt": 417,
+      "digest_required": true,
+      "digest_ref": "enterprise_stress/digests/source-007-digest.md",
+      "last_digest_at": "2026-06-07",
+      "next_digest_due": "2026-06-21",
+      "debt_queue": "source_digest_backlog",
+      "debt_owner_or_queue": "source_digest_backlog",
+      "next_action": "create_or_refresh_source_digest",
+      "digest_backlog_age_days": 14
+    },
+    {
+      "source_ref": "enterprise_stress/sources/source-011.md",
+      "total": 423,
+      "active": 417,
+      "ai_ready": 398,
+      "repair": 14,
+      "stale": 5,
+      "scale_debt": 417,
+      "digest_required": true,
+      "digest_ref": "enterprise_stress/digests/source-011-digest.md",
+      "last_digest_at": "2026-06-07",
+      "next_digest_due": "2026-06-21",
+      "debt_queue": "source_digest_backlog",
+      "debt_owner_or_queue": "source_digest_backlog",
+      "next_action": "create_or_refresh_source_digest",
+      "digest_backlog_age_days": 14
+    },
+    {
+      "source_ref": "enterprise_stress/sources/source-016.md",
+      "total": 16,
+      "active": 16,
+      "ai_ready": 13,
+      "repair": 3,
+      "stale": 0,
+      "scale_debt": 0,
+      "digest_required": false,
+      "digest_ref": "",
+      "last_digest_at": "",
+      "next_digest_due": "",
+      "debt_queue": "",
+      "debt_owner_or_queue": "",
+      "next_action": "none",
+      "digest_backlog_age_days": 0
+    },
+    {
+      "source_ref": "enterprise_stress/sources/source-032.md",
+      "total": 16,
+      "active": 16,
+      "ai_ready": 15,
+      "repair": 1,
+      "stale": 0,
+      "scale_debt": 0,
+      "digest_required": false,
+      "digest_ref": "",
+      "last_digest_at": "",
+      "next_digest_due": "",
+      "debt_queue": "",
+      "debt_owner_or_queue": "",
+      "next_action": "none",
+      "digest_backlog_age_days": 0
+    },
+    {
+      "source_ref": "enterprise_stress/sources/source-050.md",
+      "total": 16,
+      "active": 16,
+      "ai_ready": 14,
+      "repair": 2,
+      "stale": 0,
+      "scale_debt": 0,
+      "digest_required": false,
+      "digest_ref": "",
+      "last_digest_at": "",
+      "next_digest_due": "",
+      "debt_queue": "",
+      "debt_owner_or_queue": "",
+      "next_action": "none",
+      "digest_backlog_age_days": 0
+    },
+    {
+      "source_ref": "enterprise_stress/sources/source-066.md",
+      "total": 16,
+      "active": 16,
+      "ai_ready": 16,
+      "repair": 0,
+      "stale": 0,
+      "scale_debt": 0,
+      "digest_required": false,
+      "digest_ref": "",
+      "last_digest_at": "",
+      "next_digest_due": "",
+      "debt_queue": "",
+      "debt_owner_or_queue": "",
+      "next_action": "none",
+      "digest_backlog_age_days": 0
+    },
+    {
+      "source_ref": "enterprise_stress/sources/source-117.md",
+      "total": 16,
+      "active": 16,
+      "ai_ready": 16,
+      "repair": 0,
+      "stale": 0,
+      "scale_debt": 0,
+      "digest_required": false,
+      "digest_ref": "",
+      "last_digest_at": "",
+      "next_digest_due": "",
+      "debt_queue": "",
+      "debt_owner_or_queue": "",
+      "next_action": "none",
+      "digest_backlog_age_days": 0
+    },
+    {
+      "source_ref": "enterprise_stress/sources/source-000.md",
+      "total": 16,
+      "active": 15,
+      "ai_ready": 15,
+      "repair": 0,
+      "stale": 0,
+      "scale_debt": 0,
+      "digest_required": false,
+      "digest_ref": "",
+      "last_digest_at": "",
+      "next_digest_due": "",
+      "debt_queue": "",
+      "debt_owner_or_queue": "",
+      "next_action": "none",
+      "digest_backlog_age_days": 0
+    },
+    {
+      "source_ref": "enterprise_stress/sources/source-008.md",
+      "total": 15,
+      "active": 15,
+      "ai_ready": 15,
+      "repair": 0,
+      "stale": 0,
+      "scale_debt": 0,
+      "digest_required": false,
+      "digest_ref": "",
+      "last_digest_at": "",
+      "next_digest_due": "",
+      "debt_queue": "",
+      "debt_owner_or_queue": "",
+      "next_action": "none",
+      "digest_backlog_age_days": 0
+    },
+    {
+      "source_ref": "enterprise_stress/sources/source-013.md",
+      "total": 15,
+      "active": 15,
+      "ai_ready": 13,
+      "repair": 1,
+      "stale": 1,
+      "scale_debt": 0,
+      "digest_required": false,
+      "digest_ref": "",
+      "last_digest_at": "",
+      "next_digest_due": "",
+      "debt_queue": "",
+      "debt_owner_or_queue": "",
+      "next_action": "none",
+      "digest_backlog_age_days": 0
+    },
+    {
+      "source_ref": "enterprise_stress/sources/source-018.md",
+      "total": 15,
+      "active": 15,
+      "ai_ready": 15,
+      "repair": 0,
+      "stale": 0,
+      "scale_debt": 0,
+      "digest_required": false,
+      "digest_ref": "",
+      "last_digest_at": "",
+      "next_digest_due": "",
+      "debt_queue": "",
+      "debt_owner_or_queue": "",
+      "next_action": "none",
+      "digest_backlog_age_days": 0
+    },
+    {
+      "source_ref": "enterprise_stress/sources/source-021.md",
+      "total": 15,
+      "active": 15,
+      "ai_ready": 14,
+      "repair": 0,
+      "stale": 1,
+      "scale_debt": 0,
+      "digest_required": false,
+      "digest_ref": "",
+      "last_digest_at": "",
+      "next_digest_due": "",
+      "debt_queue": "",
+      "debt_owner_or_queue": "",
+      "next_action": "none",
+      "digest_backlog_age_days": 0
+    },
+    {
+      "source_ref": "enterprise_stress/sources/source-026.md",
+      "total": 15,
+      "active": 15,
+      "ai_ready": 14,
+      "repair": 1,
+      "stale": 0,
+      "scale_debt": 0,
+      "digest_required": false,
+      "digest_ref": "",
+      "last_digest_at": "",
+      "next_digest_due": "",
+      "debt_queue": "",
+      "debt_owner_or_queue": "",
+      "next_action": "none",
+      "digest_backlog_age_days": 0
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "fixture": "valid-ready-not-submitted",
+  "checks": {
+    "dispatch.dispatch_ready": true,
+    "dispatch.external_submission_performed": false,
+    "authority_flags.actual_opus_result_present": false,
+    "authority_flags.user_approval_present": false
+  },
+  "expected": true
+}

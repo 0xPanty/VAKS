@@ -1,0 +1,182 @@
+{
+  "artifact_overwrite_error_class": "FileExistsError",
+  "artifact_overwrite_rejected": true,
+  "artifact_text_unchanged_after_rejected_write": true,
+  "first_run_status": "pass",
+  "forbidden_output_path_self_test": {
+    "check_count": 6,
+    "checks": [
+      {
+        "created": false,
+        "error_class": "ValueError",
+        "name": "raw_root",
+        "passed": true,
+        "path": "C:/Users/Administrator/Documents/资料库/raw/vaks-supervised-trial-adapter-preflight-r1-5-r47-forbidden-39036-1782323433311"
+      },
+      {
+        "created": false,
+        "error_class": "ValueError",
+        "name": "wiki_root",
+        "passed": true,
+        "path": "C:/Users/Administrator/Documents/资料库/wiki/vaks-supervised-trial-adapter-preflight-r1-5-r47-forbidden-39036-1782323433311"
+      },
+      {
+        "created": false,
+        "error_class": "ValueError",
+        "name": "review_prefix_trick",
+        "passed": true,
+        "path": "C:/Users/Administrator/Documents/资料库/outputs/review_evil/vaks-supervised-trial-adapter-preflight-r1-5-r47-forbidden-39036-1782323433311"
+      },
+      {
+        "created": false,
+        "error_class": "ValueError",
+        "name": "bad_review_name",
+        "passed": true,
+        "path": "C:/Users/Administrator/Documents/资料库/outputs/review/vaks-supervised-trial-adapter-preflight-r1-5-r47-forbidden-39036-1782323433311-badname"
+      },
+      {
+        "created": false,
+        "error_class": "ValueError",
+        "name": "control_char_name",
+        "passed": true,
+        "path": "C:/Users/Administrator/Documents/资料库/outputs/review/vaks-supervised-trial-adapter-preflight-r1-5-r47-forbidden-39036-1782323433311\ncontrol"
+      },
+      {
+        "created": false,
+        "error_class": "ValueError",
+        "name": "obsidian_vault",
+        "passed": true,
+        "path": "H:/Obsidian/资料库/vaks-supervised-trial-adapter-preflight-r1-5-r47-forbidden-39036-1782323433311"
+      }
+    ],
+    "failure_count": 0,
+    "status": "pass"
+  },
+  "preexisting_zip_left_output_dir_uncreated": true,
+  "preexisting_zip_rejected": true,
+  "second_run_error_class": "FileExistsError",
+  "second_run_exit_code": 3,
+  "second_run_same_directory_rejected": true,
+  "stable_artifact_repeatability_self_test": {
+    "check_count": 7,
+    "checks": [
+      {
+        "left_sha256": "6b4bd22030dabca3cc156f1bde6efffb82a11b6ab0eadc8e7766a03b08a800fa",
+        "name": "trial_cases.jsonl_exact_match",
+        "passed": true,
+        "right_sha256": "6b4bd22030dabca3cc156f1bde6efffb82a11b6ab0eadc8e7766a03b08a800fa"
+      },
+      {
+        "left_sha256": "bb7f33ca4961f2e0b8ed4cab55c4c783cffc2905d572aa300400e61bbbd46fcc",
+        "name": "trial_logs.jsonl_exact_match",
+        "passed": true,
+        "right_sha256": "bb7f33ca4961f2e0b8ed4cab55c4c783cffc2905d572aa300400e61bbbd46fcc"
+      },
+      {
+        "left_sha256": "213fb689ebcc0e8f0e207780703ea34ac16107ce4f059345c973f2cae59874c1",
+        "name": "dependency_checks.json_exact_match",
+        "passed": true,
+        "right_sha256": "213fb689ebcc0e8f0e207780703ea34ac16107ce4f059345c973f2cae59874c1"
+      },
+      {
+        "left_sha256": "dcbc1536b95b847f412376c42268438fed6b6cbfa9a6b07e051d169c4f7ea4b1",
+        "name": "trial_results.jsonl_normalized_match",
+        "normalization": "latency_and_elapsed_fields_removed",
+        "passed": true,
+        "right_sha256": "dcbc1536b95b847f412376c42268438fed6b6cbfa9a6b07e051d169c4f7ea4b1"
+      },
+      {
+        "left_sha256": "cf5be5288775c9ce38c6e58c4c3ed1ebc1c07ec3885c8f411c02e8ccf36cecd6",
+        "name": "quality_metrics.json_normalized_match",
+        "normalization": "latency_fields_removed",
+        "passed": true,
+        "right_sha256": "cf5be5288775c9ce38c6e58c4c3ed1ebc1c07ec3885c8f411c02e8ccf36cecd6"
+      },
+      {
+        "left_sha256": "3b6bbf42f2523f22eac8105ea512710bf7b15d9fe3a086d8f103780b82fed7d8",
+        "name": "summary.json_normalized_match",
+        "normalization": "latency_fields_removed",
+        "passed": true,
+        "right_sha256": "3b6bbf42f2523f22eac8105ea512710bf7b15d9fe3a086d8f103780b82fed7d8"
+      },
+      {
+        "left_status": "pass",
+        "name": "both_runs_pass",
+        "passed": true,
+        "right_status": "pass"
+      }
+    ],
+    "failure_count": 0,
+    "not_compared_as_deterministic": [
+      "latency_metrics.json",
+      "zip_sha256",
+      "run_manifest artifact hashes"
+    ],
+    "status": "pass"
+  },
+  "status": "pass",
+  "tamper_negative_self_test": {
+    "check_count": 8,
+    "checks": [
+      {
+        "manifest_hashes_match": false,
+        "name": "artifact_tamper_detected",
+        "observed_status": "fail",
+        "passed": true
+      },
+      {
+        "manifest_hashes_match": false,
+        "name": "missing_artifact_detected",
+        "observed_status": "fail",
+        "passed": true
+      },
+      {
+        "extra_hashes": [
+          "unexpected-extra-artifact.txt"
+        ],
+        "name": "extra_artifact_detected",
+        "observed_status": "fail",
+        "passed": true
+      },
+      {
+        "name": "sidecar_tamper_detected",
+        "observed_status": "fail",
+        "passed": true,
+        "zip_sidecar_matches_zip": false
+      },
+      {
+        "name": "sidecar_format_tamper_detected",
+        "observed_status": "fail",
+        "passed": true,
+        "zip_sidecar_exact_format": false,
+        "zip_sidecar_matches_zip": true
+      },
+      {
+        "name": "zip_unsafe_entry_tamper_detected",
+        "observed_status": "fail",
+        "passed": true,
+        "unsafe_entry_count": 1,
+        "zip_has_no_unsafe_entries": false
+      },
+      {
+        "duplicate_entry_count": 1,
+        "name": "zip_duplicate_entry_tamper_detected",
+        "observed_status": "fail",
+        "passed": true,
+        "zip_has_no_duplicate_entries": false
+      },
+      {
+        "name": "zip_content_tamper_detected",
+        "observed_status": "fail",
+        "passed": true,
+        "zip_entry_hashes_match_directory": false,
+        "zip_hash_failure_count": 1
+      }
+    ],
+    "failure_count": 0,
+    "status": "pass"
+  },
+  "tree_hash_after_second_run": "57be64bb18d07cdf4dd5409ba094c0a6a1c575b5d1832ed90374fe663e62d722",
+  "tree_hash_before_second_run": "57be64bb18d07cdf4dd5409ba094c0a6a1c575b5d1832ed90374fe663e62d722",
+  "tree_hash_unchanged_after_rejected_second_run": true
+}

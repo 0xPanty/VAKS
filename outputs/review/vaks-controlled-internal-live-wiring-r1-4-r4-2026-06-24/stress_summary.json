@@ -1,0 +1,21 @@
+{
+  "boundary": "stress covers feature flag, eligibility, guard-pass release decision, and output gate logic; not live LLM/retrieval/network production load",
+  "gate_path_avg_ms": 0.010904,
+  "gate_path_p95_ms": 0.0086,
+  "gate_path_p99_ms": 0.0734,
+  "parallel_count": 120000,
+  "parallel_determinism_failure_count": 0,
+  "parallel_elapsed_ms": 9104.5025,
+  "parallel_worker_count": 8,
+  "sample_coverage": {
+    "eligible_released_sample_count": 16,
+    "eligible_withheld_sample_count": 33,
+    "guard_fault_sample_count": 3,
+    "ineligible_sample_count": 84
+  },
+  "sample_coverage_pass": true,
+  "sequential_count": 500000,
+  "sequential_elapsed_ms": 5915.6169,
+  "sequential_failure_count": 0,
+  "status": "pass"
+}

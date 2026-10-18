@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>p2-86 Approval To Prewrite Gate</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f7f8fa; color: #1d2530; }
+    main { max-width: 1080px; margin: 0 auto; padding: 32px 20px; }
+    h1 { font-size: 28px; margin: 0 0 16px; letter-spacing: 0; }
+    .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-bottom: 22px; }
+    .metric { background: #fff; border: 1px solid #d9e0e8; border-radius: 8px; padding: 14px; }
+    .metric span { display: block; color: #596575; font-size: 13px; }
+    .metric strong { display: block; font-size: 24px; margin-top: 6px; }
+    table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #d9e0e8; }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #e5e9ef; }
+    th { color: #526070; font-size: 13px; }
+    .boundary { margin-top: 20px; background: #fff4f2; border-left: 4px solid #a63d40; padding: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>p2-86 Approval To Prewrite Gate</h1>
+    <section class="metrics">
+      <div class="metric"><span>Fresh hash match</span><strong>75/75</strong></div>
+      <div class="metric"><span>Positive ready</span><strong>1</strong></div>
+      <div class="metric"><span>Negative blocked</span><strong>7</strong></div>
+      <div class="metric"><span>Old writes</span><strong>0</strong></div>
+    </section>
+    <table>
+      <thead><tr><th>Scenario</th><th>Gate State</th><th>Prewrite Ready</th><th>Write Allowed Now</th></tr></thead>
+      <tbody><tr><td>POS-01-exact-clean-prewrite-ready</td><td>ready_for_prewrite_confirmation</td><td>true</td><td>false</td></tr>
+<tr><td>NEG-01-generic-continuation</td><td>blocked_no_exact_approval</td><td>false</td><td>false</td></tr>
+<tr><td>NEG-02-product-acceptance-as-approval</td><td>blocked_no_exact_approval</td><td>false</td><td>false</td></tr>
+<tr><td>NEG-03-hash-drift</td><td>blocked_prewrite_hash_or_missing_target</td><td>false</td><td>false</td></tr>
+<tr><td>NEG-04-missing-rehearsal</td><td>blocked_missing_byte_safe_rehearsal</td><td>false</td><td>false</td></tr>
+<tr><td>NEG-05-boundary-not-passed</td><td>blocked_boundary_not_passed</td><td>false</td><td>false</td></tr>
+<tr><td>NEG-06-mainline-request</td><td>blocked_mainline_authority_request</td><td>false</td><td>false</td></tr>
+<tr><td>NEG-07-immediate-write-request</td><td>blocked_immediate_write_request</td><td>false</td><td>false</td></tr></tbody>
+    </table>
+    <section class="boundary">Ready-for-prewrite is not old-file write authority. This slice writes no old files.</section>
+  </main>
+</body>
+</html>

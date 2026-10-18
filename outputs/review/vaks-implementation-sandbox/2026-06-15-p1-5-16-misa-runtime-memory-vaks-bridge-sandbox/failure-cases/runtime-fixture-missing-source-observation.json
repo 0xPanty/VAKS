@@ -1,0 +1,19 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "runtime-fixture-missing-source-observation",
+  "expected_valid": false,
+  "expected_codes": ["MB_SOURCE_OBSERVATION_TRACE_MISSING"],
+  "patch": {
+    "runtime_memory": {
+      "entries": [
+        {
+          "id": "bad-runtime-fixture",
+          "ref": "fixtures/bad/runtime-session-observation-missing-source.json",
+          "memory_type": "session_observation",
+          "source_observation_ids": ["obs-bad-missing-source"],
+          "action_basis_allowed": false
+        }
+      ]
+    }
+  }
+}

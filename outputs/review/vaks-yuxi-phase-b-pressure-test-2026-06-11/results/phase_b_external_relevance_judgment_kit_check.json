@@ -1,0 +1,63 @@
+{
+  "external_relevance_judgment_kit_check_status": "pending_external_judgment",
+  "error_count": 0,
+  "errors": [],
+  "artifacts": {
+    "artifacts": [
+      {
+        "path": "results\\phase_b_blind_relevance_judgment_packet.csv",
+        "exists": true,
+        "bytes": 1125540
+      },
+      {
+        "path": "results\\phase_b_blind_relevance_external_judgment_template.csv",
+        "exists": true,
+        "bytes": 1013271
+      },
+      {
+        "path": "results\\phase_b_blind_relevance_external_judgment_mapping.csv",
+        "exists": true,
+        "bytes": 158117
+      },
+      {
+        "path": "results\\phase_b_external_relevance_judgment_kit.json",
+        "exists": true,
+        "bytes": 1007
+      },
+      {
+        "path": "PHASE_B_EXTERNAL_RELEVANCE_JUDGMENT_KIT.md",
+        "exists": true,
+        "bytes": 2129
+      }
+    ]
+  },
+  "template": {
+    "packet_rows": 720,
+    "template_rows": 720,
+    "mapping_rows": 720,
+    "query_count": 18,
+    "corpora": [
+      "full",
+      "primary"
+    ],
+    "system_slots": [
+      "system_01",
+      "system_02",
+      "system_03",
+      "system_04"
+    ],
+    "mapped_modes": [
+      "baseline_file_lexical",
+      "vaks_b_adapter_skeleton",
+      "vaks_only_lexical_bucket",
+      "yuxi_native_profile"
+    ]
+  },
+  "external_judgments": {
+    "external_judgment_status": "pending_external_judgment",
+    "judgment_rows": 0,
+    "missing_judgment_rows": 720,
+    "disagreement_rows": 0,
+    "summary_rows": 0
+  }
+}

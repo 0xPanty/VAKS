@@ -1,0 +1,12 @@
+{
+  "fixture_id": "all-targets-current-status-match-manifest",
+  "expected": {
+    "target_change_count": 75,
+    "target_file_count": 75,
+    "target_old_slice_count": 20,
+    "missing_target_count": 0,
+    "frontmatter_invalid_count": 0,
+    "current_status_mismatch_count": 0,
+    "proposed_status_already_applied_count": 0
+  }
+}

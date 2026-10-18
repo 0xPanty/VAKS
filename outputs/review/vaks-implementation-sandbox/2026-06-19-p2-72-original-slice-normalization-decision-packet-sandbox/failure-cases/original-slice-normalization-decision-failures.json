@@ -1,0 +1,42 @@
+[
+  {
+    "failure_id": "reject_user_approval_collected_true",
+    "risk": "decision packet cannot infer user approval",
+    "mutation": {"set_path": {"path": ["authority_flags", "user_approval_collected"], "value": true}}
+  },
+  {
+    "failure_id": "reject_normalization_applied_true",
+    "risk": "dry-run packet cannot claim normalization was applied",
+    "mutation": {"set_path": {"path": ["authority_flags", "normalization_applied"], "value": true}}
+  },
+  {
+    "failure_id": "reject_old_slice_write_allowed_true",
+    "risk": "old-slice writes require separate approval",
+    "mutation": {"set_path": {"path": ["authority_flags", "old_slice_write_allowed"], "value": true}}
+  },
+  {
+    "failure_id": "reject_mainline_ready_true",
+    "risk": "decision packet cannot approve mainline readiness",
+    "mutation": {"set_path": {"path": ["authority_flags", "mainline_ready"], "value": true}}
+  },
+  {
+    "failure_id": "reject_action_basis_ready_true",
+    "risk": "decision packet cannot create action basis",
+    "mutation": {"set_path": {"path": ["authority_flags", "action_basis_ready"], "value": true}}
+  },
+  {
+    "failure_id": "reject_wrong_item_count",
+    "risk": "decision packet must cover all 20 original items",
+    "mutation": {"set_path": {"path": ["summary", "original_items_covered"], "value": 19}}
+  },
+  {
+    "failure_id": "reject_missing_dry_run_change_count",
+    "risk": "dry-run manifest must list proposed status changes",
+    "mutation": {"set_path": {"path": ["summary", "dry_run_status_change_count"], "value": 0}}
+  },
+  {
+    "failure_id": "reject_approval_option_allowed_now",
+    "risk": "approve_status_only_normalization cannot be allowed before explicit approval",
+    "mutation": {"set_path": {"path": ["decision_options", 0, "allowed_now"], "value": true}}
+  }
+]

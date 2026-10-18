@@ -1,0 +1,1 @@
+{"case_id":"reviewed-truth-write","base_fixture":"fixtures/valid-product-experience-screening.json","mutations":[{"op":"set_candidate","id":"P2-PX-02","path":"/authority_flags/writes_reviewed_truth","value":true}]}

@@ -1,0 +1,19 @@
+field,old_value,new_value,legacy_field,migration_kind,risk_note
+record_kind,source_record,source_card,legacy_record_kind,pure_rename,mostly naming drift; legacy retained for audit when recovered
+record_kind,video_source_card,source_card,legacy_record_kind,pure_rename,mostly naming drift; legacy retained for audit when recovered
+record_kind,source_snapshot_index,source_card,legacy_record_kind,semantic_compression,not fully equivalent; preserve legacy value or review before relying on canonical value
+record_kind,project_lens_overlay,project_overlay,legacy_record_kind,pure_rename,mostly naming drift; legacy retained for audit when recovered
+overlay_state,candidate_only,none,legacy_overlay_state,semantic_compression,not fully equivalent; preserve legacy value or review before relying on canonical value
+overlay_state,candidate,none,legacy_overlay_state,semantic_compression,not fully equivalent; preserve legacy value or review before relying on canonical value
+overlay_state,project_sidecar_created,none,legacy_overlay_state,semantic_compression,not fully equivalent; preserve legacy value or review before relying on canonical value
+review_pressure,local_benchmark_required,review_due,legacy_review_pressure,semantic_compression,not fully equivalent; preserve legacy value or review before relying on canonical value
+review_pressure,local_pilot_required,review_due,legacy_review_pressure,semantic_compression,not fully equivalent; preserve legacy value or review before relying on canonical value
+retrieval_policy.policy_kind,candidate_only,orientation_only,legacy_retrieval_policy_kind,semantic_compression,not fully equivalent; preserve legacy value or review before relying on canonical value
+retrieval_policy.policy_kind,source_with_candidate_comprehension,source_identity_only,legacy_retrieval_policy_kind,semantic_compression,not fully equivalent; preserve legacy value or review before relying on canonical value
+retrieval_policy.pack_allowed,context_with_warning,activation_only,legacy_retrieval_pack_allowed,semantic_compression,not fully equivalent; preserve legacy value or review before relying on canonical value
+retrieval_policy.warning_code,candidate_not_reviewed,candidate_not_action_basis,legacy_retrieval_warning_code,semantic_shift,not fully equivalent; preserve legacy value or review before relying on canonical value
+retrieval_policy.warning_code,raw_snapshot_only,raw_is_provenance_only,legacy_retrieval_warning_code,pure_rename,mostly naming drift; legacy retained for audit when recovered
+promotion_gate,evidence_aware_review_required,v0_2_13_required,legacy_promotion_gate,semantic_compression,not fully equivalent; preserve legacy value or review before relying on canonical value
+promotion_gate,evidence_aware_review_and_local_benchmark_required,v0_2_13_required,legacy_promotion_gate,semantic_compression,not fully equivalent; preserve legacy value or review before relying on canonical value
+promotion_gate,evidence_aware_review_and_sandbox_required,v0_2_13_required,legacy_promotion_gate,semantic_compression,not fully equivalent; preserve legacy value or review before relying on canonical value
+promotion_gate,retrieval_layer_comparison_and_sandbox_required,v0_2_13_required,legacy_promotion_gate,semantic_compression,not fully equivalent; preserve legacy value or review before relying on canonical value

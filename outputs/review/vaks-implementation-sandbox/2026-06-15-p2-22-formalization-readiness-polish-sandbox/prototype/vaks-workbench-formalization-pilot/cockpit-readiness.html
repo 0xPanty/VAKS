@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en" data-sandbox-only="true" data-no-sync="true" data-no-authority="true">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VAKS Formalization Readiness Pilot</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172026;
+      --muted: #52616b;
+      --line: #d7dde2;
+      --paper: #f8faf9;
+      --panel: #ffffff;
+      --accent: #0f766e;
+      --warn: #b45309;
+      --ok: #28724f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      padding: 28px 32px 18px;
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 34px;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    .sub { max-width: 940px; color: var(--muted); line-height: 1.5; }
+    .shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: 20px;
+      padding: 20px 32px 36px;
+    }
+    main { min-width: 0; }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    input {
+      min-width: 260px;
+      height: 40px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    button {
+      height: 40px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--panel);
+      color: var(--ink);
+      padding: 0 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button.active { border-color: var(--accent); color: var(--accent); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      min-height: 172px;
+    }
+    .card h3 { margin: 4px 0 8px; font-size: 18px; }
+    .card p { color: var(--muted); line-height: 1.45; }
+    .eyebrow { margin: 0; color: var(--accent); font-size: 12px; font-weight: 700; text-transform: uppercase; }
+    aside {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      align-self: start;
+      position: sticky;
+      top: 16px;
+    }
+    aside h2 { margin: 0 0 10px; font-size: 18px; }
+    aside li { margin-bottom: 8px; color: var(--muted); }
+    section {
+      margin-top: 18px;
+      padding: 16px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    section h2 { margin-top: 0; font-size: 20px; }
+    .options li { margin-bottom: 12px; }
+    .options span { display: block; color: var(--muted); margin-top: 3px; line-height: 1.45; }
+    @media (max-width: 860px) {
+      .shell { grid-template-columns: 1fr; padding: 16px; }
+      header { padding: 22px 16px 14px; }
+      h1 { font-size: 28px; }
+      aside { position: static; }
+      input { min-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>VAKS Formalization Readiness Pilot</h1>
+    <p class="sub">A sandbox-only product pilot that turns the P2-21 workbench into a first-run path, daily operator flow, receipt inspector, formalization decision matrix, and acceptance gate set. It is not reviewed knowledge, not evidence support, not action basis, and does not approve.</p>
+  </header>
+  <div class="shell">
+    <main>
+      <div class="toolbar" data-role="surface-filter">
+        <input id="q" type="search" placeholder="Search: receipt inspector, no formal vault write, next sandbox route">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="pilot_home">Home</button>
+        <button data-filter="receipt_inspector">Receipts</button>
+        <button data-filter="formalization_decision_matrix">Decision</button>
+        <button data-filter="acceptance_gates">Gates</button>
+      </div>
+      <div class="grid" id="cards" data-role="readiness-surfaces">
+        <article class="card" data-surface="pilot_home" data-search="pilot_home Pilot Home Where do I start? What changed? What is blocked? navigation is not authority sandbox only not reviewed knowledge not evidence support not action basis does not approve no sync no commit no push no promotion no formal vault write where do I start formalization route receipt inspector dirty state missing anchor blocked reason boundary faq no formal vault write not action basis not evidence support PASS_PRODUCT_GRADE next sandbox route">
+  <p class="eyebrow">pilot_home</p>
+  <h3>Pilot Home</h3>
+  <p>Where do I start? What changed? What is blocked?</p>
+  <strong>navigation is not authority</strong>
+</article>
+<article class="card" data-surface="first_run_script" data-search="first_run_script First Run Script How do I try this in five minutes? trial does not mean adoption sandbox only not reviewed knowledge not evidence support not action basis does not approve no sync no commit no push no promotion no formal vault write where do I start formalization route receipt inspector dirty state missing anchor blocked reason boundary faq no formal vault write not action basis not evidence support PASS_PRODUCT_GRADE next sandbox route">
+  <p class="eyebrow">first_run_script</p>
+  <h3>First Run Script</h3>
+  <p>How do I try this in five minutes?</p>
+  <strong>trial does not mean adoption</strong>
+</article>
+<article class="card" data-surface="daily_operator_flow" data-search="daily_operator_flow Daily Operator Flow What do I do when a new item appears? triage is not review approval sandbox only not reviewed knowledge not evidence support not action basis does not approve no sync no commit no push no promotion no formal vault write where do I start formalization route receipt inspector dirty state missing anchor blocked reason boundary faq no formal vault write not action basis not evidence support PASS_PRODUCT_GRADE next sandbox route">
+  <p class="eyebrow">daily_operator_flow</p>
+  <h3>Daily Operator Flow</h3>
+  <p>What do I do when a new item appears?</p>
+  <strong>triage is not review approval</strong>
+</article>
+<article class="card" data-surface="receipt_inspector" data-search="receipt_inspector Receipt Inspector Which verifier, hash, or report should I inspect? receipt is not evidence support sandbox only not reviewed knowledge not evidence support not action basis does not approve no sync no commit no push no promotion no formal vault write where do I start formalization route receipt inspector dirty state missing anchor blocked reason boundary faq no formal vault write not action basis not evidence support PASS_PRODUCT_GRADE next sandbox route">
+  <p class="eyebrow">receipt_inspector</p>
+  <h3>Receipt Inspector</h3>
+  <p>Which verifier, hash, or report should I inspect?</p>
+  <strong>receipt is not evidence support</strong>
+</article>
+<article class="card" data-surface="triage_dirty_state_panel" data-search="triage_dirty_state_panel Triage and Dirty-State Panel What is blocked, stale, dirty, missing an anchor, review due, or action risky? state grouping is not approval sandbox only not reviewed knowledge not evidence support not action basis does not approve no sync no commit no push no promotion no formal vault write where do I start formalization route receipt inspector dirty state missing anchor blocked reason boundary faq no formal vault write not action basis not evidence support PASS_PRODUCT_GRADE next sandbox route">
+  <p class="eyebrow">triage_dirty_state_panel</p>
+  <h3>Triage and Dirty-State Panel</h3>
+  <p>What is blocked, stale, dirty, missing an anchor, review due, or action risky?</p>
+  <strong>state grouping is not approval</strong>
+</article>
+<article class="card" data-surface="formalization_decision_matrix" data-search="formalization_decision_matrix Formalization Decision Matrix Which route should a real Obsidian workbench take? decision matrix is not a merge approval sandbox only not reviewed knowledge not evidence support not action basis does not approve no sync no commit no push no promotion no formal vault write where do I start formalization route receipt inspector dirty state missing anchor blocked reason boundary faq no formal vault write not action basis not evidence support PASS_PRODUCT_GRADE next sandbox route">
+  <p class="eyebrow">formalization_decision_matrix</p>
+  <h3>Formalization Decision Matrix</h3>
+  <p>Which route should a real Obsidian workbench take?</p>
+  <strong>decision matrix is not a merge approval</strong>
+</article>
+<article class="card" data-surface="acceptance_gates" data-search="acceptance_gates Acceptance Gates What must pass before a user can trust the workflow? gate pass is not mainline approval sandbox only not reviewed knowledge not evidence support not action basis does not approve no sync no commit no push no promotion no formal vault write where do I start formalization route receipt inspector dirty state missing anchor blocked reason boundary faq no formal vault write not action basis not evidence support PASS_PRODUCT_GRADE next sandbox route">
+  <p class="eyebrow">acceptance_gates</p>
+  <h3>Acceptance Gates</h3>
+  <p>What must pass before a user can trust the workflow?</p>
+  <strong>gate pass is not mainline approval</strong>
+</article>
+<article class="card" data-surface="boundary_faq" data-search="boundary_faq Boundary FAQ What does this not mean? FAQ prevents authority confusion sandbox only not reviewed knowledge not evidence support not action basis does not approve no sync no commit no push no promotion no formal vault write where do I start formalization route receipt inspector dirty state missing anchor blocked reason boundary faq no formal vault write not action basis not evidence support PASS_PRODUCT_GRADE next sandbox route">
+  <p class="eyebrow">boundary_faq</p>
+  <h3>Boundary FAQ</h3>
+  <p>What does this not mean?</p>
+  <strong>FAQ prevents authority confusion</strong>
+</article>
+<article class="card" data-surface="reviewer_packet" data-search="reviewer_packet Reviewer Packet What should reviewers inspect first? reviewer pass is not Product Acceptance sandbox only not reviewed knowledge not evidence support not action basis does not approve no sync no commit no push no promotion no formal vault write where do I start formalization route receipt inspector dirty state missing anchor blocked reason boundary faq no formal vault write not action basis not evidence support PASS_PRODUCT_GRADE next sandbox route">
+  <p class="eyebrow">reviewer_packet</p>
+  <h3>Reviewer Packet</h3>
+  <p>What should reviewers inspect first?</p>
+  <strong>reviewer pass is not Product Acceptance</strong>
+</article>
+<article class="card" data-surface="failure_messages" data-search="failure_messages Failure Messages Why was this blocked and what is the safe alternative? block reason is not a truth judgment sandbox only not reviewed knowledge not evidence support not action basis does not approve no sync no commit no push no promotion no formal vault write where do I start formalization route receipt inspector dirty state missing anchor blocked reason boundary faq no formal vault write not action basis not evidence support PASS_PRODUCT_GRADE next sandbox route">
+  <p class="eyebrow">failure_messages</p>
+  <h3>Failure Messages</h3>
+  <p>Why was this blocked and what is the safe alternative?</p>
+  <strong>block reason is not a truth judgment</strong>
+</article>
+<article class="card" data-surface="formalization_readiness_packet" data-search="formalization_readiness_packet Formalization Readiness Packet What would a later approved formalization slice need to touch? readiness packet is not permission to execute sandbox only not reviewed knowledge not evidence support not action basis does not approve no sync no commit no push no promotion no formal vault write where do I start formalization route receipt inspector dirty state missing anchor blocked reason boundary faq no formal vault write not action basis not evidence support PASS_PRODUCT_GRADE next sandbox route">
+  <p class="eyebrow">formalization_readiness_packet</p>
+  <h3>Formalization Readiness Packet</h3>
+  <p>What would a later approved formalization slice need to touch?</p>
+  <strong>readiness packet is not permission to execute</strong>
+</article>
+<article class="card" data-surface="rollout_backlog" data-search="rollout_backlog Rollout Backlog What is next after this sandbox? backlog item is not approval to execute sandbox only not reviewed knowledge not evidence support not action basis does not approve no sync no commit no push no promotion no formal vault write where do I start formalization route receipt inspector dirty state missing anchor blocked reason boundary faq no formal vault write not action basis not evidence support PASS_PRODUCT_GRADE next sandbox route">
+  <p class="eyebrow">rollout_backlog</p>
+  <h3>Rollout Backlog</h3>
+  <p>What is next after this sandbox?</p>
+  <strong>backlog item is not approval to execute</strong>
+</article>
+      </div>
+      <section data-role="decision-options">
+        <h2>Formalization Routes</h2>
+        <ul class="options"><li><b>Keep static HTML cockpit as inspection surface</b><span>Best for fast review and browser smoke tests. Boundary: inspection surface only.</span></li>
+<li><b>Translate to Obsidian-native Markdown and Bases</b><span>Best native operator experience after explicit formal-vault approval. Boundary: not executed here.</span></li>
+<li><b>Build a local read-only sidecar</b><span>Best for search, validation, and cockpit refresh without mutating the vault. Boundary: read-only only.</span></li>
+<li><b>Hybrid: native Markdown entry plus static inspector plus read-only validator</b><span>Best next product route because it keeps Obsidian feel and auditability separate. Boundary: recommended candidate, not approval.</span></li></ul>
+      </section>
+      <section data-role="acceptance-gates">
+        <h2>Acceptance Gates</h2>
+        <ul><li>first_run_under_5_minutes: A new operator reaches the boundary FAQ and first run checklist in three links or fewer.</li>
+<li>status_answered_in_2_clicks: Status, blocker, receipt, and next safe step are visible from Pilot Home.</li>
+<li>receipt_path_visible: P2-21 verification, boundary, reviewer, and product reports are linked from the pilot pack.</li>
+<li>authority_confusion_blocked: No page says sandbox pass equals reviewed knowledge, evidence support, action basis, merge, sync, commit, or push.</li>
+<li>write_scope_clean: All generated files stay under this slice path.</li>
+<li>reviewer_boundary_product_acceptance: Reviewer, Boundary Auditor, and GPT-5.5 xhigh Product Acceptance reports exist before next slice.</li></ul>
+      </section>
+    </main>
+    <aside data-role="boundary-rail">
+      <h2>Boundary Rail</h2>
+      <ul>
+        <li>sandbox only</li>
+        <li>not reviewed knowledge</li>
+        <li>not evidence support</li>
+        <li>not action basis</li>
+        <li>does not approve</li>
+        <li>no formal vault write</li>
+        <li>no sync / no commit / no push</li>
+      </ul>
+    </aside>
+  </div>
+  <script type="application/json" id="readiness-data">
+{
+  "slice_id": "2026-06-15-p2-22-formalization-readiness-polish-sandbox",
+  "source_slice": "2026-06-15-p2-21-silky-obsidian-workbench-sandbox",
+  "purpose": "Turn the product-grade sandbox workbench prototype into a formalization-readiness pilot pack.",
+  "write_scope": [
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-22-formalization-readiness-polish-sandbox/"
+  ],
+  "read_only_sources": [
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/next-step.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/verification.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/product-acceptance-report.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/artifact/silky-workbench-contract.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/prototype/vaks-silky-workbench-vault/cockpit.html"
+  ],
+  "operations": {
+    "default_read_only": true,
+    "rebuild_requires_explicit_flag": true,
+    "formal_vault_write": false,
+    "obsidian_sync": false,
+    "commit": false,
+    "push": false,
+    "promotion": false,
+    "dependency_install": false,
+    "background_service": false,
+    "mcp_write_tool": false,
+    "hooks": false,
+    "real_base_files": false,
+    "production_ui": false
+  },
+  "boundary_phrases": [
+    "sandbox only",
+    "not reviewed knowledge",
+    "not evidence support",
+    "not action basis",
+    "does not approve",
+    "no sync",
+    "no commit",
+    "no push",
+    "no promotion",
+    "no formal vault write"
+  ],
+  "surfaces": [
+    {
+      "id": "pilot_home",
+      "title": "Pilot Home",
+      "answers": [
+        "Where do I start?",
+        "What changed?",
+        "What is blocked?"
+      ],
+      "boundary": "navigation is not authority"
+    },
+    {
+      "id": "first_run_script",
+      "title": "First Run Script",
+      "answers": [
+        "How do I try this in five minutes?"
+      ],
+      "boundary": "trial does not mean adoption"
+    },
+    {
+      "id": "daily_operator_flow",
+      "title": "Daily Operator Flow",
+      "answers": [
+        "What do I do when a new item appears?"
+      ],
+      "boundary": "triage is not review approval"
+    },
+    {
+      "id": "receipt_inspector",
+      "title": "Receipt Inspector",
+      "answers": [
+        "Which verifier, hash, or report should I inspect?"
+      ],
+      "boundary": "receipt is not evidence support"
+    },
+    {
+      "id": "triage_dirty_state_panel",
+      "title": "Triage and Dirty-State Panel",
+      "answers": [
+        "What is blocked, stale, dirty, missing an anchor, review due, or action risky?"
+      ],
+      "boundary": "state grouping is not approval"
+    },
+    {
+      "id": "formalization_decision_matrix",
+      "title": "Formalization Decision Matrix",
+      "answers": [
+        "Which route should a real Obsidian workbench take?"
+      ],
+      "boundary": "decision matrix is not a merge approval"
+    },
+    {
+      "id": "acceptance_gates",
+      "title": "Acceptance Gates",
+      "answers": [
+        "What must pass before a user can trust the workflow?"
+      ],
+      "boundary": "gate pass is not mainline approval"
+    },
+    {
+      "id": "boundary_faq",
+      "title": "Boundary FAQ",
+      "answers": [
+        "What does this not mean?"
+      ],
+      "boundary": "FAQ prevents authority confusion"
+    },
+    {
+      "id": "reviewer_packet",
+      "title": "Reviewer Packet",
+      "answers": [
+        "What should reviewers inspect first?"
+      ],
+      "boundary": "reviewer pass is not Product Acceptance"
+    },
+    {
+      "id": "failure_messages",
+      "title": "Failure Messages",
+      "answers": [
+        "Why was this blocked and what is the safe alternative?"
+      ],
+      "boundary": "block reason is not a truth judgment"
+    },
+    {
+      "id": "formalization_readiness_packet",
+      "title": "Formalization Readiness Packet",
+      "answers": [
+        "What would a later approved formalization slice need to touch?"
+      ],
+      "boundary": "readiness packet is not permission to execute"
+    },
+    {
+      "id": "rollout_backlog",
+      "title": "Rollout Backlog",
+      "answers": [
+        "What is next after this sandbox?"
+      ],
+      "boundary": "backlog item is not approval to execute"
+    }
+  ],
+  "journeys": [
+    {
+      "id": "new_user_first_run",
+      "goal": "A new operator can understand the workbench without reading architecture first.",
+      "surface": "first_run_script",
+      "steps": [
+        "Open Pilot Home",
+        "Run First Run Script",
+        "Confirm Boundary FAQ"
+      ],
+      "expected_answer": "This is a sandbox pilot pack, not the formal vault.",
+      "boundary_check": "contains sandbox only and no formal vault write",
+      "stop_condition": "Stop if any step asks for sync, commit, push, install, or formal vault write."
+    },
+    {
+      "id": "daily_triage",
+      "goal": "An operator can decide where a new candidate belongs.",
+      "surface": "daily_operator_flow",
+      "steps": [
+        "Open Daily Operator Flow",
+        "Choose capture or review radar",
+        "Inspect next safe step"
+      ],
+      "expected_answer": "Triage can route work, but cannot approve truth or action basis.",
+      "boundary_check": "triage is not review approval",
+      "stop_condition": "Stop if routing is presented as reviewed knowledge."
+    },
+    {
+      "id": "receipt_lookup",
+      "goal": "An operator can find the verification trail for a slice.",
+      "surface": "receipt_inspector",
+      "steps": [
+        "Open Receipt Inspector",
+        "Select P2-21 source links",
+        "Open relevant receipt or report"
+      ],
+      "expected_answer": "Receipt proves process visibility only.",
+      "boundary_check": "receipt is not evidence support",
+      "stop_condition": "Stop if a receipt is described as source support."
+    },
+    {
+      "id": "formalization_route_choice",
+      "goal": "A product owner can compare formalization routes without accidental merge.",
+      "surface": "formalization_decision_matrix",
+      "steps": [
+        "Open Decision Matrix",
+        "Compare four routes",
+        "Select a recommended next sandbox route"
+      ],
+      "expected_answer": "Recommended route still requires separate user approval.",
+      "boundary_check": "decision matrix is not a merge approval",
+      "stop_condition": "Stop if the matrix authorizes Obsidian sync or mainline promotion."
+    },
+    {
+      "id": "acceptance_review",
+      "goal": "A reviewer can tell whether the pilot pack is ready for the next slice.",
+      "surface": "acceptance_gates",
+      "steps": [
+        "Open Acceptance Gates",
+        "Run validator",
+        "Read Reviewer, Boundary, Product reports"
+      ],
+      "expected_answer": "Only GPT-5.5 xhigh Product Acceptance can pass product grade.",
+      "boundary_check": "validator pass is not Product Acceptance",
+      "stop_condition": "Stop if validator output is treated as reviewer approval."
+    }
+  ],
+  "decision_options": [
+    {
+      "id": "static_html_cockpit",
+      "label": "Keep static HTML cockpit as inspection surface",
+      "fit": "Best for fast review and browser smoke tests.",
+      "risk": "Can feel outside native Obsidian if used alone.",
+      "requires_user_approval_for_formalization": true,
+      "boundary": "inspection surface only"
+    },
+    {
+      "id": "obsidian_native_markdown_bases",
+      "label": "Translate to Obsidian-native Markdown and Bases",
+      "fit": "Best native operator experience after explicit formal-vault approval.",
+      "risk": "Would write formal vault and possibly .base files, so it is not allowed in this slice.",
+      "requires_user_approval_for_formalization": true,
+      "boundary": "not executed here"
+    },
+    {
+      "id": "local_read_only_sidecar",
+      "label": "Build a local read-only sidecar",
+      "fit": "Best for search, validation, and cockpit refresh without mutating the vault.",
+      "risk": "Could drift into a runtime service if not tightly scoped.",
+      "requires_user_approval_for_formalization": true,
+      "boundary": "read-only only"
+    },
+    {
+      "id": "hybrid_pilot_path",
+      "label": "Hybrid: native Markdown entry plus static inspector plus read-only validator",
+      "fit": "Best next product route because it keeps Obsidian feel and auditability separate.",
+      "risk": "Needs a later approved slice to touch the formal vault.",
+      "requires_user_approval_for_formalization": true,
+      "boundary": "recommended candidate, not approval"
+    }
+  ],
+  "acceptance_gates": [
+    {
+      "id": "first_run_under_5_minutes",
+      "test": "A new operator reaches the boundary FAQ and first run checklist in three links or fewer."
+    },
+    {
+      "id": "status_answered_in_2_clicks",
+      "test": "Status, blocker, receipt, and next safe step are visible from Pilot Home."
+    },
+    {
+      "id": "receipt_path_visible",
+      "test": "P2-21 verification, boundary, reviewer, and product reports are linked from the pilot pack."
+    },
+    {
+      "id": "authority_confusion_blocked",
+      "test": "No page says sandbox pass equals reviewed knowledge, evidence support, action basis, merge, sync, commit, or push."
+    },
+    {
+      "id": "write_scope_clean",
+      "test": "All generated files stay under this slice path."
+    },
+    {
+      "id": "reviewer_boundary_product_acceptance",
+      "test": "Reviewer, Boundary Auditor, and GPT-5.5 xhigh Product Acceptance reports exist before next slice."
+    }
+  ],
+  "search_targets": [
+    "where do I start",
+    "formalization route",
+    "receipt inspector",
+    "dirty state",
+    "missing anchor",
+    "blocked reason",
+    "boundary faq",
+    "no formal vault write",
+    "not action basis",
+    "not evidence support",
+    "PASS_PRODUCT_GRADE",
+    "next sandbox route"
+  ],
+  "product_metrics": {
+    "first_run_max_steps": 3,
+    "status_answer_max_clicks": 2,
+    "required_positive_fixtures": 2,
+    "minimum_failure_cases": 18,
+    "required_decision_options": 4,
+    "required_surfaces": 11
+  }
+}
+  </script>
+  <script>
+    const input = document.getElementById('q');
+    const cards = Array.from(document.querySelectorAll('.card'));
+    const buttons = Array.from(document.querySelectorAll('button[data-filter]'));
+    let filter = 'all';
+    function apply() {
+      const query = input.value.toLowerCase();
+      cards.forEach(card => {
+        const okFilter = filter === 'all' || card.dataset.surface === filter;
+        const okQuery = !query || card.dataset.search.toLowerCase().includes(query) || card.textContent.toLowerCase().includes(query);
+        card.hidden = !(okFilter && okQuery);
+      });
+    }
+    buttons.forEach(btn => btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filter = btn.dataset.filter;
+      apply();
+    }));
+    input.addEventListener('input', apply);
+  </script>
+</body>
+</html>

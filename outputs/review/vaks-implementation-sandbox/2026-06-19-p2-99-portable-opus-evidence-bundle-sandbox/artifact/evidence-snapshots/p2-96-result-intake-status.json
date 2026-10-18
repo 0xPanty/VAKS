@@ -1,0 +1,55 @@
+{
+  "record_kind": "opus_result_intake_status",
+  "slice_id": "2026-06-19-p2-96-opus-result-intake-skeleton-sandbox",
+  "created_at": "2026-06-19T10:10:31.843439+00:00",
+  "source_inputs": {
+    "p2_94_submission_packet": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-94-opus-review-submission-packet-sandbox/artifact/opus-review-submission-packet.json",
+    "p2_94_result_intake_gate": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-94-opus-review-submission-packet-sandbox/artifact/opus-result-intake-gate.md",
+    "p2_95_goal_state_ledger": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-95-goal-state-external-review-waiting-ledger-sandbox/artifact/goal-state-external-review-waiting-ledger.json"
+  },
+  "summary": {
+    "allowed_conclusion_token_count": 3,
+    "raw_result_placeholder_present": true,
+    "actual_opus_result_present": false,
+    "opus_review_performed": false,
+    "opus_approval_claimed": false,
+    "result_intake_ready": true,
+    "p2_95_external_opus_review_pending": true,
+    "p2_95_goal_complete_now": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "commit_push_sync_ready": false,
+    "goal_complete_now": false
+  },
+  "allowed_conclusion_tokens": [
+    "OPUS_PASS_SANDBOX_CLOSEOUT",
+    "OPUS_REVISE_SANDBOX_CLOSEOUT",
+    "OPUS_BLOCKED_NEEDS_USER"
+  ],
+  "expected_future_result_record": {
+    "raw_conclusion_token": "<one allowed token>",
+    "reviewed_evidence": [
+      "<paths Opus says it inspected>"
+    ],
+    "blockers": [],
+    "boundary_verdict": "not_mainline_approval",
+    "raw_response_path": "artifact/raw-opus-result.md"
+  },
+  "authority_flags": {
+    "skeleton_only": true,
+    "actual_opus_result_present": false,
+    "opus_review_performed": false,
+    "opus_approval_claimed": false,
+    "mainline_merge": false,
+    "promotion": false,
+    "reviewed_knowledge": false,
+    "evidence_support": false,
+    "action_basis": false,
+    "user_mainline_approval": false,
+    "commit_push_sync": false,
+    "goal_complete_now": false
+  }
+}

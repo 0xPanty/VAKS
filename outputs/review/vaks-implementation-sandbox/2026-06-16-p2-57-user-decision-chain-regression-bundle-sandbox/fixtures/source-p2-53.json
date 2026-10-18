@@ -1,0 +1,9 @@
+{
+  "fixture_kind": "source_slice_expected",
+  "slice_id": "2026-06-16-p2-53-user-response-classifier-dry-run-sandbox",
+  "product_pass": true,
+  "reviewer_pass": true,
+  "boundary_pass": true,
+  "verification_present": true,
+  "next_step_present": true
+}

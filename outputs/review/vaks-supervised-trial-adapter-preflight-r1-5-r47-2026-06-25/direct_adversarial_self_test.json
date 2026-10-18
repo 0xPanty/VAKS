@@ -1,0 +1,95 @@
+{
+  "check_count": 10,
+  "checks": [
+    {
+      "details": {
+        "allowed_count": 1,
+        "attempt_count": 64,
+        "sink_sealed": true
+      },
+      "name": "concurrent_single_sink_write_once",
+      "passed": true
+    },
+    {
+      "details": {
+        "buffer_unchanged": true,
+        "committed_hash_unchanged": true,
+        "fact_write_allowed": false,
+        "second_candidate_allowed": false,
+        "second_fallback_allowed": false
+      },
+      "name": "sealed_sink_rejects_later_candidate_fallback_and_fact_writes",
+      "passed": true
+    },
+    {
+      "details": {
+        "buffer_hash": "f3b651bea825ef4a1667909ff90d35261f962870c2384757fa905d6e4c06a978",
+        "committed_hash": "f3b651bea825ef4a1667909ff90d35261f962870c2384757fa905d6e4c06a978"
+      },
+      "name": "committed_final_property_returns_copy",
+      "passed": true
+    },
+    {
+      "details": {
+        "claim_ids_match": false,
+        "passed": false
+      },
+      "name": "relevance_rejects_extra_visible_claim",
+      "passed": true
+    },
+    {
+      "details": {
+        "candidate_hash_matches_text": false,
+        "passed": false
+      },
+      "name": "relevance_rejects_candidate_hash_mismatch",
+      "passed": true
+    },
+    {
+      "details": {
+        "cycle_marker_present": true,
+        "serialized_length": 85
+      },
+      "name": "json_safe_serializes_cycles_without_crashing",
+      "passed": true
+    },
+    {
+      "details": {
+        "depth_marker_present": true,
+        "serialized_length": 143
+      },
+      "name": "json_safe_serializes_deep_values_with_depth_marker",
+      "passed": true
+    },
+    {
+      "details": {
+        "raw_sample_present": false,
+        "sample_text_present": false,
+        "sensitive_token_present": false,
+        "truncation_marker_present": true
+      },
+      "name": "json_safe_truncates_long_sensitive_strings_without_raw_sample",
+      "passed": true
+    },
+    {
+      "details": {
+        "serialized": "{\"inf\":{\"__non_json_float__\":\"inf\"},\"nan\":{\"__non_json_float__\":\"nan\"},\"neg_inf\":{\"__non_json_float__\":\"-inf\"}}"
+      },
+      "name": "json_safe_converts_nonfinite_floats_to_markers",
+      "passed": true
+    },
+    {
+      "details": {
+        "safe_accepted": true,
+        "safe_case_count": 2,
+        "unsafe_case_count": 9,
+        "unsafe_rejected": true
+      },
+      "name": "zip_entry_name_guard_rejects_traversal_and_absolute_forms",
+      "passed": true
+    }
+  ],
+  "failure_count": 0,
+  "schema_version": "r1.5-direct-adversarial-self-test",
+  "status": "pass"
+}

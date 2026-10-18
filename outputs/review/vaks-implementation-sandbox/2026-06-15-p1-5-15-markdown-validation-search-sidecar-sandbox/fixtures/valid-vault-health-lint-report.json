@@ -1,0 +1,37 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "valid-vault-health-lint-report",
+  "expected_valid": true,
+  "expected_codes": [],
+  "patch": {
+    "validation": {
+      "health_lint": {
+        "missing_anchor_count": 2,
+        "unknown_enum_count": 0,
+        "forbidden_field_count": 0,
+        "creates_review_pressure_only": true,
+        "claims_review_pass": false,
+        "claims_action_ready": false
+      }
+    },
+    "search": {
+      "included_buckets": ["review_input"],
+      "excluded_buckets": ["feedback", "runtime_artifact", "project_overlay", "candidate"],
+      "hits": [
+        {
+          "id": "lint-review-input",
+          "ref": "fixtures/copied-subset/candidate-distillation.md",
+          "authority_bucket": "review_input",
+          "knowledge_status": "candidate",
+          "pack_role": "review_input",
+          "selected_by": ["frontmatter_filter", "path_scope"],
+          "rank": 1,
+          "score": 0.64,
+          "action_basis_allowed": false,
+          "rank_claims_trust": false,
+          "score_sets_confidence": false
+        }
+      ]
+    }
+  }
+}

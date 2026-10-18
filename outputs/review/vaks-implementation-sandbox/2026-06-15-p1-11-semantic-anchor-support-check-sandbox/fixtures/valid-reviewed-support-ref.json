@@ -1,0 +1,18 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "valid-reviewed-support-ref",
+  "expected_valid": true,
+  "expected_codes": [],
+  "anchors": [
+    {
+      "id": "reviewed-support-ref-anchor",
+      "anchor_kind": "reviewed_support_ref",
+      "support_claimed": true,
+      "support_role": "direct_support",
+      "source_ref": "outputs/review/reviewed-support/example-evidence-packet.md",
+      "selector": "evidence-item:e-03",
+      "authority_bucket": "reviewed_support",
+      "selected_by_semantic": false
+    }
+  ]
+}

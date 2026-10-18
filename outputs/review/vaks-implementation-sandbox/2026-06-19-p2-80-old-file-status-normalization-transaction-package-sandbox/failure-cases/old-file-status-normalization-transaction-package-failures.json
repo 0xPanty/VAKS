@@ -1,0 +1,46 @@
+{
+  "record_kind": "sandbox_failure_case_matrix",
+  "slice_id": "2026-06-19-p2-80-old-file-status-normalization-transaction-package-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "TX-FAIL-01-missing-transaction-operation",
+      "must_fail_when": "a p2-72 status change has no transaction operation"
+    },
+    {
+      "case_id": "TX-FAIL-02-target-hash-missing",
+      "must_fail_when": "a transaction operation lacks a current target file sha256"
+    },
+    {
+      "case_id": "TX-FAIL-03-before-status-drift-ignored",
+      "must_fail_when": "before status no longer matches manifest current_status"
+    },
+    {
+      "case_id": "TX-FAIL-04-proposed-status-already-applied-ignored",
+      "must_fail_when": "proposed status is already on disk but treated as unapplied"
+    },
+    {
+      "case_id": "TX-FAIL-05-rollback-status-missing",
+      "must_fail_when": "rollback status is missing or differs from manifest current_status"
+    },
+    {
+      "case_id": "TX-FAIL-06-transaction-package-treated-as-approval",
+      "must_fail_when": "transaction package is treated as user approval"
+    },
+    {
+      "case_id": "TX-FAIL-07-executor-write-allowed-now",
+      "must_fail_when": "executor write is allowed before exact p2-75 approval"
+    },
+    {
+      "case_id": "TX-FAIL-08-old-slice-write-applied",
+      "must_fail_when": "transaction package applies an old slice write"
+    },
+    {
+      "case_id": "TX-FAIL-09-fresh-hash-check-not-required",
+      "must_fail_when": "future write does not require fresh target hash match"
+    },
+    {
+      "case_id": "TX-FAIL-10-mainline-or-action-authority-created",
+      "must_fail_when": "transaction package creates mainline readiness, promotion, reviewed knowledge, evidence support, action basis, or goal completion"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "valid-code-line-anchor-support",
+  "expected_valid": true,
+  "expected_codes": [],
+  "anchors": [
+    {
+      "id": "code-line-anchor",
+      "anchor_kind": "code_line_range",
+      "support_claimed": true,
+      "support_role": "direct_support",
+      "source_ref": "raw/repos/example-repo/src/module.py",
+      "commit_sha": "abc1234",
+      "line_range": "L40-L57",
+      "authority_bucket": "source_anchor",
+      "selected_by_semantic": true
+    }
+  ]
+}

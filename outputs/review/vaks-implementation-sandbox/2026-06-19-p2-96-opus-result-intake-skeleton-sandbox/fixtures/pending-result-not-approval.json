@@ -1,0 +1,7 @@
+{
+  "case_id": "pending-result-not-approval",
+  "actual_opus_result_present": false,
+  "opus_review_performed": false,
+  "opus_approval_claimed": false,
+  "passed": true
+}

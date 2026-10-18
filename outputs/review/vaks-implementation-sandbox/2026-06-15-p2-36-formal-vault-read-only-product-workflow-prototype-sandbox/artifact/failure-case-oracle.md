@@ -1,0 +1,140 @@
+# Failure Case Oracle
+
+Slice: `2026-06-15-p2-36-formal-vault-read-only-product-workflow-prototype-sandbox`
+
+- `001-operation-formal_vault_read.json` -> `operation_not_false:formal_vault_read`
+- `002-operation-formal_vault_scan.json` -> `operation_not_false:formal_vault_scan`
+- `003-operation-formal_vault_write.json` -> `operation_not_false:formal_vault_write`
+- `004-operation-formal_vault_hash.json` -> `operation_not_false:formal_vault_hash`
+- `005-operation-formal_vault_snapshot.json` -> `operation_not_false:formal_vault_snapshot`
+- `006-operation-formal_vault_state_check.json` -> `operation_not_false:formal_vault_state_check`
+- `007-operation-obsidian_sync.json` -> `operation_not_false:obsidian_sync`
+- `008-operation-commit.json` -> `operation_not_false:commit`
+- `009-operation-push.json` -> `operation_not_false:push`
+- `010-operation-promotion.json` -> `operation_not_false:promotion`
+- `011-operation-dependency_install.json` -> `operation_not_false:dependency_install`
+- `012-operation-background_service.json` -> `operation_not_false:background_service`
+- `013-operation-mcp_write_tool.json` -> `operation_not_false:mcp_write_tool`
+- `014-operation-hooks.json` -> `operation_not_false:hooks`
+- `015-operation-approval_collection.json` -> `operation_not_false:approval_collection`
+- `016-operation-user_instruction_collection.json` -> `operation_not_false:user_instruction_collection`
+- `017-operation-user_wording_storage.json` -> `operation_not_false:user_wording_storage`
+- `018-operation-command_emitted.json` -> `operation_not_false:command_emitted`
+- `019-operation-absolute_vault_path_resolved.json` -> `operation_not_false:absolute_vault_path_resolved`
+- `020-operation-execution_permission_granted.json` -> `operation_not_false:execution_permission_granted`
+- `021-operation-execution_performed.json` -> `operation_not_false:execution_performed`
+- `022-operation-action_basis_creation.json` -> `operation_not_false:action_basis_creation`
+- `023-operation-reviewed_knowledge_creation.json` -> `operation_not_false:reviewed_knowledge_creation`
+- `024-operation-evidence_support_creation.json` -> `operation_not_false:evidence_support_creation`
+- `025-operation-mainline_merge.json` -> `operation_not_false:mainline_merge`
+- `026-operation-dirty_tree_repair.json` -> `operation_not_false:dirty_tree_repair`
+- `027-operation-workflow_auto_advance.json` -> `operation_not_false:workflow_auto_advance`
+- `028-control-sandbox_only.json` -> `workflow_control_mismatch:sandbox_only`
+- `029-control-read_only_workflow_only.json` -> `workflow_control_mismatch:read_only_workflow_only`
+- `030-control-non_executable.json` -> `workflow_control_mismatch:non_executable`
+- `031-control-source_bound.json` -> `workflow_control_mismatch:source_bound`
+- `032-control-fresh_sandbox_required_for_next_work.json` -> `workflow_control_mismatch:fresh_sandbox_required_for_next_work`
+- `033-control-no_formal_vault_access.json` -> `workflow_control_mismatch:no_formal_vault_access`
+- `034-control-no_approval_collection.json` -> `workflow_control_mismatch:no_approval_collection`
+- `035-control-no_user_instruction.json` -> `workflow_control_mismatch:no_user_instruction`
+- `036-control-no_user_wording.json` -> `workflow_control_mismatch:no_user_wording`
+- `037-control-no_commands.json` -> `workflow_control_mismatch:no_commands`
+- `038-control-no_absolute_vault_paths.json` -> `workflow_control_mismatch:no_absolute_vault_paths`
+- `039-control-no_mainline_claim.json` -> `workflow_control_mismatch:no_mainline_claim`
+- `040-control-no_action_basis.json` -> `workflow_control_mismatch:no_action_basis`
+- `041-control-no_evidence_support.json` -> `workflow_control_mismatch:no_evidence_support`
+- `042-control-no_reviewed_knowledge.json` -> `workflow_control_mismatch:no_reviewed_knowledge`
+- `043-control-no_dirty_tree_repair.json` -> `workflow_control_mismatch:no_dirty_tree_repair`
+- `044-control-no_auto_advance.json` -> `workflow_control_mismatch:no_auto_advance`
+- `045-control-operator_must_stop_before_execution.json` -> `workflow_control_mismatch:operator_must_stop_before_execution`
+- `046-control-workflow_is_not_authority.json` -> `workflow_control_mismatch:workflow_is_not_authority`
+- `047-source-input-0-sha-drift.json` -> `source_inputs_mismatch`
+- `048-source-input-1-sha-drift.json` -> `source_inputs_mismatch`
+- `049-source-input-2-sha-drift.json` -> `source_inputs_mismatch`
+- `050-source-input-3-sha-drift.json` -> `source_inputs_mismatch`
+- `051-source-input-4-sha-drift.json` -> `source_inputs_mismatch`
+- `052-source-input-5-sha-drift.json` -> `source_inputs_mismatch`
+- `053-source-input-6-sha-drift.json` -> `source_inputs_mismatch`
+- `054-source-input-7-sha-drift.json` -> `source_inputs_mismatch`
+- `055-source-input-8-sha-drift.json` -> `source_inputs_mismatch`
+- `056-source-input-9-sha-drift.json` -> `source_inputs_mismatch`
+- `057-source-status-0-drift.json` -> `source_statuses_mismatch`
+- `058-source-status-1-drift.json` -> `source_statuses_mismatch`
+- `059-source-status-2-drift.json` -> `source_statuses_mismatch`
+- `060-source-status-3-drift.json` -> `source_statuses_mismatch`
+- `061-payload-operator_can_copy_commands.json` -> `workflow_payload_flag_not_false:operator_can_copy_commands, workflow_payload_mismatch`
+- `062-payload-operator_can_collect_approval.json` -> `workflow_payload_flag_not_false:operator_can_collect_approval, workflow_payload_mismatch`
+- `063-payload-operator_can_store_user_wording.json` -> `workflow_payload_flag_not_false:operator_can_store_user_wording, workflow_payload_mismatch`
+- `064-payload-operator_can_access_formal_vault.json` -> `workflow_payload_flag_not_false:operator_can_access_formal_vault, workflow_payload_mismatch`
+- `065-payload-operator_can_create_action_basis.json` -> `workflow_payload_flag_not_false:operator_can_create_action_basis, workflow_payload_mismatch`
+- `066-payload-operator_can_mark_mainline_ready.json` -> `workflow_payload_flag_not_false:operator_can_mark_mainline_ready, workflow_payload_mismatch`
+- `067-payload-operator_can_fix_dirty_tree.json` -> `workflow_payload_flag_not_false:operator_can_fix_dirty_tree, workflow_payload_mismatch`
+- `068-payload-operator_can_auto_advance.json` -> `workflow_payload_flag_not_false:operator_can_auto_advance, workflow_payload_mismatch`
+- `069-binding-formal_vault_accessed.json` -> `source_binding_flag_not_false:formal_vault_accessed, source_surface_binding_mismatch`
+- `070-binding-approval_collected_now.json` -> `source_binding_flag_not_false:approval_collected_now, source_surface_binding_mismatch`
+- `071-binding-user_instruction_collected.json` -> `source_binding_flag_not_false:user_instruction_collected, source_surface_binding_mismatch`
+- `072-binding-user_wording_stored.json` -> `source_binding_flag_not_false:user_wording_stored, source_surface_binding_mismatch`
+- `073-binding-execution_permission_granted.json` -> `source_binding_flag_not_false:execution_permission_granted, source_surface_binding_mismatch`
+- `074-binding-execution_performed.json` -> `source_binding_flag_not_false:execution_performed, source_surface_binding_mismatch`
+- `075-binding-write_performed.json` -> `source_binding_flag_not_false:write_performed, source_surface_binding_mismatch`
+- `076-binding-sync_performed.json` -> `source_binding_flag_not_false:sync_performed, source_surface_binding_mismatch`
+- `077-binding-commit_performed.json` -> `source_binding_flag_not_false:commit_performed, source_surface_binding_mismatch`
+- `078-binding-push_performed.json` -> `source_binding_flag_not_false:push_performed, source_surface_binding_mismatch`
+- `079-binding-promotion_performed.json` -> `source_binding_flag_not_false:promotion_performed, source_surface_binding_mismatch`
+- `080-binding-mainline_ready.json` -> `source_binding_flag_not_false:mainline_ready, source_surface_binding_mismatch`
+- `081-binding-workflow_used_as_action_basis.json` -> `source_binding_flag_not_false:workflow_used_as_action_basis, source_surface_binding_mismatch`
+- `082-binding-dirty_tree_fixed.json` -> `source_binding_flag_not_false:dirty_tree_fixed, source_surface_binding_mismatch`
+- `083-binding-auto_advanced.json` -> `source_binding_flag_not_false:auto_advanced, source_surface_binding_mismatch`
+- `084-receipt-formal_vault_accessed.json` -> `workflow_receipt_flag_not_false:formal_vault_accessed`
+- `085-receipt-approval_collected_now.json` -> `workflow_receipt_flag_not_false:approval_collected_now`
+- `086-receipt-user_instruction_collected.json` -> `workflow_receipt_flag_not_false:user_instruction_collected`
+- `087-receipt-user_wording_stored.json` -> `workflow_receipt_flag_not_false:user_wording_stored`
+- `088-receipt-execution_permission_granted.json` -> `workflow_receipt_flag_not_false:execution_permission_granted`
+- `089-receipt-execution_performed.json` -> `workflow_receipt_flag_not_false:execution_performed`
+- `090-receipt-write_performed.json` -> `workflow_receipt_flag_not_false:write_performed`
+- `091-receipt-sync_performed.json` -> `workflow_receipt_flag_not_false:sync_performed`
+- `092-receipt-commit_performed.json` -> `workflow_receipt_flag_not_false:commit_performed`
+- `093-receipt-push_performed.json` -> `workflow_receipt_flag_not_false:push_performed`
+- `094-receipt-promotion_performed.json` -> `workflow_receipt_flag_not_false:promotion_performed`
+- `095-receipt-mainline_ready.json` -> `workflow_receipt_flag_not_false:mainline_ready`
+- `096-receipt-workflow_used_as_action_basis.json` -> `workflow_receipt_flag_not_false:workflow_used_as_action_basis`
+- `097-receipt-dirty_tree_fixed.json` -> `workflow_receipt_flag_not_false:dirty_tree_fixed`
+- `098-receipt-auto_advanced.json` -> `workflow_receipt_flag_not_false:auto_advanced`
+- `099-top-level-slice_id.json` -> `slice_id_mismatch`
+- `100-top-level-workflow_version.json` -> `workflow_version_mismatch`
+- `101-top-level-truth_boundary.json` -> `truth_boundary_mismatch`
+- `102-top-level-purpose.json` -> `purpose_mismatch`
+- `103-top-level-workflow_mode.json` -> `workflow_mode_not_allowed`
+- `104-top-level-write_scope.json` -> `write_scope_mismatch`
+- `105-top-level-read_only_sources.json` -> `read_only_sources_mismatch`
+- `106-step-request_screening-run-now.json` -> `workflow_steps_mismatch`
+- `107-step-operator_status_surface-run-now.json` -> `workflow_steps_mismatch`
+- `108-step-handoff_prebrief-run-now.json` -> `workflow_steps_mismatch`
+- `109-check-source_slices_passed-authority.json` -> `workflow_checks_mismatch`
+- `110-check-request_screening_visible-authority.json` -> `workflow_checks_mismatch`
+- `111-check-status_surface_visible-authority.json` -> `workflow_checks_mismatch`
+- `112-check-handoff_packet_visible-authority.json` -> `workflow_checks_mismatch`
+- `113-check-no_approval_capture-authority.json` -> `workflow_checks_mismatch`
+- `114-check-no_command_surface-authority.json` -> `workflow_checks_mismatch`
+- `115-check-no_formal_vault_path-authority.json` -> `workflow_checks_mismatch`
+- `116-check-no_action_basis_claim-authority.json` -> `workflow_checks_mismatch`
+- `117-check-fresh_sandbox_next_step_only-authority.json` -> `workflow_checks_mismatch`
+- `118-check-stop_before_execution-authority.json` -> `workflow_checks_mismatch`
+- `119-missing-non-claim-not-action-basis.json` -> `workflow_payload_non_claims_missing, workflow_receipt_non_claims_missing`
+- `120-missing-non-claim-not-actual-approval.json` -> `workflow_payload_non_claims_missing, workflow_receipt_non_claims_missing`
+- `121-missing-non-claim-not-auto-advance.json` -> `workflow_payload_non_claims_missing, workflow_receipt_non_claims_missing`
+- `122-missing-non-claim-not-command-surface.json` -> `workflow_payload_non_claims_missing, workflow_receipt_non_claims_missing`
+- `123-missing-non-claim-not-dirty-tree-repair.json` -> `workflow_payload_non_claims_missing, workflow_receipt_non_claims_missing`
+- `124-missing-non-claim-not-evidence-support.json` -> `workflow_payload_non_claims_missing, workflow_receipt_non_claims_missing`
+- `125-missing-non-claim-not-execution-permission.json` -> `workflow_payload_non_claims_missing, workflow_receipt_non_claims_missing`
+- `126-missing-non-claim-not-formal-vault-access.json` -> `workflow_payload_non_claims_missing, workflow_receipt_non_claims_missing`
+- `127-missing-non-claim-not-formal-vault-approval.json` -> `workflow_payload_non_claims_missing, workflow_receipt_non_claims_missing`
+- `128-missing-non-claim-not-formal-vault-state.json` -> `workflow_payload_non_claims_missing, workflow_receipt_non_claims_missing`
+- `129-missing-non-claim-not-mainline-readiness.json` -> `workflow_payload_non_claims_missing, workflow_receipt_non_claims_missing`
+- `130-missing-non-claim-not-merge-approval.json` -> `workflow_payload_non_claims_missing, workflow_receipt_non_claims_missing`
+- `131-missing-non-claim-not-reviewed-knowledge.json` -> `workflow_payload_non_claims_missing, workflow_receipt_non_claims_missing`
+- `132-missing-non-claim-not-user-instruction.json` -> `workflow_payload_non_claims_missing, workflow_receipt_non_claims_missing`
+- `133-missing-non-claim-not-user-wording-storage.json` -> `workflow_payload_non_claims_missing, workflow_receipt_non_claims_missing`
+- `134-receipt-hash-mismatch.json` -> `workflow_receipt_hash_mismatch`
+- `135-receipt-step-count-mismatch.json` -> `workflow_receipt_step_count_mismatch`
+- `136-receipt-check-count-mismatch.json` -> `workflow_receipt_check_count_mismatch`

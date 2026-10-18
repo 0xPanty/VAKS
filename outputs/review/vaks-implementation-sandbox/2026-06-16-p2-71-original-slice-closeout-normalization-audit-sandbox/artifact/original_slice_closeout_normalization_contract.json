@@ -1,0 +1,26 @@
+{
+  "record_kind": "sandbox_original_slice_closeout_normalization_contract",
+  "slice_id": "2026-06-16-p2-71-original-slice-closeout-normalization-audit-sandbox",
+  "purpose": "audit original 20 implementation slices for closeout normalization without mutating old slices",
+  "input_contract": {
+    "source_index_slice_id": "2026-06-16-p2-70-product-grade-coverage-index-sandbox",
+    "source_index_path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-70-product-grade-coverage-index-sandbox/artifact/product_grade_coverage_index.json",
+    "original_plan_item_count": 20,
+    "status_source": "p2-70 strict frontmatter-derived index",
+    "old_slice_reads_only": true
+  },
+  "output_contract": {
+    "normalization_applied": false,
+    "old_slice_edit_allowed": false,
+    "user_approval_required_for_old_slice_edits": true,
+    "audit_is_not_mainline_readiness": true,
+    "audit_is_not_promotion_approval": true,
+    "audit_is_not_reviewed_knowledge": true,
+    "audit_is_not_evidence_support": true,
+    "audit_is_not_action_basis": true,
+    "dependency_install_required": false,
+    "network_required": false,
+    "mcp_required": false,
+    "background_service_required": false
+  }
+}

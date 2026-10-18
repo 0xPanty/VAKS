@@ -1,0 +1,19 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "self-support-loop",
+  "expected_valid": false,
+  "expected_codes": ["SA_SELF_SUPPORT_LOOP"],
+  "anchors": [
+    {
+      "id": "self-support-anchor",
+      "anchor_kind": "raw_excerpt",
+      "support_claimed": true,
+      "support_role": "direct_support",
+      "target_ref": "wiki/claims/example-claim.md",
+      "source_ref": "wiki/claims/example-claim.md",
+      "selector": "claim-body",
+      "authority_bucket": "raw_anchor",
+      "source_ref_kind": "claim_note"
+    }
+  ]
+}

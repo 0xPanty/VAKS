@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "action-basis-allowed",
+  "expected_valid": false,
+  "expected_codes": ["RP_ACTION_BASIS_FORBIDDEN"],
+  "patch": {"boundary": {"action_basis_allowed": true}}
+}

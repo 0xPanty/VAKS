@@ -1,0 +1,1 @@
+{"case_id":"authority-flag-missing","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"delete","path":"/steps/0/authority_flags/writes_reviewed_truth"}]}

@@ -1,0 +1,38 @@
+{
+  "record_kind": "post_approval_executor_handoff_failure_cases",
+  "slice_id": "2026-06-19-p2-90-post-approval-executor-handoff-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "P2-90-FAIL-01-claims-current-write-authority",
+      "must_fail_when": "The handoff says old-file writes are allowed now."
+    },
+    {
+      "case_id": "P2-90-FAIL-02-skips-fresh-prewrite-gate",
+      "must_fail_when": "The handoff allows immediate writing after approval without fresh prewrite checks."
+    },
+    {
+      "case_id": "P2-90-FAIL-03-missing-exact-approval-prerequisite",
+      "must_fail_when": "The handoff omits the exact p2-75 approval prerequisite."
+    },
+    {
+      "case_id": "P2-90-FAIL-04-target-count-drift",
+      "must_fail_when": "The operation count is not 75."
+    },
+    {
+      "case_id": "P2-90-FAIL-05-allows-body-or-artifact-edits",
+      "must_fail_when": "The handoff allows body content, artifact, tools, templates, wiki truth layer, or mainline edits."
+    },
+    {
+      "case_id": "P2-90-FAIL-06-missing-rollback-or-audit",
+      "must_fail_when": "The handoff omits rollback, path audit, or final gate requirements."
+    },
+    {
+      "case_id": "P2-90-FAIL-07-mainline-or-truth-authority",
+      "must_fail_when": "The handoff implies merge, promotion, reviewed knowledge, evidence support, or action basis."
+    },
+    {
+      "case_id": "P2-90-FAIL-08-goal-complete",
+      "must_fail_when": "The handoff claims the full goal is complete before old-file normalization is actually executed and verified."
+    }
+  ]
+}

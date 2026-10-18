@@ -1,0 +1,1 @@
+{"fixture_kind":"source_entry_expected","slice_id":"2026-06-16-p2-57-user-decision-chain-regression-bundle-sandbox","operator_use":"prove p2-51 through p2-56 guard chain still passes","product_pass":true,"reviewer_pass":true,"boundary_pass":true,"final_gate_declared":true}

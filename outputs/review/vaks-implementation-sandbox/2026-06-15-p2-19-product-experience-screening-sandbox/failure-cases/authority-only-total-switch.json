@@ -1,0 +1,1 @@
+{"case_id":"authority-only-total-switch","base_fixture":"fixtures/valid-product-experience-screening.json","mutations":[{"op":"set_candidate","id":"P2-PX-01","path":"/authority_flags","value":{"all_authority_changes_disabled":true}}]}

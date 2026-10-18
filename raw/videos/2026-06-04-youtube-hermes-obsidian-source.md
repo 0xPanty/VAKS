@@ -1,5 +1,6 @@
 ---
 type: source
+record_kind: source_card
 status: source-captured
 title: "Hermes Obsidian Is Absolutely Wilde(FREE!) 🤯"
 source_id: youtube-mjju1qYAV2w
@@ -16,8 +17,6 @@ duration: 483s
 captured_at: "2026-06-04 01:54:41 +08:00"
 captured_by: Codex
 raw_location: raw/videos/2026-06-04-youtube-hermes-obsidian-source.md
-processing_mode: immediate
-processing_level: medium
 review_priority: normal
 review_owner: Codex
 formalization_status: raw-only
@@ -46,6 +45,17 @@ tags:
   - raw-video
   - youtube
   - candidate-only
+knowledge_status: raw
+processing_tier: light
+why_saved: see_body_or_legacy_record
+retrieval_policy:
+  policy_kind: source_identity_only
+  pack_allowed: drilldown_required
+  action_basis_allowed: false
+  warning_code: raw_is_provenance_only
+promotion_gate: none
+action_basis_allowed: false
+truth_mutation_allowed: false
 ---
 
 # 视频资料：Hermes + Obsidian 作为 AI 业务记忆工作流

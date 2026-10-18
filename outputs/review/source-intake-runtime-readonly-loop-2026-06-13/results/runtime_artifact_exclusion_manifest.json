@@ -1,0 +1,407 @@
+{
+  "status": "marker_generated_not_live_index_proof",
+  "artifact_count": 50,
+  "artifacts": [
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/answer_drafts/RT-01-candidate-support-block-answer-draft.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/answer_drafts/RT-02-overlay-support-block-answer-draft.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/answer_drafts/RT-03-raw-summary-without-anchor-block-answer-draft.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/answer_drafts/RT-04-graph-neighbor-support-block-answer-draft.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/answer_drafts/RT-05-rank-score-support-block-answer-draft.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/answer_drafts/RT-06-legacy-raw-metadata-support-block-answer-draft.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/answer_drafts/RT-07-safe-raw-anchor-readonly-allow-answer-draft.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/answer_drafts/RT-08-broken-raw-anchor-block-answer-draft.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/answer_drafts/RT-09-mixed-pack-support-selection-allow-answer-draft.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/COMBINED_PACKAGE_README.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/context_packs/RT-01-candidate-support-block-context-pack.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/context_packs/RT-02-overlay-support-block-context-pack.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/context_packs/RT-03-raw-summary-without-anchor-block-context-pack.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/context_packs/RT-04-graph-neighbor-support-block-context-pack.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/context_packs/RT-05-rank-score-support-block-context-pack.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/context_packs/RT-06-legacy-raw-metadata-support-block-context-pack.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/context_packs/RT-07-safe-raw-anchor-readonly-allow-context-pack.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/context_packs/RT-08-broken-raw-anchor-block-context-pack.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/context_packs/RT-09-mixed-pack-support-selection-allow-context-pack.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/EXTERNAL_BLIND_RELEVANCE_INSTRUCTIONS.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/fixtures/raw_sources/README.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/PRO_REVIEW_REQUEST.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/query_runs/RT-01-candidate-support-block-query-run.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/query_runs/RT-02-overlay-support-block-query-run.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/query_runs/RT-03-raw-summary-without-anchor-block-query-run.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/query_runs/RT-04-graph-neighbor-support-block-query-run.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/query_runs/RT-05-rank-score-support-block-query-run.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/query_runs/RT-06-legacy-raw-metadata-support-block-query-run.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/query_runs/RT-07-safe-raw-anchor-readonly-allow-query-run.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/query_runs/RT-08-broken-raw-anchor-block-query-run.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/query_runs/RT-09-mixed-pack-support-selection-allow-query-run.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/README.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/results/external_blind_relevance_judge_only.zip",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/results/external_blind_relevance_judge_package_check.json",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/results/external_blind_relevance_judge_README.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/results/external_blind_relevance_mapping.csv",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/results/external_blind_relevance_packet_check.json",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/results/external_blind_relevance_template.csv",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/results/runtime_artifact_exclusion_test.csv",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/results/runtime_artifact_exclusion_test.json",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/results/runtime_mock_tool_loop_cases.csv",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/results/runtime_mock_tool_loop_events.jsonl",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/results/runtime_mock_tool_loop_summary.json",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/results/runtime_readonly_loop_cases.csv",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/results/runtime_readonly_loop_cases.json",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/results/runtime_readonly_loop_events.jsonl",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/results/runtime_readonly_loop_summary.json",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/RUNTIME_AUDIT_RESPONSE.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/RUNTIME_READONLY_LOOP_REPORT.md",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    },
+    {
+      "path": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/source-intake-runtime-readonly-loop-combined-review-and-judge-package.zip",
+      "artifact_kind": "runtime_test_artifact",
+      "retrieval_exclusion": true,
+      "default_retrieval": false,
+      "indexing_policy": "exclude_from_default_retrieval_graph_pack_support",
+      "reason": "sandbox runtime evidence; not reviewed knowledge, support, action basis, or default retrieval material"
+    }
+  ],
+  "truth_boundary": "Exclusion markers only; live retrieval index exclusion still requires a separate test."
+}

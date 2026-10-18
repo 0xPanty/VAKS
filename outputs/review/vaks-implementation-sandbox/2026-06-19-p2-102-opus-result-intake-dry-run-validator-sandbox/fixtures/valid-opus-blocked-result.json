@@ -1,0 +1,42 @@
+{
+  "record_kind": "opus_result_intake_dry_run_record",
+  "dry_run_only": true,
+  "actual_opus_result_present": false,
+  "opus_review_performed": false,
+  "mainline_approval": false,
+  "mainline_merge": false,
+  "promotion": false,
+  "promotion_ready": false,
+  "reviewed_knowledge": false,
+  "reviewed_knowledge_ready": false,
+  "evidence_support": false,
+  "evidence_support_ready": false,
+  "action_basis": false,
+  "action_basis_ready": false,
+  "commit_push_sync": false,
+  "commit_push_sync_ready": false,
+  "opus_approval_claimed": false,
+  "user_mainline_approval": false,
+  "mainline_ready": false,
+  "goal_complete_now": false,
+  "raw_conclusion_token": "OPUS_BLOCKED_NEEDS_USER",
+  "reviewed_evidence": [
+    "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-100-opus-review-transfer-package-sandbox/artifact/opus-review-transfer-package.zip",
+    "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-100-opus-review-transfer-package-sandbox/artifact/opus-review-transfer-package-sha256.txt"
+  ],
+  "boundary_verdict": "not_mainline_approval",
+  "raw_response_path": "artifact/raw-opus-result.md",
+  "blocking_issues": [
+    "dry_run_sample_issue"
+  ],
+  "recommended_next_action": "create sandbox-only result intake slice after real Opus response",
+  "authority_flags": {
+    "opus_approval_claimed": false,
+    "mainline_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "commit_push_sync_ready": false,
+    "goal_complete_now": false
+  }
+}

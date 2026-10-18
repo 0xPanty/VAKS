@@ -1,0 +1,47 @@
+{
+  "source_url": "http://xhslink.com/o/4wSzxwYP6qK",
+  "item_id": "6a23b6e6000000001c025bc5",
+  "steps": [
+    {
+      "status": "ok",
+      "cloud_api_used": false,
+      "method": "public_xhs_shortlink_resolution",
+      "cookies_used": false
+    },
+    {
+      "status": "ok",
+      "cloud_api_used": false,
+      "method": "public_og_video_download_to_scratch",
+      "cookies_used": false
+    },
+    {
+      "status": "ok",
+      "cloud_api_used": false,
+      "method": "ffmpeg_extract_audio",
+      "cookies_used": false
+    },
+    {
+      "status": "ok",
+      "cloud_api_used": false,
+      "method": "local_faster_whisper_asr",
+      "cookies_used": false
+    },
+    {
+      "status": "ok",
+      "removed": [
+        "source.mp4",
+        "audio.wav"
+      ],
+      "method": "delete_scratch_media"
+    }
+  ],
+  "retained_artifacts": [
+    "transcript.txt",
+    "segments.md",
+    "segments.json",
+    "transcript-meta.json",
+    "source-metadata.json"
+  ],
+  "created_at": "2026-06-08T05:29:58.5283999+08:00",
+  "canonical_item_url": "https://www.xiaohongshu.com/explore/6a23b6e6000000001c025bc5"
+}

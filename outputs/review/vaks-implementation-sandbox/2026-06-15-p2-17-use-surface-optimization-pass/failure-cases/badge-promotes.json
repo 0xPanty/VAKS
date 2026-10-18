@@ -1,0 +1,8 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "badge-promotes",
+  "expected_valid": false,
+  "expected_codes": ["US_BADGE_PROMOTES"],
+  "allowed_extra_codes": ["US_AUTHORITY_CONFUSION"],
+  "patch": {"layer_badges": {"badge_can_promote": true}}
+}

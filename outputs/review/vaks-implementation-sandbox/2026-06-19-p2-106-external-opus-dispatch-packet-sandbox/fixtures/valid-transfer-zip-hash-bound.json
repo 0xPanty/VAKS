@@ -1,0 +1,8 @@
+{
+  "fixture": "valid-transfer-zip-hash-bound",
+  "checks": {
+    "dispatch.zip_hash_verified": true,
+    "dispatch.source_message_hash_verified": true
+  },
+  "expected": true
+}

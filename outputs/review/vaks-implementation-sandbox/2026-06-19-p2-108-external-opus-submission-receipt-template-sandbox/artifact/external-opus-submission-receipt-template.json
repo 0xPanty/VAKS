@@ -1,0 +1,59 @@
+{
+  "record_kind": "external_opus_submission_receipt_template",
+  "slice_id": "2026-06-19-p2-108-external-opus-submission-receipt-template-sandbox",
+  "source_inputs": {
+    "manual_submission_json": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-107-external-opus-manual-submission-brief-sandbox/artifact/external-opus-manual-submission-brief.json",
+    "manual_submission_brief": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-107-external-opus-manual-submission-brief-sandbox/artifact/external-opus-manual-submission-brief.md",
+    "response_capture_card": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-107-external-opus-manual-submission-brief-sandbox/artifact/external-opus-response-capture-card.md"
+  },
+  "source_hashes": {
+    "manual_submission_json_sha256": "6bee83bf6988a048fed79d3fb0fe2ff707f4d4534a1538b7ee4d3398799afd59",
+    "manual_submission_brief_sha256": "418aef12624f9aa74d4967a02b6533a37e233553dd22b90a37665524e7410daa",
+    "response_capture_card_sha256": "2b2d6b8d29cdca16c9be2d024f5b90a6b4d10a3f574b61ffce4348cd7bc7e71a",
+    "expected_manual_submission_brief_sha256": "418aef12624f9aa74d4967a02b6533a37e233553dd22b90a37665524e7410daa",
+    "expected_response_capture_card_sha256": "2b2d6b8d29cdca16c9be2d024f5b90a6b4d10a3f574b61ffce4348cd7bc7e71a"
+  },
+  "receipt_template": {
+    "template_ready": true,
+    "receipt_template_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-108-external-opus-submission-receipt-template-sandbox/artifact/external-opus-submission-receipt-template.md",
+    "receipt_template_sha256": "462d2e32b267732d46aa2c87e4973432fd06b84433678991a15f135f70295fb9",
+    "submission_performed": false,
+    "raw_response_received": false,
+    "required_fields": [
+      "submitted_at",
+      "submitted_by",
+      "submission_surface",
+      "surface_url_or_identifier",
+      "attachment_zip_path",
+      "attachment_zip_sha256",
+      "brief_path",
+      "dispatch_message_path",
+      "raw_response_received",
+      "raw_response_path",
+      "expected_intake_route",
+      "expected_validator"
+    ],
+    "attachment_zip_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-100-opus-review-transfer-package-sandbox/artifact/opus-review-transfer-package.zip",
+    "attachment_zip_sha256": "2fa20d453406757c0e53abc2c2ad9842264c35359d1e12b203ea5113273b2640",
+    "brief_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-107-external-opus-manual-submission-brief-sandbox/artifact/external-opus-manual-submission-brief.md",
+    "dispatch_message_path": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-106-external-opus-dispatch-packet-sandbox/artifact/external-opus-dispatch-message.md",
+    "expected_validator": "2026-06-19-p2-102-opus-result-intake-dry-run-validator-sandbox",
+    "expected_intake_route": "new sandbox-only intake slice"
+  },
+  "authority_flags": {
+    "receipt_template_only": true,
+    "external_submission_performed": false,
+    "raw_opus_response_present": false,
+    "actual_opus_result_present": false,
+    "validated_opus_pass_present": false,
+    "user_approval_present": false,
+    "mainline_ready": false,
+    "mainline_merge_allowed": false,
+    "promotion_allowed": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "commit_push_sync_ready": false,
+    "goal_complete_now": false
+  }
+}

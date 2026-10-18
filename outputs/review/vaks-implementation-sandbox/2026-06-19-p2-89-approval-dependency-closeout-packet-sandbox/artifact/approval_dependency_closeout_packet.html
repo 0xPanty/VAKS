@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>p2-89 Approval Dependency Closeout</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f7f8fa; color: #202832; }
+    main { max-width: 1040px; margin: 0 auto; padding: 32px 20px; }
+    h1 { font-size: 28px; margin: 0 0 12px; letter-spacing: 0; }
+    .verdict { background: #fff; border-left: 4px solid #a63d40; padding: 14px; margin: 18px 0; }
+    .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+    .metric { background: #fff; border: 1px solid #d9e0e8; border-radius: 8px; padding: 14px; }
+    .metric span { display: block; color: #596575; font-size: 13px; }
+    .metric strong { display: block; margin-top: 6px; font-size: 24px; }
+    pre { white-space: pre-wrap; background: #1f2933; color: #f4f7fb; border-radius: 8px; padding: 14px; }
+    section { margin-top: 22px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>p2-89 Approval Dependency Closeout</h1>
+    <div class="verdict">All known sandbox preparation artifacts are product-grade through p2-88, but old-file normalization is not applied and the full goal is not complete.</div>
+    <section class="metrics">
+      <div class="metric"><span>Preview operations</span><strong>75</strong></div>
+      <div class="metric"><span>Hash matches</span><strong>75/75</strong></div>
+      <div class="metric"><span>Old writes</span><strong>0</strong></div>
+      <div class="metric"><span>Approval collected</span><strong>false</strong></div>
+    </section>
+    <section>
+      <h2>Exact Approval Phrase</h2>
+      <pre>I explicitly approve p2-75 old-file status-only normalization: apply the 75 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only. Do not edit body content, artifacts, tools, templates, wiki truth layers, main architecture docs, README, Obsidian vault, commit, push, or sync.</pre>
+    </section>
+    <section>
+      <h2>Safe Next Actions</h2>
+      <ul><li>Wait for the exact p2-75 approval phrase.</li><li>If the exact phrase is provided, run a fresh prewrite gate before any executor write.</li><li>If approval is withheld, leave old files unchanged and keep this as the closeout state.</li></ul>
+    </section>
+    <section>
+      <h2>Unsafe Actions</h2>
+      <ul><li>Do not treat continue, all done, go ahead, or product-grade as approval.</li><li>Do not write old files from this packet.</li><li>Do not merge mainline, promote knowledge, create reviewed knowledge, evidence support, or action basis from this packet.</li></ul>
+    </section>
+  </main>
+</body>
+</html>

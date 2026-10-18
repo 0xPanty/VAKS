@@ -1,0 +1,141 @@
+文章
+
+查看新帖子
+对话
+painn
+@_0xpainn
+How to Build an AI Powered Knowledge System That Works While You Sleep with Obsidian + Vellum
+Most people lose their best ideas by noon.
+Save this :)
+This setup captures everything, connects the dots automatically, and hands you a synthesized briefing every morning.. for next to nothing.
+What You'll Need
+Four tools. Each has a specific role. None of them overlap.
+Obsidian
+obsidian.md — your local vault. Notes are plain markdown files that live on your machine. Free for personal use. You own everything.
+Vellum
+vellum.ai — the intelligence layer that reads, connects, and synthesizes your notes. Credits are passed through at cost with no markup. Light daily use runs a few dollars a month.
+Readwise
+readwise.io — aggregates every highlight you make across articles, Kindle, Twitter bookmarks, and Pocket into one place, then pipes them directly into Obsidian automatically.
+N8N
+n8n.io — open source automation. Runs the background workflows that connect your capture sources to your vault. Self-host it or use their cloud version.
+Step 1
+Design the Vault Architecture
+Open Obsidian, create a new vault, and name it CHIEF. Then build this exact folder structure:
+markdown
+CHIEF/
+├── 00-INBOX/
+├── 01-CAPTURES/
+│   ├── articles/
+│   ├── ideas/
+│   ├── patterns/
+│   ├── questions/
+│   └── numbers/
+├── 02-CONNECTIONS/
+├── 03-PROJECTS/
+└── 04-VELLUM/
+    ├── VELLUM.md
+    └── workflows/
+Every folder has a single purpose. Here's the logic behind each one:
+00-INBOX is raw landing ground. Nothing gets organized at capture time — speed matters more than structure in the moment.
+01-CAPTURES is sorted by note type, not topic. This is the most consequential architectural decision in the entire system. When you organize by topic, a crypto insight and a behavioral psychology observation never share a folder. When you organize by type, they both land in patterns/ — and Vellum finds the bridge between them.
+02-CONNECTIONS is where synthesized thinking lives. These aren't cleaned-up captures. They're emergent insights — new ideas that only exist because two unrelated notes were finally in the same room.
+03-PROJECTS holds everything related to what you're currently building or researching. One subfolder per active project.
+04-VELLUM is the intelligence layer's working directory. This is where Vellum reads its instructions and stores its output files.
+Step 2
+Install Three Plugins
+Go to Settings → Community Plugins → disable Safe Mode → Browse. Install these:
+Templater— Runs dynamic templates with actual logic. You'll use this to auto-format notes when N8N pushes captures into the vault.
+Dataview— Turns your vault into a queryable database. Filter notes by tag, date, or any property..essential for the weekly connection sessions.
+Obsidian Git— Backs up your entire vault to a private GitHub repo every hour. Configure once, never think about it again.
+Step 3
+Automate Everything at the Capture Layer
+The capture system has one job: collect without asking anything of you. Every extra click or decision at capture time is a future gap in your knowledge base.
+Articles & Highlights
+Set up Readwise and install their browser extension. As you read anything online, highlight the lines that matter. Readwise stores them automatically — no tagging, no copying, just highlight and keep reading. Then enable the native Obsidian sync inside Readwise settings. Every highlight flows into 01-CAPTURES/articles/ as a formatted markdown file without you touching anything.
+Quick Capture From Anywhere
+Build a Telegram bot that accepts any message you send and drops it directly into 00-INBOX. Use this N8N workflow:
+markdown
+Node 1: Telegram Trigger → Event: message → Chat ID: your_bot_id
+Node 2: Code Node → Filename: 00-INBOX/{{date}}-capture.md → Content: "Quick Capture / {{message}} / Date: {{date}} / Source: Telegram"
+Node 3: Write File → Path: /your-vault/00-INBOX/ → Operation: create
+Takes about 30 minutes to set up. After that it runs indefinitely. A thought at 2am, a wallet address you want to track, a market pattern you noticed — send it to the bot and it lands in your vault.
+Voice Notes
+For anything longer than a quick thought, record a voice memo. Run it through Whisper for a clean transcript. Paste the transcript into the Telegram bot. It hits INBOX automatically.
+Step 4
+Write the VELLUM.md File
+This is the most important file in the system.
+Without it, every Vellum session starts cold — no context about who you are, what you're building, or what matters to you right now. With it, Vellum behaves like a collaborator who has been reading your notes for months.
+Create this file at 04-VELLUM/VELLUM.md and fill it out completely:
+markdown
+CHIEF SYSTEM — VELLUM.md
+
+Identity
+My name is [YOUR NAME]. I am [WHAT YOU DO — be specific]. My current focus: [the one thing you're trying to sharpen]. Goals for 2026: [3 concrete outcomes].
+
+This Vault
+This is my permanent knowledge base and thinking system. Every note is raw material for decisions, research, and original thinking. Nothing here is decorative.
+
+Vault Structure
+00-INBOX: unprocessed captures — check here first
+01-CAPTURES/articles: highlights and article notes
+01-CAPTURES/ideas: my own observations and thinking
+01-CAPTURES/patterns: the same principle appearing across different domains
+01-CAPTURES/questions: things I genuinely don't know the answer to
+01-CAPTURES/numbers: real data points with specific figures attached
+02-CONNECTIONS: synthesized insights drawn from two or more notes
+03-PROJECTS: active research and work
+04-VELLUM: your working directory
+
+Current Projects
+Active: [what you're building or researching right now]
+Stuck on: [where you need the most help thinking]
+Next milestone: [what done looks like for your current sprint]
+
+What I Want From You
+Surface connections I haven't noticed across my notes. Find patterns in what I've been reading before I consciously recognize them. When I ask what to focus on, answer from vault context — not generically. Flag when something I currently believe contradicts something I saved earlier. Challenge my assumptions before agreeing with them.
+
+What I'm Reading and Thinking About Right Now
+[Update this every Monday — current obsessions, open questions, things that don't make sense yet]
+Step 5
+Connect Vellum to Your Vault
+Create your account at vellum.ai. Connect it to your Obsidian vault folder. Then run this test prompt immediately:
+"Read my VELLUM.md file and tell me in one paragraph what you understand about this vault, who I am, and what your role is inside this system."
+If the response is specific and grounded in your actual file, the connection is working. If it's generic, your VELLUM.md needs more detail. Go back and be more concrete — especially in the identity and current projects sections.
+Step 6
+Build the Four Core Workflows
+Save each of these as a markdown file inside 04-VELLUM/workflows/. Call them by name whenever you need them.
+Workflow 1 — Process Inbox
+Save as: process-inbox.md. Trigger with: "process my inbox" / "clear the inbox" / "morning processing"
+"Read every note in my 00-INBOX from the last 24 hours. For each note: determine which 01-CAPTURES subfolder it belongs in, sharpen the raw capture into one specific punchy sentence, and move it to the correct subfolder. After processing, tell me: total notes handled and where each went, any patterns you noticed across today's captures, and one connection worth exploring from today's batch. A sharpened note should be specific enough that a stranger understands exactly what was observed without additional context. If it still needs explanation, it isn't sharp enough."
+Workflow 2 — Daily Brief
+Save as: daily-brief.md. Schedule via N8N to run automatically at 6am every morning.
+"Read everything in my 00-INBOX from the last 24 hours and everything in 01-CAPTURES from the last 7 days. Then do three things. CONNECTIONS: find the 3 most interesting links between recent captures and older notes I probably haven't noticed. Be specific — quote the relevant passages from my actual notes. PATTERN: identify one pattern across everything I've been reading this week. What is my brain clearly working on even if I haven't named it yet? QUESTION: give me one question worth sitting with today based on that pattern. Not a task. A question. Save this as brief-{{date}}.md in my 00-INBOX folder."
+Workflow 3 — Weekly Connections
+Save as: weekly-connections.md. Run every Sunday.
+"Read all notes added to 01-CAPTURES in the last 7 days. Search for connections across all subfolders simultaneously. A strong connection is one of four types: TYPE A — the same underlying principle appearing in two completely different domains. TYPE B — a contradiction between two notes that creates interesting tension. TYPE C — a pattern connecting three or more notes into one unnamed insight. TYPE D — a question from one note that another note accidentally answers. For each strong connection: name the type, write a one-sentence bridge between the ideas, and create a new note in 02-CONNECTIONS linking the source notes. Only surface connections that would genuinely surprise me. Minimum three, maximum five. Quality over volume."
+Workflow 4 — Deep Research Session
+Save as: deep-research.md. Trigger with: "deep research on [topic]" / "what do I know about [topic]"
+"Read everything in my vault related to [topic]. Tell me four things. First: what do I actually believe about this based on my notes — not generically. Second: what have I saved that contradicts that belief — show me both sides from my own notes. Third: what perspective is clearly missing from my research based on what I am and am not reading. Fourth: what is the single most important question I haven't asked yet about this topic. Be direct. Challenge me. Do not summarize what I already know."
+Step 7
+The Daily Ritual — 15 Minutes
+This is how you run the system every morning.
+Min 1–5    Before opening any app, spend five minutes sending raw  captures to your Telegram bot. Things you observed yesterday. A pattern you noticed. A question that surfaced. A specific number. Raw. Unpolished. Just get it in.
+Min 6–10   Run the Process Inbox workflow. Read the report — what got filed, what patterns Vellum noticed across the day's captures.
+Min 11–15   Read the daily brief generated at 6am. This is the moment the system earns its place. You're reading a synthesis of a full week's worth of inputs — with the connections you missed surfaced automatically — before you've opened a single social platform.
+The rest of the day is execution, not ideation.
+Step 8
+The Weekly Connection Session
+Every Sunday, run the Weekly Connections workflow across the full week of captures. Let Vellum read everything across all subfolders at once — the connections it surfaces from a week of inputs are consistently stronger than what the daily session produces.
+Review the connection notes it creates in 02-CONNECTIONS. Pick the two strongest. Those are your two best ideas for the week. Everything else is secondary.
+Step 9
+Close the Loop
+This is the step that makes the system compound over time.
+Whenever a thesis plays out, a pattern you identified proves correct, or a connection leads somewhere real — open the relevant note and record what happened. Vellum reads these updates. Over months, it stops just knowing what you think and starts understanding what kinds of thinking have actually been right for you.
+Run this once a month:
+"Read everything I've added to my vault in the last 30 days. Tell me: what beliefs am I forming that I haven't stated explicitly yet? What pattern keeps appearing across different domains in my notes? What is the single highest-leverage thing I could be thinking about right now based on everything in this vault? And what am I clearly not reading that the gaps in my notes suggest I should be? Only give me insights specific to my actual notes. No generic advice."
+What Happens Over Time
+30 days — The vault feels genuinely useful. The daily brief starts surfacing things you'd completely forgotten.. notes from two weeks ago that happen to be exactly relevant to what you're working on today.
+90 days — Something shifts. Vellum starts connecting month-one notes to month-three captures. You ask about a topic you're researching and it surfaces a note from eight weeks ago you have no memory of saving. The vault knows things about your thinking that you don't consciously remember.
+6 months — You have a complete record of every belief you held and changed. Every pattern that appeared in your thinking before you recognized it as an obsession. Every connection that turned into an insight, into a decision, into an outcome. The intelligence you have isn't the same intelligence you started with. It's been compounding while you were living your life.
+Most people start from zero every single day.
+This system makes sure you never have to.

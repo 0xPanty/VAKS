@@ -1,0 +1,64 @@
+{
+  "record_kind": "local_obsidian_graph_readonly_mcp_manifest",
+  "scenario_id": "receipt-vector-score-claims-support",
+  "expected_valid": false,
+  "expected_codes": ["OG_RANK_AS_SUPPORT_OR_CONFIDENCE"],
+  "vault_access": {
+    "sandbox_fixture_only": true,
+    "uses_real_vault": false,
+    "vault_path": "fixtures/obsidian-sample-vault",
+    "read_only": true,
+    "write_attempted": false,
+    "sync_attempted": false
+  },
+  "mcp_contract": {
+    "server_started": false,
+    "background_service": false,
+    "hooks_enabled": false,
+    "tools": [
+      {"name": "query_graph", "mode": "read_only", "operations": ["query"], "write_enabled": false}
+    ]
+  },
+  "structural_triples": [
+    {
+      "id": "triple-receipt-rank-support",
+      "from": "Kwipu",
+      "relation": "mentions",
+      "to": "VAKS",
+      "source_ref": "fixtures/obsidian-sample-vault/kwipu.md",
+      "source_hash": "sha256:1212121212121212121212121212121212121212121212121212121212121212",
+      "graph_status": "candidate_graph_fragment",
+      "claims": []
+    }
+  ],
+  "derived_cache_manifest": {
+    "cache_id": "receipt-rank-support-cache",
+    "source_state_hash": "sha256:3434343434343434343434343434343434343434343434343434343434343434",
+    "indexer_id": "sandbox-graph-indexer",
+    "indexer_version": "0.1-sandbox",
+    "model_id": "local-embedding-fixture",
+    "model_fingerprint": "sha256:5656565656565656565656565656565656565656565656565656565656565656",
+    "model_locality": "local",
+    "locality_reviewed": true,
+    "rebuild_boundary": "fixture-only derived cache",
+    "source_of_record": false,
+    "used_for_query": true,
+    "hash_algorithm": "sha256"
+  },
+  "retrieval_receipt": {
+    "query_id": "q-receipt-rank-support",
+    "route": "hybrid_graph",
+    "included_buckets": ["review_input", "raw_anchor"],
+    "excluded_buckets": ["feedback", "runtime_artifact"],
+    "bucket_filter_first": true,
+    "selected_by_channels": ["vector", "bm25", "temporal", "synonym"],
+    "cross_bucket_fusion": false,
+    "vector_score_claims_support": true,
+    "score_sets_confidence": true
+  },
+  "generated_answer": {
+    "has_file_citations": false,
+    "citations_claim_support": false,
+    "claims_action_basis": false
+  }
+}

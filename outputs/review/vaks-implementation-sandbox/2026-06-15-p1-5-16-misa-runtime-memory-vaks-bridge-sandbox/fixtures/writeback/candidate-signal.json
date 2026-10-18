@@ -1,0 +1,7 @@
+{
+  "record_kind": "candidate_signal_fixture",
+  "candidate_signal_id": "cs-2026-06-15-001",
+  "signal_kind": "missing_evidence_candidate",
+  "promotion_ready": false,
+  "truth_boundary": "candidate-signal-not-promotion"
+}

@@ -1,0 +1,314 @@
+{
+  "slice_id": "2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox",
+  "source_slice": "2026-06-15-p2-22-formalization-readiness-polish-sandbox",
+  "purpose": "Create a sandbox-native Markdown entry plus read-only inspector pilot for a future Obsidian-facing VAKS workbench.",
+  "write_scope": [
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/"
+  ],
+  "read_only_sources": [
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-22-formalization-readiness-polish-sandbox/next-step.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-22-formalization-readiness-polish-sandbox/verification.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-22-formalization-readiness-polish-sandbox/product-acceptance-report.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-22-formalization-readiness-polish-sandbox/artifact/formalization-readiness-contract.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-22-formalization-readiness-polish-sandbox/prototype/vaks-workbench-formalization-pilot/00 Pilot Home - VAKS Workbench.md"
+  ],
+  "operations": {
+    "default_read_only": true,
+    "rebuild_requires_explicit_flag": true,
+    "formal_vault_write": false,
+    "obsidian_sync": false,
+    "commit": false,
+    "push": false,
+    "promotion": false,
+    "dependency_install": false,
+    "background_service": false,
+    "mcp_write_tool": false,
+    "hooks": false,
+    "real_base_files": false,
+    "production_ui": false,
+    "local_storage_write": false,
+    "network_post": false
+  },
+  "inspector_controls": {
+    "inputs": [
+      {
+        "id": "q",
+        "type": "search",
+        "purpose": "filter"
+      }
+    ],
+    "buttons": [
+      {
+        "label": "All",
+        "filter": "all"
+      },
+      {
+        "label": "Entry",
+        "filter": "entry"
+      },
+      {
+        "label": "Status",
+        "filter": "status_surface"
+      },
+      {
+        "label": "Receipts",
+        "filter": "receipt_surface"
+      },
+      {
+        "label": "Stop",
+        "filter": "stop_surface"
+      }
+    ]
+  },
+  "boundary_phrases": [
+    "sandbox only",
+    "not reviewed knowledge",
+    "not evidence support",
+    "not action basis",
+    "does not approve",
+    "no sync",
+    "no commit",
+    "no push",
+    "no promotion",
+    "no formal vault write",
+    "read-only inspector",
+    "navigation is not authority"
+  ],
+  "native_entry_pages": [
+    {
+      "id": "native_home",
+      "file": "00 Native Home.md",
+      "title": "Native Home",
+      "role": "entry",
+      "answers": [
+        "Where do I start?",
+        "What is the current safe route?"
+      ],
+      "next_links": [
+        "01 Inbox.md",
+        "02 Status Board.md",
+        "03 Receipt Index.md",
+        "04 Boundary Stop.md"
+      ]
+    },
+    {
+      "id": "inbox",
+      "file": "01 Inbox.md",
+      "title": "Inbox",
+      "role": "capture_triage",
+      "answers": [
+        "Where would a new item be staged?"
+      ],
+      "next_links": [
+        "02 Status Board.md",
+        "04 Boundary Stop.md"
+      ]
+    },
+    {
+      "id": "status_board",
+      "file": "02 Status Board.md",
+      "title": "Status Board",
+      "role": "status_surface",
+      "answers": [
+        "What is blocked, dirty, stale, review_due, or action-risk?"
+      ],
+      "next_links": [
+        "03 Receipt Index.md",
+        "06 Next Safe Step.md"
+      ]
+    },
+    {
+      "id": "receipt_index",
+      "file": "03 Receipt Index.md",
+      "title": "Receipt Index",
+      "role": "receipt_surface",
+      "answers": [
+        "Which process proof should I inspect?"
+      ],
+      "next_links": [
+        "05 Readonly Inspector Guide.md",
+        "06 Next Safe Step.md"
+      ]
+    },
+    {
+      "id": "boundary_stop",
+      "file": "04 Boundary Stop.md",
+      "title": "Boundary Stop",
+      "role": "stop_surface",
+      "answers": [
+        "When must I stop and ask the user?"
+      ],
+      "next_links": [
+        "06 Next Safe Step.md"
+      ]
+    },
+    {
+      "id": "readonly_inspector_guide",
+      "file": "05 Readonly Inspector Guide.md",
+      "title": "Readonly Inspector Guide",
+      "role": "inspection_surface",
+      "answers": [
+        "How do I use the inspector without writing?"
+      ],
+      "next_links": [
+        "03 Receipt Index.md",
+        "06 Next Safe Step.md"
+      ]
+    },
+    {
+      "id": "next_safe_step",
+      "file": "06 Next Safe Step.md",
+      "title": "Next Safe Step",
+      "role": "handoff_surface",
+      "answers": [
+        "What is the next approved sandbox move?"
+      ],
+      "next_links": [
+        "04 Boundary Stop.md"
+      ]
+    },
+    {
+      "id": "dry_run_results",
+      "file": "07 Dry Run Results.md",
+      "title": "Dry Run Results",
+      "role": "verification_surface",
+      "answers": [
+        "Did the local file/link journey work?"
+      ],
+      "next_links": [
+        "03 Receipt Index.md"
+      ]
+    },
+    {
+      "id": "approved_actions",
+      "file": "99 Approved Actions.md",
+      "title": "Approved Actions",
+      "role": "approval_surface",
+      "answers": [
+        "This approves action basis."
+      ],
+      "next_links": []
+    }
+  ],
+  "inspector_views": [
+    {
+      "id": "entry_map",
+      "title": "Entry Map",
+      "shows": "Native Markdown pages and their next links.",
+      "does_not_show": "reviewed knowledge or approval"
+    },
+    {
+      "id": "status_lanes",
+      "title": "Status Lanes",
+      "shows": "blocked, dirty, stale, missing-anchor, review_due, action-risk",
+      "does_not_show": "truth confidence"
+    },
+    {
+      "id": "receipt_lanes",
+      "title": "Receipt Lanes",
+      "shows": "source reports, validator output, hash receipt, Product Acceptance",
+      "does_not_show": "evidence support"
+    },
+    {
+      "id": "boundary_lanes",
+      "title": "Boundary Lanes",
+      "shows": "stop conditions and forbidden operations",
+      "does_not_show": "permission to execute"
+    }
+  ],
+  "journeys": [
+    {
+      "id": "native_first_run",
+      "goal": "A user opens the native Home and reaches a boundary stop quickly.",
+      "steps": [
+        "00 Native Home",
+        "04 Boundary Stop",
+        "06 Next Safe Step"
+      ],
+      "expected_answer": "This is sandbox only and no formal vault write is allowed.",
+      "max_steps": 3,
+      "boundary_check": "navigation is not authority",
+      "stop_condition": "Stop if a page asks for sync, commit, push, install, or formal vault write."
+    },
+    {
+      "id": "receipt_lookup",
+      "goal": "A user finds the source Product Acceptance and build receipt.",
+      "steps": [
+        "00 Native Home",
+        "03 Receipt Index",
+        "Receipts/native-entry-readonly-inspector-receipt.json"
+      ],
+      "expected_answer": "Receipt proves process trail only.",
+      "max_steps": 3,
+      "boundary_check": "receipt is not evidence support",
+      "stop_condition": "Stop if receipt is treated as support."
+    },
+    {
+      "id": "status_to_stop",
+      "goal": "A user maps dirty/review_due/action-risk to a safe stop.",
+      "steps": [
+        "02 Status Board",
+        "04 Boundary Stop",
+        "06 Next Safe Step"
+      ],
+      "expected_answer": "Status grouping is not approval.",
+      "max_steps": 3,
+      "boundary_check": "status is not approval",
+      "stop_condition": "Stop if status is presented as action basis."
+    },
+    {
+      "id": "inspector_check",
+      "goal": "A user opens the read-only inspector and confirms it has no write controls.",
+      "steps": [
+        "05 Readonly Inspector Guide",
+        "readonly-inspector.html",
+        "04 Boundary Stop"
+      ],
+      "expected_answer": "Inspector can filter and inspect only.",
+      "max_steps": 3,
+      "boundary_check": "read-only inspector",
+      "stop_condition": "Stop if inspector has save/sync/post/write controls."
+    }
+  ],
+  "dry_run_metrics": {
+    "time_to_native_home_seconds": 20,
+    "time_to_boundary_stop_seconds": 45,
+    "time_to_receipt_index_seconds": 55,
+    "time_to_confirm_readonly_inspector_seconds": 65,
+    "max_links_to_boundary_stop": 2,
+    "max_links_to_receipt_index": 2,
+    "max_links_to_next_safe_step": 2
+  },
+  "acceptance_gates": [
+    "native_home_exists",
+    "all_wikilinks_resolve",
+    "source_report_links_resolve",
+    "read_only_inspector_has_no_write_controls",
+    "receipt_index_two_links_or_less",
+    "boundary_stop_visible",
+    "failure_cases_block_forbidden_operations",
+    "frontmatter_final_gate_is_exact",
+    "reviewer_boundary_product_acceptance_complete"
+  ],
+  "search_targets": [
+    "native markdown entry",
+    "read-only inspector",
+    "no formal vault write",
+    "not evidence support",
+    "not action basis",
+    "navigation is not authority",
+    "status grouping is not approval",
+    "receipt proves process trail only",
+    "next safe step"
+  ],
+  "product_metrics": {
+    "required_positive_fixtures": 2,
+    "minimum_failure_cases": 22,
+    "required_native_pages": 8,
+    "required_inspector_views": 4,
+    "max_first_run_steps": 3
+  },
+  "expected_failures": [
+    "authority_confusing_text"
+  ]
+}

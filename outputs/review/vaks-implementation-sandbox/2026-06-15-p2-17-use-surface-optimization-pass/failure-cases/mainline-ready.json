@@ -1,0 +1,8 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "mainline-ready",
+  "expected_valid": false,
+  "expected_codes": ["US_MAINLINE_READY_FORBIDDEN"],
+  "allowed_extra_codes": ["US_AUTHORITY_CONFUSION"],
+  "patch": {"guardrails": {"mainline_ready": true}}
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "missing-config-contract-block",
+  "expected_valid": false,
+  "expected_codes": ["MS_MISSING_CONFIG"],
+  "patch": {
+    "config_contract": {
+      "__delete__": true
+    }
+  }
+}

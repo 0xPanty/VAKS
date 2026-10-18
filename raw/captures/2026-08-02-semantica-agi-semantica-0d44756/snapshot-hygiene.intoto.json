@@ -1,0 +1,48 @@
+{
+  "_type": "https://in-toto.io/Statement/v1",
+  "predicate": {
+    "checker": {
+      "id": "vaks.snapshot-inspector",
+      "implementation": {
+        "digest": "sha256:06f7d1dffe9b58baa99e265726323b8b5f2059ad57f9747961e4526170008c9e",
+        "media_type": "application/vnd.vaks.source-capture-implementation.v1+json",
+        "size": 999
+      },
+      "version": "1.0-alpha.1"
+    },
+    "execution_state": "complete",
+    "findings": [],
+    "parameters": {
+      "limits_profile": "vaks-default-archive-limits/v1",
+      "max_compression_ratio": 100.0,
+      "max_entries": 50000,
+      "max_entry_size": 134217728,
+      "max_finding_detail_items": 20,
+      "max_finding_paths": 20,
+      "max_findings_per_code": 100,
+      "max_input_blob_size": 2147483648,
+      "max_path_depth": 100,
+      "max_path_length": 260,
+      "max_symlink_target_size": 4096,
+      "max_total_size": 536870912
+    },
+    "profiles": [
+      "archive-safety/v1",
+      "repo-completeness/v1",
+      "repo-portability/v1"
+    ],
+    "summary": {
+      "finding_count": 0,
+      "max_severity": "none"
+    }
+  },
+  "predicateType": "urn:vaks:predicate:repo-snapshot-hygiene:v1",
+  "subject": [
+    {
+      "digest": {
+        "sha256": "b8b3a0e1ce0a80e7aa8e9b0f29c7f25267f0bde6216d6f5f5041d07e6dc366f3"
+      },
+      "name": "snapshot-manifest"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "valid-hybrid-search-activation-only",
+  "expected_valid": true,
+  "expected_codes": [],
+  "patch": {
+    "search_cache": {
+      "used_for_query": true
+    },
+    "search": {
+      "included_buckets": ["reviewed", "candidate"],
+      "excluded_buckets": ["feedback", "runtime_artifact", "project_overlay"],
+      "hits": [
+        {
+          "id": "reviewed-orientation-hit",
+          "ref": "fixtures/copied-subset/reviewed-summary.md",
+          "authority_bucket": "reviewed",
+          "knowledge_status": "reviewed",
+          "pack_role": "orientation",
+          "selected_by": ["semantic", "bm25", "hybrid"],
+          "rank": 1,
+          "score": 0.91,
+          "action_basis_allowed": false,
+          "rank_claims_trust": false,
+          "score_sets_confidence": false
+        },
+        {
+          "id": "candidate-orientation-hit",
+          "ref": "fixtures/copied-subset/candidate-distillation.md",
+          "authority_bucket": "candidate",
+          "knowledge_status": "candidate",
+          "pack_role": "orientation",
+          "selected_by": ["semantic", "hybrid"],
+          "rank": 2,
+          "score": 0.77,
+          "action_basis_allowed": false,
+          "rank_claims_trust": false,
+          "score_sets_confidence": false
+        }
+      ]
+    }
+  }
+}

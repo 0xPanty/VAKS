@@ -1,5 +1,7 @@
 # 资料库
 
+跨机开发请先读 [Mac 接续入口](START_HERE_MAC.md) 与 [2026-10-19 迁移交接](00_handoff/2026-10-19-github-mac-continuation.md)。设计、候选研究、实验进度和保险产品评审均已建立恢复索引；上线能力仍须按各自证据与限制判断。
+
 这个资料库不是普通收藏夹，而是一个本地 verified action knowledge system。
 
 当前路线已经确认：

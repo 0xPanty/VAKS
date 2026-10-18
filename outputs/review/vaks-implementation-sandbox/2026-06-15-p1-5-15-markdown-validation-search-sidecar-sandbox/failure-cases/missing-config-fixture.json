@@ -1,0 +1,11 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "missing-config-fixture",
+  "expected_valid": false,
+  "expected_codes": ["MS_FIXTURE_PATH_MISSING"],
+  "patch": {
+    "config_contract": {
+      "contract_path": "fixtures/mdvs.toml.missing"
+    }
+  }
+}

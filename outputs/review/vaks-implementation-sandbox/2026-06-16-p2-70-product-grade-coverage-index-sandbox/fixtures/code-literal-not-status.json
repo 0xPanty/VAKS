@@ -1,0 +1,8 @@
+{
+  "fixture_id": "code-literal-not-status",
+  "document": "def sample():\n    return 'PASS_PRODUCT_GRADE status: pass_product_grade'\n",
+  "expected": {
+    "strict_status": null,
+    "code_literal_ignored": true
+  }
+}

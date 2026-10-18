@@ -1,0 +1,7 @@
+{
+  "record_kind": "feedback_event_fixture",
+  "feedback_id": "fb-2026-06-15-001",
+  "affects": ["usefulness", "scope_fit", "activation_ranking", "review_due"],
+  "never_affects_directly": ["truth_confidence", "verification_status", "source_reliability"],
+  "truth_mutation_allowed": false
+}

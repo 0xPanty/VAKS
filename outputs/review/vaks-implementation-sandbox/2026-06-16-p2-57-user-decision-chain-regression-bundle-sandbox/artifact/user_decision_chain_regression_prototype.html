@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Decision Chain Regression</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 32px; color: #1f2937; background: #f8fafc; }
+    main { max-width: 1080px; margin: 0 auto; }
+    h1 { font-size: 28px; margin-bottom: 8px; }
+    .summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 20px 0; }
+    .metric { background: #fff; border: 1px solid #d1d5db; border-radius: 8px; padding: 14px; }
+    .label { font-size: 12px; color: #6b7280; text-transform: uppercase; }
+    .value { font-size: 24px; margin-top: 6px; }
+    table { width: 100%; border-collapse: collapse; background: #fff; }
+    th, td { border: 1px solid #d1d5db; padding: 9px; text-align: left; font-size: 14px; }
+    th { background: #e5e7eb; }
+    .boundary { margin-top: 20px; padding: 14px; border: 1px solid #f59e0b; background: #fffbeb; border-radius: 8px; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>User Decision Chain Regression</h1>
+  <p>Sandbox-only regression readout. This is not execution authority, mainline approval, promotion approval, Obsidian sync approval, reviewed knowledge, evidence support, or action basis.</p>
+  <section class="summary">
+    <div class="metric"><div class="label">Source slices</div><div class="value">6</div></div>
+    <div class="metric"><div class="label">p2-56 gate</div><div class="value">True</div></div>
+    <div class="metric"><div class="label">Demo scenarios</div><div class="value">9</div></div>
+    <div class="metric"><div class="label">Chain passed</div><div class="value">True</div></div>
+  </section>
+  <table>
+    <thead><tr><th>Source slice</th><th>Product</th><th>Reviewer</th><th>Boundary</th><th>Verification</th></tr></thead>
+    <tbody><tr><td>2026-06-16-p2-51-user-decision-request-packet-sandbox</td><td>PASS</td><td>PASS</td><td>PASS</td><td>local_verification_passed_pending_review</td></tr><tr><td>2026-06-16-p2-52-user-decision-no-auto-advance-guard-sandbox</td><td>PASS</td><td>PASS</td><td>PASS</td><td>local_verification_passed</td></tr><tr><td>2026-06-16-p2-53-user-response-classifier-dry-run-sandbox</td><td>PASS</td><td>PASS</td><td>PASS</td><td>local_verification_passed</td></tr><tr><td>2026-06-16-p2-54-safe-user-response-renderer-dry-run-sandbox</td><td>PASS</td><td>PASS</td><td>PASS</td><td>local_verification_passed</td></tr><tr><td>2026-06-16-p2-55-user-decision-e2e-dry-run-simulator-sandbox</td><td>PASS</td><td>PASS</td><td>PASS</td><td>local_verification_passed</td></tr><tr><td>2026-06-16-p2-56-user-decision-demo-transcript-smoke-runner-sandbox</td><td>PASS</td><td>PASS</td><td>PASS</td><td>local_verification_passed</td></tr></tbody>
+  </table>
+  <section class="boundary">
+    <strong>must_not</strong>
+    <ul><li>execute_option</li><li>merge_mainline</li><li>promote</li><li>sync_obsidian</li><li>commit</li><li>push</li><li>write_reviewed_knowledge</li><li>create_evidence_support</li><li>create_action_basis</li><li>start_future_slice_by_inference</li></ul>
+  </section>
+</main>
+</body>
+</html>

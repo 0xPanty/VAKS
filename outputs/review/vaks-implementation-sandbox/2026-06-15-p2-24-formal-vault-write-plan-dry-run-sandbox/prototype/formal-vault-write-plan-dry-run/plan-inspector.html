@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en" data-sandbox-only="true" data-dry-run-only="true" data-no-write="true" data-no-sync="true" data-no-authority="true">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formal Vault Write Plan Dry Run</title>
+  <style>
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: #172026; background: #f7faf8; }
+    header { padding: 24px 28px 16px; background: #fff; border-bottom: 1px solid #d8dee4; }
+    h1 { margin: 0 0 8px; font-size: 30px; letter-spacing: 0; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 18px; padding: 18px 28px 32px; }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
+    input { min-width: 280px; height: 40px; padding: 0 12px; border: 1px solid #d8dee4; border-radius: 6px; }
+    button { height: 40px; border: 1px solid #d8dee4; background: #fff; border-radius: 6px; padding: 0 12px; font-weight: 700; }
+    button.active { border-color: #256f68; color: #256f68; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
+    .card, aside { background: #fff; border: 1px solid #d8dee4; border-radius: 8px; padding: 14px; }
+    .card h3 { margin: 4px 0 8px; font-size: 18px; }
+    .card p, aside li { color: #52616b; line-height: 1.45; }
+    .eyebrow { margin: 0; color: #256f68; text-transform: uppercase; font-size: 12px; font-weight: 700; }
+    aside { align-self: start; position: sticky; top: 16px; }
+    @media (max-width: 860px) { .layout { grid-template-columns: 1fr; padding: 16px; } input { min-width: 100%; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Formal Vault Write Plan Dry Run</h1>
+    <p>Sandbox-only plan inspector. It cannot write, sync, approve, hash the formal vault, or execute commands.</p>
+  </header>
+  <div class="layout">
+    <main>
+      <div class="toolbar" data-role="plan-filter">
+        <input id="q" type="search" placeholder="Search files, approvals, rollback, stops">
+        <button type="button" class="active" data-filter="all">All</button> <button type="button" data-filter="files">Files</button> <button type="button" data-filter="approvals">Approvals</button> <button type="button" data-filter="rollback">Rollback</button> <button type="button" data-filter="stops">Stops</button>
+      </div>
+      <div class="grid" data-role="plan-cards">
+        <article class="card" data-kind="files" data-search="native_home VAKS-Workbench-Draft/00 Native Home.md outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/00 Native Home.md 8d69253089dc6d704bda107a291e5fd32e493d6c7f3cbc993549175ddbdac11b dry-run only no formal vault write">
+  <p class="eyebrow">files</p>
+  <h3>native_home</h3>
+  <p>VAKS-Workbench-Draft/00 Native Home.md</p>
+  <p>outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/00 Native Home.md</p>
+  <strong>write_enabled=false</strong>
+</article>
+<article class="card" data-kind="files" data-search="status_board VAKS-Workbench-Draft/02 Status Board.md outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/02 Status Board.md f882d70b1761f9cc57148f9d5134cf92b5c8a9d9713b2c17c4a8865ab6749324 dry-run only no formal vault write">
+  <p class="eyebrow">files</p>
+  <h3>status_board</h3>
+  <p>VAKS-Workbench-Draft/02 Status Board.md</p>
+  <p>outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/02 Status Board.md</p>
+  <strong>write_enabled=false</strong>
+</article>
+<article class="card" data-kind="files" data-search="receipt_index VAKS-Workbench-Draft/03 Receipt Index.md outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/03 Receipt Index.md 1729f2662ee8021526ff57fae565e9e3a7357596599d4fdca63e4171f0048cfc dry-run only no formal vault write">
+  <p class="eyebrow">files</p>
+  <h3>receipt_index</h3>
+  <p>VAKS-Workbench-Draft/03 Receipt Index.md</p>
+  <p>outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/03 Receipt Index.md</p>
+  <strong>write_enabled=false</strong>
+</article>
+<article class="card" data-kind="files" data-search="boundary_stop VAKS-Workbench-Draft/04 Boundary Stop.md outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/04 Boundary Stop.md 9e5560a2ee7eab313c6a31e7b42b05991883f2b98993073d0b20da6521953945 dry-run only no formal vault write">
+  <p class="eyebrow">files</p>
+  <h3>boundary_stop</h3>
+  <p>VAKS-Workbench-Draft/04 Boundary Stop.md</p>
+  <p>outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/04 Boundary Stop.md</p>
+  <strong>write_enabled=false</strong>
+</article>
+<article class="card" data-kind="files" data-search="readonly_inspector VAKS-Workbench-Draft/readonly-inspector.html outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/readonly-inspector.html b367c6225e55e77845d586c2f96832ea539de79033bcf5341d4a15921082e203 dry-run only no formal vault write">
+  <p class="eyebrow">files</p>
+  <h3>readonly_inspector</h3>
+  <p>VAKS-Workbench-Draft/readonly-inspector.html</p>
+  <p>outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/readonly-inspector.html</p>
+  <strong>write_enabled=false</strong>
+</article>
+<article class="card" data-kind="approvals" data-search="approve_formal_vault_write_scope explicit user approval default deny">
+  <p class="eyebrow">approvals</p>
+  <h3>approve_formal_vault_write_scope</h3>
+  <p>Do you explicitly approve writing only the listed relative files to the formal vault in a future slice?</p>
+  <strong>default=deny</strong>
+</article>
+<article class="card" data-kind="approvals" data-search="approve_rollback_manifest explicit user approval default deny">
+  <p class="eyebrow">approvals</p>
+  <h3>approve_rollback_manifest</h3>
+  <p>Do you approve the rollback manifest and hash-before/hash-after checks before any future write?</p>
+  <strong>default=deny</strong>
+</article>
+<article class="card" data-kind="approvals" data-search="approve_no_sync_after_write explicit user approval default deny">
+  <p class="eyebrow">approvals</p>
+  <h3>approve_no_sync_after_write</h3>
+  <p>Do you approve keeping Obsidian sync disabled unless separately requested after the future write?</p>
+  <strong>default=deny</strong>
+</article>
+<article class="card" data-kind="rollback" data-search="rollback snapshot hash before hash after dry-run only">
+  <p class="eyebrow">rollback</p>
+  <h3>Rollback Manifest</h3>
+  <p>Snapshot and hash checks are required before any future write.</p>
+  <strong>dry-run only</strong>
+</article>
+<article class="card" data-kind="stops" data-search="stop conditions no sync no commit no push no promotion no formal vault read no formal vault write">
+  <p class="eyebrow">stops</p>
+  <h3>Stop Conditions</h3>
+  <p>Stop on any formal vault access, sync, commit, push, promotion, or missing approval.</p>
+  <strong>does not approve</strong>
+</article>
+      </div>
+    </main>
+    <aside data-role="boundary-rail">
+      <h2>Boundary Rail</h2>
+      <ul>
+        <li>sandbox only</li>
+        <li>formal vault not accessed</li>
+        <li>dry-run only</li>
+        <li>not evidence support</li>
+        <li>not action basis</li>
+        <li>no formal vault read / no formal vault write</li>
+        <li>no sync / no commit / no push / no promotion</li>
+      </ul>
+    </aside>
+  </div>
+  <script type="application/json" id="plan-data">
+{
+  "proposed_files": [
+    {
+      "id": "native_home",
+      "relative_target": "VAKS-Workbench-Draft/00 Native Home.md",
+      "source_artifact": "P2-23 prototype native home",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/00 Native Home.md",
+      "source_sha256": "8d69253089dc6d704bda107a291e5fd32e493d6c7f3cbc993549175ddbdac11b",
+      "content_binding": "exact_source_sha256",
+      "write_enabled": false,
+      "dry_run_only": true,
+      "requires_user_approval": true,
+      "rollback_required": true
+    },
+    {
+      "id": "status_board",
+      "relative_target": "VAKS-Workbench-Draft/02 Status Board.md",
+      "source_artifact": "P2-23 prototype status board",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/02 Status Board.md",
+      "source_sha256": "f882d70b1761f9cc57148f9d5134cf92b5c8a9d9713b2c17c4a8865ab6749324",
+      "content_binding": "exact_source_sha256",
+      "write_enabled": false,
+      "dry_run_only": true,
+      "requires_user_approval": true,
+      "rollback_required": true
+    },
+    {
+      "id": "receipt_index",
+      "relative_target": "VAKS-Workbench-Draft/03 Receipt Index.md",
+      "source_artifact": "P2-23 prototype receipt index",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/03 Receipt Index.md",
+      "source_sha256": "1729f2662ee8021526ff57fae565e9e3a7357596599d4fdca63e4171f0048cfc",
+      "content_binding": "exact_source_sha256",
+      "write_enabled": false,
+      "dry_run_only": true,
+      "requires_user_approval": true,
+      "rollback_required": true
+    },
+    {
+      "id": "boundary_stop",
+      "relative_target": "VAKS-Workbench-Draft/04 Boundary Stop.md",
+      "source_artifact": "P2-23 prototype boundary stop",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/04 Boundary Stop.md",
+      "source_sha256": "9e5560a2ee7eab313c6a31e7b42b05991883f2b98993073d0b20da6521953945",
+      "content_binding": "exact_source_sha256",
+      "write_enabled": false,
+      "dry_run_only": true,
+      "requires_user_approval": true,
+      "rollback_required": true
+    },
+    {
+      "id": "readonly_inspector",
+      "relative_target": "VAKS-Workbench-Draft/readonly-inspector.html",
+      "source_artifact": "P2-23 static read-only inspector",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/readonly-inspector.html",
+      "source_sha256": "b367c6225e55e77845d586c2f96832ea539de79033bcf5341d4a15921082e203",
+      "content_binding": "exact_source_sha256",
+      "write_enabled": false,
+      "dry_run_only": true,
+      "requires_user_approval": true,
+      "rollback_required": true
+    }
+  ],
+  "approval_prompts": [
+    {
+      "id": "approve_formal_vault_write_scope",
+      "prompt": "Do you explicitly approve writing only the listed relative files to the formal vault in a future slice?",
+      "applies_to_file_ids": [
+        "native_home",
+        "status_board",
+        "receipt_index",
+        "boundary_stop",
+        "readonly_inspector"
+      ],
+      "plan_version_required": "p2-24-dry-run-v1",
+      "plan_hash_required": true,
+      "confirmation_phrase": "APPROVE ONLY LISTED FILES FOR FUTURE FORMAL VAULT WRITE",
+      "required_response": "explicit_user_approval",
+      "default": "deny",
+      "blocks": [
+        "formal_vault_write",
+        "obsidian_sync",
+        "real_base_files"
+      ],
+      "excludes": [
+        "obsidian_sync",
+        "commit",
+        "push",
+        "promotion"
+      ]
+    },
+    {
+      "id": "approve_rollback_manifest",
+      "prompt": "Do you approve the rollback manifest and hash-before/hash-after checks before any future write?",
+      "applies_to_file_ids": [
+        "native_home",
+        "status_board",
+        "receipt_index",
+        "boundary_stop",
+        "readonly_inspector"
+      ],
+      "plan_version_required": "p2-24-dry-run-v1",
+      "plan_hash_required": true,
+      "confirmation_phrase": "APPROVE ROLLBACK AND HASH CHECKS BEFORE FUTURE WRITE",
+      "required_response": "explicit_user_approval",
+      "default": "deny",
+      "blocks": [
+        "formal_vault_write"
+      ],
+      "excludes": [
+        "obsidian_sync",
+        "commit",
+        "push",
+        "promotion"
+      ]
+    },
+    {
+      "id": "approve_no_sync_after_write",
+      "prompt": "Do you approve keeping Obsidian sync disabled unless separately requested after the future write?",
+      "applies_to_file_ids": [
+        "native_home",
+        "status_board",
+        "receipt_index",
+        "boundary_stop",
+        "readonly_inspector"
+      ],
+      "plan_version_required": "p2-24-dry-run-v1",
+      "plan_hash_required": true,
+      "confirmation_phrase": "APPROVE NO SYNC COMMIT PUSH OR PROMOTION IN FUTURE WRITE SLICE",
+      "required_response": "explicit_user_approval",
+      "default": "deny",
+      "blocks": [
+        "obsidian_sync"
+      ],
+      "excludes": [
+        "obsidian_sync",
+        "commit",
+        "push",
+        "promotion"
+      ]
+    }
+  ],
+  "stop_conditions": [
+    "formal vault read requested",
+    "formal vault write requested",
+    "absolute vault path requested",
+    "Obsidian sync requested",
+    "real .base requested",
+    "commit or push requested",
+    "promotion requested",
+    "dependency install requested",
+    "background service requested",
+    "MCP write tool requested",
+    "approval prompt missing or default not deny",
+    "rollback manifest missing",
+    "hash-before or hash-after missing"
+  ]
+}
+  </script>
+  <script>
+    const input = document.getElementById('q');
+    const cards = Array.from(document.querySelectorAll('.card'));
+    const buttons = Array.from(document.querySelectorAll('button[data-filter]'));
+    let filter = 'all';
+    function applyFilter() {
+      const query = input.value.toLowerCase();
+      cards.forEach(card => {
+        const okFilter = filter === 'all' || card.dataset.kind === filter;
+        const okQuery = !query || card.dataset.search.toLowerCase().includes(query) || card.textContent.toLowerCase().includes(query);
+        card.hidden = !(okFilter && okQuery);
+      });
+    }
+    buttons.forEach(btn => btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filter = btn.dataset.filter;
+      applyFilter();
+    }));
+    input.addEventListener('input', applyFilter);
+  </script>
+</body>
+</html>

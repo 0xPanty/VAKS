@@ -1,0 +1,236 @@
+filters:
+  and:
+    - file.inFolder("outputs/review/source-annotation-scale-sandbox-2026-06-14/samples/annotations")
+    - file.ext == "md"
+    - record_kind == "source_annotation"
+properties:
+  annotation_id:
+    displayName: Annotation ID
+  source_ref:
+    displayName: Source
+  annotation_role:
+    displayName: Role
+  body_note:
+    displayName: Note
+  anchor_status:
+    displayName: Anchor
+  lifecycle_state:
+    displayName: Lifecycle
+  review_pressure:
+    displayName: Pressure
+  project_overlay_refs:
+    displayName: Project lens refs
+  candidate_refs:
+    displayName: Candidate refs
+  evidence_packet_ref:
+    displayName: Evidence packet
+  support_checked:
+    displayName: Support checked
+  evidence_support_status:
+    displayName: Evidence status
+  action_basis_allowed:
+    displayName: Action basis
+  anchor_checked_at:
+    displayName: Anchor checked
+  anchor_stale:
+    displayName: Stale
+  source_digest_required:
+    displayName: Source digest required
+  blocked_reason:
+    displayName: Blocked reason
+  next_action:
+    displayName: Next action
+  file.path:
+    displayName: Path
+views:
+  - type: table
+    name: Annotation inbox
+    filters:
+      and:
+        - lifecycle_state == "source_annotated"
+        - lifecycle_state != "archived"
+        - anchor_status != "broken"
+        - anchor_status != "ambiguous"
+        - anchor_status != "source_changed"
+        - anchor_stale != true
+    order:
+      - annotation_id
+      - source_ref
+      - annotation_role
+      - body_note
+      - anchor_status
+      - review_pressure
+      - project_overlay_refs
+      - file.path
+    limit: 100
+  - type: table
+    name: Locator pool
+    filters:
+      and:
+        - lifecycle_state != "source_annotated"
+        - lifecycle_state != "archived"
+        - anchor_stale != true
+        - or:
+            - anchor_status == "exact_verified"
+            - anchor_status == "fuzzy_recovered"
+    order:
+      - source_ref
+      - selector_position_start
+      - selector_line_start
+      - selector_timestamp_start
+      - selector_page
+      - annotation_role
+      - body_note
+      - file.path
+    limit: 100
+  - type: table
+    name: Source drilldown
+    order:
+      - source_ref
+      - selector_position_start
+      - selector_line_start
+      - selector_timestamp_start
+      - selector_page
+      - annotation_role
+      - body_note
+      - anchor_status
+    limit: 100
+  - type: table
+    name: Project lens
+    filters:
+      and:
+        - project_overlay_refs != []
+        - lifecycle_state != "archived"
+    order:
+      - project_overlay_refs
+      - source_ref
+      - annotation_role
+      - body_note
+      - anchor_status
+      - support_checked
+      - file.path
+    limit: 100
+  - type: table
+    name: Routing queue
+    filters:
+      and:
+        - lifecycle_state != "archived"
+        - support_checked == false
+        - review_pressure != "none"
+    order:
+      - review_pressure
+      - annotation_role
+      - source_ref
+      - body_note
+      - candidate_refs
+      - project_overlay_refs
+    limit: 100
+  - type: table
+    name: Needs anchor repair
+    filters:
+      or:
+        - anchor_status == "ambiguous"
+        - anchor_status == "broken"
+        - anchor_status == "source_changed"
+    order:
+      - anchor_status
+      - source_ref
+      - annotation_id
+      - anchor_match_count
+      - blocked_reason
+      - next_action
+      - repair_note
+      - file.path
+    limit: 100
+  - type: table
+    name: Support checked audit
+    filters:
+      support_checked == true
+    order:
+      - annotation_id
+      - source_ref
+      - evidence_packet_ref
+      - evidence_support_status
+      - action_basis_allowed
+      - file.path
+    limit: 100
+  - type: table
+    name: AI export ready
+    # User-facing name should be AI review-input ready.
+    filters:
+      and:
+        - lifecycle_state != "archived"
+        - anchor_stale != true
+        - action_basis_allowed == false
+        - or:
+            - anchor_status == "exact_verified"
+            - anchor_status == "fuzzy_recovered"
+    order:
+      - source_ref
+      - annotation_role
+      - body_note
+      - anchor_status
+      - next_action
+      - file.path
+    limit: 100
+  - type: table
+    name: Stale anchors
+    filters:
+      and:
+        - lifecycle_state != "archived"
+        - anchor_stale == true
+    order:
+      - anchor_checked_at
+      - source_ref
+      - annotation_id
+      - annotation_role
+      - blocked_reason
+      - next_action
+      - review_pressure
+      - file.path
+    limit: 100
+  - type: table
+    name: Scale debt raw
+    filters:
+      or:
+        - source_digest_required == true
+        - review_pressure == "medium"
+        - review_pressure == "high"
+    order:
+      - source_ref
+      - source_digest_required
+      - annotation_id
+      - annotation_role
+      - body_note
+      - next_action
+      - file.path
+    limit: 100
+  - type: table
+    name: AI export blocked
+    filters:
+      or:
+        - anchor_status == "ambiguous"
+        - anchor_status == "broken"
+        - anchor_status == "source_changed"
+        - action_basis_allowed == true
+        - truth_mutation_allowed == true
+    order:
+      - anchor_status
+      - annotation_id
+      - source_ref
+      - review_pressure
+      - blocked_reason
+      - next_action
+      - file.path
+    limit: 100
+  - type: table
+    name: Cold archive
+    filters:
+      lifecycle_state == "archived"
+    order:
+      - annotation_id
+      - source_ref
+      - annotation_role
+      - repair_note
+      - file.path
+    limit: 100

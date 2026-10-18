@@ -1,0 +1,36 @@
+id,scenario,expected_check,detected_checks,blocked
+FM-01,Medium candidate becomes action basis,authority_bypass,authority_bypass;candidate_not_provisional;missing_candidate_points;missing_required_field,True
+FM-02,Suggested overlay persists without confirmation,suggested_overlay_persisted,enum_registry;missing_required_field;suggested_overlay_persisted,True
+FM-03,Confirmed overlay leaks outside active project,overlay_scope,missing_required_field;overlay_scope,True
+FM-08,Archived overlay remains in default retrieval,archived_overlay_default_retrieval,archived_overlay_default_retrieval;archived_overlay_pack_allowed;missing_required_field,True
+FM-10,Enum drift bypasses filter,enum_registry,candidate_not_provisional;enum_registry;missing_candidate_points;missing_required_field,True
+FM-11,Feedback directly mutates reviewed truth,authority_bypass,authority_bypass,True
+FM-13,Candidate missing source/provisional/candidate points,missing_required_field,candidate_not_provisional;missing_candidate_points;missing_required_field,True
+FM-14,Source card claims reviewed knowledge status,source_card_status,source_card_status,True
+FM-15,Confirmed overlay enters global default retrieval,confirmed_overlay_default_retrieval,confirmed_overlay_default_retrieval,True
+FM-16,Accepted heavy review skips forbidden proxy check,forbidden_proxy_check_missing,forbidden_proxy_check_missing,True
+FM-17,Feedback lacks project/context scope,missing_required_field,missing_required_field,True
+FM-18,Confirmed overlay lacks project and target refs,missing_required_field,missing_required_field,True
+FM-19,Query-run uses invalid query_mode,enum_registry,enum_registry;missing_required_field,True
+FM-20,Query-run candidate item is direct support,non_support_record_marked_support,diagnostic_signal_as_support;missing_required_field;non_support_record_marked_support;support_missing_independent_anchor,True
+FM-20A,Query-run source annotation item is direct support,non_support_record_marked_support,missing_required_field;non_support_record_marked_support,True
+FM-20B,Source annotation is incorrectly marked as heavy processing,source_annotation_processing_tier,source_annotation_processing_tier,True
+FM-21,Heavy review warrant uses benchmark/proxy as support,proxy_support_in_warrant,proxy_support_in_warrant,True
+FM-22,Candidate distillation omits canonical record_kind,canonical_serialization,canonical_serialization,True
+FM-23,Legacy source_record omits canonical source_card record_kind,canonical_serialization,canonical_serialization,True
+FM-24,Query-run trace only serializes query_mode and skips receipt contract,missing_required_field,missing_required_field,True
+FM-25,Context-pack manifest skips top-level pack contract,missing_required_field,missing_required_field,True
+FM-26,Overlay suggestion persists as standalone record,suggested_overlay_persisted,suggested_overlay_persisted,True
+FM-27,Raw source why_saved placeholder has no body capture reason,source_why_saved_placeholder_without_body_reason,source_why_saved_placeholder_without_body_reason,True
+FM-28,Raw source card carries top-level relations as authority-like metadata,source_card_relation_authority_metadata,source_card_relation_authority_metadata,True
+FM-29,Duplicate YAML key hides boundary field through last-wins parsing,duplicate_yaml_key,duplicate_yaml_key,True
+FM-30,Legacy project_lens_overlay passes as if canonical overlay without warning,legacy_project_lens_overlay_compatibility,confirmed_overlay_placeholder_value;legacy_project_lens_overlay_compatibility,True
+FM-31,Raw source card carries top-level confidence outside capture namespace,source_card_confidence_not_namespaced,source_card_confidence_not_namespaced,True
+FM-32,Confirmed overlay uses placeholder for semantic required field,confirmed_overlay_placeholder_value,confirmed_overlay_placeholder_value,True
+FM-33,Retrieval selects item from legacy_raw_metadata,legacy_raw_metadata_used_for_selection,legacy_raw_metadata_used_for_selection,True
+FM-04,Project non-borrow scope becomes universal ban,universal_ban_wording,universal_ban_wording,True
+FM-05,Candidate summary is marked support without raw anchor,candidate_as_support,candidate_as_support;missing_independent_anchor,True
+FM-06,Broken anchor is cited in action mode,broken_anchor_action_use,broken_anchor_action_use,True
+FM-07,Repeated negative feedback does not create review_due,missing_review_pressure,missing_review_pressure,True
+FM-09,Heavy Review Open is treated as Review Passed,pending_heavy_review_as_support,pending_heavy_review_as_support,True
+FM-12,Diagnostic score becomes support,diagnostic_signal_as_support,diagnostic_signal_as_support,True

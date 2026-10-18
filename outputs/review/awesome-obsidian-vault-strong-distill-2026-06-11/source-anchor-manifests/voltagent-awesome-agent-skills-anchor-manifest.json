@@ -1,0 +1,29 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "VoltAgent/awesome-agent-skills",
+  "source_url": "https://github.com/VoltAgent/awesome-agent-skills",
+  "checked_commit": "0e6e58985eb75a2cf7b2cbf4bc518f1bd4ef1210",
+  "checked_at": "2026-06-11",
+  "inspection_method": "shallow git clone plus README and CONTRIBUTING inspection",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "registry",
+      "why": "Main registry of official and community agent skills, category layout, path table, quality criteria, and security notice."
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "kind": "governance",
+      "why": "Contribution rules: entry format, category placement, requirements, and link-only curation boundary."
+    }
+  ],
+  "known_limits": [
+    "This repo is primarily a curated link registry, not a runtime or validator.",
+    "Listed skills live in external repositories and were not individually audited in this source review.",
+    "Community adoption and inclusion are not evidence of safety, correctness, or action readiness."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

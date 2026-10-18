@@ -1,0 +1,1 @@
+{"extends": "fixtures/valid-bases-cockpit.json", "scenario_id": "navigation-target-missing", "patch": {"navigation": [{"id": "only-review", "from": "operator-cockpit.base", "to": "review-candidates.base", "artifact_ref": "review_candidate", "navigation_creates_authority": false, "opens_reviewed_write": false}]}}

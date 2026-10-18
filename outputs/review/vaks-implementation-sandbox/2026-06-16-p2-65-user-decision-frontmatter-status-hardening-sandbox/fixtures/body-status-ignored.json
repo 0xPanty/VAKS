@@ -1,0 +1,10 @@
+{
+  "fixture_id": "body-status-ignored",
+  "document": "---\nslice_id: sample\nstatus: pass_boundary\n---\n\n# Boundary Audit\n\nstatus: fail_boundary\n\nThis body line is diagnostic text and must not override frontmatter.",
+  "expected": {
+    "valid": true,
+    "status": "pass_boundary",
+    "body_status": "fail_boundary",
+    "body_status_ignored": true
+  }
+}

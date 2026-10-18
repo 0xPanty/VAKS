@@ -1,0 +1,38 @@
+{
+  "record_kind": "opus_reviewable_closeout_packet_failure_cases",
+  "slice_id": "2026-06-19-p2-93-opus-reviewable-closeout-packet-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "P2-93-FAIL-01-p2-91-normalization-not-applied",
+      "must_fail_when": "p2-91 does not prove 75 approved status-only writes with zero protected path writes."
+    },
+    {
+      "case_id": "P2-93-FAIL-02-p2-92-current-strict-not-complete",
+      "must_fail_when": "p2-92 does not prove 75/75 current strict statuses and 20/20 original groups complete."
+    },
+    {
+      "case_id": "P2-93-FAIL-03-hash-or-body-preservation-missing",
+      "must_fail_when": "p2-92 does not prove 75/75 current hash match, body preservation, and non-status frontmatter preservation."
+    },
+    {
+      "case_id": "P2-93-FAIL-04-p2-92-final-gate-incomplete",
+      "must_fail_when": "p2-92 report statuses do not show local verification, review, boundary, product acceptance, and next-step pass labels."
+    },
+    {
+      "case_id": "P2-93-FAIL-05-opus-approval-claimed",
+      "must_fail_when": "The packet claims Opus approval instead of presenting review input for later Opus review."
+    },
+    {
+      "case_id": "P2-93-FAIL-06-mainline-or-truth-authority-claimed",
+      "must_fail_when": "The packet claims mainline merge, promotion, reviewed knowledge, evidence support, or action basis."
+    },
+    {
+      "case_id": "P2-93-FAIL-07-protected-path-write",
+      "must_fail_when": "This slice writes outside its own sandbox path or reports protected path writes."
+    },
+    {
+      "case_id": "P2-93-FAIL-08-checklist-missing-review-actions",
+      "must_fail_when": "The packet lacks a concrete external reviewer checklist."
+    }
+  ]
+}

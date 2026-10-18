@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frontmatter Status Hardening</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 32px; color: #1f2937; background: #f8fafc; }
+    main { max-width: 980px; margin: 0 auto; }
+    table { width: 100%; border-collapse: collapse; background: #fff; }
+    th, td { border: 1px solid #d1d5db; padding: 8px; text-align: left; }
+    th { background: #e5e7eb; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Frontmatter Status Hardening</h1>
+  <p>Sandbox-only strict parser. It does not approve execution, merge, promotion, sync, reviewed knowledge, evidence support, action basis, or user approval.</p>
+  <p><strong>Hardening ready:</strong> True</p>
+  <table><thead><tr><th>Report</th><th>Status</th><th>Expected</th><th>Match</th></tr></thead><tbody><tr><td>verification</td><td>local_verification_passed</td><td>local_verification_passed</td><td>True</td></tr><tr><td>reviewer</td><td>review_pass_no_blocker</td><td>review_pass_no_blocker</td><td>True</td></tr><tr><td>boundary</td><td>pass_boundary</td><td>pass_boundary</td><td>True</td></tr><tr><td>product</td><td>pass_product_grade</td><td>pass_product_grade</td><td>True</td></tr><tr><td>next_step</td><td>pass_product_grade_pending_next_slice</td><td>pass_product_grade_pending_next_slice</td><td>True</td></tr></tbody></table>
+  <h2>Parser Contract</h2>
+  <ul><li>requires_opening_frontmatter_delimiter: True</li><li>requires_closing_frontmatter_delimiter: True</li><li>requires_exactly_one_status_in_frontmatter: True</li><li>requires_non_empty_status: True</li><li>ignores_body_status_mentions: True</li><li>does_not_substring_match_pass_tokens: True</li></ul>
+</main>
+</body>
+</html>

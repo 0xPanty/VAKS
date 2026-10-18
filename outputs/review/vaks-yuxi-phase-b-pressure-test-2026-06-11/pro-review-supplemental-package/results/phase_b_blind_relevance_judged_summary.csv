@@ -1,0 +1,9 @@
+﻿corpus,mode,queries,hit_at_5_judged,mean_relevant_at_5,mean_borderline_at_5,judged_mrr_at_5,ndcg_at_5
+full,baseline_file_lexical,18,3/18,0.2778,2.6667,0.1667,0.7537
+full,vaks_b_adapter_skeleton,18,13/18,2.0000,2.4444,0.6250,0.9186
+full,vaks_only_lexical_bucket,18,11/18,1.0000,2.3889,0.3889,0.8607
+full,yuxi_native_profile,18,11/18,2.1111,2.6111,0.5185,0.9513
+primary,baseline_file_lexical,18,2/18,0.2222,2.0000,0.0324,0.6078
+primary,vaks_b_adapter_skeleton,18,11/18,1.9444,2.2778,0.5741,0.9554
+primary,vaks_only_lexical_bucket,18,10/18,1.1111,2.4444,0.3935,0.9024
+primary,yuxi_native_profile,18,13/18,2.0000,2.2222,0.5481,0.9044

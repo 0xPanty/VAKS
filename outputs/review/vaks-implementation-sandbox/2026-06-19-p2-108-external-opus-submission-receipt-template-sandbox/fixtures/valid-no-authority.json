@@ -1,0 +1,13 @@
+{
+  "fixture": "valid-no-authority",
+  "checks": {
+    "authority_flags.external_submission_performed": false,
+    "authority_flags.raw_opus_response_present": false,
+    "authority_flags.validated_opus_pass_present": false,
+    "authority_flags.user_approval_present": false,
+    "authority_flags.mainline_merge_allowed": false,
+    "authority_flags.action_basis_ready": false,
+    "authority_flags.goal_complete_now": false
+  },
+  "expected": true
+}

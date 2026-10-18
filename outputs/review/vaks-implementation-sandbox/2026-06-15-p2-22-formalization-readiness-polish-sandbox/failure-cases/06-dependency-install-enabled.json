@@ -1,0 +1,294 @@
+{
+  "slice_id": "2026-06-15-p2-22-formalization-readiness-polish-sandbox",
+  "source_slice": "2026-06-15-p2-21-silky-obsidian-workbench-sandbox",
+  "purpose": "Turn the product-grade sandbox workbench prototype into a formalization-readiness pilot pack.",
+  "write_scope": [
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-22-formalization-readiness-polish-sandbox/"
+  ],
+  "read_only_sources": [
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/next-step.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/verification.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/product-acceptance-report.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/artifact/silky-workbench-contract.md",
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-21-silky-obsidian-workbench-sandbox/prototype/vaks-silky-workbench-vault/cockpit.html"
+  ],
+  "operations": {
+    "default_read_only": true,
+    "rebuild_requires_explicit_flag": true,
+    "formal_vault_write": false,
+    "obsidian_sync": false,
+    "commit": false,
+    "push": false,
+    "promotion": false,
+    "dependency_install": true,
+    "background_service": false,
+    "mcp_write_tool": false,
+    "hooks": false,
+    "real_base_files": false,
+    "production_ui": false
+  },
+  "boundary_phrases": [
+    "sandbox only",
+    "not reviewed knowledge",
+    "not evidence support",
+    "not action basis",
+    "does not approve",
+    "no sync",
+    "no commit",
+    "no push",
+    "no promotion",
+    "no formal vault write"
+  ],
+  "surfaces": [
+    {
+      "id": "pilot_home",
+      "title": "Pilot Home",
+      "answers": [
+        "Where do I start?",
+        "What changed?",
+        "What is blocked?"
+      ],
+      "boundary": "navigation is not authority"
+    },
+    {
+      "id": "first_run_script",
+      "title": "First Run Script",
+      "answers": [
+        "How do I try this in five minutes?"
+      ],
+      "boundary": "trial does not mean adoption"
+    },
+    {
+      "id": "daily_operator_flow",
+      "title": "Daily Operator Flow",
+      "answers": [
+        "What do I do when a new item appears?"
+      ],
+      "boundary": "triage is not review approval"
+    },
+    {
+      "id": "receipt_inspector",
+      "title": "Receipt Inspector",
+      "answers": [
+        "Which verifier, hash, or report should I inspect?"
+      ],
+      "boundary": "receipt is not evidence support"
+    },
+    {
+      "id": "triage_dirty_state_panel",
+      "title": "Triage and Dirty-State Panel",
+      "answers": [
+        "What is blocked, stale, dirty, missing an anchor, review due, or action risky?"
+      ],
+      "boundary": "state grouping is not approval"
+    },
+    {
+      "id": "formalization_decision_matrix",
+      "title": "Formalization Decision Matrix",
+      "answers": [
+        "Which route should a real Obsidian workbench take?"
+      ],
+      "boundary": "decision matrix is not a merge approval"
+    },
+    {
+      "id": "acceptance_gates",
+      "title": "Acceptance Gates",
+      "answers": [
+        "What must pass before a user can trust the workflow?"
+      ],
+      "boundary": "gate pass is not mainline approval"
+    },
+    {
+      "id": "boundary_faq",
+      "title": "Boundary FAQ",
+      "answers": [
+        "What does this not mean?"
+      ],
+      "boundary": "FAQ prevents authority confusion"
+    },
+    {
+      "id": "reviewer_packet",
+      "title": "Reviewer Packet",
+      "answers": [
+        "What should reviewers inspect first?"
+      ],
+      "boundary": "reviewer pass is not Product Acceptance"
+    },
+    {
+      "id": "failure_messages",
+      "title": "Failure Messages",
+      "answers": [
+        "Why was this blocked and what is the safe alternative?"
+      ],
+      "boundary": "block reason is not a truth judgment"
+    },
+    {
+      "id": "formalization_readiness_packet",
+      "title": "Formalization Readiness Packet",
+      "answers": [
+        "What would a later approved formalization slice need to touch?"
+      ],
+      "boundary": "readiness packet is not permission to execute"
+    },
+    {
+      "id": "rollout_backlog",
+      "title": "Rollout Backlog",
+      "answers": [
+        "What is next after this sandbox?"
+      ],
+      "boundary": "backlog item is not approval to execute"
+    }
+  ],
+  "journeys": [
+    {
+      "id": "new_user_first_run",
+      "goal": "A new operator can understand the workbench without reading architecture first.",
+      "surface": "first_run_script",
+      "steps": [
+        "Open Pilot Home",
+        "Run First Run Script",
+        "Confirm Boundary FAQ"
+      ],
+      "expected_answer": "This is a sandbox pilot pack, not the formal vault.",
+      "boundary_check": "contains sandbox only and no formal vault write",
+      "stop_condition": "Stop if any step asks for sync, commit, push, install, or formal vault write."
+    },
+    {
+      "id": "daily_triage",
+      "goal": "An operator can decide where a new candidate belongs.",
+      "surface": "daily_operator_flow",
+      "steps": [
+        "Open Daily Operator Flow",
+        "Choose capture or review radar",
+        "Inspect next safe step"
+      ],
+      "expected_answer": "Triage can route work, but cannot approve truth or action basis.",
+      "boundary_check": "triage is not review approval",
+      "stop_condition": "Stop if routing is presented as reviewed knowledge."
+    },
+    {
+      "id": "receipt_lookup",
+      "goal": "An operator can find the verification trail for a slice.",
+      "surface": "receipt_inspector",
+      "steps": [
+        "Open Receipt Inspector",
+        "Select P2-21 source links",
+        "Open relevant receipt or report"
+      ],
+      "expected_answer": "Receipt proves process visibility only.",
+      "boundary_check": "receipt is not evidence support",
+      "stop_condition": "Stop if a receipt is described as source support."
+    },
+    {
+      "id": "formalization_route_choice",
+      "goal": "A product owner can compare formalization routes without accidental merge.",
+      "surface": "formalization_decision_matrix",
+      "steps": [
+        "Open Decision Matrix",
+        "Compare four routes",
+        "Select a recommended next sandbox route"
+      ],
+      "expected_answer": "Recommended route still requires separate user approval.",
+      "boundary_check": "decision matrix is not a merge approval",
+      "stop_condition": "Stop if the matrix authorizes Obsidian sync or mainline promotion."
+    },
+    {
+      "id": "acceptance_review",
+      "goal": "A reviewer can tell whether the pilot pack is ready for the next slice.",
+      "surface": "acceptance_gates",
+      "steps": [
+        "Open Acceptance Gates",
+        "Run validator",
+        "Read Reviewer, Boundary, Product reports"
+      ],
+      "expected_answer": "Only GPT-5.5 xhigh Product Acceptance can pass product grade.",
+      "boundary_check": "validator pass is not Product Acceptance",
+      "stop_condition": "Stop if validator output is treated as reviewer approval."
+    }
+  ],
+  "decision_options": [
+    {
+      "id": "static_html_cockpit",
+      "label": "Keep static HTML cockpit as inspection surface",
+      "fit": "Best for fast review and browser smoke tests.",
+      "risk": "Can feel outside native Obsidian if used alone.",
+      "requires_user_approval_for_formalization": true,
+      "boundary": "inspection surface only"
+    },
+    {
+      "id": "obsidian_native_markdown_bases",
+      "label": "Translate to Obsidian-native Markdown and Bases",
+      "fit": "Best native operator experience after explicit formal-vault approval.",
+      "risk": "Would write formal vault and possibly .base files, so it is not allowed in this slice.",
+      "requires_user_approval_for_formalization": true,
+      "boundary": "not executed here"
+    },
+    {
+      "id": "local_read_only_sidecar",
+      "label": "Build a local read-only sidecar",
+      "fit": "Best for search, validation, and cockpit refresh without mutating the vault.",
+      "risk": "Could drift into a runtime service if not tightly scoped.",
+      "requires_user_approval_for_formalization": true,
+      "boundary": "read-only only"
+    },
+    {
+      "id": "hybrid_pilot_path",
+      "label": "Hybrid: native Markdown entry plus static inspector plus read-only validator",
+      "fit": "Best next product route because it keeps Obsidian feel and auditability separate.",
+      "risk": "Needs a later approved slice to touch the formal vault.",
+      "requires_user_approval_for_formalization": true,
+      "boundary": "recommended candidate, not approval"
+    }
+  ],
+  "acceptance_gates": [
+    {
+      "id": "first_run_under_5_minutes",
+      "test": "A new operator reaches the boundary FAQ and first run checklist in three links or fewer."
+    },
+    {
+      "id": "status_answered_in_2_clicks",
+      "test": "Status, blocker, receipt, and next safe step are visible from Pilot Home."
+    },
+    {
+      "id": "receipt_path_visible",
+      "test": "P2-21 verification, boundary, reviewer, and product reports are linked from the pilot pack."
+    },
+    {
+      "id": "authority_confusion_blocked",
+      "test": "No page says sandbox pass equals reviewed knowledge, evidence support, action basis, merge, sync, commit, or push."
+    },
+    {
+      "id": "write_scope_clean",
+      "test": "All generated files stay under this slice path."
+    },
+    {
+      "id": "reviewer_boundary_product_acceptance",
+      "test": "Reviewer, Boundary Auditor, and GPT-5.5 xhigh Product Acceptance reports exist before next slice."
+    }
+  ],
+  "search_targets": [
+    "where do I start",
+    "formalization route",
+    "receipt inspector",
+    "dirty state",
+    "missing anchor",
+    "blocked reason",
+    "boundary faq",
+    "no formal vault write",
+    "not action basis",
+    "not evidence support",
+    "PASS_PRODUCT_GRADE",
+    "next sandbox route"
+  ],
+  "product_metrics": {
+    "first_run_max_steps": 3,
+    "status_answer_max_clicks": 2,
+    "required_positive_fixtures": 2,
+    "minimum_failure_cases": 18,
+    "required_decision_options": 4,
+    "required_surfaces": 11
+  },
+  "expected_failures": [
+    "forbidden_operation:dependency_install"
+  ]
+}

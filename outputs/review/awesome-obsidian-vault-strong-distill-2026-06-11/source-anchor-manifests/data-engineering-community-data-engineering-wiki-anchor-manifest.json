@@ -1,0 +1,50 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "data-engineering-community/data-engineering-wiki",
+  "source_url": "https://github.com/data-engineering-community/data-engineering-wiki",
+  "checked_commit": "92550c91c9a04cf18a9bfb01294c10713fca4a15",
+  "checked_at": "2026-06-11",
+  "inspection_method": "local git checkout; inspected README, CONTRIBUTING, templates, top-level folders, and GitHub workflow",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "project-identity",
+      "why": "Identifies the project as a community-maintained data engineering wiki and lists its main category structure."
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "kind": "contribution-governance",
+      "why": "Defines note frontmatter, title conventions, templates, separate PR guidance, mermaid guidance, and AI-generated-content policy."
+    },
+    {
+      "path": "Templates/Tool Template.md",
+      "kind": "tool-note-template",
+      "why": "Shows aliases, lifecycle tags, publish false, advantages, disadvantages, resources, recent posts, edit/copy affordances, and helpfulness feedback."
+    },
+    {
+      "path": "Templates/Concept Template.md",
+      "kind": "concept-note-template",
+      "why": "Shows a simple candidate concept shape with advantages and disadvantages."
+    },
+    {
+      "path": ".github/workflows/check_links.yml",
+      "kind": "maintenance-automation",
+      "why": "Runs scheduled/manual link checking and creates a GitHub issue with failures."
+    }
+  ],
+  "observed_counts": {
+    "github_files": 2,
+    "other_files": 234,
+    "top_level_content_folders": 7,
+    "templates_sampled": 2
+  },
+  "known_limits": [
+    "Lifecycle tags are maturity/routing labels, not truth confidence.",
+    "Community contribution process is not evidence-aware review.",
+    "Link checking detects availability, not factual support."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

@@ -1,0 +1,57 @@
+{
+  "platform": "bilibili",
+  "platform_id": "BV1p45v6kEJc",
+  "source_uri": "bilibili:BV1p45v6kEJc",
+  "url": "https://www.bilibili.com/video/BV1p45v6kEJc/",
+  "title": "Obsidian从此不再有短板！All-in-one一页纸工作台插件，免配置，免费开源，安装即用",
+  "author": "潘多拉的数字花园",
+  "publisher": "潘多拉的数字花园",
+  "owner_mid": 386246701,
+  "aid": "116577542408052",
+  "cid": "38348654258",
+  "published_at": "2026-05-15T16:08:30+08:00",
+  "duration_seconds": 162,
+  "description": "Obsidian 一页纸工作台。一个页面，搞定一切。随手记灵感、管理待办、追踪项目 — 而且好看得不像实力派",
+  "pic": "http://i1.hdslb.com/bfs/archive/58539ccdd854ed546d858901c210f9d97450c01c.jpg",
+  "stat": {
+    "aid": 116577542408052,
+    "view": 38832,
+    "danmaku": 102,
+    "reply": 284,
+    "favorite": 3956,
+    "coin": 798,
+    "share": 264,
+    "now_rank": 0,
+    "his_rank": 0,
+    "like": 1624,
+    "dislike": 0,
+    "evaluation": "",
+    "vt": 0
+  },
+  "argue_info": {
+    "argue_msg": "",
+    "argue_type": 0,
+    "argue_link": ""
+  },
+  "captured_at": "2026-06-04T16:36:01+08:00",
+  "metadata_fetch_method": "bilibili_public_view_api",
+  "public_subtitle_entries": [],
+  "player_subtitle_counts": [
+    {
+      "api": "Bilibili player/v2 bvid+cid",
+      "count": 0
+    },
+    {
+      "api": "Bilibili player/v2 aid+cid",
+      "count": 0
+    },
+    {
+      "api": "Bilibili player/wbi/v2 bvid+cid",
+      "count": 0
+    },
+    {
+      "api": "Bilibili player/wbi/v2 aid+cid",
+      "count": 0
+    }
+  ]
+}

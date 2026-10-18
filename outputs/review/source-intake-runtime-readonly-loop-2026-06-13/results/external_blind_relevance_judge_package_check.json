@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "created_at": "2026-06-14T01:37:48+00:00",
+  "zip": "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/results/external_blind_relevance_judge_only.zip",
+  "zip_sha256": "7df931a67b66873188210b0b304bff8fabb913c7b529217cdeea3b206c8ef1b8",
+  "included_files": [
+    "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/EXTERNAL_BLIND_RELEVANCE_INSTRUCTIONS.md",
+    "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/results/external_blind_relevance_template.csv",
+    "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/results/external_blind_relevance_packet_check.json",
+    "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/results/external_blind_relevance_judge_README.md"
+  ],
+  "excluded_internal_files": [
+    "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/results/external_blind_relevance_mapping.csv",
+    "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/results/runtime_readonly_loop_cases.csv",
+    "outputs/review/source-intake-runtime-readonly-loop-2026-06-13/results/runtime_readonly_loop_cases.json"
+  ],
+  "truth_boundary": "Judge-only packet; external judgments are still not completed."
+}

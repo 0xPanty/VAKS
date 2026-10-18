@@ -1,0 +1,38 @@
+{
+  "record_kind": "old_file_status_normalization_executor_failure_cases",
+  "slice_id": "2026-06-19-p2-91-old-file-status-normalization-executor-apply-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "P2-91-FAIL-01-missing-exact-approval",
+      "must_fail_when": "The exact p2-75 approval phrase is not present."
+    },
+    {
+      "case_id": "P2-91-FAIL-02-prewrite-hash-drift",
+      "must_fail_when": "Any target file hash differs from the p2-80 prewrite hash before execution."
+    },
+    {
+      "case_id": "P2-91-FAIL-03-current-status-mismatch",
+      "must_fail_when": "Any target status differs from the p2-80 before status before execution."
+    },
+    {
+      "case_id": "P2-91-FAIL-04-body-drift",
+      "must_fail_when": "Any operation changes body content."
+    },
+    {
+      "case_id": "P2-91-FAIL-05-non-status-frontmatter-drift",
+      "must_fail_when": "Any operation changes non-status frontmatter."
+    },
+    {
+      "case_id": "P2-91-FAIL-06-wrong-target-or-count",
+      "must_fail_when": "The executor writes anything other than the 75 p2-80 target files."
+    },
+    {
+      "case_id": "P2-91-FAIL-07-protected-path-write",
+      "must_fail_when": "The executor writes artifacts, tools, templates, wiki truth layers, root docs, README, Obsidian, commit, push, or sync."
+    },
+    {
+      "case_id": "P2-91-FAIL-08-mainline-or-truth-authority",
+      "must_fail_when": "The executor output claims merge, promotion, reviewed knowledge, evidence support, action basis, or mainline readiness."
+    }
+  ]
+}

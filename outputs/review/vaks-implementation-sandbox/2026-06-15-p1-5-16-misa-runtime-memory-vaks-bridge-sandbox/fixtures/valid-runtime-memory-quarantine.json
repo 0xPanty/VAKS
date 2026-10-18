@@ -1,0 +1,11 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "valid-runtime-memory-quarantine",
+  "expected_valid": true,
+  "expected_codes": [],
+  "patch": {
+    "runtime_memory": {
+      "status": "quarantined_runtime_memory"
+    }
+  }
+}

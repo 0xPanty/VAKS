@@ -1,0 +1,13 @@
+{
+  "record_kind": "read_only_bridge_use_loop_trace_fixture",
+  "trace_id": "bad-use-loop-labels-missing",
+  "query_id": "query-p1-5-16-bad-labels-missing",
+  "read_only": true,
+  "tool_writes": false,
+  "context_pack_ref": "fixtures/context-packs/vaks-context-pack-readonly.json",
+  "authority_labels_visible": false,
+  "warnings_visible": false,
+  "action_basis_allowed": false,
+  "answer_boundary": "orientation_only_not_action_basis",
+  "truth_boundary": "bad_fixture_should_fail_labels_missing"
+}

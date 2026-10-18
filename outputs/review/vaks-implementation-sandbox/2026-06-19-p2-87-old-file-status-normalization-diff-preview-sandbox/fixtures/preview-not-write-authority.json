@@ -1,0 +1,5 @@
+{
+  "case_id": "preview-not-write-authority",
+  "old_slice_writes_applied": 0,
+  "preview_authorizes_write": false
+}

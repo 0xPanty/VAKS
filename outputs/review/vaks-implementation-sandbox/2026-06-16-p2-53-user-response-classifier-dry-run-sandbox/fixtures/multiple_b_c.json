@@ -1,0 +1,11 @@
+{
+  "input_text": "B 和 C 都行",
+  "case_id": "multiple_options",
+  "expected_result": "clarify_required",
+  "expected_safe_next_step": "ask_user_to_choose_one_option",
+  "automatic_execution": false,
+  "requires_clarification": true,
+  "requires_new_scope": false,
+  "requires_separate_user_approval": false,
+  "requires_explicit_allowed_paths": false
+}

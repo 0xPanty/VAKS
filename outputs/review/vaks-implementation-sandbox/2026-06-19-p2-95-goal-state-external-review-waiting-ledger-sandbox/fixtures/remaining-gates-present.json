@@ -1,0 +1,10 @@
+{
+  "case_id": "remaining-gates-present",
+  "remaining_gate_count": 3,
+  "remaining_gate_ids": [
+    "external_opus_review",
+    "opus_result_intake",
+    "user_mainline_approval"
+  ],
+  "passed": true
+}

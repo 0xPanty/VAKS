@@ -1,0 +1,6 @@
+{
+  "status": "pass",
+  "case_count": 3,
+  "passed_expected_decision_count": 3,
+  "truth_boundary": "Package check covers generated sandbox evidence presence and expected deterministic decisions only."
+}

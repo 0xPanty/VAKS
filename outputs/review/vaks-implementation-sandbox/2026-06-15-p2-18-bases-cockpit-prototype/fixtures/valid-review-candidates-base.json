@@ -1,0 +1,1 @@
+{"extends": "fixtures/valid-bases-cockpit.json", "scenario_id": "valid-review-candidates-base", "expected_valid": true, "expected_codes": []}

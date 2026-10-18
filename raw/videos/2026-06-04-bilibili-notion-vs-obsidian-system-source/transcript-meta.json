@@ -1,0 +1,16 @@
+{
+  "bvid": "BV1adLw6qE1x",
+  "method": "public subtitle checks via Bilibili view/player APIs and yt-dlp -> public media via yt-dlp headers -> local ASR",
+  "engine": "openai-whisper",
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16",
+  "language": "zh",
+  "language_probability": null,
+  "duration": 183,
+  "segment_count": 94,
+  "text_chars": 1065,
+  "elapsed_seconds": 44.02,
+  "media_retention": "scratch media to be deleted after project artifacts are copied",
+  "generated_at": "2026-06-04T16:18:26+08:00"
+}

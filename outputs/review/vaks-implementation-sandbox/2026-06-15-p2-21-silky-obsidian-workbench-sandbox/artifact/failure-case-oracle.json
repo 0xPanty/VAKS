@@ -1,0 +1,128 @@
+{
+  "formal-vault-write-enabled.json": {
+    "expected_valid": false,
+    "expected_codes": [
+      "WB_FORBIDDEN_SCOPE_ENABLED"
+    ]
+  },
+  "formal-vault-target-path.json": {
+    "expected_valid": false,
+    "expected_codes": [
+      "WB_TARGET_VAULT_OUTSIDE_PROTOTYPE"
+    ]
+  },
+  "sync-enabled.json": {
+    "expected_valid": false,
+    "expected_codes": [
+      "WB_FORBIDDEN_SCOPE_ENABLED"
+    ]
+  },
+  "real-base-file-enabled.json": {
+    "expected_valid": false,
+    "expected_codes": [
+      "WB_FORBIDDEN_SCOPE_ENABLED"
+    ]
+  },
+  "starts-service.json": {
+    "expected_valid": false,
+    "expected_codes": [
+      "WB_FORBIDDEN_SCOPE_ENABLED"
+    ]
+  },
+  "installs-dependencies.json": {
+    "expected_valid": false,
+    "expected_codes": [
+      "WB_FORBIDDEN_SCOPE_ENABLED"
+    ]
+  },
+  "mcp-write-enabled.json": {
+    "expected_valid": false,
+    "expected_codes": [
+      "WB_FORBIDDEN_SCOPE_ENABLED"
+    ]
+  },
+  "commit-push-enabled.json": {
+    "expected_valid": false,
+    "expected_codes": [
+      "WB_FORBIDDEN_SCOPE_ENABLED"
+    ]
+  },
+  "protected-write-target.json": {
+    "expected_valid": false,
+    "expected_codes": [
+      "WB_PROTECTED_WRITE_TARGET"
+    ]
+  },
+  "missing-boundary-copy.json": {
+    "expected_valid": false,
+    "expected_codes": [
+      "WB_BOUNDARY_PHRASE_MISSING"
+    ]
+  },
+  "copy-claims-action-basis.json": {
+    "expected_valid": false,
+    "expected_codes": [
+      "WB_COPY_AUTHORITY_CONFUSION"
+    ]
+  },
+  "copy-claims-evidence-support.json": {
+    "expected_valid": false,
+    "expected_codes": [
+      "WB_COPY_AUTHORITY_CONFUSION"
+    ]
+  },
+  "missing-frontier-pattern.json": {
+    "expected_valid": false,
+    "expected_codes": [
+      "WB_FRONTIER_PATTERN_MISSING"
+    ]
+  },
+  "missing-lane.json": {
+    "expected_valid": false,
+    "expected_codes": [
+      "WB_LANE_MISSING"
+    ]
+  },
+  "missing-search-target.json": {
+    "expected_valid": false,
+    "expected_codes": [
+      "WB_SEARCH_TARGET_MISSING"
+    ]
+  },
+  "missing-required-slice.json": {
+    "expected_valid": false,
+    "expected_codes": [
+      "WB_REQUIRED_SLICE_MISSING"
+    ]
+  },
+  "slice-not-pass.json": {
+    "expected_valid": false,
+    "expected_codes": [
+      "WB_SLICE_STATUS_NOT_PASS"
+    ]
+  },
+  "journey-too-long.json": {
+    "expected_valid": false,
+    "expected_codes": [
+      "WB_JOURNEY_TOO_LONG"
+    ]
+  },
+  "journey-boundary-missing.json": {
+    "expected_valid": false,
+    "expected_codes": [
+      "WB_JOURNEY_BOUNDARY_MISSING"
+    ]
+  },
+  "status-too-deep.json": {
+    "expected_valid": false,
+    "expected_codes": [
+      "WB_STATUS_TOO_DEEP"
+    ]
+  },
+  "formal-vault-delta-allowed.json": {
+    "expected_valid": false,
+    "expected_codes": [
+      "WB_FORMAL_VAULT_DELTA_ALLOWED"
+    ]
+  }
+}

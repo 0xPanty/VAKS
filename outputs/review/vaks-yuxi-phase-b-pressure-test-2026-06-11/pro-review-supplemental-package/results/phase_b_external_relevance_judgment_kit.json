@@ -1,0 +1,32 @@
+{
+  "artifact_kind": "phase_b_external_relevance_judgment_kit",
+  "created_at": "2026-06-12",
+  "truth_boundary": "judgment_kit_not_completed_external_judgment",
+  "action_basis_allowed": false,
+  "packet_rows": 720,
+  "template_rows": 720,
+  "mapping_rows": 720,
+  "query_count": 18,
+  "corpora": [
+    "full",
+    "primary"
+  ],
+  "system_slots": [
+    "system_01",
+    "system_02",
+    "system_03",
+    "system_04"
+  ],
+  "system_identity_hidden_from_judge_template": true,
+  "mapping_file": "results/phase_b_blind_relevance_external_judgment_mapping.csv",
+  "required_external_judgment_file": "results/phase_b_blind_relevance_external_judgments.csv",
+  "required_judges": 2,
+  "requires_arbitration": true,
+  "status": "pending_external_judgment",
+  "hard_stops": [
+    "template_is_not_completed_external_judgment",
+    "do_not_use_internal_judgments_as_external_judgment",
+    "do_not_claim_original_yuxi_runtime_validated",
+    "do_not_enter_c_lite_from_this_kit"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "run_id": "run-001-direct-support",
+  "created_at": "2026-06-22T18:59:23+00:00",
+  "tool_versions": {
+    "runner": "source-intake-real-readonly-evidence-loop-r0.5-2026-06-23",
+    "query_policy": "r0.5-authority-first-local-lexical-v1",
+    "anchor_normalization": "r0.5-textquote-selector-v1",
+    "assessor": "r0.5-scripted-non-authoritative-claim-map-v1",
+    "vaks_guard": "0.1.0"
+  },
+  "corpus_snapshot_hash": "801881da6dd650a2a77d332f4509b17c2ce613c304d376ff43760fa38accf924",
+  "artifact_hashes": {
+    "query_policy.json": "1e5f74c8053873278059b5bd9157a9ea5a5960337f13a5dce02e353d02dd1fa4",
+    "retrieval_receipt.jsonl": "6ae8c7376aa6d4187694c8a01ddb037d5113f7853040a7881fa0f3f6fe951836",
+    "context_pack.json": "b760f08ab0a0cd523deb53b8b09ea40fac7bf5a2dcc1b83c8a37ca761a5f19c5",
+    "claim_support_map.jsonl": "460fad067c017c64327a16fa442dee028c4963767230c1bba34904540c8c4b0d",
+    "sufficiency_summary.json": "9f4cfaf98ee07ff8aaf306205fcd82cc6743201b11f3641c621019dec47c51da",
+    "answer_use.md": "7feead6d642ed594e86a3990ef450c5422a07167eec165688d10c4ba298d4d92",
+    "guard_report.json": "77214a8778c02c5bc228b9151d3dc47108295d158912a954147394950d4ba070"
+  },
+  "read_only": true,
+  "parent_run_id": null,
+  "scenario": "direct_support",
+  "answer_policy": "direct",
+  "sufficiency_result": "sufficient",
+  "not_proven": [
+    "Source Intake P0",
+    "production runtime",
+    "vector_graph_retrieval",
+    "reviewed_truth",
+    "action_readiness"
+  ]
+}

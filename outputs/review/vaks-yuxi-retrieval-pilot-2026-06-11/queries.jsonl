@@ -1,0 +1,13 @@
+{"id":"q01","intent":"evidence","query":"retrieval score graph rank vector similarity 能不能作为 evidence support 或 truth confidence","expected":["SCHEMA.md","ARCHITECTURE_PRINCIPLES.md","retrieval score","graph rank","evidence support"],"needs_boundary_warning":true}
+{"id":"q02","intent":"retrieval_design","query":"Mnemosyne 对 VAKS 检索层有什么可借鉴 local-first sqlite vec FTS polyphonic recall","expected":["mnemosyne","sqlite-vec","FTS5","polyphonic","retrieval-layer"],"needs_boundary_warning":true}
+{"id":"q03","intent":"retrieval_design","query":"turbovec 在 VAKS 里应该怎么用 compressed vector cache allowlist rerank","expected":["turbovec","compressed","allowlist","rerank"],"needs_boundary_warning":true}
+{"id":"q04","intent":"action","query":"candidate distillation 可以直接作为 action basis 吗 action_basis_allowed false","expected":["SOURCE_INTAKE.md","REVIEW_QUEUE.md","candidate_not_action_basis","action_basis_allowed"],"needs_boundary_warning":true}
+{"id":"q05","intent":"context_pack","query":"context pack evidence sufficiency gate coverage map 支持反例缺口 风险 怎么生成","expected":["SCHEMA.md","DEV_CONTEXT.md","REVIEW_QUEUE.md","coverage_map","Evidence Sufficiency"],"needs_boundary_warning":false}
+{"id":"q06","intent":"feedback","query":"反馈 feedback 能不能改变 truth confidence 还是只调整 activation ranking","expected":["FEEDBACK.md","truth confidence","activation ranking","feedback"],"needs_boundary_warning":false}
+{"id":"q07","intent":"agent_access","query":"Agent MCP 写入资料库需要什么边界 review queue agent memory quarantine","expected":["ARCHITECTURE_PRINCIPLES.md","agent memory","review queue","MCP"],"needs_boundary_warning":true}
+{"id":"q08","intent":"retrieval_design","query":"VAKS 检索层 north star 高召回 不权威坍塌 bucket first","expected":["retrieval-layer-north-star.md","High recall without authority collapse","bucket","authority"],"needs_boundary_warning":true}
+{"id":"q09","intent":"source_integrity","query":"source hash 改了 embedding vector cache stale 怎么处理 derived index hygiene","expected":["source hash","embedding","stale","derived"],"needs_boundary_warning":true}
+{"id":"q10","intent":"graph_retrieval","query":"GraphRAG LightRAG relation neighborhood retrieval graph rank 不是 trust 怎么处理","expected":["GraphRAG","LightRAG","relation-neighborhood","graph rank","trust"],"needs_boundary_warning":true}
+{"id":"q11","intent":"workbench","query":"Obsidian Bases dashboard workbench 是不是 truth layer 还是 view layer","expected":["Obsidian Bases","workbench","truth layer","view"],"needs_boundary_warning":true}
+{"id":"q12","intent":"source_intake","query":"强蒸馏 repo intake 应该保存哪些 candidate-only artifacts source card distillation overlay sync hash","expected":["source card","candidate distillation","project overlay","sync","hash"],"needs_boundary_warning":true}
+

@@ -1,0 +1,13 @@
+{
+  "case_id": "prototype-markdown-permission",
+  "description": "Prototype Markdown claims permission.",
+  "expected_errors": [
+    "prototype_text_dangerous:02 Readiness Checks.md:execution_permission_granted",
+    "prototype_text_authority_confusion:02 Readiness Checks.md:execution_permission"
+  ],
+  "prototype_tamper": {
+    "kind": "markdown_replace",
+    "file": "02 Readiness Checks.md",
+    "content": "Execution permission granted."
+  }
+}

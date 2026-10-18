@@ -1,0 +1,21 @@
+{
+  "boundary": "stress covers frozen binding/brake/render/commit logic and simulated system faults; not live LLM, live retrieval, network, or production IO",
+  "brake_path_avg_ms": 0.265197,
+  "brake_path_p95_ms": 0.8644,
+  "brake_path_p99_ms": 3.0494,
+  "parallel_count": 80000,
+  "parallel_determinism_failure_count": 0,
+  "parallel_elapsed_ms": 43102.4709,
+  "parallel_worker_count": 8,
+  "scenario_counts": {
+    "burst": 60000,
+    "guard_fault": 60000,
+    "malformed_draft": 60000,
+    "normal": 60000,
+    "retrieval_empty": 60000
+  },
+  "sequential_count": 300000,
+  "sequential_elapsed_ms": 80401.787,
+  "sequential_failure_count": 0,
+  "status": "pass"
+}

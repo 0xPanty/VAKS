@@ -1,0 +1,30 @@
+{
+  "record_kind": "sandbox_chain_hardening_readiness_contract",
+  "slice_id": "2026-06-16-p2-66-user-decision-chain-hardening-readiness-sandbox",
+  "source_slice_id": "2026-06-16-p2-65-user-decision-frontmatter-status-hardening-sandbox",
+  "purpose": "decide the next safe sandbox step after strict frontmatter status hardening",
+  "allowed_next_without_separate_user_approval": [
+    "sandbox_chain_hardening_package",
+    "return_to_broader_p2_workflow"
+  ],
+  "parked_requires_separate_user_approval": [
+    "old_slice_backfill",
+    "shared_helper_or_tools"
+  ],
+  "output_contract": {
+    "dry_run_only": true,
+    "dependency_install_required": false,
+    "network_required": false,
+    "mcp_required": false,
+    "background_service_required": false,
+    "automatic_execution": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "formal_vault_ready": false,
+    "obsidian_sync_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "user_approval_collected": false
+  }
+}

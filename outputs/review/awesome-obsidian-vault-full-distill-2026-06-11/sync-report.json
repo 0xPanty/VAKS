@@ -1,0 +1,56 @@
+[
+  {
+    "RelativePath": "raw\\repos\\2026-06-11-obsidian-pkm-vault-awesome-obsidian-vault-source.md",
+    "SourceHash": "a9ba0700dca2d665941cff46814d6cbc431ec40c800175fffbcbd22446187e76",
+    "DestHash": "a9ba0700dca2d665941cff46814d6cbc431ec40c800175fffbcbd22446187e76",
+    "Match": true
+  },
+  {
+    "RelativePath": "outputs\\review\\2026-06-11-awesome-obsidian-vault-candidate-triage.md",
+    "SourceHash": "b976cf15ef3db4b592fa2561b7c9e676bddac2f5721e2ee5454d94872396846a",
+    "DestHash": "b976cf15ef3db4b592fa2561b7c9e676bddac2f5721e2ee5454d94872396846a",
+    "Match": true
+  },
+  {
+    "RelativePath": "outputs\\review\\2026-06-11-awesome-obsidian-vault-p1-batch-scout.md",
+    "SourceHash": "627d0081461078c075e56e00fa044c710eb8b9e100c579ad253a92979cfc4f7d",
+    "DestHash": "627d0081461078c075e56e00fa044c710eb8b9e100c579ad253a92979cfc4f7d",
+    "Match": true
+  },
+  {
+    "RelativePath": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\task_plan.md",
+    "SourceHash": "c492ba4302380d7e052a9570f77a48d59b6b5a60444c38345082acb36d450f45",
+    "DestHash": "c492ba4302380d7e052a9570f77a48d59b6b5a60444c38345082acb36d450f45",
+    "Match": true
+  },
+  {
+    "RelativePath": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\findings.md",
+    "SourceHash": "5337e0a3bde306f66dafd9b71bf6afbce1b576c052ec884cadf723d34048b1e6",
+    "DestHash": "5337e0a3bde306f66dafd9b71bf6afbce1b576c052ec884cadf723d34048b1e6",
+    "Match": true
+  },
+  {
+    "RelativePath": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\progress.md",
+    "SourceHash": "e82037e8b8aed3a2981e806adfb4c5a33c95a68916898161284ca00ae1f60bb7",
+    "DestHash": "e82037e8b8aed3a2981e806adfb4c5a33c95a68916898161284ca00ae1f60bb7",
+    "Match": true
+  },
+  {
+    "RelativePath": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\batch-source-ledger.json",
+    "SourceHash": "ea941402a70dea5381749c83cf6c14a1f847fddd85c5c66e1d083ccca9e5e580",
+    "DestHash": "ea941402a70dea5381749c83cf6c14a1f847fddd85c5c66e1d083ccca9e5e580",
+    "Match": true
+  },
+  {
+    "RelativePath": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\batch-source-ledger.csv",
+    "SourceHash": "49fd60d6a20082faa1ebe5333c6d223a275df8ac49456ecff142e634d28c2ea7",
+    "DestHash": "49fd60d6a20082faa1ebe5333c6d223a275df8ac49456ecff142e634d28c2ea7",
+    "Match": true
+  },
+  {
+    "RelativePath": "outputs\\review\\awesome-obsidian-vault-full-distill-2026-06-11\\full-batch-candidate-distillation.md",
+    "SourceHash": "6c3b5f903f2ecd0913a626b0b0fc58da2854a57846c59870f0b4a050a1c0329b",
+    "DestHash": "6c3b5f903f2ecd0913a626b0b0fc58da2854a57846c59870f0b4a050a1c0329b",
+    "Match": true
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "case_id": "authority-boundaries-false",
+  "opus_review_performed": false,
+  "opus_approval_claimed": false,
+  "mainline_ready": false,
+  "reviewed_knowledge_ready": false,
+  "evidence_support_ready": false,
+  "action_basis_ready": false,
+  "goal_complete_now": false,
+  "passed": true
+}

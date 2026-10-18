@@ -1,0 +1,193 @@
+{
+  "record_kind": "source_intake_route_map_candidate",
+  "status": "candidate",
+  "created_at": "2026-06-07",
+  "topic_id": "source-intake-routing",
+  "truth_boundary": "navigation_only_not_truth",
+  "allowed_use": [
+    "workbench_navigation",
+    "route_selection",
+    "context_pack_seed"
+  ],
+  "forbidden_use": [
+    "truth",
+    "reviewed_relation",
+    "action_basis",
+    "platform_adoption"
+  ],
+  "start_here_refs": [
+    "SOURCE_INTAKE.md",
+    "templates/source-record.md",
+    "templates/candidate-distillation.md",
+    "templates/query-run.md",
+    "00_handoff/2026-06-06-source-intake-control-flow-mainline-merge-handoff.md"
+  ],
+  "external_scout_refs": [
+    "raw/repos/2026-06-07-langgenius-dify-source.md",
+    "raw/repos/2026-06-07-infiniflow-ragflow-source.md",
+    "raw/repos/2026-06-07-mintplex-labs-anything-llm-source.md",
+    "raw/repos/2026-06-07-run-llama-llama-index-source.md",
+    "raw/repos/2026-06-07-deepset-ai-haystack-source.md",
+    "outputs/review/2026-06-07-source-intake-routing-github-scout-candidate-distillation.md",
+    "outputs/review/project_overlays/VAKS/VAKS-source-intake-routing-github-scout-2026-06-07.md"
+  ],
+  "intent_router_ref": "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/fixtures/query-intent-router-v0.json",
+  "lane_internal_sort_policy": [
+    "pinned_ref",
+    "exact_topic_match",
+    "entity_match",
+    "recent_scout_or_current_sandbox",
+    "ordinary_match"
+  ],
+  "selector_policy": {
+    "selector_or_offset": "line selector or section-local navigation pointer",
+    "snippet_status": "navigation_snippet_not_evidence",
+    "guard": "Selector and snippet help the reader open the right place; they are not evidence support."
+  },
+  "action_pack_policy": {
+    "raw_role": "anchor_queue_raw_provenance",
+    "final_support_state": "none",
+    "guard": "Action mode prepares anchors only; evidence support check must run before final action-facing use."
+  },
+  "route_cards": [
+    {
+      "route_id": "source-front-door",
+      "label": "Source Route Front Door",
+      "plain_rule": "Start from source type and intended use before ranking search hits.",
+      "query_triggers": [
+        "source route",
+        "front door",
+        "workbench",
+        "entrypoint",
+        "Dify",
+        "AnythingLLM"
+      ],
+      "include_lanes": [
+        "mainline_current",
+        "raw_drilldown",
+        "candidate_orientation"
+      ],
+      "exclude_lanes_by_default": [
+        "audit_evidence",
+        "feedback_diagnostics",
+        "archived_overlay"
+      ],
+      "borrowed_from": [
+        "langgenius/dify",
+        "Mintplex-Labs/anything-llm"
+      ],
+      "implementation_hint": "Show source routes first: repo/library, article/web, paper, video, Obsidian note, previous sandbox/check.",
+      "risk_guard": "A visible source route is navigation; it is not authority."
+    },
+    {
+      "route_id": "ingestion-parser-route",
+      "label": "Ingestion And Parser Route",
+      "plain_rule": "Parser, connector, and chunk method are source hygiene, not proof.",
+      "query_triggers": [
+        "ingestion",
+        "parser",
+        "chunk",
+        "connector",
+        "RAGFlow",
+        "LlamaIndex"
+      ],
+      "include_lanes": [
+        "raw_drilldown",
+        "candidate_orientation"
+      ],
+      "exclude_lanes_by_default": [
+        "action_basis",
+        "reviewed_relation"
+      ],
+      "borrowed_from": [
+        "infiniflow/ragflow",
+        "run-llama/llama_index"
+      ],
+      "implementation_hint": "Expose source_type, content_form, parser/connector trace, and raw anchor availability.",
+      "risk_guard": "Chunk metadata and parser output stay raw/candidate until evidence review."
+    },
+    {
+      "route_id": "metadata-router-trace",
+      "label": "Metadata Router And Trace",
+      "plain_rule": "Use metadata to slice retrieval after authority/status filters.",
+      "query_triggers": [
+        "metadata",
+        "router",
+        "filter",
+        "trace",
+        "Haystack",
+        "Dify"
+      ],
+      "include_lanes": [
+        "mainline_current",
+        "candidate_orientation",
+        "support_review_output"
+      ],
+      "exclude_lanes_by_default": [
+        "candidate_as_action_basis",
+        "cross_lane_rrf"
+      ],
+      "borrowed_from": [
+        "deepset-ai/haystack",
+        "langgenius/dify"
+      ],
+      "implementation_hint": "Show hard filters, lane counts, selected items, excluded items, and content_trace_policy.",
+      "risk_guard": "Metadata route hit is not confidence, truth, or action readiness."
+    },
+    {
+      "route_id": "citation-clickback-route",
+      "label": "Citation And Clickback Route",
+      "plain_rule": "Citation UI is a drilldown affordance; evidence support is a later check.",
+      "query_triggers": [
+        "citation",
+        "clickback",
+        "source icon",
+        "anchor",
+        "AnythingLLM",
+        "LlamaIndex"
+      ],
+      "include_lanes": [
+        "raw_drilldown",
+        "reviewed_support"
+      ],
+      "exclude_lanes_by_default": [
+        "candidate_orientation_as_support",
+        "overlay_as_support"
+      ],
+      "borrowed_from": [
+        "Mintplex-Labs/anything-llm",
+        "run-llama/llama_index"
+      ],
+      "implementation_hint": "Pack items should display source_ref, selector_or_offset, citable_status, and action readiness.",
+      "risk_guard": "A citation link is not evidence support unless the cited span supports the specific point."
+    },
+    {
+      "route_id": "action-safety-route",
+      "label": "Action Safety Route",
+      "plain_rule": "Action packs can prepare anchors, but candidate/overlay/audit material cannot become final support.",
+      "query_triggers": [
+        "action",
+        "decision",
+        "basis",
+        "safe",
+        "support"
+      ],
+      "include_lanes": [
+        "mainline_current",
+        "reviewed_support",
+        "raw_drilldown"
+      ],
+      "exclude_lanes_by_default": [
+        "candidate_orientation",
+        "active_project_overlay",
+        "audit_evidence",
+        "feedback_diagnostics"
+      ],
+      "borrowed_from": [
+        "VAKS source-intake control flow"
+      ],
+      "implementation_hint": "Always emit action_readiness:not_ready until a raw/reviewed anchor has been opened and checked.",
+      "risk_guard": "Do not let route convenience override knowledge_status or retrieval_policy."
+    }
+  ]
+}

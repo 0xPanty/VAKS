@@ -1,0 +1,37 @@
+corpus,query_id,intent,mode,hit_at_5,hit_at_10,top1_path,top1_heading,top1_bucket,top1_status,candidate_or_raw_top1,top5_nonreviewed_count,top5_warning_count,warning_emitted,needs_boundary_warning
+primary,q01,evidence,T0_baseline_file_lexical,True,True,outputs/review/vaks-retrieval-layer-design-2026-06-11/frontier-source-ledger.md,frontier-source-ledger.md,candidate,candidate,True,4,0,False,True
+primary,q01,evidence,T1_yuxi_like_no_labels,True,True,SCHEMA.md,1.8 Graph retrieval stratification is not truth,active,active,True,5,0,False,True
+primary,q01,evidence,T2_yuxi_like_boundary_labels,True,True,SCHEMA.md,1.8 Graph retrieval stratification is not truth,active,active,True,5,5,True,True
+primary,q02,retrieval_design,T0_baseline_file_lexical,True,True,outputs/review/vaks-retrieval-layer-design-2026-06-11/retrieval-layer-north-star.md,retrieval-layer-north-star.md,candidate,candidate,True,5,0,False,True
+primary,q02,retrieval_design,T1_yuxi_like_no_labels,True,True,outputs/review/vaks-retrieval-layer-design-2026-06-11/findings.md,What Mnemosyne Adds,candidate,candidate,True,5,0,False,True
+primary,q02,retrieval_design,T2_yuxi_like_boundary_labels,True,True,outputs/review/vaks-retrieval-layer-design-2026-06-11/findings.md,What Mnemosyne Adds,candidate,candidate,True,5,5,True,True
+primary,q03,retrieval_design,T0_baseline_file_lexical,True,True,outputs/review/2026-06-11-RyanCodrai-turbovec-candidate-distillation.md,2026-06-11-RyanCodrai-turbovec-candidate-distillation.md,candidate,candidate,True,5,0,False,True
+primary,q03,retrieval_design,T1_yuxi_like_no_labels,True,True,outputs/review/project_lens_overlays/2026-06-11-turbovec-vector-retrieval-cache.md,Project Borrow Scope,overlay,candidate,True,5,0,False,True
+primary,q03,retrieval_design,T2_yuxi_like_boundary_labels,True,True,outputs/review/project_lens_overlays/2026-06-11-turbovec-vector-retrieval-cache.md,Project Borrow Scope,overlay,candidate,True,5,5,True,True
+primary,q04,action,T0_baseline_file_lexical,False,False,raw/repos/2026-06-08-Yaozhuwa-easy-typing-obsidian-source.md,2026-06-08-Yaozhuwa-easy-typing-obsidian-source.md,raw,raw,True,3,0,False,True
+primary,q04,action,T1_yuxi_like_no_labels,True,True,wiki/projects/2026-05-27-llm-wiki-compiler-implementation-extraction.md,可以直接用上的实现思想,reviewed,reviewed,False,4,0,False,True
+primary,q04,action,T2_yuxi_like_boundary_labels,True,True,wiki/projects/2026-05-27-llm-wiki-compiler-implementation-extraction.md,可以直接用上的实现思想,reviewed,reviewed,False,4,5,True,True
+primary,q05,context_pack,T0_baseline_file_lexical,True,True,README.md,README.md,unknown,unknown,True,3,0,False,False
+primary,q05,context_pack,T1_yuxi_like_no_labels,False,True,IMPLEMENTATION_BLUEPRINT.md,7. Phase 3: Context Pack Contract,active,active,True,3,0,False,False
+primary,q05,context_pack,T2_yuxi_like_boundary_labels,False,True,IMPLEMENTATION_BLUEPRINT.md,7. Phase 3: Context Pack Contract,active,active,True,3,0,False,False
+primary,q06,feedback,T0_baseline_file_lexical,True,True,outputs/qa/2026-05-27-conversation-derived-feedback-routing-research.md,2026-05-27-conversation-derived-feedback-routing-research.md,qa,candidate,True,5,0,False,False
+primary,q06,feedback,T1_yuxi_like_no_labels,True,True,IMPLEMENTATION_BLUEPRINT.md,14. Feedback Calibration,active,active,True,5,0,False,False
+primary,q06,feedback,T2_yuxi_like_boundary_labels,True,True,IMPLEMENTATION_BLUEPRINT.md,14. Feedback Calibration,active,active,True,5,1,True,False
+primary,q07,agent_access,T0_baseline_file_lexical,False,False,wiki/summaries/2026-06-08-Momoyu404-geminese-architecture-review.md,2026-06-08-Momoyu404-geminese-architecture-review.md,summary,candidate,True,3,0,False,True
+primary,q07,agent_access,T1_yuxi_like_no_labels,True,True,wiki/patterns/verified-vault-api-for-agent-brain.md,适用场景,reviewed,reviewed,False,0,0,False,True
+primary,q07,agent_access,T2_yuxi_like_boundary_labels,True,True,wiki/patterns/verified-vault-api-for-agent-brain.md,适用场景,reviewed,reviewed,False,0,0,False,True
+primary,q08,retrieval_design,T0_baseline_file_lexical,True,True,outputs/review/vaks-retrieval-layer-design-2026-06-11/README.md,README.md,candidate,candidate,True,5,0,False,True
+primary,q08,retrieval_design,T1_yuxi_like_no_labels,True,True,outputs/review/vaks-retrieval-layer-design-2026-06-11/retrieval-layer-north-star.md,Retrieval Layer North Star,candidate,candidate,True,5,0,False,True
+primary,q08,retrieval_design,T2_yuxi_like_boundary_labels,True,True,outputs/review/vaks-retrieval-layer-design-2026-06-11/retrieval-layer-north-star.md,Retrieval Layer North Star,candidate,candidate,True,5,5,True,True
+primary,q09,source_integrity,T0_baseline_file_lexical,False,False,wiki/summaries/2026-06-11-AxDSan-mnemosyne-architecture-review.md,2026-06-11-AxDSan-mnemosyne-architecture-review.md,summary,candidate,True,5,0,False,True
+primary,q09,source_integrity,T1_yuxi_like_no_labels,True,True,wiki/patterns/incremental-vault-index-retrieval-cache.md,Source evidence,reviewed,reviewed,False,3,0,False,True
+primary,q09,source_integrity,T2_yuxi_like_boundary_labels,True,True,wiki/patterns/incremental-vault-index-retrieval-cache.md,Source evidence,reviewed,reviewed,False,3,3,True,True
+primary,q10,graph_retrieval,T0_baseline_file_lexical,True,True,outputs/qa/2026-05-26-nano-notebooklm-kg-vector-index-analysis.md,2026-05-26-nano-notebooklm-kg-vector-index-analysis.md,qa,candidate,True,3,0,False,True
+primary,q10,graph_retrieval,T1_yuxi_like_no_labels,True,True,SCHEMA.md,1.8 Graph retrieval stratification is not truth,active,active,True,5,0,False,True
+primary,q10,graph_retrieval,T2_yuxi_like_boundary_labels,True,True,SCHEMA.md,1.8 Graph retrieval stratification is not truth,active,active,True,5,0,False,True
+primary,q11,workbench,T0_baseline_file_lexical,True,True,wiki/summaries/2026-05-27-kepano-obsidian-architecture-review.md,2026-05-27-kepano-obsidian-architecture-review.md,summary,candidate,True,3,0,False,True
+primary,q11,workbench,T1_yuxi_like_no_labels,True,True,IMPLEMENTATION_BLUEPRINT.md,"10. Phase 6: API, MCP, Viewer, and Obsidian Workbench",active,active,True,3,0,False,True
+primary,q11,workbench,T2_yuxi_like_boundary_labels,True,True,IMPLEMENTATION_BLUEPRINT.md,"10. Phase 6: API, MCP, Viewer, and Obsidian Workbench",active,active,True,3,2,True,True
+primary,q12,source_intake,T0_baseline_file_lexical,True,True,wiki/patterns/incremental-source-state-compiler.md,incremental-source-state-compiler.md,reviewed,reviewed,False,3,0,False,True
+primary,q12,source_intake,T1_yuxi_like_no_labels,True,True,SOURCE_INTAKE.md,Project Overlay Gate / part 1,active,active,True,5,0,False,True
+primary,q12,source_intake,T2_yuxi_like_boundary_labels,True,True,SOURCE_INTAKE.md,Project Overlay Gate / part 1,active,active,True,5,0,False,True

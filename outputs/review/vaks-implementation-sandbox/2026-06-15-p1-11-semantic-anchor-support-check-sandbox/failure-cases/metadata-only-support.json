@@ -1,0 +1,16 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "metadata-only-support",
+  "expected_valid": false,
+  "expected_codes": ["SA_SUPPORT_REQUIRES_STABLE_ANCHOR"],
+  "anchors": [
+    {
+      "id": "metadata-only-anchor",
+      "anchor_kind": "metadata_only",
+      "support_claimed": true,
+      "support_role": "direct_support",
+      "source_ref": "raw/articles/example-source.md#frontmatter",
+      "authority_bucket": "raw_anchor"
+    }
+  ]
+}

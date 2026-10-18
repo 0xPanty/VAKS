@@ -1,0 +1,9 @@
+{
+  "fixture_id": "forbid-implicit-approval",
+  "decision_option": "approve_status_only_normalization",
+  "implicit_user_intent": "全部落地",
+  "expected": {
+    "counts_as_explicit_old_slice_edit_approval": false,
+    "allowed_now": false
+  }
+}

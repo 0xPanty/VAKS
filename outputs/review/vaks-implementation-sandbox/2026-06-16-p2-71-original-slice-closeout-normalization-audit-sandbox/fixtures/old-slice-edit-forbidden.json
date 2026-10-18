@@ -1,0 +1,12 @@
+{
+  "fixture_id": "old-slice-edit-forbidden",
+  "candidate_action": {
+    "operation": "patch_old_slice_next_step",
+    "old_slice_edit_allowed": true,
+    "user_approval_present": false
+  },
+  "expected": {
+    "allowed": false,
+    "reason": "old slice edits require separate user approval"
+  }
+}

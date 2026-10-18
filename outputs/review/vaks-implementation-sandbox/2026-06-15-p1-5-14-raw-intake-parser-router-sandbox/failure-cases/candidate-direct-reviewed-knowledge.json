@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "candidate-direct-reviewed-knowledge",
+  "expected_valid": false,
+  "expected_codes": ["RP_AUTHORITY_CLAIM_FORBIDDEN"],
+  "patch": {"candidate_distillation": {"reviewed_knowledge": true}}
+}

@@ -1,0 +1,75 @@
+{
+  "record_kind": "sandbox_user_decision_freeze_operator_readiness_brief",
+  "slice_id": "2026-06-16-p2-61-user-decision-freeze-operator-readiness-brief-sandbox",
+  "source_slice_id": "2026-06-16-p2-60-user-decision-index-freeze-checksum-sandbox",
+  "purpose": "operator-facing readiness brief for the p2-60 checksum freeze",
+  "brief_ready": true,
+  "readiness_inputs": {
+    "source_manifest_exists": true,
+    "source_manifest_path": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-60-user-decision-index-freeze-checksum-sandbox/artifact/user_decision_index_freeze_checksum_manifest.json",
+    "source_slice_count": 9,
+    "entry_count": 268,
+    "missing_count": 0,
+    "hash_algorithm": "sha256_bytes",
+    "freeze_ready": true,
+    "latest_source_final_gate_passed": true
+  },
+  "source_status": {
+    "verification_status": "local_verification_passed",
+    "reviewer_passed": true,
+    "boundary_passed": true,
+    "product_acceptance_passed": true,
+    "next_step_status": "pass_product_grade_pending_next_slice"
+  },
+  "manual_readonly_verification": {
+    "command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-16-p2-60-user-decision-index-freeze-checksum-sandbox\\artifact\\verify_user_decision_index_freeze_checksum.py --final-gate",
+    "intent": "manually re-run p2-60 final gate before using the freeze as a sandbox handoff input",
+    "automation_by_this_artifact": false,
+    "writes_files": false
+  },
+  "operator_steps": [
+    "Read this brief and confirm the source slice is p2-60.",
+    "If drift must be checked, run the manual read-only verification command.",
+    "If the command fails, stop and inspect p2-60 before using the handoff index.",
+    "If the command passes, use the freeze only as sandbox handoff integrity input.",
+    "Ask the user separately before any execution, merge, promotion, sync, commit, or push."
+  ],
+  "readiness_flags": {
+    "automatic_execution": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "formal_vault_ready": false,
+    "obsidian_sync_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "user_approval_collected": false
+  },
+  "hard_no": [
+    "do_not_execute_user_decision_option",
+    "do_not_merge_mainline",
+    "do_not_promote",
+    "do_not_sync_obsidian",
+    "do_not_commit",
+    "do_not_push",
+    "do_not_install_dependencies",
+    "do_not_start_background_service",
+    "do_not_install_hooks",
+    "do_not_use_mcp_write_tool",
+    "do_not_create_reviewed_knowledge",
+    "do_not_create_evidence_support",
+    "do_not_create_action_basis",
+    "do_not_treat_checksum_as_user_approval"
+  ],
+  "required_non_claims": [
+    "This brief is not user approval.",
+    "This brief is not execution authority.",
+    "This brief is not mainline approval.",
+    "This brief is not promotion approval.",
+    "This brief is not formal-vault approval.",
+    "This brief is not Obsidian sync approval.",
+    "This brief is not reviewed knowledge.",
+    "This brief is not evidence support.",
+    "This brief is not action basis."
+  ]
+}

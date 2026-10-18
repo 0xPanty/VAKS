@@ -1,0 +1,38 @@
+{
+  "record_kind": "goal_state_external_review_waiting_ledger_failure_cases",
+  "slice_id": "2026-06-19-p2-95-goal-state-external-review-waiting-ledger-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "P2-95-FAIL-01-p2-91-proof-missing",
+      "must_fail_when": "p2-91 no longer proves 75 old-slice status writes with zero protected path writes."
+    },
+    {
+      "case_id": "P2-95-FAIL-02-p2-92-proof-missing",
+      "must_fail_when": "p2-92 no longer proves 20/20 original slices current-strict complete."
+    },
+    {
+      "case_id": "P2-95-FAIL-03-p2-93-review-packet-not-ready",
+      "must_fail_when": "p2-93 no longer provides an external review-ready packet."
+    },
+    {
+      "case_id": "P2-95-FAIL-04-p2-94-submission-not-ready",
+      "must_fail_when": "p2-94 no longer provides an executable Opus submission packet."
+    },
+    {
+      "case_id": "P2-95-FAIL-05-opus-approval-claimed-without-result",
+      "must_fail_when": "The ledger claims Opus approval without an external Opus result artifact."
+    },
+    {
+      "case_id": "P2-95-FAIL-06-mainline-or-truth-authority-claimed",
+      "must_fail_when": "The ledger claims mainline readiness, reviewed knowledge, evidence support, or action basis."
+    },
+    {
+      "case_id": "P2-95-FAIL-07-goal-complete-claimed",
+      "must_fail_when": "The ledger claims the overall goal is complete while Opus review is pending."
+    },
+    {
+      "case_id": "P2-95-FAIL-08-protected-path-write",
+      "must_fail_when": "This slice writes outside its own sandbox path."
+    }
+  ]
+}

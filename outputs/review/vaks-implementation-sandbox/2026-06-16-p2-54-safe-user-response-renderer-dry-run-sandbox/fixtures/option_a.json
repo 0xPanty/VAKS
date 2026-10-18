@@ -1,0 +1,12 @@
+{
+  "input_text": "A",
+  "expected_case_id": "explicit_A",
+  "expected_reply_id": "acknowledge_reference_only",
+  "expected_next_step": "no_action_reference_only",
+  "automatic_execution": false,
+  "must_contain_any": [
+    "不会",
+    "不执行"
+  ],
+  "must_not_contain_positive_execution": true
+}

@@ -1,0 +1,8 @@
+decision_outcome:
+  recommendation: "Use first-bucket source hygiene only."
+  confidence_at_decision: medium
+  user_choice: "accept"
+  explicit_user_override: false
+  rationale: "Matches existing review queue and source intake boundaries."
+  outcome: succeeded
+  outcome_note: "Sandbox rules remained schema-locked."

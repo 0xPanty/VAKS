@@ -1,0 +1,116 @@
+{
+  "record_kind": "sandbox_old_file_status_normalization_approval_request",
+  "slice_id": "2026-06-19-p2-75-old-file-status-normalization-approval-request-sandbox",
+  "created_at": "2026-06-18T20:52:31.542401+00:00",
+  "source_inputs": {
+    "p2_72_decision_packet_json": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-72-original-slice-normalization-decision-packet-sandbox/artifact/original_slice_normalization_decision_packet.json",
+    "p2_73_sidecar_ledger_json": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-73-original-20-current-strict-sidecar-closeout-ledger-sandbox/artifact/original_20_current_strict_sidecar_closeout_ledger.json",
+    "p2_74_operator_status_surface_json": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-74-original-20-operator-status-surface-sandbox/artifact/original_20_operator_status_surface.json"
+  },
+  "current_state": {
+    "original_items": 20,
+    "status_changes": 75,
+    "old_file_current_strict_final_gate": 0,
+    "sidecar_closeout_passed": 20,
+    "old_slice_writes_applied": 0,
+    "normalization_applied": false,
+    "user_approval_collected": false
+  },
+  "request": {
+    "question": "Do you explicitly approve old-file status-only normalization for the original 20 sandbox slice reports?",
+    "exact_approval_phrase": "I explicitly approve p2-75 old-file status-only normalization: apply the 75 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only. Do not edit body content, artifacts, tools, templates, wiki truth layers, main architecture docs, README, Obsidian vault, commit, push, or sync.",
+    "approval_status_now": "not_collected",
+    "generic_language_is_not_approval": true,
+    "non_approval_examples": [
+      "继续",
+      "全部落地",
+      "都做完",
+      "可以",
+      "go ahead",
+      "make it product grade"
+    ]
+  },
+  "future_if_approved_scope": {
+    "allowed_edit_kind": "status_only_frontmatter_normalization",
+    "allowed_field": "frontmatter.status",
+    "allowed_change_source": "p2-72 dry_run_manifest.status_changes",
+    "expected_change_count": 75,
+    "allowed_target_family": "outputs/review/vaks-implementation-sandbox/2026-06-15-p*-*/{verification.md,reviewer-report.md,boundary-audit.md,product-acceptance-report.md,next-step.md}",
+    "body_content_edits_allowed": false,
+    "artifact_edits_allowed": false,
+    "mainline_edits_allowed": false,
+    "templates_tools_edits_allowed": false,
+    "wiki_truth_layer_edits_allowed": false,
+    "obsidian_sync_allowed": false,
+    "commit_push_allowed": false
+  },
+  "dry_run_manifest_digest": {
+    "source": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-72-original-slice-normalization-decision-packet-sandbox/artifact/original_slice_normalization_decision_packet.json",
+    "status_change_count": 75,
+    "all_changes_unapplied": true,
+    "all_changes_require_explicit_user_approval": true,
+    "target_paths_sample": [
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/verification.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/reviewer-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/boundary-audit.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/product-acceptance-report.md",
+      "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox/next-step.md"
+    ]
+  },
+  "approval_classifier_examples": [
+    {
+      "input_text": "I explicitly approve p2-75 old-file status-only normalization: apply the 75 dry-run frontmatter status changes from p2-72 to the original 20 sandbox slice reports only. Do not edit body content, artifacts, tools, templates, wiki truth layers, main architecture docs, README, Obsidian vault, commit, push, or sync.",
+      "is_exact_required_phrase": true,
+      "would_count_as_explicit_approval_in_future": true,
+      "current_packet_collects_approval": false
+    },
+    {
+      "input_text": "继续",
+      "is_exact_required_phrase": false,
+      "would_count_as_explicit_approval_in_future": false,
+      "current_packet_collects_approval": false
+    },
+    {
+      "input_text": "全部落地",
+      "is_exact_required_phrase": false,
+      "would_count_as_explicit_approval_in_future": false,
+      "current_packet_collects_approval": false
+    },
+    {
+      "input_text": "都做完",
+      "is_exact_required_phrase": false,
+      "would_count_as_explicit_approval_in_future": false,
+      "current_packet_collects_approval": false
+    },
+    {
+      "input_text": "可以",
+      "is_exact_required_phrase": false,
+      "would_count_as_explicit_approval_in_future": false,
+      "current_packet_collects_approval": false
+    },
+    {
+      "input_text": "go ahead",
+      "is_exact_required_phrase": false,
+      "would_count_as_explicit_approval_in_future": false,
+      "current_packet_collects_approval": false
+    },
+    {
+      "input_text": "make it product grade",
+      "is_exact_required_phrase": false,
+      "would_count_as_explicit_approval_in_future": false,
+      "current_packet_collects_approval": false
+    }
+  ],
+  "authority_flags": {
+    "approval_request_only": true,
+    "user_approval_collected": false,
+    "old_slice_write_allowed_now": false,
+    "old_slice_writes_applied": 0,
+    "normalization_applied": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "record_kind": "sandbox_old_file_status_normalization_transaction_simulation_contract",
+  "slice_id": "2026-06-19-p2-81-old-file-status-normalization-transaction-simulator-sandbox",
+  "contract_version": "1.0",
+  "expected_summary": {
+    "simulated_operation_count": 75,
+    "unique_target_file_count": 75,
+    "target_old_slice_count": 20,
+    "after_status_match_count": 75,
+    "rollback_status_match_count": 75,
+    "body_unchanged_count": 75,
+    "rollback_sha_match_count": 75,
+    "status_only_change_count": 75,
+    "simulation_failure_count": 0,
+    "old_slice_writes_applied": 0
+  },
+  "expected_gate": {
+    "approval_collected_now": false,
+    "p2_77_readiness": "blocked_no_exact_approval",
+    "executor_write_allowed_now": false,
+    "simulation_is_not_approval": true,
+    "simulation_is_not_write_authority": true,
+    "requires_exact_p2_75_approval_before_real_write": true,
+    "requires_fresh_hash_check_before_real_write": true,
+    "requires_stop_before_write": true
+  },
+  "authority_flags": {
+    "simulation_only": true,
+    "approval_collected": false,
+    "executor_write_allowed": false,
+    "old_slice_write_allowed_now": false,
+    "old_slice_writes_applied": 0,
+    "normalization_applied": false,
+    "rollback_applied": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "goal_complete_now": false
+  },
+  "required_fixture_ids": [
+    "all-operations-simulate-status-only",
+    "body-content-preserved",
+    "rollback-restores-original",
+    "simulation-not-approval",
+    "future-real-write-still-gated"
+  ],
+  "required_failure_case_ids": [
+    "SIM-FAIL-01-after-status-not-proposed",
+    "SIM-FAIL-02-body-content-changed",
+    "SIM-FAIL-03-rollback-does-not-restore-original",
+    "SIM-FAIL-04-simulation-writes-old-slice",
+    "SIM-FAIL-05-simulation-treated-as-approval",
+    "SIM-FAIL-06-simulation-treated-as-write-authority",
+    "SIM-FAIL-07-fresh-hash-check-skipped",
+    "SIM-FAIL-08-frontmatter-status-duplicate-created",
+    "SIM-FAIL-09-non-status-frontmatter-changed",
+    "SIM-FAIL-10-mainline-or-action-authority-created"
+  ]
+}

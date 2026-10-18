@@ -1,0 +1,46 @@
+{
+  "record_kind": "opus_external_review_operator_kit_failure_cases",
+  "slice_id": "2026-06-19-p2-101-opus-external-review-operator-kit-sandbox",
+  "failure_cases": [
+    {
+      "id": "missing_transfer_zip_hash",
+      "expectation": "Verifier fails if the p2-100 ZIP hash is absent or mismatched."
+    },
+    {
+      "id": "missing_submission_message",
+      "expectation": "Verifier fails if the exact submission message is missing."
+    },
+    {
+      "id": "missing_allowed_result_token",
+      "expectation": "Verifier fails if any p2-96 allowed Opus result token is omitted."
+    },
+    {
+      "id": "missing_intake_template",
+      "expectation": "Verifier fails if the result intake template is missing."
+    },
+    {
+      "id": "approval_overclaim",
+      "expectation": "Verifier fails if the kit claims Opus approval before a raw result exists."
+    },
+    {
+      "id": "mainline_ready_overclaim",
+      "expectation": "Verifier fails if the kit claims mainline readiness."
+    },
+    {
+      "id": "truth_or_action_authority_overclaim",
+      "expectation": "Verifier fails if the kit claims reviewed knowledge, evidence support, or action basis."
+    },
+    {
+      "id": "goal_complete_overclaim",
+      "expectation": "Verifier fails if the kit claims the full goal is complete."
+    },
+    {
+      "id": "old_slice_write_required",
+      "expectation": "Verifier fails if the kit instructs operators to edit old slices directly."
+    },
+    {
+      "id": "commit_push_sync_required",
+      "expectation": "Verifier fails if the kit instructs commit, push, or sync."
+    }
+  ]
+}

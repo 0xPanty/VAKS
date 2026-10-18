@@ -1,0 +1,414 @@
+{
+  "record_kind": "sandbox_operator_launch_checklist",
+  "slice_id": "2026-06-15-p2-49-sandbox-operator-launch-checklist-sandbox",
+  "version": "0.1.0",
+  "generated_at": "2026-06-16",
+  "purpose": "turn p2-44 through p2-48 into a manual read-only operator launch checklist",
+  "truth_boundary": "operator_checklist_for_sandbox_handoff_not_authority",
+  "write_scope": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-49-sandbox-operator-launch-checklist-sandbox/",
+  "source_chain": [
+    {
+      "slice_id": "2026-06-15-p2-44-sandbox-evidence-ledger-sandbox",
+      "role": "evidence ledger and improvement inventory",
+      "source_root": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-44-sandbox-evidence-ledger-sandbox",
+      "required_status": "pass_product_grade",
+      "product_acceptance_report": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-44-sandbox-evidence-ledger-sandbox/product-acceptance-report.md",
+        "exists": true,
+        "size_bytes": 2769,
+        "sha256": "523d7e0e8bb0cbaa1551bd34cf234db9f4835e73ef79c56f0a1dccbd449e4918",
+        "frontmatter_status": "pass_product_grade"
+      },
+      "verification_report": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-44-sandbox-evidence-ledger-sandbox/verification.md",
+        "exists": true,
+        "size_bytes": 1174,
+        "sha256": "73661e8f5b8415ed44950e4e1de7766fa8445a25ebdaa6ff2a3d73201844f7c7",
+        "frontmatter_status": "local_verification_passed_pending_review"
+      },
+      "primary_artifact": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-44-sandbox-evidence-ledger-sandbox/artifact/evidence-ledger.json",
+        "exists": true,
+        "size_bytes": 104628,
+        "sha256": "eef7f76e8a6b30503c3ef51c91bb271d2b22fef2d87fe4f31a5c4d83d5f9f954",
+        "frontmatter_status": null
+      },
+      "readout": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-44-sandbox-evidence-ledger-sandbox/ledger-packets/plain-answer.md",
+        "exists": true,
+        "size_bytes": 1568,
+        "sha256": "3bb897ffe9c0858f38c559cdf52af4ac0625bcb15b88ea6cd734617446cdb50d",
+        "frontmatter_status": null
+      },
+      "verifier": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-44-sandbox-evidence-ledger-sandbox/artifact/verify_evidence_ledger.py",
+        "exists": true,
+        "size_bytes": 882,
+        "sha256": "cccf0a8755067c45e85c32d5182e62f8327d29d7ed90a12aa4d90c93ed4b7f81",
+        "frontmatter_status": null
+      },
+      "manual_read_only_verifier_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-15-p2-44-sandbox-evidence-ledger-sandbox\\artifact\\verify_evidence_ledger.py",
+      "manual_run_policy": "read_only_on_demand_after_freeze_passes",
+      "launch_gate_role": "supporting_reference_not_launch_gate",
+      "known_current_note": ""
+    },
+    {
+      "slice_id": "2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox",
+      "role": "release-candidate handoff packet without release authority",
+      "source_root": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox",
+      "required_status": "pass_product_grade",
+      "product_acceptance_report": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox/product-acceptance-report.md",
+        "exists": true,
+        "size_bytes": 1108,
+        "sha256": "3c28222f283cca16a2e0b72203b49d73d63698ebd4f4ef417a3a02c286c717f2",
+        "frontmatter_status": "pass_product_grade"
+      },
+      "verification_report": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox/verification.md",
+        "exists": true,
+        "size_bytes": 1215,
+        "sha256": "7adb370e0028286e638e2f08a9d55709242e1e8e04165132303bf37b640cc0f9",
+        "frontmatter_status": "local_verification_passed_pending_review"
+      },
+      "primary_artifact": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox/artifact/release-candidate-handoff.json",
+        "exists": true,
+        "size_bytes": 6595,
+        "sha256": "c6bb5a13bb17c1a921c608776af5c925fc64216069a9fe7e31b60ab3e3cd04eb",
+        "frontmatter_status": null
+      },
+      "readout": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox/handoff-packets/release-candidate-handoff.md",
+        "exists": true,
+        "size_bytes": 1390,
+        "sha256": "0ba313896dc7eeff4658d2eff189e2240f759b8bd5742c125cf9cc6ccab64bd2",
+        "frontmatter_status": null
+      },
+      "verifier": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox/artifact/verify_release_candidate_handoff.py",
+        "exists": true,
+        "size_bytes": 901,
+        "sha256": "b9aeb357a22e7c56d7a6903d308eb52383d18b46a533d44cbce33795be5b6f89",
+        "frontmatter_status": null
+      },
+      "manual_read_only_verifier_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox\\artifact\\verify_release_candidate_handoff.py",
+      "manual_run_policy": "read_only_on_demand_after_freeze_passes",
+      "launch_gate_role": "supporting_reference_not_launch_gate",
+      "known_current_note": ""
+    },
+    {
+      "slice_id": "2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox",
+      "role": "legacy status normalization guide",
+      "source_root": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox",
+      "required_status": "pass_product_grade",
+      "product_acceptance_report": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox/product-acceptance-report.md",
+        "exists": true,
+        "size_bytes": 1238,
+        "sha256": "c91951c80e1880315187994836c5350d3b149dcf0378ca23afab4453e495bece",
+        "frontmatter_status": "pass_product_grade"
+      },
+      "verification_report": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox/verification.md",
+        "exists": true,
+        "size_bytes": 1167,
+        "sha256": "347d4d4d5c5f804465dc37853554a253da9a89fc92d0319d52d769d3e82f0dbb",
+        "frontmatter_status": "local_verification_passed_pending_review"
+      },
+      "primary_artifact": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox/artifact/status-normalization-audit.json",
+        "exists": true,
+        "size_bytes": 178240,
+        "sha256": "3a9696bbefd0f9ab47284ccb2c7a446be2cb8a239a18656e916279910d0f174b",
+        "frontmatter_status": null
+      },
+      "readout": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox/readouts/status-normalization-guide.md",
+        "exists": true,
+        "size_bytes": 562,
+        "sha256": "9a292f5396ac423c08ada8047f9b5e6216c30d532795115b8e7c564d9d10ec4d",
+        "frontmatter_status": null
+      },
+      "verifier": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox/artifact/verify_status_normalization_audit.py",
+        "exists": true,
+        "size_bytes": 861,
+        "sha256": "6c73c22e540897951ad0d5707d479e0050693490597845ab3e45d22c4a75a5e8",
+        "frontmatter_status": null
+      },
+      "manual_read_only_verifier_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox\\artifact\\verify_status_normalization_audit.py",
+      "manual_run_policy": "read_only_on_demand_after_freeze_passes",
+      "launch_gate_role": "supporting_reference_not_launch_gate",
+      "known_current_note": ""
+    },
+    {
+      "slice_id": "2026-06-15-p2-47-sandbox-verifier-portability-dependency-audit-sandbox",
+      "role": "static verifier portability and dependency audit",
+      "source_root": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-47-sandbox-verifier-portability-dependency-audit-sandbox",
+      "required_status": "pass_product_grade",
+      "product_acceptance_report": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-47-sandbox-verifier-portability-dependency-audit-sandbox/product-acceptance-report.md",
+        "exists": true,
+        "size_bytes": 1273,
+        "sha256": "0b74321028ab4ff002114eef340fda2a48877ca7d06687ab40109269d3e83cbb",
+        "frontmatter_status": "pass_product_grade"
+      },
+      "verification_report": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-47-sandbox-verifier-portability-dependency-audit-sandbox/verification.md",
+        "exists": true,
+        "size_bytes": 1103,
+        "sha256": "4bddd3c534e308d9da3ffb7635f36d8cba9fa8ea5025b304e10c3d4ec6696055",
+        "frontmatter_status": "local_verification_passed_pending_review"
+      },
+      "primary_artifact": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-47-sandbox-verifier-portability-dependency-audit-sandbox/artifact/verifier-portability-audit.json",
+        "exists": true,
+        "size_bytes": 61267,
+        "sha256": "c648feb2925e70bf2733f5d223fe14270719db00e61c238bac05e9b892e15614",
+        "frontmatter_status": null
+      },
+      "readout": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-47-sandbox-verifier-portability-dependency-audit-sandbox/readouts/verifier-portability-guide.md",
+        "exists": true,
+        "size_bytes": 540,
+        "sha256": "2bf6ca3cd40335ba773b9f63f93aaa4525b56d442fab171555ffa73c28f3069c",
+        "frontmatter_status": null
+      },
+      "verifier": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-47-sandbox-verifier-portability-dependency-audit-sandbox/artifact/verify_portability_audit.py",
+        "exists": true,
+        "size_bytes": 863,
+        "sha256": "e6b90bdff007d546ee484bab22128cab62e33f6a74e9f08972b7b90f763e3076",
+        "frontmatter_status": null
+      },
+      "manual_read_only_verifier_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-15-p2-47-sandbox-verifier-portability-dependency-audit-sandbox\\artifact\\verify_portability_audit.py",
+      "manual_run_policy": "read_only_on_demand_after_freeze_passes",
+      "launch_gate_role": "diagnostic_drift_sensitive_not_launch_gate",
+      "known_current_note": "Product report is PASS, but the dynamic verifier can fail after later slices add new verifier files; treat that as drift-sensitive diagnostic context, not a launch green gate."
+    },
+    {
+      "slice_id": "2026-06-15-p2-48-sandbox-evidence-chain-freeze-checksum-bundle-sandbox",
+      "role": "checksum freeze and drift detector for p2-44 through p2-47",
+      "source_root": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-48-sandbox-evidence-chain-freeze-checksum-bundle-sandbox",
+      "required_status": "pass_product_grade",
+      "product_acceptance_report": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-48-sandbox-evidence-chain-freeze-checksum-bundle-sandbox/product-acceptance-report.md",
+        "exists": true,
+        "size_bytes": 1253,
+        "sha256": "0557798a758295949716efd06c43130b379e4a75f9c6490f5e9c59d4a40954cb",
+        "frontmatter_status": "pass_product_grade"
+      },
+      "verification_report": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-48-sandbox-evidence-chain-freeze-checksum-bundle-sandbox/verification.md",
+        "exists": true,
+        "size_bytes": 1121,
+        "sha256": "50c3385aafb9ad621d94cc23d3f6c2e9f4e9ad0cf2524e59b31b5c15d6e15641",
+        "frontmatter_status": "local_verification_passed_pending_review"
+      },
+      "primary_artifact": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-48-sandbox-evidence-chain-freeze-checksum-bundle-sandbox/artifact/evidence-chain-freeze-manifest.json",
+        "exists": true,
+        "size_bytes": 20730,
+        "sha256": "b4f2d2f70746b6c903e911258f97f561e1fa8eeabb4de025207e8e3de59eb0b0",
+        "frontmatter_status": null
+      },
+      "readout": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-48-sandbox-evidence-chain-freeze-checksum-bundle-sandbox/readouts/evidence-chain-freeze-guide.md",
+        "exists": true,
+        "size_bytes": 578,
+        "sha256": "4e32e9828f8b9952732406335e212649e40312632ba406235ef36d9b0466ccc2",
+        "frontmatter_status": null
+      },
+      "verifier": {
+        "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-48-sandbox-evidence-chain-freeze-checksum-bundle-sandbox/artifact/verify_freeze_bundle.py",
+        "exists": true,
+        "size_bytes": 859,
+        "sha256": "89cc1fd77193603665fd576c45727445eed575147a7e02aed0a329bef83de021",
+        "frontmatter_status": null
+      },
+      "manual_read_only_verifier_command": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-15-p2-48-sandbox-evidence-chain-freeze-checksum-bundle-sandbox\\artifact\\verify_freeze_bundle.py",
+      "manual_run_policy": "read_only_on_demand_after_freeze_passes",
+      "launch_gate_role": "required_freeze_final_gate",
+      "known_current_note": ""
+    }
+  ],
+  "launch_sequence": [
+    {
+      "step_id": "01-scope-card",
+      "title": "Confirm current slice scope",
+      "operator_action": "Confirm the current work writes only inside this p2-49 sandbox path and treats unrelated dirty tree entries as pre-existing baseline.",
+      "command_hint": "git status --short -- .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-15-p2-49-sandbox-operator-launch-checklist-sandbox",
+      "writes_allowed": false,
+      "stop_if": [
+        "protected_path_touched_by_current_slice",
+        "operator_scope_would_write_outside_current_sandbox"
+      ]
+    },
+    {
+      "step_id": "02-freeze-final-gate",
+      "title": "Run the p2-48 freeze verifier first",
+      "operator_action": "Run the checksum freeze final gate before trusting the handoff chain.",
+      "command_hint": "python -B .\\outputs\\review\\vaks-implementation-sandbox\\2026-06-15-p2-48-sandbox-evidence-chain-freeze-checksum-bundle-sandbox\\artifact\\verify_freeze_bundle.py --final-gate",
+      "expected": {
+        "passed": true,
+        "missing_file_count": 0,
+        "report_status_mismatch_count": 0
+      },
+      "writes_allowed": false,
+      "stop_if": [
+        "freeze_verifier_failed",
+        "checksum_or_status_drift_detected"
+      ]
+    },
+    {
+      "step_id": "03-evidence-ledger-read",
+      "title": "Read p2-44 for what improved",
+      "operator_action": "Use the evidence ledger as a status and improvement inventory only.",
+      "source_slice": "2026-06-15-p2-44-sandbox-evidence-ledger-sandbox",
+      "writes_allowed": false,
+      "stop_if": [
+        "source_product_status_not_pass_product_grade",
+        "authority_confusion_detected"
+      ]
+    },
+    {
+      "step_id": "04-release-handoff-read",
+      "title": "Read p2-45 for user-facing handoff wording",
+      "operator_action": "Use the handoff packet to explain sandbox readiness without claiming release approval.",
+      "source_slice": "2026-06-15-p2-45-sandbox-release-candidate-handoff-sandbox",
+      "writes_allowed": false,
+      "stop_if": [
+        "authority_confusion_detected"
+      ]
+    },
+    {
+      "step_id": "05-status-normalization-read",
+      "title": "Use p2-46 to interpret legacy statuses",
+      "operator_action": "Resolve old report wording through the status normalization guide before drawing a pass/fail conclusion.",
+      "source_slice": "2026-06-15-p2-46-sandbox-status-normalization-compatibility-audit-sandbox",
+      "writes_allowed": false,
+      "stop_if": [
+        "source_product_status_not_pass_product_grade"
+      ]
+    },
+    {
+      "step_id": "06-portability-read",
+      "title": "Use p2-47 before running verifiers on another machine",
+      "operator_action": "Check portability warnings and dependency assumptions before manual verifier execution. Do not treat p2-47 as a current launch green gate; later slices can make its dynamic scope scan drift.",
+      "source_slice": "2026-06-15-p2-47-sandbox-verifier-portability-dependency-audit-sandbox",
+      "writes_allowed": false,
+      "known_current_note": "Product report is PASS, but the dynamic verifier can fail after later slices add new verifier files; treat that as drift-sensitive diagnostic context, not a launch green gate.",
+      "stop_if": [
+        "authority_confusion_detected",
+        "portability_verifier_claimed_green_despite_known_scope_drift"
+      ]
+    },
+    {
+      "step_id": "07-plain-answer-compose",
+      "title": "Compose plain-language status",
+      "operator_action": "Answer what is done, what improved, what passed, and what remains sandbox-only.",
+      "writes_allowed": false,
+      "required_answer_parts": [
+        "completed_slice_chain",
+        "verification_counts",
+        "reviewer_boundary_product_verdicts",
+        "sandbox_not_mainline",
+        "user_approval_needed_for_any_promotion"
+      ],
+      "stop_if": [
+        "authority_confusion_detected"
+      ]
+    },
+    {
+      "step_id": "08-stop-or-escalate",
+      "title": "Stop on drift or authority crossing",
+      "operator_action": "If any stop condition fires, do not continue to the next slice and ask the user or repair the current slice.",
+      "writes_allowed": false,
+      "stop_if": [
+        "freeze_verifier_failed",
+        "checksum_or_status_drift_detected",
+        "source_product_status_not_pass_product_grade",
+        "protected_path_touched_by_current_slice",
+        "operator_scope_would_write_outside_current_sandbox",
+        "authority_confusion_detected",
+        "portability_verifier_claimed_green_despite_known_scope_drift",
+        "user_approval_required_for_mainline_or_formal_vault"
+      ]
+    }
+  ],
+  "stop_conditions": [
+    "freeze_verifier_failed",
+    "checksum_or_status_drift_detected",
+    "source_product_status_not_pass_product_grade",
+    "protected_path_touched_by_current_slice",
+    "operator_scope_would_write_outside_current_sandbox",
+    "authority_confusion_detected",
+    "portability_verifier_claimed_green_despite_known_scope_drift",
+    "user_approval_required_for_mainline_or_formal_vault"
+  ],
+  "readiness_flags": {
+    "operator_launch_checklist_ready": true,
+    "re_acceptance_performed": false,
+    "runtime_certified": false,
+    "release_approved": false,
+    "promotion_approved": false,
+    "mainline_ready": false,
+    "enterprise_production_ready": false,
+    "formal_vault_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "user_approval_collected": false
+  },
+  "operation_flags": {
+    "old_slice_modified": false,
+    "old_verifier_executed": false,
+    "automated_old_verifier_batch": false,
+    "commit": false,
+    "push": false,
+    "obsidian_sync": false,
+    "formal_vault_write": false,
+    "mainline_merge": false,
+    "promotion": false,
+    "dependency_install": false,
+    "background_service": false,
+    "hooks": true,
+    "mcp_write_tool": false,
+    "network_access": false,
+    "auto_advance": false
+  },
+  "required_non_claims": [
+    "not re-acceptance",
+    "not runtime certification",
+    "not old verifier execution",
+    "not release approval",
+    "not promotion approval",
+    "not mainline ready",
+    "not enterprise production ready",
+    "not formal vault approval",
+    "not Obsidian sync",
+    "not commit",
+    "not push",
+    "not reviewed knowledge",
+    "not evidence support",
+    "not action basis",
+    "not auto advance",
+    "not user approval"
+  ],
+  "manual_command_policy": {
+    "default_command_is_this_slice_verifier": true,
+    "old_verifier_commands_are_documented_not_auto_executed": true,
+    "old_verifier_batch_execution_forbidden": true,
+    "rebuild_flags_are_builder_only": true,
+    "no_dependency_installation": true
+  },
+  "acceptance_contract": {
+    "positive_fixture_count": 3,
+    "requires_failure_case_oracle": true,
+    "requires_reviewer": true,
+    "requires_boundary_auditor": true,
+    "requires_gpt_5_5_extra_high_product_acceptance": true,
+    "product_acceptance_is_only_pass_authority_for_next_slice": true
+  }
+}

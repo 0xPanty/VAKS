@@ -1,0 +1,35 @@
+{
+  "sha256:1111111111111111111111111111111111111111111111111111111111111111": {
+    "source_records": [
+      "raw/articles/source-a-source.md",
+      "raw/articles/source-a-mirror-source.md"
+    ],
+    "origins": [
+      "https://example.test/source-a",
+      "https://mirror.example.test/source-a"
+    ],
+    "current_versions": [
+      "raw/articles/source-a-source.md",
+      "raw/articles/source-a-mirror-source.md"
+    ],
+    "compiled_outputs": [
+      "outputs/review/candidates/source-a.candidate.md"
+    ],
+    "last_derived_at": "2026-06-08T00:00:00Z"
+  },
+  "sha256:2222222222222222222222222222222222222222222222222222222222222222": {
+    "source_records": [
+      "raw/articles/source-a-source.md"
+    ],
+    "origins": [
+      "https://example.test/source-a"
+    ],
+    "current_versions": [
+      "raw/articles/source-a-source.md"
+    ],
+    "compiled_outputs": [
+      "outputs/review/candidates/source-a-v2.candidate.md"
+    ],
+    "last_derived_at": "2026-06-08T00:00:00Z"
+  }
+}

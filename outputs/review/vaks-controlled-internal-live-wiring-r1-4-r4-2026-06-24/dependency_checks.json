@@ -1,0 +1,48 @@
+{
+  "r1_1_output": "C:/Users/Administrator/Documents/资料库/outputs/review/vaks-guarded-answer-wiring-r1-1-2026-06-23",
+  "r1_1_self_test": {
+    "checks": {
+      "hard_zeros": true,
+      "manifest_hashes_match": true,
+      "preserves_supported": true,
+      "runner_provenance_hash_matches": true,
+      "summary_pass": true
+    },
+    "extra_hashes": [],
+    "hash_failures": [],
+    "status": "pass"
+  },
+  "r1_1_tool_sha256": "660214cb84f9e82704297761b034de33a94498fb934179bbe4573f8ff13eb060",
+  "r1_2_output": "C:/Users/Administrator/Documents/资料库/outputs/review/vaks-guarded-answer-runtime-comparison-r1-2-2026-06-23",
+  "r1_2_self_test": {
+    "checks": {
+      "guarded_zero_blocked": true,
+      "guarded_zero_unsupported": true,
+      "manifest_hashes_match": true,
+      "runner_provenance_hash_matches": true,
+      "summary_pass": true,
+      "supported_preservation": true
+    },
+    "extra_hashes": [],
+    "hash_failures": [],
+    "status": "pass"
+  },
+  "r1_2_tool_sha256": "739ab07d700e1e934c03422cacc7473f792062444bdca38d94bb804f19ccbfe2",
+  "r1_3_output": "C:/Users/Administrator/Documents/资料库/outputs/review/vaks-guarded-answer-production-shaped-replay-r1-3-r3-2026-06-24",
+  "r1_3_self_test": {
+    "checks": {
+      "hard_zero_pass": true,
+      "manifest_hashes_match": true,
+      "runner_provenance_hash_matches": true,
+      "stress_pass": true,
+      "summary_pass": true,
+      "supported_preservation_pass": true
+    },
+    "extra_hashes": [],
+    "hash_failures": [],
+    "status": "pass"
+  },
+  "r1_3_tool_sha256": "9449abcd6c8b577052594eb5d3949eca4f664bb35537f75a965b4481c8dc97b1",
+  "status": "pass",
+  "vaks_guard_sha256": "2a3e551635952e694be823f9d421fb541a9eee448c2a3d3790afdb5130b1fe04"
+}

@@ -1,0 +1,50 @@
+{
+  "record_kind": "source_anchor_manifest",
+  "status": "candidate",
+  "project_id": "VAKS",
+  "source": "lukesmithxyz/based.cooking",
+  "source_url": "https://github.com/lukesmithxyz/based.cooking",
+  "checked_commit": "2d8642ec41ccc6162ec3123c15024dd3d22cc33b",
+  "checked_at": "2026-06-11",
+  "inspection_method": "local git checkout; inspected README, example recipe, Hugo config, author metadata, content counts, static assets, and deployment workflow",
+  "anchors": [
+    {
+      "path": "README.md",
+      "kind": "contribution-contract",
+      "why": "Defines where recipe files go, filename conventions, tag reuse, image policy, author metadata, and licensing posture."
+    },
+    {
+      "path": "example.md",
+      "kind": "entry-template",
+      "why": "Shows required frontmatter and simple body sections for title, tags, date, author, ingredients, and ordered directions."
+    },
+    {
+      "path": "data/authors/",
+      "kind": "separated-author-metadata",
+      "why": "Keeps author identity and donation/contact metadata outside recipe notes while linking by frontmatter author key."
+    },
+    {
+      "path": "config.toml",
+      "kind": "static-site-boundary",
+      "why": "Hugo configuration shows repo Markdown as the source and website generation as a separate publish surface."
+    },
+    {
+      "path": ".github/workflows/upload.yml",
+      "kind": "deployment-workflow",
+      "why": "Push-to-server workflow rebuilds the generated site from the repository without changing source semantics."
+    }
+  ],
+  "observed_counts": {
+    "content_markdown_files": 350,
+    "author_metadata_files": 129,
+    "static_files": 151,
+    "layout_files": 4
+  },
+  "known_limits": [
+    "The cooking content itself is not VAKS evidence and should not be imported as knowledge.",
+    "The repository's public-domain/content policy is source-specific and should not become a VAKS default.",
+    "The publish workflow is operational inspiration only; VAKS should not auto-deploy or auto-promote candidate notes."
+  ],
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

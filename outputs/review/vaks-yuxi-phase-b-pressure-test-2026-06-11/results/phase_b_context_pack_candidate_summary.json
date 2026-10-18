@@ -1,0 +1,16 @@
+{
+  "artifact_kind": "vaks_phase_b_context_pack_summary",
+  "pack_count": 90,
+  "source_sets": [
+    "holdout",
+    "main"
+  ],
+  "corpora": [
+    "full",
+    "primary"
+  ],
+  "action_basis_allowed_count": 0,
+  "packs_with_suppressed_receipt_action_flags": 36,
+  "output_path": "C:\\Users\\Administrator\\Documents\\资料库\\outputs\\review\\vaks-yuxi-phase-b-pressure-test-2026-06-11\\results\\phase_b_context_pack_candidates.jsonl",
+  "built_at": "2026-06-10T21:14:55+00:00"
+}

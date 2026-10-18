@@ -1,0 +1,29 @@
+{
+  "cleanup_ok": true,
+  "coverage": {
+    "guarded_case_ids": [
+      "trial-001-happy-release",
+      "trial-006-answer-relevance-negative",
+      "trial-009-guard-error-fallback"
+    ],
+    "guarded_iterations_per_case": 100,
+    "parallel_case_ids": [
+      "trial-002-policy-injection",
+      "trial-004-flag-off"
+    ],
+    "parallel_iterations_total": 12000,
+    "pure_case_ids": [
+      "trial-002-policy-injection",
+      "trial-004-flag-off"
+    ],
+    "pure_iterations_per_case": 20000
+  },
+  "failure_count": 0,
+  "failure_samples": [],
+  "parallel_count": 12000,
+  "sequential_count": 40300,
+  "signature_plan_count": 7,
+  "status": "pass",
+  "stress_workspace_exists_after": false,
+  "total_count": 52300
+}

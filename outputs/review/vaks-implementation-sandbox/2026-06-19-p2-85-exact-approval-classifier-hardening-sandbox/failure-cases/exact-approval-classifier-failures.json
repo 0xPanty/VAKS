@@ -1,0 +1,42 @@
+{
+  "record_kind": "exact_approval_classifier_failure_cases",
+  "slice_id": "2026-06-19-p2-85-exact-approval-classifier-hardening-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "P2-85-FAIL-01-generic-chinese-approval-confusion",
+      "must_fail_when": "Chinese generic continuation is classified as approval."
+    },
+    {
+      "case_id": "P2-85-FAIL-02-generic-english-approval-confusion",
+      "must_fail_when": "English generic go-ahead language is classified as approval."
+    },
+    {
+      "case_id": "P2-85-FAIL-03-paraphrase-approval-confusion",
+      "must_fail_when": "A paraphrase is classified as exact approval."
+    },
+    {
+      "case_id": "P2-85-FAIL-04-partial-phrase-approval-confusion",
+      "must_fail_when": "A partial phrase is classified as exact approval."
+    },
+    {
+      "case_id": "P2-85-FAIL-05-wrong-count-approval-confusion",
+      "must_fail_when": "A phrase with a wrong status-change count is classified as approval."
+    },
+    {
+      "case_id": "P2-85-FAIL-06-missing-prohibitions-approval-confusion",
+      "must_fail_when": "A phrase missing commit/push/sync prohibitions is classified as approval."
+    },
+    {
+      "case_id": "P2-85-FAIL-07-extra-authority-approval-confusion",
+      "must_fail_when": "A phrase adding merge/mainline authority is classified as approval."
+    },
+    {
+      "case_id": "P2-85-FAIL-08-whitespace-or-case-normalization-confusion",
+      "must_fail_when": "Whitespace or case normalization changes are ignored and classified as approval."
+    },
+    {
+      "case_id": "P2-85-FAIL-09-classifier-pass-as-user-approval",
+      "must_fail_when": "This slice treats a fixture pass as user approval collected now."
+    }
+  ]
+}

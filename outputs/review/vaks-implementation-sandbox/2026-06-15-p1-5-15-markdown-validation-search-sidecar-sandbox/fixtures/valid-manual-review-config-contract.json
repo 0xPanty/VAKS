@@ -1,0 +1,19 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "valid-manual-review-config-contract",
+  "expected_valid": true,
+  "expected_codes": [],
+  "patch": {
+    "config_contract": {
+      "contract_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox/fixtures/mdvs.toml.inferred-review-required",
+      "inferred_from_vault": true,
+      "manual_review_required": true,
+      "review_status": "pending_human_review",
+      "config_claims_schema_governance": false,
+      "schema_governance": false
+    },
+    "search_cache": {
+      "used_for_query": false
+    }
+  }
+}

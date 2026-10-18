@@ -1,0 +1,60 @@
+# Original 20 Operator Status Surface
+
+Sandbox-only operator surface. It explains status; it does not approve or merge anything.
+
+## Plain Verdict
+
+The original 20 have product-grade sidecar closeout, but the old files themselves are still 0/20 current strict final-gate complete.
+
+## Counts
+
+- original items: `20`
+- legacy Product Acceptance evidence: `20`
+- legacy core pass evidence: `20`
+- product-grade sidecar closeout: `20`
+- old-file current strict final-gate: `0`
+- dry-run old-file status changes: `75`
+- old slice writes applied: `0`
+
+## Status Cards
+
+### Sandbox sidecar is product-grade
+
+- card id: `product_grade_sidecar_ready`
+- status: `ready_in_sandbox_sidecar`
+- plain language: p2-73 gives the original 20 items a product-grade sidecar ledger.
+- boundary: This is not old-file normalization or mainline readiness.
+
+### Old slice files are not current strict complete
+
+- card id: `old_files_not_current_strict_complete`
+- status: `not_complete_for_old_files`
+- plain language: The old 20 slice files still have 0 of 20 current strict final-gate completion.
+- boundary: Do not claim all old files are strict complete.
+
+### Old-file normalization needs separate approval
+
+- card id: `old_file_normalization_requires_user_approval`
+- status: `blocked_until_explicit_user_approval`
+- plain language: The 75 proposed status-only changes remain dry-run and unapplied.
+- boundary: Generic continuation language is not approval.
+
+### Mainline is not authorized
+
+- card id: `mainline_not_authorized`
+- status: `not_authorized`
+- plain language: Nothing here merges architecture, promotes knowledge, or creates action basis.
+- boundary: Sandbox pass is not merge, promotion, reviewed knowledge, evidence support, or action basis.
+
+## Decision Options
+
+- `continue_with_sidecar_recloseout`: allowed_now=`true`, edits_old_files=`false`. Continue proving strict closeout in new sandbox sidecars without editing old files.
+- `request_explicit_old_file_status_normalization_approval`: allowed_now=`false`, edits_old_files=`true`. Ask the user for a separate explicit approval before status-only old-file edits.
+- `do_not_claim_all_old_files_strict_complete`: allowed_now=`true`, edits_old_files=`false`. Report old-file current strict final-gate as 0 of 20 until separately normalized or reclosed.
+- `do_not_merge_mainline`: allowed_now=`true`, edits_old_files=`false`. Keep all outputs sandbox-only until the user separately approves a mainline path.
+
+## Do Not Say
+
+- Do not say all old files are current strict complete.
+- Do not say user approved old-file edits.
+- Do not say this is mainline-ready, promoted, reviewed knowledge, evidence support, or action basis.

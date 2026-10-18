@@ -1,0 +1,98 @@
+{
+  "record_kind": "evidence_support_check_real_local_fixture_candidate",
+  "status": "candidate_only",
+  "topic_id": "source-intake-routing",
+  "query": "real local sample: what does answer draft smoke lint guarantee, and what does it not guarantee",
+  "truth_boundary": "real_local_sandbox_fixture_only_not_truth",
+  "action_basis_allowed": false,
+  "answer_candidate": [
+    "Smoke lint assumes the skeleton readiness label is correct and leaves readiness correctness to the upstream evidence support check.",
+    "Smoke lint checks shape compliance and reference-handle existence.",
+    "Semantic support, citation faithfulness, coverage, and omissions remain outside the smoke lint layer.",
+    "Mismatched-ref and omitted-claim cases are expected-pass known limitations.",
+    "Empty claim refs, paragraph-style blocked answers, and fenced-heading blocked answers are expected-fail shape adversaries."
+  ],
+  "claims": [
+    {
+      "claim_id": "rl1",
+      "claim_text": "Smoke lint assumes the skeleton readiness label is correct and leaves readiness correctness to the upstream evidence support check.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/checks/answer-draft-smoke-v0-test.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/README.md"
+      ],
+      "must_match_any": [
+        "smoke lint assumes the skeleton readiness label is correct",
+        "readiness correctness belongs to the upstream evidence support check",
+        "smoke lint assumes skeleton readiness is correct upstream"
+      ],
+      "warrant": "The smoke test and README explicitly state the readiness trust boundary."
+    },
+    {
+      "claim_id": "rl2",
+      "claim_text": "Smoke lint checks shape compliance and reference-handle existence.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/checks/answer-draft-smoke-v0-test.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/README.md"
+      ],
+      "must_match_any": [
+        "smoke lint checks shape compliance and reference-handle existence",
+        "shape and reference-handle existence only",
+        "shape compliance and reference-handle existence only"
+      ],
+      "warrant": "The local smoke test describes the actual lint guarantee."
+    },
+    {
+      "claim_id": "rl3",
+      "claim_text": "Semantic support, citation faithfulness, coverage, and omissions remain outside the smoke lint layer.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/checks/answer-draft-smoke-v0-test.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/21_EVIDENCE_SUPPORT_CHECK_V0_LANDING.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/22_ANSWER_DRAFT_SMOKE_V0_OPUS_REVIEW_BRIEF.md"
+      ],
+      "must_match_any": [
+        "semantic support, citation faithfulness, coverage, and omissions remain outside this layer",
+        "faithfulness, coverage, and omissions remain outside this layer",
+        "citation faithfulness and coverage belong to evidence support"
+      ],
+      "warrant": "The local test, landing note, and review brief all state the non-goals."
+    },
+    {
+      "claim_id": "rl4",
+      "claim_text": "Mismatched-ref and omitted-claim cases are expected-pass known limitations.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/checks/answer-draft-smoke-v0-test.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/22_ANSWER_DRAFT_SMOKE_V0_OPUS_REVIEW_BRIEF.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/README.md"
+      ],
+      "must_match_any": [
+        "mismatched ref known limitation: expected pass / actual pass",
+        "omitted claim known limitation: expected pass / actual pass",
+        "known-limitation cases: 2 expected pass",
+        "mismatched ref: expected pass known limitation",
+        "omitted claim: expected pass known limitation"
+      ],
+      "warrant": "The known-limitation cases are documented as expected-pass tests."
+    },
+    {
+      "claim_id": "rl5",
+      "claim_text": "Empty claim refs, paragraph-style blocked answers, and fenced-heading blocked answers are expected-fail shape adversaries.",
+      "grounding_check_required": true,
+      "preferred_refs": [
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/checks/answer-draft-smoke-v0-test.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/22_ANSWER_DRAFT_SMOKE_V0_OPUS_REVIEW_BRIEF.md",
+        "outputs/review/source-intake-tag-routing-sandbox-2026-06-07/README.md"
+      ],
+      "must_match_any": [
+        "empty claim_refs adversary: expected fail / actual fail",
+        "paragraph blocked answer adversary: expected fail / actual fail",
+        "fenced heading blocked answer adversary: expected fail / actual fail",
+        "fenced heading blocked answer: expected fail / actual fail"
+      ],
+      "warrant": "The shape adversaries are documented as expected-fail tests."
+    }
+  ]
+}

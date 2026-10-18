@@ -1,0 +1,13 @@
+{
+  "fixture_id": "generic-language-rejected",
+  "input_texts": [
+    "继续",
+    "全部落地",
+    "可以",
+    "go ahead",
+    "complete the goal"
+  ],
+  "expected": {
+    "all_rejected": true
+  }
+}

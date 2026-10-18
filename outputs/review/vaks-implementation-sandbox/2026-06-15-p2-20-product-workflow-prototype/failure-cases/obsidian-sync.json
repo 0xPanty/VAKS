@@ -1,0 +1,1 @@
+{"case_id":"obsidian-sync","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/scope/syncs_obsidian","value":true}]}

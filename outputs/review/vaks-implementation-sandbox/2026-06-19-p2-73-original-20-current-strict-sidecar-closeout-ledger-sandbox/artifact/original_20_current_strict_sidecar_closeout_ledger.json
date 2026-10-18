@@ -1,0 +1,1008 @@
+{
+  "record_kind": "sandbox_original_20_current_strict_sidecar_closeout_ledger",
+  "slice_id": "2026-06-19-p2-73-original-20-current-strict-sidecar-closeout-ledger-sandbox",
+  "created_at": "2026-06-18T20:34:05.580347+00:00",
+  "source_inputs": {
+    "p2_71_audit_json": "outputs/review/vaks-implementation-sandbox/2026-06-16-p2-71-original-slice-closeout-normalization-audit-sandbox/artifact/original_slice_closeout_normalization_audit.json",
+    "p2_72_decision_packet_json": "outputs/review/vaks-implementation-sandbox/2026-06-19-p2-72-original-slice-normalization-decision-packet-sandbox/artifact/original_slice_normalization_decision_packet.json"
+  },
+  "summary": {
+    "original_items_covered": 20,
+    "source_product_acceptance_evidence_count": 20,
+    "source_core_pass_evidence_count": 20,
+    "source_old_slice_current_strict_final_gate_count": 0,
+    "sidecar_closeout_passed_count": 20,
+    "dry_run_status_change_count_from_p2_72": 75,
+    "old_slice_writes_applied": 0,
+    "normalization_applied": false,
+    "user_approval_collected": false,
+    "claim_old_slices_current_strict_complete": false
+  },
+  "authority_flags": {
+    "sidecar_only": true,
+    "old_slice_write_allowed": false,
+    "old_slice_writes_applied": 0,
+    "normalization_applied": false,
+    "user_approval_collected": false,
+    "mainline_ready": false,
+    "promotion_ready": false,
+    "reviewed_knowledge_ready": false,
+    "evidence_support_ready": false,
+    "action_basis_ready": false,
+    "claim_old_slices_current_strict_complete": false
+  },
+  "required_final_gate_statuses": {
+    "verification": "local_verification_passed",
+    "reviewer": "review_pass_no_blocker",
+    "boundary": "pass_boundary",
+    "product": "pass_product_grade",
+    "next_step": "pass_product_grade_pending_next_slice"
+  },
+  "decision_packet_guard": {
+    "approve_status_only_normalization_allowed_now": false,
+    "status_only_normalization_requires_separate_user_approval": true,
+    "rerun_recloseout_without_old_slice_edits_allowed_now": true
+  },
+  "items": [
+    {
+      "plan_key": "P0-01",
+      "label": "retrieval receipt template sandbox",
+      "old_slice_id": "2026-06-15-p0-01-retrieval-receipt-template-sandbox",
+      "old_slice_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-01-retrieval-receipt-template-sandbox",
+      "source_report_statuses": {
+        "verification": "pass",
+        "reviewer": "pass",
+        "boundary": "pass",
+        "product": "pass_product_grade_round_2",
+        "next_step": "pending_acceptance"
+      },
+      "source_evidence": {
+        "verification_pass_evidence": true,
+        "reviewer_pass_evidence": true,
+        "boundary_pass_evidence": true,
+        "product_acceptance_evidence": true,
+        "core_reports_have_pass_evidence": true
+      },
+      "old_slice_current_strict_final_gate": false,
+      "sidecar_closeout_passed": true,
+      "sidecar_closeout_basis": "legacy pass evidence is recorded in p2-71; this sidecar records current-strict evidence without editing old slice files",
+      "required_final_gate_statuses_for_future_closeout": {
+        "verification": "local_verification_passed",
+        "reviewer": "review_pass_no_blocker",
+        "boundary": "pass_boundary",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_pending_next_slice"
+      },
+      "old_slice_modified": false,
+      "old_slice_status_normalized": false,
+      "requires_explicit_user_approval_for_old_slice_edit": true,
+      "allowed_use": [
+        "future recovery",
+        "status reporting",
+        "operator explanation",
+        "input to a separately approved normalization or recloseout slice"
+      ],
+      "forbidden_use": [
+        "claim old slice files are current strict final-gate complete",
+        "claim user approved old-slice edits",
+        "claim mainline readiness",
+        "claim promotion readiness",
+        "claim reviewed knowledge",
+        "claim evidence support",
+        "claim action basis"
+      ]
+    },
+    {
+      "plan_key": "P0-02",
+      "label": "operation receipt template sandbox",
+      "old_slice_id": "2026-06-15-p0-02-operation-receipt-template-sandbox",
+      "old_slice_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-02-operation-receipt-template-sandbox",
+      "source_report_statuses": {
+        "verification": "local_verification_pass",
+        "reviewer": "review_pass_no_blocker_round_2",
+        "boundary": "boundary_pass_no_blocker_round_2",
+        "product": "pass_product_grade",
+        "next_step": "pending_product_acceptance"
+      },
+      "source_evidence": {
+        "verification_pass_evidence": true,
+        "reviewer_pass_evidence": true,
+        "boundary_pass_evidence": true,
+        "product_acceptance_evidence": true,
+        "core_reports_have_pass_evidence": true
+      },
+      "old_slice_current_strict_final_gate": false,
+      "sidecar_closeout_passed": true,
+      "sidecar_closeout_basis": "legacy pass evidence is recorded in p2-71; this sidecar records current-strict evidence without editing old slice files",
+      "required_final_gate_statuses_for_future_closeout": {
+        "verification": "local_verification_passed",
+        "reviewer": "review_pass_no_blocker",
+        "boundary": "pass_boundary",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_pending_next_slice"
+      },
+      "old_slice_modified": false,
+      "old_slice_status_normalized": false,
+      "requires_explicit_user_approval_for_old_slice_edit": true,
+      "allowed_use": [
+        "future recovery",
+        "status reporting",
+        "operator explanation",
+        "input to a separately approved normalization or recloseout slice"
+      ],
+      "forbidden_use": [
+        "claim old slice files are current strict final-gate complete",
+        "claim user approved old-slice edits",
+        "claim mainline readiness",
+        "claim promotion readiness",
+        "claim reviewed knowledge",
+        "claim evidence support",
+        "claim action basis"
+      ]
+    },
+    {
+      "plan_key": "P0-03",
+      "label": "body hash validator sandbox",
+      "old_slice_id": "2026-06-15-p0-03-body-hash-validator-sandbox",
+      "old_slice_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-03-body-hash-validator-sandbox",
+      "source_report_statuses": {
+        "verification": "local_verification_pass",
+        "reviewer": "review_pass_no_blocker_round_2",
+        "boundary": "boundary_pass_no_blocker_round_2",
+        "product": "pass_product_grade",
+        "next_step": "pending_product_acceptance"
+      },
+      "source_evidence": {
+        "verification_pass_evidence": true,
+        "reviewer_pass_evidence": true,
+        "boundary_pass_evidence": true,
+        "product_acceptance_evidence": true,
+        "core_reports_have_pass_evidence": true
+      },
+      "old_slice_current_strict_final_gate": false,
+      "sidecar_closeout_passed": true,
+      "sidecar_closeout_basis": "legacy pass evidence is recorded in p2-71; this sidecar records current-strict evidence without editing old slice files",
+      "required_final_gate_statuses_for_future_closeout": {
+        "verification": "local_verification_passed",
+        "reviewer": "review_pass_no_blocker",
+        "boundary": "pass_boundary",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_pending_next_slice"
+      },
+      "old_slice_modified": false,
+      "old_slice_status_normalized": false,
+      "requires_explicit_user_approval_for_old_slice_edit": true,
+      "allowed_use": [
+        "future recovery",
+        "status reporting",
+        "operator explanation",
+        "input to a separately approved normalization or recloseout slice"
+      ],
+      "forbidden_use": [
+        "claim old slice files are current strict final-gate complete",
+        "claim user approved old-slice edits",
+        "claim mainline readiness",
+        "claim promotion readiness",
+        "claim reviewed knowledge",
+        "claim evidence support",
+        "claim action basis"
+      ]
+    },
+    {
+      "plan_key": "P0-04",
+      "label": "support boundary validator sandbox",
+      "old_slice_id": "2026-06-15-p0-04-support-boundary-validator-sandbox",
+      "old_slice_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-04-support-boundary-validator-sandbox",
+      "source_report_statuses": {
+        "verification": "local_verification_pass",
+        "reviewer": "review_pass_no_blocker_round_2",
+        "boundary": "boundary_pass_no_blocker_round_2",
+        "product": "pass_product_grade",
+        "next_step": "pending_product_acceptance"
+      },
+      "source_evidence": {
+        "verification_pass_evidence": true,
+        "reviewer_pass_evidence": true,
+        "boundary_pass_evidence": true,
+        "product_acceptance_evidence": true,
+        "core_reports_have_pass_evidence": true
+      },
+      "old_slice_current_strict_final_gate": false,
+      "sidecar_closeout_passed": true,
+      "sidecar_closeout_basis": "legacy pass evidence is recorded in p2-71; this sidecar records current-strict evidence without editing old slice files",
+      "required_final_gate_statuses_for_future_closeout": {
+        "verification": "local_verification_passed",
+        "reviewer": "review_pass_no_blocker",
+        "boundary": "pass_boundary",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_pending_next_slice"
+      },
+      "old_slice_modified": false,
+      "old_slice_status_normalized": false,
+      "requires_explicit_user_approval_for_old_slice_edit": true,
+      "allowed_use": [
+        "future recovery",
+        "status reporting",
+        "operator explanation",
+        "input to a separately approved normalization or recloseout slice"
+      ],
+      "forbidden_use": [
+        "claim old slice files are current strict final-gate complete",
+        "claim user approved old-slice edits",
+        "claim mainline readiness",
+        "claim promotion readiness",
+        "claim reviewed knowledge",
+        "claim evidence support",
+        "claim action basis"
+      ]
+    },
+    {
+      "plan_key": "P0-05",
+      "label": "action readiness validator sandbox",
+      "old_slice_id": "2026-06-15-p0-05-action-readiness-validator-sandbox",
+      "old_slice_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-05-action-readiness-validator-sandbox",
+      "source_report_statuses": {
+        "verification": "pass",
+        "reviewer": "review_pass_no_blocker",
+        "boundary": "boundary_pass_no_blocker",
+        "product": "pass_product_grade",
+        "next_step": "pending_acceptance"
+      },
+      "source_evidence": {
+        "verification_pass_evidence": true,
+        "reviewer_pass_evidence": true,
+        "boundary_pass_evidence": true,
+        "product_acceptance_evidence": true,
+        "core_reports_have_pass_evidence": true
+      },
+      "old_slice_current_strict_final_gate": false,
+      "sidecar_closeout_passed": true,
+      "sidecar_closeout_basis": "legacy pass evidence is recorded in p2-71; this sidecar records current-strict evidence without editing old slice files",
+      "required_final_gate_statuses_for_future_closeout": {
+        "verification": "local_verification_passed",
+        "reviewer": "review_pass_no_blocker",
+        "boundary": "pass_boundary",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_pending_next_slice"
+      },
+      "old_slice_modified": false,
+      "old_slice_status_normalized": false,
+      "requires_explicit_user_approval_for_old_slice_edit": true,
+      "allowed_use": [
+        "future recovery",
+        "status reporting",
+        "operator explanation",
+        "input to a separately approved normalization or recloseout slice"
+      ],
+      "forbidden_use": [
+        "claim old slice files are current strict final-gate complete",
+        "claim user approved old-slice edits",
+        "claim mainline readiness",
+        "claim promotion readiness",
+        "claim reviewed knowledge",
+        "claim evidence support",
+        "claim action basis"
+      ]
+    },
+    {
+      "plan_key": "P0-06",
+      "label": "feedback validator sandbox",
+      "old_slice_id": "2026-06-15-p0-06-feedback-validator-sandbox",
+      "old_slice_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-06-feedback-validator-sandbox",
+      "source_report_statuses": {
+        "verification": "pass",
+        "reviewer": "review_pass_no_blocker",
+        "boundary": "boundary_pass_no_blocker",
+        "product": "pass_product_grade",
+        "next_step": "pending_acceptance"
+      },
+      "source_evidence": {
+        "verification_pass_evidence": true,
+        "reviewer_pass_evidence": true,
+        "boundary_pass_evidence": true,
+        "product_acceptance_evidence": true,
+        "core_reports_have_pass_evidence": true
+      },
+      "old_slice_current_strict_final_gate": false,
+      "sidecar_closeout_passed": true,
+      "sidecar_closeout_basis": "legacy pass evidence is recorded in p2-71; this sidecar records current-strict evidence without editing old slice files",
+      "required_final_gate_statuses_for_future_closeout": {
+        "verification": "local_verification_passed",
+        "reviewer": "review_pass_no_blocker",
+        "boundary": "pass_boundary",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_pending_next_slice"
+      },
+      "old_slice_modified": false,
+      "old_slice_status_normalized": false,
+      "requires_explicit_user_approval_for_old_slice_edit": true,
+      "allowed_use": [
+        "future recovery",
+        "status reporting",
+        "operator explanation",
+        "input to a separately approved normalization or recloseout slice"
+      ],
+      "forbidden_use": [
+        "claim old slice files are current strict final-gate complete",
+        "claim user approved old-slice edits",
+        "claim mainline readiness",
+        "claim promotion readiness",
+        "claim reviewed knowledge",
+        "claim evidence support",
+        "claim action basis"
+      ]
+    },
+    {
+      "plan_key": "P0-07",
+      "label": "action-boundary failure matrix",
+      "old_slice_id": "2026-06-15-p0-07-action-boundary-failure-matrix-sandbox",
+      "old_slice_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p0-07-action-boundary-failure-matrix-sandbox",
+      "source_report_statuses": {
+        "verification": "pass",
+        "reviewer": "review_pass_no_blocker",
+        "boundary": "boundary_pass_no_blocker",
+        "product": "pass_product_grade",
+        "next_step": "pending_acceptance"
+      },
+      "source_evidence": {
+        "verification_pass_evidence": true,
+        "reviewer_pass_evidence": true,
+        "boundary_pass_evidence": true,
+        "product_acceptance_evidence": true,
+        "core_reports_have_pass_evidence": true
+      },
+      "old_slice_current_strict_final_gate": false,
+      "sidecar_closeout_passed": true,
+      "sidecar_closeout_basis": "legacy pass evidence is recorded in p2-71; this sidecar records current-strict evidence without editing old slice files",
+      "required_final_gate_statuses_for_future_closeout": {
+        "verification": "local_verification_passed",
+        "reviewer": "review_pass_no_blocker",
+        "boundary": "pass_boundary",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_pending_next_slice"
+      },
+      "old_slice_modified": false,
+      "old_slice_status_normalized": false,
+      "requires_explicit_user_approval_for_old_slice_edit": true,
+      "allowed_use": [
+        "future recovery",
+        "status reporting",
+        "operator explanation",
+        "input to a separately approved normalization or recloseout slice"
+      ],
+      "forbidden_use": [
+        "claim old slice files are current strict final-gate complete",
+        "claim user approved old-slice edits",
+        "claim mainline readiness",
+        "claim promotion readiness",
+        "claim reviewed knowledge",
+        "claim evidence support",
+        "claim action basis"
+      ]
+    },
+    {
+      "plan_key": "P1-08",
+      "label": "retrieval/operation receipt validator pilot",
+      "old_slice_id": "2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox",
+      "old_slice_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-08-retrieval-operation-receipt-validator-pilot-sandbox",
+      "source_report_statuses": {
+        "verification": "local_verification_passed",
+        "reviewer": "review_pass_no_blocker_after_revision",
+        "boundary": "boundary_pass_no_blocker_after_revision",
+        "product": "pass_product_grade",
+        "next_step": "pending_product_acceptance"
+      },
+      "source_evidence": {
+        "verification_pass_evidence": true,
+        "reviewer_pass_evidence": true,
+        "boundary_pass_evidence": true,
+        "product_acceptance_evidence": true,
+        "core_reports_have_pass_evidence": true
+      },
+      "old_slice_current_strict_final_gate": false,
+      "sidecar_closeout_passed": true,
+      "sidecar_closeout_basis": "legacy pass evidence is recorded in p2-71; this sidecar records current-strict evidence without editing old slice files",
+      "required_final_gate_statuses_for_future_closeout": {
+        "verification": "local_verification_passed",
+        "reviewer": "review_pass_no_blocker",
+        "boundary": "pass_boundary",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_pending_next_slice"
+      },
+      "old_slice_modified": false,
+      "old_slice_status_normalized": false,
+      "requires_explicit_user_approval_for_old_slice_edit": true,
+      "allowed_use": [
+        "future recovery",
+        "status reporting",
+        "operator explanation",
+        "input to a separately approved normalization or recloseout slice"
+      ],
+      "forbidden_use": [
+        "claim old slice files are current strict final-gate complete",
+        "claim user approved old-slice edits",
+        "claim mainline readiness",
+        "claim promotion readiness",
+        "claim reviewed knowledge",
+        "claim evidence support",
+        "claim action basis"
+      ]
+    },
+    {
+      "plan_key": "P1-09",
+      "label": "read-only query loop pilot",
+      "old_slice_id": "2026-06-15-p1-09-read-only-query-loop-pilot-sandbox",
+      "old_slice_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-09-read-only-query-loop-pilot-sandbox",
+      "source_report_statuses": {
+        "verification": "local_verification_passed",
+        "reviewer": "review_pass_no_blocker_after_refinement",
+        "boundary": "boundary_pass_no_blocker_after_refinement",
+        "product": "pass_product_grade",
+        "next_step": "pending_product_acceptance"
+      },
+      "source_evidence": {
+        "verification_pass_evidence": true,
+        "reviewer_pass_evidence": true,
+        "boundary_pass_evidence": true,
+        "product_acceptance_evidence": true,
+        "core_reports_have_pass_evidence": true
+      },
+      "old_slice_current_strict_final_gate": false,
+      "sidecar_closeout_passed": true,
+      "sidecar_closeout_basis": "legacy pass evidence is recorded in p2-71; this sidecar records current-strict evidence without editing old slice files",
+      "required_final_gate_statuses_for_future_closeout": {
+        "verification": "local_verification_passed",
+        "reviewer": "review_pass_no_blocker",
+        "boundary": "pass_boundary",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_pending_next_slice"
+      },
+      "old_slice_modified": false,
+      "old_slice_status_normalized": false,
+      "requires_explicit_user_approval_for_old_slice_edit": true,
+      "allowed_use": [
+        "future recovery",
+        "status reporting",
+        "operator explanation",
+        "input to a separately approved normalization or recloseout slice"
+      ],
+      "forbidden_use": [
+        "claim old slice files are current strict final-gate complete",
+        "claim user approved old-slice edits",
+        "claim mainline readiness",
+        "claim promotion readiness",
+        "claim reviewed knowledge",
+        "claim evidence support",
+        "claim action basis"
+      ]
+    },
+    {
+      "plan_key": "P1-10",
+      "label": "runtime artifact exclusion test",
+      "old_slice_id": "2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox",
+      "old_slice_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox",
+      "source_report_statuses": {
+        "verification": "local_verification_passed",
+        "reviewer": "review_pass_no_blocker_after_revision",
+        "boundary": "boundary_pass_no_blocker_after_revision",
+        "product": "pass_product_grade_after_revision",
+        "next_step": "pending_product_acceptance"
+      },
+      "source_evidence": {
+        "verification_pass_evidence": true,
+        "reviewer_pass_evidence": true,
+        "boundary_pass_evidence": true,
+        "product_acceptance_evidence": true,
+        "core_reports_have_pass_evidence": true
+      },
+      "old_slice_current_strict_final_gate": false,
+      "sidecar_closeout_passed": true,
+      "sidecar_closeout_basis": "legacy pass evidence is recorded in p2-71; this sidecar records current-strict evidence without editing old slice files",
+      "required_final_gate_statuses_for_future_closeout": {
+        "verification": "local_verification_passed",
+        "reviewer": "review_pass_no_blocker",
+        "boundary": "pass_boundary",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_pending_next_slice"
+      },
+      "old_slice_modified": false,
+      "old_slice_status_normalized": false,
+      "requires_explicit_user_approval_for_old_slice_edit": true,
+      "allowed_use": [
+        "future recovery",
+        "status reporting",
+        "operator explanation",
+        "input to a separately approved normalization or recloseout slice"
+      ],
+      "forbidden_use": [
+        "claim old slice files are current strict final-gate complete",
+        "claim user approved old-slice edits",
+        "claim mainline readiness",
+        "claim promotion readiness",
+        "claim reviewed knowledge",
+        "claim evidence support",
+        "claim action basis"
+      ]
+    },
+    {
+      "plan_key": "P1-11",
+      "label": "semantic anchor support check",
+      "old_slice_id": "2026-06-15-p1-11-semantic-anchor-support-check-sandbox",
+      "old_slice_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-11-semantic-anchor-support-check-sandbox",
+      "source_report_statuses": {
+        "verification": "local_verification_passed_pending_review",
+        "reviewer": "review_pass_no_blocker",
+        "boundary": "boundary_pass_no_blocker",
+        "product": "pass_product_grade",
+        "next_step": "pending_product_acceptance"
+      },
+      "source_evidence": {
+        "verification_pass_evidence": true,
+        "reviewer_pass_evidence": true,
+        "boundary_pass_evidence": true,
+        "product_acceptance_evidence": true,
+        "core_reports_have_pass_evidence": true
+      },
+      "old_slice_current_strict_final_gate": false,
+      "sidecar_closeout_passed": true,
+      "sidecar_closeout_basis": "legacy pass evidence is recorded in p2-71; this sidecar records current-strict evidence without editing old slice files",
+      "required_final_gate_statuses_for_future_closeout": {
+        "verification": "local_verification_passed",
+        "reviewer": "review_pass_no_blocker",
+        "boundary": "pass_boundary",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_pending_next_slice"
+      },
+      "old_slice_modified": false,
+      "old_slice_status_normalized": false,
+      "requires_explicit_user_approval_for_old_slice_edit": true,
+      "allowed_use": [
+        "future recovery",
+        "status reporting",
+        "operator explanation",
+        "input to a separately approved normalization or recloseout slice"
+      ],
+      "forbidden_use": [
+        "claim old slice files are current strict final-gate complete",
+        "claim user approved old-slice edits",
+        "claim mainline readiness",
+        "claim promotion readiness",
+        "claim reviewed knowledge",
+        "claim evidence support",
+        "claim action basis"
+      ]
+    },
+    {
+      "plan_key": "P1.5-12",
+      "label": "robust RAG retrieval sandbox",
+      "old_slice_id": "2026-06-15-p1-5-12-robust-rag-retrieval-sandbox",
+      "old_slice_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-12-robust-rag-retrieval-sandbox",
+      "source_report_statuses": {
+        "verification": "local_verification_passed_pending_review",
+        "reviewer": "review_pass_no_blocker_after_repair",
+        "boundary": "boundary_pass_no_blocker_after_repair",
+        "product": "pass_product_grade",
+        "next_step": "pending_product_acceptance"
+      },
+      "source_evidence": {
+        "verification_pass_evidence": true,
+        "reviewer_pass_evidence": true,
+        "boundary_pass_evidence": true,
+        "product_acceptance_evidence": true,
+        "core_reports_have_pass_evidence": true
+      },
+      "old_slice_current_strict_final_gate": false,
+      "sidecar_closeout_passed": true,
+      "sidecar_closeout_basis": "legacy pass evidence is recorded in p2-71; this sidecar records current-strict evidence without editing old slice files",
+      "required_final_gate_statuses_for_future_closeout": {
+        "verification": "local_verification_passed",
+        "reviewer": "review_pass_no_blocker",
+        "boundary": "pass_boundary",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_pending_next_slice"
+      },
+      "old_slice_modified": false,
+      "old_slice_status_normalized": false,
+      "requires_explicit_user_approval_for_old_slice_edit": true,
+      "allowed_use": [
+        "future recovery",
+        "status reporting",
+        "operator explanation",
+        "input to a separately approved normalization or recloseout slice"
+      ],
+      "forbidden_use": [
+        "claim old slice files are current strict final-gate complete",
+        "claim user approved old-slice edits",
+        "claim mainline readiness",
+        "claim promotion readiness",
+        "claim reviewed knowledge",
+        "claim evidence support",
+        "claim action basis"
+      ]
+    },
+    {
+      "plan_key": "P1.5-13",
+      "label": "local Obsidian graph retrieval read-only MCP sandbox",
+      "old_slice_id": "2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox",
+      "old_slice_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-13-local-obsidian-graph-retrieval-readonly-mcp-sandbox",
+      "source_report_statuses": {
+        "verification": "local_verification_passed_pending_reacceptance",
+        "reviewer": "reviewer_pass_no_blocker_after_product_revision",
+        "boundary": "boundary_pass_no_blocker_after_product_revision",
+        "product": "pass_product_grade",
+        "next_step": "pending_product_reacceptance"
+      },
+      "source_evidence": {
+        "verification_pass_evidence": true,
+        "reviewer_pass_evidence": true,
+        "boundary_pass_evidence": true,
+        "product_acceptance_evidence": true,
+        "core_reports_have_pass_evidence": true
+      },
+      "old_slice_current_strict_final_gate": false,
+      "sidecar_closeout_passed": true,
+      "sidecar_closeout_basis": "legacy pass evidence is recorded in p2-71; this sidecar records current-strict evidence without editing old slice files",
+      "required_final_gate_statuses_for_future_closeout": {
+        "verification": "local_verification_passed",
+        "reviewer": "review_pass_no_blocker",
+        "boundary": "pass_boundary",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_pending_next_slice"
+      },
+      "old_slice_modified": false,
+      "old_slice_status_normalized": false,
+      "requires_explicit_user_approval_for_old_slice_edit": true,
+      "allowed_use": [
+        "future recovery",
+        "status reporting",
+        "operator explanation",
+        "input to a separately approved normalization or recloseout slice"
+      ],
+      "forbidden_use": [
+        "claim old slice files are current strict final-gate complete",
+        "claim user approved old-slice edits",
+        "claim mainline readiness",
+        "claim promotion readiness",
+        "claim reviewed knowledge",
+        "claim evidence support",
+        "claim action basis"
+      ]
+    },
+    {
+      "plan_key": "P1.5-14",
+      "label": "raw intake parser router sandbox",
+      "old_slice_id": "2026-06-15-p1-5-14-raw-intake-parser-router-sandbox",
+      "old_slice_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox",
+      "source_report_statuses": {
+        "verification": "local_verification_passed_pending_recheck_after_boundary_repair",
+        "reviewer": "reviewer_pass_no_blocker",
+        "boundary": "boundary_pass_no_blocker",
+        "product": "pass_product_grade",
+        "next_step": "pending_product_acceptance"
+      },
+      "source_evidence": {
+        "verification_pass_evidence": true,
+        "reviewer_pass_evidence": true,
+        "boundary_pass_evidence": true,
+        "product_acceptance_evidence": true,
+        "core_reports_have_pass_evidence": true
+      },
+      "old_slice_current_strict_final_gate": false,
+      "sidecar_closeout_passed": true,
+      "sidecar_closeout_basis": "legacy pass evidence is recorded in p2-71; this sidecar records current-strict evidence without editing old slice files",
+      "required_final_gate_statuses_for_future_closeout": {
+        "verification": "local_verification_passed",
+        "reviewer": "review_pass_no_blocker",
+        "boundary": "pass_boundary",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_pending_next_slice"
+      },
+      "old_slice_modified": false,
+      "old_slice_status_normalized": false,
+      "requires_explicit_user_approval_for_old_slice_edit": true,
+      "allowed_use": [
+        "future recovery",
+        "status reporting",
+        "operator explanation",
+        "input to a separately approved normalization or recloseout slice"
+      ],
+      "forbidden_use": [
+        "claim old slice files are current strict final-gate complete",
+        "claim user approved old-slice edits",
+        "claim mainline readiness",
+        "claim promotion readiness",
+        "claim reviewed knowledge",
+        "claim evidence support",
+        "claim action basis"
+      ]
+    },
+    {
+      "plan_key": "P1.5-15",
+      "label": "markdown validation/search sidecar sandbox",
+      "old_slice_id": "2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox",
+      "old_slice_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-15-markdown-validation-search-sidecar-sandbox",
+      "source_report_statuses": {
+        "verification": "local_verification_passed_pending_review",
+        "reviewer": "review_pass_after_product_revision",
+        "boundary": "boundary_pass_after_product_revision",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_next_slice_allowed"
+      },
+      "source_evidence": {
+        "verification_pass_evidence": true,
+        "reviewer_pass_evidence": true,
+        "boundary_pass_evidence": true,
+        "product_acceptance_evidence": true,
+        "core_reports_have_pass_evidence": true
+      },
+      "old_slice_current_strict_final_gate": false,
+      "sidecar_closeout_passed": true,
+      "sidecar_closeout_basis": "legacy pass evidence is recorded in p2-71; this sidecar records current-strict evidence without editing old slice files",
+      "required_final_gate_statuses_for_future_closeout": {
+        "verification": "local_verification_passed",
+        "reviewer": "review_pass_no_blocker",
+        "boundary": "pass_boundary",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_pending_next_slice"
+      },
+      "old_slice_modified": false,
+      "old_slice_status_normalized": false,
+      "requires_explicit_user_approval_for_old_slice_edit": true,
+      "allowed_use": [
+        "future recovery",
+        "status reporting",
+        "operator explanation",
+        "input to a separately approved normalization or recloseout slice"
+      ],
+      "forbidden_use": [
+        "claim old slice files are current strict final-gate complete",
+        "claim user approved old-slice edits",
+        "claim mainline readiness",
+        "claim promotion readiness",
+        "claim reviewed knowledge",
+        "claim evidence support",
+        "claim action basis"
+      ]
+    },
+    {
+      "plan_key": "P1.5-16",
+      "label": "MISA runtime memory / VAKS bridge sandbox",
+      "old_slice_id": "2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox",
+      "old_slice_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-16-misa-runtime-memory-vaks-bridge-sandbox",
+      "source_report_statuses": {
+        "verification": "local_verification_passed_pending_review",
+        "reviewer": "review_pass_after_third_revision",
+        "boundary": "boundary_pass_after_third_revision",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_enter_p2_17"
+      },
+      "source_evidence": {
+        "verification_pass_evidence": true,
+        "reviewer_pass_evidence": true,
+        "boundary_pass_evidence": true,
+        "product_acceptance_evidence": true,
+        "core_reports_have_pass_evidence": true
+      },
+      "old_slice_current_strict_final_gate": false,
+      "sidecar_closeout_passed": true,
+      "sidecar_closeout_basis": "legacy pass evidence is recorded in p2-71; this sidecar records current-strict evidence without editing old slice files",
+      "required_final_gate_statuses_for_future_closeout": {
+        "verification": "local_verification_passed",
+        "reviewer": "review_pass_no_blocker",
+        "boundary": "pass_boundary",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_pending_next_slice"
+      },
+      "old_slice_modified": false,
+      "old_slice_status_normalized": false,
+      "requires_explicit_user_approval_for_old_slice_edit": true,
+      "allowed_use": [
+        "future recovery",
+        "status reporting",
+        "operator explanation",
+        "input to a separately approved normalization or recloseout slice"
+      ],
+      "forbidden_use": [
+        "claim old slice files are current strict final-gate complete",
+        "claim user approved old-slice edits",
+        "claim mainline readiness",
+        "claim promotion readiness",
+        "claim reviewed knowledge",
+        "claim evidence support",
+        "claim action basis"
+      ]
+    },
+    {
+      "plan_key": "P2-17",
+      "label": "use-surface optimization pass",
+      "old_slice_id": "2026-06-15-p2-17-use-surface-optimization-pass",
+      "old_slice_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-17-use-surface-optimization-pass",
+      "source_report_statuses": {
+        "verification": "local_verification_passed_pending_review",
+        "reviewer": "review_pass_after_first_revision",
+        "boundary": "boundary_pass_after_first_revision",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_enter_p2_18"
+      },
+      "source_evidence": {
+        "verification_pass_evidence": true,
+        "reviewer_pass_evidence": true,
+        "boundary_pass_evidence": true,
+        "product_acceptance_evidence": true,
+        "core_reports_have_pass_evidence": true
+      },
+      "old_slice_current_strict_final_gate": false,
+      "sidecar_closeout_passed": true,
+      "sidecar_closeout_basis": "legacy pass evidence is recorded in p2-71; this sidecar records current-strict evidence without editing old slice files",
+      "required_final_gate_statuses_for_future_closeout": {
+        "verification": "local_verification_passed",
+        "reviewer": "review_pass_no_blocker",
+        "boundary": "pass_boundary",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_pending_next_slice"
+      },
+      "old_slice_modified": false,
+      "old_slice_status_normalized": false,
+      "requires_explicit_user_approval_for_old_slice_edit": true,
+      "allowed_use": [
+        "future recovery",
+        "status reporting",
+        "operator explanation",
+        "input to a separately approved normalization or recloseout slice"
+      ],
+      "forbidden_use": [
+        "claim old slice files are current strict final-gate complete",
+        "claim user approved old-slice edits",
+        "claim mainline readiness",
+        "claim promotion readiness",
+        "claim reviewed knowledge",
+        "claim evidence support",
+        "claim action basis"
+      ]
+    },
+    {
+      "plan_key": "P2-18",
+      "label": "Bases cockpit prototype",
+      "old_slice_id": "2026-06-15-p2-18-bases-cockpit-prototype",
+      "old_slice_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-18-bases-cockpit-prototype",
+      "source_report_statuses": {
+        "verification": "local_verification_passed_reviewer_boundary_product_passed",
+        "reviewer": "reviewer_pass",
+        "boundary": "boundary_pass",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_next_p2_19"
+      },
+      "source_evidence": {
+        "verification_pass_evidence": true,
+        "reviewer_pass_evidence": true,
+        "boundary_pass_evidence": true,
+        "product_acceptance_evidence": true,
+        "core_reports_have_pass_evidence": true
+      },
+      "old_slice_current_strict_final_gate": false,
+      "sidecar_closeout_passed": true,
+      "sidecar_closeout_basis": "legacy pass evidence is recorded in p2-71; this sidecar records current-strict evidence without editing old slice files",
+      "required_final_gate_statuses_for_future_closeout": {
+        "verification": "local_verification_passed",
+        "reviewer": "review_pass_no_blocker",
+        "boundary": "pass_boundary",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_pending_next_slice"
+      },
+      "old_slice_modified": false,
+      "old_slice_status_normalized": false,
+      "requires_explicit_user_approval_for_old_slice_edit": true,
+      "allowed_use": [
+        "future recovery",
+        "status reporting",
+        "operator explanation",
+        "input to a separately approved normalization or recloseout slice"
+      ],
+      "forbidden_use": [
+        "claim old slice files are current strict final-gate complete",
+        "claim user approved old-slice edits",
+        "claim mainline readiness",
+        "claim promotion readiness",
+        "claim reviewed knowledge",
+        "claim evidence support",
+        "claim action basis"
+      ]
+    },
+    {
+      "plan_key": "P2-19",
+      "label": "product experience screening sandbox",
+      "old_slice_id": "2026-06-15-p2-19-product-experience-screening-sandbox",
+      "old_slice_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-19-product-experience-screening-sandbox",
+      "source_report_statuses": {
+        "verification": "local_verification_passed_reviewer_boundary_product_passed",
+        "reviewer": "reviewer_pass",
+        "boundary": "boundary_pass",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_next_p2_20"
+      },
+      "source_evidence": {
+        "verification_pass_evidence": true,
+        "reviewer_pass_evidence": true,
+        "boundary_pass_evidence": true,
+        "product_acceptance_evidence": true,
+        "core_reports_have_pass_evidence": true
+      },
+      "old_slice_current_strict_final_gate": false,
+      "sidecar_closeout_passed": true,
+      "sidecar_closeout_basis": "legacy pass evidence is recorded in p2-71; this sidecar records current-strict evidence without editing old slice files",
+      "required_final_gate_statuses_for_future_closeout": {
+        "verification": "local_verification_passed",
+        "reviewer": "review_pass_no_blocker",
+        "boundary": "pass_boundary",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_pending_next_slice"
+      },
+      "old_slice_modified": false,
+      "old_slice_status_normalized": false,
+      "requires_explicit_user_approval_for_old_slice_edit": true,
+      "allowed_use": [
+        "future recovery",
+        "status reporting",
+        "operator explanation",
+        "input to a separately approved normalization or recloseout slice"
+      ],
+      "forbidden_use": [
+        "claim old slice files are current strict final-gate complete",
+        "claim user approved old-slice edits",
+        "claim mainline readiness",
+        "claim promotion readiness",
+        "claim reviewed knowledge",
+        "claim evidence support",
+        "claim action basis"
+      ]
+    },
+    {
+      "plan_key": "P2-20",
+      "label": "product workflow prototype",
+      "old_slice_id": "2026-06-15-p2-20-product-workflow-prototype",
+      "old_slice_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-20-product-workflow-prototype",
+      "source_report_statuses": {
+        "verification": "local_verification_reviewer_boundary_product_acceptance_passed",
+        "reviewer": "reviewer_pass",
+        "boundary": "boundary_pass",
+        "product": "pass_product_grade",
+        "next_step": "sandbox_series_complete_pending_user_mainline_decision"
+      },
+      "source_evidence": {
+        "verification_pass_evidence": true,
+        "reviewer_pass_evidence": true,
+        "boundary_pass_evidence": true,
+        "product_acceptance_evidence": true,
+        "core_reports_have_pass_evidence": true
+      },
+      "old_slice_current_strict_final_gate": false,
+      "sidecar_closeout_passed": true,
+      "sidecar_closeout_basis": "legacy pass evidence is recorded in p2-71; this sidecar records current-strict evidence without editing old slice files",
+      "required_final_gate_statuses_for_future_closeout": {
+        "verification": "local_verification_passed",
+        "reviewer": "review_pass_no_blocker",
+        "boundary": "pass_boundary",
+        "product": "pass_product_grade",
+        "next_step": "pass_product_grade_pending_next_slice"
+      },
+      "old_slice_modified": false,
+      "old_slice_status_normalized": false,
+      "requires_explicit_user_approval_for_old_slice_edit": true,
+      "allowed_use": [
+        "future recovery",
+        "status reporting",
+        "operator explanation",
+        "input to a separately approved normalization or recloseout slice"
+      ],
+      "forbidden_use": [
+        "claim old slice files are current strict final-gate complete",
+        "claim user approved old-slice edits",
+        "claim mainline readiness",
+        "claim promotion readiness",
+        "claim reviewed knowledge",
+        "claim evidence support",
+        "claim action basis"
+      ]
+    }
+  ]
+}

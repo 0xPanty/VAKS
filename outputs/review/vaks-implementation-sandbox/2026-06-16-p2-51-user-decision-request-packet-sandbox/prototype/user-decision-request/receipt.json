@@ -1,0 +1,6 @@
+{
+  "record_kind": "user_decision_request_prototype_receipt",
+  "slice_id": "2026-06-16-p2-51-user-decision-request-packet-sandbox",
+  "option_count": 4,
+  "truth_boundary": "decision_request_packet_not_approval_or_execution_authority"
+}

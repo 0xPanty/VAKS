@@ -1,0 +1,38 @@
+{
+  "record_kind": "external_review_wait_state_guard_failure_cases",
+  "slice_id": "2026-06-19-p2-97-external-review-wait-state-guard-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "P2-97-FAIL-01-opus-result-present-but-guard-still-waiting",
+      "must_fail_when": "A valid Opus result exists but the guard still says wait without intake."
+    },
+    {
+      "case_id": "P2-97-FAIL-02-opus-approval-claimed-without-result",
+      "must_fail_when": "Opus approval is claimed while no valid external result exists."
+    },
+    {
+      "case_id": "P2-97-FAIL-03-mainline-ready-claimed",
+      "must_fail_when": "The guard claims mainline readiness."
+    },
+    {
+      "case_id": "P2-97-FAIL-04-truth-authority-claimed",
+      "must_fail_when": "The guard claims reviewed knowledge, evidence support, or action basis readiness."
+    },
+    {
+      "case_id": "P2-97-FAIL-05-goal-complete-claimed",
+      "must_fail_when": "The guard claims the overall goal is complete."
+    },
+    {
+      "case_id": "P2-97-FAIL-06-no-merge-checklist-missing",
+      "must_fail_when": "The no-merge checklist is missing or omits user mainline approval."
+    },
+    {
+      "case_id": "P2-97-FAIL-07-next-action-missing",
+      "must_fail_when": "The guard does not point to external Opus review and p2-96 intake."
+    },
+    {
+      "case_id": "P2-97-FAIL-08-protected-path-write",
+      "must_fail_when": "This slice writes outside its own sandbox path."
+    }
+  ]
+}

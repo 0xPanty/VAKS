@@ -1,0 +1,36 @@
+{
+  "record_kind": "robust_rag_retrieval_manifest",
+  "scenario_id": "runtime-cache-selected",
+  "expected_valid": false,
+  "expected_codes": ["RR_RUNTIME_ARTIFACT_SELECTED"],
+  "query": {
+    "query_mode": "orientation",
+    "verbatim_input": "Find latest generated suite output.",
+    "question_summary": "Runtime artifact pollution.",
+    "action_sensitive": false,
+    "verbatim_preserved": true
+  },
+  "route_selection": {
+    "selected": "basic_vector",
+    "authority_buckets_included": ["runtime_artifact"],
+    "authority_buckets_excluded": ["feedback"],
+    "selected_context_types": ["runtime_output"],
+    "forbidden_support_types": ["retrieval_score", "graph_rank", "community_report_summary", "llm_extracted_relation"]
+  },
+  "retrieval_config": {"bucket_filter_first": true, "rrf_within_bucket_only": true, "exclude_runtime_artifacts": true},
+  "retrieved_items": [
+    {
+      "id": "runtime-cache",
+      "ref": "outputs/review/example/runtime-cache/query_cache.json",
+      "path": "outputs/review/example/runtime-cache/query_cache.json",
+      "record_kind": "runtime_cache",
+      "artifact_kind": "runtime_cache",
+      "authority_bucket": "runtime_artifact",
+      "pack_role": "orientation",
+      "runtime_artifact": true,
+      "selected": true,
+      "excluded": false,
+      "selected_by": {"semantic": true}
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "raw-topk-trust",
+  "expected_valid": false,
+  "expected_codes": ["US_RAW_TOPK_TRUST"],
+  "allowed_extra_codes": ["US_AUTHORITY_CONFUSION"],
+  "patch": {"search_surface": {"raw_topk_is_trust": true}}
+}

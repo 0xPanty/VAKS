@@ -1,0 +1,12 @@
+{
+  "case_id": "prototype-markdown-action-basis-yes",
+  "description": "Prototype Markdown says action basis yes.",
+  "expected_errors": [
+    "prototype_text_authority_confusion:05 Reviewer Packet.md:action_basis_yes"
+  ],
+  "prototype_tamper": {
+    "kind": "markdown_replace",
+    "file": "05 Reviewer Packet.md",
+    "content": "action basis: yes"
+  }
+}

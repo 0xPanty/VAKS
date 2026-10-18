@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "search-receipt-missing",
+  "expected_valid": false,
+  "expected_codes": ["US_RECEIPT_BACKED_SEARCH_REQUIRED"],
+  "patch": {"search_surface": {"receipt_backed": false}}
+}

@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:vaks:schema:source-snapshot-index-record:v1",
+  "title": "VAKS Source Snapshot Index v1 JSONL record",
+  "type": "object",
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "record_type",
+        "profile",
+        "store_layout",
+        "layout_version",
+        "entry_count"
+      ],
+      "properties": {
+        "schema": { "const": "urn:vaks:index:source-snapshot:v1" },
+        "record_type": { "const": "header" },
+        "profile": { "const": "source-snapshot-index/v1" },
+        "store_layout": { "const": "vaks-source-capture-store/v1" },
+        "layout_version": { "const": "1" },
+        "entry_count": { "type": "integer", "minimum": 0 }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "record_type",
+        "source_id",
+        "source_kind",
+        "snapshot_id",
+        "snapshot_kind",
+        "capture_id",
+        "capture_store_path",
+        "observed_at",
+        "capture_method",
+        "change_state",
+        "bundle_digest",
+        "raw_blob"
+      ],
+      "properties": {
+        "schema": { "const": "urn:vaks:index:source-snapshot:v1" },
+        "record_type": { "const": "entry" },
+        "source_id": { "type": "string", "minLength": 1 },
+        "source_kind": { "type": "string", "minLength": 1 },
+        "snapshot_id": { "type": "string", "minLength": 1 },
+        "snapshot_kind": { "type": "string", "minLength": 1 },
+        "capture_id": {
+          "type": "string",
+          "pattern": "^urn:uuid:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+        },
+        "capture_store_path": {
+          "type": "string",
+          "pattern": "^captures/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+        },
+        "observed_at": { "type": "string", "minLength": 1 },
+        "capture_method": { "type": "string", "minLength": 1 },
+        "change_state": { "type": "string", "minLength": 1 },
+        "bundle_digest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "raw_blob": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["retention_state", "digest"],
+          "properties": {
+            "retention_state": { "enum": ["retained", "not_retained"] },
+            "digest": {
+              "type": "string",
+              "pattern": "^sha256:[0-9a-f]{64}$"
+            },
+            "store_path": {
+              "type": "string",
+              "pattern": "^blobs/sha256/[0-9a-f]{2}/[0-9a-f]{64}$"
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": { "retention_state": { "const": "retained" } },
+                "required": ["retention_state"]
+              },
+              "then": { "required": ["store_path"] }
+            },
+            {
+              "if": {
+                "properties": { "retention_state": { "const": "not_retained" } },
+                "required": ["retention_state"]
+              },
+              "then": { "not": { "required": ["store_path"] } }
+            }
+          ]
+        },
+        "revision": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "value"],
+          "properties": {
+            "kind": { "type": "string", "minLength": 1 },
+            "value": { "type": "string", "minLength": 1 }
+          }
+        }
+      }
+    }
+  ]
+}

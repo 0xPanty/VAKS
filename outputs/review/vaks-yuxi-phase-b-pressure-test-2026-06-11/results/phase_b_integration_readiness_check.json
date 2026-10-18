@@ -1,0 +1,165 @@
+{
+  "readiness_status": "pass",
+  "error_count": 0,
+  "errors": [],
+  "metrics": [
+    {
+      "set": "main",
+      "corpus": "primary",
+      "mode": "vaks_b_adapter_skeleton",
+      "queries": "30",
+      "resolvable_queries": "30",
+      "hit_at_5": "30/30",
+      "hit_at_10": "30/30",
+      "mrr": "1.0000",
+      "action_leakage_rate": "0.0000",
+      "forbidden_top1_rate": "0.0000",
+      "cross_bucket_violation_rate": "0.0000",
+      "warning_coverage_risk": "1.0000",
+      "clickback_coverage": "1.0000",
+      "hash_coverage": "1.0000",
+      "adapter_coverage": "1.0000",
+      "receipt_coverage": "1.0000",
+      "stale_detection_rate": "1.0000"
+    },
+    {
+      "set": "main",
+      "corpus": "full",
+      "mode": "vaks_b_adapter_skeleton",
+      "queries": "30",
+      "resolvable_queries": "30",
+      "hit_at_5": "30/30",
+      "hit_at_10": "30/30",
+      "mrr": "1.0000",
+      "action_leakage_rate": "0.0000",
+      "forbidden_top1_rate": "0.0000",
+      "cross_bucket_violation_rate": "0.0000",
+      "warning_coverage_risk": "1.0000",
+      "clickback_coverage": "1.0000",
+      "hash_coverage": "1.0000",
+      "adapter_coverage": "1.0000",
+      "receipt_coverage": "1.0000",
+      "stale_detection_rate": "1.0000"
+    },
+    {
+      "set": "holdout",
+      "corpus": "primary",
+      "mode": "vaks_b_adapter_skeleton",
+      "queries": "15",
+      "resolvable_queries": "15",
+      "hit_at_5": "12/15",
+      "hit_at_10": "13/15",
+      "mrr": "0.7811",
+      "action_leakage_rate": "0.0000",
+      "forbidden_top1_rate": "0.0000",
+      "cross_bucket_violation_rate": "0.0000",
+      "warning_coverage_risk": "1.0000",
+      "clickback_coverage": "1.0000",
+      "hash_coverage": "1.0000",
+      "adapter_coverage": "1.0000",
+      "receipt_coverage": "1.0000",
+      "stale_detection_rate": "0.0000"
+    },
+    {
+      "set": "holdout",
+      "corpus": "full",
+      "mode": "vaks_b_adapter_skeleton",
+      "queries": "15",
+      "resolvable_queries": "15",
+      "hit_at_5": "13/15",
+      "hit_at_10": "13/15",
+      "mrr": "0.7591",
+      "action_leakage_rate": "0.0000",
+      "forbidden_top1_rate": "0.0000",
+      "cross_bucket_violation_rate": "0.0000",
+      "warning_coverage_risk": "1.0000",
+      "clickback_coverage": "1.0000",
+      "hash_coverage": "1.0000",
+      "adapter_coverage": "1.0000",
+      "receipt_coverage": "1.0000",
+      "stale_detection_rate": "0.0000"
+    }
+  ],
+  "contract": {
+    "contract_status": "pass",
+    "error_count": 0
+  },
+  "package": {
+    "headings": [
+      "Decision",
+      "Compared Against Previous Version",
+      "Adapter API Shape",
+      "Inputs",
+      "Outputs",
+      "Required Result Fields",
+      "Insertion Point",
+      "Failure Modes",
+      "Rollback Path",
+      "Required Gates Before Mainline Discussion",
+      "Next Candidate Step"
+    ],
+    "bytes": 8416
+  },
+  "artifacts": [
+    {
+      "path": "tools/vaks_phase_b_adapter.py",
+      "exists": true,
+      "bytes": 10448
+    },
+    {
+      "path": "tools/run_phase_b_pressure.py",
+      "exists": true,
+      "bytes": 67194
+    },
+    {
+      "path": "tools/validate_phase_b_adapter_contract.py",
+      "exists": true,
+      "bytes": 13090
+    },
+    {
+      "path": "results/phase_b_summary.csv",
+      "exists": true,
+      "bytes": 1865
+    },
+    {
+      "path": "results/phase_b_holdout_summary.csv",
+      "exists": true,
+      "bytes": 1859
+    },
+    {
+      "path": "results/phase_b_adapter_contract_test.json",
+      "exists": true,
+      "bytes": 2276
+    },
+    {
+      "path": "results/phase_b_skeleton_main_primary_chunk_manifest.jsonl",
+      "exists": true,
+      "bytes": 5174653
+    },
+    {
+      "path": "results/phase_b_skeleton_main_full_chunk_manifest.jsonl",
+      "exists": true,
+      "bytes": 27012918
+    },
+    {
+      "path": "results/phase_b_skeleton_main_primary_retrieval_receipts.jsonl",
+      "exists": true,
+      "bytes": 630956
+    },
+    {
+      "path": "results/phase_b_skeleton_main_full_retrieval_receipts.jsonl",
+      "exists": true,
+      "bytes": 627668
+    },
+    {
+      "path": "results/phase_b_skeleton_holdout_primary_retrieval_receipts.jsonl",
+      "exists": true,
+      "bytes": 320990
+    },
+    {
+      "path": "results/phase_b_skeleton_holdout_full_retrieval_receipts.jsonl",
+      "exists": true,
+      "bytes": 316355
+    }
+  ]
+}

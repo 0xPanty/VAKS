@@ -1,0 +1,19 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "entry-approves-reviewed",
+  "expected_valid": false,
+  "expected_codes": ["US_ENTRY_APPROVES_FORBIDDEN"],
+  "allowed_extra_codes": ["US_AUTHORITY_CONFUSION"],
+  "patch": {
+    "entries": [
+      {"id": "add_source", "backend_artifact": "source_card", "boundary_label": "provenance_only", "receipt_required": false, "can_approve": true, "can_write_reviewed": false, "can_promote": false, "creates_action_basis": false},
+      {"id": "process_this", "backend_artifact": "candidate_distillation", "boundary_label": "candidate_only", "receipt_required": false, "can_approve": false, "can_write_reviewed": false, "can_promote": false, "creates_action_basis": false},
+      {"id": "ask_vault", "backend_artifact": "query_run_trace", "boundary_label": "orientation_unless_action_mode", "receipt_required": true, "can_approve": false, "can_write_reviewed": false, "can_promote": false, "creates_action_basis": false},
+      {"id": "check_vault", "backend_artifact": "maintenance_manifest", "boundary_label": "diagnostic_only", "receipt_required": false, "can_approve": false, "can_write_reviewed": false, "can_promote": false, "creates_action_basis": false},
+      {"id": "make_context_pack", "backend_artifact": "context_pack_manifest", "boundary_label": "not_action_basis_by_itself", "receipt_required": true, "can_approve": false, "can_write_reviewed": false, "can_promote": false, "creates_action_basis": false},
+      {"id": "review_candidates", "backend_artifact": "evidence_packet_or_review_candidate", "boundary_label": "review_input_only", "receipt_required": false, "can_approve": false, "can_write_reviewed": false, "can_promote": false, "creates_action_basis": false},
+      {"id": "record_feedback", "backend_artifact": "feedback_event", "boundary_label": "activation_review_pressure_only", "receipt_required": false, "can_approve": false, "can_write_reviewed": false, "can_promote": false, "creates_action_basis": false},
+      {"id": "prepare_action", "backend_artifact": "context_support_readiness_bundle", "boundary_label": "blocked_until_action_readiness", "receipt_required": true, "can_approve": false, "can_write_reviewed": false, "can_promote": false, "creates_action_basis": false}
+    ]
+  }
+}

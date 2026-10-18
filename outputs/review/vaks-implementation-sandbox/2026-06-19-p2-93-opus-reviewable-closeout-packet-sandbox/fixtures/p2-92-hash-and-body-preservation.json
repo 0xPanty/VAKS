@@ -1,0 +1,7 @@
+{
+  "case_id": "p2-92-hash-and-body-preservation",
+  "current_file_hash_match_count": 75,
+  "body_unchanged_count": 75,
+  "non_status_frontmatter_unchanged_count": 75,
+  "passed": true
+}

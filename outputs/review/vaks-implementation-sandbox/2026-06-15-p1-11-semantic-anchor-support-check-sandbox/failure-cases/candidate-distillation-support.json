@@ -1,0 +1,17 @@
+{
+  "record_kind": "semantic_anchor_support_manifest",
+  "scenario_id": "candidate-distillation-support",
+  "expected_valid": false,
+  "expected_codes": ["SA_CANDIDATE_AS_SUPPORT"],
+  "anchors": [
+    {
+      "id": "candidate-distillation-anchor",
+      "anchor_kind": "candidate_distillation",
+      "support_claimed": true,
+      "support_role": "direct_support",
+      "source_ref": "outputs/review/example-candidate-distillation.md",
+      "selector": "candidate-point:cp-01",
+      "authority_bucket": "candidate"
+    }
+  ]
+}

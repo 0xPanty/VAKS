@@ -1,0 +1,39 @@
+---
+record_kind: sandbox_next_step
+slice_id: 2026-06-15-p1-09-read-only-query-loop-pilot-sandbox
+status: pass_product_grade_pending_next_slice
+truth_boundary: sandbox_next_step_only
+---
+
+# Next Step
+
+If and only if GPT-5.5 extra-high Product Acceptance returns
+`PASS_PRODUCT_GRADE`, the next slice may be:
+
+```text
+2026-06-15-p1-10-runtime-artifact-exclusion-test-sandbox
+```
+
+## Recommended Carry-Forward
+
+- Reuse the P1-09 scenario shape as a small state-machine harness for runtime
+  artifact exclusion tests.
+- Keep P1-10 sandbox-only and read-only with respect to mainline knowledge.
+- Do not move the query loop pilot into `tools/` without separate user approval.
+- Do not treat query loop pass as reviewer approval, evidence support, reviewed
+  knowledge, action basis, mainline readiness, commit approval, push approval,
+  or Obsidian sync approval.
+
+## P1-10 Entry Preconditions
+
+- Product Acceptance conclusion for this slice must be `PASS_PRODUCT_GRADE`.
+- Final git audit for this slice must show this round's writes confined to:
+
+```text
+outputs/review/vaks-implementation-sandbox/2026-06-15-p1-09-read-only-query-loop-pilot-sandbox/
+```
+
+## If Revision Is Required
+
+Stay on P1-09, fix only inside this sandbox path, rerun verification, and repeat
+Reviewer, Boundary Auditor, and Product Acceptance.

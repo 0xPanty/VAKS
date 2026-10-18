@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "route-modality-mismatch",
+  "expected_valid": false,
+  "expected_codes": ["RP_ROUTE_MODALITY_MISMATCH"],
+  "patch": {"router": {"modality": "image", "route": "document_parse"}}
+}

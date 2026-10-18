@@ -1,0 +1,52 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "valid-image-ocr-extraction-bundle",
+  "expected_valid": true,
+  "expected_codes": [],
+  "patch": {
+    "original": {
+      "path": "fixtures/raw/screenshot-fixture.png",
+      "sha256": "sha256:5555555555555555555555555555555555555555555555555555555555555555",
+      "source_type": "screenshot"
+    },
+    "router": {
+      "modality": "image",
+      "route": "image_ocr",
+      "selected_adapter": "ocr_fixture_adapter",
+      "selected_by": ["source_type", "mime_type"],
+      "route_reason": "Screenshot route to OCR fixture adapter"
+    },
+    "parser": {
+      "adapter_name": "ocr_fixture_adapter",
+      "parser_config_hash": "sha256:6666666666666666666666666666666666666666666666666666666666666666",
+      "known_limits": ["OCR text may contain visual layout loss"]
+    },
+    "outputs": {
+      "markdown_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/fixtures/extracted/screenshot-fixture.md",
+      "json_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/fixtures/extracted/screenshot-fixture.json",
+      "metadata_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/fixtures/extracted/screenshot-fixture.metadata.json",
+      "images_dir": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/fixtures/extracted/screenshot-images",
+      "retained_outputs": [
+        {
+          "kind": "ocr_markdown",
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/fixtures/extracted/screenshot-fixture.md",
+          "output_hash": "sha256:7777777777777777777777777777777777777777777777777777777777777777",
+          "knowledge_status": "raw"
+        }
+      ]
+    },
+    "anchors": {
+      "page_refs": [],
+      "region_refs": [
+        {
+          "id": "region-hero",
+          "selector": "xywh=10,20,300,120",
+          "source_hash": "sha256:5555555555555555555555555555555555555555555555555555555555555555"
+        }
+      ]
+    },
+    "source_card": {
+      "target_path": "raw/articles/screenshot-fixture-source.md"
+    }
+  }
+}

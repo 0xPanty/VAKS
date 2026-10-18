@@ -1,0 +1,5 @@
+{
+  "case_id": "decision-options-no-write-authority",
+  "decision_option_count": 4,
+  "any_option_writes_now": false
+}

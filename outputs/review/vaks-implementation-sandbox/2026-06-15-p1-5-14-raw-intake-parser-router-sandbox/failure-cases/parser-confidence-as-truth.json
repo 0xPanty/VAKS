@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "parser-confidence-as-truth",
+  "expected_valid": false,
+  "expected_codes": ["RP_PARSER_CONFIDENCE_AS_TRUTH"],
+  "patch": {"parser": {"parser_confidence_claims_truth": true}}
+}

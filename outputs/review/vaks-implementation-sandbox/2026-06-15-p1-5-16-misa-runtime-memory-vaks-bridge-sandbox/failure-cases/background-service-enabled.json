@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "background-service-enabled",
+  "expected_valid": false,
+  "expected_codes": ["MB_BACKGROUND_SERVICE_FORBIDDEN"],
+  "patch": {"scope": {"background_service": true}}
+}

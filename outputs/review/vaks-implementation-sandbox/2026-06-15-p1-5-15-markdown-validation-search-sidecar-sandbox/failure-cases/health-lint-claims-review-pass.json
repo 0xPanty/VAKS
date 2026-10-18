@@ -1,0 +1,13 @@
+{
+  "extends": "fixtures/valid-frontmatter-validation-check.json",
+  "scenario_id": "health-lint-claims-review-pass",
+  "expected_valid": false,
+  "expected_codes": ["MS_AUTHORITY_CONFUSION"],
+  "patch": {
+    "validation": {
+      "health_lint": {
+        "claims_review_pass": true
+      }
+    }
+  }
+}

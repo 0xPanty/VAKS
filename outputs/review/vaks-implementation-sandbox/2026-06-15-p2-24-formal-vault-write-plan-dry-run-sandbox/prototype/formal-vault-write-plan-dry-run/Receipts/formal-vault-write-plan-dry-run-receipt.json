@@ -1,0 +1,82 @@
+{
+  "record_kind": "sandbox_formal_vault_write_plan_receipt",
+  "slice_id": "2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox",
+  "source_slice": "2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox",
+  "generated_at_utc": "2026-06-15T09:30:58+00:00",
+  "formal_vault_accessed": false,
+  "write_scope": [
+    "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-24-formal-vault-write-plan-dry-run-sandbox/"
+  ],
+  "source_hashes": {
+    "source_next_step": "cefe61a591c73746fd3384624063aa7834e763a0d909534436849ff079304a1a",
+    "source_verification": "80175cc7b1ce9b96ebdf73606bd8b9deec0d8aac282e53b14b1aa659295440ce",
+    "source_product_acceptance": "18b65d507c984ab469daa664ab7c53a03be590667312decc0e4d4dd8f219ab41",
+    "source_contract": "2fc34642e57ec0c8527bc14af4c66654c5258c3206038b2fa4837bea7dc96a09",
+    "source_native_home": "8d69253089dc6d704bda107a291e5fd32e493d6c7f3cbc993549175ddbdac11b",
+    "source_status_board": "f882d70b1761f9cc57148f9d5134cf92b5c8a9d9713b2c17c4a8865ab6749324",
+    "source_receipt_index": "1729f2662ee8021526ff57fae565e9e3a7357596599d4fdca63e4171f0048cfc",
+    "source_boundary_stop": "9e5560a2ee7eab313c6a31e7b42b05991883f2b98993073d0b20da6521953945",
+    "source_readonly_inspector": "b367c6225e55e77845d586c2f96832ea539de79033bcf5341d4a15921082e203"
+  },
+  "proposed_file_source_bindings": [
+    {
+      "file_id": "native_home",
+      "relative_target": "VAKS-Workbench-Draft/00 Native Home.md",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/00 Native Home.md",
+      "source_sha256": "8d69253089dc6d704bda107a291e5fd32e493d6c7f3cbc993549175ddbdac11b",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "file_id": "status_board",
+      "relative_target": "VAKS-Workbench-Draft/02 Status Board.md",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/02 Status Board.md",
+      "source_sha256": "f882d70b1761f9cc57148f9d5134cf92b5c8a9d9713b2c17c4a8865ab6749324",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "file_id": "receipt_index",
+      "relative_target": "VAKS-Workbench-Draft/03 Receipt Index.md",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/03 Receipt Index.md",
+      "source_sha256": "1729f2662ee8021526ff57fae565e9e3a7357596599d4fdca63e4171f0048cfc",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "file_id": "boundary_stop",
+      "relative_target": "VAKS-Workbench-Draft/04 Boundary Stop.md",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/04 Boundary Stop.md",
+      "source_sha256": "9e5560a2ee7eab313c6a31e7b42b05991883f2b98993073d0b20da6521953945",
+      "content_binding": "exact_source_sha256"
+    },
+    {
+      "file_id": "readonly_inspector",
+      "relative_target": "VAKS-Workbench-Draft/readonly-inspector.html",
+      "source_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p2-23-native-markdown-entry-readonly-inspector-sandbox/prototype/vaks-native-entry-readonly-inspector/readonly-inspector.html",
+      "source_sha256": "b367c6225e55e77845d586c2f96832ea539de79033bcf5341d4a15921082e203",
+      "content_binding": "exact_source_sha256"
+    }
+  ],
+  "forbidden_operations": {
+    "formal_vault_read": false,
+    "formal_vault_scan": false,
+    "formal_vault_write": false,
+    "obsidian_sync": false,
+    "commit": false,
+    "push": false,
+    "promotion": false,
+    "dependency_install": false,
+    "background_service": false,
+    "mcp_write_tool": false,
+    "hooks": false,
+    "real_base_files": false,
+    "production_ui": false,
+    "local_storage_write": false,
+    "network_post": false
+  },
+  "non_claims": [
+    "not reviewed knowledge",
+    "not evidence support",
+    "not action basis",
+    "not formal vault approval",
+    "not mainline approval"
+  ]
+}

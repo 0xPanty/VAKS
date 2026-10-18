@@ -1,0 +1,17 @@
+{
+  "case_id": "no_reply",
+  "input_state": "no_user_response",
+  "expected_result": "A_keep_sandbox_reference",
+  "expected_action": "no_action",
+  "requires_new_scope": false,
+  "requires_separate_user_approval": false,
+  "requires_explicit_allowed_paths": false,
+  "must_not": [
+    "execute_option",
+    "merge",
+    "promote",
+    "sync",
+    "commit",
+    "push"
+  ]
+}

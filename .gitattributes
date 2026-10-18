@@ -1,3 +1,6 @@
+# Preserve captured bytes and evidence hashes across Windows/macOS checkouts.
+# Explicit LF rules below remain authoritative for implementation components.
+* -text
 tools/inspect_source_snapshot.py text eol=lf
 tools/validate_source_capture_bundle.py text eol=lf
 tools/source_intake_enum_registry.json text eol=lf

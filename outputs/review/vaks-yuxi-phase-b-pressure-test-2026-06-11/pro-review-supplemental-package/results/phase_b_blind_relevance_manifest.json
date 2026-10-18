@@ -1,0 +1,53 @@
+{
+  "artifact_kind": "phase_b_blind_relevance_manifest",
+  "run_id": "phase_b_blind_relevance_20260611T151035Z",
+  "started_at": "2026-06-11T15:10:35+00:00",
+  "finished_at": "2026-06-11T15:12:35+00:00",
+  "truth_boundary": "blind_relevance_packet_not_external_human_judgment",
+  "action_basis_allowed": false,
+  "query_file": "queries_phase_b_blind_relevance.jsonl",
+  "query_file_sha256": "43520d99020c88b97aa682cddddd2175a7d607e022c6cda085f59230d48ae8d0",
+  "query_count": 18,
+  "corpora": [
+    "primary",
+    "full"
+  ],
+  "modes": [
+    "baseline_file_lexical",
+    "vaks_only_lexical_bucket",
+    "vaks_b_adapter_skeleton",
+    "yuxi_native_profile"
+  ],
+  "top_k": 20,
+  "judgment_k": 5,
+  "top20_item_rows": 2880,
+  "judgment_packet_rows": 720,
+  "script_records": [
+    {
+      "path": "tools/run_phase_b_pressure.py",
+      "sha256": "29eff8c0fb5cce8b326a2c2ee87577ca979d2fc6fb81f727d095288f61c398f8",
+      "bytes": 67194
+    },
+    {
+      "path": "tools/build_phase_b_p0_query_replay.py",
+      "sha256": "8cc7b3e5b231f95b030222caf531517ee10c22f4458d890a1ce64ad84af99478",
+      "bytes": 29288
+    },
+    {
+      "path": "tools/build_phase_b_blind_relevance_pilot.py",
+      "sha256": "6568776caae780a76e9456acf040e3a2b61a7d9a175780f07f6b41316b96f8a7",
+      "bytes": 10847
+    }
+  ],
+  "artifacts": {
+    "query_manifest": "results/phase_b_blind_relevance_query_manifest.csv",
+    "top20_items": "results/phase_b_blind_relevance_top20_items.csv",
+    "judgment_packet": "results/phase_b_blind_relevance_judgment_packet.csv"
+  },
+  "hard_stops": [
+    "internal_no_parent_context_is_not_external_human_blind",
+    "judgment_packet_is_not_completed_judgment",
+    "does_not_validate_original_yuxi_runtime",
+    "does_not_approve_c_lite_or_writeback"
+  ]
+}

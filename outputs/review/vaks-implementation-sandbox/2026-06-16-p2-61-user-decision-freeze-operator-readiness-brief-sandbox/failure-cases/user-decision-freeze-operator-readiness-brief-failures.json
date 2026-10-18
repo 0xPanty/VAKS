@@ -1,0 +1,80 @@
+[
+  {
+    "failure_id": "reject_entry_count_drift",
+    "description": "Reject a brief whose entry count no longer matches p2-60.",
+    "mutation": {"set_path": {"path": ["readiness_inputs", "entry_count"], "value": 267}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_treat_checksum_as_user_approval"]
+  },
+  {
+    "failure_id": "reject_source_count_drift",
+    "description": "Reject a brief that loses source slice coverage.",
+    "mutation": {"set_path": {"path": ["readiness_inputs", "source_slice_count"], "value": 8}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_treat_checksum_as_user_approval"]
+  },
+  {
+    "failure_id": "reject_manifest_missing",
+    "description": "Reject a brief if the source manifest is missing.",
+    "mutation": {"set_path": {"path": ["readiness_inputs", "source_manifest_exists"], "value": false}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_treat_checksum_as_user_approval"]
+  },
+  {
+    "failure_id": "reject_hash_algorithm_drift",
+    "description": "Reject a brief that loses the sha256_bytes contract.",
+    "mutation": {"set_path": {"path": ["readiness_inputs", "hash_algorithm"], "value": "md5"}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_treat_checksum_as_user_approval"]
+  },
+  {
+    "failure_id": "reject_source_final_gate_false",
+    "description": "Reject a brief whose p2-60 final gate is not passed.",
+    "mutation": {"set_path": {"path": ["readiness_inputs", "latest_source_final_gate_passed"], "value": false}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_treat_checksum_as_user_approval"]
+  },
+  {
+    "failure_id": "reject_automation_true",
+    "description": "Reject a brief that turns manual verification into automation.",
+    "mutation": {"set_path": {"path": ["manual_readonly_verification", "automation_by_this_artifact"], "value": true}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_treat_checksum_as_user_approval"]
+  },
+  {
+    "failure_id": "reject_manual_command_without_final_gate",
+    "description": "Reject a manual command that does not require final gate.",
+    "mutation": {"set_path": {"path": ["manual_readonly_verification", "command"], "value": "python -B verifier.py"}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_treat_checksum_as_user_approval"]
+  },
+  {
+    "failure_id": "reject_mainline_ready_true",
+    "description": "Reject mainline authority confusion.",
+    "mutation": {"set_path": {"path": ["readiness_flags", "mainline_ready"], "value": true}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_treat_checksum_as_user_approval"]
+  },
+  {
+    "failure_id": "reject_promotion_ready_true",
+    "description": "Reject promotion authority confusion.",
+    "mutation": {"set_path": {"path": ["readiness_flags", "promotion_ready"], "value": true}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_treat_checksum_as_user_approval"]
+  },
+  {
+    "failure_id": "reject_action_basis_ready_true",
+    "description": "Reject action_basis authority confusion.",
+    "mutation": {"set_path": {"path": ["readiness_flags", "action_basis_ready"], "value": true}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_treat_checksum_as_user_approval"]
+  },
+  {
+    "failure_id": "reject_user_approval_collected_true",
+    "description": "Reject user_approval authority confusion.",
+    "mutation": {"set_path": {"path": ["readiness_flags", "user_approval_collected"], "value": true}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_treat_checksum_as_user_approval"]
+  },
+  {
+    "failure_id": "reject_hard_no_removed",
+    "description": "Reject missing hard_no boundary.",
+    "mutation": {"remove_hard_no": "do_not_commit"},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_treat_checksum_as_user_approval"]
+  },
+  {
+    "failure_id": "reject_dangerous_claim_text",
+    "description": "Reject dangerous text such as mainline approved.",
+    "mutation": {"set_path": {"path": ["purpose"], "value": "mainline approved"}},
+    "hard_no": ["do_not_execute_user_decision_option", "do_not_merge_mainline", "do_not_promote", "do_not_sync_obsidian", "do_not_commit", "do_not_push", "do_not_install_dependencies", "do_not_start_background_service", "do_not_install_hooks", "do_not_use_mcp_write_tool", "do_not_create_reviewed_knowledge", "do_not_create_evidence_support", "do_not_create_action_basis", "do_not_treat_checksum_as_user_approval"]
+  }
+]

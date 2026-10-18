@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "file_count": 278,
+  "zip": "outputs/review/source-intake-control-flow-hardening-2026-06-12/source-intake-control-flow-hardening-pro-review-package.zip",
+  "zip_present": true,
+  "zip_entry_check": "pass",
+  "package_check_in_zip": true,
+  "errors": [],
+  "truth_boundary": "package integrity evidence only; not Source Intake P0 approval"
+}

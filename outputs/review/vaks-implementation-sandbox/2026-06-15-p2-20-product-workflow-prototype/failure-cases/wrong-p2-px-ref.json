@@ -1,0 +1,1 @@
+{"case_id":"wrong-p2-px-ref","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"set","path":"/steps/4/p2_px_ref","value":"P2-PX-99"}]}

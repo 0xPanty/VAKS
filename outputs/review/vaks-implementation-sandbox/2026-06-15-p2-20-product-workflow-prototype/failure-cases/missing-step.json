@@ -1,0 +1,1 @@
+{"case_id":"missing-step","base_fixture":"fixtures/valid-product-workflow.json","mutations":[{"op":"remove_step","id":"WF-05"}]}

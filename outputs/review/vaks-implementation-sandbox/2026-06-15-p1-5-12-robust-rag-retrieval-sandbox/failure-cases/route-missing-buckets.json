@@ -1,0 +1,33 @@
+{
+  "record_kind": "robust_rag_retrieval_manifest",
+  "scenario_id": "route-missing-buckets",
+  "expected_valid": false,
+  "expected_codes": ["RR_ROUTE_BUCKETS_MISSING"],
+  "query": {
+    "query_mode": "orientation",
+    "verbatim_input": "Find broad context.",
+    "question_summary": "Find context.",
+    "action_sensitive": false,
+    "verbatim_preserved": true
+  },
+  "route_selection": {
+    "selected": "basic_vector",
+    "authority_buckets_included": [],
+    "authority_buckets_excluded": [],
+    "selected_context_types": ["reviewed_node"],
+    "forbidden_support_types": ["retrieval_score", "graph_rank", "community_report_summary", "llm_extracted_relation"]
+  },
+  "retrieval_config": {"bucket_filter_first": true, "rrf_within_bucket_only": true, "exclude_runtime_artifacts": true},
+  "retrieved_items": [
+    {
+      "id": "reviewed-note-a",
+      "ref": "wiki/concepts/example.md",
+      "record_kind": "reviewed_note",
+      "authority_bucket": "reviewed",
+      "pack_role": "orientation",
+      "selected": false,
+      "excluded": false,
+      "selected_by": {}
+    }
+  ]
+}

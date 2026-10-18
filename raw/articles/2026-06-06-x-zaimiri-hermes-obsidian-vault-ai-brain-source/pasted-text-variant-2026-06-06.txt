@@ -1,0 +1,303 @@
+文章
+
+查看新帖子
+对话
+zaimiri
+@zaimiri
+Hermes Agent + Obsidian Vault = AI Brain
+I think Obsidian becomes way more interesting when you stop treating it like a prettier notes app.
+The vault is where your memory should live.
+Hermes is the thing that can read that memory, use tools, run scheduled work, and write the result back into the vault.
+That is the useful setup:
+Obsidian stores the context.
+Hermes reads it.
+Hermes does the work.
+Obsidian keeps the receipts.
+This guide is the practical version.
+No fake second brain language. No giant life OS diagram you abandon after three days.
+Just a folder of markdown files connected to an agent that can act on them.
+What you are building
+You are building a small local setup: one Obsidian vault, one Hermes config, and a few repeatable skills.
+It has four parts:
+1. Obsidian as the human-readable memory layer
+2. Filesystem access so Hermes can read and write vault files
+3. Hermes skills so the Claude session knows your repeatable workflows
+4. Hermes cron jobs so useful workflows run without you opening a chat
+The important part is that Obsidian stays plain text.
+Every project note, meeting note, daily note, decision, research capture, and weekly review is just a markdown file on disk.
+Hermes can work with that directly.
+If Claude writes a morning brief through Hermes, it becomes a note.
+If it processes your inbox, the original capture stays traceable.
+If it updates a project, you can open the exact markdown file and edit it yourself.
+That is the point of keeping the work in markdown files.
+Hermes should not become a black box that remembers things somewhere you never open.
+Step 1: Install Hermes
+Use the normal installer:
+curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+Then run the setup flow:
+hermes setup
+hermes model
+hermes doctor
+Use whatever model/provider you already trust for real work. Hermes supports OpenRouter, Anthropic, OpenAI, Nous Portal, local endpoints, and more.
+The only rule for this setup:
+Do not paste secrets into your vault.
+API keys belong in Hermes config or `.env`, not in Obsidian notes.
+Useful commands:
+hermes config path
+hermes config env-path
+hermes config edit
+`config.yaml` is where Hermes settings live.
+`.env` is where secrets and environment values live.
+Step 2: Create a vault structure Hermes can understand
+You can use your existing Obsidian vault, but give Hermes predictable places to read from and write to.
+A clean starter structure:
+VAULT/
+  00-INBOX/
+  01-DAILY/
+  02-PROJECTS/
+  03-NOTES/
+  04-RESOURCES/
+  05-HERMES-OUTPUTS/
+    briefings/
+    inbox/
+    projects/
+    research/
+    reviews/
+  06-SYSTEM/
+    CLAUDE.md
+    templates/
+The folder that matters most is `05-HERMES-OUTPUTS`.
+Do not let the agent spray files all over your vault.
+Give it one output zone first.
+Once the system is reliable, you can allow more direct edits into project folders or permanent notes.
+For the first week, keep it simple:
+- You capture raw ideas in `00-INBOX`
+- You keep project truth in `02-PROJECTS`
+- Hermes writes outputs to `05-HERMES-OUTPUTS`
+- You review and promote the good stuff manually
+This keeps the system useful without making your vault feel haunted.
+Step 3: Tell Hermes where the vault is
+Add a vault path to your Hermes environment file.
+Find the path:
+hermes config env-path
+Open that file and add:
+OBSIDIAN_VAULT_PATH="/Users/yourname/Documents/YourVault"
+Use your actual path.
+If your vault path has spaces, keep the quotes.
+This gives your skills and scripts one stable name for the vault instead of hardcoding the path everywhere.
+Step 4: Connect the vault through Filesystem MCP
+Hermes can work with local files through its own tools and bundled Obsidian skill.
+For a clean Obsidian setup guide, I would still add a bounded Filesystem MCP server because it makes the boundary explicit:
+Hermes gets access to this vault folder.
+Not your whole laptop.
+Not your downloads folder.
+Not every random file on the machine.
+Make sure Node and `npx` are available:
+node -v
+npx -v
+Then add the MCP server:
+hermes mcp add obsidian_fs \
+  --command npx \
+  --args -y @modelcontextprotocol/server-filesystem "/Users/yourname/Documents/YourVault"
+Or add it manually in `~/.hermes/config.yaml`:
+mcp_servers:
+  obsidian_fs:
+    command: "npx"
+    args:
+      - "-y"
+      - "@modelcontextprotocol/server-filesystem"
+      - "/Users/yourname/Documents/YourVault"
+Then test it:
+hermes mcp test obsidian_fs
+Start a fresh Hermes session, or reload MCP inside a running one:
+/reload-mcp
+Test with a boring prompt:
+List the top-level folders in my Obsidian vault and tell me what you can access.
+If Hermes cannot see the folders, fix this before building anything else.
+The setup is only real when it can read the vault and write a test note in the output folder.
+Step 5: Add the system note Hermes should read first
+Create this file in your vault:
+06-SYSTEM/CLAUDE.md
+Starter version:
+# My Obsidian + Hermes system
+
+## Vault rules
+
+Vault root: [your vault path]
+Hermes outputs: 05-HERMES-OUTPUTS/
+Raw captures: 00-INBOX/
+Active projects: 02-PROJECTS/
+
+## Current priorities
+
+1. [priority one]
+2. [priority two]
+3. [priority three]
+
+## Active projects
+
+### [Project name]
+Status: [one sentence]
+Next action: [specific next action]
+
+## How Hermes should work with this vault
+
+Before producing any output:
+- Read this file
+- Read relevant project notes
+- Reference exact note paths when making claims
+
+When saving any output:
+- Save it under 05-HERMES-OUTPUTS first
+- Use date-stamped filenames
+- Add simple frontmatter
+- Do not delete or overwrite notes unless I explicitly ask
+
+## Writing preferences
+
+[How you want briefs, reviews, and notes to sound]
+
+## Human review rule
+
+Hermes can draft and organize notes.
+Major deletions, project status changes, finance/legal edits, and irreversible actions need review.
+This file is not magic.
+It is a steering file.
+The benefit is that every recurring skill can start from the same source of truth instead of asking you the same questions again.
+Update it once a week.
+If this file is stale, the whole system gets weird.
+Step 6: Create your first Hermes skill
+Start with one workflow.
+Do not create seven automations on day one.
+The best first skill is a morning brief because it proves the whole loop:
+Vault context in.
+Hermes reasoning in the middle.
+Markdown output back into Obsidian.
+Create a skill folder:
+mkdir -p ~/.hermes/skills/personal/vault-morning-brief
+Create:
+~/.hermes/skills/personal/vault-morning-brief/SKILL.md
+Paste this starter skill:
+---
+name: vault-morning-brief
+description: Generate a morning brief from my Obsidian vault.
+---
+
+# Vault Morning Brief
+
+Use this skill when I ask for a morning brief from my Obsidian vault.
+
+## Process
+
+1. Read `06-SYSTEM/CLAUDE.md` from the vault.
+2. Read today's daily note from `01-DAILY/` if it exists.
+3. Read active project overview files in `02-PROJECTS/`.
+4. Read the latest weekly review from `05-HERMES-OUTPUTS/reviews/` if it exists.
+5. Produce a short morning brief with:
+   - the one thing that matters today
+   - project pulse
+   - open loops
+   - useful note connections
+   - any decisions waiting on me
+6. Save the brief to:
+   `05-HERMES-OUTPUTS/briefings/YYYY-MM-DD-morning-brief.md`
+
+## Quality bar
+
+Reference actual note paths.
+Do not write generic productivity advice.
+If a claim comes from the vault, name the file.
+Restart Hermes or run a fresh session so the new skill is visible.
+Then test it manually:
+Use the vault-morning-brief skill and generate today's brief from my Obsidian vault.
+If the first output is too broad, tighten the skill.
+Good skills are not long.
+Good skills are specific.
+Step 7: Add the other workflows slowly
+Once the morning brief works, add the next workflows one at a time.
+These are the five I would build first:
+1. Inbox processor
+Reads `00-INBOX`, classifies each capture, and writes a filing summary to `05-HERMES-OUTPUTS/inbox/`.
+First version should not move files automatically.
+Make it propose where each note should go.
+After a week, allow it to file low-risk notes.
+2. Project health check
+Reads every `overview.md` and `tasks.md` under `02-PROJECTS`.
+Outputs:
+- on track
+- at risk
+- stalled
+- blocked
+- next action
+This becomes useful very fast because project folders usually reveal where you are lying to yourself.
+3. Weekly synthesis
+Reads daily notes, project updates, and Hermes outputs from the past seven days.
+Writes one review to `05-HERMES-OUTPUTS/reviews/`.
+This is where `01-DAILY`, `02-PROJECTS`, and `05-HERMES-OUTPUTS` start becoming useful together.
+You stop asking, “What happened this week?”
+The notes tell you.
+4. Research converter
+Takes messy research captures from `00-INBOX` and turns them into cleaner literature notes or permanent notes.
+Keep this review-first at the start.
+Research automation can create a lot of polished junk if you let it run without standards.
+5. Connection finder
+Reads recently edited notes and suggests links to older notes.
+Do not let it auto-link everything.
+Make it produce a report first:
+This new note connects to these older notes.
+Here is why.
+Here is the suggested wikilink.
+Then you decide what belongs in the graph.
+Step 8: Schedule the workflows
+Hermes has cron scheduling built in.
+Once a skill works manually, schedule it.
+Example schedule ideas:
+Daily 6:00 AM: morning brief
+Daily 8:00 PM: inbox processing proposal
+Monday 7:00 AM: project health report
+Sunday 6:00 PM: weekly synthesis
+Sunday 7:00 PM: connection finder
+Use:
+hermes cron create "0 6 * * *"
+hermes cron list
+For the prompt, be explicit:
+Use the vault-morning-brief skill. Read my Obsidian vault through obsidian_fs. Save the output to 05-HERMES-OUTPUTS/briefings/. Do not publish or message anything unless there is a blocking issue.
+The mistake is scheduling vague prompts.
+A cron should read like a tiny operating procedure.
+Tell it:
+- what skill to use
+- what folders to read
+- where to write
+- what it is not allowed to do
+- when to ask for review
+The safety setup I would use
+Start with these rules:
+1. Filesystem MCP is scoped only to the vault
+2. First 7 days are output-only into `05-HERMES-OUTPUTS`
+3. No deletion permissions in prompts
+4. Project status edits need review
+5. Finance, legal, medical, and client-sensitive notes need separate rules
+6. Secrets never enter the vault
+7. Every automated output references the source files it used
+This is what keeps the system from becoming creepy.
+You want useful context automation, not an agent randomly rewriting your second brain at 2 AM.
+The daily loop
+The finished Obsidian + Hermes loop feels simple.
+Morning:
+Hermes reads your vault and writes a brief before you start the day.
+During the day:
+You throw messy notes, ideas, links, tasks, and meeting scraps into `00-INBOX`.
+Evening:
+Hermes proposes where everything should go.
+Weekly:
+Hermes reads the week, points out what moved, what stalled, and which notes connect.
+You stay in Obsidian because it is still the readable source of truth.
+Hermes stays useful because it has real context instead of an empty chat window.
+That is the setup.
+Not a magic productivity system.
+A markdown vault with an agent attached to it.
+Start with one folder, one system note, one skill, one scheduled brief.
+If that works for seven days, add the inbox processor.
+If that works for seven days, add project health.
+Build it like a reliable system, not like a weekend Notion template.
+The compounding starts when the same agent reads the same vault every day and writes the receipts back where you can actually see them

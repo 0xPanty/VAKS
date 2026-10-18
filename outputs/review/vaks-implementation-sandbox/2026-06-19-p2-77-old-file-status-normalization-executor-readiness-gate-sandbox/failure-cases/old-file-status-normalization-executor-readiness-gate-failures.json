@@ -1,0 +1,38 @@
+{
+  "record_kind": "sandbox_failure_case_matrix",
+  "slice_id": "2026-06-19-p2-77-old-file-status-normalization-executor-readiness-gate-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "RG-FAIL-01-current-continuation-counts-as-approval",
+      "must_fail_when": "current goal continuation is treated as exact approval"
+    },
+    {
+      "case_id": "RG-FAIL-02-write-allowed-without-approval",
+      "must_fail_when": "executor_write_allowed is true without an exact future user approval phrase"
+    },
+    {
+      "case_id": "RG-FAIL-03-preflight-drift-ignored",
+      "must_fail_when": "gate allows readiness when p2-76 preflight has missing targets or status mismatches"
+    },
+    {
+      "case_id": "RG-FAIL-04-p2-75-packet-treated-as-approval",
+      "must_fail_when": "p2-75 approval request packet itself is treated as user approval"
+    },
+    {
+      "case_id": "RG-FAIL-05-generic-language-accepted",
+      "must_fail_when": "generic language such as continue or 全部落地 is accepted as approval"
+    },
+    {
+      "case_id": "RG-FAIL-06-old-slice-write-applied",
+      "must_fail_when": "readiness gate applies any old-slice write"
+    },
+    {
+      "case_id": "RG-FAIL-07-boundary-authority-created",
+      "must_fail_when": "gate creates mainline readiness, promotion, reviewed knowledge, evidence support, or action basis"
+    },
+    {
+      "case_id": "RG-FAIL-08-future-approval-skips-fresh-preflight",
+      "must_fail_when": "future exact approval bypasses fresh preflight, boundary audit, or stop-before-write"
+    }
+  ]
+}

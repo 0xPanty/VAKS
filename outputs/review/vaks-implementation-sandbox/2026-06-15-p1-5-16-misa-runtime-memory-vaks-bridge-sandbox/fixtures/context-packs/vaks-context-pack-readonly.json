@@ -1,0 +1,27 @@
+{
+  "record_kind": "vaks_context_pack_fixture",
+  "pack_id": "ctx-p1-5-16-readonly",
+  "query_mode": "orientation",
+  "read_only": true,
+  "included_buckets": ["reviewed", "candidate", "raw_anchor"],
+  "excluded_buckets": ["feedback", "runtime_memory"],
+  "items": [
+    {
+      "id": "reviewed-orientation",
+      "ref": "fixtures/context-packs/reviewed-orientation-note.md",
+      "authority_bucket": "reviewed",
+      "pack_role": "orientation",
+      "warning_code": "orientation_not_action_basis",
+      "action_basis_allowed": false
+    },
+    {
+      "id": "candidate-review-input",
+      "ref": "fixtures/context-packs/candidate-review-input.md",
+      "authority_bucket": "candidate",
+      "pack_role": "review_input",
+      "warning_code": "candidate_not_support",
+      "action_basis_allowed": false
+    }
+  ],
+  "truth_boundary": "context-pack-fixture-not-evidence-support"
+}

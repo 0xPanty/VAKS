@@ -1,0 +1,102 @@
+[
+  {
+    "Name": "res",
+    "Count": 592
+  },
+  {
+    "Name": "assets",
+    "Count": 447
+  },
+  {
+    "Name": "META-INF",
+    "Count": 59
+  },
+  {
+    "Name": "lib",
+    "Count": 14
+  },
+  {
+    "Name": "kotlin",
+    "Count": 7
+  },
+  {
+    "Name": "okhttp3",
+    "Count": 2
+  },
+  {
+    "Name": "org",
+    "Count": 2
+  },
+  {
+    "Name": "transport-api.properties",
+    "Count": 1
+  },
+  {
+    "Name": "resources.arsc",
+    "Count": 1
+  },
+  {
+    "Name": "play-services-tasks.properties",
+    "Count": 1
+  },
+  {
+    "Name": "play-services-places-placereport.properties",
+    "Count": 1
+  },
+  {
+    "Name": "play-services-location.properties",
+    "Count": 1
+  },
+  {
+    "Name": "play-services-basement.properties",
+    "Count": 1
+  },
+  {
+    "Name": "play-services-base.properties",
+    "Count": 1
+  },
+  {
+    "Name": "AndroidManifest.xml",
+    "Count": 1
+  },
+  {
+    "Name": "transport-backend-cct.properties",
+    "Count": 1
+  },
+  {
+    "Name": "firebase-encoders.properties",
+    "Count": 1
+  },
+  {
+    "Name": "firebase-encoders-proto.properties",
+    "Count": 1
+  },
+  {
+    "Name": "firebase-encoders-json.properties",
+    "Count": 1
+  },
+  {
+    "Name": "DebugProbesKt.bin",
+    "Count": 1
+  },
+  {
+    "Name": "com",
+    "Count": 1
+  },
+  {
+    "Name": "classes.dex",
+    "Count": 1
+  },
+  {
+    "Name": "billing.properties",
+    "Count": 1
+  },
+  {
+    "Name": "play-services-ads-identifier.properties",
+    "Count": 1
+  },
+  {
+    "Name": "transport-runtime.properties",
+    "Count": 1
+  }
+]

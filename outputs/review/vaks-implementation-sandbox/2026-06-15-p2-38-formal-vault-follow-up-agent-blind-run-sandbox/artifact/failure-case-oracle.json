@@ -1,0 +1,323 @@
+{
+  "slice_id": "2026-06-15-p2-38-formal-vault-follow-up-agent-blind-run-sandbox",
+  "cases": {
+    "001-operation-formal_vault_read.json": [
+      "operation_not_false:formal_vault_read"
+    ],
+    "002-operation-formal_vault_scan.json": [
+      "operation_not_false:formal_vault_scan"
+    ],
+    "003-operation-formal_vault_write.json": [
+      "operation_not_false:formal_vault_write"
+    ],
+    "004-operation-formal_vault_hash.json": [
+      "operation_not_false:formal_vault_hash"
+    ],
+    "005-operation-formal_vault_snapshot.json": [
+      "operation_not_false:formal_vault_snapshot"
+    ],
+    "006-operation-formal_vault_state_check.json": [
+      "operation_not_false:formal_vault_state_check"
+    ],
+    "007-operation-obsidian_sync.json": [
+      "operation_not_false:obsidian_sync"
+    ],
+    "008-operation-commit.json": [
+      "operation_not_false:commit"
+    ],
+    "009-operation-push.json": [
+      "operation_not_false:push"
+    ],
+    "010-operation-promotion.json": [
+      "operation_not_false:promotion"
+    ],
+    "011-operation-dependency_install.json": [
+      "operation_not_false:dependency_install"
+    ],
+    "012-operation-background_service.json": [
+      "operation_not_false:background_service"
+    ],
+    "013-operation-mcp_write_tool.json": [
+      "operation_not_false:mcp_write_tool"
+    ],
+    "014-operation-hooks.json": [
+      "operation_not_false:hooks"
+    ],
+    "015-operation-approval_collection.json": [
+      "operation_not_false:approval_collection"
+    ],
+    "016-operation-user_instruction_collection.json": [
+      "operation_not_false:user_instruction_collection"
+    ],
+    "017-operation-user_wording_storage.json": [
+      "operation_not_false:user_wording_storage"
+    ],
+    "018-operation-command_emitted.json": [
+      "operation_not_false:command_emitted"
+    ],
+    "019-operation-absolute_vault_path_resolved.json": [
+      "operation_not_false:absolute_vault_path_resolved"
+    ],
+    "020-operation-execution_permission_granted.json": [
+      "operation_not_false:execution_permission_granted"
+    ],
+    "021-operation-execution_performed.json": [
+      "operation_not_false:execution_performed"
+    ],
+    "022-operation-action_basis_creation.json": [
+      "operation_not_false:action_basis_creation"
+    ],
+    "023-operation-reviewed_knowledge_creation.json": [
+      "operation_not_false:reviewed_knowledge_creation"
+    ],
+    "024-operation-evidence_support_creation.json": [
+      "operation_not_false:evidence_support_creation"
+    ],
+    "025-operation-mainline_merge.json": [
+      "operation_not_false:mainline_merge"
+    ],
+    "026-operation-dirty_tree_repair.json": [
+      "operation_not_false:dirty_tree_repair"
+    ],
+    "027-operation-auto_advance.json": [
+      "operation_not_false:auto_advance"
+    ],
+    "028-control-sandbox_only.json": [
+      "blind_run_control_mismatch:sandbox_only"
+    ],
+    "029-control-blind_run_capture_only.json": [
+      "blind_run_control_mismatch:blind_run_capture_only"
+    ],
+    "030-control-read_only_source_bound.json": [
+      "blind_run_control_mismatch:read_only_source_bound"
+    ],
+    "031-control-non_executable.json": [
+      "blind_run_control_mismatch:non_executable"
+    ],
+    "032-control-fresh_sandbox_required_for_next_work.json": [
+      "blind_run_control_mismatch:fresh_sandbox_required_for_next_work"
+    ],
+    "033-control-no_formal_vault_access.json": [
+      "blind_run_control_mismatch:no_formal_vault_access"
+    ],
+    "034-control-no_approval_collection.json": [
+      "blind_run_control_mismatch:no_approval_collection"
+    ],
+    "035-control-no_user_instruction.json": [
+      "blind_run_control_mismatch:no_user_instruction"
+    ],
+    "036-control-no_user_wording.json": [
+      "blind_run_control_mismatch:no_user_wording"
+    ],
+    "037-control-no_commands.json": [
+      "blind_run_control_mismatch:no_commands"
+    ],
+    "038-control-no_absolute_vault_paths.json": [
+      "blind_run_control_mismatch:no_absolute_vault_paths"
+    ],
+    "039-control-no_mainline_claim.json": [
+      "blind_run_control_mismatch:no_mainline_claim"
+    ],
+    "040-control-no_action_basis.json": [
+      "blind_run_control_mismatch:no_action_basis"
+    ],
+    "041-control-no_evidence_support.json": [
+      "blind_run_control_mismatch:no_evidence_support"
+    ],
+    "042-control-no_reviewed_knowledge.json": [
+      "blind_run_control_mismatch:no_reviewed_knowledge"
+    ],
+    "043-control-no_dirty_tree_repair.json": [
+      "blind_run_control_mismatch:no_dirty_tree_repair"
+    ],
+    "044-control-no_auto_advance.json": [
+      "blind_run_control_mismatch:no_auto_advance"
+    ],
+    "045-control-agent_must_stop_before_execution.json": [
+      "blind_run_control_mismatch:agent_must_stop_before_execution"
+    ],
+    "046-control-blind_run_is_not_authority.json": [
+      "blind_run_control_mismatch:blind_run_is_not_authority"
+    ],
+    "047-source-input-0-sha-drift.json": [
+      "source_inputs_mismatch"
+    ],
+    "048-source-input-1-sha-drift.json": [
+      "source_inputs_mismatch"
+    ],
+    "049-source-input-2-sha-drift.json": [
+      "source_inputs_mismatch"
+    ],
+    "050-source-input-3-sha-drift.json": [
+      "source_inputs_mismatch"
+    ],
+    "051-source-input-4-sha-drift.json": [
+      "source_inputs_mismatch"
+    ],
+    "052-source-input-5-sha-drift.json": [
+      "source_inputs_mismatch"
+    ],
+    "053-source-status-0-drift.json": [
+      "source_statuses_mismatch"
+    ],
+    "054-source-status-1-drift.json": [
+      "source_statuses_mismatch"
+    ],
+    "055-source-status-2-drift.json": [
+      "source_statuses_mismatch"
+    ],
+    "056-source-status-3-drift.json": [
+      "source_statuses_mismatch"
+    ],
+    "057-top-level-slice_id.json": [
+      "slice_id_mismatch"
+    ],
+    "058-top-level-blind_run_version.json": [
+      "blind_run_version_mismatch"
+    ],
+    "059-top-level-truth_boundary.json": [
+      "truth_boundary_mismatch"
+    ],
+    "060-top-level-purpose.json": [
+      "purpose_mismatch"
+    ],
+    "061-top-level-write_scope.json": [
+      "write_scope_mismatch"
+    ],
+    "062-top-level-read_only_sources.json": [
+      "read_only_sources_mismatch"
+    ],
+    "063-top-level-required_capture_count.json": [
+      "required_capture_count_mismatch"
+    ],
+    "064-receipt-formal_vault_accessed.json": [
+      "blind_run_receipt_flag_not_false:formal_vault_accessed"
+    ],
+    "065-receipt-approval_collected_now.json": [
+      "blind_run_receipt_flag_not_false:approval_collected_now"
+    ],
+    "066-receipt-user_instruction_collected.json": [
+      "blind_run_receipt_flag_not_false:user_instruction_collected"
+    ],
+    "067-receipt-user_wording_stored.json": [
+      "blind_run_receipt_flag_not_false:user_wording_stored"
+    ],
+    "068-receipt-execution_permission_granted.json": [
+      "blind_run_receipt_flag_not_false:execution_permission_granted"
+    ],
+    "069-receipt-execution_performed.json": [
+      "blind_run_receipt_flag_not_false:execution_performed"
+    ],
+    "070-receipt-write_performed.json": [
+      "blind_run_receipt_flag_not_false:write_performed"
+    ],
+    "071-receipt-sync_performed.json": [
+      "blind_run_receipt_flag_not_false:sync_performed"
+    ],
+    "072-receipt-commit_performed.json": [
+      "blind_run_receipt_flag_not_false:commit_performed"
+    ],
+    "073-receipt-push_performed.json": [
+      "blind_run_receipt_flag_not_false:push_performed"
+    ],
+    "074-receipt-promotion_performed.json": [
+      "blind_run_receipt_flag_not_false:promotion_performed"
+    ],
+    "075-receipt-mainline_ready.json": [
+      "blind_run_receipt_flag_not_false:mainline_ready"
+    ],
+    "076-receipt-blind_run_used_as_action_basis.json": [
+      "blind_run_receipt_flag_not_false:blind_run_used_as_action_basis"
+    ],
+    "077-receipt-dirty_tree_fixed.json": [
+      "blind_run_receipt_flag_not_false:dirty_tree_fixed"
+    ],
+    "078-receipt-auto_advanced.json": [
+      "blind_run_receipt_flag_not_false:auto_advanced"
+    ],
+    "079-missing-non-claim-not-action-basis.json": [
+      "blind_run_receipt_non_claims_missing"
+    ],
+    "080-missing-non-claim-not-actual-approval.json": [
+      "blind_run_receipt_non_claims_missing"
+    ],
+    "081-missing-non-claim-not-auto-advance.json": [
+      "blind_run_receipt_non_claims_missing"
+    ],
+    "082-missing-non-claim-not-command-surface.json": [
+      "blind_run_receipt_non_claims_missing"
+    ],
+    "083-missing-non-claim-not-dirty-tree-repair.json": [
+      "blind_run_receipt_non_claims_missing"
+    ],
+    "084-missing-non-claim-not-evidence-support.json": [
+      "blind_run_receipt_non_claims_missing"
+    ],
+    "085-missing-non-claim-not-execution-permission.json": [
+      "blind_run_receipt_non_claims_missing"
+    ],
+    "086-missing-non-claim-not-formal-vault-access.json": [
+      "blind_run_receipt_non_claims_missing"
+    ],
+    "087-missing-non-claim-not-formal-vault-approval.json": [
+      "blind_run_receipt_non_claims_missing"
+    ],
+    "088-missing-non-claim-not-formal-vault-state.json": [
+      "blind_run_receipt_non_claims_missing"
+    ],
+    "089-missing-non-claim-not-mainline-readiness.json": [
+      "blind_run_receipt_non_claims_missing"
+    ],
+    "090-missing-non-claim-not-merge-approval.json": [
+      "blind_run_receipt_non_claims_missing"
+    ],
+    "091-missing-non-claim-not-reviewed-knowledge.json": [
+      "blind_run_receipt_non_claims_missing"
+    ],
+    "092-missing-non-claim-not-user-instruction.json": [
+      "blind_run_receipt_non_claims_missing"
+    ],
+    "093-missing-non-claim-not-user-wording-storage.json": [
+      "blind_run_receipt_non_claims_missing"
+    ],
+    "094-receipt-hash-mismatch.json": [
+      "blind_run_receipt_hash_mismatch"
+    ],
+    "095-capture-blind_read_only_recovery-bad-decision.json": [
+      "capture_decision_mismatch"
+    ],
+    "096-capture-blind_read_only_recovery-unsafe-flag.json": [
+      "capture_safe_decision_not_true"
+    ],
+    "097-capture-blind_read_only_recovery-command.json": [
+      "capture_operation_not_false:command_emitted"
+    ],
+    "098-capture-blind_read_only_recovery-authority-confusion.json": [
+      "capture_non_authority_not_true"
+    ],
+    "099-capture-blind_formal_vault_boundary_stop-bad-decision.json": [
+      "capture_decision_mismatch"
+    ],
+    "100-capture-blind_formal_vault_boundary_stop-unsafe-flag.json": [
+      "capture_safe_decision_not_true"
+    ],
+    "101-capture-blind_formal_vault_boundary_stop-command.json": [
+      "capture_operation_not_false:command_emitted"
+    ],
+    "102-capture-blind_formal_vault_boundary_stop-authority-confusion.json": [
+      "capture_non_authority_not_true"
+    ],
+    "103-capture-blind_fresh_sandbox_continuation-bad-decision.json": [
+      "capture_decision_mismatch"
+    ],
+    "104-capture-blind_fresh_sandbox_continuation-unsafe-flag.json": [
+      "capture_safe_decision_not_true"
+    ],
+    "105-capture-blind_fresh_sandbox_continuation-command.json": [
+      "capture_operation_not_false:command_emitted"
+    ],
+    "106-capture-blind_fresh_sandbox_continuation-authority-confusion.json": [
+      "capture_non_authority_not_true"
+    ]
+  }
+}

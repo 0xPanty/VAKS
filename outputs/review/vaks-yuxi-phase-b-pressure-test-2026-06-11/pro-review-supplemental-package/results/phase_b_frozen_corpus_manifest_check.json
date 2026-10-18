@@ -1,0 +1,31 @@
+{
+  "frozen_corpus_manifest_check_status": "pass",
+  "error_count": 0,
+  "errors": [],
+  "artifacts": {
+    "artifacts": [
+      {
+        "path": "results\\phase_b_frozen_corpus_manifest.json",
+        "exists": true,
+        "bytes": 2517782
+      },
+      {
+        "path": "results\\phase_b_frozen_corpus_manifest.csv",
+        "exists": true,
+        "bytes": 1552890
+      },
+      {
+        "path": "PHASE_B_FROZEN_CORPUS_MANIFEST.md",
+        "exists": true,
+        "bytes": 1040
+      }
+    ]
+  },
+  "manifest": {
+    "manifest_rows": 4793,
+    "current_rows": 4793,
+    "primary_files": 409,
+    "full_files": 4384,
+    "record_mismatch_count": 0
+  }
+}

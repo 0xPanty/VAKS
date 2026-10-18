@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-public-web-extraction-bundle.json",
+  "scenario_id": "private-web-no-auth",
+  "expected_valid": false,
+  "expected_codes": ["RP_PRIVATE_ACCESS_UNAUTHORIZED"],
+  "patch": {"original": {"access_mode": "private_account", "private_or_account_content": true, "explicit_user_authorization": false}}
+}

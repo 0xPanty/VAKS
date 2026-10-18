@@ -1,0 +1,8 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "protected-path-write",
+  "expected_valid": false,
+  "expected_codes": ["US_PROTECTED_PATH_TARGET"],
+  "allowed_extra_codes": ["US_WRITE_PATH_OUTSIDE_SLICE"],
+  "patch": {"scope": {"allowed_write_paths": ["templates/query-run.md"]}}
+}

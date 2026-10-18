@@ -1,0 +1,1 @@
+{"alias_target_exists":false,"allowed":false,"case_id":"internal_junction_alias_fallback_to_released","created":false,"junction_ok":true,"junction_status":"available","path_errors":[],"validation_valid_before_alias":true,"violation":false,"write_error_class":"RuntimeError"}

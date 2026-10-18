@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "badge-display-not-only",
+  "expected_valid": false,
+  "expected_codes": ["US_BADGE_DISPLAY_ONLY_REQUIRED"],
+  "patch": {"layer_badges": {"display_only": false}}
+}

@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "boundary-reviewed-write-allowed",
+  "expected_valid": false,
+  "expected_codes": ["MB_REVIEWED_WRITE_FORBIDDEN"],
+  "patch": {"boundary": {"reviewed_write_allowed": true}}
+}

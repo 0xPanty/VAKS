@@ -1,0 +1,11 @@
+{
+  "input_text": "A",
+  "case_id": "explicit_A",
+  "expected_result": "A_keep_sandbox_reference",
+  "expected_safe_next_step": "acknowledge_sandbox_reference_only",
+  "automatic_execution": false,
+  "requires_clarification": false,
+  "requires_new_scope": false,
+  "requires_separate_user_approval": false,
+  "requires_explicit_allowed_paths": false
+}

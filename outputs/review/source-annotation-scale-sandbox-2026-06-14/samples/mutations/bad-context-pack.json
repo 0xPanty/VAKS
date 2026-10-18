@@ -1,0 +1,12 @@
+context_pack_id: ctx-mut-bad-support-ref
+selected_items:
+- ref: samples/annotations/ann-web-001.md
+  record_kind: source_annotation
+  pack_role: support
+  warning_code: annotation_not_support
+  action_basis_allowed: false
+coverage_map:
+- claim: annotations can prove support
+  support_refs:
+  - samples/annotations/ann-web-001.md
+warnings: []

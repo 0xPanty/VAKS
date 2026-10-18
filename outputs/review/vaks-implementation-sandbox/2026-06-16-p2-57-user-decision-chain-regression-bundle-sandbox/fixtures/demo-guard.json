@@ -1,0 +1,17 @@
+{
+  "fixture_kind": "demo_guard_expected",
+  "scenario_count": 9,
+  "demo_safe": true,
+  "must_not": [
+    "execute_option",
+    "merge_mainline",
+    "promote",
+    "sync_obsidian",
+    "commit",
+    "push",
+    "write_reviewed_knowledge",
+    "create_evidence_support",
+    "create_action_basis",
+    "start_future_slice_by_inference"
+  ]
+}

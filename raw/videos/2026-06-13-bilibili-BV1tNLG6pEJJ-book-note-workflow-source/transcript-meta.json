@@ -1,0 +1,57 @@
+{
+  "record_kind": "transcript_metadata",
+  "source_id": "bilibili-BV1tNLG6pEJJ",
+  "source_url": "https://www.bilibili.com/video/BV1tNLG6pEJJ/",
+  "title": "如何用一套流程搞定读书笔记 ：2 年读书笔记实践分享",
+  "platform": "bilibili",
+  "platform_id": "BV1tNLG6pEJJ",
+  "aid": 116584421136502,
+  "cid": 38381748273,
+  "author": "reminds_AI卡片笔记",
+  "published_at": "2026-05-16 21:14:14 +08:00",
+  "duration_seconds": 558,
+  "captured_at": "2026-06-13 20:33:04 +08:00",
+  "access_boundary": "public_no_cookies",
+  "subtitle_probe": {
+    "public_subtitles_found": false,
+    "need_login_subtitle": true,
+    "method": "bilibili player/v2 subtitle list"
+  },
+  "asr": {
+    "engine": "openai-whisper",
+    "package_invocation": "python -m whisper",
+    "model": "small",
+    "language": "Chinese",
+    "task": "transcribe",
+    "device": "cuda",
+    "fp16": true,
+    "cloud_api_used": false,
+    "cookies_used": false,
+    "transcript_quality": "medium",
+    "caveat": "ASR has obvious Chinese proper-noun errors; tool names and book names require key-entity confidence checks."
+  },
+  "input_media": {
+    "public_dash_audio_id": 30280,
+    "audio_mime": "audio/mp4",
+    "audio_codecs": "mp4a.40.2",
+    "scratch_audio_m4s": "C:\\Users\\Administrator\\.codex\\video-research\\2026-06-13-bilibili-BV1tNLG6pEJJ\\audio.m4s",
+    "scratch_audio_wav": "C:\\Users\\Administrator\\.codex\\video-research\\2026-06-13-bilibili-BV1tNLG6pEJJ\\audio.wav",
+    "media_retention_policy": "delete_scratch_media_after_project_visible_artifacts_and_sync_verify",
+    "media_retention_status": "scratch_audio_and_playurl_deleted_after_sync_verify"
+  },
+  "project_visible_artifacts": {
+    "transcript": "raw/videos/2026-06-13-bilibili-BV1tNLG6pEJJ-book-note-workflow-source/transcript.txt",
+    "segments_md": "raw/videos/2026-06-13-bilibili-BV1tNLG6pEJJ-book-note-workflow-source/segments.md",
+    "segments_json": "raw/videos/2026-06-13-bilibili-BV1tNLG6pEJJ-book-note-workflow-source/segments.json",
+    "transcript_srt": "raw/videos/2026-06-13-bilibili-BV1tNLG6pEJJ-book-note-workflow-source/transcript.srt",
+    "sha256": {
+      "segments.md": "e36e0129833ab95e9cd9e8e8d442001ab8cad80b19426d832751cbcc6c44b906",
+      "transcript.srt": "badd1a85b86df0c0941af975fd48536193b787cf27f50398724f47e4b8e19d74",
+      "segments.json": "3650b191923babc175272dac798ee0aa89205d1d5d9d1df2ff701abf0016b3d1",
+      "transcript.txt": "4a71caad9b01c65210be76961b2bcc95e3aa6f1d2c30f02d246f476ce8229ee0"
+    }
+  },
+  "candidate_only": true,
+  "action_basis_allowed": false,
+  "truth_mutation_allowed": false
+}

@@ -1,0 +1,5 @@
+{
+  "fixture": "post-response-sandbox-only",
+  "expected_next_container": "later sandbox-only intake slice",
+  "expected": true
+}

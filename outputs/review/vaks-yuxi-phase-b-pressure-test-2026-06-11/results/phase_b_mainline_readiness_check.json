@@ -1,0 +1,63 @@
+{
+  "mainline_readiness_status": "pass",
+  "error_count": 0,
+  "errors": [],
+  "artifacts": [
+    {
+      "path": "PHASE_B_MAINLINE_READINESS_PACKET.md",
+      "exists": true,
+      "bytes": 7373
+    },
+    {
+      "path": "PHASE_B_MAINLINE_READINESS_DECISION.md",
+      "exists": true,
+      "bytes": 2173
+    },
+    {
+      "path": "PHASE_B_INTEGRATION_READINESS_CHECK.md",
+      "exists": true,
+      "bytes": 1127
+    },
+    {
+      "path": "PHASE_B_INTEGRATION_READINESS_DECISION.md",
+      "exists": true,
+      "bytes": 2513
+    },
+    {
+      "path": "PHASE_B_CONTRACT_TEST_DECISION.md",
+      "exists": true,
+      "bytes": 2736
+    },
+    {
+      "path": "results/phase_b_integration_readiness_check.json",
+      "exists": true,
+      "bytes": 4510
+    },
+    {
+      "path": "results/phase_b_adapter_contract_test.json",
+      "exists": true,
+      "bytes": 2276
+    }
+  ],
+  "packet": {
+    "bytes": 7373
+  },
+  "readiness": {
+    "readiness_status": "pass",
+    "error_count": 0
+  },
+  "contract": {
+    "contract_status": "pass",
+    "error_count": 0
+  },
+  "core_docs": {
+    "returncode": 0,
+    "dirty": [
+      " M DEV_CONTEXT.md",
+      " M IMPLEMENTATION_BLUEPRINT.md",
+      " M MEMORY_TIER.md",
+      " M SOURCE_INTAKE.md"
+    ],
+    "approved_patch_dirty": true
+  }
+}

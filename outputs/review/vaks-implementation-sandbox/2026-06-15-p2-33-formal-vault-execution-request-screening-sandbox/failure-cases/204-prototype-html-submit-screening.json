@@ -1,0 +1,22 @@
+{
+  "case_id": "prototype-html-submit-screening",
+  "note": "HTML contains send action label.",
+  "prototype_tamper": {
+    "kind": "html_replace",
+    "file": "request-screening-inspector.html",
+    "content": "<html><body><button>Submit screening to gate</button></body></html>"
+  },
+  "expected_errors": [
+    "prototype_text_authority_confusion:request-screening-inspector.html:submit_screening",
+    "html_missing_attr:data-sandbox-only=\"true\"",
+    "html_missing_attr:data-screening-only=\"true\"",
+    "html_missing_attr:data-non-executable=\"true\"",
+    "html_missing_attr:data-no-formal-vault-access=\"true\"",
+    "html_missing_attr:data-no-write=\"true\"",
+    "html_missing_attr:data-no-sync=\"true\"",
+    "html_missing_attr:data-no-authority=\"true\"",
+    "html_missing_attr:data-no-permission=\"true\"",
+    "html_missing_attr:data-no-actual-user-wording=\"true\"",
+    "html_missing_attr:data-no-submission=\"true\""
+  ]
+}

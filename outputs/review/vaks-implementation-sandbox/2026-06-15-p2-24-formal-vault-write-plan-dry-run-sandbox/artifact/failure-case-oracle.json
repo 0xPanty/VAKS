@@ -1,0 +1,194 @@
+[
+  {
+    "file": "01-forbidden-formal_vault_read.json",
+    "expected_failures": [
+      "forbidden_operation:formal_vault_read"
+    ]
+  },
+  {
+    "file": "02-forbidden-formal_vault_scan.json",
+    "expected_failures": [
+      "forbidden_operation:formal_vault_scan"
+    ]
+  },
+  {
+    "file": "03-forbidden-formal_vault_write.json",
+    "expected_failures": [
+      "forbidden_operation:formal_vault_write"
+    ]
+  },
+  {
+    "file": "04-forbidden-obsidian_sync.json",
+    "expected_failures": [
+      "forbidden_operation:obsidian_sync"
+    ]
+  },
+  {
+    "file": "05-forbidden-commit.json",
+    "expected_failures": [
+      "forbidden_operation:commit"
+    ]
+  },
+  {
+    "file": "06-forbidden-push.json",
+    "expected_failures": [
+      "forbidden_operation:push"
+    ]
+  },
+  {
+    "file": "07-forbidden-promotion.json",
+    "expected_failures": [
+      "forbidden_operation:promotion"
+    ]
+  },
+  {
+    "file": "08-forbidden-dependency_install.json",
+    "expected_failures": [
+      "forbidden_operation:dependency_install"
+    ]
+  },
+  {
+    "file": "09-forbidden-background_service.json",
+    "expected_failures": [
+      "forbidden_operation:background_service"
+    ]
+  },
+  {
+    "file": "10-forbidden-mcp_write_tool.json",
+    "expected_failures": [
+      "forbidden_operation:mcp_write_tool"
+    ]
+  },
+  {
+    "file": "11-forbidden-hooks.json",
+    "expected_failures": [
+      "forbidden_operation:hooks"
+    ]
+  },
+  {
+    "file": "12-forbidden-real_base_files.json",
+    "expected_failures": [
+      "forbidden_operation:real_base_files"
+    ]
+  },
+  {
+    "file": "13-forbidden-production_ui.json",
+    "expected_failures": [
+      "forbidden_operation:production_ui"
+    ]
+  },
+  {
+    "file": "14-forbidden-local_storage_write.json",
+    "expected_failures": [
+      "forbidden_operation:local_storage_write"
+    ]
+  },
+  {
+    "file": "15-forbidden-network_post.json",
+    "expected_failures": [
+      "forbidden_operation:network_post"
+    ]
+  },
+  {
+    "file": "16-absolute-formal-target.json",
+    "expected_failures": [
+      "proposed_file_absolute_or_forbidden:native_home"
+    ]
+  },
+  {
+    "file": "17-write-enabled-target.json",
+    "expected_failures": [
+      "proposed_file_write_enabled:native_home"
+    ]
+  },
+  {
+    "file": "18-missing-user-approval.json",
+    "expected_failures": [
+      "proposed_file_missing_user_approval:native_home"
+    ]
+  },
+  {
+    "file": "19-auto-approval-prompt.json",
+    "expected_failures": [
+      "approval_prompt_not_deny:approve_formal_vault_write_scope"
+    ]
+  },
+  {
+    "file": "20-missing-rollback-snapshot.json",
+    "expected_failures": [
+      "rollback_snapshot_missing"
+    ]
+  },
+  {
+    "file": "21-missing-hash-before.json",
+    "expected_failures": [
+      "hash_before_missing"
+    ]
+  },
+  {
+    "file": "22-executable-command-template.json",
+    "expected_failures": [
+      "hash_plan_executable_command"
+    ]
+  },
+  {
+    "file": "23-authority-confusing-stop.json",
+    "expected_failures": [
+      "authority_confusing_text"
+    ]
+  },
+  {
+    "file": "24-approval-missing-file-binding.json",
+    "expected_failures": [
+      "approval_prompt_missing_file_binding:approve_formal_vault_write_scope"
+    ]
+  },
+  {
+    "file": "25-approval-missing-plan-hash.json",
+    "expected_failures": [
+      "approval_prompt_missing_plan_hash:approve_formal_vault_write_scope"
+    ]
+  },
+  {
+    "file": "26-rollback-file-entries-missing.json",
+    "expected_failures": [
+      "rollback_file_entries_missing"
+    ]
+  },
+  {
+    "file": "27-rollback-dirty-abort-missing.json",
+    "expected_failures": [
+      "rollback_dirty_state_abort_missing"
+    ]
+  },
+  {
+    "file": "28-hash-records-missing.json",
+    "expected_failures": [
+      "hash_records_missing"
+    ]
+  },
+  {
+    "file": "29-hash-rollback-verify-missing.json",
+    "expected_failures": [
+      "hash_rollback_verification_missing"
+    ]
+  },
+  {
+    "file": "30-too-few-failure-cases.json",
+    "expected_failures": [
+      "minimum_failure_cases_too_low"
+    ]
+  },
+  {
+    "file": "31-missing-source-path-binding.json",
+    "expected_failures": [
+      "proposed_file_source_path_missing:native_home"
+    ]
+  },
+  {
+    "file": "32-source-hash-mismatch.json",
+    "expected_failures": [
+      "proposed_file_source_hash_mismatch:native_home"
+    ]
+  }
+]

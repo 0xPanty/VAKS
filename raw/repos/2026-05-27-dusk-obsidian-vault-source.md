@@ -1,5 +1,6 @@
 ---
 type: source
+record_kind: source_card
 status: source-captured
 title: "DuskWasHere/dusk-obsidian-vault source review"
 source_url: "https://github.com/DuskWasHere/dusk-obsidian-vault"
@@ -7,7 +8,6 @@ source_type: repo
 captured_at: 2026-05-27
 captured_by: Codex
 raw_location: "temporary clone: %TEMP%/codex-dusk-obsidian-vault"
-processing_mode: immediate
 review_priority: normal
 review_owner: Codex
 formalization_status: candidate-generated
@@ -22,7 +22,7 @@ projects:
   - verified-action-knowledge-system
 source_family: obsidian-vault-template
 verification_status: single-source
-relations:
+candidate_relation_suggestions:
   - target: "[[2026-05-27-dusk-obsidian-vault-architecture-review]]"
     type: derived_from
     strength: 5
@@ -39,8 +39,19 @@ tags:
   - vault-template
   - dev-context
   - modularity
+knowledge_status: raw
+processing_tier: light
+source_id: "https://github.com/DuskWasHere/dusk-obsidian-vault"
+why_saved: see_body_or_legacy_record
+retrieval_policy:
+  policy_kind: source_identity_only
+  pack_allowed: drilldown_required
+  action_basis_allowed: false
+  warning_code: raw_is_provenance_only
+promotion_gate: none
+action_basis_allowed: false
+truth_mutation_allowed: false
 ---
-
 # Source Record: DuskWasHere/dusk-obsidian-vault
 
 ## Why captured

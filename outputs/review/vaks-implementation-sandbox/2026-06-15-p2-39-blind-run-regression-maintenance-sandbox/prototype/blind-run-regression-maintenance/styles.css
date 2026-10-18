@@ -1,0 +1,91 @@
+:root {
+  color-scheme: light;
+  font-family: Arial, sans-serif;
+  background: #f7f8fa;
+  color: #171923;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+header {
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #53606f;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.15;
+}
+
+.summary {
+  max-width: 680px;
+  color: #44515f;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #d8dee8;
+  border-radius: 8px;
+  padding: 18px;
+  margin: 16px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  border: 1px solid #d8dee8;
+  border-radius: 8px;
+  padding: 14px;
+  background: #fbfcfe;
+}
+
+.card strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.checklist li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e7ebf0;
+}
+
+.checklist strong {
+  color: #226348;
+}
+
+.notice {
+  border-left: 4px solid #2f6fed;
+  background: #eef4ff;
+  padding: 14px 16px;
+  color: #21314f;
+}

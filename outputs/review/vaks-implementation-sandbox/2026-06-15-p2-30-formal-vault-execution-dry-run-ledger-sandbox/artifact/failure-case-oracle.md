@@ -1,0 +1,148 @@
+# Failure Case Oracle
+
+Case count: 144
+
+- `01-forbidden-formal_vault_read.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:formal_vault_read`
+- `02-forbidden-formal_vault_scan.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:formal_vault_scan`
+- `03-forbidden-formal_vault_write.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:formal_vault_write`
+- `04-forbidden-formal_vault_hash.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:formal_vault_hash`
+- `05-forbidden-formal_vault_snapshot.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:formal_vault_snapshot`
+- `06-forbidden-formal_vault_state_check.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:formal_vault_state_check`
+- `07-forbidden-obsidian_sync.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:obsidian_sync`
+- `08-forbidden-commit.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:commit`
+- `09-forbidden-push.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:push`
+- `10-forbidden-promotion.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:promotion`
+- `11-forbidden-dependency_install.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:dependency_install`
+- `12-forbidden-background_service.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:background_service`
+- `13-forbidden-mcp_write_tool.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:mcp_write_tool`
+- `14-forbidden-hooks.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:hooks`
+- `15-forbidden-real_base_files.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:real_base_files`
+- `16-forbidden-production_ui.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:production_ui`
+- `17-forbidden-local_storage_write.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:local_storage_write`
+- `18-forbidden-network_post.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:network_post`
+- `19-forbidden-actual_approval_collection.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:actual_approval_collection`
+- `20-forbidden-actual_user_approval.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:actual_user_approval`
+- `21-forbidden-actual_user_decision_collection.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:actual_user_decision_collection`
+- `22-forbidden-user_approval_inference.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:user_approval_inference`
+- `23-forbidden-real_user_text_storage.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:real_user_text_storage`
+- `24-forbidden-real_user_text_capture.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:real_user_text_capture`
+- `25-forbidden-write_gate_opening.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:write_gate_opening`
+- `26-forbidden-execution_performed.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:execution_performed`
+- `27-forbidden-snapshot_taken.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:snapshot_taken`
+- `28-forbidden-rollback_executed.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:rollback_executed`
+- `29-forbidden-hash_before_collected.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:hash_before_collected`
+- `30-forbidden-hash_after_collected.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:hash_after_collected`
+- `31-forbidden-action_basis_creation.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:action_basis_creation`
+- `32-forbidden-reviewed_knowledge_creation.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:reviewed_knowledge_creation`
+- `33-forbidden-external_notification.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:external_notification`
+- `34-forbidden-shell_command_emitted.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:shell_command_emitted`
+- `35-forbidden-copy_command_emitted.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:copy_command_emitted`
+- `36-forbidden-absolute_vault_path_resolved.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:absolute_vault_path_resolved`
+- `37-forbidden-ledger_promoted_to_execution_log.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:ledger_promoted_to_execution_log`
+- `38-forbidden-ledger_used_as_action_basis.json` -> `dry_run_ledger_hash_mismatch, forbidden_operation_enabled:ledger_used_as_action_basis`
+- `39-control-sandbox_only-false.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_true:sandbox_only`
+- `40-control-dry_run_only-false.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_true:dry_run_only`
+- `41-control-ledger_only-false.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_true:ledger_only`
+- `42-control-non_executable-false.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_true:non_executable`
+- `43-control-operator_must_stop_before_execution-false.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_true:operator_must_stop_before_execution`
+- `44-control-separate_future_user_confirmation_required-false.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_true:separate_future_user_confirmation_required`
+- `45-control-separate_future_execution_slice_required-false.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_true:separate_future_execution_slice_required`
+- `46-control-validator_is_not_reviewer-false.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_true:validator_is_not_reviewer`
+- `47-control-product_acceptance_is_not_formal_vault_approval-false.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_true:product_acceptance_is_not_formal_vault_approval`
+- `48-control-plan_pass_is_not_execution_permission-false.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_true:plan_pass_is_not_execution_permission`
+- `49-control-dry_run_ledger_is_not_execution_log-false.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_true:dry_run_ledger_is_not_execution_log`
+- `50-control-dirty_state_blocks_execution-false.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_true:dirty_state_blocks_execution`
+- `51-control-execution_allowed_now-true.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_false:execution_allowed_now`
+- `52-control-formal_vault_access_allowed_now-true.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_false:formal_vault_access_allowed_now`
+- `53-control-formal_vault_state_check_allowed_now-true.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_false:formal_vault_state_check_allowed_now`
+- `54-control-formal_vault_write_allowed_now-true.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_false:formal_vault_write_allowed_now`
+- `55-control-formal_vault_hash_allowed_now-true.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_false:formal_vault_hash_allowed_now`
+- `56-control-formal_vault_snapshot_allowed_now-true.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_false:formal_vault_snapshot_allowed_now`
+- `57-control-user_confirmation_collected_now-true.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_false:user_confirmation_collected_now`
+- `58-control-actual_user_text_stored-true.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_false:actual_user_text_stored`
+- `59-control-contains_commands-true.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_false:contains_commands`
+- `60-control-command_export_enabled-true.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_false:command_export_enabled`
+- `61-control-copy_paste_command_enabled-true.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_false:copy_paste_command_enabled`
+- `62-control-absolute_vault_paths_present-true.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_false:absolute_vault_paths_present`
+- `63-control-sync_commit_push_promotion_allowed-true.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_false:sync_commit_push_promotion_allowed`
+- `64-control-ledger_can_be_replayed-true.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_false:ledger_can_be_replayed`
+- `65-control-ledger_is_action_basis-true.json` -> `dry_run_ledger_hash_mismatch, ledger_control_not_false:ledger_is_action_basis`
+- `66-source-hash-1-source_plan_hash.json` -> `dry_run_ledger_hash_mismatch, source_hash_claim_mismatch:source_plan_hash`
+- `67-source-hash-2-source_plan_input_bundle_hash.json` -> `dry_run_ledger_hash_mismatch, source_hash_claim_mismatch:source_plan_input_bundle_hash`
+- `68-source-hash-3-source_target_manifest_hash.json` -> `dry_run_ledger_hash_mismatch, source_hash_claim_mismatch:source_target_manifest_hash`
+- `69-source-hash-4-source_plan_receipt_hash.json` -> `dry_run_ledger_hash_mismatch, source_hash_claim_mismatch:source_plan_receipt_hash`
+- `70-source-hash-5-source_ledger_plan_contract_hash.json` -> `contract_required_plan_contract_hash_mismatch, dry_run_ledger_hash_mismatch, source_hash_claim_mismatch:source_ledger_plan_contract_hash`
+- `71-source-inputs-missing.json` -> `dry_run_ledger_hash_mismatch, source_inputs_mismatch`
+- `72-source-inputs-bad-sha.json` -> `dry_run_ledger_hash_mismatch, source_inputs_mismatch`
+- `73-source-input-bundle-drift.json` -> `dry_run_ledger_hash_mismatch, source_input_bundle_hash_mismatch`
+- `74-read-only-sources-drift-rehashed.json` -> `read_only_sources_mismatch`
+- `75-purpose-authority-confusion-rehashed.json` -> `purpose_mismatch`
+- `76-ledger-mode-drift-rehashed.json` -> `ledger_mode_not_allowed`
+- `77-target-missing-one.json` -> `dry_run_ledger_hash_mismatch, target_manifest_hash_mismatch, target_scope_ids_mismatch`
+- `78-target-extra-one.json` -> `dry_run_ledger_hash_mismatch, target_manifest_hash_mismatch, target_not_in_plan_scope:extra_target, target_scope_ids_mismatch`
+- `79-target-relative-drift.json` -> `dry_run_ledger_hash_mismatch, target_manifest_hash_mismatch, target_relative_target_mismatch:native_home`
+- `80-target-source-path-drift.json` -> `dry_run_ledger_hash_mismatch, target_manifest_hash_mismatch, target_source_path_mismatch:native_home`
+- `81-target-source-hash-drift.json` -> `dry_run_ledger_hash_mismatch, target_manifest_hash_mismatch, target_source_sha256_mismatch:native_home`
+- `82-target-absolute-path.json` -> `dangerous_value:$.target_manifest[0].relative_target:absolute_formal_vault_path, dry_run_ledger_hash_mismatch, target_manifest_hash_mismatch, target_relative_path_unsafe:native_home, target_relative_target_mismatch:native_home`
+- `83-target-resolved-now.json` -> `dry_run_ledger_hash_mismatch, target_flag_not_false:native_home:formal_vault_target_resolved, target_manifest_hash_mismatch`
+- `84-target-write-enabled-now.json` -> `dry_run_ledger_hash_mismatch, target_flag_not_false:native_home:write_enabled_now, target_manifest_hash_mismatch`
+- `85-target-execution-enabled-now.json` -> `dry_run_ledger_hash_mismatch, target_flag_not_false:native_home:execution_enabled_now, target_manifest_hash_mismatch`
+- `86-target-manifest-hash-drift.json` -> `dry_run_ledger_hash_mismatch, target_manifest_hash_mismatch`
+- `87-contract-kind-drift.json` -> `contract_field_mismatch:contract_kind, dry_run_ledger_hash_mismatch`
+- `88-contract-executes-true.json` -> `contract_field_mismatch:current_slice_executes, dry_run_ledger_hash_mismatch`
+- `89-contract-ledger-action-basis.json` -> `contract_field_mismatch:ledger_is_not_action_basis, dry_run_ledger_hash_mismatch`
+- `90-contract-plan-hash-drift.json` -> `contract_required_plan_hash_mismatch, dry_run_ledger_hash_mismatch`
+- `91-entries-missing-one.json` -> `dry_run_ledger_hash_mismatch, ledger_entry_ids_mismatch, ledger_entry_sequence_mismatch`
+- `92-entries-extra-one.json` -> `dry_run_ledger_hash_mismatch, ledger_entry_ids_mismatch, ledger_entry_result_mismatch:extra_entry, ledger_entry_review_question_mismatch:extra_entry, ledger_entry_sequence_mismatch, ledger_entry_source_step_mismatch:extra_entry`
+- `93-entry-sequence-drift.json` -> `dry_run_ledger_hash_mismatch, ledger_entry_sequence_mismatch`
+- `94-entry-result-executable.json` -> `dry_run_ledger_hash_mismatch, ledger_entry_result_mismatch:source_binding_reconfirm`
+- `95-entry-review-question-drift.json` -> `ledger_entry_review_question_mismatch:source_binding_reconfirm`
+- `96-entry-perform-now.json` -> `dry_run_ledger_hash_mismatch, ledger_entry_flag_not_false:source_binding_reconfirm:perform_now`
+- `97-entry-writes-now.json` -> `dry_run_ledger_hash_mismatch, ledger_entry_flag_not_false:source_binding_reconfirm:writes_now`
+- `98-entry-vault-access-now.json` -> `dry_run_ledger_hash_mismatch, ledger_entry_flag_not_false:source_binding_reconfirm:formal_vault_access_now`
+- `99-entry-state-check-now.json` -> `dry_run_ledger_hash_mismatch, ledger_entry_flag_not_false:source_binding_reconfirm:formal_vault_state_check_now`
+- `100-entry-hash-now.json` -> `dry_run_ledger_hash_mismatch, ledger_entry_flag_not_false:source_binding_reconfirm:hash_now`
+- `101-entry-snapshot-now.json` -> `dry_run_ledger_hash_mismatch, ledger_entry_flag_not_false:source_binding_reconfirm:snapshot_now`
+- `102-entry-sync-now.json` -> `dry_run_ledger_hash_mismatch, ledger_entry_flag_not_false:source_binding_reconfirm:sync_now`
+- `103-entry-command-present.json` -> `dangerous_value:$.ledger_entries[0].command:copy_item, dry_run_ledger_hash_mismatch, ledger_entry_forbidden_field_nonempty:source_binding_reconfirm:command`
+- `104-entry-absolute-target-present.json` -> `dangerous_value:$.ledger_entries[0].absolute_target_path:absolute_formal_vault_path, dry_run_ledger_hash_mismatch, ledger_entry_forbidden_field_nonempty:source_binding_reconfirm:absolute_target_path`
+- `105-entry-copy-tool-present.json` -> `dangerous_value:$.ledger_entries[0].copy_tool:copy_item, dry_run_ledger_hash_mismatch, ledger_entry_forbidden_field_nonempty:source_binding_reconfirm:copy_tool`
+- `106-entry-non-claim-drift.json` -> `dry_run_ledger_hash_mismatch, ledger_entry_non_claim_mismatch:source_binding_reconfirm`
+- `107-sample-ledger-replayable.json` -> `dry_run_ledger_hash_mismatch, ledger_sample_flag_not_false:synthetic_approved_plan_ledger:ledger_replayable`
+- `108-sample-ledger-created-false-rehashed.json` -> `ledger_sample_created_mismatch:synthetic_approved_plan_ledger`
+- `109-sample-source-scenario-drift-rehashed.json` -> `ledger_sample_source_scenario_mismatch:synthetic_approved_plan_ledger`
+- `110-sample-ledger-mode-drift-rehashed.json` -> `ledger_sample_mode_mismatch:synthetic_approved_plan_ledger`
+- `111-sample-ledger-execution-log.json` -> `dry_run_ledger_hash_mismatch, ledger_sample_flag_not_false:synthetic_approved_plan_ledger:ledger_is_execution_log`
+- `112-sample-executes.json` -> `dry_run_ledger_hash_mismatch, ledger_sample_flag_not_false:synthetic_approved_plan_ledger:execution_performed`
+- `113-sample-writes.json` -> `dry_run_ledger_hash_mismatch, ledger_sample_flag_not_false:synthetic_approved_plan_ledger:formal_vault_write_allowed_now`
+- `114-sample-action-basis.json` -> `dry_run_ledger_hash_mismatch, ledger_sample_flag_not_false:synthetic_approved_plan_ledger:action_basis_created`
+- `115-sample-real-user-input.json` -> `dry_run_ledger_hash_mismatch, ledger_sample_flag_not_false:synthetic_approved_plan_ledger:actual_user_input`
+- `116-sample-scope-ids-drift.json` -> `dry_run_ledger_hash_mismatch, ledger_sample_scope_ids_mismatch:synthetic_approved_plan_ledger`
+- `117-receipt-vault-accessed.json` -> `dry_run_ledger_hash_mismatch, receipt_flag_not_false:formal_vault_accessed`
+- `118-receipt-executed.json` -> `dry_run_ledger_hash_mismatch, receipt_flag_not_false:execution_performed`
+- `119-receipt-write-performed.json` -> `dry_run_ledger_hash_mismatch, receipt_flag_not_false:write_performed`
+- `120-receipt-ledger-replayed.json` -> `dry_run_ledger_hash_mismatch, receipt_flag_not_false:ledger_replayed`
+- `121-receipt-action-basis.json` -> `dry_run_ledger_hash_mismatch, receipt_flag_not_false:ledger_used_as_action_basis`
+- `122-receipt-status-drift.json` -> `dry_run_ledger_hash_mismatch, receipt_status_mismatch`
+- `123-receipt-non-claims-missing.json` -> `dry_run_ledger_hash_mismatch, receipt_non_claims_missing`
+- `124-stop-conditions-command-replaced-rehashed.json` -> `dangerous_value:$.stop_conditions[0]:absolute_formal_vault_path, dangerous_value:$.stop_conditions[0]:copy_item, stop_conditions_mismatch`
+- `125-stop-conditions-order-reversed-rehashed.json` -> `stop_conditions_mismatch`
+- `126-max-journey-steps-drift-rehashed.json` -> `product_metric_max_journey_steps_mismatch`
+- `127-unknown-top-level-command.json` -> `dangerous_value:$.shell_command:absolute_formal_vault_path, dangerous_value:$.shell_command:copy_item, dry_run_ledger_hash_mismatch, unknown_key:config:shell_command, unknown_top_level_key:shell_command`
+- `128-unknown-top-level-safe.json` -> `dry_run_ledger_hash_mismatch, unknown_key:config:operator_note, unknown_top_level_key:operator_note`
+- `129-unknown-entry-field.json` -> `dangerous_value:$.ledger_entries[0].shell_command:copy_item, dry_run_ledger_hash_mismatch, unknown_key:ledger_entries[source_binding_reconfirm]:shell_command`
+- `130-unknown-receipt-field.json` -> `dangerous_value:$.non_execution_ledger_receipt.write_command:copy_item, dry_run_ledger_hash_mismatch, unknown_key:non_execution_ledger_receipt:write_command`
+- `131-ledger-hash-drift.json` -> `dry_run_ledger_hash_mismatch`
+- `132-metric-floor-too-low.json` -> `dry_run_ledger_hash_mismatch, product_metric_failure_case_floor_too_low`
+- `133-prototype-markdown-command.json` -> `prototype_text_dangerous:00 Dry Run Ledger Home.md:copy_item, prototype_text_dangerous:00 Dry Run Ledger Home.md:absolute_formal_vault_path`
+- `134-prototype-markdown-ready-execute.json` -> `prototype_text_authority_confusion:01 Ledger Contract.md:ready_to_execute`
+- `135-prototype-markdown-action-basis.json` -> `prototype_text_authority_confusion:02 Ledger Entries.md:is_action_basis`
+- `136-prototype-receipt-unknown-command.json` -> `dangerous_value:$.prototype_receipt.shell_command:absolute_formal_vault_path, dangerous_value:$.prototype_receipt.shell_command:copy_item, unknown_key:prototype_receipt:shell_command`
+- `137-prototype-receipt-hash-drift.json` -> `prototype_receipt_ledger_hash_mismatch`
+- `138-prototype-receipt-non-claims-missing.json` -> `prototype_receipt_non_claims_missing`
+- `139-prototype-receipt-entry-count-drift.json` -> `prototype_receipt_entry_count_mismatch`
+- `140-prototype-receipt-target-count-drift.json` -> `prototype_receipt_target_count_mismatch`
+- `141-prototype-receipt-slice-id-drift.json` -> `prototype_receipt_slice_id_mismatch`
+- `142-prototype-receipt-source-slice-drift.json` -> `prototype_receipt_source_slice_mismatch`
+- `143-prototype-receipt-record-kind-drift.json` -> `prototype_receipt_record_kind_mismatch`
+- `144-prototype-receipt-action-basis.json` -> `prototype_receipt_flag_not_false:ledger_used_as_action_basis`

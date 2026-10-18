@@ -1,0 +1,418 @@
+[
+  {
+    "name": "AdminDashboardView-C43TreDc.js",
+    "url": "https://timefriend.xin/assets/AdminDashboardView-C43TreDc.js",
+    "file": "assets/AdminDashboardView-C43TreDc.js",
+    "status": "ok",
+    "bytes": 226791,
+    "sha256": "29300808D0BFC074AE6BBA27F67D5EFE0C602EDF4D3FBC5B5E895CAB00CF8DC8"
+  },
+  {
+    "name": "AdminDashboardView-CzbN2ASm.css",
+    "url": "https://timefriend.xin/assets/AdminDashboardView-CzbN2ASm.css",
+    "file": "assets/AdminDashboardView-CzbN2ASm.css",
+    "status": "exists",
+    "bytes": 7723,
+    "sha256": "9C4E6BEC8615A18A6B4C5C74C5CB8969A334812DF36CE298B75A19772101C509"
+  },
+  {
+    "name": "AdminLoginView-BuRi257i.css",
+    "url": "https://timefriend.xin/assets/AdminLoginView-BuRi257i.css",
+    "file": "assets/AdminLoginView-BuRi257i.css",
+    "status": "exists",
+    "bytes": 976,
+    "sha256": "92A44774EBABC78152B3F32C76EEC0D4E41B6F57A25670A3509963E2EA0E7180"
+  },
+  {
+    "name": "AdminLoginView-Q00dQOkb.js",
+    "url": "https://timefriend.xin/assets/AdminLoginView-Q00dQOkb.js",
+    "file": "assets/AdminLoginView-Q00dQOkb.js",
+    "status": "exists",
+    "bytes": 4457,
+    "sha256": "9BDD82C49E14EC35EECE1AAEE63638442C5EC9B2F2518E370F026006FFE61E58"
+  },
+  {
+    "name": "AnalyticsView-BGsg6F--.css",
+    "url": "https://timefriend.xin/assets/AnalyticsView-BGsg6F--.css",
+    "file": "assets/AnalyticsView-BGsg6F--.css",
+    "status": "exists",
+    "bytes": 15642,
+    "sha256": "791074EA4021BD93B4EE12F68AE5F0D57015C8872F1CAB226B1396D068B72543"
+  },
+  {
+    "name": "AnalyticsView-BzNO0CcO.js",
+    "url": "https://timefriend.xin/assets/AnalyticsView-BzNO0CcO.js",
+    "file": "assets/AnalyticsView-BzNO0CcO.js",
+    "status": "exists",
+    "bytes": 343171,
+    "sha256": "7CB58562918759EA78298774439D646972ED2986C2F7B3A63ABCB4A33A497727"
+  },
+  {
+    "name": "CompletedTasksView-BFRd_QWw.js",
+    "url": "https://timefriend.xin/assets/CompletedTasksView-BFRd_QWw.js",
+    "file": "assets/CompletedTasksView-BFRd_QWw.js",
+    "status": "ok",
+    "bytes": 10842,
+    "sha256": "8011C74F37DF1C297788C51F7C0CA5556720A9809050E2F56882DC6E377D858A"
+  },
+  {
+    "name": "CompletedTasksView-Di3dXGKB.css",
+    "url": "https://timefriend.xin/assets/CompletedTasksView-Di3dXGKB.css",
+    "file": "assets/CompletedTasksView-Di3dXGKB.css",
+    "status": "ok",
+    "bytes": 7928,
+    "sha256": "8E5B1F83E0FD1076BA1B9BC4046B2143F574150F534890BA0E3AF34C51655001"
+  },
+  {
+    "name": "DiaryView-BpLGed6u.css",
+    "url": "https://timefriend.xin/assets/DiaryView-BpLGed6u.css",
+    "file": "assets/DiaryView-BpLGed6u.css",
+    "status": "ok",
+    "bytes": 115663,
+    "sha256": "530563DC478494DBA68F856DAE2FAB72C5A09A5375827875CAE3FF6601C306E1"
+  },
+  {
+    "name": "DiaryView-Fi9ivshD.js",
+    "url": "https://timefriend.xin/assets/DiaryView-Fi9ivshD.js",
+    "file": "assets/DiaryView-Fi9ivshD.js",
+    "status": "ok",
+    "bytes": 101840,
+    "sha256": "272B697D3AAF56A2A31A13EE6F67BA402664F94B45E8AEB539FFD281CDEE70A8"
+  },
+  {
+    "name": "GapAnalysisView-JTQeSW9m.js",
+    "url": "https://timefriend.xin/assets/GapAnalysisView-JTQeSW9m.js",
+    "file": "assets/GapAnalysisView-JTQeSW9m.js",
+    "status": "ok",
+    "bytes": 9089,
+    "sha256": "1B8A322DD99DF2BC0B3400CCA10AA8FE6C1D4C3756BD115E2B69106B85C9A347"
+  },
+  {
+    "name": "HelpCenterView-BB994cZT.js",
+    "url": "https://timefriend.xin/assets/HelpCenterView-BB994cZT.js",
+    "file": "assets/HelpCenterView-BB994cZT.js",
+    "status": "ok",
+    "bytes": 262419,
+    "sha256": "D44B5FAA9FCAC44E452BA50F7BEE5BF65ADAC4FACD873DE113294E12D93B1783"
+  },
+  {
+    "name": "HelpCenterView-BF-zxCwU.css",
+    "url": "https://timefriend.xin/assets/HelpCenterView-BF-zxCwU.css",
+    "file": "assets/HelpCenterView-BF-zxCwU.css",
+    "status": "ok",
+    "bytes": 80876,
+    "sha256": "2CE8781C32E7545A6FC0BA62EE292928BDF70177F79C91878922DB356F6EAC5C"
+  },
+  {
+    "name": "InboxView-BgMvwLy_.css",
+    "url": "https://timefriend.xin/assets/InboxView-BgMvwLy_.css",
+    "file": "assets/InboxView-BgMvwLy_.css",
+    "status": "ok",
+    "bytes": 57332,
+    "sha256": "E3EAB77FD14DB601FA1A0A0103BC6917A44269819F15A692A8BFD633B18072EF"
+  },
+  {
+    "name": "InboxView-HqvgOLuB.js",
+    "url": "https://timefriend.xin/assets/InboxView-HqvgOLuB.js",
+    "file": "assets/InboxView-HqvgOLuB.js",
+    "status": "ok",
+    "bytes": 52472,
+    "sha256": "00FBB02B8F39C320F0B691B883786C79204393E2BEED8BB3681F8BAF320910D8"
+  },
+  {
+    "name": "index-CelCbz22.js",
+    "url": "https://timefriend.xin/assets/index-CelCbz22.js",
+    "file": "assets/index-CelCbz22.js",
+    "status": "ok",
+    "bytes": 4118,
+    "sha256": "EAA9DD0ECC4896A368739DED70309B136633ED52ED4A01A18CADFDD79AEAA6CB"
+  },
+  {
+    "name": "InsightsView-Cdwcuepg.js",
+    "url": "https://timefriend.xin/assets/InsightsView-Cdwcuepg.js",
+    "file": "assets/InsightsView-Cdwcuepg.js",
+    "status": "ok",
+    "bytes": 14088,
+    "sha256": "C6205A1A2B36B047F57CF6DE40331F108C3E02AD1C3E074B8B045C96CA016EB4"
+  },
+  {
+    "name": "jszip.min-DmNMeufm.js",
+    "url": "https://timefriend.xin/assets/jszip.min-DmNMeufm.js",
+    "file": "assets/jszip.min-DmNMeufm.js",
+    "status": "ok",
+    "bytes": 200188,
+    "sha256": "C395604E8289B49A0B8601B28E91A5629934CE3D0FF7B124A0B5B303345A3BE7"
+  },
+  {
+    "name": "LoginView-0j3KkrBI.js",
+    "url": "https://timefriend.xin/assets/LoginView-0j3KkrBI.js",
+    "file": "assets/LoginView-0j3KkrBI.js",
+    "status": "ok",
+    "bytes": 33540,
+    "sha256": "DBD9C270C13B148C89D630DAE25EC70AAADF1EBFBDB7DE0758FAF71D29AD3807"
+  },
+  {
+    "name": "LoginView-DULq3uNV.css",
+    "url": "https://timefriend.xin/assets/LoginView-DULq3uNV.css",
+    "file": "assets/LoginView-DULq3uNV.css",
+    "status": "ok",
+    "bytes": 7537,
+    "sha256": "DC1E5A873D6BE2F5886B2617006F20E48B6FFF917324FE9E9D43778C9E43B50B"
+  },
+  {
+    "name": "PatternAnalysisView-NCT7DDCI.js",
+    "url": "https://timefriend.xin/assets/PatternAnalysisView-NCT7DDCI.js",
+    "file": "assets/PatternAnalysisView-NCT7DDCI.js",
+    "status": "ok",
+    "bytes": 13197,
+    "sha256": "6367FB9A81B0D32EB1EDD63293EA39AD289F78F901387A4B787464CA0B4679EA"
+  },
+  {
+    "name": "PaymentSuccessView-BKVmAe2A.js",
+    "url": "https://timefriend.xin/assets/PaymentSuccessView-BKVmAe2A.js",
+    "file": "assets/PaymentSuccessView-BKVmAe2A.js",
+    "status": "ok",
+    "bytes": 5614,
+    "sha256": "9BFECC24EEFB70745F932D482A248608E5F25D01F3DEB730614C88E22EFE69B6"
+  },
+  {
+    "name": "PaymentSuccessView-C_sLPLd-.css",
+    "url": "https://timefriend.xin/assets/PaymentSuccessView-C_sLPLd-.css",
+    "file": "assets/PaymentSuccessView-C_sLPLd-.css",
+    "status": "ok",
+    "bytes": 1889,
+    "sha256": "50281B5B1DDF72BAEDD4B1C93F74FD4207CBE9B3C97082C003B34E5A14EF1373"
+  },
+  {
+    "name": "ResetPasswordView-D28TCHO8.js",
+    "url": "https://timefriend.xin/assets/ResetPasswordView-D28TCHO8.js",
+    "file": "assets/ResetPasswordView-D28TCHO8.js",
+    "status": "ok",
+    "bytes": 4402,
+    "sha256": "5B0CA00ED98BA593EB3506B39643770D290A90FE6ACA4703A5B51DB11DEE7D68"
+  },
+  {
+    "name": "SettingsTest-_urmA247.css",
+    "url": "https://timefriend.xin/assets/SettingsTest-_urmA247.css",
+    "file": "assets/SettingsTest-_urmA247.css",
+    "status": "ok",
+    "bytes": 26326,
+    "sha256": "4812B70E4F14BA0403BCE4484FFBBBFC2AF8DB4F5D354CB4F44698E6822B5E90"
+  },
+  {
+    "name": "SettingsTest-CXOkbg-Y.js",
+    "url": "https://timefriend.xin/assets/SettingsTest-CXOkbg-Y.js",
+    "file": "assets/SettingsTest-CXOkbg-Y.js",
+    "status": "ok",
+    "bytes": 55175,
+    "sha256": "BE8A6FA0440A683C82D71E5389F0E9B15CC3D29023FD4DE9D44E2AEE82D51257"
+  },
+  {
+    "name": "SubscriptionView-CegA7r-a.css",
+    "url": "https://timefriend.xin/assets/SubscriptionView-CegA7r-a.css",
+    "file": "assets/SubscriptionView-CegA7r-a.css",
+    "status": "ok",
+    "bytes": 19375,
+    "sha256": "5BF9ECCF9CCD7D483B2673A4A810B12E4CED4F31BC562731BA1CF891EAE7944A"
+  },
+  {
+    "name": "SubscriptionView-CQDPRMih.js",
+    "url": "https://timefriend.xin/assets/SubscriptionView-CQDPRMih.js",
+    "file": "assets/SubscriptionView-CQDPRMih.js",
+    "status": "ok",
+    "bytes": 21389,
+    "sha256": "0EC95CF7C611B51F9A1A6CE2FE7A7B8E24AFD141F00D306AC517FC53230165AC"
+  },
+  {
+    "name": "TagManagementView-BCayLDj0.js",
+    "url": "https://timefriend.xin/assets/TagManagementView-BCayLDj0.js",
+    "file": "assets/TagManagementView-BCayLDj0.js",
+    "status": "ok",
+    "bytes": 38351,
+    "sha256": "17093D0BE1098C71D1F1A25FE1BFEB5B11826BDC823D2C732E08DB7A4B2CACB3"
+  },
+  {
+    "name": "TagManagementView-CS04jLMl.css",
+    "url": "https://timefriend.xin/assets/TagManagementView-CS04jLMl.css",
+    "file": "assets/TagManagementView-CS04jLMl.css",
+    "status": "ok",
+    "bytes": 11691,
+    "sha256": "780C6B7CC518F1A5DD8574B20FB803E993ABC795B73175B013DD3571D19B13F5"
+  },
+  {
+    "name": "TaskDetailPanel-BhdurwPM.css",
+    "url": "https://timefriend.xin/assets/TaskDetailPanel-BhdurwPM.css",
+    "file": "assets/TaskDetailPanel-BhdurwPM.css",
+    "status": "ok",
+    "bytes": 32829,
+    "sha256": "8140DBD5ABB80EE9A026DA84B64AD52F7AAD89ADF6BB6B5D9AECBC822428939F"
+  },
+  {
+    "name": "TaskDetailPanel-DYyfbnbk.js",
+    "url": "https://timefriend.xin/assets/TaskDetailPanel-DYyfbnbk.js",
+    "file": "assets/TaskDetailPanel-DYyfbnbk.js",
+    "status": "ok",
+    "bytes": 37319,
+    "sha256": "C134AAA5143004780827655E356D588011EDDFA2E18D98C0D583745D817B22B4"
+  },
+  {
+    "name": "TimelineView-BvD1R6rn.css",
+    "url": "https://timefriend.xin/assets/TimelineView-BvD1R6rn.css",
+    "file": "assets/TimelineView-BvD1R6rn.css",
+    "status": "ok",
+    "bytes": 127095,
+    "sha256": "532506CC3D574F8873F47C6B89167F864ED0520595E753A2D23BE351128B42C7"
+  },
+  {
+    "name": "TimelineView-Dv8uHth4.js",
+    "url": "https://timefriend.xin/assets/TimelineView-Dv8uHth4.js",
+    "file": "assets/TimelineView-Dv8uHth4.js",
+    "status": "ok",
+    "bytes": 153848,
+    "sha256": "76EBCB203B0BFAC4AEB47890892C9BBC27E7B6B2237E4905BCC5964ED0C6C5BF"
+  },
+  {
+    "name": "TodoCalendarView-B4g01KnU.css",
+    "url": "https://timefriend.xin/assets/TodoCalendarView-B4g01KnU.css",
+    "file": "assets/TodoCalendarView-B4g01KnU.css",
+    "status": "ok",
+    "bytes": 8472,
+    "sha256": "EF6691A608CEB7E7BADE6A0D018E185FCD5113DE2CC9A1CDF74305448C5F12AF"
+  },
+  {
+    "name": "TodoCalendarView-CxCMyosu.js",
+    "url": "https://timefriend.xin/assets/TodoCalendarView-CxCMyosu.js",
+    "file": "assets/TodoCalendarView-CxCMyosu.js",
+    "status": "ok",
+    "bytes": 7875,
+    "sha256": "37B7D7EBA5C7CBF564203EE3B97121FB30403DF3D05EDD767943DFB5BD2C0126"
+  },
+  {
+    "name": "TodoHistoryView-B-mGLs1Y.js",
+    "url": "https://timefriend.xin/assets/TodoHistoryView-B-mGLs1Y.js",
+    "file": "assets/TodoHistoryView-B-mGLs1Y.js",
+    "status": "ok",
+    "bytes": 16726,
+    "sha256": "7095B1D77590D3FFE489FBBCF9D5EFADD85003CC3075D185D1717DE188C24ABF"
+  },
+  {
+    "name": "TodoHistoryView-PoJAl8sR.css",
+    "url": "https://timefriend.xin/assets/TodoHistoryView-PoJAl8sR.css",
+    "file": "assets/TodoHistoryView-PoJAl8sR.css",
+    "status": "ok",
+    "bytes": 9909,
+    "sha256": "D2B0D3AE536E8F2C9485FA5F2C70FF49248BAA9879518C468396C5C51AEEF5E3"
+  },
+  {
+    "name": "TodoModal-B0ANjWWB.js",
+    "url": "https://timefriend.xin/assets/TodoModal-B0ANjWWB.js",
+    "file": "assets/TodoModal-B0ANjWWB.js",
+    "status": "ok",
+    "bytes": 27587,
+    "sha256": "ECD9EC1148B2BFD956465B8236264E0DBB4C7C7C779CB1CC0F4E4E583111BA48"
+  },
+  {
+    "name": "TodoModal-CmEL8WhA.css",
+    "url": "https://timefriend.xin/assets/TodoModal-CmEL8WhA.css",
+    "file": "assets/TodoModal-CmEL8WhA.css",
+    "status": "ok",
+    "bytes": 12242,
+    "sha256": "68492D50A20A750E8D2A83FB8A673E270F4F8B9FCD94B14EE09D868735521DDF"
+  },
+  {
+    "name": "TodoView-CDvNXn3o.css",
+    "url": "https://timefriend.xin/assets/TodoView-CDvNXn3o.css",
+    "file": "assets/TodoView-CDvNXn3o.css",
+    "status": "ok",
+    "bytes": 128005,
+    "sha256": "49B98DAEC58A3DEB24E912A246E3170D0D8EE7E4FEA50B035999CB30D8A2C951"
+  },
+  {
+    "name": "TodoView-DbTDvArj.js",
+    "url": "https://timefriend.xin/assets/TodoView-DbTDvArj.js",
+    "file": "assets/TodoView-DbTDvArj.js",
+    "status": "ok",
+    "bytes": 105809,
+    "sha256": "2A2BAA1AAF9EB3854F51F670B67CBB9E803F357D814E7957115DE38443401B12"
+  },
+  {
+    "name": "unifiedExport-DsurIdvo.js",
+    "url": "https://timefriend.xin/assets/unifiedExport-DsurIdvo.js",
+    "file": "assets/unifiedExport-DsurIdvo.js",
+    "status": "ok",
+    "bytes": 855142,
+    "sha256": "35ABCE9CFD83B32A0074D29F28B3DCFC19F4B631140D7F4904BC30E8BE516DD6"
+  },
+  {
+    "name": "VerifyEmailView-jj6aUFmC.js",
+    "url": "https://timefriend.xin/assets/VerifyEmailView-jj6aUFmC.js",
+    "file": "assets/VerifyEmailView-jj6aUFmC.js",
+    "status": "ok",
+    "bytes": 4116,
+    "sha256": "94D8C8FC76CB0BF3B1188955BB6A5D992FF9D98CA92BB1EDD3DDACFBE20520AA"
+  },
+  {
+    "name": "VipOverlay-BWrFcNQ7.js",
+    "url": "https://timefriend.xin/assets/VipOverlay-BWrFcNQ7.js",
+    "file": "assets/VipOverlay-BWrFcNQ7.js",
+    "status": "ok",
+    "bytes": 3922,
+    "sha256": "2EA4B7C0E44D6FADF248BEB26662C74566B558F6BA2CD4C2A2D7B09CB910AC56"
+  },
+  {
+    "name": "VipOverlay-khlMZwHC.css",
+    "url": "https://timefriend.xin/assets/VipOverlay-khlMZwHC.css",
+    "file": "assets/VipOverlay-khlMZwHC.css",
+    "status": "ok",
+    "bytes": 3344,
+    "sha256": "70E50F055F2B93A3B20BB7876C03D5A6DE88584A1B1FB4E5CAE472ED374AF692"
+  },
+  {
+    "name": "WechatBindView-Cj7Ragq_.js",
+    "url": "https://timefriend.xin/assets/WechatBindView-Cj7Ragq_.js",
+    "file": "assets/WechatBindView-Cj7Ragq_.js",
+    "status": "ok",
+    "bytes": 4556,
+    "sha256": "60AAFAFCCEC890A609A53FE66F4E63DD860BE8973A25D0B685CCDF11378E2223"
+  },
+  {
+    "name": "WechatBindView-DRpZO_0w.css",
+    "url": "https://timefriend.xin/assets/WechatBindView-DRpZO_0w.css",
+    "file": "assets/WechatBindView-DRpZO_0w.css",
+    "status": "ok",
+    "bytes": 3748,
+    "sha256": "00CE2ED4C6D21C5956ED0926EA051AF22DB2114CE66D83A2F4F25A300C6B38DA"
+  },
+  {
+    "name": "WeekView-CR3rE_L-.css",
+    "url": "https://timefriend.xin/assets/WeekView-CR3rE_L-.css",
+    "file": "assets/WeekView-CR3rE_L-.css",
+    "status": "ok",
+    "bytes": 48452,
+    "sha256": "8D64E954456C76DC857E136C1B6A1674E535372C30B0FBD62E63F60845D735B2"
+  },
+  {
+    "name": "WeekView-D5tN_tWf.js",
+    "url": "https://timefriend.xin/assets/WeekView-D5tN_tWf.js",
+    "file": "assets/WeekView-D5tN_tWf.js",
+    "status": "ok",
+    "bytes": 34234,
+    "sha256": "1BAD2D57C554797DAFAFECB80846DC36ED25644B1A2E3C74E7C9DC6AECB7F84D"
+  },
+  {
+    "name": "WelcomeView-C1Q79YzI.css",
+    "url": "https://timefriend.xin/assets/WelcomeView-C1Q79YzI.css",
+    "file": "assets/WelcomeView-C1Q79YzI.css",
+    "status": "ok",
+    "bytes": 19742,
+    "sha256": "4E91E307B63C6497A69D63D75884C4C50D297ED1A8B29B516201839208DA49B8"
+  },
+  {
+    "name": "WelcomeView-SpfvzQ_I.js",
+    "url": "https://timefriend.xin/assets/WelcomeView-SpfvzQ_I.js",
+    "file": "assets/WelcomeView-SpfvzQ_I.js",
+    "status": "ok",
+    "bytes": 17938,
+    "sha256": "E5556553D742B679826F57CDD9F55A44457F7793724144CC57465A210CE3E464"
+  }
+]

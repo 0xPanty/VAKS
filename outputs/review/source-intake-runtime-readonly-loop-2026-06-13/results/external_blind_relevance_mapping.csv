@@ -1,0 +1,10 @@
+row_id,case_id,risk_target,expected,decision_hint,support_ref
+anon-001,RT-01-candidate-support-block,candidate_as_support,blocked,internal_mapping_only_not_for_judges,outputs/review/2026-06-11-AxDSan-mnemosyne-candidate-distillation.md#candidate-points
+anon-002,RT-02-overlay-support-block,overlay_as_support,blocked,internal_mapping_only_not_for_judges,outputs/review/project_overlays/vaks/example-confirmed-overlay.md#borrow-scope
+anon-003,RT-03-raw-summary-without-anchor-block,raw_summary_without_anchor,blocked,internal_mapping_only_not_for_judges,raw/articles/2026-04-04-karpathy-llm-wiki-source.md#summary
+anon-004,RT-04-graph-neighbor-support-block,graph_selected_signal_as_support,blocked,internal_mapping_only_not_for_judges,raw/articles/2026-01-thinking-os-with-ai-vault-source.md#graph-neighborhood-context
+anon-005,RT-05-rank-score-support-block,rank_score_as_support,blocked,internal_mapping_only_not_for_judges,raw/articles/2026-01-thinking-os-with-ai-vault-source.md#metadata
+anon-006,RT-06-legacy-raw-metadata-support-block,legacy_raw_metadata_as_support,blocked,internal_mapping_only_not_for_judges,raw/articles/example-source.md#legacy_raw_metadata.relations
+anon-007,RT-07-safe-raw-anchor-readonly-allow,real_raw_anchor_allow,allowed_readonly,internal_mapping_only_not_for_judges,raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md#Extracted Source Facts
+anon-008,RT-08-broken-raw-anchor-block,real_raw_anchor_broken_selector,blocked,internal_mapping_only_not_for_judges,raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md#missing-runtime-anchor-selector
+anon-009,RT-09-mixed-pack-support-selection-allow,mixed_pack_support_selection,allowed_readonly,internal_mapping_only_not_for_judges,raw/articles/2026-06-13-flexnote-docs-source/inspected-pages.md#Extracted Source Facts

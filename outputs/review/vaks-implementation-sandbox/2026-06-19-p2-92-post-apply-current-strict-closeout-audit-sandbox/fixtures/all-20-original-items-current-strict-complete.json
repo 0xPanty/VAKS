@@ -1,0 +1,7 @@
+{
+  "case_id": "all-20-original-items-current-strict-complete",
+  "original_item_count": 20,
+  "current_strict_complete_original_item_count": 20,
+  "expected": 20,
+  "passed": true
+}

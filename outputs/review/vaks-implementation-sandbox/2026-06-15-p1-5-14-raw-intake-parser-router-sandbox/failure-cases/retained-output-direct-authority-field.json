@@ -1,0 +1,22 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "retained-output-direct-authority-field",
+  "expected_valid": false,
+  "expected_codes": ["RP_AUTHORITY_CLAIM_FORBIDDEN"],
+  "patch": {
+    "outputs": {
+      "retained_outputs": [
+        {
+          "kind": "markdown",
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/fixtures/extracted/manual-fixture.md",
+          "output_hash": "sha256:3333333333333333333333333333333333333333333333333333333333333333",
+          "knowledge_status": "raw",
+          "evidence_support": true,
+          "reviewed_knowledge": true,
+          "action_basis": true,
+          "mainline_readiness": true
+        }
+      ]
+    }
+  }
+}

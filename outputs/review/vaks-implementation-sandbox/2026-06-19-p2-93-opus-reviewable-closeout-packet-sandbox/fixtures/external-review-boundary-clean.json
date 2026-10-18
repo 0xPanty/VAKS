@@ -1,0 +1,7 @@
+{
+  "case_id": "external-review-boundary-clean",
+  "p2_92_old_slice_writes_applied": 0,
+  "p2_92_protected_path_writes": 0,
+  "external_review_packet_ready": true,
+  "passed": true
+}

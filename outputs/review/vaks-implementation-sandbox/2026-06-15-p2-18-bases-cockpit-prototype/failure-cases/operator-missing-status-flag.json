@@ -1,0 +1,1 @@
+{"extends": "fixtures/valid-bases-cockpit.json", "scenario_id": "operator-missing-status-flag", "expected_valid": false, "expected_codes": ["BC_OPERATOR_STATES_INCOMPLETE"], "patch": {"operator_states": {"shows": ["blocked"], "dirty_state_judges_knowledge": false, "hash_match_is_support": false, "activity_count_changes_confidence": false, "mainline_ready": false}}}

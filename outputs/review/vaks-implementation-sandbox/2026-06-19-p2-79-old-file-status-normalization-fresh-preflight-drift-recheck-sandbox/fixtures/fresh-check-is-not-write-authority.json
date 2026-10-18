@@ -1,0 +1,11 @@
+{
+  "fixture_id": "fresh-check-is-not-write-authority",
+  "expected": {
+    "fresh_drift_recheck_passed": true,
+    "fresh_drift_recheck_is_not_write_authority": true,
+    "old_slice_write_allowed_now": false,
+    "old_slice_writes_applied": 0,
+    "normalization_applied": false,
+    "goal_complete_now": false
+  }
+}

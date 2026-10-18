@@ -1,0 +1,8 @@
+{
+  "extends": "fixtures/valid-bridge-full-contract.json",
+  "scenario_id": "action-ready-with-insufficient-support",
+  "expected_valid": false,
+  "expected_codes": ["MB_ACTION_READY_WITH_INSUFFICIENT_SUPPORT"],
+  "allowed_extra_codes": ["MB_AUTHORITY_CLAIM_FORBIDDEN", "MB_AUTHORITY_CONFUSION"],
+  "patch": {"action_readiness": {"support_sufficiency": "insufficient", "action_ready": true}}
+}

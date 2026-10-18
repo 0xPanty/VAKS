@@ -1,0 +1,27 @@
+{
+  "exclude_runtime_artifacts": true,
+  "items": [
+    {
+      "artifact_kind": "sandbox_verification_doc",
+      "authority_bucket": "candidate",
+      "excluded": false,
+      "id": "prodlike-q003-plain-final-answer",
+      "path": "outputs/review/vaks-guarded-answer-wiring-r1-1-2026-06-23/final_answers.jsonl",
+      "runtime_artifact": false,
+      "selected": true
+    },
+    {
+      "artifact_kind": "execution_log",
+      "authority_bucket": "diagnostic",
+      "excluded": true,
+      "excluded_reason": "runtime_artifact_excluded",
+      "id": "prodlike-q003-plain-trace",
+      "path": "outputs/review/vaks-guarded-answer-wiring-r1-1-2026-06-23/temp/prodlike-q003-plain.log",
+      "runtime_artifact": true,
+      "seen_by_retrieval": false,
+      "selected": false
+    }
+  ],
+  "record_kind": "runtime_artifact_exclusion_manifest",
+  "scenario_id": "r1-1-prodlike-q003-plain"
+}

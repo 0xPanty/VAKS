@@ -1,0 +1,7 @@
+{
+  "collected_file_count": 225,
+  "validated_intake_surface_count": 171,
+  "skipped_non_target_file_count": 54,
+  "csv": "outputs/review/source-intake-control-flow-hardening-2026-06-12/results/source_intake_current_lint_corpus_manifest.csv",
+  "truth_boundary": "current lint corpus identity manifest only; not semantic equivalence proof"
+}

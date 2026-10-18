@@ -1,0 +1,5 @@
+{
+  "case_id": "all-75-previews-present",
+  "expected_preview_operation_count": 75,
+  "observed_preview_operation_count": 75
+}

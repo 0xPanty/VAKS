@@ -1,0 +1,12 @@
+{
+  "artifact_kind": "phase_b_external_blind_query_author_manifest",
+  "created_at": "",
+  "author_type": "external_human | different_model_family",
+  "author_id_or_model_family": "",
+  "generation_method": "",
+  "attestation_no_phase_b_query_access": null,
+  "attestation_no_phase_b_result_access": null,
+  "attestation_no_phase_b_report_access": null,
+  "allowed_docs_seen": [],
+  "notes": ""
+}

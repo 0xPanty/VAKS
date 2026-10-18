@@ -1,0 +1,46 @@
+{
+  "record_kind": "sandbox_failure_case_matrix",
+  "slice_id": "2026-06-19-p2-79-old-file-status-normalization-fresh-preflight-drift-recheck-sandbox",
+  "failure_cases": [
+    {
+      "case_id": "FP-FAIL-01-missing-target-ignored",
+      "must_fail_when": "a missing old target report is ignored"
+    },
+    {
+      "case_id": "FP-FAIL-02-frontmatter-invalid-ignored",
+      "must_fail_when": "invalid report frontmatter is ignored"
+    },
+    {
+      "case_id": "FP-FAIL-03-current-status-mismatch-ignored",
+      "must_fail_when": "disk status no longer matches manifest current_status"
+    },
+    {
+      "case_id": "FP-FAIL-04-proposed-status-already-applied-treated-as-clean",
+      "must_fail_when": "a target already carrying proposed_status is treated as an unapplied clean target"
+    },
+    {
+      "case_id": "FP-FAIL-05-clean-drift-check-treated-as-approval",
+      "must_fail_when": "fresh drift recheck success is treated as old-file write approval"
+    },
+    {
+      "case_id": "FP-FAIL-06-p2-75-request-treated-as-approval",
+      "must_fail_when": "p2-75 approval request packet is treated as user approval"
+    },
+    {
+      "case_id": "FP-FAIL-07-p2-77-blocked-readiness-ignored",
+      "must_fail_when": "p2-77 blocked_no_exact_approval is ignored"
+    },
+    {
+      "case_id": "FP-FAIL-08-old-slice-write-applied",
+      "must_fail_when": "fresh preflight applies any old slice write"
+    },
+    {
+      "case_id": "FP-FAIL-09-fresh-check-claims-goal-complete",
+      "must_fail_when": "fresh preflight claims the overall goal is complete"
+    },
+    {
+      "case_id": "FP-FAIL-10-gap-ledger-or-preflight-creates-mainline-authority",
+      "must_fail_when": "preflight creates mainline readiness, promotion, reviewed knowledge, evidence support, or action basis"
+    }
+  ]
+}

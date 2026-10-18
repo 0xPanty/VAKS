@@ -1,0 +1,18 @@
+{
+  "extends": "fixtures/valid-operator-use-surface.json",
+  "scenario_id": "valid-entry-surface-map",
+  "expected_valid": true,
+  "expected_codes": [],
+  "patch": {
+    "status_surfaces": [
+      {
+        "id": "entry_surface_only_status",
+        "shows": ["blocked", "stale", "missing_anchor", "hash_mismatch", "action_not_ready", "dirty_state"],
+        "short_status_before_manuals": true,
+        "can_approve": false,
+        "mutates_truth": false,
+        "can_promote": false
+      }
+    ]
+  }
+}

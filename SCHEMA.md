@@ -239,6 +239,10 @@ Source Capture Store verification reports are diagnostic projections over a
 Store instance. They may report `pass`, `pass_with_warnings`, `fail`, or
 `indeterminate`, but they do not repair the Store or create source trust,
 reviewed knowledge, evidence support, runtime readiness, or action authority.
+Source Snapshot indexes rebuilt from a Store are deterministic lookup
+projections over verified captures. They are not authority records and may be
+deleted and rebuilt from `captures/`; they must not become the source of truth
+for provenance, review, evidence support, or action use.
 
 边界：
 

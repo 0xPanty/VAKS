@@ -1,0 +1,29 @@
+{
+  "scenario_id": "NEG-01-generic-continuation",
+  "description": "Generic continuation is not approval.",
+  "user_text": "继续，全部落地",
+  "expected_gate_state": "blocked_no_exact_approval",
+  "result": {
+    "scenario_id": "NEG-01-generic-continuation",
+    "description": "Generic continuation is not approval.",
+    "approval": {
+      "matched_exact_phrase": false,
+      "approval_class": "not_approval",
+      "fixture_match_is_user_approval": false
+    },
+    "hash_match_count": 75,
+    "hash_target_count": 75,
+    "hash_clean": true,
+    "rehearsal_ok": true,
+    "boundary_ok": true,
+    "blockers": [
+      "blocked_no_exact_approval"
+    ],
+    "gate_state": "blocked_no_exact_approval",
+    "ready_for_prewrite_confirmation": false,
+    "executor_write_allowed_now": false,
+    "old_slice_writes_applied": 0,
+    "requires_stop_before_write": true,
+    "fixture_match_is_user_approval": false
+  }
+}

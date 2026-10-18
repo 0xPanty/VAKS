@@ -1,0 +1,271 @@
+# Failure Case Oracle
+
+Case count: 267
+
+- `001-operation-formal_vault_read.json` -> operation_not_false:formal_vault_read
+- `002-operation-formal_vault_scan.json` -> operation_not_false:formal_vault_scan
+- `003-operation-formal_vault_write.json` -> operation_not_false:formal_vault_write
+- `004-operation-formal_vault_hash.json` -> operation_not_false:formal_vault_hash
+- `005-operation-formal_vault_snapshot.json` -> operation_not_false:formal_vault_snapshot
+- `006-operation-formal_vault_state_check.json` -> operation_not_false:formal_vault_state_check
+- `007-operation-obsidian_sync.json` -> operation_not_false:obsidian_sync
+- `008-operation-commit.json` -> operation_not_false:commit
+- `009-operation-push.json` -> operation_not_false:push
+- `010-operation-promotion.json` -> operation_not_false:promotion
+- `011-operation-dependency_install.json` -> operation_not_false:dependency_install
+- `012-operation-background_service.json` -> operation_not_false:background_service
+- `013-operation-mcp_write_tool.json` -> operation_not_false:mcp_write_tool
+- `014-operation-hooks.json` -> operation_not_false:hooks
+- `015-operation-approval_collection.json` -> operation_not_false:approval_collection
+- `016-operation-user_instruction_collection.json` -> operation_not_false:user_instruction_collection
+- `017-operation-user_wording_storage.json` -> operation_not_false:user_wording_storage
+- `018-operation-execution_performed.json` -> operation_not_false:execution_performed
+- `019-operation-packet_submission.json` -> operation_not_false:packet_submission
+- `020-operation-screening_submission.json` -> operation_not_false:screening_submission
+- `021-operation-action_basis_creation.json` -> operation_not_false:action_basis_creation
+- `022-operation-reviewed_knowledge_creation.json` -> operation_not_false:reviewed_knowledge_creation
+- `023-operation-evidence_support_creation.json` -> operation_not_false:evidence_support_creation
+- `024-operation-mainline_merge.json` -> operation_not_false:mainline_merge
+- `025-operation-template_write.json` -> operation_not_false:template_write
+- `026-operation-tools_write.json` -> operation_not_false:tools_write
+- `027-operation-wiki_truth_write.json` -> operation_not_false:wiki_truth_write
+- `028-operation-command_emitted.json` -> operation_not_false:command_emitted
+- `029-operation-absolute_vault_path_resolved.json` -> operation_not_false:absolute_vault_path_resolved
+- `030-operation-dirty_state_resolution.json` -> operation_not_false:dirty_state_resolution
+- `031-control-sandbox_only.json` -> status_control_mismatch:sandbox_only
+- `032-control-read_only_status_surface.json` -> status_control_mismatch:read_only_status_surface
+- `033-control-source_hash_bound.json` -> status_control_mismatch:source_hash_bound
+- `034-control-existing_sandbox_only.json` -> status_control_mismatch:existing_sandbox_only
+- `035-control-non_executable.json` -> status_control_mismatch:non_executable
+- `036-control-no_formal_vault_access.json` -> status_control_mismatch:no_formal_vault_access
+- `037-control-no_approval_collection.json` -> status_control_mismatch:no_approval_collection
+- `038-control-no_user_instruction.json` -> status_control_mismatch:no_user_instruction
+- `039-control-no_user_wording.json` -> status_control_mismatch:no_user_wording
+- `040-control-no_commands.json` -> status_control_mismatch:no_commands
+- `041-control-no_absolute_vault_paths.json` -> status_control_mismatch:no_absolute_vault_paths
+- `042-control-no_truth_mutation.json` -> status_control_mismatch:no_truth_mutation
+- `043-control-no_mainline_claim.json` -> status_control_mismatch:no_mainline_claim
+- `044-control-no_merge_claim.json` -> status_control_mismatch:no_merge_claim
+- `045-control-no_replay_claim.json` -> status_control_mismatch:no_replay_claim
+- `046-control-status_is_not_authority.json` -> status_control_mismatch:status_is_not_authority
+- `047-control-badges_are_not_approval.json` -> status_control_mismatch:badges_are_not_approval
+- `048-control-dirty_state_is_process_risk_not_truth.json` -> status_control_mismatch:dirty_state_is_process_risk_not_truth
+- `049-control-product_acceptance_is_not_formal_vault_approval.json` -> status_control_mismatch:product_acceptance_is_not_formal_vault_approval
+- `050-control-operator_must_stop_before_execution.json` -> status_control_mismatch:operator_must_stop_before_execution
+- `051-control-execution_allowed_now.json` -> status_control_mismatch:execution_allowed_now
+- `052-control-formal_vault_write_allowed_now.json` -> status_control_mismatch:formal_vault_write_allowed_now
+- `053-control-action_basis_ready.json` -> status_control_mismatch:action_basis_ready
+- `054-control-reviewed_knowledge_created.json` -> status_control_mismatch:reviewed_knowledge_created
+- `055-control-evidence_support_created.json` -> status_control_mismatch:evidence_support_created
+- `056-control-mainline_ready.json` -> status_control_mismatch:mainline_ready
+- `057-control-user_approval_collected.json` -> status_control_mismatch:user_approval_collected
+- `058-control-dirty_tree_fixed.json` -> status_control_mismatch:dirty_tree_fixed
+- `059-source-input-0-sha-drift.json` -> source_inputs_mismatch
+- `060-source-input-1-sha-drift.json` -> source_inputs_mismatch
+- `061-source-input-2-sha-drift.json` -> source_inputs_mismatch
+- `062-source-input-3-sha-drift.json` -> source_inputs_mismatch
+- `063-source-input-4-sha-drift.json` -> source_inputs_mismatch
+- `064-source-input-5-sha-drift.json` -> source_inputs_mismatch
+- `065-source-input-6-sha-drift.json` -> source_inputs_mismatch
+- `066-source-input-7-sha-drift.json` -> source_inputs_mismatch
+- `067-source-input-8-sha-drift.json` -> source_inputs_mismatch
+- `068-source-input-9-sha-drift.json` -> source_inputs_mismatch
+- `069-source-input-10-sha-drift.json` -> source_inputs_mismatch
+- `070-source-input-11-sha-drift.json` -> source_inputs_mismatch
+- `071-source-input-12-sha-drift.json` -> source_inputs_mismatch
+- `072-source-input-13-sha-drift.json` -> source_inputs_mismatch
+- `073-source-input-14-sha-drift.json` -> source_inputs_mismatch
+- `074-source-input-15-sha-drift.json` -> source_inputs_mismatch
+- `075-source-input-16-sha-drift.json` -> source_inputs_mismatch
+- `076-source-input-17-sha-drift.json` -> source_inputs_mismatch
+- `077-source-input-18-sha-drift.json` -> source_inputs_mismatch
+- `078-source-input-19-sha-drift.json` -> source_inputs_mismatch
+- `079-source-input-20-sha-drift.json` -> source_inputs_mismatch
+- `080-source-input-21-sha-drift.json` -> source_inputs_mismatch
+- `081-source-input-22-sha-drift.json` -> source_inputs_mismatch
+- `082-source-input-23-sha-drift.json` -> source_inputs_mismatch
+- `083-source-input-24-sha-drift.json` -> source_inputs_mismatch
+- `084-source-input-25-sha-drift.json` -> source_inputs_mismatch
+- `085-source-input-26-sha-drift.json` -> source_inputs_mismatch
+- `086-source-input-27-sha-drift.json` -> source_inputs_mismatch
+- `087-source-input-28-sha-drift.json` -> source_inputs_mismatch
+- `088-source-input-29-sha-drift.json` -> source_inputs_mismatch
+- `089-source-input-30-sha-drift.json` -> source_inputs_mismatch
+- `090-source-input-31-sha-drift.json` -> source_inputs_mismatch
+- `091-source-input-32-sha-drift.json` -> source_inputs_mismatch
+- `092-source-input-33-sha-drift.json` -> source_inputs_mismatch
+- `093-source-input-34-sha-drift.json` -> source_inputs_mismatch
+- `094-source-input-35-sha-drift.json` -> source_inputs_mismatch
+- `095-source-status-2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox-slice-plan-md-drift.json` -> source_status_not_met:2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox:slice-plan.md, source_statuses_mismatch
+- `096-source-status-2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox-source-map-md-drift.json` -> source_status_not_met:2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox:source-map.md, source_statuses_mismatch
+- `097-source-status-2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox-verification-md-drift.json` -> source_status_not_met:2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox:verification.md, source_statuses_mismatch
+- `098-source-status-2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox-reviewer-report-md-drift.json` -> source_status_not_met:2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox:reviewer-report.md, source_statuses_mismatch
+- `099-source-status-2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox-boundary-audit-md-drift.json` -> source_status_not_met:2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox:boundary-audit.md, source_statuses_mismatch
+- `100-source-status-2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox-product-acceptance-report-md-drift.json` -> source_status_not_met:2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox:product-acceptance-report.md, source_statuses_mismatch
+- `101-source-status-2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox-next-step-md-drift.json` -> source_status_not_met:2026-06-15-p2-30-formal-vault-execution-dry-run-ledger-sandbox:next-step.md, source_statuses_mismatch
+- `102-source-status-2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox-slice-plan-md-drift.json` -> source_status_not_met:2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox:slice-plan.md, source_statuses_mismatch
+- `103-source-status-2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox-source-map-md-drift.json` -> source_status_not_met:2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox:source-map.md, source_statuses_mismatch
+- `104-source-status-2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox-verification-md-drift.json` -> source_status_not_met:2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox:verification.md, source_statuses_mismatch
+- `105-source-status-2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox-reviewer-report-md-drift.json` -> source_status_not_met:2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox:reviewer-report.md, source_statuses_mismatch
+- `106-source-status-2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox-boundary-audit-md-drift.json` -> source_status_not_met:2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox:boundary-audit.md, source_statuses_mismatch
+- `107-source-status-2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox-product-acceptance-report-md-drift.json` -> source_status_not_met:2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox:product-acceptance-report.md, source_statuses_mismatch
+- `108-source-status-2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox-next-step-md-drift.json` -> source_status_not_met:2026-06-15-p2-31-formal-vault-execution-readiness-gate-sandbox:next-step.md, source_statuses_mismatch
+- `109-source-status-2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox-slice-plan-md-drift.json` -> source_status_not_met:2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox:slice-plan.md, source_statuses_mismatch
+- `110-source-status-2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox-source-map-md-drift.json` -> source_status_not_met:2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox:source-map.md, source_statuses_mismatch
+- `111-source-status-2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox-verification-md-drift.json` -> source_status_not_met:2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox:verification.md, source_statuses_mismatch
+- `112-source-status-2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox-reviewer-report-md-drift.json` -> source_status_not_met:2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox:reviewer-report.md, source_statuses_mismatch
+- `113-source-status-2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox-boundary-audit-md-drift.json` -> source_status_not_met:2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox:boundary-audit.md, source_statuses_mismatch
+- `114-source-status-2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox-product-acceptance-report-md-drift.json` -> source_status_not_met:2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox:product-acceptance-report.md, source_statuses_mismatch
+- `115-source-status-2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox-next-step-md-drift.json` -> source_status_not_met:2026-06-15-p2-32-formal-vault-execution-request-packet-sandbox:next-step.md, source_statuses_mismatch
+- `116-source-status-2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox-slice-plan-md-drift.json` -> source_status_not_met:2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox:slice-plan.md, source_statuses_mismatch
+- `117-source-status-2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox-source-map-md-drift.json` -> source_status_not_met:2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox:source-map.md, source_statuses_mismatch
+- `118-source-status-2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox-verification-md-drift.json` -> source_status_not_met:2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox:verification.md, source_statuses_mismatch
+- `119-source-status-2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox-reviewer-report-md-drift.json` -> source_status_not_met:2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox:reviewer-report.md, source_statuses_mismatch
+- `120-source-status-2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox-boundary-audit-md-drift.json` -> source_status_not_met:2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox:boundary-audit.md, source_statuses_mismatch
+- `121-source-status-2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox-product-acceptance-report-md-drift.json` -> source_status_not_met:2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox:product-acceptance-report.md, source_statuses_mismatch
+- `122-source-status-2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox-next-step-md-drift.json` -> source_status_not_met:2026-06-15-p2-33-formal-vault-execution-request-screening-sandbox:next-step.md, source_statuses_mismatch
+- `123-chain-p2_30_dry_run_ledger-product_status.json` -> operator_chain_mismatch, operator_chain_status_bad:p2_30_dry_run_ledger:product_status
+- `124-chain-p2_30_dry_run_ledger-reviewer_status.json` -> operator_chain_mismatch, operator_chain_status_bad:p2_30_dry_run_ledger:reviewer_status
+- `125-chain-p2_30_dry_run_ledger-boundary_status.json` -> operator_chain_mismatch, operator_chain_status_bad:p2_30_dry_run_ledger:boundary_status
+- `126-chain-p2_30_dry_run_ledger-verification_status.json` -> operator_chain_mismatch, operator_chain_status_bad:p2_30_dry_run_ledger:verification_status
+- `127-chain-p2_30_dry_run_ledger-next_status.json` -> operator_chain_mismatch, operator_chain_status_bad:p2_30_dry_run_ledger:next_status
+- `128-chain-p2_30_dry_run_ledger-result_hash.json` -> operator_chain_mismatch
+- `129-chain-p2_30_dry_run_ledger-receipt_sha256.json` -> operator_chain_mismatch
+- `130-chain-p2_30_dry_run_ledger-formal_vault_accessed.json` -> operator_chain_flag_not_false:p2_30_dry_run_ledger:formal_vault_accessed, operator_chain_mismatch
+- `131-chain-p2_30_dry_run_ledger-approval_collected_now.json` -> operator_chain_flag_not_false:p2_30_dry_run_ledger:approval_collected_now, operator_chain_mismatch
+- `132-chain-p2_30_dry_run_ledger-user_wording_stored.json` -> operator_chain_flag_not_false:p2_30_dry_run_ledger:user_wording_stored, operator_chain_mismatch
+- `133-chain-p2_30_dry_run_ledger-execution_permission_granted.json` -> operator_chain_flag_not_false:p2_30_dry_run_ledger:execution_permission_granted, operator_chain_mismatch
+- `134-chain-p2_30_dry_run_ledger-execution_performed.json` -> operator_chain_flag_not_false:p2_30_dry_run_ledger:execution_performed, operator_chain_mismatch
+- `135-chain-p2_30_dry_run_ledger-write_performed.json` -> operator_chain_flag_not_false:p2_30_dry_run_ledger:write_performed, operator_chain_mismatch
+- `136-chain-p2_30_dry_run_ledger-sync_performed.json` -> operator_chain_flag_not_false:p2_30_dry_run_ledger:sync_performed, operator_chain_mismatch
+- `137-chain-p2_30_dry_run_ledger-promotion_performed.json` -> operator_chain_flag_not_false:p2_30_dry_run_ledger:promotion_performed, operator_chain_mismatch
+- `138-chain-p2_30_dry_run_ledger-used_as_action_basis.json` -> operator_chain_flag_not_false:p2_30_dry_run_ledger:used_as_action_basis, operator_chain_mismatch
+- `139-chain-p2_30_dry_run_ledger-submitted.json` -> operator_chain_flag_not_false:p2_30_dry_run_ledger:submitted, operator_chain_mismatch
+- `140-chain-p2_30_dry_run_ledger-non_claims.json` -> operator_chain_mismatch, operator_chain_non_claims_missing:p2_30_dry_run_ledger
+- `141-chain-p2_31_readiness_gate-product_status.json` -> operator_chain_mismatch, operator_chain_status_bad:p2_31_readiness_gate:product_status
+- `142-chain-p2_31_readiness_gate-reviewer_status.json` -> operator_chain_mismatch, operator_chain_status_bad:p2_31_readiness_gate:reviewer_status
+- `143-chain-p2_31_readiness_gate-boundary_status.json` -> operator_chain_mismatch, operator_chain_status_bad:p2_31_readiness_gate:boundary_status
+- `144-chain-p2_31_readiness_gate-verification_status.json` -> operator_chain_mismatch, operator_chain_status_bad:p2_31_readiness_gate:verification_status
+- `145-chain-p2_31_readiness_gate-next_status.json` -> operator_chain_mismatch, operator_chain_status_bad:p2_31_readiness_gate:next_status
+- `146-chain-p2_31_readiness_gate-result_hash.json` -> operator_chain_mismatch
+- `147-chain-p2_31_readiness_gate-receipt_sha256.json` -> operator_chain_mismatch
+- `148-chain-p2_31_readiness_gate-formal_vault_accessed.json` -> operator_chain_flag_not_false:p2_31_readiness_gate:formal_vault_accessed, operator_chain_mismatch
+- `149-chain-p2_31_readiness_gate-approval_collected_now.json` -> operator_chain_flag_not_false:p2_31_readiness_gate:approval_collected_now, operator_chain_mismatch
+- `150-chain-p2_31_readiness_gate-user_wording_stored.json` -> operator_chain_flag_not_false:p2_31_readiness_gate:user_wording_stored, operator_chain_mismatch
+- `151-chain-p2_31_readiness_gate-execution_permission_granted.json` -> operator_chain_flag_not_false:p2_31_readiness_gate:execution_permission_granted, operator_chain_mismatch
+- `152-chain-p2_31_readiness_gate-execution_performed.json` -> operator_chain_flag_not_false:p2_31_readiness_gate:execution_performed, operator_chain_mismatch
+- `153-chain-p2_31_readiness_gate-write_performed.json` -> operator_chain_flag_not_false:p2_31_readiness_gate:write_performed, operator_chain_mismatch
+- `154-chain-p2_31_readiness_gate-sync_performed.json` -> operator_chain_flag_not_false:p2_31_readiness_gate:sync_performed, operator_chain_mismatch
+- `155-chain-p2_31_readiness_gate-promotion_performed.json` -> operator_chain_flag_not_false:p2_31_readiness_gate:promotion_performed, operator_chain_mismatch
+- `156-chain-p2_31_readiness_gate-used_as_action_basis.json` -> operator_chain_flag_not_false:p2_31_readiness_gate:used_as_action_basis, operator_chain_mismatch
+- `157-chain-p2_31_readiness_gate-submitted.json` -> operator_chain_flag_not_false:p2_31_readiness_gate:submitted, operator_chain_mismatch
+- `158-chain-p2_31_readiness_gate-non_claims.json` -> operator_chain_mismatch, operator_chain_non_claims_missing:p2_31_readiness_gate
+- `159-chain-p2_32_request_packet-product_status.json` -> operator_chain_mismatch, operator_chain_status_bad:p2_32_request_packet:product_status
+- `160-chain-p2_32_request_packet-reviewer_status.json` -> operator_chain_mismatch, operator_chain_status_bad:p2_32_request_packet:reviewer_status
+- `161-chain-p2_32_request_packet-boundary_status.json` -> operator_chain_mismatch, operator_chain_status_bad:p2_32_request_packet:boundary_status
+- `162-chain-p2_32_request_packet-verification_status.json` -> operator_chain_mismatch, operator_chain_status_bad:p2_32_request_packet:verification_status
+- `163-chain-p2_32_request_packet-next_status.json` -> operator_chain_mismatch, operator_chain_status_bad:p2_32_request_packet:next_status
+- `164-chain-p2_32_request_packet-result_hash.json` -> operator_chain_mismatch
+- `165-chain-p2_32_request_packet-receipt_sha256.json` -> operator_chain_mismatch
+- `166-chain-p2_32_request_packet-formal_vault_accessed.json` -> operator_chain_flag_not_false:p2_32_request_packet:formal_vault_accessed, operator_chain_mismatch
+- `167-chain-p2_32_request_packet-approval_collected_now.json` -> operator_chain_flag_not_false:p2_32_request_packet:approval_collected_now, operator_chain_mismatch
+- `168-chain-p2_32_request_packet-user_wording_stored.json` -> operator_chain_flag_not_false:p2_32_request_packet:user_wording_stored, operator_chain_mismatch
+- `169-chain-p2_32_request_packet-execution_permission_granted.json` -> operator_chain_flag_not_false:p2_32_request_packet:execution_permission_granted, operator_chain_mismatch
+- `170-chain-p2_32_request_packet-execution_performed.json` -> operator_chain_flag_not_false:p2_32_request_packet:execution_performed, operator_chain_mismatch
+- `171-chain-p2_32_request_packet-write_performed.json` -> operator_chain_flag_not_false:p2_32_request_packet:write_performed, operator_chain_mismatch
+- `172-chain-p2_32_request_packet-sync_performed.json` -> operator_chain_flag_not_false:p2_32_request_packet:sync_performed, operator_chain_mismatch
+- `173-chain-p2_32_request_packet-promotion_performed.json` -> operator_chain_flag_not_false:p2_32_request_packet:promotion_performed, operator_chain_mismatch
+- `174-chain-p2_32_request_packet-used_as_action_basis.json` -> operator_chain_flag_not_false:p2_32_request_packet:used_as_action_basis, operator_chain_mismatch
+- `175-chain-p2_32_request_packet-submitted.json` -> operator_chain_flag_not_false:p2_32_request_packet:submitted, operator_chain_mismatch
+- `176-chain-p2_32_request_packet-non_claims.json` -> operator_chain_mismatch, operator_chain_non_claims_missing:p2_32_request_packet
+- `177-chain-p2_33_request_screening-product_status.json` -> operator_chain_mismatch, operator_chain_status_bad:p2_33_request_screening:product_status
+- `178-chain-p2_33_request_screening-reviewer_status.json` -> operator_chain_mismatch, operator_chain_status_bad:p2_33_request_screening:reviewer_status
+- `179-chain-p2_33_request_screening-boundary_status.json` -> operator_chain_mismatch, operator_chain_status_bad:p2_33_request_screening:boundary_status
+- `180-chain-p2_33_request_screening-verification_status.json` -> operator_chain_mismatch, operator_chain_status_bad:p2_33_request_screening:verification_status
+- `181-chain-p2_33_request_screening-next_status.json` -> operator_chain_mismatch, operator_chain_status_bad:p2_33_request_screening:next_status
+- `182-chain-p2_33_request_screening-result_hash.json` -> operator_chain_mismatch
+- `183-chain-p2_33_request_screening-receipt_sha256.json` -> operator_chain_mismatch
+- `184-chain-p2_33_request_screening-formal_vault_accessed.json` -> operator_chain_flag_not_false:p2_33_request_screening:formal_vault_accessed, operator_chain_mismatch
+- `185-chain-p2_33_request_screening-approval_collected_now.json` -> operator_chain_flag_not_false:p2_33_request_screening:approval_collected_now, operator_chain_mismatch
+- `186-chain-p2_33_request_screening-user_wording_stored.json` -> operator_chain_flag_not_false:p2_33_request_screening:user_wording_stored, operator_chain_mismatch
+- `187-chain-p2_33_request_screening-execution_permission_granted.json` -> operator_chain_flag_not_false:p2_33_request_screening:execution_permission_granted, operator_chain_mismatch
+- `188-chain-p2_33_request_screening-execution_performed.json` -> operator_chain_flag_not_false:p2_33_request_screening:execution_performed, operator_chain_mismatch
+- `189-chain-p2_33_request_screening-write_performed.json` -> operator_chain_flag_not_false:p2_33_request_screening:write_performed, operator_chain_mismatch
+- `190-chain-p2_33_request_screening-sync_performed.json` -> operator_chain_flag_not_false:p2_33_request_screening:sync_performed, operator_chain_mismatch
+- `191-chain-p2_33_request_screening-promotion_performed.json` -> operator_chain_flag_not_false:p2_33_request_screening:promotion_performed, operator_chain_mismatch
+- `192-chain-p2_33_request_screening-used_as_action_basis.json` -> operator_chain_flag_not_false:p2_33_request_screening:used_as_action_basis, operator_chain_mismatch
+- `193-chain-p2_33_request_screening-submitted.json` -> operator_chain_flag_not_false:p2_33_request_screening:submitted, operator_chain_mismatch
+- `194-chain-p2_33_request_screening-non_claims.json` -> operator_chain_mismatch, operator_chain_non_claims_missing:p2_33_request_screening
+- `195-badge-sandbox_product_grade-status.json` -> status_badges_mismatch
+- `196-badge-sandbox_product_grade-authority.json` -> status_badge_authority_confusion:sandbox_product_grade, status_badges_mismatch
+- `197-badge-formal_vault_stop-status.json` -> status_badges_mismatch
+- `198-badge-formal_vault_stop-authority.json` -> status_badge_authority_confusion:formal_vault_stop, status_badges_mismatch
+- `199-badge-approval_stop-status.json` -> status_badges_mismatch
+- `200-badge-approval_stop-authority.json` -> status_badge_authority_confusion:approval_stop, status_badges_mismatch
+- `201-badge-mainline_stop-status.json` -> status_badges_mismatch
+- `202-badge-mainline_stop-authority.json` -> status_badge_authority_confusion:mainline_stop, status_badges_mismatch
+- `203-stop-line-stop_before_execution-not-stop.json` -> stop_line_not_must_stop:stop_before_execution, stop_lines_mismatch
+- `204-stop-line-stop_before_execution-reason-command.json` -> dangerous_value:$.stop_lines[0].reason:promote_py, dangerous_value:$.stop_lines[0].reason:python_command, dangerous_value:$.stop_lines[0].reason:sync_flag, stop_lines_mismatch
+- `205-stop-line-stop_before_approval_collection-not-stop.json` -> stop_line_not_must_stop:stop_before_approval_collection, stop_lines_mismatch
+- `206-stop-line-stop_before_approval_collection-reason-command.json` -> dangerous_value:$.stop_lines[1].reason:promote_py, dangerous_value:$.stop_lines[1].reason:python_command, dangerous_value:$.stop_lines[1].reason:sync_flag, stop_lines_mismatch
+- `207-stop-line-stop_before_formal_vault-not-stop.json` -> stop_line_not_must_stop:stop_before_formal_vault, stop_lines_mismatch
+- `208-stop-line-stop_before_formal_vault-reason-command.json` -> dangerous_value:$.stop_lines[2].reason:promote_py, dangerous_value:$.stop_lines[2].reason:python_command, dangerous_value:$.stop_lines[2].reason:sync_flag, stop_lines_mismatch
+- `209-stop-line-stop_before_mainline-not-stop.json` -> stop_line_not_must_stop:stop_before_mainline, stop_lines_mismatch
+- `210-stop-line-stop_before_mainline-reason-command.json` -> dangerous_value:$.stop_lines[3].reason:promote_py, dangerous_value:$.stop_lines[3].reason:python_command, dangerous_value:$.stop_lines[3].reason:sync_flag, stop_lines_mismatch
+- `211-receipt-record_kind.json` -> receipt_record_kind_mismatch
+- `212-receipt-slice_id.json` -> receipt_slice_id_mismatch
+- `213-receipt-surface_result.json` -> receipt_surface_result_mismatch
+- `214-receipt-source_slice_count.json` -> receipt_source_slice_count_mismatch
+- `215-receipt-source_input_count.json` -> receipt_source_input_count_mismatch
+- `216-receipt-badge_count.json` -> receipt_badge_count_mismatch
+- `217-receipt-stop_line_count.json` -> receipt_stop_line_count_mismatch
+- `218-receipt-formal_vault_accessed.json` -> receipt_flag_not_false:formal_vault_accessed
+- `219-receipt-approval_collected_now.json` -> receipt_flag_not_false:approval_collected_now
+- `220-receipt-user_instruction_collected.json` -> receipt_flag_not_false:user_instruction_collected
+- `221-receipt-user_wording_stored.json` -> receipt_flag_not_false:user_wording_stored
+- `222-receipt-execution_permission_granted.json` -> receipt_flag_not_false:execution_permission_granted
+- `223-receipt-execution_performed.json` -> receipt_flag_not_false:execution_performed
+- `224-receipt-write_performed.json` -> receipt_flag_not_false:write_performed
+- `225-receipt-sync_performed.json` -> receipt_flag_not_false:sync_performed
+- `226-receipt-commit_performed.json` -> receipt_flag_not_false:commit_performed
+- `227-receipt-push_performed.json` -> receipt_flag_not_false:push_performed
+- `228-receipt-promotion_performed.json` -> receipt_flag_not_false:promotion_performed
+- `229-receipt-mainline_ready.json` -> receipt_flag_not_false:mainline_ready
+- `230-receipt-status_used_as_action_basis.json` -> receipt_flag_not_false:status_used_as_action_basis
+- `231-receipt-dirty_tree_fixed.json` -> receipt_flag_not_false:dirty_tree_fixed
+- `232-receipt-status_surface_hash.json` -> receipt_status_surface_hash_mismatch
+- `233-receipt-non_claims.json` -> receipt_non_claims_missing
+- `234-metric-required_positive_fixtures.json` -> metric_positive_fixtures_mismatch
+- `235-metric-minimum_failure_cases.json` -> metric_failure_case_floor_too_low
+- `236-metric-source_slice_count.json` -> metric_source_slice_count_mismatch
+- `237-metric-source_input_count.json` -> metric_source_input_count_mismatch
+- `238-metric-manual_negative_probes.json` -> metric_manual_negative_probes_mismatch
+- `239-metric-max_visible_stages.json` -> metric_max_visible_stages_mismatch
+- `240-top-level-slice-id.json` -> slice_id_mismatch
+- `241-top-level-version.json` -> status_surface_version_mismatch
+- `242-top-level-boundary.json` -> truth_boundary_mismatch
+- `243-top-level-purpose.json` -> purpose_mismatch
+- `244-top-level-mode.json` -> receipt_badge_count_mismatch, receipt_surface_result_mismatch, status_badges_mismatch, surface_mode_not_allowed
+- `245-top-level-write-scope.json` -> write_scope_mismatch
+- `246-top-level-read-sources.json` -> read_only_sources_mismatch
+- `247-top-level-extra-key.json` -> unknown_key:config:unexpected
+- `248-top-level-command-string.json` -> dangerous_value:$.unexpected:promote_py, dangerous_value:$.unexpected:python_command, dangerous_value:$.unexpected:sync_flag, unknown_key:config:unexpected
+- `249-hash-drift.json` -> status_surface_hash_mismatch
+- `250-prototype-markdown-command.json` -> prototype_text_dangerous:04 Reviewer Packet.md:python_command, prototype_text_dangerous:04 Reviewer Packet.md:promote_py, prototype_text_dangerous:04 Reviewer Packet.md:sync_flag
+- `251-prototype-markdown-execution-permission.json` -> prototype_text_dangerous:03 Stop Lines.md:execution_permission_marker
+- `252-prototype-markdown-formal-vault-approval.json` -> prototype_text_dangerous:02 Status Badges.md:formal_vault_approval_marker
+- `253-prototype-markdown-action-basis.json` -> prototype_text_dangerous:01 Evidence Chain.md:action_basis_marker
+- `254-prototype-markdown-mainline-ready.json` -> prototype_text_dangerous:00 Operator Status Home.md:mainline_ready_marker, prototype_markdown_missing_stage_slice:p2_30_dry_run_ledger, prototype_markdown_missing_stage_label:p2_30_dry_run_ledger, prototype_markdown_missing_stage_slice:p2_31_readiness_gate, prototype_markdown_missing_stage_label:p2_31_readiness_gate, prototype_markdown_missing_stage_slice:p2_32_request_packet, prototype_markdown_missing_stage_label:p2_32_request_packet, prototype_markdown_missing_stage_slice:p2_33_request_screening, prototype_markdown_missing_stage_label:p2_33_request_screening
+- `255-prototype-markdown-user-wording.json` -> prototype_text_dangerous:04 Reviewer Packet.md:actual_user_wording_marker
+- `256-prototype-markdown-may-execute.json` -> prototype_text_authority_confusion:03 Stop Lines.md:may_execute
+- `257-prototype-markdown-missing-chain.json` -> prototype_markdown_missing_stage_slice:p2_30_dry_run_ledger, prototype_markdown_missing_stage_label:p2_30_dry_run_ledger, prototype_markdown_missing_stage_slice:p2_31_readiness_gate, prototype_markdown_missing_stage_label:p2_31_readiness_gate, prototype_markdown_missing_stage_slice:p2_32_request_packet, prototype_markdown_missing_stage_label:p2_32_request_packet, prototype_markdown_missing_stage_slice:p2_33_request_screening, prototype_markdown_missing_stage_label:p2_33_request_screening
+- `258-prototype-html-command.json` -> prototype_text_dangerous:operator-status-surface.html:python_command, prototype_text_dangerous:operator-status-surface.html:promote_py, prototype_text_dangerous:operator-status-surface.html:sync_flag, html_missing_attr:data-sandbox-only="true", html_missing_attr:data-status-only="true", html_missing_attr:data-non-executable="true", html_missing_attr:data-no-formal-vault-access="true", html_missing_attr:data-no-write="true", html_missing_attr:data-no-sync="true", html_missing_attr:data-no-authority="true", html_missing_attr:data-no-approval="true", html_missing_attr:data-no-user-wording="true", html_missing_attr:data-no-command="true", html_stage_card_count_mismatch:0:expected:4, html_missing_stage_slice:p2_30_dry_run_ledger, html_missing_stage_label:p2_30_dry_run_ledger, html_missing_stage_slice:p2_31_readiness_gate, html_missing_stage_label:p2_31_readiness_gate, html_missing_stage_slice:p2_32_request_packet, html_missing_stage_label:p2_32_request_packet, html_missing_stage_slice:p2_33_request_screening, html_missing_stage_label:p2_33_request_screening
+- `259-prototype-html-missing-attrs.json` -> html_missing_attr:data-sandbox-only="true", html_missing_attr:data-status-only="true", html_missing_attr:data-non-executable="true", html_missing_attr:data-no-formal-vault-access="true", html_missing_attr:data-no-write="true", html_missing_attr:data-no-sync="true", html_missing_attr:data-no-authority="true", html_missing_attr:data-no-approval="true", html_missing_attr:data-no-user-wording="true", html_missing_attr:data-no-command="true", html_stage_card_count_mismatch:0:expected:4, html_missing_stage_slice:p2_30_dry_run_ledger, html_missing_stage_label:p2_30_dry_run_ledger, html_missing_stage_slice:p2_31_readiness_gate, html_missing_stage_label:p2_31_readiness_gate, html_missing_stage_slice:p2_32_request_packet, html_missing_stage_label:p2_32_request_packet, html_missing_stage_slice:p2_33_request_screening, html_missing_stage_label:p2_33_request_screening
+- `260-prototype-html-missing-chain.json` -> html_stage_card_count_mismatch:0:expected:4, html_missing_stage_slice:p2_30_dry_run_ledger, html_missing_stage_label:p2_30_dry_run_ledger, html_missing_stage_slice:p2_31_readiness_gate, html_missing_stage_label:p2_31_readiness_gate, html_missing_stage_slice:p2_32_request_packet, html_missing_stage_label:p2_32_request_packet, html_missing_stage_slice:p2_33_request_screening, html_missing_stage_label:p2_33_request_screening
+- `261-prototype-html-start-execution.json` -> prototype_text_authority_confusion:operator-status-surface.html:start_execution, html_missing_attr:data-sandbox-only="true", html_missing_attr:data-status-only="true", html_missing_attr:data-non-executable="true", html_missing_attr:data-no-formal-vault-access="true", html_missing_attr:data-no-write="true", html_missing_attr:data-no-sync="true", html_missing_attr:data-no-authority="true", html_missing_attr:data-no-approval="true", html_missing_attr:data-no-user-wording="true", html_missing_attr:data-no-command="true", html_stage_card_count_mismatch:0:expected:4, html_missing_stage_slice:p2_30_dry_run_ledger, html_missing_stage_label:p2_30_dry_run_ledger, html_missing_stage_slice:p2_31_readiness_gate, html_missing_stage_label:p2_31_readiness_gate, html_missing_stage_slice:p2_32_request_packet, html_missing_stage_label:p2_32_request_packet, html_missing_stage_slice:p2_33_request_screening, html_missing_stage_label:p2_33_request_screening
+- `262-prototype-receipt-badge-count.json` -> prototype_receipt_badge_count_mismatch
+- `263-prototype-receipt-stop-line-count.json` -> prototype_receipt_stop_line_count_mismatch
+- `264-prototype-receipt-permission.json` -> prototype_receipt_flag_not_false:execution_permission_granted
+- `265-prototype-receipt-action-basis.json` -> prototype_receipt_flag_not_false:status_used_as_action_basis
+- `266-prototype-receipt-mainline.json` -> prototype_receipt_flag_not_false:mainline_ready
+- `267-prototype-receipt-non-claims.json` -> prototype_receipt_non_claims_missing

@@ -1,0 +1,10 @@
+{
+  "external_junction_sentinel_hash_matches_after_workspace_cleanup": true,
+  "external_junction_target_exists_after_trial_cleanup": false,
+  "external_junction_target_exists_after_workspace_cleanup": true,
+  "vault_file_count_before_cleanup": 1103,
+  "vault_root_hmac": "65aca48c6efbfb37a4d29d29bd6844c8ca8d303de2607acf7a598c8e890eec43",
+  "vault_tree_hmac_before_cleanup": "4a9fc2a209566577bf22260b54b2bb3a6f60b0f26e4f686bc89817a0ae20fb2d",
+  "workspace_exists_after_cleanup": false,
+  "workspace_exists_before_cleanup": true
+}

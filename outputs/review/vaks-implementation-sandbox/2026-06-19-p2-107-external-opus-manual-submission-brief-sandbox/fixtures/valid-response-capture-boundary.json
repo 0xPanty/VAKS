@@ -1,0 +1,9 @@
+{
+  "fixture": "valid-response-capture-boundary",
+  "checks": {
+    "manual_submission.post_response_validator_slice": "2026-06-19-p2-102-opus-result-intake-dry-run-validator-sandbox",
+    "authority_flags.raw_opus_response_present": false,
+    "authority_flags.validated_opus_pass_present": false
+  },
+  "expected": true
+}

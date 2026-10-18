@@ -1,0 +1,12 @@
+{
+  "case_id": "prototype-markdown-approval",
+  "note": "Prototype claims approval.",
+  "prototype_tamper": {
+    "kind": "markdown_replace",
+    "file": "03 Stop Conditions.md",
+    "content": "approval collected: yes"
+  },
+  "expected_errors": [
+    "prototype_text_dangerous:03 Stop Conditions.md:approval_collected_marker"
+  ]
+}

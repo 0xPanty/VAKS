@@ -1,0 +1,58 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "valid-video-transcript-extraction-bundle",
+  "expected_valid": true,
+  "expected_codes": [],
+  "patch": {
+    "original": {
+      "path": "fixtures/raw/video-fixture.mp4",
+      "sha256": "sha256:8888888888888888888888888888888888888888888888888888888888888888",
+      "source_type": "video"
+    },
+    "router": {
+      "modality": "video",
+      "route": "video_transcript",
+      "selected_adapter": "transcript_fixture_adapter",
+      "selected_by": ["source_type", "media_probe"],
+      "route_reason": "Video route to transcript fixture adapter"
+    },
+    "parser": {
+      "adapter_name": "transcript_fixture_adapter",
+      "parser_config_hash": "sha256:9999999999999999999999999999999999999999999999999999999999999999",
+      "known_limits": ["ASR entity confidence requires key-entity check"]
+    },
+    "outputs": {
+      "markdown_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/fixtures/extracted/video-fixture-transcript.md",
+      "json_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/fixtures/extracted/video-fixture-segments.json",
+      "metadata_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/fixtures/extracted/video-fixture.metadata.json",
+      "chunks_path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/fixtures/extracted/video-fixture.segments.json",
+      "retained_outputs": [
+        {
+          "kind": "transcript",
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/fixtures/extracted/video-fixture-transcript.md",
+          "output_hash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "knowledge_status": "raw"
+        },
+        {
+          "kind": "timestamp_segments",
+          "path": "outputs/review/vaks-implementation-sandbox/2026-06-15-p1-5-14-raw-intake-parser-router-sandbox/fixtures/extracted/video-fixture-segments.json",
+          "output_hash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "knowledge_status": "candidate"
+        }
+      ]
+    },
+    "anchors": {
+      "page_refs": [],
+      "timestamp_refs": [
+        {
+          "id": "ts-001",
+          "selector": "00:01:10-00:01:24",
+          "source_hash": "sha256:8888888888888888888888888888888888888888888888888888888888888888"
+        }
+      ]
+    },
+    "source_card": {
+      "target_path": "raw/videos/video-fixture-source.md"
+    }
+  }
+}

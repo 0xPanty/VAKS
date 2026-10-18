@@ -1,0 +1,7 @@
+{
+  "extends": "fixtures/valid-document-extraction-bundle.json",
+  "scenario_id": "source-card-direct-evidence-support",
+  "expected_valid": false,
+  "expected_codes": ["RP_AUTHORITY_CLAIM_FORBIDDEN"],
+  "patch": {"source_card": {"evidence_support": true}}
+}
